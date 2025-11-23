@@ -188,3 +188,43 @@ CREATE TABLE mindmap (
     UNIQUE(video_id)
 );
 
+SELECT table_name 
+FROM information_schema.tables 
+WHERE table_schema = 'public' 
+ORDER BY table_name;
+
+
+INSERT INTO "user" (first_name, last_name, email, password, study_field, educational_level, language_preference)
+VALUES 
+    ('Ahmed', 'Mohamed', 'ahmed@viducatee.com', 'hashed_password_123', 'Computer Science', 'Bachelor', 'ar'),
+    ('Sarah', 'Ali', 'sarah@viducatee.com', 'hashed_password_456', 'Engineering', 'Master', 'en');
+
+SELECT * FROM "user";
+
+
+INSERT INTO video (user_id, title, url, duration, language, section, processing_status)
+VALUES 
+    (1, 'Introduction to Database Systems', 'https://example.com/video1.mp4', 3600, 'en', 'Computer Science', 'completed');
+
+Select * FROM "video";
+
+INSERT INTO topic_segment (vid_id, segment_number, title, maintopic, start_time, end_time)
+VALUES 
+    (1, 1, 'What is a Database?', 'Introduction to databases and their importance', 0, 600),
+    (1, 2, 'Types of Databases', 'Relational vs NoSQL databases', 600, 1200);
+
+INSERT INTO quiz (segment_id, difficulty_level, type, mode, time_limit)
+VALUES 
+    (1, 'easy', 'mcq', 'learning', 300);
+
+INSERT INTO question (quiz_id, ques_text, question_type, difficulty, correct_answer, corrans_explanation)
+VALUES 
+    (1, 'What does SQL stand for?', 'mcq', 'easy', 'Structured Query Language', 'SQL is the standard language for managing relational databases.');
+
+INSERT INTO answer_options (ques_id, option_text, is_correct)
+VALUES 
+    (1, 'Structured Query Language', TRUE),
+    (1, 'Simple Query Language', FALSE),
+    (1, 'Standard Question Language', FALSE),
+    (1, 'System Query Language', FALSE);
+
