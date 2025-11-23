@@ -1,3 +1,5 @@
+# cd backend\tests python test_db.py
+
 from sqlalchemy import create_engine, text
 from dotenv import load_dotenv
 import os
@@ -28,24 +30,24 @@ def insert_user(conn):
         })
 
         new_id = result.scalar()
-        print(f"➡️ User inserted with ID: {new_id}")
+        print(f"User inserted with ID: {new_id}")
 
     except Exception as e:
-        print(f"❌ Insert failed: {e}")
+        print(f"Insert failed: {e}")
 
 try:
     
     with engine.begin() as conn:
         result = conn.execute(text('SELECT COUNT(*) FROM "user"'))
         count = result.scalar()
-        print("✅ Connected successfully!")
-        print(f"👤 Current users in database: {count}")
+        print("Connected successfully!")
+        print(f" Current users in database: {count}")
 
-        print("\n🟦 Inserting new user...")
+        print("\nInserting new user...")
         insert_user(conn)
 
         result = conn.execute(text('SELECT COUNT(*) FROM "user"'))
-        print(f"📌 Updated user count: {result.scalar()}")
+        print(f"Updated user count: {result.scalar()}")
 
         result = conn.execute(text("""
             SELECT table_name 
@@ -59,4 +61,6 @@ try:
             print(f"  - {row[0]}")
 
 except Exception as e:
-    print(f"❌ Connection failed: {e}")
+    print(f"Connection failed: {e}")
+
+
