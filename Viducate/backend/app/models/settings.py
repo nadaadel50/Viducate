@@ -8,7 +8,6 @@ class Settings(Base):
 
     sett_id = Column(Integer, primary_key=True)
     user_id = Column(Integer, ForeignKey("user.id", ondelete="CASCADE"), unique=True)
-    notification_preferences = Column(JSON, default={})
     theme = Column(String(20), default="light")
     language = Column(String(10), default="en")
     created_at = Column(TIMESTAMP, server_default=func.now())

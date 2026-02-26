@@ -10,7 +10,6 @@ class Quiz(Base):
     segment_id = Column(Integer, ForeignKey("topic_segment.segment_id", ondelete="CASCADE"))
     difficulty_level = Column(String(20), default="medium")
     type = Column(String(50), default="mcq")
-    mode = Column(String(20), default="learning")  # 'learning' or 'exam'
     time_limit = Column(Integer)
     created_at = Column(TIMESTAMP, server_default=func.now())
 

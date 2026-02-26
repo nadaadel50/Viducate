@@ -12,7 +12,6 @@ class Video(Base):
     url = Column(String(1000))
     duration = Column(Integer)
     language = Column(String(10), default="en")
-    section = Column(String(200))
     processing_status = Column(String(50), default="uploaded")
     upload_date = Column(TIMESTAMP, server_default=func.now())
     created_at = Column(TIMESTAMP, server_default=func.now())

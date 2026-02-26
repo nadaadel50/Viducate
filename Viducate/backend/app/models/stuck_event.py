@@ -15,3 +15,5 @@ class StuckEvent(Base):
 
     user = relationship("User", back_populates="stuck_events")
     segment = relationship("TopicSegment")
+
+
