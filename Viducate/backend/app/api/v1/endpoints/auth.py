@@ -1,10 +1,14 @@
-from fastapi import APIRouter, Depends, status
+from fastapi import APIRouter, Depends, HTTPException, status, Header
 from sqlalchemy.orm import Session
-from app.schemas.user import UserRegisterRequest, RegisterResponse, UserResponse, TokenResponse
+from app.schemas.user import UserRegisterRequest, RegisterResponse, UserResponse, TokenResponse, UserLoginRequest
 from app.services.auth_service import AuthService
 from app.dependencies import get_db
+import logging
+from fastapi.security import HTTPBearer, HTTPAuthorizationCredentials
 
 router = APIRouter(prefix="/auth", tags=["Authentication"])
+logger = logging.getLogger(__name__)
+security = HTTPBearer()
 
 @router.post(
     "/register",
@@ -19,7 +23,9 @@ def register(
     db: Session = Depends(get_db)       
 ):
     service = AuthService(db)
+    logger.info(f"Registration attempt for email: {request.email}")
     new_user, token = service.register(request)
+    logger.info(f"User registered successfully: {new_user.email} (ID: {new_user.id})")
 
     return RegisterResponse(
         message="Account created successfully",
@@ -30,3 +36,67 @@ def register(
             user=UserResponse.model_validate(new_user)
         )
     )
+
+@router.post(
+    "/login",
+    response_model=TokenResponse,
+    status_code=status.HTTP_200_OK,
+    summary="Login user",
+    description="Authenticates user and returns JWT token"
+)
+def login(
+    request: UserLoginRequest,
+    db: Session = Depends(get_db)
+):
+    service = AuthService(db)
+
+    logger.info(f"Login attempt: {request.email}")
+
+    token, user = service.login(email=request.email, password=request.password)
+
+    logger.info(f"Login successful: {user.email} (ID: {user.id})")
+
+    return TokenResponse(
+        access_token=token,
+        token_type="bearer",
+        user=UserResponse.model_validate(user)
+    )
+
+@router.get(
+    "/me",
+    response_model=UserResponse,
+    status_code=status.HTTP_200_OK,
+    summary="Get current user",
+    description="Returns authenticated user profile"
+)
+def get_current_user(
+    credentials: HTTPAuthorizationCredentials = Depends(security),
+    db: Session = Depends(get_db)
+):
+    service = AuthService(db)
+    token = credentials.credentials
+    user = service.get_current_user(token)
+
+    logger.info(f"User profile accessed: {user.email}")
+
+    print("TOKEN RECEIVED:", token)
+    return UserResponse.model_validate(user)    
+
+
+@router.post(
+    "/logout",
+    status_code=status.HTTP_200_OK,
+    summary="Logout user",
+    description="Logs user logout event"
+)
+@router.post("/logout")
+def logout(
+    credentials: HTTPAuthorizationCredentials = Depends(security),
+    db: Session = Depends(get_db)
+):
+    token = credentials.credentials
+    service = AuthService(db)
+    service.logout(token)
+
+    logger.info("User logged out successfully")
+    return {"message": "Logged out successfully"}

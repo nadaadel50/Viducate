@@ -69,3 +69,8 @@ class RegisterResponse(BaseModel):
     message: str
     user: UserResponse
     token: TokenResponse
+
+
+class UserLoginRequest(BaseModel):
+    email: EmailStr
+    password: str
