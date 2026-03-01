@@ -1,6 +1,6 @@
 import { Logo } from "../../../../../core/componants/logo";
 import { EmailInputSection } from "../componants/main_section";
-import { MainText } from "../../../../../core/componants/auth_text_section";
+import { AuthMainText } from "../../../../../core/componants/auth_text_section";
 
 export function ForgetPasswordPage() {
   return (
@@ -9,7 +9,7 @@ export function ForgetPasswordPage() {
         <div className="flex flex-col min-h-screen py-4 px-6 bg-red-100">
           <Logo />
           <div className="flex flex-col flex-1 justify-center items-center ">
-            <MainText
+            <AuthMainText
               bigTitle="Forget password?"
               smallTitle="Enter your email to reset your password"
             />

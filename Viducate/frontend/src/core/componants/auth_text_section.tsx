@@ -2,7 +2,7 @@ type MainTextProps = {
   bigTitle: string;
   smallTitle: string;
 };
-export function MainText({ bigTitle, smallTitle }: MainTextProps){
+export function AuthMainText({ bigTitle, smallTitle }: MainTextProps){
     return(
         <div className="w-full">
             <div>
