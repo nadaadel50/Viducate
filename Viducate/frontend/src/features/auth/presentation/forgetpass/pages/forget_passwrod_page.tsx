@@ -1,6 +1,6 @@
 import { Logo } from "../../../../../core/componants/logo";
 import { EmailInputSection } from "../componants/main_section";
-import { MainText } from "../componants/text_section";
+import { MainText } from "../../../../../core/componants/auth_text_section";
 
 export function ForgetPasswordPage() {
   return (
