@@ -6,7 +6,7 @@ export function ForgetPasswordPage() {
   return (
     <>
       <div className="min-h-screen  grid grid-cols-2 font-display">
-        <div className="flex flex-col min-h-screen py-4 px-6 bg-red-100">
+        <div className="flex flex-col min-h-screen py-4 px-15 bg-red-100">
           <Logo />
           <div className="flex flex-col flex-1 justify-center items-center ">
             <AuthMainText
