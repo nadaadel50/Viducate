@@ -65,7 +65,7 @@ export function CustomInput({
           ))}
       </div>
 
-      {isError && (
+      {isError&&!isEmpty&& (
         <p
           className="text-sm mt-2"
           style={{ color: COLORS.error }}
