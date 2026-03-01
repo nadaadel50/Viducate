@@ -4,5 +4,16 @@ export const COLORS = {
   danger: "#FF4D4F",
   light: "#F5F5F5",
   dark: "#222222",
-  gradient: "linear-gradient(to bottom right, #359EFF, #5A0BB1)" // اللون المتدرج
+  gradient: "linear-gradient(to bottom right, #359EFF, #5A0BB1)" ,
+  
+ borderDefault: "#dcdde5",
+  borderFocus: "#6366f1",   // indigo-500
+
+  error: "#ef4444",
+  success: "#10b981",
+
+  buttonPrimary: "#4f46e5",  // indigo-600
+  buttonPrimaryHover: "#4338ca", // indigo-700
+
+  disabled: "#9ca3af",
 };
