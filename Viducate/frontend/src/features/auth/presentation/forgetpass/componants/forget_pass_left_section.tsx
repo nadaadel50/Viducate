@@ -7,7 +7,7 @@ const schema = z.object({
   email: z.email(),
 });
 
-export function SubmitEmailSection() {
+export function ForgetPassLeftSection() {
   const [email, setEmail] = useState("");
   const [error, setError] = useState("");
 
