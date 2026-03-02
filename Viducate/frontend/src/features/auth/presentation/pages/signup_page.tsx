@@ -160,7 +160,7 @@
 import React from 'react';
 import AuthLayout from '../layouts/AuthLayout';
 import { AuthForm } from '../componants/AuthForm';
-
+import {RightSection }from '../componants/right_section';
 // استيراد الصورة الخاصة بالساين أب
 import signUpPhoto from '../../../../assets/Images/signUpPhoto.png';
 
@@ -180,12 +180,13 @@ const SignupPage: React.FC = () => {
 
   return (
     <AuthLayout
-      // البيانات اللي بتظهر في الجزء اليمين (الصورة والكلام)
-      title="Turn hours of video into minutes of insight."
+      RightContent={<RightSection 
+      titleFirstPart="Turn hours of video "
+      titleColoredPart="into minutes of insight."
       description="Viducate helps you learn faster with AI-powered summaries and quizzes generated directly from your course materials."
-      imageSrc={signUpPhoto}
+      imgSrc={signUpPhoto}
+      />}
       
-      // بنستدعي الـ Component المشترك ونحدد النوع 'signup'
       LeftContent={
         <AuthForm 
           type="signup" 

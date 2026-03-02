@@ -5,7 +5,7 @@ import * as z from 'zod';
 import { Link } from 'react-router-dom';
 import { CustomInput } from '../../../../core/componants/custom_input';
 import { CustomButton } from '../../../../core/componants/custum_btn';
-import { AuthMainText } from '../../../../core/componants/auth_text_section';
+import { AuthMainText } from './auth_text_section';
 import GoogleIcon from '../../../../assets/Images/Google.png';
 
 interface AuthFormProps {

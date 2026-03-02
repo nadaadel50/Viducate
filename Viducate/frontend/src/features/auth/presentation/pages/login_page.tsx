@@ -121,15 +121,19 @@
 import AuthLayout from '../layouts/AuthLayout';
 import { AuthForm } from '../componants/AuthForm';
 import LoginPhoto from '../../../../assets/Images/LoginPhoto.png';
+import { RightSection } from '../componants/right_section';
 
 const LoginPage = () => {
   const handleLogin = (data: any) => console.log("Login API Call:", data);
 
   return (
     <AuthLayout 
-      title="Turn hours of video into minutes of learning."
+    RightContent={<RightSection
+      titleFirstPart="Turn hours of video "
+      titleColoredPart="into minutes of learning."
       description="Master your coursework with AI-powered tools."
-      imageSrc={LoginPhoto}
+      imgSrc={LoginPhoto}
+      />}
       LeftContent={<AuthForm type="login" onSubmit={handleLogin} />}
     />
   );
