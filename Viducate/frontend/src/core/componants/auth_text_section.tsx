@@ -9,8 +9,9 @@ export function AuthMainText({ bigTitle, smallTitle }: MainTextProps){
         <h2 className="lg:text-4xl font-black leading-tight tracking-[-0.033em] mb-3">
           {bigTitle}
         </h2>
-        <h3>{smallTitle}</h3>
+        <p className="text-lg text-[#636988] dark:text-gray-300">{smallTitle}</p >
       </div>
         </div>
     )
 }
+export default AuthMainText;

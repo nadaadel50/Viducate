@@ -1,13 +1,16 @@
 import { BrowserRouter, Route, Routes } from "react-router";
 import { ProtectedRoute } from "./protextedRoutes";
 import App from "../../App";
-
+import LoginPage from "../../features/auth/presentation/pages/login_page";
+import SignupPage from "../../features/auth/presentation/pages/signup_page";
 
 export function AppRoutes() {
     return (
         <BrowserRouter>
 
         <Routes>
+          <Route path="/login" element={<LoginPage />} />
+        <Route path="/signup" element={<SignupPage />} />
 
 
             /* here we will put all the public routes that don't need authentication to access them like landing page, signup */
