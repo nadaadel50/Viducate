@@ -19,18 +19,18 @@ export function CustomButton({
       onClick={onClick}
       disabled={disabled}
       style={{
-        backgroundColor: disabled ? COLORS.disabled : COLORS.PrimaryColor,
-        color: COLORS.light,
+        backgroundColor: disabled ? COLORS.button.disabled : COLORS.button.primary,
+        color: COLORS.text.white,
       }}
       className="w-full rounded-xl h-12 px-4 font-bold transition cursor-pointer disabled:cursor-not-allowed shadow-xl"
       onMouseEnter={(e) => {
         if (!disabled) {
-          e.currentTarget.style.backgroundColor = COLORS.PrimaryHover;
+          e.currentTarget.style.backgroundColor = COLORS.button.primaryHover;
         }
       }}
       onMouseLeave={(e) => {
         if (!disabled) {
-          e.currentTarget.style.backgroundColor = COLORS.PrimaryColor;
+          e.currentTarget.style.backgroundColor = COLORS.button.primary;
         }
       }}
     >

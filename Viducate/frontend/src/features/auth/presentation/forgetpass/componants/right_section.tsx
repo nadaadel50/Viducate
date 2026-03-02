@@ -1,12 +1,18 @@
 import { COLORS } from "../../../../../core/constants";
 
+ type RightSectionProps={
+    imgSrc:string,
+    titleFirstPart:string,
+    titleColoredPart:string,
+    description:string
 
-export function RightSection(){
+}
+export function RightSection(props:RightSectionProps){
     return(
         <>
-         <img  className="w-64 md:w-80 lg:w-96 h-auto" src="src/assets/forget_pass_2.svg " alt="" />
-          <h2 style={{color:COLORS.PrimaryText}} className="mt-15 mb-4 md:text-3xl lg:text-4xl font-bold  text-center">Securely reset your password <span style={{color:COLORS.PrimaryColor}}>and continue your learning journey</span></h2>
-          <p style={{color:COLORS.SecondyText}}>It only takes a few seconds to get back on track</p>
+         <img  className="w-64 md:w-80 lg:w-90 h-auto" src={props.imgSrc} alt="" />
+          <h2 style={{color:COLORS.text.primary}} className="mt-15 mb-4 text-3xl font-bold md:w-100 lg:w-160 text-center">{props.titleFirstPart}<span style={{color:COLORS.text.coloredText}}>{props.titleColoredPart}</span></h2>
+          <p style={{color:COLORS.text.secondary}}>{props.description}</p>
         </>
     )
 }
