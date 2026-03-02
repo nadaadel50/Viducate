@@ -12,8 +12,11 @@ export const COLORS = {
   error: "#ef4444",
   success: "#10b981",
 
-  buttonPrimary: "#4f46e5",  // indigo-600
-  buttonPrimaryHover: "#4338ca", // indigo-700
+  PrimaryColor: "#4f46e5",  // indigo-600
+  PrimaryHover: "#4338ca", // indigo-700
+  PrimaryText:"#111218",
+  SecondyText:"#636988",
 
   disabled: "#9ca3af",
+
 };
