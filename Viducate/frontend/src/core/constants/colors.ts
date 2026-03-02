@@ -25,6 +25,7 @@ export const COLORS = {
   text: {
     primary: "#111421",
     secondary: "#636988",
+    coloredText:"#4f46e5",
     muted: "#9ca3af",
     white: "#ffffff",
   },
