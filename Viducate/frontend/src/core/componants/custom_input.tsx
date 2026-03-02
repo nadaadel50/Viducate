@@ -22,10 +22,10 @@ export function CustomInput({
   const isError = !!error;
 
   const borderColor = isEmpty
-    ? COLORS.borderDefault
+    ? COLORS.border.default
     : isError
-    ? COLORS.error
-    : COLORS.success;
+    ? COLORS.state.error
+    : COLORS.state.success;
 
   return (
     <div className="w-full py-4">
@@ -41,7 +41,7 @@ export function CustomInput({
           className="w-full h-12 px-4 pr-10 rounded-xl border-2 transition-all focus:outline-none"
           onFocus={(e) => {
             if (isEmpty) {
-              e.currentTarget.style.borderColor = COLORS.borderFocus;
+              e.currentTarget.style.borderColor = COLORS.border.focus;
             }
           }}
           onBlur={(e) => {
@@ -53,13 +53,13 @@ export function CustomInput({
           (isError ? (
             <AlertCircle
               className="absolute right-3 top-1/2 -translate-y-1/2"
-              style={{ color: COLORS.error }}
+              style={{ color: COLORS.state.error }}
               size={18}
             />
           ) : (
             <Check
               className="absolute right-3 top-1/2 -translate-y-1/2 text-white rounded-full p-1"
-              style={{ backgroundColor: COLORS.success }}
+              style={{ backgroundColor: COLORS.state.success }}
               size={18}
             />
           ))}
@@ -68,7 +68,7 @@ export function CustomInput({
       {isError&&!isEmpty&& (
         <p
           className="text-sm mt-2"
-          style={{ color: COLORS.error }}
+          style={{ color: COLORS.state.error }}
         >
           {error}
         </p>
