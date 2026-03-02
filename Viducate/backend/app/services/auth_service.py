@@ -1,18 +1,21 @@
+import secrets
 from sqlalchemy.orm import Session
 from app.repositories.user_repository import UserRepository
 from app.core.security import hash_password, create_access_token
-from app.schemas.user import UserRegisterRequest
+from app.schemas.user import UserRegisterRequest , ForgetPasswordRequest,ResetPasswordRequest
 from fastapi import HTTPException, status
 from datetime import timedelta
 from app.config import settings
 from app.core.security import verify_password, decode_access_token
 from datetime import datetime
-
+from app.services import email_service
 
 class AuthService:
 
+
     def __init__(self, db: Session):
         self.user_repo = UserRepository(db)
+        # self.email_service = email_service
 
     def register(self, request: UserRegisterRequest):
      
@@ -116,3 +119,56 @@ class AuthService:
             )
 
         return True
+    
+
+#User Forget Password ,He request to reset password 
+
+    async def request_password_reset(self,request:ForgetPasswordRequest):
+        # Check if email already exists
+        existing_user = self.user_repo.get_by_email(request.email)
+        if not existing_user:
+            raise HTTPException(
+                status_code=status.HTTP_409_CONFLICT,
+                detail="An account with this email already exists")
+        
+        reset_token = secrets.token_urlsafe(32)
+        expires_at = datetime.utcnow() + timedelta(hours=1)
+
+        existing_user.reset_token = reset_token
+        existing_user.reset_token_expires = expires_at
+        self.user_repo.update(existing_user)
+
+        reset_url =  f"{settings.FRONTEND_URL}/reset-password?token={reset_token}"
+        await email_service.send_reset_email(existing_user.email, reset_url)    
+
+        return{ "message": "If an account with that email exists, "
+                      "we've sent password reset instructions."
+        }
+
+
+    def reset_password(self, request:ResetPasswordRequest):
+        #User resets password using token
+        user = self.user_repo.get_by_reset_token(request.token)
+        if not user:
+            raise HTTPException(
+                status_code=status.HTTP_400_BAD_REQUEST,
+                detail="Invalid or expired reset token"
+            )
+        
+        # Check if token expired
+        if user.reset_token_expires < datetime.utcnow():
+            raise HTTPException(
+                status_code=status.HTTP_400_BAD_REQUEST,
+                detail="Reset token has expired. Please request a new one."
+            )
+        
+
+        hashed_password = hash_password(request.new_password)
+        user.password = hashed_password
+        user.reset_token = None  # Clear token (can't be reused)
+        user.reset_token_expires = None
+        user.failed_login_attempts = 0  # Reset any lockout
+        self.user_repo.update(user)
+        return {"message": "Password reset successful! You can now login."}
+
+

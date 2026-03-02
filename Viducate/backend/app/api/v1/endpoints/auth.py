@@ -1,6 +1,6 @@
 from fastapi import APIRouter, Depends, HTTPException, status, Header
 from sqlalchemy.orm import Session
-from app.schemas.user import UserRegisterRequest, RegisterResponse, UserResponse, TokenResponse, UserLoginRequest
+from app.schemas.user import ForgetPasswordRequest, ForgetPasswordResponse, ResetPasswordRequest, ResetPasswordResponse, UserRegisterRequest, RegisterResponse, UserResponse, TokenResponse, UserLoginRequest
 from app.services.auth_service import AuthService
 from app.dependencies import get_db
 import logging
@@ -100,3 +100,47 @@ def logout(
 
     logger.info("User logged out successfully")
     return {"message": "Logged out successfully"}
+
+
+@router.post(
+    "/forgot-password",
+    response_model=ForgetPasswordResponse,
+    status_code=status.HTTP_200_OK,
+    summary="Request password reset",
+    description="Sends password reset email if account exists"
+)
+async def forgot_password(
+    request: ForgetPasswordRequest,
+    db: Session = Depends(get_db)
+):
+    service = AuthService(db)
+    
+    logger.info(f"Password reset requested for: {request.email}")
+    
+    result =await service.request_password_reset(request)
+    
+    return ForgetPasswordResponse(**result)
+
+
+@router.post(
+    "/reset-password",
+    response_model=ResetPasswordResponse,
+    status_code=status.HTTP_200_OK,
+    summary="Reset password",
+    description="Resets password using token from email"
+)
+def reset_password(
+    request: ResetPasswordRequest,
+    db: Session = Depends(get_db)
+):
+    service = AuthService(db)
+    
+    logger.info(f"Password reset attempt with token: {request.token[:10]}...")
+    
+    result = service.reset_password(request)
+    
+    logger.info("Password reset completed successfully")
+    
+    return ResetPasswordResponse(**result)
+
+

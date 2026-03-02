@@ -1,4 +1,4 @@
-from sqlalchemy import Column, Integer, String, TIMESTAMP
+from sqlalchemy import Column, Integer, String, TIMESTAMP,DateTime
 from sqlalchemy.orm import relationship
 from sqlalchemy.sql import func
 from .base import Base
@@ -17,6 +17,8 @@ class User(Base):
     created_at = Column(TIMESTAMP, server_default=func.now())
     updated_at = Column(TIMESTAMP, server_default=func.now(), onupdate=func.now())
     failed_login_attempts = Column(Integer, default=0)
+    reset_token = Column(String,nullable=True)
+    reset_token_expires = Column(DateTime,nullable=True)
 
     # videos = relationship("Video", back_populates="user")
     # dashboard = relationship("UserDashboard", uselist=False, back_populates="user")

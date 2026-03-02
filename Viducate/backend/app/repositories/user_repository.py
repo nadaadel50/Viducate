@@ -27,3 +27,7 @@ class UserRepository:
         self.db.commit()
         self.db.refresh(user)
         return user
+    
+    # Get User by reset token
+    def get_by_reset_token(self, token: str):
+        return self.db.query(User).filter(User.reset_token==token).first()
