@@ -38,7 +38,7 @@ const AuthLayout: React.FC<AuthLayoutProps> = ({
 
       {/* right section */}
       <div
-        className="hidden md:flex lg:flex relative flex-col items-center overflow-hidden p-6 text-center"
+        className="hidden md:flex lg:flex relative flex-col justify-center items-center overflow-hidden p-6 text-center"
         style={{ backgroundColor: COLORS.layout.rightBackgroundLight }}
       >
         {/* glow effects */}
