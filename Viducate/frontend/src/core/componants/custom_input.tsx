@@ -1,4 +1,5 @@
-import { AlertCircle, Check } from "lucide-react";
+import { AlertCircle, Check, Eye, EyeOff } from "lucide-react";
+import { useState } from "react";
 import { COLORS } from "../constants/colors";
 
 type CustomInputProps = {
@@ -7,6 +8,7 @@ type CustomInputProps = {
   value: string;
   placeholder?: string;
   error?: string;
+  success?: boolean;
   onChange: (e: React.ChangeEvent<HTMLInputElement>) => void;
 };
 
@@ -16,16 +18,27 @@ export function CustomInput({
   value,
   placeholder,
   error,
+  success = false,
   onChange,
 }: CustomInputProps) {
+  const [showPassword, setShowPassword] = useState(false);
+  const [isFocused, setIsFocused] = useState(false);
+
+  const isPasswordField = type === "password";
   const isEmpty = value.length === 0;
   const isError = !!error;
+  const isSuccess = success && !isError && !isEmpty;
 
-  const borderColor = isEmpty
-    ? COLORS.border.default
-    : isError
-    ? COLORS.state.error
-    : COLORS.state.success;
+  const inputType =
+    isPasswordField && showPassword ? "text" : type;
+
+ const borderColor = isError
+  ? COLORS.state.error
+  : isSuccess
+  ? COLORS.state.success
+  : isFocused
+  ? COLORS.border.focus
+  : COLORS.border.default;
 
   return (
     <div className="w-full py-4">
@@ -33,39 +46,46 @@ export function CustomInput({
 
       <div className="relative">
         <input
-          type={type}
+          type={inputType}
           value={value}
           placeholder={placeholder}
           onChange={onChange}
           style={{ borderColor }}
-          className="w-full h-12 px-4 pr-10 rounded-xl border-2 transition-all focus:outline-none"
-          onFocus={(e) => {
-            if (isEmpty) {
-              e.currentTarget.style.borderColor = COLORS.border.focus;
-            }
-          }}
-          onBlur={(e) => {
-            e.currentTarget.style.borderColor = borderColor;
-          }}
+          onBlur={() => setIsFocused(false)}
+          onFocus={() => setIsFocused(true)}
+          className="w-full h-12 px-4 pr-12 rounded-xl border-2 transition-all focus:outline-none"
         />
 
-        {!isEmpty &&
-          (isError ? (
+        {/* Right Icon */}
+        <div className="absolute right-3 top-1/2 -translate-y-1/2 flex items-center">
+          {(isError&&!isPasswordField) ? (
             <AlertCircle
-              className="absolute right-3 top-1/2 -translate-y-1/2"
+              size={18}
               style={{ color: COLORS.state.error }}
-              size={18}
             />
-          ) : (
+          ) : isSuccess ? (
             <Check
-              className="absolute right-3 top-1/2 -translate-y-1/2 text-white rounded-full p-1"
-              style={{ backgroundColor: COLORS.state.success }}
               size={18}
+              className="text-white rounded-full p-1"
+              style={{ backgroundColor: COLORS.state.success }}
             />
-          ))}
+          ) : isPasswordField ? (
+            <button
+              type="button"
+              onClick={() => setShowPassword((prev) => !prev)}
+              className="focus:outline-none cursor-pointer"
+            >
+              {showPassword ? (
+                <EyeOff size={18} />
+              ) : (
+                <Eye size={18} />
+              )}
+            </button>
+          ) : null}
+        </div>
       </div>
 
-      {isError&&!isEmpty&& (
+      {isError && !isEmpty && (
         <p
           className="text-sm mt-2"
           style={{ color: COLORS.state.error }}

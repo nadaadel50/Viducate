@@ -1,4 +1,4 @@
-import type { NavigateFunction } from "react-router-dom";
+import type { NavigateFunction } from "react-router";
 import { routes } from "../../app/routers/routes";
 
 // Navigation helpers
@@ -8,5 +8,19 @@ export function goToHome(navigate: NavigateFunction) {
 
 export function goToLogin(navigate: NavigateFunction) {
   navigate(routes.login);
+}
+export function goToForgetPass(navigate: NavigateFunction) {
+  navigate(routes.forgetPass);
+}
+
+export function goToLSuccessSendEmail(navigate: NavigateFunction) {
+  navigate(routes.sucessSendEmail);
+}
+export function goToRestPassword(navigate: NavigateFunction) {
+  navigate(routes.restPass);
+}
+
+export function goToSuccessResetPassword(navigate: NavigateFunction) {
+  navigate(routes.successRestPass);
 }
 

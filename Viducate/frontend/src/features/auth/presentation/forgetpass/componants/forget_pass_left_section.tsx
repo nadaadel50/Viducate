@@ -2,6 +2,8 @@ import { useState } from "react";
 import { z } from "zod";
 import { CustomInput } from "../../../../../core/componants/custom_input";
 import { CustomButton } from "../../../../../core/componants/custum_btn";
+import { goToLSuccessSendEmail } from "../../../../../core/navigation/navigation";
+import { useNavigate } from "react-router";
 
 const schema = z.object({
   email: z.email(),
@@ -10,6 +12,7 @@ const schema = z.object({
 export function ForgetPassLeftSection() {
   const [email, setEmail] = useState("");
   const [error, setError] = useState("");
+  const navigate = useNavigate();
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     const value = e.target.value.trim();
@@ -32,6 +35,7 @@ export function ForgetPassLeftSection() {
       return;
     }
     // here i will call the use case of reset link
+    goToLSuccessSendEmail(navigate)
   };
   return (
     <div className="w-full">

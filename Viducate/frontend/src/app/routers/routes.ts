@@ -1,5 +1,8 @@
-// this page will containt only the names of routs like this 
 export const routes = {
+  home: "/",
   login: "/login",
-  home: "/home",
-}
+  forgetPass: "/forget-password",
+  sucessSendEmail: "/success-send-email",
+  restPass: "/reset-password",
+  successRestPass: "/success-reset-password",
+};
