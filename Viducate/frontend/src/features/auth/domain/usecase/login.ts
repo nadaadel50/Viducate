@@ -1,12 +1,15 @@
 import type { AuthRepo } from "../repo/auth_repo";
-import { AuthMainText } from '../../../../core/componants/auth_text_section
+import type { LoginRequestDto } from '../../api/models/login/login_request_dto';
+
 export class LoginUseCase {
+  private repository: AuthRepo;
 
-    private authRepository: AuthRepo;
-    constructor( authRepository: AuthRepo) {
-        this.authRepository = authRepository;
-    }
+  constructor(repository: AuthRepo) {
+    this.repository = repository;
+  }
 
-   
-   
+  async execute(params: LoginRequestDto) {
+    // ممكن هنا تضيفي أي Logic قبل الإرسال
+    return await this.repository.login(params);
+  }
 }
