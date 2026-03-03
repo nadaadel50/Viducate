@@ -49,7 +49,15 @@ export const COLORS = {
 
   copyright: {
     text: "#9ca3af",         
+  },
+  icon:{
+    primary:"#4f46e5",
+    secondry: "#ffffff",
+    background:"#ececf7"
+
   }
+
+  
 
   
 };
