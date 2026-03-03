@@ -4,12 +4,14 @@ import { COLORS } from "../../../../core/constants";
 
 interface AuthLayoutProps {
   LeftContent: ReactNode;
-  RightContent:ReactNode
+  RightContent:ReactNode;
+  RightBadge?: ReactNode
 }
 
 const AuthLayout: React.FC<AuthLayoutProps> = ({
   LeftContent,
-  RightContent
+  RightContent,
+  RightBadge
  
 }) => {
   return (
@@ -55,8 +57,13 @@ const AuthLayout: React.FC<AuthLayoutProps> = ({
         >
 
         </div>
-        <div className=" md:flex flex-col items-center">
+        <div className="relative md:flex flex-col items-center">
            {RightContent}
+           {RightBadge && (
+              <div className="absolute z-10">
+           {RightBadge}
+              </div>
+           )}   
         </div>
 
       
