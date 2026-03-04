@@ -1,8 +1,7 @@
-// import { FormattedMessage } from "react-intl";
-// import { useLanguage } from "./core/hooks/useLanguage";
+//  import { useLanguage } from "./core/hooks/useLanguage";
 import LoginPage from './features/auth/presentation/pages/login_page';
 function App() {
-  // const { locale, toggleLocale } = useLanguage();
+  //  const { locale, toggleLocale } = useLanguage();
 
   return (
     <>
