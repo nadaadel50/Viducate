@@ -1,0 +1,6 @@
+{
+     "python.analysis.extraPaths": [
+          "./Viducate/backend/app",
+          "./Viducate/backend"
+     ]
+}

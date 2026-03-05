@@ -69,3 +69,42 @@ class RegisterResponse(BaseModel):
     message: str
     user: UserResponse
     token: TokenResponse
+
+
+class UserLoginRequest(BaseModel):
+    email: EmailStr
+    password: str
+
+
+#Forget Password 
+class ForgetPasswordRequest(BaseModel):
+    email:EmailStr
+
+class ForgetPasswordResponse(BaseModel):
+    message: str
+
+class ResetPasswordRequest(BaseModel):
+    token:str
+    new_password:str
+    confirm_password:str
+
+    @field_validator("new_password")
+    @classmethod
+    def validate_password(cls, value):
+        if len(value) < 8:
+            raise ValueError("Password must be at least 8 characters long")
+        if not re.search(r"[A-Z]", value):
+            raise ValueError("Password must contain at least one uppercase letter")
+        if not re.search(r"[0-9]", value):
+            raise ValueError("Password must contain at least one number")
+        return value
+    
+    @field_validator("confirm_password")
+    @classmethod
+    def passwords_match(cls, v, info):
+        if "new_password" in info.data and v != info.data["new_password"]:
+            raise ValueError("Passwords do not match")
+        return v
+
+class ResetPasswordResponse(BaseModel):
+    message: str
