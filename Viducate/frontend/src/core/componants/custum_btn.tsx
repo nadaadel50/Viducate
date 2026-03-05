@@ -20,7 +20,7 @@ export function CustomButton({
       disabled={disabled}
       style={{
         backgroundColor: disabled ? COLORS.button.disabled : COLORS.button.primary,
-        color: COLORS.text.white,
+        color: COLORS.background.light,
       }}
       className="w-full rounded-xl h-12 px-4 font-bold transition cursor-pointer disabled:cursor-not-allowed shadow-xl"
       onMouseEnter={(e) => {
@@ -34,6 +34,7 @@ export function CustomButton({
         }
       }}
     >
+      
       {children}
     </button>
   );
