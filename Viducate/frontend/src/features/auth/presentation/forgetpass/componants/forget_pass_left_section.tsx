@@ -45,12 +45,14 @@ export function ForgetPassLeftSection() {
         value={email}
         placeholder="student@university.edu"
         error={error}
+        success={true}
         onChange={handleChange}
       />
 
       <CustomButton
         type="submit"
         onClick={handleSubmit}
+        
         disabled={!!error || email.length === 0}
       >
         Send Reset Link

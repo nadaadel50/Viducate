@@ -23,7 +23,7 @@ export function SucessLeftSection() {
          <span>successful</span>
         </h2>
         
-        <p className="text-lg text-[#636988] dark:text-gray-300">Your password has been successfully updated. You can now access your study library with your new credentials.</p >
+        <p className="text-lg text-[#636988]">Your password has been successfully updated. You can now access your study library with your new credentials.</p >
        
       </div>
 
@@ -32,13 +32,7 @@ export function SucessLeftSection() {
 
       }} className="w-full relative px-10">
         <CustomButton>Back to login</CustomButton>
-        <div className="absolute right-42 top-1/2 -translate-y-1/2">
-          <ExternalLink
-            strokeWidth={2}
-            style={{ color: COLORS.icon.secondry }}
-            className="w-5 h-5 "
-          />
-        </div>
+       
       </div>
 
      
