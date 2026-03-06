@@ -31,3 +31,13 @@ class UserRepository:
     # Get User by reset token
     def get_by_reset_token(self, token: str):
         return self.db.query(User).filter(User.reset_token==token).first()
+    
+    def get_by_oauth(self, provider: str, oauth_id: str):
+        return (
+            self.db.query(User)
+            .filter(
+                User.oauth_provider == provider,
+                User.oauth_id == oauth_id
+            )
+            .first()
+        )
