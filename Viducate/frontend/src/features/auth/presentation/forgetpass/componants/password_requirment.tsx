@@ -1,14 +1,17 @@
 import { Check, Circle, X } from "lucide-react";
+import { useT } from "../../../../../core/hooks/useTranslation";
 
 type Props = {
   password: string;
 };
 
 export function PasswordRequirements({ password }: Props) {
+  const { translation } = useT();
+
   const validations = {
     length: password.length >= 8,
     number: /[0-9]/.test(password),
-    special: /[!@#$%^&*]/.test(password),
+    special: /[!@#$%^&-*]/.test(password),
   };
 
   const renderIcon = (isValid: boolean) => {
@@ -25,23 +28,23 @@ export function PasswordRequirements({ password }: Props) {
   return (
     <div className="w-full mt-2 rounded-xl bg-gray-50 border border-gray-100 px-5 py-5">
       <p className="mb-3 text-xs font-bold uppercase tracking-wide text-gray-500">
-        Password requirements:
+        {translation("auth.passwordReq.title")}
       </p>
 
       <ul className="flex flex-col gap-2 text-sm text-[#636988]">
         <li className="flex items-center gap-2">
           {renderIcon(validations.length)}
-          At least 8 characters long
+          {translation("auth.passwordReq.length")}
         </li>
 
         <li className="flex items-center gap-2">
           {renderIcon(validations.number)}
-          Contains at least one number
+          {translation("auth.passwordReq.number")}
         </li>
 
         <li className="flex items-center gap-2">
           {renderIcon(validations.special)}
-          Contains at least one special character
+          {translation("auth.passwordReq.special")}
         </li>
       </ul>
     </div>

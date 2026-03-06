@@ -1,4 +1,5 @@
 import { CustomInput } from "../../../../../core/componants/custom_input";
+import { useT } from "../../../../../core/hooks/useTranslation";
 
 type Props = {
   password: string;
@@ -15,24 +16,29 @@ export function PasswordInputsSection({
   onPasswordChange,
   onConfirmPasswordChange,
 }: Props) {
+
+  const { translation } = useT();
+
   return (
     <div className="w-full mt-5">
+
       <CustomInput
-        placeholder="Enter new password"
-        label="New password"
+        placeholder={translation("auth.resetPassword.inputs.newPasswordPlaceholder")}
+        label={translation("auth.resetPassword.inputs.newPasswordLabel")}
         type="password"
         value={password}
         onChange={onPasswordChange}
       />
 
       <CustomInput
-        placeholder="Confirm your password"
+        placeholder={translation("auth.resetPassword.inputs.confirmPasswordPlaceholder")}
         type="password"
-        label="Confirm new password"
+        label={translation("auth.resetPassword.inputs.confirmPasswordLabel")}
         value={confirmPassword}
         error={confirmPasswordError}
         onChange={onConfirmPasswordChange}
       />
+
     </div>
   );
 }

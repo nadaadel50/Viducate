@@ -5,6 +5,7 @@ import { ForgetPasswordPage } from "../../features/auth/presentation/forgetpass/
 import { EmailSendedPage } from "../../features/auth/presentation/forgetpass/pages/email_sended_page";
 import { ResetPasswordPage } from "../../features/auth/presentation/forgetpass/pages/reset_password_page";
 import { SuccessfullResetPage } from "../../features/auth/presentation/forgetpass/pages/successfull_rest_page";
+import { AppRoutesNames } from "./routes";
 
 
 export function AppRoutes() {
@@ -21,8 +22,9 @@ export function AppRoutes() {
               /* here we will put all the protected routes that need authentication to access them */
              </Route>
 
-             <Route path="/success-send-email" element={<EmailSendedPage />} />
-             <Route path="/reset-password" element={<ResetPasswordPage />} />
+             <Route path={AppRoutesNames.sucessSendEmail} element={<EmailSendedPage />} />
+             <Route path={AppRoutesNames.restPass} element={<ResetPasswordPage />} />
+             <Route path={AppRoutesNames.successRestPass} element={<SuccessfullResetPage />} />
              
 
 

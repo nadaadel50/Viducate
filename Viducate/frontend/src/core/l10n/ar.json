@@ -5,8 +5,47 @@
   "auth.forgetPassword.emailPlaceholder": "student@university.edu",
   "auth.forgetPassword.sendResetLink": "إرسال رابط إعادة التعيين",
 
-   "auth.checkEmail.title": "تحقق من بريدك الإلكتروني",
+  "auth.checkEmail.title": "تحقق من بريدك الإلكتروني",
   "auth.checkEmail.subtitle": "لقد أرسلنا رابط إعادة تعيين كلمة المرور إلى",
   "auth.checkEmail.openEmailApp": "فتح تطبيق البريد",
-  "auth.checkEmail.resend": "إعادة الإرسال"
+  "auth.checkEmail.resend": "إعادة الإرسال",
+  "auth.checkEmail.didnotReciveEmail": "لم يتك ارسال الايميل",
+
+  "auth.resetPassword.title": "إنشاء كلمة مرور جديدة",
+  "auth.resetPassword.subtitle": "يجب أن تكون كلمة المرور الجديدة مختلفة عن كلمات المرور المستخدمة سابقًا.",
+  "auth.resetPassword.button": "إعادة تعيين كلمة المرور",
+
+  "auth.resetSuccess.titleLine1": "تم إعادة تعيين كلمة المرور",
+  "auth.resetSuccess.titleLine2": "بنجاح",
+  "auth.resetSuccess.description": "تم تحديث كلمة المرور الخاصة بك بنجاح. يمكنك الآن الوصول إلى مكتبة الدراسة باستخدام بيانات الاعتماد الجديدة.",
+  "auth.resetSuccess.backToLogin": "العودة إلى تسجيل الدخول",
+
+   "auth.passwordReq.title": "متطلبات كلمة المرور:",
+  "auth.passwordReq.length": "على الأقل 8 أحرف",
+  "auth.passwordReq.number": "تحتوي على رقم واحد على الأقل",
+  "auth.passwordReq.special": "تحتوي على رمز خاص واحد على الأقل",
+
+
+   "auth.resetSuccessPage.title": "كل شيء جاهز!",
+  "auth.resetSuccessPage.description": "تابع رحلة تعلمك بثقة",
+
+  "auth.resetPasswordPage.titleFirst": "قم بتأمين حسابك من أجل",
+  "auth.resetPasswordPage.titleColored": "فتح باب المعرفة.",
+  "auth.resetPasswordPage.description": "حافظ على رحلة تعلمك آمنة. قم بتعيين كلمة مرور قوية لمواصلة الوصول إلى الرؤى المدعومة بالذكاء الاصطناعي.",
+
+   "auth.forgetPasswordPage.titleFirst": "أعد تعيين كلمة المرور بأمان",
+  "auth.forgetPasswordPage.titleColored": "وتابع رحلتك في التعلم",
+  "auth.forgetPasswordPage.description": "لن يستغرق الأمر سوى بضع ثوانٍ للعودة إلى المسار الصحيح",
+
+  "auth.emailSentPage.titleFirst": "لقد أرسلنا رابط إعادة تعيين كلمة المرور",
+  "auth.emailSentPage.titleColored": "إلى بريدك الإلكتروني",
+  "auth.emailSentPage.description": "لن يستغرق الأمر سوى بضع ثوانٍ للعودة إلى المسار الصحيح",
+
+    "auth.forgetPassword.errors.invalidEmail": "يرجى إدخال بريد إلكتروني صحيح",
+     "auth.resetPassword.errors.passwordMismatch": "كلمتا المرور غير متطابقتين",
+
+      "auth.resetPassword.inputs.newPasswordLabel": "كلمة المرور الجديدة",
+  "auth.resetPassword.inputs.newPasswordPlaceholder": "أدخل كلمة المرور الجديدة",
+  "auth.resetPassword.inputs.confirmPasswordLabel": "تأكيد كلمة المرور الجديدة",
+  "auth.resetPassword.inputs.confirmPasswordPlaceholder": "أكد كلمة المرور"
 }

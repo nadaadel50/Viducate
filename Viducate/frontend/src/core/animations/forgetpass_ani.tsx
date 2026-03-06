@@ -1,5 +1,6 @@
 import Lottie from "lottie-react";
 import forgetpass_ani from "../../assets/animations/forgetpass_ani2.json"
+// import forgetpass_ani from "../../assets/animations/ForgotPassword.json"
 
 
 function ForgetPassAnimaion() {
@@ -9,5 +10,6 @@ function ForgetPassAnimaion() {
     </div>
   );
 }
+
 
 export default ForgetPassAnimaion;

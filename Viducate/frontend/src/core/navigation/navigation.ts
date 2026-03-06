@@ -1,28 +1,29 @@
 import type { NavigateFunction } from "react-router";
-import { routes } from "../../app/routers/routes";
+import { AppRoutesNames } from "../../app/routers/routes";
 
 // Navigation helpers
 export function goToHome(navigate: NavigateFunction) {
-  navigate(routes.home);
+  navigate(AppRoutesNames.home);
 }
 
 export function goToLogin(navigate: NavigateFunction) {
-  navigate(routes.login);
+  navigate(AppRoutesNames.login);
 }
 export function goToForgetPass(navigate: NavigateFunction) {
-  navigate(routes.forgetPass);
+  navigate(AppRoutesNames.forgetPass);
 }
 
 export function goToLSuccessSendEmail(navigate: NavigateFunction,email:string) {
-  navigate(routes.sucessSendEmail,{
+  navigate(AppRoutesNames.sucessSendEmail,{
     state:{email}
   });
 }
 export function goToRestPassword(navigate: NavigateFunction) {
-  navigate(routes.restPass);
+  navigate(AppRoutesNames.restPass);
 }
 
 export function goToSuccessResetPassword(navigate: NavigateFunction) {
-  navigate(routes.successRestPass);
+  navigate(AppRoutesNames.successRestPass,{replace:true});
 }
+
 

@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import { COLORS } from "../../../../../core/constants";
-import { useForgetPassword } from "../hooks/useForgetPassword";
+import { useT } from "../../../../../core/hooks/useTranslation";
 
 type ClickToResendProps={
   handleRestLink: (emailSended: string) => Promise<void>
@@ -10,6 +10,7 @@ type ClickToResendProps={
 
 export function ClickToResend(props:ClickToResendProps) {
   const [seconds, setSeconds] = useState(30);
+  const {translation}=useT()
 
 
   const formatTime = (totalSeconds: number) => {
@@ -35,7 +36,7 @@ export function ClickToResend(props:ClickToResendProps) {
 
   return (
     <div className="text-sm gap-1  flex font-medium text-[#636988] dark:text-gray-400 mt-4">
-      Didn't receive the email?
+     {translation("auth.checkEmail.didnotReciveEmail")}
       <button
         onClick={handleResend}
         disabled={seconds > 0}
@@ -46,7 +47,8 @@ export function ClickToResend(props:ClickToResendProps) {
         }}
         className=" font-bold cursor-pointer"
       >
-        Click to resend
+        {translation("auth.checkEmail.resend")}
+        
       </button>
 
       {seconds>0&&<p >{formatTime(seconds)}</p>}

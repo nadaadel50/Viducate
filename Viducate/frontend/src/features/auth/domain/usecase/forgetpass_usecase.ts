@@ -8,7 +8,7 @@ export class ForgetPassUseCase {
     this.authRepository = authRepository;
   }
 
-  async forgetPass(forgetPassReq: ForgetPassReq): Promise<ApiResult<void>> {
+  async forgetPass(forgetPassReq: ForgetPassReq): Promise<ApiResult<string>> {
     return await this.authRepository.forgetPassword(forgetPassReq);
   }
 }

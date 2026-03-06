@@ -1,23 +1,28 @@
 import { ForgetPassLeftSection } from "../componants/forget_pass_left_section";
 import AuthLayout from "../../layouts/AuthLayout";
-
 import { RightSection } from "../../componants/right_section";
 import ForgetPassAnimaion from "../../../../../core/animations/forgetpass_ani";
+import { useT } from "../../../../../core/hooks/useTranslation";
+
 export function ForgetPasswordPage() {
+  const { translation } = useT();
+
   return (
     <AuthLayout
       LeftContent={
-
-          <div className="pr-16">
-           
-
-            <ForgetPassLeftSection />
-          </div>
-     
+        <div className="pr-16">
+          <ForgetPassLeftSection />
+        </div>
       }
-      RightContent={<RightSection animation={true} animationComponant={<ForgetPassAnimaion/>} titleFirstPart={"Securely reset your password"} titleColoredPart={" and continue your learning journey"} description={"It only takes a few seconds to get back on track"}/>}
-      
+      RightContent={
+        <RightSection
+          animation={true}
+          animationComponant={<ForgetPassAnimaion />}
+          titleFirstPart={translation("auth.forgetPasswordPage.titleFirst")}
+          titleColoredPart={translation("auth.forgetPasswordPage.titleColored")}
+          description={translation("auth.forgetPasswordPage.description")}
+        />
+      }
     />
-   
   );
 }
