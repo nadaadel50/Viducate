@@ -1,3 +1,12 @@
 {
-   "title":"مرحبا"
+  "auth.forgetPassword.title": "نسيت كلمة المرور؟",
+  "auth.forgetPassword.subtitle": "أدخل بريدك الإلكتروني لإعادة تعيين كلمة المرور",
+  "auth.forgetPassword.emailLabel": "البريد الإلكتروني",
+  "auth.forgetPassword.emailPlaceholder": "student@university.edu",
+  "auth.forgetPassword.sendResetLink": "إرسال رابط إعادة التعيين",
+
+   "auth.checkEmail.title": "تحقق من بريدك الإلكتروني",
+  "auth.checkEmail.subtitle": "لقد أرسلنا رابط إعادة تعيين كلمة المرور إلى",
+  "auth.checkEmail.openEmailApp": "فتح تطبيق البريد",
+  "auth.checkEmail.resend": "إعادة الإرسال"
 }

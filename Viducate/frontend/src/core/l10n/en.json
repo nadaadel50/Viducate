@@ -1,3 +1,12 @@
 {
-    "title": "Hello"
+  "auth.forgetPassword.title": "Forget password?",
+  "auth.forgetPassword.subtitle": "Enter your email to reset your password",
+  "auth.forgetPassword.emailLabel": "Email address",
+  "auth.forgetPassword.emailPlaceholder": "student@university.edu",
+  "auth.forgetPassword.sendResetLink": "Send Reset Link",
+
+  "auth.checkEmail.title": "Check your email",
+  "auth.checkEmail.subtitle": "We've sent a password reset link to",
+  "auth.checkEmail.openEmailApp": "Open email app",
+  "auth.checkEmail.resend": "Click to resend"
 }

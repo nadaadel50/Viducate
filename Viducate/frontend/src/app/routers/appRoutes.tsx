@@ -15,13 +15,15 @@ export function AppRoutes() {
 
 
             /* here we will put all the public routes that don't need authentication to access them like landing page, signup */
-            <Route path="/" element={<SuccessfullResetPage />} />  /* for example */
+            <Route path="/" element={<ForgetPasswordPage />} />  /* for example */
 
              <Route  element={<ProtectedRoute/>}>  // will prmove "/protected" soon
               /* here we will put all the protected routes that need authentication to access them */
              </Route>
 
              <Route path="/success-send-email" element={<EmailSendedPage />} />
+             <Route path="/reset-password" element={<ResetPasswordPage />} />
+             
 
 
                 

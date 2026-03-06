@@ -1,8 +1,16 @@
 import { useEffect, useState } from "react";
 import { COLORS } from "../../../../../core/constants";
+import { useForgetPassword } from "../hooks/useForgetPassword";
 
-export function ClickToResend() {
+type ClickToResendProps={
+  handleRestLink: (emailSended: string) => Promise<void>
+  emailSended:string
+
+}
+
+export function ClickToResend(props:ClickToResendProps) {
   const [seconds, setSeconds] = useState(30);
+
 
   const formatTime = (totalSeconds: number) => {
     const minutes = Math.floor(totalSeconds / 60);
@@ -22,7 +30,7 @@ export function ClickToResend() {
 
   const handleResend = () => {
     setSeconds(30);
-    // call api here also
+    props.handleRestLink(props.emailSended)
   };
 
   return (

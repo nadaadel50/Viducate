@@ -3,7 +3,17 @@ import { COLORS } from "../../../../../core/constants";
 import { AuthMainText } from "../../componants/auth_text_section";
 import { CustomButton } from "../../../../../core/componants/custum_btn";
 import { ClickToResend } from "./click_to_resend";
+import { FormattedMessage, useIntl } from "react-intl";
+import { useLocation } from "react-router-dom";
+import { useForgetPassword } from "../hooks/useForgetPassword";
+
 export function SendedEmailLeftSection() {
+  const intl = useIntl();
+  const location = useLocation();
+  const email = location.state?.email;
+  const {fetchRequest}=useForgetPassword();
+
+  
   return (
     <div className="w-full flex flex-col justify-center  items-center pr-16  ">
       <div
@@ -19,18 +29,22 @@ export function SendedEmailLeftSection() {
 
       <div className="mt-5 mb-8 flex flex-col items-center">
         <AuthMainText
-          bigTitle={"Check your email"}
-          smallTitle={"We've sent a password reset link to"}
+          bigTitle={intl.formatMessage({ id: "auth.checkEmail.title" })}
+          smallTitle={intl.formatMessage({ id: "auth.checkEmail.subtitle" })}
         />
-        <p>student@university.edu</p> {/*will change soon */}
+        <p>{email}</p>
       </div>
 
-      <div onClick={()=>{
-        window.open("https://mail.google.com", "_blank")
-
-      }} className="w-full relative px-10">
-        <CustomButton>Open email app</CustomButton>
-        <div className="absolute right-42 top-1/2 -translate-y-1/2">
+      <div
+        onClick={() => {
+          window.open("https://mail.google.com", "_blank");
+        }}
+        className="w-full relative px-10"
+      >
+        <CustomButton>
+          {intl.formatMessage({ id: "auth.checkEmail.openEmailApp" })}
+        </CustomButton>
+        <div className="absolute right-55 top-1/2 -translate-y-1/2">
           <ExternalLink
             strokeWidth={2}
             style={{ color: COLORS.icon.secondry }}
@@ -39,7 +53,7 @@ export function SendedEmailLeftSection() {
         </div>
       </div>
 
-     <ClickToResend/>
+      <ClickToResend handleRestLink={fetchRequest} emailSended={email} />
     </div>
   );
 }

@@ -1,50 +1,66 @@
-import { useState } from "react";
-import { z } from "zod";
+import { FormattedMessage, useIntl } from "react-intl";
 import { CustomInput } from "../../../../../core/componants/custom_input";
 import { CustomButton } from "../../../../../core/componants/custum_btn";
-import { goToLSuccessSendEmail } from "../../../../../core/navigation/navigation";
-import { useNavigate } from "react-router";
-
-const schema = z.object({
-  email: z.email(),
-});
+import { AuthMainText } from "../../componants/auth_text_section";
+import { useForgetPassword } from "../hooks/useForgetPassword";
+import CustumBtnLoader from "../../../../../core/componants/custum_btn_loader";
 
 export function ForgetPassLeftSection() {
-  const [email, setEmail] = useState("");
-  const [error, setError] = useState("");
-  const navigate = useNavigate();
+  const intl = useIntl();
 
-  const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
-    const value = e.target.value.trim();
-    setEmail(value);
+  const {
+    email,
+    loading,
+    validationError,
+    apiError,
+    handleChange,
+    handleSubmit,
+    clearError,
+  } = useForgetPassword();
 
-    const result = schema.safeParse({ email: value });
-
-    if (!result.success) {
-      setError(result.error.issues[0].message);
-    } else {
-      setError("");
-    }
-  };
-
-  const handleSubmit = () => {
-    const result = schema.safeParse({ email });
-
-    if (!result.success) {
-      setError("Please write a valid email");
-      return;
-    }
-    // here i will call the use case of reset link
-    goToLSuccessSendEmail(navigate)
-  };
   return (
-    <div className="w-full">
+    <div className="w-full relative pt-18">
+      
+      {apiError && (
+        <div className="absolute top-0 left-0 right-0 flex items-center justify-between rounded-xl border border-red-100 bg-red-50 p-2">
+          
+          <div className="flex items-center gap-3">
+            <span className="material-symbols-outlined text-red-600">
+              error
+            </span>
+
+            <p className="text-sm font-medium text-red-800">{apiError}</p>
+          </div>
+
+          <button
+            onClick={clearError}
+            className="text-red-600 hover:text-red-800 mr-2"
+          >
+            ✕
+          </button>
+        </div>
+      )}
+
+     
+      <AuthMainText
+        bigTitle={intl.formatMessage({
+          id: "auth.forgetPassword.title",
+        })}
+        smallTitle={intl.formatMessage({
+          id: "auth.forgetPassword.subtitle",
+        })}
+      />
+{/* key enter */}
       <CustomInput
-        label="Email address"
+        label={intl.formatMessage({
+          id: "auth.forgetPassword.emailLabel",
+        })}
         type="email"
         value={email}
-        placeholder="student@university.edu"
-        error={error}
+        placeholder={intl.formatMessage({
+          id: "auth.forgetPassword.emailPlaceholder",
+        })}
+        error={validationError}
         success={true}
         onChange={handleChange}
       />
@@ -52,10 +68,13 @@ export function ForgetPassLeftSection() {
       <CustomButton
         type="submit"
         onClick={handleSubmit}
-        
-        disabled={!!error || email.length === 0}
+        disabled={!!validationError || email.length === 0}
       >
-        Send Reset Link
+        {loading ? (
+          <CustumBtnLoader />
+        ) : (
+          <FormattedMessage id="auth.forgetPassword.sendResetLink" />
+        )}
       </CustomButton>
     </div>
   );

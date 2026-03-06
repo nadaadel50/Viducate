@@ -13,8 +13,10 @@ export function goToForgetPass(navigate: NavigateFunction) {
   navigate(routes.forgetPass);
 }
 
-export function goToLSuccessSendEmail(navigate: NavigateFunction) {
-  navigate(routes.sucessSendEmail);
+export function goToLSuccessSendEmail(navigate: NavigateFunction,email:string) {
+  navigate(routes.sucessSendEmail,{
+    state:{email}
+  });
 }
 export function goToRestPassword(navigate: NavigateFunction) {
   navigate(routes.restPass);
