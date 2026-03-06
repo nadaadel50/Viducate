@@ -29,6 +29,7 @@ app.add_middleware(
 app.include_router(auth_router, prefix="/api/v1")
 
 
+
 @app.get("/", tags=["Health"])
 def root():
     return {"status": "Viducate API is running"}
