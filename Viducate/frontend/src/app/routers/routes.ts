@@ -1,5 +1,5 @@
 // this page will containt only the names of routs like this 
-export const routes = {
+export const AppRoutesNames = {
   login: "/login",
   home: "/home",
 }
