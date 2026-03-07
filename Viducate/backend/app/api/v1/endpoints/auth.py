@@ -1,7 +1,7 @@
 from fastapi import APIRouter, Depends, HTTPException, status, Header, Request
 from fastapi.responses import RedirectResponse
 from sqlalchemy.orm import Session
-from app.schemas.user import ForgetPasswordRequest, ForgetPasswordResponse, ResetPasswordRequest, ResetPasswordResponse, UserRegisterRequest, RegisterResponse, UserResponse, TokenResponse, UserLoginRequest
+from app.schemas.user import ForgetPasswordRequest, ForgetPasswordResponse, ResetPasswordRequest, ResetPasswordResponse, UserRegisterRequest, RegisterResponse, UserResponse, TokenResponse, UserLoginRequest, UpdateLanguageRequest
 from app.services.auth_service import AuthService
 from app.dependencies import get_db
 import logging
@@ -193,3 +193,20 @@ async def google_callback(request: Request, db: Session = Depends(get_db)):
         logger.error(f"Google OAuth error: {str(e)}")
         error_redirect = f"{settings.FRONTEND_URL}/auth/error?message=google_oauth_failed"
         return RedirectResponse(url=error_redirect)
+    
+
+@router.put("/profile/language")
+def update_language(
+    request: UpdateLanguageRequest,
+    credentials: HTTPAuthorizationCredentials = Depends(security),
+    db: Session = Depends(get_db)
+):
+    token = credentials.credentials
+    service = AuthService(db)
+    user = service.get_current_user(token)
+    updated_user = service.update_language(user.id, request.language)
+
+    return {
+        "message": "Language updated successfully",
+        "language": updated_user.language_preference
+    }

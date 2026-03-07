@@ -41,3 +41,9 @@ class UserRepository:
             )
             .first()
         )
+    
+    def update_language(self, user, language: str):
+        user.language_preference = language
+        self.db.commit()
+        self.db.refresh(user)
+        return user

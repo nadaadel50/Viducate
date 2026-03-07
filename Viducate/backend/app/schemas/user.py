@@ -2,6 +2,7 @@ from pydantic import BaseModel, EmailStr, field_validator
 from typing import Optional
 from datetime import datetime
 import re
+from typing import Literal
 
 
 # User Request
@@ -108,3 +109,7 @@ class ResetPasswordRequest(BaseModel):
 
 class ResetPasswordResponse(BaseModel):
     message: str
+
+
+class UpdateLanguageRequest(BaseModel):
+    language: Literal["en", "ar"]
