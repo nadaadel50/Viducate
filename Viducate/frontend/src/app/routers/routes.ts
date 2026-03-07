@@ -1,5 +1,5 @@
+// this page will containt only the names of routs like this 
 export const AppRoutesNames = {
-  home: "/",
   login: "/login",
   forgetPass: "/forget-password",
   sucessSendEmail: "/sended-email",
