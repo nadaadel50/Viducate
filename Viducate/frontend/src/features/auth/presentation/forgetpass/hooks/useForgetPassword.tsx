@@ -46,7 +46,8 @@ export const useForgetPassword = () => {
     }
   };
 
-  const handleSubmit = async () => {
+  const handleSubmit = async (e: React.SubmitEvent) => {
+    e.preventDefault();
 
     const result = schema.safeParse({ email });
 

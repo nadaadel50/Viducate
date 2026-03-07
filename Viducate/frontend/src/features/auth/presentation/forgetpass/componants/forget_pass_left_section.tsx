@@ -27,8 +27,8 @@ export function ForgetPassLeftSection() {
         bigTitle={translation("auth.forgetPassword.title")}
         smallTitle={translation("auth.forgetPassword.subtitle")}
       />
-      {/* key enter */}
-      
+
+      <form onSubmit={handleSubmit}>
         <CustomInput
           label={translation("auth.forgetPassword.emailLabel")}
           type="email"
@@ -42,7 +42,6 @@ export function ForgetPassLeftSection() {
         <CustomButton
           type="submit"
           disabled={!!validationError || email.length === 0}
-          onClick={handleSubmit}
         >
           {loading ? (
             <CustumBtnLoader />
@@ -50,7 +49,7 @@ export function ForgetPassLeftSection() {
             translation("auth.forgetPassword.sendResetLink")
           )}
         </CustomButton>
-      
+      </form>
     </div>
   );
 }
