@@ -7,6 +7,9 @@ from app.dependencies import get_db
 import logging
 from app.services.oauth import oauth
 from app.config import settings 
+from fastapi.security import HTTPBearer, HTTPAuthorizationCredentials
+security = HTTPBearer()
+router = APIRouter()
 def logout(
     credentials: HTTPAuthorizationCredentials = Depends(security),
     db: Session = Depends(get_db)
