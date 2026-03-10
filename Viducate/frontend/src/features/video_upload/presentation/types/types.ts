@@ -1,0 +1,1 @@
+export type SelectType = "upload" | "link";

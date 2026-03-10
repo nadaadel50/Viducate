@@ -1,0 +1,48 @@
+import { Sparkles } from "lucide-react";
+
+type UploadBtnProps = {
+  videoLink: string;
+  videoTitle: string;
+  linkError: boolean;
+  titleError: boolean;
+  videoFile:File | null
+};
+
+export function UploadBtn({
+  videoLink,
+  videoTitle,
+  linkError,
+  titleError,
+  videoFile
+}: UploadBtnProps) {
+
+  const isDisabled = linkError || titleError||videoLink===""||videoTitle==="";
+
+  return (
+    <div className="w-full flex justify-end mt-10">
+      <button
+        disabled={isDisabled}
+        onClick={() => {
+
+          // call api to take the video url or the video file
+        }}
+        className={`flex text-sm font-bold w-45 items-center justify-center gap-2 py-2.5 transition-all text-white rounded-xl
+        ${
+          isDisabled
+            ? "bg-gray-400 cursor-not-allowed"
+            : "bg-gradient-to-br from-[#359EFF] to-[#5A0BB1] hover:from-[#2f8be0] hover:to-[#4c0997] cursor-pointer"
+        }`}
+      >
+        <Sparkles width={18} />
+        {"Analyze Video"}
+      </button>
+
+
+    <div>
+        
+         
+    </div>
+      
+    </div>
+  );
+}

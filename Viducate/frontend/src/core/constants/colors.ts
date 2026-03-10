@@ -28,6 +28,7 @@ export const COLORS = {
     coloredText:"#4f46e5",
     muted: "#9ca3af",
     white: "#ffffff",
+    gray:"#6B7280"
   },
   background: {
     light: "#F5F5F5",

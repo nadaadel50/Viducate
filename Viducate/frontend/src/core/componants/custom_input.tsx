@@ -53,7 +53,7 @@ export function CustomInput({
           style={{ borderColor }}
           onBlur={() => setIsFocused(false)}
           onFocus={() => setIsFocused(true)}
-          className="w-full h-12 px-4 pr-12 rounded-xl border-2 transition-all focus:outline-none"
+          className="w-full h-12 px-4 pr-12 rounded-xl border-2 transition-all focus:outline-none "
         />
 
         {/* Right Icon */}
