@@ -183,11 +183,8 @@ async def google_callback(request: Request, db: Session = Depends(get_db)):
             is_verified=email_verified
         )
 
-        return {
-            "access_token": access_token,
-            "token_type": "bearer",
-            "email": email
-        }
+        frontend_redirect = f"{settings.FRONTEND_URL}/auth/callback#access_token={access_token}&token_type=bearer"
+        return RedirectResponse(url=frontend_redirect)
 
     except Exception as e:
         logger.error(f"Google OAuth error: {str(e)}")
