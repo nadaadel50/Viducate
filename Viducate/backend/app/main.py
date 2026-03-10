@@ -1,5 +1,6 @@
 from fastapi import FastAPI
 from app.api.v1.endpoints.auth import router as auth_router
+from app.api.v1.endpoints.video import router as video_router
 from starlette.middleware.sessions import SessionMiddleware
 import secrets
 from app.config import settings
@@ -27,6 +28,7 @@ app.add_middleware(
 
 # Register routers
 app.include_router(auth_router, prefix="/api/v1")
+app.include_router(video_router, prefix="/api/v1")
 
 
 @app.get("/", tags=["Health"])
