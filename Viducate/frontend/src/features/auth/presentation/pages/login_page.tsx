@@ -6,11 +6,11 @@ import { RightSection } from "../componants/right_section";
 
 const LoginPage = () => {
   const intl = useIntl();
-
   return (
     <AuthLayout
       RightContent={
         <RightSection
+          animation={false}
           titleFirstPart={intl.formatMessage({ id: "login.hero.title1" })}
           titleColoredPart={intl.formatMessage({ id: "login.hero.title2" })}
           description={intl.formatMessage({ id: "login.hero.description" })}

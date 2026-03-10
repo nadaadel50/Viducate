@@ -3,20 +3,16 @@ from app.api.v1.endpoints.auth import router as auth_router
 from starlette.middleware.sessions import SessionMiddleware
 import secrets
 from app.config import settings
-
 from fastapi.middleware.cors import CORSMiddleware
 app = FastAPI(
     title="Viducate API",
     description="Backend API for Viducate learning platform",
     version="1.0.0"
 )
-
 app.add_middleware(
     SessionMiddleware,
-    secret_key=settings.SECRET_KEY or secrets.token_urlsafe(32)
+    secret_key=settings.SECRET_KEY or secrets.token_urlsafe(32),
 )
-
-
 
 app.add_middleware(
    CORSMiddleware,
@@ -25,6 +21,10 @@ app.add_middleware(
   allow_methods=["*"],
   allow_headers=["*"],
 )
+
+
+
+
 
 # Register routers
 app.include_router(auth_router, prefix="/api/v1")

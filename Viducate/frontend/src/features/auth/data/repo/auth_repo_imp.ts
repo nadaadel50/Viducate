@@ -1,23 +1,27 @@
 
 import type { AuthRepo } from "../../domain/repo/auth_repo";
 import type { AuthDataSource } from "../data_source/auth_data_source";
-import type { SignupRequestDto, SignupResponseDto } from "../../api/models/signup/signup_request_dto";
-import type{ LoginRequestDto, LoginResponseDto } from "../../api/models/login/login_request_dto";
+import { SignupRequest } from "../../domain/entity/signup_request";
+import { LoginRequest } from "../../domain/entity/login_request";
+import { toSignupRequestDto } from "../../api/models/signup/signup_request_dto";
+import type { SignupResponseDto } from "../../api/models/signup/signup_response_dto";
+import { toLoginRequestDto } from "../../api/models/login/login_request_dto";
+import type { LoginResponseDto } from "../../api/models/login/login_response_dto";
+
 
 export class AuthRepoImp implements AuthRepo {
   private dataSource: AuthDataSource;
-
-  // هنا بنعمل Dependency Injection للـ DataSource
   constructor(dataSource: AuthDataSource) {
     this.dataSource = dataSource;
   }
 
-  async register(data: SignupRequestDto): Promise<SignupResponseDto> {
-    // الـ Repo هنا ممكن يعمل Logic إضافي زي تحويل البيانات (Mapping) لو محتاجه
-    return await this.dataSource.register(data);
+  async register(entity: SignupRequest): Promise<SignupResponseDto> {
+    const dto = toSignupRequestDto(entity);
+    return await this.dataSource.register(dto);
   }
 
-  async login(data: LoginRequestDto): Promise<LoginResponseDto> {
-    return await this.dataSource.login(data);
+  async login(entity: LoginRequest): Promise<LoginResponseDto> {
+    const dto = toLoginRequestDto(entity);
+    return await this.dataSource.login(dto);
   }
 }

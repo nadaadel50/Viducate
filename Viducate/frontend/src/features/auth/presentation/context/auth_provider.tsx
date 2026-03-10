@@ -5,16 +5,14 @@ import { AuthDataSourceImp } from '../../api/data_source/auth_data_source_imp';
 import { AuthRepoImp } from '../../data/repo/auth_repo_imp';
 import { SignupUseCase } from '../../domain/usecase/signup';
 import { LoginUseCase } from '../../domain/usecase/login';
+import { SignupRequest } from "../../domain/entity/signup_request";
+import { LoginRequest } from "../../domain/entity/login_request";
 import type { UserDto } from '../../api/models/user_dto';
-import type { LoginRequestDto } from '../../api/models/login/login_request_dto';
-import type { SignupRequestDto } from '../../api/models/signup/signup_request_dto';
 export const AuthProvider = ({ children }: { children: React.ReactNode }) => {
-  // حل مشكلة State Action null: نحدد نوع الـ State إنه ممكن يكون UserDto أو null
   const [user, setUser] = useState<UserDto | null>(null); 
   const [loading, setLoading] = useState(true);
 
   const { loginUseCase, signupUseCase } = useMemo(() => {
-    // حل مشكلة الـ Argument: بعتنا الأرجومنت لو الـ constructor محتاجه، أو سيبيه لو عدلتي الـ Imp
     const dataSource = new AuthDataSourceImp(); 
     const repo = new AuthRepoImp(dataSource);
     return {
@@ -22,32 +20,39 @@ export const AuthProvider = ({ children }: { children: React.ReactNode }) => {
       signupUseCase: new SignupUseCase(repo),
     };
   }, []);
-
   useEffect(() => {
-    const initAuth = async () => {
-      const token = localStorage.getItem('token');
-      if (token) {
-        try {
-          const userData = await authService.getCurrentUser();
-          setUser(userData);
-        } catch { // شيلنا الـ (e) عشان ESLint ميزعلش إنها unused
-          localStorage.removeItem('token');
-        }
+  const initAuth = async () => {
+    const token = localStorage.getItem('token') || sessionStorage.getItem('token');
+    if (token) {
+      try {
+        const userData = await authService.getCurrentUser();
+        setUser(userData);
+      } catch {
+        localStorage.removeItem('token');
+        sessionStorage.removeItem('token');
       }
-      setLoading(false);
-    };
-    initAuth();
-  }, []);
-
-  // حل الـ Unnecessary try/catch: بننادي الـ UseCase علطول
-  // لو حصل error الـ UI هو اللي هيمسكه
-  const login = async (credentials: LoginRequestDto) => {
-    const data = await loginUseCase.execute(credentials);
-    localStorage.setItem('token', data.access_token);
-    setUser(data.user);
+    }
+    setLoading(false);
   };
+  initAuth();
+}, []);
 
-  const signup = async (userData: SignupRequestDto) => {
+  const login = async (credentials: LoginRequest, rememberMe: boolean) => {
+  const data = await loginUseCase.execute(credentials);
+  
+  
+  if (rememberMe) {
+    localStorage.setItem('token', data.access_token);
+    sessionStorage.removeItem('token'); 
+  } else {
+    sessionStorage.setItem('token', data.access_token);
+    localStorage.removeItem('token'); 
+  }
+  
+  setUser(data.user);
+};
+  const signup = async (userData: SignupRequest) => {
+    
     const data = await signupUseCase.execute(userData);
     localStorage.setItem('token', data.token.access_token);
     setUser(data.user);

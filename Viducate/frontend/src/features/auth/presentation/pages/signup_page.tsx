@@ -12,6 +12,7 @@ const SignupPage: React.FC = () => {
     <AuthLayout
       RightContent={
         <RightSection
+          animation={false}
           titleFirstPart={intl.formatMessage({ id: "signup.hero.title1" })}
           titleColoredPart={intl.formatMessage({ id: "signup.hero.title2" })}
           description={intl.formatMessage({ id: "signup.hero.description" })}

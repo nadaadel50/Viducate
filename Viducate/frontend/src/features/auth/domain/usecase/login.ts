@@ -1,6 +1,6 @@
 import type { AuthRepo } from "../repo/auth_repo";
-import type { LoginRequestDto } from '../../api/models/login/login_request_dto';
-
+import { LoginRequest } from "../entity/login_request";
+import type { LoginResponseDto } from "../../api/models/login/login_response_dto";
 export class LoginUseCase {
   private repository: AuthRepo;
 
@@ -8,8 +8,7 @@ export class LoginUseCase {
     this.repository = repository;
   }
 
-  async execute(params: LoginRequestDto) {
-    // ممكن هنا تضيفي أي Logic قبل الإرسال
+async execute(params: LoginRequest): Promise<LoginResponseDto> {
     return await this.repository.login(params);
   }
 }
