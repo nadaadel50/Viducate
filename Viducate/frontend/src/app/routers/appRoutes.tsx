@@ -12,7 +12,7 @@ export function AppRoutes() {
         <Routes>
           <Route path="/login" element={<LoginPage />} />
         <Route path="/signup" element={<SignupPage />} />
-        <Route path="/auth-success" element={<AuthSuccess />} />
+        <Route path="/auth/callback" element={<AuthSuccess />} />
 
 
             /* here we will put all the public routes that don't need authentication to access them like landing page, signup */

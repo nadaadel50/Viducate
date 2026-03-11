@@ -1,28 +1,37 @@
 import { useEffect } from "react";
-import { useNavigate, useSearchParams } from "react-router-dom";
+import { useNavigate, useLocation } from "react-router-dom";
 
 const AuthSuccess = () => {
-  const [searchParams] = useSearchParams();
   const navigate = useNavigate();
+  const location = useLocation();
 
   useEffect(() => {
-    const token = searchParams.get("token");
 
-    if (token) {
-      localStorage.setItem("token", token);
+    const hash = location.hash;
+
+    if (hash) {
       
-      console.log("تم استلام التوكن بنجاح!");
-      navigate("/dashboard");
-    } else {
-      console.error("مفيش توكن في الرابط!");
-      navigate("/login");
+      const params = new URLSearchParams(hash.substring(1));
+      const token = params.get("access_token");
+
+      if (token) {
+        
+        localStorage.setItem("token", token);
+        console.log("Token saved successfully!");
+
+        navigate("/dashboard");
+        return;
+      }
     }
-  }, [searchParams, navigate]);
+
+
+    console.error("No token found in URL hash");
+    
+  }, [location, navigate]);
 
   return (
     <div style={{ textAlign: "center", marginTop: "50px" }}>
-      <h2>جاري تسجيل الدخول...</h2>
-      <p>من فضلك انتظر ثانية واحدة</p>
+      <h2>جاري فك تشفير البيانات وتسجيل الدخول...</h2>
     </div>
   );
 };
