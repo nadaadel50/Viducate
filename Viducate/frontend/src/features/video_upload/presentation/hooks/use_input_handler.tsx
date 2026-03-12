@@ -35,6 +35,7 @@ export function useInputHandlers() {
     if (linkTitle.trim() === "" && !isFirstLinkTyping) {
       setLinkTitleError(true);
     } else {
+      console.log("came here")
       setLinkTitleError(false);
     }
   }, [linkTitle]);

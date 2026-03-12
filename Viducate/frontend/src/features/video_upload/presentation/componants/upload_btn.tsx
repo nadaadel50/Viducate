@@ -1,38 +1,43 @@
-import { Sparkles } from "lucide-react";
-import type { SelectType } from "../types/types";
+import { ArrowUpFromLine } from "lucide-react";
 
 type UploadBtnProps = {
   videoLink: string;
-  videoTitle: string;
-  linkError: boolean;
-  titleError: boolean;
-  videoFile:File | null;
-  selected:string
+  videoFile: File | null;
+  selected: string;
+  uploadedVideoTitle:string;
+  linkVideoTitle:string
+  videoLinkError:boolean,
+  onUploadClick:()=>void
+
+  
 };
 
 export function UploadBtn({
   videoLink,
-  videoTitle,
-  linkError,
-  titleError,
-  videoFile,selected
+  videoFile,
+  selected,
+  uploadedVideoTitle,
+  linkVideoTitle,
+  videoLinkError,
+  onUploadClick
 }: UploadBtnProps) {
-
-  const isDisabled =
-
-  !(
-    (selected === "link" && videoLink !== "") ||
-    (selected === "upload" && videoFile)
+  const isDisabled = !(
+    // will be disapled when (uploaded selected &&( no videoFile , no Tile)) or (link selected &&(no link && no title))
+    (
+      (selected === "link" && !videoLinkError &&videoLink !== ""&&linkVideoTitle!="") ||
+      (selected === "upload" && videoFile&&uploadedVideoTitle!="")
+    )
   );
 
   return (
     <div className="w-full flex justify-end mt-10">
       <button
         disabled={isDisabled}
-        onClick={() => {
-
+        onClick={// if selected ==link then make somthing  else if selected == upload then make somthing else
           // call api to take the video url or the video file
-        }}
+
+          onUploadClick
+        }
         className={`flex text-sm font-bold w-45 items-center justify-center gap-2 py-2.5 transition-all text-white rounded-xl
         ${
           isDisabled
@@ -40,16 +45,11 @@ export function UploadBtn({
             : "bg-gradient-to-br from-[#359EFF] to-[#5A0BB1] hover:from-[#2f8be0] hover:to-[#4c0997] cursor-pointer"
         }`}
       >
-        <Sparkles width={18} />
-        {"Analyze Video"}
+        <ArrowUpFromLine   width={18} />
+        {selected==="upload"? "Upload Video" : "Upload Link"}
       </button>
 
-
-    <div>
-        
-         
-    </div>
-      
+      <div></div>
     </div>
   );
 }
