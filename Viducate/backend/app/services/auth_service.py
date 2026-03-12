@@ -129,7 +129,7 @@ class AuthService:
         if not existing_user:
             raise HTTPException(
                 status_code=status.HTTP_409_CONFLICT,
-                detail="An account with this email already exists")
+                detail="An account with this email not exists")
         
         reset_token = secrets.token_urlsafe(32)
         expires_at = datetime.utcnow() + timedelta(hours=1)
@@ -172,3 +172,65 @@ class AuthService:
         return {"message": "Password reset successful! You can now login."}
 
 
+    def oauth_login(
+    self,
+    email: str,
+    full_name: str,
+    oauth_provider: str,
+    oauth_id: str,
+    picture_url: str,
+    is_verified: bool):
+        user = self.user_repo.get_by_oauth(oauth_provider, oauth_id)
+
+        if user:
+            token = create_access_token(
+                data={"sub": str(user.id), "email": user.email},
+                expires_delta=timedelta(minutes=settings.ACCESS_TOKEN_EXPIRE_MINUTES)
+            )
+
+            return token, user
+
+        user = self.user_repo.get_by_email(email)
+        if user:
+            user.oauth_provider = oauth_provider
+            user.oauth_id = oauth_id
+            user.profile_picture = picture_url
+            user.is_email_verified = is_verified
+
+            self.user_repo.update(user)
+
+        else:
+            first_name = full_name.split(" ")[0]
+            last_name = full_name.split(" ")[-1]
+
+            user_data = {
+                "first_name": first_name,
+                "last_name": last_name,
+                "email": email,
+                "password": None, 
+                "study_field": None,
+                "language_preference": "en",
+                "account_status": "active",
+                "oauth_provider": oauth_provider,
+                "oauth_id": oauth_id,
+                "profile_picture": picture_url,
+                "is_email_verified": is_verified
+            }
+
+            user = self.user_repo.create(user_data)
+
+        token = create_access_token(
+            data={"sub": str(user.id), "email": user.email},
+            expires_delta=timedelta(minutes=settings.ACCESS_TOKEN_EXPIRE_MINUTES)
+        )
+
+        return token, user
+    
+    def update_language(self, user_id: int, language: str):
+        user = self.user_repo.get_by_id(user_id)
+        if not user:
+            raise HTTPException(
+                status_code=404,
+                detail="User not found"
+            )
+        return self.user_repo.update_language(user, language)

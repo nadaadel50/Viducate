@@ -2,7 +2,7 @@ from .base import Base
 from .user import User
 from .settings import Settings
 # from .user_dashboard import UserDashboard
-# from .video import Video
+from .video import Video
 # from .video_summary import VideoSummary
 # from .slide import Slide
 # from .topic_segment import TopicSegment
@@ -18,7 +18,7 @@ from .settings import Settings
 # from .mindmap import Mindmap
 
 __all__ = [
-    "Base", "User", "Settings"
+    "Base", "User", "Settings", "Video"
 ]
 
 # "UserAnalytics","Video", "VideoSummary", "Slide",
