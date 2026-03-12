@@ -8,16 +8,22 @@ import { UploadBtn } from "../componants/upload_btn";
 import { useInputHandlers } from "../hooks/use_input_handler";
 import { useLinkHandlers } from "../hooks/use_link_handler";
 import { useUploadHandlers } from "../hooks/use_upload_handlers";
+import { UploadLoadingSection } from "../componants/upload_loading_section";
+import { useState } from "react";
+import { VideoDragedSection } from "../componants/video_draged_section";
 
 export function UploadVideoPage() {
   const { handleSelected, selected } = useSelectBtnHandlers();
 
   const {
-    title,
-    textArea,
-    error: titleError,
-    handleTextArea,
-    handleTitle,
+    uploadTitle,
+    setUploadTitle,
+    linkTitle,
+
+    uploadTitleError,
+
+    handleUploadTitle,
+    handleLinkTitle,
   } = useInputHandlers();
 
   const { url, handleUrlChange, linkError, handlePaste } = useLinkHandlers();
@@ -28,8 +34,12 @@ export function UploadVideoPage() {
     handleFileChange,
     handleDrop,
     fileInputRef,
-    videoFile
-  } = useUploadHandlers();
+    videoFile,
+    takeVideo,
+    setTakeVideo,
+    handleCancelVideo,
+    handleCancelTakenVideo,
+  } = useUploadHandlers(setUploadTitle);
 
   return (
     <div className="  flex justify-center items-center bg-[#f3f4f6] min-h-screen p-12 font-display">
@@ -44,12 +54,18 @@ export function UploadVideoPage() {
         <div className=" flex justify-center items-center mt-10 bg-white rounded-xl  ">
           <div className="m-10 w-full flex flex-col items-center">
             <SelectBox handleSelected={handleSelected} selected={selected} />
-            {selected === "link" ? (
+
+            {selected == "link" ? (
               <LinkSection
                 url={url}
                 error={linkError}
                 handleUrlChange={handleUrlChange}
                 handlePaste={handlePaste}
+              />
+            ) : takeVideo ? (
+              <VideoDragedSection
+                videoFile={videoFile}
+                handleCancel={handleCancelTakenVideo}
               />
             ) : (
               <UploadSection
@@ -60,14 +76,28 @@ export function UploadVideoPage() {
                 handleDrop={handleDrop}
               />
             )}
-            <InputSection
-              title={title}
-              error={titleError}
-              handleTitle={handleTitle}
-              handleTextArea={handleTextArea}
-              textArea={textArea}
-            />
-            <UploadBtn videoLink={url} videoTitle={title} linkError={linkError} titleError={titleError} videoFile={videoFile} />
+
+            {selected === "link" ? (
+              <InputSection
+                title={linkTitle}
+                error={linkError}
+                handleTitle={handleLinkTitle}
+              />
+            ) : (
+              <InputSection
+                title={uploadTitle}
+                error={uploadTitleError}
+                handleTitle={handleUploadTitle}
+              />
+            )}
+            {/* <UploadBtn
+              videoLink={url}
+              videoTitle={title}
+              linkError={linkError}
+              titleError={titleError}
+              videoFile={videoFile}
+              selected={selected}
+            /> */}
           </div>
         </div>
       </div>

@@ -1,51 +1,54 @@
 import { useEffect, useState } from "react";
-import { STORAGE_KEYS } from "../../../../core/constants";
-
-
 
 export function useInputHandlers() {
-  const [title, setTitle] = useState(
-    () => sessionStorage.getItem(STORAGE_KEYS.title) || ""
-  );
 
-  const [textArea, setTextArea] = useState(
-    () => sessionStorage.getItem(STORAGE_KEYS.description) || ""
-  );
+  const [uploadTitle, setUploadTitle] = useState("");
+  const [linkTitle, setLinkTitle] = useState("");
 
-  const [error, setError] = useState(false);
+  const [isFirstUploadTyping, setIsFirstUploadTyping] = useState(true);
+  const [isFirstLinkTyping, setIsFirstLinkTyping] = useState(true);
 
-  const handleTitle = (e: React.ChangeEvent<HTMLInputElement>) => {
+  const [uploadTitleError, setUploadTitleError] = useState(false);
+  const [linkTitleError, setLinkTitleError] = useState(false);
+
+  const handleUploadTitle = (e: React.ChangeEvent<HTMLInputElement>) => {
     const value = e.target.value;
-    if(value.trim()==""){
-      setError(true)
-    }
-    else{
-      setError(false)
-    }
-    setTitle(value);
+    setUploadTitle(value);
+    setIsFirstUploadTyping(false);
   };
 
-  const handleTextArea = (e: React.ChangeEvent<HTMLTextAreaElement>) => {
+  const handleLinkTitle = (e: React.ChangeEvent<HTMLInputElement>) => {
     const value = e.target.value;
-    setTextArea(value);
+    setLinkTitle(value);
+    setIsFirstLinkTyping(false);
   };
 
- 
   useEffect(() => {
-    sessionStorage.setItem(STORAGE_KEYS.title, title);
-  }, [title]);
+    if (uploadTitle.trim() === "" && !isFirstUploadTyping) {
+      setUploadTitleError(true);
+    } else {
+      setUploadTitleError(false);
+    }
+  }, [uploadTitle]);
 
- 
   useEffect(() => {
-    sessionStorage.setItem(STORAGE_KEYS.description, textArea);
-  }, [textArea]);
+    if (linkTitle.trim() === "" && !isFirstLinkTyping) {
+      setLinkTitleError(true);
+    } else {
+      setLinkTitleError(false);
+    }
+  }, [linkTitle]);
 
   return {
-    title,
-    textArea,
-    error,
-    setError,
-    handleTitle,
-    handleTextArea,
+    uploadTitle,
+    setUploadTitle,
+    linkTitle,
+   
+
+    uploadTitleError,
+    linkTitleError,
+
+    handleUploadTitle,
+    handleLinkTitle,
   };
 }

@@ -1,11 +1,13 @@
 import { Sparkles } from "lucide-react";
+import type { SelectType } from "../types/types";
 
 type UploadBtnProps = {
   videoLink: string;
   videoTitle: string;
   linkError: boolean;
   titleError: boolean;
-  videoFile:File | null
+  videoFile:File | null;
+  selected:string
 };
 
 export function UploadBtn({
@@ -13,10 +15,15 @@ export function UploadBtn({
   videoTitle,
   linkError,
   titleError,
-  videoFile
+  videoFile,selected
 }: UploadBtnProps) {
 
-  const isDisabled = linkError || titleError||videoLink===""||videoTitle==="";
+  const isDisabled =
+
+  !(
+    (selected === "link" && videoLink !== "") ||
+    (selected === "upload" && videoFile)
+  );
 
   return (
     <div className="w-full flex justify-end mt-10">
