@@ -20,5 +20,17 @@ class Settings:
     MAIL_SSL_TLS: bool = os.getenv("MAIL_SSL", "False").lower() == "true"
     USE_CREDENTIALS: bool = os.getenv("USE_CREDENTIALS", "True").lower() == "true"
 
+    GOOGLE_CLIENT_ID: str = os.getenv("GOOGLE_CLIENT_ID")
+    GOOGLE_CLIENT_SECRET: str = os.getenv("GOOGLE_CLIENT_SECRET")
+    GOOGLE_REDIRECT_URI: str = os.getenv("GOOGLE_REDIRECT_URI")
+
+    SUPABASE_URL: str = os.getenv("SUPABASE_URL")
+    SUPABASE_S3_ENDPOINT: str = os.getenv("SUPABASE_S3_ENDPOINT")    
+    SUPABASE_S3_ACCESS_KEY: str = os.getenv("SUPABASE_S3_ACCESS_KEY")
+    SUPABASE_S3_SECRET_KEY: str = os.getenv("SUPABASE_S3_SECRET_KEY")
+    SUPABASE_REGION: str = os.getenv("SUPABASE_REGION", "ap-southeast-1")
+    SUPABASE_BUCKET_NAME: str = os.getenv("SUPABASE_BUCKET_NAME", "viducate-videos")
+    SUPABASE_BUCKET_PUBLIC: bool = os.getenv("SUPABASE_BUCKET_PUBLIC", "false").lower() == "true"
+
 settings = Settings()
   

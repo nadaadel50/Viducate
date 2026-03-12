@@ -1,8 +1,11 @@
-from sqlalchemy import Column, Integer, String, TIMESTAMP,DateTime
+from sqlalchemy import Column, Integer, String, TIMESTAMP,DateTime, Enum, Boolean
 from sqlalchemy.orm import relationship
 from sqlalchemy.sql import func
 from .base import Base
-
+import enum
+class AuthProvider(str, enum.Enum):
+    LOCAL = "local"
+    GOOGLE = "google"
 class User(Base):
     __tablename__ = "user"
 
@@ -10,7 +13,7 @@ class User(Base):
     first_name = Column(String(100))
     last_name = Column(String(100))
     email = Column(String(255), unique=True, nullable=False)
-    password = Column(String(255), nullable=False)
+    password = Column(String(255), nullable=True)
     study_field = Column(String(100))
     language_preference = Column(String(10), default='en')
     account_status = Column(String(20), default='active')
@@ -19,8 +22,12 @@ class User(Base):
     failed_login_attempts = Column(Integer, default=0)
     reset_token = Column(String,nullable=True)
     reset_token_expires = Column(DateTime,nullable=True)
+    oauth_provider = Column(String(50), nullable=True) 
+    oauth_id = Column(String(255), nullable=True)
+    profile_picture = Column(String, nullable=True)
+    is_email_verified = Column(Boolean, default=False)
 
-    # videos = relationship("Video", back_populates="user")
+    videos = relationship("Video", back_populates="user")
     # dashboard = relationship("UserDashboard", uselist=False, back_populates="user")
     settings = relationship("Settings", uselist=False, back_populates="user")
     # quiz_attempts = relationship("UserQuizAttempts", back_populates="user")
