@@ -1,0 +1,11 @@
+import { UploadVideoService } from "../../features/video_upload/api/client/upload_video_service";
+import { UploadVideoDataSourceImp } from "../../features/video_upload/api/data_source/upload_video_dataSource_imp";
+import { uploadVideoRepoImp } from "../../features/video_upload/data/repository/upload_video_repo_imp";
+import { UploadVideoUseCase } from "../../features/video_upload/domain/usecase/upload_video_usecase";
+
+const uploadService = new UploadVideoService();
+const dataSource = new UploadVideoDataSourceImp(uploadService);
+const repository = new uploadVideoRepoImp(dataSource);
+
+export const uploadVideoUseCase = new UploadVideoUseCase(repository);
+

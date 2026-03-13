@@ -1,17 +1,20 @@
 import { AlertCircle, CirclePlay } from "lucide-react";
+import { InputSection } from "../componants/input_section";
 
-type LinkSectionProps={
-  url:string,
-  error:boolean
+type LinkSectionProps = {
+  url: string;
+  error: boolean;
+  
   handleUrlChange: (e: React.ChangeEvent<HTMLInputElement>) => void;
   handlePaste: () => void;
- 
-}
+};
 
-export function LinkSection({url,error,handleUrlChange,handlePaste}:LinkSectionProps) {
-
-   
- 
+export function LinkSection({
+  url,
+  error,
+  handleUrlChange,
+  handlePaste,
+}: LinkSectionProps) {
   return (
     <div className="  bg-gray-50  w-full flex flex-col  mt-10 py-12 border-2  border-gray-200 rounded-2xl   mb-10 ">
       <div className="mx-15 flex flex-col ">
@@ -24,7 +27,7 @@ export function LinkSection({url,error,handleUrlChange,handlePaste}:LinkSectionP
             width={18}
             className="absolute left-3 top-7 -translate-y-1/2 text-gray-400 "
           />
-         
+
           <input
             value={url}
             onChange={handleUrlChange}
@@ -38,7 +41,10 @@ export function LinkSection({url,error,handleUrlChange,handlePaste}:LinkSectionP
             placeholder="https://www.youtube.com/watch?v=..."
           />
 
-          <button onClick={handlePaste} className="absolute right-4 top-1/2 -translate-y-1/2 px-4 py-2 bg-gradient-to-br from-[#359EFF] to-[#5A0BB1] hover:from-[#2f8be0] hover:to-[#4c0997] cursor-pointer  text-white  text-xs font-bold rounded-lg transition-colors">
+          <button
+            onClick={handlePaste}
+            className="absolute right-4 top-1/2 -translate-y-1/2 px-4 py-2 bg-gradient-to-br from-[#359EFF] to-[#5A0BB1] hover:from-[#2f8be0] hover:to-[#4c0997] cursor-pointer  text-white  text-xs font-bold rounded-lg transition-colors"
+          >
             PASTE
           </button>
         </div>
@@ -47,6 +53,10 @@ export function LinkSection({url,error,handleUrlChange,handlePaste}:LinkSectionP
           Make sure the video is public or unlisted so our AI can access it.
         </p>
       </div>
+
+
+
+      
     </div>
   );
 }
