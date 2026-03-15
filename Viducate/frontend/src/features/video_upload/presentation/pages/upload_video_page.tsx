@@ -3,40 +3,40 @@ import { SelectBox } from "../componants/select_box";
 
 import { useSelectBtnHandlers } from "../hooks/use_select_btn_handlers";
 
-
-import { useState } from "react";
+import { useRef, useState } from "react";
 
 import { useUploadTitleInput } from "../hooks/use_upload_input_handler";
-import { useUploadHandlers } from "../hooks/use_upload_handlers";
 import { UploadLinkSection } from "../sections/upload_link_section";
 import { UploadLoadingSection } from "../sections/upload_loading_section";
 import { UploadVideoSection } from "../sections/upload_video_section";
-
 export function UploadVideoPage() {
   const { handleSelected, selected } = useSelectBtnHandlers();
+  const [isUploading, setIsUploading] = useState(false);
+  const [progress, setProgress] = useState(0);
+  const [videoFile, setVideoFile] = useState<File | null>(null);
+ const takeVideo = !!videoFile;
+
+  const controllerRef = useRef<AbortController | null>(null);
 
   const { uploadTitle, uploadTitleError, handleUploadTitle, setUploadTitle } =
-    useUploadTitleInput();
+    useUploadTitleInput(videoFile);
 
-  const {
-    handleBrowseClick,
-    handleDragOver,
-    handleFileChange,
-    handleDrop,
-    fileInputRef,
-    videoFile,
-    takeVideo,
-    handleCancelTakenVideo,
-  } = useUploadHandlers(setUploadTitle);
-
-  const [isUploading, setIsUploading] = useState(false);
-
-  const handleUploadClick = () => {
-    setIsUploading(true);
+  const handleTakeVideo = (file: File) => {
+    setVideoFile(file);
+   
+    setUploadTitle(file.name.trim());
   };
 
-  const handleCancelUploadedVideo = () => {
+  const handleCancelTakenVideo = () => {
+    setVideoFile(null);
+    setUploadTitle("");
+  };
+
+  const handleCancelUploadedVideo = async () => {
+    controllerRef.current?.abort();
+
     setIsUploading(false);
+    setProgress(0);
   };
 
   function renderUploadContent() {
@@ -47,6 +47,7 @@ export function UploadVideoPage() {
     if (isUploading) {
       return (
         <UploadLoadingSection
+          progress={progress}
           title={uploadTitle}
           handleCancel={handleCancelUploadedVideo}
         />
@@ -55,17 +56,15 @@ export function UploadVideoPage() {
 
     return (
       <UploadVideoSection
-        takeVideo={takeVideo}
         videoFile={videoFile}
-        uploadTitle={uploadTitle}
-        uploadTitleError={uploadTitleError}
-        handleUploadTitle={handleUploadTitle}
-        handleBrowseClick={handleBrowseClick}
-        handleDragOver={handleDragOver}
-        handleFileChange={handleFileChange}
-        handleDrop={handleDrop}
-        fileInputRef={fileInputRef}
+        takeVideo={takeVideo}
+        handleTakeVideo={handleTakeVideo}
         handleCancelTakenVideo={handleCancelTakenVideo}
+        setProgress={setProgress}
+        setUploading={setIsUploading}
+        handleTitle={handleUploadTitle}
+        titleError={uploadTitleError}
+        title={uploadTitle}
       />
     );
   }

@@ -7,7 +7,20 @@ export class UploadVideoUseCase {
     this.uploadVideoRepo = uploadVideoRepo;
   }
 
-  async uploadVideo(uploadReq:UploadVideoRequest){
-    return this.uploadVideoRepo.uploadVideo(uploadReq)
+  async uploadVideo(
+    uploadReq: UploadVideoRequest,
+    onProgress?: (percent: number) => void,
+    signal?: AbortSignal,
+  ) {
+    const response = await this.uploadVideoRepo.uploadVideo(
+      uploadReq,
+      onProgress,
+      signal,
+    );
+    if (!response.success) return response;
+    if (response.data.processing_status === "cancelled") {
+      await this.uploadVideoRepo.deleteVideo(response.data.videoId);
+    }
+    return response
   }
 }

@@ -1,11 +1,13 @@
-import axios, { toFormData } from "axios";
 import handleApiError from "../../../../core/api/apiError";
 import type { ApiResult } from "../../../../core/api/apiResult";
 import type { UploadVideoDataSource } from "../../data/dataSource/upload_video_dataSource";
 import type { UploadVideoRequest } from "../../domain/entity/upload_video_request";
-import type { UploadVideoResponse } from "../../domain/entity/upload_video_response";
 import type { UploadVideoService } from "../client/upload_video_service";
 import { uploadFilestoFormData } from "../model/upload_video_req_dto";
+import type { ConfirmUploadResponse } from "../../domain/entity/confirm_upload_response";
+import { toConfirmEntity } from "../model/confirm_upload_video_response_dto";
+import axios from "axios";
+
 
 
 export class UploadVideoDataSourceImp implements UploadVideoDataSource {
@@ -13,24 +15,67 @@ export class UploadVideoDataSourceImp implements UploadVideoDataSource {
   constructor(uploadVideoService: UploadVideoService) {
     this.uploadVideoService = uploadVideoService;
   }
-  async uploadVideo(
-    uploadReq: UploadVideoRequest,
-  ): Promise<ApiResult<UploadVideoResponse>> {
-    try {
-      const response = await this.uploadVideoService.requestUploadLink(
-       uploadFilestoFormData(uploadReq)
-      );
-      await this.uploadVideoService.uploadVideo(response.upload_url, uploadReq.file);
+ async uploadVideo(
+  uploadReq: UploadVideoRequest,
+  onProgress?: (percent: number) => void,
+  signal?: AbortSignal
+): Promise<ApiResult<ConfirmUploadResponse>> {
 
-      await this.uploadVideoService.confirmUpload(response.video_id);
-  
+  let videoId: number | undefined;
+
+  try {
+
+    const linkRes = await this.uploadVideoService.requestUploadLink(
+      uploadFilestoFormData(uploadReq)
+    );
+
+    videoId = linkRes.video_id;
+
+    await this.uploadVideoService.uploadVideo(
+      linkRes.upload_url,
+      uploadReq.file,
+      onProgress,
+      signal
+    );
+
+    const confirmRes = await this.uploadVideoService.confirmUpload(videoId);
+
+    console.log(confirmRes)
+
+    return {
+      success: true,
+      data: toConfirmEntity(confirmRes),
+    };
+
+  } catch (error) {
+
+    if (axios.isCancel(error) && videoId) {
       return {
         success: true,
-        data: response,
+        data: {
+          videoId: videoId,
+          message: "Upload cancelled",
+          processing_status: "cancelled",
+        },
       };
-    } catch (error) {
-      const message = handleApiError(error);
-      return { success: false, error: message };
     }
+
+    const message = handleApiError(error);
+    return { success: false, error: message };
   }
+}
+
+
+async deleteVideo(videoId:number):Promise<ApiResult<string>>{
+  try{
+    const response=await this.uploadVideoService.deleteVideo(videoId)
+    return {success:true,data:response}
+  }
+  catch(error){
+     const message = handleApiError(error);
+    return { success: false, error: message };
+
+  }
+
+}
 }

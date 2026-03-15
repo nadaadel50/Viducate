@@ -1,4 +1,4 @@
-import { ArrowUpFromLine } from "lucide-react";
+import { ArrowUpFromLine, Sparkles } from "lucide-react";
 
 type UploadBtnProps = {
   disabled: boolean;
@@ -19,7 +19,7 @@ export function UploadBtn({ disabled, label, onClick }: UploadBtnProps) {
             : "bg-gradient-to-br from-[#359EFF] to-[#5A0BB1] hover:from-[#2f8be0] hover:to-[#4c0997] cursor-pointer"
         }`}
       >
-        <ArrowUpFromLine width={18} />
+        <Sparkles width={18} />
         {label}
       </button>
     </div>

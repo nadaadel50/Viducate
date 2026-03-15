@@ -1,42 +1,86 @@
+import { useRef } from "react";
+
 import { VideoDragedSection } from "./video_draged_section";
 import { InputSection } from "../componants/input_section";
 import { UploadBtn } from "../componants/upload_btn";
 import { UploadSection } from "./upload_section";
+
 import { uploadVideoUseCase } from "../../../../core/di/upload_video_container";
 import { UploadVideoRequest } from "../../domain/entity/upload_video_request";
 
+import { useUploadHandlers } from "../hooks/use_upload_handlers";
+
 type Props = {
-  uploadTitle: string;
-  uploadTitleError: boolean;
-  handleUploadTitle: (e: React.ChangeEvent<HTMLInputElement>) => void;
-
-  fileInputRef: React.RefObject<HTMLInputElement | null>;
-  handleBrowseClick: () => void;
-  handleFileChange: (e: React.ChangeEvent<HTMLInputElement>) => void;
-  handleDragOver: (e: React.DragEvent<HTMLDivElement>) => void;
-  handleDrop: (e: React.DragEvent<HTMLDivElement>) => void;
-
   videoFile: File | null;
   takeVideo: boolean;
+
+  handleTakeVideo: (file: File) => void;
   handleCancelTakenVideo: () => void;
-  
+
+  setProgress: React.Dispatch<React.SetStateAction<number>>;
+  setUploading: React.Dispatch<React.SetStateAction<boolean>>;
+  titleError:boolean,
+  handleTitle:(e: React.ChangeEvent<HTMLInputElement, Element>) => void
+    title: string;
 };
 
 export function UploadVideoSection({
-  uploadTitle,
-  uploadTitleError,
-  handleUploadTitle,
-
-  fileInputRef,
-  handleBrowseClick,
-  handleFileChange,
-  handleDragOver,
-  handleDrop,
-
   videoFile,
   takeVideo,
+  handleTakeVideo,
   handleCancelTakenVideo,
+  setProgress,
+  setUploading,
+  titleError,
+  handleTitle,
+  title
 }: Props) {
+
+  const abortController = useRef<AbortController | null>(null);
+
+  const {
+    handleBrowseClick,
+    handleDragOver,
+    handleFileChange,
+    handleDrop,
+    fileInputRef,
+  } = useUploadHandlers(handleTakeVideo);
+
+  const handleUploadVideo = async () => {
+    if (!videoFile) return;
+
+    setUploading(true);
+    abortController.current = new AbortController();
+
+    try {
+      const response = await uploadVideoUseCase.uploadVideo(
+        new UploadVideoRequest(
+          videoFile,
+          videoFile.name,
+          title,
+          "en",
+          "technology",
+          videoFile.type
+        ),
+        (p) => setProgress(p),
+        abortController.current.signal
+      );
+
+      if (!response.success) {
+        console.log(response.error);
+        return;
+      }
+
+      console.log(response.data);
+
+    } catch (error) {
+      console.log(error);
+    } finally {
+     
+      abortController.current = null;
+    }
+  };
+
   return (
     <>
       {takeVideo ? (
@@ -54,38 +98,12 @@ export function UploadVideoSection({
         />
       )}
 
-      <InputSection
-        title={uploadTitle}
-        error={uploadTitleError}
-        handleTitle={handleUploadTitle}
-      />
+      <InputSection title={title} error={titleError} handleTitle={handleTitle}/>
 
       <UploadBtn
-        disabled={!videoFile || uploadTitle === ""}
+        disabled={!videoFile||!title}
         label="Upload Video"
-        onClick={async() => {
-          if (!videoFile) {
-            return;
-          }
-
-          const response = await uploadVideoUseCase.uploadVideo(
-            new UploadVideoRequest(
-              videoFile,
-              videoFile.name,
-              uploadTitle,
-              "en",
-              "technology",
-              videoFile.type,
-            ),
-          );
-          if(response.success){
-            console.log(response.data)
-
-          }
-          else{
-            console.log(response.error)
-          }
-        }}
+        onClick={handleUploadVideo}
       />
     </>
   );
