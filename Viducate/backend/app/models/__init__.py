@@ -4,7 +4,6 @@ from .settings import Settings
 # from .user_dashboard import UserDashboard
 from .video import Video
 
-from .ocr_result import OCRResult
 # from .video_summary import VideoSummary
 # from .slide import Slide
 # from .topic_segment import TopicSegment
@@ -20,7 +19,7 @@ from .ocr_result import OCRResult
 # from .mindmap import Mindmap
 
 __all__ = [
-    "Base", "User", "Settings", "Video", "OCRResult"
+    "Base", "User", "Settings", "Video"
 ]
 
 # "UserAnalytics","Video", "VideoSummary", "Slide",
