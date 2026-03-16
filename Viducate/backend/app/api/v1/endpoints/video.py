@@ -153,9 +153,5 @@ def delete_video(
     current_user=Depends(get_current_user),
 ):
     service = VideoService(db)
-<<<<<<< HEAD
-    return service.delete_video(current_user.id, video_id)
-=======
     return service.delete_video(current_user.id, video_id)
     
->>>>>>> ea2eccd1902d1373bc6459370a0bb36d301c8d77
