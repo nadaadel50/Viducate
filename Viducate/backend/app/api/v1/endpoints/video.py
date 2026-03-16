@@ -154,3 +154,4 @@ def delete_video(
 ):
     service = VideoService(db)
     return service.delete_video(current_user.id, video_id)
+    
