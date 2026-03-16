@@ -1,6 +1,7 @@
 import cv2
 import os
 import uuid
+import time
 import tempfile
 import requests
 import yt_dlp
@@ -11,16 +12,10 @@ from typing import List, Dict, Tuple
 
 
 class OCRProcessor:
-    """
-    Exact same logic as working ocr_video_paddleocr.py script.
-    Differences:
-    - Entry point is URL instead of local path
-    - Returns structured dict instead of writing to .txt file
-    - Language mapping: en=English only, ar=Arabic+English, mixed=Arabic+English
-    """
+  
 
-    SAMPLE_INTERVAL = 2       # seconds between sampled frames
-    DIFF_THRESHOLD  = 0.01    # % of pixels that must change = new slide
+    SAMPLE_INTERVAL = 2
+    DIFF_THRESHOLD  = 0.01
     MIN_TEXT_LEN    = 4
     DUP_RATIO       = 0.88
     OCR_CONFIDENCE  = 0.6
@@ -35,7 +30,7 @@ class OCRProcessor:
         self._ocr_cache: Dict[str, PaddleOCR] = {}
 
     # ─────────────────────────────────────────
-    # OCR INSTANCE (cached)
+    # OCR INSTANCE (cached per language)
     # ─────────────────────────────────────────
     def _get_ocr(self, lang: str) -> PaddleOCR:
         if lang not in self._ocr_cache:
@@ -49,56 +44,76 @@ class OCRProcessor:
         return self._ocr_cache[lang]
 
     # ─────────────────────────────────────────
-    # LANGUAGE MAPPING
+    # AUTO LANGUAGE DETECTION
     # ─────────────────────────────────────────
-    def _detect_language(self, language: str) -> str:
+    def _detect_language_from_frame(self, frame) -> str:
         """
-        Maps app language to PaddleOCR lang.
+        Detects language by running Arabic OCR on a sample frame
+        and checking ratio of Arabic characters in the result.
+        Returns "ar" or "en".
+        Arabic model detects both Arabic and English.
+        """
+        try:
+            ocr = self._get_ocr("ar")
+            results = ocr.predict(frame)
 
-        Key insight from working script:
-        - "ar" model detects BOTH Arabic AND English automatically
-        - So for mixed content → use "ar" model
-        - "en" model detects English only
+            if not results or not results[0]:
+                return "en"
 
+            rec_texts  = results[0].get("rec_texts", [])
+            rec_scores = results[0].get("rec_scores", [])
+
+            all_text = ""
+            for txt, score in zip(rec_texts, rec_scores):
+                if score >= self.OCR_CONFIDENCE:
+                    all_text += " " + txt
+
+            if not all_text.strip():
+                return "en"
+
+            arabic_chars = sum(1 for c in all_text if '\u0600' <= c <= '\u06FF')
+            total_chars  = sum(1 for c in all_text if c.isalpha())
+
+            if total_chars == 0:
+                return "en"
+
+            arabic_ratio = arabic_chars / total_chars
+            print(f"[OCRProcessor] Auto-detect: arabic_ratio={arabic_ratio:.2f}")
+
+            return "ar" if arabic_ratio > 0.3 else "en"
+
+        except Exception as e:
+            print(f"[OCRProcessor] Language detection failed: {e}, defaulting to en")
+            return "en"
+
+    def _get_paddle_lang(self, lang: str) -> str:
+        """
+        ar    → "ar"  (detects Arabic + English)
         en    → "en"  (English only)
-        ar    → "ar"  (Arabic + English both detected)
-        mixed → "ar"  (Arabic + English both detected)
         """
-        mapping = {
-            "en": "en",
-            "ar": "ar",
-            "mixed": "ar"   # Arabic model handles both languages
-        }
-        return mapping.get(language, "en")
+        return "ar" if lang == "ar" else "en"
 
     # ─────────────────────────────────────────
-    # HELPERS (exact same as working script)
+    # HELPERS
     # ─────────────────────────────────────────
     def _frames_are_same(self, prev_gray, curr_gray) -> bool:
-        """
-        Returns True if slide has NOT changed enough to warrant OCR.
-        Exact same logic as working script frames_are_same().
-        """
         if prev_gray is None:
             return False
-
         diff = cv2.absdiff(prev_gray, curr_gray)
         changed_ratio = np.count_nonzero(diff > 20) / diff.size
         return changed_ratio < self.DIFF_THRESHOLD
 
     def _clean_text(self, text: str) -> str:
-        """Exact same as working script clean_text()"""
         text = " ".join(text.split())
         text = "".join(
             c for c in text
             if c.isalnum()
             or c in " .,!?;:،؛؟-"
-            or '\u0600' <= c <= '\u06FF'  # keep Arabic unicode range
+            or '\u0600' <= c <= '\u06FF'
         )
         return text.strip()
 
     def _is_duplicate(self, new_text: str, last_text: str) -> bool:
-        """Exact same as working script is_duplicate()"""
         if not last_text or not new_text:
             return False
         return SequenceMatcher(None, last_text, new_text).ratio() > self.DUP_RATIO
@@ -110,8 +125,7 @@ class OCRProcessor:
         return any(p in url for p in self.YOUTUBE_PATTERNS)
 
     def _download_video(self, url: str) -> Tuple[str, str]:
-        """Download video to temp file. Returns (path, url_type)"""
-        temp_dir = tempfile.gettempdir()
+        temp_dir  = tempfile.gettempdir()
         unique_id = uuid.uuid4().hex
         temp_path = os.path.join(temp_dir, f"viducate_ocr_{unique_id}.mp4")
 
@@ -125,7 +139,6 @@ class OCRProcessor:
             with yt_dlp.YoutubeDL(ydl_opts) as ydl:
                 ydl.download([url])
 
-            # yt-dlp may rename file — find actual path
             if not os.path.exists(temp_path):
                 for ext in [".mp4", ".mkv", ".webm"]:
                     candidate = temp_path.replace(".mp4", ext)
@@ -148,15 +161,13 @@ class OCRProcessor:
     # ─────────────────────────────────────────
     # RUN OCR ON SINGLE FRAME
     # ─────────────────────────────────────────
-    def _run_ocr_on_frame(self, frame, language: str) -> List[str]:
+    def _run_ocr_on_frame(self, frame, paddle_lang: str) -> List[str]:
         """
-        Exact same as working script — one OCR call, one language.
-        Arabic model handles mixed content automatically.
-        No dual-model logic needed.
+        Runs OCR using the given paddle_lang model.
+        Exact same parsing as working standalone script.
         """
         lines = []
-        paddle_lang = self._detect_language(language)
-        ocr = self._get_ocr(paddle_lang)
+        ocr   = self._get_ocr(paddle_lang)
 
         try:
             results = ocr.predict(frame)
@@ -167,7 +178,6 @@ class OCRProcessor:
         if not results or not results[0]:
             return lines
 
-        # Exact same parsing as working script
         rec_texts  = results[0].get("rec_texts", [])
         rec_scores = results[0].get("rec_scores", [])
 
@@ -185,10 +195,12 @@ class OCRProcessor:
     # ─────────────────────────────────────────
     def process_from_url(self, url: str, language: str = "en") -> Dict:
         """
-        Full pipeline — URL in, segments out.
-        Exact same logic as extract_text_from_video() in working script.
+        Language param is ignored — language is auto-detected from video.
+        URL is the only thing that matters.
         """
         temp_path = None
+        cap       = None
+
         try:
             # ── 1. Download ──────────────────────────────────────
             temp_path, url_type = self._download_video(url)
@@ -204,14 +216,36 @@ class OCRProcessor:
             duration_min = total_frames / fps / 60
             step         = max(1, int(fps * self.SAMPLE_INTERVAL))
 
+            # ── 3. Auto-detect language from sample frames ───────
+            print(f"[OCRProcessor] Auto-detecting language...")
+            detected_lang = "en"  # default
+
+            sample_positions = [
+                int(total_frames * 0.1),
+                int(total_frames * 0.3),
+                int(total_frames * 0.5),
+            ]
+            for pos in sample_positions:
+                cap.set(cv2.CAP_PROP_POS_FRAMES, pos)
+                ret, sample_frame = cap.read()
+                if ret:
+                    detected_lang = self._detect_language_from_frame(sample_frame)
+                    if detected_lang == "ar":
+                        break  # Arabic found — no need to check more frames
+
+            # Reset video to beginning
+            cap.set(cv2.CAP_PROP_POS_FRAMES, 0)
+
+            paddle_lang = self._get_paddle_lang(detected_lang)
+
             print(f"[OCRProcessor] Video    : {os.path.basename(temp_path)}")
             print(f"[OCRProcessor] FPS      : {fps:.1f}")
             print(f"[OCRProcessor] Length   : {duration_min:.1f} min ({total_frames} frames)")
             print(f"[OCRProcessor] Sampling : every {step} frames = every {self.SAMPLE_INTERVAL}s")
-            print(f"[OCRProcessor] Language : {language} → paddle_lang={self._detect_language(language)}")
+            print(f"[OCRProcessor] Detected language: {detected_lang} → paddle_lang={paddle_lang}")
             print(f"[OCRProcessor] Sensitivity: skip if <{self.DIFF_THRESHOLD*100:.0f}% pixels changed")
 
-            # ── 3. Loop frames ───────────────────────────────────
+            # ── 4. Main OCR loop ─────────────────────────────────
             prev_gray = None
             last_text = ""
             frame_idx = 0
@@ -225,13 +259,11 @@ class OCRProcessor:
 
                 frame_idx += 1
 
-                # Only sample every N frames
                 if frame_idx % step != 0:
                     continue
 
                 curr_gray = cv2.cvtColor(frame, cv2.COLOR_BGR2GRAY)
 
-                # Skip if slide hasn't changed
                 if self._frames_are_same(prev_gray, curr_gray):
                     prev_gray = curr_gray
                     continue
@@ -239,15 +271,13 @@ class OCRProcessor:
                 prev_gray = curr_gray
                 ocr_count += 1
 
-                # ── Run OCR ──────────────────────────────────────
-                lines = self._run_ocr_on_frame(frame, language)
+                lines = self._run_ocr_on_frame(frame, paddle_lang)
 
                 if not lines:
                     continue
 
                 page_text = " | ".join(lines)
 
-                # ── Skip duplicate ────────────────────────────────
                 if self._is_duplicate(page_text, last_text):
                     secs = int(frame_idx / fps)
                     mm, ss = divmod(secs, 60)
@@ -255,7 +285,6 @@ class OCRProcessor:
                     print(f"[OCRProcessor] Duplicate at {hh:02d}:{mm:02d}:{ss:02d} — skipped")
                     continue
 
-                # ── Build timestamp ───────────────────────────────
                 secs = int(frame_idx / fps)
                 mm, ss = divmod(secs, 60)
                 hh, mm = divmod(mm, 60)
@@ -277,20 +306,28 @@ class OCRProcessor:
                     print(f"[OCRProcessor] {pct:5.1f}% | "
                           f"OCR runs: {ocr_count} | Saved: {len(segments)}")
 
-            cap.release()
-
             print(f"\n[OCRProcessor] ✅ Done!")
             print(f"[OCRProcessor] OCR ran on  : {ocr_count} unique frames")
             print(f"[OCRProcessor] Lines saved : {len(segments)}")
 
             return {
-                "segments": segments,
-                "total":    len(segments),
-                "language": language,
-                "url_type": url_type
+                "segments":  segments,
+                "total":     len(segments),
+                "language":  detected_lang,  # return what was actually detected
+                "url_type":  url_type
             }
 
         finally:
+            # Always release cap before deleting file
+            if cap is not None:
+                cap.release()
+                print(f"[OCRProcessor] Video capture released.")
+
+            time.sleep(0.5)  # let Windows release file handle
+
             if temp_path and os.path.exists(temp_path):
-                os.remove(temp_path)
-                print(f"[OCRProcessor] Temp file deleted.")
+                try:
+                    os.remove(temp_path)
+                    print(f"[OCRProcessor] Temp file deleted.")
+                except Exception as e:
+                    print(f"[OCRProcessor] Could not delete temp file: {e}")
