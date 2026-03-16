@@ -3,6 +3,7 @@ import asyncio
 from sqlalchemy.orm import Session
 from app.repositories.video_repository import VideoRepository
 from app.db.database import SessionLocal
+from app.services.transcription_service import transcribe
 
 from app.services.ocr_service import OCRService
 
