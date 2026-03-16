@@ -87,10 +87,15 @@ async def run_processing_pipeline(video_id: int, language: str):
         transcript = await transcribe(video.url, video_id=video_id)
         logger.info(f"Transcript: {transcript}")
 
-        # ── Step 2: OCR ────────────────────────────────────────────────────
+        # ── Step 2: OCR ───────────────────────────────────────────────────
         logger.info(f"[Pipeline] Step 2 - OCR: video_id={video_id}")
-        ocr_service = OCRService(db)
-        ocr_service.run(video_id)
+        repo.update_status(video_id, "ocr_processing")
+        loop = asyncio.get_event_loop()
+        ocr_segments = await loop.run_in_executor(
+            None,
+            lambda: OCRService(db).run(video_id)
+        )
+        logger.info(f"[Pipeline] OCR segments: {len(ocr_segments)}")
 
         # ── Step 2: Topic Segmentation ─────────────────────────────────────
         logger.info(f"[Pipeline] Step 2 - Segmentation: video_id={video_id}")
