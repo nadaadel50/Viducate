@@ -1,75 +1,69 @@
+import os
 import logging
 from sqlalchemy.orm import Session
 from fastapi import HTTPException, status
-from app.repositories.ocr_repository import OCRRepository
 from app.ml.processors.ocr_processor import OCRProcessor
+from app.repositories.video_repository import VideoRepository
 
 logger = logging.getLogger(__name__)
 
 
 class OCRService:
-    """
-    Orchestrates the full OCR pipeline starting from video_id.
-    Reads video.url and video.language from DB — no extra input needed.
-    """
-
     def __init__(self, db: Session):
-        self.repo = OCRRepository(db)
-        self.processor = OCRProcessor()
+        self.video_repo = VideoRepository(db)
+        self.processor  = OCRProcessor()
 
-    def run(self, video_id: int) -> dict:
-
-        video = self.repo.get_video_by_id(video_id)
+    def run(self, video_id: int) -> list:
+        """
+        Runs OCR pipeline.
+        Saves results to text file.
+        Returns segments list — same structure as transcript variable.
+        """
+        video = self.video_repo.get_by_id(video_id)
         if not video:
             raise HTTPException(
                 status_code=status.HTTP_404_NOT_FOUND,
                 detail=f"Video {video_id} not found"
             )
 
-        if video.processing_status == "processing":
-            raise HTTPException(
-                status_code=status.HTTP_409_CONFLICT,
-                detail=f"Video {video_id} is already being processed"
-            )
-
-        self.repo.update_video_status(video_id, "processing")
-
         try:
-            # ── Map language: mixed → ar ──────────────────────────
-            language = video.language or "en"
-            if language == "mixed":
-                language = "ar"
-            # ─────────────────────────────────────────────────────
+            logger.info(f"[OCRService] Starting | video_id={video_id} | url={video.url}")
+
+            result            = self.processor.process_from_url(
+                url=video.url,
+                language=video.language or "en"
+            )
+            segments          = result["segments"]
+            detected_language = result["language"]
+
+            # Save to text file
+            self._save_to_txt(video_id, segments, detected_language)
 
             logger.info(
-                f"[OCRService] Starting OCR | "
-                f"video_id={video_id} | url={video.url} | lang={language}"
+                f"[OCRService] Done | video_id={video_id} | "
+                f"segments={len(segments)} | lang={detected_language}"
             )
 
-            result = self.processor.process_from_url(
-                url=video.url,
-                language=language
-            )
-
-            self.repo.save_ocr_segments(video_id, result["segments"])
-            self.repo.update_video_status(video_id, "completed")
-
-            return {
-                "video_id": video_id,
-                "status": "completed",
-                "segments": result["segments"],
-                "total": result["total"],
-                "language": language,
-                "url_type": result["url_type"]
-            }
+            return segments   # ← same as transcript variable
 
         except HTTPException:
             raise
-
         except Exception as e:
-            self.repo.update_video_status(video_id, "failed")
             logger.error(f"[OCRService] Failed | video_id={video_id} | error={e}")
-            raise HTTPException(
-                status_code=status.HTTP_500_INTERNAL_SERVER_ERROR,
-                detail=f"OCR pipeline failed: {str(e)}"
-            )
+            raise
+
+    def _save_to_txt(self, video_id: int, segments: list, language: str):
+        """Save OCR results to text file with same template as API response."""
+        output_dir  = "logs/ocr_outputs"
+        os.makedirs(output_dir, exist_ok=True)
+        output_file = os.path.join(output_dir, f"ocr_video_{video_id}.txt")
+
+        with open(output_file, "w", encoding="utf-8") as f:
+            f.write(f"# OCR Output — video_id={video_id}\n")
+            f.write(f"# Language: {language}\n")
+            f.write(f"# Total segments: {len(segments)}\n\n")
+
+            for seg in segments:
+                f.write(f"[{seg['timestamp']}] {seg['text']}\n")
+
+        logger.info(f"[OCRService] Saved to {output_file}")
