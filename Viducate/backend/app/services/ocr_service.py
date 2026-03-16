@@ -18,16 +18,7 @@ class OCRService:
         self.processor = OCRProcessor()
 
     def run(self, video_id: int) -> dict:
-        """
-        1. Fetch video from DB → get url + language
-        2. Validate
-        3. status → "processing"
-        4. Run OCR pipeline
-        5. Save segments to DB
-        6. status → "completed"
-        """
 
-        # ── 1. Fetch video ────────────────────────────────────
         video = self.repo.get_video_by_id(video_id)
         if not video:
             raise HTTPException(
@@ -35,45 +26,40 @@ class OCRService:
                 detail=f"Video {video_id} not found"
             )
 
-        # ── 2. Guard: already processing ─────────────────────
         if video.processing_status == "processing":
             raise HTTPException(
                 status_code=status.HTTP_409_CONFLICT,
                 detail=f"Video {video_id} is already being processed"
             )
 
-        # ── 3. Status → processing ────────────────────────────
         self.repo.update_video_status(video_id, "processing")
 
         try:
+            # ── Map language: mixed → ar ──────────────────────────
+            language = video.language or "en"
+            if language == "mixed":
+                language = "ar"
+            # ─────────────────────────────────────────────────────
+
             logger.info(
                 f"[OCRService] Starting OCR | "
-                f"video_id={video_id} | url={video.url} | lang={video.language}"
+                f"video_id={video_id} | url={video.url} | lang={language}"
             )
 
-            # ── 4. Run OCR ────────────────────────────────────
             result = self.processor.process_from_url(
                 url=video.url,
-                language=video.language
+                language=language
             )
 
-            # ── 5. Save to DB ─────────────────────────────────
             self.repo.save_ocr_segments(video_id, result["segments"])
-
-            # ── 6. Status → completed ─────────────────────────
             self.repo.update_video_status(video_id, "completed")
-
-            logger.info(
-                f"[OCRService] Done | video_id={video_id} | "
-                f"segments={result['total']}"
-            )
 
             return {
                 "video_id": video_id,
                 "status": "completed",
                 "segments": result["segments"],
                 "total": result["total"],
-                "language": video.language,
+                "language": language,
                 "url_type": result["url_type"]
             }
 
