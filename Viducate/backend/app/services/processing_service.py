@@ -13,6 +13,10 @@ PROCESSING_STATUSES = {
     "uploaded",       # Just saved to DB (URL) or presigned URL issued (file)
     "pending",        # Confirmed in S3 / queued for processing
     "processing",     # ML pipeline running (transcription, segmentation, etc.)
+    "transcribing",       # Step 1: Speech to text
+    "ocr_processing",     # Step 2: OCR
+    "merging",            # Step 3: Merge
+    "segmenting",         # Step 4: Topic segmentation
     "completed",      # All processing done
     "failed",         
 }
@@ -57,7 +61,6 @@ class ProcessingJobService:
         logger.error(f"Video {video_id} processing failed: {reason}")
         self.video_repo.update_status(video_id, "failed")
 
-
 async def run_processing_pipeline(video_id: int, language: str):
     """
     Background task that simulates the ML pipeline.
@@ -76,25 +79,32 @@ async def run_processing_pipeline(video_id: int, language: str):
         logger.info(f"[Pipeline] Starting: video_id={video_id}, language={language}")
         repo.update_status(video_id, "processing")
 
-        # ── Step 1: Transcription ──────────────────────────────────────────
-        logger.info(f"[Pipeline] Step 1 – Transcription: video_id={video_id}")
+         # ── Step 1: Transcription ──────────────────────────────────────────
+        logger.info(f"[Pipeline] Step 1 - Transcription: video_id={video_id}")
+        repo.update_status(video_id, "transcribing")
+        video = repo.get_by_id(video_id)
+        transcript = await transcribe(video.url, video_id=video_id)
+        logger.info(f"Transcript: {transcript}")
+
+        # ── Step 2: OCR ────────────────────────────────────────────────────
+        logger.info(f"[Pipeline] Step 2 - OCR: video_id={video_id}")
         ocr_service = OCRService(db)
         ocr_service.run(video_id)
 
         # ── Step 2: Topic Segmentation ─────────────────────────────────────
-        logger.info(f"[Pipeline] Step 2 – Segmentation: video_id={video_id}")
+        logger.info(f"[Pipeline] Step 2 - Segmentation: video_id={video_id}")
         await asyncio.sleep(0)          # Replace with: await segment_topics(video_id)
 
         # ── Step 3: Summarization ──────────────────────────────────────────
-        logger.info(f"[Pipeline] Step 3 – Summarisation: video_id={video_id}")
+        logger.info(f"[Pipeline] Step 3 - Summarisation: video_id={video_id}")
         await asyncio.sleep(0)          # Replace with: await summarise(video_id, language)
 
         # ── Step 4: Quiz Generation ────────────────────────────────────────
-        logger.info(f"[Pipeline] Step 4 – Quiz generation: video_id={video_id}")
+        logger.info(f"[Pipeline] Step 4 - Quiz generation: video_id={video_id}")
         await asyncio.sleep(0)          # Replace with: await generate_quizzes(video_id)
 
         # ── Step 5: Mindmap Generation ─────────────────────────────────────
-        logger.info(f"[Pipeline] Step 5 – Mindmap: video_id={video_id}")
+        logger.info(f"[Pipeline] Step 5 - Mindmap: video_id={video_id}")
         await asyncio.sleep(0)          # Replace with: await generate_mindmap(video_id)
 
         repo.update_status(video_id, "completed")
