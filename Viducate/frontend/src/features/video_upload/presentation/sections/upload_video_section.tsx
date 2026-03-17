@@ -19,9 +19,12 @@ type Props = {
 
   setProgress: React.Dispatch<React.SetStateAction<number>>;
   setUploading: React.Dispatch<React.SetStateAction<boolean>>;
-  titleError:boolean,
-  handleTitle:(e: React.ChangeEvent<HTMLInputElement, Element>) => void
-    title: string;
+  titleError: boolean;
+  handleTitle: (e: React.ChangeEvent<HTMLInputElement, Element>) => void;
+  title: string;
+
+  controllerRef: React.RefObject<AbortController | null>;
+  handleError: (errorMessage: string) => void;
 };
 
 export function UploadVideoSection({
@@ -33,11 +36,10 @@ export function UploadVideoSection({
   setUploading,
   titleError,
   handleTitle,
-  title
+  title,
+  controllerRef,
+  handleError,
 }: Props) {
-
-  const abortController = useRef<AbortController | null>(null);
-
   const {
     handleBrowseClick,
     handleDragOver,
@@ -50,7 +52,7 @@ export function UploadVideoSection({
     if (!videoFile) return;
 
     setUploading(true);
-    abortController.current = new AbortController();
+    controllerRef.current = new AbortController();
 
     try {
       const response = await uploadVideoUseCase.uploadVideo(
@@ -60,24 +62,26 @@ export function UploadVideoSection({
           title,
           "en",
           "technology",
-          videoFile.type
+          videoFile.type,
         ),
         (p) => setProgress(p),
-        abortController.current.signal
+        controllerRef.current.signal,
       );
 
       if (!response.success) {
-        console.log(response.error);
+        handleError(response.error);
         return;
       }
 
       console.log(response.data);
-
     } catch (error) {
-      console.log(error);
+      if (error instanceof Error) {
+        handleError(error.message);
+      } else {
+        handleError("Something went wrong Please try again");
+      }
     } finally {
-     
-      abortController.current = null;
+      controllerRef.current = null;
     }
   };
 
@@ -98,10 +102,14 @@ export function UploadVideoSection({
         />
       )}
 
-      <InputSection title={title} error={titleError} handleTitle={handleTitle}/>
+      <InputSection
+        title={title}
+        error={titleError}
+        handleTitle={handleTitle}
+      />
 
       <UploadBtn
-        disabled={!videoFile||!title}
+        disabled={!videoFile || !title}
         label="Upload Video"
         onClick={handleUploadVideo}
       />

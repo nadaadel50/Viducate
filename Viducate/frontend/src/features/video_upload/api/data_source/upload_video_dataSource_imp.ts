@@ -7,6 +7,10 @@ import { uploadFilestoFormData } from "../model/upload_video_req_dto";
 import type { ConfirmUploadResponse } from "../../domain/entity/confirm_upload_response";
 import { toConfirmEntity } from "../model/confirm_upload_video_response_dto";
 import axios from "axios";
+import type { UrlRequest } from "../../domain/entity/url_request";
+import type { UrlResponse } from "../../domain/entity/url_response";
+import { toUrlResponse } from "../model/url_response_dto";
+import { toUrlRequestDto } from "../model/url_request_dto";
 
 
 
@@ -15,6 +19,7 @@ export class UploadVideoDataSourceImp implements UploadVideoDataSource {
   constructor(uploadVideoService: UploadVideoService) {
     this.uploadVideoService = uploadVideoService;
   }
+ 
  async uploadVideo(
   uploadReq: UploadVideoRequest,
   onProgress?: (percent: number) => void,
@@ -49,7 +54,10 @@ export class UploadVideoDataSourceImp implements UploadVideoDataSource {
 
   } catch (error) {
 
+    
+
     if (axios.isCancel(error) && videoId) {
+    
       return {
         success: true,
         data: {
@@ -78,4 +86,21 @@ async deleteVideo(videoId:number):Promise<ApiResult<string>>{
   }
 
 }
+
+
+ async uploadURL(uploadReq: UrlRequest): Promise<ApiResult<UrlResponse>> {
+   try{
+    const response=await this.uploadVideoService.uploadURl(toUrlRequestDto(uploadReq))
+    return {success:true,data:toUrlResponse(response)}
+  }
+  catch(error){
+     const message = handleApiError(error);
+    return { success: false, error: message };
+
+  }
+
+  }
+
+
+
 }

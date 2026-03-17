@@ -1,4 +1,4 @@
-import { ArrowUpFromLine, Sparkles } from "lucide-react";
+import { Sparkles } from "lucide-react";
 
 type UploadBtnProps = {
   disabled: boolean;

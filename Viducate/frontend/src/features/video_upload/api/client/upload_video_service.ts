@@ -2,6 +2,8 @@ import axios from "axios";
 import { apiClient } from "../../../../core/api/apiClient";
 import type { UploadVideoResponseDTO } from "../model/upload_video_response_dto";
 import type { ConfirmUploadResponseDto } from "../model/confirm_upload_video_response_dto";
+import type { UrlRequestDto } from "../model/url_request_dto";
+import type { UrlResponseDto } from "../model/url_response_dto";
 
 export class UploadVideoService {
   async requestUploadLink(formData: FormData): Promise<UploadVideoResponseDTO> {
@@ -45,6 +47,11 @@ export class UploadVideoService {
 
   async deleteVideo(video_id:number):Promise<string>{
      const response = await apiClient.delete(`/videos/${video_id}`);
+     return response.data
+
+  }
+  async uploadURl(uploadReqDto:UrlRequestDto):Promise<UrlResponseDto>{
+     const response = await apiClient.delete(`/videos/url`,uploadReqDto);
      return response.data
 
   }

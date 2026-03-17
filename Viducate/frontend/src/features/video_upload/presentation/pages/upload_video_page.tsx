@@ -9,11 +9,14 @@ import { useUploadTitleInput } from "../hooks/use_upload_input_handler";
 import { UploadLinkSection } from "../sections/upload_link_section";
 import { UploadLoadingSection } from "../sections/upload_loading_section";
 import { UploadVideoSection } from "../sections/upload_video_section";
+import { CustumError } from "../../../../core/componants/custum_error";
 export function UploadVideoPage() {
   const { handleSelected, selected } = useSelectBtnHandlers();
   const [isUploading, setIsUploading] = useState(false);
   const [progress, setProgress] = useState(0);
   const [videoFile, setVideoFile] = useState<File | null>(null);
+  const [error,setError]=useState<boolean>(false)
+  const [errorMessage,setErrorMessage]=useState<string>("")
  const takeVideo = !!videoFile;
 
   const controllerRef = useRef<AbortController | null>(null);
@@ -54,6 +57,12 @@ export function UploadVideoPage() {
       );
     }
 
+    function handleError(errorMessage:string){
+      setError(true)
+      setErrorMessage(errorMessage)
+
+    }
+
     return (
       <UploadVideoSection
         videoFile={videoFile}
@@ -65,6 +74,8 @@ export function UploadVideoPage() {
         handleTitle={handleUploadTitle}
         titleError={uploadTitleError}
         title={uploadTitle}
+        controllerRef={controllerRef}
+        handleError={handleError}
       />
     );
   }
@@ -79,11 +90,19 @@ export function UploadVideoPage() {
           }
         />
 
-        <div className="flex justify-center items-center mt-10 bg-white rounded-xl">
-          <div className="m-10 w-full flex flex-col items-center">
+        <div className=" relative flex  justify-center items-center mt-10 bg-white rounded-xl">
+          {/* appear error here */}
+           {error&& <CustumError apiError={errorMessage} clearError={()=>{
+            setError(false)
+          } }/>}
+         
+          <div className="m-15 w-full flex flex-col items-center">
+            
             {!isUploading && (
               <SelectBox handleSelected={handleSelected} selected={selected} />
             )}
+
+            
 
             {renderUploadContent()}
           </div>
