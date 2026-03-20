@@ -1,81 +1,72 @@
 import { UploadTitle } from "../componants/uplaod_title";
 import { SelectBox } from "../componants/select_box";
-
 import { useSelectBtnHandlers } from "../hooks/use_select_btn_handlers";
 
-import { useRef, useState } from "react";
-
 import { useUploadTitleInput } from "../hooks/use_upload_input_handler";
+
 import { UploadLinkSection } from "../sections/upload_link_section";
 import { UploadLoadingSection } from "../sections/upload_loading_section";
 import { UploadVideoSection } from "../sections/upload_video_section";
+
 import { CustumError } from "../../../../core/componants/custum_error";
+import { useUploadVideoController } from "../hooks/use_upload_video_control";
+
+
+
+
 export function UploadVideoPage() {
   const { handleSelected, selected } = useSelectBtnHandlers();
-  const [isUploading, setIsUploading] = useState(false);
-  const [progress, setProgress] = useState(0);
-  const [videoFile, setVideoFile] = useState<File | null>(null);
-  const [error,setError]=useState<boolean>(false)
-  const [errorMessage,setErrorMessage]=useState<string>("")
- const takeVideo = !!videoFile;
 
-  const controllerRef = useRef<AbortController | null>(null);
+  const { state, actions, refs } = useUploadVideoController();
 
-  const { uploadTitle, uploadTitleError, handleUploadTitle, setUploadTitle } =
-    useUploadTitleInput(videoFile);
 
-  const handleTakeVideo = (file: File) => {
-    setVideoFile(file);
-   
-    setUploadTitle(file.name.trim());
-  };
+  const {
+    uploadTitle,
+    uploadTitleError,
+    handleUploadTitle,
+    setUploadTitle,
+    setIsFirstUploadTyping
+  } = useUploadTitleInput(state.videoFile);
 
-  const handleCancelTakenVideo = () => {
-    setVideoFile(null);
-    setUploadTitle("");
-  };
+  const handleCancelTakeVideo=()=>{
+     actions.handleCancelTakenVideo(setUploadTitle)
+     setIsFirstUploadTyping(true)
+     
 
-  const handleCancelUploadedVideo = async () => {
-    controllerRef.current?.abort();
-
-    setIsUploading(false);
-    setProgress(0);
-  };
+  }
 
   function renderUploadContent() {
     if (selected === "link") {
-      return <UploadLinkSection />;
+      return (
+        <UploadLinkSection handleError={actions.handleError} />
+      );
     }
 
-    if (isUploading) {
+    if (state.isUploading) {
       return (
         <UploadLoadingSection
-          progress={progress}
+          progress={state.progress}
           title={uploadTitle}
-          handleCancel={handleCancelUploadedVideo}
+          handleCancel={actions.handleCancelUpload}
         />
       );
     }
 
-    function handleError(errorMessage:string){
-      setError(true)
-      setErrorMessage(errorMessage)
-
-    }
-
     return (
       <UploadVideoSection
-        videoFile={videoFile}
-        takeVideo={takeVideo}
-        handleTakeVideo={handleTakeVideo}
-        handleCancelTakenVideo={handleCancelTakenVideo}
-        setProgress={setProgress}
-        setUploading={setIsUploading}
+        videoFile={state.videoFile}
+        handleTakeVideo={(file) =>
+          actions.handleTakeVideo(file, setUploadTitle)
+        }
+        handleCancelTakenVideo={handleCancelTakeVideo
+        }
+        setProgress={actions.setProgress}
+        setUploading={actions.setIsUploading}
         handleTitle={handleUploadTitle}
         titleError={uploadTitleError}
         title={uploadTitle}
-        controllerRef={controllerRef}
-        handleError={handleError}
+        controllerRef={refs.controllerRef}
+        handleError={actions.handleError}
       />
     );
   }
@@ -90,19 +81,24 @@ export function UploadVideoPage() {
           }
         />
 
-        <div className=" relative flex  justify-center items-center mt-10 bg-white rounded-xl">
-          {/* appear error here */}
-           {error&& <CustumError apiError={errorMessage} clearError={()=>{
-            setError(false)
-          } }/>}
-         
+        <div className="relative flex justify-center items-center mt-10 bg-white rounded-xl">
+
+     
+          {state.errorMessage && (
+            <CustumError
+              apiError={state.errorMessage}
+              clearError={actions.clearError}
+            />
+          )}
+
           <div className="m-15 w-full flex flex-col items-center">
             
-            {!isUploading && (
-              <SelectBox handleSelected={handleSelected} selected={selected} />
+            {!state.isUploading && (
+              <SelectBox
+                handleSelected={handleSelected}
+                selected={selected}
+              />
             )}
-
-            
 
             {renderUploadContent()}
           </div>

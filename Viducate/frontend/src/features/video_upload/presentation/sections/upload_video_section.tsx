@@ -12,7 +12,7 @@ import { useUploadHandlers } from "../hooks/use_upload_handlers";
 
 type Props = {
   videoFile: File | null;
-  takeVideo: boolean;
+  
 
   handleTakeVideo: (file: File) => void;
   handleCancelTakenVideo: () => void;
@@ -29,7 +29,6 @@ type Props = {
 
 export function UploadVideoSection({
   videoFile,
-  takeVideo,
   handleTakeVideo,
   handleCancelTakenVideo,
   setProgress,
@@ -87,7 +86,7 @@ export function UploadVideoSection({
 
   return (
     <>
-      {takeVideo ? (
+      {videoFile ? (
         <VideoDragedSection
           videoFile={videoFile}
           handleCancel={handleCancelTakenVideo}

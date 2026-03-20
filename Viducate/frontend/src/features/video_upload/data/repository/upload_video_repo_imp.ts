@@ -13,7 +13,7 @@ export class uploadVideoRepoImp implements UploadVideoRepo {
     this.uploadVideoDataSource = uploadVideoDs;
   }
   uploadURL(uploadReq: UrlRequest): Promise<ApiResult<UrlResponse>> {
-    return this.uploadURL(uploadReq)
+    return this.uploadVideoDataSource.uploadURL(uploadReq)
   }
   uploadVideo(
     uploadReq: UploadVideoRequest,

@@ -32,7 +32,7 @@ export class UploadVideoService {
       );
 
       onProgress?.(percent);
-      console.log(percent)
+      
     },
   });
 
@@ -51,7 +51,7 @@ export class UploadVideoService {
 
   }
   async uploadURl(uploadReqDto:UrlRequestDto):Promise<UrlResponseDto>{
-     const response = await apiClient.delete(`/videos/url`,uploadReqDto);
+     const response = await apiClient.post(`/videos/url`,uploadReqDto);
      return response.data
 
   }
