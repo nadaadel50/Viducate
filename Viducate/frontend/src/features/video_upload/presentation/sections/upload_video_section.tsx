@@ -1,45 +1,92 @@
+import { useRef } from "react";
+
 import { VideoDragedSection } from "./video_draged_section";
 import { InputSection } from "../componants/input_section";
 import { UploadBtn } from "../componants/upload_btn";
 import { UploadSection } from "./upload_section";
+
 import { uploadVideoUseCase } from "../../../../core/di/upload_video_container";
 import { UploadVideoRequest } from "../../domain/entity/upload_video_request";
 
+import { useUploadHandlers } from "../hooks/use_upload_handlers";
+
 type Props = {
-  uploadTitle: string;
-  uploadTitleError: boolean;
-  handleUploadTitle: (e: React.ChangeEvent<HTMLInputElement>) => void;
-
-  fileInputRef: React.RefObject<HTMLInputElement | null>;
-  handleBrowseClick: () => void;
-  handleFileChange: (e: React.ChangeEvent<HTMLInputElement>) => void;
-  handleDragOver: (e: React.DragEvent<HTMLDivElement>) => void;
-  handleDrop: (e: React.DragEvent<HTMLDivElement>) => void;
-
   videoFile: File | null;
-  takeVideo: boolean;
-  handleCancelTakenVideo: () => void;
   
+
+  handleTakeVideo: (file: File) => void;
+  handleCancelTakenVideo: () => void;
+
+  setProgress: React.Dispatch<React.SetStateAction<number>>;
+  setUploading: React.Dispatch<React.SetStateAction<boolean>>;
+  titleError: boolean;
+  handleTitle: (e: React.ChangeEvent<HTMLInputElement, Element>) => void;
+  title: string;
+
+  controllerRef: React.RefObject<AbortController | null>;
+  handleError: (errorMessage: string) => void;
 };
 
 export function UploadVideoSection({
-  uploadTitle,
-  uploadTitleError,
-  handleUploadTitle,
-
-  fileInputRef,
-  handleBrowseClick,
-  handleFileChange,
-  handleDragOver,
-  handleDrop,
-
   videoFile,
-  takeVideo,
+  handleTakeVideo,
   handleCancelTakenVideo,
+  setProgress,
+  setUploading,
+  titleError,
+  handleTitle,
+  title,
+  controllerRef,
+  handleError,
 }: Props) {
+  const {
+    handleBrowseClick,
+    handleDragOver,
+    handleFileChange,
+    handleDrop,
+    fileInputRef,
+  } = useUploadHandlers(handleTakeVideo);
+
+  const handleUploadVideo = async () => {
+    if (!videoFile) return;
+
+    setUploading(true);
+    controllerRef.current = new AbortController();
+
+    try {
+      const response = await uploadVideoUseCase.uploadVideo(
+        new UploadVideoRequest(
+          videoFile,
+          videoFile.name,
+          title,
+          "en",
+          "technology",
+          videoFile.type,
+        ),
+        (p) => setProgress(p),
+        controllerRef.current.signal,
+      );
+
+      if (!response.success) {
+        handleError(response.error);
+        return;
+      }
+
+      console.log(response.data);
+    } catch (error) {
+      if (error instanceof Error) {
+        handleError(error.message);
+      } else {
+        handleError("Something went wrong Please try again");
+      }
+    } finally {
+      controllerRef.current = null;
+    }
+  };
+
   return (
     <>
-      {takeVideo ? (
+      {videoFile ? (
         <VideoDragedSection
           videoFile={videoFile}
           handleCancel={handleCancelTakenVideo}
@@ -55,37 +102,15 @@ export function UploadVideoSection({
       )}
 
       <InputSection
-        title={uploadTitle}
-        error={uploadTitleError}
-        handleTitle={handleUploadTitle}
+        title={title}
+        error={titleError}
+        handleTitle={handleTitle}
       />
 
       <UploadBtn
-        disabled={!videoFile || uploadTitle === ""}
+        disabled={!videoFile || !title}
         label="Upload Video"
-        onClick={async() => {
-          if (!videoFile) {
-            return;
-          }
-
-          const response = await uploadVideoUseCase.uploadVideo(
-            new UploadVideoRequest(
-              videoFile,
-              videoFile.name,
-              uploadTitle,
-              "en",
-              "technology",
-              videoFile.type,
-            ),
-          );
-          if(response.success){
-            console.log(response.data)
-
-          }
-          else{
-            console.log(response.error)
-          }
-        }}
+        onClick={handleUploadVideo}
       />
     </>
   );

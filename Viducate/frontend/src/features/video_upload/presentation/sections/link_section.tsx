@@ -1,5 +1,4 @@
 import { AlertCircle, CirclePlay } from "lucide-react";
-import { InputSection } from "../componants/input_section";
 
 type LinkSectionProps = {
   url: string;

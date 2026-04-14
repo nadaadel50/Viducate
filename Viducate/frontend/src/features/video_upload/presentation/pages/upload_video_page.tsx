@@ -1,71 +1,72 @@
 import { UploadTitle } from "../componants/uplaod_title";
 import { SelectBox } from "../componants/select_box";
-
 import { useSelectBtnHandlers } from "../hooks/use_select_btn_handlers";
 
-
-import { useState } from "react";
-
 import { useUploadTitleInput } from "../hooks/use_upload_input_handler";
-import { useUploadHandlers } from "../hooks/use_upload_handlers";
+
 import { UploadLinkSection } from "../sections/upload_link_section";
 import { UploadLoadingSection } from "../sections/upload_loading_section";
 import { UploadVideoSection } from "../sections/upload_video_section";
 
+import { CustumError } from "../../../../core/componants/custum_error";
+import { useUploadVideoController } from "../hooks/use_upload_video_control";
+
+
+
+
 export function UploadVideoPage() {
   const { handleSelected, selected } = useSelectBtnHandlers();
 
-  const { uploadTitle, uploadTitleError, handleUploadTitle, setUploadTitle } =
-    useUploadTitleInput();
+  const { state, actions, refs } = useUploadVideoController();
+
 
   const {
-    handleBrowseClick,
-    handleDragOver,
-    handleFileChange,
-    handleDrop,
-    fileInputRef,
-    videoFile,
-    takeVideo,
-    handleCancelTakenVideo,
-  } = useUploadHandlers(setUploadTitle);
+    uploadTitle,
+    uploadTitleError,
+    handleUploadTitle,
+    setUploadTitle,
+    setIsFirstUploadTyping
+  } = useUploadTitleInput(state.videoFile);
 
-  const [isUploading, setIsUploading] = useState(false);
+  const handleCancelTakeVideo=()=>{
+     actions.handleCancelTakenVideo(setUploadTitle)
+     setIsFirstUploadTyping(true)
+     
 
-  const handleUploadClick = () => {
-    setIsUploading(true);
-  };
-
-  const handleCancelUploadedVideo = () => {
-    setIsUploading(false);
-  };
+  }
 
   function renderUploadContent() {
     if (selected === "link") {
-      return <UploadLinkSection />;
+      return (
+        <UploadLinkSection handleError={actions.handleError} />
+      );
     }
 
-    if (isUploading) {
+    if (state.isUploading) {
       return (
         <UploadLoadingSection
+          progress={state.progress}
           title={uploadTitle}
-          handleCancel={handleCancelUploadedVideo}
+          handleCancel={actions.handleCancelUpload}
         />
       );
     }
 
     return (
       <UploadVideoSection
-        takeVideo={takeVideo}
-        videoFile={videoFile}
-        uploadTitle={uploadTitle}
-        uploadTitleError={uploadTitleError}
-        handleUploadTitle={handleUploadTitle}
-        handleBrowseClick={handleBrowseClick}
-        handleDragOver={handleDragOver}
-        handleFileChange={handleFileChange}
-        handleDrop={handleDrop}
-        fileInputRef={fileInputRef}
-        handleCancelTakenVideo={handleCancelTakenVideo}
+        videoFile={state.videoFile}
+        handleTakeVideo={(file) =>
+          actions.handleTakeVideo(file, setUploadTitle)
+        }
+        handleCancelTakenVideo={handleCancelTakeVideo
+        }
+        setProgress={actions.setProgress}
+        setUploading={actions.setIsUploading}
+        handleTitle={handleUploadTitle}
+        titleError={uploadTitleError}
+        title={uploadTitle}
+        controllerRef={refs.controllerRef}
+        handleError={actions.handleError}
       />
     );
   }
@@ -80,10 +81,23 @@ export function UploadVideoPage() {
           }
         />
 
-        <div className="flex justify-center items-center mt-10 bg-white rounded-xl">
-          <div className="m-10 w-full flex flex-col items-center">
-            {!isUploading && (
-              <SelectBox handleSelected={handleSelected} selected={selected} />
+        <div className="relative flex justify-center items-center mt-10 bg-white rounded-xl">
+
+     
+          {state.errorMessage && (
+            <CustumError
+              apiError={state.errorMessage}
+              clearError={actions.clearError}
+            />
+          )}
+
+          <div className="m-15 w-full flex flex-col items-center">
+            
+            {!state.isUploading && (
+              <SelectBox
+                handleSelected={handleSelected}
+                selected={selected}
+              />
             )}
 
             {renderUploadContent()}

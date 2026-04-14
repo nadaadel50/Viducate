@@ -16,7 +16,7 @@ export function UploadSection(props:UploadSectionProps) {
     <div
       onDragOver={props.handleDragOver}
       onDrop={props.handleDrop}
-      className=" group  bg-gray-50 hover:bg-blue-50  w-full flex flex-col items-center mt-10 py-12 border-2 border-dashed border-gray-300 rounded-2xl transition-colors cursor-pointer  mb-10 "
+      className=" group   bg-gray-50 hover:bg-blue-50  w-full flex flex-col items-center mt-10 py-12 border-2 border-dashed border-gray-300 rounded-2xl transition-colors cursor-pointer  mb-10 "
     >
       <div onClick={props.handleBrowseClick}
         style={{ background: COLORS.brand.gradient }}
