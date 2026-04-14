@@ -7,6 +7,7 @@ import { EmailSendedPage } from "../../features/auth/presentation/forgetpass/pag
 import { ResetPasswordPage } from "../../features/auth/presentation/forgetpass/pages/reset_password_page";
 import { SuccessfullResetPage } from "../../features/auth/presentation/forgetpass/pages/successfull_rest_page";
 import { AppRoutesNames } from "./routes";
+import TestModalsPage from "../../features/video_upload/presentation/pages/test_modals_page";
 
 
 export function AppRoutes() {
@@ -19,6 +20,7 @@ export function AppRoutes() {
             /* here we will put all the public routes that don't need authentication to access them like landing page, signup */
             <Route path="/" element={<UploadVideoPage />} />  /* for example */
             <Route path="/" element={<ForgetPasswordPage />} />  /* for example */
+            <Route path="/test-modals" element={<TestModalsPage />} />  /* for example */
 
              <Route  element={<ProtectedRoute/>}>  // will prmove "/protected" soon
               /* here we will put all the protected routes that need authentication to access them */

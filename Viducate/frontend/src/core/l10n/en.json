@@ -47,8 +47,27 @@
    "auth.resetPassword.inputs.newPasswordLabel": "New password",
   "auth.resetPassword.inputs.newPasswordPlaceholder": "Enter new password",
   "auth.resetPassword.inputs.confirmPasswordLabel": "Confirm new password",
-  "auth.resetPassword.inputs.confirmPasswordPlaceholder": "Confirm your password"
+  "auth.resetPassword.inputs.confirmPasswordPlaceholder": "Confirm your password",
 
 
 
+  "preferences.outputLanguage": "Output Language",
+  "preferences.sameAsVideo": "Same as Video",
+  "preferences.english": "English",
+  "preferences.arabic": "Arabic",
+
+  "languageInit.title": "Customize your learning language preferences?",
+  "languageInit.desc": "Viducate uses AI to adapt content to you. Would you like to set your default language now?",
+  "languageInit.noContinue": "No, continue",
+  "languageInit.yesCustomize": "Yes, customize",
+  "languageInit.secure": "Your preferences are saved securely.",
+
+  "customize.title": "Customize Your Learning Experience",
+  "customize.desc": "Choose the default languages used for generating summaries, quizzes, and flashcards.",
+  "customize.skip": "Skip for now",
+  "customize.save": "Save Preferences",
+  "customize.unified.title": "Unified Language Settings",
+  "customize.language.unified.enabled": "All content uses the same language",
+  "customize.language.unified.disabled": "Using your preferred content language",
+  "customize.preferredLanguage": "Preferred Language"
 }

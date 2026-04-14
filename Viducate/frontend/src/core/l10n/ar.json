@@ -47,5 +47,28 @@
       "auth.resetPassword.inputs.newPasswordLabel": "كلمة المرور الجديدة",
   "auth.resetPassword.inputs.newPasswordPlaceholder": "أدخل كلمة المرور الجديدة",
   "auth.resetPassword.inputs.confirmPasswordLabel": "تأكيد كلمة المرور الجديدة",
-  "auth.resetPassword.inputs.confirmPasswordPlaceholder": "أكد كلمة المرور"
+  "auth.resetPassword.inputs.confirmPasswordPlaceholder": "أكد كلمة المرور",
+
+
+
+  "preferences.outputLanguage": "لغة عرض المحتوى",
+  "preferences.sameAsVideo": "مثل لغة الفيديو",
+  "preferences.english": "الإنجليزية",
+  "preferences.arabic": "العربية",
+
+  "languageInit.title": "هل تود تخصيص لغة التعلم؟",
+  "languageInit.desc": "يستخدم Viducate الذكاء الاصطناعي لتكييف المحتوى حسب تفضيلاتك. هل ترغب في تحديد لغتك الافتراضية الآن؟",
+  "languageInit.noContinue": "لا، متابعة",
+  "languageInit.yesCustomize": "نعم، تخصيص الإعدادات",
+  "languageInit.secure": "سيتم حفظ تفضيلاتك بشكل آمن.",
+
+  "customize.title": "خصص تجربة التعلم الخاصة بك",
+  "customize.desc": "حدد اللغة الافتراضية لإنشاء الملخصات والاختبارات والبطاقات التعليمية.",
+  "customize.skip": "تخطي الآن",
+  "customize.save": "حفظ الإعدادات",
+  "customize.unified.title": "إعدادات توحيد اللغة",
+  "customize.language.unified.enabled": "كل المحتوى بيستخدم نفس اللغة",
+  "customize.language.unified.disabled": "بيتم استخدام لغة المحتوى المفضلة لديك",
+  "customize.preferredLanguage": "لغتك المفضلة"
+
 }
