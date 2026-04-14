@@ -14,3 +14,4 @@ export function AuthMainText({ bigTitle, smallTitle }: MainTextProps){
         </div>
     )
 }
+export default AuthMainText;

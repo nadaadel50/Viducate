@@ -8,6 +8,12 @@ import type { AuthApiService } from "../client/auth_service";
 import { toForgetPassReqDTO } from "../models/forgetPass/forgetpass_req_dto";
 import { toResetPasswordRequestDto } from "../models/forgetPass/reset_password_request_dto";
 
+import { authService } from "../client/auth_service";
+import type { LoginResponseDto } from '../../api/models/login/login_response_dto';
+import type { LoginRequestDto } from '../models/login/login_request_dto';
+import type { SignupRequestDto } from '../models/signup/signup_request_dto';
+import type { SignupResponseDto } from '../models/signup/signup_response_dto';
+
 export class AuthDataSourceImp implements AuthDataSource {
   private authApiService: AuthApiService;
   constructor(authApiService: AuthApiService) {
@@ -46,4 +52,12 @@ export class AuthDataSourceImp implements AuthDataSource {
       return { success: false, error: message };
     }
   }
+  async login(data: LoginRequestDto): Promise<LoginResponseDto> {
+    return await authService.login(data);
+  }
+
+  async register(data: SignupRequestDto): Promise<SignupResponseDto> {
+    return await authService.register(data);
+  }
 }
+

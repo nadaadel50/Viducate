@@ -1,12 +1,14 @@
 import type { AuthRepo } from "../repo/auth_repo";
-
+import { LoginRequest } from "../entity/login_request";
+import type { LoginResponseDto } from "../../api/models/login/login_response_dto";
 export class LoginUseCase {
+  private repository: AuthRepo;
 
-    private authRepository: AuthRepo;
-    constructor( authRepository: AuthRepo) {
-        this.authRepository = authRepository;
-    }
+  constructor(repository: AuthRepo) {
+    this.repository = repository;
+  }
 
-   
-   
+async execute(params: LoginRequest): Promise<LoginResponseDto> {
+    return await this.repository.login(params);
+  }
 }

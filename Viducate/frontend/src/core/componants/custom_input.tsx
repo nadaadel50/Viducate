@@ -41,7 +41,7 @@ export function CustomInput({
   : COLORS.border.default;
 
   return (
-    <div className="w-full py-4">
+    <div className="w-full py-2">
       <p className="text-sm font-medium mb-2">{label}</p>
 
       <div className="relative">
