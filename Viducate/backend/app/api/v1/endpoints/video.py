@@ -16,6 +16,7 @@ from app.schemas.video import (
     PresignedUploadRequest,
 )
 
+
 router = APIRouter(prefix="/videos", tags=["Videos"])
 logger = logging.getLogger(__name__)
 security = HTTPBearer()

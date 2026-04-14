@@ -6,10 +6,10 @@ from .video import Video
 
 # from .video_summary import VideoSummary
 # from .slide import Slide
-# from .topic_segment import TopicSegment
+from .topic_segment import TopicSegment
 # from .segment_summary import SegmentSummary
-# from .subtopics import Subtopic
-# from .keypoints import Keypoint
+from .subtopics import Subtopic
+from .keypoints import Keypoint
 # from .quiz import Quiz
 # from .question import Question
 # from .answer_options import AnswerOption
@@ -19,7 +19,7 @@ from .video import Video
 # from .mindmap import Mindmap
 
 __all__ = [
-    "Base", "User", "Settings", "Video"
+    "Base", "User", "Settings", "Video","TopicSegment", "Subtopic", "Keypoint"
 ]
 
 # "UserAnalytics","Video", "VideoSummary", "Slide",

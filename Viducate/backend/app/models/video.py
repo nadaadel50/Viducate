@@ -19,4 +19,5 @@ class Video(Base):
     created_at = Column(TIMESTAMP, server_default=func.now())
 
     user = relationship("User", back_populates="videos")
+    segments = relationship("TopicSegment",back_populates="video",cascade="all, delete-orphan")
     

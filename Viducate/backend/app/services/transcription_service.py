@@ -95,7 +95,8 @@ async def transcribe(url: str, video_id: int, language: str = None) -> str:
                 full_transcript.append({
                 "start": segment["start"] + offset,
                 "end": segment["end"] + offset,
-                "text": segment["text"]
+                "text": segment["text"],
+                "lines": [segment["text"]] 
             })
                 
         with open(f"transcript_{video_id}.txt", "w", encoding="utf-8") as f:

@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import os
 import sys
 from sqlalchemy import create_engine, text
@@ -37,7 +36,6 @@ def drop_all_tables_force():
 
 if __name__ == "__main__":
     drop_all_tables_force()
-=======
 import os
 import sys
 from sqlalchemy import create_engine, text
@@ -76,4 +74,3 @@ def drop_all_tables_force():
 
 if __name__ == "__main__":
     drop_all_tables_force()
->>>>>>> ea2eccd1902d1373bc6459370a0bb36d301c8d77

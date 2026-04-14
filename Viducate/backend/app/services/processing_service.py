@@ -6,6 +6,9 @@ from app.db.database import SessionLocal
 from app.services.transcription_service import transcribe
 
 from app.services.ocr_service import OCRService
+from app.services.merging_service import merge_transcript_ocr
+from app.services.segmentation_service import segment_topics
+from app.repositories.segment_repository import SegmentRepository
 
 logger = logging.getLogger(__name__)
 
@@ -97,22 +100,36 @@ async def run_processing_pipeline(video_id: int, language: str):
         )
         logger.info(f"[Pipeline] OCR segments: {len(ocr_segments)}")
 
-        # ── Step 2: Topic Segmentation ─────────────────────────────────────
-        logger.info(f"[Pipeline] Step 2 - Segmentation: video_id={video_id}")
+        # ── Step 3: Merging ─────────────────────────────────────
+        logger.info(f"[Pipeline] Step 3 - Merging: video_id={video_id}")
+        repo.update_status(video_id, "merging")
+        merged =  merge_transcript_ocr(transcript, video_id, ocr_segments)
+        logger.info(f"[Pipeline] Merged segments: {len(merged)}")
+
+        # ── Step 4: Topic Segmentation ──────────────────────────────────
+        logger.info(f"[Pipeline] Step 4 - Segmentation: video_id={video_id}")
+        repo.update_status(video_id, "segmenting")
+        segment_repo = SegmentRepository(db)
+
+        segments_result = await segment_topics(merged, video_id)
+        logger.info(f"[Pipeline] Segments generated: {segments_result['total_segments']}")
+
+        # SAVE TO DATABASE
+        print("TOTAL:", segments_result["total_segments"])
+        for seg in segments_result["segments"]:
+            print(" inserting segment:", seg["segment_number"])
+            try:
+                segment_repo.create_full_segment(
+                    video_id=video_id,
+                    segment_data=seg
+                )
+            except Exception as e:
+                logger.error(f" Failed to insert segment: {e}")
+
+        logger.info("[Pipeline] Segments saved to DB successfully")
         await asyncio.sleep(0)          # Replace with: await segment_topics(video_id)
 
-        # ── Step 3: Summarization ──────────────────────────────────────────
-        logger.info(f"[Pipeline] Step 3 - Summarisation: video_id={video_id}")
-        await asyncio.sleep(0)          # Replace with: await summarise(video_id, language)
-
-        # ── Step 4: Quiz Generation ────────────────────────────────────────
-        logger.info(f"[Pipeline] Step 4 - Quiz generation: video_id={video_id}")
-        await asyncio.sleep(0)          # Replace with: await generate_quizzes(video_id)
-
-        # ── Step 5: Mindmap Generation ─────────────────────────────────────
-        logger.info(f"[Pipeline] Step 5 - Mindmap: video_id={video_id}")
-        await asyncio.sleep(0)          # Replace with: await generate_mindmap(video_id)
-
+        # ── Completed Status ─────────────────────────────────────
         repo.update_status(video_id, "completed")
         logger.info(f"[Pipeline] Completed: video_id={video_id}")
 
