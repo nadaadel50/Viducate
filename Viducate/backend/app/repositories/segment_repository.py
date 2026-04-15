@@ -5,13 +5,17 @@ from app.models.keypoints import Keypoint
 
 from typing import Optional, List
 
-def time_to_seconds(t: str) -> int:
-        parts = list(map(int, t.split(":")))
-        if len(parts) == 2:
-            return parts[0] * 60 + parts[1]
-        elif len(parts) == 3:
-            return parts[0] * 3600 + parts[1] * 60 + parts[2]
-        return 0
+def time_to_seconds(t):
+    if isinstance(t, int):
+        return t
+
+    parts = list(map(int, t.split(":")))
+
+    if len(parts) == 2:
+        return parts[0] * 60 + parts[1]
+    elif len(parts) == 3:
+        return parts[0] * 3600 + parts[1] * 60 + parts[2]
+    return 0
 
 class SegmentRepository:
     def __init__(self, db: Session):
@@ -106,19 +110,19 @@ class SegmentRepository:
     def get_by_video(self, video_id: int) -> List[TopicSegment]:
         return (
             self.db.query(TopicSegment)
-            .filter(TopicSegment.video_id == video_id)
+            .filter(TopicSegment.vid_id == video_id)
             .order_by(TopicSegment.segment_number)
             .all()
         )
 
-    # =========================
-    # DELETE
-    # =========================
-    def delete(self, segment_id: int) -> bool:
-        segment = self.get_by_id(segment_id)
-        if not segment:
-            return False
+    # # =========================
+    # # DELETE
+    # # =========================
+    # def delete(self, segment_id: int) -> bool:
+    #     segment = self.get_by_id(segment_id)
+    #     if not segment:
+    #         return False
 
-        self.db.delete(segment)
-        self.db.commit()
-        return True
+    #     self.db.delete(segment)
+    #     self.db.commit()
+    #     return True

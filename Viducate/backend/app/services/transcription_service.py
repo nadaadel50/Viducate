@@ -38,7 +38,7 @@ def download_audio(url: str, video_id: int) -> str:
     logger.info(f"audio saved: {files[0]}")
     return files[0]
 
-def split_audio(file_path: str, chunk_minutes: int = 5) -> list:
+def split_audio(file_path: str, chunk_minutes: int = 2) -> list:
     logger.info(f"Splitting start: ")
     audio = AudioSegment.from_file(file_path)
     chunk_ms = chunk_minutes * 60 * 1000
@@ -51,25 +51,34 @@ def split_audio(file_path: str, chunk_minutes: int = 5) -> list:
     logger.info(f"Splitting done: ")
     return chunks
 
-def send_to_groq(client: Groq, chunk_path: str, offset: float, lang: str, retries: int = 3):
+def send_to_groq(client: Groq, chunk_path: str, offset: float, lang: str, retries: int = 5):
+    logger.info("before groq call")
     logger.info(f"sending to groq: {chunk_path}")
     for attempt in range(retries):
         try:
             with open(chunk_path, "rb") as f:
+                logger.info(f"START chunk {chunk_path}")
                 result = client.audio.transcriptions.create(
                     file=f,
                     model="whisper-large-v3-turbo",
                     language=lang,
                     response_format="verbose_json",
-                    timeout=60
+                    timeout=120  # timeout
                 )
+            
+            
+            if not hasattr(result, 'segments') or result.segments is None:
+                raise Exception(f"Invalid response from Groq: {result}")
+                
             logger.info(f"chunk done: {chunk_path}")
             return result
+            
         except Exception as e:
             logger.warning(f"attempt {attempt+1} failed: {e}")
-            print(f"attempt {attempt+1} failed: {e}")
-            time.sleep(3)
-    raise Exception("failed after 3 attempts")
+            if attempt < retries - 1:
+                time.sleep(10)  
+            
+    raise Exception("Groq transcription failed after 3 attempts")
 
 async def transcribe(url: str, video_id: int, language: str = None) -> str:
     audio_file = None

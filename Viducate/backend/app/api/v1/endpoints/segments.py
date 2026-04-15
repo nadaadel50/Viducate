@@ -41,7 +41,19 @@ def get_segments_by_video(
     current_user=Depends(get_current_user),
 ):
     repo = SegmentRepository(db)
-    return repo.get_by_video(video_id)
+    segments = repo.get_by_video(video_id)
+    return [
+        {
+            "segment_id": s.segment_id,
+            "video_id": s.vid_id,
+            "segment_number": s.segment_number,
+            "start_time": s.start_time,
+            "end_time": s.end_time,
+            "main_topic": s.main_topic,
+            "title": s.title,
+        }
+        for s in segments
+    ]
 
 # =========================
 # DELETE SEGMENT

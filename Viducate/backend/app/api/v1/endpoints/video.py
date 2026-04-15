@@ -47,6 +47,8 @@ def submit_video_url(
 ):
     service = VideoService(db)
     result = service.submit_url(current_user.id, request)
+    if result.get("cached"):
+        return result  
 
     background_tasks.add_task(
         run_processing_pipeline,
