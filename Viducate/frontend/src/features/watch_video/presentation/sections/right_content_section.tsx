@@ -1,6 +1,5 @@
 import { Clock4, FolderUp, Save, Share2 } from "lucide-react";
 import { MediaBtn } from "../widgets/media_btn";
-import video from "../../../../assets/videos/test.mp4";
 import { VideoPlayer } from "../widgets/video_part";
 
 

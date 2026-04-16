@@ -4,7 +4,7 @@ import { RightContentSection } from "../sections/right_content_section";
 export function MainPage() {
   return (
     <>
-    <div className="flex  h-screen font-display  ">
+    <div className="flex  font-display  ">
         <div className="flex-1  ">
 
            <LeftContentSection/>
@@ -15,7 +15,7 @@ export function MainPage() {
 
 
 
-        <div className="flex-[3.5] bg-red-100">
+        <div className="flex-[3.5]  bg-red-100">
           <RightContentSection/>
         </div>
 

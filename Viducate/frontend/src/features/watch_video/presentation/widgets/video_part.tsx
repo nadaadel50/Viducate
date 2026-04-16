@@ -1,6 +1,7 @@
 import { useRef, useState } from "react";
-import { CirclePlus, Gauge, Pause, Play } from "lucide-react";
+import { CirclePlus, Pause, Play } from "lucide-react";
 import video from "../../../../assets/videos/test.mp4";
+import { TopicEndSection } from "../sections/topic_end_section";
 
 export function VideoPlayer() {
   const videoRef = useRef<HTMLVideoElement | null>(null);
@@ -9,6 +10,7 @@ export function VideoPlayer() {
   const [currentTime, setCurrentTime] = useState(0);
   const [pause, setPause] = useState(false);
   const progressRef = useRef<HTMLDivElement | null>(null);
+  const [showTopicEnd, setShowTopicEnd] = useState(false);
 
   type Marker = {
     time: number;
@@ -61,17 +63,34 @@ export function VideoPlayer() {
   };
 
   return (
-    <div className="flex flex-col">
+    <div className="flex flex-col items-center">
       <div className="relative w-250 h-[400px] transition ">
         <video
           ref={videoRef}
           src={video}
+          controls={started}
           onTimeUpdate={handleTimeUpdate}
+          onPlay={() => setPause(true)}
+          onPause={() => setPause(false)}
           onEnded={() => {
             setPause(false);
+            setShowTopicEnd(true);
           }}
           className="w-250 h-full object-cover rounded-xl hover:scale-[1.01] shadow-glow border border-3 border-transparent hover:border-[#4f46e5]/30 transition-all"
         />
+
+        <div
+          className={`fixed  inset-0 flex items-center justify-center  z-20 
+  bg-black/60 transition-all duration-500
+  ${
+    showTopicEnd
+      ? "opacity-100 translate-y-0"
+      : "opacity-0 translate-y-20 pointer-events-none"
+  }
+  `}
+        >
+          <TopicEndSection />
+        </div>
 
         {!started && (
           <div className="absolute inset-0 flex items-center justify-center ">
@@ -86,12 +105,12 @@ export function VideoPlayer() {
           </div>
         )}
 
-
-        <div className="absolute bottom-2 right-2 w-10 h-10 bg-blue-100 flex ">
+        {/* <div className="absolute bottom-2 right-2 bg-white flex gap-5 justify-center items-center  rounded-2xl border border-slate-100    p-2 shadow-xl shadow-slate-200/50 ">
           <button><Gauge /></button>
-          <button></button>
+          <button><Volume2 /></button>
+          <button onClick={handleFullscreen}> <Maximize /></button>
 
-        </div>
+        </div> */}
       </div>
 
       <div className="w-full bg-green-100 flex gap-2 mt-5 justify-center items-center  rounded-2xl border border-slate-100  bg-white  p-6 shadow-xl shadow-slate-200/50 ">
