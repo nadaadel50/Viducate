@@ -8,6 +8,7 @@ class VideoUploadURLRequest(BaseModel):
     title: str
     language: Optional[Literal["en", "ar"]] = "en"
     subject: Optional[str] = None
+    subject: Optional[str] = None
 
     @field_validator("url")
     @classmethod

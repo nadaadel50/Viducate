@@ -16,6 +16,7 @@ from app.schemas.video import (
     PresignedUploadRequest,
 )
 
+
 router = APIRouter(prefix="/videos", tags=["Videos"])
 logger = logging.getLogger(__name__)
 security = HTTPBearer()
@@ -46,6 +47,8 @@ def submit_video_url(
 ):
     service = VideoService(db)
     result = service.submit_url(current_user.id, request)
+    if result.get("cached"):
+        return result  
 
     background_tasks.add_task(
         run_processing_pipeline,
@@ -154,3 +157,4 @@ def delete_video(
 ):
     service = VideoService(db)
     return service.delete_video(current_user.id, video_id)
+    

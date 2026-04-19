@@ -3,12 +3,13 @@ from .user import User
 from .settings import Settings
 # from .user_dashboard import UserDashboard
 from .video import Video
-# from .video_summary import VideoSummary
+
+from .video_summary import VideoSummary
 # from .slide import Slide
-# from .topic_segment import TopicSegment
-# from .segment_summary import SegmentSummary
-# from .subtopics import Subtopic
-# from .keypoints import Keypoint
+from .topic_segment import TopicSegment
+from .segment_summary import SegmentSummary
+from .subtopics import Subtopic
+from .keypoints import Keypoint
 # from .quiz import Quiz
 # from .question import Question
 # from .answer_options import AnswerOption
@@ -18,7 +19,7 @@ from .video import Video
 # from .mindmap import Mindmap
 
 __all__ = [
-    "Base", "User", "Settings", "Video"
+    "Base", "User", "Settings", "Video","TopicSegment", "Subtopic", "Keypoint", "VideoSummary", "SegmentSummary"
 ]
 
 # "UserAnalytics","Video", "VideoSummary", "Slide",

@@ -13,6 +13,25 @@ class VideoRepository:
         self.db.commit()
         self.db.refresh(video)
         return video
+    
+    # CACHE LOOKUPS
+    def get_by_user_and_hash(self, user_id: int, content_hash: str) -> Optional[Video]:
+        return (
+            self.db.query(Video)
+            .filter(Video.user_id == user_id)
+            .filter(Video.content_hash == content_hash)
+            .first()
+        )
+
+    # user (global cache)
+    def get_by_hash(self, content_hash: str) -> Optional[Video]:
+        return (
+            self.db.query(Video)
+            .filter(Video.content_hash == content_hash)
+            .first()
+        )
+    # def get_by_url(self, url: str):
+    #     return self.db.query(Video).filter(Video.url == url).first()
 
     def get_by_id(self, video_id: int) -> Optional[Video]:
         return self.db.query(Video).filter(Video.vid == video_id).first()
