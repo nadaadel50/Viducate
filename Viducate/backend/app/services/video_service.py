@@ -4,10 +4,13 @@ from fastapi import HTTPException, status
 from app.repositories.video_repository import VideoRepository
 from app.services.s3_service import S3Service
 from app.services.processing_service import ProcessingJobService
+from app.services.videoCaching_service import VideoCachingServise
+
 from app.schemas.video import (
     VideoUploadURLRequest,
     PresignedUploadRequest,
 )
+
 
 logger = logging.getLogger(__name__)
 
@@ -24,15 +27,28 @@ class VideoService:
         self.video_repo = VideoRepository(db)
         self.s3 = S3Service()
         self.job_service = ProcessingJobService(db)
+        self.caching_service = VideoCachingServise(db)
 
+
+    
+    
     def submit_url(self, user_id: int, request: VideoUploadURLRequest) -> dict:
+        normalized_url = self.caching_service.normalize_youtube_url(request.url)
+        content_hash = self.caching_service.generate_hash(normalized_url)
+
+        cache_result = self.caching_service.check_cache(user_id, content_hash,request.title)
+        if cache_result:
+            cache_result["language"] = cache_result.get("language", "en")
+            return cache_result
+            
         video_data = {
             "user_id": user_id,
             "title": request.title,
-            "url": request.url,
+            "url": normalized_url,
             "language": request.language,
             "subject": request.subject,
             "processing_status": "uploaded",
+            "content_hash": content_hash
         }
         video = self.video_repo.create(video_data)
         logger.info(f"URL video created: video_id={video.vid}, user_id={user_id}")
@@ -44,8 +60,10 @@ class VideoService:
             "url": video.url,
             "language": video.language,
             "processing_status": video.processing_status,
+            "content_hash": video.content_hash,
             "message": "Video URL received and queued for processing",
         }
+    
     
     def request_file_upload(self, user_id: int, request: PresignedUploadRequest) -> dict:
         """

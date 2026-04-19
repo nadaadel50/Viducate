@@ -18,5 +18,11 @@ class Video(Base):
     upload_date = Column(TIMESTAMP, server_default=func.now())
     created_at = Column(TIMESTAMP, server_default=func.now())
 
+    # NEW FIELD (for caching)
+    content_hash = Column(String(64), index=True, nullable=True)
+
     user = relationship("User", back_populates="videos")
+    segments = relationship("TopicSegment",back_populates="video",cascade="all, delete-orphan")
+    video_summary = relationship("VideoSummary", back_populates="video", uselist=False, cascade="all, delete-orphan"
+)
     

@@ -11,5 +11,6 @@ class Keypoint(Base):
     description = Column(Text, nullable=False)
     created_at = Column(TIMESTAMP, server_default=func.now())
 
+
     segment = relationship("TopicSegment", back_populates="keypoints")
 
