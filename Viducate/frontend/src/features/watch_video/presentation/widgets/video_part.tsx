@@ -24,8 +24,10 @@ export function VideoPlayer() {
     setStarted(true);
     setPause(true);
   };
+
   const handleVideoPauseAndStart = () => {
     if (!videoRef.current) return;
+
     if (pause) {
       videoRef.current.pause();
       setPause(false);
@@ -41,8 +43,8 @@ export function VideoPlayer() {
 
     const current = videoRef.current.currentTime;
     setCurrentTime(current);
-    const duration = videoRef.current.duration;
 
+    const duration = videoRef.current.duration;
     if (duration) {
       setProgress((current / duration) * 100);
     }
@@ -50,21 +52,26 @@ export function VideoPlayer() {
 
   const handleProgressClick = (e: React.MouseEvent<HTMLDivElement>) => {
     if (!videoRef.current || !progressRef.current) return;
+
     const rect = progressRef.current.getBoundingClientRect();
     const clickX = e.clientX - rect.left;
+
     const newTime = (clickX / rect.width) * videoRef.current.duration;
     videoRef.current.currentTime = newTime;
   };
 
   const handleAddMarker = () => {
     if (!videoRef.current) return;
+
     const time = videoRef.current.currentTime;
     setMarkers([...markers, { time }]);
   };
 
   return (
-    <div className="flex flex-col items-center">
-      <div className="relative w-250 h-[400px] transition ">
+    <div className="flex flex-col items-center w-full">
+
+      {/* video */}
+      <div className="relative w-full max-w-5xl h-[350px]">
         <video
           ref={videoRef}
           src={video}
@@ -76,97 +83,91 @@ export function VideoPlayer() {
             setPause(false);
             setShowTopicEnd(true);
           }}
-          className="w-250 h-full object-cover rounded-xl hover:scale-[1.01] shadow-glow border border-3 border-transparent hover:border-[#4f46e5]/30 transition-all"
+          className="w-full h-full object-cover rounded-xl shadow-md border border-transparent hover:border-[#4f46e5]/30 transition"
         />
 
+        {/* overlay */}
         <div
-          className={`fixed  inset-0 flex items-center justify-center  z-20 
-  bg-black/60 transition-all duration-500
-  ${
-    showTopicEnd
-      ? "opacity-100 translate-y-0"
-      : "opacity-0 translate-y-20 pointer-events-none"
-  }
-  `}
+          className={`fixed inset-0 flex items-center justify-center z-20 
+          bg-black/60 transition-all duration-500
+          ${
+            showTopicEnd
+              ? "opacity-100 translate-y-0"
+              : "opacity-0 translate-y-20 pointer-events-none"
+          }`}
         >
           <TopicEndSection />
         </div>
 
+        {/* play button */}
         {!started && (
-          <div className="absolute inset-0 flex items-center justify-center ">
+          <div className="absolute inset-0 flex items-center justify-center">
             <button
               onClick={handleStart}
               className="cursor-pointer bg-gradient-to-br from-[#359EFF]/60 to-[#5A0BB1]/60
-                   hover:from-[#5A0BB1] hover:to-[#359EFF]
-                   text-white p-5 rounded-full transition"
+              hover:from-[#5A0BB1] hover:to-[#359EFF]
+              text-white p-5 rounded-full transition"
             >
               <Play className="w-8 h-8" />
             </button>
           </div>
         )}
-
-        {/* <div className="absolute bottom-2 right-2 bg-white flex gap-5 justify-center items-center  rounded-2xl border border-slate-100    p-2 shadow-xl shadow-slate-200/50 ">
-          <button><Gauge /></button>
-          <button><Volume2 /></button>
-          <button onClick={handleFullscreen}> <Maximize /></button>
-
-        </div> */}
       </div>
 
-      <div className="w-full bg-green-100 flex gap-2 mt-5 justify-center items-center  rounded-2xl border border-slate-100  bg-white  p-6 shadow-xl shadow-slate-200/50 ">
-        {/* icon */}
+      {/* controls */}
+      <div className="w-full max-w-5xl flex gap-3 mt-5 items-center rounded-xl border border-slate-100 bg-white p-4 shadow-md">
+
+        {/* play / pause */}
         <span
           onClick={handleVideoPauseAndStart}
-          className="  cursor-pointer w-10 h-10 bg-blue-300 flex justify-center items-center rounded-xl bg-slate-50 hover:bg-[#4338ca] hover:text-white text-slate-700  transition-all duration-300 shadow-sm"
+          className="cursor-pointer w-10 h-10 flex justify-center items-center rounded-xl bg-slate-50 hover:bg-[#4338ca] hover:text-white text-slate-700 transition"
         >
-          {!pause ? <Play size={24} /> : <Pause size={24} />}
+          {!pause ? <Play size={20} /> : <Pause size={20} />}
         </span>
+
         {/* progress */}
         <div
           ref={progressRef}
-          className="w-180 h-2 bg-slate-200 rounded-full mt-2 cursor-pointer relative shadow-inner"
+          className="flex-1 h-2 bg-slate-200 rounded-full cursor-pointer relative"
           onClick={handleProgressClick}
         >
           <div
-            className=" h-full bg-gradient-to-br from-[#359EFF] to-[#5A0BB1] rounded-full transition-all"
+            className="h-full bg-gradient-to-r from-[#359EFF] to-[#5A0BB1] rounded-full"
             style={{ width: `${prgress}%` }}
           />
 
           {markers.map((marker, index) => (
             <div
               key={index}
-              className="absolute absolute top-1/2 -translate-y-1/2  cursor-pointer "
-              onClick={(e) => {
-                e.stopPropagation();
-
-                videoRef.current!.currentTime = marker.time;
-              }}
+              className="absolute top-1/2 -translate-y-1/2 cursor-pointer"
               style={{
                 left: `${(marker.time / videoRef.current!.duration) * 100}%`,
               }}
+              onClick={(e) => {
+                e.stopPropagation();
+                videoRef.current!.currentTime = marker.time;
+              }}
             >
-              <div className="w-5 h-5 rounded-full shadow-md bg-white flex justify-center items-center hover:scale-125 transition-transform z-10  hover:shadow-md hover:shadow-[#4338ca]/50">
-                <div className="w-3 h-3 rounded-full bg-[#4338ca]/40"></div>
+              <div className="w-4 h-4 rounded-full bg-white flex items-center justify-center shadow hover:scale-110 transition">
+                <div className="w-2 h-2 rounded-full bg-[#4338ca]/50"></div>
               </div>
             </div>
           ))}
         </div>
 
         {/* time */}
-        <div className="text-sm text-slate-500">
+        <div className="text-sm text-slate-500 min-w-[50px] text-center">
           {Math.floor(currentTime / 60)}:
           {String(Math.floor(currentTime % 60)).padStart(2, "0")}
         </div>
 
-        <p className="text-slate-200">|</p>
-
         {/* add marker */}
         <div
           onClick={handleAddMarker}
-          className="flex gap-2 bg-white  justify-center items-center font-bold uppercase tracking-wider text-[#4338ca] transition-colors px-2 py-1 rounded hover:bg-[#4338ca]/5 cursor-pointer "
+          className="flex gap-2 items-center text-[#4338ca] text-sm font-medium px-2 py-1 rounded hover:bg-[#4338ca]/5 cursor-pointer"
         >
-          <CirclePlus size={20} />
-          <p className="text-sm">ADD Marker</p>
+          <CirclePlus size={18} />
+          Add Marker
         </div>
       </div>
     </div>
