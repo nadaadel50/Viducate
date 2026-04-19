@@ -19,7 +19,7 @@ export function RightContentSection() {
     <div className="flex flex-col min-h-screen">
 
       {/* 🔹 HEADER ( */}
-      <div className="px-6 pt-15 w-full">
+      <div className="px-6 pt-15 ">
         <h1 className="text-4xl font-bold tracking-tight text-slate-900">
           Understanding Limit Laws
         </h1>
