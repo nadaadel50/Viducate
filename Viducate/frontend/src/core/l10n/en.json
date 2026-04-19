@@ -69,5 +69,22 @@
   "customize.unified.title": "Unified Language Settings",
   "customize.language.unified.enabled": "All content uses the same language",
   "customize.language.unified.disabled": "Using your preferred content language",
-  "customize.preferredLanguage": "Preferred Language"
+  "customize.preferredLanguage": "Preferred Language",
+
+
+  
+  "analysis.title": "AI is analyzing your video",
+  "analysis.subtitle": "This usually takes about 2-3 minutes depending on length.",
+  "analysis.complete": "Analysis Complete!",
+  "analysis.ready": "Your study material is ready.",
+  "analysis.step.fetching": "Fetching video data",
+  "analysis.step.segmenting": "Segmenting topics",
+  "analysis.step.generating": "Generating summary & quiz",
+  "analysis.cancel": "Cancel Analysis",
+  "analysis.tip.title": "Did you know?",
+  "analysis.tip.desc": "Our AI can detect over 50 different educational topics and automatically generate timestamps for easier navigation through your learning content.",
+  "analysis.pending": "Pending",
+  "analysis.active": "In Progress",
+  "analysis.completed": "Completed"
+
 }

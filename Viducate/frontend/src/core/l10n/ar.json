@@ -69,6 +69,23 @@
   "customize.unified.title": "إعدادات توحيد اللغة",
   "customize.language.unified.enabled": "كل المحتوى بيستخدم نفس اللغة",
   "customize.language.unified.disabled": "بيتم استخدام لغة المحتوى المفضلة لديك",
-  "customize.preferredLanguage": "لغتك المفضلة"
+  "customize.preferredLanguage": "لغتك المفضلة",
+
+
+
+  
+  "analysis.title": "الذكاء الاصطناعي يحلل الفيديو الخاص بك",
+  "analysis.subtitle": "يستغرق هذا عادةً حوالي 2-3 دقائق حسب طول الفيديو.",
+  "analysis.complete": "اكتمل التحليل!",
+  "analysis.ready": "المحتوى الدراسي الخاص بك جاهز.",
+  "analysis.step.fetching": "جلب بيانات الفيديو",
+  "analysis.step.segmenting": "تقسيم المواضيع",
+  "analysis.step.generating": "إنشاء الملخص والاختبارات",
+  "analysis.cancel": "إلغاء التحليل",
+  "analysis.tip.title": "هل تعلم؟",
+  "analysis.tip.desc": "يمكن لذكاءنا الاصطناعي اكتشاف أكثر من 50 موضوعًا تعليميًا مختلفًا وإنشاء طوابع زمنية تلقائيًا لتسهيل التنقل عبر محتوى التعلم الخاص بك.",
+  "analysis.pending": "قيد الانتظار",
+  "analysis.active": "جارٍ المعالجة",
+  "analysis.completed": "اكتمل"
 
 }

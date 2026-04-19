@@ -8,7 +8,7 @@ import { ResetPasswordPage } from "../../features/auth/presentation/forgetpass/p
 import { SuccessfullResetPage } from "../../features/auth/presentation/forgetpass/pages/successfull_rest_page";
 import { AppRoutesNames } from "./routes";
 import TestModalsPage from "../../features/video_upload/presentation/pages/test_modals_page";
-
+import {ProcessingPage }from "../../features/video_upload/presentation/pages/processing_page";
 
 export function AppRoutes() {
     return (
@@ -18,9 +18,10 @@ export function AppRoutes() {
 
 
             /* here we will put all the public routes that don't need authentication to access them like landing page, signup */
-            <Route path="/" element={<UploadVideoPage />} />  /* for example */
+            <Route path="/UploadVideoPage" element={<UploadVideoPage />} />  /* for example */
             <Route path="/" element={<ForgetPasswordPage />} />  /* for example */
             <Route path="/test-modals" element={<TestModalsPage />} />  /* for example */
+            <Route path="/upload-loading" element={<ProcessingPage />} />  /* for example */
 
              <Route  element={<ProtectedRoute/>}>  // will prmove "/protected" soon
               /* here we will put all the protected routes that need authentication to access them */
