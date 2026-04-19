@@ -1,0 +1,1370 @@
+[00:00:02]
+  Transcript :  نوع من انواع الالجوريزمات اللي تستخدم في مع بعض. ما تستخدمش
+  OCR        : K-MEANS CLUSTERNG - Adobe Acrobat Reeder DC 32-bi | Fie Edit Wew Sip Window Help | Home | Tools | K-MEANS CLUSTER. | Sign In | 13  25 | Naive Base
+  Combined   :  نوع من انواع الالجوريزمات اللي تستخدم في مع بعض. ما تستخدمش K-MEANS CLUSTERNG - Adobe Acrobat Reeder DC 32-bi | Fie Edit Wew Sip Window Help | Home | Tools | K-MEANS CLUSTER. | Sign In | 13  25 | Naive Base
+
+[00:00:12]
+  Transcript :  في ماشي? طيب. تعال ناخد على طول عشان نفهم هو نايف بيزا
+  OCR        : K-MEANS CLUSTERING - Adobe Acrebat Reader DC 32-eit | File Edit Vew Sigp Window Help | Home | Tools | K-MEANS CLUSTER. | Sign In | 14 25 | 74.1 | Play Tennis. Example | PlayTennis: training examples | Outlook | Temperature | Humidity | Wind | PlayTennis | Sunny | High | Weak | Sunny | High | Strong | Overcast | Hligh | Weuk | Rain | Mild | High | Welk | Rain | Cool | Normal | Rain | Strong | Weak | Cool | Normal | Overcast | Cool | Normal | Strong | Sunny | Mild | High | Weak | Sunny | Cool | Normal | Weuk | Rain | Mild | Normal | Weuk | Sunny | Mild | Normal | Strong | Overcnst | Mild | High | Strong | Normal | Wenk | Overcast | Rain | Mild | High | Strong
+  Combined   :  في ماشي? طيب. تعال ناخد على طول عشان نفهم هو نايف بيزا K-MEANS CLUSTERING - Adobe Acrebat Reader DC 32-eit | File Edit Vew Sigp Window Help | Home | Tools | K-MEANS CLUSTER. | Sign In | 14 25 | 74.1 | Play Tennis. Example | PlayTennis: training examples | Outlook | Temperature | Humidity | Wind | PlayTennis | Sunny | High | Weak | Sunny | High | Strong | Overcast | Hligh | Weuk | Rain | Mild | High | Welk | Rain | Cool | Normal | Rain | Strong | Weak | Cool | Normal | Overcast | Cool | Normal | Strong | Sunny | Mild | High | Weak | Sunny | Cool | Normal | Weuk | Rain | Mild | Normal | Weuk | Sunny | Mild | Normal | Strong | Overcnst | Mild | High | Strong | Normal | Wenk | Overcast | Rain | Mild | High | Strong
+
+[00:00:13]
+  Transcript :  ستنشغل ازاي? بالنسبة لي عندي جدول بالشكل ده كده. ده بقى اللي
+  OCR        : None
+  Combined   :  ستنشغل ازاي? بالنسبة لي عندي جدول بالشكل ده كده. ده بقى اللي
+
+[00:00:22]
+  Transcript :  كنت بقولك عليه ان هو بيشتغل بطريقة النايف بيشتغل بطريقة
+  OCR        : K-MEANS CLUSTERING - Adobe Acrebat Reeder DC 32-eit | File Edit View Sigp Window Help | Home | Tools | K-MEANS CLUSTER.. | Sign In | 13  25 | 74.1 | Naive Base
+  Combined   :  كنت بقولك عليه ان هو بيشتغل بطريقة النايف بيشتغل بطريقة K-MEANS CLUSTERING - Adobe Acrebat Reeder DC 32-eit | File Edit View Sigp Window Help | Home | Tools | K-MEANS CLUSTER.. | Sign In | 13  25 | 74.1 | Naive Base
+
+[00:00:26]
+  Transcript :  اللي ايه? اللي هو اه بيعتمد على الهو بيعتمد على حاجات خاصة
+  OCR        : K-MEANS CLUSTERoNG - Adobe Acrobat Reader DC 32-bit | File Edit Vew Sigp Window Help | Home | Tools | K-MEANS CLUSTER.. | Sign In | 14  25 | 74.1 | Play Tennis. Example | PlayTenis: training examples | Outlook | Temperature | Humidity | Wind | PlayTennis | Sunny | High | Weak | Sunny | High | Strong | Overcast | High | Weak | Rain | Mild | High | Weak | Rain | Cool | Normal | Rain | Strong | Weak | Cool | Normal | Overcast | Cool | Normal | Strong | Sunny | Mild | High | Weak | Sunny | Cool | Normal | Weak | Rain | Mild | Noremal | Weak | Sunny | Mild | Normal | Strong | Overcast | Mild | High | Strong | Overcast | Normal | Wenk | Rain | Mild | 1igh | Strong
+  Combined   :  اللي ايه? اللي هو اه بيعتمد على الهو بيعتمد على حاجات خاصة K-MEANS CLUSTERoNG - Adobe Acrobat Reader DC 32-bit | File Edit Vew Sigp Window Help | Home | Tools | K-MEANS CLUSTER.. | Sign In | 14  25 | 74.1 | Play Tennis. Example | PlayTenis: training examples | Outlook | Temperature | Humidity | Wind | PlayTennis | Sunny | High | Weak | Sunny | High | Strong | Overcast | High | Weak | Rain | Mild | High | Weak | Rain | Cool | Normal | Rain | Strong | Weak | Cool | Normal | Overcast | Cool | Normal | Strong | Sunny | Mild | High | Weak | Sunny | Cool | Normal | Weak | Rain | Mild | Noremal | Weak | Sunny | Mild | Normal | Strong | Overcast | Mild | High | Strong | Overcast | Normal | Wenk | Rain | Mild | 1igh | Strong
+
+[00:00:31]
+  Transcript :  بالاحصة. عارف انت المعادلات بتاع الاحصة ان هو يقول لك بتاعت
+  OCR        : None
+  Combined   :  بالاحصة. عارف انت المعادلات بتاع الاحصة ان هو يقول لك بتاعت
+
+[00:00:36]
+  Transcript :  بتاعت الهوت مش عارف ايه? فنشتغل عليها كده واحدة واحدة يعني.
+  OCR        : None
+  Combined   :  بتاعت الهوت مش عارف ايه? فنشتغل عليها كده واحدة واحدة يعني.
+
+[00:00:41]
+  Transcript :  هتلاقي دي نصف. لو احنا عندنا جادر بالشكل ده كده. عندي دي وان
+  OCR        : None
+  Combined   :  هتلاقي دي نصف. لو احنا عندنا جادر بالشكل ده كده. عندي دي وان
+
+[00:00:45]
+  Transcript :  عندي مجموع اللي هو الايام بتاعتي من اول دي وان لحد رقم
+  OCR        : None
+  Combined   :  عندي مجموع اللي هو الايام بتاعتي من اول دي وان لحد رقم
+
+[00:00:48]
+  Transcript :  ربعتاشر. اسبوعين يعني. وعندي شوية خصائص او خاصة بالجو. اللي
+  OCR        : None
+  Combined   :  ربعتاشر. اسبوعين يعني. وعندي شوية خصائص او خاصة بالجو. اللي
+
+[00:00:54]
+  Transcript : 
+  OCR        : None
+  Combined   : 
+
+[00:01:07]
+  Transcript :  كده. والتمبريتشر بتاعتي اللي هو داركة الحرارة اللي هي هوت ولا ولا
+  OCR        : None
+  Combined   :  كده. والتمبريتشر بتاعتي اللي هو داركة الحرارة اللي هي هوت ولا ولا
+
+[00:01:11]
+  Transcript :  ولا كول. والهوميدي اللي هي الرطوبة. ماشي? اه والويند اه
+  OCR        : None
+  Combined   :  ولا كول. والهوميدي اللي هي الرطوبة. ماشي? اه والويند اه
+
+[00:01:18]
+  Transcript :  الرياح اللي هي اه يعني خفيفة ولا قوية ولا ايه بالزبط يعني. فعلى
+  OCR        : None
+  Combined   :  الرياح اللي هي اه يعني خفيفة ولا قوية ولا ايه بالزبط يعني. فعلى
+
+[00:01:23]
+  Transcript :  الافترس دي بص كده لو انت مسكت دي وان يعني هتلاقي ان انت عندك
+  OCR        : None
+  Combined   :  الافترس دي بص كده لو انت مسكت دي وان يعني هتلاقي ان انت عندك
+
+[00:01:28]
+  Transcript :  الاوتلوك بتاعك اللي هو يعني اليوم بتاعنا ده مشمس. ودرجة
+  OCR        : None
+  Combined   :  الاوتلوك بتاعك اللي هو يعني اليوم بتاعنا ده مشمس. ودرجة
+
+[00:01:32]
+  Transcript :  الحرارة اه يعني اه حرارة عالية. والرطوبة بتاعتك عالية
+  OCR        : None
+  Combined   :  الحرارة اه يعني اه حرارة عالية. والرطوبة بتاعتك عالية
+
+[00:01:37]
+  Transcript :  والويند بتاعك ضعيف. في الحالة دي لما يكون عندك بالشكل ده كده
+  OCR        : None
+  Combined   :  والويند بتاعك ضعيف. في الحالة دي لما يكون عندك بالشكل ده كده
+
+[00:01:42]
+  Transcript :  اه اه التنس ما ما فيش لعبة يعني ما ينشأين فعلا
+  OCR        : None
+  Combined   :  اه اه التنس ما ما فيش لعبة يعني ما ينشأين فعلا
+
+[00:01:48]
+  Transcript :  مرحبا.
+  OCR        : None
+  Combined   :  مرحبا.
+
+[00:01:49]
+  Transcript :  مرحبا.
+  OCR        : None
+  Combined   :  مرحبا.
+
+[00:01:54]
+  Transcript :  مرحبا.
+  OCR        : AK MEANS CLUSTEIEING -AdOE ACODT | File Edit View Sigp Window Help | Home | Tools | K-MEANS CLUSTER. X | Sign In | 14  25 | 74.1 | Play Tennis. Example | PlayTemis: training examples | Outlook | Temperature | Humidity | Wind | PlayTennis | Sunny | Weak | Sunny | High | Strong | Overcast | High | Rain | High | Wouk | Mild | Weak | Rain | Cool | Normal | Weak | Rain | Strong | Cool | Normal | Overcast | Cool | Normal | Strong | Sunny | Mild | High | Weak | Sunny | Cool | Noral | Weak | Rain | Mild | Normal | Wiak | Normal | Strong | Sunny | Mild | Overcast | Mild | High | Strong | Normal | Weak | Overcast | Rain | Mild | 1tigh | Strong
+  Combined   :  مرحبا. AK MEANS CLUSTEIEING -AdOE ACODT | File Edit View Sigp Window Help | Home | Tools | K-MEANS CLUSTER. X | Sign In | 14  25 | 74.1 | Play Tennis. Example | PlayTemis: training examples | Outlook | Temperature | Humidity | Wind | PlayTennis | Sunny | Weak | Sunny | High | Strong | Overcast | High | Rain | High | Wouk | Mild | Weak | Rain | Cool | Normal | Weak | Rain | Strong | Cool | Normal | Overcast | Cool | Normal | Strong | Sunny | Mild | High | Weak | Sunny | Cool | Noral | Weak | Rain | Mild | Normal | Wiak | Normal | Strong | Sunny | Mild | Overcast | Mild | High | Strong | Normal | Weak | Overcast | Rain | Mild | 1tigh | Strong
+
+[00:01:54]
+  Transcript :  مرحبا.
+  OCR        : None
+  Combined   :  مرحبا.
+
+[00:01:55]
+  Transcript :  مرحبا.
+  OCR        : None
+  Combined   :  مرحبا.
+
+[00:01:56]
+  Transcript :  مرحبا.
+  OCR        : None
+  Combined   :  مرحبا.
+
+[00:01:57]
+  Transcript :  زي ما قلت كده في اول دي دي وان.
+  OCR        : None
+  Combined   :  زي ما قلت كده في اول دي دي وان.
+
+[00:01:58]
+  Transcript :  زي ما قلت لك ان انا لقوا
+  OCR        : None
+  Combined   :  زي ما قلت لك ان انا لقوا
+
+[00:02:00]
+  Transcript :  بس بتاعتك فصلت. منا عملت الشيرس كنينة. او شايفين انا ده. او كن
+  OCR        : None
+  Combined   :  بس بتاعتك فصلت. منا عملت الشيرس كنينة. او شايفين انا ده. او كن
+
+[00:02:06]
+  Transcript :  انا شايف. باتل. طيب. اه لو قلت لك مسلا بتاعك اللي هو اه اليوم
+  OCR        : None
+  Combined   :  انا شايف. باتل. طيب. اه لو قلت لك مسلا بتاعك اللي هو اه اليوم
+
+[00:02:11]
+  Transcript :  بتاعك مشمس ودرجة الحرقة اه عالية. والرطوبة بتاعتك عالية
+  OCR        : None
+  Combined   :  بتاعك مشمس ودرجة الحرقة اه عالية. والرطوبة بتاعتك عالية
+
+[00:02:15]
+  Transcript :  والرياح بتاعتك الضعيفة في الحالة دي انا مش هلعب تلس.
+  OCR        : None
+  Combined   :  والرياح بتاعتك الضعيفة في الحالة دي انا مش هلعب تلس.
+
+[00:02:18]
+  Transcript :  خمشي? طيب في حالة لو انت عندك ودرجة الحرقة عالية. والرتوبة
+  OCR        : None
+  Combined   :  خمشي? طيب في حالة لو انت عندك ودرجة الحرقة عالية. والرتوبة
+
+[00:02:23]
+  Transcript :  بتاعتك عالية بس الويد بتاعتك اه برضو ميه? مش هنلعب تلس. مش
+  OCR        : None
+  Combined   :  بتاعتك عالية بس الويد بتاعتك اه برضو ميه? مش هنلعب تلس. مش
+
+[00:02:27]
+  Transcript :  هينفع اللعب تنس. طيب لو لو انت عندك الاول بتاعك اه اوفركاست
+  OCR        : None
+  Combined   :  هينفع اللعب تنس. طيب لو لو انت عندك الاول بتاعك اه اوفركاست
+
+[00:02:31]
+  Transcript :  وطاركة الحرارة عالية والرطوبة عالية بس ايه بس الرياح خفيفة.
+  OCR        : None
+  Combined   :  وطاركة الحرارة عالية والرطوبة عالية بس ايه بس الرياح خفيفة.
+
+[00:02:36]
+  Transcript :  في الحالة دي ممكن ايه? ممكن نلعب. ممكن نلعب تنس. في مشكلة
+  OCR        : None
+  Combined   :  في الحالة دي ممكن ايه? ممكن نلعب. ممكن نلعب تنس. في مشكلة
+
+[00:02:40]
+  Transcript :  كده في الحاجات دي. فدي مجموعة مجموعة على اساسها هتلعب او
+  OCR        : None
+  Combined   :  كده في الحاجات دي. فدي مجموعة مجموعة على اساسها هتلعب او
+
+[00:02:47]
+  Transcript :  لا يعني على اساس الحاجات دي هتلعب ايه? او لا هتكرر انت تلعب اول
+  OCR        : None
+  Combined   :  لا يعني على اساس الحاجات دي هتلعب ايه? او لا هتكرر انت تلعب اول
+
+[00:02:51]
+  Transcript : 
+  OCR        : None
+  Combined   : 
+
+[00:03:08]
+  Transcript :  وتمبريتشار بتاعتك ميلد. والهوميديت بتاعتك هاي. والويند
+  OCR        : None
+  Combined   :  وتمبريتشار بتاعتك ميلد. والهوميديت بتاعتك هاي. والويند
+
+[00:03:13]
+  Transcript :  بتاعك تقول لي انت ايه? تقول لي يا يس و او نو. على اي اساس اصلا?
+  OCR        : None
+  Combined   :  بتاعك تقول لي انت ايه? تقول لي يا يس و او نو. على اي اساس اصلا?
+
+[00:03:17]
+  Transcript :  على اساس الديت الست اللي هي. اه. الحصائص بتاعت. اه. على اساس
+  OCR        : None
+  Combined   :  على اساس الديت الست اللي هي. اه. الحصائص بتاعت. اه. على اساس
+
+[00:03:23]
+  Transcript :  موجودة قبل كده. فلازم انت تضرب بتاعك او تضرب بتاعك على
+  OCR        : None
+  Combined   :  موجودة قبل كده. فلازم انت تضرب بتاعك او تضرب بتاعك على
+
+[00:03:27]
+  Transcript :  دي. دربوا على ده. ده ده ماشي? ده مثال بقى على ايه? على
+  OCR        : None
+  Combined   :  دي. دربوا على ده. ده ده ماشي? ده مثال بقى على ايه? على
+
+[00:03:34]
+  Transcript :  بقى. ده مثال على عندك ماشي بس ده بالنائف يعني. طيب تعالنا نشوف
+  OCR        : None
+  Combined   :  بقى. ده مثال على عندك ماشي بس ده بالنائف يعني. طيب تعالنا نشوف
+
+[00:03:40]
+  Transcript :  بقى الخطوات ازاي بتمشي عشان تحل المشكلة دي عشان تحل الكلام ده.
+  OCR        : None
+  Combined   :  بقى الخطوات ازاي بتمشي عشان تحل المشكلة دي عشان تحل الكلام ده.
+
+[00:03:44]
+  Transcript :  عشان لما اجيسألك سؤال بعد كده اتجاوب اللي عليها على طول. عالنا
+  OCR        : None
+  Combined   :  عشان لما اجيسألك سؤال بعد كده اتجاوب اللي عليها على طول. عالنا
+
+[00:03:50]
+  Transcript :  نشوف كده ايه الخطوات اللي بتتم? اول حاجة هيبدأ يحسب شوية احصائيات
+  OCR        : K-MEANS CLUSTERING - Adobe Acrebat Reader DC 32-eit | File Edit View Sigp Windew Help | Home | Tools | K-MEANS CLUSTER. | Sign In | 15  25 | 74.1 | Calculating Probabilities | Dotrset | Learning Phase | Outlook | Play-Yes | Plap-Ne | Temperatur | Play-Yes | Plar-N | Sunny | Opurat | Rain | Coot | Hunidiny | PlayY | PlaywN | Wind | PlayJes | Plavied | Stuong | High | PPlayYes  914 PPlayNo  514
+  Combined   :  نشوف كده ايه الخطوات اللي بتتم? اول حاجة هيبدأ يحسب شوية احصائيات K-MEANS CLUSTERING - Adobe Acrebat Reader DC 32-eit | File Edit View Sigp Windew Help | Home | Tools | K-MEANS CLUSTER. | Sign In | 15  25 | 74.1 | Calculating Probabilities | Dotrset | Learning Phase | Outlook | Play-Yes | Plap-Ne | Temperatur | Play-Yes | Plar-N | Sunny | Opurat | Rain | Coot | Hunidiny | PlayY | PlaywN | Wind | PlayJes | Plavied | Stuong | High | PPlayYes  914 PPlayNo  514
+
+[00:03:51]
+  Transcript :  هيبدأ يقول ان بتاعتي هيقسمها لي الى جزء صاني وجزء ويبدأ
+  OCR        : None
+  Combined   :  هيبدأ يقول ان بتاعتي هيقسمها لي الى جزء صاني وجزء ويبدأ
+
+[00:03:57]
+  Transcript :  يقول لك ايه? بتاعتي صاني.
+  OCR        : None
+  Combined   :  يقول لك ايه? بتاعتي صاني.
+
+[00:04:00]
+  Transcript :  في حالة البلاي بتسوي يس
+  OCR        : None
+  Combined   :  في حالة البلاي بتسوي يس
+
+[00:04:02]
+  Transcript :  هي البرويلت بتاعت
+  OCR        : None
+  Combined   :  هي البرويلت بتاعت
+
+[00:04:04]
+  Transcript :  بتسوي ساني
+  OCR        : None
+  Combined   :  بتسوي ساني
+
+[00:04:06]
+  Transcript :  جيفن ان البلاي بتسوي يس كام على كام
+  OCR        : None
+  Combined   :  جيفن ان البلاي بتسوي يس كام على كام
+
+[00:04:08]
+  Transcript :  هو انت عندك اصلا
+  OCR        : None
+  Combined   :  هو انت عندك اصلا
+
+[00:04:12]
+  Transcript :  هنا عندك كام يس
+  OCR        : K-MEANS CLUSTERNG - Adobe Acrobat Reader DC 32-eit | File Edit View Sigp Window Help | Home | Tools | K-MEANS CLUSTER. | Sign In | 14  25 | 74.1 | Play Tennis Example | Aotaset | PlayTenis: training exainples | Outlook | Temperature | Humidiry | Wind | PlayTennis | Sunny | 1tot | High | Weak | Sunny | High | Strong | Overcast | High | Weuk | High | Rain | Mild | Weak | Rain | Normal | Cool | Weak | Strong | Rain | Cool | Normal | Overcast | Cool | Norenal | Strong | Sunny | Mild | 1igh | Sunny | Normal | Weak | Cool | Weak | Rain | Mild | Normal | Heak | Normal | Sunny | Mild | Strong | Overcast | Mild | High | Sarong | Overcast | Normal | Wienk | Rain | Mild | High | Strong
+  Combined   :  هنا عندك كام يس K-MEANS CLUSTERNG - Adobe Acrobat Reader DC 32-eit | File Edit View Sigp Window Help | Home | Tools | K-MEANS CLUSTER. | Sign In | 14  25 | 74.1 | Play Tennis Example | Aotaset | PlayTenis: training exainples | Outlook | Temperature | Humidiry | Wind | PlayTennis | Sunny | 1tot | High | Weak | Sunny | High | Strong | Overcast | High | Weuk | High | Rain | Mild | Weak | Rain | Normal | Cool | Weak | Strong | Rain | Cool | Normal | Overcast | Cool | Norenal | Strong | Sunny | Mild | 1igh | Sunny | Normal | Weak | Cool | Weak | Rain | Mild | Normal | Heak | Normal | Sunny | Mild | Strong | Overcast | Mild | High | Sarong | Overcast | Normal | Wienk | Rain | Mild | High | Strong
+
+[00:04:12]
+  Transcript :  وكام نو
+  OCR        : None
+  Combined   :  وكام نو
+
+[00:04:13]
+  Transcript :  عندك كام يس عندهم كده
+  OCR        : None
+  Combined   :  عندك كام يس عندهم كده
+
+[00:04:18]
+  Transcript :  عندك واحد اتنين تلاتة
+  OCR        : None
+  Combined   :  عندك واحد اتنين تلاتة
+
+[00:04:20]
+  Transcript :  اربعة خمسة ستة سبعة
+  OCR        : None
+  Combined   :  اربعة خمسة ستة سبعة
+
+[00:04:22]
+  Transcript :  تمانية تسعة
+  OCR        : None
+  Combined   :  تمانية تسعة
+
+[00:04:23]
+  Transcript :  التوتل بتاعك تسعة يس صح كده
+  OCR        : None
+  Combined   :  التوتل بتاعك تسعة يس صح كده
+
+[00:04:26]
+  Transcript :  وعندك كام نو
+  OCR        : None
+  Combined   :  وعندك كام نو
+
+[00:04:28]
+  Transcript :  خمسة. لبا فيه تسعة ايه? فيه تسعة ياس. وعندي كم نوع? ادي
+  OCR        : None
+  Combined   :  خمسة. لبا فيه تسعة ايه? فيه تسعة ياس. وعندي كم نوع? ادي
+
+[00:04:33]
+  Transcript :  اتنين اربعة خمسة. ايه? خمسة نوع. ماشي كده عشان دي هنحتكد
+  OCR        : None
+  Combined   :  اتنين اربعة خمسة. ايه? خمسة نوع. ماشي كده عشان دي هنحتكد
+
+[00:04:38]
+  Transcript :  دلوقتي. طيب تعالي بص كده. بتاعتك لما تكون صني. ماشي? النسبة
+  OCR        : None
+  Combined   :  دلوقتي. طيب تعالي بص كده. بتاعتك لما تكون صني. ماشي? النسبة
+
+[00:04:44]
+  Transcript :  بقى اللي هي اللي هي او نسبة احتمال ان الصني بتاعتك احتمال
+  OCR        : None
+  Combined   :  بقى اللي هي اللي هي او نسبة احتمال ان الصني بتاعتك احتمال
+
+[00:04:50]
+  Transcript : 
+  OCR        : None
+  Combined   : 
+
+[00:05:07]
+  Transcript :  طيب تعال نحسب كده الصني ديت لما بتسوي صني والبلاي بتاعتها
+  OCR        : None
+  Combined   :  طيب تعال نحسب كده الصني ديت لما بتسوي صني والبلاي بتاعتها
+
+[00:05:13]
+  Transcript :  بتسوي كام واحدة? اول واحدة كده هتلاقي ان الصني بتسوي نوم.
+  OCR        : None
+  Combined   :  بتسوي كام واحدة? اول واحدة كده هتلاقي ان الصني بتسوي نوم.
+
+[00:05:17]
+  Transcript :  ماشي دي واحدة نوم. صح. والصني تانية مرة برضو بنوم. فتعال
+  OCR        : None
+  Combined   :  ماشي دي واحدة نوم. صح. والصني تانية مرة برضو بنوم. فتعال
+
+[00:05:22]
+  Transcript :  اشوف كده? الصني ديت برضو ايه? برضو بنوع. تمام? وعندك هنا كمان
+  OCR        : None
+  Combined   :  اشوف كده? الصني ديت برضو ايه? برضو بنوع. تمام? وعندك هنا كمان
+
+[00:05:27]
+  Transcript :  في صني هاي? وفي صني كمان هاي? ماشي? دي بايه ودي بايه? دي
+  OCR        : None
+  Combined   :  في صني هاي? وفي صني كمان هاي? ماشي? دي بايه ودي بايه? دي
+
+[00:05:31]
+  Transcript :  ياس? وديس. صح كده? دي ياس. يبقى بتاعت الصني لما تكون بتاعتها
+  OCR        : None
+  Combined   :  ياس? وديس. صح كده? دي ياس. يبقى بتاعت الصني لما تكون بتاعتها
+
+[00:05:39]
+  Transcript :  ياس كم على كم? اتنين على تسعة. اتنين على تسعة. خللي بالك ركز
+  OCR        : None
+  Combined   :  ياس كم على كم? اتنين على تسعة. اتنين على تسعة. خللي بالك ركز
+
+[00:05:48]
+  Transcript :  معي. انا عندك او بص كده. هتلاقي عندك الاوبتلوك لما تكون صني
+  OCR        : MEANS CUSTERING - Adobe Acrobat Read 32- | File Edit View Sigp Windew Help | Home | Tools | K-MEANS CLUSTER., | Sign In | 15  25 | 74.1 | Calculating Probabilities | Dotuset | Learning Phase | 9 Yes | Outlook | Play-Yes | Plav-Ne | Temperatur | Play-Yes | Pln-M | Sunny | Onrat | Rain | Cout | Humnidity | Play | PlaysiN | Wind | PlayJes | Played | Sthng | High | Woad | PPlayYes  914 PPlayNo  514
+  Combined   :  معي. انا عندك او بص كده. هتلاقي عندك الاوبتلوك لما تكون صني MEANS CUSTERING - Adobe Acrobat Read 32- | File Edit View Sigp Windew Help | Home | Tools | K-MEANS CLUSTER., | Sign In | 15  25 | 74.1 | Calculating Probabilities | Dotuset | Learning Phase | 9 Yes | Outlook | Play-Yes | Plav-Ne | Temperatur | Play-Yes | Pln-M | Sunny | Onrat | Rain | Cout | Humnidity | Play | PlaysiN | Wind | PlayJes | Played | Sthng | High | Woad | PPlayYes  914 PPlayNo  514
+
+[00:05:49]
+  Transcript :  ان البلاي بتاعتك بيس ديت نسبتها تنين على تسعة. ماشي كده? مم. طيب
+  OCR        : None
+  Combined   :  ان البلاي بتاعتك بيس ديت نسبتها تنين على تسعة. ماشي كده? مم. طيب
+
+[00:05:55]
+  Transcript :  لما تكون بتاعتك بصني. والبلات
+  OCR        : None
+  Combined   :  لما تكون بتاعتك بصني. والبلات
+
+[00:06:06]
+  Transcript :  بتاعتها بنو كم على كم? يعني انت عندك او بتسوي برضو. بس بتاعتك
+  OCR        : K-MEANS CLUSTERING - Adobe Acrebat Reader DC 32-eit | File Edit View Sigp Windeow Help | Home | Tools | K-MEANS CLUSTER., | Sign In | 14  25 | 74.1 | Play TennisExample | Dotaset | PlayTennis: training examnples | Outlook | Temperature | Humidity | Wind | PlayTennis | Susjny | High | Weak | Sunny | High | Strong | 9 Yes | Overcast | High | Weak | Rain | Mild | High | Wenk | Rain | Cool | Normal | Weak | Strong | Rain | Cool | Cool | Normal | Overcast | Normal | Strong | Sunny | Mild | 1igh | Weak | Sunny | Cool | Normal | Weak | Rain | Mild | Normal | Weak | Sunny | Mild | Normal | Strong | Cyercast | Mild | High | Stroing | Weak | Cvercast | Normal | Rain | Mild | High | Strong
+  Combined   :  بتاعتها بنو كم على كم? يعني انت عندك او بتسوي برضو. بس بتاعتك K-MEANS CLUSTERING - Adobe Acrebat Reader DC 32-eit | File Edit View Sigp Windeow Help | Home | Tools | K-MEANS CLUSTER., | Sign In | 14  25 | 74.1 | Play TennisExample | Dotaset | PlayTennis: training examnples | Outlook | Temperature | Humidity | Wind | PlayTennis | Susjny | High | Weak | Sunny | High | Strong | 9 Yes | Overcast | High | Weak | Rain | Mild | High | Wenk | Rain | Cool | Normal | Weak | Strong | Rain | Cool | Cool | Normal | Overcast | Normal | Strong | Sunny | Mild | 1igh | Weak | Sunny | Cool | Normal | Weak | Rain | Mild | Normal | Weak | Sunny | Mild | Normal | Strong | Cyercast | Mild | High | Stroing | Weak | Cvercast | Normal | Rain | Mild | High | Strong
+
+[00:06:07]
+  Transcript :  بنو. يعني كام نو في الصني? على نسبة النو كلها. كام نو في الصني?
+  OCR        : None
+  Combined   :  بنو. يعني كام نو في الصني? على نسبة النو كلها. كام نو في الصني?
+
+[00:06:14]
+  Transcript :  اه. كام نو في الصني على نسبة النو كلها. بصوا كده هتلاقي ادي
+  OCR        : None
+  Combined   :  اه. كام نو في الصني على نسبة النو كلها. بصوا كده هتلاقي ادي
+
+[00:06:17]
+  Transcript :  واحد. واحد اتنين. تلاتة. تلاتة على خمسة. تلاتة على خمسة اهو.
+  OCR        : None
+  Combined   :  واحد. واحد اتنين. تلاتة. تلاتة على خمسة. تلاتة على خمسة اهو.
+
+[00:06:23]
+  Transcript :  اللي هو الاولين ده بصوا كده. هنغير بس اللون الاحمر ده كده.
+  OCR        : None
+  Combined   :  اللي هو الاولين ده بصوا كده. هنغير بس اللون الاحمر ده كده.
+
+[00:06:28]
+  Transcript :  ادي اول واحد اهو. اللي هو ده. ادي نو. وادي كمان نو. وادي ايه?
+  OCR        : None
+  Combined   :  ادي اول واحد اهو. اللي هو ده. ادي نو. وادي كمان نو. وادي ايه?
+
+[00:06:33]
+  Transcript :  وادي نو. يبدا تلاتة على كام? ها? تلاتة على خمسة. يبدا نسبة
+  OCR        : None
+  Combined   :  وادي نو. يبدا تلاتة على كام? ها? تلاتة على خمسة. يبدا نسبة
+
+[00:06:39]
+  Transcript :  الصني بتاعتك. او او بتاعت لما تكون بتسوي صني. بتاعتك بتسوي
+  OCR        : None
+  Combined   :  الصني بتاعتك. او او بتاعت لما تكون بتسوي صني. بتاعتك بتسوي
+
+[00:06:46]
+  Transcript :  اللي هي كام على كام? تلاتة على خمسة. طيب الخمسة دي كانت منين?
+  OCR        : None
+  Combined   :  اللي هي كام على كام? تلاتة على خمسة. طيب الخمسة دي كانت منين?
+
+[00:07:02]
+  Transcript : 
+  OCR        : K-MEANS CLUSTERING - Adobe Acrobat Reeder DC 32-bi | File Edit Yew Sigp Windeow Help | Home | Tools | K-MEANS CLUSTER., | Sign In | 13  25 | 74.1 | Calculating Probabilities | Dotarset | Learning Rhase | 9 yes | Outlook | Play-Yes | Plap-Ne | Temperatur | Play-Yes | Plar-M | Sunny | Onrcat | Rain | Cout | Hanidity | FlayY | PlayN | Wind | PlayYes | Play | Strng | High | Weud | PPlayYes  914 PPlayNo  514
+  Combined   :  K-MEANS CLUSTERING - Adobe Acrobat Reeder DC 32-bi | File Edit Yew Sigp Windeow Help | Home | Tools | K-MEANS CLUSTER., | Sign In | 13  25 | 74.1 | Calculating Probabilities | Dotarset | Learning Rhase | 9 yes | Outlook | Play-Yes | Plap-Ne | Temperatur | Play-Yes | Plar-M | Sunny | Onrcat | Rain | Cout | Hanidity | FlayY | PlayN | Wind | PlayYes | Play | Strng | High | Weud | PPlayYes  914 PPlayNo  514
+
+[00:07:07]
+  Transcript :  الوفر كاست هتلاقي ان ان ان الاوتلوك لما تكون بتسوي
+  OCR        : None
+  Combined   :  الوفر كاست هتلاقي ان ان ان الاوتلوك لما تكون بتسوي
+
+[00:07:16]
+  Transcript :  بتاعتك بيس. ها? تعال بص كده. الوفر كاست هنا لو انت جيت تبص
+  OCR        : K-MEANS CLUSTERING - Adobe Acrobat Reader DC 32-ei | File Edit Vew Sigp Window Help | Home | Tools | K-MEANS CLUSTER., | Sign In | 14  25 | 74.1 | Play Tennis Example | Aotset | PlayTenmis: training examples | Outlook | Temperature | Humidity | Wind | PlayTennis | Sunny | High | Weak | Sunny | High | Strong | 9 yes | Ovireast | High | Weok | Rain | Mild | High | Rain | Weak | Cool | Normal | Weak | Strong | Rain | Cool | Normal | Overcast | Cool | Normal | Strong | Sunny | Mild | 1tigh | Weak | Suany | Cool | Normal | Weak | Rain | Mild | Normal | Weak | Sunny | Mild | Normal | Strong | Cyercast | Mild | High | Strong | Overcast | Normal | Strong | Weak | Rain | Mild | High
+  Combined   :  بتاعتك بيس. ها? تعال بص كده. الوفر كاست هنا لو انت جيت تبص K-MEANS CLUSTERING - Adobe Acrobat Reader DC 32-ei | File Edit Vew Sigp Window Help | Home | Tools | K-MEANS CLUSTER., | Sign In | 14  25 | 74.1 | Play Tennis Example | Aotset | PlayTenmis: training examples | Outlook | Temperature | Humidity | Wind | PlayTennis | Sunny | High | Weak | Sunny | High | Strong | 9 yes | Ovireast | High | Weok | Rain | Mild | High | Rain | Weak | Cool | Normal | Weak | Strong | Rain | Cool | Normal | Overcast | Cool | Normal | Strong | Sunny | Mild | 1tigh | Weak | Suany | Cool | Normal | Weak | Rain | Mild | Normal | Weak | Sunny | Mild | Normal | Strong | Cyercast | Mild | High | Strong | Overcast | Normal | Strong | Weak | Rain | Mild | High
+
+[00:07:17]
+  Transcript :  عليها. ادي واحدة يس. ماشي? ادي التانية يس. ادي التالتة يس.
+  OCR        : None
+  Combined   :  عليها. ادي واحدة يس. ماشي? ادي التانية يس. ادي التالتة يس.
+
+[00:07:24]
+  Transcript :  ورابع ييس. يبقى كام على كام? ربعة على تسعة? اربعة على تسعة.
+  OCR        : None
+  Combined   :  ورابع ييس. يبقى كام على كام? ربعة على تسعة? اربعة على تسعة.
+
+[00:07:28]
+  Transcript :  طيب تعال احسابة برضو في نفس الموضع ده كده نسبة النوع. اللي
+  OCR        : None
+  Combined   :  طيب تعال احسابة برضو في نفس الموضع ده كده نسبة النوع. اللي
+
+[00:07:33]
+  Transcript :  هي برضو اوتلو كام واحدة? هل في اكتر? ولا واحدة. يبقى زيره على كامل.
+  OCR        : None
+  Combined   :  هي برضو اوتلو كام واحدة? هل في اكتر? ولا واحدة. يبقى زيره على كامل.
+
+[00:07:40]
+  Transcript :  ولا واحد. ها? زيره على خمس. يبقى زيره على خمس. ماشي كده اهو. بص
+  OCR        : None
+  Combined   :  ولا واحد. ها? زيره على خمس. يبقى زيره على خمس. ماشي كده اهو. بص
+
+[00:07:46]
+  Transcript :  كده. هتلاقي اربعة على تسعة هوت وزيره على خمس. في مشكلة كده?
+  OCR        : K-MEANS CLUSTERoNG - Adobe Acrobat Reader DC 32-bit | File Edit Vew Sigp Window Help | Home | Tools | K-MEANS CLUSTER. | Sign In | 15  25 | 74.1 | Calculating Probabilities | Dotuset | Learning-Rhase | 9 yes | Outlook | Play-Yes | Play-No | Temperatur | Play-Yes | Plar-Ne | Sunny | Opurat | Ratin | Coot | Hunidity | PlayYe | PlayN | Wind | PlayYes | PlayNo | Strong | High | Wead | PPlayYes 911 PPlayNo  514
+  Combined   :  كده. هتلاقي اربعة على تسعة هوت وزيره على خمس. في مشكلة كده? K-MEANS CLUSTERoNG - Adobe Acrobat Reader DC 32-bit | File Edit Vew Sigp Window Help | Home | Tools | K-MEANS CLUSTER. | Sign In | 15  25 | 74.1 | Calculating Probabilities | Dotuset | Learning-Rhase | 9 yes | Outlook | Play-Yes | Play-No | Temperatur | Play-Yes | Plar-Ne | Sunny | Opurat | Ratin | Coot | Hunidity | PlayYe | PlayN | Wind | PlayYes | PlayNo | Strong | High | Wead | PPlayYes 911 PPlayNo  514
+
+[00:07:50]
+  Transcript :  هنحسن الجداول دي ليه? لان الجداول دي هنستفيد منها بعد كده ان انا
+  OCR        : None
+  Combined   :  هنحسن الجداول دي ليه? لان الجداول دي هنستفيد منها بعد كده ان انا
+
+[00:07:53]
+  Transcript :  اعمل بقى. لان انا اسألك سؤال اجاوبك من خلال الجداول دي. طيب بتاعتي
+  OCR        : None
+  Combined   :  اعمل بقى. لان انا اسألك سؤال اجاوبك من خلال الجداول دي. طيب بتاعتي
+
+[00:08:00]
+  Transcript :  لا اه خد امسك الاوتلوك بتساوي رين وهاتلي نسبة اليس ونسبة
+  OCR        : None
+  Combined   :  لا اه خد امسك الاوتلوك بتساوي رين وهاتلي نسبة اليس ونسبة
+
+[00:08:04]
+  Transcript :  النو. اه دي هتطلع تلاتة على تسعة واتنين على خمسة. تعالنا
+  OCR        : None
+  Combined   :  النو. اه دي هتطلع تلاتة على تسعة واتنين على خمسة. تعالنا
+
+[00:08:08]
+  Transcript :  نتأكد كده. الرين اهي. ادي واحدة يس. ودي واحدة يس. ودي كمان
+  OCR        : K-MEANS CLUSTERING - Adobe Acrebat Reeder DC 32-bit | File Edit Yew Sigp Window Help | Home | Tools | K-MEANS CLUSTER. | Sign In | H θQ | 14  25 | 74.1 | Play TennisExample | Dotaset | PlayTeunis: training exainples | Cutlook | Temperature | Humidity | Wind | PlayTennis | Sunny | High | Weak | Sunny | High | Strong | 9 yes | Overcast | High | Weak | Mild | High | Rain | Rain | Cool | Wenk | Normal | Rain | Weak | Strong | Cool | Cool | Normal | Overcast | Noreal | Strong | Sunny | Mild | High | Weak | Sunny | Cool | Normal | Weak | Rain | Mild | Normal | Weak | Sunny | Normal | Strong | Mild | Mlld | Overcast | High | Serong | Overcaat | Normal | Wenk | Rain | Mild | High | Strong
+  Combined   :  نتأكد كده. الرين اهي. ادي واحدة يس. ودي واحدة يس. ودي كمان K-MEANS CLUSTERING - Adobe Acrebat Reeder DC 32-bit | File Edit Yew Sigp Window Help | Home | Tools | K-MEANS CLUSTER. | Sign In | H θQ | 14  25 | 74.1 | Play TennisExample | Dotaset | PlayTeunis: training exainples | Cutlook | Temperature | Humidity | Wind | PlayTennis | Sunny | High | Weak | Sunny | High | Strong | 9 yes | Overcast | High | Weak | Mild | High | Rain | Rain | Cool | Wenk | Normal | Rain | Weak | Strong | Cool | Cool | Normal | Overcast | Noreal | Strong | Sunny | Mild | High | Weak | Sunny | Cool | Normal | Weak | Rain | Mild | Normal | Weak | Sunny | Normal | Strong | Mild | Mlld | Overcast | High | Serong | Overcaat | Normal | Wenk | Rain | Mild | High | Strong
+
+[00:08:12]
+  Transcript :  واحدة يس اهي. يبقى تلاتة على كام? تلاتة على تسعة. في تاني?
+  OCR        : None
+  Combined   :  واحدة يس اهي. يبقى تلاتة على كام? تلاتة على تسعة. في تاني?
+
+[00:08:17]
+  Transcript :  لأ ما فيش تاني. طب تعالنا نشوف الرين كم منه? ادي رين منه. ادي
+  OCR        : None
+  Combined   :  لأ ما فيش تاني. طب تعالنا نشوف الرين كم منه? ادي رين منه. ادي
+
+[00:08:21]
+  Transcript :  واحد. ماشي? وعندي في الاخر خالص خالص هي. باخده ايه واحد. يبقى
+  OCR        : None
+  Combined   :  واحد. ماشي? وعندي في الاخر خالص خالص هي. باخده ايه واحد. يبقى
+
+[00:08:28]
+  Transcript :  اتنين على خمسة. يبقى كده نسبة بتاع التلاتة على تسعة واتنين على
+  OCR        : K-MEANS CLUSTERNG - Adobe Acrebat Reeder DC 32-bit | File Edit Yew Sigp Window Help | Home | Tools | K-MEANS CLUSTER.. | Sign In | 14  25 | 74.1 | Play Tennis Example | Antuset | PlayTemis: training exainples | Outlook | Temperature | Humidity | Wind | PlayTennis | Sunny | High | Weak | Sunny | High | Strong | Overcas | High | Weak | High | Rain | Rain | Mild | Weak | Cool | Normal | Weak | Strong | Rain | Cool | Normal | Chrercast | Cool | Normal | Strong | Sunny | Mild | High | Weak | Sunny | Cool | Normal | Weak | Rain | Mild | Normal | Weak | Sunny | Mild | Normal | Strong | Overcast | Mild | High | Strong | Overcast | Normal | Weak | Rain | Mild | High | Strong
+  Combined   :  اتنين على خمسة. يبقى كده نسبة بتاع التلاتة على تسعة واتنين على K-MEANS CLUSTERNG - Adobe Acrebat Reeder DC 32-bit | File Edit Yew Sigp Window Help | Home | Tools | K-MEANS CLUSTER.. | Sign In | 14  25 | 74.1 | Play Tennis Example | Antuset | PlayTemis: training exainples | Outlook | Temperature | Humidity | Wind | PlayTennis | Sunny | High | Weak | Sunny | High | Strong | Overcas | High | Weak | High | Rain | Rain | Mild | Weak | Cool | Normal | Weak | Strong | Rain | Cool | Normal | Chrercast | Cool | Normal | Strong | Sunny | Mild | High | Weak | Sunny | Cool | Normal | Weak | Rain | Mild | Normal | Weak | Sunny | Mild | Normal | Strong | Overcast | Mild | High | Strong | Overcast | Normal | Weak | Rain | Mild | High | Strong
+
+[00:08:30]
+  Transcript :  اتنين على خمسة. يبقى كده نسبة بتاع التلاتة على تسعة واتنين على
+  OCR        : K-MEANS CLUSTERNG - Adobe Acrebat Reeder DC 32-bit | File Edit Yew Sigp Window Help | Home | Tools | K-MEANS CLUSTER. | Sign In | 15  25 | 74.1 | Calculating Probabilities | Dotarset | Learning Rhase | gyes | Outlook | Play-Yes | Play-Ne | Temperatur | Play-Yes | Sunny | Opurcast | Rain | Humnidity | Play | PlaysN | Wind | PlayYes | Playe! | Sthng | High | Woad | PPlavYes 914 PPlayNo  514
+  Combined   :  اتنين على خمسة. يبقى كده نسبة بتاع التلاتة على تسعة واتنين على K-MEANS CLUSTERNG - Adobe Acrebat Reeder DC 32-bit | File Edit Yew Sigp Window Help | Home | Tools | K-MEANS CLUSTER. | Sign In | 15  25 | 74.1 | Calculating Probabilities | Dotarset | Learning Rhase | gyes | Outlook | Play-Yes | Play-Ne | Temperatur | Play-Yes | Sunny | Opurcast | Rain | Humnidity | Play | PlaysN | Wind | PlayYes | Playe! | Sthng | High | Woad | PPlavYes 914 PPlayNo  514
+
+[00:08:36]
+  Transcript :  بتحسب ازاي? هتروح تحسب نفس الكلام لمن? بالفيتش رقم اتنين.
+  OCR        : None
+  Combined   :  بتحسب ازاي? هتروح تحسب نفس الكلام لمن? بالفيتش رقم اتنين.
+
+[00:08:42]
+  Transcript :  اللي هي مين? اللي هي تبدأ تاخد كل واحدة فيها اللي هي تحسب لها
+  OCR        : K-MEANS CLUSTERING - Adobe Acrobat Reeder DC 32-eit | File Edit Vew Sigp Window Help | Home | Tools | K-MEANS CLUSTER. | Sign In | 14  25 | 74.1 | Play TennisExample | Dotset | PlayTennis: training examples | Cutlook | Temperature | Humidity | Wind | PlayTennis | Sunny | 1igh | Weak | Sunny | High | Strong | 9 yes | Overcast | High | Weak | Mild | High | Weak | Rain | Rain | Cool | Normal | Rain | Weak | Strong | Cool | Noreal | Overcast | Cool | Norenal | Strong | Sunny | Mild | High | Weak | Suany | Cool | Normal | Weak | Rain | Mild | Noremal | Weuk | Sunny | Mild | Narmal | Strong | Overcast | Mild | High | Sarong | Overeas | Normal | Strong | Wenk | Rain | Mild | High
+  Combined   :  اللي هي مين? اللي هي تبدأ تاخد كل واحدة فيها اللي هي تحسب لها K-MEANS CLUSTERING - Adobe Acrobat Reeder DC 32-eit | File Edit Vew Sigp Window Help | Home | Tools | K-MEANS CLUSTER. | Sign In | 14  25 | 74.1 | Play TennisExample | Dotset | PlayTennis: training examples | Cutlook | Temperature | Humidity | Wind | PlayTennis | Sunny | 1igh | Weak | Sunny | High | Strong | 9 yes | Overcast | High | Weak | Mild | High | Weak | Rain | Rain | Cool | Normal | Rain | Weak | Strong | Cool | Noreal | Overcast | Cool | Norenal | Strong | Sunny | Mild | High | Weak | Suany | Cool | Normal | Weak | Rain | Mild | Noremal | Weuk | Sunny | Mild | Narmal | Strong | Overcast | Mild | High | Sarong | Overeas | Normal | Strong | Wenk | Rain | Mild | High
+
+[00:08:46]
+  Transcript :  نسبة ونسبة والمايل تحسب لها نسبة ونسبة والكل تحسب لها نسبة
+  OCR        : None
+  Combined   :  نسبة ونسبة والمايل تحسب لها نسبة ونسبة والكل تحسب لها نسبة
+
+[00:08:51]
+  Transcript : 
+  OCR        : None
+  Combined   : 
+
+[00:09:05]
+  Transcript :  النورمال بتاعتك اليس والنوم طيب ونفس الكلام دي طيب اليس والنوم
+  OCR        : None
+  Combined   :  النورمال بتاعتك اليس والنوم طيب ونفس الكلام دي طيب اليس والنوم
+
+[00:09:10]
+  Transcript :  نفسهم بقى لها الاخيرة دي هي نسبة اصلا لو انا قلت لك بقى ايه
+  OCR        : None
+  Combined   :  نفسهم بقى لها الاخيرة دي هي نسبة اصلا لو انا قلت لك بقى ايه
+
+[00:09:18]
+  Transcript :  انت عندك خلاص الاربع جداول هما بتاع الاربع فيتشر دول في مشكلة
+  OCR        : K-MEANS CLUSTERING - Adobe Acrebat Reeder DC 32-bit | File Edit View Sigp Windeow Help | Home | Tools | K-MEANS CLUSTER.. | Sign In | 15  25 | Calculating Probabilities | Dotarset | Learning-Rhase | 9 Yes | Outlook | Play-Yes | Play-Ne | Temperatur | Play-Yes | Plar-M | Sunny | Onurcat | Rain | Cout | Humnidity | FlayYe | PlayN | Wind | PlayYes | Playwl | High | Strong | Woad | PPlavYes  914 PPlayNo  514
+  Combined   :  انت عندك خلاص الاربع جداول هما بتاع الاربع فيتشر دول في مشكلة K-MEANS CLUSTERING - Adobe Acrebat Reeder DC 32-bit | File Edit View Sigp Windeow Help | Home | Tools | K-MEANS CLUSTER.. | Sign In | 15  25 | Calculating Probabilities | Dotarset | Learning-Rhase | 9 Yes | Outlook | Play-Yes | Play-Ne | Temperatur | Play-Yes | Plar-M | Sunny | Onurcat | Rain | Cout | Humnidity | FlayYe | PlayN | Wind | PlayYes | Playwl | High | Strong | Woad | PPlavYes  914 PPlayNo  514
+
+[00:09:20]
+  Transcript :  انت عندك خلاص الاربع جداول هما بتاع الاربع فيتشر دول في مشكلة
+  OCR        : K-MEANS CLUSTERING - Adobe Acrebat Reeder DC 32-eit | File Edit View Sigp Windeow Help | Home | Tools | K-MEANS CLUSTER.. | Sign In | 14 25 | 74.1 | Play Tennis Example | Antrset | PlayTemmis: training exainples | Outiook | Temperature | Humidity | Wind | PlayTennis | Sunny | High | Weak | Sunny | High | Strong | Overcas | High | High | Weak | Rain | RAin | Mrild | Weak | Cool | Normal | Weak | Strong | Rain | Cool | Normal | Cvercast | Cool | Normal | Strong | Yies | Sunny | Mild | High | Weak | Suany | Cool | Normal | Weak | Rain | Mild | Normal | Weak | Sunny | Milld | Normal | Smong | Overcas | Mild | High | Strong | Norea | Overcast | Strong | Weak | Rain | Mild | High
+  Combined   :  انت عندك خلاص الاربع جداول هما بتاع الاربع فيتشر دول في مشكلة K-MEANS CLUSTERING - Adobe Acrebat Reeder DC 32-eit | File Edit View Sigp Windeow Help | Home | Tools | K-MEANS CLUSTER.. | Sign In | 14 25 | 74.1 | Play Tennis Example | Antrset | PlayTemmis: training exainples | Outiook | Temperature | Humidity | Wind | PlayTennis | Sunny | High | Weak | Sunny | High | Strong | Overcas | High | High | Weak | Rain | RAin | Mrild | Weak | Cool | Normal | Weak | Strong | Rain | Cool | Normal | Cvercast | Cool | Normal | Strong | Yies | Sunny | Mild | High | Weak | Suany | Cool | Normal | Weak | Rain | Mild | Normal | Weak | Sunny | Milld | Normal | Smong | Overcas | Mild | High | Strong | Norea | Overcast | Strong | Weak | Rain | Mild | High
+
+[00:09:22]
+  Transcript :  كده اللي هما دوق اللي هما دوق ادي outlook وال temperature والهيموليتي
+  OCR        : K-MEANS CLUSTERING - Adobe Acrebat Reeder DC 32-eit | File Edit Yew Sigp Window Help | Home | Tools | K-MEANS CLUSTER. | Sign In | 14  25 | 74.1 | Play TennisExample | Dotaset | PlayTenmis: training exainples | Cutlook | Temperature | Humidity | Wind | PlayTennis | Sunny | High | Weak | Sunny | High | Strong | 9 Yes | Overeast | High | Weak | Mild | High | Rain | Rain | Wenk | Cool | Normal | Weak | Strong | Rain | Cool | Normal | Overcast | Cool | Normal | Strong | Sunny | Mild | High | Weak | Sunny | Cool | Normal | Weak | Rain | Mild | Normal | Weak | Sunny | Mild | Normal | Strong | Overcast | Mild | High | Seroing | Cvercast | Normal | Weak | Rain | Mild | High | Strong
+  Combined   :  كده اللي هما دوق اللي هما دوق ادي outlook وال temperature والهيموليتي K-MEANS CLUSTERING - Adobe Acrebat Reeder DC 32-eit | File Edit Yew Sigp Window Help | Home | Tools | K-MEANS CLUSTER. | Sign In | 14  25 | 74.1 | Play TennisExample | Dotaset | PlayTenmis: training exainples | Cutlook | Temperature | Humidity | Wind | PlayTennis | Sunny | High | Weak | Sunny | High | Strong | 9 Yes | Overeast | High | Weak | Mild | High | Rain | Rain | Wenk | Cool | Normal | Weak | Strong | Rain | Cool | Normal | Overcast | Cool | Normal | Strong | Sunny | Mild | High | Weak | Sunny | Cool | Normal | Weak | Rain | Mild | Normal | Weak | Sunny | Mild | Normal | Strong | Overcast | Mild | High | Seroing | Cvercast | Normal | Weak | Rain | Mild | High | Strong
+
+[00:09:26]
+  Transcript :  كده اللي هما دوق اللي هما دوق ادي outlook وال temperature والهيموليتي
+  OCR        : EANS CLUSTERNG - Adbe Acrobat Reed 32- | File Edit Vew Sigp Window Help | Home | Tools | K-MEANS CLUSTER. | Sign In | 15  25 | 74.1 | Calculating Probabilities | Dotrset | Learning-Rhase | 9 yes | Outlook | Play-Yes | Play-No | Temperatur | Play-Yes | Plan-No | Surmy | Ratin | Hunidity | FlayYe | PlayaN | Wind | PlayYes | PlayaN | Strong | High | Weald | PPlayYes  914 PPlayNo  514
+  Combined   :  كده اللي هما دوق اللي هما دوق ادي outlook وال temperature والهيموليتي EANS CLUSTERNG - Adbe Acrobat Reed 32- | File Edit Vew Sigp Window Help | Home | Tools | K-MEANS CLUSTER. | Sign In | 15  25 | 74.1 | Calculating Probabilities | Dotrset | Learning-Rhase | 9 yes | Outlook | Play-Yes | Play-No | Temperatur | Play-Yes | Plan-No | Surmy | Ratin | Hunidity | FlayYe | PlayaN | Wind | PlayYes | PlayaN | Strong | High | Weald | PPlayYes  914 PPlayNo  514
+
+[00:09:27]
+  Transcript :  والويند لحد هنا كده فيه مشكلة جامعة طيب لو انا قلت لك بقى
+  OCR        : None
+  Combined   :  والويند لحد هنا كده فيه مشكلة جامعة طيب لو انا قلت لك بقى
+
+[00:09:34]
+  Transcript :  نسبة البلي بتساوي نسبة البلي بتساوي اس نسبتها كام يعني بتاعت
+  OCR        : None
+  Combined   :  نسبة البلي بتساوي نسبة البلي بتساوي اس نسبتها كام يعني بتاعت
+
+[00:09:39]
+  Transcript :  البلي بتساوي اس كام على كام انت دلوقتي كنت مخصصص لي عدد
+  OCR        : None
+  Combined   :  البلي بتساوي اس كام على كام انت دلوقتي كنت مخصصص لي عدد
+
+[00:09:47]
+  Transcript :  عدد اليس على التوتل
+  OCR        : None
+  Combined   :  عدد اليس على التوتل
+
+[00:09:52]
+  Transcript :  بقى بص كده مش دول كلهم كام على بعض
+  OCR        : K-MEANS CLUSTERING - Adobe Acrebat Reeder DC 32-bit | File Edit Vew Sigp Window Help | Home | Tools | K-MEANS CLUSTER., | Sign In | 14 25 | 74.1 | Play Tennis. Example | PlayTennis: training examples | Outlook | Temperature | Humidity | Wind | PlayTennis | Sunny | 1tot | High | Weak | Sunny | High | Strong | Overcast | High | Weak | Mild | High | Wenk | Rain | Rain | Coel | Normal | Rain | Weak | Strong | Cool | Cool | Normal | Overcast | Noreal | Strong | Sunny | Mikd | 1igh | Weak | Sunny | Cool | Normal | Rain | Mild | Normal | Wouk | Sunny | Mild | Normal | Strong | Overost | Mild | High | Serong | Normal | Overcast | Wonk | Rain | Mild | High | Strong
+  Combined   :  بقى بص كده مش دول كلهم كام على بعض K-MEANS CLUSTERING - Adobe Acrebat Reeder DC 32-bit | File Edit Vew Sigp Window Help | Home | Tools | K-MEANS CLUSTER., | Sign In | 14 25 | 74.1 | Play Tennis. Example | PlayTennis: training examples | Outlook | Temperature | Humidity | Wind | PlayTennis | Sunny | 1tot | High | Weak | Sunny | High | Strong | Overcast | High | Weak | Mild | High | Wenk | Rain | Rain | Coel | Normal | Rain | Weak | Strong | Cool | Cool | Normal | Overcast | Noreal | Strong | Sunny | Mikd | 1igh | Weak | Sunny | Cool | Normal | Rain | Mild | Normal | Wouk | Sunny | Mild | Normal | Strong | Overost | Mild | High | Serong | Normal | Overcast | Wonk | Rain | Mild | High | Strong
+
+[00:09:52]
+  Transcript :  البيلاي كلهم
+  OCR        : None
+  Combined   :  البيلاي كلهم
+
+[00:09:54]
+  Transcript :  دول كلهم كام على بعض دول كلهم على بعض غير 14
+  OCR        : None
+  Combined   :  دول كلهم كام على بعض دول كلهم على بعض غير 14
+
+[00:09:57]
+  Transcript :  14
+  OCR        : None
+  Combined   :  14
+
+[00:09:58]
+  Transcript :  لما اقولك هتلي نسبة اليس
+  OCR        : None
+  Combined   :  لما اقولك هتلي نسبة اليس
+
+[00:10:00]
+  Transcript :  بقى لازم تعديلي كم نص على عدد كله. اللي هو اه ادى واحد اتنين
+  OCR        : None
+  Combined   :  بقى لازم تعديلي كم نص على عدد كله. اللي هو اه ادى واحد اتنين
+
+[00:10:03]
+  Transcript :  تلاتة اربعة خمسة ستة سبعة تمانية تسعة هيبقى تسعة على
+  OCR        : None
+  Combined   :  تلاتة اربعة خمسة ستة سبعة تمانية تسعة هيبقى تسعة على
+
+[00:10:07]
+  Transcript :  اربعتاشر. طب نسبة النوع كلها هيبقى نسبة النوع على العدد كله.
+  OCR        : None
+  Combined   :  اربعتاشر. طب نسبة النوع كلها هيبقى نسبة النوع على العدد كله.
+
+[00:10:14]
+  Transcript :  مختلفة. خمسة على اربعتاشر. اللي هو كام? اللي هو خمسة على
+  OCR        : K-MEANS CLUSTERING - Adobe Acrebat Reader DC 32-bit | File Edit View Sigp Window Help | Home | Tools | K-MEANS CLUSTER., | Sign In | 15  25 | 74.1 | Calculating Probabilities | Learning Phase | Outlook | Play-Yes | Plav-N | Temperatur | Play-Yes | Plar-N | Surny | Onurcat | Rain | Huanidiay | FlayY | PlayN | Wind | PlayYes | Played | High | Strong | Weak | PPlayYes  914 PPlayNo  514
+  Combined   :  مختلفة. خمسة على اربعتاشر. اللي هو كام? اللي هو خمسة على K-MEANS CLUSTERING - Adobe Acrebat Reader DC 32-bit | File Edit View Sigp Window Help | Home | Tools | K-MEANS CLUSTER., | Sign In | 15  25 | 74.1 | Calculating Probabilities | Learning Phase | Outlook | Play-Yes | Plav-N | Temperatur | Play-Yes | Plar-N | Surny | Onurcat | Rain | Huanidiay | FlayY | PlayN | Wind | PlayYes | Played | High | Strong | Weak | PPlayYes  914 PPlayNo  514
+
+[00:10:14]
+  Transcript :  اربعتاشر. في مشكلة كده? لا. عرفنا نجيب الجداول دي? لو عرفنا
+  OCR        : None
+  Combined   :  اربعتاشر. في مشكلة كده? لا. عرفنا نجيب الجداول دي? لو عرفنا
+
+[00:10:18]
+  Transcript :  نجيب الجداول دي كده خلصت كده نايف بيز على فكرة. تعال بقى نشوف
+  OCR        : None
+  Combined   :  نجيب الجداول دي كده خلصت كده نايف بيز على فكرة. تعال بقى نشوف
+
+[00:10:26]
+  Transcript :  البيتم ازاي? تعال بقى دلوقتي اسألك سؤالك. بص كده بيقول لي
+  OCR        : K-MEANS CLUSTERING - Adobe Acrobat Reader DC 32-bit | File Edit View Sigp Window Help | Home | Tools | K-MEANS CLUSTER..x | Sign In | 16 25 | 74.1 | Test Phase | Plap-le | Given a new instance, predict its label | Checas | xOutlookSummy; TemperatureCool, HumidityHigh, WindSrrong | -Look up tables achieved in the learning phrase | Hamadny | Parelie | Wind | Pap-ian | POutlookSimnPlay-Fes29 | POutlookSunnyPlayNo35 | PTemperature-CooPlay-Yes 39 | PTemperaturemCoolPlay-No  15 | APep-Ys-911 APay-Ne-514 | PHuminity-HigPlayHes39 | PHuminity-HighPlay-No-45 | PWindStrong;PlayYes  39 | PWind-StrongPlay-No35 | PPlayYes  914 | PPlayNo514 | PZesx  PSuommyYesPCooYesPHigYesPSrrongYesPPlayYes  0.0053 | PNox  PSwmsNo PCooNoPHighNoPStrongiNoPPlayNo  0.0206 | Given the fact PYesix  PNoix. we label x to be No.
+  Combined   :  البيتم ازاي? تعال بقى دلوقتي اسألك سؤالك. بص كده بيقول لي K-MEANS CLUSTERING - Adobe Acrobat Reader DC 32-bit | File Edit View Sigp Window Help | Home | Tools | K-MEANS CLUSTER..x | Sign In | 16 25 | 74.1 | Test Phase | Plap-le | Given a new instance, predict its label | Checas | xOutlookSummy; TemperatureCool, HumidityHigh, WindSrrong | -Look up tables achieved in the learning phrase | Hamadny | Parelie | Wind | Pap-ian | POutlookSimnPlay-Fes29 | POutlookSunnyPlayNo35 | PTemperature-CooPlay-Yes 39 | PTemperaturemCoolPlay-No  15 | APep-Ys-911 APay-Ne-514 | PHuminity-HigPlayHes39 | PHuminity-HighPlay-No-45 | PWindStrong;PlayYes  39 | PWind-StrongPlay-No35 | PPlayYes  914 | PPlayNo514 | PZesx  PSuommyYesPCooYesPHigYesPSrrongYesPPlayYes  0.0053 | PNox  PSwmsNo PCooNoPHighNoPStrongiNoPPlayNo  0.0206 | Given the fact PYesix  PNoix. we label x to be No.
+
+[00:10:28]
+  Transcript :  بيقول لي انا عاوز اسألك سؤال بتساوي لما يكون بتاعتك لما
+  OCR        : None
+  Combined   :  بيقول لي انا عاوز اسألك سؤال بتساوي لما يكون بتاعتك لما
+
+[00:10:34]
+  Transcript :  تكون هل الاجابة بتاعتك هتكون
+  OCR        : None
+  Combined   :  تكون هل الاجابة بتاعتك هتكون
+
+[00:10:38]
+  Transcript :  على اي اساس بقى? على الديبتالي انا طبعا بص كده تعال بقى نشوف
+  OCR        : None
+  Combined   :  على اي اساس بقى? على الديبتالي انا طبعا بص كده تعال بقى نشوف
+
+[00:10:46]
+  Transcript :  بقى الجدول الموجودة عندك اهي الجدول الموجودة عندك بالشكل ده
+  OCR        : None
+  Combined   :  بقى الجدول الموجودة عندك اهي الجدول الموجودة عندك بالشكل ده
+
+[00:10:49]
+  Transcript :  كده. عادة بقى نشوف بتحسب الكلام ده ازاي. انت هتحسب لي نسبة
+  OCR        : None
+  Combined   :  كده. عادة بقى نشوف بتحسب الكلام ده ازاي. انت هتحسب لي نسبة
+
+[00:10:53]
+  Transcript :  given the yes given no given yes
+  OCR        : None
+  Combined   :  given the yes given no given yes
+
+[00:11:09]
+  Transcript :  اتنين على تسعة. بص كده لو هتاخد كل yes وتشتغل عليه وتطلع للمعدلة.
+  OCR        : None
+  Combined   :  اتنين على تسعة. بص كده لو هتاخد كل yes وتشتغل عليه وتطلع للمعدلة.
+
+[00:11:16]
+  Transcript :  بص كده المعدلة دي. ركز في المعدلة دي. المعدلة دي بيقول
+  OCR        : K-MEANS CLUSTERING - Adobe Acrebat Reader DC 32-bit | File Edit View Sigp Windew Help | Home | Tools | K-MEANS CLUSTER..x | Sign In | 16 25 | 74.1 | Test Phase | Oufock | Parp-lin | Pap-lo | Sony | Checad | Given a new instance. predict its label | xOutlookSunmry; TemperatureCool, HumidityHigh, WindStrong | Look up tables achieved in the learning phrase | Humadity | Parpelc | Wind | Parplia | Somg | POutlookSmmyPlayYes  29 | POutlookSunnyPlayNo35 | PTemperature-CooPlayYes 39 | PTemperatureCoolPlay-No  15 | APay-Ys-914 APay-Ne-514 | PHuminity-HigPlay-Hes39 | PHuminityHighPlayNo  45 | PWind-StrongPlay-Yes  39 | PWindStrongPlayNo - 35 | PPlayYes 914 | PPlayNo514 | PYesx PScomYesPCooYesPHighYesPSmrongYesPPlayYes  0.0053 | PNox  PSwmyNo PCooNoPHighNoPStrongNoPPlayNo  0.0206 | Given the fact PYesx  PNox, we label x to be No,
+  Combined   :  بص كده المعدلة دي. ركز في المعدلة دي. المعدلة دي بيقول K-MEANS CLUSTERING - Adobe Acrebat Reader DC 32-bit | File Edit View Sigp Windew Help | Home | Tools | K-MEANS CLUSTER..x | Sign In | 16 25 | 74.1 | Test Phase | Oufock | Parp-lin | Pap-lo | Sony | Checad | Given a new instance. predict its label | xOutlookSunmry; TemperatureCool, HumidityHigh, WindStrong | Look up tables achieved in the learning phrase | Humadity | Parpelc | Wind | Parplia | Somg | POutlookSmmyPlayYes  29 | POutlookSunnyPlayNo35 | PTemperature-CooPlayYes 39 | PTemperatureCoolPlay-No  15 | APay-Ys-914 APay-Ne-514 | PHuminity-HigPlay-Hes39 | PHuminityHighPlayNo  45 | PWind-StrongPlay-Yes  39 | PWindStrongPlayNo - 35 | PPlayYes 914 | PPlayNo514 | PYesx PScomYesPCooYesPHighYesPSmrongYesPPlayYes  0.0053 | PNox  PSwmyNo PCooNoPHighNoPStrongNoPPlayNo  0.0206 | Given the fact PYesx  PNox, we label x to be No,
+
+[00:11:18]
+  Transcript :  ليه هاتلي بتاعة the yes. اللي هي كام? اتنين على تسعة. فيه. اضراب
+  OCR        : K-MEANS CLUSTERING - Adobe Acrebat Reader DC 32-bit | File Edit View Sigp Window Help | Home | Tools | K-MEANS CLUSTER..x | Sign In | 16 25 | 74.1 | Test Phase | Oufock | Parp-lin | Pap-lo | Sony | Orecat | Given a new instance, predict its label | xOutlookSunmry; TemperatureCool, HumidityHigh, WindStrong | Look up tables achieved in the learning phrase | Humadity | Parpelc | Wind | Parplia | Somg | POutlookSmmyPlayYes  29 | POutlookSunnyPlayNo35 | PTemperature-CooPlay-Yes39 | PTemperatureCoolPlayNo  15 | APay-Is-91 APap-o-51 | PHuminityHighPlayYes  39 | PHuminity-HighPlayNo45 | PWindStrongPlayYes  39 | PWind-StrongPlay-No  35 | PPlayYes  914 | PPlayNo514 | PYesx PSwdmYesPCooYesPHighYesPSrrongYesPPlayYes  0.0053 | PNox  PSwmyNo PCooNoPHighNoPStrongNoPPlayNo  0.0206 | Given the fact PYesix  PNoix, we label x to be No.
+  Combined   :  ليه هاتلي بتاعة the yes. اللي هي كام? اتنين على تسعة. فيه. اضراب K-MEANS CLUSTERING - Adobe Acrebat Reader DC 32-bit | File Edit View Sigp Window Help | Home | Tools | K-MEANS CLUSTER..x | Sign In | 16 25 | 74.1 | Test Phase | Oufock | Parp-lin | Pap-lo | Sony | Orecat | Given a new instance, predict its label | xOutlookSunmry; TemperatureCool, HumidityHigh, WindStrong | Look up tables achieved in the learning phrase | Humadity | Parpelc | Wind | Parplia | Somg | POutlookSmmyPlayYes  29 | POutlookSunnyPlayNo35 | PTemperature-CooPlay-Yes39 | PTemperatureCoolPlayNo  15 | APay-Is-91 APap-o-51 | PHuminityHighPlayYes  39 | PHuminity-HighPlayNo45 | PWindStrongPlayYes  39 | PWind-StrongPlay-No  35 | PPlayYes  914 | PPlayNo514 | PYesx PSwdmYesPCooYesPHighYesPSrrongYesPPlayYes  0.0053 | PNox  PSwmyNo PCooNoPHighNoPStrongNoPPlayNo  0.0206 | Given the fact PYesix  PNoix, we label x to be No.
+
+[00:11:20]
+  Transcript :  ليه هاتلي بتاعة the yes. اللي هي كام? اتنين على تسعة. فيه. اضراب
+  OCR        : K-MEANS CLUSTERING - Adobe Acrebat Reader DC 32-bit | File Edit View Sigp Window Help | Home | Tools | K-MEANS CLUSTER. | Sign In | 16 25 | 74.1 | Test Phase | Oufock | Parp-lin | Pap-lo | Sony | Given a new instance, predict its label | Orecat | xOutlookSunmry; TemperatureCool, HumidityHigh, WindStrong | Look up tables achieved in the learning phrase | Humadity | Parpelc | Wind | Parplia | Somg | POutlookSmmyPlayYes  29 | POutlookSunnyPlayNo35 | PTemperature-CooPlayYes  39 | PTemperatureCoolPlayNo  15 | APay-Is-914 APay-Ne-514 | PHuminity-HigPlay-Hes39 | PHuminity-HighPlay-No45 | PWindStrongPlayYes  39 | PWindStrongPlayNo  35 | PPlayYes  914 | PYesx  PSwomnYesPCooYesPHighYesPSrrongYesPPlayYes  0.0053 | PNox  PSwmyNo PCooNoPHighNoPStrongNoPPlayNo  0.0206 | Given the fact PYesix  PNoix, we label x to be No.
+  Combined   :  ليه هاتلي بتاعة the yes. اللي هي كام? اتنين على تسعة. فيه. اضراب K-MEANS CLUSTERING - Adobe Acrebat Reader DC 32-bit | File Edit View Sigp Window Help | Home | Tools | K-MEANS CLUSTER. | Sign In | 16 25 | 74.1 | Test Phase | Oufock | Parp-lin | Pap-lo | Sony | Given a new instance, predict its label | Orecat | xOutlookSunmry; TemperatureCool, HumidityHigh, WindStrong | Look up tables achieved in the learning phrase | Humadity | Parpelc | Wind | Parplia | Somg | POutlookSmmyPlayYes  29 | POutlookSunnyPlayNo35 | PTemperature-CooPlayYes  39 | PTemperatureCoolPlayNo  15 | APay-Is-914 APay-Ne-514 | PHuminity-HigPlay-Hes39 | PHuminity-HighPlay-No45 | PWindStrongPlayYes  39 | PWindStrongPlayNo  35 | PPlayYes  914 | PYesx  PSwomnYesPCooYesPHighYesPSrrongYesPPlayYes  0.0053 | PNox  PSwmyNo PCooNoPHighNoPStrongNoPPlayNo  0.0206 | Given the fact PYesix  PNoix, we label x to be No.
+
+[00:11:22]
+  Transcript :  الدي فيه. نسبة ايض الكل لما تكون لما تكون بتاعتها باي playoffs.
+  OCR        : None
+  Combined   :  الدي فيه. نسبة ايض الكل لما تكون لما تكون بتاعتها باي playoffs.
+
+[00:11:27]
+  Transcript :  اللي هي كم? فين الكل دي? الكل تحتية تاعتها تاعتها تاعتها
+  OCR        : None
+  Combined   :  اللي هي كم? فين الكل دي? الكل تحتية تاعتها تاعتها تاعتها
+
+[00:11:33]
+  Transcript :  olmak ايه. ماشي? مام. ونسبة بتاعت لما تكون بتساو cool given
+  OCR        : None
+  Combined   :  olmak ايه. ماشي? مام. ونسبة بتاعت لما تكون بتساو cool given
+
+[00:11:39]
+  Transcript :  지هيات. تاعتها تسعة برضه. برضو تاعتها تسعة. ونسبة الود. اللي هي
+  OCR        : None
+  Combined   :  지هيات. تاعتها تسعة برضه. برضو تاعتها تسعة. ونسبة الود. اللي هي
+
+[00:11:44]
+  Transcript :  بتاعتها بتاعتها jag готов the phone given in iays. تاعتها تقسعة تاعتق
+  OCR        : None
+  Combined   :  بتاعتها بتاعتها jag готов the phone given in iays. تاعتها تقسعة تاعتق
+
+[00:11:48]
+  Transcript :  تسعة. تضرب لي الكلام ده كله. ماشي? تضربها لي في نسبة الاس كلها.
+  OCR        : None
+  Combined   :  تسعة. تضرب لي الكلام ده كله. ماشي? تضربها لي في نسبة الاس كلها.
+
+[00:11:53]
+  Transcript :  نسبة كبيرة بتاعت الاس كلها على بعضها. ها? هتديك الرقم ده. ماشي كده?
+  OCR        : None
+  Combined   :  نسبة كبيرة بتاعت الاس كلها على بعضها. ها? هتديك الرقم ده. ماشي كده?
+
+[00:12:02]
+  Transcript :  على فكرة هو نفس الكلام ده ده نفس الاحمر اللي في النص ده كله هو
+  OCR        : K-MEANS CLUSTERING - Adobe Acrebat Reader DC 32-bit | File Edit View Sigp Windew Help | Home | Tools | K-MEANS CLUSTER. | Sign In | 16  25 | 74.1 | Test Phase | Cufook | Parp-Iin | Pap-lo | Sany | Given a new instance, predict its label | Crecast | xOutlookSummry; TemperatureCool, HumidityHigh, WindStrong | Look up tables achieved in the learning phrase | Humidiny | Wind | Somg | POutlookSnmyPlayYes 29 | POutlookSunnyPlayNo 35 | PTemperature-CooPlayYes 39 | PTemperatureCoolPlayNo15 | APej-Y6s-91 APay-N6-514 | PHuminityHigPlayFes39 | PHuminity-HighPlay-No-45 | PWind-StrongPlay-Yes39 | PWind-StrongPlay-No  35 | PPlayYes  914 | PPlayNo514 | PYesx  PSnomYesPCooYesPHighYesPStrongYesPPlayYes  0.0053 | PNox  PSwmmyNo PCooNoPHighNoPStrongiNoPPlayNo  0.0206 | Given the fact PYesx  PNojx. we label x to be No,
+  Combined   :  على فكرة هو نفس الكلام ده ده نفس الاحمر اللي في النص ده كله هو K-MEANS CLUSTERING - Adobe Acrebat Reader DC 32-bit | File Edit View Sigp Windew Help | Home | Tools | K-MEANS CLUSTER. | Sign In | 16  25 | 74.1 | Test Phase | Cufook | Parp-Iin | Pap-lo | Sany | Given a new instance, predict its label | Crecast | xOutlookSummry; TemperatureCool, HumidityHigh, WindStrong | Look up tables achieved in the learning phrase | Humidiny | Wind | Somg | POutlookSnmyPlayYes 29 | POutlookSunnyPlayNo 35 | PTemperature-CooPlayYes 39 | PTemperatureCoolPlayNo15 | APej-Y6s-91 APay-N6-514 | PHuminityHigPlayFes39 | PHuminity-HighPlay-No-45 | PWind-StrongPlay-Yes39 | PWind-StrongPlay-No  35 | PPlayYes  914 | PPlayNo514 | PYesx  PSnomYesPCooYesPHighYesPStrongYesPPlayYes  0.0053 | PNox  PSwmmyNo PCooNoPHighNoPStrongiNoPPlayNo  0.0206 | Given the fact PYesx  PNojx. we label x to be No,
+
+[00:12:03]
+  Transcript :  اللي جاي من الجدو الاساسي. ده اللي هو في الجدو الاساسي. طيب.
+  OCR        : None
+  Combined   :  اللي جاي من الجدو الاساسي. ده اللي هو في الجدو الاساسي. طيب.
+
+[00:12:06]
+  Transcript :  تعال بقى هلتلي نسبة الكلام ده كله بس مش اللي يسبق. بس يمشي
+  OCR        : None
+  Combined   :  تعال بقى هلتلي نسبة الكلام ده كله بس مش اللي يسبق. بس يمشي
+
+[00:12:10]
+  Transcript :  بالترتيب. هاتلي بتاعت الاوتلوك. اه اا اقوال. بتاعتك بنو. دي كم?
+  OCR        : None
+  Combined   :  بالترتيب. هاتلي بتاعت الاوتلوك. اه اا اقوال. بتاعتك بنو. دي كم?
+
+[00:12:20]
+  Transcript :  ها? تلاتة على خمس? صح هو ليه? اه. تلاتة على خمس. طيب تعال نشوف
+  OCR        : None
+  Combined   :  ها? تلاتة على خمس? صح هو ليه? اه. تلاتة على خمس. طيب تعال نشوف
+
+[00:12:25]
+  Transcript :  بتاعتي. بتاع التمبرتشور لما تكون بتسوي كون. جيفن النو برضو.
+  OCR        : None
+  Combined   :  بتاعتي. بتاع التمبرتشور لما تكون بتسوي كون. جيفن النو برضو.
+
+[00:12:29]
+  Transcript :  ها هتبص على الايه? على القيمة دي ليه واحد على خمسة. في مشكلة
+  OCR        : None
+  Combined   :  ها هتبص على الايه? على القيمة دي ليه واحد على خمسة. في مشكلة
+
+[00:12:34]
+  Transcript :  كده? لا لا. وبعد كده تجيب لي برضو بتاعت
+  OCR        : None
+  Combined   :  كده? لا لا. وبعد كده تجيب لي برضو بتاعت
+
+[00:12:38]
+  Transcript :  النوع. ها? فين النوع اللي اربعة على خمسة. اربعة على خمسة. طيب
+  OCR        : None
+  Combined   :  النوع. ها? فين النوع اللي اربعة على خمسة. اربعة على خمسة. طيب
+
+[00:12:54]
+  Transcript : 
+  OCR        : K-MEANS CLUSTERING - Adobe Acrebat Reader DC 32-bit | File Edit View Sigp Window Help | Home | Tools | K-MEANS CLUSTER..x | Sign In | 16 25 | 74.1 | Test Phase | Parp-lin | Pap-lo | Samy | Given a new instance, predict its label | IFLIS | xOutlookSummy; TemperatureCool, HumidityHigh, WindSrrolig | -Look up tables achieved in the learning phrase | Hunide | Wind | Parplo | Somg | POutlookSnmyPlayYes  29 | POutlookSunnyPlayNo35 | PTemperature-CooPlay-Yes 39 | PTemperatureCoolPlayNo  15 | APsp-Is-914 APay-N-514 | PHuminity-HigPlay-Hes39 | PHuminityHighPlayNo  45 | PWind-StrongPlay-Yes39 | PWind-StrongPlay-No 35 | PPlayYes  914 | PPlayNo514 | PYesx  PSaomyYesPCooYesPHigrYesPSrrongYesPPlayYes  0.0053 | PNox  PSmmmyNo PCooNoPHighNoPStrongNoPPlayNo  0.0206 | Given the fact PYesix  PNoix, we label x to be No.
+  Combined   :  K-MEANS CLUSTERING - Adobe Acrebat Reader DC 32-bit | File Edit View Sigp Window Help | Home | Tools | K-MEANS CLUSTER..x | Sign In | 16 25 | 74.1 | Test Phase | Parp-lin | Pap-lo | Samy | Given a new instance, predict its label | IFLIS | xOutlookSummy; TemperatureCool, HumidityHigh, WindSrrolig | -Look up tables achieved in the learning phrase | Hunide | Wind | Parplo | Somg | POutlookSnmyPlayYes  29 | POutlookSunnyPlayNo35 | PTemperature-CooPlay-Yes 39 | PTemperatureCoolPlayNo  15 | APsp-Is-914 APay-N-514 | PHuminity-HigPlay-Hes39 | PHuminityHighPlayNo  45 | PWind-StrongPlay-Yes39 | PWind-StrongPlay-No 35 | PPlayYes  914 | PPlayNo514 | PYesx  PSaomyYesPCooYesPHigrYesPSrrongYesPPlayYes  0.0053 | PNox  PSmmmyNo PCooNoPHighNoPStrongNoPPlayNo  0.0206 | Given the fact PYesix  PNoix, we label x to be No.
+
+[00:13:16]
+  Transcript :  اضراب الكلام ده كله في بتاعة اللي هي اه. اه. اه. خمسة على
+  OCR        : None
+  Combined   :  اضراب الكلام ده كله في بتاعة اللي هي اه. اه. اه. خمسة على
+
+[00:13:24]
+  Transcript :  اربعة عشر. اللي هي خمسة على اربعة عشر. اللي هي خمسة على
+  OCR        : None
+  Combined   :  اربعة عشر. اللي هي خمسة على اربعة عشر. اللي هي خمسة على
+
+[00:13:26]
+  Transcript :  اربعة عشر. خلاص كده يا جماعة? هتحسب لي القيمة دي اطلع لك
+  OCR        : None
+  Combined   :  اربعة عشر. خلاص كده يا جماعة? هتحسب لي القيمة دي اطلع لك
+
+[00:13:30]
+  Transcript :  بالقيمة دي كده. اللي هي ايه طلعت الاتنين من مية دي. طيب تعال
+  OCR        : K-MEANS CLUSTERING - Adobe Acrebat Reader DC 32-bit | File Edit View Sigp Windew Help | Home | Tools | K-MEANS CLUSTER..x | Sign In | 16  25 | 74.1 | Test Phase | Cufook | Parp-ln | Pap-le | Sony | Orecat | Given a new instance, predict its label | 3614 | xOutlookSummry; TemperatureCool, HumidityHigh, WindStrong | Look up tables achieved in the learning phrase | Wind | Parela | Somy | POutlookSwmnPlayYes29 | POutlookSunnyPlayNo35 | PTemperatureCooPlayYes  39 | PTemperatureCoolPlayNo15 | APaj-Y6s-91 APayNe-514 | PHuminity-HighPlay-Hes 39 | PHuminityHighPlayNo  45 | PWind-Strong Play-Yes  39 | PWind-StrongPlay-No35 | PPlayYes  914 | PPlayNo 514 | PYesx  PSwonmyYesPCooYesPHigYesPStrowgYesPPlayYes | PNox  PSmmNo PCooNoPHigh,NoPStronglNoPPlayNo0.0206 | Given the fact PYesx  PNox, we label x to be No,
+  Combined   :  بالقيمة دي كده. اللي هي ايه طلعت الاتنين من مية دي. طيب تعال K-MEANS CLUSTERING - Adobe Acrebat Reader DC 32-bit | File Edit View Sigp Windew Help | Home | Tools | K-MEANS CLUSTER..x | Sign In | 16  25 | 74.1 | Test Phase | Cufook | Parp-ln | Pap-le | Sony | Orecat | Given a new instance, predict its label | 3614 | xOutlookSummry; TemperatureCool, HumidityHigh, WindStrong | Look up tables achieved in the learning phrase | Wind | Parela | Somy | POutlookSwmnPlayYes29 | POutlookSunnyPlayNo35 | PTemperatureCooPlayYes  39 | PTemperatureCoolPlayNo15 | APaj-Y6s-91 APayNe-514 | PHuminity-HighPlay-Hes 39 | PHuminityHighPlayNo  45 | PWind-Strong Play-Yes  39 | PWind-StrongPlay-No35 | PPlayYes  914 | PPlayNo 514 | PYesx  PSwonmyYesPCooYesPHigYesPStrowgYesPPlayYes | PNox  PSmmNo PCooNoPHigh,NoPStronglNoPPlayNo0.0206 | Given the fact PYesx  PNox, we label x to be No,
+
+[00:13:34]
+  Transcript :  بقى ايه قارن الاتنين دول ببعض. شوف اكبر نسبة فيهم كام? اللي
+  OCR        : K-MEANS CLUSTERING - Adobe Acrebat Reader DC 32-bit | File Edit View Sigp Window Help | Home | Tools | K-MEANS CLUSTER. | Sign In | 16 25 | 74.1 | Test Phase | Oufook | Pamp-lin | Pap-ls | Sasny | Given a new instance. predict its label | Orecart | xOutlookSummry; TemperatureCool, HumidityHigh, WindSrrong | Look up tables achieved in the learning phrase | Humidiny | Paryelc | Wind | Somy | POutlookSwmnPlayYes29 | POutlookSunnyPlayNo35 | PTemperature-CooPlayYes 39 | PTemperatureCoolPlayNo 15 | APap-Ys-911 Pay-No-514 | PHuminity-HigPlay-Fes39 | PHuminity-HighPlayNo45 | PWind-StrongPlay-Yes-39 | PWind-StrongPlay-No35 | PPlayYes  914 | PPlayNo 514 | PYesx  PSwnmYesPCooYesPHigYesPStrowgYesPPlayYes  0.0053 | PNox  PSwmyNo PCooNoPHighNoPStrongNoPPlayNo  0,0206 | Given the fact PYesix  PNoix, we label x to be No,
+  Combined   :  بقى ايه قارن الاتنين دول ببعض. شوف اكبر نسبة فيهم كام? اللي K-MEANS CLUSTERING - Adobe Acrebat Reader DC 32-bit | File Edit View Sigp Window Help | Home | Tools | K-MEANS CLUSTER. | Sign In | 16 25 | 74.1 | Test Phase | Oufook | Pamp-lin | Pap-ls | Sasny | Given a new instance. predict its label | Orecart | xOutlookSummry; TemperatureCool, HumidityHigh, WindSrrong | Look up tables achieved in the learning phrase | Humidiny | Paryelc | Wind | Somy | POutlookSwmnPlayYes29 | POutlookSunnyPlayNo35 | PTemperature-CooPlayYes 39 | PTemperatureCoolPlayNo 15 | APap-Ys-911 Pay-No-514 | PHuminity-HigPlay-Fes39 | PHuminity-HighPlayNo45 | PWind-StrongPlay-Yes-39 | PWind-StrongPlay-No35 | PPlayYes  914 | PPlayNo 514 | PYesx  PSwnmYesPCooYesPHigYesPStrowgYesPPlayYes  0.0053 | PNox  PSwmyNo PCooNoPHighNoPStrongNoPPlayNo  0,0206 | Given the fact PYesix  PNoix, we label x to be No,
+
+[00:13:36]
+  Transcript :  يهن هنا. النو. النو. يبقى الكبيرة فيهم هي هتروح للايه
+  OCR        : None
+  Combined   :  يهن هنا. النو. النو. يبقى الكبيرة فيهم هي هتروح للايه
+
+[00:13:41]
+  Transcript :  الاجابة اللي انت عاوزها. الاجابة اللي هي النتيجة بتاعتك.
+  OCR        : None
+  Combined   :  الاجابة اللي انت عاوزها. الاجابة اللي هي النتيجة بتاعتك.
+
+[00:13:43]
+  Transcript :  اخدام بالكم? يبقى تبدأ تكرن كمتون دول ببعض. اللي هي
+  OCR        : None
+  Combined   :  اخدام بالكم? يبقى تبدأ تكرن كمتون دول ببعض. اللي هي
+
+[00:13:48]
+  Transcript :  بقى بتاعت الاتنين دول ببعض? نقول لك بتاعت الايس بقى كلها
+  OCR        : None
+  Combined   :  بقى بتاعت الاتنين دول ببعض? نقول لك بتاعت الايس بقى كلها
+
+[00:13:53]
+  Transcript :  على بعضها كده? مش دي اصلا بتاعت الايس كلها? اللي هي بتاعت
+  OCR        : None
+  Combined   :  على بعضها كده? مش دي اصلا بتاعت الايس كلها? اللي هي بتاعت
+
+[00:13:57]
+  Transcript :  دي. ده السؤال كله على بعضها.
+  OCR        : None
+  Combined   :  دي. ده السؤال كله على بعضها.
+
+[00:14:00]
+  Transcript :  اصلا. ماشي? فلما تقول بقى بتاعت هي هيديك القيمة اللي هي
+  OCR        : K-MEANS CLUSTERING - Adobe Acrebat Reader DC 32-bit | File Edit View Sigp Window Help | Home | Tools | K-MEANS CLUSTER. | Sign In | 16  25 | 74.1 | Test Phase | Cufook | Pamp-lin | Plap-ls | Sony | Given a new instance, predict its label | Ohecas | XOutlookSunun.Temperature-Cooi.HuumidityHigh, WindStrongI | Look up tables achieved in the learning phrase | Homide | Paryelc | Wind | POutlookSwmnPlayYes29 | POutlookSunnyPlayNo35 | PTemperatureCooPlayYes  39 | PTemperatureCoolPlayNo  15 | APap-Ys-911 APay-No-514 | PHuminity-HigPlay-Fes39 | PHuminityHighPlayNo  45 | PWindStrongPlayYes  39 | PWind-StrongPlay-No35 | PPlayYes  914 | PPlayNo514 | PYesx  PSwnmYesPCooYesPHigYesPStrowgYesPPlayYes  0.0053 | PNox  PSwmyNo PCooNoPHighNoPStrongNoPPlayNo  0.0206 | Given the fact PYesix  PNox, we label x to be No,
+  Combined   :  اصلا. ماشي? فلما تقول بقى بتاعت هي هيديك القيمة اللي هي K-MEANS CLUSTERING - Adobe Acrebat Reader DC 32-bit | File Edit View Sigp Window Help | Home | Tools | K-MEANS CLUSTER. | Sign In | 16  25 | 74.1 | Test Phase | Cufook | Pamp-lin | Plap-ls | Sony | Given a new instance, predict its label | Ohecas | XOutlookSunun.Temperature-Cooi.HuumidityHigh, WindStrongI | Look up tables achieved in the learning phrase | Homide | Paryelc | Wind | POutlookSwmnPlayYes29 | POutlookSunnyPlayNo35 | PTemperatureCooPlayYes  39 | PTemperatureCoolPlayNo  15 | APap-Ys-911 APay-No-514 | PHuminity-HigPlay-Fes39 | PHuminityHighPlayNo  45 | PWindStrongPlayYes  39 | PWind-StrongPlay-No35 | PPlayYes  914 | PPlayNo514 | PYesx  PSwnmYesPCooYesPHigYesPStrowgYesPPlayYes  0.0053 | PNox  PSwmyNo PCooNoPHighNoPStrongNoPPlayNo  0.0206 | Given the fact PYesix  PNox, we label x to be No,
+
+[00:14:04]
+  Transcript :  تلاتة وخمسين ايه من عشر تلاف. والبتاعت ان هو هتبديك اتنين من
+  OCR        : None
+  Combined   :  تلاتة وخمسين ايه من عشر تلاف. والبتاعت ان هو هتبديك اتنين من
+
+[00:14:09]
+  Transcript :  مية. فطبعا القيمة بتاعت اه القيمة بتاعت الاتنين من مية اكبر
+  OCR        : None
+  Combined   :  مية. فطبعا القيمة بتاعت اه القيمة بتاعت الاتنين من مية اكبر
+
+[00:14:14]
+  Transcript :  من القيمة التانية دي. فالنتج بتاعك هيبه نو وليس هيس. يبقى
+  OCR        : None
+  Combined   :  من القيمة التانية دي. فالنتج بتاعك هيبه نو وليس هيس. يبقى
+
+[00:14:20]
+  Transcript :  لو انا لوقتي دي لما اسألك السؤال ده. لو اوتلوب بتساوي صاني.
+  OCR        : K-MEANS CLUSTERING - Adobe Acrebat Reader DC 32-bit | File Edit View Sigp Windew Help | Home | Tools | K-MEANS CLUSTER. | Sign In | 16 25 | 74.1 | Test Phase | Cufool | Pamp-In | Pap-lo | Sammy | Given a new instance. predict its label | Oecat | xOutlookSummy; TemperatureCool, HumidityHigh, WindStrong | Look up tables achieved in the learning phrase | Honde | Wind | Parpla | Somg | POutlookSmmyPlayYes  29 | POutlookSunnyPlayNo35 | Nial | PTemperature-CooPlay-Yes  39 | PTemperatureCoolPlayNo 15 | APap-Is-914APay-Ne-514 | PHuminityHigPlay-Hes 39 | PHuminity-HighPlay-No45 | PWind-StrongPlay-Yes  39 | PWind-StrongPlay-No 35 | PPlayYes914 | PPlayNo514 | PYesx  PSwmryYesPCooYesPHigYesPSrrongYesPPlayYes  0.0053 | PNox  PSwmyNo PCooNoPHighNoPStrongNoPPlayNo  0.0206 | Given the fact PYesx  PNox, we label x to be No,
+  Combined   :  لو انا لوقتي دي لما اسألك السؤال ده. لو اوتلوب بتساوي صاني. K-MEANS CLUSTERING - Adobe Acrebat Reader DC 32-bit | File Edit View Sigp Windew Help | Home | Tools | K-MEANS CLUSTER. | Sign In | 16 25 | 74.1 | Test Phase | Cufool | Pamp-In | Pap-lo | Sammy | Given a new instance. predict its label | Oecat | xOutlookSummy; TemperatureCool, HumidityHigh, WindStrong | Look up tables achieved in the learning phrase | Honde | Wind | Parpla | Somg | POutlookSmmyPlayYes  29 | POutlookSunnyPlayNo35 | Nial | PTemperature-CooPlay-Yes  39 | PTemperatureCoolPlayNo 15 | APap-Is-914APay-Ne-514 | PHuminityHigPlay-Hes 39 | PHuminity-HighPlay-No45 | PWind-StrongPlay-Yes  39 | PWind-StrongPlay-No 35 | PPlayYes914 | PPlayNo514 | PYesx  PSwmryYesPCooYesPHigYesPSrrongYesPPlayYes  0.0053 | PNox  PSwmyNo PCooNoPHighNoPStrongNoPPlayNo  0.0206 | Given the fact PYesx  PNox, we label x to be No,
+
+[00:14:22]
+  Transcript :  لما يكون الجو مشمس. ويكون الدرجة للحراب بتاعتك كول.
+  OCR        : None
+  Combined   :  لما يكون الجو مشمس. ويكون الدرجة للحراب بتاعتك كول.
+
+[00:14:32]
+  Transcript : 
+  OCR        : K-MEANS CLUSTERING - Adobe Acrebat Reader DC 32-bit | File Edit Vew Sigp Windeow Help | Home | Tools | K-MEANS CLUSTER., | Sign In | 14  25 | 74.1 | Play Tennis. Example | PlayTennis: training examples | Cutlook | Temperature | Humidity | Wind | PlayTennis | Sunny | High | Weak | Sunny | High | Strong | Overcast | High | Wouk | Mild | High | Wenk | Rain | Rain | Normal | Weak | Cool | Rain | Strong | Cool | Normal | Overcast | Cool | Norenal | Strong | Sunny | Mild | High | Sunny | Weak | Cool | Normal | Weuk | Rain | Mild | Normal | Weak | Sunny | Mild | Narmal | Strong | Overost | Mild | High | Strong | Overcast | Normal | Wienk | Rain | Mild | High | Strong
+  Combined   :  K-MEANS CLUSTERING - Adobe Acrebat Reader DC 32-bit | File Edit Vew Sigp Windeow Help | Home | Tools | K-MEANS CLUSTER., | Sign In | 14  25 | 74.1 | Play Tennis. Example | PlayTennis: training examples | Cutlook | Temperature | Humidity | Wind | PlayTennis | Sunny | High | Weak | Sunny | High | Strong | Overcast | High | Wouk | Mild | High | Wenk | Rain | Rain | Normal | Weak | Cool | Rain | Strong | Cool | Normal | Overcast | Cool | Norenal | Strong | Sunny | Mild | High | Sunny | Weak | Cool | Normal | Weuk | Rain | Mild | Normal | Weak | Sunny | Mild | Narmal | Strong | Overost | Mild | High | Strong | Overcast | Normal | Wienk | Rain | Mild | High | Strong
+
+[00:14:48]
+  Transcript : 
+  OCR        : K-MEANS CLUSTERING - Adobe Acrebat Reader DC 32-bit | File Edit Vew Sigp Windeow Help | Home | Tools | K-MEANS CLUSTER. | Sign In | 14  25 | 74.1 | Calculating Probabilities | Learning Phase | Outlook | Play-Yes | Plav-Ne | Temperatur | Play-Yes | Play-N | Sunny | Rain | Coot | Hunidity | Play2 | PlayN | Wind | PlayYes | Playon | High | Strong | Weoad | PPlayYes  914 PPlayNo  514
+  Combined   :  K-MEANS CLUSTERING - Adobe Acrebat Reader DC 32-bit | File Edit Vew Sigp Windeow Help | Home | Tools | K-MEANS CLUSTER. | Sign In | 14  25 | 74.1 | Calculating Probabilities | Learning Phase | Outlook | Play-Yes | Plav-Ne | Temperatur | Play-Yes | Play-N | Sunny | Rain | Coot | Hunidity | Play2 | PlayN | Wind | PlayYes | Playon | High | Strong | Weoad | PPlayYes  914 PPlayNo  514
+
+[00:14:50]
+  Transcript : 
+  OCR        : K-MEANS CLUSTERING - Adobe Acrebat Reader DC 32-bit | File Edit View Sigp Windew Help | Home | Tools | K-MEANS CLUSTER..x | Sign In | 16  25 | 74.1 | Test Phase | Pap-lin | Pa-ls | Ohecst | Given a new instance. predict its label | xOutlookSummy; TemperatureCool, HumidityHigh, WindSrrong | Look up tables achieved in the learning phrase | Paryelc | Wind | Pap-las | Somy | POutlookSwmyPlayYes 29 | POutlookSunnyPlayNo35 | PTemperature-CooPlay-Yes  39 | PTemperatureCoolPlay-No15 | PHuminityHigiPlayYes39 | PHuminity-HighPlayNo-45 | PWindStrong Play- Yes  39 | PWindStrongPlayNo  35 | PPlayYes  914 | PPlayNo514 | PYesx  PSaonmyYesPCooYesPHigrYesPSrrongYesPPlayYes  0.0053 | PNox  PSmmyNo PCooNoPHighNoPStrongNoPPlayNo  0.0206 | Given the fact PYesx  PNox. we label x to be No.
+  Combined   :  K-MEANS CLUSTERING - Adobe Acrebat Reader DC 32-bit | File Edit View Sigp Windew Help | Home | Tools | K-MEANS CLUSTER..x | Sign In | 16  25 | 74.1 | Test Phase | Pap-lin | Pa-ls | Ohecst | Given a new instance. predict its label | xOutlookSummy; TemperatureCool, HumidityHigh, WindSrrong | Look up tables achieved in the learning phrase | Paryelc | Wind | Pap-las | Somy | POutlookSwmyPlayYes 29 | POutlookSunnyPlayNo35 | PTemperature-CooPlay-Yes  39 | PTemperatureCoolPlay-No15 | PHuminityHigiPlayYes39 | PHuminity-HighPlayNo-45 | PWindStrong Play- Yes  39 | PWindStrongPlayNo  35 | PPlayYes  914 | PPlayNo514 | PYesx  PSaonmyYesPCooYesPHigrYesPSrrongYesPPlayYes  0.0053 | PNox  PSmmyNo PCooNoPHighNoPStrongNoPPlayNo  0.0206 | Given the fact PYesx  PNox. we label x to be No.
+
+[00:14:52]
+  Transcript : 
+  OCR        : K-MEANS CLUSTERING - Adobe Acrebat Reader DC 32-bit | File Edit Vew Sigp Windeow Help | Home | Tools | K-MEANS CLUSTER. | Sign In | 15  25 | 74.1 | Calculating Probabilities | Learning Phase | Outlook | Play-Yes | Plap-Me | Temperatur | Play-Yes | Plar-N | Sunny | Onurat | Rain | Humidity | Play | PlaysN | Wind | PlayYes | Playe | High | Strong | Wead | PPlayYes  914 PPlayNo  514
+  Combined   :  K-MEANS CLUSTERING - Adobe Acrebat Reader DC 32-bit | File Edit Vew Sigp Windeow Help | Home | Tools | K-MEANS CLUSTER. | Sign In | 15  25 | 74.1 | Calculating Probabilities | Learning Phase | Outlook | Play-Yes | Plap-Me | Temperatur | Play-Yes | Plar-N | Sunny | Onurat | Rain | Humidity | Play | PlaysN | Wind | PlayYes | Playe | High | Strong | Wead | PPlayYes  914 PPlayNo  514
+
+[00:15:06]
+  Transcript :  كله. انا محتاج. لا لا سهلا جدا. اه يعني اعرف استخدام الجزء
+  OCR        : None
+  Combined   :  كله. انا محتاج. لا لا سهلا جدا. اه يعني اعرف استخدام الجزء
+
+[00:15:11]
+  Transcript :  البسيط الرياضي اللي يفيدني بس ان انا افهم الالجوريزم. انا مش
+  OCR        : None
+  Combined   :  البسيط الرياضي اللي يفيدني بس ان انا افهم الالجوريزم. انا مش
+
+[00:15:15]
+  Transcript :  محتاج الاخش في التفاصيل بتاعت اللغرية مات ولا اخش في التفاصيل
+  OCR        : None
+  Combined   :  محتاج الاخش في التفاصيل بتاعت اللغرية مات ولا اخش في التفاصيل
+
+[00:15:18]
+  Transcript :  بتاعة الكلام ده كله. انا عاوز بص اعرف الجزء الرياضي البسيط
+  OCR        : None
+  Combined   :  بتاعة الكلام ده كله. انا عاوز بص اعرف الجزء الرياضي البسيط
+
+[00:15:24]
+  Transcript :  اللي يفهمني الالجوريزم شغال ازاي? فبكل بساطة. شغال برعلك. بكل
+  OCR        : None
+  Combined   :  اللي يفهمني الالجوريزم شغال ازاي? فبكل بساطة. شغال برعلك. بكل
+
+[00:15:27]
+  Transcript :  بساطة انا بشتغل بالبروبيلتز دلوقتي. الاحتمالات والاحصى لو لو
+  OCR        : None
+  Combined   :  بساطة انا بشتغل بالبروبيلتز دلوقتي. الاحتمالات والاحصى لو لو
+
+[00:15:31]
+  Transcript :  واحد مسلا ما يعرفش اي حاج خالص عن الاحصى هيعرفها بالطرق دي.
+  OCR        : None
+  Combined   :  واحد مسلا ما يعرفش اي حاج خالص عن الاحصى هيعرفها بالطرق دي.
+
+[00:15:35]
+  Transcript :  طريقة بلدي خالص بنتكلم بها اي. طريقة سهلة جدا. طيب. فهمنا كده
+  OCR        : None
+  Combined   :  طريقة بلدي خالص بنتكلم بها اي. طريقة سهلة جدا. طيب. فهمنا كده
+
+[00:15:44]
+  Transcript :  الالجوريزم ده شغال ازاي? طيب. فده ناتج ايه? ده ناتج بتاعك
+  OCR        : K-MEANS CLUSTERING - Adobe Acrebat Reader DC 32-bit | File Edit View Sigp Window Help | Home | Tools | K-MEANS CLUSTER..x | Sign In | 16 25 | 74.1 | Test Phase | Pap-le | Given a new instance. predict its label | Oreces | xOutlookSummy; TemperatureCool, HumidityHigh, WindSrroug | -Look up tables achieved in the learning phrase | Smmy | POutlookSwnnPlayYes29 | POutlookSunnyPlayNo35 | PTemperature-CooPlay-Fes  39 | PTemperatureCoolPlayNo 15 | PHuuinityHiglPlayYes  39 | PHuminity-HighPlay-No-45 | PWindStrongPlayYes  39 | PWind-StrongPlayNo  35 | PPlayYes  914 | PPlayNo514 | PYesx  PSnmrγYesPCooYesPHigYesPStrongXesPPlayYes  0.0053 | PNox  PSwmyNo PCooNoPHighNoPStrongiNoPPlayNo  0.0206 | Given the fact PYesx  PNox, we label x to be No,
+  Combined   :  الالجوريزم ده شغال ازاي? طيب. فده ناتج ايه? ده ناتج بتاعك K-MEANS CLUSTERING - Adobe Acrebat Reader DC 32-bit | File Edit View Sigp Window Help | Home | Tools | K-MEANS CLUSTER..x | Sign In | 16 25 | 74.1 | Test Phase | Pap-le | Given a new instance. predict its label | Oreces | xOutlookSummy; TemperatureCool, HumidityHigh, WindSrroug | -Look up tables achieved in the learning phrase | Smmy | POutlookSwnnPlayYes29 | POutlookSunnyPlayNo35 | PTemperature-CooPlay-Fes  39 | PTemperatureCoolPlayNo 15 | PHuuinityHiglPlayYes  39 | PHuminity-HighPlay-No-45 | PWindStrongPlayYes  39 | PWind-StrongPlayNo  35 | PPlayYes  914 | PPlayNo514 | PYesx  PSnmrγYesPCooYesPHigYesPStrongXesPPlayYes  0.0053 | PNox  PSwmyNo PCooNoPHighNoPStrongiNoPPlayNo  0.0206 | Given the fact PYesx  PNox, we label x to be No,
+
+[00:15:45]
+  Transcript :  بيطلع لك بالشكل ده كده. العلماء بقى ايه? قال لك بدل ما هو
+  OCR        : None
+  Combined   :  بيطلع لك بالشكل ده كده. العلماء بقى ايه? قال لك بدل ما هو
+
+[00:15:49]
+  Transcript :  بيطلع لبرده ممكن استفيد من القيمة دي انه هو يطلع لبرده ايه?
+  OCR        : None
+  Combined   :  بيطلع لبرده ممكن استفيد من القيمة دي انه هو يطلع لبرده ايه?
+
+[00:15:52]
+  Transcript :  يعني هما بيعملوا تعديلة كده بسيطة في الناتج النهائي ده.
+  OCR        : None
+  Combined   :  يعني هما بيعملوا تعديلة كده بسيطة في الناتج النهائي ده.
+
+[00:15:57]
+  Transcript :  زي زي على فكرة مين? زي احنا اخذنا حاجة
+  OCR        : None
+  Combined   :  زي زي على فكرة مين? زي احنا اخذنا حاجة
+
+[00:16:00]
+  Transcript :  زي كانت زبط. زي زي بالزبط. خدنا عملنا فيه تعديلة بحيث ان
+  OCR        : None
+  Combined   :  زي كانت زبط. زي زي بالزبط. خدنا عملنا فيه تعديلة بحيث ان
+
+[00:16:06]
+  Transcript :  هو يشتغل ايه? ان هو يشتغل. انه هو يشتغل كايه? كاكلاسيبيكيشن لان
+  OCR        : None
+  Combined   :  هو يشتغل ايه? ان هو يشتغل. انه هو يشتغل كايه? كاكلاسيبيكيشن لان
+
+[00:16:12]
+  Transcript :  اللوجستيك بيشتغل ايه? بيشتغل كلاسيبيكيشن. ماشي? طيب. بس
+  OCR        : None
+  Combined   :  اللوجستيك بيشتغل ايه? بيشتغل كلاسيبيكيشن. ماشي? طيب. بس
+
+[00:16:18]
+  Transcript :  هو بيشتغل بس. لكن ده خلوه يشتغل اتنين. خلوه يشتغل مع
+  OCR        : K-MEANS CLUSTERING - Adobe Acrebat Reader DC 32-bit | File Edit View Sigp Window Help | Home | Tools | K-MEANS CLUSTER. | Sign In | 17  25 | 74.1 | Pros and Cons | Advantages of Naive Bayes | This algorithm works very fast and can easily predict the class of a test dataset | You can use it to solve multi-class prediction problems as its guite useful with them. | Naive Bayes classifier performs better than other models with less training data if the assumption | of independence of features holds. | Disadvantages of Naive Bayes | If your test data sethas arcategorical variable of a category that wasnt present in the training data | set, the Naive Bayes model will assign it zero probability and wont be able to make any predictions | in this regard. | It assumes that all the features are independent. While it might sound great in theory, in real life | youll hardly find a set of independent features.
+  Combined   :  هو بيشتغل بس. لكن ده خلوه يشتغل اتنين. خلوه يشتغل مع K-MEANS CLUSTERING - Adobe Acrebat Reader DC 32-bit | File Edit View Sigp Window Help | Home | Tools | K-MEANS CLUSTER. | Sign In | 17  25 | 74.1 | Pros and Cons | Advantages of Naive Bayes | This algorithm works very fast and can easily predict the class of a test dataset | You can use it to solve multi-class prediction problems as its guite useful with them. | Naive Bayes classifier performs better than other models with less training data if the assumption | of independence of features holds. | Disadvantages of Naive Bayes | If your test data sethas arcategorical variable of a category that wasnt present in the training data | set, the Naive Bayes model will assign it zero probability and wont be able to make any predictions | in this regard. | It assumes that all the features are independent. While it might sound great in theory, in real life | youll hardly find a set of independent features.
+
+[00:16:25]
+  Transcript :  بعض. وطبعا هتلاقي فهل اتنين مع بعض. كل ما عليك هتغير
+  OCR        : None
+  Combined   :  بعض. وطبعا هتلاقي فهل اتنين مع بعض. كل ما عليك هتغير
+
+[00:16:31]
+  Transcript :  الاسم بتاع اللي انت بتعمله بس. اه بتاع نفس. طيب. اللي هو
+  OCR        : None
+  Combined   :  الاسم بتاع اللي انت بتعمله بس. اه بتاع نفس. طيب. اللي هو
+
+[00:16:37]
+  Transcript :  بتاعت النائف بيس اللي هو بقول
+  OCR        : None
+  Combined   :  بتاعت النائف بيس اللي هو بقول
+
+[00:16:41]
+  Transcript :  يعني اي حاجة تسأله بعد كده ايه? هيجاوبك عليها بكل بكل
+  OCR        : None
+  Combined   :  يعني اي حاجة تسأله بعد كده ايه? هيجاوبك عليها بكل بكل
+
+[00:16:47]
+  Transcript :  ثلاثة من خلال طبعا الجدول اللي انت ايه? اللي انت اشتغلت عليها.
+  OCR        : None
+  Combined   :  ثلاثة من خلال طبعا الجدول اللي انت ايه? اللي انت اشتغلت عليها.
+
+[00:16:50]
+  Transcript :  يقول لي you can use it to solve multi-class prediction problem
+  OCR        : None
+  Combined   :  يقول لي you can use it to solve multi-class prediction problem
+
+[00:16:54]
+  Transcript :  two class yes and no features
+  OCR        : None
+  Combined   :  two class yes and no features
+
+[00:17:08]
+  Transcript :  نوع كده مع بعض كل ويبدأ يشتغل عليها ويطلع لك الاحتمالات
+  OCR        : None
+  Combined   :  نوع كده مع بعض كل ويبدأ يشتغل عليها ويطلع لك الاحتمالات
+
+[00:17:13]
+  Transcript :  بتاعت كل وبعد كده بتجي اسأل سؤال يقول لك ده ده ده فعلا كات ده
+  OCR        : None
+  Combined   :  بتاعت كل وبعد كده بتجي اسأل سؤال يقول لك ده ده ده فعلا كات ده
+
+[00:17:18]
+  Transcript :  ده اي ان كان بقى النوع ليه? مثلا اي ان كان نوع الحيوان نفسه
+  OCR        : None
+  Combined   :  ده اي ان كان بقى النوع ليه? مثلا اي ان كان نوع الحيوان نفسه
+
+[00:17:24]
+  Transcript :  هو ايه اللي هو بيشتغل عليه. فهو فهو ما بيشتغلش على اتنين
+  OCR        : None
+  Combined   :  هو ايه اللي هو بيشتغل عليه. فهو فهو ما بيشتغلش على اتنين
+
+[00:17:28]
+  Transcript :  بس هو ممكن يشتغل على اكتر من من كلاس.
+  OCR        : None
+  Combined   :  بس هو ممكن يشتغل على اكتر من من كلاس.
+
+[00:17:31]
+  Transcript :  نايف بيس كلاسفاير اه برفورم بيتر.
+  OCR        : None
+  Combined   :  نايف بيس كلاسفاير اه برفورم بيتر.
+
+[00:17:34]
+  Transcript :  than ازر موديلز وز ليس ترينينج ديتا. فيهمنا الحيطة دي كده?
+  OCR        : None
+  Combined   :  than ازر موديلز وز ليس ترينينج ديتا. فيهمنا الحيطة دي كده?
+
+[00:17:38]
+  Transcript :  بيقول لما يكون معايا ترينينج ديتا بسيطة. بيشتغل معاك كويس
+  OCR        : None
+  Combined   :  بيقول لما يكون معايا ترينينج ديتا بسيطة. بيشتغل معاك كويس
+
+[00:17:44]
+  Transcript :  جدا عن ان لما يكون معايا ديتا كبيرة. ماشي? يعني دي من ضمن
+  OCR        : K-MEANS CLUSTERING - Adobe Acrebat Reader DC 32-bit | File Edit View Sigp Windew Help | Home | Tools | K-MEANS CLUSTER | Sign In | 17  25 | 74.1 | Pros and Cons | Advantages of Naive Bayes | This algorithm works very fast and can easilvnres | t dataset. | You can use it to solve multi-class predicti | eful with them. | Naive Bayes classifier performs better | than other models with less training dataif the assumption | of independence of features holds. | Disadvantages of Naive Bayes | 1. If your test data sethas arcategorical variable of a category that wasnt present in the training data | set, the Naive Bayes model will assign it zero probability and wont be able to make any predictions | in this regard. | It assumes that all the features are independent. While it might sound great in theory, in real life, | youll hardly find a set of independent features.
+  Combined   :  جدا عن ان لما يكون معايا ديتا كبيرة. ماشي? يعني دي من ضمن K-MEANS CLUSTERING - Adobe Acrebat Reader DC 32-bit | File Edit View Sigp Windew Help | Home | Tools | K-MEANS CLUSTER | Sign In | 17  25 | 74.1 | Pros and Cons | Advantages of Naive Bayes | This algorithm works very fast and can easilvnres | t dataset. | You can use it to solve multi-class predicti | eful with them. | Naive Bayes classifier performs better | than other models with less training dataif the assumption | of independence of features holds. | Disadvantages of Naive Bayes | 1. If your test data sethas arcategorical variable of a category that wasnt present in the training data | set, the Naive Bayes model will assign it zero probability and wont be able to make any predictions | in this regard. | It assumes that all the features are independent. While it might sound great in theory, in real life, | youll hardly find a set of independent features.
+
+[00:17:48]
+  Transcript :  يعني يعني يعني يعني يعني يعني عشان لو انت عندك اه ديتا
+  OCR        : K-MEANS CLUSTERING - Adobe Acrebat Reader DC 32-bit | File Edit View Sigp Windew Help | Home | Tools | K-MEANS CLUSTER.x | Sign In | 17  25 | 74.1 | Pros and Cons | Advantages of Naive Bayes | This algorithm works very fast and can easily predict the class of a test dataset. | You can use it to solve multi-class prediction problems as its guite useful with them. | Naive Bayes classifier performs better than other models with less training datal if the assumption | of independence of features holds. | Disadvantages of Naive Bayes | If your test data sethas arcategorical variable of a category that wasnt present in the training data | set, the Naive Bayes model will assign it zero probability and wont be able to make any predictions | in this regard. | It assumes that all the features are independent. While it might sound great in theory, in real life, | youll hardly find a set of independent features.
+  Combined   :  يعني يعني يعني يعني يعني يعني عشان لو انت عندك اه ديتا K-MEANS CLUSTERING - Adobe Acrebat Reader DC 32-bit | File Edit View Sigp Windew Help | Home | Tools | K-MEANS CLUSTER.x | Sign In | 17  25 | 74.1 | Pros and Cons | Advantages of Naive Bayes | This algorithm works very fast and can easily predict the class of a test dataset. | You can use it to solve multi-class prediction problems as its guite useful with them. | Naive Bayes classifier performs better than other models with less training datal if the assumption | of independence of features holds. | Disadvantages of Naive Bayes | If your test data sethas arcategorical variable of a category that wasnt present in the training data | set, the Naive Bayes model will assign it zero probability and wont be able to make any predictions | in this regard. | It assumes that all the features are independent. While it might sound great in theory, in real life, | youll hardly find a set of independent features.
+
+[00:17:51]
+  Transcript :  بسيطة عاوز تريح دماغك وتختار يطلع لك نتيجة كويسة فانت ممكن
+  OCR        : None
+  Combined   :  بسيطة عاوز تريح دماغك وتختار يطلع لك نتيجة كويسة فانت ممكن
+
+[00:17:55]
+  Transcript :  تشتغل حاجة بشكل كي. طيب بداية النايف بيز ان هو بيقول لي اف يور
+  OCR        : None
+  Combined   :  تشتغل حاجة بشكل كي. طيب بداية النايف بيز ان هو بيقول لي اف يور
+
+[00:18:00]
+  Transcript :  تست ديتا. آآ هذا الكاتيجور. معلش الشؤال بس آآ كده هو
+  OCR        : None
+  Combined   :  تست ديتا. آآ هذا الكاتيجور. معلش الشؤال بس آآ كده هو
+
+[00:18:04]
+  Transcript :  بيشتغل على على على فكرة بيشتغل بيشتغل قوي جدا بيشتغل على
+  OCR        : None
+  Combined   :  بيشتغل على على على فكرة بيشتغل بيشتغل قوي جدا بيشتغل على
+
+[00:18:12]
+  Transcript :  ديتا كبيرة والدات الصغيرة عادة جدا. او. لا انقصدي لو حد معها
+  OCR        : None
+  Combined   :  ديتا كبيرة والدات الصغيرة عادة جدا. او. لا انقصدي لو حد معها
+
+[00:18:16]
+  Transcript :  يعني معها يشتغل لو هامل تلاسيفيكيشن صحب? يشتغل على اي
+  OCR        : None
+  Combined   :  يعني معها يشتغل لو هامل تلاسيفيكيشن صحب? يشتغل على اي
+
+[00:18:25]
+  Transcript :  نوع من انواع على فكرة. اي نوع. اي نوع. من اول لحد
+  OCR        : None
+  Combined   :  نوع من انواع على فكرة. اي نوع. اي نوع. من اول لحد
+
+[00:18:30]
+  Transcript :  لحد الى ما شاء الله يعني. اي نوع. لكن اه امتى تشتغل على امتى لما
+  OCR        : None
+  Combined   :  لحد الى ما شاء الله يعني. اي نوع. لكن اه امتى تشتغل على امتى لما
+
+[00:18:35]
+  Transcript :  يكون معك اه لو انت معك ديتها كبيرة جدا جدا جدا. وعاوز تبيرفورم
+  OCR        : None
+  Combined   :  يكون معك اه لو انت معك ديتها كبيرة جدا جدا جدا. وعاوز تبيرفورم
+
+[00:18:40]
+  Transcript :  بقى يعني انت يطلع لك اكروس كويسة يعني يفضل تشتغل على ديب
+  OCR        : None
+  Combined   :  بقى يعني انت يطلع لك اكروس كويسة يعني يفضل تشتغل على ديب
+
+[00:18:44]
+  Transcript :  ماشي? وعلى فكرة في الصابرات وفكتل ماشين بيبيرفورم واللي في
+  OCR        : None
+  Combined   :  ماشي? وعلى فكرة في الصابرات وفكتل ماشين بيبيرفورم واللي في
+
+[00:18:49]
+  Transcript :  الحالة دي برضو. يعني انت لو اشتغلت عليها لو اشتغلت عليها
+  OCR        : None
+  Combined   :  الحالة دي برضو. يعني انت لو اشتغلت عليها لو اشتغلت عليها
+
+[00:18:52]
+  Transcript : 
+  OCR        : None
+  Combined   : 
+
+[00:19:07]
+  Transcript :  نتيجة كويسة يعني. عشان بيحاول ان هو في النص بالزبط. اه بالنسبة
+  OCR        : None
+  Combined   :  نتيجة كويسة يعني. عشان بيحاول ان هو في النص بالزبط. اه بالنسبة
+
+[00:19:13]
+  Transcript :  للكلام ده. يقول لي يعني لو انت ما عندكش اه بيقول لي
+  OCR        : None
+  Combined   :  للكلام ده. يقول لي يعني لو انت ما عندكش اه بيقول لي
+
+[00:19:20]
+  Transcript :  هذا الكاتيجوري.
+  OCR        : None
+  Combined   :  هذا الكاتيجوري.
+
+[00:19:25]
+  Transcript :  يعني ايه ده? يعني انت لو عندك مسلا بتسأل سؤال على جديد ما كانش
+  OCR        : None
+  Combined   :  يعني ايه ده? يعني انت لو عندك مسلا بتسأل سؤال على جديد ما كانش
+
+[00:19:34]
+  Transcript :  موجود اصلا في الترينج اساسا. فالمفروض هو يحسب لك بتاع
+  OCR        : None
+  Combined   :  موجود اصلا في الترينج اساسا. فالمفروض هو يحسب لك بتاع
+
+[00:19:39]
+  Transcript :  انت زوده ده هيحسبه بتاعتك زيرو. والزيرو ده طبعا هتأثر لك على
+  OCR        : None
+  Combined   :  انت زوده ده هيحسبه بتاعتك زيرو. والزيرو ده طبعا هتأثر لك على
+
+[00:19:50]
+  Transcript :  الجديد اللي انت عاوستي تنبق به. يعني انت دلوقتي مزبط
+  OCR        : K-MEANS CLUSTERING - Adobe Acrebat Reader DC 32-bit | File Edit View Sigp Windew Help | Home | Tools | K-MEANS CLUSTER..x | Sign In | 16 25 | 74.1 | Test Phase | Pap-le | Given a new instance, predict its label | Chrecat | xOutlookSummy; TemperatureCool, HumidityHigh, WindStrowg | -Look up tables achieved in the learning phrase | Parpeie | Somy | POutlookSaownPlay-Fes29 | POutlookSunnyPlayNo35 | PTemperatureCooPlayYes 39 | PTemperature-CoolPlayNo15 | PHuninityHigPlayFes  39 | PHuminityHighPlayNo  45 | PWind-Strong.PlayYes-39 | PWind-StrougPlay-No35 | PPlayYes  914 | PPlayNo514 | PYesx PSamnYesPCooFesPHighYesPSrrongYesPPlayYes  0.0053 | PNox  PSwnmyNo PCooNoPHighNoPStrongiNoPPlayNo  0.0206 | Given the fact PYesix  PNoix. we label x to be No
+  Combined   :  الجديد اللي انت عاوستي تنبق به. يعني انت دلوقتي مزبط K-MEANS CLUSTERING - Adobe Acrebat Reader DC 32-bit | File Edit View Sigp Windew Help | Home | Tools | K-MEANS CLUSTER..x | Sign In | 16 25 | 74.1 | Test Phase | Pap-le | Given a new instance, predict its label | Chrecat | xOutlookSummy; TemperatureCool, HumidityHigh, WindStrowg | -Look up tables achieved in the learning phrase | Parpeie | Somy | POutlookSaownPlay-Fes29 | POutlookSunnyPlayNo35 | PTemperatureCooPlayYes 39 | PTemperature-CoolPlayNo15 | PHuninityHigPlayFes  39 | PHuminityHighPlayNo  45 | PWind-Strong.PlayYes-39 | PWind-StrougPlay-No35 | PPlayYes  914 | PPlayNo514 | PYesx PSamnYesPCooFesPHighYesPSrrongYesPPlayYes  0.0053 | PNox  PSwnmyNo PCooNoPHighNoPStrongiNoPPlayNo  0.0206 | Given the fact PYesix  PNoix. we label x to be No
+
+[00:19:52]
+  Transcript :  جديدة بتاعتك اهو. عندك وعندك وعندك وعندك رين. ما ينفعش تجي
+  OCR        : K-MEANS CLUSTERING - Adobe Acrebat Reader DC 32-bit | File Edit Vew Sigp Windeow Help | Home | Tools | K-MEANS CLUSTER | Sign In | 14  25 | 74.1 | Play Tennis. Example | PlayTennis: training examples | Outlook | Temperature | Humidity | Wind | PlayTennis | Sunny | 1tot | High | Weak | Sunny | High | Strong | Overeast | High | Weak | High | Mild | Wenk | Rain | Rain | Cool | Normal | Rain | Weak | Streng | Cool | Normal | Overcast | Cool | Normal | Strong | Sunny | Mild | High | Weak | Sunny | Cool | Nornal | Weuk | Rain | Mild | Normal | Weak | Sunny | Mild | Normal | Serong | Overonst | Mild | High | Seroing | Normal | Wienk | Chercast | Rain | Mild | High | Strong
+  Combined   :  جديدة بتاعتك اهو. عندك وعندك وعندك وعندك رين. ما ينفعش تجي K-MEANS CLUSTERING - Adobe Acrebat Reader DC 32-bit | File Edit Vew Sigp Windeow Help | Home | Tools | K-MEANS CLUSTER | Sign In | 14  25 | 74.1 | Play Tennis. Example | PlayTennis: training examples | Outlook | Temperature | Humidity | Wind | PlayTennis | Sunny | 1tot | High | Weak | Sunny | High | Strong | Overeast | High | Weak | High | Mild | Wenk | Rain | Rain | Cool | Normal | Rain | Weak | Streng | Cool | Normal | Overcast | Cool | Normal | Strong | Sunny | Mild | High | Weak | Sunny | Cool | Nornal | Weuk | Rain | Mild | Normal | Weak | Sunny | Mild | Normal | Serong | Overonst | Mild | High | Seroing | Normal | Wienk | Chercast | Rain | Mild | High | Strong
+
+[00:19:56]
+  Transcript :  اسألوا سؤال وتقولوا او بتاعتي بحية جديدة ما كانتش موجودة عنده.
+  OCR        : None
+  Combined   :  اسألوا سؤال وتقولوا او بتاعتي بحية جديدة ما كانتش موجودة عنده.
+
+[00:20:00]
+  Transcript :  واخدين مالكم معناه? اه بالزبط. يعني ما نفعش تقول له مسلا.
+  OCR        : None
+  Combined   :  واخدين مالكم معناه? اه بالزبط. يعني ما نفعش تقول له مسلا.
+
+[00:20:04]
+  Transcript :  هيدي لها البروبريتك بتاعها زيرو. والبروبريتك زيرو ديت لما
+  OCR        : None
+  Combined   :  هيدي لها البروبريتك بتاعها زيرو. والبروبريتك زيرو ديت لما
+
+[00:20:09]
+  Transcript :  تيجي تحطها في المعادلة المعادلة ايه ضرب كلها في بعضها.
+  OCR        : None
+  Combined   :  تيجي تحطها في المعادلة المعادلة ايه ضرب كلها في بعضها.
+
+[00:20:12]
+  Transcript :  المعادلة كلها ضرب في بعضها ايه. فالزيرو ديت هتأثر لك على
+  OCR        : K-MEANS CLUSTERING - Adobe Acrebat Reader DC 32-bit | File Edit View Sigp Window Help | Home | Tools | K-MEANS CLUSTER..x | Sign In | 16  25 | 74.1 | Test Phase | Pap-ls | Given a new instance. predict its label | Ohecar | xOutlookSummry; TemperatureCool, HumidityHigh, WindStrong | -Look up tables achieved in the learning phrase | Humdity | Pirpeie | Wind | Pap-lo | POutlookSnmyPlayYes 29 | POutlookSunnyPlayNo35 | Nial | PTemperature-CooPlayTes  39 | PTemperatureCoolPlay-No15 | APay-Is-1APay-No-514 | PHunninityHigiPlayYes  39 | PHuminity--HighPlay-No-45 | PWind-StrongPlay-Yes  39 | PWind-StrongPlay-No35 | PPlayYes  924 | PPlayNo514 | PZesx  PSnonmyYesPCooYesPHigYesPSrrongYesPPlayYes  0.0053 | PNox  PSmmNo PCooNoPHighNoPStrongNoPPlayNo  0.0206 | Given the fact PYesix  PNoix, we label x to be No.
+  Combined   :  المعادلة كلها ضرب في بعضها ايه. فالزيرو ديت هتأثر لك على K-MEANS CLUSTERING - Adobe Acrebat Reader DC 32-bit | File Edit View Sigp Window Help | Home | Tools | K-MEANS CLUSTER..x | Sign In | 16  25 | 74.1 | Test Phase | Pap-ls | Given a new instance. predict its label | Ohecar | xOutlookSummry; TemperatureCool, HumidityHigh, WindStrong | -Look up tables achieved in the learning phrase | Humdity | Pirpeie | Wind | Pap-lo | POutlookSnmyPlayYes 29 | POutlookSunnyPlayNo35 | Nial | PTemperature-CooPlayTes  39 | PTemperatureCoolPlay-No15 | APay-Is-1APay-No-514 | PHunninityHigiPlayYes  39 | PHuminity--HighPlay-No-45 | PWind-StrongPlay-Yes  39 | PWind-StrongPlay-No35 | PPlayYes  924 | PPlayNo514 | PZesx  PSnonmyYesPCooYesPHigYesPSrrongYesPPlayYes  0.0053 | PNox  PSmmNo PCooNoPHighNoPStrongNoPPlayNo  0.0206 | Given the fact PYesix  PNoix, we label x to be No.
+
+[00:20:15]
+  Transcript :  ناتج النهائي. هيطلع لك النتج بتاعك في الاخي زيرو يعني. فانت
+  OCR        : None
+  Combined   :  ناتج النهائي. هيطلع لك النتج بتاعك في الاخي زيرو يعني. فانت
+
+[00:20:18]
+  Transcript :  تتسعل على حاجة اصلا مش موجودة. خلاص? حتى لو انتك كله مفهول.
+  OCR        : None
+  Combined   :  تتسعل على حاجة اصلا مش موجودة. خلاص? حتى لو انتك كله مفهول.
+
+[00:20:22]
+  Transcript :  احتمالية. بالزبط. لان انت ما عملت لاش احتمالات عندك. انت ما
+  OCR        : None
+  Combined   :  احتمالية. بالزبط. لان انت ما عملت لاش احتمالات عندك. انت ما
+
+[00:20:26]
+  Transcript :  زودت لاش عندك. فالمفروض كنت تروح تزودها في عشان يطلع لك
+  OCR        : K-MEANS CLUSTERING - Adobe Acrebat Reader DC 32-bit | File Edit Vew Sigp Windeow Help | Home | Tools | K-MEANS CLUSTER.. | Sign In | 15  25 | 74.1 | Calculating Probabilities | Learning Phase | Outlook | Play-Yes | Play-Ne | Temperatur | Play-Yes | Pla-Me | Sunny | Onurcat | Rain | Coot | Humnidity | FlayYe | PlayN | Wind | PlayYes | Played | High | Strong | Weald | PPlayYes  914 PPlayNo  514
+  Combined   :  زودت لاش عندك. فالمفروض كنت تروح تزودها في عشان يطلع لك K-MEANS CLUSTERING - Adobe Acrebat Reader DC 32-bit | File Edit Vew Sigp Windeow Help | Home | Tools | K-MEANS CLUSTER.. | Sign In | 15  25 | 74.1 | Calculating Probabilities | Learning Phase | Outlook | Play-Yes | Play-Ne | Temperatur | Play-Yes | Pla-Me | Sunny | Onurcat | Rain | Coot | Humnidity | FlayYe | PlayN | Wind | PlayYes | Played | High | Strong | Weald | PPlayYes  914 PPlayNo  514
+
+[00:20:32]
+  Transcript :  النتيجة صحيحة في الاخر. ماشي? طيب. بيقول لي
+  OCR        : K-MEANS CLUSTERING - Adobe Acrebat Reader DC 32-bit | File Edit View Sigp Windew Help | Home | Tools | K-MEANS CLUSTER..x | Sign In | 16 25 | 74.1 | Test Phase | Pap-le | Given a new instance. predict its label | Checas | xOutlookSummy; TemperatureCool, HumidityHigh, WindSrrong | -Look up tables achieved in the learning phrase | Parpelc | Somy | POutlookSwnnPlay-Yes29 | POutlookSunnyPlayNo35 | PTemperature-CooPlay-Yes  39 | PTemperatureCoolPlay-No15 | APlep-Ys-914APay-Ne-514 | PHuuinityHigPlayYes  39 | PHuminity-HighPlay-No-45 | PWind-Strong PlayYes  39 | PWind-StrongPlay-No35 | PPlay 1es  914 | PPlayNo514 | PYesx  PSnommyYesPCooYesPHghYesPSrrougYesPPlayYes  0.0053 | PNox  PSwmmyNo PCooNoPHighNoPStrongiNoPPlayNo  0.0206 | Given the fact PYesix  PNoix, we label x to be No
+  Combined   :  النتيجة صحيحة في الاخر. ماشي? طيب. بيقول لي K-MEANS CLUSTERING - Adobe Acrebat Reader DC 32-bit | File Edit View Sigp Windew Help | Home | Tools | K-MEANS CLUSTER..x | Sign In | 16 25 | 74.1 | Test Phase | Pap-le | Given a new instance. predict its label | Checas | xOutlookSummy; TemperatureCool, HumidityHigh, WindSrrong | -Look up tables achieved in the learning phrase | Parpelc | Somy | POutlookSwnnPlay-Yes29 | POutlookSunnyPlayNo35 | PTemperature-CooPlay-Yes  39 | PTemperatureCoolPlay-No15 | APlep-Ys-914APay-Ne-514 | PHuuinityHigPlayYes  39 | PHuminity-HighPlay-No-45 | PWind-Strong PlayYes  39 | PWind-StrongPlay-No35 | PPlay 1es  914 | PPlayNo514 | PYesx  PSnommyYesPCooYesPHghYesPSrrougYesPPlayYes  0.0053 | PNox  PSwmmyNo PCooNoPHighNoPStrongiNoPPlayNo  0.0206 | Given the fact PYesix  PNoix, we label x to be No
+
+[00:20:34]
+  Transcript :  بيعتمد ان كلها اه ملاش علاقة بعض يعني بيشتغل على كل
+  OCR        : K-MEANS CLUSTERING - Adobe Acrebat Reader DC 32-bit | File Edit View Sigp Window Help | Home | Tools | K-MEANS CLUSTER. | Sign In | 17 25 | 74.1 | Pros and Cons | Advantages of Naive Bayes | This algorithm works very fast and can easily predict the class of a test dataset. | You can use it to solve multi-class prediction problems as its guite useful with them. | Naive Bayes classifier performs better than other models with less training data if the assumption | of independence of features holds. | Disadvantages of Naive Bayes | If your test data sethas arcategorical variable of a category that wasnt present in the training data | set, the Naive Bayes model will assign it zero probability and wont be able to make any predictions | in this regard. | It assumes that all the features are independent. While it might sound great in theory, in real life, | youll hardly find a set of independent features.
+  Combined   :  بيعتمد ان كلها اه ملاش علاقة بعض يعني بيشتغل على كل K-MEANS CLUSTERING - Adobe Acrebat Reader DC 32-bit | File Edit View Sigp Window Help | Home | Tools | K-MEANS CLUSTER. | Sign In | 17 25 | 74.1 | Pros and Cons | Advantages of Naive Bayes | This algorithm works very fast and can easily predict the class of a test dataset. | You can use it to solve multi-class prediction problems as its guite useful with them. | Naive Bayes classifier performs better than other models with less training data if the assumption | of independence of features holds. | Disadvantages of Naive Bayes | If your test data sethas arcategorical variable of a category that wasnt present in the training data | set, the Naive Bayes model will assign it zero probability and wont be able to make any predictions | in this regard. | It assumes that all the features are independent. While it might sound great in theory, in real life, | youll hardly find a set of independent features.
+
+[00:20:39]
+  Transcript :  الوحدها وبيطلع لها جدول لوحدها. ماشي? يعني الكلام ده
+  OCR        : None
+  Combined   :  الوحدها وبيطلع لها جدول لوحدها. ماشي? يعني الكلام ده
+
+[00:20:46]
+  Transcript : 
+  OCR        : None
+  Combined   : 
+
+[00:21:09]
+  Transcript :  تعمل له بياخد كل الكلام ده كله ويدربه في بعضه. فكأنه ضربتهم
+  OCR        : None
+  Combined   :  تعمل له بياخد كل الكلام ده كله ويدربه في بعضه. فكأنه ضربتهم
+
+[00:21:13]
+  Transcript :  مع بعض في الاخر يعني. انا شايف ان هي مش ايه? مش مش مش مش مش
+  OCR        : None
+  Combined   :  مع بعض في الاخر يعني. انا شايف ان هي مش ايه? مش مش مش مش مش
+
+[00:21:18]
+  Transcript :  اتأثر معي اوي. تمام? لكن حتة التانية اللي هي الاولى دي اللي
+  OCR        : None
+  Combined   :  اتأثر معي اوي. تمام? لكن حتة التانية اللي هي الاولى دي اللي
+
+[00:21:22]
+  Transcript :  ممكن تأثر قوي لان انت بتسأله على حاجة اصلا هو ما حسب لهاش
+  OCR        : None
+  Combined   :  ممكن تأثر قوي لان انت بتسأله على حاجة اصلا هو ما حسب لهاش
+
+[00:21:26]
+  Transcript :  احتمال. ما حسب لهاش احتمال يبقى بتاعتها بزيرو. الزيرو سننضغر
+  OCR        : None
+  Combined   :  احتمال. ما حسب لهاش احتمال يبقى بتاعتها بزيرو. الزيرو سننضغر
+
+[00:21:30]
+  Transcript :  في اي حاجة اطلع لك بزيرو. ماشي كده يا جماعة? طيب ده اللي هو ايه?
+  OCR        : None
+  Combined   :  في اي حاجة اطلع لك بزيرو. ماشي كده يا جماعة? طيب ده اللي هو ايه?
+
+[00:21:36]
+  Transcript :  ايه نايف بي? ده نايف بيز ده بتاعه. ان هو بيبدأ من الاول
+  OCR        : K-MEANS CLUSTERING - Adobe Acrebat Reader DC 32-bit | File Edit Vew Sigp Window Help | Home | Tools | K-MEANS CLUSTER., | Sign In | 18  25 | 74.1 | Surt | For cach atribute A | Flow chart | Traverse allribute list for A at | Nest Atribute | cumined node | Find peobablity msing valae | of A to be in a class | Update Class for A | All values | in A have | Is thore amy | attributc? | lind
+  Combined   :  ايه نايف بي? ده نايف بيز ده بتاعه. ان هو بيبدأ من الاول K-MEANS CLUSTERING - Adobe Acrebat Reader DC 32-bit | File Edit Vew Sigp Window Help | Home | Tools | K-MEANS CLUSTER., | Sign In | 18  25 | 74.1 | Surt | For cach atribute A | Flow chart | Traverse allribute list for A at | Nest Atribute | cumined node | Find peobablity msing valae | of A to be in a class | Update Class for A | All values | in A have | Is thore amy | attributc? | lind
+
+[00:21:44]
+  Transcript :  خالص بعد كده بيقول لي فور اتريبيوت. فاكز معي بقى هتلاقي
+  OCR        : K-MEANS CLUSTERING - Adobe Acrebat Reader DC 32-bit | File Edit Vew Sigp Window Help | Home | Tools | K-MEANS CLUSTER., | Sign In | 18  25 | 74.1 | Staurt | For cach maribxas A | Flow chart | Travorse attribute list for A a | cumuned nod | Next Attribute | chart for Nalve Bayresian classification. Download | Sclentific Diagram | ofAtobeaclans | Update Clase for A | All valaos | in A have | Is there amy | acribur?
+  Combined   :  خالص بعد كده بيقول لي فور اتريبيوت. فاكز معي بقى هتلاقي K-MEANS CLUSTERING - Adobe Acrebat Reader DC 32-bit | File Edit Vew Sigp Window Help | Home | Tools | K-MEANS CLUSTER., | Sign In | 18  25 | 74.1 | Staurt | For cach maribxas A | Flow chart | Travorse attribute list for A a | cumuned nod | Next Attribute | chart for Nalve Bayresian classification. Download | Sclentific Diagram | ofAtobeaclans | Update Clase for A | All valaos | in A have | Is there amy | acribur?
+
+[00:21:46]
+  Transcript :  نفس الكلام ده كأنك انت اللي بتطبقه من شوية. بياخد كل
+  OCR        : K-MEANS CLUSTERING - Adobe Acrebat Reader DC 32-bit | File Edit Vew Sigp Window Helip | Home | Tools | K-MEANS CLUSTER., | Sign In | 18  25 | 74.1 | Start | For cach atribute A | Flow chart | Traverse allribute list for A at | Nest Aribute | cxuarined node | Find peobabelity msing valae | of A to be in a class | Update Class for A | All values | in A have | Is thore any | attributc? | Eind
+  Combined   :  نفس الكلام ده كأنك انت اللي بتطبقه من شوية. بياخد كل K-MEANS CLUSTERING - Adobe Acrebat Reader DC 32-bit | File Edit Vew Sigp Window Helip | Home | Tools | K-MEANS CLUSTER., | Sign In | 18  25 | 74.1 | Start | For cach atribute A | Flow chart | Traverse allribute list for A at | Nest Aribute | cxuarined node | Find peobabelity msing valae | of A to be in a class | Update Class for A | All values | in A have | Is thore any | attributc? | Eind
+
+[00:21:47]
+  Transcript :  يقعد عليه كده ويحسب لكل قيمة موجودة في ده او لكل قيمة موجودة
+  OCR        : None
+  Combined   :  يقعد عليه كده ويحسب لكل قيمة موجودة في ده او لكل قيمة موجودة
+
+[00:21:54]
+  Transcript :  في ده يحسب لها ايه? يحسب لها بتاعته. على حسب لو انت عندك
+  OCR        : None
+  Combined   :  في ده يحسب لها ايه? يحسب لها بتاعته. على حسب لو انت عندك
+
+[00:22:04]
+  Transcript :  كزا كلاس بيحسب لكل كلاس واحد. وبعد كده بتاعة كل واحد فيهم.
+  OCR        : K-MEANS CLUSTERING - Adobe Acrebat Reader DC 32-bit | File Edit Vew Sigp Windeow Help | Home | Tools | K-MEANS CLUSTER.. | Sign In | 18  25 | 74.1 | Start | For cach atribute A | Flow chart | Traverse atribute list for A at | Nest Aribute | cxarined node | Find perobability asing valae | --of A to be in a class | Flow chart for Naive Rayesian classification Downlioad | Sclentifis Diagram | All values | in A have | Is thore amy | attributc? | Eind
+  Combined   :  كزا كلاس بيحسب لكل كلاس واحد. وبعد كده بتاعة كل واحد فيهم. K-MEANS CLUSTERING - Adobe Acrebat Reader DC 32-bit | File Edit Vew Sigp Windeow Help | Home | Tools | K-MEANS CLUSTER.. | Sign In | 18  25 | 74.1 | Start | For cach atribute A | Flow chart | Traverse atribute list for A at | Nest Aribute | cxarined node | Find perobability asing valae | --of A to be in a class | Flow chart for Naive Rayesian classification Downlioad | Sclentifis Diagram | All values | in A have | Is thore amy | attributc? | Eind
+
+[00:22:04]
+  Transcript :  ماشي? بيبدأ بقى ايه? يدخل في القيمة الجديدة اللي هي القيمة
+  OCR        : None
+  Combined   :  ماشي? بيبدأ بقى ايه? يدخل في القيمة الجديدة اللي هي القيمة
+
+[00:22:14]
+  Transcript :  الجديدة اللي موجودة في نفس الفيتشر. يعني انت مسكت دي فترة
+  OCR        : None
+  Combined   :  الجديدة اللي موجودة في نفس الفيتشر. يعني انت مسكت دي فترة
+
+[00:22:18]
+  Transcript :  حاجات. مسكت الصاني خلصتها. تبدأ تدخل على مين? تدخل على
+  OCR        : None
+  Combined   :  حاجات. مسكت الصاني خلصتها. تبدأ تدخل على مين? تدخل على
+
+[00:22:24]
+  Transcript :  التانية. اللي هي القيمة التانية اللي موجودة في نفس الفيتشر.
+  OCR        : K-MEANS CLUSTERING - Adobe Acrebat Reader DC 32-bit | File Edit View Sigp Windew Help | Home | Tools | K-MEANS CLUSTER. | Sign In | 11  25 | 74.1 | Pros and Cons | Advantages of Naive Bayes | This algorithm works very fast and can easily predict the class of a test dataset. | You can use it to solve multi-class prediction problems as its guite useful with them | Naive Bayes classifier performs better than other models with less training data if the assumption | of independence of features holds. | Disadvantages of Naive Bayes | If your test data set thas arcategorical variable of a category that wasnt present in the training data | set, the Naive Bayes model will assign it zero probability and wont be able to make any predictions | in this regard. | It assumes that all the features are independent. While it might sound great in theory, in real life, | youll hardly find a set of independent features.
+  Combined   :  التانية. اللي هي القيمة التانية اللي موجودة في نفس الفيتشر. K-MEANS CLUSTERING - Adobe Acrebat Reader DC 32-bit | File Edit View Sigp Windew Help | Home | Tools | K-MEANS CLUSTER. | Sign In | 11  25 | 74.1 | Pros and Cons | Advantages of Naive Bayes | This algorithm works very fast and can easily predict the class of a test dataset. | You can use it to solve multi-class prediction problems as its guite useful with them | Naive Bayes classifier performs better than other models with less training data if the assumption | of independence of features holds. | Disadvantages of Naive Bayes | If your test data set thas arcategorical variable of a category that wasnt present in the training data | set, the Naive Bayes model will assign it zero probability and wont be able to make any predictions | in this regard. | It assumes that all the features are independent. While it might sound great in theory, in real life, | youll hardly find a set of independent features.
+
+[00:22:26]
+  Transcript :  الهي مين? دي الحتة بتاع تقديده يعني بعد كده تدخل على الغين
+  OCR        : K-MEANS CLUSTERNG - Adobe Acrobat Reader DC 32-bit | File Edit Vew Sigp Windeow Help | Home | Tools | K-MEANS CLUSTER., | Sign In | H θQ | 14  25 | 74.1 | Play Tennis. Example | PlayTennis: training examples | Outlook | Temperature | Humidity | Wind | PlayTennis | Sunny | High | Weak | Sunny | High | Strong | Ovircast | High | Wouk | Mild | High | Weak | Rain | Rain | Cool | Normal | Weak | Rain | Strong | Cool | Normal | Overcast | Cool | Noreal | Strong | Sunny | Mild | High | Weak | Sunny | Cool | Normal | Weak | Rain | Mild | Normal | Wouk | Sunny | Mild | Narmal | Sarong | Overenst | Mild | High | Stroing | Overcast | Normal | Wienk | Rain | Mild | High | Strong
+  Combined   :  الهي مين? دي الحتة بتاع تقديده يعني بعد كده تدخل على الغين K-MEANS CLUSTERNG - Adobe Acrobat Reader DC 32-bit | File Edit Vew Sigp Windeow Help | Home | Tools | K-MEANS CLUSTER., | Sign In | H θQ | 14  25 | 74.1 | Play Tennis. Example | PlayTennis: training examples | Outlook | Temperature | Humidity | Wind | PlayTennis | Sunny | High | Weak | Sunny | High | Strong | Ovircast | High | Wouk | Mild | High | Weak | Rain | Rain | Cool | Normal | Weak | Rain | Strong | Cool | Normal | Overcast | Cool | Noreal | Strong | Sunny | Mild | High | Weak | Sunny | Cool | Normal | Weak | Rain | Mild | Normal | Wouk | Sunny | Mild | Narmal | Sarong | Overenst | Mild | High | Stroing | Overcast | Normal | Wienk | Rain | Mild | High | Strong
+
+[00:22:30]
+  Transcript :  ماشي خلصتهم تبدأ تاخد ايه? تبدأ تشوف القيم اللي موجودة في
+  OCR        : None
+  Combined   :  ماشي خلصتهم تبدأ تاخد ايه? تبدأ تشوف القيم اللي موجودة في
+
+[00:22:36]
+  Transcript :  دي تاخد الهوت الوحدة تاخد الوحدة تاخد الكل الوحدة.
+  OCR        : None
+  Combined   :  دي تاخد الهوت الوحدة تاخد الوحدة تاخد الكل الوحدة.
+
+[00:22:39]
+  Transcript :  خلصتهم تاخد تاخد الايه? يعني كده تاخد القيمة الاولية والتانية
+  OCR        : None
+  Combined   :  خلصتهم تاخد تاخد الايه? يعني كده تاخد القيمة الاولية والتانية
+
+[00:22:43]
+  Transcript :  والتالتيه. يعني كده خلصتهم تدخل على دي الحتة اللي هي بتاعت ايه
+  OCR        : None
+  Combined   :  والتالتيه. يعني كده خلصتهم تدخل على دي الحتة اللي هي بتاعت ايه
+
+[00:22:48]
+  Transcript :  بتاعت ال qué than Maksyard refuses tonak b Pros nefesfere 22 hours
+  OCR        : K-MEANS CLUSTERING - Adobe Acrebat Reader DC 32-bit | File Edit View Sigp Window Help | Home | Tools | K-MEANS CLUSTER. | Sign In | 11 25 | 74.1 | Pros and Cons | Advantages of Naive Bayes | This algorithm works very fast and can easily predict the class of a test dataset. | You can use it to solve multi-class prediction problems as its guite useful with them. | Naive Bayes classifier performs better than other models with less training data if the assumption | of independence of features holds. | Disadvantages of Naive Bayes | If your test data sethas arcategorical variable of a category that wasnt present in the training data | set, the Naive Bayes model will assign it zero probability and wont be able to make any predictions | in this regard. | It assumes that all the features are independent. While it might sound great in theory, in real life, | youll hardly find a set of independent features.
+  Combined   :  بتاعت ال qué than Maksyard refuses tonak b Pros nefesfere 22 hours K-MEANS CLUSTERING - Adobe Acrebat Reader DC 32-bit | File Edit View Sigp Window Help | Home | Tools | K-MEANS CLUSTER. | Sign In | 11 25 | 74.1 | Pros and Cons | Advantages of Naive Bayes | This algorithm works very fast and can easily predict the class of a test dataset. | You can use it to solve multi-class prediction problems as its guite useful with them. | Naive Bayes classifier performs better than other models with less training data if the assumption | of independence of features holds. | Disadvantages of Naive Bayes | If your test data sethas arcategorical variable of a category that wasnt present in the training data | set, the Naive Bayes model will assign it zero probability and wont be able to make any predictions | in this regard. | It assumes that all the features are independent. While it might sound great in theory, in real life, | youll hardly find a set of independent features.
+
+[00:22:50]
+  Transcript :  بتاعت ال qué than Maksyard refuses tonak b Pros nefesfere 22 hours
+  OCR        : K-MEANS CLUSTERING - Adobe Acrebat Reader DC 32-bit | File Edit Vew Sigp Windeow Help | Home | Tools | K-MEANS CLUSTER | Sign In | 18 25 | 74.1 | Sturt | For cach anuribuate A | Flow chart | Traverse alttribute list for A al | Nest Auribute | cxcarined node | Find peohability asing vslae | of A to be in a class | Upedate Class for A | All values | in A have | Is thore ay | attributc?
+  Combined   :  بتاعت ال qué than Maksyard refuses tonak b Pros nefesfere 22 hours K-MEANS CLUSTERING - Adobe Acrebat Reader DC 32-bit | File Edit Vew Sigp Windeow Help | Home | Tools | K-MEANS CLUSTER | Sign In | 18 25 | 74.1 | Sturt | For cach anuribuate A | Flow chart | Traverse alttribute list for A al | Nest Auribute | cxcarined node | Find peohability asing vslae | of A to be in a class | Upedate Class for A | All values | in A have | Is thore ay | attributc?
+
+[00:22:55]
+  Transcript :  ماشي? هتبدأ لو انت عندك اه قيمة تانية من خلال يعني هتبدأ ترجع
+  OCR        : None
+  Combined   :  ماشي? هتبدأ لو انت عندك اه قيمة تانية من خلال يعني هتبدأ ترجع
+
+[00:23:03]
+  Transcript :  تعيد نفس الكلام ده كله على الجديد اللي هو الجديدة اللي
+  OCR        : None
+  Combined   :  تعيد نفس الكلام ده كله على الجديد اللي هو الجديدة اللي
+
+[00:23:10]
+  Transcript :  على هتدوها. لو ما فيش خلاص هتاند. بس في مشكلة كده.
+  OCR        : K-MEANS CLUSTERING - Adobe Acrebat Reader DC 32-bit | File Edit Vew Sigp Windeow Help | Home | Tools | K-MEANS CLUSTER., | Sign In | 18  25 | 74.1 | Start | For cach atribute A | Flow chart | Traverse altribute fist foe A at | Nest Anribute | examinod node | Find peobability wsing valae | of A to be in a class | Update Class for A | All values | ins A have | Is there amy | atoribute? | Scientific Diagran
+  Combined   :  على هتدوها. لو ما فيش خلاص هتاند. بس في مشكلة كده. K-MEANS CLUSTERING - Adobe Acrebat Reader DC 32-bit | File Edit Vew Sigp Windeow Help | Home | Tools | K-MEANS CLUSTER., | Sign In | 18  25 | 74.1 | Start | For cach atribute A | Flow chart | Traverse altribute fist foe A at | Nest Anribute | examinod node | Find peobability wsing valae | of A to be in a class | Update Class for A | All values | ins A have | Is there amy | atoribute? | Scientific Diagran
+

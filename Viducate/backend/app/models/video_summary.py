@@ -12,4 +12,4 @@ class VideoSummary(Base):
     language = Column(String(10), default="en")
     created_at = Column(TIMESTAMP, server_default=func.now())
 
-    video = relationship("Video", back_populates="summaries")
+    video = relationship("Video", back_populates="video_summary")

@@ -1,0 +1,8 @@
+# OCR Output — video_id=6
+# Language: en
+# Total segments: 4
+
+[00:00:02] Devorps Day -01 | 1. wtat is Devops9 | 2. Why DeNbp3 9 | 3 Howto Introduce Yourself? | 4.7 what are your Day-Day | acoivitien
+[00:21:00] Devops | Devops | cultwre thatimprover | DeliverN | example.Com | Llodays v1ve | Hoursi-2days
+[00:22:08] Devops | CICD | improving Delivery | Automationr | qrualityr | Monltoring | Testngv
+[00:22:36] Devops

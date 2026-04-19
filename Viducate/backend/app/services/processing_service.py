@@ -1,5 +1,6 @@
 import logging
 import asyncio
+import traceback
 from sqlalchemy.orm import Session
 from app.repositories.video_repository import VideoRepository
 from app.db.database import SessionLocal
@@ -9,6 +10,7 @@ from app.services.ocr_service import OCRService
 from app.services.merging_service import merge_transcript_ocr
 from app.services.segmentation_service import segment_topics
 from app.repositories.segment_repository import SegmentRepository
+from app.ml.processors.summarization_processor import process_summaries
 
 logger = logging.getLogger(__name__)
 
@@ -21,6 +23,7 @@ PROCESSING_STATUSES = {
     "ocr_processing",     # Step 2: OCR
     "merging",            # Step 3: Merge
     "segmenting",         # Step 4: Topic segmentation
+    "summarizing",        # Step 5: Summarization
     "completed",      # All processing done
     "failed",         
 }
@@ -127,7 +130,12 @@ async def run_processing_pipeline(video_id: int, language: str):
                 logger.error(f" Failed to insert segment: {e}")
 
         logger.info("[Pipeline] Segments saved to DB successfully")
-        await asyncio.sleep(0)          # Replace with: await segment_topics(video_id)
+        
+        # ── Step 5: Summarization ────────────────────────────────────── 
+        logger.info(f"[Pipeline] Step 5 - Summarization: video_id={video_id}")
+        repo.update_status(video_id, "summarizing")
+        await asyncio.to_thread(process_summaries, db, video_id, language)
+        logger.info(f"[Pipeline] Summarization complete: video_id={video_id}")
 
         # ── Completed Status ─────────────────────────────────────
         repo.update_status(video_id, "completed")
@@ -135,6 +143,7 @@ async def run_processing_pipeline(video_id: int, language: str):
 
     except Exception as e:
         logger.error(f"[Pipeline] Failed: video_id={video_id}, error={e}")
+        logger.error(traceback.format_exc()) 
         VideoRepository(db).update_status(video_id, "failed")
 
     finally:

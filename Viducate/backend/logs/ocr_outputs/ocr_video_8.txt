@@ -1,0 +1,9 @@
+# OCR Output — video_id=8
+# Language: en
+# Total segments: 5
+
+[00:00:02] Virtual Mactiner vM | what i3 a serverg | Ptysical os virtual | Hypervisor | tow to create vM | Real word example
+[00:15:56] Cxample.com | Tald | Team2 | serven | PEPP5 | team 5 | sysadmin | 50GB | 100G3 | Inefticienc | 5 GB | 100 core
+[00:16:00] Mumbai | Team1 | HPIBM | Porn enare | Logical isolation | Hypevisor | server | Efficiency | Memory | Hardwm | vmware | thyporvisor
+[00:22:46] unetffiency | I Aore | LAND | Envoying | 12 Acre | Efficient | Antomation | Renb
+[00:23:02] C0ODO | 100 GB | 100 Core | 8ingapore | Mumbai | 10GB | Traadn | Ameronwykpn | Hyderabadt
