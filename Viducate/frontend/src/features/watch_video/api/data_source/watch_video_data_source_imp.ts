@@ -16,14 +16,14 @@ export class WatchVideoDataSourceImp implements WatchVideoDataSource {
     topicReq: TopicsRequest,
   ): Promise<ApiResult<TopicResponse[]>> {
 
-   // console.log("WatchVideoDataSourceImp.getTopics called with:", topicReq);
+   
     try {
       const response = await this.watchVideoService.getTopics(
         toTopicRequestDto(topicReq),
       );
       console.log(response)
       const responseEntity = response.map((dto) => toTopicResponseEntity(dto));
-      console.log("Response from WatchVideoService:", responseEntity);
+     // console.log("Response from WatchVideoService:", responseEntity);
       return {
         success: true,
         data: responseEntity,

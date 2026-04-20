@@ -1,36 +1,66 @@
-import { useState } from "react";
+import { use, useState } from "react";
 import { ContentLearningCard } from "../widgets/content_learning_card";
 import { SearchTopicBar } from "../widgets/search_topic_bar";
-import { TopicEntity } from "../../domin/entity/topic_entity";
+import { useVideoData } from "../../../../core/hooks/useVideoData";
+import { TopicResponse } from "../../domin/entity/topic_response";
 
 export function LeftContentSection() {
+
+  const fakeTopics: TopicResponse[] = [
+  new TopicResponse(
+    1,
+    3,
+    1,
+    0,
+    60,
+    "Introduction",
+    "What is AI?"
+  ),
+  new TopicResponse(
+    2,
+    3,
+    2,
+    61,
+    120,
+    "Basics",
+    "Machine Learning Basics"
+  ),
+  new TopicResponse(
+    3,
+    3,
+    3,
+    121,
+    180,
+    "Deep Learning",
+    "Neural Networks Intro"
+  ),
+  new TopicResponse(
+    4,
+    3,
+    4,
+    181,
+    240,
+    "Applications",
+    "AI in Real Life"
+  ),
+];
+
+
+
   const [selectedTopic, setSelectedTopic] = useState(0);
   const [searchQuery, setSearchQuery] = useState("");
+  let cards:TopicResponse[]=fakeTopics;
 
-  const cards = [
-    new TopicEntity(
-      "Introduction to React",
-      "Learn the basics of React.js",
-      120
-    ),
-    new TopicEntity(
-      "State Management in React",
-      "Learn how to manage state in React applications",
-      180
-    ),
-    new TopicEntity(
-      "Performance Optimization in React",
-      "Learn how to optimize performance in React application",
-      240
-    ),
-  ];
+  const { data:topics} = useVideoData(3);
+
+
 
   const filteredCards = cards.filter((item) => {
     if (!searchQuery) return true;
 
     return (
       item.title.toLowerCase().includes(searchQuery.toLowerCase()) ||
-      item.description.toLowerCase().includes(searchQuery.toLowerCase())
+      item.title.toLowerCase().includes(searchQuery.toLowerCase())
     );
   });
 

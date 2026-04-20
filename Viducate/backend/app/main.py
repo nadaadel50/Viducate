@@ -2,6 +2,7 @@ from fastapi import FastAPI
 from app.api.v1.endpoints.auth import router as auth_router
 from app.api.v1.endpoints.video import router as video_router
 from starlette.middleware.sessions import SessionMiddleware
+from fastapi.middleware.cors import CORSMiddleware
 import secrets
 from app.config import settings
 
@@ -18,6 +19,16 @@ app = FastAPI(
 app.add_middleware(
     SessionMiddleware,
     secret_key=settings.SECRET_KEY or secrets.token_urlsafe(32)
+)
+
+
+
+app.add_middleware(
+    CORSMiddleware,
+    allow_origins=["http://localhost:5173"],
+    allow_credentials=True,
+    allow_methods=["*"],
+    allow_headers=["*"],
 )
 
 

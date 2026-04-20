@@ -1,7 +1,8 @@
-import { useRef, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import { CirclePlus, Pause, Play } from "lucide-react";
 import video from "../../../../assets/videos/test.mp4";
 import { TopicEndSection } from "../sections/topic_end_section";
+import { useSelectedTopic } from "../context/topic_context";
 
 export function VideoPlayer() {
   const videoRef = useRef<HTMLVideoElement | null>(null);
@@ -11,6 +12,39 @@ export function VideoPlayer() {
   const [pause, setPause] = useState(false);
   const progressRef = useRef<HTMLDivElement | null>(null);
   const [showTopicEnd, setShowTopicEnd] = useState(false);
+  const { selectedTopic } = useSelectedTopic();
+  const [events, setEvents] = useState<{ time: number; timestamp: number }[]>(
+    [],
+  );
+
+  const [showPopup, setShowPopup] = useState(false);
+  const [lastPopupTime, setLastPopupTime] = useState(0);
+
+  function detectRepeatedSeek(events: { time: number; timestamp: number }[]) {
+    const now = Date.now();
+
+    const lastMinute = events.filter((e) => now - e.timestamp < 60000);
+
+    let count = 0;
+
+    for (let i = 0; i < lastMinute.length; i++) {
+      for (let j = i + 1; j < lastMinute.length; j++) {
+        if (Math.abs(lastMinute[i].time - lastMinute[j].time) < 5) {
+          count++;
+        }
+      }
+    }
+
+    return count >= 3;
+  }
+
+  useEffect(() => {
+    if (selectedTopic && videoRef.current) {
+      videoRef.current.currentTime = selectedTopic.start_time;
+      setCurrentTime(selectedTopic.start_time);
+      setProgress((selectedTopic.start_time / videoRef.current.duration) * 100);
+    }
+  }, [selectedTopic]);
 
   type Marker = {
     time: number;
@@ -69,13 +103,33 @@ export function VideoPlayer() {
 
   return (
     <div className="flex flex-col items-center w-full">
-
       {/* video */}
       <div className="relative w-full max-w-5xl h-[350px]">
         <video
           ref={videoRef}
           src={video}
           controls={started}
+          onSeeked={() => {
+            if (!videoRef.current) return;
+
+            const current = videoRef.current.currentTime;
+
+            const newEvent = {
+              time: current,
+              timestamp: Date.now(),
+            };
+
+            const updatedEvents = [...events, newEvent];
+            setEvents(updatedEvents);
+
+            // detect stuck
+            if (detectRepeatedSeek(updatedEvents)) {
+              if (Date.now() - lastPopupTime > 120000) {
+                setShowPopup(true);
+                setLastPopupTime(Date.now());
+              }
+            }
+          }}
           onTimeUpdate={handleTimeUpdate}
           onPlay={() => setPause(true)}
           onPause={() => setPause(false)}
@@ -114,9 +168,33 @@ export function VideoPlayer() {
         )}
       </div>
 
+
+      {showPopup && (
+  <div className="fixed bottom-5 right-5 bg-black text-white p-4 rounded-xl shadow-lg z-50">
+    👀 شكلك بتعيد الجزء ده كتير  
+    <div className="mt-2 flex gap-2">
+      <button
+        onClick={() => {
+          setShowPopup(false);
+          alert("هنساعدك هنا بعدين 😄"); // placeholder
+        }}
+        className="bg-white text-black px-2 py-1 rounded"
+      >
+        ساعدني
+      </button>
+
+      <button
+        onClick={() => setShowPopup(false)}
+        className="px-2 py-1"
+      >
+        لا شكراً
+      </button>
+    </div>
+  </div>
+)}
+
       {/* controls */}
       <div className="w-full max-w-5xl flex gap-3 mt-5 items-center rounded-xl border border-slate-100 bg-white p-4 shadow-md">
-
         {/* play / pause */}
         <span
           onClick={handleVideoPauseAndStart}

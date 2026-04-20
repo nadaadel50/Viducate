@@ -1,8 +1,10 @@
-function handleApiError(error: unknown): string {
-    if (error instanceof Error) {
-        return error.message;
-    }
-    return "An unknown error occurred";
-}
+export default function handleApiError(error: any): string {
 
-export default handleApiError;
+  console.log(error)
+
+  if (error.response?.data?.detail) {
+    return error.response.data.detail
+  }
+  
+  return "Something went wrong"
+}
