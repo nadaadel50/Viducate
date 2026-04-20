@@ -10,7 +10,7 @@ import { useProcessingStatus } from '../hooks/use_processing_status';
 export function ProcessingPage() {
   const { videoId } = useParams();
   const navigate = useNavigate();
-  
+
   const { status, progress } = useProcessingStatus(videoId);
   useEffect(() => {
     if (status === 'completed') {
@@ -21,7 +21,7 @@ export function ProcessingPage() {
 
 
   const ringGradient = useMemo(() => ({
-    background: progress === 100
+    background: status === 'completed'
       ? `conic-gradient(from 0deg, ${COLORS.state.success} 0%, ${COLORS.state.success} 100%)`
       : `conic-gradient(from 0deg, ${COLORS.brand.primary} 0%, ${COLORS.brand.secondary} ${progress}%, ${COLORS.effects.ringEmpty} ${progress}%)`
 }),  [progress, status]);
