@@ -56,10 +56,10 @@
   "preferences.english": "الإنجليزية",
   "preferences.arabic": "العربية",
 
-  "languageInit.title": "هل تود تخصيص لغة التعلم؟",
-  "languageInit.desc": "يستخدم Viducate الذكاء الاصطناعي لتكييف المحتوى حسب تفضيلاتك. هل ترغب في تحديد لغتك الافتراضية الآن؟",
+  "languageInit.title": "هل تريد تخصيص لغة المحتوى؟",
+  "languageInit.desc": "يستخدم Viducate الذكاء الاصطناعي لتكييف المحتوى معك. هل تريد تخصيص لغة المحتوى، أو المتابعة بلغة الفيديو؟",
   "languageInit.noContinue": "لا، متابعة",
-  "languageInit.yesCustomize": "نعم، تخصيص الإعدادات",
+  "languageInit.yesCustomize": "نعم، تخصيص",
   "languageInit.secure": "سيتم حفظ تفضيلاتك بشكل آمن.",
 
   "customize.title": "خصص تجربة التعلم الخاصة بك",

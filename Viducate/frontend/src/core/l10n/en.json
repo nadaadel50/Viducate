@@ -56,8 +56,8 @@
   "preferences.english": "English",
   "preferences.arabic": "Arabic",
 
-  "languageInit.title": "Customize your learning language preferences?",
-  "languageInit.desc": "Viducate uses AI to adapt content to you. Would you like to set your default language now?",
+  "languageInit.title": "Customize your content language?",
+  "languageInit.desc": "Viducate uses AI to adapt content to you. Do you want to customize the content language, or continue with the video’s language?",
   "languageInit.noContinue": "No, continue",
   "languageInit.yesCustomize": "Yes, customize",
   "languageInit.secure": "Your preferences are saved securely.",

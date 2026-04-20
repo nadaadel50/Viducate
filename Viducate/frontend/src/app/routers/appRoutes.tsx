@@ -21,7 +21,7 @@ export function AppRoutes() {
             <Route path="/UploadVideoPage" element={<UploadVideoPage />} />  /* for example */
             <Route path="/" element={<ForgetPasswordPage />} />  /* for example */
             <Route path="/test-modals" element={<TestModalsPage />} />  /* for example */
-            <Route path="/upload-loading" element={<ProcessingPage />} />  /* for example */
+            <Route path="/ProcessingPage" element={<ProcessingPage />} />  /* for example */
 
              <Route  element={<ProtectedRoute/>}>  // will prmove "/protected" soon
               /* here we will put all the protected routes that need authentication to access them */
