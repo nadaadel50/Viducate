@@ -32,5 +32,8 @@ class Settings:
     SUPABASE_BUCKET_NAME: str = os.getenv("SUPABASE_BUCKET_NAME", "viducate-videos")
     SUPABASE_BUCKET_PUBLIC: bool = os.getenv("SUPABASE_BUCKET_PUBLIC", "false").lower() == "true"
 
+    GEMINI_API_KEY: str = os.getenv("GEMINI_API_KEY")
+    GROQ_API_KEY: str = os.getenv("GROQ_API_KEY")
+
 settings = Settings()
   

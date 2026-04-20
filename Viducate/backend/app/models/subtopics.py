@@ -9,9 +9,10 @@ class Subtopic(Base):
     subtopic_id = Column(Integer, primary_key=True)
     segment_id = Column(Integer, ForeignKey("topic_segment.segment_id", ondelete="CASCADE"))
     name = Column(String(500), nullable=False)
-    description = Column(Text)
-    time_start = Column(Integer)
-    time_end = Column(Integer)
+    description = Column(Text,nullable=False)
+    start_time = Column(Integer)
+    end_time = Column(Integer)
     created_at = Column(TIMESTAMP, server_default=func.now())
+
 
     segment = relationship("TopicSegment", back_populates="subtopics")
