@@ -1,37 +1,32 @@
-import { useState, useEffect, useMemo } from 'react';
-import { useNavigate } from 'react-router-dom';
+import { useEffect, useMemo } from 'react';
+import { useNavigate, useParams } from 'react-router-dom';
 import { CheckCircle, X } from 'lucide-react';
 import { FormattedMessage } from 'react-intl';
 import { AnalysisStepItem } from '../componants/analysis_step_item';
 import { TipCard } from '../componants/tip_card';
 import { COLORS } from '../../../../core/constants/colors';
-export function ProcessingPage() {
-  const [progress, setProgress] = useState(0);
-  const navigate = useNavigate();
-  // Simulation Logic 
-  useEffect(() => {
-    if (progress < 100) {
-      const timer = setTimeout(() => {
-        setProgress(p => Math.min(p + Math.floor(Math.random() * 5) + 2, 100));
-      }, 500);
-      return () => clearTimeout(timer);
-    }
-  }, [progress]);
+import { useProcessingStatus } from '../hooks/use_processing_status';
 
-  //  Navigation Logic
+export function ProcessingPage() {
+  const { videoId } = useParams();
+  const navigate = useNavigate();
+  
+  const { status, progress } = useProcessingStatus(videoId);
   useEffect(() => {
-    if (progress === 100) {
-      const timeout = setTimeout(() => navigate('/WatchVideo'), 1000000);
+    if (status === 'completed') {
+      const timeout = setTimeout(() => navigate(`/WatchVideo/${videoId}`), 2500);
       return () => clearTimeout(timeout);
     }
-  }, [progress, navigate]);
+  }, [status, navigate, videoId]);
 
-  //  Dynamic Styles 
+
   const ringGradient = useMemo(() => ({
     background: progress === 100
       ? `conic-gradient(from 0deg, ${COLORS.state.success} 0%, ${COLORS.state.success} 100%)`
       : `conic-gradient(from 0deg, ${COLORS.brand.primary} 0%, ${COLORS.brand.secondary} ${progress}%, ${COLORS.effects.ringEmpty} ${progress}%)`
-  }), [progress]);
+}),  [progress, status]);
+
+
 
   return (
     <div className="relative min-h-screen flex flex-col items-center justify-center bg-white overflow-hidden px-4 py-8 font-sans"

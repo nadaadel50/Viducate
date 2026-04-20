@@ -9,7 +9,6 @@ import { SuccessfullResetPage } from "../../features/auth/presentation/forgetpas
 import { AppRoutesNames } from "./routes";
 import TestModalsPage from "../../features/video_upload/presentation/pages/test_modals_page";
 import {ProcessingPage }from "../../features/video_upload/presentation/pages/processing_page";
-
 export function AppRoutes() {
     return (
         <BrowserRouter>
@@ -21,7 +20,7 @@ export function AppRoutes() {
             <Route path="/UploadVideoPage" element={<UploadVideoPage />} />  /* for example */
             <Route path="/" element={<ForgetPasswordPage />} />  /* for example */
             <Route path="/test-modals" element={<TestModalsPage />} />  /* for example */
-            <Route path="/ProcessingPage" element={<ProcessingPage />} />  /* for example */
+            <Route path="/ProcessingPage/:videoId" element={<ProcessingPage />} />  /* for example */
 
              <Route  element={<ProtectedRoute/>}>  // will prmove "/protected" soon
               /* here we will put all the protected routes that need authentication to access them */

@@ -4,6 +4,7 @@ from app.api.v1.endpoints.video import router as video_router
 from starlette.middleware.sessions import SessionMiddleware
 import secrets
 from app.config import settings
+from fastapi.middleware.cors import CORSMiddleware
 
 from app.api.v1.endpoints.ocr import router as ocr_router
 from app.api.v1.endpoints.segments import router as segments_router 
@@ -22,13 +23,13 @@ app.add_middleware(
 
 
 
-#app.add_middleware(
-#    CORSMiddleware,
-#   allow_origins=["http://localhost:5173"],  # React/Vite
-#   allow_credentials=True,
-#   allow_methods=["*"],
-#   allow_headers=["*"],
-#)
+app.add_middleware(
+   CORSMiddleware,
+  allow_origins=["http://localhost:5173"],  # React/Vite
+  allow_credentials=True,
+  allow_methods=["*"],
+  allow_headers=["*"],
+)
 
 # Register routers
 app.include_router(auth_router, prefix="/api/v1")
