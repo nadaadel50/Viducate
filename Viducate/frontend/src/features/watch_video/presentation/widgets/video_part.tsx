@@ -3,6 +3,8 @@ import { CirclePlus, Pause, Play } from "lucide-react";
 import video from "../../../../assets/videos/test.mp4";
 import { TopicEndSection } from "../sections/topic_end_section";
 import { useSelectedTopic } from "../context/topic_context";
+import { PopupOnTimeline } from "./popup_on_time_line";
+import { PopupBottomRight } from "./popup_bottom";
 
 export function VideoPlayer() {
   const videoRef = useRef<HTMLVideoElement | null>(null);
@@ -16,40 +18,89 @@ export function VideoPlayer() {
   const [events, setEvents] = useState<{ time: number; timestamp: number }[]>(
     [],
   );
-
+  const { setCurrentTime: setTime, changeProgressValue } = useSelectedTopic();
+  const [lastSeekTime, setLastSeekTime] = useState<number | null>(null);
+  const [pauseStart, setPauseStart] = useState<number | null>(null);
   const [showPopup, setShowPopup] = useState(false);
   const [lastPopupTime, setLastPopupTime] = useState(0);
+  const [topicStartTime, setTopicStartTime] = useState<number | null>(null);
+  const [timeSpent, setTimeSpent] = useState(0);
+  const [topicDuration, setTopicDuration] = useState(0);
+  const [markers, setMarkers] = useState<Marker[]>([]);
+  const [isFullscreen, setIsFullscreen] = useState(false);
+
+  type Marker = {
+    time: number;
+  };
+
+  useEffect(() => {
+    if (selectedTopic && videoRef.current) {
+      setTopicStartTime(Date.now());
+      setTopicDuration(
+        (selectedTopic.end_time - selectedTopic.start_time) * 1000,
+      );
+      setTimeSpent(0);
+      if (changeProgressValue) {
+        videoRef.current.currentTime = selectedTopic.start_time;
+        setCurrentTime(selectedTopic.start_time);
+        setProgress(
+          (selectedTopic.start_time / videoRef.current.duration) * 100,
+        );
+      }
+    }
+
+    setEvents([]);
+  }, [selectedTopic]);
+
+  useEffect(() => {
+    const handleFullscreenChange = () => {
+      setIsFullscreen(!!document.fullscreenElement);
+    };
+
+    document.addEventListener("fullscreenchange", handleFullscreenChange);
+    return () =>
+      document.removeEventListener("fullscreenchange", handleFullscreenChange);
+  }, []);
+
+
+
 
   function detectRepeatedSeek(events: { time: number; timestamp: number }[]) {
     const now = Date.now();
 
     const lastMinute = events.filter((e) => now - e.timestamp < 60000);
+    const clusters: number[][] = [];
 
-    let count = 0;
+    for (const event of lastMinute) {
+      const existingCluster = clusters.find((cluster) =>
+        cluster.some((time) => Math.abs(time - event.time) < 5),
+      );
 
-    for (let i = 0; i < lastMinute.length; i++) {
-      for (let j = i + 1; j < lastMinute.length; j++) {
-        if (Math.abs(lastMinute[i].time - lastMinute[j].time) < 5) {
-          count++;
-        }
+      if (existingCluster) {
+        existingCluster.push(event.time);
+      } else {
+        clusters.push([event.time]);
       }
     }
 
-    return count >= 3;
+    return clusters.some((cluster) => cluster.length >= 3);
   }
 
   useEffect(() => {
-    if (selectedTopic && videoRef.current) {
-      videoRef.current.currentTime = selectedTopic.start_time;
-      setCurrentTime(selectedTopic.start_time);
-      setProgress((selectedTopic.start_time / videoRef.current.duration) * 100);
-    }
-  }, [selectedTopic]);
+    const interval = setInterval(() => {
+      if (topicStartTime && pause) {
+        setTimeSpent((prev) => prev + 1000);
+      }
+    }, 1000);
 
-  type Marker = {
-    time: number;
-  };
-  const [markers, setMarkers] = useState<Marker[]>([]);
+    return () => clearInterval(interval);
+  }, [topicStartTime, pause]);
+
+  useEffect(() => {
+    if (topicDuration && timeSpent > topicDuration * 2) {
+      triggerStuck("user spending too much time on topic");
+    }
+  }, [timeSpent, topicDuration]);
 
   const handleStart = () => {
     if (!videoRef.current) return;
@@ -74,6 +125,7 @@ export function VideoPlayer() {
 
   const handleTimeUpdate = () => {
     if (!videoRef.current) return;
+    setTime(videoRef.current.currentTime);
 
     const current = videoRef.current.currentTime;
     setCurrentTime(current);
@@ -101,6 +153,52 @@ export function VideoPlayer() {
     setMarkers([...markers, { time }]);
   };
 
+  function triggerStuck(reason: string) {
+    if (Date.now() - lastPopupTime < 120000) return;
+
+    setShowPopup(true);
+    setLastPopupTime(Date.now());
+
+    console.log("User might be stuck due to:", reason);
+  }
+
+  const handleSeek = () => {
+    if (!videoRef.current) return;
+    setLastSeekTime(videoRef.current.currentTime);
+
+    const current = videoRef.current.currentTime;
+
+    const newEvent = {
+      time: current,
+      timestamp: Date.now(),
+    };
+
+    const updatedEvents = [...events, newEvent];
+    setEvents(updatedEvents);
+
+    if (detectRepeatedSeek(updatedEvents)) {
+      triggerStuck("repeated_seek");
+    }
+  };
+
+  const handlePlay = () => {
+    setPause(true);
+    if (!pauseStart || !lastSeekTime || !videoRef.current) return;
+
+    const pauseDuration = Date.now() - pauseStart;
+    const current = videoRef.current.currentTime;
+
+    const sameSpot = Math.abs(current - lastSeekTime) < 5;
+
+    // between min and 3 min
+
+    if (pauseDuration > 60000 && pauseDuration < 180000 && sameSpot) {
+      triggerStuck("seek_pause");
+    }
+
+    setPauseStart(null);
+  };
+
   return (
     <div className="flex flex-col items-center w-full">
       {/* video */}
@@ -109,36 +207,21 @@ export function VideoPlayer() {
           ref={videoRef}
           src={video}
           controls={started}
-          onSeeked={() => {
-            if (!videoRef.current) return;
-
-            const current = videoRef.current.currentTime;
-
-            const newEvent = {
-              time: current,
-              timestamp: Date.now(),
-            };
-
-            const updatedEvents = [...events, newEvent];
-            setEvents(updatedEvents);
-
-            // detect stuck
-            if (detectRepeatedSeek(updatedEvents)) {
-              if (Date.now() - lastPopupTime > 120000) {
-                setShowPopup(true);
-                setLastPopupTime(Date.now());
-              }
-            }
-          }}
+          onSeeked={handleSeek}
           onTimeUpdate={handleTimeUpdate}
-          onPlay={() => setPause(true)}
-          onPause={() => setPause(false)}
+          onPlay={handlePlay}
+          onPause={() => {
+            setPause(false);
+            setPauseStart(Date.now());
+          }}
           onEnded={() => {
             setPause(false);
             setShowTopicEnd(true);
           }}
           className="w-full h-full object-cover rounded-xl shadow-md border border-transparent hover:border-[#4f46e5]/30 transition"
         />
+
+
 
         {/* overlay */}
         <div
@@ -167,30 +250,29 @@ export function VideoPlayer() {
           </div>
         )}
       </div>
-
-
+      {/* 
       {showPopup && (
-  <div className="fixed bottom-5 right-5 bg-black text-white p-4 rounded-xl shadow-lg z-50">
-    👀 شكلك بتعيد الجزء ده كتير  
-    <div className="mt-2 flex gap-2">
-      <button
-        onClick={() => {
-          setShowPopup(false);
-          alert("هنساعدك هنا بعدين 😄"); // placeholder
-        }}
-        className="bg-white text-black px-2 py-1 rounded"
-      >
-        ساعدني
-      </button>
+        <div className="fixed bottom-5 right-5 bg-black text-white p-4 rounded-xl shadow-lg z-50">
+          👀 شكلك بتعيد الجزء ده كتير
+          <div className="mt-2 flex gap-2">
+            <button
+              onClick={() => {
+                setShowPopup(false);
+                alert("هنساعدك هنا بعدين 😄"); // placeholder
+              }}
+              className="bg-white text-black px-2 py-1 rounded"
+            >
+              ساعدني
+            </button>
 
-      <button
-        onClick={() => setShowPopup(false)}
-        className="px-2 py-1"
-      >
-        لا شكراً
-      </button>
-    </div>
-  </div>
+            <button onClick={() => setShowPopup(false)} className="px-2 py-1">
+              لا شكراً
+            </button>
+          </div>
+        </div>
+      )} */}
+      {showPopup && !isFullscreen && (
+  <PopupBottomRight onClose={() => setShowPopup(false)} />
 )}
 
       {/* controls */}
@@ -213,6 +295,14 @@ export function VideoPlayer() {
             className="h-full bg-gradient-to-r from-[#359EFF] to-[#5A0BB1] rounded-full"
             style={{ width: `${prgress}%` }}
           />
+
+          {showPopup && isFullscreen && videoRef.current && (
+            <PopupOnTimeline
+              currentTime={currentTime}
+              duration={videoRef.current.duration}
+              onClose={() => setShowPopup(false)}
+            />
+          )}
 
           {markers.map((marker, index) => (
             <div

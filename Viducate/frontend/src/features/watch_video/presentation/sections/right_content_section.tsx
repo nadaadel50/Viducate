@@ -15,7 +15,7 @@ export function RightContentSection() {
   return (
     <div className="flex flex-col min-h-screen">
       {/* 🔹 HEADER ( */}
-     <MainHeader/>
+     <MainHeader />
 
       {/* 🔹 CONTENT (centered) */}
       <div className="px-6 pb-10 flex-1 max-w-5xl mx-auto w-full">

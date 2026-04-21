@@ -2,8 +2,10 @@ import { LeftContentSection } from "../sections/left_content_section";
 import { RightContentSection } from "../sections/right_content_section";
 import { useVideoData } from "../../../../core/hooks/useVideoData";
 import { useSelectedTopic } from "../context/topic_context";
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 import { TopicResponse } from "../../domin/entity/topic_response";
+import Loading from "../../../../core/widgets/loading";
+import { ErrorMessage } from "../../../../core/widgets/error";
 
 export function MainPage() {
    const fakeTopics: TopicResponse[] = [
@@ -30,7 +32,7 @@ export function MainPage() {
       3,
       3,
       121,
-      180,
+      500,
       "Deep Learning",
       "Neural Networks Intro"
     ),
@@ -38,8 +40,8 @@ export function MainPage() {
       4,
       3,
       4,
-      181,
-      240,
+      501,
+      360,
       "Applications",
       "AI in Real Life"
     ),
@@ -47,27 +49,28 @@ export function MainPage() {
   
   let { data: topics, isLoading, error } = useVideoData(3);
   const { selectedTopic, setSelectedTopic } = useSelectedTopic();
+ 
+  
+  // will remove this after api integration
   if(topics?.length===0){
     topics=fakeTopics;
 
   }
-
   useEffect(() => {
     if (topics && topics.length > 0 && !selectedTopic) {
-      console.log("Setting selected topic to:", topics[0]);
       setSelectedTopic(topics[0]);
     }
   }, [topics]);
 
+
+
   if (isLoading) {
-    return <div>Loading...</div>;
+    return <Loading />;
   }
 
   if (error) {
-    return <div>Error: {error.message}</div>;
-  } else if (topics) {
-    console.log(topics);
-  }
+    return <ErrorMessage errorMessage={error.message} />;
+  } 
 
   return (
     <div className="flex font-display bg-[#f8fafc]">

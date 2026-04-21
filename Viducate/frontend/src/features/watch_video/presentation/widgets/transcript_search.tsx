@@ -61,7 +61,7 @@ export function TranscriptSearch() {
       </div>
 
       {/* results */}
-      {filteredResults.map((item) => (
+      {/* {filteredResults.map((item) => (
         <button
           key={item.id}
           className="cursor-pointer w-full text-left group flex flex-col sm:flex-row sm:items-center gap-3 sm:gap-4 rounded-xl border border-slate-200 bg-white p-3 sm:p-4 hover:bg-slate-50 hover:border-[#4f46e5]/40 transition shadow-sm"
@@ -77,7 +77,7 @@ export function TranscriptSearch() {
             {highlightText(item.text, searchQuery)}
           </p>
         </button>
-      ))}
+      ))} */}
 
     </div>
   );

@@ -5,7 +5,6 @@ import {
   TvMinimalPlay,
 } from "lucide-react";
 import { ContentGenerationBtn } from "./content_genration_btn";
-import type { TopicEntity } from "../../domin/entity/topic_entity";
 import type { TopicResponse } from "../../domin/entity/topic_response";
 import { useSelectedTopic } from "../context/topic_context";
 
@@ -18,10 +17,15 @@ export function ContentLearningCard({
   onClick: () => void;
   cardInfo: TopicResponse;
 }) {
-  const { setSelectedTopic } = useSelectedTopic();
+  const { setSelectedTopic ,setChangeProgressValue} = useSelectedTopic();
   return (
     <div
-      className={`group relative rounded-2xl bg-white/70  p-4 transition-all hover:bg-white hover:border-primary/40 hover:shadow-soft ${isSelected ? "border-2 border-[#4f46e5] shadow-xl shadow-[#4f46e5]/15" : "border border-slate-200/60 w-80"}`}
+      onClick={() => {
+        onClick();
+        setSelectedTopic(cardInfo);
+        setChangeProgressValue(true);
+      }}
+      className={`cursor-pointer group relative rounded-2xl bg-white/70  p-4 transition-all hover:bg-white hover:border-primary/40 hover:shadow-soft ${isSelected ? "border-2 border-[#4f46e5] shadow-xl shadow-[#4f46e5]/15" : "border border-slate-200/60 w-80"}`}
     >
       {/* Title */}
       <div className="flex justify-between items-start">
@@ -32,8 +36,9 @@ export function ContentLearningCard({
         </h4>
 
         <span className="text-[10px] font-bold  text-slate-400 bg-slate-100 px-2.5 py-1 rounded-full group-hover:text-slate-600 transition-colors">
-          {Math.floor((cardInfo.start_time + cardInfo.end_time) / 60)}:
-          {Math.floor((cardInfo.start_time + cardInfo.end_time) % 60)
+          {
+          Math.floor((cardInfo.start_time) / 60)}:
+          {Math.floor((cardInfo.start_time) % 60)
             .toString()
             .padStart(2, "0")}
         </span>
@@ -47,10 +52,7 @@ export function ContentLearningCard({
       <div className="grid grid-cols-4 gap-3 mt-4">
         {/* ask about this */}
         <ContentGenerationBtn
-          onClick={() => {
-            onClick();
-            setSelectedTopic(cardInfo);
-          }}
+          onClick={() => {}}
           icon={<TvMinimalPlay />}
           label={"Watch"}
         />

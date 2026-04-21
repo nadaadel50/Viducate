@@ -1,8 +1,12 @@
-import { createContext, useContext, useState } from "react";
+import { createContext, useContext, useState, type Dispatch, type SetStateAction } from "react";
 import type { TopicResponse } from "../../domin/entity/topic_response";
 type SelectedTopicContextType = {
   selectedTopic: TopicResponse | null;
-  setSelectedTopic: (topic: TopicResponse | null) => void;
+  setSelectedTopic: Dispatch<SetStateAction<TopicResponse | null>>;
+  currentTime:number;
+  setCurrentTime:(time:number)=>void;
+  changeProgressValue:boolean;
+  setChangeProgressValue: (value:boolean)=>void;
 };
 export const SelectedTopicContext =createContext<SelectedTopicContextType | null>(null);
 
