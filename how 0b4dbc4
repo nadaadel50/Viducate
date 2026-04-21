@@ -1,0 +1,60 @@
+[33m0b4dbc4[m[33m ([m[1;36mHEAD[m[33m -> [m[1;32mfeature/login-signup[m[33m)[m Fix merge conflicts from feature/auth
+[33m3c5028e[m update the design of Sign&login pages
+[33m8cdba85[m update auth presentation layer
+[33m1192b3f[m update auth data layer
+[33m8837054[m update auth domain logic
+[33m2e46d51[m update auth api layer
+[33m345f97c[m update auth images
+[33m4150187[m[33m ([m[1;31morigin/feature/auth[m[33m, [m[1;32mfeature/auth[m[33m)[m Add RightBadge prop to AuthLayout component
+[33mff52d4e[m Enhance CustomInput component with password visibility toggle and success state handling; update colors constants and fix layout in RightSection component
+[33ma80d627[m Adjust padding in AuthLayout right section
+[33mb245bcf[m update custum_btn
+[33m93e2264[m resolve merge conflict in auth feature
+[33m1f94341[m update custum_btn
+[33mc871bcc[m update login&Signup pages and custum_btn
+[33m0a4ce2b[m Update right section layout in AuthLayout for improved alignment
+[33m1dade02[m Fix merge conflicts from feature/auth
+[33mae474da[m add UI of Login&Signup
+[33m8b34fac[m Add AuthMainText and RightSection components; update AuthLayout layout and styles
+[33mf19ee1b[m Refactor color constants and update CustomInput and AuthLayout components to use new color structure
+[33m429b39e[m update style of smallTitle
+[33me0d0f80[m Add AuthLayout
+[33m0fb5d80[m[33m ([m[1;31morigin/feature/login-signup[m[33m)[m add AuthLayout
+[33m3c42896[m merge updates from origin/feature/auth
+[33m69813f4[m add login/signup images
+[33ma4b0a7b[m update error message  in custom_imput_text
+[33m4923f62[m add text section
+[33m484d12e[m feat: add custom input, button, and logo components
+[33me33eb80[m Save all current changes
+[33mf8d5f34[m Merge branch 'frontEnd_dev' into feature/auth
+[33m372dbad[m[33m ([m[1;31morigin/frontEnd_dev[m[33m, [m[1;32mfrontEnd_dev[m[33m)[m update
+[33mc34789b[m feat: implement authentication feature with API services and context (only common signiture)
+[33m695cba2[m feat: initialize frontend project with Vite, React, and Tailwind CSS
+[33m5f74c3d[m Add key.py to generate a secure secret key
+[33m0e43a56[m Add new dependencies to requirements.txt
+[33md0493d3[m Initialize FastAPI application for Viducate
+[33m148fe27[m Add user registration endpoint
+[33me5dec81[m Implement get_db function for DB session management
+[33ma2e9726[m Add AuthService for user registration
+[33m64c8d93[m Implement UserRepository for user management
+[33ma1e5943[m Implement security functions for password and JWT
+[33ma6b8b3d[m Add user schemas for registration and responses
+[33m6f38abe[m Add sessionmaker and declarative_base imports
+[33mc6c58bf[m Update config.py
+[33m4cb7981[m Update .env with new database credentials and vars
+[33mde9d51c[m Reset database tables, update models
+[33ma6699df[m Add seed_data
+[33m46d176f[m Add SQLAlchemy models and database setup
+[33m744d6e5[m Update test_db.py
+[33mfe27d08[m Add files via upload
+[33m92d0a7d[m Add files via upload
+[33med53e37[m Update Database_viducate.sql
+[33m7256db9[m Add files via upload
+[33m4a0485f[m Add files via upload
+[33m2047390[m Delete docker-compose.yml
+[33m8a55b3f[m Delete README.md
+[33m936d8cb[m Delete .gitignore
+[33m66ad18c[m Delete docs directory
+[33m8558e3c[m Delete Viducate directory
+[33m0915997[m Add files via upload
+[33m5ba5be5[m first commit

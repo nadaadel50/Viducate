@@ -1,10 +1,14 @@
 from fastapi import APIRouter, Depends, HTTPException, status, Header, Request
 from fastapi.responses import RedirectResponse
+from fastapi import APIRouter, Depends, HTTPException, status, Header, Request
+from fastapi.responses import RedirectResponse
 from sqlalchemy.orm import Session
 from app.schemas.user import ForgetPasswordRequest, ForgetPasswordResponse, ResetPasswordRequest, ResetPasswordResponse, UserRegisterRequest, RegisterResponse, UserResponse, TokenResponse, UserLoginRequest, UpdateLanguageRequest
 from app.services.auth_service import AuthService
 from app.dependencies import get_db
 import logging
+from app.services.oauth import oauth
+from app.config import settings 
 from app.services.oauth import oauth
 from app.config import settings 
 from fastapi.security import HTTPBearer, HTTPAuthorizationCredentials
