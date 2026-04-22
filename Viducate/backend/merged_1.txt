@@ -1,0 +1,1930 @@
+[00:00:02]
+  Transcript :  Hello everyone, my name is Abhishek and welcome back to my channel.
+  OCR        : Multi Stage | Builds
+  Combined   :  Hello everyone, my name is Abhishek and welcome back to my channel. Multi Stage | Builds
+
+[00:00:05]
+  Transcript :  So today we are at day 26 of our complete DevOps course.
+  OCR        : None
+  Combined   :  So today we are at day 26 of our complete DevOps course.
+
+[00:00:09]
+  Transcript :  And this video is going to be a both practical as well as theory class.
+  OCR        : None
+  Combined   :  And this video is going to be a both practical as well as theory class.
+
+[00:00:14]
+  Transcript :  And this is very, very important because I am going to explain you
+  OCR        : None
+  Combined   :  And this is very, very important because I am going to explain you
+
+[00:00:18]
+  Transcript :  some production issues with Docker or you know,
+  OCR        : None
+  Combined   :  some production issues with Docker or you know,
+
+[00:00:21]
+  Transcript :  whenever interviewer asks you what are some of the practical problems
+  OCR        : None
+  Combined   :  whenever interviewer asks you what are some of the practical problems
+
+[00:00:25]
+  Transcript :  that you have faced with Docker or containers and how did you solve them.
+  OCR        : None
+  Combined   :  that you have faced with Docker or containers and how did you solve them.
+
+[00:00:29]
+  Transcript :  so many people are asking me this kind of interview based scenario sessions so that is one of the main
+  OCR        : None
+  Combined   :  so many people are asking me this kind of interview based scenario sessions so that is one of the main
+
+[00:00:35]
+  Transcript :  reasons i choose to talk about this topic today so what we are going to learn on a very high level
+  OCR        : None
+  Combined   :  reasons i choose to talk about this topic today so what we are going to learn on a very high level
+
+[00:00:40]
+  Transcript :  is one we are going to understand the concept of multi-stage docker builds and the second thing
+  OCR        : None
+  Combined   :  is one we are going to understand the concept of multi-stage docker builds and the second thing
+
+[00:00:49]
+  Transcript :  that we are going to cover is distro less images okay so there is a very close relation between both of them that means by using distro less images you can improve the efficiency or you know you can get maximum benefit of multi docker builds now many people must have heard about this
+  OCR        : None
+  Combined   :  that we are going to cover is distro less images okay so there is a very close relation between both of them that means by using distro less images you can improve the efficiency or you know you can get maximum benefit of multi docker builds now many people must have heard about this
+
+[00:01:07]
+  Transcript :  terminology called multi-stage docker builds but you might not have heard about distroless images
+  OCR        : None
+  Combined   :  terminology called multi-stage docker builds but you might not have heard about distroless images
+
+[00:01:13]
+  Transcript :  so don't worry we will try to cover both of them practically as well as theoretically so watch the
+  OCR        : None
+  Combined   :  so don't worry we will try to cover both of them practically as well as theoretically so watch the
+
+[00:01:19]
+  Transcript :  video till the end so that you get all the useful information and like always I put all of this
+  OCR        : None
+  Combined   :  video till the end so that you get all the useful information and like always I put all of this
+
+[00:01:25]
+  Transcript :  content into the github repository as well so you can get the details of github repository so that
+  OCR        : None
+  Combined   :  content into the github repository as well so you can get the details of github repository so that
+
+[00:01:30]
+  Transcript :  you can try these things practically at your end now firstly we should understand what is the concept
+  OCR        : None
+  Combined   :  you can try these things practically at your end now firstly we should understand what is the concept
+
+[00:01:37]
+  Transcript :  of multi-stage docker builds so before that let's try to see what is the usual process okay that we
+  OCR        : None
+  Combined   :  of multi-stage docker builds so before that let's try to see what is the usual process okay that we
+
+[00:01:44]
+  Transcript :  follow to write a let's take an example to write a calculator application.
+  OCR        : None
+  Combined   :  follow to write a let's take an example to write a calculator application.
+
+[00:01:48]
+  Transcript :  Okay, so your task is to like execute a calculator application
+  OCR        : None
+  Combined   :  Okay, so your task is to like execute a calculator application
+
+[00:01:54]
+  Transcript :  as a docker container.
+  OCR        : None
+  Combined   :  as a docker container.
+
+[00:01:55]
+  Transcript :  Okay, so assume this is a python application.
+  OCR        : None
+  Combined   :  Okay, so assume this is a python application.
+
+[00:01:58]
+  Transcript :  Now. What will be your steps?
+  OCR        : None
+  Combined   :  Now. What will be your steps?
+
+[00:02:00]
+  Transcript :  So the steps would be to start with firstly I will use a base image. Let me use Ubuntu in this case. Okay and after that what I will do is if require I will set the work directory. If not required I will skip it. And after that I will install the dependencies like in this case firstly I have to start with installing the Python.
+  OCR        : None
+  Combined   :  So the steps would be to start with firstly I will use a base image. Let me use Ubuntu in this case. Okay and after that what I will do is if require I will set the work directory. If not required I will skip it. And after that I will install the dependencies like in this case firstly I have to start with installing the Python.
+
+[00:02:22]
+  Transcript :  so i'll say run apt and install python then i will install probably pip then i'll install
+  OCR        : None
+  Combined   :  so i'll say run apt and install python then i will install probably pip then i'll install
+
+[00:02:29]
+  Transcript :  let's say if it is a slightly advanced calculator and require some python modules or python packages
+  OCR        : None
+  Combined   :  let's say if it is a slightly advanced calculator and require some python modules or python packages
+
+[00:02:36]
+  Transcript :  so i'll install one two three python packages that are required and then finally what i'll do is once
+  OCR        : None
+  Combined   :  so i'll install one two three python packages that are required and then finally what i'll do is once
+
+[00:02:42]
+  Transcript :  this binary is built okay and i'll try to build this egg file or whatever is pyc file or something
+  OCR        : None
+  Combined   :  this binary is built okay and i'll try to build this egg file or whatever is pyc file or something
+
+[00:02:50]
+  Transcript :  and then I'll execute that.
+  OCR        : None
+  Combined   :  and then I'll execute that.
+
+[00:02:51]
+  Transcript :  Okay. So as part of the CMD.
+  OCR        : None
+  Combined   :  Okay. So as part of the CMD.
+
+[00:02:55]
+  Transcript :  So this will be a steps on a very high level right Slash app for example So this will be the steps on a very high level Now while this is a very good docker file that you have written
+  OCR        : None
+  Combined   :  So this will be a steps on a very high level right Slash app for example So this will be the steps on a very high level Now while this is a very good docker file that you have written
+
+[00:03:05]
+  Transcript :  Okay.
+  OCR        : None
+  Combined   :  Okay.
+
+[00:03:05]
+  Transcript :  So there is a problem with this docker file that you have to understand.
+  OCR        : None
+  Combined   :  So there is a problem with this docker file that you have to understand.
+
+[00:03:09]
+  Transcript :  Okay.
+  OCR        : None
+  Combined   :  Okay.
+
+[00:03:09]
+  Transcript :  To start with if you are a beginner then yes you have written a very good docker file.
+  OCR        : None
+  Combined   :  To start with if you are a beginner then yes you have written a very good docker file.
+
+[00:03:13]
+  Transcript :  But the problem is that even for this basic calculator application or it can be a complicated
+  OCR        : None
+  Combined   :  But the problem is that even for this basic calculator application or it can be a complicated
+
+[00:03:19]
+  Transcript :  application as well that your organization is using.
+  OCR        : None
+  Combined   :  application as well that your organization is using.
+
+[00:03:21]
+  Transcript :  you only require python runtime to execute this application right because it's a python application
+  OCR        : None
+  Combined   :  you only require python runtime to execute this application right because it's a python application
+
+[00:03:29]
+  Transcript :  you will require a python runtime to run this application if it was a java application you
+  OCR        : None
+  Combined   :  you will require a python runtime to run this application if it was a java application you
+
+[00:03:33]
+  Transcript :  would only require java runtime but if you look at the docker image that you have created it has
+  OCR        : None
+  Combined   :  would only require java runtime but if you look at the docker image that you have created it has
+
+[00:03:39]
+  Transcript :  100 other things it has a ubuntu base image like this ubuntu base image will come with a lot of
+  OCR        : None
+  Combined   :  100 other things it has a ubuntu base image like this ubuntu base image will come with a lot of
+
+[00:03:45]
+  Transcript :  ubuntu system dependencies and you know it will come with apt packages it will come with apt
+  OCR        : None
+  Combined   :  ubuntu system dependencies and you know it will come with apt packages it will come with apt
+
+[00:03:50]
+  Transcript :  repositories right so it has a lot of
+  OCR        : None
+  Combined   :  repositories right so it has a lot of
+
+[00:03:54]
+  Transcript :  overload on your simple docker image that you want as output end of the day
+  OCR        : None
+  Combined   :  overload on your simple docker image that you want as output end of the day
+
+[00:04:00]
+  Transcript :  You just want to run this calculator application.
+  OCR        : None
+  Combined   :  You just want to run this calculator application.
+
+[00:04:02]
+  Transcript :  And that calculator application only requires Python runtime.
+  OCR        : None
+  Combined   :  And that calculator application only requires Python runtime.
+
+[00:04:05]
+  Transcript :  Not even the applications that you have installed as part of these stages.
+  OCR        : None
+  Combined   :  Not even the applications that you have installed as part of these stages.
+
+[00:04:09]
+  Transcript :  These are only required to build your application.
+  OCR        : None
+  Combined   :  These are only required to build your application.
+
+[00:04:12]
+  Transcript :  So these are two different stages.
+  OCR        : None
+  Combined   :  So these are two different stages.
+
+[00:04:14]
+  Transcript :  Build is different.
+  OCR        : None
+  Combined   :  Build is different.
+
+[00:04:15]
+  Transcript :  Running your application is required.
+  OCR        : None
+  Combined   :  Running your application is required.
+
+[00:04:17]
+  Transcript :  To build your application.
+  OCR        : None
+  Combined   :  To build your application.
+
+[00:04:18]
+  Transcript :  Let's say you are building a Java application.
+  OCR        : None
+  Combined   :  Let's say you are building a Java application.
+
+[00:04:20]
+  Transcript :  So to build your Java application.
+  OCR        : None
+  Combined   :  So to build your Java application.
+
+[00:04:21]
+  Transcript :  You might want 100 of Java libraries that you want to put in your pom.xml.
+  OCR        : None
+  Combined   :  You might want 100 of Java libraries that you want to put in your pom.xml.
+
+[00:04:28]
+  Transcript :  or you know you might require a lot of jar files while building your java application
+  OCR        : None
+  Combined   :  or you know you might require a lot of jar files while building your java application
+
+[00:04:32]
+  Transcript :  but to execute your java application what you will require you only require jre java runtime plus your
+  OCR        : None
+  Combined   :  but to execute your java application what you will require you only require jre java runtime plus your
+
+[00:04:38]
+  Transcript :  java binary it can be a jar file war file or er file so those are the only things that you'll
+  OCR        : None
+  Combined   :  java binary it can be a jar file war file or er file so those are the only things that you'll
+
+[00:04:44]
+  Transcript :  require right so why you need a base image that is a ubuntu base image that is coming with a lot
+  OCR        : None
+  Combined   :  require right so why you need a base image that is a ubuntu base image that is coming with a lot
+
+[00:04:51]
+  Transcript :  of overload but you might you might say that oh okay i require a ubuntu base image because You know I want to install all of this Python dependencies and it is very easy to install them using Ubuntu probably I can also use CentOS or any other thing
+  OCR        : None
+  Combined   :  of overload but you might you might say that oh okay i require a ubuntu base image because You know I want to install all of this Python dependencies and it is very easy to install them using Ubuntu probably I can also use CentOS or any other thing
+
+[00:05:06]
+  Transcript :  so for this problem to solve this problem what Docker said is oh okay let me introduce a new
+  OCR        : None
+  Combined   :  so for this problem to solve this problem what Docker said is oh okay let me introduce a new
+
+[00:05:13]
+  Transcript :  concept and this concept is called as multi-stage builds now what you will do as part of multi-stage
+  OCR        : None
+  Combined   :  concept and this concept is called as multi-stage builds now what you will do as part of multi-stage
+
+[00:05:19]
+  Transcript :  builds is you will split your you will split your docker file okay into two parts now this can be
+  OCR        : None
+  Combined   :  builds is you will split your you will split your docker file okay into two parts now this can be
+
+[00:05:31]
+  Transcript :  multiple parts but if we go back to our example i'll start with two parts then i'll explain you
+  OCR        : None
+  Combined   :  multiple parts but if we go back to our example i'll start with two parts then i'll explain you
+
+[00:05:36]
+  Transcript :  how it can be multiple parts as well but for first reference let us start with just two parts
+  OCR        : None
+  Combined   :  how it can be multiple parts as well but for first reference let us start with just two parts
+
+[00:05:40]
+  Transcript :  So in the first part, what I'll do is I'll do the same thing from Ubuntu.
+  OCR        : None
+  Combined   :  So in the first part, what I'll do is I'll do the same thing from Ubuntu.
+
+[00:05:47]
+  Transcript :  Okay.
+  OCR        : None
+  Combined   :  Okay.
+
+[00:05:48]
+  Transcript :  Then I'll use the run command to install all of the dependency packages.
+  OCR        : None
+  Combined   :  Then I'll use the run command to install all of the dependency packages.
+
+[00:05:53]
+  Transcript :  Let's say one, two, three, four, five.
+  OCR        : None
+  Combined   :  Let's say one, two, three, four, five.
+
+[00:05:55]
+  Transcript :  Okay.
+  OCR        : None
+  Combined   :  Okay.
+
+[00:05:55]
+  Transcript :  Then what I'll do is I will execute this as CMD.
+  OCR        : None
+  Combined   :  Then what I'll do is I will execute this as CMD.
+
+[00:05:59]
+  Transcript :  Okay.
+  OCR        : None
+  Combined   :  Okay.
+
+[00:06:00]
+  Transcript :  This was the initial process.
+  OCR        : None
+  Combined   :  This was the initial process.
+
+[00:06:01]
+  Transcript :  But here what I will do is in the multi-stage build,
+  OCR        : None
+  Combined   :  But here what I will do is in the multi-stage build,
+
+[00:06:04]
+  Transcript :  I will not have this step.
+  OCR        : None
+  Combined   :  I will not have this step.
+
+[00:06:06]
+  Transcript :  Okay.
+  OCR        : None
+  Combined   :  Okay.
+
+[00:06:07]
+  Transcript :  So instead of executing the command here itself
+  OCR        : None
+  Combined   :  So instead of executing the command here itself
+
+[00:06:10]
+  Transcript :  or instead of executing the entry point here itself,
+  OCR        : None
+  Combined   :  or instead of executing the entry point here itself,
+
+[00:06:12]
+  Transcript :  what I will do is I will take the binary from this Docker image
+  OCR        : None
+  Combined   :  what I will do is I will take the binary from this Docker image
+
+[00:06:17]
+  Transcript :  or from this Docker file into this specific Docker file.
+  OCR        : None
+  Combined   :  or from this Docker file into this specific Docker file.
+
+[00:06:21]
+  Transcript :  So you can consider it as stage 1 and this as stage 2.
+  OCR        : None
+  Combined   :  So you can consider it as stage 1 and this as stage 2.
+
+[00:06:27]
+  Transcript :  So you will write both the stage 1 and stage 2
+  OCR        : None
+  Combined   :  So you will write both the stage 1 and stage 2
+
+[00:06:29]
+  Transcript :  as part of the same docker file okay so this will remain as only one single docker file
+  OCR        : None
+  Combined   :  as part of the same docker file okay so this will remain as only one single docker file
+
+[00:06:34]
+  Transcript :  but what you will do is you will have two from statements so here you will say from ubuntu and
+  OCR        : None
+  Combined   :  but what you will do is you will have two from statements so here you will say from ubuntu and
+
+[00:06:41]
+  Transcript :  here basically i will choose a very minimal image okay so it can be an image that has just python
+  OCR        : None
+  Combined   :  here basically i will choose a very minimal image okay so it can be an image that has just python
+
+[00:06:48]
+  Transcript :  runtime okay or it can be an image that has just java runtime okay so you will find these images I will show you how to find these images or here you can also choose a distro image So distro image I will talk in next 2 minutes
+  OCR        : None
+  Combined   :  runtime okay or it can be an image that has just java runtime okay so you will find these images I will show you how to find these images or here you can also choose a distro image So distro image I will talk in next 2 minutes
+
+[00:07:06]
+  Transcript :  But before that you understand that here you are using a from Ubuntu image.
+  OCR        : None
+  Combined   :  But before that you understand that here you are using a from Ubuntu image.
+
+[00:07:11]
+  Transcript :  Because it is very easy to install packages.
+  OCR        : None
+  Combined   :  Because it is very easy to install packages.
+
+[00:07:14]
+  Transcript :  Or it is very easy to get all the dependencies that are required for building your application on the Ubuntu image.
+  OCR        : None
+  Combined   :  Or it is very easy to get all the dependencies that are required for building your application on the Ubuntu image.
+
+[00:07:21]
+  Transcript :  For example Ubuntu image by default has curl.
+  OCR        : None
+  Combined   :  For example Ubuntu image by default has curl.
+
+[00:07:23]
+  Transcript :  Ubuntu image by default has wget.
+  OCR        : None
+  Combined   :  Ubuntu image by default has wget.
+
+[00:07:25]
+  Transcript :  Ubuntu image by default has a lot of things that are required for building your applications.
+  OCR        : None
+  Combined   :  Ubuntu image by default has a lot of things that are required for building your applications.
+
+[00:07:32]
+  Transcript :  But this python runtime or this java runtime they are specifically python images.
+  OCR        : None
+  Combined   :  But this python runtime or this java runtime they are specifically python images.
+
+[00:07:37]
+  Transcript :  They might not have curl.
+  OCR        : None
+  Combined   :  They might not have curl.
+
+[00:07:38]
+  Transcript :  So you don't have to install curl because curl was only required during your build process.
+  OCR        : None
+  Combined   :  So you don't have to install curl because curl was only required during your build process.
+
+[00:07:43]
+  Transcript :  Because you are executing during your execution stage you don't require curl because you only have to run.
+  OCR        : None
+  Combined   :  Because you are executing during your execution stage you don't require curl because you only have to run.
+
+[00:07:50]
+  Transcript :  So this specific stage 2 will only have from the Python runtime environment
+  OCR        : None
+  Combined   :  So this specific stage 2 will only have from the Python runtime environment
+
+[00:07:56]
+  Transcript :  that is Python runtime base image plus you will copy
+  OCR        : None
+  Combined   :  that is Python runtime base image plus you will copy
+
+[00:08:00]
+  Transcript :  copy the artifact binary from this step to here what you will do is simply you will use the same
+  OCR        : None
+  Combined   :  copy the artifact binary from this step to here what you will do is simply you will use the same
+
+[00:08:04]
+  Transcript :  copy command but you will say hyphen hyphen from and you will say here you will mention enter
+  OCR        : None
+  Combined   :  copy command but you will say hyphen hyphen from and you will say here you will mention enter
+
+[00:08:10]
+  Transcript :  from ubuntu as build for example you can create an alias from build okay this has again a syntax
+  OCR        : None
+  Combined   :  from ubuntu as build for example you can create an alias from build okay this has again a syntax
+
+[00:08:18]
+  Transcript :  I'll show you but here from sorry copy from your base image and then you will have the image from
+  OCR        : None
+  Combined   :  I'll show you but here from sorry copy from your base image and then you will have the image from
+
+[00:08:26]
+  Transcript :  stage 1 to stage 2 here you can simply say cmd slash app so here you will not have entry point
+  OCR        : None
+  Combined   :  stage 1 to stage 2 here you can simply say cmd slash app so here you will not have entry point
+
+[00:08:34]
+  Transcript :  or cmd but in the final stage you will have the entry point or cmd so what is the advantage with
+  OCR        : None
+  Combined   :  or cmd but in the final stage you will have the entry point or cmd so what is the advantage with
+
+[00:08:40]
+  Transcript :  this is you have reduced your image size significantly all this content will not be in
+  OCR        : None
+  Combined   :  this is you have reduced your image size significantly all this content will not be in
+
+[00:08:45]
+  Transcript :  your final image okay so this will be only part of your build image and this will be your final
+  OCR        : None
+  Combined   :  your final image okay so this will be only part of your build image and this will be your final
+
+[00:08:50]
+  Transcript :  image okay so if you look at your final image it will have only python runtime it will have only the binary that you have built in your build state and just the executable now this might look very simple to you but let take another example that will clear cut
+  OCR        : None
+  Combined   :  image okay so if you look at your final image it will have only python runtime it will have only the binary that you have built in your build state and just the executable now this might look very simple to you but let take another example that will clear cut
+
+[00:09:06]
+  Transcript :  explain you what is the fundamental advantage of distro less sorry multi-stage docker builds
+  OCR        : None
+  Combined   :  explain you what is the fundamental advantage of distro less sorry multi-stage docker builds
+
+[00:09:12]
+  Transcript :  so let's take a complicated application that has front end that has back end and that has some db
+  OCR        : None
+  Combined   :  so let's take a complicated application that has front end that has back end and that has some db
+
+[00:09:17]
+  Transcript :  related stuff so in such cases what you will do is you will effectively choose one base image first
+  OCR        : None
+  Combined   :  related stuff so in such cases what you will do is you will effectively choose one base image first
+
+[00:09:23]
+  Transcript :  again from ubuntu and then you will start installing all of the packages that are required
+  OCR        : None
+  Combined   :  again from ubuntu and then you will start installing all of the packages that are required
+
+[00:09:29]
+  Transcript :  for your so this is a three-tier architecture application okay so for this three-tier architecture
+  OCR        : None
+  Combined   :  for your so this is a three-tier architecture application okay so for this three-tier architecture
+
+[00:09:34]
+  Transcript :  application front end is react for example back end is java spring boot and then you have some db
+  OCR        : None
+  Combined   :  application front end is react for example back end is java spring boot and then you have some db
+
+[00:09:41]
+  Transcript :  related things for example mysql okay so in this docker image you have to install all of these
+  OCR        : None
+  Combined   :  related things for example mysql okay so in this docker image you have to install all of these
+
+[00:09:47]
+  Transcript :  things firstly you will choose ubuntu base image now why can't you directly choose a java runtime
+  OCR        : None
+  Combined   :  things firstly you will choose ubuntu base image now why can't you directly choose a java runtime
+
+[00:09:52]
+  Transcript :  here itself anyone can answer this one you cannot choose java runtime directly here itself because
+  OCR        : None
+  Combined   :  here itself anyone can answer this one you cannot choose java runtime directly here itself because
+
+[00:10:00]
+  Transcript :  If you directly choose Java runtime base image, Java runtime image as a base image or open JDK as base image.
+  OCR        : None
+  Combined   :  If you directly choose Java runtime base image, Java runtime image as a base image or open JDK as base image.
+
+[00:10:06]
+  Transcript :  Okay, or Python as your base image.
+  OCR        : None
+  Combined   :  Okay, or Python as your base image.
+
+[00:10:08]
+  Transcript :  The problem would be you have to install hell lot of things.
+  OCR        : None
+  Combined   :  The problem would be you have to install hell lot of things.
+
+[00:10:11]
+  Transcript :  Okay, your Docker image will become very very complicated.
+  OCR        : None
+  Combined   :  Okay, your Docker image will become very very complicated.
+
+[00:10:14]
+  Transcript :  And that was the steps people or DevOps engineer used to do three years, four years ago.
+  OCR        : None
+  Combined   :  And that was the steps people or DevOps engineer used to do three years, four years ago.
+
+[00:10:18]
+  Transcript :  But with the advancement of this multistage Docker build, what you are simply doing is base image.
+  OCR        : None
+  Combined   :  But with the advancement of this multistage Docker build, what you are simply doing is base image.
+
+[00:10:24]
+  Transcript :  You choose a very rich base image.
+  OCR        : None
+  Combined   :  You choose a very rich base image.
+
+[00:10:27]
+  Transcript :  What do I mean by very rich base image?
+  OCR        : None
+  Combined   :  What do I mean by very rich base image?
+
+[00:10:29]
+  Transcript :  A base image that has all the dependencies.
+  OCR        : None
+  Combined   :  A base image that has all the dependencies.
+
+[00:10:31]
+  Transcript :  Okay.
+  OCR        : None
+  Combined   :  Okay.
+
+[00:10:32]
+  Transcript :  You are not even worried if this base image is 1 GB or 2 GB.
+  OCR        : None
+  Combined   :  You are not even worried if this base image is 1 GB or 2 GB.
+
+[00:10:35]
+  Transcript :  Okay.
+  OCR        : None
+  Combined   :  Okay.
+
+[00:10:36]
+  Transcript :  The reason for that is base image will be removed.
+  OCR        : None
+  Combined   :  The reason for that is base image will be removed.
+
+[00:10:39]
+  Transcript :  And finally, the Docker image that you are creating will only have the last stage.
+  OCR        : None
+  Combined   :  And finally, the Docker image that you are creating will only have the last stage.
+
+[00:10:43]
+  Transcript :  That is the final stage.
+  OCR        : None
+  Combined   :  That is the final stage.
+
+[00:10:45]
+  Transcript :  Okay.
+  OCR        : None
+  Combined   :  Okay.
+
+[00:10:46]
+  Transcript :  So to go back to the example, let's say if you are not using this multi-stage Docker
+  OCR        : None
+  Combined   :  So to go back to the example, let's say if you are not using this multi-stage Docker
+
+[00:10:50]
+  Transcript :  build concept.
+  OCR        : None
+  Combined   :  build concept.
+
+[00:10:51]
+  Transcript :  Okay.
+  OCR        : None
+  Combined   :  Okay.
+
+[00:10:51]
+  Transcript :  For example if you are not using this concept what you have to do is firstly you will start with from Ubuntu then you will install all the dependencies regarding Java You will install all the dependencies regarding React You will install all the dependencies requiring MySQL
+  OCR        : None
+  Combined   :  For example if you are not using this concept what you have to do is firstly you will start with from Ubuntu then you will install all the dependencies regarding Java You will install all the dependencies regarding React You will install all the dependencies requiring MySQL
+
+[00:11:07]
+  Transcript :  Then you will build your Java application.
+  OCR        : None
+  Combined   :  Then you will build your Java application.
+
+[00:11:10]
+  Transcript :  Okay.
+  OCR        : None
+  Combined   :  Okay.
+
+[00:11:10]
+  Transcript :  Then probably you build your front end.
+  OCR        : None
+  Combined   :  Then probably you build your front end.
+
+[00:11:14]
+  Transcript :  And as part of your entry point,
+  OCR        : None
+  Combined   :  And as part of your entry point,
+
+[00:11:17]
+  Transcript :  you will execute a combined application.
+  OCR        : None
+  Combined   :  you will execute a combined application.
+
+[00:11:20]
+  Transcript :  Right.
+  OCR        : None
+  Combined   :  Right.
+
+[00:11:21]
+  Transcript :  So it can be a ER file.
+  OCR        : None
+  Combined   :  So it can be a ER file.
+
+[00:11:23]
+  Transcript :  for example slash app dot ear so this will be your output that you are execute the problem here
+  OCR        : None
+  Combined   :  for example slash app dot ear so this will be your output that you are execute the problem here
+
+[00:11:29]
+  Transcript :  would be this docker image will go crazy so it can even go up to 1.5 gb or 1 gb size okay so why
+  OCR        : None
+  Combined   :  would be this docker image will go crazy so it can even go up to 1.5 gb or 1 gb size okay so why
+
+[00:11:40]
+  Transcript :  did it go to 1 gb because you haven't used the concept of multi-stage docker build and this
+  OCR        : None
+  Combined   :  did it go to 1 gb because you haven't used the concept of multi-stage docker build and this
+
+[00:11:45]
+  Transcript :  so it will be in this steps right so the first thing when you download the base image that is
+  OCR        : None
+  Combined   :  so it will be in this steps right so the first thing when you download the base image that is
+
+[00:11:51]
+  Transcript :  Ubuntu probably it can be 400 MB.
+  OCR        : None
+  Combined   :  Ubuntu probably it can be 400 MB.
+
+[00:11:54]
+  Transcript :  Okay on top of that you have installed Java.
+  OCR        : None
+  Combined   :  Okay on top of that you have installed Java.
+
+[00:11:57]
+  Transcript :  So it can be some 50 MB on top of it.
+  OCR        : None
+  Combined   :  So it can be some 50 MB on top of it.
+
+[00:12:00]
+  Transcript :  you have installed the react related things again.
+  OCR        : None
+  Combined   :  you have installed the react related things again.
+
+[00:12:02]
+  Transcript :  It can be some 100 MB on top of it.
+  OCR        : None
+  Combined   :  It can be some 100 MB on top of it.
+
+[00:12:04]
+  Transcript :  You install my SQL then again it can be 100 MB.
+  OCR        : None
+  Combined   :  You install my SQL then again it can be 100 MB.
+
+[00:12:06]
+  Transcript :  So you have piled up all of these things on your base image
+  OCR        : None
+  Combined   :  So you have piled up all of these things on your base image
+
+[00:12:09]
+  Transcript :  because of which it went to 1 GB.
+  OCR        : None
+  Combined   :  because of which it went to 1 GB.
+
+[00:12:10]
+  Transcript :  So using this multi-stage Docker build concept,
+  OCR        : None
+  Combined   :  So using this multi-stage Docker build concept,
+
+[00:12:13]
+  Transcript :  you can avoid this problem because in the final stage
+  OCR        : None
+  Combined   :  you can avoid this problem because in the final stage
+
+[00:12:16]
+  Transcript :  what I'll only do is I'll say because the final image
+  OCR        : None
+  Combined   :  what I'll only do is I'll say because the final image
+
+[00:12:20]
+  Transcript :  is just a Java runtime environment.
+  OCR        : None
+  Combined   :  is just a Java runtime environment.
+
+[00:12:21]
+  Transcript :  I'll say from
+  OCR        : None
+  Combined   :  I'll say from
+
+[00:12:26]
+  Transcript :  open JDK
+  OCR        : None
+  Combined   :  open JDK
+
+[00:12:27]
+  Transcript :  yeah from open JDK colon 11 or 12 or latest whatever you want to use the version of the image.
+  OCR        : None
+  Combined   :  yeah from open JDK colon 11 or 12 or latest whatever you want to use the version of the image.
+
+[00:12:34]
+  Transcript :  So from open JDK just copy the hyphen hyphen from the base image from here we can say ubuntu as build.
+  OCR        : None
+  Combined   :  So from open JDK just copy the hyphen hyphen from the base image from here we can say ubuntu as build.
+
+[00:12:46]
+  Transcript :  Okay. So from ubuntu as build you will create an alias for it. So here you will say from build
+  OCR        : None
+  Combined   :  Okay. So from ubuntu as build you will create an alias for it. So here you will say from build
+
+[00:12:53]
+  Transcript :  you will copy this specific er file and finally as part of the entry point or CMD what you will do is you will just execute this specific app so what will be the final image size if this open JDK is 100 MB
+  OCR        : None
+  Combined   :  you will copy this specific er file and finally as part of the entry point or CMD what you will do is you will just execute this specific app so what will be the final image size if this open JDK is 100 MB
+
+[00:13:09]
+  Transcript :  and this binary because this is just a binary it should it should not be more than some 50 MB or
+  OCR        : None
+  Combined   :  and this binary because this is just a binary it should it should not be more than some 50 MB or
+
+[00:13:15]
+  Transcript :  something again this will depending upon your size application size but hardly it will be some 50 MB
+  OCR        : None
+  Combined   :  something again this will depending upon your size application size but hardly it will be some 50 MB
+
+[00:13:21]
+  Transcript :  So your final image size will only be 150 MB.
+  OCR        : None
+  Combined   :  So your final image size will only be 150 MB.
+
+[00:13:25]
+  Transcript :  So you have reduced from 1 GB to 150 MB.
+  OCR        : None
+  Combined   :  So you have reduced from 1 GB to 150 MB.
+
+[00:13:28]
+  Transcript :  This is the advantage of multi-stage Docker build.
+  OCR        : None
+  Combined   :  This is the advantage of multi-stage Docker build.
+
+[00:13:31]
+  Transcript :  Now this can be of multiple steps as well.
+  OCR        : None
+  Combined   :  Now this can be of multiple steps as well.
+
+[00:13:33]
+  Transcript :  So here I just took example of one stage.
+  OCR        : None
+  Combined   :  So here I just took example of one stage.
+
+[00:13:36]
+  Transcript :  But you can increase the stages depending upon your application.
+  OCR        : None
+  Combined   :  But you can increase the stages depending upon your application.
+
+[00:13:38]
+  Transcript :  So in some scenarios, for some people, this Docker multi-stage build,
+  OCR        : None
+  Combined   :  So in some scenarios, for some people, this Docker multi-stage build,
+
+[00:13:43]
+  Transcript :  I'll show you practical example as well.
+  OCR        : None
+  Combined   :  I'll show you practical example as well.
+
+[00:13:44]
+  Transcript :  Don't worry.
+  OCR        : None
+  Combined   :  Don't worry.
+
+[00:13:45]
+  Transcript :  But here it can be of two to three stages.
+  OCR        : None
+  Combined   :  But here it can be of two to three stages.
+
+[00:13:47]
+  Transcript :  So in the first stage, you might only focus on building your front end.
+  OCR        : None
+  Combined   :  So in the first stage, you might only focus on building your front end.
+
+[00:13:51]
+  Transcript :  Second stage you might only focus on building your back end.
+  OCR        : None
+  Combined   :  Second stage you might only focus on building your back end.
+
+[00:13:57]
+  Transcript :  And in the final stage what you will do.
+  OCR        : None
+  Combined   :  And in the final stage what you will do.
+
+[00:14:00]
+  Transcript :  is you will only get the dependencies from front end stage, back end stage and as part of your CMD
+  OCR        : None
+  Combined   :  is you will only get the dependencies from front end stage, back end stage and as part of your CMD
+
+[00:14:07]
+  Transcript :  you will just execute it. So if somebody asks you what are the number of stages that can be in a
+  OCR        : None
+  Combined   :  you will just execute it. So if somebody asks you what are the number of stages that can be in a
+
+[00:14:14]
+  Transcript :  multi-stage docker build the answer is countless. So you can create n number of stages but there
+  OCR        : None
+  Combined   :  multi-stage docker build the answer is countless. So you can create n number of stages but there
+
+[00:14:21]
+  Transcript :  will be only one final stage which will be a minimalistic image. So it has to be a minimalistic
+  OCR        : None
+  Combined   :  will be only one final stage which will be a minimalistic image. So it has to be a minimalistic
+
+[00:14:29]
+  Transcript :  image because by choosing a minimalistic image you will get the advantage of your docker multi-stage
+  OCR        : None
+  Combined   :  image because by choosing a minimalistic image you will get the advantage of your docker multi-stage
+
+[00:14:36]
+  Transcript :  build so here i'll introduce you to distro less images okay so now we have set the ground very
+  OCR        : None
+  Combined   :  build so here i'll introduce you to distro less images okay so now we have set the ground very
+
+[00:14:45]
+  Transcript :  well for you to understand what is a distro less docker image many people find this very complicated
+  OCR        : None
+  Combined   :  well for you to understand what is a distro less docker image many people find this very complicated
+
+[00:14:51]
+  Transcript :  topic i don even understand why people find it difficult because i looked into some google groups Google forums the ones that have subscribed to or the cnc of slack channels people ask a lot of questions on digital images but this concept
+  OCR        : None
+  Combined   :  topic i don even understand why people find it difficult because i looked into some google groups Google forums the ones that have subscribed to or the cnc of slack channels people ask a lot of questions on digital images but this concept
+
+[00:15:06]
+  Transcript :  of digital images is very very simple okay so don't get confused digital image is basically a
+  OCR        : None
+  Combined   :  of digital images is very very simple okay so don't get confused digital image is basically a
+
+[00:15:13]
+  Transcript :  very minimalistic image okay so it is a very minimalistic image
+  OCR        : None
+  Combined   :  very minimalistic image okay so it is a very minimalistic image
+
+[00:15:17]
+  Transcript :  that will hardly have any packages. Okay. So for example, like I told you, if you choose a
+  OCR        : None
+  Combined   :  that will hardly have any packages. Okay. So for example, like I told you, if you choose a
+
+[00:15:25]
+  Transcript :  Python distroless image, now where will you get this distroless images? Don't worry. I'll show
+  OCR        : None
+  Combined   :  Python distroless image, now where will you get this distroless images? Don't worry. I'll show
+
+[00:15:31]
+  Transcript :  you that as well. So if you want to choose a Python distroless image, so this Python distroless
+  OCR        : None
+  Combined   :  you that as well. So if you want to choose a Python distroless image, so this Python distroless
+
+[00:15:36]
+  Transcript :  image will only have Python runtime. Like in the previous example, I explained you, I will choose a
+  OCR        : None
+  Combined   :  image will only have Python runtime. Like in the previous example, I explained you, I will choose a
+
+[00:15:44]
+  Transcript :  Open JDK digital-less image.
+  OCR        : None
+  Combined   :  Open JDK digital-less image.
+
+[00:15:48]
+  Transcript :  Like I told you this will be only 100 MB
+  OCR        : React | 1GB,2GB | Base mage | MaSar, | FROM ubuntU ap Build. | T00MB | Java | 56M3 | React | MNIL | FoonDocker | Jawa | 1.56 | Front | Entrypoint las.co | FRoM opendk: 1I | LOOMB | Final | copy -Prtom boild. | 810g7 | V5oMB | Entrypoint as.can | 50MB
+  Combined   :  Like I told you this will be only 100 MB React | 1GB,2GB | Base mage | MaSar, | FROM ubuntU ap Build. | T00MB | Java | 56M3 | React | MNIL | FoonDocker | Jawa | 1.56 | Front | Entrypoint las.co | FRoM opendk: 1I | LOOMB | Final | copy -Prtom boild. | 810g7 | V5oMB | Entrypoint as.can | 50MB
+
+[00:15:48]
+  Transcript :  because it only has Open JDK.
+  OCR        : None
+  Combined   :  because it only has Open JDK.
+
+[00:15:50]
+  Transcript :  Okay.
+  OCR        : None
+  Combined   :  Okay.
+
+[00:15:51]
+  Transcript :  Now there will be another kind of
+  OCR        : None
+  Combined   :  Now there will be another kind of
+
+[00:15:54]
+  Transcript :  digital-less images that will not even have Python runtime.
+  OCR        : Distroleer | Google groups | Python | 3hon Runlime Mini talistic
+  Combined   :  digital-less images that will not even have Python runtime. Distroleer | Google groups | Python | 3hon Runlime Mini talistic
+
+[00:15:56]
+  Transcript :  For example, if you take example of a Golang application.
+  OCR        : None
+  Combined   :  For example, if you take example of a Golang application.
+
+[00:15:59]
+  Transcript :  Golang application.
+  OCR        : None
+  Combined   :  Golang application.
+
+[00:16:00]
+  Transcript :  application is a statically typed application okay so these statically typed applications
+  OCR        : None
+  Combined   :  application is a statically typed application okay so these statically typed applications
+
+[00:16:06]
+  Transcript :  they don't even require runtimes okay so you don't require a go runtime for executing go
+  OCR        : None
+  Combined   :  they don't even require runtimes okay so you don't require a go runtime for executing go
+
+[00:16:12]
+  Transcript :  application okay so because of which you will reduce your docker image to typically like you
+  OCR        : None
+  Combined   :  application okay so because of which you will reduce your docker image to typically like you
+
+[00:16:19]
+  Transcript :  know some 10 mb or 15 mb size okay and this will be our practical as well so the practical example
+  OCR        : None
+  Combined   :  know some 10 mb or 15 mb size okay and this will be our practical as well so the practical example
+
+[00:16:27]
+  Transcript :  that I'm going to show you that is intentionally on Golanguage because I want to show you I want
+  OCR        : None
+  Combined   :  that I'm going to show you that is intentionally on Golanguage because I want to show you I want
+
+[00:16:33]
+  Transcript :  to show you the advantage of distroless images plus multi-stage docker build okay so what is a
+  OCR        : None
+  Combined   :  to show you the advantage of distroless images plus multi-stage docker build okay so what is a
+
+[00:16:40]
+  Transcript :  distroless image a distroless image is a very minimalistic or lightweight docker image that
+  OCR        : None
+  Combined   :  distroless image a distroless image is a very minimalistic or lightweight docker image that
+
+[00:16:46]
+  Transcript :  will have only the runtime environments okay so if you are choosing a distroless image called as
+  OCR        : None
+  Combined   :  will have only the runtime environments okay so if you are choosing a distroless image called as
+
+[00:16:52]
+  Transcript :  python distroless image okay this python distroless image even if you try to perform some basic shell commands like for example i telling you if you try to use a shell command called find you will get error
+  OCR        : None
+  Combined   :  python distroless image okay this python distroless image even if you try to perform some basic shell commands like for example i telling you if you try to use a shell command called find you will get error
+
+[00:17:05]
+  Transcript :  saying that find executable is not found you will try to use some basic shell command like
+  OCR        : None
+  Combined   :  saying that find executable is not found you will try to use some basic shell command like
+
+[00:17:10]
+  Transcript :  or wget or even in some cases you will not be able to perform commands like ls because the main idea
+  OCR        : None
+  Combined   :  or wget or even in some cases you will not be able to perform commands like ls because the main idea
+
+[00:17:17]
+  Transcript :  is to just have a runtime environment or just to have your final docker build that only has a python
+  OCR        : None
+  Combined   :  is to just have a runtime environment or just to have your final docker build that only has a python
+
+[00:17:23]
+  Transcript :  on runtime and the only purpose of this environment is to just execute the slash app or you know
+  OCR        : None
+  Combined   :  on runtime and the only purpose of this environment is to just execute the slash app or you know
+
+[00:17:28]
+  Transcript :  python application so one biggest advantage that you would get from distroless images
+  OCR        : None
+  Combined   :  python application so one biggest advantage that you would get from distroless images
+
+[00:17:33]
+  Transcript :  is the security okay so other than reducing your container image size you will have highest
+  OCR        : None
+  Combined   :  is the security okay so other than reducing your container image size you will have highest
+
+[00:17:44]
+  Transcript :  security with distroless images so this is something that you can answer in your interview
+  OCR        : None
+  Combined   :  security with distroless images so this is something that you can answer in your interview
+
+[00:17:48]
+  Transcript :  you as well when someone asks you what are what is one of the
+  OCR        : None
+  Combined   :  you as well when someone asks you what are what is one of the
+
+[00:17:52]
+  Transcript :  production issue that you faced with Docker containers and
+  OCR        : None
+  Combined   :  production issue that you faced with Docker containers and
+
+[00:17:55]
+  Transcript :  how did you solve it.
+  OCR        : None
+  Combined   :  how did you solve it.
+
+[00:17:56]
+  Transcript :  You can say that previously we were using Ubuntu base images
+  OCR        : None
+  Combined   :  You can say that previously we were using Ubuntu base images
+
+[00:18:00]
+  Transcript :  or previously we were using even in the final stage we were using ubuntu images or python
+  OCR        : None
+  Combined   :  or previously we were using even in the final stage we were using ubuntu images or python
+
+[00:18:05]
+  Transcript :  runtime or any other runtime images which were exposed to some kind of vulnerabilities by hackers
+  OCR        : None
+  Combined   :  runtime or any other runtime images which were exposed to some kind of vulnerabilities by hackers
+
+[00:18:10]
+  Transcript :  or you know people usually find some kind of issues with this images so we moved to distroless
+  OCR        : None
+  Combined   :  or you know people usually find some kind of issues with this images so we moved to distroless
+
+[00:18:16]
+  Transcript :  images if you are using a python application for example in your organization you can say we moved
+  OCR        : None
+  Combined   :  images if you are using a python application for example in your organization you can say we moved
+
+[00:18:20]
+  Transcript :  to a python distroless image which only had python runtime and because of which like it even did not
+  OCR        : None
+  Combined   :  to a python distroless image which only had python runtime and because of which like it even did not
+
+[00:18:26]
+  Transcript :  not have some basic packages like find ls wget curl. So it was providing us highest level of
+  OCR        : None
+  Combined   :  not have some basic packages like find ls wget curl. So it was providing us highest level of
+
+[00:18:34]
+  Transcript :  security and we after implementing digital images we are safe to say that our applications are not
+  OCR        : None
+  Combined   :  security and we after implementing digital images we are safe to say that our applications are not
+
+[00:18:40]
+  Transcript :  exposed to any OS or operating system related vulnerabilities. Okay and let's say you are using
+  OCR        : None
+  Combined   :  exposed to any OS or operating system related vulnerabilities. Okay and let's say you are using
+
+[00:18:47]
+  Transcript :  applications like go language then you have even highest level of advantage using digital images
+  OCR        : None
+  Combined   :  applications like go language then you have even highest level of advantage using digital images
+
+[00:18:51]
+  Transcript :  because you don't even need a runtime.
+  OCR        : None
+  Combined   :  because you don't even need a runtime.
+
+[00:18:54]
+  Transcript :  So this digitalized images are like you know you can literally say they are 99 of of times not exposed to vulnerabilities okay if you are using applications like google language if you are using applications like python at least they have python runtime so there is a very little chance
+  OCR        : None
+  Combined   :  So this digitalized images are like you know you can literally say they are 99 of of times not exposed to vulnerabilities okay if you are using applications like google language if you are using applications like python at least they have python runtime so there is a very little chance
+
+[00:19:09]
+  Transcript :  okay little means like you know very very little chance of exposing to security threats now i hope
+  OCR        : None
+  Combined   :  okay little means like you know very very little chance of exposing to security threats now i hope
+
+[00:19:15]
+  Transcript :  you understood the concept of this digitalized images and whatever i was talking now what i will
+  OCR        : None
+  Combined   :  you understood the concept of this digitalized images and whatever i was talking now what i will
+
+[00:19:20]
+  Transcript :  do is I will first show you the example that we are going to discuss today. Okay. So like I always
+  OCR        : None
+  Combined   :  do is I will first show you the example that we are going to discuss today. Okay. So like I always
+
+[00:19:28]
+  Transcript :  do. So this is my GitHub repository. This is my GitHub organization. Let me increase the font
+  OCR        : None
+  Combined   :  do. So this is my GitHub repository. This is my GitHub organization. Let me increase the font
+
+[00:19:35]
+  Transcript :  and I have a repository called Docker zero to hero, right? So you can go to this repository,
+  OCR        : None
+  Combined   :  and I have a repository called Docker zero to hero, right? So you can go to this repository,
+
+[00:19:40]
+  Transcript :  all the Docker classes. We are trying to learn using the same repository and in the future
+  OCR        : None
+  Combined   :  all the Docker classes. We are trying to learn using the same repository and in the future
+
+[00:19:45]
+  Transcript :  classes also where I'll talk about networking. I'll talk about volumes. I have already prepared
+  OCR        : None
+  Combined   :  classes also where I'll talk about networking. I'll talk about volumes. I have already prepared
+
+[00:19:49]
+  Transcript :  the content and it is ready.
+  OCR        : None
+  Combined   :  the content and it is ready.
+
+[00:19:50]
+  Transcript :  So if you go to examples folder here,
+  OCR        : None
+  Combined   :  So if you go to examples folder here,
+
+[00:19:52]
+  Transcript :  you have something called as
+  OCR        : None
+  Combined   :  you have something called as
+
+[00:19:53]
+  Transcript :  Golang multi-stage docker build.
+  OCR        : None
+  Combined   :  Golang multi-stage docker build.
+
+[00:19:55]
+  Transcript :  So why did I choose Golang explicitly?
+  OCR        : None
+  Combined   :  So why did I choose Golang explicitly?
+
+[00:19:58]
+  Transcript :  Like I told you, you can
+  OCR        : None
+  Combined   :  Like I told you, you can
+
+[00:20:00]
+  Transcript :  They stand the biggest advantage of multistage docker builds with programming languages or the applications like Golang.
+  OCR        : None
+  Combined   :  They stand the biggest advantage of multistage docker builds with programming languages or the applications like Golang.
+
+[00:20:06]
+  Transcript :  Because they are statically typed and they don't even require the Golang runtime.
+  OCR        : None
+  Combined   :  Because they are statically typed and they don't even require the Golang runtime.
+
+[00:20:10]
+  Transcript :  So you can replace the same application like you can write a Python calculator application.
+  OCR        : None
+  Combined   :  So you can replace the same application like you can write a Python calculator application.
+
+[00:20:15]
+  Transcript :  You can try and even you will find the advantage of distroless images.
+  OCR        : None
+  Combined   :  You can try and even you will find the advantage of distroless images.
+
+[00:20:18]
+  Transcript :  Don't worry.
+  OCR        : None
+  Combined   :  Don't worry.
+
+[00:20:18]
+  Transcript :  Oh, sorry.
+  OCR        : None
+  Combined   :  Oh, sorry.
+
+[00:20:19]
+  Transcript :  I was not sharing my screen.
+  OCR        : None
+  Combined   :  I was not sharing my screen.
+
+[00:20:21]
+  Transcript :  So let me stop sharing here and show you the screen.
+  OCR        : None
+  Combined   :  So let me stop sharing here and show you the screen.
+
+[00:20:25]
+  Transcript :  Sorry for that.
+  OCR        : None
+  Combined   :  Sorry for that.
+
+[00:20:26]
+  Transcript :  I can stop sharing here.
+  OCR        : None
+  Combined   :  I can stop sharing here.
+
+[00:20:36]
+  Transcript :  just give me a moment stop share and let me share this one where is this
+  OCR        : Abhishek Veeramalla
+  Combined   :  just give me a moment stop share and let me share this one where is this Abhishek Veeramalla
+
+[00:20:54]
+  Transcript :  yep so share yeah so if I go back I was just explaining about this repository here that is Docker zero to hero so you can go to my github organization and you can find this repository called docker zero to hero and in
+  OCR        : main | Docker-Zero-to-Hero examples  golang-multi-stage-docker-build | Go to file | Add file | iam-veeramalla multi stage docker build | ee4f763 36 minutes ago | History | dockerfile-without-multistage | multi stage docker build | 36 minutes ago | Dockerfile | multi stage docker build | 36 minutes ago | README.md | multi stage docker build | 36 minutes ago | calculator.go | multi stage docker build | 36 minutes ago | README.md | Multi Stage Docker Build | The main purpose of choosing a golang based applciation to demostrate this example is golang is a statically-typed | programming language that does not require a runtime in the traditional sense. Unlike dynamically-typed languages like Python,
+  Combined   :  yep so share yeah so if I go back I was just explaining about this repository here that is Docker zero to hero so you can go to my github organization and you can find this repository called docker zero to hero and in main | Docker-Zero-to-Hero examples  golang-multi-stage-docker-build | Go to file | Add file | iam-veeramalla multi stage docker build | ee4f763 36 minutes ago | History | dockerfile-without-multistage | multi stage docker build | 36 minutes ago | Dockerfile | multi stage docker build | 36 minutes ago | README.md | multi stage docker build | 36 minutes ago | calculator.go | multi stage docker build | 36 minutes ago | README.md | Multi Stage Docker Build | The main purpose of choosing a golang based applciation to demostrate this example is golang is a statically-typed | programming language that does not require a runtime in the traditional sense. Unlike dynamically-typed languages like Python,
+
+[00:21:02]
+  Transcript :  yep so share yeah so if I go back I was just explaining about this repository here that is Docker zero to hero so you can go to my github organization and you can find this repository called docker zero to hero and in
+  OCR        : Search or jump to... | Pull requests Issues Codespaces Marketplace Explore | iam-veeramallaDocker-Zero-to-Hero Public | Unwatch2 | Fork 46 | Starred 16 | Code | Issues | Pull requests | Actions | Projects | Wiki | Security | Insights | Settings | main | Docker-Zero-to-Hero examples  golang-multi-stage-docker-build | Go to file | Add file | iam-veeramalla multi stage docker build | Be4f763 36 minutes ago | History | dockerfile-without-multistage | multi stage docker build | 36 minutes ago | Dockerfile | multi stage docker build | 36 minutes ago | README.md | multi stage docker build | 36 minutes ago | calculator.go | multi stage docker build | 36 minutes ago
+  Combined   :  yep so share yeah so if I go back I was just explaining about this repository here that is Docker zero to hero so you can go to my github organization and you can find this repository called docker zero to hero and in Search or jump to... | Pull requests Issues Codespaces Marketplace Explore | iam-veeramallaDocker-Zero-to-Hero Public | Unwatch2 | Fork 46 | Starred 16 | Code | Issues | Pull requests | Actions | Projects | Wiki | Security | Insights | Settings | main | Docker-Zero-to-Hero examples  golang-multi-stage-docker-build | Go to file | Add file | iam-veeramalla multi stage docker build | Be4f763 36 minutes ago | History | dockerfile-without-multistage | multi stage docker build | 36 minutes ago | Dockerfile | multi stage docker build | 36 minutes ago | README.md | multi stage docker build | 36 minutes ago | calculator.go | multi stage docker build | 36 minutes ago
+
+[00:21:08]
+  Transcript :  this repository i have a folder called example where i am going to explain or demonstrate the
+  OCR        : iam-veeramallaDocker-Zero-to-Hero | Public | Unwatch 2 | Fork 46 | Starred 16 | Code | Issues | 1Pull requests | Actions | Projects | m Wiki | Security | Insights | Settings | main | Docker-Zero-to-Hero examplesgolang-multi-stage-docker-build | Go to file | Add file | iam-veeramalla multi stage docker build | e4f763 36 minutes ago | History | dockerfile-without-multistage | multi stage docker build | 36 minutes ago | Dockerfile | multi stage docker build | 36 minutes ago | README.md | multi stage docker build | 36 minutes ago | calculator.go | multi stage docker build | 36 minutes ago | README.md
+  Combined   :  this repository i have a folder called example where i am going to explain or demonstrate the iam-veeramallaDocker-Zero-to-Hero | Public | Unwatch 2 | Fork 46 | Starred 16 | Code | Issues | 1Pull requests | Actions | Projects | m Wiki | Security | Insights | Settings | main | Docker-Zero-to-Hero examplesgolang-multi-stage-docker-build | Go to file | Add file | iam-veeramalla multi stage docker build | e4f763 36 minutes ago | History | dockerfile-without-multistage | multi stage docker build | 36 minutes ago | Dockerfile | multi stage docker build | 36 minutes ago | README.md | multi stage docker build | 36 minutes ago | calculator.go | multi stage docker build | 36 minutes ago | README.md
+
+[00:21:10]
+  Transcript :  this repository i have a folder called example where i am going to explain or demonstrate the
+  OCR        : Unwatch 2 | Fork 46 | Starred 16 | Code | Issues | 1 Pull requests | Actions | Projects | B Wiki | Security | Insights | Settings | main | Docker-Zero-to-Hero  examples  golang-multi-stage-docker-build | Go to file | Add file | iam-veeramalla multi stage docker build | ee4f763 36 minutes ago | History | dockerfile-without-multistage | multi stage docker build | 36 minutes ago | Dockerfile | multi stage docker build | 36 minutes ago | README.md | multi stage docker build | 36 minutes ago | calculator.go | multi stage docker build | 36 minutes ago | README.md | Multi Stage Docker Build
+  Combined   :  this repository i have a folder called example where i am going to explain or demonstrate the Unwatch 2 | Fork 46 | Starred 16 | Code | Issues | 1 Pull requests | Actions | Projects | B Wiki | Security | Insights | Settings | main | Docker-Zero-to-Hero  examples  golang-multi-stage-docker-build | Go to file | Add file | iam-veeramalla multi stage docker build | ee4f763 36 minutes ago | History | dockerfile-without-multistage | multi stage docker build | 36 minutes ago | Dockerfile | multi stage docker build | 36 minutes ago | README.md | multi stage docker build | 36 minutes ago | calculator.go | multi stage docker build | 36 minutes ago | README.md | Multi Stage Docker Build
+
+[00:21:12]
+  Transcript :  this repository i have a folder called example where i am going to explain or demonstrate the
+  OCR        : Code | Issues | I Pull requests | Actions | Projects | Wiki | Security | Insights | Settings | main | Docker-Zero-to-Hero examples  golang-multi-stage-docker-build | Go to file | Add file | iam-veeramalla multi stage docker build | e4f763 36 minutes ago | History | dockerfile-without-multistage | multi stage docker build | 36 minutes ago | Dockerfile | multi stage docker build | 36 minutes ago | README.md | multi stage docker build | 36 minutes ago | calculator.go | multi stage docker build | 36 minutes ago | README.md | Multi Stage Docker Build
+  Combined   :  this repository i have a folder called example where i am going to explain or demonstrate the Code | Issues | I Pull requests | Actions | Projects | Wiki | Security | Insights | Settings | main | Docker-Zero-to-Hero examples  golang-multi-stage-docker-build | Go to file | Add file | iam-veeramalla multi stage docker build | e4f763 36 minutes ago | History | dockerfile-without-multistage | multi stage docker build | 36 minutes ago | Dockerfile | multi stage docker build | 36 minutes ago | README.md | multi stage docker build | 36 minutes ago | calculator.go | multi stage docker build | 36 minutes ago | README.md | Multi Stage Docker Build
+
+[00:21:18]
+  Transcript :  multi-stage docker build using golang multi-stage docker build okay so reason why i choose golang
+  OCR        : PrOURCLE | main | Docker-Zero-to-Hero examples golang-multi-stage-docker-build | Go to file | Add file | iam-veeramalla multi stage docker build | 0e4f763 36 minutes ago | History | dockerfile-without-multistage | multi stage docker build | 36 minutes ago | Dockerfile | multi stage docker build | 36 minutes ago | README.md | multi stage docker build | 36 minutes ago | calculator.go | multi stage docker build | 36 minutes ago | README.md | Multi Stage Docker Build | The main purpose of choosing a golang based applciation to demostrate this example is golang is a statically-typed | programming language that does not require a runtime in the traditional sense. Unlike dynamically-typed languages like Python,
+  Combined   :  multi-stage docker build using golang multi-stage docker build okay so reason why i choose golang PrOURCLE | main | Docker-Zero-to-Hero examples golang-multi-stage-docker-build | Go to file | Add file | iam-veeramalla multi stage docker build | 0e4f763 36 minutes ago | History | dockerfile-without-multistage | multi stage docker build | 36 minutes ago | Dockerfile | multi stage docker build | 36 minutes ago | README.md | multi stage docker build | 36 minutes ago | calculator.go | multi stage docker build | 36 minutes ago | README.md | Multi Stage Docker Build | The main purpose of choosing a golang based applciation to demostrate this example is golang is a statically-typed | programming language that does not require a runtime in the traditional sense. Unlike dynamically-typed languages like Python,
+
+[00:21:22]
+  Transcript :  is i already explained you i was sharing the wrong window but i hope you understood the concept that
+  OCR        : main | Docker-Zero-to-Hero  examples  golang-multi-stage-docker-build | Go to file | Add file- | iam-veeramalla multi stage docker build | e4f763 36 minutes ago | History | dockerfile-without-multistage | multi stage docker build | 36 minutes ago | Dockerfile | multi stage docker build | 36 minutes ago | README.md | multi stage docker build | 36 minutes ago | calculator.go | multi stage docker build | 36 minutes ago | README.md | Multi Stage Docker Build | The main purpose of choosing a golang based applciation to demostrate this example is golang is a statically-typed | programming language that does not require a runtime in the traditional sense. Unlike dynamically-typed languages like Python | Ruby, and JavaScript, which rely on a runtime environment to execute their code, Go compiles directly to machine code, which | can then be executed directly by the operating system.
+  Combined   :  is i already explained you i was sharing the wrong window but i hope you understood the concept that main | Docker-Zero-to-Hero  examples  golang-multi-stage-docker-build | Go to file | Add file- | iam-veeramalla multi stage docker build | e4f763 36 minutes ago | History | dockerfile-without-multistage | multi stage docker build | 36 minutes ago | Dockerfile | multi stage docker build | 36 minutes ago | README.md | multi stage docker build | 36 minutes ago | calculator.go | multi stage docker build | 36 minutes ago | README.md | Multi Stage Docker Build | The main purpose of choosing a golang based applciation to demostrate this example is golang is a statically-typed | programming language that does not require a runtime in the traditional sense. Unlike dynamically-typed languages like Python | Ruby, and JavaScript, which rely on a runtime environment to execute their code, Go compiles directly to machine code, which | can then be executed directly by the operating system.
+
+[00:21:24]
+  Transcript :  by explaining so let me clone this repository i already cloned this repository to be honest and
+  OCR        : None
+  Combined   :  by explaining so let me clone this repository i already cloned this repository to be honest and
+
+[00:21:30]
+  Transcript :  now i will execute this docker file i'll show what is this calculator application
+  OCR        : None
+  Combined   :  now i will execute this docker file i'll show what is this calculator application
+
+[00:21:35]
+  Transcript :  and let us see the difference by using a multi-stage docker build and by not using
+  OCR        : None
+  Combined   :  and let us see the difference by using a multi-stage docker build and by not using
+
+[00:21:44]
+  Transcript :  multi-stage docker build okay so that it will be clearly evident and you will see a
+  OCR        : Docker-Zero-to-Hero git:main
+  Combined   :  multi-stage docker build okay so that it will be clearly evident and you will see a Docker-Zero-to-Hero git:main
+
+[00:21:44]
+  Transcript :  drastic sorry drastic advantage of 100 times less image okay so the size of image that i'm going to
+  OCR        : None
+  Combined   :  drastic sorry drastic advantage of 100 times less image okay so the size of image that i'm going to
+
+[00:21:51]
+  Transcript :  show you will go by 100 times by using the concept of multi-stage Docker build.
+  OCR        : None
+  Combined   :  show you will go by 100 times by using the concept of multi-stage Docker build.
+
+[00:21:57]
+  Transcript :  Yeah, so we are all excited.
+  OCR        : None
+  Combined   :  Yeah, so we are all excited.
+
+[00:22:02]
+  Transcript :  us go to examples folder let us go to golang multistage docker build ls and now this is the
+  OCR        : Docker-Zero-to-Hero git:main ls | README,md | commands,md | examples | networking.md volumes.md | Docker-Zero-to-Hero git:maincd examples | examples git:main | first-docker-file | golang-multi-stage-docker-build python-web-app | examples git:maincd
+  Combined   :  us go to examples folder let us go to golang multistage docker build ls and now this is the Docker-Zero-to-Hero git:main ls | README,md | commands,md | examples | networking.md volumes.md | Docker-Zero-to-Hero git:maincd examples | examples git:main | first-docker-file | golang-multi-stage-docker-build python-web-app | examples git:maincd
+
+[00:22:06]
+  Transcript :  us go to examples folder let us go to golang multistage docker build ls and now this is the
+  OCR        : golang-multi-stage-docker-build git:main | README.md | Dockerfile | calculator.go | golang-multi-stage-docker-build git:main | dockerfile-without-multistage
+  Combined   :  us go to examples folder let us go to golang multistage docker build ls and now this is the golang-multi-stage-docker-build git:main | README.md | Dockerfile | calculator.go | golang-multi-stage-docker-build git:main | dockerfile-without-multistage
+
+[00:22:08]
+  Transcript :  calculator application oh sorry yeah so this is the calculator function that i am going to run
+  OCR        : main | Docker-Zero-to-Heroexamplesgolang-multi-stage-docker-build | Go to file | Add file - | iam-veeramalla multi stage docker build | e4f763 37 minutes ago | History | dockerfile-without-multistage | multi stage docker build | 37 minutes ago | Dockerfile | multi stage docker build | 37 minutes ago | README.md | multi stage docker build | 37 minutes ago | calculator.go | multi stage docker build | 37 minutes ago | README.md | Multi Stage Docker Build | The main purpose of choosing a golang based applciation to demostrate this example is golang is a statically-typed | programming language that does not require a runtime in the traditional sense. Unlike dynamically-typed languages like Python,
+  Combined   :  calculator application oh sorry yeah so this is the calculator function that i am going to run main | Docker-Zero-to-Heroexamplesgolang-multi-stage-docker-build | Go to file | Add file - | iam-veeramalla multi stage docker build | e4f763 37 minutes ago | History | dockerfile-without-multistage | multi stage docker build | 37 minutes ago | Dockerfile | multi stage docker build | 37 minutes ago | README.md | multi stage docker build | 37 minutes ago | calculator.go | multi stage docker build | 37 minutes ago | README.md | Multi Stage Docker Build | The main purpose of choosing a golang based applciation to demostrate this example is golang is a statically-typed | programming language that does not require a runtime in the traditional sense. Unlike dynamically-typed languages like Python,
+
+[00:22:10]
+  Transcript :  calculator application oh sorry yeah so this is the calculator function that i am going to run
+  OCR        : golang-multi-stage-docker-build git:main | Dockerfile | README.md | calculator.go | dockerfile-without-multistage | golang-multi-stage-docker-build git:main
+  Combined   :  calculator application oh sorry yeah so this is the calculator function that i am going to run golang-multi-stage-docker-build git:main | Dockerfile | README.md | calculator.go | dockerfile-without-multistage | golang-multi-stage-docker-build git:main
+
+[00:22:11]
+  Transcript :  simply you can do uh go run calculator.go and you will see what i am going to show you so this is a
+  OCR        : None
+  Combined   :  simply you can do uh go run calculator.go and you will see what i am going to show you so this is a
+
+[00:22:18]
+  Transcript :  very basic application which says provide the inputs for the calculation like if i say 2 into
+  OCR        : golang-multi-stage-docker-build git:mainls | Dockerfile | README,md | calculator.go | dockerfile-without-multistoge | golang-multi-stage-docker-build git:maingo run calculator.go | Hi Abhishek.Veeramalla, I am a calculator app | Enter any calculation Example: 1  2 or 2  5 - Please maintain spaces as shown in example:
+  Combined   :  very basic application which says provide the inputs for the calculation like if i say 2 into golang-multi-stage-docker-build git:mainls | Dockerfile | README,md | calculator.go | dockerfile-without-multistoge | golang-multi-stage-docker-build git:maingo run calculator.go | Hi Abhishek.Veeramalla, I am a calculator app | Enter any calculation Example: 1  2 or 2  5 - Please maintain spaces as shown in example:
+
+[00:22:22]
+  Transcript :  two times of 100 so it will give me 200 like if i say uh 5 divided by 2 so it will give me the
+  OCR        : None
+  Combined   :  two times of 100 so it will give me 200 like if i say uh 5 divided by 2 so it will give me the
+
+[00:22:32]
+  Transcript :  output okay so this is the calculator function that i'm going to show you now we will containerize
+  OCR        : golang-multi-stage-docker-build git:main
+  Combined   :  output okay so this is the calculator function that i'm going to show you now we will containerize golang-multi-stage-docker-build git:main
+
+[00:22:34]
+  Transcript :  output okay so this is the calculator function that i'm going to show you now we will containerize
+  OCR        : golang-multi-stage-docker-build git:main ls | Dockerfile | README.md | calculator.go | dockerfile-without-multistage | golang-multi-stage-docker-build git:main
+  Combined   :  output okay so this is the calculator function that i'm going to show you now we will containerize golang-multi-stage-docker-build git:main ls | Dockerfile | README.md | calculator.go | dockerfile-without-multistage | golang-multi-stage-docker-build git:main
+
+[00:22:35]
+  Transcript :  this and you know what we will do is we will execute the container so let us firstly start
+  OCR        : None
+  Combined   :  this and you know what we will do is we will execute the container so let us firstly start
+
+[00:22:41]
+  Transcript :  with docker file without multi-stage okay so go to this folder that says docker file without
+  OCR        : None
+  Combined   :  with docker file without multi-stage okay so go to this folder that says docker file without
+
+[00:22:50]
+  Transcript :  multi-stage and it will have something called as a docker file so what are the steps i just have a
+  OCR        : BASEIMAGE | FROM ubuntu AS build | RUN apt-get update  apt-get install -y golang-go | ENV G0111MODULEoff | COPY . | RUN CGoENABLED0 go build -o app | ENTRYPOINT app | lockerfile-without-multistageDockerfile 16L, 2668
+  Combined   :  multi-stage and it will have something called as a docker file so what are the steps i just have a BASEIMAGE | FROM ubuntu AS build | RUN apt-get update  apt-get install -y golang-go | ENV G0111MODULEoff | COPY . | RUN CGoENABLED0 go build -o app | ENTRYPOINT app | lockerfile-without-multistageDockerfile 16L, 2668
+
+[00:22:51]
+  Transcript :  the base image that is from Ubuntu.
+  OCR        : None
+  Combined   :  the base image that is from Ubuntu.
+
+[00:22:53]
+  Transcript :  I call this as build.
+  OCR        : None
+  Combined   :  I call this as build.
+
+[00:22:54]
+  Transcript :  You can ignore just for keeping in sync with the multistage build I just created an alias but from ubuntu what i did is i installed go language and then i enabled this go modules as off don worry about
+  OCR        : None
+  Combined   :  You can ignore just for keeping in sync with the multistage build I just created an alias but from ubuntu what i did is i installed go language and then i enabled this go modules as off don worry about
+
+[00:23:08]
+  Transcript :  it then i copied the source code that is calculator.go into this specific thing and finally i'm
+  OCR        : None
+  Combined   :  it then i copied the source code that is calculator.go into this specific thing and finally i'm
+
+[00:23:14]
+  Transcript :  running the go build and building the binary and i'm executing the binary as part of the entry point
+  OCR        : None
+  Combined   :  running the go build and building the binary and i'm executing the binary as part of the entry point
+
+[00:23:24]
+  Transcript :  okay so if you are not familiar with go language don't worry your steps will be replaced here
+  OCR        : BASE IMAGE | FROM ubuntu AS build | RUN apt-get update  apt-get install -y golang-go | ENV G0111MODULEoff | COPY . | RUN CGoENABLED0 go build -o app | ENTRYPOINT app
+  Combined   :  okay so if you are not familiar with go language don't worry your steps will be replaced here BASE IMAGE | FROM ubuntu AS build | RUN apt-get update  apt-get install -y golang-go | ENV G0111MODULEoff | COPY . | RUN CGoENABLED0 go build -o app | ENTRYPOINT app
+
+[00:23:24]
+  Transcript :  so if you are a python application this copy command will be the same the calculator.go or
+  OCR        : None
+  Combined   :  so if you are a python application this copy command will be the same the calculator.go or
+
+[00:23:29]
+  Transcript :  you can also use the django application that i explained in the previous class
+  OCR        : None
+  Combined   :  you can also use the django application that i explained in the previous class
+
+[00:23:36]
+  Transcript :  this will be the same this will be removed you only have to modify this specific command okay
+  OCR        : BASE IMAGE | FROM ubuntu AS build | RUN apt-get update  apt-get install -y golang-go | GO111MODULEof | COPY | RUN CGoENABLED0 go build -o app | ENTRYPOINT app | dockerfile-without-multistageDockerfile 16L, 2668
+  Combined   :  this will be the same this will be removed you only have to modify this specific command okay BASE IMAGE | FROM ubuntu AS build | RUN apt-get update  apt-get install -y golang-go | GO111MODULEof | COPY | RUN CGoENABLED0 go build -o app | ENTRYPOINT app | dockerfile-without-multistageDockerfile 16L, 2668
+
+[00:23:38]
+  Transcript :  this will be the same this will be removed you only have to modify this specific command okay
+  OCR        : BASE IMAGE | FROM ubuntu AS build | RUN apt-get update  apt-get install -y golang-go | ENV G0111MODULE0ff | COPY | RUN CGOENABLED-0 go build -o app | ENTRYPOINT app
+  Combined   :  this will be the same this will be removed you only have to modify this specific command okay BASE IMAGE | FROM ubuntu AS build | RUN apt-get update  apt-get install -y golang-go | ENV G0111MODULE0ff | COPY | RUN CGOENABLED-0 go build -o app | ENTRYPOINT app
+
+[00:23:40]
+  Transcript :  or you can directly put your .py in your entry point itself but i will recommend you to create
+  OCR        : BASE IMAGE | FROM ubuntu AS build | RUN apt-get update  apt-get install -y golang-go | ENV G0111MODULEoff | COPY. | RUN CGoENABLED0 go build -o app | ENTRYPOINT | Iapp | dockerfile-without-multistageDockerfile 16L, 2668
+  Combined   :  or you can directly put your .py in your entry point itself but i will recommend you to create BASE IMAGE | FROM ubuntu AS build | RUN apt-get update  apt-get install -y golang-go | ENV G0111MODULEoff | COPY. | RUN CGoENABLED0 go build -o app | ENTRYPOINT | Iapp | dockerfile-without-multistageDockerfile 16L, 2668
+
+[00:23:43]
+  Transcript :  a .pyc or egg file and execute that egg now what i am doing here is i am copying the source code
+  OCR        : None
+  Combined   :  a .pyc or egg file and execute that egg now what i am doing here is i am copying the source code
+
+[00:23:51]
+  Transcript :  I am executing building the Golang binary and I'm running the go runtime or the go binary but
+  OCR        : None
+  Combined   :  I am executing building the Golang binary and I'm running the go runtime or the go binary but
+
+[00:24:04]
+  Transcript :  As I told you like 15 minutes back to actually run this.
+  OCR        : BASE IMAGE | FROM ubuntu AS build | RUN apt-get update  apt-get install -y golang-go | NV G0111MODULEoff | COPY . | RUN CGoENABLED0 go build -o app | ENTRYPOINT | Vapp
+  Combined   :  As I told you like 15 minutes back to actually run this. BASE IMAGE | FROM ubuntu AS build | RUN apt-get update  apt-get install -y golang-go | NV G0111MODULEoff | COPY . | RUN CGoENABLED0 go build -o app | ENTRYPOINT | Vapp
+
+[00:24:04]
+  Transcript :  I don't require the source code.
+  OCR        : None
+  Combined   :  I don't require the source code.
+
+[00:24:06]
+  Transcript :  I don't require a go language.
+  OCR        : BASE IMAGE | FROM ubuntu AS build | RUN apt-get update  apt-get install -y golang-go | NV G0111MODULEOff | COPY | RUN CGoENABLED0 go build -o app . | ENTRYPOINTapp | dockerfile-without-multistageDockerfile 16L, 2668
+  Combined   :  I don't require a go language. BASE IMAGE | FROM ubuntu AS build | RUN apt-get update  apt-get install -y golang-go | NV G0111MODULEOff | COPY | RUN CGoENABLED0 go build -o app . | ENTRYPOINTapp | dockerfile-without-multistageDockerfile 16L, 2668
+
+[00:24:07]
+  Transcript :  I don't even require the binary.
+  OCR        : None
+  Combined   :  I don't even require the binary.
+
+[00:24:09]
+  Transcript :  Sorry, I require the binary, but I don't require the source code.
+  OCR        : None
+  Combined   :  Sorry, I require the binary, but I don't require the source code.
+
+[00:24:12]
+  Transcript :  I don't require the packages that I have installed.
+  OCR        : None
+  Combined   :  I don't require the packages that I have installed.
+
+[00:24:18]
+  Transcript :  So let us see what will be the image size here.
+  OCR        : golang-multi-stage-docker-build git:main 1s | Dockerfile | README.md | calculator.go | dockerfile-without-multistage | golang-multi-stage-docker-build git:main vim dockerfile-without-multistageDockerfile | golang-multi-stage-docker-build git:main
+  Combined   :  So let us see what will be the image size here. golang-multi-stage-docker-build git:main 1s | Dockerfile | README.md | calculator.go | dockerfile-without-multistage | golang-multi-stage-docker-build git:main vim dockerfile-without-multistageDockerfile | golang-multi-stage-docker-build git:main
+
+[00:24:18]
+  Transcript :  Okay, so let me build this one.
+  OCR        : None
+  Combined   :  Okay, so let me build this one.
+
+[00:24:20]
+  Transcript :  Let me go to this folder and let me build the calculator application.
+  OCR        : None
+  Combined   :  Let me go to this folder and let me build the calculator application.
+
+[00:24:25]
+  Transcript :  So go Docker build minus T.
+  OCR        : None
+  Combined   :  So go Docker build minus T.
+
+[00:24:27]
+  Transcript :  let us provide a tag and let us call this as simple calculator and dot let us see what will
+  OCR        : None
+  Combined   :  let us provide a tag and let us call this as simple calculator and dot let us see what will
+
+[00:24:40]
+  Transcript :  be the image size of it so what it is initially doing it is pulling the ubuntu image then it
+  OCR        : golang-multi-stage-docker-build git:mainls | Dockerfile | README.md | calculator.go | dockerfile-without-multistage | golang-multi-stage-docker-build git:mainvim dockerfile-without-multistageDockerfile | golang-multi-stage-docker-build git:maincd dockerfile-without-multistage | dockerfile-without-multistage git:main | Dockerfile | calculator.go | dockerfile-without-multistage git:maindocker build -t simplecalculator | Building 1.3s 34 | internal load build definition from Dockerfile | 0.0s | m transferring | dockerfile: 3108 | 0.0s | -internal load | .dockerignore | 0.0s | transferring | context: 28 | 0.0s | internal load metadata for docker.iolibraryubuntu:latest | 1.2s | Tauth librorvubuntu:pull token for registry-I.docker.io | 0.0s
+  Combined   :  be the image size of it so what it is initially doing it is pulling the ubuntu image then it golang-multi-stage-docker-build git:mainls | Dockerfile | README.md | calculator.go | dockerfile-without-multistage | golang-multi-stage-docker-build git:mainvim dockerfile-without-multistageDockerfile | golang-multi-stage-docker-build git:maincd dockerfile-without-multistage | dockerfile-without-multistage git:main | Dockerfile | calculator.go | dockerfile-without-multistage git:maindocker build -t simplecalculator | Building 1.3s 34 | internal load build definition from Dockerfile | 0.0s | m transferring | dockerfile: 3108 | 0.0s | -internal load | .dockerignore | 0.0s | transferring | context: 28 | 0.0s | internal load metadata for docker.iolibraryubuntu:latest | 1.2s | Tauth librorvubuntu:pull token for registry-I.docker.io | 0.0s
+
+[00:24:44]
+  Transcript :  be the image size of it so what it is initially doing it is pulling the ubuntu image then it
+  OCR        : golang-multi-stage-docker-build git:main ls | Dockerfile | README.md | calculator.go | dockerfile-without-multistage | golang-multi-stage-docker-build git:mainvim dockerfile-without-multistageDockerfile | golang-multi-stage-docker-build git:maincd dockerfile-without-multistage | dockerfile-without-multistage git:main | Dockerfile | calculator.go | dockerfile-without-multistage git:maindocker build -t simplecalculator | Building 4.7s 1010 FINISHED | internal load build definition from Dockerfile | 0.0s | - - transferring dockerfile: 3108 | 0.0s | internal load | .dockerignore | 0.0s | transferring | context: 28 | 0.0s | internal | load | docker.iolibraryubuntu:lotest | 0.0s | 3.8s | auth libro | yubuntu:pull token for registry-1 | docker,io | FROM | Gock | 256:9c0bdde4188b896a372804be238401Se90e3f84906b750c1a53539b585fbbe7f | 0.0s | Cinternoll | context | 0.0s | -o transferringcontext: 1.75kB | 0.0s | CACHED 24 | RUN apt-get update  apt-get install | -y golang-go | 0.0s | COPY | 0.0s | RUN CGOENABLED0 go build -osapp | 0.65 | - exporting to imoge | 0.1s | w mo exporting | layers | 0.1s | wwritingimoge sha2S6:1989365d926o5872b69d4fao834cf3320c4cfcaf48180afdbb7aad29d9407288 | 0.0s | naming | to docker.iolibrarysimplecalculotor | 0.0s | Use docker scan to run Snyk tests against images to find vulnerabilities and learn how to fix them | dockerfile-without-multistage git:main
+  Combined   :  be the image size of it so what it is initially doing it is pulling the ubuntu image then it golang-multi-stage-docker-build git:main ls | Dockerfile | README.md | calculator.go | dockerfile-without-multistage | golang-multi-stage-docker-build git:mainvim dockerfile-without-multistageDockerfile | golang-multi-stage-docker-build git:maincd dockerfile-without-multistage | dockerfile-without-multistage git:main | Dockerfile | calculator.go | dockerfile-without-multistage git:maindocker build -t simplecalculator | Building 4.7s 1010 FINISHED | internal load build definition from Dockerfile | 0.0s | - - transferring dockerfile: 3108 | 0.0s | internal load | .dockerignore | 0.0s | transferring | context: 28 | 0.0s | internal | load | docker.iolibraryubuntu:lotest | 0.0s | 3.8s | auth libro | yubuntu:pull token for registry-1 | docker,io | FROM | Gock | 256:9c0bdde4188b896a372804be238401Se90e3f84906b750c1a53539b585fbbe7f | 0.0s | Cinternoll | context | 0.0s | -o transferringcontext: 1.75kB | 0.0s | CACHED 24 | RUN apt-get update  apt-get install | -y golang-go | 0.0s | COPY | 0.0s | RUN CGOENABLED0 go build -osapp | 0.65 | - exporting to imoge | 0.1s | w mo exporting | layers | 0.1s | wwritingimoge sha2S6:1989365d926o5872b69d4fao834cf3320c4cfcaf48180afdbb7aad29d9407288 | 0.0s | naming | to docker.iolibrarysimplecalculotor | 0.0s | Use docker scan to run Snyk tests against images to find vulnerabilities and learn how to fix them | dockerfile-without-multistage git:main
+
+[00:24:46]
+  Transcript :  installs all of the things it is done let us see docker images i have a lot of images on this
+  OCR        : golang-multi-stage-docker-build git:main ls | Dockerfile | README.md | calculator.go | dockerfile-without-multistage | golang-multi-stage-docker-build git:main vim dockerfile-without-multistageDockerfile | golang-multi-stage-docker-build git:maincd dockerfile-without-multistage | dockerfile-without-multistage git:main | Dockerfile | dockerfile-without-multistage git:maindocker build -t simplecalculator | calculator.go | Building 4.7s 1010 FINISHED | internal | lood build definition from Dockerfile | 0.0s | - - transferringdockerfile: 310B | 0.0s | internal lood | .dockerignore | 0.0s | transferring | metadata for docker.tolibraryubuntu:latest | context: 28 | 0.0s | Tinternall lood | 3.85 | outh libroryubuntu:pull token for registry-1.docker.io | 0.0s | 14FR0Mdocker.iolibraryubuntusha256:9a0bdde4188b896a372804be238401Se90e3f84906b750c1a53539b585fbbe7f | 0.0s | internal | lood build context | 0.0s | o transferringcontext: 1.75kB | 8.0s | CACHED 24 | RUN apt-get update  apt-get install | -y golang-go | 0.0s | COPY | 0.0s | RUN CGOENABLED0go buiLd-o app | 0.6s | - exporting to image | 0.1s | exporting layers | 0.0s | 0.1s | writingimage sho256:1989365d926o5872b69d4fao834cf3320c4cfcaf48180afdbb7aad29d9407288 | naming | to docker.iolibrarysimplecalculator | 0.0s | Use docker scan to run Snyk tests against images to find vulnerabilities and learn how to fix them | dockerfile-without-multistage git:maind
+  Combined   :  installs all of the things it is done let us see docker images i have a lot of images on this golang-multi-stage-docker-build git:main ls | Dockerfile | README.md | calculator.go | dockerfile-without-multistage | golang-multi-stage-docker-build git:main vim dockerfile-without-multistageDockerfile | golang-multi-stage-docker-build git:maincd dockerfile-without-multistage | dockerfile-without-multistage git:main | Dockerfile | dockerfile-without-multistage git:maindocker build -t simplecalculator | calculator.go | Building 4.7s 1010 FINISHED | internal | lood build definition from Dockerfile | 0.0s | - - transferringdockerfile: 310B | 0.0s | internal lood | .dockerignore | 0.0s | transferring | metadata for docker.tolibraryubuntu:latest | context: 28 | 0.0s | Tinternall lood | 3.85 | outh libroryubuntu:pull token for registry-1.docker.io | 0.0s | 14FR0Mdocker.iolibraryubuntusha256:9a0bdde4188b896a372804be238401Se90e3f84906b750c1a53539b585fbbe7f | 0.0s | internal | lood build context | 0.0s | o transferringcontext: 1.75kB | 8.0s | CACHED 24 | RUN apt-get update  apt-get install | -y golang-go | 0.0s | COPY | 0.0s | RUN CGOENABLED0go buiLd-o app | 0.6s | - exporting to image | 0.1s | exporting layers | 0.0s | 0.1s | writingimage sho256:1989365d926o5872b69d4fao834cf3320c4cfcaf48180afdbb7aad29d9407288 | naming | to docker.iolibrarysimplecalculator | 0.0s | Use docker scan to run Snyk tests against images to find vulnerabilities and learn how to fix them | dockerfile-without-multistage git:maind
+
+[00:24:54]
+  Transcript :  laptop so just i do head minus five so you will see the latest five images that are built So simple calculator What is the size of it 861 MB so do you really think for this basic calculator application do I need this much size of docker image like you can say that oh Abhishek
+  OCR        : golang-multi-stage-docker-build git:main cd dockerfile-without-multistage | dockerfile-without-multistage git:main | calculator.go | Dockerfile | dockerfile-without-multistage git:maindocker build-t simplecalculator | Building 4.7s 1010 FINISHED | Linternal load butid definition from Dockerfile | m transferring | dockerfile: 3108 | 0.0s | internal | lood | dockerignore | 0.0s | o transferring | context: 28 | 0.0s | internal | load metodota for docker.iolibraryubuntu:latest | 3.85 | auth libraryubuntu:pull token for registry-1.docker.io | 0.0s | FROMdocker.iolibraryubuntusha256:9o0bdde4188b896a372804be238401Se90e3f84906b750c1a53539b585fbbe7f | 0.0s | internol | lood build context | 0.8s | transferringcontext: 1.75kB | 0.0s | CACHED 24 RUN apt-get update  apt-get install -y golang-go | 0.0s | COPY | 0.0s | 44RUN CGOENABLED8go build-o app | 0.6s | m exporting to image | 0.1s | exporting layers | 0.1s | --owritingimagesha2S6:1989365d926o5872b69d4fgo834cf3320c4cfcaf48180ofdbb7egd29d9407288 | 0.0s | -- naming to docker.iolibrarysimplecalculator | 0.0s | Use docker scan to run Snyk tests against images to find vulnerabilities and learn how to fix them | dockerfile-without-multistage git:maindocker images I head -5 | REPOSITORY | latest | IMAGE ID | CREATED | SIZE | simplecalculator | 1989365d926a | 10 seconds ago | 861MB | none | none | 77b19b2f0ade | 43 minutes ago | 861MB | none | none | c79355950cb3 | 59 minutes ago | 1.83MB | gcr.iodistrolessjavall-debian11 | latest | 05f7776fa297 | 19 hours ago | 210MB | dockerfile-without-multistage git:main
+  Combined   :  laptop so just i do head minus five so you will see the latest five images that are built So simple calculator What is the size of it 861 MB so do you really think for this basic calculator application do I need this much size of docker image like you can say that oh Abhishek golang-multi-stage-docker-build git:main cd dockerfile-without-multistage | dockerfile-without-multistage git:main | calculator.go | Dockerfile | dockerfile-without-multistage git:maindocker build-t simplecalculator | Building 4.7s 1010 FINISHED | Linternal load butid definition from Dockerfile | m transferring | dockerfile: 3108 | 0.0s | internal | lood | dockerignore | 0.0s | o transferring | context: 28 | 0.0s | internal | load metodota for docker.iolibraryubuntu:latest | 3.85 | auth libraryubuntu:pull token for registry-1.docker.io | 0.0s | FROMdocker.iolibraryubuntusha256:9o0bdde4188b896a372804be238401Se90e3f84906b750c1a53539b585fbbe7f | 0.0s | internol | lood build context | 0.8s | transferringcontext: 1.75kB | 0.0s | CACHED 24 RUN apt-get update  apt-get install -y golang-go | 0.0s | COPY | 0.0s | 44RUN CGOENABLED8go build-o app | 0.6s | m exporting to image | 0.1s | exporting layers | 0.1s | --owritingimagesha2S6:1989365d926o5872b69d4fgo834cf3320c4cfcaf48180ofdbb7egd29d9407288 | 0.0s | -- naming to docker.iolibrarysimplecalculator | 0.0s | Use docker scan to run Snyk tests against images to find vulnerabilities and learn how to fix them | dockerfile-without-multistage git:maindocker images I head -5 | REPOSITORY | latest | IMAGE ID | CREATED | SIZE | simplecalculator | 1989365d926a | 10 seconds ago | 861MB | none | none | 77b19b2f0ade | 43 minutes ago | 861MB | none | none | c79355950cb3 | 59 minutes ago | 1.83MB | gcr.iodistrolessjavall-debian11 | latest | 05f7776fa297 | 19 hours ago | 210MB | dockerfile-without-multistage git:main
+
+[00:25:14]
+  Transcript :  you can reduce the docker image size by simply using like you know instead of using Ubuntu you
+  OCR        : BASE IMAGE | FROM ubuntu AS build | RUN apt-get update  apt-get install -y golang-go | ENV G0111MODULEoff | COPY. | RUN CGoENABLED0 go build -o app | ENTRYPOINT app | Dockerfile 16L, 2668
+  Combined   :  you can reduce the docker image size by simply using like you know instead of using Ubuntu you BASE IMAGE | FROM ubuntu AS build | RUN apt-get update  apt-get install -y golang-go | ENV G0111MODULEoff | COPY. | RUN CGoENABLED0 go build -o app | ENTRYPOINT app | Dockerfile 16L, 2668
+
+[00:25:15]
+  Transcript :  can probably use something called as a UBI image Red Hat provides a UBI image which is lighter UBI
+  OCR        : None
+  Combined   :  can probably use something called as a UBI image Red Hat provides a UBI image which is lighter UBI
+
+[00:25:21]
+  Transcript :  minimal for example okay so this ubi minimal you can say that it is lighter than uber into why don't
+  OCR        : None
+  Combined   :  minimal for example okay so this ubi minimal you can say that it is lighter than uber into why don't
+
+[00:25:26]
+  Transcript :  you use it or you can also say you can simply use golang right not distro less but you can directly
+  OCR        : None
+  Combined   :  you use it or you can also say you can simply use golang right not distro less but you can directly
+
+[00:25:36]
+  Transcript :  use a golang image that go is providing you can do all of those things even after that your image
+  OCR        : dockerfile-without-multistage git:main | Dockerfile | calculator.go | dockerfile-without-multistage git:maindocker build -t simplecalculator | Building 4.7s 1010 FINISHED | build definition | from Dockerfile | transferring | dockerfile: 3108 | internal | lood | .dockerianore | - tronsferrino | context: 2B | 0.0s | internal load | metadato for docker.tolibraryubuntu:latest | 3.8s | outh libroryubuntu:pull token for registry-1.docker.io | 0.0s | 14FR0Mdocker.io1ibraryubuntusha256:9o0bdde4188b896a372804be2384015e90e3f84906b750c1a53539b585fbbe7f | 0.0s | Cinteroel | Lood | build context | 0.0s | transferring context: 1.75k8 | 0.0s | CACHED 24 RUN apt-get update  apt-get instoll -y golong-go | 0.0s | COPY | 0.0s | RUN CGOENABLED-0 | go build -o app | 0.6s | exportind | image | 0.1s | mexporting | layers | 0.1s | writing | sha256:1989365d926o5872b69d4fao834cf3320c4cfcaf48180afdbb7aad29d9407288 | 0.0s | docker.iorlibrarystmplecalculator | 0.0s | Use docker scan to run Snyk tests against images to find vulnerabilities and learn how to fix them | dockerfile-without-multistage git:maindocker images I head -5 | REPOSITORY | IMAGE ID | CREATED | SIZE | simplecalculator | latest | 1989365d926a | 10 seconds ago | 861M8 | none | none | 77b19b2f0ade | 43 minutes ago | 861MB | none | none | c79355950cb3 | 59 minutes ago | 1.83M8 | gcr.iodistrolessjava11-debian11 | latest | 05f7776fa297 | 19 hours ago | 210MB | dockerfile-without-multistage git:mainvim Dockerfile | dockerfile-without-multistage git:main
+  Combined   :  use a golang image that go is providing you can do all of those things even after that your image dockerfile-without-multistage git:main | Dockerfile | calculator.go | dockerfile-without-multistage git:maindocker build -t simplecalculator | Building 4.7s 1010 FINISHED | build definition | from Dockerfile | transferring | dockerfile: 3108 | internal | lood | .dockerianore | - tronsferrino | context: 2B | 0.0s | internal load | metadato for docker.tolibraryubuntu:latest | 3.8s | outh libroryubuntu:pull token for registry-1.docker.io | 0.0s | 14FR0Mdocker.io1ibraryubuntusha256:9o0bdde4188b896a372804be2384015e90e3f84906b750c1a53539b585fbbe7f | 0.0s | Cinteroel | Lood | build context | 0.0s | transferring context: 1.75k8 | 0.0s | CACHED 24 RUN apt-get update  apt-get instoll -y golong-go | 0.0s | COPY | 0.0s | RUN CGOENABLED-0 | go build -o app | 0.6s | exportind | image | 0.1s | mexporting | layers | 0.1s | writing | sha256:1989365d926o5872b69d4fao834cf3320c4cfcaf48180afdbb7aad29d9407288 | 0.0s | docker.iorlibrarystmplecalculator | 0.0s | Use docker scan to run Snyk tests against images to find vulnerabilities and learn how to fix them | dockerfile-without-multistage git:maindocker images I head -5 | REPOSITORY | IMAGE ID | CREATED | SIZE | simplecalculator | latest | 1989365d926a | 10 seconds ago | 861M8 | none | none | 77b19b2f0ade | 43 minutes ago | 861MB | none | none | c79355950cb3 | 59 minutes ago | 1.83M8 | gcr.iodistrolessjava11-debian11 | latest | 05f7776fa297 | 19 hours ago | 210MB | dockerfile-without-multistage git:mainvim Dockerfile | dockerfile-without-multistage git:main
+
+[00:25:36]
+  Transcript :  will not come less than 500 mb or 400 mb or 300 mb now what i am going to show you is the concept
+  OCR        : None
+  Combined   :  will not come less than 500 mb or 400 mb or 300 mb now what i am going to show you is the concept
+
+[00:25:44]
+  Transcript :  of multi-stage build and distro less images by which you will be shocked to see the size of the
+  OCR        : dockerfile-without-multistage git:maincd | golang-multi-stage-docker-build git:main ls
+  Combined   :  of multi-stage build and distro less images by which you will be shocked to see the size of the dockerfile-without-multistage git:maincd | golang-multi-stage-docker-build git:main ls
+
+[00:25:46]
+  Transcript :  of multi-stage build and distro less images by which you will be shocked to see the size of the
+  OCR        : dockerfile-without-multistage git:maincd | golang-multi-stoge-docker-build git:main | Dockerfile | README.md | calculator.go | dockerfile-without-multistage | golang-multi-stage-docker-build git:main
+  Combined   :  of multi-stage build and distro less images by which you will be shocked to see the size of the dockerfile-without-multistage git:maincd | golang-multi-stoge-docker-build git:main | Dockerfile | README.md | calculator.go | dockerfile-without-multistage | golang-multi-stage-docker-build git:main
+
+[00:25:48]
+  Transcript :  the final image that I am going to create.
+  OCR        : None
+  Combined   :  the final image that I am going to create.
+
+[00:25:52]
+  Transcript :  Can anybody guess here?
+  OCR        : None
+  Combined   :  Can anybody guess here?
+
+[00:25:53]
+  Transcript :  Like it will be great if somebody can give a right guess.
+  OCR        : None
+  Combined   :  Like it will be great if somebody can give a right guess.
+
+[00:25:57]
+  Transcript :  What will be like the image that we have built is
+  OCR        : None
+  Combined   :  What will be like the image that we have built is
+
+[00:26:00]
+  Transcript :  161 MB. Now using the concept of multi-stage Docker builds, what will be the size of image
+  OCR        : naming.to docker.iolibrarysimplecalculator | 0.0s | Use docker scan to run Snyk tests against images to find vulnerabilities and learn how to fix them | dockerfile-without-multistage git:main | docker images 1 head -5 | REPOSITORY | IMAGE ID | CREATED | SIZE | simplecalculator | latest | 1989365d926a | 10 seconds ago | 861MB | 861MB | none | none | 77b19b2f0ade | 43 minutes ago | none | none | c79355950cb3 | 59 minutes ago | 1.83MB | gcr.iodistrolessjavall-debian11 | latest | 05f7776fa297 | 19 hours ago | 210MB | dockerfile-without-multistagegit:mainvim Dockerfile | dockerfile-without-multistagegit:mainclear | dockerfile-without-multistage git:maincd .. | golang-multi-stoge-docker-build git:mainls | Dockerfile | READMEmd | calculator.go | dockerfile-without-multistage | golang-multi-stage-docker-build git:mainvim Dockerfile
+  Combined   :  161 MB. Now using the concept of multi-stage Docker builds, what will be the size of image naming.to docker.iolibrarysimplecalculator | 0.0s | Use docker scan to run Snyk tests against images to find vulnerabilities and learn how to fix them | dockerfile-without-multistage git:main | docker images 1 head -5 | REPOSITORY | IMAGE ID | CREATED | SIZE | simplecalculator | latest | 1989365d926a | 10 seconds ago | 861MB | 861MB | none | none | 77b19b2f0ade | 43 minutes ago | none | none | c79355950cb3 | 59 minutes ago | 1.83MB | gcr.iodistrolessjavall-debian11 | latest | 05f7776fa297 | 19 hours ago | 210MB | dockerfile-without-multistagegit:mainvim Dockerfile | dockerfile-without-multistagegit:mainclear | dockerfile-without-multistage git:maincd .. | golang-multi-stoge-docker-build git:mainls | Dockerfile | READMEmd | calculator.go | dockerfile-without-multistage | golang-multi-stage-docker-build git:mainvim Dockerfile
+
+[00:26:04]
+  Transcript :  161 MB. Now using the concept of multi-stage Docker builds, what will be the size of image
+  OCR        : dockerfile-without-multistage git:main cd | golang-multi-stage-docker-build git:main | Dockerfile | README.md | calculator.go | dockerfile-without-multistage | golang-multi-stage-docker-build git:mainvim Dockerfile
+  Combined   :  161 MB. Now using the concept of multi-stage Docker builds, what will be the size of image dockerfile-without-multistage git:main cd | golang-multi-stage-docker-build git:main | Dockerfile | README.md | calculator.go | dockerfile-without-multistage | golang-multi-stage-docker-build git:mainvim Dockerfile
+
+[00:26:10]
+  Transcript :  that we are going to create? Any guesses? Let us see if somebody will guess right in the comment
+  OCR        : BASE IMAGE | FROM ubuntu AS build | RUN apt-get update  apt-get install -y golang-go | ENV G0111MODULEoff | COPY . . | RUN CGoENABLED0 go build -o app . | HERE STARTS THE MAGIC OF MULTI STAGE BUILD | FROM scratch | Copy the compiled binary from the build stage | CoPY --frombuildapp app | Set the entrypoint for the container to run the binary | ENTRYPOINT app | Dockerfile 26L, 550B
+  Combined   :  that we are going to create? Any guesses? Let us see if somebody will guess right in the comment BASE IMAGE | FROM ubuntu AS build | RUN apt-get update  apt-get install -y golang-go | ENV G0111MODULEoff | COPY . . | RUN CGoENABLED0 go build -o app . | HERE STARTS THE MAGIC OF MULTI STAGE BUILD | FROM scratch | Copy the compiled binary from the build stage | CoPY --frombuildapp app | Set the entrypoint for the container to run the binary | ENTRYPOINT app | Dockerfile 26L, 550B
+
+[00:26:18]
+  Transcript :  section. So what I'm doing here, like I told you, I have split this into two stages. One is the base
+  OCR        : none | none | c79355950cb3 | 59 minutes ago | 1.83MB | gcr.iodistrolessjaval1-debian11 | latest | 05f7776fa297 | 19 hours ago | 210MB | dockerfile-without-multistage git:mainvim Dockerfile | dockerfile-without-multistage git:mainclear | BASE IMAGE | FROM ubuntu AS build | RUN apt-get update  apt-get install -y golang-go | ENV G0111MODULEoff | COPY. | RUN CGoENABLED0 go build -o app . | HERE STARTS THE MAGIC OF MULTI STAGE BUILD | FROM scratch | Copy the compiled binary from the build stage | COPY --frombuildappapp | Set the entrypoint for the container to run the binary | ENTRYPOINT app
+  Combined   :  section. So what I'm doing here, like I told you, I have split this into two stages. One is the base none | none | c79355950cb3 | 59 minutes ago | 1.83MB | gcr.iodistrolessjaval1-debian11 | latest | 05f7776fa297 | 19 hours ago | 210MB | dockerfile-without-multistage git:mainvim Dockerfile | dockerfile-without-multistage git:mainclear | BASE IMAGE | FROM ubuntu AS build | RUN apt-get update  apt-get install -y golang-go | ENV G0111MODULEoff | COPY. | RUN CGoENABLED0 go build -o app . | HERE STARTS THE MAGIC OF MULTI STAGE BUILD | FROM scratch | Copy the compiled binary from the build stage | COPY --frombuildappapp | Set the entrypoint for the container to run the binary | ENTRYPOINT app
+
+[00:26:20]
+  Transcript :  image stage and one is here starts the magic of multi-stage build. This is the final stage.
+  OCR        : BASE IMAGE | FROM ubuntu AS build | RUN apt-get update  apt-get install -y golang-go | ENV G0111MODULEoff | COPY . . | RUN CG0ENABLED0 go build -o app . | HERE STARTS THE MAGIC OF MULTI STAGE BUILD | FROM scratch | Copy the compiled binary from the build stage | Copy --frombuild app app | Set the entrypoint for the container to run the binary | ENTRYPOINT app | Dockerfile26L,550B
+  Combined   :  image stage and one is here starts the magic of multi-stage build. This is the final stage. BASE IMAGE | FROM ubuntu AS build | RUN apt-get update  apt-get install -y golang-go | ENV G0111MODULEoff | COPY . . | RUN CG0ENABLED0 go build -o app . | HERE STARTS THE MAGIC OF MULTI STAGE BUILD | FROM scratch | Copy the compiled binary from the build stage | Copy --frombuild app app | Set the entrypoint for the container to run the binary | ENTRYPOINT app | Dockerfile26L,550B
+
+[00:26:26]
+  Transcript :  Okay. So I have split the Docker file into two stages. This is stage one and this is stage two.
+  OCR        : BASE IMAGE | FROM ubuntu AS build | RUN apt-get update  apt-get install -y golang-go | ENV G0111MODULE- | COPY .. | RUN CGoENABLED-0 go build -o app | HERE STARTS THE MAGIC OF MULTI STAGE BUILD | FROM scratch | Copy the compiled binary from the build stage | copY --frombuild app app | Set the entrypoint for the container to run the binary | ENTRYPOINTapp | Dockerfile 26L, 550B
+  Combined   :  Okay. So I have split the Docker file into two stages. This is stage one and this is stage two. BASE IMAGE | FROM ubuntu AS build | RUN apt-get update  apt-get install -y golang-go | ENV G0111MODULE- | COPY .. | RUN CGoENABLED-0 go build -o app | HERE STARTS THE MAGIC OF MULTI STAGE BUILD | FROM scratch | Copy the compiled binary from the build stage | copY --frombuild app app | Set the entrypoint for the container to run the binary | ENTRYPOINTapp | Dockerfile 26L, 550B
+
+[00:26:28]
+  Transcript :  if you clearly see in stage one i don't have entry point or i don't have cmd right so what i have
+  OCR        : None
+  Combined   :  if you clearly see in stage one i don't have entry point or i don't have cmd right so what i have
+
+[00:26:35]
+  Transcript :  done is stage one is only dedicated to the build steps where i've used the ubuntu base image then
+  OCR        : None
+  Combined   :  done is stage one is only dedicated to the build steps where i've used the ubuntu base image then
+
+[00:26:41]
+  Transcript :  i have used uh this one here like i have downloaded the golang then i have copied the source code
+  OCR        : None
+  Combined   :  i have used uh this one here like i have downloaded the golang then i have copied the source code
+
+[00:26:47]
+  Transcript :  finally i created the binary and in the final stage i am using a special image called scratch
+  OCR        : None
+  Combined   :  finally i created the binary and in the final stage i am using a special image called scratch
+
+[00:26:52]
+  Transcript :  So this is minimalistic distro image that we have today Okay So there can be any new things that i not aware of but as far as my knowledge is concerned scratch is the minimalistic distro image that
+  OCR        : None
+  Combined   :  So this is minimalistic distro image that we have today Okay So there can be any new things that i not aware of but as far as my knowledge is concerned scratch is the minimalistic distro image that
+
+[00:27:07]
+  Transcript :  we have till date so that's why to show you the biggest advantage of distro-less images plus
+  OCR        : None
+  Combined   :  we have till date so that's why to show you the biggest advantage of distro-less images plus
+
+[00:27:13]
+  Transcript :  multi-stage docker builds i have used scratch so if you try to use the same thing for your python
+  OCR        : None
+  Combined   :  multi-stage docker builds i have used scratch so if you try to use the same thing for your python
+
+[00:27:18]
+  Transcript :  application it will fail because your python application requires python runtime but go
+  OCR        : None
+  Combined   :  application it will fail because your python application requires python runtime but go
+
+[00:27:23]
+  Transcript :  language applications will not need go runtime so if you decide to use scratch image then what you
+  OCR        : None
+  Combined   :  language applications will not need go runtime so if you decide to use scratch image then what you
+
+[00:27:28]
+  Transcript :  need to do additionally is you have to install python on this scratch image so instead of scratch
+  OCR        : None
+  Combined   :  need to do additionally is you have to install python on this scratch image so instead of scratch
+
+[00:27:32]
+  Transcript :  if you are using python or java applications you can choose python or java distroless images i'll
+  OCR        : None
+  Combined   :  if you are using python or java applications you can choose python or java distroless images i'll
+
+[00:27:39]
+  Transcript :  show you how to find them don't worry so from scratch if you are using go language application
+  OCR        : None
+  Combined   :  show you how to find them don't worry so from scratch if you are using go language application
+
+[00:27:44]
+  Transcript :  use scratch from scratch just copy the binary so as i told you this is the syntax from hyphen
+  OCR        : None
+  Combined   :  use scratch from scratch just copy the binary so as i told you this is the syntax from hyphen
+
+[00:27:50]
+  Transcript :  fn from build that means I am copying the binary from the build states that we have created here
+  OCR        : None
+  Combined   :  fn from build that means I am copying the binary from the build states that we have created here
+
+[00:27:55]
+  Transcript :  and I am just executing as part of the entry point. Let us try to execute this
+  OCR        : None
+  Combined   :  and I am just executing as part of the entry point. Let us try to execute this
+
+[00:28:00]
+  Transcript :  see what will be the size so docker build now i'll say simple calculator
+  OCR        : dockerfile-without-multistage git:maincd | golang-multi-stage-docker-build git:main | Dockerfile | README.md | calculator.go | dockerfile-without-multistage | golang-multi-stage-docker-build git:main vim Dockerfile | golang-multi-stage-docker-build git:main
+  Combined   :  see what will be the size so docker build now i'll say simple calculator dockerfile-without-multistage git:maincd | golang-multi-stage-docker-build git:main | Dockerfile | README.md | calculator.go | dockerfile-without-multistage | golang-multi-stage-docker-build git:main vim Dockerfile | golang-multi-stage-docker-build git:main
+
+[00:28:14]
+  Transcript :  multi-stage okay just for our reference and dot let us see what will be the image size
+  OCR        : dockerfile-without-multistage git:maincd | golang-multi-stage-docker-build git:main | Dockerfile | README.md | calculator.go | dockerfile-without-multistage | golang-multi-stage-docker-build git:mainvim Dockerfile | golang-multi-stage-docker-build git:moin docker build simplecalculat-multistage . | docker build requires exactly 1 argument. | See docker build --help | Usoge: docker build OPTIONS PATH 1 URL I | Build an image from a Dockerfile | golang-multi-stage-docker-build git:main
+  Combined   :  multi-stage okay just for our reference and dot let us see what will be the image size dockerfile-without-multistage git:maincd | golang-multi-stage-docker-build git:main | Dockerfile | README.md | calculator.go | dockerfile-without-multistage | golang-multi-stage-docker-build git:mainvim Dockerfile | golang-multi-stage-docker-build git:moin docker build simplecalculat-multistage . | docker build requires exactly 1 argument. | See docker build --help | Usoge: docker build OPTIONS PATH 1 URL I | Build an image from a Dockerfile | golang-multi-stage-docker-build git:main
+
+[00:28:16]
+  Transcript :  what happened here oh sorry i did not provide minus t so the command is wrong
+  OCR        : dockerfile-without-multistage git:maincd | golang-multi-stage-docker-build git:main | Dockerfile | README.md | calculator.go | dockerfile-without-multistage | golang-multi-stage-docker-build git:mainvim Dockerfile | golang-multi-stage-docker-build git:main docker build simplecalculat-multistage | docker build requires exactly 1 argument. | See docker build --help | Usoge: | docker build OPTIONS PATH I URL | Build an image from a Dockerfile | golang-multi-stage-docker-build git:main | Dockerfile | README.md | calculator.go | dockerfile-without-multistage | golang-multi-stage-docker-build git:main
+  Combined   :  what happened here oh sorry i did not provide minus t so the command is wrong dockerfile-without-multistage git:maincd | golang-multi-stage-docker-build git:main | Dockerfile | README.md | calculator.go | dockerfile-without-multistage | golang-multi-stage-docker-build git:mainvim Dockerfile | golang-multi-stage-docker-build git:main docker build simplecalculat-multistage | docker build requires exactly 1 argument. | See docker build --help | Usoge: | docker build OPTIONS PATH I URL | Build an image from a Dockerfile | golang-multi-stage-docker-build git:main | Dockerfile | README.md | calculator.go | dockerfile-without-multistage | golang-multi-stage-docker-build git:main
+
+[00:28:22]
+  Transcript :  what i missed here is i have to provide minus t because we are tagging the image
+  OCR        : dockerfile-without-multistage git:maincd | golang-multi-stoge-docker-build git:main | Dockerfile | README.md | calculator.go | dockerfile-without-multistage | golang-multi-stage-docker-build git:main | golang-multi-stage-docker-build git:main | vim Dockerfile | docker build simplecalculat-multistage . | docker build requires exactly 1 argument. | See docker build --help | Usoge: | docker build OPTIONS PATH I URL | Build an image from a Dockerfile | golang-multi-stage-docker-build git:main | Dockerfile | README.md | calculator.go | dockerfile-without-multistage | golang-multi-stage-docker-build git:mainls UsersaveeramaDownloadsabhishekdevops.pem | golang-multi-stage-docker-build git:main
+  Combined   :  what i missed here is i have to provide minus t because we are tagging the image dockerfile-without-multistage git:maincd | golang-multi-stoge-docker-build git:main | Dockerfile | README.md | calculator.go | dockerfile-without-multistage | golang-multi-stage-docker-build git:main | golang-multi-stage-docker-build git:main | vim Dockerfile | docker build simplecalculat-multistage . | docker build requires exactly 1 argument. | See docker build --help | Usoge: | docker build OPTIONS PATH I URL | Build an image from a Dockerfile | golang-multi-stage-docker-build git:main | Dockerfile | README.md | calculator.go | dockerfile-without-multistage | golang-multi-stage-docker-build git:mainls UsersaveeramaDownloadsabhishekdevops.pem | golang-multi-stage-docker-build git:main
+
+[00:28:30]
+  Transcript :  so now let us see what will be the size i'm very sure most of you will be shocked to see this
+  OCR        : dockerfile-without-multistage git:maincd | golang-multi-stage-docker-build git:main | Dockerfile | README.md | calculator.go | dockerfile-without-multistage | golang-multi-stage-docker-build git:mainvim Dockerfile | golang-multi-stage-docker-build git:main docker build simplecalculat-multistage | docker build requires exactly 1 argument. | See docker build --help | Usage: | docker build OPTIONS PATH I URL 1 | Build an image from a Dockerfile | golang-multi-stage-docker-build git:main | Dockerfile | README.md | calculator.go | dockerfile-without-multistage | golang-multi-stage-docker-build git:main ls UsersaveeramaDownloadsabhishekdevops.pem | golang-multi-stage-docker-buildgit:maindocker build -t simplecalculat-multistage. | Building 1.3s 79 | Lood build definition from Dockerfile | 0.0s | transferring | dockerfile: 5948 | 0.0s | Cinternal | lood | dockerianore | 0.0s | rensferrino | context: | 0.0s | internal | lood | metadata for docker.iolibraryubuntu:Latest | build14FR0Mdocker.iolibraryubuntusha256:9abdde4188b896a372804be2384015e90e3f84906b750c1a53539b585fbbe7f | 0.0s | internal | load build context | 0.0s | context: 4.51kB | 0.0s | CACHED butld 24 RUN apt-get update 8 apt-get install | -v golang-o | 0.0s | build 34 | COPY | 0.0s | build 44RUN CG0ENABLED0 go build -o app . | 0.1s
+  Combined   :  so now let us see what will be the size i'm very sure most of you will be shocked to see this dockerfile-without-multistage git:maincd | golang-multi-stage-docker-build git:main | Dockerfile | README.md | calculator.go | dockerfile-without-multistage | golang-multi-stage-docker-build git:mainvim Dockerfile | golang-multi-stage-docker-build git:main docker build simplecalculat-multistage | docker build requires exactly 1 argument. | See docker build --help | Usage: | docker build OPTIONS PATH I URL 1 | Build an image from a Dockerfile | golang-multi-stage-docker-build git:main | Dockerfile | README.md | calculator.go | dockerfile-without-multistage | golang-multi-stage-docker-build git:main ls UsersaveeramaDownloadsabhishekdevops.pem | golang-multi-stage-docker-buildgit:maindocker build -t simplecalculat-multistage. | Building 1.3s 79 | Lood build definition from Dockerfile | 0.0s | transferring | dockerfile: 5948 | 0.0s | Cinternal | lood | dockerianore | 0.0s | rensferrino | context: | 0.0s | internal | lood | metadata for docker.iolibraryubuntu:Latest | build14FR0Mdocker.iolibraryubuntusha256:9abdde4188b896a372804be2384015e90e3f84906b750c1a53539b585fbbe7f | 0.0s | internal | load build context | 0.0s | context: 4.51kB | 0.0s | CACHED butld 24 RUN apt-get update 8 apt-get install | -v golang-o | 0.0s | build 34 | COPY | 0.0s | build 44RUN CG0ENABLED0 go build -o app . | 0.1s
+
+[00:28:32]
+  Transcript :  so now let us see what will be the size i'm very sure most of you will be shocked to see this
+  OCR        : docker build requires exactly 1 argument. | See docker build --help | Usage: | docker build OPTIONS PATH 1 URL 1 - | Build an image from a Dockerfile | golang-multi-stage-docker-build git:mainls | Dockerfile | README.md | calculator.go | dockerfile-without-multistage | golang-multi-stage-docker-build git:main ls UsersaveeramaDownloadsabhishekdevops.pem | golang-multi-stage-docker-build git:maindocker build -t simplecalculat-multistage . | Building 2.6s 1010 FINISHED | internal | load build definition from Dockerfile | 0.0s | - transferringdockerfile: 5948 | 0.0s | -internal lood | .dockerignore | 0.0s | m transferring context: 2B | 0.0s | internal | lood | metadatafordocker.iolibraryubuntu:latest | 0.9s | but1d14FR0Mdocker.1olibraryubuntusha256:9a0bdde4188b896a372804be238401Se90e3f84906b750c1o53539b585fbbe7f | 0.0s | internal load build context | 0.0s | - transferring context: 4.51kB | 0.0s | CACHED butld 24 RUN apt-get update  apt-get install -y golang-go | 0.0s | build 34 | COPY | 0.0s | build 44RUN CGoENABLED0 go build-0 app | 0.7s | -CACHED stoge-1 11 COPy--frombuild appapp | 0.0s | - exporting to image | 0.0s | exporting layers | 0.0s | --writingimage sha256:c79355950cb3cb6b69c20e1bc9116451eo66cfeb069c0209fSaSc8732e1bd279 | 0.0s | m naming to docker.iolibrarysimplecalculot-multistoge | 0.0s | Use docker scan to run Snyk tests against images to find vulnerabilities and learn how to fix them | golang-multi-stage-docker-build git:main
+  Combined   :  so now let us see what will be the size i'm very sure most of you will be shocked to see this docker build requires exactly 1 argument. | See docker build --help | Usage: | docker build OPTIONS PATH 1 URL 1 - | Build an image from a Dockerfile | golang-multi-stage-docker-build git:mainls | Dockerfile | README.md | calculator.go | dockerfile-without-multistage | golang-multi-stage-docker-build git:main ls UsersaveeramaDownloadsabhishekdevops.pem | golang-multi-stage-docker-build git:maindocker build -t simplecalculat-multistage . | Building 2.6s 1010 FINISHED | internal | load build definition from Dockerfile | 0.0s | - transferringdockerfile: 5948 | 0.0s | -internal lood | .dockerignore | 0.0s | m transferring context: 2B | 0.0s | internal | lood | metadatafordocker.iolibraryubuntu:latest | 0.9s | but1d14FR0Mdocker.1olibraryubuntusha256:9a0bdde4188b896a372804be238401Se90e3f84906b750c1o53539b585fbbe7f | 0.0s | internal load build context | 0.0s | - transferring context: 4.51kB | 0.0s | CACHED butld 24 RUN apt-get update  apt-get install -y golang-go | 0.0s | build 34 | COPY | 0.0s | build 44RUN CGoENABLED0 go build-0 app | 0.7s | -CACHED stoge-1 11 COPy--frombuild appapp | 0.0s | - exporting to image | 0.0s | exporting layers | 0.0s | --writingimage sha256:c79355950cb3cb6b69c20e1bc9116451eo66cfeb069c0209fSaSc8732e1bd279 | 0.0s | m naming to docker.iolibrarysimplecalculot-multistoge | 0.0s | Use docker scan to run Snyk tests against images to find vulnerabilities and learn how to fix them | golang-multi-stage-docker-build git:main
+
+[00:28:36]
+  Transcript :  let us use the same command called docker head minus five and the size has gone down to
+  OCR        : golang-multi-stage-docker-build git:main cd ..
+  Combined   :  let us use the same command called docker head minus five and the size has gone down to golang-multi-stage-docker-build git:main cd ..
+
+[00:28:38]
+  Transcript :  let us use the same command called docker head minus five and the size has gone down to
+  OCR        : golang-multi-stage-docker-build git:main docker images I head -5 | REPOSITORY | IMAGE ID | CREATED | SIZE | simplecalculator | latest | 1989365d926a | 3 minutes ago | 861M | none | none | 77b19b2f0ade | 47 minutes ago | 861M | simplecalculat-multistage | latest | c79355950cb3 | About an hour ago | 1.83 | gcr.iodistrolessjaval1-debian11 | latest | 05f7776fa297 | 19 hours ago | 210M | golang-multi-stage-docker-build git:main
+  Combined   :  let us use the same command called docker head minus five and the size has gone down to golang-multi-stage-docker-build git:main docker images I head -5 | REPOSITORY | IMAGE ID | CREATED | SIZE | simplecalculator | latest | 1989365d926a | 3 minutes ago | 861M | none | none | 77b19b2f0ade | 47 minutes ago | 861M | simplecalculat-multistage | latest | c79355950cb3 | About an hour ago | 1.83 | gcr.iodistrolessjaval1-debian11 | latest | 05f7776fa297 | 19 hours ago | 210M | golang-multi-stage-docker-build git:main
+
+[00:28:40]
+  Transcript :  do you see it here simple calculator multi-stage what is the size of it 1.83 mb now can you
+  OCR        : None
+  Combined   :  do you see it here simple calculator multi-stage what is the size of it 1.83 mb now can you
+
+[00:28:51]
+  Transcript :  imagine how many times the size of the application has gone down So this was the size of simple calculator application that we have created that is 861 MB And this is the size of simple calculator multistage that is only 1 MB
+  OCR        : None
+  Combined   :  imagine how many times the size of the application has gone down So this was the size of simple calculator application that we have created that is 861 MB And this is the size of simple calculator multistage that is only 1 MB
+
+[00:29:07]
+  Transcript :  That means we have reduced it by 800 times close to.
+  OCR        : None
+  Combined   :  That means we have reduced it by 800 times close to.
+
+[00:29:12]
+  Transcript :  Am I right?
+  OCR        : None
+  Combined   :  Am I right?
+
+[00:29:13]
+  Transcript :  So this is the demonstration that I wanted to show you.
+  OCR        : None
+  Combined   :  So this is the demonstration that I wanted to show you.
+
+[00:29:17]
+  Transcript :  And it is really important to understand the concept of multistage builds.
+  OCR        : None
+  Combined   :  And it is really important to understand the concept of multistage builds.
+
+[00:29:21]
+  Transcript :  it is really to sorry it is really important to understand the concept of distro less images
+  OCR        : None
+  Combined   :  it is really to sorry it is really important to understand the concept of distro less images
+
+[00:29:27]
+  Transcript :  because that is the future of containers the main advantages that you have to talk in interviews is
+  OCR        : None
+  Combined   :  because that is the future of containers the main advantages that you have to talk in interviews is
+
+[00:29:33]
+  Transcript :  by moving towards multi-stage builds and moving towards distro less images we not only reduce the
+  OCR        : None
+  Combined   :  by moving towards multi-stage builds and moving towards distro less images we not only reduce the
+
+[00:29:39]
+  Transcript :  size of the image but we also made sure that container images that we have or the containers
+  OCR        : None
+  Combined   :  size of the image but we also made sure that container images that we have or the containers
+
+[00:29:45]
+  Transcript :  that we have are running securely and that are very less vulnerable to the threats right so this
+  OCR        : None
+  Combined   :  that we have are running securely and that are very less vulnerable to the threats right so this
+
+[00:29:54]
+  Transcript :  is the advantage guys and now let me show you how to find distroless images so all that you need to
+  OCR        : golang-multi-stage-docker-build git:main | zsh: command not found:
+  Combined   :  is the advantage guys and now let me show you how to find distroless images so all that you need to golang-multi-stage-docker-build git:main | zsh: command not found:
+
+[00:29:58]
+  Transcript :  is the advantage guys and now let me show you how to find distroless images so all that you need to
+  OCR        : Hmm. Were having trouble finding that site | We cant connect to the server at calculator go. | of you entered the ripht adresn, you can | Try again later | Check your network comnection | Try Again
+  Combined   :  is the advantage guys and now let me show you how to find distroless images so all that you need to Hmm. Were having trouble finding that site | We cant connect to the server at calculator go. | of you entered the ripht adresn, you can | Try again later | Check your network comnection | Try Again
+
+[00:29:58]
+  Transcript :  do is you just have
+  OCR        : None
+  Combined   :  do is you just have
+
+[00:30:00]
+  Transcript :  to search for distroless images you will see a github repository for distroless images just go
+  OCR        : main | Docker-Zero-to-Heroexamplesgolang-multi-stage-docker-build | Go to file | Add file - | iam-veeramalla multi stage docker build | e4f763 45 minutes ago | History | dockerfile-without-multistage | multi stage docker build | 45 minutes ago | Dockerfile | multi stage docker build | 45 minutes ago | README.md | multi stage docker build | 45 minutes ago | calculator.go | multi stage docker build | 45 minutes ago | README.md | Multi Stage Docker Build | The main purpose of choosing a golang based applciation to demostrate this example is golang is a statically-typed | programming language that does not require a runtime in the traditional sense. Unlike dynamically-typed languages like Python,
+  Combined   :  to search for distroless images you will see a github repository for distroless images just go main | Docker-Zero-to-Heroexamplesgolang-multi-stage-docker-build | Go to file | Add file - | iam-veeramalla multi stage docker build | e4f763 45 minutes ago | History | dockerfile-without-multistage | multi stage docker build | 45 minutes ago | Dockerfile | multi stage docker build | 45 minutes ago | README.md | multi stage docker build | 45 minutes ago | calculator.go | multi stage docker build | 45 minutes ago | README.md | Multi Stage Docker Build | The main purpose of choosing a golang based applciation to demostrate this example is golang is a statically-typed | programming language that does not require a runtime in the traditional sense. Unlike dynamically-typed languages like Python,
+
+[00:30:02]
+  Transcript :  to search for distroless images you will see a github repository for distroless images just go
+  OCR        : Search with Google or enter address | trivago | Amazon | Trivago | youtube | Sponsored | meet.google | Sponsored
+  Combined   :  to search for distroless images you will see a github repository for distroless images just go Search with Google or enter address | trivago | Amazon | Trivago | youtube | Sponsored | meet.google | Sponsored
+
+[00:30:04]
+  Transcript :  to search for distroless images you will see a github repository for distroless images just go
+  OCR        : Cigle | distroless images | images | Shopping | News | Videos | 1 More | Tools | About 57,ooo results 0.36 seconds | htpsgithub.com- GoogleContainerTools distroless | Distroless Container Images - GitHub | cortaen packuage managens, shels or any cther programs you woulid | distrolessREADME md at main baseREADME md Python 3  Node s | People also ask | What is a distroless image? | What are the benefits of distroless imaoes? | What is Distroless in Docker? | What is the size of Distroless? | Feedack | Images for distroless images | cosign | docker images | docker container | distroless docker
+  Combined   :  to search for distroless images you will see a github repository for distroless images just go Cigle | distroless images | images | Shopping | News | Videos | 1 More | Tools | About 57,ooo results 0.36 seconds | htpsgithub.com- GoogleContainerTools distroless | Distroless Container Images - GitHub | cortaen packuage managens, shels or any cther programs you woulid | distrolessREADME md at main baseREADME md Python 3  Node s | People also ask | What is a distroless image? | What are the benefits of distroless imaoes? | What is Distroless in Docker? | What is the size of Distroless? | Feedack | Images for distroless images | cosign | docker images | docker container | distroless docker
+
+[00:30:10]
+  Transcript :  there and what you will see is a bunch of folders here let's say i want to find for java just go to
+  OCR        : LICENSE | Initial license boilerplate. | 6 years ago | Makefile 0.3 | README.md | Update README.md | 2 months ago | RELEASES.md | Fix relative link to cloudbuild.yaml in RELEASES... | 7 months ago | SECURITY.md | Update SECURITY.md | 5 months ago | SUPPORTPOLICY.md | Update SUPPORTPOLICY.md | 2 months ago | WORKSPACE | Remove debian 10 images from build | 5 months ago | busyboxarchives.bzl | upgrade busybox to avoid security vulnerabilities | 10 months ago | checksums.bzl | Remove debian 10 images from build | 5 months ago | cloudbuild.yaml | Fix typo, add python to stamps | 2 months ago | cloudbuildcosign.sh | Move base-nossl out of preview | 2 months ago | cloudbuilddocker.sh | Move base-nossl out of preview | 2 months ago | cloudbuildjq.sh | Make sure we are signing every image built | 2 years ago | cosign.pub | Sign one distroless image, check-in public key | 2 years ago | debianarchives.bzl | Bumping packages to latest stable versions | yesterday
+  Combined   :  there and what you will see is a bunch of folders here let's say i want to find for java just go to LICENSE | Initial license boilerplate. | 6 years ago | Makefile 0.3 | README.md | Update README.md | 2 months ago | RELEASES.md | Fix relative link to cloudbuild.yaml in RELEASES... | 7 months ago | SECURITY.md | Update SECURITY.md | 5 months ago | SUPPORTPOLICY.md | Update SUPPORTPOLICY.md | 2 months ago | WORKSPACE | Remove debian 10 images from build | 5 months ago | busyboxarchives.bzl | upgrade busybox to avoid security vulnerabilities | 10 months ago | checksums.bzl | Remove debian 10 images from build | 5 months ago | cloudbuild.yaml | Fix typo, add python to stamps | 2 months ago | cloudbuildcosign.sh | Move base-nossl out of preview | 2 months ago | cloudbuilddocker.sh | Move base-nossl out of preview | 2 months ago | cloudbuildjq.sh | Make sure we are signing every image built | 2 years ago | cosign.pub | Sign one distroless image, check-in public key | 2 years ago | debianarchives.bzl | Bumping packages to latest stable versions | yesterday
+
+[00:30:12]
+  Transcript :  there and what you will see is a bunch of folders here let's say i want to find for java just go to
+  OCR        : base | Merge pull request 1209 from cristitalcasmain | last month | B Readme | buildtar | Remove deblan 10 images from build | 5 months ago | Apache-2.0 license | 8 months ago | Security policy | cacerts | updates | 14.8k stars | Fix: Use SOURCEDATE EPOCH for the distroleSs.. | 2 months ago | 185 watching | debian.packageman... | Fix debian snapshot url | 5 months ago | 839 forks | examples | update pkg.tar | last month | experimental | Fix typo, add python to stamps | 2 months ago | Releases | hack | use registry | 2 years ago | No releases published | java | update java versions in testdata | 5 days ago | locale | updates | 8 months ago | Packages | nodejs | Update tests | last week | No packages published | osrelease | updates | 8 months ago | packagemanager | fix lint | 8 months ago | Contributors 113 | provenance | Update build-distroless-task.yaml | 10 months ago
+  Combined   :  there and what you will see is a bunch of folders here let's say i want to find for java just go to base | Merge pull request 1209 from cristitalcasmain | last month | B Readme | buildtar | Remove deblan 10 images from build | 5 months ago | Apache-2.0 license | 8 months ago | Security policy | cacerts | updates | 14.8k stars | Fix: Use SOURCEDATE EPOCH for the distroleSs.. | 2 months ago | 185 watching | debian.packageman... | Fix debian snapshot url | 5 months ago | 839 forks | examples | update pkg.tar | last month | experimental | Fix typo, add python to stamps | 2 months ago | Releases | hack | use registry | 2 years ago | No releases published | java | update java versions in testdata | 5 days ago | locale | updates | 8 months ago | Packages | nodejs | Update tests | last week | No packages published | osrelease | updates | 8 months ago | packagemanager | fix lint | 8 months ago | Contributors 113 | provenance | Update build-distroless-task.yaml | 10 months ago
+
+[00:30:16]
+  Transcript :  the java folder and in the readme.md you will have the location of this distroless images
+  OCR        : Search or jump to... | Pull requests Issues Codespaces Marketplace Explore | GoogleContainerToolsdistroless | Public | Watch 185 | Fork839 | Star 14.8k | Code | Issues | 1Pull requests | Actions | Projects | Security | Insights | main | distrolessjava | Go to file | Add file | bobcallaway update java versions in testdata | 85923c4 5 days ago | History | jetty | Remove java, python, node -deblanto builds | last year | testdata | update java versions in testdata | 5 days ago | BUILD | Fix: Use SOURCEpATEEPOCH for the distroless images. | 2 months ago | BUILD.jetty | update pkgtar | last month | README.md | Update README.md | 2 years ago | ire yer bzl
+  Combined   :  the java folder and in the readme.md you will have the location of this distroless images Search or jump to... | Pull requests Issues Codespaces Marketplace Explore | GoogleContainerToolsdistroless | Public | Watch 185 | Fork839 | Star 14.8k | Code | Issues | 1Pull requests | Actions | Projects | Security | Insights | main | distrolessjava | Go to file | Add file | bobcallaway update java versions in testdata | 85923c4 5 days ago | History | jetty | Remove java, python, node -deblanto builds | last year | testdata | update java versions in testdata | 5 days ago | BUILD | Fix: Use SOURCEpATEEPOCH for the distroless images. | 2 months ago | BUILD.jetty | update pkgtar | last month | README.md | Update README.md | 2 years ago | ire yer bzl
+
+[00:30:18]
+  Transcript :  the java folder and in the readme.md you will have the location of this distroless images
+  OCR        : README.md | Image Contents | This image contains a minimal Linux, OpenJDK-based runtime. | Specifically, the image contains everything in the base image, plus: | OpenJDK 11 gcr.iodistrolessjava11-debian11 and its dependencies | OpenJDK 17 gcr.iodistrolessjava17-debian11  and its dependencies. | Usage | The entrypoint of this image is set to the equivalent of java -jar, so this image expects users to supply a path to a JAR file in | the CMD. | Give feedback
+  Combined   :  the java folder and in the readme.md you will have the location of this distroless images README.md | Image Contents | This image contains a minimal Linux, OpenJDK-based runtime. | Specifically, the image contains everything in the base image, plus: | OpenJDK 11 gcr.iodistrolessjava11-debian11 and its dependencies | OpenJDK 17 gcr.iodistrolessjava17-debian11  and its dependencies. | Usage | The entrypoint of this image is set to the equivalent of java -jar, so this image expects users to supply a path to a JAR file in | the CMD. | Give feedback
+
+[00:30:24]
+  Transcript :  so if you want to replace like the same example if you are using a java application what you will
+  OCR        : golang-multi-stage-docker-build git:main | zsh: command not found: | golang-multi-stage-docker-build git:main vim
+  Combined   :  so if you want to replace like the same example if you are using a java application what you will golang-multi-stage-docker-build git:main | zsh: command not found: | golang-multi-stage-docker-build git:main vim
+
+[00:30:26]
+  Transcript :  do is you will go to my docker file and finally instead of scratch what you will do is you will
+  OCR        : BASE IMAGE | FROM ubuntu AS build | RUN apt-get update  apt-get install -y golang-go | ENV G0111MODULEoff | COPY. | RUN CGoENABLED0 go build -o app . | HERE STARTS THE MAGIC OF MULTI STAGE BUILD | FROM scratch | Copy the compiled binary from the build stage | CoPY --frombuild appapp | Set the entrypoint for the container to run the binary | ENTRYPOINTapp | Dockerfile 26L,550B
+  Combined   :  do is you will go to my docker file and finally instead of scratch what you will do is you will BASE IMAGE | FROM ubuntu AS build | RUN apt-get update  apt-get install -y golang-go | ENV G0111MODULEoff | COPY. | RUN CGoENABLED0 go build -o app . | HERE STARTS THE MAGIC OF MULTI STAGE BUILD | FROM scratch | Copy the compiled binary from the build stage | CoPY --frombuild appapp | Set the entrypoint for the container to run the binary | ENTRYPOINTapp | Dockerfile 26L,550B
+
+[00:30:30]
+  Transcript :  just replace with this distroless images if you want to use openjdk11 if you want to use openjdk17
+  OCR        : README.md | Image Contents | This image contains a minimal Linux, OpenJDK-based runtime. | Specifically, the image contains everything in the base image, plus: | OpenJDK 11  gcr.iodistrolessjava11-debian11 and its dependencies. | OpenJDK 17  gcr.iodistrolessjava17-debian11 and its dependencies. | Usage | The entrypoint of this image is set to the equivalent of java -jar, so this image expects users to supply a path to a JAR file in | the CMD. | Give feedback
+  Combined   :  just replace with this distroless images if you want to use openjdk11 if you want to use openjdk17 README.md | Image Contents | This image contains a minimal Linux, OpenJDK-based runtime. | Specifically, the image contains everything in the base image, plus: | OpenJDK 11  gcr.iodistrolessjava11-debian11 and its dependencies. | OpenJDK 17  gcr.iodistrolessjava17-debian11 and its dependencies. | Usage | The entrypoint of this image is set to the equivalent of java -jar, so this image expects users to supply a path to a JAR file in | the CMD. | Give feedback
+
+[00:30:38]
+  Transcript :  you will use this distroless image and i have also tried that so because i wanted to show you people
+  OCR        : BASE IMAGE | FROM ubuntu AS build | RUN apt-get update  apt-get install -y golang-go | ENV G0111MODULEoff | COPY . . | RUN CGoENABLED0 go build -o app . | HERE STARTS THE MAGIC OF MULTI STAGE BUILD | FROM scratch | Copy the compiled binary from the build stage | COPY --frombuildappapp | Set the entrypoint for the container to run the binary | ENTRYPOINTapp | Dockerfile26L,550B
+  Combined   :  you will use this distroless image and i have also tried that so because i wanted to show you people BASE IMAGE | FROM ubuntu AS build | RUN apt-get update  apt-get install -y golang-go | ENV G0111MODULEoff | COPY . . | RUN CGoENABLED0 go build -o app . | HERE STARTS THE MAGIC OF MULTI STAGE BUILD | FROM scratch | Copy the compiled binary from the build stage | COPY --frombuildappapp | Set the entrypoint for the container to run the binary | ENTRYPOINTapp | Dockerfile26L,550B
+
+[00:30:40]
+  Transcript :  you will use this distroless image and i have also tried that so because i wanted to show you people
+  OCR        : golang-multi-stage-docker-build git:main | zsh: command not found: | golang-multi-stage-docker-build git:main vim Dockerfile | golang-multi-stage-docker-build git:maindock
+  Combined   :  you will use this distroless image and i have also tried that so because i wanted to show you people golang-multi-stage-docker-build git:main | zsh: command not found: | golang-multi-stage-docker-build git:main vim Dockerfile | golang-multi-stage-docker-build git:maindock
+
+[00:30:46]
+  Transcript :  in the demo i also initially played with a java application but finally i choose golang application
+  OCR        : golang-multi-stage-docker-build git:main | zsh: command not found: | golang-multi-stage-docker-build git:main vim Dockerfile | golang-multi-stage-docker-build git:maindocker im | golang-multi-stage-docker-build git:main docker images I head | REPOSITORY | IMAGE ID | CREATED | SIZE | simplecalculator | latest | 1989365d926a | 6 minutes ago | 861M | none | none | 77b19b2f0ade | 49 minutes ago | 861M | simplecalculat-multistage | latest | c79355950cb3 | About an hour ago | 1.83 | gcr.iodistrolessjaval1-debian11 | latest | 05f7776fa297 | 19 hours ago | 210M | golang-multi-stage-docker-build git:main
+  Combined   :  in the demo i also initially played with a java application but finally i choose golang application golang-multi-stage-docker-build git:main | zsh: command not found: | golang-multi-stage-docker-build git:main vim Dockerfile | golang-multi-stage-docker-build git:maindocker im | golang-multi-stage-docker-build git:main docker images I head | REPOSITORY | IMAGE ID | CREATED | SIZE | simplecalculator | latest | 1989365d926a | 6 minutes ago | 861M | none | none | 77b19b2f0ade | 49 minutes ago | 861M | simplecalculat-multistage | latest | c79355950cb3 | About an hour ago | 1.83 | gcr.iodistrolessjaval1-debian11 | latest | 05f7776fa297 | 19 hours ago | 210M | golang-multi-stage-docker-build git:main
+
+[00:30:47]
+  Transcript :  because it has the biggest advantage but if you are using a java application then again the image
+  OCR        : None
+  Combined   :  because it has the biggest advantage but if you are using a java application then again the image
+
+[00:30:52]
+  Transcript :  size has come down to 200 MB here in this case it is slightly more because we have the open JDK
+  OCR        : None
+  Combined   :  size has come down to 200 MB here in this case it is slightly more because we have the open JDK
+
+[00:30:58]
+  Transcript :  dependency but if you are using the Golang application with a very bare minimal scratch
+  OCR        : None
+  Combined   :  dependency but if you are using the Golang application with a very bare minimal scratch
+
+[00:31:03]
+  Transcript :  it only has 1.83 MB so this is the biggest advantage that you are getting with distroless
+  OCR        : None
+  Combined   :  it only has 1.83 MB so this is the biggest advantage that you are getting with distroless
+
+[00:31:10]
+  Transcript :  images and multi-stage docker build I hope this video was informative and I hope you learned a lot
+  OCR        : golang-multi-stage-docker-build git:main
+  Combined   :  images and multi-stage docker build I hope this video was informative and I hope you learned a lot golang-multi-stage-docker-build git:main
+
+[00:31:15]
+  Transcript :  of things from this video so if you like this video click on the like button if you have any
+  OCR        : None
+  Combined   :  of things from this video so if you like this video click on the like button if you have any
+
+[00:31:19]
+  Transcript :  feedback for me share that in the comment section and finally don't forget to subscribe to my channel
+  OCR        : None
+  Combined   :  feedback for me share that in the comment section and finally don't forget to subscribe to my channel
+
+[00:31:24]
+  Transcript :  Abhishek Virmala. Thank you so much. I'll see you in the next video. Take care everyone. Bye.
+  OCR        : None
+  Combined   :  Abhishek Virmala. Thank you so much. I'll see you in the next video. Take care everyone. Bye.
+
