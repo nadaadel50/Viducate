@@ -5,8 +5,10 @@ type SelectedTopicContextType = {
   setSelectedTopic: Dispatch<SetStateAction<TopicResponse | null>>;
   currentTime:number;
   setCurrentTime:(time:number)=>void;
-  changeProgressValue:boolean;
-  setChangeProgressValue: (value:boolean)=>void;
+  seekTo:number|null;
+  setSeekTo: Dispatch<SetStateAction<number | null>>;
+
+
 };
 export const SelectedTopicContext =createContext<SelectedTopicContextType | null>(null);
 

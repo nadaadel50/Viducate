@@ -1,73 +1,64 @@
-import {  useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 import { ContentLearningCard } from "../widgets/content_learning_card";
 import { SearchTopicBar } from "../widgets/search_topic_bar";
-import { TopicResponse } from "../../domin/entity/topic_response";
 import { useSelectedTopic } from "../context/topic_context";
+import { useVideoData } from "../../../../core/hooks/useVideoData";
+import { STORAGE_KEYS } from "../../../../core/constants";
 
 export function LeftContentSection() {
-  const fakeTopics: TopicResponse[] = [
-    new TopicResponse(1, 3, 1, 0, 60, "Introduction", "What is AI?"),
-    new TopicResponse(2, 3, 2, 61, 120, "Basics", "Machine Learning Basics"),
-    new TopicResponse(
-      3,
-      3,
-      3,
-      121,
-      186,
-      "Deep Learning",
-      "Neural Networks Intro",
-    ),
-    new TopicResponse(4, 3, 4, 187, 600, "Applications", "AI in Real Life"),
-  ];
+  const [searchQuery, setSearchQuery] = useState<string>("");
 
-  const [focusTopic, setfocusTopic] = useState(0);
-  const [searchQuery, setSearchQuery] = useState("");
-  const { currentTime, setSelectedTopic, setChangeProgressValue } =
-    useSelectedTopic();
+  const {
+    currentTime,
+    setSelectedTopic,
+    setSeekTo
 
+    
+  } = useSelectedTopic();
+  const { data: topics } = useVideoData();
+
+  // derive current topic from time
+  const currentTopicIndex = topics!.findIndex(
+    (topic) => currentTime >= topic.start_time && currentTime <= topic.end_time,
+  );
+
+  //  sync selected topic with video
   useEffect(() => {
-    const currentTopicIndex = fakeTopics.findIndex(
-      (topic) =>
-        currentTime >= topic.start_time && currentTime <= topic.end_time,
-    );
-    if (currentTopicIndex !== -1) {
-      const newTopic = fakeTopics[currentTopicIndex];
-      setfocusTopic(currentTopicIndex);
-      setChangeProgressValue(false);
-      setSelectedTopic((prev) => {
-        if (prev?.segment_id === newTopic.segment_id) return prev;
-        return newTopic;
-      });
-    }
-  }, [currentTime]);
+    if (currentTopicIndex === -1) return;
 
-  let cards: TopicResponse[] = fakeTopics;
-  //const { data: topics } = useVideoData(3);
+    const newTopic = topics![currentTopicIndex];
 
-  const filteredCards = cards.filter((item) => {
+    setSelectedTopic((prev) => {
+      if (prev?.segment_id === newTopic.segment_id) return prev;
+      return newTopic;
+    });
+  }, [currentTopicIndex]);
+
+  //  filter
+  const filteredCards = topics!.filter((item) => {
     if (!searchQuery) return true;
 
-    return (
-      item.title.toLowerCase().includes(searchQuery.toLowerCase()) ||
-      item.title.toLowerCase().includes(searchQuery.toLowerCase())
-    );
+    return item.title.toLowerCase().includes(searchQuery.toLowerCase());
   });
 
   return (
     <div className="flex flex-col h-full w-full ">
-      {/* { SEARCH BAR} */}
+      {/* SEARCH */}
       <div className="p-4 border-b border-slate-100">
         <SearchTopicBar setSearchQuery={setSearchQuery} />
       </div>
 
-      {/* list */}
+      {/* LIST */}
       <div className="flex-1 overflow-y-auto">
         <div className="flex flex-col gap-3 p-4 max-w-md mx-auto w-full">
           {filteredCards.map((card, index) => (
             <ContentLearningCard
               key={index}
-              isSelected={focusTopic === index}
-              onClick={() => setfocusTopic(index)}
+              isSelected={currentTopicIndex === index}
+              onClick={() => {
+                setSelectedTopic(card);
+                setSeekTo(card.start_time);
+              }}
               cardInfo={card}
             />
           ))}
