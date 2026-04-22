@@ -1,6 +1,6 @@
 import { useEffect, useMemo } from 'react';
 import { useNavigate, useParams } from 'react-router-dom';
-import { CheckCircle, X } from 'lucide-react';
+import { XCircle,CheckCircle, X ,RotateCcw} from 'lucide-react';
 import { FormattedMessage } from 'react-intl';
 import { AnalysisStepItem } from '../componants/analysis_step_item';
 import { TipCard } from '../componants/tip_card';
@@ -21,11 +21,12 @@ export function ProcessingPage() {
 
 
   const ringGradient = useMemo(() => ({
-    background: status === 'completed'
+    background: status === 'failed'
+      ? `conic-gradient(from 0deg, ${COLORS.state.error} 0%, ${COLORS.state.error} 100%)` // دائرة حمراء كاملة
+      : status === 'completed'
       ? `conic-gradient(from 0deg, ${COLORS.state.success} 0%, ${COLORS.state.success} 100%)`
       : `conic-gradient(from 0deg, ${COLORS.brand.primary} 0%, ${COLORS.brand.secondary} ${progress}%, ${COLORS.effects.ringEmpty} ${progress}%)`
-}),  [progress, status]);
-
+  }), [progress, status]);
 
 
   return (
@@ -42,7 +43,9 @@ export function ProcessingPage() {
           <div className="relative w-40 h-40 md:w-44 md:h-44 rounded-full p-4 bg-white shadow-2xl flex items-center justify-center">
             <div className="absolute inset-0 rounded-full opacity-20 transition-all duration-500" style={ringGradient} />
             <div className="flex flex-col items-center text-center">
-              {progress === 100 ? (
+              {status === 'failed' ? (
+                <XCircle size={64} className="text-red-500 animate-in zoom-in duration-500" />
+              ) : status === 'completed' ? (
                 <CheckCircle size={64} className="text-green-500 animate-in zoom-in duration-500" />
               ) : (
                 <>
@@ -57,10 +60,17 @@ export function ProcessingPage() {
         {/*Title Section */}
         <div className="text-center space-y-2">
           <h1 className="text-3xl md:text-4xl font-black tracking-tight" style={{ color: COLORS.text.primary }}>
-            <FormattedMessage id={progress === 100 ? "analysis.complete" : "analysis.title"} />
+            <FormattedMessage id={
+              status === 'failed' ? "analysis.error.title" : 
+              status === 'completed' ? "analysis.complete" : "analysis.title"
+            } />
+
           </h1>
           <p className="text-lg font-medium" style={{ color: COLORS.text.secondary }}>
-            <FormattedMessage id={progress === 100 ? "analysis.ready" : "analysis.subtitle"} />
+            <FormattedMessage id={
+              status === 'failed' ? "analysis.error.subtitle" : 
+              status === 'completed' ? "analysis.ready" : "analysis.subtitle"
+            } />
           </p>
         </div>
 
@@ -68,11 +78,23 @@ export function ProcessingPage() {
         <div className="w-full max-w-md bg-white/60 backdrop-blur-md rounded-2xl p-8 border border-white/60 shadow-sm shadow-indigo-100/20">
           <AnalysisStepItem 
             labelId="analysis.step.fetching" 
-            status={progress < 50 ? 'active' : 'completed'} 
+            status={
+              status === 'failed' ? 'failed'
+               : status !== 'segmenting' && status !== 'completed' 
+               ? 'active'
+               : 'completed'
+            } 
           />
           <AnalysisStepItem 
             labelId="analysis.step.segmenting" 
-            status={progress < 50 ? 'pending' : progress < 100 ? 'active' : 'completed'} 
+            status={ 
+              status === 'failed' ? 'failed'
+             : status === 'segmenting'
+             ? 'active'
+             : status === 'completed'
+             ? 'completed'
+             : 'pending'
+            } 
             isLast 
           />
         </div>
@@ -81,7 +103,16 @@ export function ProcessingPage() {
 
         {/* Actions Area */}
         <div className="flex flex-col items-center gap-6 w-full pb-10"> 
-          {progress < 100 && (
+          {status === 'failed' ? (
+            <button 
+               onClick={() => navigate('/UploadVideoPage')}
+               className="flex items-center gap-3 px-8 py-3 rounded-full font-bold text-white transition-all active:scale-95 shadow-lg shadow-indigo-200/50 group"
+               style={{ backgroundColor: COLORS.brand.primary }}
+     >
+              <RotateCcw size={20} className="group-hover:rotate-[-180deg] transition-transform" />
+              <FormattedMessage id="analysis.retry" />
+            </button>
+          ) : status !== 'completed' && (
             <button 
               onClick={() => navigate('/UploadVideoPage')}
               className="flex items-center gap-2 text-xs font-bold uppercase tracking-widest transition-all hover:text-red-500 cursor-pointer active:scale-95"

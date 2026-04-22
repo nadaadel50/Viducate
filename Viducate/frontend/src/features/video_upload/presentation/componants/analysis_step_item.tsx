@@ -1,18 +1,20 @@
-import { CheckCircle, RefreshCw, Circle } from 'lucide-react';
+import { CheckCircle, RefreshCw, Circle, XCircle } from 'lucide-react';
 import { FormattedMessage } from 'react-intl';
 import { COLORS } from '../../../../core/constants/colors';
 
 interface StepProps {
   labelId: string;
-  status: 'pending' | 'active' | 'completed';
+  status: 'pending' | 'active' | 'completed' | 'failed';
   isLast?: boolean;
 }
 export const AnalysisStepItem = ({ labelId, status, isLast }: StepProps) => {
   const isCompleted = status === 'completed';
   const isActive = status === 'active';
+  const isFailed = status === 'failed';
   const getColors = () => {
     if (isCompleted) return { icon: COLORS.state.success, text: COLORS.state.success, line: COLORS.state.success };
     if (isActive) return { icon: COLORS.brand.primary, text: COLORS.brand.primary, line: COLORS.border.default };
+    if (isFailed) return { icon: COLORS.state.error, text: COLORS.state.error, line: COLORS.state.error };
     return { icon: COLORS.text.muted, text: COLORS.text.muted, line: COLORS.border.default };
   };
 
@@ -26,7 +28,9 @@ export const AnalysisStepItem = ({ labelId, status, isLast }: StepProps) => {
           className={`transition-all duration-300 ${isActive ? 'scale-110' : ''}`}
           style={{ color: activeColors.icon }}
         >
-          {isCompleted ? (
+        {isFailed ? (
+            <XCircle size={28} /> 
+          ) :isCompleted ? (
             <CheckCircle size={28} />
           ) : isActive ? (
             <RefreshCw className="animate-spin" size={28} />

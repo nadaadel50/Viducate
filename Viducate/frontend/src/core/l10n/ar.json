@@ -86,6 +86,10 @@
   "analysis.tip.desc": "يمكن لذكاءنا الاصطناعي اكتشاف أكثر من 50 موضوعًا تعليميًا مختلفًا وإنشاء طوابع زمنية تلقائيًا لتسهيل التنقل عبر محتوى التعلم الخاص بك.",
   "analysis.pending": "قيد الانتظار",
   "analysis.active": "جارٍ المعالجة",
-  "analysis.completed": "اكتمل"
-
+  "analysis.completed": "اكتمل",
+  
+  "analysis.failed": "فشلت العملية",
+  "analysis.error.title": "فشلت عملية التحليل",
+  "analysis.error.subtitle": "حدث خطأ أثناء معالجة الفيديو الخاص بك. يرجى المحاولة مرة أخرى.",
+  "analysis.retry": "إعادة محاولة الرفع"
 }

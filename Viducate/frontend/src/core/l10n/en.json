@@ -85,6 +85,11 @@
   "analysis.tip.desc": "Our AI can detect over 50 different educational topics and automatically generate timestamps for easier navigation through your learning content.",
   "analysis.pending": "Pending",
   "analysis.active": "In Progress",
-  "analysis.completed": "Completed"
+  "analysis.completed": "Completed",
+   
 
+  "analysis.failed": "Failed",
+  "analysis.error.title": "Analysis Failed",
+  "analysis.error.subtitle": "Something went wrong while processing your video. Please try again.",
+  "analysis.retry": "Retry Upload"
 }

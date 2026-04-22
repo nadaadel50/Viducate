@@ -1,5 +1,5 @@
 export interface VideoStatusEntity {
   id: number;
-  status: 'pending' | 'processing' | 'completed' | 'failed';
+  status: 'uploaded' | 'pending' | 'processing' | 'transcribing' | 'ocr_processing' | 'merging' | 'segmenting' | 'completed' | 'failed';
   title: string;
 }
