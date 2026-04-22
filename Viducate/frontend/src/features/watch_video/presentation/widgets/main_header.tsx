@@ -13,7 +13,7 @@ export function MainHeader() {
   };
   const { selectedTopic } = useSelectedTopic();
   return (
-    <div className="px-6 pt-15 ">
+    <div className=" pt-12  ">
       <h1 className="text-4xl font-bold tracking-tight text-slate-900">
         {selectedTopic?.title}
       </h1>
