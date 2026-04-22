@@ -1,15 +1,8 @@
 # OCR Output — video_id=3
 # Language: en
-# Total segments: 11
+# Total segments: 4
 
-[00:00:01] TECHNOLOGY SERIES | OPTICAL CHARACTER RECOGNITION | HOW IT WORKS
-[00:00:05] OPTICAL | CHARACTER | RECOGNITION
-[00:00:19] PRE-PROCESSING | SKEW  DESPECKLE  BINARIZE
-[00:00:25] POST SKEW TRANSFORMATION
-[00:00:27] BINARIZED
-[00:00:33] FEATURE DETECTION | APPROACH 1
-[00:00:37] 1  1 V
-[00:00:41] PATTERN RECOGNITION | APPROACH 2
-[00:00:43] THE QUICK BROWN FOX JUMPED | OVER THE LAZY DOG
-[00:00:51] APPLE
-[00:01:02] d  y  y1² x2  x2
+[00:00:02] Devorps Day -01 | 1. wtat is Devops9 | 2. Why DeNbp3 9 | 3 Howto Introduce Yourself? | 4.7 what are your Day-Day | acoivitien
+[00:21:00] Devops | Devops | cultwre thatimprover | DeliverN | example.Com | Llodays v1ve | Hoursi-2days
+[00:22:08] Devops | CICD | improving Delivery | Automationr | qrualityr | Monltoring | Testngv
+[00:22:36] Devops
