@@ -19,7 +19,7 @@ export function CustumError(props:CustumErrorProps){
 
           <button
             onClick={props.clearError}
-            className="text-red-600 hover:text-red-800 mr-2"
+            className="text-red-600 hover:text-red-800 mr-2 cursor-pointer"
           >
             ✕
           </button>

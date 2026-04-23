@@ -4,3 +4,25 @@
   --font-display: "Lexend";
   --font-body: "Noto Sans";
 }
+
+::-webkit-scrollbar {
+  width: 8px; 
+  height: 6px; 
+  background-color: transparent; 
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: #cbd5e1; 
+  border-radius: 10px; 
+  transition: background-color 0.2s ease;
+}
+
+
+::-webkit-scrollbar-thumb:hover {
+  background-color: #94a3b8; 
+}
+
+
+::-webkit-scrollbar-track {
+  background-color: transparent;
+}

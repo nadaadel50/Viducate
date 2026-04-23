@@ -1,6 +1,7 @@
 import { BrowserRouter, Route, Routes } from "react-router";
 import { ProtectedRoute } from "./protextedRoutes";
 import App from "../../App";
+import { UploadVideoPage } from "../../features/video_upload/presentation/pages/upload_video_page";
 import { ForgetPasswordPage } from "../../features/auth/presentation/forgetpass/pages/forget_passwrod_page";
 import { EmailSendedPage } from "../../features/auth/presentation/forgetpass/pages/email_sended_page";
 import { ResetPasswordPage } from "../../features/auth/presentation/forgetpass/pages/reset_password_page";
@@ -11,6 +12,8 @@ import LoginPage from "../../features/auth/presentation/pages/login_page";
 import SignupPage from "../../features/auth/presentation/pages/signup_page";
 
 
+import TestModalsPage from "../../features/video_upload/presentation/pages/test_modals_page";
+import {ProcessingPage }from "../../features/video_upload/presentation/pages/processing_page";
 export function AppRoutes() {
     return (
         <BrowserRouter>
@@ -24,6 +27,10 @@ export function AppRoutes() {
 
             /* here we will put all the public routes that don't need authentication to access them like landing page, signup */
            /* for example */
+            <Route path="/UploadVideoPage" element={<UploadVideoPage />} />  /* for example */
+            <Route path="/" element={<ForgetPasswordPage />} />  /* for example */
+            <Route path="/test-modals" element={<TestModalsPage />} />  /* for example */
+            <Route path="/ProcessingPage/:videoId" element={<ProcessingPage />} />  /* for example */
 
              <Route  element={<ProtectedRoute/>}>  // will prmove "/protected" soon
               /* here we will put all the protected routes that need authentication to access them */

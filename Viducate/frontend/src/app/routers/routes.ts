@@ -5,8 +5,9 @@ export const AppRoutesNames = {
   sucessSendEmail: "/sended-email",
   restPass: "/reset-password",
   successRestPass: "/success-reset-password",
-
   home: "/home",
   forgotPassword: "/forgot-password",
-  signup: "/signup"
+  signup: "/signup",
+  ProcessingPage: "/ProcessingPage",
 };
+

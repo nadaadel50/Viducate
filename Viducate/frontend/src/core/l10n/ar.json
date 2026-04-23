@@ -88,5 +88,49 @@
   "login.hero.title2": "وتعلّم بذكاء أكبر.",
   "login.hero.description": "طوّر مستواك الدراسي باستخدام أدوات ذكية بتختصر عليك الطريق.",
   "login.badge.title": "ملخص ذكي",
-  "login.badge.subtitle": "اكتمل في دقيقتين فقط"
+  "login.badge.subtitle": "اكتمل في دقيقتين فقط",
+
+
+
+  "preferences.outputLanguage": "لغة عرض المحتوى",
+  "preferences.sameAsVideo": "مثل لغة الفيديو",
+  "preferences.english": "الإنجليزية",
+  "preferences.arabic": "العربية",
+
+  "languageInit.title": "هل تريد تخصيص لغة المحتوى؟",
+  "languageInit.desc": "يستخدم Viducate الذكاء الاصطناعي لتكييف المحتوى معك. هل تريد تخصيص لغة المحتوى، أو المتابعة بلغة الفيديو؟",
+  "languageInit.noContinue": "لا، متابعة",
+  "languageInit.yesCustomize": "نعم، تخصيص",
+  "languageInit.secure": "سيتم حفظ تفضيلاتك بشكل آمن.",
+
+  "customize.title": "خصص تجربة التعلم الخاصة بك",
+  "customize.desc": "حدد اللغة الافتراضية لإنشاء الملخصات والاختبارات والبطاقات التعليمية.",
+  "customize.skip": "تخطي الآن",
+  "customize.save": "حفظ الإعدادات",
+  "customize.unified.title": "إعدادات توحيد اللغة",
+  "customize.language.unified.enabled": "كل المحتوى بيستخدم نفس اللغة",
+  "customize.language.unified.disabled": "بيتم استخدام لغة المحتوى المفضلة لديك",
+  "customize.preferredLanguage": "لغتك المفضلة",
+
+
+
+  
+  "analysis.title": "الذكاء الاصطناعي يحلل الفيديو الخاص بك",
+  "analysis.subtitle": "يستغرق هذا عادةً حوالي 2-3 دقائق حسب طول الفيديو.",
+  "analysis.complete": "اكتمل التحليل!",
+  "analysis.ready": "المحتوى الدراسي الخاص بك جاهز.",
+  "analysis.step.fetching": "جلب بيانات الفيديو",
+  "analysis.step.segmenting": "تقسيم المواضيع",
+  "analysis.step.generating": "إنشاء الملخص والاختبارات",
+  "analysis.cancel": "إلغاء التحليل",
+  "analysis.tip.title": "هل تعلم؟",
+  "analysis.tip.desc": "يمكن لذكاءنا الاصطناعي اكتشاف أكثر من 50 موضوعًا تعليميًا مختلفًا وإنشاء طوابع زمنية تلقائيًا لتسهيل التنقل عبر محتوى التعلم الخاص بك.",
+  "analysis.pending": "قيد الانتظار",
+  "analysis.active": "جارٍ المعالجة",
+  "analysis.completed": "اكتمل",
+  
+  "analysis.failed": "فشلت العملية",
+  "analysis.error.title": "فشلت عملية التحليل",
+  "analysis.error.subtitle": "حدث خطأ أثناء معالجة الفيديو الخاص بك. يرجى المحاولة مرة أخرى.",
+  "analysis.retry": "إعادة محاولة الرفع"
 }
