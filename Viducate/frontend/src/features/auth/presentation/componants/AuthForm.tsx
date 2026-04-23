@@ -34,7 +34,13 @@ const formValues = watch();
   };
 
   return (
-    <div className="space-y-2 relative">
+    <div className="space-y-2 relative py-15">
+      {serverError && (
+  <CustumError
+    apiError={serverError}
+    clearError={clearError}
+  />
+)}
       <AuthMainText
         bigTitle={intl.formatMessage({ id: isLogin ? "auth.welcomeBack" : "auth.createAccount" })}
         smallTitle={intl.formatMessage({ id: isLogin ? "auth.loginSubtitle" : "auth.signupSubtitle" })}
@@ -51,12 +57,7 @@ const formValues = watch();
         <span className="mx-4 text-[10px] font-bold text-gray-400 uppercase"><FormattedMessage id="auth.or" /></span>
         <div className="flex-grow border-t border-gray-100"></div>
       </div>
-{serverError && (
-  <CustumError
-    apiError={serverError}
-    clearError={clearError}
-  />
-)}
+
       <form onSubmit={handleSubmit(handleProcess)} className="space-y-1">
         {!isLogin && (
           <CustomInput

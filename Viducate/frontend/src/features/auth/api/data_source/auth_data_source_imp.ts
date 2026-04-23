@@ -9,10 +9,10 @@ import { toForgetPassReqDTO } from "../models/forgetPass/forgetpass_req_dto";
 import { toResetPasswordRequestDto } from "../models/forgetPass/reset_password_request_dto";
 
 import { authService } from "../client/auth_service";
-import type { LoginResponseDto } from '../../api/models/login/login_response_dto';
-import type { LoginRequestDto } from '../models/login/login_request_dto';
-import type { SignupRequestDto } from '../models/signup/signup_request_dto';
-import type { SignupResponseDto } from '../models/signup/signup_response_dto';
+import type { LoginResponseDto } from "../../api/models/login/login_response_dto";
+import type { LoginRequestDto } from "../models/login/login_request_dto";
+import type { SignupRequestDto } from "../models/signup/signup_request_dto";
+import type { SignupResponseDto } from "../models/signup/signup_response_dto";
 
 export class AuthDataSourceImp implements AuthDataSource {
   private authApiService: AuthApiService;
@@ -26,10 +26,6 @@ export class AuthDataSourceImp implements AuthDataSource {
       const response = await this.authApiService.resetPassword(
         toResetPasswordRequestDto(resetPassReq),
       );
-      console.log(response.message)
-
-      
-
       return {
         success: true,
         data: response.message,
@@ -39,9 +35,11 @@ export class AuthDataSourceImp implements AuthDataSource {
       return { success: false, error: message };
     }
   }
-  async forgetPassword(forgetPassReq: ForgetPassReq): Promise<ApiResult<string>> {
+  async forgetPassword(
+    forgetPassReq: ForgetPassReq,
+  ): Promise<ApiResult<string>> {
     try {
-      const response =await this.authApiService.forgetPassword(
+      const response = await this.authApiService.forgetPassword(
         toForgetPassReqDTO(forgetPassReq),
       );
 
@@ -52,12 +50,27 @@ export class AuthDataSourceImp implements AuthDataSource {
       return { success: false, error: message };
     }
   }
-  async login(data: LoginRequestDto): Promise<LoginResponseDto> {
-    return await authService.login(data);
+  async login(data: LoginRequestDto): Promise<ApiResult<LoginResponseDto>> {
+    try {
+      const response = await authService.login(data);
+
+      return { success: true, data: response };
+    } catch (error) {
+      const message = handleApiError(error);
+      return { success: false, error: message };
+    }
   }
 
-  async register(data: SignupRequestDto): Promise<SignupResponseDto> {
-    return await authService.register(data);
+  async register(
+    data: SignupRequestDto,
+  ): Promise<ApiResult<SignupResponseDto>> {
+    try {
+      const response = await authService.register(data);
+console.log("2")
+      return { success: true, data: response };
+    } catch (error) {
+      const message = handleApiError(error);
+      return { success: false, error: message };
+    }
   }
 }
-

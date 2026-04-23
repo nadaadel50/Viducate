@@ -8,6 +8,9 @@ import axios from "axios";
 import { useAuth } from "../../../../core/hooks/useAuth";
 import { LoginRequest } from "../../domain/entity/login_request";
 import { SignupRequest } from "../../domain/entity/signup_request";
+import type { ApiResult } from "../../../../core/api/apiResult";
+import type { LoginResponseDto } from "../../api/models/login/login_response_dto";
+import type { SignupResponseDto } from "../../api/models/signup/signup_response_dto";
 
 export const useAuthForm = (isLogin: boolean) => {
   const { login, signup } = useAuth();
@@ -38,27 +41,34 @@ export const useAuthForm = (isLogin: boolean) => {
     mode: "onChange",
   });
 
-  const handleProcess = async (data: AuthFormData) => {
-    setServerError(null);
-    setIsSubmitting(true);
-    try {
-      if (isLogin) {
-      
-        await login(new LoginRequest(data.email, data.password), !!data.rememberMe);
-      } else {
-        await signup(new SignupRequest(data.firstName!, data.lastName!, data.email, data.password));
-      }
-      navigate("/dashboard");
-    } catch (error: unknown) {
-      if (axios.isAxiosError(error) && error.response?.data?.detail) {
-        setServerError(error.response.data.detail);
-      } else {
-        setServerError(intl.formatMessage({ id: "auth.genericError" }));
-      }
-    } finally { 
-      setIsSubmitting(false); 
+const handleProcess = async (data: AuthFormData) => {
+  setServerError(null);
+  setIsSubmitting(true);
+
+  try {
+    let result: ApiResult<any>;
+
+    if (isLogin) {
+      result = await login(new LoginRequest(data.email, data.password), !!data.rememberMe);
+    } else {
+      result = await signup(
+        new SignupRequest(data.firstName!, data.lastName!, data.email, data.password)
+      );
     }
-  };
+
+    if (!result.success) {
+      setServerError(result.error);
+      return;
+    }
+
+    navigate("/dashboard");
+  } catch (err) {
+    console.error("Unexpected error:", err); 
+    setServerError("Something went wrong");
+  } finally {
+    setIsSubmitting(false); 
+  }
+};
 
   return { 
   ...formMethods, 

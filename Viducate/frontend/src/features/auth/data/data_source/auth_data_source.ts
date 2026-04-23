@@ -9,7 +9,7 @@ import type { SignupResponseDto } from "../../api/models/signup/signup_response_
 export interface AuthDataSource {
     forgetPassword(forgetPassReq:ForgetPassReq):Promise<ApiResult<string>>
     resetPassword(resetPassReq:ResetPasswordRequest):Promise<ApiResult<string>>
-    login(data: LoginRequestDto): Promise<LoginResponseDto>;
-    register(data: SignupRequestDto): Promise<SignupResponseDto>;
+    login(data: LoginRequestDto): Promise<ApiResult<LoginResponseDto>>;
+    register(data: SignupRequestDto): Promise<ApiResult<SignupResponseDto>>;
 
 }

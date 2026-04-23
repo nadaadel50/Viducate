@@ -2,6 +2,8 @@ import { CircleCheck } from "lucide-react";
 import { CustomButton } from "../../../../../core/componants/custum_btn";
 import { useT } from "../../../../../core/hooks/useTranslation";
 import { useNavigate } from "react-router-dom";
+import { AppRoutes } from "../../../../../app/routers/appRoutes";
+import { AppRoutesNames } from "../../../../../app/routers/routes";
 
 export function SucessLeftSection() {
   const { translation } = useT();
@@ -33,7 +35,7 @@ export function SucessLeftSection() {
 
       <div
         onClick={()=>{
-          // go to login
+          navigate(AppRoutesNames.login)
         }}
         className="w-full relative px-10"
       >

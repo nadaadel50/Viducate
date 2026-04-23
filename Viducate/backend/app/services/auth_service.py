@@ -130,7 +130,7 @@ class AuthService:
             raise HTTPException(
                 status_code=status.HTTP_409_CONFLICT,
                 detail="An account with this email not exists")
-                detail="An account with this email not exists")
+                
         
         reset_token = secrets.token_urlsafe(32)
         expires_at = datetime.utcnow() + timedelta(hours=1)

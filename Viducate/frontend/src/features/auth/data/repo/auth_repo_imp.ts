@@ -26,12 +26,12 @@ export class AuthRepoImp implements AuthRepo {
    
 
 
-  async register(entity: SignupRequest): Promise<SignupResponseDto> {
+  async register(entity: SignupRequest): Promise<ApiResult<SignupResponseDto>> {
     const dto = toSignupRequestDto(entity);
     return await this.AuthDataSource.register(dto);
   }
 
-  async login(entity: LoginRequest): Promise<LoginResponseDto> {
+  async login(entity: LoginRequest): Promise<ApiResult<LoginResponseDto>> {
     const dto = toLoginRequestDto(entity);
     return await this.AuthDataSource.login(dto);
   }
