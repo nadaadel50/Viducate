@@ -1,41 +1,60 @@
 import React, { useState } from 'react';
-import { useNavigate } from "react-router-dom";
+import { useNavigate, useParams } from "react-router-dom";
 import { BaseModal } from '../../../../core/componants/base_modal';
-import CustumBtnLoader  from '../../../../core/componants/custum_btn_loader';
-import {CustumError} from '../../../../core/componants/custum_error';
+import CustumBtnLoader from '../../../../core/componants/custum_btn_loader';
+import { CustumError } from '../../../../core/componants/custum_error';
 import { PreferenceCard } from './PreferenceCard';
 import { FormattedMessage } from "react-intl";
 import { COLORS } from "../../../../core/constants/colors";
 import { AppRoutesNames } from '../../../../app/routers/routes';
+import { useSavePreferences } from '../hooks/use_save_preferences';
+
 interface CustomizeProps {
   isOpen: boolean;
   onClose: () => void;
 }
+type LanguageOption = "en" | "ar" | "Same as Video";
+
 export const CustomizeExperienceModal: React.FC<CustomizeProps> = ({ isOpen, onClose }) => {
+  const { id } = useParams<{ id: string }>(); 
+  const { submitPreferences, isSubmitting } = useSavePreferences();
   const [serverError, setServerError] = useState<string | null>(null);
-  const [prefs, setPrefs] = useState({ 
-  summary: 'Same as Video', 
-  quiz: 'Same as Video', 
-  flashcards: 'Same as Video'
-});
-const [isSaving, setIsSaving] = useState(false);
+  const navigate = useNavigate();
+
+  const [prefs, setPrefs] = useState<{
+    summary: LanguageOption;
+    quiz: LanguageOption;
+    flashcards: LanguageOption;
+  }>({ 
+    summary: 'Same as Video', 
+    quiz: 'Same as Video', 
+    flashcards: 'Same as Video'
+  });
+
   const handleSave = async () => {
-     try {
-    setIsSaving(true);
-    console.log("Saving Preferences:", prefs);
-    // fake delay أو API call
-    await new Promise((res) => setTimeout(res, 1000));
-    //await savePreferences(prefs); //  API CALL حقيقي
-    onClose();
-    navigate(AppRoutesNames.ProcessingPage);
+    try {
+      setServerError(null);
+      await submitPreferences({
+        videoId: Number(id),
+        summaryLang: prefs.summary,
+        quizLang: prefs.quiz,
+        flashcardsLang: prefs.flashcards
+      });
+      
+      onClose();
+      navigate(AppRoutesNames.ProcessingPage);
     } catch (error: unknown) {
-    setServerError((error as Error).message || "Something went wrong");
-  } finally {
-    setIsSaving(false);
-  }
+      if (typeof error === 'object' && error !== null && 'response' in error) {
+        const apiError = error as { response: { data: { detail?: string } } };
+        setServerError(apiError.response.data.detail || "Failed to save preferences");
+      } else if (error instanceof Error) {
+        setServerError(error.message);
+      } else {
+        setServerError("An unexpected error occurred");
+      }
+    }
   };
 
-const navigate = useNavigate();
   return (
     <BaseModal isOpen={isOpen} onClose={onClose} maxWidth="max-w-5xl">
       {/*  Header Section */}
@@ -70,7 +89,7 @@ const navigate = useNavigate();
             icon="summarize" 
             desc="Set the output language for video summaries." 
             value={prefs.summary} 
-            onChange={(v: string) => setPrefs({...prefs, summary: v})}           
+            onChange={(v: string) => setPrefs({...prefs, summary: v as LanguageOption})}           
             iconBgClass="bg-blue-50 dark:bg-blue-900/20"
             iconTextClass="text-blue-600"
           />
@@ -79,7 +98,7 @@ const navigate = useNavigate();
             icon="quiz" 
             desc="Choose the language for your practice questions." 
             value={prefs.quiz}
-            onChange={(v: string) => setPrefs({...prefs, quiz: v})} 
+            onChange={(v: string) => setPrefs({...prefs, quiz: v as LanguageOption})} 
             iconBgClass="bg-purple-50 dark:bg-purple-900/20"
             iconTextClass="text-purple-600"
           />
@@ -88,7 +107,7 @@ const navigate = useNavigate();
             icon="style" 
             desc="Choose the language for your revision flashcards." 
             value={prefs.flashcards} 
-            onChange={(v: string) => setPrefs({...prefs, flashcards: v})} 
+            onChange={(v: string) => setPrefs({...prefs, flashcards: v as LanguageOption})} 
             iconBgClass="bg-green-50 dark:bg-green-900/20"
             iconTextClass="text-green-600"
           />
@@ -101,7 +120,7 @@ const navigate = useNavigate();
           <FormattedMessage id="customize.skip" />
         </button>
         <button onClick={handleSave} className="h-12 px-8 rounded-xl  text-white text-sm font-bold shadow-md hover:shadow-lg hover:shadow-[#5A0BB1]/30 hover:-translate-y-0.5 transition-all" style={{ background: COLORS.brand.gradient }}>
-         {isSaving ? (
+         {isSubmitting ? (
     <CustumBtnLoader color="bg-white" />
   ) : (
   <FormattedMessage id="customize.save" />

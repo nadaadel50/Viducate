@@ -1,6 +1,6 @@
 export interface VideoPreferences {
-  isUnified: boolean;
-  summaryLang: string;
-  quizLang: string;
-  flashcardsLang: string;
+  videoId: number;
+  summaryLang: "en" | "ar" | "Same as Video";
+  quizLang: "en" | "ar" | "Same as Video";
+  flashcardsLang: "en" | "ar" | "Same as Video";
 }

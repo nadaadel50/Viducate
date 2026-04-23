@@ -41,11 +41,11 @@ export const PreferenceCard: React.FC<PreferenceCardProps> = ({
   <FormattedMessage id="preferences.sameAsVideo" />
 </option>
 
-<option value="English">
+<option value="en">
   <FormattedMessage id="preferences.english" />
 </option>
 
-<option value="Arabic">
+<option value="ar">
   <FormattedMessage id="preferences.arabic" />
 </option>
 </select>

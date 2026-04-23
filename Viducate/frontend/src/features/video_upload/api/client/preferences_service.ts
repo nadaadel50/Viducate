@@ -3,7 +3,7 @@ import type { UserPreferencesRequestDto, UserPreferencesResponseDto } from '../m
 
 export const preferencesService = {
   updatePreferences: async (data: UserPreferencesRequestDto): Promise<UserPreferencesResponseDto> => {
-    const response = await apiClient.post<UserPreferencesResponseDto>('/user/update-preferences', data);
+    const response = await apiClient.put<UserPreferencesResponseDto>('/preferences/content-language', data);
     return response.data;
   }
 };
