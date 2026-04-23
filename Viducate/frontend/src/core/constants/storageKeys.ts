@@ -5,5 +5,9 @@ export const STORAGE_KEYS = {
   title: "video_title",
   description: "video_description",
   videoURL: "video_url",
-  selectType:"select_type"
+  selectType:"select_type",
+   currentTime: "lms_current_time",
+  selectedTopic: "lms_selected_topic",
+   marks:"marks",
+
 };

@@ -129,14 +129,14 @@ async def run_processing_pipeline(video_id: int, language: str):
 
         logger.info("[Pipeline] Segments saved to DB successfully")
 
-        # ── Completed Status ─────────────────────────────────────
-        repo.update_status(video_id, "completed")
-        logger.info(f"[Pipeline] Completed: video_id={video_id}")
+    #     # ── Completed Status ─────────────────────────────────────
+    #     repo.update_status(video_id, "completed")
+    #     logger.info(f"[Pipeline] Completed: video_id={video_id}")
 
-    except Exception as e:
-        logger.error(f"[Pipeline] Failed: video_id={video_id}, error={e}")
-        logger.error(traceback.format_exc()) 
-        VideoRepository(db).update_status(video_id, "failed")
+    # except Exception as e:
+    #     logger.error(f"[Pipeline] Failed: video_id={video_id}, error={e}")
+    #     logger.error(traceback.format_exc()) 
+    #     VideoRepository(db).update_status(video_id, "failed")
 
     finally:
         db.close()
