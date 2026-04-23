@@ -6,6 +6,7 @@ import { AnalysisStepItem } from '../componants/analysis_step_item';
 import { TipCard } from '../componants/tip_card';
 import { COLORS } from '../../../../core/constants/colors';
 import { useProcessingStatus } from '../hooks/use_processing_status';
+import { AppRoutesNames } from '../../../../app/routers/routes';
 
 export function ProcessingPage() {
   const { videoId } = useParams();
@@ -14,7 +15,7 @@ export function ProcessingPage() {
   const { status, progress } = useProcessingStatus(videoId);
   useEffect(() => {
     if (status === 'completed') {
-      const timeout = setTimeout(() => navigate(`/WatchVideo/${videoId}`), 2500);
+      const timeout = setTimeout(() => navigate(AppRoutesNames.wathcVideo), 2500);
       return () => clearTimeout(timeout);
     }
   }, [status, navigate, videoId]);

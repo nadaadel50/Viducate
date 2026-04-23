@@ -77,9 +77,8 @@ export const AuthProvider = ({ children }: { children: React.ReactNode }) => {
 
       const signupData=response.data;
       
-   //   console.log(signupData.token.access_token)
-
-     // localStorage.setItem('token', signupData.token.access_token);
+    sessionStorage.setItem('token', signupData.token.access_token);
+        localStorage.removeItem('token'); 
      console.log(".....................")
      console.log(signupData)
       setUser(signupData.user);

@@ -17,13 +17,13 @@ export function ContentLearningCard({
   onClick: () => void;
   cardInfo: TopicResponse;
 }) {
-  const { setSelectedTopic ,setChangeProgressValue} = useSelectedTopic();
+  const { setSelectedTopic } = useSelectedTopic();
   return (
     <div
       onClick={() => {
         onClick();
         setSelectedTopic(cardInfo);
-        setChangeProgressValue(true);
+      
       }}
       className={`cursor-pointer group relative rounded-2xl bg-white/70  p-4 transition-all hover:bg-white hover:border-primary/40 hover:shadow-soft ${isSelected ? "border-2 border-[#4f46e5] shadow-xl shadow-[#4f46e5]/15" : "border border-slate-200/60 w-80"}`}
     >

@@ -39,7 +39,7 @@ export function AppRoutes() {
               <Route path="/UploadVideoPage" element={<UploadVideoPage />} /> 
                 <Route path="/ProcessingPage/:videoId" element={<ProcessingPage />} />
                <Route
-          path="/"
+          path="/WatchVideo"
           element={
             <SelectedTopicProvider>
               <MainPage />

@@ -5,6 +5,8 @@ import { useLinkHandlers } from "../hooks/use_link_handler";
 import { useLinkTitleInput } from "../hooks/use_link_input_handler";
 import { uploadURLUseCase } from "../../../../core/di/upload_video_container";
 import { UrlRequest } from "../../domain/entity/url_request";
+import { useNavigate } from "react-router";
+import { AppRoutesNames } from "../../../../app/routers/routes";
 
 
 type UploadLinkSectionProps={
@@ -21,6 +23,8 @@ export function UploadLinkSection({handleError}:UploadLinkSectionProps) {
 
 } = useLinkTitleInput();
 
+const navigate=useNavigate();
+
  const handleUploadURL = async () => {
     if (!url) return;
     console.log(url)
@@ -31,6 +35,9 @@ export function UploadLinkSection({handleError}:UploadLinkSectionProps) {
 
     if(response.success){
       console.log(response.data)
+      navigate(`${AppRoutesNames.ProcessingPage}/${response.data.videoId}`);
+      
+
     }
     else{
      handleError(response.error)
