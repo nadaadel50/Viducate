@@ -18,7 +18,7 @@ def summarize_segment(segment_title: str, main_topic: str, subtopics: list[dict]
     - Mentions specific concepts, components, or tools by name
     - Explains what each component DOES, not just that it exists
     - Is useful for someone who wants to understand the topic deeply
-
+    {lang_note} 
     Segment Title: {segment_title}
     Main Topic: {main_topic}
     Subtopics:
@@ -52,6 +52,7 @@ def summarize_full_video(video_title: str, segment_summaries: list[dict], langua
     - Would help a student understand what they will learn from this video
     - Is 5-7 sentences long
     {segments_text}
+    {lang_note} 
     Write a specific, comprehensive summary:"""
 
     response = client.chat.completions.create(

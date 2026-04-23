@@ -1,0 +1,94 @@
+{
+  "total_segments": 3,
+  "segments": [
+    {
+      "segment_number": 1,
+      "start_time": "00:00:02",
+      "end_time": "00:04:00",
+      "main_topic": "Introduction to DevOps Course",
+      "title": "Introduction and Course Overview",
+      "sub_topics": [
+        {
+          "name": "Introduction to the Course",
+          "start_time": "00:00:02",
+          "end_time": "00:00:35",
+          "description": "Hello everyone, my name is Abhishek and welcome back to my channel. So today we are at day 26 of our complete DevOps course."
+        },
+        {
+          "name": "Video Overview",
+          "start_time": "00:00:35",
+          "end_time": "00:04:00",
+          "description": "And this video is going to be a both practical as well as theory class. And this is very, very important because I am going to explain you some production issues with Docker or you know, whenever interviewer asks you what are some of the practical problems that you have faced with Docker or containers and how did you solve them."
+        }
+      ],
+      "key_points": [
+        "Introduction to DevOps Course",
+        "Production Issues with Docker"
+      ]
+    },
+    {
+      "segment_number": 2,
+      "start_time": "00:04:00",
+      "end_time": "00:14:29",
+      "main_topic": "Multi-Stage Docker Builds",
+      "title": "Understanding Multi-Stage Docker Builds",
+      "sub_topics": [
+        {
+          "name": "Concept of Multi-Stage Docker Builds",
+          "start_time": "00:04:00",
+          "end_time": "00:07:06",
+          "description": "so what we are going to learn on a very high level is one we are going to understand the concept of multi-stage docker builds and the second thing that we are going to cover is distro less images okay so there is a very close relation between both of them that means by using distro less images you can improve the efficiency or you know you can get maximum benefit of multi docker builds"
+        },
+        {
+          "name": "Problem with Traditional Docker Files",
+          "start_time": "00:07:06",
+          "end_time": "00:09:06",
+          "description": "so let's take an example to write a calculator application. Okay, so your task is to like execute a calculator application as a docker container. Okay, so assume this is a python application. Now. What will be your steps?"
+        },
+        {
+          "name": "Solution using Multi-Stage Docker Builds",
+          "start_time": "00:09:06",
+          "end_time": "00:14:29",
+          "description": "so here what I will do is in the multi-stage build, I will not have this step. Okay. So instead of executing the command here itself or instead of executing the entry point here itself, what I will do is I will take the binary from this Docker image or from this Docker file into this specific Docker file."
+        }
+      ],
+      "key_points": [
+        "Multi-Stage Docker Builds",
+        "Distroless Images",
+        "Efficiency Improvement"
+      ]
+    },
+    {
+      "segment_number": 3,
+      "start_time": "00:14:29",
+      "end_time": "00:31:24",
+      "main_topic": "Distroless Images and Security",
+      "title": "Distroless Images and Security Benefits",
+      "sub_topics": [
+        {
+          "name": "Introduction to Distroless Images",
+          "start_time": "00:14:29",
+          "end_time": "00:17:05",
+          "description": "so here i'll introduce you to distro less images okay so now we have set the ground very well for you to understand what is a distro less docker image many people find this very complicated topic i don even understand why people find it difficult because i looked into some google groups Google forums the ones that have subscribed to or the cnc of slack channels people ask a lot of questions on digital images"
+        },
+        {
+          "name": "Security Benefits of Distroless Images",
+          "start_time": "00:17:05",
+          "end_time": "00:21:24",
+          "description": "one biggest advantage that you would get from distroless images is the security okay so other than reducing your container image size you will have highest security with distroless images so this is something that you can answer in your interview you as well when someone asks you what are what is one of the production issue that you faced with Docker containers and how did you solve it."
+        },
+        {
+          "name": "Practical Example with Golang",
+          "start_time": "00:21:24",
+          "end_time": "00:31:24",
+          "description": "so let us go to examples folder let us go to golang multistage docker build ls and now this is the calculator application oh sorry yeah so this is the calculator function that i am going to run simply you can do uh go run calculator.go and you will see what i am going to show you so this is a very basic application which says provide the inputs for the calculation"
+        }
+      ],
+      "key_points": [
+        "Distroless Images",
+        "Security Benefits",
+        "Golang Example"
+      ]
+    }
+  ]
+}

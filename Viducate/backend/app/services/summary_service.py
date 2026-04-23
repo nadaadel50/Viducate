@@ -6,6 +6,7 @@ from app.models.segment_summary import SegmentSummary
 from app.models.topic_segment import TopicSegment
 from app.models.video import Video
 from app.ml.processors.summarization_processor import process_summaries
+from app.models.content_preferences import ContentPreferences
 
 logger = logging.getLogger(__name__)
 
@@ -13,6 +14,14 @@ logger = logging.getLogger(__name__)
 class SummaryService:
     def __init__(self, db: Session):
         self.db = db
+
+    def _resolve_language(self, user_id: int, video_language: str) -> str:
+        pref = self.db.query(ContentPreferences).filter(
+            ContentPreferences.user_id == user_id
+        ).first()
+        if pref and pref.summary_language:
+            return pref.summary_language
+        return video_language
 
     def _check_video_belongs_to_user(self, video_id: int, user_id: int):
         video = self.db.query(Video).filter(Video.vid == video_id).first()
@@ -45,8 +54,9 @@ class SummaryService:
             }
 
         # Generate
+        lang = self._resolve_language(user_id, video.language)
         logger.info(f"Generating new summary for video_id={video_id}")
-        process_summaries(self.db, video_id, video.language)
+        process_summaries(self.db, video_id, lang)
 
         new_summary = self.db.query(VideoSummary).filter(
             VideoSummary.video_id == video_id
@@ -80,7 +90,8 @@ class SummaryService:
 
         if not first_summary:
             logger.info(f"Generating segment summaries for video_id={video_id}")
-            process_summaries(self.db, video_id, video.language)
+            lang = self._resolve_language(user_id, video.language)
+            process_summaries(self.db, video_id, lang)
 
         # Fetch and return all
         result = []

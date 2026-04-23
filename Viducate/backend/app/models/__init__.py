@@ -17,9 +17,10 @@ from .keypoints import Keypoint
 # from .chat_history import ChatHistory
 # from .stuck_event import StuckEvent
 # from .mindmap import Mindmap
+from .content_preferences import ContentPreferences
 
 __all__ = [
-    "Base", "User", "Settings", "Video","TopicSegment", "Subtopic", "Keypoint", "VideoSummary", "SegmentSummary"
+    "Base", "User", "Settings", "Video","TopicSegment", "Subtopic", "Keypoint", "VideoSummary", "SegmentSummary", "ContentPreferences"
 ]
 
 # "UserAnalytics","Video", "VideoSummary", "Slide",
