@@ -11,6 +11,7 @@ import { SignupRequest } from "../../domain/entity/signup_request";
 import type { ApiResult } from "../../../../core/api/apiResult";
 import type { LoginResponseDto } from "../../api/models/login/login_response_dto";
 import type { SignupResponseDto } from "../../api/models/signup/signup_response_dto";
+import { AppRoutesNames } from "../../../../app/routers/routes";
 
 export const useAuthForm = (isLogin: boolean) => {
   const { login, signup } = useAuth();
@@ -61,7 +62,7 @@ const handleProcess = async (data: AuthFormData) => {
       return;
     }
 
-    navigate("/dashboard");
+    navigate(AppRoutesNames.uploadPage); // will move to dashboard soooooooooooooooooooooooooon!!!!!
   } catch (err) {
     console.error("Unexpected error:", err); 
     setServerError("Something went wrong");

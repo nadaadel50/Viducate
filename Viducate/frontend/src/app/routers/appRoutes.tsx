@@ -27,13 +27,13 @@ export function AppRoutes() {
 
             /* here we will put all the public routes that don't need authentication to access them like landing page, signup */
            /* for example */
-            <Route path="/UploadVideoPage" element={<UploadVideoPage />} />  /* for example */
+             /* for example */
             <Route path="/" element={<ForgetPasswordPage />} />  /* for example */
             <Route path="/test-modals" element={<TestModalsPage />} />  /* for example */
-            <Route path="/ProcessingPage/:videoId" element={<ProcessingPage />} />  /* for example */
-
+           <Route path="/ProcessingPage/:videoId" element={<ProcessingPage />} />
              <Route  element={<ProtectedRoute/>}>  // will prmove "/protected" soon
               /* here we will put all the protected routes that need authentication to access them */
+              <Route path="/UploadVideoPage" element={<UploadVideoPage />} /> 
              </Route>
 
              <Route path={AppRoutesNames.sucessSendEmail} element={<EmailSendedPage />} />

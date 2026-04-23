@@ -9,5 +9,7 @@ export const AppRoutesNames = {
   forgotPassword: "/forgot-password",
   signup: "/signup",
   ProcessingPage: "/ProcessingPage",
+  uploadPage:"/UploadVideoPage"
+
 };
 

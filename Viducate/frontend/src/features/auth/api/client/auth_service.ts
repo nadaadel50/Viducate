@@ -32,15 +32,15 @@ export class AuthApiService {
 export const authService = {
   
   login: async (data: LoginRequestDto) => {
-    const response:LoginResponseDto = await apiClient.post('/auth/login', data);
+    const response = await apiClient.post('/auth/login', data);
     
-    return response;
+    return response.data;
+   
   },
   register: async (data: SignupRequestDto) => {
-    const response:SignupResponseDto = await apiClient.post('/auth/register', data);
-    console.log("i cam to service")
-    console.log(response)
-    return response;
+    const response = await apiClient.post('/auth/register', data);
+   
+    return response.data;
   },
   
   getCurrentUser: async () => {
