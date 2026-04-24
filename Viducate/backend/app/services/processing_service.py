@@ -88,19 +88,26 @@ async def run_processing_pipeline(video_id: int, language: str):
         logger.info(f"[Pipeline] Step 1 - Transcription: video_id={video_id}")
         repo.update_status(video_id, "transcribing")
         video = repo.get_by_id(video_id)
-        transcript = await transcribe(video.url, video_id=video_id)
+        # transcript = await transcribe(video.url, video_id=video_id)
+        transcript, video_path = await transcribe(video.url, video_id=video_id)
         logger.info(f"Transcript: {transcript}")
 
         # ── Step 2: OCR ───────────────────────────────────────────────────
         logger.info(f"[Pipeline] Step 2 - OCR: video_id={video_id}")
         repo.update_status(video_id, "ocr_processing")
         loop = asyncio.get_event_loop()
+        ocr_service = OCRService(db)
+
         ocr_segments = await loop.run_in_executor(
             None,
-            lambda: OCRService(db).run(video_id)
+            lambda: ocr_service.run(video_path, video_id)
         )
+        # ocr_segments = await loop.run_in_executor(
+        #     None,
+        #     lambda: OCRService(db).run(video_id)
+        # )
         logger.info(f"[Pipeline] OCR segments: {len(ocr_segments)}")
-
+        
         # ── Step 3: Merging ─────────────────────────────────────
         logger.info(f"[Pipeline] Step 3 - Merging: video_id={video_id}")
         repo.update_status(video_id, "merging")
