@@ -9,7 +9,10 @@ from app.api.v1.endpoints.ocr import router as ocr_router
 from app.api.v1.endpoints.segments import router as segments_router 
 from app.api.v1.endpoints.summary import router as summary_router
 from app.api.v1.endpoints.preferences import router as preferences_router
+<<<<<<< HEAD
 from app.api.v1.endpoints.flashcards import router as flashcards_router
+=======
+>>>>>>> main
 
 
 app = FastAPI(
