@@ -1,0 +1,345 @@
+[00:00:02]
+  Transcript :  السلام عليكم
+  OCR        : Problems Solving | Codewars 8 Kyu Introduction
+  Combined   :  السلام عليكم Problems Solving | Codewars 8 Kyu Introduction
+
+[00:00:06]
+  Transcript :  السلام عليكم
+  OCR        : IzeroSoive | Clam Enknone | Apr 2022 | Eam extra honor and ealin new alles | Dont let lseyofhs scere y | Disueirse | Progress | Rask: 81y4 | Up Votes: | Highest Trained: Ca4 85 kyul | Rank Brealedown | Overalt:  kys 10.04 | C: Bkyw10.0 | Nerat Rack
+  Combined   :  السلام عليكم IzeroSoive | Clam Enknone | Apr 2022 | Eam extra honor and ealin new alles | Dont let lseyofhs scere y | Disueirse | Progress | Rask: 81y4 | Up Votes: | Highest Trained: Ca4 85 kyul | Rank Brealedown | Overalt:  kys 10.04 | C: Bkyw10.0 | Nerat Rack
+
+[00:00:12]
+  Transcript :  السلام عليكم
+  OCR        : ElzeroSolve | Clan Unknows | Mtemniher Slince: 1902 | Earn extra honor and gain new alles! | Dont let layefth scare you | Lavfing a joh istnch is | Sorial | Disecurse | Progress | Rank 8 kyo | Up Votes | Highent Tralned: Cas  kysl | Total Languages Trained: | ank Freakedown | Cx 8.k450.0 | Overall: a kya  10.09 | Neset Rank
+  Combined   :  السلام عليكم ElzeroSolve | Clan Unknows | Mtemniher Slince: 1902 | Earn extra honor and gain new alles! | Dont let layefth scare you | Lavfing a joh istnch is | Sorial | Disecurse | Progress | Rank 8 kyo | Up Votes | Highent Tralned: Cas  kysl | Total Languages Trained: | ank Freakedown | Cx 8.k450.0 | Overall: a kya  10.09 | Neset Rank
+
+[00:00:30]
+  Transcript :  بإذن الله وعملت أكاونت جديد غير الحسابات بتاعتي عشان أبدأ معاك الرحلة من السفر
+  OCR        : None
+  Combined   :  بإذن الله وعملت أكاونت جديد غير الحسابات بتاعتي عشان أبدأ معاك الرحلة من السفر
+
+[00:00:35]
+  Transcript :  أول حاجة محتاجة أقولها لك أنك تقدر تمشي معنا في الرحلة بأي لغة زي ما اتفقنا
+  OCR        : None
+  Combined   :  أول حاجة محتاجة أقولها لك أنك تقدر تمشي معنا في الرحلة بأي لغة زي ما اتفقنا
+
+[00:00:40]
+  Transcript :  عايز تتعلم بC++ وتحل بيها تمام
+  OCR        : None
+  Combined   :  عايز تتعلم بC++ وتحل بيها تمام
+
+[00:00:42]
+  Transcript :  اتعلمت اللغة تانية في أي مكان تاني وعايز تكمل معنا برضو مفيش أدنى مشكلة
+  OCR        : None
+  Combined   :  اتعلمت اللغة تانية في أي مكان تاني وعايز تكمل معنا برضو مفيش أدنى مشكلة
+
+[00:00:48]
+  Transcript :  أول حاجة طبعا هتدخل على الموقع التسجل
+  OCR        : 1 Register | 2 Choose Language | 3 Level | 4 Daily Solve | 5 Stop Video And Try | 6 Use Your IDE | 7 Watch Other Solutions And Learn
+  Combined   :  أول حاجة طبعا هتدخل على الموقع التسجل 1 Register | 2 Choose Language | 3 Level | 4 Daily Solve | 5 Stop Video And Try | 6 Use Your IDE | 7 Watch Other Solutions And Learn
+
+[00:00:52]
+  Transcript :  بعد كده هتخش على practice الشكل ده
+  OCR        : lzeroSolve | Clan Unknown | Following | Profiles | FollowersO | Leaderboardis | Earn adra honor and gain new alles! | Dont let layofth scare yous | Landing a jab is tedh as son | Dliscussian | Solution | Cobevtion | umite | Dlaeverne | Progress | Rank 8 ky4 | Tatal Langunges Trained: 1 | Up Votes | Totad Completed Kata | Highest Tralned: Cas 0kye | ank Firealedown | Overal: 8 kya10.0 | C: 8.kyw10.0k | Neet Rank
+  Combined   :  بعد كده هتخش على practice الشكل ده lzeroSolve | Clan Unknown | Following | Profiles | FollowersO | Leaderboardis | Earn adra honor and gain new alles! | Dont let layofth scare yous | Landing a jab is tedh as son | Dliscussian | Solution | Cobevtion | umite | Dlaeverne | Progress | Rank 8 ky4 | Tatal Langunges Trained: 1 | Up Votes | Totad Completed Kata | Highest Tralned: Cas 0kye | ank Firealedown | Overal: 8 kya10.0 | C: 8.kyw10.0k | Neet Rank
+
+[00:00:54]
+  Transcript :  C C
+  OCR        : FEATURED TAGS | Cnyptapraphy | Delaiggiling | Saetly | 1U121xataFioun | Between Extremen | Statu | Acproied | Propem | Defcll | Find out whether the shape is a cube | Sum even mumsbers | 527 926-1.3208000 | Valld Parentheses
+  Combined   :  C C FEATURED TAGS | Cnyptapraphy | Delaiggiling | Saetly | 1U121xataFioun | Between Extremen | Statu | Acproied | Propem | Defcll | Find out whether the shape is a cube | Sum even mumsbers | 527 926-1.3208000 | Valld Parentheses
+
+[00:00:56]
+  Transcript :  C C
+  OCR        : FEATURED TAOS | Saet By | Between Extreme | My Langagm | Agda leta | BF Bela | Find out whether the shape is a cube | 844 90f2017 14.953 2.1hm | EML leta | Cloume | COBOL fletal | Sum even numbers | Collecticriot | 3527929-11.3208000 | Commonlisp leta | Valld Parentheses | Crystal
+  Combined   :  C C FEATURED TAOS | Saet By | Between Extreme | My Langagm | Agda leta | BF Bela | Find out whether the shape is a cube | 844 90f2017 14.953 2.1hm | EML leta | Cloume | COBOL fletal | Sum even numbers | Collecticriot | 3527929-11.3208000 | Commonlisp leta | Valld Parentheses | Crystal
+
+[00:00:58]
+  Transcript :  C C
+  OCR        : FEATURED TIAOS | Saet By | Between Extremen | peticaly | Find out whether the shape is a cube | 844 9012017 14.953 2.1hm | Sum even numbers | Valld Parentheses
+  Combined   :  C C FEATURED TIAOS | Saet By | Between Extremen | peticaly | Find out whether the shape is a cube | 844 9012017 14.953 2.1hm | Sum even numbers | Valld Parentheses
+
+[00:01:00]
+  Transcript :  C C
+  OCR        : FEATURED TIAONS | Defficulty | Find out whether the shape is a cube | 90201714.953 | 527 92-1.320 | Sum even mumbers | Valld Parentheses
+  Combined   :  C C FEATURED TIAONS | Defficulty | Find out whether the shape is a cube | 90201714.953 | 527 92-1.320 | Sum even mumbers | Valld Parentheses
+
+[00:01:04]
+  Transcript :  C C
+  OCR        : Cata LearyCa Reacic | Sort8y | 11218 | sain | Appn | Dificulty | Find out whether the shape is a cube | 844 9012.017 14.953 1.1hm | 7hyw | Sum even mumbers | 8277291.320 | 8.00 | 4 lyu | 3 kw | Valid Parentheses
+  Combined   :  C C Cata LearyCa Reacic | Sort8y | 11218 | sain | Appn | Dificulty | Find out whether the shape is a cube | 844 9012.017 14.953 1.1hm | 7hyw | Sum even mumbers | 8277291.320 | 8.00 | 4 lyu | 3 kw | Valid Parentheses
+
+[00:01:06]
+  Transcript :  C C
+  OCR        : Sort8y | Find out whether the shape is a cube | sain | Appn | Dificulty | My head is at the wrong end! | 11318 | jab in tach is stit | Thinkdul-Logic Drilis Traffic Right | 975.228845035 | CAREER OPPORTUNITIES
+  Combined   :  C C Sort8y | Find out whether the shape is a cube | sain | Appn | Dificulty | My head is at the wrong end! | 11318 | jab in tach is stit | Thinkdul-Logic Drilis Traffic Right | 975.228845035 | CAREER OPPORTUNITIES
+
+[00:01:08]
+  Transcript :  يعني المفروض أنت تبدأ بحاجة جمدة
+  OCR        : None
+  Combined   :  يعني المفروض أنت تبدأ بحاجة جمدة
+
+[00:01:10]
+  Transcript :  ده صحيح في حالات لكن في المنطقة بتاعتنا هنا أو في الحالة بتاعتنا هنا ما ينفعش
+  OCR        : None
+  Combined   :  ده صحيح في حالات لكن في المنطقة بتاعتنا هنا أو في الحالة بتاعتنا هنا ما ينفعش
+
+[00:01:15]
+  Transcript :  ما ينفعش تبدأ بمسألة صعبة جدا لأنها هتعقدك وممكن تكرهك في حل المشكلات
+  OCR        : None
+  Combined   :  ما ينفعش تبدأ بمسألة صعبة جدا لأنها هتعقدك وممكن تكرهك في حل المشكلات
+
+[00:01:19]
+  Transcript :  لازم تبدأ بتدرج
+  OCR        : None
+  Combined   :  لازم تبدأ بتدرج
+
+[00:01:21]
+  Transcript :  ابدأ بمسائل أو مشاكل بسيطة
+  OCR        : None
+  Combined   :  ابدأ بمسائل أو مشاكل بسيطة
+
+[00:01:23]
+  Transcript :  اتعلم منها افهم الفكرة خش على اللي بعده
+  OCR        : None
+  Combined   :  اتعلم منها افهم الفكرة خش على اللي بعده
+
+[00:01:25]
+  Transcript :  في اللي بعده في اللي بعده
+  OCR        : None
+  Combined   :  في اللي بعده في اللي بعده
+
+[00:01:26]
+  Transcript :  لحد ما توصل للمستوى اللي نفسك فيه بإذن الله
+  OCR        : None
+  Combined   :  لحد ما توصل للمستوى اللي نفسك فيه بإذن الله
+
+[00:01:30]
+  Transcript :  طبعا كل يوم لما تحل مشكلات
+  OCR        : KataLaryCoPaction | FEATUREDTAGA | DelogPng | Sort ly | Find out whether the shape is a cube | Stabue | Progrem | Detcaly | My head is at the wrong end! | .80N-44.391 | 35318 | 1P01 | a job in tach ic wil wnl | Thinidfual- Logic Drils: Traffic Right | 100979-85228 45.005 | 2 trae-Oune | Bey is bNiring a ML. Einginenr Intarn
+  Combined   :  طبعا كل يوم لما تحل مشكلات KataLaryCoPaction | FEATUREDTAGA | DelogPng | Sort ly | Find out whether the shape is a cube | Stabue | Progrem | Detcaly | My head is at the wrong end! | .80N-44.391 | 35318 | 1P01 | a job in tach ic wil wnl | Thinidfual- Logic Drils: Traffic Right | 100979-85228 45.005 | 2 trae-Oune | Bey is bNiring a ML. Einginenr Intarn
+
+[00:01:31]
+  Transcript :  المفروض ان انت ما تخليهاش تظهر قدامك تاني
+  OCR        : None
+  Combined   :  المفروض ان انت ما تخليهاش تظهر قدامك تاني
+
+[00:01:34]
+  Transcript :  فبتيجي عند البروجرس هنا
+  OCR        : None
+  Combined   :  فبتيجي عند البروجرس هنا
+
+[00:01:36]
+  Transcript :  وتقوله I have not completed
+  OCR        : KataLbaneC-Pactice | FEATURED TAGS | 4ngrapi | Sort By | Find out whether the shape is a cube | 1.Thoman | Stabue | Aoproved | My head is at the wrong end! | Kata I have not trained on | Donrctant hyets wncit yus. Lamd | 8100979-15.228 945.035 | 2 Grae Crase | CAREER OPPORTUNITIES | I tiring a ML. Engineer Intare
+  Combined   :  وتقوله I have not completed KataLbaneC-Pactice | FEATURED TAGS | 4ngrapi | Sort By | Find out whether the shape is a cube | 1.Thoman | Stabue | Aoproved | My head is at the wrong end! | Kata I have not trained on | Donrctant hyets wncit yus. Lamd | 8100979-15.228 945.035 | 2 Grae Crase | CAREER OPPORTUNITIES | I tiring a ML. Engineer Intare
+
+[00:01:38]
+  Transcript :  هيجيب لك المشاكل اللي انت ما حلتهاش
+  OCR        : KataLibarneC-Pactice | FEATURED TAGS | ngrapin | 0Eatorlats | Sort By | Find out whether the shape is a cube | 1Theoman | My head is at the wrong end! | Kata I hayw compleles | 8100 979-85.228 945.035 | 2 Grae Crase | CAREER OPPORTUNITIES
+  Combined   :  هيجيب لك المشاكل اللي انت ما حلتهاش KataLibarneC-Pactice | FEATURED TAGS | ngrapin | 0Eatorlats | Sort By | Find out whether the shape is a cube | 1Theoman | My head is at the wrong end! | Kata I hayw compleles | 8100 979-85.228 945.035 | 2 Grae Crase | CAREER OPPORTUNITIES
+
+[00:01:40]
+  Transcript :  وليتحل خلاص هيتفلتر من هنا
+  OCR        : KataLibaneC-Paction | Sort By | Find out whether the shape is a cube | My head is at the wrong end! | 35318 | Thinkfal- Loglic Drils: Traffic light | 8100 97985.228 46.005 | Grae Orase
+  Combined   :  وليتحل خلاص هيتفلتر من هنا KataLibaneC-Paction | Sort By | Find out whether the shape is a cube | My head is at the wrong end! | 35318 | Thinkfal- Loglic Drils: Traffic light | 8100 97985.228 46.005 | Grae Orase
+
+[00:01:42]
+  Transcript :  عندك حوالي 142 وحده
+  OCR        : KataLibaneCoPactice | FEATURED TAGS | Sort By | Find out wihether the shape is a cube | 1.Thoman | Stabue | Difficalty | My head is at the wrong end! | -.54N14.391035.318 | 100 97-85.228 45.095 | Thinkdul-Logic Drils Traffic ight | 2 Grae Crase
+  Combined   :  عندك حوالي 142 وحده KataLibaneCoPactice | FEATURED TAGS | Sort By | Find out wihether the shape is a cube | 1.Thoman | Stabue | Difficalty | My head is at the wrong end! | -.54N14.391035.318 | 100 97-85.228 45.095 | Thinkdul-Logic Drils Traffic ight | 2 Grae Crase
+
+[00:01:44]
+  Transcript :  في وقت تسجيل الفيديو ده
+  OCR        : None
+  Combined   :  في وقت تسجيل الفيديو ده
+
+[00:01:48]
+  Transcript :  او لحد وقت تسجيل الفيديو ده
+  OCR        : 1 Register | 2 Choose Language | 3 Level | 4 Daily Solve | 5 Stop Video And Try | 6 Use Your IDE | 7 Watch Other Solutions And Learn
+  Combined   :  او لحد وقت تسجيل الفيديو ده 1 Register | 2 Choose Language | 3 Level | 4 Daily Solve | 5 Stop Video And Try | 6 Use Your IDE | 7 Watch Other Solutions And Learn
+
+[00:01:48]
+  Transcript :  يوميا حضرتك ممكن تحل مثلا 10 او 15 في الحاجات السهلة دي
+  OCR        : None
+  Combined   :  يوميا حضرتك ممكن تحل مثلا 10 او 15 في الحاجات السهلة دي
+
+[00:01:51]
+  Transcript :  بعد كده هتلاقي ان المسائل بدأت تبقى اصعب شوية
+  OCR        : None
+  Combined   :  بعد كده هتلاقي ان المسائل بدأت تبقى اصعب شوية
+
+[00:01:54]
+  Transcript :  ممكن تلاقي نفسك بتحل 2 او 3 في اليوم
+  OCR        : None
+  Combined   :  ممكن تلاقي نفسك بتحل 2 او 3 في اليوم
+
+[00:01:57]
+  Transcript :  لحد ما تتوغل اكتر ممكن تلاقي
+  OCR        : None
+  Combined   :  لحد ما تتوغل اكتر ممكن تلاقي
+
+[00:02:00]
+  Transcript :  تقعد معك يوم او اتنين او حتى اسبوع طبعا على حسب. ازاي تستفيد من
+  OCR        : None
+  Combined   :  تقعد معك يوم او اتنين او حتى اسبوع طبعا على حسب. ازاي تستفيد من
+
+[00:02:06]
+  Transcript :  القائمة بتاعتنا اللي هيكون فيها مشكلات وحلها مع الشرح مع الكلام
+  OCR        : Kata Lt | FEATURED TINGA | Deloging | SortBy | 142xataFloond | Find out whether the shape is arcube | State | Acercned | Progrett | Detcalty | My head is at the wrorg end! | -844.391 | 35318 | Thinidul- Logic Drills: Traffic Right | 810012-5228045.035
+  Combined   :  القائمة بتاعتنا اللي هيكون فيها مشكلات وحلها مع الشرح مع الكلام Kata Lt | FEATURED TINGA | Deloging | SortBy | 142xataFloond | Find out whether the shape is arcube | State | Acercned | Progrett | Detcalty | My head is at the wrorg end! | -844.391 | 35318 | Thinidul- Logic Drills: Traffic Right | 810012-5228045.035
+
+[00:02:09]
+  Transcript :  ده كله. ان حضرتك تشوف المطلوب ايه? تفتح المشكلة تشوف المطلوب
+  OCR        : None
+  Combined   :  ده كله. ان حضرتك تشوف المطلوب ايه? تفتح المشكلة تشوف المطلوب
+
+[00:02:16]
+  Transcript :  وتحلها بنفسك. يعني ما تبصش على الفيديو بتاعي نيها ايا الا لما
+  OCR        : olidil gn dalgail bib | plaicild | -lk pial | Problems Solving Level One | For Absalute Beginners | Video fom | Century Fron
+  Combined   :  وتحلها بنفسك. يعني ما تبصش على الفيديو بتاعي نيها ايا الا لما olidil gn dalgail bib | plaicild | -lk pial | Problems Solving Level One | For Absalute Beginners | Video fom | Century Fron
+
+[00:02:18]
+  Transcript :  تجرب. هنا مثلا الفيديو الاول فيه تلات مشاكل. هتفتح المشكلة
+  OCR        : Century from Year | Is Io Divisibe By X dand Y?
+  Combined   :  تجرب. هنا مثلا الفيديو الاول فيه تلات مشاكل. هتفتح المشكلة Century from Year | Is Io Divisibe By X dand Y?
+
+[00:02:21]
+  Transcript :  وتجرب تحلها. تشوف حل واثنين وتلاتة. وحزاري حزاري حزاري يا
+  OCR        : None
+  Combined   :  وتجرب تحلها. تشوف حل واثنين وتلاتة. وحزاري حزاري حزاري يا
+
+[00:02:26]
+  Transcript :  صديقي ان انت تروح تبحث عن حل المشكلة في جوجل لانك كده مش
+  OCR        : None
+  Combined   :  صديقي ان انت تروح تبحث عن حل المشكلة في جوجل لانك كده مش
+
+[00:02:30]
+  Transcript :  هتتعلم ومش هتستفيد اي حاجة. جربت التلاتة حلتهم محلتهمش طوله
+  OCR        : None
+  Combined   :  هتتعلم ومش هتستفيد اي حاجة. جربت التلاتة حلتهم محلتهمش طوله
+
+[00:02:35]
+  Transcript :  معاك بعد كده شوف الفيديو. حلتهم شوف الحلول وكارن محلتهمش شوف
+  OCR        : None
+  Combined   :  معاك بعد كده شوف الفيديو. حلتهم شوف الحلول وكارن محلتهمش شوف
+
+[00:02:40]
+  Transcript :  الحلول وتعلم عشان تساعدك في المشاكل اللي بعدها. مفيش مانع
+  OCR        : None
+  Combined   :  الحلول وتعلم عشان تساعدك في المشاكل اللي بعدها. مفيش مانع
+
+[00:02:46]
+  Transcript :  ابدا لو تعقلت في الاول ولقيت للمشكلة صعبة. مفيش مشكلة. هتحلها
+  OCR        : CatatihanyCPacio | FEATUREDTAGS | Detoging | Sort By | 42xataFloond | Lapup | Find out whether the shape is a cube | 1Thoman | Statue | Auproied | Progrest | Deficatty | Eata i bove | My head is at the wrorg end! | 0 271 | 8.4580044.391 | 35318 | 100 92-1522805.005 | Thinkful- Logic Drills: Tratfic Right | 1 Giree Orse
+  Combined   :  ابدا لو تعقلت في الاول ولقيت للمشكلة صعبة. مفيش مشكلة. هتحلها CatatihanyCPacio | FEATUREDTAGS | Detoging | Sort By | 42xataFloond | Lapup | Find out whether the shape is a cube | 1Thoman | Statue | Auproied | Progrest | Deficatty | Eata i bove | My head is at the wrorg end! | 0 271 | 8.4580044.391 | 35318 | 100 92-1522805.005 | Thinkful- Logic Drills: Tratfic Right | 1 Giree Orse
+
+[00:02:48]
+  Transcript :  بعد ما حد يعلمك بعد كده بازن الله هتطور من نفسك وتحل اللي
+  OCR        : None
+  Combined   :  بعد ما حد يعلمك بعد كده بازن الله هتطور من نفسك وتحل اللي
+
+[00:02:58]
+  Transcript :  Visual Studio Community
+  OCR        : 1 Register | 2 Choose Language | 4 Daily Solve | Level | Stop Video And Try | Use Your IDE | Watch Other Solutions And Learn
+  Combined   :  Visual Studio Community 1 Register | 2 Choose Language | 4 Daily Solve | Level | Stop Video And Try | Use Your IDE | Watch Other Solutions And Learn
+
+[00:03:04]
+  Transcript :  Visual Studio Community
+  OCR        : 1 Register | 2 Choose Language | 3 Leve1 | 4 Daily Solve | 6 Use Your IDE | 5 Stop Video And Try | 7 Watch Other Solutions And Learn
+  Combined   :  Visual Studio Community 1 Register | 2 Choose Language | 3 Leve1 | 4 Daily Solve | 6 Use Your IDE | 5 Stop Video And Try | 7 Watch Other Solutions And Learn
+
+[00:03:07]
+  Transcript :  من البرامج الاحترافية. وتجرب الكود اللي انت بتحل به المشكلة
+  OCR        : None
+  Combined   :  من البرامج الاحترافية. وتجرب الكود اللي انت بتحل به المشكلة
+
+[00:03:10]
+  Transcript :  على البرنامج. عشان تشوف الخطأ السليم الاحترافي وتتعلم يعني
+  OCR        : None
+  Combined   :  على البرنامج. عشان تشوف الخطأ السليم الاحترافي وتتعلم يعني
+
+[00:03:15]
+  Transcript :  المشكلة ايه هي. تحل الخطأ وتكمل حل المشكلة. لانه كتير هتواجه
+  OCR        : None
+  Combined   :  المشكلة ايه هي. تحل الخطأ وتكمل حل المشكلة. لانه كتير هتواجه
+
+[00:03:20]
+  Transcript :  اخطاء على الموقع مش مفهومة ومش عارف هو عايزي. طيب بعد ما
+  OCR        : None
+  Combined   :  اخطاء على الموقع مش مفهومة ومش عارف هو عايزي. طيب بعد ما
+
+[00:03:25]
+  Transcript :  تخلص من اهم الحاجات اللي هتفرق معك في حياتك او الحلول بتاعت
+  OCR        : None
+  Combined   :  تخلص من اهم الحاجات اللي هتفرق معك في حياتك او الحلول بتاعت
+
+[00:03:30]
+  Transcript :  الناس التانية. انت حلت المشكلة وتقول سلام عليك وتروح لا ده
+  OCR        : None
+  Combined   :  الناس التانية. انت حلت المشكلة وتقول سلام عليك وتروح لا ده
+
+[00:03:34]
+  Transcript :  اكبر غلط. بعد ما تحل المشكلة شوف حلول الناس التانية. هتلاقي
+  OCR        : None
+  Combined   :  اكبر غلط. بعد ما تحل المشكلة شوف حلول الناس التانية. هتلاقي
+
+[00:03:38]
+  Transcript :  ناس حرفيا عبكرة بيحطوا حلول جميلة جدا هتفرق معك وهتعلمك
+  OCR        : None
+  Combined   :  ناس حرفيا عبكرة بيحطوا حلول جميلة جدا هتفرق معك وهتعلمك
+
+[00:03:42]
+  Transcript :  وهتقول ايه ده? هي الحاجة دي كان ممكن نستخدمها بالشكل ده? هو ده
+  OCR        : None
+  Combined   :  وهتقول ايه ده? هي الحاجة دي كان ممكن نستخدمها بالشكل ده? هو ده
+
+[00:03:46]
+  Transcript :  المطلوب من حل المشكلات
+  OCR        : None
+  Combined   :  المطلوب من حل المشكلات
+
+[00:03:48]
+  Transcript :  احنا محتاجين نطور المنطق البرمجي
+  OCR        : None
+  Combined   :  احنا محتاجين نطور المنطق البرمجي
+
+[00:03:50]
+  Transcript :  ماش محتاجين نحل المشكلة
+  OCR        : None
+  Combined   :  ماش محتاجين نحل المشكلة
+
+[00:03:54]
+  Transcript :  وناخد شوية نقط ونروح
+  OCR        : FEATUREDTAS | Delsigire | SwrtBy | 42xlataFlound | Lanpup | Find out whether the shape is a cube | K0f2017 14353 1 Thomn | Stabue | Auproned | Propest | Eata I hove not camph | Diftclty | My head is at the wrorg end! | 0 27 | 844.391 | Thinkdful- Logic Drils: Traffic Right | 8.100 928-45228 46.035 | Grae-Ouse
+  Combined   :  وناخد شوية نقط ونروح FEATUREDTAS | Delsigire | SwrtBy | 42xlataFlound | Lanpup | Find out whether the shape is a cube | K0f2017 14353 1 Thomn | Stabue | Auproned | Propest | Eata I hove not camph | Diftclty | My head is at the wrorg end! | 0 27 | 844.391 | Thinkdful- Logic Drils: Traffic Right | 8.100 928-45228 46.035 | Grae-Ouse
+
+[00:03:54]
+  Transcript :  ابداً طيب بعد ما خلصنا الحاجات الاساسية
+  OCR        : None
+  Combined   :  ابداً طيب بعد ما خلصنا الحاجات الاساسية
+
+[00:03:56]
+  Transcript :  وحضرتك هتبدأ بسم الله كده تحل مشاكل
+  OCR        : None
+  Combined   :  وحضرتك هتبدأ بسم الله كده تحل مشاكل
+
+[00:04:00]
+  Transcript :  مع كل مشكلة او مع كل مجموعة مشاكل برضو هنزود معلومات في التعامل مع الموقع
+  OCR        : None
+  Combined   :  مع كل مشكلة او مع كل مجموعة مشاكل برضو هنزود معلومات في التعامل مع الموقع
+
+[00:04:05]
+  Transcript :  وهناخد شوية tips كده في السكة عشان البلاي لست كلها باذن الله تبقى مفيدة
+  OCR        : None
+  Combined   :  وهناخد شوية tips كده في السكة عشان البلاي لست كلها باذن الله تبقى مفيدة
+
+[00:04:10]
+  Transcript :  يارب يا جماعة المقدمة تكون بسيطة ومفيدة وتشجعنا ان احنا نبدأ
+  OCR        : None
+  Combined   :  يارب يا جماعة المقدمة تكون بسيطة ومفيدة وتشجعنا ان احنا نبدأ
+
+[00:04:14]
+  Transcript :  ونشوفكم ان شاء الله مع اول مشكلات والسلام عليكم
+  OCR        : None
+  Combined   :  ونشوفكم ان شاء الله مع اول مشكلات والسلام عليكم
+
