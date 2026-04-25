@@ -24,8 +24,8 @@ const AuthSuccess = () => {
       }
     }
 
-
-    console.error("No token found in URL hash");
+    
+    // console.error("No token found in URL hash");
     
   }, [location, navigate]);
 

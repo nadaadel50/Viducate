@@ -1,0 +1,15 @@
+# OCR Output — video_id=12
+# Language: en
+# Total segments: 11
+
+[00:00:27] Winclude stxing | include string | std::string evenoroddint number; | Assert::Thatevenorodd0, EqualsEven, ExtraMessageIncorrect answer for number0;
+[00:01:05] I include string | return number  2  0 ? Even : odd; | Assert::Thatevenorodd 1, EqualsOdd, ExtraMessageIncorrect answer for number1; | Assert::Thatevenorodd21, EqualsOdd, ExtraMessageIncorrect answer for number-21;
+[00:01:52] using namespace std ; | Assert::ThatreverseStringhello, Equalsolleh; | Assert::ThatreverseStringrat, Equalstar; | Assert::ThatreverseStringalpha, Equalsahpla; | Assert::ThatreverseStringcodowars, Equalssrawedoc; | Assert::ThatreverseStringfootball, Equalsllabtoof;
+[00:03:40] using nanespace std ; | for int i  str.length - 1; i  0; i-- | reversed  stri; | return reversed;
+[00:03:53] include algorithm | return std::stringstr.rbegin, str.rend;
+[00:04:03] reversestr.begin, str.end; | std::reversestr.begin, str.end; | return str; | string s - ; | for int i  ss.length-1; i  0; i--
+[00:04:13] fox int i  ss.length-1; i  0; i-- | s  s  55i; | cout  s; | return s; | include string? | reversestr.begin,str.end; | return stx;
+[00:04:23] 17,518 | 237,231
+[00:04:33] Assert::Thatbooleantostringtrue, Equalstrue; | Assert::Thatbooleantostringfalse, Equalsfalse; | Assert::Thatbooleantostringfalse, Equalsfalse; | Assert::Thatbooleantostringtrue,Equalstrue;
+[00:05:02] 1  include string | true ? true : false;
+[00:05:36] return b ? true : false; | using namespace std; | EeE UU u Uu : uU;
