@@ -5,9 +5,8 @@ import type { ResetPasswordResponseDto } from "../models/forgetPass/reset_pass_r
 import type { ResetPasswordRequestDto } from "../models/forgetPass/reset_password_request_dto";
 
 import type { LoginRequestDto } from '../models/login/login_request_dto';
-import type { LoginResponseDto } from "../models/login/login_response_dto";
 import type { SignupRequestDto } from '../models/signup/signup_request_dto';
-import type { SignupResponseDto } from "../models/signup/signup_response_dto";
+
 export class AuthApiService {
   async forgetPassword(
     forgetpassReqDTO: ForgetPassReqDTO,

@@ -12,6 +12,7 @@ import { useSavePreferences } from '../hooks/use_save_preferences';
 interface CustomizeProps {
   isOpen: boolean;
   onClose: () => void;
+  videoId: number | undefined;
 }
 type LanguageOption = "en" | "ar" | "Same as Video";
 

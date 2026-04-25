@@ -9,7 +9,6 @@ import { loginUseCase, signupUseCase } from '../../../../core/di/auth_container'
 import type { ApiResult } from '../../../../core/api/apiResult';
 import type { LoginResponseDto } from '../../api/models/login/login_response_dto';
 import type { SignupResponseDto } from '../../api/models/signup/signup_response_dto';
-import { useAuth } from '../../../../core/hooks/useAuth';
 
 export const AuthProvider = ({ children }: { children: React.ReactNode }) => {
   const [user, setUser] = useState<UserDto | null>(null); 

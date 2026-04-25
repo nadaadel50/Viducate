@@ -16,7 +16,7 @@ import { SelectedTopicProvider } from "../../features/watch_video/presentation/c
 
 import TestModalsPage from "../../features/video_upload/presentation/pages/test_modals_page";
 import {ProcessingPage }from "../../features/video_upload/presentation/pages/processing_page";
-
+import AuthSuccess from "../../features/auth/presentation/pages/AuthSuccess";
 export function AppRoutes() {
     return (
         <BrowserRouter>
@@ -24,7 +24,7 @@ export function AppRoutes() {
         <Routes>
           <Route path="/" element={<LoginPage />} />
         <Route path="/signup" element={<SignupPage />} />
-        {/* <Route path="/auth/callback" element={<AuthSuccess />} /> */}
+        <Route path="/auth/callback" element={<AuthSuccess />} />
         <Route path="/forgot-password" element={<ForgetPasswordPage />} />
 
 
