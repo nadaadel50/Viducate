@@ -1,18 +1,15 @@
 import { BaseModal } from '../../../../core/componants/base_modal';
 import { FormattedMessage } from "react-intl";
-import { useNavigate } from "react-router-dom";
 import { COLORS } from '../../../../core/constants';
-import { AppRoutesNames } from '../../../../app/routers/routes';
 
 interface LanguageInitProps {
   isOpen: boolean;
   onClose: () => void;
   onCustomize: () => void;
-
 }
 
 export const LanguageInitModal = ({ isOpen, onClose, onCustomize }: LanguageInitProps) => {
-  const navigate = useNavigate();
+
   return (
     <BaseModal isOpen={isOpen} onClose={onClose} maxWidth="max-w-[480px]">
       <div className="p-6 md:p-8 flex flex-col items-center text-center">
@@ -31,7 +28,7 @@ export const LanguageInitModal = ({ isOpen, onClose, onCustomize }: LanguageInit
         </p>
         
         <div className="flex w-full flex-col gap-3 sm:flex-row">
-          <button onClick={() => navigate(AppRoutesNames.ProcessingPage)} className="flex-1 h-12 rounded-lg font-bold transition-all"
+          <button onClick={onClose} className="flex-1 h-12 rounded-lg font-bold transition-all"
                   style={{   border: `1px solid ${COLORS.border.default}`,color: COLORS.text.secondary}}>
             <FormattedMessage id="languageInit.noContinue" />
           </button>

@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { useNavigate, useParams } from "react-router-dom";
+import { useNavigate  } from "react-router-dom";
 import { BaseModal } from '../../../../core/componants/base_modal';
 import CustumBtnLoader from '../../../../core/componants/custum_btn_loader';
 import { CustumError } from '../../../../core/componants/custum_error';
@@ -16,8 +16,7 @@ interface CustomizeProps {
 }
 type LanguageOption = "en" | "ar" | "Same as Video";
 
-export const CustomizeExperienceModal: React.FC<CustomizeProps> = ({ isOpen, onClose }) => {
-  const { id } = useParams<{ id: string }>(); 
+export const CustomizeExperienceModal: React.FC<CustomizeProps> = ({ isOpen, onClose, videoId }) => {
   const { submitPreferences, isSubmitting } = useSavePreferences();
   const [serverError, setServerError] = useState<string | null>(null);
   const navigate = useNavigate();
@@ -35,8 +34,12 @@ export const CustomizeExperienceModal: React.FC<CustomizeProps> = ({ isOpen, onC
   const handleSave = async () => {
     try {
       setServerError(null);
+      if (!videoId) {
+  setServerError("Video ID is missing");
+  return;
+}
       await submitPreferences({
-        videoId: Number(id),
+        videoId,
         summaryLang: prefs.summary,
         quizLang: prefs.quiz,
         flashcardsLang: prefs.flashcards
@@ -117,7 +120,7 @@ export const CustomizeExperienceModal: React.FC<CustomizeProps> = ({ isOpen, onC
 
       {/* Footer Section */}
       <div className="p-6 border-t border-gray-100 dark:border-gray-800 flex items-center justify-end gap-3 bg-gray-50/50 dark:bg-gray-900/50 rounded-b-2xl">
-        <button onClick={() => navigate(AppRoutesNames.ProcessingPage)} className="h-12 px-6 rounded-xl text-sm font-bold text-gray-600 dark:text-gray-300 hover:text-gray-900 dark:hover:text-white hover:bg-gray-100 dark:hover:bg-gray-800 transition-colors">
+        <button onClick={onClose} className="h-12 px-6 rounded-xl text-sm font-bold text-gray-600 dark:text-gray-300 hover:text-gray-900 dark:hover:text-white hover:bg-gray-100 dark:hover:bg-gray-800 transition-colors">
           <FormattedMessage id="customize.skip" />
         </button>
         <button onClick={handleSave} className="h-12 px-8 rounded-xl  text-white text-sm font-bold shadow-md hover:shadow-lg hover:shadow-[#5A0BB1]/30 hover:-translate-y-0.5 transition-all" style={{ background: COLORS.brand.gradient }}>

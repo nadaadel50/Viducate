@@ -12,6 +12,7 @@ export class PreferencesRepoImp implements PreferencesRepository {
       quiz_language: prefs.quizLang === 'Same as Video' ? null : prefs.quizLang,
       flashcard_language: prefs.flashcardsLang === 'Same as Video' ? null : prefs.flashcardsLang,
     };
+    console.log("DTO:", dto);
 
     return await preferencesDataSourceImp.save(dto);
   }

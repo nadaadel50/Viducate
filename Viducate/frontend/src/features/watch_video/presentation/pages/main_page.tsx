@@ -19,10 +19,20 @@ export function MainPage() {
   const { selectedTopic, setSelectedTopic } = useSelectedTopic();
  const videoId = selectedTopic?.video_id;
   
-  const [isInitOpen, setIsInitOpen] = useState(true);
+  const [isInitOpen, setIsInitOpen] = useState(false);
   const [isCustomizeOpen, setIsCustomizeOpen] = useState(false);
 
-  
+  useEffect(() => {
+  if (!videoId) return;
+
+  const key = `init_modal_seen_${videoId}`;
+  const hasSeen = localStorage.getItem(key);
+
+  if (!hasSeen) {
+    setIsInitOpen(true);
+    localStorage.setItem(key, "true");
+  }
+}, [videoId]);
 
   
   useEffect(() => {
@@ -38,6 +48,7 @@ export function MainPage() {
       setIsCustomizeOpen(true);
     }, 300);
   };
+  
 
   if (isLoading) {
     return <Loading />;
