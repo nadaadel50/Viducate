@@ -11,6 +11,7 @@ from app.api.v1.endpoints.ocr import router as ocr_router
 from app.api.v1.endpoints.segments import router as segments_router 
 from app.api.v1.endpoints.summary import router as summary_router
 from app.api.v1.endpoints.preferences import router as preferences_router
+from app.api.v1.endpoints.flashcards import router as flashcards_router
 
 
 app = FastAPI(
@@ -42,6 +43,7 @@ app.include_router(ocr_router, prefix="/api/v1")
 app.include_router(segments_router, prefix="/api/v1") 
 app.include_router(summary_router, prefix="/api/v1")
 app.include_router(preferences_router, prefix="/api/v1")
+app.include_router(flashcards_router, prefix="/api/v1")
 
 @app.get("/", tags=["Health"])
 def root():
