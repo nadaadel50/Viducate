@@ -7,6 +7,9 @@ from groq import Groq
 from pydub import AudioSegment
 
 import logging
+
+from app.services.downloading import download_video
+from app.config import settings
 logger = logging.getLogger(__name__)
 
 
@@ -22,21 +25,30 @@ def detect_language(audio_file: str) -> str:
     del model
     return lang
 
-def download_audio(url: str, video_id: int) -> str:
-    output_path = f"audio_{video_id}"
-    ydl_opts = {
-        'format': 'bestaudio/best',
-        'outtmpl': f'{output_path}.%(ext)s',
-        'quiet': True
-    }
-    with yt_dlp.YoutubeDL(ydl_opts) as ydl:
-        ydl.download([url])
+
+def extract_audio(video_path: str) -> str:
+    audio_path = video_path.replace(".mp4", ".mp3")
     
-    files = glob.glob(f"{output_path}.*")
-    if not files:
-        raise Exception(f"Audio download failed for video_id={video_id}")
-    logger.info(f"audio saved: {files[0]}")
-    return files[0]
+    audio = AudioSegment.from_file(video_path)
+    audio.export(audio_path, format="mp3")
+
+    return audio_path
+
+# def download_audio(url: str, video_id: int) -> str:
+#     output_path = f"audio_{video_id}"
+#     ydl_opts = {
+#         'format': 'bestaudio/best',
+#         'outtmpl': f'{output_path}.%(ext)s',
+#         'quiet': True
+#     }
+#     with yt_dlp.YoutubeDL(ydl_opts) as ydl:
+#         ydl.download([url])
+    
+#     files = glob.glob(f"{output_path}.*")
+#     if not files:
+#         raise Exception(f"Audio download failed for video_id={video_id}")
+#     logger.info(f"audio saved: {files[0]}")
+#     return files[0]
 
 def split_audio(file_path: str, chunk_minutes: int = 2) -> list:
     logger.info(f"Splitting start: ")
@@ -85,7 +97,8 @@ async def transcribe(url: str, video_id: int, language: str = None) -> str:
     chunks_created = []
     try:
         # 1. Download
-        audio_file = download_audio(url, video_id)
+        video_file = download_video(url, video_id)
+        audio_file = extract_audio(video_file)
 
         # 2. Detect language
         lang = language or detect_language(audio_file)
@@ -95,7 +108,7 @@ async def transcribe(url: str, video_id: int, language: str = None) -> str:
         chunks_created = [c[0] for c in chunks]
 
         # 4. Transcribe
-        client = Groq(api_key="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")
+        client = Groq(api_key=settings.GROQ_API_KEY)
         full_transcript = []
 
         for chunk_path, offset in chunks:
@@ -112,7 +125,7 @@ async def transcribe(url: str, video_id: int, language: str = None) -> str:
             for segment in full_transcript:
                 f.write(f"[{segment['start']:.1f} --> {segment['end']:.1f}] {segment['text']}\n")
 
-        return full_transcript
+        return full_transcript, video_file
 
     finally:
         if audio_file and os.path.exists(audio_file):

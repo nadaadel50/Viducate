@@ -7,6 +7,9 @@ from app.config import settings
 
 from app.api.v1.endpoints.ocr import router as ocr_router
 from app.api.v1.endpoints.segments import router as segments_router 
+from app.api.v1.endpoints.semantic_search import router as search_router 
+from app.api.v1.endpoints.summary import router as summary_router 
+from app.api.v1.endpoints.slidesExtraction import router as slides_router 
 
 
 app = FastAPI(
@@ -36,6 +39,12 @@ app.include_router(video_router, prefix="/api/v1")
 
 app.include_router(ocr_router, prefix="/api/v1") 
 app.include_router(segments_router, prefix="/api/v1") 
+app.include_router(segments_router, prefix="/api/v1") 
+
+
+app.include_router(search_router, prefix="/api/v1")
+app.include_router(summary_router, prefix="/api/v1")
+app.include_router(slides_router, prefix="/api/v1")
 
 @app.get("/", tags=["Health"])
 def root():

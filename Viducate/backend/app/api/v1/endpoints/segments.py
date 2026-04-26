@@ -55,18 +55,18 @@ def get_segments_by_video(
         for s in segments
     ]
 
-# =========================
-# DELETE SEGMENT
-# =========================
-@router.delete(
-    "/{segment_id}",
-    status_code=status.HTTP_200_OK,
-    summary="Delete segment",
-)
-def delete_segment(
-    segment_id: int,
-    db: Session = Depends(get_db),
-    current_user=Depends(get_current_user),
-):
-    repo = SegmentRepository(db)
-    return repo.delete(segment_id)
+# # =========================
+# # DELETE SEGMENT
+# # =========================
+# @router.delete(
+#     "/{segment_id}",
+#     status_code=status.HTTP_200_OK,
+#     summary="Delete segment",
+# )
+# def delete_segment(
+#     segment_id: int,
+#     db: Session = Depends(get_db),
+#     current_user=Depends(get_current_user),
+# ):
+#     repo = SegmentRepository(db)
+#     return repo.delete(segment_id)

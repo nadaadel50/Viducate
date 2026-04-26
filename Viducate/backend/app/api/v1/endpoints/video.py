@@ -15,6 +15,7 @@ from app.schemas.video import (
     VideoResponse,
     PresignedUploadRequest,
 )
+from app.repositories.video_repository import VideoRepository
 
 
 router = APIRouter(prefix="/videos", tags=["Videos"])
@@ -50,14 +51,37 @@ def submit_video_url(
     if result.get("cached"):
         return result  
 
-    background_tasks.add_task(
-        run_processing_pipeline,
-        video_id=result["video_id"],
-        language=result["language"],
-    )
+    # background_tasks.add_task(
+    #     run_processing_pipeline,
+    #     video_id=result["video_id"],
+    #     language=result["language"],
+    # )
 
     logger.info(f"URL video submitted: video_id={result['video_id']}, user={current_user.id}")
     return result
+
+
+
+@router.post(
+    "/{video_id}/start",
+    status_code=status.HTTP_200_OK,
+    summary="Start processing pipeline",
+)
+def start_processing(
+    video_id: int,
+    background_tasks: BackgroundTasks,
+    db: Session = Depends(get_db),
+    current_user=Depends(get_current_user),
+):
+    video = VideoRepository(db).get_by_id(video_id)
+    
+    background_tasks.add_task(
+        run_processing_pipeline,
+        video_id=video_id,
+        language=video.language,
+    )
+    
+    return {"message": "Pipeline started", "video_id": video_id}
 
 
 @router.post(

@@ -13,7 +13,7 @@ class OCRService:
         self.video_repo = VideoRepository(db)
         self.processor  = OCRProcessor()
 
-    def run(self, video_id: int) -> list:
+    def run(self, video_path: str, video_id: int) -> list:
         """
         Runs OCR pipeline.
         Saves results to text file.
@@ -29,10 +29,11 @@ class OCRService:
         try:
             logger.info(f"[OCRService] Starting | video_id={video_id} | url={video.url}")
 
-            result            = self.processor.process_from_url(
-                url=video.url,
-                language=video.language or "en"
-            )
+            result = self.processor.process_from_file(video_path)
+            # result            = self.processor.process_from_file(
+            #     url=video.url,
+            #     language=video.language or "en"
+            # )
             segments          = result["segments"]
             detected_language = result["language"]
 

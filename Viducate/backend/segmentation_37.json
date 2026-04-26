@@ -1,0 +1,235 @@
+{
+  "total_segments": 8,
+  "segments": [
+    {
+      "segment_number": 1,
+      "start_time": "00:00:02",
+      "end_time": "00:01:24",
+      "main_topic": "المورثيم",
+      "title": "المورثيم",
+      "sub_topics": [
+        {
+          "name": "تعريف المورثيم",
+          "start_time": "00:00:02",
+          "end_time": "00:00:04",
+          "description": "كما جميعا من A Home | Edit | Convert | Page | Tools | Protect | Morphemes definitions | Affix | A bound morpheme that is joined before, after, or within a root or stem | Suffixes: follow the rootstem | eat, eats | Prefixes: precede the rootstem | happy, unhappy | Infixes: inserted into the rootstem splural, mothers-in-low | Affixes maybe derivational affixes, inflectional affixes or both | Root | - The portion of the word that: | is common to a set of derived or inflected forms, if any, when all | affixes are removed | is not further analyzable into meaningful elements | carries the principle portion of meaning of the words | Stem | - The root of a word, together with any derivational affixes | - the morpheme that forms the central meaning unit in a word"
+        },
+        {
+          "name": "أنواع المورثيم",
+          "start_time": "00:00:06",
+          "end_time": "00:01:24",
+          "description": "التي تتكلم عن المورثيم home | edit | convert | page | tools | form | protect | in formal languages, words are arbitrary strings | in natural languages, words are made up of meaningful | subunits called morphemes | morpheme minimal meaning-bearing unit in a language | morphemes may be | stems: the main morpheme of the word. | affixes: convey the words role, number, gender, etc."
+        }
+      ],
+      "key_points": [
+        "المورثيم هو وحدة بنائية意义 في اللغة",
+        "المورثيم يمكن أن يكون جذراً أو لاحقة أو سابقة"
+      ]
+    },
+    {
+      "segment_number": 2,
+      "start_time": "00:01:25",
+      "end_time": "00:02:20",
+      "main_topic": "المورثيم",
+      "title": "المورثيم",
+      "sub_topics": [
+        {
+          "name": "المورثيم في الكلمات",
+          "start_time": "00:01:25",
+          "end_time": "00:01:49",
+          "description": "الدياجرام دا يدي تقريبا اكزامبل على اللي احنا قلناه | ان المورفين ممكن يكون root زي teach و tree | والاستم ممكن يكون tree go teacher | هنا الteacher دي root وعليها مورفين | عليها هنا عليها suffix | فبقت كلمة لها معنى اللي هي teacher"
+        },
+        {
+          "name": "الفري مورفيم و الباوند مورفيم",
+          "start_time": "00:01:49",
+          "end_time": "00:02:20",
+          "description": "فري مورفيم هي كلمة التي تستاند الوان | كلمة الوانية | في جملة الواحدة هي ليها معنى مش محتاجة اي حاجة عشان معنى هيوضح | زي boy, mother, girl كل دي كلمات كانت stand alone فاحنا من قدر نقول عليها free morpheme"
+        }
+      ],
+      "key_points": [
+        "المورثيم يمكن أن يكون جذراً أو سابقة أو لاحقة",
+        "الفري مورفيم هو مورثيم يمكن أن يقف لوحده"
+      ]
+    },
+    {
+      "segment_number": 3,
+      "start_time": "00:02:21",
+      "end_time": "00:04:10",
+      "main_topic": "التحليل المورفولوجي",
+      "title": "التحليل المورفولوجي",
+      "sub_topics": [
+        {
+          "name": "التحليل المورفولوجي",
+          "start_time": "00:02:21",
+          "end_time": "00:02:40",
+          "description": "هنا السلايد دي بس بتوضح لنا | احنا محتاجين ليه محتاجين المورثيم | بنستخدمه ليه tools | - spelling correction | morphological analysis | how words are constructed out of basic meaning unit"
+        },
+        {
+          "name": "الانفلكشن و الديفرينش",
+          "start_time": "00:02:40",
+          "end_time": "00:04:10",
+          "description": "هنا بقى المورثيم analysis ده مهم جدا | عندنا 3 أنوايا من المورثيم analysis | عندنا يقام المورثيم يبقى | يقام المورثيم يبقى | يقام المورثيم يقام المورثيم"
+        }
+      ],
+      "key_points": [
+        "التحليل المورفولوجي هو تحليل الكلمات إلى مورثيمات",
+        "الانفلكشن و الديفرينش هما نوعان من التحليل المورفولوجي"
+      ]
+    },
+    {
+      "segment_number": 4,
+      "start_time": "00:04:10",
+      "end_time": "00:07:26",
+      "main_topic": "التنظيم المورفولوجي",
+      "title": "التنظيم المورفولوجي",
+      "sub_topics": [
+        {
+          "name": "التأثير المورفولوجي",
+          "start_time": "00:04:10",
+          "end_time": "00:05:07",
+          "description": "ديفرينش هو اللي بيغير الكاتجوري بتاع الكلمة | يعني انا مثلا عندي friend noun | ويقوم بقى صفكس وبتاعة ده | وبيفكس بقت انفرندلي بقت ادجكتف"
+        },
+        {
+          "name": "التنظيم المورفولوجي",
+          "start_time": "00:05:07",
+          "end_time": "00:07:26",
+          "description": "فرق بينهم | فري مورفيم هي كلمة التي تستاند الوان | كلمة الوانية | في جملة الواحدة هي ليها معنى مش محتاجة اي حاجة عشان معنى هيوضح"
+        }
+      ],
+      "key_points": [
+        "التنظيم المورفولوجي هو عملية فهم كيفية بناء الكلمات",
+        "التنظيم المورفولوجي ي giúp في فهم المعاني الكلمات"
+      ]
+    },
+    {
+      "segment_number": 5,
+      "start_time": "00:07:28",
+      "end_time": "00:09:06",
+      "main_topic": "Finite State Transducer for Inflection of English Verbs",
+      "title": "Finite-State Automaton for Inflection of English Verbs",
+      "sub_topics": [
+        {
+          "name": "الريجولر بوست فرب فدي",
+          "start_time": "00:07:28",
+          "end_time": "00:07:32",
+          "description": "فعرفنا انه اصلا الريجولر بوست فرب فدي انا انا هم فيها ايه لما اجي اعمل فوانات استيت اوتوميتا انا دي هحفظها للمشي زي ما احفظناه في البداية"
+        },
+        {
+          "name": "الفرق بين الريجولر و الايريجولر",
+          "start_time": "00:07:32",
+          "end_time": "00:07:45",
+          "description": "مش مفاش اي نوع من انواع التجويد انا هبقى قيلة لو ان انت عندك استورت استيت لما يجي لك الريجولر بمن دول اروح للفاينال استيت تمام"
+        },
+        {
+          "name": "مثال على الريجولر",
+          "start_time": "00:07:45",
+          "end_time": "00:07:52",
+          "description": "ناخد مثلاً Home | Edit | Convert | Page | Tools | Form | Protect | Jumps | Parses | Fries | Sobs | Eats | Brings | Cuts | -ing participle | Jumping | Parsing | Frying | Sobbing | Eating | Bringing | Cutting | Past form | Jumped | Parsed | Fried | Sobbed | Brought | -ed participle | Irreg-past-verb-form | Jumped | Parsed | Fried | Sobbed | Eaten | Brought"
+        },
+        {
+          "name": "مثال على الايريجولر",
+          "start_time": "00:07:52",
+          "end_time": "00:07:54",
+          "description": "ناخد مثلاً jumped Home | Edie | Convert | Page | Tools | Form | Protect | veros | Stem | Jump | Parse | Bring | -s form | Jumps | Parses | Fries | Sobs | Eats | Brings | Cuts | -ing participle | Jumping | Parsing | Frying | Sobbing | Eating | Bringing | Cutting | Past form | Jumped | Parsed | Fried | Sobbed | Brought | -ed participle | Irreg-past-verb-form | Jumped | Parsed | Fried | Sobbed | Eaten | Brought"
+        },
+        {
+          "name": "توضيح الفرق بين الريجولر و الايريجولر",
+          "start_time": "00:07:54",
+          "end_time": "00:08:02",
+          "description": "فانت كده اصلا لو جالك جنب بس فهو accept. طب لو جالك بعديه ed فهو كده"
+        }
+      ],
+      "key_points": [
+        "الريجولر بوست فرب فدي",
+        "الفرق بين الريجولر و الايريجولر",
+        "أمثلة على الريجولر و الايريجولر"
+      ]
+    },
+    {
+      "segment_number": 6,
+      "start_time": "00:09:06",
+      "end_time": "00:11:30",
+      "main_topic": "Finite State Transducer",
+      "title": "Finite State Transducer",
+      "sub_topics": [
+        {
+          "name": "تعريف الفاينيت ستيت ترانسدوسر",
+          "start_time": "00:09:06",
+          "end_time": "00:09:10",
+          "description": "فانايت استيت ترانسدوسر ترانسدوسر دي يعني انا بقى كونفرت من فورم"
+        },
+        {
+          "name": "شرح الفاينيت ستيت ترانسدوسر",
+          "start_time": "00:09:10",
+          "end_time": "00:09:22",
+          "description": "خلينا نبص على فانايت استيت اوتوميتا تحت ايه"
+        },
+        {
+          "name": "توضيح الفاينيت ستيت ترانسدوسر",
+          "start_time": "00:09:22",
+          "end_time": "00:09:26",
+          "description": "هي هي الف اس ايه مثل الفكرة كلها ان الف اس تي تختلف ايه"
+        },
+        {
+          "name": "أمثلة على الفاينيت ستيت ترانسدوسر",
+          "start_time": "00:09:26",
+          "end_time": "00:09:30",
+          "description": "لان انا هنا عندي ايه النقطين فوق بعض دول"
+        }
+      ],
+      "key_points": [
+        "تعريف الفاينيت ستيت ترانسدوسر",
+        "شرح الفاينيت ستيت ترانسدوسر",
+        "توضيح الفاينيت ستيت ترانسدوسر"
+      ]
+    },
+    {
+      "segment_number": 7,
+      "start_time": "00:11:30",
+      "end_time": "00:12:13",
+      "main_topic": "Two-Level Morphology",
+      "title": "Two-Level Morphology",
+      "sub_topics": [
+        {
+          "name": "تعريف ثو ليفل مورفولوجي",
+          "start_time": "00:11:30",
+          "end_time": "00:11:34",
+          "description": "Two-Level Morphology Two-level morphology represents a word as a correspondence between :- 1- a lexical level, which represents a simple concatenation of morphemes making up a word"
+        },
+        {
+          "name": "شرح ثو ليفل مورفولوجي",
+          "start_time": "00:11:34",
+          "end_time": "00:11:40",
+          "description": "2- the surface level, which represents the actual spelling of the final word."
+        },
+        {
+          "name": "أمثلة على ثو ليفل مورفولوجي",
+          "start_time": "00:11:40",
+          "end_time": "00:11:50",
+          "description": "Lexical V PROG | Surface V 3SG | sings"
+        }
+      ],
+      "key_points": [
+        "تعريف ثو ليفل مورفولوجي",
+        "شرح ثو ليفل مورفولوجي",
+        "أمثلة على ثو ليفل مورفولوجي"
+      ]
+    },
+    {
+      "segment_number": 8,
+      "start_time": "00:00",
+      "end_time": "00:00",
+      "main_topic": "الكلمة",
+      "title": "الكلمة",
+      "sub_topics": [
+        {
+          "name": "الكلمة",
+          "start_time": "00:00",
+          "end_time": "00:00",
+          "description": "الكلمة"
+        }
+      ],
+      "key_points": []
+    }
+  ]
+}
