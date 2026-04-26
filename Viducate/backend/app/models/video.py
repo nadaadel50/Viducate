@@ -23,6 +23,6 @@ class Video(Base):
 
     user = relationship("User", back_populates="videos")
     segments = relationship("TopicSegment",back_populates="video",cascade="all, delete-orphan")
-    video_summary = relationship("VideoSummary", back_populates="video", uselist=False, cascade="all, delete-orphan"
-)
+    video_summary = relationship("VideoSummary", back_populates="video", uselist=False, cascade="all, delete-orphan")
+    content_preferences = relationship("ContentPreferences", uselist=False, back_populates="video")
     

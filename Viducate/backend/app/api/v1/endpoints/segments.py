@@ -5,8 +5,9 @@ from sqlalchemy.orm import Session
 from app.dependencies import get_db
 from app.services.auth_service import AuthService
 from app.repositories.segment_repository import SegmentRepository
-from app.schemas.segment_schema import SegmentResponse
+from app.schemas.segment_schema import SegmentResponse, VideoSegmentsResponse
 from fastapi.security import HTTPBearer, HTTPAuthorizationCredentials
+from app.repositories.video_repository import VideoRepository
 
 
 
@@ -31,7 +32,7 @@ def get_current_user(
 # =========================
 @router.get(
     "/videos/{video_id}",
-    response_model=list[SegmentResponse],
+    response_model=VideoSegmentsResponse,
     status_code=status.HTTP_200_OK,
     summary="Get all segments of a video",
 )
@@ -42,18 +43,25 @@ def get_segments_by_video(
 ):
     repo = SegmentRepository(db)
     segments = repo.get_by_video(video_id)
-    return [
-        {
-            "segment_id": s.segment_id,
-            "video_id": s.vid_id,
-            "segment_number": s.segment_number,
-            "start_time": s.start_time,
-            "end_time": s.end_time,
-            "main_topic": s.main_topic,
-            "title": s.title,
-        }
-        for s in segments
-    ]
+
+    video_repo = VideoRepository(db)
+    video = video_repo.get_by_id(video_id)
+
+    return {
+        "video_id": video_id,
+        "video_url": video.url if video else None,
+        "segments": [
+            {
+                "segment_id": s.segment_id,
+                "segment_number": s.segment_number,
+                "start_time": s.start_time,
+                "end_time": s.end_time,
+                "main_topic": s.main_topic,
+                "title": s.title,
+            }
+            for s in segments
+        ]
+    }
 
 # # =========================
 # # DELETE SEGMENT

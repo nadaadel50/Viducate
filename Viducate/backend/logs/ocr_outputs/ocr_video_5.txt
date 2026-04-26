@@ -1,0 +1,11 @@
+# OCR Output — video_id=5
+# Language: en
+# Total segments: 7
+
+[00:00:02] SoftwareDevelopment | Lifecycle
+[00:22:02] 6-12v | enample.com | I-uvmen | women | E-Commayce | Requirements | Pranning | D.ocoment | Deploy | Defiving | Aufomation | Testig | Dedigning | Building
+[00:22:32] Building | Developing | Dev. | gource code | Testing | Repo | Testing | Berve | Deployment | prod | Fasreng | Quickly | Acboate
+[00:23:14] 6-12 | enample.com | l-uvmen | women | E-commayce | Reqviremenes | Pranning | D.ocument | Depioy | Defiving | Aufomation | Testig | Designing | Building
+[00:24:08] Building | Developing | Dev. | gource code | Testing | Repo | Testing | Berve | Deployment | prod | Fasreng | Quickly | atel
+[00:24:28] 6-12v | enample.com | I-uvmen | women | E-Commayce | Reqvirements | Pranning | D.ocoment | Depioy | Defiving | Aufomation | Testig | Deigning | Building
+[00:26:10] Abhishek Veeramalla

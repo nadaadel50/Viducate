@@ -34,21 +34,7 @@ def extract_audio(video_path: str) -> str:
 
     return audio_path
 
-# def download_audio(url: str, video_id: int) -> str:
-#     output_path = f"audio_{video_id}"
-#     ydl_opts = {
-#         'format': 'bestaudio/best',
-#         'outtmpl': f'{output_path}.%(ext)s',
-#         'quiet': True
-#     }
-#     with yt_dlp.YoutubeDL(ydl_opts) as ydl:
-#         ydl.download([url])
-    
-#     files = glob.glob(f"{output_path}.*")
-#     if not files:
-#         raise Exception(f"Audio download failed for video_id={video_id}")
-#     logger.info(f"audio saved: {files[0]}")
-#     return files[0]
+
 
 def split_audio(file_path: str, chunk_minutes: int = 2) -> list:
     logger.info(f"Splitting start: ")

@@ -1,0 +1,115 @@
+{
+  "total_segments": 4,
+  "segments": [
+    {
+      "segment_number": 1,
+      "start_time": "00:00:02",
+      "end_time": "00:01:43",
+      "main_topic": "Introduction to the topic and announcement",
+      "title": "Introduction to Containers",
+      "sub_topics": [
+        {
+          "name": "Introduction to the topic",
+          "start_time": "00:00:02",
+          "end_time": "00:00:32",
+          "description": "hello everyone my name is Abhishek and welcome back to my channel so today is day 23 of our complete DevOps course and in this class I'll introduce you to the world of containers"
+        },
+        {
+          "name": " Announcement",
+          "start_time": "00:00:32",
+          "end_time": "00:01:07",
+          "description": "before we jump on to the topic for today I would like to make an announcement that the other day I created a telegram group for our channel and I will use this telegram group to share some important resources"
+        },
+        {
+          "name": "Introduction to containers",
+          "start_time": "00:01:07",
+          "end_time": "00:01:43",
+          "description": "so what we do today is we will try to understand the basics or introduction of containers This is very important because before you jump onto the Concepts like creating projects with containers or you know how one container interacts with the other container all of these things"
+        }
+      ],
+      "key_points": [
+        "Introduction to containers",
+        "Importance of understanding containers",
+        "Announcement of Telegram group"
+      ]
+    },
+    {
+      "segment_number": 2,
+      "start_time": "00:01:43",
+      "end_time": "00:05:07",
+      "main_topic": "Understanding Virtual Machines",
+      "title": "Virtual Machines and their limitations",
+      "sub_topics": [
+        {
+          "name": "Understanding Virtual Machines",
+          "start_time": "00:01:43",
+          "end_time": "00:02:51",
+          "description": "so before understanding the world of containers it is very important to understand the world of virtual machines because if you consider virtual machines as advancement to physical servers then containers is an advancement to virtual machines"
+        },
+        {
+          "name": "Limitations of Virtual Machines",
+          "start_time": "00:02:51",
+          "end_time": "00:05:07",
+          "description": "so what happens is as a DevOps engineer you might have created many EC2 instances you might be playing with Jenkins you might be even the viewers of our channel all this 22 days we have created a lot of examples and everything we tried on EC2 instance"
+        }
+      ],
+      "key_points": [
+        "Understanding Virtual Machines",
+        "Limitations of Virtual Machines",
+        "Importance of containers"
+      ]
+    },
+    {
+      "segment_number": 3,
+      "start_time": "00:05:07",
+      "end_time": "00:10:49",
+      "main_topic": "Introduction to Containers",
+      "title": "Containers and their advantages",
+      "sub_topics": [
+        {
+          "name": "Introduction to Containers",
+          "start_time": "00:05:07",
+          "end_time": "00:07:07",
+          "description": "so containers will solve the same problem that is they will effectively use your virtual machines to even reduce this problem so the problem with physical servers was solved to some extent using virtual machines now to the problem of virtual machines is also solved to some extent with containers"
+        },
+        {
+          "name": "Advantages of Containers",
+          "start_time": "00:07:07",
+          "end_time": "00:10:49",
+          "description": "why i said to some extent because containers still have some drawbacks you can use some advanced security policies or you know you can do some more things but even today virtual machines are very very secure when compared to containers"
+        }
+      ],
+      "key_points": [
+        "Introduction to Containers",
+        "Advantages of Containers",
+        "Comparison with Virtual Machines"
+      ]
+    },
+    {
+      "segment_number": 4,
+      "start_time": "00:10:49",
+      "end_time": "00:24:59",
+      "main_topic": "Docker and Builder",
+      "title": "Docker and Builder introduction",
+      "sub_topics": [
+        {
+          "name": "Docker introduction",
+          "start_time": "00:10:49",
+          "end_time": "00:19:06",
+          "description": "so containers can be created in two ways one is you can create containers on top of virtual machines and the other is you can create containers on top of physical servers as well"
+        },
+        {
+          "name": "Builder introduction",
+          "start_time": "00:19:06",
+          "end_time": "00:24:59",
+          "description": "so what is the problem here is that docker is basically more very much dependent on something called as docker engine and this docker engine is basically a single point of failure what is spmf it's a single point of failure"
+        }
+      ],
+      "key_points": [
+        "Docker introduction",
+        "Builder introduction",
+        "Comparison of Docker and Builder"
+      ]
+    }
+  ]
+}

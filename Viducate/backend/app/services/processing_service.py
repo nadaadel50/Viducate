@@ -1,4 +1,3 @@
-import json
 import logging
 import asyncio
 import traceback
@@ -10,10 +9,8 @@ from app.services.transcription_service import transcribe
 from app.services.ocr_service import OCRService
 from app.services.merging_service import merge_transcript_ocr
 from app.services.segmentation_service import segment_topics
-from app.services.embedding_service import store_embeddings
 from app.repositories.segment_repository import SegmentRepository
-from app.ml.processors.summarization_processor import process_summaries
-from app.services.downloading import download_video
+from app.services.embedding_service import store_embeddings
 
 logger = logging.getLogger(__name__)
 
@@ -26,7 +23,6 @@ PROCESSING_STATUSES = {
     "ocr_processing",     # Step 2: OCR
     "merging",            # Step 3: Merge
     "segmenting",         # Step 4: Topic segmentation
-    "summarizing",        # Step 5: Summarization
     "completed",      # All processing done
     "failed",         
 }
@@ -71,11 +67,6 @@ class ProcessingJobService:
         logger.error(f"Video {video_id} processing failed: {reason}")
         self.video_repo.update_status(video_id, "failed")
 
-
-def seconds_to_mmss(seconds: float) -> str:
-    seconds = int(seconds)
-    return f"{seconds // 60:02d}:{seconds % 60:02d}"
-
 async def run_processing_pipeline(video_id: int, language: str):
     """
     Background task that simulates the ML pipeline.
@@ -98,63 +89,9 @@ async def run_processing_pipeline(video_id: int, language: str):
         logger.info(f"[Pipeline] Step 1 - Transcription: video_id={video_id}")
         repo.update_status(video_id, "transcribing")
         video = repo.get_by_id(video_id)
-        transcript, video_path = await transcribe(video.url, video_id=video_id)
         # transcript = await transcribe(video.url, video_id=video_id)
-#         transcript = [
-#             {
-#                 "timestamp": seconds_to_mmss(seg["start"]),
-#                 "transcript_text": seg["text"]
-#             }
-#             for seg in transcript
-# ]
+        transcript, video_path = await transcribe(video.url, video_id=video_id)
         logger.info(f"Transcript: {transcript}")
-
-
-    #    # ── Step 2: Topic Segmentation ──────────────────────────────────
-    #     logger.info(f"[Pipeline] Step 2 - Segmentation: video_id={video_id}")
-    #     repo.update_status(video_id, "segmenting")
-    #     segment_repo = SegmentRepository(db)
-    #     segments_result = await segment_topics(transcript, video_id)
-    #     logger.info(f"[Pipeline] Segments generated: {segments_result['total_segments']}")
-
-    #     # ── Step 3: Match Slides ──────────────────────────────────────────
-    #     logger.info(f"[Pipeline] Step 3 - Slides Matching: video_id={video_id}")
-    #     repo.update_status(video_id, "matching_slides")
-        
-    #     # جيب الـ slides_text اللي اتحفظت للـ video ده
-    #     from app.services.slides_store import get_slides_text, delete_slides_text
-    #     from app.services.slides_matching_service import match_slides_to_segments
-
-
-    #     # Step 3
-    #     slides_text = get_slides_text(video_id)
-    #     if slides_text:
-    #         segments_result = match_slides_to_segments(segments_result, slides_text)
-
-    #     # بعد ما الـ pipeline يخلص امسحيها من الـ memory
-    #     delete_slides_text(video_id)
-
-    #     with open(f"segments_with_slides_{video_id}.json", "w", encoding="utf-8") as f:
-    #         json.dump(segments_result, f, ensure_ascii=False, indent=2)
-    #     # ── Save to DB ────────────────────────────────────────────────────
-    #     for seg in segments_result["segments"]:
-    #         try:
-    #             segment_repo.create_full_segment(
-    #                 video_id=video_id,
-    #                 segment_data=seg
-    #             )
-    #         except Exception as e:
-    #             logger.error(f"Failed to insert segment: {e}")
-
-    #     # ── Step 4: Store Embeddings ──────────────────────────────────────
-    #     logger.info(f"[Pipeline] Step 4 - Embeddings: video_id={video_id}")
-    #     store_embeddings(video_id, segments_result["segments"])
-
-    #     repo.update_status(video_id, "completed")
-    #     logger.info(f"[Pipeline] Completed: video_id={video_id}")
-
-
-        # video_path = download_video(video.url, video_id=video_id)
 
         # ── Step 2: OCR ───────────────────────────────────────────────────
         logger.info(f"[Pipeline] Step 2 - OCR: video_id={video_id}")
@@ -171,48 +108,38 @@ async def run_processing_pipeline(video_id: int, language: str):
         #     lambda: OCRService(db).run(video_id)
         # )
         logger.info(f"[Pipeline] OCR segments: {len(ocr_segments)}")
-
-        # # ── Step 3: Merging ─────────────────────────────────────
-        # logger.info(f"[Pipeline] Step 3 - Merging: video_id={video_id}")
-        # repo.update_status(video_id, "merging")
-        # merged =  merge_transcript_ocr(transcript, video_id, ocr_segments)
-        # logger.info(f"[Pipeline] Merged segments: {len(merged)}")
-
-        # # ── Step 4: Topic Segmentation ──────────────────────────────────
-        # logger.info(f"[Pipeline] Step 4 - Segmentation: video_id={video_id}")
-        # repo.update_status(video_id, "segmenting")
-        # segment_repo = SegmentRepository(db)
-
-        # segments_result = await segment_topics(merged, video_id)
-        # logger.info(f"[Pipeline] Segments generated: {segments_result['total_segments']}")
-
-        # # SAVE TO DATABASE
-        # print("TOTAL:", segments_result["total_segments"])
-        # for seg in segments_result["segments"]:
-        #     print(" inserting segment:", seg["segment_number"])
-        #     try:
-        #         segment_repo.create_full_segment(
-        #             video_id=video_id,
-        #             segment_data=seg
-        #         )
-        #     except Exception as e:
-        #         logger.error(f" Failed to insert segment: {e}")
-
-        # logger.info("[Pipeline] Segments saved to DB successfully")
-
-        # # ── Step 5: Store Embeddings ──────────────────────────────────
-        # logger.info(f"[Pipeline] Step 5 - Embeddings: video_id={video_id}")
-        # store_embeddings(video_id, segments_result["segments"])
-        # logger.info("[Pipeline] Embeddings stored successfully")
-        # print(f"[Embeddings] Done for video_id={video_id}")
         
-        # ── Step 6: Summarization ────────────────────────────────────── 
-        # logger.info(f"[Pipeline] Step 5 - Summarization: video_id={video_id}")
-        # repo.update_status(video_id, "summarizing")
-        # await asyncio.to_thread(process_summaries, db, video_id, language)
-        # logger.info(f"[Pipeline] Summarization complete: video_id={video_id}")
+        # ── Step 3: Merging ─────────────────────────────────────
+        logger.info(f"[Pipeline] Step 3 - Merging: video_id={video_id}")
+        repo.update_status(video_id, "merging")
+        merged =  merge_transcript_ocr(transcript, video_id, ocr_segments)
+        logger.info(f"[Pipeline] Merged segments: {len(merged)}")
 
+        # ── Step 4: Topic Segmentation ──────────────────────────────────
+        logger.info(f"[Pipeline] Step 4 - Segmentation: video_id={video_id}")
+        repo.update_status(video_id, "segmenting")
+        segment_repo = SegmentRepository(db)
 
+        segments_result = await segment_topics(merged, video_id)
+        logger.info(f"[Pipeline] Segments generated: {segments_result['total_segments']}")
+
+        # SAVE TO DATABASE
+        print("TOTAL:", segments_result["total_segments"])
+        for seg in segments_result["segments"]:
+            print(" inserting segment:", seg["segment_number"])
+            try:
+                segment_repo.create_full_segment(
+                    video_id=video_id,
+                    segment_data=seg
+                )
+            except Exception as e:
+                logger.error(f" Failed to insert segment: {e}")
+
+        logger.info("[Pipeline] Segments saved to DB successfully")
+
+        # ── Step 4: Store Embeddings ──────────────────────────────────────
+        logger.info(f"[Pipeline] Step 4 - Embeddings: video_id={video_id}")
+        store_embeddings(video_id, segments_result["segments"])
 
         # ── Completed Status ─────────────────────────────────────
         repo.update_status(video_id, "completed")

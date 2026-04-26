@@ -21,8 +21,6 @@ def store_embeddings(video_id: int, segments: list) -> None:
     for segment in segments:
         for sub_topic in segment.get("sub_topics", []):
             text = f"{segment['main_topic']} {segment['title']} {sub_topic['name']} {sub_topic['description']}"
-            if segment.get("slide_content"):
-                text += f" {segment['slide_content']}"
             embedding = get_embedding(text)
             
             collection.add(

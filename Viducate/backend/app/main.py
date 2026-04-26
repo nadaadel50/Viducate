@@ -10,8 +10,16 @@ from app.api.v1.endpoints.segments import router as segments_router
 from app.api.v1.endpoints.semantic_search import router as search_router 
 from app.api.v1.endpoints.summary import router as summary_router 
 from app.api.v1.endpoints.slidesExtraction import router as slides_router 
+from app.api.v1.endpoints.summary import router as summary_router
+from app.api.v1.endpoints.preferences import router as preferences_router
+from app.api.v1.endpoints.flashcards import router as flashcards_router
 
+import asyncio
+import sys
 
+if sys.platform == "win32":
+    asyncio.set_event_loop_policy(asyncio.WindowsSelectorEventLoopPolicy())
+    
 app = FastAPI(
     title="Viducate API",
     description="Backend API for Viducate learning platform",
@@ -45,6 +53,9 @@ app.include_router(segments_router, prefix="/api/v1")
 app.include_router(search_router, prefix="/api/v1")
 app.include_router(summary_router, prefix="/api/v1")
 app.include_router(slides_router, prefix="/api/v1")
+app.include_router(summary_router, prefix="/api/v1")
+app.include_router(preferences_router, prefix="/api/v1")
+app.include_router(flashcards_router, prefix="/api/v1")
 
 @app.get("/", tags=["Health"])
 def root():
