@@ -1,0 +1,187 @@
+{
+  "total_segments": 7,
+  "segments": [
+    {
+      "segment_number": 1,
+      "start_time": "00:00:02",
+      "end_time": "00:04:22",
+      "main_topic": "DEFUZZIFICATION TECHNIQUES",
+      "title": "DEFUZZIFICATION TECHNIQUES IN FUZZY LOGIC",
+      "sub_topics": [
+        {
+          "name": "DEFUZZIFICATION TECHNIQUES",
+          "start_time": "00:00:02",
+          "end_time": "00:00:22",
+          "description": "نبتدي. طيب احنا هنكمل الفازي كنترول سيستم. Fuzzy Logic | Control | Sabah Sayed | Department of Computer Science | Faculty of Computers and Artificial Intelligence | Cairo University | Egypt | 5192021"
+        },
+        {
+          "name": "MAX MEMBERSHIP PRINCIPLE",
+          "start_time": "00:00:22",
+          "end_time": "00:00:27",
+          "description": "زي ما اتفقنا عكده ادي آآ بيتعامل بأكثر من طريقة. Defuzzification Techniques | 1- Max membership principle: Also known as the | height method, this scheme is limited to peaked | output functions. This method is given by the | algebraic expression: | μC z μC z, for all z Z, | - where z is the defuzzified | value | If multiple peaks exist, the middle one is chosen."
+        },
+        {
+          "name": "MEAN MAX MEMBERSHIP",
+          "start_time": "00:01:14",
+          "end_time": "00:01:43",
+          "description": "خلاص? اي اي اول طريقة اسمها ودي بحاول اجيب فيها اللي عندها [00:00:27] بيبقى اهلا هي اللي باخدها وبادروا فيها. تمام? هم كلهم [00:00:46] بيختلفوا بس في ايه انا اخدها اللي هي خلاص اللي هي على [00:01:14] عندها الايه الممبرشيب بون. هي دي زت زت ستار بتاعتك. طيب. لو انا Defuzzification Techniques | 2- Mean Max membership: This method also | called middle-of-maxima is closely related to | the first method, except that the locations of the | maximum membership can be nonuniqe i.e., | the maximum membership can be a plateau | rather than a single point. | This method is given by | the expression: [00:01:14] عندي اكتر من بوينت بقى الممبرشيب بتاعهم بون. جهت الطريقة [00:01:19] التانية بتقول لك خد المين يعني لو انا عندي هنا عند الا كانت [00:01:24] بوان وعند البي كمان بوان من الا للبي خلاص يعني مش بوينت دي ايه [00:01:32] ده لاين مش بوينت واحدة يبقى هيا خد الا بلاس البي واقسمهم [00:01:42] على الاتنين وهي دي لها طلعان للزد ستور الطريقة التالتة اللي هي Defuzzification Techniques | 3- Centroid method: This procedure also called | center of area or center of gravity is the most | prevalent and physically appealing of all the | defuzzification methods Sugeno, 1985; it is given | by the algebraic expression: | µCz z dz | µz dz | where I denotes an algebraic integration"
+        }
+      ],
+      "key_points": [
+        "DEFUZZIFICATION TECHNIQUES",
+        "MAX MEMBERSHIP PRINCIPLE",
+        "MEAN MAX MEMBERSHIP"
+      ]
+    },
+    {
+      "segment_number": 2,
+      "start_time": "00:04:22",
+      "end_time": "00:07:49",
+      "main_topic": "FUZZY INFERENCE",
+      "title": "FUZZY INFERENCE TECHNIQUES",
+      "sub_topics": [
+        {
+          "name": "FUZZY INFERENCE",
+          "start_time": "00:04:22",
+          "end_time": "00:04:28",
+          "description": "بتاعت الاوتوت. في دي خلاص. طيب. الفاضي في اكتر من فاضي في Fuzzy Inference | The most commonly used fuzzy inference technique is the so- | called Mamdani method. | Mamdanis model expresses the output using fuzzy terms instead | of mathematical combinations of the input variable. | All defuzzification techniques previously discussed belong to | Mamdanis model. | The Mamdani-style fuzzy inference process is performed in four | steps: | 1. Fuzzification of the input variables | 2. Rule evaluation inference | 3. Aggregation of the rule outputs composition | 4.Defuzzification."
+        },
+        {
+          "name": "MAMDANI FUZZY INFERENCE",
+          "start_time": "00:04:28",
+          "end_time": "00:05:06",
+          "description": "مامداني وفي سوجينو. احنا مش ناخد سوجينو خلاص احنا الطريقة اللي [00:04:32] احنا اخدناها دي اللي هي بتاعت المامداني. بتاعت مامداني. بيعمل [00:04:35] دي بيعمل ودي خلاص ده مش مش حاجة مؤسرة قوي عندي خلاص ممكن [00:04:47] ندخلها جوة يعني احنا قريت دي عملناها خلاص احنا قريت دي عمناها"
+        }
+      ],
+      "key_points": [
+        "FUZZY INFERENCE",
+        "MAMDANI FUZZY INFERENCE"
+      ]
+    },
+    {
+      "segment_number": 3,
+      "start_time": "00:07:49",
+      "end_time": "00:11:08",
+      "main_topic": "FUZZIFICATION",
+      "title": "FUZZIFICATION PROCESS",
+      "sub_topics": [
+        {
+          "name": "FUZZIFICATION",
+          "start_time": "00:07:49",
+          "end_time": "00:07:53",
+          "description": "ده عشان اجيب بتاعته مبدئيا هو لاين فالاكوشن بتاعته تبقى ايه [00:07:53] وي بتساوي اي اكس بلاس بي. خلاص? اي اكس بلاس بي. وانا [00:08:09] دلوقتي هدفي ان انا ايه اشوف بتاعت الايه والبي بكام."
+        },
+        {
+          "name": "LINE EQUATION",
+          "start_time": "00:08:09",
+          "end_time": "00:11:08",
+          "description": "عشان اعرف اجيب الايه. الايه ده بنقول [00:08:28] علي السلوب بتاع الاي بتاع اللاين. بتاعته بتساوي اي نقطتين نجيب اي [00:08:34] نقطتين على اللاين. اللاين ده نقطتين عادي من اكس بزيرو وي بو [00:08:40] ون. يبزيرو وون. دي البوينت الاولى. تمام? البوينت التانية [00:08:46] x2 two minus y one x two minus x one y two"
+        }
+      ],
+      "key_points": [
+        "FUZZIFICATION",
+        "LINE EQUATION"
+      ]
+    },
+    {
+      "segment_number": 4,
+      "start_time": "00:11:08",
+      "end_time": "00:17:27",
+      "main_topic": "RULE EVALUATION",
+      "title": "RULE EVALUATION PROCESS",
+      "sub_topics": [
+        {
+          "name": "RULE EVALUATION",
+          "start_time": "00:11:08",
+          "end_time": "00:11:14",
+          "description": "انا انا ما فيمتش خطة دي. انا فيمتش خطة. انا فيمتش خطة. [00:11:09] بعد اللاين بعد ما احنا جبنا السلوب وجبنا البي. اه عملنا ايه ما مش"
+        },
+        {
+          "name": "CLIPPING ALPHA-CUT",
+          "start_time": "00:11:14",
+          "end_time": "00:13:38",
+          "description": "Step 2: Rule Evaluation | The most common method of | correlating the rule consequent | with the truth value of the rule | Degree of | antecedent is to cut the | Membership | consequent membership | 1.0- | function at the level of the | antecedent truth. This method | is called clipping alpha-cut. | However, clipping is still often | preferred because it involves | less complex and faster | clipping | mathematics, and generates an | aggregated output surface that | is easier to defuzzify."
+        }
+      ],
+      "key_points": [
+        "RULE EVALUATION",
+        "CLIPPING ALPHA-CUT"
+      ]
+    },
+    {
+      "segment_number": 5,
+      "start_time": "00:17:36",
+      "end_time": "00:20:43",
+      "main_topic": "الفازي",
+      "title": "شرح الفازي",
+      "sub_topics": [
+        {
+          "name": "حساب الفازي",
+          "start_time": "00:17:36",
+          "end_time": "00:18:09",
+          "description": "الفازي [00:17:36] ست اللي هي سي وان. هتبقى ايه قلنا بنجمع عدد النقط بنجمع النقط [00:17:43] بنقسم على عددهم. خلاص النقط بتاعتي كان زيرو زيرو وصيرتي وفيفتي [00:17:49] جمعتهم مع بعض وقسمت على الفور. فادديني ده الايه? بتاع [00:17:55] وهكذا عملت في وفي [00:18:00] خلاص طلعت هعمل ايه? هاضرب كل في بتاعها. وجمعهم واقسم على [00:18:09] المجموعة بتاعي ايه? طلع لي ايه? خمسة وستين."
+        },
+        {
+          "name": "استخدام الفازي",
+          "start_time": "00:18:09",
+          "end_time": "00:20:43",
+          "description": "خدوا بالكم [00:18:16] الارقام ايه غير معضة. يعني الطرق بتاعة بتفرق معي اللي Step 4: Defuzzification centroid | Degree of | Membership | 0.8 - | 0.6 - | 67.4 | 0 10 20 0.1 30 40 50 60 0.2 70 80 90 100 0.5 | 67.4 | 0,1 0.1 0.1 0.2 0.2 0.2 0.2 0.5 0.5 0.5 0.5 [00:18:26] بتطلعه على حسب الطريقة. طيب ايه الطريقة المفضلة? ايه? Step 4: Defuzzification weighted | average | Another method is weighted average method where centroid of each | of the fuzzy sets is weighted by the membership value, divided by the | sum of memberships."
+        }
+      ],
+      "key_points": [
+        "حساب الفازي",
+        "استخدام الفازي"
+      ]
+    },
+    {
+      "segment_number": 6,
+      "start_time": "00:20:43",
+      "end_time": "00:22:25",
+      "main_topic": "الوظائف",
+      "title": "شرح الوظائف",
+      "sub_topics": [
+        {
+          "name": "الوظائف والفازي",
+          "start_time": "00:20:43",
+          "end_time": "00:21:20",
+          "description": "ودي اللي انت برضو هتشتغلوا بيه. يبقى في بتاعتي محتاجة [00:20:35] اعمل ان انا هحسب لالفوز اللي عندي. ان انا ايه اجمع على حسب [00:20:48] Lati Data Classes Data Lab"
+        },
+        {
+          "name": "استخدام الوظائف",
+          "start_time": "00:21:20",
+          "end_time": "00:22:25",
+          "description": "ونحن في البداية نحن نقوم بعمل شيء مثل الفاظي فاظي فاظي فاظي فاظي دي اللي نحن نحدد هو مكانها فين كل نقطة مكانها فين الوائي بتاعها [00:21:13] هذا اللي بيقابلك فين ماشي؟ [00:21:15] او بس انت بقى في الاساين انت مش هتعمل مكانها فيه لان مش هيبقى فيه ورق وهترسم"
+        }
+      ],
+      "key_points": [
+        "الوظائف والفازي",
+        "استخدام الوظائف"
+      ]
+    },
+    {
+      "segment_number": 7,
+      "start_time": "00:22:25",
+      "end_time": "00:23:16",
+      "main_topic": "الاستنتاج",
+      "title": "شرح الاستنتاج",
+      "sub_topics": [
+        {
+          "name": "الاستنتاج والفازي",
+          "start_time": "00:22:25",
+          "end_time": "00:22:50",
+          "description": "نحن نحن بتاعة الفوزي ستس بتاعة الاوفد [00:22:30] اه. دي بنحسب الـSyndroids وبندربها في الأرقام اللي هي طالعة من logic. أو من inference يعني. صح؟"
+        },
+        {
+          "name": "استخدام الاستنتاج",
+          "start_time": "00:22:50",
+          "end_time": "00:23:16",
+          "description": "او بنعمل الـ Equation بقى. بنسمع على اللي هو متوسط يعني. تمام. طب مالش يا دكتور اللي بنعملها على التكامل دي دي حاجة شبه اللي هي زي [00:22:58] زي Normal Distribution أو حاجة زي الـ Bable T-Dainisty Function أو حاجة كده التكامل بتاعها كله بواحد لو هي جمعت كلها فاحنا"
+        }
+      ],
+      "key_points": [
+        "الاستنتاج والفازي",
+        "استخدام الاستنتاج"
+      ]
+    }
+  ]
+}

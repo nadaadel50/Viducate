@@ -1,0 +1,28 @@
+# OCR Output — video_id=57
+# Language: en
+# Total segments: 24
+
+[00:00:02] Trees | Introduction to
+[00:00:10] Tree Data Structure
+[00:00:14] Tree Data Structure | Stack | Queue
+[00:00:16] Tree Data Structure | Stack | Queue | Linked-List | Array
+[00:01:06] Tree Data Structure
+[00:01:44] Tree Data Structure | leaf | brunch | root
+[00:02:16] Tree Data Structure | root
+[00:03:24] Tree Data Structure | Binary | Tree | Binary | Space | Partition
+[00:04:40] Tree Data Structure
+[00:04:44] ta Structure
+[00:05:48] root | Parents : A,B,F | Children: B,E,F,C,D,G,H,I
+[00:06:30] root | Parents : A,B,F | Children: B,E,F,C,D,G,H,I | Leaves: C,D,E,G,H,I | Internal | nodes:
+[00:07:20] root | Parents : A,B,F | Children: B,E,F,C,D,G,H,I | Leaves: C,D,E,G,H,I | nodes: B,F | Internal | Siblings:B,E,F,C,DG,H,I
+[00:08:24] root | Parents : A,B,F | DepthC: 2 | Children: B,E,F,C,D,G,H,I | DepthE: 1 | Leaves: C,D,E,G,H,I | DepthH: | nodes: B,F | Internal | Siblings:B,E,F,C,DG,H,I | Ancestor:CA,B | IA,F
+[00:09:42] root | arents : A,B,F | DepthC: 2 | Children: B,E,F,C,D,G,H,I | Height | Leaves: | C,D,E,G,H,I | ternal | nodes: | Siblings: | C,DG,H,I | Ancestor:CA,B | IA,F
+[00:09:44] root | Height
+[00:10:08] root | HeightB: 3 | HeightA:
+[00:10:52] Level:0 | Level:1 | Level:2
+[00:11:48] Level:0 | Level:1 | Level:2 | Edges
+[00:12:54] Level:0 | Level:1 | Level:2
+[00:13:18] Level:0 | Level:1 | Level:2 | Outdegree:A | Indegree:
+[00:14:18] Level:0 | Level:1 | Level:2 | Outdegree:A | MMMM | degree: B  3 | Indegree: | Total | ABWUDF
+[00:14:38] Parenthetical notation: AB
+[00:15:14] otation: ABC DE | FGHI

@@ -48,7 +48,6 @@ class SegmentSchema(BaseModel):
 # =========================
 class SegmentResponse(BaseModel):
     segment_id: int
-    video_id: int 
     segment_number: int
     start_time: int
     end_time: int
@@ -57,3 +56,8 @@ class SegmentResponse(BaseModel):
 
     model_config = {"from_attributes": True}
 
+
+class VideoSegmentsResponse(BaseModel):
+    video_id: int
+    video_url: Optional[str]
+    segments: List[SegmentResponse]

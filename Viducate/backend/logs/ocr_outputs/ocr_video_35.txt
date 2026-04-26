@@ -1,0 +1,52 @@
+# OCR Output — video_id=35
+# Language: en
+# Total segments: 48
+
+[00:00:02] cSimplilea | simpllearn
+[00:00:12] Roadblocks | cSimplilea | simpl,learn
+[00:00:16] Roadblocks | Cloud Computing | cSimplilea | simpllearn
+[00:00:18] Simplilearn. All rights reserved. | simpllearn
+[00:00:22] On-premises | Clou | cSimplilearn. All rights reserved | simpl,learn
+[00:00:42] On-premises | Cloud | Scalability | Scalability | CSimplilearn. All rights reserved | simpllearn
+[00:00:56] On-premises | Cloud | Scalability | Scalability | Server Storage | simpllearn
+[00:01:02] On-premises | Cloud | Scalability | Scalability | Server Storage | Server Storage | Azure | simpllearn
+[00:01:08] Server Storage | Server Storage | Azure | Data Security | Simplilearn. All rights reserved. | simpllearn
+[00:01:26] Data Security | Data Security | OSimplilearn. All rights reserved | simpllearn
+[00:01:36] Data Security | Data Security | Data Loss | Data Loss | CSimplilearn, All rights reserved | simpllearn
+[00:01:42] Data Loss | Data Loss | Data Recovery | Maintenance | Simplilearn. All rights reserved. | simpllearn
+[00:01:44] Data Loss | Data Loss | Data Recovery | Maintenance | simpllearn
+[00:01:46] Data Loss | Data Loss | Data Recovery | Maintenance | CSimplilearn, All rights reserved | simpllearn
+[00:01:54] Data Loss | Data Loss | Data Recovery | Maintenance | Maintenance | Simplilearn. All rights reserved
+[00:01:56] Data Loss | Data Loss | Data Recovery | Maintenance | Maintenance | Azure | Google CloudPaforn | Simplilearn. All rights reserved. | simpllearn
+[00:02:00] Simplilearn. All ngh | simpllearn
+[00:02:02] Simplilearn. All rights reserved. | simpllearn
+[00:02:24] Cloud Computing | Simplilearn, All rights reserved. | simpllearn
+[00:02:28] Deployment Model | cSin | simpllearn
+[00:02:30] Deployment Model | Simplilearn. All rights reserved. | simpllearn
+[00:02:34] Deployment Model | Public Cloud | Private Cloud | Hybrid Cloud | Simplilearn. All rights reserved. | simpllearn
+[00:02:40] Deployment Model | Public Cloud | Private Cloud | Hybrid Cloud | cSimplil | pllearn
+[00:02:42] Deployment Model | Public Cloud | Private Cloud | Hybrid Cloud | oSimplil | rn. All rights reseo | pllearn
+[00:02:44] Deployment Model | PublicCloud | Private Cloud | Hybrid Cloud | oSimplil | pllearn
+[00:03:16] Service Model | loud | Simplilearn. All rights reserved | simpllearn
+[00:03:24] On-Premises | Applications | Data | Runtime | You Manage | Middieware | Other Manages | Virtualization | Servers | Storage | Networking | CSimplilearn. All rightsn | simpllearn
+[00:03:36] On-Premises | laaS | Applications | Applications | Date | Deta | Runtime | Runtime | You Manage | Middieware | Middleware | Other Manages | Virtualization | Virtualization | Servers | Servers | Storage | Storage | Networking | Networking | simpllearn
+[00:03:52] On-Premises | Applications | Date | Runtime | You Manage | Mididleware | Other Manages | Virtualizati | Servers | Storay | Network | simplearn
+[00:03:54] On-Premises | laaS | Applications | Applications | Date | Deta | Runtime | Runtime | You Manage | Middieware | Middleware | Other Manages | Virtualization | Servers | Store | Netw | simpllearn
+[00:03:56] On-Premises | laaS | Applications | Applications | Data | Data | Runtime | Runtime | You Manage | Middieware | Middleware | Other Manages | Virtualization | Virtualization | Servers | Servers | Storage | Storage | Networking | Networking | IAAS | simpllearn
+[00:04:00] On-Premises | laaS | PaaS | Applications | Applications | Applications | Data | Deta | Data | Runtime | Runtime | Runtime | You Manage | Middieware | Middleware | Middeware | Other Manages | Virtualization | Virtualization | Virtualization | Servers | Servers | Servers | Storage | Storage | Storage | Networking | Networking | Networking | IAAS | simpl learn
+[00:04:24] On-Premises | laaS | PaaS | Applications | Applications | Applications | Data | Data | Data | Runtime | Runtime | Runtime | You Manage | Mididleware | Middieware | Other Manages | Virtualization | Virtualization | Servers | Servers | Storage | Storage | Networking | Networking | anage | PAAS | IAAS | simpllearn
+[00:04:26] On-Premises | laaS | PaaS | Applications | Applications | Applications | Data | Data | Data | Runtime | Runtime | Runtime | Middieware | Middleware | You Manage | Middeware | Other Manages | Virtualization | Virtualization | Virtualization | Servers | Servers | Servers | Storage | Storage | Storage | Networking | Networking | Networking | Acquire | Manage | PAAS | IAAS | simpllearn
+[00:04:38] On-Premises | laaS | PaaS | SaaS | Applications | Applications | Applications | Applications | Data | Deta | Data | Date | Runtime | Runtime | Runtime | Runtime | Middieware | Middleware | You Manage | Middieware | Middleware | Other Manages | Virtualization | Virtualization | Virtualization | Virtualization | Servers | Servers | Servers | Servers | Storage | Storage | Storage | Storage | Networking | Networking | Networking | Networking | Acquire | Manage | PAAS | IAAS | mpllearn
+[00:05:04] nages | QUIZ! | SAAS | rights reserved. | simpllearn
+[00:05:06] In whie | QUIZ! | cSimplilea | simpllearn
+[00:05:08] QUIZ! | In which one of the following deployment models are you, as the business, | respo | cSimplilearn | simpllearn
+[00:05:10] In which one of the following deployment models are you, as the business, | QUIZ! | responsible for the Application, Data and Operating System? | cSimplilearn. All rights reserved. | simpilearn
+[00:05:18] In which one of the following deployment models are you, as the business, | responsible for the Application, Data and Operating System? | I. laaS | 2. PaaS | 3. SaaS | cSimplilearn. All rigt | simplearn
+[00:05:22] In which one of the following deployment models are you, as the business, | responsible for the Application, Data and Operating System? | I. laaS | 2. PaaS | 3. SaaS | 4. laaS  PaaS | LET US KNO | cSimplilearn. All rights reserved | simpllearn
+[00:05:24] In which one of the following deployment models are you, as the business, | responsible for the Application, Data and Operating System? | I. laaS | 2. PaaS | 3. SaaS | 4. laaS  PaaS | LET US KNOW YOUR ANSWER IN THE | COMMENT SECTION BELOW | Simplilearn. All rights reserved | simpllearn
+[00:05:28] Some of the most popular cloud | CSimplilearn. All rights reserved | simpllearn
+[00:05:30] Some of the most popular cloud computing services in the market are | Simplilearn. All rights reserved. | simpilearn
+[00:05:36] Some of the most popular cloud computing services in the market are | Azure | Google Cloud Platform | cSimplilearn. All rights reserved. | simpilearn
+[00:05:40] Some of the most popular cloud computing services in the market are | Azure | Google Cloud Platform | Want to learn about them | and how they differ from each other? | Simplilearn. All rights reserved. | simpllearn
+[00:05:50] CSimplilearn. All rights reserved | simplearn
+[00:06:06] Thank you for watching and | stay tuned for mo | SUBSCRIBE | Simplilearn. All rights reserved. | simpllearn

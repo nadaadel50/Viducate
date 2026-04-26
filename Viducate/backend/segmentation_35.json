@@ -1,0 +1,83 @@
+{
+  "total_segments": 3,
+  "segments": [
+    {
+      "segment_number": 1,
+      "start_time": "00:00:02",
+      "end_time": "00:01:56",
+      "main_topic": "Introduction to Cloud Computing",
+      "title": "Introduction to Cloud Computing and its Benefits",
+      "sub_topics": [
+        {
+          "name": "Introduction to Cloud Computing",
+          "start_time": "00:00:02",
+          "end_time": "00:00:18",
+          "description": "Imagine you're the owner of a small software development firm and you want to scale your business up. However, a small team size, the unpredictability of demand, and limited resources are roadblocks for this expansion. That's when you hear about cloud computing."
+        },
+        {
+          "name": "Differences between On-Premise and Cloud-Based Computing",
+          "start_time": "00:00:18",
+          "end_time": "00:01:56",
+          "description": "But before investing money into it, you decide to draw up the differences between on-premise and cloud-based computing to make a better decision. When it comes to scalability, you pay more for an on-premise setup and get lesser options, too. Cloud computing, on the other hand, allows you to pay only for how much you use, with much easier and faster provisions for scaling up or down."
+        }
+      ],
+      "key_points": [
+        "Cloud computing offers scalability and cost-effectiveness",
+        "On-premise computing has limited scalability and higher costs",
+        "Cloud computing provides easier and faster provisions for scaling up or down"
+      ]
+    },
+    {
+      "segment_number": 2,
+      "start_time": "00:01:56",
+      "end_time": "00:04:50",
+      "main_topic": "What is Cloud Computing?",
+      "title": "Definition and Types of Cloud Computing",
+      "sub_topics": [
+        {
+          "name": "Definition of Cloud Computing",
+          "start_time": "00:01:56",
+          "end_time": "00:02:24",
+          "description": "So now, thinking that cloud computing is a better option, you decide to take a closer look at what exactly cloud computing is. Cloud computing refers to the delivery of on-demand computing services over the Internet on a pay-as-you-go basis."
+        },
+        {
+          "name": "Types of Cloud Computing Models",
+          "start_time": "00:02:24",
+          "end_time": "00:04:50",
+          "description": "Cloud computing has two types of models, deployment model and service model. There are three types of deployment models: public, private, and hybrid cloud."
+        }
+      ],
+      "key_points": [
+        "Cloud computing is the delivery of on-demand computing services over the Internet",
+        "There are two types of cloud computing models: deployment and service models",
+        "There are three types of deployment models: public, private, and hybrid cloud"
+      ]
+    },
+    {
+      "segment_number": 3,
+      "start_time": "00:04:50",
+      "end_time": "00:06:06",
+      "main_topic": "Cloud Computing Services",
+      "title": "Popular Cloud Computing Services and Their Differences",
+      "sub_topics": [
+        {
+          "name": "IaaS, PaaS, and SaaS",
+          "start_time": "00:04:50",
+          "end_time": "00:05:04",
+          "description": "And finally, we have SAS. Software and hardware requirements are satisfied by the vendors, so you don't have to manage any of those aspects of the solution."
+        },
+        {
+          "name": "Popular Cloud Computing Services",
+          "start_time": "00:05:04",
+          "end_time": "00:06:06",
+          "description": "Coming back to cloud computing, some of the most popular cloud computing services in the market are AWS or Amazon Web Services, Microsoft Azure, and Google Cloud Platform. Want to learn more about them and how they differ from each other?"
+        }
+      ],
+      "key_points": [
+        "IaaS provides access to basic computing infrastructure",
+        "PaaS provides cloud platforms and runtime environments for developing applications",
+        "Popular cloud computing services include AWS, Microsoft Azure, and Google Cloud Platform"
+      ]
+    }
+  ]
+}

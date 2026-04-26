@@ -1,0 +1,521 @@
+{
+  "total_segments": 19,
+  "segments": [
+    {
+      "segment_number": 1,
+      "start_time": "00:00:04",
+      "end_time": "00:00:52",
+      "main_topic": "Fundamentals of Programming",
+      "title": "Introduction to Variables and Naming Rules",
+      "sub_topics": [
+        {
+          "name": "Introduction to Variables",
+          "start_time": "00:00:04",
+          "end_time": "00:00:12",
+          "description": "السلام عليكم | Fundamentals of Programming"
+        },
+        {
+          "name": "Naming Rules",
+          "start_time": "00:00:12",
+          "end_time": "00:00:30",
+          "description": "السلام عليكم | File | Edit | Selection View Go Run Terminal Help | Fundamentals Administrator | C app.cpp | Variables NamingRules -Best-Practices | Naming Rules | MustBe Unique | Case-Sensitive | Cannot | Start | WithNumbers | Nums | Letters | Underscore | No White | Space | Special Characters | Reserved Keywords | Class, | Public | Best-Practices | Related-Names | Writing Style | include iostream | Ln 8, Col 36 | Spaces: 2 | UTF-8 | 12192022"
+        },
+        {
+          "name": "Variable Declaration",
+          "start_time": "00:00:30",
+          "end_time": "00:00:52",
+          "description": "اللي الناس بتستعملها وهي بتختار اسم المتغير. هنشوف الكلام ده | File | Edit | Selection View Go Run Terminal Help | Fundamentals Administrator | C app.cpp | Variables-NamingRules Best Practices | NamingRules | Must Be Unique | Case-Sensitive | Cannot | Start | With Numbers | Nums | Letters | Underscore | White | Space | Special | lCharacters | Reserved Keywords | Class, | Public | Best-Practices | Related-Names | WritingStyle | include iostream | Ln 2, Col 42 14 selected | Spaces: 2 | UTF-8 | 1Z192022"
+        }
+      ],
+      "key_points": [
+        "Variables are used to store values",
+        "Naming rules are important for variable declaration",
+        "Variables must be unique and case-sensitive"
+      ]
+    },
+    {
+      "segment_number": 2,
+      "start_time": "00:00:52",
+      "end_time": "00:02:04",
+      "main_topic": "Variable Declaration and Initialization",
+      "title": "Declaring and Initializing Variables",
+      "sub_topics": [
+        {
+          "name": "Declaring Variables",
+          "start_time": "00:00:52",
+          "end_time": "00:01:04",
+          "description": "declare a new variable declare declare price price declare update the value | File | Edit | Selection View Go Run Terminal Help | Fundamentals Administrator | app.cpp | Best-Practices | RelatedNames | Writing Style | include iostream | usingnamespace std; | int main | intprice 100; Dec | return 0; | Ln 22, Col 25 Spaces: 2 | UTF-8 | 12192022"
+        },
+        {
+          "name": "Initializing Variables",
+          "start_time": "00:01:04",
+          "end_time": "00:01:44",
+          "description": "declare a new variable declare declare price price declare update the value | File | Edit | Selection View Go Run Terminal Help | Fundamentals Administrator | app.cpp | Best-Practices | RelatedNames | Writing Style | includeiostream | usingnamespacestd; | int price | int ma | Declare A New Variable | intprice 100;   Declare-A-New-Variable | price 200; | return 0; | Ln 23, Col 19 Spaces: 2 | UTF-8 | 12192022"
+        },
+        {
+          "name": "Updating Variable Values",
+          "start_time": "00:01:44",
+          "end_time": "00:02:04",
+          "description": "هعمل سيلكت وقوله رن هتبدأ تلاقي حاجات عجيبة ومش هتفهم القصة دي | File | Edit | Selection View Go Run Terminal Help | Fundamentals Administrator | app.cpp | include iostream | using | namespacestd; | int main | OUTPUT | TERMINAL | DEBUG CONSOLE | PROBLEMS | Code | Runningcd c:UsersosamaDesktopFundamentals g app.cpp -0 app | c:UsersosamaDesktopFundamentalsapp | Doneexitedwith code0 in 0.507 seconds | Runningcdc:UsersosamaDesktopFundamentals | tempCodeRunnerFile c:UsersosamaDesktopFundamenta | Ln 20, Col 3 131 selected | Spaces: 2 | UTF-8"
+        }
+      ],
+      "key_points": [
+        "Variables can be declared and initialized",
+        "Variables can be updated with new values",
+        "Variable names must be unique and follow naming rules"
+      ]
+    },
+    {
+      "segment_number": 3,
+      "start_time": "00:02:04",
+      "end_time": "00:02:50",
+      "main_topic": "Variable Naming Rules",
+      "title": "Case Sensitivity and Reserved Keywords",
+      "sub_topics": [
+        {
+          "name": "Case Sensitivity",
+          "start_time": "00:02:04",
+          "end_time": "00:02:26",
+          "description": "File | Edit | Selection View Go Run Terminal Help | Fundamentals Administrator | app.cpp | include iostream | usingnamespace std; | int main | intprice 100;  DeclareANew-Variable | price 200; - . . -   -Update- The-Value | intprice 100; DeclareA | New Variable | cout price; | return 0; | Ln 24, Col 20 Spaces: 2 | UTF-8 | 12192022"
+        },
+        {
+          "name": "Reserved Keywords",
+          "start_time": "00:02:26",
+          "end_time": "00:02:42",
+          "description": "بيقول لي انه | File | Edit | Selection View Go Run Terminal Help | Fundamentals Administrator | app.cpp | include iostream | usingnamespace std; | int main | OUTPUT | TERMINAL | DEBUG CONSOLE | PROBLEMS | Code | int price  400; | ANNNN | app.cpp:22:7: note:int price previously declared-here | intprice 100;  DeclareA New-Variable | ANNNN | Doneexited-with code1in 0.375 seconds | Ln 24, Col 19 | Spaces: 2 | UTF-8 | 21912022"
+        },
+        {
+          "name": "Variable Naming Best Practices",
+          "start_time": "00:02:42",
+          "end_time": "00:02:50",
+          "description": "النقطة اللي بعدها ان الحروف | File | Edit | Selection View Go Run Terminal Help | OFundamentals Administrator | C app.cpp | Variables-Naming-Rules  Best Practices | NamingRules | Must Be Unique | CaseSensitive | Cannot | Start | WithNumbers | Nums | Letters | Underscore | No White | Space | Special-Characters | Reserved Keywords | Class, | Public | Best-Practices | Related-Names | Writing-Style | include iostream | Ln 26, Col 12 Spaces: 2 | UTF-8 | 1Z192022"
+        }
+      ],
+      "key_points": [
+        "Variable names are case-sensitive",
+        "Reserved keywords cannot be used as variable names",
+        "Variable names should follow best practices for readability and maintainability"
+      ]
+    },
+    {
+      "segment_number": 4,
+      "start_time": "00:02:56",
+      "end_time": "00:03:04",
+      "main_topic": "Introduction to C++",
+      "title": "Declaring Variables",
+      "sub_topics": [
+        {
+          "name": "Declaring a Variable",
+          "start_time": "00:02:56",
+          "end_time": "00:03:04",
+          "description": "File | Edit | Selection View Go Run Terminal Help | Fundamentals Administrator | app.cpp | include iostream | using namespace std; | int main | intprice 100;  DeclareA-New-Variable | price 200;  - . . -   -Update- The -Value | intPrice 400; | cout price; | return | Ln 24, Col 8 | Spaces: 2 | UTF-8 | 1Z192022"
+        }
+      ],
+      "key_points": [
+        "Declaring variables",
+        "Using namespace std"
+      ]
+    },
+    {
+      "segment_number": 5,
+      "start_time": "00:03:04",
+      "end_time": "00:03:10",
+      "main_topic": "C++ Basics",
+      "title": "Running C++ Code",
+      "sub_topics": [
+        {
+          "name": "Running C++ Code",
+          "start_time": "00:03:04",
+          "end_time": "00:03:10",
+          "description": "File | Edit | Selection View Go Run Terminal Help | Fundamentals Administrator | C app.cpp | Debug CC File | include iostream | Run Code | Run CC | File | usingnamespace std; | int main | intprice 100;  Declare A-New Variable | price 200;- . . .   -Update- The-Value | int Price  400; | cout  price; | return 0; | Ln 24, Col 19 | Spaces: 2 | UTF-8 | 12192022"
+        },
+        {
+          "name": "Debugging C++ Code",
+          "start_time": "00:03:08",
+          "end_time": "00:03:10",
+          "description": "200 اهو وما عندناش اي مشكلة والحمد لله طيب خلييني دلوقتي نجرب تجربة كده نحنا نضيف | File | Edit | Selection View Go Run Terminal Help | Fundamentals Administrator | app.cpp | include iostream | using namespace std; | int main | OUTPUT | TERMINAL | DEBUG CONSOLE | PROBLEMS | Code | Done-exited-with-code1 in 0.375 seconds | Runningcd c:UsersosamaDesktopFundamentals  g app.cpp -O app | c:UsersosamaDesktopFundamentalsapp | Done exitedwith code0 in 0.49 seconds | Ln 24, Col 19 Spaces: 2 | UTF-8 | 1Z192022"
+        }
+      ],
+      "key_points": [
+        "Running C++ code",
+        "Debugging C++ code"
+      ]
+    },
+    {
+      "segment_number": 6,
+      "start_time": "00:03:10",
+      "end_time": "00:03:30",
+      "main_topic": "Variable Naming Rules",
+      "title": "Naming Conventions",
+      "sub_topics": [
+        {
+          "name": "Naming Conventions",
+          "start_time": "00:03:10",
+          "end_time": "00:03:14",
+          "description": "200 اهو وما عندناش اي مشكلة والحمد لله طيب خلييني دلوقتي نجرب تجربة كده نحنا نضيف | File | Edit | Selection View Go Run Terminal Help | Fundamentals Administrator | app.cpp | int main | intprice 100;   DeclareANew-Variable | price 200;- . . .    -Update- The-Value | int-Price 400; | cout | t price; | return 0; | Ln 24, Col 19 | Spaces: 2 | UTF-8 | 1Z192022"
+        },
+        {
+          "name": "Variable Naming Rules",
+          "start_time": "00:03:14",
+          "end_time": "00:03:30",
+          "description": "200 اهو وما عندناش اي مشكلة والحمد لله طيب خلييني دلوقتي نجرب تجربة كده نحنا نضيف | File | Edit | Selection View Go Run Terminal | Help | Fundamentals Administrator | C app.cpp | Naming Rules | Must -Be Unique | Case Sensitive | Cannot Start | WithNumbers | Nums Or Letters Or Underscore | No White Space-Or Special -Characters | Reserved Keywords Class, Public | Best-Practices | Related-Names | Writing Style | include iostream | using | namespace std; | Ln 24, Col 19 | Spaces: 2 | UTF-8 | 12192022"
+        }
+      ],
+      "key_points": [
+        "Naming conventions",
+        "Variable naming rules"
+      ]
+    },
+    {
+      "segment_number": 7,
+      "start_time": "00:03:30",
+      "end_time": "00:04:10",
+      "main_topic": "Using Variables",
+      "title": "Using Variables in C++",
+      "sub_topics": [
+        {
+          "name": "Using Variables",
+          "start_time": "00:03:30",
+          "end_time": "00:03:36",
+          "description": "نضيف كده"
+        },
+        {
+          "name": "Variable Usage",
+          "start_time": "00:03:36",
+          "end_time": "00:04:10",
+          "description": "حاجة هنا اقول له | File | Edit | Selection View Go Run Terminal Help | Fundamentals Administrator | app.cpp | intprice 100;   Declare A-New-Variable | price 200;   -UpdateTheValue | intPrice  400; | cout  price; | cout | return 0; | Ln 26, Col 33 | Spaces: 2 | UTF-8 | Z191202Z"
+        }
+      ],
+      "key_points": [
+        "Using variables",
+        "Variable usage"
+      ]
+    },
+    {
+      "segment_number": 8,
+      "start_time": "00:04:10",
+      "end_time": "00:05:20",
+      "main_topic": "Variable Naming Best Practices",
+      "title": "Best Practices for Variable Naming",
+      "sub_topics": [
+        {
+          "name": "Best Practices",
+          "start_time": "00:04:10",
+          "end_time": "00:04:20",
+          "description": "الشرطة والخط اللي انت شايفه ده. ولو طبعا عملنا Run هيطلع لك طبعا مشاكل. طيب عرفنا دي وما فيهاش اي مشكلة خالص لكن محتاجين ان احنا نفهم حاجة بخصوص الاركام. انت ما ينفعش تبدأ برقم لكن تقدر تديف الرقم في النص او في الاخر ما عندكش ادنى مشكلة. شايفين يا شباب? الرقم في النص في الاخر في اي حتة تعجبك عايز تكتب حرفه وكل اللي بعده اركام ما فيش اي مشكلة خالص. | File | Edit | Selection View Go Run Terminal Help | OFundamentals Administrator | app.cpp | intprice 100;    Declare A-New-Variable | price 200;   Update The-Value | intPrice  400; | cout | price; | cout | intnum 10; | cout num; | return 0; | Ln 27, Col 7 Spaces: 2 | UTF-8 | 2192022"
+        },
+        {
+          "name": "Variable Naming Best Practices",
+          "start_time": "00:04:20",
+          "end_time": "00:05:20",
+          "description": "أهم شيء ما تبدأش اسم المتغير برقم"
+        }
+      ],
+      "key_points": [
+        "Best practices",
+        "Variable naming best practices"
+      ]
+    },
+    {
+      "segment_number": 9,
+      "start_time": "00:05:24",
+      "end_time": "00:06:18",
+      "main_topic": "Variables Naming Rules",
+      "title": "Understanding Variables Naming Rules",
+      "sub_topics": [
+        {
+          "name": "Introduction to Variables Naming Rules",
+          "start_time": "00:05:24",
+          "end_time": "00:05:27",
+          "description": "حطيت الـ underscore في النص أو في الآخر. ما عندكش أدنى مشكلة"
+        },
+        {
+          "name": "Using Underscore in Variable Names",
+          "start_time": "00:05:27",
+          "end_time": "00:05:32",
+          "description": "نهائيا. خلاص. انت أصلا بدأت بـ underscore فعادي ان انت تضيفها في"
+        },
+        {
+          "name": "Example of Using Underscore in Variable Names",
+          "start_time": "00:05:32",
+          "end_time": "00:06:18",
+          "description": "أي مكان. كله تمام يا شباب كله تمام. هنا عندنا الاركم و جردناها."
+        }
+      ],
+      "key_points": [
+        "Variables can have underscore in their names",
+        "Underscore can be used at the beginning or end of a variable name",
+        "Using underscore in variable names is allowed"
+      ]
+    },
+    {
+      "segment_number": 10,
+      "start_time": "00:06:18",
+      "end_time": "00:07:06",
+      "main_topic": "White Space and Special Characters",
+      "title": "Understanding White Space and Special Characters",
+      "sub_topics": [
+        {
+          "name": "Introduction to White Space",
+          "start_time": "00:06:18",
+          "end_time": "00:06:28",
+          "description": "نجرب بقى الـ special characters وبعدين الـ white space. اول حاجة عايزك"
+        },
+        {
+          "name": "Using White Space in Variable Names",
+          "start_time": "00:06:28",
+          "end_time": "00:06:40",
+          "description": "تفهمها بالمنطق كده بعيد عن البرمجة. انت لو استعملت white space في اسم اي identifier."
+        },
+        {
+          "name": "Example of Using White Space in Variable Names",
+          "start_time": "00:06:40",
+          "end_time": "00:07:06",
+          "description": "ده في عالم البرمجة مشكلة بدلا مكتب اسمي متغير وهو مستني بعد دي حاجة معينة فانت بتفصل الاسمين عن بعض بالعلامة دي"
+        }
+      ],
+      "key_points": [
+        "White space is not allowed in variable names",
+        "Using white space in variable names can cause errors",
+        "Special characters are also not allowed in variable names"
+      ]
+    },
+    {
+      "segment_number": 11,
+      "start_time": "00:07:06",
+      "end_time": "00:07:47",
+      "main_topic": "Reserved Keywords",
+      "title": "Understanding Reserved Keywords",
+      "sub_topics": [
+        {
+          "name": "Introduction to Reserved Keywords",
+          "start_time": "00:07:06",
+          "end_time": "00:07:28",
+          "description": "احنا عندنا كلمات محجوزة"
+        },
+        {
+          "name": "Example of Reserved Keywords",
+          "start_time": "00:07:28",
+          "end_time": "00:07:36",
+          "description": "زي اللي حضرتك شايفها دي"
+        },
+        {
+          "name": "Using Reserved Keywords in Variable Names",
+          "start_time": "00:07:36",
+          "end_time": "00:07:47",
+          "description": "يعني انا ما اقدرش اجي اقوله هنا"
+        }
+      ],
+      "key_points": [
+        "Reserved keywords cannot be used as variable names",
+        "Using reserved keywords can cause errors",
+        "Reserved keywords are specific to each programming language"
+      ]
+    },
+    {
+      "segment_number": 12,
+      "start_time": "00:07:52",
+      "end_time": "00:08:06",
+      "main_topic": "متغيرات برمجة",
+      "title": "تسمية المتغيرات",
+      "sub_topics": [
+        {
+          "name": "تسمية المتغيرات",
+          "start_time": "00:07:52",
+          "end_time": "00:07:54",
+          "description": "طب انت عايز ايه ما الاسم سليم اهو"
+        },
+        {
+          "name": "أسماء محجوزة",
+          "start_time": "00:07:54",
+          "end_time": "00:08:06",
+          "description": "بس هو محجوز للغة في حضرتك ما تقدرش"
+        }
+      ],
+      "key_points": [
+        "تسمية المتغيرات",
+        "أسماء محجوزة"
+      ]
+    },
+    {
+      "segment_number": 13,
+      "start_time": "00:08:06",
+      "end_time": "00:08:22",
+      "main_topic": "قواعد التسمية",
+      "title": "قواعد تسمية المتغيرات",
+      "sub_topics": [
+        {
+          "name": "قواعد التسمية",
+          "start_time": "00:08:06",
+          "end_time": "00:08:12",
+          "description": "دي كده شباب الرولز اللي بتحكم تسمية المتغير بتاعنا"
+        },
+        {
+          "name": "أفضل الممارسات",
+          "start_time": "00:08:12",
+          "end_time": "00:08:22",
+          "description": "تعالوا بقى نشوف ايه قصة البيست براكسس"
+        }
+      ],
+      "key_points": [
+        "قواعد التسمية",
+        "أفضل الممارسات"
+      ]
+    },
+    {
+      "segment_number": 14,
+      "start_time": "00:08:22",
+      "end_time": "00:08:46",
+      "main_topic": "أنماط التسمية",
+      "title": "أنماط تسمية المتغيرات",
+      "sub_topics": [
+        {
+          "name": "كامل كيس",
+          "start_time": "00:08:22",
+          "end_time": "00:08:30",
+          "description": "في طريقة وانت بتكتب اسم المتغير ليها اسم معين"
+        },
+        {
+          "name": "باسكال كيس",
+          "start_time": "00:08:30",
+          "end_time": "00:08:46",
+          "description": "بسمينها camel case"
+        }
+      ],
+      "key_points": [
+        "كامل كيس",
+        "باسكال كيس"
+      ]
+    },
+    {
+      "segment_number": 15,
+      "start_time": "00:08:48",
+      "end_time": "00:08:51",
+      "main_topic": "Camel Case",
+      "title": "Camel Case Naming Convention",
+      "sub_topics": [
+        {
+          "name": "Introduction to Camel Case",
+          "start_time": "00:08:48",
+          "end_time": "00:08:50",
+          "description": "ليه عشان أول حرف من الكلمة الأولى small | C Reserved Words | Camel Case - Google Search | google.comsearch?qCamelCasesourceInmstbmischsaXved2ahUKEwj93af8yIT8AhUECuwKHYVRAL8QAUoAXoECAEQAwbiw1920bih929dpr1imgrcMkI7Md9ySYvegM | Life | ESNext | Progress | AcademyRes | Practice | Share | New Tools | Work | Business | GTargets | Other bookmarks | Google | OSAMA | Camel Case | camel | CamelCase naming convention examples | Wikipedia | Explained | camelCase | Lurteit | snakecase | Harperbutie | PascalCase | w Wikipedia | TechTarget | Khalil Stemmler | Camel case - Wikipedia | What is the CamelCase naming convention? | Pascal Case  Naming Conventions .. | CamelCase | Camel case | lowercase | From Wipedia, the free encyckopedia | Redirectet fron CanelCase | Camel case sylized as | MiXeDcAsE | camelCase: also known as | camel caps or more formally | camelCase | Proper Case | as medial capitals is the | practice of writing phrases | such that each word or | Title Case | abbreviation in the midde of | the phrase begins with a | kebab-case | snakecase | capital letter, with no | UPPERCASE | intervening spaces or | camalCaso is named affter the | punctuation. Common | examples include Phone | simlar to the hump of common camels | Junior to Expert | Computer Hope | CD Cloud Logix | Wikimedia Commons | Naminq Convention, Camel Case  Keb.. | What is Camelcase? | Quick Reads  Camel case vs Sn.. | File:CamelCase.svg - Wikimedia.. | IDENTIFPIANT | Imtpuecalhostd8e91agilemg | UpperCamelCaon | AcpOeron | Tordixes | UperCameCase | poblide int? Userte  get: set: | Iscathnt aus | Wilues Exum | UpoerdCanelCase | rareigel?nerta | JSON | Rasw Data | Headers | Eseremenhs | UpperCimelCae | Save Copy | Y Filter 15ON | Exxplan | Uow CamalCo | pobild string toetacttrde grt: set | Calsrs.corebantes | OpporCaon | publde string Theme  grts wt | cporCanelCace | Eupouszit | Cirsthime: | Iancy | Isleve | lastiame: | Seattle | Davolin | Merode | UpperCandCase | puolic string Address  grts srt | cityt | UpceCamelCas | Seder Tet | Faante | publlc string dvanarlixageort  get; oet: | oeCand | Iyperliems | emp1ayectt: | pallie crrling kole prt ont | firstirme: | Aedirew | pulililc strieng Contactowall aet seta | LestNane: | Tarow | uller | csty: | OTHAINO | Twaino | Stack Overflow | BinaryIntellect Knowledge Base | Camel Case - Twaino | asp.net core 1.0 web api use camelcase .. | Camel Casing in ASP.NET Core Web API | Helg | Camel case - Wikipedia | CALAJAON | Welcome | casejson | Naming conventions in Java | Images may be subject to copyright. Learn More | PascalCase: PascalCase | camelCase: canelCase | camelCase | snakecase: snakecase | kebab-case: kebab-case | noun: a compound word that uses capital | Related content | letters to delineate words. Doesnt | acuigt ont iroey to | include the first letter. | Camel Ca | Waiting for www.google.com... | 1Z192022"
+        },
+        {
+          "name": "Camel Case Examples",
+          "start_time": "00:08:50",
+          "end_time": "00:08:51",
+          "description": "أول حرف من الكلمة الثانية capital | C Reserved Words | Camel Case - Google Search | google.comsearch?qCamelCasesourceInmstbmischsaXved2ahUKEwj93af8yIT8AhUECuwKHYVRAL8QAUoAXoECAEQAwbiw1920bih929dpr1imgrcMkI7Md9ySYvegM | Life | ESNext | Progress | Academy Res | Practice | Share | New Tools | Work | Business | GTargets | Other bookmarks | Google | OSAMA | Camel Case | CamelCase naming convention examples | Wikipedia | Explained | camelCase | Rackliarpet | wkay | intting | snakecase | Raxylitation | Harperbutine | PascalCase | w Wikipedia | TechTarget | Khalil Stemmler | Camel case - Wikipedia | What is the CamelCase naming convention? | Pascal Case  Naming Conventions . | CamelCase | Camel case | lowercase | From Wikibedia, the free entyckopedia | Redincted fron CanelCase | Camel case stylized as | MiXeDcAsE | camelCase: also known as | camel caps or more formally | camelCase | Proper Case | as medial capitals is tho | practice of writing phrases | abbreviation in the middle of | such that each word or | Title Case | the ptrase begins with a | kebab-case | snakecase | capital letter, with no | UPPERCASE | intervening spaces or | camelCase is named after the | punctuation Common | examples include Phone | simlar to the hump of coromon camels. | Junior to Expert | Computer Hope | CD Cloud Logix | Wikimedia Commons | Naminq Convention, Camel Case  Keb... | What is Camelcase? | Quick Reads  Camel case vs Sn.. | File:CamelCase.svq - Wikimedia. | IDENTIPIANT | EOMPSE | Imtplecalhostdse91agileme | Elsion | UnperCamelCase | AppOmrge | UpperCamelCase | Emnatmet | phite int Uerte  get set | Incathant 9s | UpperCanelCase | roreligymeal | ISON | Raw Data | Headers | Esemends | OpperCamwdCase | palie virual sher ser  get set | Save Copy | V Eimer 15ON | Exaplion | UscwCamelCana | pablic string Contacttede grt; ret: | OpporCase | puhite string fame  prt st 1 | UperGanel.ase | Cirsthame: | luncy | Pemode | Isleve | lastlames | Seattle | Davniie | Laper CanelCase | pablix string Addess  get set; | city: | Syber Tet | Paamalty | pablle snrling ivanarinagrt get, uet | Iyediems | emglayec10: | Fragrels | pulllic srrling kote get snt | firstliame: | Andres | Uzow CarnedC | patic string Coetactwad 1 aet sets 1 | Lastiame: | uller | city: | Tacoma | OTHAING | Twaino | Stack Overflow | BinaryIntellect Knowledge Base | Camel Case - Twaino | asp.net core 1.0 web api use camelcase | Camel Casinq in ASP.NET Core Web API | Camel case - Wikipedia | Welcome | case,json x | Naming conventions in Java | Images may be subject to copyright. Learn More | cametCase: canelCase | PascalCase: PascalCase | camelCase | snakecase: snakecase | kebab-case: | kebab-case | noun: a compound word that uses capital | Related content | letters to delineate words. Doesnt | artoges ont pianry to | include the first letter. | Camel Ca | https:en.wikipedia.orgwikiCamelcase | 1Z192022"
+        }
+      ],
+      "key_points": [
+        "Camel Case is a naming convention",
+        "It is used in programming languages",
+        "It is also known as camel caps or medial capitals"
+      ]
+    },
+    {
+      "segment_number": 16,
+      "start_time": "00:08:51",
+      "end_time": "00:09:05",
+      "main_topic": "Naming Conventions",
+      "title": "Naming Conventions in Programming",
+      "sub_topics": [
+        {
+          "name": "Introduction to Naming Conventions",
+          "start_time": "00:08:51",
+          "end_time": "00:08:53",
+          "description": "فعمل زي سنم الجمل بالشكل ده"
+        },
+        {
+          "name": "Examples of Naming Conventions",
+          "start_time": "00:08:53",
+          "end_time": "00:09:05",
+          "description": "حلو جدا"
+        }
+      ],
+      "key_points": [
+        "Naming conventions are important in programming",
+        "They help to make the code more readable",
+        "There are different types of naming conventions"
+      ]
+    },
+    {
+      "segment_number": 17,
+      "start_time": "00:09:05",
+      "end_time": "00:10:44",
+      "main_topic": "Best Practices",
+      "title": "Best Practices for Naming Conventions",
+      "sub_topics": [
+        {
+          "name": "Introduction to Best Practices",
+          "start_time": "00:09:05",
+          "end_time": "00:09:16",
+          "description": "ده وسكريمينج سنيك كيس نفسها بس الحروف كلها كابيتل وهنا كاتب لك"
+        },
+        {
+          "name": "Examples of Best Practices",
+          "start_time": "00:09:16",
+          "end_time": "00:10:44",
+          "description": "بعض اللغات اللي بتستخدم الرايتنج ستايل ده بالشكل ده ليه قلتلك ان"
+        }
+      ],
+      "key_points": [
+        "Best practices are important for naming conventions",
+        "They help to make the code more maintainable",
+        "They help to avoid errors"
+      ]
+    },
+    {
+      "segment_number": 18,
+      "start_time": "00:10:46",
+      "end_time": "00:10:58",
+      "main_topic": "تسمية المتغيرات",
+      "title": "قواعد تسمية المتغيرات",
+      "sub_topics": [
+        {
+          "name": "تسمية المتغيرات",
+          "start_time": "00:10:46",
+          "end_time": "00:10:51",
+          "description": "فتمام او البابليك عدد مثلا الناس او عدد ممبرز لكن تكتب اكس"
+        },
+        {
+          "name": "أمثلة على المتغيرات",
+          "start_time": "00:10:51",
+          "end_time": "00:10:58",
+          "description": "X, N, Z الحاجات دي مش مفهوم هنا المتغير ده بيعبر عنه"
+        }
+      ],
+      "key_points": [
+        "تسمية المتغيرات",
+        "قواعد التسمية",
+        "أمثلة على المتغيرات"
+      ]
+    },
+    {
+      "segment_number": 19,
+      "start_time": "00:10:58",
+      "end_time": "00:11:03",
+      "main_topic": "قواعد التسمية",
+      "title": "أفضل الممارسات لقواعد التسمية",
+      "sub_topics": [
+        {
+          "name": "قواعد التسمية",
+          "start_time": "00:10:58",
+          "end_time": "00:11:00",
+          "description": "فالاسم مهم جدا ان حضرتك تعمله يارب يا جماعة"
+        },
+        {
+          "name": "ختام الفيديو",
+          "start_time": "00:11:00",
+          "end_time": "00:11:03",
+          "description": "ده سيكون بسيط وسهل وعجبك واشوفكو ان شاء الله في فيديو جديد والسلام عليكم"
+        }
+      ],
+      "key_points": [
+        "قواعد التسمية",
+        "أفضل الممارسات",
+        "ختام الفيديو"
+      ]
+    }
+  ]
+}
