@@ -1,6 +1,7 @@
 import logging
 import asyncio
 import traceback
+from fastapi import HTTPException,status
 from sqlalchemy.orm import Session
 from app.repositories.video_repository import VideoRepository
 from app.db.database import SessionLocal
@@ -42,7 +43,10 @@ class ProcessingJobService:
     def create_job(self, video_id: int, language: str) -> dict:
         video = self.video_repo.update_status(video_id, "pending")
         if not video:
-            raise ValueError(f"Video {video_id} not found")
+            raise HTTPException(
+                status_code=status.HTTP_404_NOT_FOUND,
+                detail=f"Video {video_id} not found"
+            )
 
         job = {
             "video_id": video_id,
@@ -57,7 +61,10 @@ class ProcessingJobService:
     def get_status(self, video_id: int) -> dict:
         video = self.video_repo.get_by_id(video_id)
         if not video:
-            raise ValueError(f"Video {video_id} not found")
+            raise HTTPException(
+                status_code=status.HTTP_404_NOT_FOUND,
+                detail=f"Video {video_id} not found"
+            )
         return {
             "video_id": video_id,
             "status": video.processing_status,
@@ -134,6 +141,10 @@ async def run_processing_pipeline(video_id: int, language: str):
                 )
             except Exception as e:
                 logger.error(f" Failed to insert segment: {e}")
+                raise HTTPException(
+                    status_code=status.HTTP_500_INTERNAL_SERVER_ERROR,
+                    detail=f"Failed to insert segment {seg['segment_number']}"
+                )
 
         logger.info("[Pipeline] Segments saved to DB successfully")
 

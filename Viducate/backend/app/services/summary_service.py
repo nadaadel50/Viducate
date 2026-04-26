@@ -1,6 +1,6 @@
 import logging
 from sqlalchemy.orm import Session
-from fastapi import HTTPException
+from fastapi import HTTPException,status
 from app.models.video_summary import VideoSummary
 from app.models.segment_summary import SegmentSummary
 from app.models.topic_segment import TopicSegment
@@ -26,12 +26,12 @@ class SummaryService:
     def _check_video_belongs_to_user(self, video_id: int, user_id: int):
         video = self.db.query(Video).filter(Video.vid == video_id).first()
         if not video:
-            raise HTTPException(status_code=404, detail="Video not found")
+            raise HTTPException(status_code=status.HTTP_404_NOT_FOUND, detail="Video not found")
         if video.user_id != user_id:
-            raise HTTPException(status_code=403, detail="Not authorized")
+            raise HTTPException(status_code=status.HTTP_403_FORBIDDEN, detail="Not authorized")
         if video.processing_status != "completed":
             raise HTTPException(
-                status_code=400,
+                status_code=status.HTTP_400_BAD_REQUEST,
                 detail=f"Video is not ready yet. Current status: {video.processing_status}"
             )
         return video
@@ -81,7 +81,7 @@ class SummaryService:
         )
 
         if not segments:
-            raise HTTPException(status_code=404, detail="No segments found for this video")
+            raise HTTPException(status_code=status.HTTP_404_NOT_FOUND, detail="No segments found for this video")
 
         # Check if summaries already exist
         first_summary = self.db.query(SegmentSummary).filter(

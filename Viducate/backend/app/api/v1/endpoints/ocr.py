@@ -58,7 +58,7 @@ def get_ocr_results(
 
     if not os.path.exists(output_file):
         raise HTTPException(
-            status_code=404,
+            status_code=status.HTTP_404_NOT_FOUND,
             detail=f"No OCR results for video {video_id}. Run /ocr/process first."
         )
 
