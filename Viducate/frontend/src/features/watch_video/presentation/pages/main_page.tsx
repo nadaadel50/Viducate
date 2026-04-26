@@ -7,9 +7,9 @@ import Loading from "../../../../core/widgets/loading";
 import { ErrorMessage } from "../../../../core/widgets/error";
 import { LanguageInitModal } from "../../../video_upload/presentation/componants/LanguageInitModal";
 import { CustomizeExperienceModal } from "../../../video_upload/presentation/componants/CustomizeExperienceModal";
-
+import { useVideoId } from '../../../../core/hooks/useVideoId';
 export function MainPage() {
-
+const { videoId } = useVideoId();
 
   const { data: topics, isLoading, error } = useVideoData();
   //lets say that data came from useVideoData is fake data right now
@@ -17,7 +17,7 @@ export function MainPage() {
 
   
   const { selectedTopic, setSelectedTopic } = useSelectedTopic();
- const videoId = selectedTopic?.video_id;
+//  const videoId = selectedTopic?.video_id;
   
   const [isInitOpen, setIsInitOpen] = useState(false);
   const [isCustomizeOpen, setIsCustomizeOpen] = useState(false);

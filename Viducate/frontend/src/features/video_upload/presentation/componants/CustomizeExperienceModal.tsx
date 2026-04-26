@@ -1,25 +1,23 @@
 import React, { useState } from 'react';
-import { useNavigate  } from "react-router-dom";
 import { BaseModal } from '../../../../core/componants/base_modal';
 import CustumBtnLoader from '../../../../core/componants/custum_btn_loader';
 import { CustumError } from '../../../../core/componants/custum_error';
 import { PreferenceCard } from './PreferenceCard';
 import { FormattedMessage } from "react-intl";
 import { COLORS } from "../../../../core/constants/colors";
-import { AppRoutesNames } from '../../../../app/routers/routes';
 import { useSavePreferences } from '../hooks/use_save_preferences';
 
 interface CustomizeProps {
   isOpen: boolean;
   onClose: () => void;
-  videoId: number | undefined;
+  videoId: number | null | undefined;
 }
 type LanguageOption = "en" | "ar" | "Same as Video";
 
 export const CustomizeExperienceModal: React.FC<CustomizeProps> = ({ isOpen, onClose, videoId }) => {
   const { submitPreferences, isSubmitting } = useSavePreferences();
   const [serverError, setServerError] = useState<string | null>(null);
-  const navigate = useNavigate();
+
 
   const [prefs, setPrefs] = useState<{
     summary: LanguageOption;
@@ -46,7 +44,6 @@ export const CustomizeExperienceModal: React.FC<CustomizeProps> = ({ isOpen, onC
       });
       
       onClose();
-      navigate(AppRoutesNames.ProcessingPage);
     } catch (error: unknown) {
       if (typeof error === 'object' && error !== null && 'response' in error) {
         const apiError = error as { response: { data: { detail?: string } } };
