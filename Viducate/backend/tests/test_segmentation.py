@@ -9,4 +9,4 @@ load_dotenv()
 
 from app.services.segmentation_service import segment_topics
 
-asyncio.run(segment_topics([], 10))
+asyncio.run(segment_topics([],56))

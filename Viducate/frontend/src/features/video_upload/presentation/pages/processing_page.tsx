@@ -1,5 +1,5 @@
 import { useEffect, useMemo } from 'react';
-import { useNavigate, useParams } from 'react-router-dom';
+import { useNavigate} from 'react-router-dom';
 import { XCircle,CheckCircle, X ,RotateCcw} from 'lucide-react';
 import { FormattedMessage } from 'react-intl';
 import { AnalysisStepItem } from '../componants/analysis_step_item';
@@ -7,12 +7,12 @@ import { TipCard } from '../componants/tip_card';
 import { COLORS } from '../../../../core/constants/colors';
 import { useProcessingStatus } from '../hooks/use_processing_status';
 import { AppRoutesNames } from '../../../../app/routers/routes';
-
+import { useVideoId } from '../../../../core/hooks/useVideoId';
 export function ProcessingPage() {
-  const { videoId } = useParams();
+  const { videoId } = useVideoId();
   const navigate = useNavigate(); 
 
-  const { status, progress } = useProcessingStatus(videoId);
+  const { status, progress } = useProcessingStatus(videoId!);
   useEffect(() => {
     if (status === 'completed') {
       const timeout = setTimeout(() => navigate(AppRoutesNames.wathcVideo), 2500);

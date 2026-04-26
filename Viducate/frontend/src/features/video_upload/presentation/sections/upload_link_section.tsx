@@ -37,7 +37,7 @@ const navigate=useNavigate();
 
     if(response.success){
       console.log(response.data)
-      navigate(`${AppRoutesNames.ProcessingPage}/${response.data.videoId}`);
+      navigate(AppRoutesNames.ProcessingPage);
 
       //add hook vedioId
       setVideoId (response.data.videoId); 
