@@ -12,12 +12,12 @@ class S3Service:
     def __init__(self):
         self.client = boto3.client(
             "s3",
-            endpoint_url=settings.SUPABASE_S3_ENDPOINT,
-            aws_access_key_id=settings.SUPABASE_S3_ACCESS_KEY,
-            aws_secret_access_key=settings.SUPABASE_S3_SECRET_KEY,
-            region_name=settings.SUPABASE_REGION,
+            endpoint_url=f"https://{settings.R2_ACCOUNT_ID}.r2.cloudflarestorage.com",
+            aws_access_key_id=settings.R2_ACCESS_KEY,
+            aws_secret_access_key=settings.R2_SECRET_KEY,
+            region_name="auto",
         )
-        self.bucket = settings.SUPABASE_BUCKET_NAME
+        self.bucket = settings.R2_BUCKET_NAME
 
     def generate_s3_key(self, user_id: int, filename: str) -> str:
         ext = filename.rsplit(".", 1)[-1].lower() if "." in filename else "mp4"
@@ -63,11 +63,8 @@ class S3Service:
             raise
 
     def get_public_url(self, s3_key: str) -> str:
-        if settings.SUPABASE_BUCKET_PUBLIC:
-            return (
-                f"{settings.SUPABASE_URL}"
-                f"/storage/v1/object/public/{self.bucket}/{s3_key}"
-            )
+        if settings.R2_PUBLIC_URL:
+            return f"{settings.R2_PUBLIC_URL.rstrip('/')}/{s3_key}"
         return self.generate_presigned_download_url(s3_key)
 
     def object_exists(self, s3_key: str) -> bool:
@@ -82,8 +79,8 @@ class S3Service:
     def delete_object(self, s3_key: str) -> bool:
         try:
             self.client.delete_object(Bucket=self.bucket, Key=s3_key)
-            logger.info(f"Deleted Supabase object: {s3_key}")
+            logger.info(f"Deleted R2 object: {s3_key}")
             return True
         except ClientError as e:
-            logger.error(f"Failed to delete Supabase object {s3_key}: {e}")
+            logger.error(f"Failed to delete R2 object {s3_key}: {e}")
             return False
