@@ -10,6 +10,7 @@ import { UploadVideoRequest } from "../../domain/entity/upload_video_request";
 import { useUploadHandlers } from "../hooks/use_upload_handlers";
 import { useNavigate } from "react-router";
 import { AppRoutesNames } from "../../../../app/routers/routes";
+import  { useVideoId } from "../../../../core/hooks/useVideoId";
 
 type Props = {
   videoFile: File | null;
@@ -48,7 +49,7 @@ export function UploadVideoSection({
     fileInputRef,
   } = useUploadHandlers(handleTakeVideo);
   const naviagate=useNavigate()
-
+  const { setVideoId  } = useVideoId();
   const handleUploadVideo = async () => {
     if (!videoFile) return;
 
@@ -73,8 +74,10 @@ export function UploadVideoSection({
         handleError(response.error);
         return;
       }
+    
 
       console.log(response.data);
+       setVideoId(response.data.videoId);
     naviagate(`${AppRoutesNames.ProcessingPage}/${response.data.videoId}`);
     } catch (error) {
       if (error instanceof Error) {
