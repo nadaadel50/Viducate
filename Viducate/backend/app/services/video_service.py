@@ -109,20 +109,20 @@ class VideoService:
         video = self.video_repo.get_by_id(video_id)
 
         if not video:
-            raise HTTPException(status_code=404, detail="Video not found")
+            raise HTTPException(status.HTTP_404_NOT_FOUND, detail="Video not found")
 
         if video.user_id != user_id:
-            raise HTTPException(status_code=403, detail="Not authorized")
+            raise HTTPException(status_code=status.HTTP_403_FORBIDDEN, detail="Not authorized")
 
         if not video.s3_key:
             raise HTTPException(
-                status_code=400,
+                status_code=status.HTTP_400_BAD_REQUEST,
                 detail="This video was submitted as a URL, not a file upload",
             )
 
         if not self.s3.object_exists(video.s3_key):
             raise HTTPException(
-                status_code=400,
+                status_code=status.HTTP_400_BAD_REQUEST,
                 detail="File not found in S3. Please upload the file before confirming.",
             )
 
@@ -139,9 +139,9 @@ class VideoService:
     def get_video_status(self, user_id: int, video_id: int) -> dict:
         video = self.video_repo.get_by_id(video_id)
         if not video:
-            raise HTTPException(status_code=404, detail="Video not found")
+            raise HTTPException(status_code=status.HTTP_404_NOT_FOUND, detail="Video not found")
         if video.user_id != user_id:
-            raise HTTPException(status_code=403, detail="Not authorised")
+            raise HTTPException(status_code=status.HTTP_403_FORBIDDEN, detail="Not authorised")
         return {
             "video_id": video.vid,
             "title": video.title,
@@ -168,9 +168,9 @@ class VideoService:
     def delete_video(self, user_id: int, video_id: int) -> dict:
         video = self.video_repo.get_by_id(video_id)
         if not video:
-            raise HTTPException(status_code=404, detail="Video not found")
+            raise HTTPException(status_code=status.HTTP_404_NOT_FOUND, detail="Video not found")
         if video.user_id != user_id:
-            raise HTTPException(status_code=403, detail="Not authorized")
+            raise HTTPException(status_code=status.HTTP_403_FORBIDDEN, detail="Not authorized")
 
         if video.s3_key:
             self.s3.delete_object(video.s3_key)

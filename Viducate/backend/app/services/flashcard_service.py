@@ -1,6 +1,6 @@
 import logging
 from sqlalchemy.orm import Session
-from fastapi import HTTPException
+from fastapi import HTTPException, status
 
 from app.models.video import Video
 from app.models.topic_segment import TopicSegment
@@ -66,17 +66,18 @@ class FlashcardService:
     def _get_video_or_404(self, video_id: int) -> Video:
         video = self.db.query(Video).filter(Video.vid == video_id).first()
         if not video:
-            raise HTTPException(status_code=404, detail="Video not found")
+            raise HTTPException(status_code=status.HTTP_404_NOT_FOUND, detail="Video not found")
+
         return video
 
     def _check_ownership(self, video: Video, user_id: int):
         if video.user_id != user_id:
-            raise HTTPException(status_code=403, detail="Not authorized")
+            raise HTTPException(status_code=status.HTTP_403_FORBIDDEN, detail="Not authorized")
 
     def _check_processing_complete(self, video: Video):
         if video.processing_status != "completed":
             raise HTTPException(
-                status_code=400,
+                status_code=status.HTTP_400_BAD_REQUEST,
                 detail=(
                     f"Video is not ready yet. "
                     f"Current status: {video.processing_status}. "
@@ -161,7 +162,7 @@ class FlashcardService:
         ).first()
 
         if not seg:
-            raise HTTPException(status_code=404, detail="Segment not found")
+            raise HTTPException(status_code=status.HTTP_404_NOT_FOUND, detail="Segment not found")
 
         cards = self.repo.get_by_segment(segment_id)
         return _build_segment_dict(seg, cards)

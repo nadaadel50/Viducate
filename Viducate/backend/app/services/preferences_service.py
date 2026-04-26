@@ -1,5 +1,5 @@
 from sqlalchemy.orm import Session
-from fastapi import HTTPException
+from fastapi import HTTPException,status
 from app.repositories.preferences_repository import PreferencesRepository
 from app.repositories.video_repository import VideoRepository
 from app.schemas.preferences import ContentPreferencesRequest
@@ -12,9 +12,9 @@ class PreferencesService:
     def save(self, user_id: int, request: ContentPreferencesRequest):
         video = self.video_repo.get_by_id(request.video_id)
         if not video:
-            raise HTTPException(status_code=404, detail="Video not found")
+            raise HTTPException(status_code=status.HTTP_404_NOT_FOUND, detail="Video not found")
         if video.user_id != user_id:
-            raise HTTPException(status_code=403, detail="Not authorized")
+            raise HTTPException(status_code=status.HTTP_403_FORBIDDEN, detail="Not authorized")
 
         data = {
             "summary_language": request.summary_language,

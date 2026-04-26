@@ -51,7 +51,10 @@ class OCRService:
             raise
         except Exception as e:
             logger.error(f"[OCRService] Failed | video_id={video_id} | error={e}")
-            raise
+            raise HTTPException(
+                status_code=status.HTTP_500_INTERNAL_SERVER_ERROR,
+                detail=f"OCR processing failed for video_id={video_id}"
+            )
 
     def _save_to_txt(self, video_id: int, segments: list, language: str):
         """Save OCR results to text file with same template as API response."""
