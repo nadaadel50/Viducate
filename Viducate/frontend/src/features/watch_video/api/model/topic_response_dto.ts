@@ -11,14 +11,3 @@ export type TopicResponseDto = {
 }
 
 
-export function toTopicResponseEntity(dto: TopicResponseDto): TopicResponse {
-  return new TopicResponse(
-    dto.segment_id,
-    dto.video_id,
-    dto.segment_number,
-    dto.start_time,
-    dto.end_time,
-    dto.main_topic,
-    dto.title
-  )
-}

@@ -316,7 +316,7 @@ export function VideoPlayer() {
                   <div className="absolute right-0 top-1/2 -translate-y-1/2 w-3 h-3 rounded-full bg-white shadow-md scale-0 group-hover/bar:scale-100 transition-transform " />
                 </div>
                 <div className="absolute top-0 left-0 w-full h-full pointer-events-none">
-                  {topics!.map((topic, index) => {
+                  {topics?.topics!.map((topic, index) => {
                     const percent = (topic.end_time / duration) * 100;
 
                     return (

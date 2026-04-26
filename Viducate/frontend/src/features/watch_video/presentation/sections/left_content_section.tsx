@@ -15,7 +15,9 @@ export function LeftContentSection() {
 
     
   } = useSelectedTopic();
-  const { data: topics } = useVideoData();
+  const { data: videoData } = useVideoData();
+  const topics=videoData?.topics
+
 
   // derive current topic from time
   const currentTopicIndex = topics!.findIndex(
