@@ -1,3 +1,4 @@
+from fastapi import HTTPException,status
 import fitz  # pymupdf
 from pptx import Presentation
 
@@ -39,4 +40,7 @@ def extract_slides_text(file_path: str) -> list[str]:
     elif file_path.endswith(".pptx"):
         return extract_from_pptx(file_path)
     else:
-        raise ValueError(f"Unsupported format: {file_path}")
+        raise HTTPException(
+            status_code=status.HTTP_400_BAD_REQUEST,
+            detail=f"Unsupported format. Allowed: .pdf, .pptx"
+        )

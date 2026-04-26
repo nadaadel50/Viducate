@@ -3,6 +3,8 @@ import uuid
 import logging
 from botocore.exceptions import ClientError
 from typing import Optional
+
+from fastapi import HTTPException, status
 from app.config import settings
 
 logger = logging.getLogger(__name__)
@@ -44,7 +46,10 @@ class S3Service:
             return url
         except ClientError as e:
             logger.error(f"Failed to generate presigned upload URL: {e}")
-            raise
+            raise HTTPException(
+                status_code=status.HTTP_500_INTERNAL_SERVER_ERROR,
+                detail="Failed to generate upload URL"
+            )
 
     def generate_presigned_download_url(
         self,
@@ -60,7 +65,10 @@ class S3Service:
             return url
         except ClientError as e:
             logger.error(f"Failed to generate presigned download URL: {e}")
-            raise
+            raise HTTPException(
+                status_code=status.HTTP_500_INTERNAL_SERVER_ERROR,
+                detail="Failed to generate download URL"
+            )
 
     def get_public_url(self, s3_key: str) -> str:
         if settings.SUPABASE_BUCKET_PUBLIC:
@@ -77,7 +85,10 @@ class S3Service:
         except ClientError as e:
             if e.response["Error"]["Code"] == "404":
                 return False
-            raise
+            raise HTTPException(
+                status_code=status.HTTP_500_INTERNAL_SERVER_ERROR,
+                detail=f"Failed to check object existence: {s3_key}"
+            )
 
     def delete_object(self, s3_key: str) -> bool:
         try:

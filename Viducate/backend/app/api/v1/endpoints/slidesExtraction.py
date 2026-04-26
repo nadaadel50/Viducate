@@ -42,7 +42,7 @@ async def upload_slides(
     # التحقق من نوع الفايل
     if not file.filename.endswith((".pdf", ".pptx")):
         raise HTTPException(
-            status_code=400,
+            status_code=status.HTTP_400_BAD_REQUEST,
             detail="Only PDF or PPTX files are allowed"
         )
     

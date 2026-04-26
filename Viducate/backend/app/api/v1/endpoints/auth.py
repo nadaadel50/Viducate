@@ -165,7 +165,7 @@ async def google_callback(request: Request, db: Session = Depends(get_db)):
 
         user_info = token.get("userinfo")
         if not user_info:
-            raise HTTPException(status_code=400, detail="Failed to get user info")
+            raise HTTPException(status_code=status.HTTP_400_BAD_REQUEST, detail="Failed to get user info")
 
         google_id = user_info.get('sub')
         email = user_info.get('email')

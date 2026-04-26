@@ -13,7 +13,6 @@ def match_slides_to_segments(segments_result: dict, slides_text: list[str]) -> d
         for slide in slides_text
     ]
 
-    # ✅ عشان منكررش نفس الـ slide في أكتر من segment
     used_slides = set()
 
     for segment in segments_result["segments"]:
