@@ -37,7 +37,7 @@ export function AppRoutes() {
              <Route  element={<ProtectedRoute/>}>  // will prmove "/protected" soon
               /* here we will put all the protected routes that need authentication to access them */
               <Route path="/UploadVideoPage" element={<UploadVideoPage />} /> 
-                <Route path="/ProcessingPage/:videoId" element={<ProcessingPage />} />
+                <Route path="/ProcessingPage" element={<ProcessingPage />} />
                <Route
           path="/WatchVideo"
           element={

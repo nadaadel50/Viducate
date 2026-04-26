@@ -78,7 +78,7 @@ export function UploadVideoSection({
 
       console.log(response.data);
        setVideoId(response.data.videoId);
-    naviagate(`${AppRoutesNames.ProcessingPage}/${response.data.videoId}`);
+    naviagate(AppRoutesNames.ProcessingPage);
     } catch (error) {
       if (error instanceof Error) {
         handleError(error.message);
