@@ -7,7 +7,6 @@ import {
   Minimize,
   Gauge,
 } from "lucide-react";
-import video from "../../../../assets/videos/test.mp4";
 import { useSelectedTopic } from "../context/topic_context";
 import { useVideoData } from "../../../../core/hooks/useVideoData";
 import { STORAGE_KEYS } from "../../../../core/constants";

@@ -7,15 +7,15 @@ const VIDEO_ID_KEY = "current_video_id";
 
 export const VideoIdProvider = ({ children }: videoIdContextProps) => {
   const [videoId, setVideoIdState] = useState<number | null>(() => {
-    const stored = localStorage.getItem(VIDEO_ID_KEY);
+    const stored = sessionStorage.getItem(VIDEO_ID_KEY);
     return stored ? Number(stored) : null;
   });
 
   const setVideoId = (id: number | null) => {
     if (id === null) {
-      localStorage.removeItem(VIDEO_ID_KEY);
+      sessionStorage.removeItem(VIDEO_ID_KEY);
     } else {
-      localStorage.setItem(VIDEO_ID_KEY, String(id));
+      sessionStorage.setItem(VIDEO_ID_KEY, String(id));
     }
     setVideoIdState(id);
   };
