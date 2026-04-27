@@ -48,7 +48,7 @@ export function UploadVideoSection({
     handleDrop,
     fileInputRef,
   } = useUploadHandlers(handleTakeVideo);
-  const naviagate=useNavigate()
+  
   const { setVideoId  } = useVideoId();
   const handleUploadVideo = async () => {
     if (!videoFile) return;
@@ -76,9 +76,9 @@ export function UploadVideoSection({
       }
     
 
-      console.log(response.data);
+     // console.log(response.data);
        setVideoId(response.data.videoId);
-    naviagate(AppRoutesNames.ProcessingPage);
+      
     } catch (error) {
       if (error instanceof Error) {
         handleError(error.message);

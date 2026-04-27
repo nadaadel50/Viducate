@@ -23,8 +23,8 @@ export class WatchVideoDataSourceImp implements WatchVideoDataSource {
       const response = await this.watchVideoService.getTopics(
         toTopicRequestDto(topicReq),
       );
-      console.log("iam here")
-      console.log(response)
+      // console.log("iam here")
+      // console.log(response)
       const responseEntity = mapVideoDtoToEntity(response)
     
       return {

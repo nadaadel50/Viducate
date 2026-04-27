@@ -2,7 +2,7 @@ import { createContext } from "react";
 
 export type VideoIdContextType = {
   videoId: number | null;
-  setVideoId : React.Dispatch<React.SetStateAction<number | null>>;
+  setVideoId: (id: number | null) => void; 
 };
 
 export const VideoIdContext = createContext<VideoIdContextType | null>(null);

@@ -19,10 +19,10 @@ export const mapVideoDtoToEntity = (
     dto.segments.map(
       (topic) =>
         new TopicResponse(
-            topic.end_time,
-            topic.start_time,
             topic.segment_id,
             topic.segment_number,
+            topic.start_time,
+            topic.end_time,
             topic.main_topic,
             topic.title
          

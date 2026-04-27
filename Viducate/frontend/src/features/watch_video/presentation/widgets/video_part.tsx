@@ -32,10 +32,7 @@ export function VideoPlayer() {
   const [isFullscreen, setIsFullscreen] = useState(false);
   const [playbackRate, setPlaybackRate] = useState(1);
   const [showSpeedMenu, setShowSpeedMenu] = useState(false);
-  const [markers, setMarkers] = useState<Marker[]>(() => {
-    const saved = localStorage.getItem(STORAGE_KEYS.marks);
-    return saved ? JSON.parse(saved) : [];
-  });
+  const [markers, setMarkers] = useState<Marker[]>([]);
   const [showControls, setShowControls] = useState(true);
   const hideControlsTimer = useRef<ReturnType<typeof setTimeout> | null>(null);
 
@@ -56,7 +53,7 @@ export function VideoPlayer() {
   const [currentTopicName, setCurrentTopicName] = useState("");
 
   useEffect(() => {
-    localStorage.setItem(STORAGE_KEYS.marks, JSON.stringify(markers));
+    sessionStorage.setItem(STORAGE_KEYS.marks, JSON.stringify(markers));
   }, [markers]);
   // ── topic change ──────────────────────────────────────────────────────────
   useEffect(() => {
@@ -260,7 +257,7 @@ export function VideoPlayer() {
       >
         <video
           ref={videoRef}
-          src={video}
+          src={topics?.video_url}
           onSeeked={handleSeek}
           onTimeUpdate={handleTimeUpdate}
           onLoadedMetadata={handleLoadedMetadata}

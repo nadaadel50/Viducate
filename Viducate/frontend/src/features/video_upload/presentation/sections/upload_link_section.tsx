@@ -29,15 +29,15 @@ const navigate=useNavigate();
 
  const handleUploadURL = async () => {
     if (!url) return;
-    console.log(url)
+    // console.log(url)
 
     const response=await uploadURLUseCase.uploadUrl(new UrlRequest(
       url,linkTitle,"en","technology"
     ))
 
     if(response.success){
-      console.log(response.data)
-      navigate(AppRoutesNames.ProcessingPage);
+      // console.log(response.data)
+      navigate(AppRoutesNames.ProcessingPage,{ replace: true });
 
       //add hook vedioId
       setVideoId (response.data.videoId); 

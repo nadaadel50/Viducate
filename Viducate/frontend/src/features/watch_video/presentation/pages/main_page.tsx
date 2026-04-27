@@ -7,40 +7,38 @@ import Loading from "../../../../core/widgets/loading";
 import { ErrorMessage } from "../../../../core/widgets/error";
 import { LanguageInitModal } from "../../../video_upload/presentation/componants/LanguageInitModal";
 import { CustomizeExperienceModal } from "../../../video_upload/presentation/componants/CustomizeExperienceModal";
-import { useVideoId } from '../../../../core/hooks/useVideoId';
+import { useVideoId } from "../../../../core/hooks/useVideoId";
 export function MainPage() {
-const { videoId } = useVideoId();
+  const { videoId } = useVideoId();
 
-  const { data: topics, isLoading, error } = useVideoData();
+  const { data: data, isLoading, error } = useVideoData();
   //lets say that data came from useVideoData is fake data right now
 
-
-  
   const { selectedTopic, setSelectedTopic } = useSelectedTopic();
-//  const videoId = selectedTopic?.video_id;
-  
+  //  const videoId = selectedTopic?.video_id;
+
   const [isInitOpen, setIsInitOpen] = useState(false);
   const [isCustomizeOpen, setIsCustomizeOpen] = useState(false);
 
   useEffect(() => {
-  if (!videoId) return;
+    if (!videoId) return;
 
-  const key = `init_modal_seen_${videoId}`;
-  const hasSeen = localStorage.getItem(key);
+    const key = `init_modal_seen_${videoId}`;
+    const hasSeen = localStorage.getItem(key);
 
-  if (!hasSeen) {
-    setIsInitOpen(true);
-    localStorage.setItem(key, "true");
-  }
-}, [videoId]);
-
-  
-  useEffect(() => {
-    if (topics && topics.length > 0 && !selectedTopic) {
-      setSelectedTopic(topics[0]);
+    if (!hasSeen) {
+      setIsInitOpen(true);
+      localStorage.setItem(key, "true");
     }
-  }, [topics, selectedTopic, setSelectedTopic]);
+  }, [videoId]);
 
+  useEffect(() => {
+    if (data && data.topics.length > 0 && !selectedTopic) {
+      setSelectedTopic(data.topics[0]);
+     
+      
+    }
+  }, [data?.topics, selectedTopic, setSelectedTopic]);
 
   const handleGoToCustomize = () => {
     setIsInitOpen(false);
@@ -48,28 +46,22 @@ const { videoId } = useVideoId();
       setIsCustomizeOpen(true);
     }, 300);
   };
-  
 
-  if (isLoading) {
-    return <Loading />;
-  }
-
-  if (error) {
-    return <ErrorMessage errorMessage={error.message} />;
-  } 
+  if (isLoading && !data) return <Loading />;
+  if (error) return <ErrorMessage errorMessage={error.message} />;
 
   return (
     <>
-    <div className="flex font-display bg-[#f8fafc]">
-      <div className="flex-1 border-r border-slate-200">
-        <LeftContentSection />
-      </div>
+      <div className="flex font-display bg-[#f8fafc]">
+        <div className="flex-1 border-r border-slate-200">
+          <LeftContentSection />
+        </div>
 
-      <div className="flex-[3.5]">
-        <RightContentSection />
+        <div className="flex-[3.5]">
+          <RightContentSection />
+        </div>
       </div>
-    </div>
-    <LanguageInitModal
+      <LanguageInitModal
         isOpen={isInitOpen}
         onClose={() => setIsInitOpen(false)}
         onCustomize={handleGoToCustomize}
