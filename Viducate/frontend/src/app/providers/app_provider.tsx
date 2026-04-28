@@ -6,13 +6,13 @@ import { LanguageProvider } from "../../core/contexts/languageContext/languagePr
 import { useScrollRestore } from "../../core/hooks/useScrollRestore";
 import { IntWrapper } from "../../core/l10n/intWrapper";
 import { AuthProvider } from "../../features/auth/presentation/context/auth_provider";
-import { VideoIdProvider } from "../../core/contexts/VideoContext/videoIdProvider";
+import { LearningSessionProvider } from "../../core/contexts/learning_content_context/learning_constent_provider";
 
 const queryClient = new QueryClient({
   defaultOptions: {
     queries: {
       staleTime: Infinity,
-      gcTime: 1000 * 60 * 60 * 24, 
+      gcTime: 1000 * 60 * 60 * 24,
     },
   },
 });
@@ -37,15 +37,13 @@ export function AppProviders({ children }: { children: React.ReactNode }) {
       client={queryClient}
       persistOptions={{
         persister,
-        maxAge: 1000 * 60 * 60 * 24, 
+        maxAge: 1000 * 60 * 60 * 24,
       }}
     >
       <AuthProvider>
         <LanguageProvider>
           <IntWrapper>
-            <VideoIdProvider>
-              {children}
-            </VideoIdProvider>
+            <LearningSessionProvider>{children}</LearningSessionProvider>
           </IntWrapper>
         </LanguageProvider>
       </AuthProvider>

@@ -6,7 +6,8 @@ import {
 } from "lucide-react";
 import { ContentGenerationBtn } from "./content_genration_btn";
 import type { TopicResponse } from "../../domin/entity/topic_response";
-import { useSelectedTopic } from "../context/topic_context";
+import { useLearningSession } from "../../../../core/hooks/useLearningContent";
+
 
 export function ContentLearningCard({
   isSelected,
@@ -17,7 +18,7 @@ export function ContentLearningCard({
   onClick: () => void;
   cardInfo: TopicResponse;
 }) {
-  const { setSelectedTopic } = useSelectedTopic();
+  const { setSelectedTopic } = useLearningSession();
   return (
     <div
       onClick={() => {

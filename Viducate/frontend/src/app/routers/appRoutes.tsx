@@ -12,7 +12,7 @@ import LoginPage from "../../features/auth/presentation/pages/login_page";
 import SignupPage from "../../features/auth/presentation/pages/signup_page";
 
 import { MainPage } from "../../features/watch_video/presentation/pages/main_page";
-import { SelectedTopicProvider } from "../../features/watch_video/presentation/context/topic_provider";
+
 
 import TestModalsPage from "../../features/video_upload/presentation/pages/test_modals_page";
 import { ProcessingPage } from "../../features/video_upload/presentation/pages/processing_page";
@@ -45,9 +45,9 @@ export function AppRoutes() {
           <Route
             path="/WatchVideo"
             element={
-              <SelectedTopicProvider>
+              
                 <MainPage />
-              </SelectedTopicProvider>
+             
             }
           />{" "}
         </Route>

@@ -1,8 +1,8 @@
 import { useEffect, useState } from "react";
 import { ContentLearningCard } from "../widgets/content_learning_card";
 import { SearchTopicBar } from "../widgets/search_topic_bar";
-import { useSelectedTopic } from "../context/topic_context";
 import { useVideoData } from "../../../../core/hooks/useVideoData";
+import { useLearningSession } from "../../../../core/hooks/useLearningContent";
 
 export function LeftContentSection() {
   const [searchQuery, setSearchQuery] = useState<string>("");
@@ -11,7 +11,7 @@ export function LeftContentSection() {
     currentTime,
     setSelectedTopic,
     setSeekTo
-  } = useSelectedTopic();
+  } = useLearningSession();
   const { data: videoData } = useVideoData();
   const topics=videoData?.topics
   
