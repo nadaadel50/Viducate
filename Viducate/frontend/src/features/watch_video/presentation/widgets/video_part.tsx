@@ -7,10 +7,10 @@ import {
   Minimize,
   Gauge,
 } from "lucide-react";
-import video from "../../../../assets/videos/test.mp4";
-import { useSelectedTopic } from "../context/topic_context";
+
 import { useVideoData } from "../../../../core/hooks/useVideoData";
 import { STORAGE_KEYS } from "../../../../core/constants";
+import { useLearningSession } from "../../../../core/hooks/useLearningContent";
 
 const SPEED_OPTIONS = [0.5, 0.75, 1, 1.25, 1.5, 2];
 
@@ -32,10 +32,7 @@ export function VideoPlayer() {
   const [isFullscreen, setIsFullscreen] = useState(false);
   const [playbackRate, setPlaybackRate] = useState(1);
   const [showSpeedMenu, setShowSpeedMenu] = useState(false);
-  const [markers, setMarkers] = useState<Marker[]>(() => {
-    const saved = localStorage.getItem(STORAGE_KEYS.marks);
-    return saved ? JSON.parse(saved) : [];
-  });
+  const [markers, setMarkers] = useState<Marker[]>([]);
   const [showControls, setShowControls] = useState(true);
   const hideControlsTimer = useRef<ReturnType<typeof setTimeout> | null>(null);
 
@@ -43,7 +40,7 @@ export function VideoPlayer() {
     [],
   );
   const { currentTime, setCurrentTime, selectedTopic, seekTo, setSeekTo } =
-    useSelectedTopic();
+    useLearningSession();
   const { data: topics } = useVideoData();
   const [lastSeekTime, setLastSeekTime] = useState<number | null>(null);
   const [pauseStart, setPauseStart] = useState<number | null>(null);
@@ -56,7 +53,7 @@ export function VideoPlayer() {
   const [currentTopicName, setCurrentTopicName] = useState("");
 
   useEffect(() => {
-    localStorage.setItem(STORAGE_KEYS.marks, JSON.stringify(markers));
+    sessionStorage.setItem(STORAGE_KEYS.marks, JSON.stringify(markers));
   }, [markers]);
   // ── topic change ──────────────────────────────────────────────────────────
   useEffect(() => {
@@ -260,7 +257,7 @@ export function VideoPlayer() {
       >
         <video
           ref={videoRef}
-          src={video}
+          src={topics?.video_url}
           onSeeked={handleSeek}
           onTimeUpdate={handleTimeUpdate}
           onLoadedMetadata={handleLoadedMetadata}

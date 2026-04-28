@@ -6,7 +6,8 @@ import {
 } from "lucide-react";
 import { ContentGenerationBtn } from "./content_genration_btn";
 import type { TopicResponse } from "../../domin/entity/topic_response";
-import { useSelectedTopic } from "../context/topic_context";
+import { useLearningSession } from "../../../../core/hooks/useLearningContent";
+
 
 export function ContentLearningCard({
   isSelected,
@@ -17,12 +18,15 @@ export function ContentLearningCard({
   onClick: () => void;
   cardInfo: TopicResponse;
 }) {
-  const { setSelectedTopic } = useSelectedTopic();
+  const { setSelectedTopic } = useLearningSession();
   return (
     <div
       onClick={() => {
         onClick();
         setSelectedTopic(cardInfo);
+        console.log("time is")
+        console.log(cardInfo.start_time)
+        
       
       }}
       className={`cursor-pointer group relative rounded-2xl bg-white/70  p-4 transition-all hover:bg-white hover:border-primary/40 hover:shadow-soft ${isSelected ? "border-2 border-[#4f46e5] shadow-xl shadow-[#4f46e5]/15" : "border border-slate-200/60 w-80"}`}

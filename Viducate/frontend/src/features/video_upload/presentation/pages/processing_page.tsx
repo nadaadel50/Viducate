@@ -7,9 +7,10 @@ import { TipCard } from '../componants/tip_card';
 import { COLORS } from '../../../../core/constants/colors';
 import { useProcessingStatus } from '../hooks/use_processing_status';
 import { AppRoutesNames } from '../../../../app/routers/routes';
-import { useVideoId } from '../../../../core/hooks/useVideoId';
+import { useLearningSession } from '../../../../core/hooks/useLearningContent';
+
 export function ProcessingPage() {
-  const { videoId } = useVideoId();
+  const { videoId } = useLearningSession();
   const navigate = useNavigate(); 
 
   const { status, progress } = useProcessingStatus(videoId!);

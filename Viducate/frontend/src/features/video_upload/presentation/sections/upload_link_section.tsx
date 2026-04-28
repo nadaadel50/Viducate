@@ -7,7 +7,8 @@ import { uploadURLUseCase } from "../../../../core/di/upload_video_container";
 import { UrlRequest } from "../../domain/entity/url_request";
 import { useNavigate } from "react-router";
 import { AppRoutesNames } from "../../../../app/routers/routes";
-import  { useVideoId } from "../../../../core/hooks/useVideoId";
+import { useLearningSession } from "../../../../core/hooks/useLearningContent";
+
 
 
 type UploadLinkSectionProps={
@@ -15,7 +16,7 @@ type UploadLinkSectionProps={
 }
 
 export function UploadLinkSection({handleError}:UploadLinkSectionProps) {
-  const { setVideoId  } = useVideoId();
+  const { setVideoId  } = useLearningSession();
   
   const { url, handleUrlChange, linkError, handlePaste } = useLinkHandlers();
   const {
@@ -29,15 +30,15 @@ const navigate=useNavigate();
 
  const handleUploadURL = async () => {
     if (!url) return;
-    console.log(url)
+    // console.log(url)
 
     const response=await uploadURLUseCase.uploadUrl(new UrlRequest(
       url,linkTitle,"en","technology"
     ))
 
     if(response.success){
-      console.log(response.data)
-      navigate(AppRoutesNames.ProcessingPage);
+      // console.log(response.data)
+      navigate(AppRoutesNames.ProcessingPage,{ replace: true });
 
       //add hook vedioId
       setVideoId (response.data.videoId); 
