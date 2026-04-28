@@ -2,12 +2,20 @@ import { useState } from "react";
 import { CompeleteProgress } from "../widgets/complete_progress";
 import { FlashCard } from "../widgets/flash_card";
 import { UserLevelBtn } from "../widgets/user_level_btn";
+import type { Flashcard, Segment } from "../../domain/entity/flash_card_entity";
+import type { FlashcardAnswer } from "../../domain/entity/flash_card_answer";
+import { Difficulty } from "../../domain/entity/difficaulty";
+import { DIFFICULTY_TIME } from "../../domain/entity/difficaulty_time";
 
 export function FlashCards() {
-  const flashcardsData = {
+  const flashcardsData: Segment = {
     segment_id: 1,
     segment_number: 1,
     title: "React Basics",
+    start_time: 0,
+    end_time: 0,
+    start_time_label: "",
+    end_time_label: "",
     flashcards: [
       {
         flashcard_id: 1,
@@ -18,6 +26,9 @@ export function FlashCards() {
         language: "en",
         difficulty: "easy",
         created_at: "2026-04-26T04:06:17.875Z",
+        segment_start_time: 0,
+        segment_end_time: 0,
+        segment_start_label: "",
       },
       {
         flashcard_id: 2,
@@ -29,6 +40,9 @@ export function FlashCards() {
         language: "en",
         difficulty: "easy",
         created_at: "2026-04-26T04:06:17.875Z",
+        segment_start_time: 0,
+        segment_end_time: 0,
+        segment_start_label: "",
       },
       {
         flashcard_id: 3,
@@ -39,6 +53,9 @@ export function FlashCards() {
         language: "en",
         difficulty: "easy",
         created_at: "2026-04-26T04:06:17.875Z",
+        segment_start_time: 0,
+        segment_end_time: 0,
+        segment_start_label: "",
       },
       {
         flashcard_id: 4,
@@ -50,6 +67,9 @@ export function FlashCards() {
         language: "en",
         difficulty: "medium",
         created_at: "2026-04-26T04:06:17.875Z",
+        segment_start_time: 0,
+        segment_end_time: 0,
+        segment_start_label: "",
       },
       {
         flashcard_id: 5,
@@ -60,6 +80,9 @@ export function FlashCards() {
         language: "en",
         difficulty: "medium",
         created_at: "2026-04-26T04:06:17.875Z",
+        segment_start_time: 0,
+        segment_end_time: 0,
+        segment_start_label: "",
       },
       {
         flashcard_id: 6,
@@ -70,6 +93,9 @@ export function FlashCards() {
         language: "en",
         difficulty: "easy",
         created_at: "2026-04-26T04:06:17.875Z",
+        segment_start_time: 0,
+        segment_end_time: 0,
+        segment_start_label: "",
       },
       {
         flashcard_id: 7,
@@ -81,6 +107,9 @@ export function FlashCards() {
         language: "en",
         difficulty: "medium",
         created_at: "2026-04-26T04:06:17.875Z",
+        segment_start_time: 0,
+        segment_end_time: 0,
+        segment_start_label: "",
       },
       {
         flashcard_id: 8,
@@ -88,21 +117,44 @@ export function FlashCards() {
         video_id: 101,
         question: "What is the difference between state and props?",
         answer:
-          "State is managed داخل the component, while props are passed from parent components.",
+          "State is managed inside the component, while props are passed from parent components.",
         language: "en",
         difficulty: "medium",
         created_at: "2026-04-26T04:06:17.875Z",
+        segment_start_time: 0,
+        segment_end_time: 0,
+        segment_start_label: "",
       },
     ],
   };
+  const [flashCardAnswers, setFlashCardAnswers] = useState<FlashcardAnswer[]>(
+    [],
+  );
   const [cardNumber, setCardNumber] = useState<number>(1);
-  const [selecedUserLevelBtn, setSelectedUserLevelBtn] = useState<
-    string | null
-  >(null);
+
   const [isFlipped, setIsFlipped] = useState<boolean>(false);
 
+  const handleAnswer = (difficulty: Difficulty) => {
+    const currentCard = flashcardsData.flashcards[cardNumber - 1];
+
+    if (!currentCard) return;
+
+    const newAnswer: FlashcardAnswer = {
+      cardInfo: currentCard,
+      selectedDifficulty: difficulty,
+      retriveTime: DIFFICULTY_TIME[difficulty],
+    };
+
+    setFlashCardAnswers((prev) => [...prev, newAnswer]);
+    setIsFlipped(false);
+    setTimeout(() => {
+      setCardNumber((prev) => prev + 1);
+    }, 350);
+    console.log(flashCardAnswers);
+  };
+
   return (
-    <div className="w-full font-display bg-[#f6f6f8] h-fit">
+    <div className="w-full font-display bg-[#f6f6f8] min-h-screen">
       <div className="flex-1 flex flex-col items-center justify-center p-8 w-full max-w-5xl mx-auto">
         {/* progress of flashcards */}
         <CompeleteProgress
@@ -113,52 +165,40 @@ export function FlashCards() {
         {/* cards */}
 
         <FlashCard
-          answer={flashcardsData.flashcards[cardNumber-1].answer}
+          key={cardNumber}
+          cardData={flashcardsData.flashcards[cardNumber - 1]}
           isFliped={isFlipped}
-          segmentId={flashcardsData.segment_id}
           onClick={() => {
             setIsFlipped(!isFlipped);
           }}
         />
 
         {/* user reaction btn */}
+        <div
+          className={`flex w-full max-w-xl justify-center items-center gap-5 transition-all duration-500
+    ${isFlipped ? "opacity-100 translate-y-0" : "opacity-0 translate-y-5 pointer-events-none"}
+  `}
+        >
+          <UserLevelBtn
+            onClick={() => handleAnswer(Difficulty.Easy)}
+            diffStyle={Difficulty.Easy}
+          />
 
-        <div className="flex w-full max-w-xl justify-center items-center gap-5">
           <UserLevelBtn
-            diffStyle={"easy"}
-            onClick={() => {
-              setSelectedUserLevelBtn("easy");
-            }}
-            isSelected={selecedUserLevelBtn === "easy"}
+            diffStyle={Difficulty.Good}
+            onClick={() => handleAnswer(Difficulty.Good)}
           />
+
           <UserLevelBtn
-            diffStyle={"good"}
-            onClick={() => {
-              setSelectedUserLevelBtn("good");
-            }}
-            isSelected={selecedUserLevelBtn === "good"}
+            diffStyle={Difficulty.Hard}
+            onClick={() => handleAnswer(Difficulty.Hard)}
           />
+
           <UserLevelBtn
-            diffStyle={"hard"}
-            onClick={() => {
-              setSelectedUserLevelBtn("hard");
-            }}
-            isSelected={selecedUserLevelBtn === "hard"}
+            diffStyle={Difficulty.Again}
+            onClick={() => handleAnswer(Difficulty.Again)}
           />
         </div>
-
-        {/* go to next card btn */}
-
-        <button
-        onClick={
-          ()=>{
-            setCardNumber(prev => prev + 1)
-          }
-        }
-         className="uppercase w-full max-w-2xl mt-10  flex justify-center border border-[#4f46e5]/50  items-center gap-2 bg-white text-[#4f46e5] px-8 py-3 rounded-full  hover:border-[#4f46e5] hover:shadow-lg transition-all active:scale-95 font-bold text-lg tracking-wide group/btn cursor-pointer">
-          <span>Next Card</span>
-        </button>
-        <p className="text-xs mt-2 text-gray-400">to go to next card , select first how will did you know this</p>
       </div>
     </div>
   );

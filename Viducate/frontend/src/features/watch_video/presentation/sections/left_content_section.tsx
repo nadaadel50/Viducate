@@ -22,16 +22,11 @@ export function LeftContentSection() {
         currentTime < topic.end_time
     )
   :-1;
-  // console.log("the currecnt topic index is ")
-  // console.log(currentTopicIndex)
+
 
   //  sync selected topic with video
   useEffect(() => {
     if (currentTopicIndex === -1) return;
-
-    // console.log("the currecnt time and index")
-    // console.log(currentTime)
-    // console.log(currentTopicIndex)
 
     const newTopic = topics![currentTopicIndex];
 
@@ -64,7 +59,6 @@ export function LeftContentSection() {
               isSelected={currentTopicIndex === index}
               onClick={() => {
                 setSelectedTopic(card);
-                console.log("clicked")
                 setSeekTo(card.start_time);
               }}
               cardInfo={card}
