@@ -13,43 +13,33 @@ import SignupPage from "../../features/auth/presentation/pages/signup_page";
 
 import { MainPage } from "../../features/watch_video/presentation/pages/main_page";
 
-
 import TestModalsPage from "../../features/video_upload/presentation/pages/test_modals_page";
 import { ProcessingPage } from "../../features/video_upload/presentation/pages/processing_page";
 import AuthSuccess from "../../features/auth/presentation/pages/AuthSuccess";
 import { FlashCards } from "../../features/flash_cards/presentation/pages/flash_card_page";
+import { WatchLayout } from "../../features/watch_video/presentation/pages/watch_outlet";
 export function AppRoutes() {
   return (
     <BrowserRouter>
       <Routes>
-        {/* <Route path="/" element={<LoginPage />} /> */}
-
-
-          <Route path="/" element={<FlashCards />} /> 
-
-          
+        <Route path="/" element={<LoginPage />} />
         <Route path="/signup" element={<SignupPage />} />
         <Route path="/auth/callback" element={<AuthSuccess />} />
-       
-       
-        <Route path={AppRoutesNames.forgotPassword} element={<ForgetPasswordPage />} /> 
+        <Route path="/forgot-password" element={<ForgetPasswordPage />} />
+        <Route path="/" element={<ForgetPasswordPage />} /> /* for example */
         <Route path="/test-modals" element={<TestModalsPage />} /> /* for
-       
         <Route element={<ProtectedRoute />}>
           {" "}
-        
           <Route path="/UploadVideoPage" element={<UploadVideoPage />} />
-           {/* <Route path={AppRoutesNames.flashCards} element={<FlashCards />} /> */}
-          
-          <Route path="/ProcessingPage/:videoId" element={<ProcessingPage />} />
-          <Route
-            path="/WatchVideo"
-            element={
-              
-                <MainPage />
-             
-            }
-          />{" "}
+          <Route path="/ProcessingPage" element={<ProcessingPage />} />
+          {/* <Route path="/WatchVideo" element={<MainPage />} />
+          <Route path="/flashcards/:segmentId" element={<FlashCards />} /> */}
+          // app_routes.tsx
+          <Route path="/WatchVideo" element={<WatchLayout />}>
+            <Route index element={<MainPage />} /> {/* /WatchVideo */}
+            <Route path="/flashcards/:segmentId" element={<FlashCards />} />{" "}
+            {/* /WatchVideo/flashcards */}
+          </Route>{" "}
         </Route>
         <Route
           path={AppRoutesNames.sucessSendEmail}

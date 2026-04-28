@@ -7,6 +7,8 @@ import {
 import { ContentGenerationBtn } from "./content_genration_btn";
 import type { TopicResponse } from "../../domin/entity/topic_response";
 import { useLearningSession } from "../../../../core/hooks/useLearningContent";
+import { useNavigate } from "react-router";
+import { AppRoutesNames } from "../../../../app/routers/routes";
 
 
 export function ContentLearningCard({
@@ -19,6 +21,7 @@ export function ContentLearningCard({
   cardInfo: TopicResponse;
 }) {
   const { setSelectedTopic } = useLearningSession();
+  const navigate=useNavigate()
   return (
     <div
       onClick={() => {
@@ -71,7 +74,11 @@ export function ContentLearningCard({
           label={"Quiz"}
         />
         <ContentGenerationBtn
-          onClick={() => {}}
+           onClick={() => {
+             
+              
+               navigate(`/flashcards/${cardInfo.segment_number}`)
+            }}
           icon={<Layers />}
           label={"cards"}
         />

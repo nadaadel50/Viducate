@@ -11,6 +11,7 @@ import {
 import { useVideoData } from "../../../../core/hooks/useVideoData";
 import { STORAGE_KEYS } from "../../../../core/constants";
 import { useLearningSession } from "../../../../core/hooks/useLearningContent";
+import testVideo from "../../../../assets/videos/test.mp4";
 
 const SPEED_OPTIONS = [0.5, 0.75, 1, 1.25, 1.5, 2];
 
@@ -32,7 +33,15 @@ export function VideoPlayer() {
   const [isFullscreen, setIsFullscreen] = useState(false);
   const [playbackRate, setPlaybackRate] = useState(1);
   const [showSpeedMenu, setShowSpeedMenu] = useState(false);
-  const [markers, setMarkers] = useState<Marker[]>([]);
+  const [markers, setMarkers] = useState<Marker[]>(() => {
+    const stored = sessionStorage.getItem(STORAGE_KEYS.marks);
+    if (!stored) return [];
+    try {
+      return JSON.parse(stored);
+    } catch {
+      return [];
+    }
+  });
   const [showControls, setShowControls] = useState(true);
   const hideControlsTimer = useRef<ReturnType<typeof setTimeout> | null>(null);
 
@@ -76,12 +85,10 @@ export function VideoPlayer() {
     setSeekTo(null);
   }, [seekTo]);
 
-     useEffect(() => {
-    
-    if(!videoRef.current) return
-    videoRef.current.currentTime=currentTime
+  useEffect(() => {
+    if (!videoRef.current) return;
+    videoRef.current.currentTime = currentTime;
   }, []);
-
 
   // ── time-spent tracking ───────────────────────────────────────────────────
   useEffect(() => {
@@ -99,13 +106,10 @@ export function VideoPlayer() {
 
   // ── fullscreen sync ───────────────────────────────────────────────────────
   useEffect(() => {
-
     const onFsChange = () => setIsFullscreen(!!document.fullscreenElement);
     document.addEventListener("fullscreenchange", onFsChange);
     return () => document.removeEventListener("fullscreenchange", onFsChange);
   }, []);
-
-
 
   // ── auto-hide controls in fullscreen ─────────────────────────────────────
   const resetHideTimer = () => {
@@ -257,7 +261,7 @@ export function VideoPlayer() {
       >
         <video
           ref={videoRef}
-          src={topics?.video_url}
+          src={testVideo}
           onSeeked={handleSeek}
           onTimeUpdate={handleTimeUpdate}
           onLoadedMetadata={handleLoadedMetadata}
