@@ -2,6 +2,8 @@ import os
 import uuid
 import tempfile
 import yt_dlp
+from fastapi import HTTPException, status
+
 
 
 def download_video(url: str, video_id: int) -> str:
@@ -37,7 +39,13 @@ def download_video(url: str, video_id: int) -> str:
                 final_file = candidate
                 break
 
+
+
     if not final_file or not os.path.exists(final_file):
-        raise Exception("Video download failed")
+        raise HTTPException(
+            status_code=status.HTTP_400_BAD_REQUEST,
+            detail="Video download failed"
+        )
+
 
     return final_file

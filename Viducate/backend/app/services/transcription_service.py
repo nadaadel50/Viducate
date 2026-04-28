@@ -1,3 +1,4 @@
+from fastapi import HTTPException,status
 import yt_dlp
 import glob
 import os
@@ -66,7 +67,10 @@ def send_to_groq(client: Groq, chunk_path: str, offset: float, lang: str, retrie
             
             
             if not hasattr(result, 'segments') or result.segments is None:
-                raise Exception(f"Invalid response from Groq: {result}")
+                raise HTTPException(
+                    status_code=status.HTTP_502_BAD_GATEWAY,
+                    detail=f"Invalid response from Groq{result}"
+                )
                 
             logger.info(f"chunk done: {chunk_path}")
             return result
@@ -76,8 +80,10 @@ def send_to_groq(client: Groq, chunk_path: str, offset: float, lang: str, retrie
             if attempt < retries - 1:
                 time.sleep(10)  
             
-    raise Exception("Groq transcription failed after 3 attempts")
-
+    raise HTTPException(
+        status_code=status.HTTP_502_BAD_GATEWAY,
+        detail="Groq transcription failed after multiple attempts"
+    )
 async def transcribe(url: str, video_id: int, language: str = None) -> str:
     audio_file = None
     chunks_created = []

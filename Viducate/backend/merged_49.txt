@@ -1,0 +1,1775 @@
+[00:00:01]
+  Transcript :  في المحاضرة دي هنفتعرض. اه كل ما يخص بداية من اني بحط
+  OCR        : Lecture 17 | Artificial Neural Networks ANNs | Training | Sabah Sayed | Department of Computer Science | Faculty of Computers and Artificial Intelligence | Cairo University | Egypt
+  Combined   :  في المحاضرة دي هنفتعرض. اه كل ما يخص بداية من اني بحط Lecture 17 | Artificial Neural Networks ANNs | Training | Sabah Sayed | Department of Computer Science | Faculty of Computers and Artificial Intelligence | Cairo University | Egypt
+
+[00:00:05]
+  Transcript :  بتاع النتورك بتاعتي. اه بناء على اللي انا عايزة احل لها. وازاي
+  OCR        : None
+  Combined   :  بتاع النتورك بتاعتي. اه بناء على اللي انا عايزة احل لها. وازاي
+
+[00:00:15]
+  Transcript :  بعمل لليل نتورك. عشان في الاخر اخد منها الاوبت. ده الشكل
+  OCR        : Classification Systems | and Inductive Learning | Basic Framework for Inductive Learning | Environment | Testing | Examples | Training | Ioducve | Induced | Examples | LearmmgSystern | Model of | Classifier | Output Classification
+  Combined   :  بعمل لليل نتورك. عشان في الاخر اخد منها الاوبت. ده الشكل Classification Systems | and Inductive Learning | Basic Framework for Inductive Learning | Environment | Testing | Examples | Training | Ioducve | Induced | Examples | LearmmgSystern | Model of | Classifier | Output Classification
+
+[00:00:16]
+  Transcript :  العام للنتورك. بيكون عندي. الانفارمنت دي هاي اللي انا عايزة
+  OCR        : None
+  Combined   :  العام للنتورك. بيكون عندي. الانفارمنت دي هاي اللي انا عايزة
+
+[00:00:24]
+  Transcript :  اعمل لها علشان تحللي البروبلم دي. خلاص الانفارمنت دي باخد منها
+  OCR        : None
+  Combined   :  اعمل لها علشان تحللي البروبلم دي. خلاص الانفارمنت دي باخد منها
+
+[00:00:28]
+  Transcript :  ايه باخد منها ال data set? والdata set دي بيكون فيها او بيكون فيها
+  OCR        : None
+  Combined   :  ايه باخد منها ال data set? والdata set دي بيكون فيها او بيكون فيها
+
+[00:00:33]
+  Transcript :  نون ايجزامبل لبعض خلاص وايه الاوبوت المقابل ليهو. المفروض
+  OCR        : None
+  Combined   :  نون ايجزامبل لبعض خلاص وايه الاوبوت المقابل ليهو. المفروض
+
+[00:00:40]
+  Transcript :  ان انا بقسم ال data set دي لترينينج ايجزامبل والتستنج ايجزامبلز.
+  OCR        : None
+  Combined   :  ان انا بقسم ال data set دي لترينينج ايجزامبل والتستنج ايجزامبلز.
+
+[00:00:45]
+  Transcript :  تمام? بعمل نيوران ناتورك بتاعتي. وبدخل لها دي المفروض ان هي
+  OCR        : None
+  Combined   :  تمام? بعمل نيوران ناتورك بتاعتي. وبدخل لها دي المفروض ان هي
+
+[00:00:52]
+  Transcript : 
+  OCR        : None
+  Combined   : 
+
+[00:01:06]
+  Transcript :  بقى خلاص اللي هي خلاص واشوف ايه اللي طلع منها تطلعج هي
+  OCR        : None
+  Combined   :  بقى خلاص اللي هي خلاص واشوف ايه اللي طلع منها تطلعج هي
+
+[00:01:15]
+  Transcript :  ده وابتدي اقارن مع الايه اللي موجودة عندي في
+  OCR        : None
+  Combined   :  ده وابتدي اقارن مع الايه اللي موجودة عندي في
+
+[00:01:20]
+  Transcript :  وبناء عليه بحدد هي فعلا النتورك دي خلاص كده بقت جهزة
+  OCR        : None
+  Combined   :  وبناء عليه بحدد هي فعلا النتورك دي خلاص كده بقت جهزة
+
+[00:01:25]
+  Transcript :  منعنا استخدمها للأعنون إجزامبلز ولا محتاجة يتعمل لها ترينج جتيني
+  OCR        : None
+  Combined   :  منعنا استخدمها للأعنون إجزامبلز ولا محتاجة يتعمل لها ترينج جتيني
+
+[00:01:29]
+  Transcript :  خلاص يعني بحسب من خلال التاستنج إجزامبلز الأكيوريس بتاعت نيورال نتورك بتاعتي
+  OCR        : None
+  Combined   :  خلاص يعني بحسب من خلال التاستنج إجزامبلز الأكيوريس بتاعت نيورال نتورك بتاعتي
+
+[00:01:36]
+  Transcript :  طيب الفيزيز دي بقى فيها تفاصيل كتير جدا سواء في الترينج أو التاستنج أو حتى الستروقتشر بتاع النيورال نتورك
+  OCR        : None
+  Combined   :  طيب الفيزيز دي بقى فيها تفاصيل كتير جدا سواء في الترينج أو التاستنج أو حتى الستروقتشر بتاع النيورال نتورك
+
+[00:01:44]
+  Transcript :  وده اللي احنا هنستعرضه في باقي اللي سلايلز
+  OCR        : None
+  Combined   :  وده اللي احنا هنستعرضه في باقي اللي سلايلز
+
+[00:01:49]
+  Transcript :  في البداية احنا اتكلمنا على الستروكتر بتاع النيوران ناتورك
+  OCR        : Node biases | A nodes output is a weighted function of its inputs | What is a bias? | Bias allows you to shift the activation function by adding a constant | i.e. the given bias to the input | - output  sum weights  inputs  bias | Bias in Neural Networks has the same role of a constant in a linear | function | y mx c | How can we learn the bias value? | - treat them like just another weight | - Just add one more input unit to the network topology | 12w5 | Neuron | Output  fi,w,  i2W2  i3w3  bias | bias
+  Combined   :  في البداية احنا اتكلمنا على الستروكتر بتاع النيوران ناتورك Node biases | A nodes output is a weighted function of its inputs | What is a bias? | Bias allows you to shift the activation function by adding a constant | i.e. the given bias to the input | - output  sum weights  inputs  bias | Bias in Neural Networks has the same role of a constant in a linear | function | y mx c | How can we learn the bias value? | - treat them like just another weight | - Just add one more input unit to the network topology | 12w5 | Neuron | Output  fi,w,  i2W2  i3w3  bias | bias
+
+[00:01:53]
+  Transcript :  وقلنا ان النيوران ناتورك كبارة عن او يعني خاصة بقى الفيد فورورد
+  OCR        : None
+  Combined   :  وقلنا ان النيوران ناتورك كبارة عن او يعني خاصة بقى الفيد فورورد
+
+[00:01:57]
+  Transcript :  النيوران ناتورك اللي احنا درسناه
+  OCR        : None
+  Combined   :  النيوران ناتورك اللي احنا درسناه
+
+[00:02:00]
+  Transcript :  في الكورس. آآ عبارة عن مجموعة من الليرز بتبتدي بالايمبوت
+  OCR        : None
+  Combined   :  في الكورس. آآ عبارة عن مجموعة من الليرز بتبتدي بالايمبوت
+
+[00:02:05]
+  Transcript :  وبعدين هذا اللير خلاص او هذا الليرز يعني واحدة او اكتر.
+  OCR        : None
+  Combined   :  وبعدين هذا اللير خلاص او هذا الليرز يعني واحدة او اكتر.
+
+[00:02:10]
+  Transcript :  وبعدين في الاخر بتنتهي باوتبوت لاير. تمام كده? كل لاير بيكون فيها
+  OCR        : None
+  Combined   :  وبعدين في الاخر بتنتهي باوتبوت لاير. تمام كده? كل لاير بيكون فيها
+
+[00:02:18]
+  Transcript :  مجموعة من النودز وكل نود بيدخل لها كل الايمبوت او كل الاوتبوتز
+  OCR        : None
+  Combined   :  مجموعة من النودز وكل نود بيدخل لها كل الايمبوت او كل الاوتبوتز
+
+[00:02:25]
+  Transcript :  من اللاير اللي قبلها مضربين في الويت بتاعه. تمام? ده اللي احنا
+  OCR        : None
+  Combined   :  من اللاير اللي قبلها مضربين في الويت بتاعه. تمام? ده اللي احنا
+
+[00:02:30]
+  Transcript :  اخدناه في المحاضرات اللي فاتت. اه طيب. فيه بقى مفهوم جديد اسمه
+  OCR        : None
+  Combined   :  اخدناه في المحاضرات اللي فاتت. اه طيب. فيه بقى مفهوم جديد اسمه
+
+[00:02:36]
+  Transcript :  تمام? ايه البيس ده? البيس ده انا بضيفه لنيوران بتاعي زي ما هو
+  OCR        : None
+  Combined   :  تمام? ايه البيس ده? البيس ده انا بضيفه لنيوران بتاعي زي ما هو
+
+[00:02:42]
+  Transcript :  في الشكل كده. خلاص? فانا عندي ده مفروض بيدخلوا الاي? الاي
+  OCR        : None
+  Combined   :  في الشكل كده. خلاص? فانا عندي ده مفروض بيدخلوا الاي? الاي
+
+[00:02:46]
+  Transcript :  بتسبتوه اللي هم ايه اللي هم الاوتبوت من اللاير اللي قبله.
+  OCR        : None
+  Combined   :  بتسبتوه اللي هم ايه اللي هم الاوتبوت من اللاير اللي قبله.
+
+[00:02:49]
+  Transcript :  خلاص? مضربين في الايه كل واحد ما تروف في الويت بتاعه. طيب انا
+  OCR        : None
+  Combined   :  خلاص? مضربين في الايه كل واحد ما تروف في الويت بتاعه. طيب انا
+
+[00:02:54]
+  Transcript : 
+  OCR        : None
+  Combined   : 
+
+[00:03:09]
+  Transcript :  البيض خلاص يبقى البيض ده انا حطوه لي في المعادلة بتاعتي انا
+  OCR        : None
+  Combined   :  البيض خلاص يبقى البيض ده انا حطوه لي في المعادلة بتاعتي انا
+
+[00:03:14]
+  Transcript :  بتاعتي دولي ان الابوت بيساوي مضروبة في الامبوت ده اللي احنا
+  OCR        : None
+  Combined   :  بتاعتي دولي ان الابوت بيساوي مضروبة في الامبوت ده اللي احنا
+
+[00:03:21]
+  Transcript :  اخدنا ايه? ده اللي احنا اخدناه قبل كده. خلاص? نقولنا بعد كده
+  OCR        : None
+  Combined   :  اخدنا ايه? ده اللي احنا اخدناه قبل كده. خلاص? نقولنا بعد كده
+
+[00:03:25]
+  Transcript :  بناخد ده. وانا قبلها لي نطلع. تمام? لأ انا قبل بقى ما هحط
+  OCR        : None
+  Combined   :  بناخد ده. وانا قبلها لي نطلع. تمام? لأ انا قبل بقى ما هحط
+
+[00:03:34]
+  Transcript :  ما دخل ده انا هضيف ايه? هضيف حاجة اسمها خلاص? فالبايز ده
+  OCR        : None
+  Combined   :  ما دخل ده انا هضيف ايه? هضيف حاجة اسمها خلاص? فالبايز ده
+
+[00:03:40]
+  Transcript :  هو يعتبر كده. انا بضيفه للاكوشن بتاعتي خلاص? بحيس ان انا
+  OCR        : None
+  Combined   :  هو يعتبر كده. انا بضيفه للاكوشن بتاعتي خلاص? بحيس ان انا
+
+[00:03:45]
+  Transcript :  يبقى عندي ان انا احرق بتاعتي خلاص? احرق بيها بتاعتي. راحزو
+  OCR        : None
+  Combined   :  يبقى عندي ان انا احرق بتاعتي خلاص? احرق بيها بتاعتي. راحزو
+
+[00:03:55]
+  Transcript :  هنا لو بتاعتي دخلها بزيرو. فدايما هيبقى
+  OCR        : None
+  Combined   :  هنا لو بتاعتي دخلها بزيرو. فدايما هيبقى
+
+[00:04:00]
+  Transcript :  . خلاص لوThe Input based zero will set up zero . لا أعيش Thus. أنا أري play
+  OCR        : None
+  Combined   :  . خلاص لوThe Input based zero will set up zero . لا أعيش Thus. أنا أري play
+
+[00:04:07]
+  Transcript :  احركiko det sim. خلاص خلاص بكون uralten معين. خلاص؟ خلاص لإvidia
+  OCR        : None
+  Combined   :  احركiko det sim. خلاص خلاص بكون uralten معين. خلاص؟ خلاص لإvidia
+
+[00:04:12]
+  Transcript :  ESO Aicht is zero and if I want output to我 đây will put my two porcupine
+  OCR        : None
+  Combined   :  ESO Aicht is zero and if I want output to我 đây will put my two porcupine
+
+[00:04:16]
+  Transcript :  احط ايه يجعل tterm'd up two تمام؟ لوенная input to me and if I want output
+  OCR        : None
+  Combined   :  احط ايه يجعل tterm'd up two تمام؟ لوенная input to me and if I want output
+
+[00:04:21]
+  Transcript :  يilit عobject 1 아 Schlie the term double one خلاص فأنا بتحكم في ايه。 في
+  OCR        : None
+  Combined   :  يilit عobject 1 아 Schlie the term double one خلاص فأنا بتحكم في ايه。 في
+
+[00:04:25]
+  Transcript :  في الـ output اللي يتلع من الـ activation function وده بيساعدني ان انا احل الـ problem بتاعتي بـ e بطريقة مور افشنة
+  OCR        : None
+  Combined   :  في الـ output اللي يتلع من الـ activation function وده بيساعدني ان انا احل الـ problem بتاعتي بـ e بطريقة مور افشنة
+
+[00:04:33]
+  Transcript :  خلاص
+  OCR        : None
+  Combined   :  خلاص
+
+[00:04:34]
+  Transcript :  فهو بالضبط البيض ده هنشوفه على ان هو e
+  OCR        : None
+  Combined   :  فهو بالضبط البيض ده هنشوفه على ان هو e
+
+[00:04:38]
+  Transcript :  بيقوم بنفس الدور اللي بيقوم بالـ constant في الـ linear function
+  OCR        : None
+  Combined   :  بيقوم بنفس الدور اللي بيقوم بالـ constant في الـ linear function
+
+[00:04:42]
+  Transcript :  y equal m في x plus e plus z تمام؟
+  OCR        : None
+  Combined   :  y equal m في x plus e plus z تمام؟
+
+[00:04:45]
+  Transcript :  هذا الم هو الـ weight والـ x هو الـ input
+  OCR        : None
+  Combined   :  هذا الم هو الـ weight والـ x هو الـ input
+
+[00:04:48]
+  Transcript :  تمام؟ لو انا سبت الـ equation كده y equal m في x زي ما قلنا كده لو دخلت الـ x بزيرو
+  OCR        : None
+  Combined   :  تمام؟ لو انا سبت الـ equation كده y equal m في x زي ما قلنا كده لو دخلت الـ x بزيرو
+
+[00:04:54]
+  Transcript :  value C C E C E
+  OCR        : None
+  Combined   :  value C C E C E
+
+[00:05:07]
+  Transcript :  بضيف البيس. طب ازاي بقى بتعامل مع البيس في بتعامل مع عادي جدا
+  OCR        : None
+  Combined   :  بضيف البيس. طب ازاي بقى بتعامل مع البيس في بتعامل مع عادي جدا
+
+[00:05:12]
+  Transcript :  زي وزي اي ايموت موجودة عندي خلاص? فيب انا بدل ما كان ده دخل
+  OCR        : None
+  Combined   :  زي وزي اي ايموت موجودة عندي خلاص? فيب انا بدل ما كان ده دخل
+
+[00:05:17]
+  Transcript :  له تلاتة ايموت اي وان واي تو واي سري لأ هو كمان دخل له ايه?
+  OCR        : None
+  Combined   :  له تلاتة ايموت اي وان واي تو واي سري لأ هو كمان دخل له ايه?
+
+[00:05:21]
+  Transcript :  دخيله رابع اللي هو البياس ودايما نقيمته بلاس وان. تمام? دايما نقيمته بايه? بايه? خلاص. وبعدين البياس ده بحط له برضو معي ايه? في
+  OCR        : None
+  Combined   :  دخيله رابع اللي هو البياس ودايما نقيمته بلاس وان. تمام? دايما نقيمته بايه? بايه? خلاص. وبعدين البياس ده بحط له برضو معي ايه? في
+
+[00:05:31]
+  Transcript :  زي وزي باقي تمام? وبدخله بقى في بتاعتي بتاعت سواء او سواء في
+  OCR        : None
+  Combined   :  زي وزي باقي تمام? وبدخله بقى في بتاعتي بتاعت سواء او سواء في
+
+[00:05:41]
+  Transcript :  الفيت فور ورد باس بتاعي عادي جدا زيه زي باقي اليمبوت تمام
+  OCR        : None
+  Combined   :  الفيت فور ورد باس بتاعي عادي جدا زيه زي باقي اليمبوت تمام
+
+[00:05:45]
+  Transcript :  البيس ده بيدخل لكل نيورون خلاص سواء في في اليمبوت لاير او في
+  OCR        : None
+  Combined   :  البيس ده بيدخل لكل نيورون خلاص سواء في في اليمبوت لاير او في
+
+[00:05:52]
+  Transcript :  الاي ما سوري توقفل هذا اللير او في الاوت كوت لاير تمام
+  OCR        : None
+  Combined   :  الاي ما سوري توقفل هذا اللير او في الاوت كوت لاير تمام
+
+[00:05:59]
+  Transcript :  طيب يجيبها للنتورك تريننج انا عندي نوعين اساسيين للقيه للنتورك
+  OCR        : Network training | Two main types of training | Supervised Training | Supplies the neural network with inputs and the desired outputs | Response of the network to the inputs is measured | The weights are modified to reduce the difference between the actual | and desired outputs | Unsupervised Training | Only supplies inputs | The neural network adjusts its own weights so that similar inputs | cause similar outputs | The network identifies the patterns and differences in the inputs | without any external assistance
+  Combined   :  طيب يجيبها للنتورك تريننج انا عندي نوعين اساسيين للقيه للنتورك Network training | Two main types of training | Supervised Training | Supplies the neural network with inputs and the desired outputs | Response of the network to the inputs is measured | The weights are modified to reduce the difference between the actual | and desired outputs | Unsupervised Training | Only supplies inputs | The neural network adjusts its own weights so that similar inputs | cause similar outputs | The network identifies the patterns and differences in the inputs | without any external assistance
+
+[00:06:07]
+  Transcript :  تريننج ممكن عمل بيهم تريننج للنتورك ايه همه وان سبرفايز من
+  OCR        : None
+  Combined   :  تريننج ممكن عمل بيهم تريننج للنتورك ايه همه وان سبرفايز من
+
+[00:06:13]
+  Transcript :  اسم كده هو موجه بايه بحاجة معين ايه الحاجة دي اللي هي الايه
+  OCR        : None
+  Combined   :  اسم كده هو موجه بايه بحاجة معين ايه الحاجة دي اللي هي الايه
+
+[00:06:18]
+  Transcript :  الديزاير د اوبوت اللي انا عايزة من الايه من الانبود خلاص يبقى
+  OCR        : None
+  Combined   :  الديزاير د اوبوت اللي انا عايزة من الايه من الانبود خلاص يبقى
+
+[00:06:23]
+  Transcript :  وعلى النتورك لما باجي اعلمها اعمل لها ترينج بعمل لها ترينج على اجزامبل كامل. يعني اي اجزامبل كامل? يعني في كل اليمبوت وكل الاؤتبوت. خلاص? فبقول لما اليمبوت يدخل ده دي. الاؤتبوت بيبقى بالشكل ده. خلاص? فهو جايدل. النتورك تبقى جايدل بالاي? بالاوتبوت اللي موجود ده. خلاص?
+  OCR        : None
+  Combined   :  وعلى النتورك لما باجي اعلمها اعمل لها ترينج بعمل لها ترينج على اجزامبل كامل. يعني اي اجزامبل كامل? يعني في كل اليمبوت وكل الاؤتبوت. خلاص? فبقول لما اليمبوت يدخل ده دي. الاؤتبوت بيبقى بالشكل ده. خلاص? فهو جايدل. النتورك تبقى جايدل بالاي? بالاوتبوت اللي موجود ده. خلاص?
+
+[00:06:47]
+  Transcript :  بقى اغدر في دي على اساس ايه? على اساس الموجود معي. طب دي
+  OCR        : None
+  Combined   :  بقى اغدر في دي على اساس ايه? على اساس الموجود معي. طب دي
+
+[00:06:53]
+  Transcript : 
+  OCR        : None
+  Combined   : 
+
+[00:07:09]
+  Transcript :  وهي اللي تعرف الايه بتاع الايه خلاص فانا هنا ما بيبقاش عندي ايه
+  OCR        : None
+  Combined   :  وهي اللي تعرف الايه بتاع الايه خلاص فانا هنا ما بيبقاش عندي ايه
+
+[00:07:16]
+  Transcript :  ما بيبقاش عندي بلي ديفايند او بوت بيبقى عندي بس خلاص اني
+  OCR        : None
+  Combined   :  ما بيبقاش عندي بلي ديفايند او بوت بيبقى عندي بس خلاص اني
+
+[00:07:21]
+  Transcript :  هي اللي بتقعد بتاعها خلاص لحد ما ايه? لحد ما تتعلم اه انهي
+  OCR        : None
+  Combined   :  هي اللي بتقعد بتاعها خلاص لحد ما ايه? لحد ما تتعلم اه انهي
+
+[00:07:29]
+  Transcript :  بيطلع انهي خلاص. وده طبعا بتعرفه عن طريق الايه? ما بين
+  OCR        : None
+  Combined   :  بيطلع انهي خلاص. وده طبعا بتعرفه عن طريق الايه? ما بين
+
+[00:07:39]
+  Transcript :  اللي داخلها. اللي هو سمناه لما جينا نشتغل في ده مهم جدا في
+  OCR        : Learning rate | The learning rate is important | Range 0.01 - 0.99 | Too small | Convergence extremely slow | Too large | Converges to a local minimum
+  Combined   :  اللي داخلها. اللي هو سمناه لما جينا نشتغل في ده مهم جدا في Learning rate | The learning rate is important | Range 0.01 - 0.99 | Too small | Convergence extremely slow | Too large | Converges to a local minimum
+
+[00:07:46]
+  Transcript :  نتورك بتاعتي. اه الفاليو بتاعته اه بتبقى بتاعها من زيرو
+  OCR        : None
+  Combined   :  نتورك بتاعتي. اه الفاليو بتاعته اه بتبقى بتاعها من زيرو
+
+[00:07:50]
+  Transcript :  الون او من او بوينت او ل او بوينت ناين ناين. تمام? انا متاح
+  OCR        : None
+  Combined   :  الون او من او بوينت او ل او بوينت ناين ناين. تمام? انا متاح
+
+[00:07:56]
+  Transcript :  لي ان انا اختار ما بين الاي. ما بين الفاليو في ال
+  OCR        : None
+  Combined   :  لي ان انا اختار ما بين الاي. ما بين الفاليو في ال
+
+[00:08:00]
+  Transcript :  في الرنج ده. تمام? طيب بس اخلي value انا بختار ان انا لو اخترت
+  OCR        : None
+  Combined   :  في الرنج ده. تمام? طيب بس اخلي value انا بختار ان انا لو اخترت
+
+[00:08:04]
+  Transcript :  ان ده هيكون ولاقي value بتاعته تبقى سوية قوي. ده معناه ان
+  OCR        : None
+  Combined   :  ان ده هيكون ولاقي value بتاعته تبقى سوية قوي. ده معناه ان
+
+[00:08:10]
+  Transcript :  هيبقية هيبقى بسيء جدا يعني بتاع النتورك هيبقى بسيء في
+  OCR        : None
+  Combined   :  هيبقية هيبقى بسيء جدا يعني بتاع النتورك هيبقى بسيء في
+
+[00:08:16]
+  Transcript :  الهرنج في النتورك هيحتاج كتير. خلاص هو وقت اطول. اه وفي نفس
+  OCR        : None
+  Combined   :  الهرنج في النتورك هيحتاج كتير. خلاص هو وقت اطول. اه وفي نفس
+
+[00:08:23]
+  Transcript :  الوقت لو انا اخترت ال value بتاعته تكون عالية قوي. فده معناه ان
+  OCR        : None
+  Combined   :  الوقت لو انا اخترت ال value بتاعته تكون عالية قوي. فده معناه ان
+
+[00:08:27]
+  Transcript :  الليرنج هي بقى سريعة جدا فده في احتمال ان انا اقع فين في
+  OCR        : None
+  Combined   :  الليرنج هي بقى سريعة جدا فده في احتمال ان انا اقع فين في
+
+[00:08:31]
+  Transcript :  الوكال مانيمان خلاص وكمان الناتورك بتاعت دي مش هتبقى
+  OCR        : None
+  Combined   :  الوكال مانيمان خلاص وكمان الناتورك بتاعت دي مش هتبقى
+
+[00:08:39]
+  Transcript :  اه مور جينيرالايت
+  OCR        : Hidden Layers and Neurons | For most problems, one layer is sufficient | Two layers are required when the function is | discontinuous | The number of neurons is very important: | Too few | Underfit the data - NN cant learn the details | Too many | Overfit the data - NN learns the insignificant details poor | generalization | Start small and increase the number until satisfactory results are | obtained
+  Combined   :  اه مور جينيرالايت Hidden Layers and Neurons | For most problems, one layer is sufficient | Two layers are required when the function is | discontinuous | The number of neurons is very important: | Too few | Underfit the data - NN cant learn the details | Too many | Overfit the data - NN learns the insignificant details poor | generalization | Start small and increase the number until satisfactory results are | obtained
+
+[00:08:40]
+  Transcript :  الهيدا ليرز والنيورن لما باجي اعمل اعمل اعمل اه استركتر لنيورن
+  OCR        : None
+  Combined   :  الهيدا ليرز والنيورن لما باجي اعمل اعمل اعمل اه استركتر لنيورن
+
+[00:08:47]
+  Transcript :  ناتورك عشان احل بيها بروبلم واستخدمها في حاجة اه دايما بنقعد
+  OCR        : None
+  Combined   :  ناتورك عشان احل بيها بروبلم واستخدمها في حاجة اه دايما بنقعد
+
+[00:08:53]
+  Transcript : 
+  OCR        : None
+  Combined   : 
+
+[00:09:06]
+  Transcript :  الا لو الفونكشن بتاعتي كانت متقطعة الفيديوز بتاعتها خلاص?
+  OCR        : None
+  Combined   :  الا لو الفونكشن بتاعتي كانت متقطعة الفيديوز بتاعتها خلاص?
+
+[00:09:14]
+  Transcript :  فانا اه في الوقت ده بحتاج ان انا احط اتنين لايرز او اكتر من
+  OCR        : None
+  Combined   :  فانا اه في الوقت ده بحتاج ان انا احط اتنين لايرز او اكتر من
+
+[00:09:20]
+  Transcript :  الهيدن لايرز. تمام طبعا الاي بوط لير دول ستين. خلاص? ما بين
+  OCR        : None
+  Combined   :  الهيدن لايرز. تمام طبعا الاي بوط لير دول ستين. خلاص? ما بين
+
+[00:09:26]
+  Transcript :  التورك للتانية بيختلف في ايه? في عدد الهيدن لايرز. خلاص? طيب
+  OCR        : None
+  Combined   :  التورك للتانية بيختلف في ايه? في عدد الهيدن لايرز. خلاص? طيب
+
+[00:09:32]
+  Transcript :  النيورنز بقى اللي هي عدد النود الموجودة في ايه في الهيدن لاير.
+  OCR        : None
+  Combined   :  النيورنز بقى اللي هي عدد النود الموجودة في ايه في الهيدن لاير.
+
+[00:09:38]
+  Transcript :  برضو تاني في الاهيدن لاير عدد النودز بعدد اللي دخلة خلاص
+  OCR        : None
+  Combined   :  برضو تاني في الاهيدن لاير عدد النودز بعدد اللي دخلة خلاص
+
+[00:09:43]
+  Transcript :  بعدد اللي ايه اللي عندي في البروبلم وعدد برده بيكون محسوم
+  OCR        : None
+  Combined   :  بعدد اللي ايه اللي عندي في البروبلم وعدد برده بيكون محسوم
+
+[00:09:48]
+  Transcript :  بعدد ال ايه هاخدها من ال ايه اللي انا عايزها في البروبلم بتاعتي.
+  OCR        : None
+  Combined   :  بعدد ال ايه هاخدها من ال ايه اللي انا عايزها في البروبلم بتاعتي.
+
+[00:09:53]
+  Transcript :  طميم? بس برضو الهاده هي اللي بتحيرنا في ايه في عدد النوت في
+  OCR        : None
+  Combined   :  طميم? بس برضو الهاده هي اللي بتحيرنا في ايه في عدد النوت في
+
+[00:09:58]
+  Transcript :  اللي اير دي. خلاص? انا
+  OCR        : None
+  Combined   :  اللي اير دي. خلاص? انا
+
+[00:10:00]
+  Transcript :  ناخد بانا ان لو عدد في الهيدر لييركيه القليل قوي فده معناه ان
+  OCR        : None
+  Combined   :  ناخد بانا ان لو عدد في الهيدر لييركيه القليل قوي فده معناه ان
+
+[00:10:07]
+  Transcript :  الناتورك بتاعتي مش هتعرف اه تتعلم بعض التفاصيل بتاعت
+  OCR        : None
+  Combined   :  الناتورك بتاعتي مش هتعرف اه تتعلم بعض التفاصيل بتاعت
+
+[00:10:13]
+  Transcript :  البروبلم خلاص فالليرنج ده مش هيحصل بطريقة ايه بطريقة
+  OCR        : None
+  Combined   :  البروبلم خلاص فالليرنج ده مش هيحصل بطريقة ايه بطريقة
+
+[00:10:18]
+  Transcript :  عشان انا احل البروبلم خلاص طيب وفي نفس الوقت لو عددهم كبير
+  OCR        : None
+  Combined   :  عشان انا احل البروبلم خلاص طيب وفي نفس الوقت لو عددهم كبير
+
+[00:10:24]
+  Transcript :  قوي النيورنز دول اكتر من اكتر من اللي البروبلم عايزين هيحصل
+  OCR        : None
+  Combined   :  قوي النيورنز دول اكتر من اكتر من اللي البروبلم عايزين هيحصل
+
+[00:10:29]
+  Transcript :  في الديتا. يعني يعني بتحفظ بقى خلاص بتحفظ اللي بيدخل لها كله.
+  OCR        : None
+  Combined   :  في الديتا. يعني يعني بتحفظ بقى خلاص بتحفظ اللي بيدخل لها كله.
+
+[00:10:38]
+  Transcript :  فهي مش مش عارف اطلع بقى ايه بالنسبة خلاص. اه يعني هي كأنها
+  OCR        : None
+  Combined   :  فهي مش مش عارف اطلع بقى ايه بالنسبة خلاص. اه يعني هي كأنها
+
+[00:10:48]
+  Transcript :  بتتعلم خلاص دي مش مهمة اتلاقا. خلاص فكأنها بتحفظ وبتفصل
+  OCR        : None
+  Combined   :  بتتعلم خلاص دي مش مهمة اتلاقا. خلاص فكأنها بتحفظ وبتفصل
+
+[00:10:54]
+  Transcript : 
+  OCR        : None
+  Combined   : 
+
+[00:11:07]
+  Transcript :  نبتدي نكبره واحدة واحدة لحد ايه? لحد ما لقيه ان انا بقى عندي
+  OCR        : None
+  Combined   :  نبتدي نكبره واحدة واحدة لحد ايه? لحد ما لقيه ان انا بقى عندي
+
+[00:11:17]
+  Transcript :  نزلت بتاعتي بتاعت ايه? بقت صفاش انت بنسبه. طيب ازاي بقى
+  OCR        : Verification | Provides an unbiased test of the quality of the | network | Common error is to test the neural network using the | same samples that were used to train the neural | network | The network was optimized on these samples, and will | obviously perform well on them | Doesnt give any indication as to how well the network will be | able to classify inputs that werent in the training set
+  Combined   :  نزلت بتاعتي بتاعت ايه? بقت صفاش انت بنسبه. طيب ازاي بقى Verification | Provides an unbiased test of the quality of the | network | Common error is to test the neural network using the | same samples that were used to train the neural | network | The network was optimized on these samples, and will | obviously perform well on them | Doesnt give any indication as to how well the network will be | able to classify inputs that werent in the training set
+
+[00:11:19]
+  Transcript :  اقل clipping Soik video in the Neural Network
+  OCR        : None
+  Combined   :  اقل clipping Soik video in the Neural Network
+
+[00:11:24]
+  Transcript :  المشكلة لما بيجي اقوم بعمله التائي
+  OCR        : None
+  Combined   :  المشكلة لما بيجي اقوم بعمله التائي
+
+[00:11:30]
+  Transcript :  وعلم لها التائي وبنفس ايدي الامر
+  OCR        : None
+  Combined   :  وعلم لها التائي وبنفس ايدي الامر
+
+[00:11:37]
+  Transcript :  اللي اعملت للنزل تامر بيها
+  OCR        : None
+  Combined   :  اللي اعملت للنزل تامر بيها
+
+[00:11:40]
+  Transcript : rapababababababab udah91
+  OCR        : None
+  Combined   : rapababababababab udah91
+
+[00:11:42]
+  Transcript :  ح famille
+  OCR        : None
+  Combined   :  ح famille
+
+[00:11:43]
+  Transcript :  لو انا استخدمت نفس الامر
+  OCR        : None
+  Combined   :  لو انا استخدمت نفس الامر
+
+[00:11:47]
+  Transcript :  او staffing
+  OCR        : None
+  Combined   :  او staffing
+
+[00:11:49]
+  Transcript :  اكيد هتطلع عالية خلاص والاكوريس دي مش هتبقى حقيقية لان النتورك
+  OCR        : None
+  Combined   :  اكيد هتطلع عالية خلاص والاكوريس دي مش هتبقى حقيقية لان النتورك
+
+[00:11:54]
+  Transcript :  اتعلمت على دي فهي خلاص عرفتها شافيتها قبل كده مفترض ان انا في
+  OCR        : None
+  Combined   :  اتعلمت على دي فهي خلاص عرفتها شافيتها قبل كده مفترض ان انا في
+
+[00:12:00]
+  Transcript :  لما يجي اتست الناتورك بتاعتي عملها اتست على اكزامبرز هي
+  OCR        : None
+  Combined   :  لما يجي اتست الناتورك بتاعتي عملها اتست على اكزامبرز هي
+
+[00:12:04]
+  Transcript :  مش هفتهاش في الترينينج تمام?
+  OCR        : None
+  Combined   :  مش هفتهاش في الترينينج تمام?
+
+[00:12:12]
+  Transcript :  وده طبعا ما بيدينيش اه هي فعلا النيورو نتورك دي خلاص
+  OCR        : None
+  Combined   :  وده طبعا ما بيدينيش اه هي فعلا النيورو نتورك دي خلاص
+
+[00:12:20]
+  Transcript :  كده بتاعها اه اه اصطب بقى بتاعها او الترينينج خلاص كده
+  OCR        : None
+  Combined   :  كده بتاعها اه اه اصطب بقى بتاعها او الترينينج خلاص كده
+
+[00:12:31]
+  Transcript :  وبديدي استخدمها واللي هيا محتاجة لسه طيب عشان بقى ما
+  OCR        : Training  Testing set | The set of all known samples is broken into two | independent sets: | Training set | A group of samples used to train the neural network | Testing set | A group of samples used to test the performance of the neural | network | Used to estimate the error rate | Known Samples | Training | Testing
+  Combined   :  وبديدي استخدمها واللي هيا محتاجة لسه طيب عشان بقى ما Training  Testing set | The set of all known samples is broken into two | independent sets: | Training set | A group of samples used to train the neural network | Testing set | A group of samples used to test the performance of the neural | network | Used to estimate the error rate | Known Samples | Training | Testing
+
+[00:12:32]
+  Transcript :  نعاشف المشكلة دي بتاعت بطريقة غلط بعمل ايه بقسم دايما بتاعتي
+  OCR        : None
+  Combined   :  نعاشف المشكلة دي بتاعت بطريقة غلط بعمل ايه بقسم دايما بتاعتي
+
+[00:12:39]
+  Transcript :  خلاص يعني بقسم انه اه بتاعتي مجموعة منهم باخدهم في ومجموعة
+  OCR        : None
+  Combined   :  خلاص يعني بقسم انه اه بتاعتي مجموعة منهم باخدهم في ومجموعة
+
+[00:12:48]
+  Transcript :  تانية خالص باخدهم فين باخدهم في تمام مجموعتين دول بيبقوا
+  OCR        : None
+  Combined   :  تانية خالص باخدهم فين باخدهم في تمام مجموعتين دول بيبقوا
+
+[00:12:53]
+  Transcript : 
+  OCR        : None
+  Combined   : 
+
+[00:13:06]
+  Transcript :  كل الانتورك دي. على كل الانتورك. ابتدي بقى. ادخل اه واحد
+  OCR        : None
+  Combined   :  كل الانتورك دي. على كل الانتورك. ابتدي بقى. ادخل اه واحد
+
+[00:13:12]
+  Transcript :  واحد من الى حين ما فيها. وبتدي ايه اتيست البرفورمانس بتاع
+  OCR        : None
+  Combined   :  واحد من الى حين ما فيها. وبتدي ايه اتيست البرفورمانس بتاع
+
+[00:13:19]
+  Transcript :  خلاص اتيست البرفورمانس ازاي. بتشوف الاوتبوت اللي هي طلعته وانقرنه
+  OCR        : None
+  Combined   :  خلاص اتيست البرفورمانس ازاي. بتشوف الاوتبوت اللي هي طلعته وانقرنه
+
+[00:13:24]
+  Transcript :  بالاوتبوت بتاع ايه? بتاع الخلاص? واحسب بقى من ده ايه? خلاص?
+  OCR        : None
+  Combined   :  بالاوتبوت بتاع ايه? بتاع الخلاص? واحسب بقى من ده ايه? خلاص?
+
+[00:13:30]
+  Transcript :  بنانة على اللي انا بحسبه ده ما شوف هو انا كده خلاص اللي
+  OCR        : None
+  Combined   :  بنانة على اللي انا بحسبه ده ما شوف هو انا كده خلاص اللي
+
+[00:13:36]
+  Transcript :  اللي حصل للناتورك بتاعتي ده صفشن في كده بالنسبة للبروبلم
+  OCR        : None
+  Combined   :  اللي حصل للناتورك بتاعتي ده صفشن في كده بالنسبة للبروبلم
+
+[00:13:43]
+  Transcript :  ولا انا محتاجة اعمل طيب الانزامبل ده بقى اللي انا هختارها في
+  OCR        : Training Set | Good training set can avoid Overfitting | What is the good training set? | Samples must represent the general population | Samples must contain members of each class | Samples in each class must contain a wide range of variations | or noise effect | The size of the training set is related to the number of | hidden neurons | Eg. 10 inputs, 5 hidden neurons, 2 outputs: | 115  62  67 weights variables | If only 10 training samples are used to determine these weights, | the network will end up being overfit | Any solution found will be specific to the 10 training samples | Having 10 equations, 67 unknowns, you can come up with a specific | solution, but you cant find the general solution with the given | information
+  Combined   :  ولا انا محتاجة اعمل طيب الانزامبل ده بقى اللي انا هختارها في Training Set | Good training set can avoid Overfitting | What is the good training set? | Samples must represent the general population | Samples must contain members of each class | Samples in each class must contain a wide range of variations | or noise effect | The size of the training set is related to the number of | hidden neurons | Eg. 10 inputs, 5 hidden neurons, 2 outputs: | 115  62  67 weights variables | If only 10 training samples are used to determine these weights, | the network will end up being overfit | Any solution found will be specific to the 10 training samples | Having 10 equations, 67 unknowns, you can come up with a specific | solution, but you cant find the general solution with the given | information
+
+[00:13:46]
+  Transcript :  الترينج سابدي شكلها المفروض يا بقية. احنا بس خلينا في الاول
+  OCR        : None
+  Combined   :  الترينج سابدي شكلها المفروض يا بقية. احنا بس خلينا في الاول
+
+[00:13:50]
+  Transcript :  نتفق ان احنا لو اخترنا الترينجزات دي بطريقة كويسة يعني
+  OCR        : None
+  Combined   :  نتفق ان احنا لو اخترنا الترينجزات دي بطريقة كويسة يعني
+
+[00:13:55]
+  Transcript :  الترينجزات دي هنشوف ازاي نختار
+  OCR        : None
+  Combined   :  الترينجزات دي هنشوف ازاي نختار
+
+[00:14:00]
+  Transcript :  الطريقة كويسة خلاص ده هيخلينا نتجنب حدوث الايه الوفرفيتنج
+  OCR        : None
+  Combined   :  الطريقة كويسة خلاص ده هيخلينا نتجنب حدوث الايه الوفرفيتنج
+
+[00:14:05]
+  Transcript :  عندي في النتورك تمام? هزي بقى اختار قلت لك الاكزامبل زي اللي
+  OCR        : None
+  Combined   :  عندي في النتورك تمام? هزي بقى اختار قلت لك الاكزامبل زي اللي
+
+[00:14:10]
+  Transcript :  انت مفتحطها في الترينيج سات دي المفروض السامبلز دي اول حاجة
+  OCR        : None
+  Combined   :  انت مفتحطها في الترينيج سات دي المفروض السامبلز دي اول حاجة
+
+[00:14:15]
+  Transcript :  بتربريزنت الايه يعني تكون اه متاخدة من كل يعني بتربريزنت
+  OCR        : None
+  Combined   :  بتربريزنت الايه يعني تكون اه متاخدة من كل يعني بتربريزنت
+
+[00:14:23]
+  Transcript :  كل الانواع خلاص اللي موجودة عندي في الداتا سات كل التغيرات اللي
+  OCR        : None
+  Combined   :  كل الانواع خلاص اللي موجودة عندي في الداتا سات كل التغيرات اللي
+
+[00:14:29]
+  Transcript :  الموجودة عندي في خلاص اللي هو بتاعي. تاني حاجة دي المفروض
+  OCR        : None
+  Combined   :  الموجودة عندي في خلاص اللي هو بتاعي. تاني حاجة دي المفروض
+
+[00:14:36]
+  Transcript :  تترابريزنت كل لإيه? لكل كلاس. يعني ايه? يعني انا لو انا بعمل
+  OCR        : None
+  Combined   :  تترابريزنت كل لإيه? لكل كلاس. يعني ايه? يعني انا لو انا بعمل
+
+[00:14:43]
+  Transcript :  وعندي فور كلاسز اي بي سي دي. نولي الاوت بتوهي. انا هطلع واحد
+  OCR        : None
+  Combined   :  وعندي فور كلاسز اي بي سي دي. نولي الاوت بتوهي. انا هطلع واحد
+
+[00:14:50]
+  Transcript : 
+  OCR        : None
+  Combined   : 
+
+[00:15:12]
+  Transcript :  تمام طيب كمان حتة الصيز الصيز بتاع الصيز يبقى ايه ايه مفروض
+  OCR        : None
+  Combined   :  تمام طيب كمان حتة الصيز الصيز بتاع الصيز يبقى ايه ايه مفروض
+
+[00:15:24]
+  Transcript :  ان هذا البيت يتناسب مع عدد الايه? مع عدد الموجودة عندي في
+  OCR        : None
+  Combined   :  ان هذا البيت يتناسب مع عدد الايه? مع عدد الموجودة عندي في
+
+[00:15:28]
+  Transcript :  النتورك. ليه عدد البيت؟ احنا لو قلنا بتاع النتورك بتاعتي
+  OCR        : None
+  Combined   :  النتورك. ليه عدد البيت؟ احنا لو قلنا بتاع النتورك بتاعتي
+
+[00:15:33]
+  Transcript :  اه سي مسلا فوركزامبل عندي عشرة في البيت وعندي خمسة في الهيدل
+  OCR        : None
+  Combined   :  اه سي مسلا فوركزامبل عندي عشرة في البيت وعندي خمسة في الهيدل
+
+[00:15:40]
+  Transcript :  وعندي ثمين في الاوتبوت لير. تمام? فالنتورك هيكون فيها كم
+  OCR        : None
+  Combined   :  وعندي ثمين في الاوتبوت لير. تمام? فالنتورك هيكون فيها كم
+
+[00:15:46]
+  Transcript :  ويت? انا عندي عشرة وعندي كمان فكده بقى محداشر. هيدخلوا لخمسة
+  OCR        : None
+  Combined   :  ويت? انا عندي عشرة وعندي كمان فكده بقى محداشر. هيدخلوا لخمسة
+
+[00:15:51]
+  Transcript :  نوت. خيبوا الحداشر في خمسة. زي اللي عندي من الخمسة بقى اللي في
+  OCR        : None
+  Combined   :  نوت. خيبوا الحداشر في خمسة. زي اللي عندي من الخمسة بقى اللي في
+
+[00:15:56]
+  Transcript :  الخمسة نوتز اللي في الهيل اللي هي دول. معهم كمان الفايز.
+  OCR        : None
+  Combined   :  الخمسة نوتز اللي في الهيل اللي هي دول. معهم كمان الفايز.
+
+[00:16:00]
+  Transcript :  يعني بقوم ستة هيدخلوا على الاي على في المحتاجين كام ويت ستة
+  OCR        : None
+  Combined   :  يعني بقوم ستة هيدخلوا على الاي على في المحتاجين كام ويت ستة
+
+[00:16:06]
+  Transcript :  في اتنين خلاص في في الاخر المجموع سبعة وستين ويت تمام فانت
+  OCR        : None
+  Combined   :  في اتنين خلاص في في الاخر المجموع سبعة وستين ويت تمام فانت
+
+[00:16:11]
+  Transcript :  كأن عندك فيها سبعة وستين وانت بتعمل لها ايه متاخد علشان
+  OCR        : None
+  Combined   :  كأن عندك فيها سبعة وستين وانت بتعمل لها ايه متاخد علشان
+
+[00:16:20]
+  Transcript :  تأجزت في الايه في الفاريبلز دي ما احنا في الاخر هدف التريننج
+  OCR        : None
+  Combined   :  تأجزت في الايه في الفاريبلز دي ما احنا في الاخر هدف التريننج
+
+[00:16:24]
+  Transcript :  ان انا اعمل ايه? اعجزت الويت دي بحيس ان الويتز دي تطلع ايه?
+  OCR        : None
+  Combined   :  ان انا اعمل ايه? اعجزت الويت دي بحيس ان الويتز دي تطلع ايه?
+
+[00:16:28]
+  Transcript :  تطلع احسن حاجة خلاص تخليني ايه? تخلي النتورك بتاعتي تطلع
+  OCR        : None
+  Combined   :  تطلع احسن حاجة خلاص تخليني ايه? تخلي النتورك بتاعتي تطلع
+
+[00:16:33]
+  Transcript :  الاوتبوت اللي انا ايه? اللي ايه طلبه? تمام كده? فانت لو انت
+  OCR        : None
+  Combined   :  الاوتبوت اللي انا ايه? اللي ايه طلبه? تمام كده? فانت لو انت
+
+[00:16:39]
+  Transcript :  مسلا شغال بعشرة وانت عايز تقديد في سبعة وزتسين فطبعا ده ايه
+  OCR        : None
+  Combined   :  مسلا شغال بعشرة وانت عايز تقديد في سبعة وزتسين فطبعا ده ايه
+
+[00:16:46]
+  Transcript :  عدد مش مناسب بالمرة. فالسلوشنز اللي هتطلع عندك هتطلع
+  OCR        : None
+  Combined   :  عدد مش مناسب بالمرة. فالسلوشنز اللي هتطلع عندك هتطلع
+
+[00:16:50]
+  Transcript :  specific
+  OCR        : None
+  Combined   :  specific
+
+[00:17:08]
+  Transcript :  على أساس الداتا سيت المتيح عندي
+  OCR        : None
+  Combined   :  على أساس الداتا سيت المتيح عندي
+
+[00:17:10]
+  Transcript :  على عدد الاكزامبلز أو السامبلز المتيح عندي في البروبلم
+  OCR        : None
+  Combined   :  على عدد الاكزامبلز أو السامبلز المتيح عندي في البروبلم
+
+[00:17:13]
+  Transcript :  طبعاً كل ما كانت الداتا سيت كبيرة
+  OCR        : None
+  Combined   :  طبعاً كل ما كانت الداتا سيت كبيرة
+
+[00:17:16]
+  Transcript :  وعدد السامبلز كبير كل ما كان أفن
+  OCR        : None
+  Combined   :  وعدد السامبلز كبير كل ما كان أفن
+
+[00:17:19]
+  Transcript : None
+  OCR        : Cross-validation | When the amount of available data is small .. | Available Examples | Repeat 10 | times | Training | Test | Pro. | Generalization error | determined by mean | test error | Used to develop 10 different ANN models | Accumulate | test errors
+  Combined   : Cross-validation | When the amount of available data is small .. | Available Examples | Repeat 10 | times | Training | Test | Pro. | Generalization error | determined by mean | test error | Used to develop 10 different ANN models | Accumulate | test errors
+
+[00:17:21]
+  Transcript :  طيب
+  OCR        : None
+  Combined   :  طيب
+
+[00:17:22]
+  Transcript :  لو بقى الداتا ست بتاع تي مش كبيرة وعدد السامبلز فيها قليل
+  OCR        : None
+  Combined   :  لو بقى الداتا ست بتاع تي مش كبيرة وعدد السامبلز فيها قليل
+
+[00:17:26]
+  Transcript :  في الوقت ده بلجأ لإيه
+  OCR        : None
+  Combined   :  في الوقت ده بلجأ لإيه
+
+[00:17:29]
+  Transcript :  احنا في الاول قلنا ان احنا كنا بنقسم الداتا ست بتاع تسي لإيه
+  OCR        : None
+  Combined   :  احنا في الاول قلنا ان احنا كنا بنقسم الداتا ست بتاع تسي لإيه
+
+[00:17:32]
+  Transcript :  بترينينج ست وإيه وتستا ست
+  OCR        : None
+  Combined   :  بترينينج ست وإيه وتستا ست
+
+[00:17:34]
+  Transcript :  خلاص عمل ترينينج بالترينينج ست دي كلها وخلص
+  OCR        : None
+  Combined   :  خلاص عمل ترينينج بالترينينج ست دي كلها وخلص
+
+[00:17:38]
+  Transcript :  وبعدين اروح تستل إيه النتورك بالترينينج بالتستا ست
+  OCR        : None
+  Combined   :  وبعدين اروح تستل إيه النتورك بالترينينج بالتستا ست
+
+[00:17:42]
+  Transcript :  وغالبا بتبقى الإيه النسبة بتاعتهم سبعين لإيه لتلاتين
+  OCR        : None
+  Combined   :  وغالبا بتبقى الإيه النسبة بتاعتهم سبعين لإيه لتلاتين
+
+[00:17:46]
+  Transcript :  يعني بياخد سبعين في المية ترينينج تمام
+  OCR        : None
+  Combined   :  يعني بياخد سبعين في المية ترينينج تمام
+
+[00:17:50]
+  Transcript :  و 30% تستنج
+  OCR        : None
+  Combined   :  و 30% تستنج
+
+[00:17:52]
+  Transcript :  تمام ده لإيه؟
+  OCR        : None
+  Combined   :  تمام ده لإيه؟
+
+[00:17:53]
+  Transcript :  ده للمفروض بيتعمل
+  OCR        : None
+  Combined   :  ده للمفروض بيتعمل
+
+[00:17:55]
+  Transcript :  ده لو عدد
+  OCR        : None
+  Combined   :  ده لو عدد
+
+[00:17:56]
+  Transcript :  في الداتا سيت بتاعتي
+  OCR        : None
+  Combined   :  في الداتا سيت بتاعتي
+
+[00:18:00]
+  Transcript :  والداتا سيت بتاعتي نفسها عددها ايه? اساس بتاعها كبير. خلاص? لو
+  OCR        : None
+  Combined   :  والداتا سيت بتاعتي نفسها عددها ايه? اساس بتاعها كبير. خلاص? لو
+
+[00:18:04]
+  Transcript :  السائز بقى قليل في الداتا سيت كلها فانا بعمل ايه? بقسم الداتا
+  OCR        : None
+  Combined   :  السائز بقى قليل في الداتا سيت كلها فانا بعمل ايه? بقسم الداتا
+
+[00:18:11]
+  Transcript :  سيت بتاعتي خلاص? اه لعشر ايه? لعشر اجزاء. خلاص? بقسم الداتا سيت
+  OCR        : None
+  Combined   :  سيت بتاعتي خلاص? اه لعشر ايه? لعشر اجزاء. خلاص? بقسم الداتا سيت
+
+[00:18:18]
+  Transcript :  بتاعتي لعشر اجزاء. كل مرة كل هيخد تسع اجزاء من الداتا سيت دي
+  OCR        : None
+  Combined   :  بتاعتي لعشر اجزاء. كل مرة كل هيخد تسع اجزاء من الداتا سيت دي
+
+[00:18:25]
+  Transcript :  اللي انا مقسمها يبقى هما الترينج ايه? الترينج ست. وجزء واحد
+  OCR        : None
+  Combined   :  اللي انا مقسمها يبقى هما الترينج ايه? الترينج ست. وجزء واحد
+
+[00:18:30]
+  Transcript :  بس اللي هو عشرة في المية يبقى هو ست. تمام? يبقى انا عملت ايه في
+  OCR        : None
+  Combined   :  بس اللي هو عشرة في المية يبقى هو ست. تمام? يبقى انا عملت ايه في
+
+[00:18:34]
+  Transcript :  الاتريشن دي? انا عملت ترينج للناتورك بتاعتي على تسعين في
+  OCR        : None
+  Combined   :  الاتريشن دي? انا عملت ترينج للناتورك بتاعتي على تسعين في
+
+[00:18:39]
+  Transcript :  المية من الداتا سات لان هي الداتا سات اصلا سؤيرة. في دوب تسعين في
+  OCR        : None
+  Combined   :  المية من الداتا سات لان هي الداتا سات اصلا سؤيرة. في دوب تسعين في
+
+[00:18:43]
+  Transcript :  المية يعمل لي للنتورك. تمام? وصبت عشرة في المية ما اتشافوش.
+  OCR        : None
+  Combined   :  المية يعمل لي للنتورك. تمام? وصبت عشرة في المية ما اتشافوش.
+
+[00:18:49]
+  Transcript : 
+  OCR        : None
+  Combined   : 
+
+[00:19:06]
+  Transcript :  الاتريشن اللي فاتت يعني سي اول مرة باخد اول تسع اجزاء
+  OCR        : None
+  Combined   :  الاتريشن اللي فاتت يعني سي اول مرة باخد اول تسع اجزاء
+
+[00:19:10]
+  Transcript :  وبسيب الاخير ده الاي للتستنج المرة اللي بعدها هياخد اول
+  OCR        : None
+  Combined   :  وبسيب الاخير ده الاي للتستنج المرة اللي بعدها هياخد اول
+
+[00:19:15]
+  Transcript :  تمانية اول تمان اجزاء ومعيهم الجزء الاخير وبسيب اللي قبل
+  OCR        : None
+  Combined   :  تمانية اول تمان اجزاء ومعيهم الجزء الاخير وبسيب اللي قبل
+
+[00:19:20]
+  Transcript :  الاخير ده. المرة اللي بعدها اخد اول سبع اجزاء ومعهم اخر اخر
+  OCR        : None
+  Combined   :  الاخير ده. المرة اللي بعدها اخد اول سبع اجزاء ومعهم اخر اخر
+
+[00:19:25]
+  Transcript :  اتنين. تمام? وبسيب الايه? التالت من ورا ده هو الايه للتستنج
+  OCR        : None
+  Combined   :  اتنين. تمام? وبسيب الايه? التالت من ورا ده هو الايه للتستنج
+
+[00:19:30]
+  Transcript :  وهكزا. بفضل اعمل ايه? اعمل اه عدد ادى عدد الاجزاء اللي انا
+  OCR        : None
+  Combined   :  وهكزا. بفضل اعمل ايه? اعمل اه عدد ادى عدد الاجزاء اللي انا
+
+[00:19:37]
+  Transcript :  مقسمها في الداتا سيت. انا مقسميهم هنا عشر اجزاء فانا عملت ايه?
+  OCR        : None
+  Combined   :  مقسمها في الداتا سيت. انا مقسميهم هنا عشر اجزاء فانا عملت ايه?
+
+[00:19:40]
+  Transcript :  هريبيتر الكلام ده عشر مرات. خلاص? لو انا مقسميهم لخمس اجزاء
+  OCR        : None
+  Combined   :  هريبيتر الكلام ده عشر مرات. خلاص? لو انا مقسميهم لخمس اجزاء
+
+[00:19:44]
+  Transcript :  انا هعمل الموضوع ده خمس مرات. كل مرة بيطلع لي ايه? بيطلع لي من
+  OCR        : None
+  Combined   :  انا هعمل الموضوع ده خمس مرات. كل مرة بيطلع لي ايه? بيطلع لي من
+
+[00:19:49]
+  Transcript :  الايه? من التستمد. خلاص او بيطلع لي الررور. الررور بقى النهائي او
+  OCR        : None
+  Combined   :  الايه? من التستمد. خلاص او بيطلع لي الررور. الررور بقى النهائي او
+
+[00:19:55]
+  Transcript :  الاكيورس النهائية هتبقى ايه? هتبقى الايه? متجمع من.
+  OCR        : None
+  Combined   :  الاكيورس النهائية هتبقى ايه? هتبقى الايه? متجمع من.
+
+[00:20:00]
+  Transcript :  العشر اي مرات اللي انا عملتهم. يعني كل مرة اخدت وجمعهم على
+  OCR        : None
+  Combined   :  العشر اي مرات اللي انا عملتهم. يعني كل مرة اخدت وجمعهم على
+
+[00:20:07]
+  Transcript :  بانت خلاص وقسمهم على اي على عشرة. فانا كده جبت ال اي جبت
+  OCR        : None
+  Combined   :  بانت خلاص وقسمهم على اي على عشرة. فانا كده جبت ال اي جبت
+
+[00:20:11]
+  Transcript :  المين بتاع الاي بتاع التست اكيوريسي او جبت المين بتاع
+  OCR        : None
+  Combined   :  المين بتاع الاي بتاع التست اكيوريسي او جبت المين بتاع
+
+[00:20:14]
+  Transcript :  التست ايرو. تمامي? اما انا هحسب على الايرو وعمل يعني احاول
+  OCR        : None
+  Combined   :  التست ايرو. تمامي? اما انا هحسب على الايرو وعمل يعني احاول
+
+[00:20:20]
+  Transcript :  اقلل فيه على قد مقدر او هحسب بالاكيوريسي وماكسمايزر اي الاكيوريسي
+  OCR        : None
+  Combined   :  اقلل فيه على قد مقدر او هحسب بالاكيوريسي وماكسمايزر اي الاكيوريسي
+
+[00:20:24]
+  Transcript :  دي على قد مقدر. تمام? يبقى احنا عملنا ده ليه? عملنا ده لان
+  OCR        : None
+  Combined   :  دي على قد مقدر. تمام? يبقى احنا عملنا ده ليه? عملنا ده لان
+
+[00:20:29]
+  Transcript :  ده سيد بتاعتي كانت اه سيد بتاعها صغير. فان انا اقسم لترينينج سات
+  OCR        : None
+  Combined   :  ده سيد بتاعتي كانت اه سيد بتاعها صغير. فان انا اقسم لترينينج سات
+
+[00:20:35]
+  Transcript :  اه وتست سات مسلا سبعين في المية مع اه وصوت تلاتين في المية او
+  OCR        : None
+  Combined   :  اه وتست سات مسلا سبعين في المية مع اه وصوت تلاتين في المية او
+
+[00:20:40]
+  Transcript :  ستين في المية او ستين في المية او صوت او سوية عارين في المية ده
+  OCR        : None
+  Combined   :  ستين في المية او ستين في المية او صوت او سوية عارين في المية ده
+
+[00:20:42]
+  Transcript :  مش هيبقى ايه مش هيبقى النتورك اتعمل لها ترينج بشكل ايه? بشكل
+  OCR        : None
+  Combined   :  مش هيبقى ايه مش هيبقى النتورك اتعمل لها ترينج بشكل ايه? بشكل
+
+[00:20:46]
+  Transcript :  افشل. وطبعا انك اكبروز فايدات انه هو بيطلع ايه? بيعمل
+  OCR        : None
+  Combined   :  افشل. وطبعا انك اكبروز فايدات انه هو بيطلع ايه? بيعمل
+
+[00:20:55]
+  Transcript : 
+  OCR        : Weightsinitialization | Random initial values - some range | Smaller weight values for nodes with many incoming | connections | Rule of thumb: initial weight range should be approximately | weights | coming into a node | Genetic Algorithm
+  Combined   :  Weightsinitialization | Random initial values - some range | Smaller weight values for nodes with many incoming | connections | Rule of thumb: initial weight range should be approximately | weights | coming into a node | Genetic Algorithm
+
+[00:21:07]
+  Transcript :  اكتر من طريقة. ممكن اعمل دي راندم. هرواس فانا حط في الاندم
+  OCR        : None
+  Combined   :  اكتر من طريقة. ممكن اعمل دي راندم. هرواس فانا حط في الاندم
+
+[00:21:13]
+  Transcript :  تمام سواء بالنجاتيب او بالبوزوتين وبعد كده هبتدي اي او
+  OCR        : None
+  Combined   :  تمام سواء بالنجاتيب او بالبوزوتين وبعد كده هبتدي اي او
+
+[00:21:19]
+  Transcript :  في الويتس دي في الايه في الليرنج او في بتاع الناتورك. تمام?
+  OCR        : None
+  Combined   :  في الويتس دي في الايه في الليرنج او في بتاع الناتورك. تمام?
+
+[00:21:28]
+  Transcript :  ويفضل ان انا لما اجي احط اه اعمل ان انا احط ايه
+  OCR        : None
+  Combined   :  ويفضل ان انا لما اجي احط اه اعمل ان انا احط ايه
+
+[00:21:34]
+  Transcript :  للنوت اللي بيدخل لها ايه? اللي بيدخل لها ايه بوتس كتير. تمام?
+  OCR        : None
+  Combined   :  للنوت اللي بيدخل لها ايه? اللي بيدخل لها ايه بوتس كتير. تمام?
+
+[00:21:41]
+  Transcript :  يبقى كل ما عدد اللي دخلها للنوت بتاعتي كان كبير. كل ما
+  OCR        : None
+  Combined   :  يبقى كل ما عدد اللي دخلها للنوت بتاعتي كان كبير. كل ما
+
+[00:21:49]
+  Transcript :  كل واحد في الويتس دي المفروض يبقى ايه? يبقى الفاديو بتاعته
+  OCR        : None
+  Combined   :  كل واحد في الويتس دي المفروض يبقى ايه? يبقى الفاديو بتاعته
+
+[00:21:53]
+  Transcript :  اصغر. طيب. فهنا كده في
+  OCR        : None
+  Combined   :  اصغر. طيب. فهنا كده في
+
+[00:22:00]
+  Transcript :  قاعدة بسيطة للانشيالايزيشن اللي هيحصل على الويد نو بيقول لك ممكن
+  OCR        : None
+  Combined   :  قاعدة بسيطة للانشيالايزيشن اللي هيحصل على الويد نو بيقول لك ممكن
+
+[00:22:04]
+  Transcript :  تحط الفاليو بتاعت الويد خلاص بدل ما تعملها رندم ممكن تحطها
+  OCR        : None
+  Combined   :  تحط الفاليو بتاعت الويد خلاص بدل ما تعملها رندم ممكن تحطها
+
+[00:22:10]
+  Transcript :  زي بلاس او ماينس الاي واحد على عدد الويدز بلاس او ماينس اي واحد
+  OCR        : None
+  Combined   :  زي بلاس او ماينس الاي واحد على عدد الويدز بلاس او ماينس اي واحد
+
+[00:22:16]
+  Transcript :  على عدد الاي الويدز اللي دخله في النوت دي تمام كده فطبعا عدد
+  OCR        : None
+  Combined   :  على عدد الاي الويدز اللي دخله في النوت دي تمام كده فطبعا عدد
+
+[00:22:22]
+  Transcript :  الويدز دي كل ما كان اكبر كل ما الفاليو اي هتقل خلاص او ممكن
+  OCR        : None
+  Combined   :  الويدز دي كل ما كان اكبر كل ما الفاليو اي هتقل خلاص او ممكن
+
+[00:22:33]
+  Transcript :  نعمل الويتس دي بالايه بالجنتيك الوريزم. طيب بالنسبة بعد
+  OCR        : Data Preparation | The quality of results relates directly to quality of the data | Eliminate or estimate missing values | Remove outliers obvious exceptions | Reduce attribute dimensionality | - remove redundant andor correlating attributes | - combine attributes sum, multiply, difference | Normalization: De-correlate example attributes via | normalization of values: | - Euclidean: n  xsqrtsum of all x2 | - Percentage: n  xsum of all x | - Variance based: n  x - mean of all xvariance
+  Combined   :  نعمل الويتس دي بالايه بالجنتيك الوريزم. طيب بالنسبة بعد Data Preparation | The quality of results relates directly to quality of the data | Eliminate or estimate missing values | Remove outliers obvious exceptions | Reduce attribute dimensionality | - remove redundant andor correlating attributes | - combine attributes sum, multiply, difference | Normalization: De-correlate example attributes via | normalization of values: | - Euclidean: n  xsqrtsum of all x2 | - Percentage: n  xsum of all x | - Variance based: n  x - mean of all xvariance
+
+[00:22:35]
+  Transcript :  الديتا بتاعتي اللي موجودة في الديتا ساتقل هي الاكزامبلز او
+  OCR        : None
+  Combined   :  الديتا بتاعتي اللي موجودة في الديتا ساتقل هي الاكزامبلز او
+
+[00:22:39]
+  Transcript :  بتاعت البروبلم دي. الديتا دي كل ما كانت عملت لها في الاول
+  OCR        : None
+  Combined   :  بتاعت البروبلم دي. الديتا دي كل ما كانت عملت لها في الاول
+
+[00:22:45]
+  Transcript :  كده او بريباريشن بطريقة او بريبروسسن يعني بطريقة آآ كويسة
+  OCR        : None
+  Combined   :  كده او بريباريشن بطريقة او بريبروسسن يعني بطريقة آآ كويسة
+
+[00:22:51]
+  Transcript : 
+  OCR        : None
+  Combined   : 
+
+[00:23:07]
+  Transcript :  وانا انا افعلها الديتا
+  OCR        : None
+  Combined   :  وانا انا افعلها الديتا
+
+[00:23:12]
+  Transcript :  اذا اتغيرت في مكان المعين وانتظر في بعض المعين المعين
+  OCR        : None
+  Combined   :  اذا اتغيرت في مكان المعين وانتظر في بعض المعين المعين
+
+[00:23:19]
+  Transcript :  لا اتغيرت جدا
+  OCR        : None
+  Combined   :  لا اتغيرت جدا
+
+[00:23:22]
+  Transcript :  زادت زيادة كبيرة او قلت بشكل كبير او
+  OCR        : None
+  Combined   :  زادت زيادة كبيرة او قلت بشكل كبير او
+
+[00:23:27]
+  Transcript :  خلاص فهذا تسمى عندي ايه؟
+  OCR        : None
+  Combined   :  خلاص فهذا تسمى عندي ايه؟
+
+[00:23:29]
+  Transcript :  او تلايرز تمام؟
+  OCR        : None
+  Combined   :  او تلايرز تمام؟
+
+[00:23:30]
+  Transcript :  دي ممكن اشالها
+  OCR        : None
+  Combined   :  دي ممكن اشالها
+
+[00:23:31]
+  Transcript :  ممكن اقلل الاتريبيوت ايه؟
+  OCR        : None
+  Combined   :  ممكن اقلل الاتريبيوت ايه؟
+
+[00:23:34]
+  Transcript :  بي منشنالتي الاتريبيوت اللي هي اليموت سيعني
+  OCR        : None
+  Combined   :  بي منشنالتي الاتريبيوت اللي هي اليموت سيعني
+
+[00:23:36]
+  Transcript :  ممكن اقللها
+  OCR        : None
+  Combined   :  ممكن اقللها
+
+[00:23:37]
+  Transcript :  خلاص
+  OCR        : None
+  Combined   :  خلاص
+
+[00:23:39]
+  Transcript :  اقللها ازاي? اقللها ان انا اعمل لها اعمل للايه? للاتريبيوتز اللي هي
+  OCR        : None
+  Combined   :  اقللها ازاي? اقللها ان انا اعمل لها اعمل للايه? للاتريبيوتز اللي هي
+
+[00:23:46]
+  Transcript :  متشابهة اللي هي بيها نفس الايه? نفس التأثير على تمام? او ان انا
+  OCR        : None
+  Combined   :  متشابهة اللي هي بيها نفس الايه? نفس التأثير على تمام? او ان انا
+
+[00:23:52]
+  Transcript :  اعمل ما بينهم لكل مجموعة متشابهة. اه ممكن اعمل لهم ايه? اعمل لهم
+  OCR        : None
+  Combined   :  اعمل ما بينهم لكل مجموعة متشابهة. اه ممكن اعمل لهم ايه? اعمل لهم
+
+[00:24:00]
+  Transcript :  منكم بقى سواء بالسوميشن او او ايه او غيرها. تمام? اه ان انا
+  OCR        : None
+  Combined   :  منكم بقى سواء بالسوميشن او او ايه او غيرها. تمام? اه ان انا
+
+[00:24:06]
+  Transcript :  كمان اعمل للداتا دي. خلاص اعمل ازاي? عندي اكتر من طريقة
+  OCR        : None
+  Combined   :  كمان اعمل للداتا دي. خلاص اعمل ازاي? عندي اكتر من طريقة
+
+[00:24:13]
+  Transcript :  وفيه طبعا غير الطرق دي. اه ان انا مسلا امسك بتاعتي. وبدل
+  OCR        : None
+  Combined   :  وفيه طبعا غير الطرق دي. اه ان انا مسلا امسك بتاعتي. وبدل
+
+[00:24:19]
+  Transcript :  لما دخل كده زي ما هي في لا انا بحسب ايه? بحسب الان.
+  OCR        : None
+  Combined   :  لما دخل كده زي ما هي في لا انا بحسب ايه? بحسب الان.
+
+[00:24:23]
+  Transcript :  ولان دي بتكون ايه? بتكون الاكس على عدد الاي على عدد الفاليوز
+  OCR        : None
+  Combined   :  ولان دي بتكون ايه? بتكون الاكس على عدد الاي على عدد الفاليوز
+
+[00:24:28]
+  Transcript :  اللي موجودة في الاكس. الاكس ده ايموت. تمام? يعني عندي في
+  OCR        : None
+  Combined   :  اللي موجودة في الاكس. الاكس ده ايموت. تمام? يعني عندي في
+
+[00:24:32]
+  Transcript :  فانا بمشي على ده وبحسب بتاعة بتاعة الاكس بتاعت ده في كل
+  OCR        : None
+  Combined   :  فانا بمشي على ده وبحسب بتاعة بتاعة الاكس بتاعت ده في كل
+
+[00:24:40]
+  Transcript :  في كل بجمعهم خلاص. وبعدين ببتدي احط ايه في كل او في كل يعني
+  OCR        : None
+  Combined   :  في كل بجمعهم خلاص. وبعدين ببتدي احط ايه في كل او في كل يعني
+
+[00:24:47]
+  Transcript :  الجديدة هتبقى ايه? هتبقى الاديمة اللي كانت موجودة على على
+  OCR        : None
+  Combined   :  الجديدة هتبقى ايه? هتبقى الاديمة اللي كانت موجودة على على
+
+[00:24:52]
+  Transcript : 
+  OCR        : None
+  Combined   : 
+
+[00:25:11]
+  Transcript :  تمام اللي هو منزيله لحد ايه? لحد بتاع ايه? بتاع كل اللي
+  OCR        : None
+  Combined   :  تمام اللي هو منزيله لحد ايه? لحد بتاع ايه? بتاع كل اللي
+
+[00:25:21]
+  Transcript :  موجودين في الاجسل. خلاص? طيب ده بقى شكل داتا سات عندي. بيكون
+  OCR        : Dataset | Dataset: | set f actuad inputs | setf actuldesiredoutputs | numerial | one reGard | values | Known ex ampbe
+  Combined   :  موجودين في الاجسل. خلاص? طيب ده بقى شكل داتا سات عندي. بيكون Dataset | Dataset: | set f actuad inputs | setf actuldesiredoutputs | numerial | one reGard | values | Known ex ampbe
+
+[00:25:24]
+  Transcript :  فيها مجموعة من الانبوتس اللي هما الانبوتس من واحد لحد ام يبني عندي
+  OCR        : None
+  Combined   :  فيها مجموعة من الانبوتس اللي هما الانبوتس من واحد لحد ام يبني عندي
+
+[00:25:27]
+  Transcript :  كده ام ايه ام بوتس تمام وبيكون عندي مجموعة من الايه الاؤوتس
+  OCR        : None
+  Combined   :  كده ام ايه ام بوتس تمام وبيكون عندي مجموعة من الايه الاؤوتس
+
+[00:25:33]
+  Transcript :  من واي وان لحد واي ان فانا عندي هنا ان اوت تمام كل رو فيهم
+  OCR        : None
+  Combined   :  من واي وان لحد واي ان فانا عندي هنا ان اوت تمام كل رو فيهم
+
+[00:25:39]
+  Transcript :  بيتسمى ايه ريكورد او بيتسمى نون اجزامبل نون ليه لان الاوبوت
+  OCR        : None
+  Combined   :  بيتسمى ايه ريكورد او بيتسمى نون اجزامبل نون ليه لان الاوبوت
+
+[00:25:43]
+  Transcript :  بتاعه موجود عندي خلاص وده بيكون في هي هي اللي موجودة في
+  OCR        : None
+  Combined   :  بتاعه موجود عندي خلاص وده بيكون في هي هي اللي موجودة في
+
+[00:25:50]
+  Transcript :  ده الكلوم اللي انا هعمل عليه
+  OCR        : None
+  Combined   :  ده الكلوم اللي انا هعمل عليه
+
+[00:26:00]
+  Transcript :  لو تفتكروا. خلاص. دا اللي انا بعمل عليه النورميز shoulders Baum Daniel
+  OCR        : None
+  Combined   :  لو تفتكروا. خلاص. دا اللي انا بعمل عليه النورميز shoulders Baum Daniel
+
+[00:26:03]
+  Transcript :  اه اللي احنا قلنا عليه. تمام? فهنا كده اتاتي عبارة
+  OCR        : None
+  Combined   :  اه اللي احنا قلنا عليه. تمام? فهنا كده اتاتي عبارة
+
+[00:26:09]
+  Transcript :  عن عامل او جنة وتطين ال ايه من الوظفك من الفتراضة ال veel
+  OCR        : None
+  Combined   :  عن عامل او جنة وتطين ال ايه من الوظفك من الفتراضة ال veel
+
+[00:26:31]
+  Transcript :  اليمبوتز والاوتبوت اللي هيتلع من الايه من اليمبوتز دي. خلاص?
+  OCR        : Training FFNN using Genetic | Algorithms | Each chromosome will represent the | set of all weights of the network fixed | and w | length. | Each gene represent 1 weight value. | The chromosome encoding is | floating point. | Network structure: | M inputs, | L nodes in 1 hidden layer | mxllxn | weights | N output
+  Combined   :  اليمبوتز والاوتبوت اللي هيتلع من الايه من اليمبوتز دي. خلاص? Training FFNN using Genetic | Algorithms | Each chromosome will represent the | set of all weights of the network fixed | and w | length. | Each gene represent 1 weight value. | The chromosome encoding is | floating point. | Network structure: | M inputs, | L nodes in 1 hidden layer | mxllxn | weights | N output
+
+[00:26:32]
+  Transcript :  انا اهم حاجة عندي في في اللي انا اعمل لها ايه بعد ما حطيت
+  OCR        : None
+  Combined   :  انا اهم حاجة عندي في في اللي انا اعمل لها ايه بعد ما حطيت
+
+[00:26:37]
+  Transcript :  بتاع النيوران نتورك اه وعملت خلاص? وقسمت الديتا سيت. طيب ازاي
+  OCR        : None
+  Combined   :  بتاع النيوران نتورك اه وعملت خلاص? وقسمت الديتا سيت. طيب ازاي
+
+[00:26:45]
+  Transcript :  بقى هستخدم الديتا سيت دي? وهعمل ايه? هعمل لليه? للنيوران
+  OCR        : None
+  Combined   :  بقى هستخدم الديتا سيت دي? وهعمل ايه? هعمل لليه? للنيوران
+
+[00:26:49]
+  Transcript :  نتورك بتاعتي. احنا اخدنا المرة اللي فاتت ان انا بعمل للا او
+  OCR        : None
+  Combined   :  نتورك بتاعتي. احنا اخدنا المرة اللي فاتت ان انا بعمل للا او
+
+[00:26:53]
+  Transcript : 
+  OCR        : None
+  Combined   : 
+
+[00:27:07]
+  Transcript :  انا محتاجة اعمل علي او ايه اللي انا محتاجة اه اه او ايه اللي
+  OCR        : None
+  Combined   :  انا محتاجة اعمل علي او ايه اللي انا محتاجة اه اه او ايه اللي
+
+[00:27:13]
+  Transcript :  انا مهتمة بالفايوز بتاعته هو الويتس. تمام? طب ايه مين الويتس
+  OCR        : None
+  Combined   :  انا مهتمة بالفايوز بتاعته هو الويتس. تمام? طب ايه مين الويتس
+
+[00:27:17]
+  Transcript :  اللي موجودة عندي? موجود عندي في الهدل لير وموجود عندي ويتس اللي
+  OCR        : None
+  Combined   :  اللي موجودة عندي? موجود عندي في الهدل لير وموجود عندي ويتس اللي
+
+[00:27:20]
+  Transcript :  ايه? بتدخل على خلاص? انا هنا معتبرة ان انا عندي هيدل لير
+  OCR        : None
+  Combined   :  ايه? بتدخل على خلاص? انا هنا معتبرة ان انا عندي هيدل لير
+
+[00:27:26]
+  Transcript :  واحدة. خلاص? فدي دي اللي ما بين اليمبوت لير والهيدل لير. خلاص?
+  OCR        : None
+  Combined   :  واحدة. خلاص? فدي دي اللي ما بين اليمبوت لير والهيدل لير. خلاص?
+
+[00:27:35]
+  Transcript :  فانا عندي ام ايمبوت. تمام? وعندي ال في الهيدل لير. فيبقى انا
+  OCR        : None
+  Combined   :  فانا عندي ام ايمبوت. تمام? وعندي ال في الهيدل لير. فيبقى انا
+
+[00:27:42]
+  Transcript :  عندي كم عندي ام في الال. عدد ايه? اللي دخلة من اليمبوت
+  OCR        : None
+  Combined   :  عندي كم عندي ام في الال. عدد ايه? اللي دخلة من اليمبوت
+
+[00:27:47]
+  Transcript :  للهادن هي ام في الال. طيب? وعدد بقى اللي دخلها من الهادن
+  OCR        : None
+  Combined   :  للهادن هي ام في الال. طيب? وعدد بقى اللي دخلها من الهادن
+
+[00:27:53]
+  Transcript :  لير عددها ال في الان. انا عندي ال في الهادن لير و
+  OCR        : None
+  Combined   :  لير عددها ال في الان. انا عندي ال في الهادن لير و
+
+[00:28:00]
+  Transcript :  وعندي sì في آتبوت
+  OCR        : None
+  Combined   :  وعندي sì في آتبوت
+
+[00:28:11]
+  Transcript :  خلاص كل هيكون ربارها عن عن مجموية الويتس دي خلاص هيكون
+  OCR        : None
+  Combined   :  خلاص كل هيكون ربارها عن عن مجموية الويتس دي خلاص هيكون
+
+[00:28:15]
+  Transcript :  عبارة عن مجموية دي diyor دي Здесьь عددها ولاconscious? لا هي عددها
+  OCR        : None
+  Combined   :  عبارة عن مجموية دي diyor دي Здесьь عددها ولاconscious? لا هي عددها
+
+[00:28:21]
+  Transcript :  فإذا قد هم عندي رباري جدا سيكوني هيبقى
+  OCR        : None
+  Combined   :  فإذا قد هم عندي رباري جدا سيكوني هيبقى
+
+[00:28:24]
+  Transcript :  خدوا بالكم في الفرزي الكروموزوم بيبقى
+  OCR        : None
+  Combined   :  خدوا بالكم في الفرزي الكروموزوم بيبقى
+
+[00:28:28]
+  Transcript :  كيف كان لانه عندي هنا اليوم عندي
+  OCR        : None
+  Combined   :  كيف كان لانه عندي هنا اليوم عندي
+
+[00:28:32]
+  Transcript :  Kollegen
+  OCR        : None
+  Combined   :  Kollegen
+
+[00:28:34]
+  Transcript :  لاني بحط في الكروموزوم
+  OCR        : None
+  Combined   :  لاني بحط في الكروموزوم
+
+[00:28:37]
+  Transcript :  الهيدزة اي اللي تعبر
+  OCR        : None
+  Combined   :  الهيدزة اي اللي تعبر
+
+[00:28:39]
+  Transcript :  في الكريعله شكل ايضا
+  OCR        : None
+  Combined   :  في الكريعله شكل ايضا
+
+[00:28:41]
+  Transcript :  في الاول لدي مح Comium
+  OCR        : None
+  Combined   :  في الاول لدي مح Comium
+
+[00:28:43]
+  Transcript :  وتفتل ايضا
+  OCR        : None
+  Combined   :  وتفتل ايضا
+
+[00:28:46]
+  Transcript :  سوف دخلف الجيل أو دخل المحفظ
+  OCR        : None
+  Combined   :  سوف دخلف الجيل أو دخل المحفظ
+
+[00:28:48]
+  Transcript :  الشائف الم matching
+  OCR        : None
+  Combined   :  الشائف الم matching
+
+[00:28:49]
+  Transcript :  اليكن
+  OCR        : None
+  Combined   :  اليكن
+
+[00:28:51]
+  Transcript :  سوف يبقى الهيدن
+  OCR        : None
+  Combined   :  سوف يبقى الهيدن
+
+[00:28:52]
+  Transcript :  هذا الت between
+  OCR        : None
+  Combined   :  هذا الت between
+
+[00:28:53]
+  Transcript :  E E output layer E
+  OCR        : None
+  Combined   :  E E output layer E
+
+[00:29:05]
+  Transcript :  كان في الهادى الاير او في الاوتبوت لير. تمام? طيب. يبقى
+  OCR        : None
+  Combined   :  كان في الهادى الاير او في الاوتبوت لير. تمام? طيب. يبقى
+
+[00:29:11]
+  Transcript :  بتاع الكروموزوم? هو الويد ده بيبقى بتاعته ايه? غالباً بتبقى
+  OCR        : None
+  Combined   :  بتاع الكروموزوم? هو الويد ده بيبقى بتاعته ايه? غالباً بتبقى
+
+[00:29:15]
+  Transcript :  ايه فلوتنج بوينت. فاحنا عاملين الانكودنج فلوتنج بوينت. تمام?
+  OCR        : None
+  Combined   :  ايه فلوتنج بوينت. فاحنا عاملين الانكودنج فلوتنج بوينت. تمام?
+
+[00:29:20]
+  Transcript :  اه وده على اي الاجزامبل ده على اي على ان انا عندي
+  OCR        : None
+  Combined   :  اه وده على اي الاجزامبل ده على اي على ان انا عندي
+
+[00:29:35]
+  Transcript :  بتاعي والن وده شكل اي شكل الكروموزومي طيب ايه بقى اللي
+  OCR        : Design the Genetic Algorithm | Initialization: Randomly initialize the population | Fitness: Mean-square error is used. | - For each chromosome: Run FFNN with chromosome | weights over Dataset. | - Get MSE on output layer. | Crossover operator: single point | Mutation operator: Non-uniform floating point | Selection Strategy: Roulette wheel selection | - Area of each chromosome  1 fitness | Replacement strategy: Elitism strategy
+  Combined   :  بتاعي والن وده شكل اي شكل الكروموزومي طيب ايه بقى اللي Design the Genetic Algorithm | Initialization: Randomly initialize the population | Fitness: Mean-square error is used. | - For each chromosome: Run FFNN with chromosome | weights over Dataset. | - Get MSE on output layer. | Crossover operator: single point | Mutation operator: Non-uniform floating point | Selection Strategy: Roulette wheel selection | - Area of each chromosome  1 fitness | Replacement strategy: Elitism strategy
+
+[00:29:36]
+  Transcript :  هعمله في في الجينتيك ألغوريزم نفس اللي كنت بعمله بتاعي
+  OCR        : None
+  Combined   :  هعمله في في الجينتيك ألغوريزم نفس اللي كنت بعمله بتاعي
+
+[00:29:42]
+  Transcript :  الجينتيك ألغوريزم نفس النسطه خلاص هعمل بتاعي
+  OCR        : None
+  Combined   :  الجينتيك ألغوريزم نفس النسطه خلاص هعمل بتاعي
+
+[00:29:48]
+  Transcript :  وهعملوا ايه? هعملوا خلاص. اه بعد كده هحسب الفتنس بتاعت كل
+  OCR        : None
+  Combined   :  وهعملوا ايه? هعملوا خلاص. اه بعد كده هحسب الفتنس بتاعت كل
+
+[00:29:53]
+  Transcript :  كروموزوم. ايه الفتنس بتاعتي هنا? الفتنس بتاعتي هنا هي ال
+  OCR        : None
+  Combined   :  كروموزوم. ايه الفتنس بتاعتي هنا? الفتنس بتاعتي هنا هي ال
+
+[00:29:56]
+  Transcript :  خلاص. اه
+  OCR        : None
+  Combined   :  خلاص. اه
+
+[00:30:00]
+  Transcript :  لكل كروموزوم. طب المين سكوير ارور ده هحسبه ازاي? همسك كل
+  OCR        : None
+  Combined   :  لكل كروموزوم. طب المين سكوير ارور ده هحسبه ازاي? همسك كل
+
+[00:30:05]
+  Transcript :  كروموزوم وهرن عليه ايه? وهرن النتورك كده عادي بالايه? بال
+  OCR        : None
+  Combined   :  كروموزوم وهرن عليه ايه? وهرن النتورك كده عادي بالايه? بال
+
+[00:30:15]
+  Transcript :  بالداتا سات بتاعتي. بالداتا سات يعني ايه? بواحد واحد في
+  OCR        : None
+  Combined   :  بالداتا سات بتاعتي. بالداتا سات يعني ايه? بواحد واحد في
+
+[00:30:19]
+  Transcript :  الترينج ايه? واحد واحد في الترينج سامبلز. ابتدي ارن
+  OCR        : None
+  Combined   :  الترينج ايه? واحد واحد في الترينج سامبلز. ابتدي ارن
+
+[00:30:25]
+  Transcript :  ادخل واستخدم اللي موجودة في الكروموزوم ده واحسب اللي موجودة ré
+  OCR        : None
+  Combined   :  ادخل واستخدم اللي موجودة في الكروموزوم ده واحسب اللي موجودة ré
+
+[00:30:41]
+  Transcript :  في الكروموزوم واحسب اللي موجودة في الكروموزوم واحسب
+  OCR        : None
+  Combined   :  في الكروموزوم واحسب اللي موجودة في الكروموزوم واحسب
+
+[00:30:44]
+  Transcript :  وقعد اجمع اجمع في دي خلاص لنفس مناخ لكروموزوم
+  OCR        : None
+  Combined   :  وقعد اجمع اجمع في دي خلاص لنفس مناخ لكروموزوم
+
+[00:30:49]
+  Transcript :  في الاخر اطلع ايه اطلع للكروموزوم ده خلاص على كل
+  OCR        : None
+  Combined   :  في الاخر اطلع ايه اطلع للكروموزوم ده خلاص على كل
+
+[00:30:54]
+  Transcript : 
+  OCR        : None
+  Combined   : 
+
+[00:31:25]
+  Transcript :  خلاص. آآ الميوتيشن بقى الميوتيشن اللي هنستخدمه بما انه هو فانسب
+  OCR        : None
+  Combined   :  خلاص. آآ الميوتيشن بقى الميوتيشن اللي هنستخدمه بما انه هو فانسب
+
+[00:31:33]
+  Transcript :  حاجة هتكون ايه? طمام? بعد كده هنستخدم العادي بحيث ان الاريا
+  OCR        : None
+  Combined   :  حاجة هتكون ايه? طمام? بعد كده هنستخدم العادي بحيث ان الاريا
+
+[00:31:44]
+  Transcript :  بتاعت كل كروموزوم بتساوي واحد على بتاعته بتاعته. بتاعت الكروموزوم
+  OCR        : None
+  Combined   :  بتاعت كل كروموزوم بتساوي واحد على بتاعته بتاعته. بتاعت الكروموزوم
+
+[00:31:52]
+  Transcript :  لان احنا بنعمل وبعد كده سنستخدم ال اي ال ال ال ال
+  OCR        : None
+  Combined   :  لان احنا بنعمل وبعد كده سنستخدم ال اي ال ال ال ال
+
+[00:32:00]
+  Transcript :  خلاص. نستخدم. وبكده انا هقدر اعمل بتاعتي باستخدام خلاص. طيب
+  OCR        : None
+  Combined   :  خلاص. نستخدم. وبكده انا هقدر اعمل بتاعتي باستخدام خلاص. طيب
+
+[00:32:11]
+  Transcript :  ايه طريقة تانية بقى هعمل بيها زي ما قلنا اه في المحضرة اللي
+  OCR        : Training FFNN using Back propagation | Randomly initialize weights. | 2.Apply feed forward pass with one input record. | 3.Calculate the total error on output layer. | - If total error  accepted value then stop | -Else continue | Apply backward pass. | 5.Update weights. | 6. Go to step 2. | When all records of training are attempted, then one | epoch is done. | Usually thousands of epochs are executed to get the | final weights for a trained network
+  Combined   :  ايه طريقة تانية بقى هعمل بيها زي ما قلنا اه في المحضرة اللي Training FFNN using Back propagation | Randomly initialize weights. | 2.Apply feed forward pass with one input record. | 3.Calculate the total error on output layer. | - If total error  accepted value then stop | -Else continue | Apply backward pass. | 5.Update weights. | 6. Go to step 2. | When all records of training are attempted, then one | epoch is done. | Usually thousands of epochs are executed to get the | final weights for a trained network
+
+[00:32:16]
+  Transcript :  فتت انا بعمل ايه بشتغل بالباك بروباجيشن ايه خلاص طيب عشان
+  OCR        : None
+  Combined   :  فتت انا بعمل ايه بشتغل بالباك بروباجيشن ايه خلاص طيب عشان
+
+[00:32:22]
+  Transcript :  اشتغل بالباك بروباجيشن ايه اللي بيحصل دي اللي بتاعتي اول
+  OCR        : None
+  Combined   :  اشتغل بالباك بروباجيشن ايه اللي بيحصل دي اللي بتاعتي اول
+
+[00:32:26]
+  Transcript :  حاجة بقى اه وبعمل دايما ده خلاص بعدين على ايه على في
+  OCR        : None
+  Combined   :  حاجة بقى اه وبعمل دايما ده خلاص بعدين على ايه على في
+
+[00:32:38]
+  Transcript :  الترينينج آآ سات بتاعتي خلاص خلاص تمام وبعد كده بعد ما خلصت
+  OCR        : None
+  Combined   :  الترينينج آآ سات بتاعتي خلاص خلاص تمام وبعد كده بعد ما خلصت
+
+[00:32:47]
+  Transcript :  بحسب الايه بحسب الارور وبحسبوه من زي ما اخدنا لو الارور ده
+  OCR        : None
+  Combined   :  بحسب الايه بحسب الارور وبحسبوه من زي ما اخدنا لو الارور ده
+
+[00:32:54]
+  Transcript : 
+  OCR        : None
+  Combined   : 
+
+[00:33:07]
+  Transcript :  التوتال ارور ده كان اكبر من ال انا حطوها دي يبقى انا ايه
+  OCR        : None
+  Combined   :  التوتال ارور ده كان اكبر من ال انا حطوها دي يبقى انا ايه
+
+[00:33:12]
+  Transcript :  هكمل في الايه في الالجوريزم او هكمل في بقى اللي ستبس ايه بقى
+  OCR        : None
+  Combined   :  هكمل في الايه في الالجوريزم او هكمل في بقى اللي ستبس ايه بقى
+
+[00:33:17]
+  Transcript :  اللي هعمله هقبله ايه باكورد بوس هعمل باكبروباجيشن ايه بوس
+  OCR        : None
+  Combined   :  اللي هعمله هقبله ايه باكورد بوس هعمل باكبروباجيشن ايه بوس
+
+[00:33:21]
+  Transcript :  تمام? طيب بعد ما بعمل ايه? بعمل في الويتز. يعني بعمله
+  OCR        : None
+  Combined   :  تمام? طيب بعد ما بعمل ايه? بعمل في الويتز. يعني بعمله
+
+[00:33:28]
+  Transcript :  اصلا علشان ايه? علشان احسن في الويتز بتاعتي. حسنت الويتز
+  OCR        : None
+  Combined   :  اصلا علشان ايه? علشان احسن في الويتز بتاعتي. حسنت الويتز
+
+[00:33:32]
+  Transcript :  هبتدي بقى ارجع للايه? للاستاب رقم اتنين انت هي كنت بعمل فيها
+  OCR        : None
+  Combined   :  هبتدي بقى ارجع للايه? للاستاب رقم اتنين انت هي كنت بعمل فيها
+
+[00:33:36]
+  Transcript :  بالايه بالويتز الجديدة بقى اللي انا حسنتها دي اللي انا
+  OCR        : None
+  Combined   :  بالايه بالويتز الجديدة بقى اللي انا حسنتها دي اللي انا
+
+[00:33:40]
+  Transcript :  عدلتها. بس المرة دي هعمل بقى ده على ايه مش على نفس على
+  OCR        : None
+  Combined   :  عدلتها. بس المرة دي هعمل بقى ده على ايه مش على نفس على
+
+[00:33:46]
+  Transcript :  واحد تاني انت بعده. تمام? على اللي بعده في خلاص. وافضل كده
+  OCR        : None
+  Combined   :  واحد تاني انت بعده. تمام? على اللي بعده في خلاص. وافضل كده
+
+[00:33:51]
+  Transcript :  الحد ايه وامشي كده الحد
+  OCR        : None
+  Combined   :  الحد ايه وامشي كده الحد
+
+[00:33:53]
+  Transcript :  ستاب سيكس وبعدين ارجع على ستاب تو
+  OCR        : None
+  Combined   :  ستاب سيكس وبعدين ارجع على ستاب تو
+
+[00:33:55]
+  Transcript :  واخد ايه واخد
+  OCR        : None
+  Combined   :  واخد ايه واخد
+
+[00:33:56]
+  Transcript :  الامتر ايكورد اللي بعده وهكذا
+  OCR        : None
+  Combined   :  الامتر ايكورد اللي بعده وهكذا
+
+[00:33:59]
+  Transcript :  الحد ما خلص
+  OCR        : None
+  Combined   :  الحد ما خلص
+
+[00:34:00]
+  Transcript :  كل الايه كل الترينج ايه او كل الامبالز اللي موجودة في الترينج
+  OCR        : None
+  Combined   :  كل الايه كل الترينج ايه او كل الامبالز اللي موجودة في الترينج
+
+[00:34:05]
+  Transcript :  سات بتاعتي خلاص طيب اه لما بستخدم الركورز كل الركورز اللي
+  OCR        : None
+  Combined   :  سات بتاعتي خلاص طيب اه لما بستخدم الركورز كل الركورز اللي
+
+[00:34:13]
+  Transcript :  موجودة في الترينج سات اه بتاعتي خلاص بحس وبابضيت على اساسها
+  OCR        : None
+  Combined   :  موجودة في الترينج سات اه بتاعتي خلاص بحس وبابضيت على اساسها
+
+[00:34:18]
+  Transcript :  الويتز في الوقت ده انا كده عملت في الايه في النيورون نتورك
+  OCR        : None
+  Combined   :  الويتز في الوقت ده انا كده عملت في الايه في النيورون نتورك
+
+[00:34:23]
+  Transcript :  ترينج. في نيورا نتورك ترينج اللي هي بنسميها ايه خلاص? بنسميها
+  OCR        : None
+  Combined   :  ترينج. في نيورا نتورك ترينج اللي هي بنسميها ايه خلاص? بنسميها
+
+[00:34:29]
+  Transcript :  ايبك. طمام? ده لما بخلص كل الموجودة عندي في الداتا سات. طيب
+  OCR        : None
+  Combined   :  ايبك. طمام? ده لما بخلص كل الموجودة عندي في الداتا سات. طيب
+
+[00:34:35]
+  Transcript :  الترينج بقى بتاع بتاع النتورك بيحتاج ان انا اعمل ايه? عداد
+  OCR        : None
+  Combined   :  الترينج بقى بتاع بتاع النتورك بيحتاج ان انا اعمل ايه? عداد
+
+[00:34:40]
+  Transcript :  كبيرة جدا من الايه من دي. خلاص? علشان فعلا يحصل ترينج. واوصل
+  OCR        : None
+  Combined   :  كبيرة جدا من الايه من دي. خلاص? علشان فعلا يحصل ترينج. واوصل
+
+[00:34:47]
+  Transcript :  في الايه خلل ايه? لا احسن ممكن ايه? ممكن تحل البروبريم بتاعتي.
+  OCR        : None
+  Combined   :  في الايه خلل ايه? لا احسن ممكن ايه? ممكن تحل البروبريم بتاعتي.
+

@@ -1,5 +1,8 @@
 import { Video } from "lucide-react";
 import { UploadBtn } from "../componants/upload_btn";
+import { useVideoId } from "../../../../core/hooks/useVideoId";
+import { AppRoutesNames } from "../../../../app/routers/routes";
+import { useNavigate } from "react-router";
 
 type UploadLoadingSectionProps = {
   title: string;
@@ -12,6 +15,8 @@ export function UploadLoadingSection({
   handleCancel,
   progress,
 }: UploadLoadingSectionProps) {
+  const {videoId}=useVideoId()
+  const navigate=useNavigate()
   return (
     <>
       <div className=" bg-gray-50  w-full flex   mt-10 py-12 border-2  border-gray-200 rounded-2xl   mb-10">
@@ -51,7 +56,7 @@ export function UploadLoadingSection({
               disabled={progress!=100}
               label="Analyze Video"
               onClick={()=>{
-                // go to analyze api
+               if(videoId)  navigate(AppRoutesNames.ProcessingPage,{ replace: true });
               }}
             />
 

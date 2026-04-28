@@ -1,22 +1,54 @@
-import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
+import { QueryClient } from "@tanstack/react-query";
+import { PersistQueryClientProvider } from "@tanstack/react-query-persist-client";
+import { createSyncStoragePersister } from "@tanstack/query-sync-storage-persister";
+
 import { LanguageProvider } from "../../core/contexts/languageContext/languageProvider";
 import { useScrollRestore } from "../../core/hooks/useScrollRestore";
 import { IntWrapper } from "../../core/l10n/intWrapper";
 import { AuthProvider } from "../../features/auth/presentation/context/auth_provider";
+import { VideoIdProvider } from "../../core/contexts/VideoContext/videoIdProvider";
 
-const queryClient = new QueryClient();
+const queryClient = new QueryClient({
+  defaultOptions: {
+    queries: {
+      staleTime: Infinity,
+      gcTime: 1000 * 60 * 60 * 24, 
+    },
+  },
+});
+
+const persister = createSyncStoragePersister({
+  storage: window.localStorage,
+  serialize: (data) => {
+    console.log("💾 Saving to localStorage");
+    return JSON.stringify(data);
+  },
+  deserialize: (data) => {
+    console.log("📦 Restoring from localStorage");
+    return JSON.parse(data);
+  },
+});
 
 export function AppProviders({ children }: { children: React.ReactNode }) {
-    useScrollRestore();
+  useScrollRestore();
+
   return (
-    <QueryClientProvider client={queryClient}>
+    <PersistQueryClientProvider
+      client={queryClient}
+      persistOptions={{
+        persister,
+        maxAge: 1000 * 60 * 60 * 24, 
+      }}
+    >
       <AuthProvider>
         <LanguageProvider>
           <IntWrapper>
-            {children}
+            <VideoIdProvider>
+              {children}
+            </VideoIdProvider>
           </IntWrapper>
         </LanguageProvider>
       </AuthProvider>
-    </QueryClientProvider>
+    </PersistQueryClientProvider>
   );
 }

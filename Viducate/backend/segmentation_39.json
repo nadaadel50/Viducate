@@ -1,0 +1,202 @@
+{
+  "total_segments": 7,
+  "segments": [
+    {
+      "segment_number": 1,
+      "start_time": "00:00:02",
+      "end_time": "00:01:43",
+      "main_topic": "مقدمة في نظام الفازي",
+      "title": "مقدمة في نظام الفازي",
+      "sub_topics": [
+        {
+          "name": "تعريف نظام الفازي",
+          "start_time": "00:00:02",
+          "end_time": "00:00:20",
+          "description": "نبتدي. طيب احنا هنكمل الفازي كنترول سيستم. Fuzzy Logic | Control | Sabah Sayed | Department of Computer Science | Faculty of Computers and Artificial Intelligence | Cairo University | Egypt | 5192021"
+        },
+        {
+          "name": "خلفية عن نظام الفازي",
+          "start_time": "00:00:20",
+          "end_time": "00:00:27",
+          "description": "زي ما اتفقنا عكده ادي آآ بيتعامل بأكثر من طريقة. Defuzzification Techniques | 1- Max membership principle: Also known as the | height method, this scheme is limited to peaked | output functions."
+        },
+        {
+          "name": "أهمية نظام الفازي",
+          "start_time": "00:00:27",
+          "end_time": "00:01:14",
+          "description": "خلاص? اي اي اول طريقة اسمها ودي بحاول اجيب فيها اللي عندها بيبقى اهلا هي اللي باخدها وبادروا فيها. تمام? هم كلهم بيختلفوا بس في ايه انا اخدها اللي هي خلاص اللي هي على"
+        },
+        {
+          "name": "نظام الفازي ودوره في prise دي سيزيون",
+          "start_time": "00:01:14",
+          "end_time": "00:01:43",
+          "description": "هي دي زت زت ستار بتاعتك. طيب. لو انا Defuzzification Techniques | 2- Mean Max membership: This method also | called middle-of-maxima is closely related to | the first method, except that the locations of the | maximum membership can be nonuniqe i.e., | the maximum membership can be a plateau | rather than a single point."
+        }
+      ],
+      "key_points": [
+        "نظام الفازي هو نظام يعتمد على المنطق المضبب",
+        "النظام الفازي له دور重要 في prise دي سيزيون",
+        "نظام الفازي يستخدم في很多 المجالات"
+      ]
+    },
+    {
+      "segment_number": 2,
+      "start_time": "00:01:43",
+      "end_time": "00:04:05",
+      "main_topic": "تقنيات التفكيك",
+      "title": "تقنيات التفكيك",
+      "sub_topics": [
+        {
+          "name": "تقنية центроيد",
+          "start_time": "00:01:43",
+          "end_time": "00:02:00",
+          "description": "دي كأنك بتعمل ايه? كأنك بتعمل التكامل ده بتاع الماز. خلاص? كأنك بتعمل التكامل. ده بتاعه. طيب."
+        },
+        {
+          "name": "تقنية المعدل المرجح",
+          "start_time": "00:02:00",
+          "end_time": "00:02:30",
+          "description": " الطريقة الرابعة زي الطريقة اللي احنا بنستخدمها ودي اللي انتو Defuzzification Techniques | 4 - Weighted average method: The weighted average | method is the most frequently used in fuzzy applications | since it is one of the more computationally efficient | methods."
+        },
+        {
+          "name": " مثال على تقنية المعدل المرجح",
+          "start_time": "00:02:30",
+          "end_time": "00:04:05",
+          "description": "هتعملوها في اللي انتو هتستخدموها في اللي هي زي ما انا كنت شرحتها لكم في من شوية ان انا بجيب هنا هي تمام? طيب والسنترويد ده بحسبه ازاي?"
+        }
+      ],
+      "key_points": [
+        "تقنية центроيد هي تقنية شائعة في نظام الفازي",
+        "تقنية المعدل المرجح هي تقنية أخرى شائعة في نظام الفازي",
+        "تقنية المعدل المرجح تعتمد على تحويل الإدخال إلىخرج"
+      ]
+    },
+    {
+      "segment_number": 3,
+      "start_time": "00:04:05",
+      "end_time": "00:11:14",
+      "main_topic": "استخدام نظام الفازي في prise دي سيزيون",
+      "title": "استخدام نظام الفازي في prise دي سيزيون",
+      "sub_topics": [
+        {
+          "name": "مثال على استخدام نظام الفازي في prise دي سيزيون",
+          "start_time": "00:04:05",
+          "end_time": "00:06:00",
+          "description": "بتاعتتي. ونضرب ونقسم على اي مجموعهم. كده يبطلعنا ال اي بتاعت الاوتوت. في دي خلاص. طيب. الفاضي في اكتر من فاضي في Defuzzification Techniques | 4- Weighted average method: getting the centroid | The centroid of symmetrical fuzzy sets is the center | point on the x-axis."
+        },
+        {
+          "name": "شرح مثال على استخدام نظام الفازي في prise دي سيزيون",
+          "start_time": "00:06:00",
+          "end_time": "00:11:14",
+          "description": "اللي هو ايه? برسم الفاضي بتاعتي وبعرف اجيب الايه? بتاعت خلاص في الفاضي ايه? دي. تمام? عملناها كزا مرة في وخلاص بقى انتم كده فهمتوها."
+        }
+      ],
+      "key_points": [
+        "نظام الفازي يمكن sử dụng في prise دي سيزيون",
+        "نظام الفازي يمكن أن يساعد في prise دي سيزيون",
+        "نظام الفازي يمكن أن يزيد دقة prise دي سيزيون"
+      ]
+    },
+    {
+      "segment_number": 4,
+      "start_time": "00:11:14",
+      "end_time": "00:16:16",
+      "main_topic": "التطبيق العملي لنظام الفازي",
+      "title": "التطبيق العملي لنظام الفازي",
+      "sub_topics": [
+        {
+          "name": "التطبيق العملي لنظام الفازي",
+          "start_time": "00:11:14",
+          "end_time": "00:13:39",
+          "description": "انا انا ما فيمتش خطة دي. انا فيمتش خطة. انا فيمتش خطة. Step 1: Fuzzification | y2xb | L1: 1-get 2 points on the line:0,1, 50,0 | 2-get slope y2-y1x2-x1 0-150-0 -150 | 3-line equation: y ax b a slope | 4-line equation: y -x50 b, substitute by one of | the points to get b."
+        },
+        {
+          "name": "التطبيق العملي لنظام الفازي",
+          "start_time": "00:13:39",
+          "end_time": "00:16:16",
+          "description": "دي؟ Step 2: Rule Evaluation | Rude 1: IF x is A3 0.0 | y is B1 0.1 | THEN | is C1 0.1 | Rule 2: IF | xs A2 0.2ANDy is B2 0.7 | THEN | z is C2 Q.2 | Rule 3: IF xis A1 | THEN | is C3 0.5"
+        }
+      ],
+      "key_points": [
+        "نظام الفازي يمكن تطبيقه عمليا",
+        "نظام الفازي يمكن تطبيقه في 많은 المجالات",
+        "نظام الفازي يمكن أن يزيد دقة التطبيق العملي"
+      ]
+    },
+    {
+      "segment_number": 5,
+      "start_time": "00:17:27",
+      "end_time": "00:18:26",
+      "main_topic": "طريقة العرض",
+      "title": "شرح طريقة العرض",
+      "sub_topics": [
+        {
+          "name": "محتوى الطريقة",
+          "start_time": "00:17:27",
+          "end_time": "00:17:43",
+          "description": "العشان اعمل يبقى محتاج احسب بتاع كل فازي ست. بتاع الفازي ست اللي هي سي وان. هتبقى ايه قلنا بنجمع عدد النقط بنجمع النقط بنقسم على عددهم."
+        },
+        {
+          "name": "تطبيق الطريقة",
+          "start_time": "00:17:43",
+          "end_time": "00:18:26",
+          "description": "خلاص النقط بتاعتي كان زيرو زيرو وصيرتي وفيفتي جمعتهم مع بعض وقسمت على الفور. فادديني ده الايه? بتاع وهكذا عملت في وفي خلاص طلعت هعمل ايه? هاضرب كل في بتاعها. وجمعهم واقسم على المجموعة بتاعي ايه? طلع لي ايه? خمسة وستين."
+        }
+      ],
+      "key_points": [
+        "تحديد طريقة العرض",
+        "تطبيق الطريقة على النقط"
+      ]
+    },
+    {
+      "segment_number": 6,
+      "start_time": "00:18:26",
+      "end_time": "00:20:41",
+      "main_topic": "فوزيفاي",
+      "title": "شرح فوزيفاي",
+      "sub_topics": [
+        {
+          "name": "تعريف فوزيفاي",
+          "start_time": "00:18:26",
+          "end_time": "00:18:35",
+          "description": "بتطلعه على حسب الطريقة. طيب ايه الطريقة المفضلة? ايه? Step 4: Defuzzification weighted | average | Another method is weighted average method where centroid of each | of the fuzzy sets is weighted by the membership value, divided by the | sum of memberships."
+        },
+        {
+          "name": "تطبيق فوزيفاي",
+          "start_time": "00:18:35",
+          "end_time": "00:20:41",
+          "description": "ودي اللي انت برضو هتشتغلوا بيه. يبقى في بتاعتي محتاجة اعمل ان انا هحسب لالفوز اللي عندي. ان انا ايه اجمع على حسب Lati Data Classes Data Lab ونحن في البداية نحن نقوم بعمل شيء مثل الفاظي فاظي فاظي فاظي دي اللي نحن نحدد هو مكانها فين كل نقطة مكانها فين الوائي بتاعها هذا اللي بيقابلك فين ماشي؟"
+        }
+      ],
+      "key_points": [
+        "تعريف فوزيفاي",
+        "تطبيق فوزيفاي"
+      ]
+    },
+    {
+      "segment_number": 7,
+      "start_time": "00:20:41",
+      "end_time": "00:23:16",
+      "main_topic": "تطبيق الفوزيفاي",
+      "title": "تطبيق الفوزيفاي على النقط",
+      "sub_topics": [
+        {
+          "name": "توضيح التطبيق",
+          "start_time": "00:20:41",
+          "end_time": "00:21:20",
+          "description": "ما عليشش يا دكتور ما عليشش مسا هي النت كان فيه مشكلة التلوات الفوزيفاي دي دي اللي هي الخطوة اللي احنا منحقدت زي ما احنا قلنا اللي هي مكانها على الوعي صح؟"
+        },
+        {
+          "name": "التطبيق الفعلي",
+          "start_time": "00:21:20",
+          "end_time": "00:23:16",
+          "description": "يعني ابتدي قبل ايه الرول بتاعتي. رول وان بتقولي لو هو في الفازي ست الفلانية فاجيب الدجري اوف ممبرشب بتاعتها. عند ولا اور مع فازي ست تانية اروح اجيب التجريه في ممبرشاب. واشوف الرقمين هاخد منهم الميلمم ولا الماكسيم. ولا هاخد الرقم زي ما هو. لو هو الواحد ما فيش كنكتر. ماشي. تمام تمام يا دكتور. وبعد ما احنا عملنا الانفلنس. بنبتدي ان احنا نعمل خططة. دي فوزي فيكيشن ان احنا بنبتدي نحصل اللي هي الويتد مين او نشوف التكامل اللي حتة الوردي صح؟"
+        }
+      ],
+      "key_points": [
+        "توضيح التطبيق",
+        "التطبيق الفعلي"
+      ]
+    }
+  ]
+}

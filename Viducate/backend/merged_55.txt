@@ -1,0 +1,1075 @@
+[00:00:04]
+  Transcript :  السلام عليكم
+  OCR        : Fundamentals of Programming
+  Combined   :  السلام عليكم Fundamentals of Programming
+
+[00:00:06]
+  Transcript :  السلام عليكم
+  OCR        : Fundamentals | Programming | Variables | Naming | Rules | Best | Practices
+  Combined   :  السلام عليكم Fundamentals | Programming | Variables | Naming | Rules | Best | Practices
+
+[00:00:12]
+  Transcript :  السلام عليكم
+  OCR        : File | Edit | Selection View Go Run Terminal Help | Fundamentals Administrator | C app.cpp | Variables NamingRules -Best-Practices | Naming Rules | MustBe Unique | Case-Sensitive | Cannot | Start | WithNumbers | Nums | Letters | Underscore | No White | Space | Special Characters | Reserved Keywords | Class, | Public | Best-Practices | Related-Names | Writing Style | include iostream | Ln 8, Col 36 | Spaces: 2 | UTF-8 | 12192022
+  Combined   :  السلام عليكم File | Edit | Selection View Go Run Terminal Help | Fundamentals Administrator | C app.cpp | Variables NamingRules -Best-Practices | Naming Rules | MustBe Unique | Case-Sensitive | Cannot | Start | WithNumbers | Nums | Letters | Underscore | No White | Space | Special Characters | Reserved Keywords | Class, | Public | Best-Practices | Related-Names | Writing Style | include iostream | Ln 8, Col 36 | Spaces: 2 | UTF-8 | 12192022
+
+[00:00:30]
+  Transcript :  اللي الناس بتستعملها وهي بتختار اسم المتغير. هنشوف الكلام ده
+  OCR        : File | Edit | Selection View Go Run Terminal Help | Fundamentals Administrator | C app.cpp | Variables-NamingRules Best Practices | NamingRules | Must Be Unique | Case-Sensitive | Cannot | Start | With Numbers | Nums | Letters | Underscore | White | Space | Special | lCharacters | Reserved Keywords | Class, | Public | Best-Practices | Related-Names | WritingStyle | include iostream | Ln 2, Col 42 14 selected | Spaces: 2 | UTF-8 | 1Z192022
+  Combined   :  اللي الناس بتستعملها وهي بتختار اسم المتغير. هنشوف الكلام ده File | Edit | Selection View Go Run Terminal Help | Fundamentals Administrator | C app.cpp | Variables-NamingRules Best Practices | NamingRules | Must Be Unique | Case-Sensitive | Cannot | Start | With Numbers | Nums | Letters | Underscore | White | Space | Special | lCharacters | Reserved Keywords | Class, | Public | Best-Practices | Related-Names | WritingStyle | include iostream | Ln 2, Col 42 14 selected | Spaces: 2 | UTF-8 | 1Z192022
+
+[00:00:34]
+  Transcript :  بالتفصيل معناه ايه? وهنقارم بينهم واحدة واحدة بالتجارب العملية.
+  OCR        : None
+  Combined   :  بالتفصيل معناه ايه? وهنقارم بينهم واحدة واحدة بالتجارب العملية.
+
+[00:00:37]
+  Transcript :  اول حاجة عندنا محتاجين نتأكد منها انه اسم المتغير يونيك نيم.
+  OCR        : None
+  Combined   :  اول حاجة عندنا محتاجين نتأكد منها انه اسم المتغير يونيك نيم.
+
+[00:00:46]
+  Transcript :  يعني اسم المتغير بتاعنا لازم يكون مميز وميفيهش يتكرر اكتر من مرة.
+  OCR        : File | Edit | Selection View Go Run Terminal Help | Fundamentals Administrator | app.cpp | Best-Practices | Related-Names | Writing-Style | include iostream | usingnamespace std; | int main | return0; | Ln 5, Col 21 | Spaces: 2 | UTF-8
+  Combined   :  يعني اسم المتغير بتاعنا لازم يكون مميز وميفيهش يتكرر اكتر من مرة. File | Edit | Selection View Go Run Terminal Help | Fundamentals Administrator | app.cpp | Best-Practices | Related-Names | Writing-Style | include iostream | usingnamespace std; | int main | return0; | Ln 5, Col 21 | Spaces: 2 | UTF-8
+
+[00:00:46]
+  Transcript :  تعال نشوف الكلام ده معناه ايه? انت بيساوي مية. السطر ده شباب
+  OCR        : None
+  Combined   :  تعال نشوف الكلام ده معناه ايه? انت بيساوي مية. السطر ده شباب
+
+[00:00:52]
+  Transcript :  declare a new variable declare declare price price declare update the value
+  OCR        : File | Edit | Selection View Go Run Terminal Help | Fundamentals Administrator | app.cpp | Best-Practices | RelatedNames | Writing Style | include iostream | usingnamespace std; | int main | intprice 100; Dec | return 0; | Ln 22, Col 25 Spaces: 2 | UTF-8 | 1Z192022
+  Combined   :  declare a new variable declare declare price price declare update the value File | Edit | Selection View Go Run Terminal Help | Fundamentals Administrator | app.cpp | Best-Practices | RelatedNames | Writing Style | include iostream | usingnamespace std; | int main | intprice 100; Dec | return 0; | Ln 22, Col 25 Spaces: 2 | UTF-8 | 1Z192022
+
+[00:01:04]
+  Transcript :  declare a new variable declare declare price price declare update the value
+  OCR        : File | Edit | Selection View Go Run Terminal Help | Fundamentals Administrator | app.cpp | Best-Practices | RelatedNames | Writing Style | includeiostream | usingnamespacestd; | int price | int ma | Declare A New Variable | intprice 100;   Declare-A-New-Variable | price 200; | return 0; | Ln 23, Col 19 Spaces: 2 | UTF-8 | 12192022
+  Combined   :  declare a new variable declare declare price price declare update the value File | Edit | Selection View Go Run Terminal Help | Fundamentals Administrator | app.cpp | Best-Practices | RelatedNames | Writing Style | includeiostream | usingnamespacestd; | int price | int ma | Declare A New Variable | intprice 100;   Declare-A-New-Variable | price 200; | return 0; | Ln 23, Col 19 Spaces: 2 | UTF-8 | 12192022
+
+[00:01:06]
+  Transcript :  declare a new variable declare declare price price declare update the value
+  OCR        : File | Edit | Selection View Go Run Terminal Help | Fundamentals Administrator | app.cpp | Best-Practices | Related-Names | Writing Style | include iostream | usingnamespace std; | price | Declare A New Variable Declare A- New- Variable | price 200; | return 0; | Ln 23, Col 19 | Spaces: 2 | UTF-8 | 1Z192022
+  Combined   :  declare a new variable declare declare price price declare update the value File | Edit | Selection View Go Run Terminal Help | Fundamentals Administrator | app.cpp | Best-Practices | Related-Names | Writing Style | include iostream | usingnamespace std; | price | Declare A New Variable Declare A- New- Variable | price 200; | return 0; | Ln 23, Col 19 | Spaces: 2 | UTF-8 | 1Z192022
+
+[00:01:08]
+  Transcript :  declare a new variable declare declare price price declare update the value
+  OCR        : File | Edit | Selection View Go Run Terminal Help | Fundamentals Administrator | app.cpp | Best-Practices | Related-Names | Writing Style | include iostream | usingnamespace std; | int main | intprice 100;  DeclareA New-Variable | price 200;  Update T | return 0; | Ln 23, Col 27 | Spaces: 2 | UTF-8 | 2192022
+  Combined   :  declare a new variable declare declare price price declare update the value File | Edit | Selection View Go Run Terminal Help | Fundamentals Administrator | app.cpp | Best-Practices | Related-Names | Writing Style | include iostream | usingnamespace std; | int main | intprice 100;  DeclareA New-Variable | price 200;  Update T | return 0; | Ln 23, Col 27 | Spaces: 2 | UTF-8 | 2192022
+
+[00:01:09]
+  Transcript :  حلو جدا. لو جيت اولتيرو see out وروح تكاتب هنا ال price بالشكل ده.
+  OCR        : None
+  Combined   :  حلو جدا. لو جيت اولتيرو see out وروح تكاتب هنا ال price بالشكل ده.
+
+[00:01:18]
+  Transcript :  ايه اللي هيتبع? حين انت عندك القيمة بتاعتنا مية حدسناها لامتين
+  OCR        : File | Edit | Selection View Go Run Terminal Help | Fundamentals Administrator | app.cpp | include iostream | usingnamespacestd; | int main | intprice 100;  DeclareANewVariable | price 200;- - . .   Update- The-Value | cout  price; | return 0; | Ln 24, Col 17 | Spaces: 2 | UTF-8 | 12192022
+  Combined   :  ايه اللي هيتبع? حين انت عندك القيمة بتاعتنا مية حدسناها لامتين File | Edit | Selection View Go Run Terminal Help | Fundamentals Administrator | app.cpp | include iostream | usingnamespacestd; | int main | intprice 100;  DeclareANewVariable | price 200;- - . .   Update- The-Value | cout  price; | return 0; | Ln 24, Col 17 | Spaces: 2 | UTF-8 | 12192022
+
+[00:01:18]
+  Transcript :  وبقوله اطبعها لي فطبعا هيتبع متين. لو انت بتستخدم الاضافة بتاعت run
+  OCR        : None
+  Combined   :  وبقوله اطبعها لي فطبعا هيتبع متين. لو انت بتستخدم الاضافة بتاعت run
+
+[00:01:26]
+  Transcript :  كود متحاولش تعمل سيلكت على حاجة وانت بترن عشان هيتلع لك اررز غريبة
+  OCR        : File | Edit | Selection View Go Run Terminal Help | Fundamentals Administrator | C app.cpp | include iostream | using-namespace std; | int main | int-price -100;  -Declare-A-New-Variable | price  200; | 7  - Update - The - Value | cout | price; | return | Ln 17, Col 1 175 selected | Spaces: 2 | UTF-8 | 12192022
+  Combined   :  كود متحاولش تعمل سيلكت على حاجة وانت بترن عشان هيتلع لك اررز غريبة File | Edit | Selection View Go Run Terminal Help | Fundamentals Administrator | C app.cpp | include iostream | using-namespace std; | int main | int-price -100;  -Declare-A-New-Variable | price  200; | 7  - Update - The - Value | cout | price; | return | Ln 17, Col 1 175 selected | Spaces: 2 | UTF-8 | 12192022
+
+[00:01:28]
+  Transcript :  جدا وهنتنقش في الموضوع ده في المستقبل بإذن الله خلي الماوز في
+  OCR        : File | Edit | Selection View Go Run Terminal Help | Fundamentals Administrator | C app.cpp | include iostream | usingnamespace std; | int main | intprice 100;  -DeclareANew-Variable | price -200;  . . . -   -Update- TheValue | cout | tprice; | return0; | Ln 25, Col 12 Spaces: 2 | UTF-8 | 12192022
+  Combined   :  جدا وهنتنقش في الموضوع ده في المستقبل بإذن الله خلي الماوز في File | Edit | Selection View Go Run Terminal Help | Fundamentals Administrator | C app.cpp | include iostream | usingnamespace std; | int main | intprice 100;  -DeclareANew-Variable | price -200;  . . . -   -Update- TheValue | cout | tprice; | return0; | Ln 25, Col 12 Spaces: 2 | UTF-8 | 12192022
+
+[00:01:32]
+  Transcript :  اي حتة كده وعمل رن عشان يعمل رن بشكل سليم زي ما انت شايف ميتين اهو
+  OCR        : File | Edit | Selection View Go Run Terminal Help | Fundamentals Administrator | app.cpp | include iostream | usingnamespace std; | int main | intprice 100; DeclareA-New Variable | price 200;- . . . -   Update - The-Value | cout  price; | return | Ln 25, Col 12 | Spaces: 2 | UTF-8 | 12192022
+  Combined   :  اي حتة كده وعمل رن عشان يعمل رن بشكل سليم زي ما انت شايف ميتين اهو File | Edit | Selection View Go Run Terminal Help | Fundamentals Administrator | app.cpp | include iostream | usingnamespace std; | int main | intprice 100; DeclareA-New Variable | price 200;- . . . -   Update - The-Value | cout  price; | return | Ln 25, Col 12 | Spaces: 2 | UTF-8 | 12192022
+
+[00:01:34]
+  Transcript :  اي حتة كده وعمل رن عشان يعمل رن بشكل سليم زي ما انت شايف ميتين اهو
+  OCR        : File | Edit | Selection View Go Run Terminal Help | Fundamentals Administrator | app.cpp | include iostream | usingnamespace std; | int main | OUTPUT | TERMINAL | DEBUG CONSOLE | PROBLEMS | Code | Running | cdc:UsersosamaDesktopFundamentals  g app.cpp-o app | c:UsersosamaDesktopFundamentalsapp | Doneexited-with code0 in 0.441seconds | Running | cdc:UsersosamaDesktopFundamentals  g | c:UsersosamaDesktopFundamentalsapp | Doneexited with code0 | in0.507seconds | Spaces: 2 | UTF-8 | 1Z192022
+  Combined   :  اي حتة كده وعمل رن عشان يعمل رن بشكل سليم زي ما انت شايف ميتين اهو File | Edit | Selection View Go Run Terminal Help | Fundamentals Administrator | app.cpp | include iostream | usingnamespace std; | int main | OUTPUT | TERMINAL | DEBUG CONSOLE | PROBLEMS | Code | Running | cdc:UsersosamaDesktopFundamentals  g app.cpp-o app | c:UsersosamaDesktopFundamentalsapp | Doneexited-with code0 in 0.441seconds | Running | cdc:UsersosamaDesktopFundamentals  g | c:UsersosamaDesktopFundamentalsapp | Doneexited with code0 | in0.507seconds | Spaces: 2 | UTF-8 | 1Z192022
+
+[00:01:36]
+  Transcript :  اي حتة كده وعمل رن عشان يعمل رن بشكل سليم زي ما انت شايف ميتين اهو
+  OCR        : File | Edit | Selection View Go Run Terminal Help | Fundamentals Administrator | app.cpp | include iostream | usingnamespacestd; | int main | OUTPUT | TERMINAL | DEBUG CONSOLE | PROBLEMS | Code | Doneexitedwith code0 in 0.441seconds | Running cd c:UsersosamaDesktopFundamentals  g app.cpp -O app | c:UsersosamaDesktopFundamentalsapp | Doneexited-with-code0 in 0.507 seconds | Ln 25, Col 12 Spaces: 2 | UTF-8 | 21912022
+  Combined   :  اي حتة كده وعمل رن عشان يعمل رن بشكل سليم زي ما انت شايف ميتين اهو File | Edit | Selection View Go Run Terminal Help | Fundamentals Administrator | app.cpp | include iostream | usingnamespacestd; | int main | OUTPUT | TERMINAL | DEBUG CONSOLE | PROBLEMS | Code | Doneexitedwith code0 in 0.441seconds | Running cd c:UsersosamaDesktopFundamentals  g app.cpp -O app | c:UsersosamaDesktopFundamentalsapp | Doneexited-with-code0 in 0.507 seconds | Ln 25, Col 12 Spaces: 2 | UTF-8 | 21912022
+
+[00:01:38]
+  Transcript :  كله تمام والحمد لله طيب عايز تتأكد من اللي انا كنتبه وريولك اهو
+  OCR        : File | Edit | Selection View Go Run Terminal Help | Fundamentals Administrator | app.cpp | include iostream | usingnamespace std; | int main | intprice 100; DeclareANewVariable | price 200;- - . .    Update- The-Value | cout  price; | return 0; | Ln 25, Col 12 Spaces: 2 | UTF-8 | 2192022
+  Combined   :  كله تمام والحمد لله طيب عايز تتأكد من اللي انا كنتبه وريولك اهو File | Edit | Selection View Go Run Terminal Help | Fundamentals Administrator | app.cpp | include iostream | usingnamespace std; | int main | intprice 100; DeclareANewVariable | price 200;- - . .    Update- The-Value | cout  price; | return 0; | Ln 25, Col 12 Spaces: 2 | UTF-8 | 2192022
+
+[00:01:40]
+  Transcript :  كله تمام والحمد لله طيب عايز تتأكد من اللي انا كنتبه وريولك اهو
+  OCR        : File | Edit | Selection View Go Run Terminal Help | Fundamentals Administrator | app.cpp | include iostream | using | namespacestd; | int main | intprice -100;  -Declare-ANew-Variable | price  200; | - Update - The - Value | cout | price; | return | Ln 20, Col 3 131 selectedSpaces: 2 | UTF-8
+  Combined   :  كله تمام والحمد لله طيب عايز تتأكد من اللي انا كنتبه وريولك اهو File | Edit | Selection View Go Run Terminal Help | Fundamentals Administrator | app.cpp | include iostream | using | namespacestd; | int main | intprice -100;  -Declare-ANew-Variable | price  200; | - Update - The - Value | cout | price; | return | Ln 20, Col 3 131 selectedSpaces: 2 | UTF-8
+
+[00:01:42]
+  Transcript :  هعمل سيلكت وقوله رن هتبدأ تلاقي حاجات عجيبة ومش هتفهم القصة دي
+  OCR        : File | Edit | Selection View Go Run Terminal Help | Fundamentals Administrator | app.cpp | include iostream | using | namespacestd; | int main | OUTPUT | TERMINAL | DEBUG CONSOLE | PROBLEMS | Code | Runningcd c:UsersosamaDesktopFundamentals g app.cpp -0 app | c:UsersosamaDesktopFundamentalsapp | Doneexitedwith code0 in 0.507 seconds | Runningcdc:UsersosamaDesktopFundamentals | tempCodeRunnerFile c:UsersosamaDesktopFundamenta | Ln 20, Col 3 131 selected | Spaces: 2 | UTF-8
+  Combined   :  هعمل سيلكت وقوله رن هتبدأ تلاقي حاجات عجيبة ومش هتفهم القصة دي File | Edit | Selection View Go Run Terminal Help | Fundamentals Administrator | app.cpp | include iostream | using | namespacestd; | int main | OUTPUT | TERMINAL | DEBUG CONSOLE | PROBLEMS | Code | Runningcd c:UsersosamaDesktopFundamentals g app.cpp -0 app | c:UsersosamaDesktopFundamentalsapp | Doneexitedwith code0 in 0.507 seconds | Runningcdc:UsersosamaDesktopFundamentals | tempCodeRunnerFile c:UsersosamaDesktopFundamenta | Ln 20, Col 3 131 selected | Spaces: 2 | UTF-8
+
+[00:01:44]
+  Transcript :  هعمل سيلكت وقوله رن هتبدأ تلاقي حاجات عجيبة ومش هتفهم القصة دي
+  OCR        : File | Edit | Selection View Go Run Terminal Help | Fundamentals Administrator | app.cpp | include iostream | using | namespacestd; | int main | OUTPUT | TERMINAL | DEBUG CONSOLE | PROBLEMS | Code | Running | cd c:UsersosamaDesktopFundamentals g tempCodeRunnerFile.cpp | tempCodeRunnerFile c:UsersosamaDesktopFundamentalstempCodeRunnerFile | tempCodeRunnerFile.cpp:1:1: error:tdoes not name a type | tmain | Doneexited-with code1 in 0.068 seconds | Ln 20, Col 3 131 selecte Spaces: 2 | UTF-8 | 12192022
+  Combined   :  هعمل سيلكت وقوله رن هتبدأ تلاقي حاجات عجيبة ومش هتفهم القصة دي File | Edit | Selection View Go Run Terminal Help | Fundamentals Administrator | app.cpp | include iostream | using | namespacestd; | int main | OUTPUT | TERMINAL | DEBUG CONSOLE | PROBLEMS | Code | Running | cd c:UsersosamaDesktopFundamentals g tempCodeRunnerFile.cpp | tempCodeRunnerFile c:UsersosamaDesktopFundamentalstempCodeRunnerFile | tempCodeRunnerFile.cpp:1:1: error:tdoes not name a type | tmain | Doneexited-with code1 in 0.068 seconds | Ln 20, Col 3 131 selecte Spaces: 2 | UTF-8 | 12192022
+
+[00:01:48]
+  Transcript :  دلوقتي. لكن لو عملت طبعا run c++ file او شغال على الفيجوال
+  OCR        : File | Edit | Selection View Go Run Terminal Help | Fundamentals Administrator | app.cpp | Debug CC File | include iostream | Code | usingnamespace std; | C File | int main | int-price 100;   -Declare A-New-Variable | price  200; | -   - Update - The - Value | cout  price; | return | Ln 20, Col 3 131 selected | Spaces: 2 | UTF-8 | 12192022
+  Combined   :  دلوقتي. لكن لو عملت طبعا run c++ file او شغال على الفيجوال File | Edit | Selection View Go Run Terminal Help | Fundamentals Administrator | app.cpp | Debug CC File | include iostream | Code | usingnamespace std; | C File | int main | int-price 100;   -Declare A-New-Variable | price  200; | -   - Update - The - Value | cout  price; | return | Ln 20, Col 3 131 selected | Spaces: 2 | UTF-8 | 12192022
+
+[00:01:50]
+  Transcript :  دلوقتي. لكن لو عملت طبعا run c++ file او شغال على الفيجوال
+  OCR        : File | Edit | Selection View Go Run Terminal Help | Fundamentals Administrator | app.cpp | include iostream | using namespace std; | int main | OUTPUT | TERMINAL | DEBUG CONSOLE | PROBLEMS | CC:.. | cppdbg: ap... | Ln 20, Col 3 131 selecte Spaces: 2 | UTF-8 | 12192022
+  Combined   :  دلوقتي. لكن لو عملت طبعا run c++ file او شغال على الفيجوال File | Edit | Selection View Go Run Terminal Help | Fundamentals Administrator | app.cpp | include iostream | using namespace std; | int main | OUTPUT | TERMINAL | DEBUG CONSOLE | PROBLEMS | CC:.. | cppdbg: ap... | Ln 20, Col 3 131 selecte Spaces: 2 | UTF-8 | 12192022
+
+[00:01:52]
+  Transcript :  مش هتواجه اي مشاكل والحمد لله هتلاقي العملية زي الفل وكله
+  OCR        : File | Edit | Selection View Go Run Terminal Help | Fundamentals Administrator | app.cpp | include iostream | using namespace std; | int main | OUTPUT | TERMINAL | DEBUG CONSOLE | PROBLEMS | CC:.. | cppdbg: ap... | osamaOsamaElzero MINGW64 DesktopFundamentals | usrbinenv c:Usersosama.vscodeextensionsms-vscode.cpptools-1.13.8-win32-x64 | debugAdaptersbinWindowsDebugLauncher.exe --stdinMicrosoft-MIEngine-In-2qotrtfs.14t | stdoutMicrosoft-MIEngine-Out-0wgswrj5.pzz --stderrMicrosoft-MIEngine-Error-yxpbous4.rnh | -pidMicrosoft-MIEngine-Pid-qscguolf.2be --dbgExeC:msys64mingw64bingdb.exe | --inter | pretermi | osamaOsamaElzero MINGw64 DesktopFundamentals | Ln 20, Col 3 131 selectedSpaces: 2 | UTF-8 | 12192022
+  Combined   :  مش هتواجه اي مشاكل والحمد لله هتلاقي العملية زي الفل وكله File | Edit | Selection View Go Run Terminal Help | Fundamentals Administrator | app.cpp | include iostream | using namespace std; | int main | OUTPUT | TERMINAL | DEBUG CONSOLE | PROBLEMS | CC:.. | cppdbg: ap... | osamaOsamaElzero MINGW64 DesktopFundamentals | usrbinenv c:Usersosama.vscodeextensionsms-vscode.cpptools-1.13.8-win32-x64 | debugAdaptersbinWindowsDebugLauncher.exe --stdinMicrosoft-MIEngine-In-2qotrtfs.14t | stdoutMicrosoft-MIEngine-Out-0wgswrj5.pzz --stderrMicrosoft-MIEngine-Error-yxpbous4.rnh | -pidMicrosoft-MIEngine-Pid-qscguolf.2be --dbgExeC:msys64mingw64bingdb.exe | --inter | pretermi | osamaOsamaElzero MINGw64 DesktopFundamentals | Ln 20, Col 3 131 selectedSpaces: 2 | UTF-8 | 12192022
+
+[00:01:56]
+  Transcript :  تمام اهو ومش هتلاقي ولا problem. تمام يا شباب? تمام. طيب نيجي للمشاكل
+  OCR        : File | Edit | Selection View Go Run Terminal Help | Fundamentals Administrator | app.cpp | include iostream | usingnamespace std; | int main | OUTPUT | TERMINAL | DEBUG CONSOLE | PROBLEMS | Filter e.g. text, .ts, !nodemodules | No problems have beeit detected in the workspace. | Ln 20, Col 3 131 selectedSpaces: 2 | UTF-8 | 1Z192022
+  Combined   :  تمام اهو ومش هتلاقي ولا problem. تمام يا شباب? تمام. طيب نيجي للمشاكل File | Edit | Selection View Go Run Terminal Help | Fundamentals Administrator | app.cpp | include iostream | usingnamespace std; | int main | OUTPUT | TERMINAL | DEBUG CONSOLE | PROBLEMS | Filter e.g. text, .ts, !nodemodules | No problems have beeit detected in the workspace. | Ln 20, Col 3 131 selectedSpaces: 2 | UTF-8 | 1Z192022
+
+[00:01:58]
+  Transcript :  تمام اهو ومش هتلاقي ولا problem. تمام يا شباب? تمام. طيب نيجي للمشاكل
+  OCR        : File | Edit | Selection View Go Run Terminal Help | Fundamentals Administrator | app.cpp | include iostream | using namespace std; | int main | intprice  100; | Declare A-New-Variable | price 200; | 7  - Update - The -Value | cout | price; | return | Ln 20, Col 3 131 selectedSpaces: 2 | UTF-8 | 1Z192022
+  Combined   :  تمام اهو ومش هتلاقي ولا problem. تمام يا شباب? تمام. طيب نيجي للمشاكل File | Edit | Selection View Go Run Terminal Help | Fundamentals Administrator | app.cpp | include iostream | using namespace std; | int main | intprice  100; | Declare A-New-Variable | price 200; | 7  - Update - The -Value | cout | price; | return | Ln 20, Col 3 131 selectedSpaces: 2 | UTF-8 | 1Z192022
+
+[00:02:00]
+  Transcript :  الوقت ناخد نسخة من الـ declare ده هنا
+  OCR        : File | Edit | Selection View Go Run Terminal Help | Fundamentals Administrator | app.cpp | includeiostream | usingnamespacestd; | int main | intprice 100; DeclareANew-Variable | price 200;  . . - -   Update The-Value | cout  price; | return 0; | Ln 26, Col 2 Spaces: 2 | UTF-8 | 1Z192022
+  Combined   :  الوقت ناخد نسخة من الـ declare ده هنا File | Edit | Selection View Go Run Terminal Help | Fundamentals Administrator | app.cpp | includeiostream | usingnamespacestd; | int main | intprice 100; DeclareANew-Variable | price 200;  . . - -   Update The-Value | cout  price; | return 0; | Ln 26, Col 2 Spaces: 2 | UTF-8 | 1Z192022
+
+[00:02:02]
+  Transcript :  الوقت ناخد نسخة من الـ declare ده هنا
+  OCR        : File | Edit | Selection View Go Run Terminal Help | Fundamentals Administrator | app.cpp | include iostream | using namespace std; | int main | int price  100;  Declare A New-Variable | price 200;-. . . -   -Update- The-Value | cout  price; | return 0; | Hlla | Ln 22, Col 20 Spaces: 2 | UTF-8 | 1Z192022
+  Combined   :  الوقت ناخد نسخة من الـ declare ده هنا File | Edit | Selection View Go Run Terminal Help | Fundamentals Administrator | app.cpp | include iostream | using namespace std; | int main | int price  100;  Declare A New-Variable | price 200;-. . . -   -Update- The-Value | cout  price; | return 0; | Hlla | Ln 22, Col 20 Spaces: 2 | UTF-8 | 1Z192022
+
+[00:02:04]
+  Transcript : None
+  OCR        : File | Edit | Selection View Go Run Terminal Help | Fundamentals Administrator | app.cpp | include iostream | usingnamespace std; | int main | intprice 100;  DeclareANew-Variable | price 200; - . . -   -Update- The-Value | intprice 100; DeclareA | New Variable | cout price; | return 0; | Ln 24, Col 20 Spaces: 2 | UTF-8 | 12192022
+  Combined   : File | Edit | Selection View Go Run Terminal Help | Fundamentals Administrator | app.cpp | include iostream | usingnamespace std; | int main | intprice 100;  DeclareANew-Variable | price 200; - . . -   -Update- The-Value | intprice 100; DeclareA | New Variable | cout price; | return 0; | Ln 24, Col 20 Spaces: 2 | UTF-8 | 12192022
+
+[00:02:06]
+  Transcript : None
+  OCR        : File | Edit | Selection View Go Run Terminal Help | Fundamentals Administrator | app.cpp | include iostream | using namespace std; | int main | intprice  100; | -DeclareA-New-Variable | price200; | - Update The - Value | intprice 100; | DeclareA-New-Variable | cout price; | return 0; | Ln 24, Col 20 25 selected | Spaces: 2 | UTF-8 | 1Z192022
+  Combined   : File | Edit | Selection View Go Run Terminal Help | Fundamentals Administrator | app.cpp | include iostream | using namespace std; | int main | intprice  100; | -DeclareA-New-Variable | price200; | - Update The - Value | intprice 100; | DeclareA-New-Variable | cout price; | return 0; | Ln 24, Col 20 25 selected | Spaces: 2 | UTF-8 | 1Z192022
+
+[00:02:08]
+  Transcript :  وهشيل الكلام ده الـ comment
+  OCR        : File | Edit | Selection View Go Run Terminal Help | Fundamentals Administrator | app.cpp | include iostream | usingnamespace std; | int main | intprice 100;    Declare A-New Variable | price 200;- . . -   -Update- The-Value | intprice  100; | cout price; | return 0; | flal | Ln 24, Col 19 | Spaces: 2 | UTF-8 | 1Z192022
+  Combined   :  وهشيل الكلام ده الـ comment File | Edit | Selection View Go Run Terminal Help | Fundamentals Administrator | app.cpp | include iostream | usingnamespace std; | int main | intprice 100;    Declare A-New Variable | price 200;- . . -   -Update- The-Value | intprice  100; | cout price; | return 0; | flal | Ln 24, Col 19 | Spaces: 2 | UTF-8 | 1Z192022
+
+[00:02:08]
+  Transcript :  واخلي price دي القيوم بتاعتها 400
+  OCR        : None
+  Combined   :  واخلي price دي القيوم بتاعتها 400
+
+[00:02:12]
+  Transcript :  احنا قلنا انه اسم المتغير لازم يكون مميز
+  OCR        : File | Edit | Selection View Go Run Terminal Help | Fundamentals Administrator | app.cpp | include iostream | usingnamespace std; | int main | intprice 100;  Declare- A-New-Variable | price 200; - . . -   -Update- The-Value | intprice 400; | cout  price; | return 0; | Ln 24, Col 16 Spaces: 2 | UTF-8 | 12192022
+  Combined   :  احنا قلنا انه اسم المتغير لازم يكون مميز File | Edit | Selection View Go Run Terminal Help | Fundamentals Administrator | app.cpp | include iostream | usingnamespace std; | int main | intprice 100;  Declare- A-New-Variable | price 200; - . . -   -Update- The-Value | intprice 400; | cout  price; | return 0; | Ln 24, Col 16 Spaces: 2 | UTF-8 | 12192022
+
+[00:02:13]
+  Transcript :  بالتالي انا هنا حطيت نفس المتغير تاني
+  OCR        : None
+  Combined   :  بالتالي انا هنا حطيت نفس المتغير تاني
+
+[00:02:16]
+  Transcript :  فالمفروض كده يطلع لي error مظبوط
+  OCR        : None
+  Combined   :  فالمفروض كده يطلع لي error مظبوط
+
+[00:02:18]
+  Transcript :  هيطلع لك فعلا error يقول لك انه price variable ده
+  OCR        : None
+  Combined   :  هيطلع لك فعلا error يقول لك انه price variable ده
+
+[00:02:21]
+  Transcript :  ماعمل له declare قبل كده ويحدد لك كمان ما كانه فيه
+  OCR        : None
+  Combined   :  ماعمل له declare قبل كده ويحدد لك كمان ما كانه فيه
+
+[00:02:24]
+  Transcript :  نشوف مع بعض
+  OCR        : None
+  Combined   :  نشوف مع بعض
+
+[00:02:26]
+  Transcript :  هنا يا شباب
+  OCR        : File | Edit | Selection View Go Run Terminal Help | Fundamentals Administrator | app.cpp | include iostream | usingnamespace std; | int main | OUTPUT | TERMINAL | DEBUG CONSOLE | PROBLEMS | Code | tempCodeRunnerFile.cpp:1:1: error:t does not name a type | tmain | Doneexited with code1 in 0.068 seconds | Runningcdc:UsersosamaDesktopFundamentals  g | c:UsersosamaDesktopFundamentalsapp | app.cpp: | function | int main: | Ln 24, Col 19 Spaces: 2 | UTF-8 | Z1192022
+  Combined   :  هنا يا شباب File | Edit | Selection View Go Run Terminal Help | Fundamentals Administrator | app.cpp | include iostream | usingnamespace std; | int main | OUTPUT | TERMINAL | DEBUG CONSOLE | PROBLEMS | Code | tempCodeRunnerFile.cpp:1:1: error:t does not name a type | tmain | Doneexited with code1 in 0.068 seconds | Runningcdc:UsersosamaDesktopFundamentals  g | c:UsersosamaDesktopFundamentalsapp | app.cpp: | function | int main: | Ln 24, Col 19 Spaces: 2 | UTF-8 | Z1192022
+
+[00:02:28]
+  Transcript :  بيقول لي انه
+  OCR        : File | Edit | Selection View Go Run Terminal Help | Fundamentals Administrator | app.cpp | include iostream | usingnamespace std; | int main | OUTPUT | TERMINAL | DEBUG CONSOLE | PROBLEMS | Code | int price  400; | ANNNN | app.cpp:22:7: note:int price previously declared-here | intprice 100;  DeclareA New-Variable | ANNNN | Doneexited-with code1in 0.375 seconds | Ln 24, Col 19 | Spaces: 2 | UTF-8 | 21912022
+  Combined   :  بيقول لي انه File | Edit | Selection View Go Run Terminal Help | Fundamentals Administrator | app.cpp | include iostream | usingnamespace std; | int main | OUTPUT | TERMINAL | DEBUG CONSOLE | PROBLEMS | Code | int price  400; | ANNNN | app.cpp:22:7: note:int price previously declared-here | intprice 100;  DeclareA New-Variable | ANNNN | Doneexited-with code1in 0.375 seconds | Ln 24, Col 19 | Spaces: 2 | UTF-8 | 21912022
+
+[00:02:28]
+  Transcript :  الـ price عموله declare قبل كده
+  OCR        : None
+  Combined   :  الـ price عموله declare قبل كده
+
+[00:02:30]
+  Transcript :  فين في السطر 22 اهو
+  OCR        : None
+  Combined   :  فين في السطر 22 اهو
+
+[00:02:33]
+  Transcript :  ومحدد لك كمان اهو
+  OCR        : None
+  Combined   :  ومحدد لك كمان اهو
+
+[00:02:35]
+  Transcript :  لو عايز تشوف
+  OCR        : None
+  Combined   :  لو عايز تشوف
+
+[00:02:38]
+  Transcript :  السطر اللي انت كده
+  OCR        : File | Edit | Selection View Go Run Terminal Help | Fundamentals Administrator | app.cpp | include iostream | usingnamespace std; | int main | intprice 100;  Declare A-New-Variable | price 200;  . . .    -Update - The-Value | intprice  400; | cout price; | return 0; | Ln 24, Col 19 | Spaces: 2 | UTF-8 | 1Z192022
+  Combined   :  السطر اللي انت كده File | Edit | Selection View Go Run Terminal Help | Fundamentals Administrator | app.cpp | include iostream | usingnamespace std; | int main | intprice 100;  Declare A-New-Variable | price 200;  . . .    -Update - The-Value | intprice  400; | cout price; | return 0; | Ln 24, Col 19 | Spaces: 2 | UTF-8 | 1Z192022
+
+[00:02:42]
+  Transcript :  النقطة اللي بعدها ان الحروف
+  OCR        : File | Edit | Selection View Go Run Terminal Help | OFundamentals Administrator | C app.cpp | Variables-Naming-Rules  Best Practices | NamingRules | Must Be Unique | CaseSensitive | Cannot | Start | WithNumbers | Nums | Letters | Underscore | No White | Space | Special-Characters | Reserved Keywords | Class, | Public | Best-Practices | Related-Names | Writing-Style | include iostream | Ln 26, Col 12 Spaces: 2 | UTF-8 | 1Z192022
+  Combined   :  النقطة اللي بعدها ان الحروف File | Edit | Selection View Go Run Terminal Help | OFundamentals Administrator | C app.cpp | Variables-Naming-Rules  Best Practices | NamingRules | Must Be Unique | CaseSensitive | Cannot | Start | WithNumbers | Nums | Letters | Underscore | No White | Space | Special-Characters | Reserved Keywords | Class, | Public | Best-Practices | Related-Names | Writing-Style | include iostream | Ln 26, Col 12 Spaces: 2 | UTF-8 | 1Z192022
+
+[00:02:42]
+  Transcript :  بتاعتنا sensitive يعني حروف حساسة
+  OCR        : None
+  Combined   :  بتاعتنا sensitive يعني حروف حساسة
+
+[00:02:45]
+  Transcript :  يعني الحرف الـ capital غير
+  OCR        : None
+  Combined   :  يعني الحرف الـ capital غير
+
+[00:02:47]
+  Transcript :  الحرف الـ small لو انا عندي
+  OCR        : None
+  Combined   :  الحرف الـ small لو انا عندي
+
+[00:02:50]
+  Transcript :  متغيرين بالشكل ده
+  OCR        : File | Edit | Selection View Go Run Terminal Help | Fundamentals Administrator | C app.cpp | includeiostream | usingnamespace std; | int main | intprice 100;  DeclareANew-Variable | price 200; -   UpdateThe Value | intprice  400; | cout  price; | return 0; | Ln 6, Col 21 | Spaces: 2 | UTF-8 | 12192022
+  Combined   :  متغيرين بالشكل ده File | Edit | Selection View Go Run Terminal Help | Fundamentals Administrator | C app.cpp | includeiostream | usingnamespace std; | int main | intprice 100;  DeclareANew-Variable | price 200; -   UpdateThe Value | intprice  400; | cout  price; | return 0; | Ln 6, Col 21 | Spaces: 2 | UTF-8 | 12192022
+
+[00:02:50]
+  Transcript :  فيهم واحد اول حرف فيه small
+  OCR        : None
+  Combined   :  فيهم واحد اول حرف فيه small
+
+[00:02:54]
+  Transcript :  ونفس الكلمة في التاني اول حرف فيه
+  OCR        : File | Edit | Selection View Go Run Terminal Help | Fundamentals Administrator | C app.cpp | includeiostream | using namespace std; | int main | intprice 100;  DeclareANewVariable | price  200; | .    - UpdateThe-Value | intprice 400; | cout | price; | return 0; | Ln 24, Col 7 1 selected Spaces: 2 | UTF-8 | 1Z192022
+  Combined   :  ونفس الكلمة في التاني اول حرف فيه File | Edit | Selection View Go Run Terminal Help | Fundamentals Administrator | C app.cpp | includeiostream | using namespace std; | int main | intprice 100;  DeclareANewVariable | price  200; | .    - UpdateThe-Value | intprice 400; | cout | price; | return 0; | Ln 24, Col 7 1 selected Spaces: 2 | UTF-8 | 1Z192022
+
+[00:02:56]
+  Transcript : 
+  OCR        : File | Edit | Selection View Go Run Terminal Help | Fundamentals Administrator | app.cpp | include iostream | using namespace std; | int main | intprice 100;  DeclareA-New-Variable | price 200;  - . . -   -Update- The -Value | intPrice 400; | cout price; | return | Ln 24, Col 8 | Spaces: 2 | UTF-8 | 1Z192022
+  Combined   :  File | Edit | Selection View Go Run Terminal Help | Fundamentals Administrator | app.cpp | include iostream | using namespace std; | int main | intprice 100;  DeclareA-New-Variable | price 200;  - . . -   -Update- The -Value | intPrice 400; | cout price; | return | Ln 24, Col 8 | Spaces: 2 | UTF-8 | 1Z192022
+
+[00:03:04]
+  Transcript : 
+  OCR        : File | Edit | Selection View Go Run Terminal Help | Fundamentals Administrator | C app.cpp | Debug CC File | include iostream | Run Code | Run CC | File | usingnamespace std; | int main | intprice 100;  Declare A-New Variable | price 200;- . . .   -Update- The-Value | int Price  400; | cout  price; | return 0; | Ln 24, Col 19 | Spaces: 2 | UTF-8 | 12192022
+  Combined   :  File | Edit | Selection View Go Run Terminal Help | Fundamentals Administrator | C app.cpp | Debug CC File | include iostream | Run Code | Run CC | File | usingnamespace std; | int main | intprice 100;  Declare A-New Variable | price 200;- . . .   -Update- The-Value | int Price  400; | cout  price; | return 0; | Ln 24, Col 19 | Spaces: 2 | UTF-8 | 12192022
+
+[00:03:08]
+  Transcript :  200 اهو وما عندناش اي مشكلة والحمد لله طيب خلييني دلوقتي نجرب تجربة كده نحنا نضيف
+  OCR        : File | Edit | Selection View Go Run Terminal Help | Fundamentals Administrator | app.cpp | include iostream | using namespace std; | int main | OUTPUT | TERMINAL | DEBUG CONSOLE | PROBLEMS | Code | Done-exited-with-code1 in 0.375 seconds | Runningcd c:UsersosamaDesktopFundamentals  g app.cpp -O app | c:UsersosamaDesktopFundamentalsapp | Done exitedwith code0 in 0.49 seconds | Ln 24, Col 19 Spaces: 2 | UTF-8 | 1Z192022
+  Combined   :  200 اهو وما عندناش اي مشكلة والحمد لله طيب خلييني دلوقتي نجرب تجربة كده نحنا نضيف File | Edit | Selection View Go Run Terminal Help | Fundamentals Administrator | app.cpp | include iostream | using namespace std; | int main | OUTPUT | TERMINAL | DEBUG CONSOLE | PROBLEMS | Code | Done-exited-with-code1 in 0.375 seconds | Runningcd c:UsersosamaDesktopFundamentals  g app.cpp -O app | c:UsersosamaDesktopFundamentalsapp | Done exitedwith code0 in 0.49 seconds | Ln 24, Col 19 Spaces: 2 | UTF-8 | 1Z192022
+
+[00:03:10]
+  Transcript :  200 اهو وما عندناش اي مشكلة والحمد لله طيب خلييني دلوقتي نجرب تجربة كده نحنا نضيف
+  OCR        : File | Edit | Selection View Go Run Terminal Help | Fundamentals Administrator | app.cpp | include iostream | using namespace std; | int main | intprice 100;   DeclareANew-Variable | price 200;- . . .    -Update- The-Value | int-Price 400; | cout | t price; | return 0; | Ln 24, Col 19 | Spaces: 2 | UTF-8 | 1Z192022
+  Combined   :  200 اهو وما عندناش اي مشكلة والحمد لله طيب خلييني دلوقتي نجرب تجربة كده نحنا نضيف File | Edit | Selection View Go Run Terminal Help | Fundamentals Administrator | app.cpp | include iostream | using namespace std; | int main | intprice 100;   DeclareANew-Variable | price 200;- . . .    -Update- The-Value | int-Price 400; | cout | t price; | return 0; | Ln 24, Col 19 | Spaces: 2 | UTF-8 | 1Z192022
+
+[00:03:14]
+  Transcript :  200 اهو وما عندناش اي مشكلة والحمد لله طيب خلييني دلوقتي نجرب تجربة كده نحنا نضيف
+  OCR        : File | Edit | Selection View Go Run Terminal | Help | Fundamentals Administrator | C app.cpp | Naming Rules | Must -Be Unique | Case Sensitive | Cannot Start | WithNumbers | Nums Or Letters Or Underscore | No White Space-Or Special -Characters | Reserved Keywords Class, Public | Best-Practices | Related-Names | Writing Style | include iostream | using | namespace std; | Ln 24, Col 19 | Spaces: 2 | UTF-8 | 12192022
+  Combined   :  200 اهو وما عندناش اي مشكلة والحمد لله طيب خلييني دلوقتي نجرب تجربة كده نحنا نضيف File | Edit | Selection View Go Run Terminal | Help | Fundamentals Administrator | C app.cpp | Naming Rules | Must -Be Unique | Case Sensitive | Cannot Start | WithNumbers | Nums Or Letters Or Underscore | No White Space-Or Special -Characters | Reserved Keywords Class, Public | Best-Practices | Related-Names | Writing Style | include iostream | using | namespace std; | Ln 24, Col 19 | Spaces: 2 | UTF-8 | 12192022
+
+[00:03:16]
+  Transcript :  Cout
+  OCR        : File | Edit | Selection View Go Run Terminal Help | Fundamentals Administrator | app.cpp | int main | intprice 100;   Declare-A-New-Variable | price 200; | Update The Value | intPrice  400; | cout price; | return 0; | Ln 25, Col 17 | Spaces: 2 | UTF-8 | 12192022
+  Combined   :  Cout File | Edit | Selection View Go Run Terminal Help | Fundamentals Administrator | app.cpp | int main | intprice 100;   Declare-A-New-Variable | price 200; | Update The Value | intPrice  400; | cout price; | return 0; | Ln 25, Col 17 | Spaces: 2 | UTF-8 | 12192022
+
+[00:03:17]
+  Transcript :  نضيف كده
+  OCR        : None
+  Combined   :  نضيف كده
+
+[00:03:20]
+  Transcript :  كم علامة يساوي تعمل لنا زي separator
+  OCR        : None
+  Combined   :  كم علامة يساوي تعمل لنا زي separator
+
+[00:03:24]
+  Transcript :  او فاصل بين الارقام بتاعتنا
+  OCR        : None
+  Combined   :  او فاصل بين الارقام بتاعتنا
+
+[00:03:26]
+  Transcript :  عشان الارقام كلها متدخلش ببعض
+  OCR        : None
+  Combined   :  عشان الارقام كلها متدخلش ببعض
+
+[00:03:30]
+  Transcript :  ونركز على القانون اللي احنا ماشيين فيه
+  OCR        : File | Edit | Selection View Go Run Terminal Help | Fundamentals Administrator | C app.cpp | Variables-NamingRules Best Practices | NamingRules | Must Be Unique | CaseSensitive | Cannot | Start | WithNumbers | Nums | Letters | Underscore | No White | Space | Special | Characters | Reserved Keywords | Class, | Public | Best-Practices | Related-Names | Writing Style | include iostream | Ln 26, Col 33 | Spaces: 2 | UTF-8
+  Combined   :  ونركز على القانون اللي احنا ماشيين فيه File | Edit | Selection View Go Run Terminal Help | Fundamentals Administrator | C app.cpp | Variables-NamingRules Best Practices | NamingRules | Must Be Unique | CaseSensitive | Cannot | Start | WithNumbers | Nums | Letters | Underscore | No White | Space | Special | Characters | Reserved Keywords | Class, | Public | Best-Practices | Related-Names | Writing Style | include iostream | Ln 26, Col 33 | Spaces: 2 | UTF-8
+
+[00:03:30]
+  Transcript :  اسم المتغير بتاين ماينفعش
+  OCR        : None
+  Combined   :  اسم المتغير بتاين ماينفعش
+
+[00:03:32]
+  Transcript :  يبدأ برقم
+  OCR        : None
+  Combined   :  يبدأ برقم
+
+[00:03:34]
+  Transcript :  تعال نشوف الكلام ده
+  OCR        : File | Edit | Selection View Go Run Terminal Help | OFundamentals Administrator | C app.cpp | Naming Rules | Must Be Unique | Case-Sensitive | Cannot | Start | With Numbers | Nums Or | Letters | Underscore | No White | Space | Special Characters | Reserved-Keywords | Class, -Public | Best-Practices | Related-Names | Writing Style | include iostream | usingnamespacestd; | int main | Ln 7, Col 1 31 selected Spaces: 2 | UTF-8
+  Combined   :  تعال نشوف الكلام ده File | Edit | Selection View Go Run Terminal Help | OFundamentals Administrator | C app.cpp | Naming Rules | Must Be Unique | Case-Sensitive | Cannot | Start | With Numbers | Nums Or | Letters | Underscore | No White | Space | Special Characters | Reserved-Keywords | Class, -Public | Best-Practices | Related-Names | Writing Style | include iostream | usingnamespacestd; | int main | Ln 7, Col 1 31 selected Spaces: 2 | UTF-8
+
+[00:03:36]
+  Transcript :  حاجة هنا اقول له
+  OCR        : File | Edit | Selection View Go Run Terminal Help | Fundamentals Administrator | app.cpp | intprice 100;   Declare A-New-Variable | price 200; .   -UpdateTheValue | intPrice  400; | cout  price; | cout | return 0; | Ln 26, Col 33 | Spaces: 2 | UTF-8 | Z191202Z
+  Combined   :  حاجة هنا اقول له File | Edit | Selection View Go Run Terminal Help | Fundamentals Administrator | app.cpp | intprice 100;   Declare A-New-Variable | price 200; .   -UpdateTheValue | intPrice  400; | cout  price; | cout | return 0; | Ln 26, Col 33 | Spaces: 2 | UTF-8 | Z191202Z
+
+[00:03:36]
+  Transcript :  int num يساوي 10
+  OCR        : None
+  Combined   :  int num يساوي 10
+
+[00:03:38]
+  Transcript :  وبعده Cout
+  OCR        : None
+  Combined   :  وبعده Cout
+
+[00:03:42]
+  Transcript :  num فما عندناش اي مشكلة
+  OCR        : File | Edit | Selection View Go Run Terminal Help | Fundamentals Administrator | C app.cpp | intprice 100;    Declare A New-Variable | price 200;  UpdateThe Value | intPrice 400; | cout | tprice; | cout | intnum 10; | cout | num; | return | Ln 28, Col 15 | Spaces: 2 | UTF-8 | 1Z192022
+  Combined   :  num فما عندناش اي مشكلة File | Edit | Selection View Go Run Terminal Help | Fundamentals Administrator | C app.cpp | intprice 100;    Declare A New-Variable | price 200;  UpdateThe Value | intPrice 400; | cout | tprice; | cout | intnum 10; | cout | num; | return | Ln 28, Col 15 | Spaces: 2 | UTF-8 | 1Z192022
+
+[00:03:42]
+  Transcript :  في الكود ده وكله زي العسل
+  OCR        : None
+  Combined   :  في الكود ده وكله زي العسل
+
+[00:03:43]
+  Transcript :  لكن لو جيت كتبت رقم هنا
+  OCR        : None
+  Combined   :  لكن لو جيت كتبت رقم هنا
+
+[00:03:45]
+  Transcript :  تبدأ هنا المشاكل
+  OCR        : None
+  Combined   :  تبدأ هنا المشاكل
+
+[00:03:48]
+  Transcript :  بيقولك
+  OCR        : File | Edit | Selection View Go Run Terminal Help | Fundamentals Administrator | app.cpp | intprice 100; -   -Declare A-New-Variable | price  200; | UpdateTheValue | int Price  400; | cout | expected | identifierCC40 | cout | View Problem AltF8 | Quick Fix... Ctrl. | int1num | cout | return | Ln 27, Col 8 Spaces: 2 | UTF-8 | 1Z192022
+  Combined   :  بيقولك File | Edit | Selection View Go Run Terminal Help | Fundamentals Administrator | app.cpp | intprice 100; -   -Declare A-New-Variable | price  200; | UpdateTheValue | int Price  400; | cout | expected | identifierCC40 | cout | View Problem AltF8 | Quick Fix... Ctrl. | int1num | cout | return | Ln 27, Col 8 Spaces: 2 | UTF-8 | 1Z192022
+
+[00:03:48]
+  Transcript :  expected and identifier
+  OCR        : None
+  Combined   :  expected and identifier
+
+[00:03:49]
+  Transcript :  متوقع منك identifier
+  OCR        : None
+  Combined   :  متوقع منك identifier
+
+[00:03:52]
+  Transcript :  متوقع منك اسم المتغير ماشي
+  OCR        : File | Edit | Selection View Go Run Terminal Help | Fundamentals Administrator | app.cpp | intprice 100;   Declare A New-Variable | price 200;   Update The Value | intPrice 400; | cout | price; | cout | int 1num | cout | num; | return 0; | Ln 27, Col 8 Spaces: 2 | UTF-8 | 12192022
+  Combined   :  متوقع منك اسم المتغير ماشي File | Edit | Selection View Go Run Terminal Help | Fundamentals Administrator | app.cpp | intprice 100;   Declare A New-Variable | price 200;   Update The Value | intPrice 400; | cout | price; | cout | int 1num | cout | num; | return 0; | Ln 27, Col 8 Spaces: 2 | UTF-8 | 12192022
+
+[00:03:53]
+  Transcript :  على القوانين اللي احنا اتفقنا عليها
+  OCR        : None
+  Combined   :  على القوانين اللي احنا اتفقنا عليها
+
+[00:03:55]
+  Transcript :  لكن انت دلوقتي خلفت الموضوع
+  OCR        : None
+  Combined   :  لكن انت دلوقتي خلفت الموضوع
+
+[00:03:58]
+  Transcript :  فبالتالي هيجيب لك
+  OCR        : File | Edit | Selection View Go Run Terminal Help | OFundamentals Administrator | C app.cpp | intprice 100;   DeclareANew-Variable | price 200;   Update The-Value | intPrice 400; | cout | price; | cout | int1num | :10; | cout | num; | return | Ln 27, Col 7 1 selected Spaces: 2 | UTF-8
+  Combined   :  فبالتالي هيجيب لك File | Edit | Selection View Go Run Terminal Help | OFundamentals Administrator | C app.cpp | intprice 100;   DeclareANew-Variable | price 200;   Update The-Value | intPrice 400; | cout | price; | cout | int1num | :10; | cout | num; | return | Ln 27, Col 7 1 selected Spaces: 2 | UTF-8
+
+[00:04:02]
+  Transcript :  الشرطة والخط اللي انت شايفه ده. ولو طبعا عملنا Run هيطلع لك طبعا مشاكل. طيب عرفنا دي وما فيهاش اي مشكلة خالص لكن محتاجين ان احنا نفهم حاجة بخصوص الاركام. انت ما ينفعش تبدأ برقم لكن تقدر تديف الرقم في النص او في الاخر ما عندكش ادنى مشكلة. شايفين يا شباب? الرقم في النص في الاخر في اي حتة تعجبك عايز تكتب حرفه وكل اللي بعده اركام ما فيش اي مشكلة خالص.
+  OCR        : File | Edit | Selection View Go Run Terminal Help | OFundamentals Administrator | app.cpp | intprice 100;    Declare A-New-Variable | price 200;   Update The-Value | intPrice 400; | cout | price; | cout | intnum 10; | cout num; | return 0; | Ln 27, Col 7 Spaces: 2 | UTF-8 | 2192022
+  Combined   :  الشرطة والخط اللي انت شايفه ده. ولو طبعا عملنا Run هيطلع لك طبعا مشاكل. طيب عرفنا دي وما فيهاش اي مشكلة خالص لكن محتاجين ان احنا نفهم حاجة بخصوص الاركام. انت ما ينفعش تبدأ برقم لكن تقدر تديف الرقم في النص او في الاخر ما عندكش ادنى مشكلة. شايفين يا شباب? الرقم في النص في الاخر في اي حتة تعجبك عايز تكتب حرفه وكل اللي بعده اركام ما فيش اي مشكلة خالص. File | Edit | Selection View Go Run Terminal Help | OFundamentals Administrator | app.cpp | intprice 100;    Declare A-New-Variable | price 200;   Update The-Value | intPrice 400; | cout | price; | cout | intnum 10; | cout num; | return 0; | Ln 27, Col 7 Spaces: 2 | UTF-8 | 2192022
+
+[00:04:06]
+  Transcript :  الشرطة والخط اللي انت شايفه ده. ولو طبعا عملنا Run هيطلع لك طبعا مشاكل. طيب عرفنا دي وما فيهاش اي مشكلة خالص لكن محتاجين ان احنا نفهم حاجة بخصوص الاركام. انت ما ينفعش تبدأ برقم لكن تقدر تديف الرقم في النص او في الاخر ما عندكش ادنى مشكلة. شايفين يا شباب? الرقم في النص في الاخر في اي حتة تعجبك عايز تكتب حرفه وكل اللي بعده اركام ما فيش اي مشكلة خالص.
+  OCR        : File | Edit | Selection View Go Run Terminal | Help | Fundamentals Administrator | C app.cpp | Naming Rules | Must Be Unique | Case Sensitive | Cannot Start | With-Numbers | Nums | Letters | Underscore | No White | Space | Special-Characters | Reserved Keywords | Class, | Public | Best-Practices | Related-Names | Writing Style | include iostream | using | namespace std; | Ln 27, Col 7 Spaces: 2 | UTF-8 | 1Z192022
+  Combined   :  الشرطة والخط اللي انت شايفه ده. ولو طبعا عملنا Run هيطلع لك طبعا مشاكل. طيب عرفنا دي وما فيهاش اي مشكلة خالص لكن محتاجين ان احنا نفهم حاجة بخصوص الاركام. انت ما ينفعش تبدأ برقم لكن تقدر تديف الرقم في النص او في الاخر ما عندكش ادنى مشكلة. شايفين يا شباب? الرقم في النص في الاخر في اي حتة تعجبك عايز تكتب حرفه وكل اللي بعده اركام ما فيش اي مشكلة خالص. File | Edit | Selection View Go Run Terminal | Help | Fundamentals Administrator | C app.cpp | Naming Rules | Must Be Unique | Case Sensitive | Cannot Start | With-Numbers | Nums | Letters | Underscore | No White | Space | Special-Characters | Reserved Keywords | Class, | Public | Best-Practices | Related-Names | Writing Style | include iostream | using | namespace std; | Ln 27, Col 7 Spaces: 2 | UTF-8 | 1Z192022
+
+[00:04:10]
+  Transcript :  الشرطة والخط اللي انت شايفه ده. ولو طبعا عملنا Run هيطلع لك طبعا مشاكل. طيب عرفنا دي وما فيهاش اي مشكلة خالص لكن محتاجين ان احنا نفهم حاجة بخصوص الاركام. انت ما ينفعش تبدأ برقم لكن تقدر تديف الرقم في النص او في الاخر ما عندكش ادنى مشكلة. شايفين يا شباب? الرقم في النص في الاخر في اي حتة تعجبك عايز تكتب حرفه وكل اللي بعده اركام ما فيش اي مشكلة خالص.
+  OCR        : File | Edit | Selection View Go Run Terminal Help | Fundamentals Administrator | app.cpp | writing Style | include iostream | usingnamespace std; | int main | intprice 100;  DeclareANew-Variable | price 200;. .. -   -Update The Value | intPrice  400; | cout price; | cout | inthum 10; | cout  num; | return 0; | Ln 27, Col 7 Spaces: 2 | UTF-8 | 1Z192022
+  Combined   :  الشرطة والخط اللي انت شايفه ده. ولو طبعا عملنا Run هيطلع لك طبعا مشاكل. طيب عرفنا دي وما فيهاش اي مشكلة خالص لكن محتاجين ان احنا نفهم حاجة بخصوص الاركام. انت ما ينفعش تبدأ برقم لكن تقدر تديف الرقم في النص او في الاخر ما عندكش ادنى مشكلة. شايفين يا شباب? الرقم في النص في الاخر في اي حتة تعجبك عايز تكتب حرفه وكل اللي بعده اركام ما فيش اي مشكلة خالص. File | Edit | Selection View Go Run Terminal Help | Fundamentals Administrator | app.cpp | writing Style | include iostream | usingnamespace std; | int main | intprice 100;  DeclareANew-Variable | price 200;. .. -   -Update The Value | intPrice  400; | cout price; | cout | inthum 10; | cout  num; | return 0; | Ln 27, Col 7 Spaces: 2 | UTF-8 | 1Z192022
+
+[00:04:14]
+  Transcript :  الشرطة والخط اللي انت شايفه ده. ولو طبعا عملنا Run هيطلع لك طبعا مشاكل. طيب عرفنا دي وما فيهاش اي مشكلة خالص لكن محتاجين ان احنا نفهم حاجة بخصوص الاركام. انت ما ينفعش تبدأ برقم لكن تقدر تديف الرقم في النص او في الاخر ما عندكش ادنى مشكلة. شايفين يا شباب? الرقم في النص في الاخر في اي حتة تعجبك عايز تكتب حرفه وكل اللي بعده اركام ما فيش اي مشكلة خالص.
+  OCR        : File | Edit | Selection View Go Run Terminal Help | Fundamentals Administrator | app.cpp | int main | intprice 100;   -Declare-A-New-Variable | price - 200;- . . .   -Update- The Value | intPrice 400; | cout | price; | cout | .nn; | int n1um | cout | num; | return | Ln 27, Col 9 Spaces: 2 | UTF-8 | 1Z192022
+  Combined   :  الشرطة والخط اللي انت شايفه ده. ولو طبعا عملنا Run هيطلع لك طبعا مشاكل. طيب عرفنا دي وما فيهاش اي مشكلة خالص لكن محتاجين ان احنا نفهم حاجة بخصوص الاركام. انت ما ينفعش تبدأ برقم لكن تقدر تديف الرقم في النص او في الاخر ما عندكش ادنى مشكلة. شايفين يا شباب? الرقم في النص في الاخر في اي حتة تعجبك عايز تكتب حرفه وكل اللي بعده اركام ما فيش اي مشكلة خالص. File | Edit | Selection View Go Run Terminal Help | Fundamentals Administrator | app.cpp | int main | intprice 100;   -Declare-A-New-Variable | price - 200;- . . .   -Update- The Value | intPrice 400; | cout | price; | cout | .nn; | int n1um | cout | num; | return | Ln 27, Col 9 Spaces: 2 | UTF-8 | 1Z192022
+
+[00:04:20]
+  Transcript :  الشرطة والخط اللي انت شايفه ده. ولو طبعا عملنا Run هيطلع لك طبعا مشاكل. طيب عرفنا دي وما فيهاش اي مشكلة خالص لكن محتاجين ان احنا نفهم حاجة بخصوص الاركام. انت ما ينفعش تبدأ برقم لكن تقدر تديف الرقم في النص او في الاخر ما عندكش ادنى مشكلة. شايفين يا شباب? الرقم في النص في الاخر في اي حتة تعجبك عايز تكتب حرفه وكل اللي بعده اركام ما فيش اي مشكلة خالص.
+  OCR        : File | Edit | Selection View Go Run Terminal Help | Fundamentals Administrator | app.cpp | int main | intprice 100;  DeclareANew-Variable | price  200; | Update The - Value | int-Price 400; | cout | price; | cout | intn1um1 | cout | n1um1; | return | Ln 27, Col 8 1 selectedSpaces: 2 | UTF-8 | 1Z192022
+  Combined   :  الشرطة والخط اللي انت شايفه ده. ولو طبعا عملنا Run هيطلع لك طبعا مشاكل. طيب عرفنا دي وما فيهاش اي مشكلة خالص لكن محتاجين ان احنا نفهم حاجة بخصوص الاركام. انت ما ينفعش تبدأ برقم لكن تقدر تديف الرقم في النص او في الاخر ما عندكش ادنى مشكلة. شايفين يا شباب? الرقم في النص في الاخر في اي حتة تعجبك عايز تكتب حرفه وكل اللي بعده اركام ما فيش اي مشكلة خالص. File | Edit | Selection View Go Run Terminal Help | Fundamentals Administrator | app.cpp | int main | intprice 100;  DeclareANew-Variable | price  200; | Update The - Value | int-Price 400; | cout | price; | cout | intn1um1 | cout | n1um1; | return | Ln 27, Col 8 1 selectedSpaces: 2 | UTF-8 | 1Z192022
+
+[00:04:25]
+  Transcript :  أهم شيء ما تبدأش اسم المتغير برقم
+  OCR        : None
+  Combined   :  أهم شيء ما تبدأش اسم المتغير برقم
+
+[00:04:30]
+  Transcript :  نشوف مع بعض
+  OCR        : None
+  Combined   :  نشوف مع بعض
+
+[00:04:32]
+  Transcript :  210 وكله تمام
+  OCR        : File | Edit | Selection View Go Run Terminal Help | OFundamentals Administrator | app.cpp | Debug CC File | int main | Run Code | Run CC File | intprice 100;  DeclareA-New-Variable | price  200; | -Update -The - Value | int-Price 400; | cout | price; | cout | n1um1111 | cout | n1um1111 | return | Ln 27, Col 21 | Spaces: 2 | UTF-8 | 1Z192022
+  Combined   :  210 وكله تمام File | Edit | Selection View Go Run Terminal Help | OFundamentals Administrator | app.cpp | Debug CC File | int main | Run Code | Run CC File | intprice 100;  DeclareA-New-Variable | price  200; | -Update -The - Value | int-Price 400; | cout | price; | cout | n1um1111 | cout | n1um1111 | return | Ln 27, Col 21 | Spaces: 2 | UTF-8 | 1Z192022
+
+[00:04:34]
+  Transcript :  210 وكله تمام
+  OCR        : File | Edit | Selection View Go Run Terminal Help | Fundamentals Administrator | app.cpp | int main | intprice 100; DeclareA-New-Variable | price200; | -Update - The - Value | int-Price 400; | cout | price; | OUTPUT | TERMINAL | DEBUG CONSOLE | PROBLEMS | Code | Running-cd-c:UsersosamaDesktopFundamentals - g-app.cpp-0 app- | c:UsersosamaDesktopFundamentalsapp | Doneexited with code0 in 0.487 seconds | Ln 27, Col 21 | Spaces: 2 | UTF-8
+  Combined   :  210 وكله تمام File | Edit | Selection View Go Run Terminal Help | Fundamentals Administrator | app.cpp | int main | intprice 100; DeclareA-New-Variable | price200; | -Update - The - Value | int-Price 400; | cout | price; | OUTPUT | TERMINAL | DEBUG CONSOLE | PROBLEMS | Code | Running-cd-c:UsersosamaDesktopFundamentals - g-app.cpp-0 app- | c:UsersosamaDesktopFundamentalsapp | Doneexited with code0 in 0.487 seconds | Ln 27, Col 21 | Spaces: 2 | UTF-8
+
+[00:04:36]
+  Transcript :  الحمد لله وزي الفل
+  OCR        : File | Edit | Selection View Go Run Terminal Help | Fundamentals Administrator | app.cpp | int main | intprice 100;   Declare- A-New-Variable | price200; | -Update -The -Value | int-Price 400; | cout | price; | cout | n1um1111 | cout | n1um1111 | return0; | Ln 27, Col 21 | Spaces: 2 | UTF-8 | 1Z192022
+  Combined   :  الحمد لله وزي الفل File | Edit | Selection View Go Run Terminal Help | Fundamentals Administrator | app.cpp | int main | intprice 100;   Declare- A-New-Variable | price200; | -Update -The -Value | int-Price 400; | cout | price; | cout | n1um1111 | cout | n1um1111 | return0; | Ln 27, Col 21 | Spaces: 2 | UTF-8 | 1Z192022
+
+[00:04:38]
+  Transcript :  ناخد بقى نسخة تاني من السيباريتور اللطيف بتاعنا ده
+  OCR        : File | Edit | Selection View Go Run Terminal Help | OFundamentals Administrator | app.cpp | int main | intprice 100;   Declare ANew Variable | price 200; . . .   -Update The-Value | int-Price  400; | cout | price; | cout | int n1um1111 | cout | n1um1111; | cout | return 0; | Ln 29, Col 26 Spaces: 2 | UTF-8 | 1Z192022
+  Combined   :  ناخد بقى نسخة تاني من السيباريتور اللطيف بتاعنا ده File | Edit | Selection View Go Run Terminal Help | OFundamentals Administrator | app.cpp | int main | intprice 100;   Declare ANew Variable | price 200; . . .   -Update The-Value | int-Price  400; | cout | price; | cout | int n1um1111 | cout | n1um1111; | cout | return 0; | Ln 29, Col 26 Spaces: 2 | UTF-8 | 1Z192022
+
+[00:04:40]
+  Transcript :  ونكمل
+  OCR        : None
+  Combined   :  ونكمل
+
+[00:04:42]
+  Transcript :  المتغيرات بتاعتنا تقدر تستعمل فيها
+  OCR        : File | Edit | Selection View Go Run Terminal Help | Fundamentals Administrator | C app.cpp | Variables NamingRules  Best Practices | NamingRules | MustBe Unique | Case-Sensitive | Cannot | Start | WithNumbers | Nums | Letters | Underscore | No White | Space Or | Special | lCharacters | Reserved Keywords | Class, | Public | Best Practices | RelatedNames | Writing-Style | include iostream | Ln 30, Col 12 Spaces: 2 | UTF-8 | 1Z192022
+  Combined   :  المتغيرات بتاعتنا تقدر تستعمل فيها File | Edit | Selection View Go Run Terminal Help | Fundamentals Administrator | C app.cpp | Variables NamingRules  Best Practices | NamingRules | MustBe Unique | Case-Sensitive | Cannot | Start | WithNumbers | Nums | Letters | Underscore | No White | Space Or | Special | lCharacters | Reserved Keywords | Class, | Public | Best Practices | RelatedNames | Writing-Style | include iostream | Ln 30, Col 12 Spaces: 2 | UTF-8 | 1Z192022
+
+[00:04:44]
+  Transcript :  الاركام والحروف الإنجليزية والأندرسكور
+  OCR        : None
+  Combined   :  الاركام والحروف الإنجليزية والأندرسكور
+
+[00:04:47]
+  Transcript :  لكن ما تقدرش تستعمل الاسبيشيال كاركتر
+  OCR        : None
+  Combined   :  لكن ما تقدرش تستعمل الاسبيشيال كاركتر
+
+[00:04:52]
+  Transcript :  اللي أنا هوريها لحضرتك دلوقتي
+  OCR        : File | Edit | Selection View Go Run Terminal Help | OFundamentals Administrator | app.cpp | intprice 100;   Declare- A-New-Variable | price 200;   -Update The Value | intPrice  400; | cout | price; | cout | intn1um1111 | cout | n1um1111; | cout | return | Ln 9, Col 26 17 selected | Spaces: 2 | UTF-8 | 21912022
+  Combined   :  اللي أنا هوريها لحضرتك دلوقتي File | Edit | Selection View Go Run Terminal Help | OFundamentals Administrator | app.cpp | intprice 100;   Declare- A-New-Variable | price 200;   -Update The Value | intPrice  400; | cout | price; | cout | intn1um1111 | cout | n1um1111; | cout | return | Ln 9, Col 26 17 selected | Spaces: 2 | UTF-8 | 21912022
+
+[00:04:52]
+  Transcript :  خلينا نقول له مثلا
+  OCR        : None
+  Combined   :  خلينا نقول له مثلا
+
+[00:04:56]
+  Transcript :  end num numbers 100 cout numbers
+  OCR        : File | Edit | Selection View Go Run Terminal Help | Fundamentals Administrator | app.cpp | intprice 100;   Declare- A-New-Variable | price 200; .  Update The Value | intPrice  400; | cout | tprice; | cout | intn1um1111 | cout | n1um1111; | cout | return 0; | Ln 30, Col 7 Spaces: 2 | UTF-8
+  Combined   :  end num numbers 100 cout numbers File | Edit | Selection View Go Run Terminal Help | Fundamentals Administrator | app.cpp | intprice 100;   Declare- A-New-Variable | price 200; .  Update The Value | intPrice  400; | cout | tprice; | cout | intn1um1111 | cout | n1um1111; | cout | return 0; | Ln 30, Col 7 Spaces: 2 | UTF-8
+
+[00:05:04]
+  Transcript :  end num numbers 100 cout numbers
+  OCR        : File | Edit | Selection | View | TerminalHelp | OFundamentals Administrator | cout | app.cpp | count | COMOutptr | Outptropt | pric | Outptroptresultmaybenu... | Outptrresultmaybenull | cout | conjunction | cout | e conjunction | Ptrcout | cout | continue; | std::ostream std::cout | cout | Count | File: iostream | Countl | zero fallhack | cout | return | Ln 31, Col 7 | Spaces: 2 | UTF-8 | 12192022
+  Combined   :  end num numbers 100 cout numbers File | Edit | Selection | View | TerminalHelp | OFundamentals Administrator | cout | app.cpp | count | COMOutptr | Outptropt | pric | Outptroptresultmaybenu... | Outptrresultmaybenull | cout | conjunction | cout | e conjunction | Ptrcout | cout | continue; | std::ostream std::cout | cout | Count | File: iostream | Countl | zero fallhack | cout | return | Ln 31, Col 7 | Spaces: 2 | UTF-8 | 12192022
+
+[00:05:06]
+  Transcript :  end num numbers 100 cout numbers
+  OCR        : File | Edit | Selection View Go Run Terminal Help | Fundamentals Administrator | app.cpp | intprice 100;   Declare A-New-Variable | price 200;  -UpdateThe Value | intPrice400; | cout price; | cout | intn1um1111 | cout | n1um1111; | cout | int numbers | 100; | cout | numbers; | return | Ln 31, Col 18 Spaces: 2 | UTF-8 | 12192022
+  Combined   :  end num numbers 100 cout numbers File | Edit | Selection View Go Run Terminal Help | Fundamentals Administrator | app.cpp | intprice 100;   Declare A-New-Variable | price 200;  -UpdateThe Value | intPrice400; | cout price; | cout | intn1um1111 | cout | n1um1111; | cout | int numbers | 100; | cout | numbers; | return | Ln 31, Col 18 Spaces: 2 | UTF-8 | 12192022
+
+[00:05:12]
+  Transcript :  بتاعتنا. اول حاجة هبدأ بـ underscore وهنا هبدأ بـ underscore. نشوف في مشكلة
+  OCR        : File | Edit | Selection View Go Run Terminal Help | OFundamentals Administrator | C app.cpp | intprice  100;   Declare A New-Variable | price 200;   Update The Value | intPrice 400; | cout | tprice; | cout | intn1um1111 | cout | n1um1111; | cout | numbers | 100; | cout | numbers | return | Ln 30, Col 12 Spaces: 2 | UTF-8 | 1Z192022
+  Combined   :  بتاعتنا. اول حاجة هبدأ بـ underscore وهنا هبدأ بـ underscore. نشوف في مشكلة File | Edit | Selection View Go Run Terminal Help | OFundamentals Administrator | C app.cpp | intprice  100;   Declare A New-Variable | price 200;   Update The Value | intPrice 400; | cout | tprice; | cout | intn1um1111 | cout | n1um1111; | cout | numbers | 100; | cout | numbers | return | Ln 30, Col 12 Spaces: 2 | UTF-8 | 1Z192022
+
+[00:05:13]
+  Transcript :  حصلت? مفيش اي مشكلة حصلت. معلش نتأكد يعني معلش نتأكد. دي رقم
+  OCR        : None
+  Combined   :  حصلت? مفيش اي مشكلة حصلت. معلش نتأكد يعني معلش نتأكد. دي رقم
+
+[00:05:18]
+  Transcript :  100 وكله تمام والحمد لله. طبعا انت بدأت بـ underscore فعادي جدا لو
+  OCR        : File | Edit | Selection View Go Run Terminal Help | OFundamentals Administrator | app.cpp | intprice 100;    -Declare- A New-Variable | price 200;   Update The Value | intPrice  400; | cout price; | cout | OUTPUT | TERMINAL | DEBUG CONSOLE | PROBLEMS | Code | c:UsersosamaDesktopFundamentalsapp | Hlla | Doneexited with code0 in 0.507 seconds | Ln 32, Col 12 Spaces: 2 | UTF-8 | 1Z192022
+  Combined   :  100 وكله تمام والحمد لله. طبعا انت بدأت بـ underscore فعادي جدا لو File | Edit | Selection View Go Run Terminal Help | OFundamentals Administrator | app.cpp | intprice 100;    -Declare- A New-Variable | price 200;   Update The Value | intPrice  400; | cout price; | cout | OUTPUT | TERMINAL | DEBUG CONSOLE | PROBLEMS | Code | c:UsersosamaDesktopFundamentalsapp | Hlla | Doneexited with code0 in 0.507 seconds | Ln 32, Col 12 Spaces: 2 | UTF-8 | 1Z192022
+
+[00:05:20]
+  Transcript :  100 وكله تمام والحمد لله. طبعا انت بدأت بـ underscore فعادي جدا لو
+  OCR        : File | Edit | Selection View Go Run Terminal Help | OFundamentals Administrator | app.cpp | intprice 100;    -Declare- A New-Variable | price 200;  UpdateThe Value | intPrice  400; | cout price; | cout | intn1um1111 | cout | n1um1111; | cout | numbers | 100; | cout | numbers; | return | Ln 32, Col 12 Spaces: 2 | UTF-8 | 21912022
+  Combined   :  100 وكله تمام والحمد لله. طبعا انت بدأت بـ underscore فعادي جدا لو File | Edit | Selection View Go Run Terminal Help | OFundamentals Administrator | app.cpp | intprice 100;    -Declare- A New-Variable | price 200;  UpdateThe Value | intPrice  400; | cout price; | cout | intn1um1111 | cout | n1um1111; | cout | numbers | 100; | cout | numbers; | return | Ln 32, Col 12 Spaces: 2 | UTF-8 | 21912022
+
+[00:05:24]
+  Transcript :  حطيت الـ underscore في النص أو في الآخر. ما عندكش أدنى مشكلة
+  OCR        : File | Edit | Selection View Go Run Terminal Help | Fundamentals Administrator | app.cpp | intprice 100;    -Declare- A-New-Variable | price 200;  Update The Value | intPrice  400; | cout | price; | cout | intn1um1111 | cout | n1um1111; | cout | bers | 100; | cout | numbers; | return | Ln 31, Col 15 | Spaces: 2 | UTF-8 | 1Z192022
+  Combined   :  حطيت الـ underscore في النص أو في الآخر. ما عندكش أدنى مشكلة File | Edit | Selection View Go Run Terminal Help | Fundamentals Administrator | app.cpp | intprice 100;    -Declare- A-New-Variable | price 200;  Update The Value | intPrice  400; | cout | price; | cout | intn1um1111 | cout | n1um1111; | cout | bers | 100; | cout | numbers; | return | Ln 31, Col 15 | Spaces: 2 | UTF-8 | 1Z192022
+
+[00:05:27]
+  Transcript :  نهائيا. خلاص. انت أصلا بدأت بـ underscore فعادي ان انت تضيفها في
+  OCR        : None
+  Combined   :  نهائيا. خلاص. انت أصلا بدأت بـ underscore فعادي ان انت تضيفها في
+
+[00:05:32]
+  Transcript :  أي مكان. كله تمام يا شباب كله تمام. هنا عندنا الاركم و جردناها.
+  OCR        : File | Edit | Selection View Go Run Terminal Help | Fundamentals Administrator | app.cpp | intprice 100;    -Declare- A-New-Variable | price 200;  Update The Value | intPrice  400; | cout | tprice; | cout | n 1:um 1 1 1 1 | OUTPUT | TERMINAL | DEBUG CONSOLE | PROBLEMS | Code | c:UsersosamaDesktopFundamentalsapp | Doneexited with-code0 in 0.506 seconds | Ln 29, Col 33 | Spaces: 2 | UTF-8 | 1Z192022
+  Combined   :  أي مكان. كله تمام يا شباب كله تمام. هنا عندنا الاركم و جردناها. File | Edit | Selection View Go Run Terminal Help | Fundamentals Administrator | app.cpp | intprice 100;    -Declare- A-New-Variable | price 200;  Update The Value | intPrice  400; | cout | tprice; | cout | n 1:um 1 1 1 1 | OUTPUT | TERMINAL | DEBUG CONSOLE | PROBLEMS | Code | c:UsersosamaDesktopFundamentalsapp | Doneexited with-code0 in 0.506 seconds | Ln 29, Col 33 | Spaces: 2 | UTF-8 | 1Z192022
+
+[00:05:34]
+  Transcript :  أي مكان. كله تمام يا شباب كله تمام. هنا عندنا الاركم و جردناها.
+  OCR        : File | Edit | Selection View Go Run Terminal Help | Fundamentals Administrator | app.cpp | int-price 100;   Declare- A-New-Variable | price 200;  Update TheValue | intPrice 400; | cout | price; | cout | intn1um1111 | cout | n1um1111; | cout | bers | 100; | cout | bers | return | Ln 29, Col 33 | Spaces: 2 | UTF-8 | 1Z192022
+  Combined   :  أي مكان. كله تمام يا شباب كله تمام. هنا عندنا الاركم و جردناها. File | Edit | Selection View Go Run Terminal Help | Fundamentals Administrator | app.cpp | int-price 100;   Declare- A-New-Variable | price 200;  Update TheValue | intPrice 400; | cout | price; | cout | intn1um1111 | cout | n1um1111; | cout | bers | 100; | cout | bers | return | Ln 29, Col 33 | Spaces: 2 | UTF-8 | 1Z192022
+
+[00:05:36]
+  Transcript :  نجرب بقى الـ special characters وبعدين الـ white space. اول حاجة عايزك
+  OCR        : File | Edit | Selection View Go Run Terminal Help | Fundamentals Administrator | app.cpp | intprice 100;    -Declare A New-Variable | price 200;  Update TheValue | intPrice  400; | cout | tprice; | cout | intn1um1111 | cout | n1um1111 | int100n; | cout | bers | 100; | cout | bers | return | Ln 29, Col 33 | Spaces: 2 | UTF-8 | 1Z1920z2
+  Combined   :  نجرب بقى الـ special characters وبعدين الـ white space. اول حاجة عايزك File | Edit | Selection View Go Run Terminal Help | Fundamentals Administrator | app.cpp | intprice 100;    -Declare A New-Variable | price 200;  Update TheValue | intPrice  400; | cout | tprice; | cout | intn1um1111 | cout | n1um1111 | int100n; | cout | bers | 100; | cout | bers | return | Ln 29, Col 33 | Spaces: 2 | UTF-8 | 1Z1920z2
+
+[00:05:42]
+  Transcript :  تفهمها بالمنطق كده بعيد عن البرمجة. انت لو استعملت white
+  OCR        : File | Edit | Selection View Go Run Terminal Help | Fundamentals Administrator | app.cpp | int price 100;   -Declare ANewVariable | price 200;   Update The Value | intPrice  400; | cout | price; | cout | intn1um1111 | cout | n1um1111; | cout | bers | 100; | cout | bers | return | Ln 29, Col 33 | Spaces: 2 | UTF-8 | 1Z192022
+  Combined   :  تفهمها بالمنطق كده بعيد عن البرمجة. انت لو استعملت white File | Edit | Selection View Go Run Terminal Help | Fundamentals Administrator | app.cpp | int price 100;   -Declare ANewVariable | price 200;   Update The Value | intPrice  400; | cout | price; | cout | intn1um1111 | cout | n1um1111; | cout | bers | 100; | cout | bers | return | Ln 29, Col 33 | Spaces: 2 | UTF-8 | 1Z192022
+
+[00:05:44]
+  Transcript :  space في اسم اي identifier. انت كده بتعتبرهم كلمتين جنب بعض. وده
+  OCR        : None
+  Combined   :  space في اسم اي identifier. انت كده بتعتبرهم كلمتين جنب بعض. وده
+
+[00:05:49]
+  Transcript :  ده في عالم البرمجة مشكلة بدلا مكتب اسمي متغير وهو مستني بعد دي حاجة معينة فانت بتفصل الاسمين عن بعض بالعلامة دي يعني دي كده فصلتهم عن بعض بقى عندي
+  OCR        : None
+  Combined   :  ده في عالم البرمجة مشكلة بدلا مكتب اسمي متغير وهو مستني بعد دي حاجة معينة فانت بتفصل الاسمين عن بعض بالعلامة دي يعني دي كده فصلتهم عن بعض بقى عندي
+
+[00:06:02]
+  Transcript :  وعندي تكملة النمبوس بيقولك بقى expected semi colon هنا هو مش فاهم انت عايزي عشان تدد له كلمتين وفصلتهم
+  OCR        : File | Edit | Selection View Go Run Terminal Help | Fundamentals Administrator | C app.cpp 2 | intprice 100;    -Declare- A New-Variable | price 200;  Update The Value | intPrice 400; | cout | price; | cout | intn1um1111 10; | cout | expected | ;CC65 | cout | View Problem | AltF8 | Quick Fix.. Ctrl. | bers | 100; | cout | bers | return 0; | Ln 30, Col 12 5 selected | Spaces: 2 | UTF-8 | 1Z192022
+  Combined   :  وعندي تكملة النمبوس بيقولك بقى expected semi colon هنا هو مش فاهم انت عايزي عشان تدد له كلمتين وفصلتهم File | Edit | Selection View Go Run Terminal Help | Fundamentals Administrator | C app.cpp 2 | intprice 100;    -Declare- A New-Variable | price 200;  Update The Value | intPrice 400; | cout | price; | cout | intn1um1111 10; | cout | expected | ;CC65 | cout | View Problem | AltF8 | Quick Fix.. Ctrl. | bers | 100; | cout | bers | return 0; | Ln 30, Col 12 5 selected | Spaces: 2 | UTF-8 | 1Z192022
+
+[00:06:10]
+  Transcript :  فقصة ال space دي اللي هي ال white space المفروض بالمنطق تكون عارفها ومتحتاجش اصل حد يشرحالك
+  OCR        : File | Edit | Selection View Go Run Terminal Help | Fundamentals Administrator | app.cpp | intprice 100;    Declare- A-New-Variable | price 200;  UpdateThe Value | intPrice  400; | cout | tprice; | cout | intn1um1111 | l   10; | cout | expected a ;CC65 | cout | View Problem | AltF8 | Quick Fix... Ctrl. | bers | 100; | cout | bers | return | Ln 30, Col 13 | Spaces: 2 | UTF-8 | 1Z192022
+  Combined   :  فقصة ال space دي اللي هي ال white space المفروض بالمنطق تكون عارفها ومتحتاجش اصل حد يشرحالك File | Edit | Selection View Go Run Terminal Help | Fundamentals Administrator | app.cpp | intprice 100;    Declare- A-New-Variable | price 200;  UpdateThe Value | intPrice  400; | cout | tprice; | cout | intn1um1111 | l   10; | cout | expected a ;CC65 | cout | View Problem | AltF8 | Quick Fix... Ctrl. | bers | 100; | cout | bers | return | Ln 30, Col 13 | Spaces: 2 | UTF-8 | 1Z192022
+
+[00:06:12]
+  Transcript :  فقصة ال space دي اللي هي ال white space المفروض بالمنطق تكون عارفها ومتحتاجش اصل حد يشرحالك
+  OCR        : File | Edit | Selection View Go Run Terminal Help | OFundamentals Administrator | app.cpp | intprice 100;   -Declare- A-New-Variable | price 200;  -Update The Value | intPrice  400; | cout | price; | cout | intn1um1111 | cout | n1um1111; | cout | bers | 100; | cout | bers | return | Ln 30, Col 13 Spaces: 2 | UTF-8 | 1Z192022
+  Combined   :  فقصة ال space دي اللي هي ال white space المفروض بالمنطق تكون عارفها ومتحتاجش اصل حد يشرحالك File | Edit | Selection View Go Run Terminal Help | OFundamentals Administrator | app.cpp | intprice 100;   -Declare- A-New-Variable | price 200;  -Update The Value | intPrice  400; | cout | price; | cout | intn1um1111 | cout | n1um1111; | cout | bers | 100; | cout | bers | return | Ln 30, Col 13 Spaces: 2 | UTF-8 | 1Z192022
+
+[00:06:18]
+  Transcript :  تمام جدا كده فاضل لنا ايه احنا اكلمنا عن ال white space فاضل ال special characters
+  OCR        : File | Edit | Selection View Go Run Terminal Help | Fundamentals Administrator | C app.cpp | Variables-NamingRules  Best Practices | Naming-Rules | Must Be Unique | Case-Sensitive | Cannot Start | WithNumbers | Nums Or | Letters | Underscore | No White | Space | Special | Characters | Reserved Keywords | Class, | Public | Best-Practices | Related-Names | Writing Style | include iostream | Ln 30, Col 12 | Spaces: 2 | UTF-8 | 21192022
+  Combined   :  تمام جدا كده فاضل لنا ايه احنا اكلمنا عن ال white space فاضل ال special characters File | Edit | Selection View Go Run Terminal Help | Fundamentals Administrator | C app.cpp | Variables-NamingRules  Best Practices | Naming-Rules | Must Be Unique | Case-Sensitive | Cannot Start | WithNumbers | Nums Or | Letters | Underscore | No White | Space | Special | Characters | Reserved Keywords | Class, | Public | Best-Practices | Related-Names | Writing Style | include iostream | Ln 30, Col 12 | Spaces: 2 | UTF-8 | 21192022
+
+[00:06:20]
+  Transcript :  تمام جدا كده فاضل لنا ايه احنا اكلمنا عن ال white space فاضل ال special characters
+  OCR        : File | Edit | Selection View Go Run Terminal Help | Fundamentals Administrator | app.cpp | int Price  400; | cout | t price; | cout | n1um1111 | cout | n1um1111; | cout | bers | 100; | cout | bers | return | Ln 30, Col 12 Spaces: 2 | UTF-8 | 1Z192022
+  Combined   :  تمام جدا كده فاضل لنا ايه احنا اكلمنا عن ال white space فاضل ال special characters File | Edit | Selection View Go Run Terminal Help | Fundamentals Administrator | app.cpp | int Price  400; | cout | t price; | cout | n1um1111 | cout | n1um1111; | cout | bers | 100; | cout | bers | return | Ln 30, Col 12 Spaces: 2 | UTF-8 | 1Z192022
+
+[00:06:20]
+  Transcript :  خلينا اقوليك واحدة من ال special characters دي مسلا العلامة دي
+  OCR        : None
+  Combined   :  خلينا اقوليك واحدة من ال special characters دي مسلا العلامة دي
+
+[00:06:28]
+  Transcript :  العلامة مثلا دي كل دي special characters ال special characters دي في اي مكان في اسم المتغير ممنوعة يعني اش هقولك بقى في الاول زي الاركام لأ
+  OCR        : File | Edit | Selection View Go Run Terminal Help | Fundamentals Administrator | app.cpp 2 | intPr1ce  400; | cout | price; | cout | n1um1111 | cout | n1um1111; | cout | !bers | 100; | cout | bers | return | Ln 30, Col 15 | Spaces: 2 | UTF-8 | 1Z19202Z
+  Combined   :  العلامة مثلا دي كل دي special characters ال special characters دي في اي مكان في اسم المتغير ممنوعة يعني اش هقولك بقى في الاول زي الاركام لأ File | Edit | Selection View Go Run Terminal Help | Fundamentals Administrator | app.cpp 2 | intPr1ce  400; | cout | price; | cout | n1um1111 | cout | n1um1111; | cout | !bers | 100; | cout | bers | return | Ln 30, Col 15 | Spaces: 2 | UTF-8 | 1Z19202Z
+
+[00:06:38]
+  Transcript :  دفتها هنا دفتها هنا ممنوعة بالشكل ده
+  OCR        : File | Edit | Selection View Go Run Terminal Help | Fundamentals Administrator | app.cpp | intPrice  400; | cout | price; | cout | n1um1111 | cout | n1um1111; | cout | bers | 100; | cout | BitScanReverse64 | define | Benignracebeg | return | BitScanReverse | pragmawarningpus | CRTDBG | RESERVED | Maybe | raises | sSEHexception | File: concurrencysal.h | ENTRIES | cpp. | result | sfinae | DEBUG | ORDER | UNWRAPPED | Ln 30, Col 16 | Spaces: 2 | UTF-8 | 1Z192022
+  Combined   :  دفتها هنا دفتها هنا ممنوعة بالشكل ده File | Edit | Selection View Go Run Terminal Help | Fundamentals Administrator | app.cpp | intPrice  400; | cout | price; | cout | n1um1111 | cout | n1um1111; | cout | bers | 100; | cout | BitScanReverse64 | define | Benignracebeg | return | BitScanReverse | pragmawarningpus | CRTDBG | RESERVED | Maybe | raises | sSEHexception | File: concurrencysal.h | ENTRIES | cpp. | result | sfinae | DEBUG | ORDER | UNWRAPPED | Ln 30, Col 16 | Spaces: 2 | UTF-8 | 1Z192022
+
+[00:06:40]
+  Transcript :  دفتها هنا دفتها هنا ممنوعة بالشكل ده
+  OCR        : File | Edit | Selection View Go Run Terminal Help | Fundamentals Administrator | app.cpp | intPr1ce  400; | cout | price; | cout | n1um1111 | cout | n1um1111; | cout | bers | 100; | n1um1111 | n1um1111 | Price | File: app.cpp | e price | abort | acos | Ln 30, Col 19 Spaces: 2 | UTF-8 | 12192022
+  Combined   :  دفتها هنا دفتها هنا ممنوعة بالشكل ده File | Edit | Selection View Go Run Terminal Help | Fundamentals Administrator | app.cpp | intPr1ce  400; | cout | price; | cout | n1um1111 | cout | n1um1111; | cout | bers | 100; | n1um1111 | n1um1111 | Price | File: app.cpp | e price | abort | acos | Ln 30, Col 19 Spaces: 2 | UTF-8 | 12192022
+
+[00:06:42]
+  Transcript :  نشوف مع بعض زي ما انت شايفة هو بيقولك بقى unrecognized token وهتسمع بقى حاجات عجيبة طول ما انت بتكتب special characters وعلامات هو مش فهمة
+  OCR        : File | Edit | Selection View Go Run Terminal Help | Fundamentals Administrator | app.cpp 3 | intPr1ce  400; | cout | price; | cout | n1um1111 | cout | n1um1111; | cout | bers | 100; | cout | bers | return | Ln 26, Col 33 Spaces: 2 | UTF-8 | 12192022
+  Combined   :  نشوف مع بعض زي ما انت شايفة هو بيقولك بقى unrecognized token وهتسمع بقى حاجات عجيبة طول ما انت بتكتب special characters وعلامات هو مش فهمة File | Edit | Selection View Go Run Terminal Help | Fundamentals Administrator | app.cpp 3 | intPr1ce  400; | cout | price; | cout | n1um1111 | cout | n1um1111; | cout | bers | 100; | cout | bers | return | Ln 26, Col 33 Spaces: 2 | UTF-8 | 12192022
+
+[00:06:44]
+  Transcript :  نشوف مع بعض زي ما انت شايفة هو بيقولك بقى unrecognized token وهتسمع بقى حاجات عجيبة طول ما انت بتكتب special characters وعلامات هو مش فهمة
+  OCR        : File | Edit | Selection View Go Run Terminal Help | Fundamentals Administrator | C app.cpp 3 | int Price  400; | cout | price; | cout | unrecognized | token CC7 | cout | unrecognized | token CC7 | cout | View Problem | AltF8 | Quick Fix... | Ctrl. | bers | 100; | cout | bers | return | Ln 26, Col 33 Spaces: 2 | UTF-8 | 1Z192022
+  Combined   :  نشوف مع بعض زي ما انت شايفة هو بيقولك بقى unrecognized token وهتسمع بقى حاجات عجيبة طول ما انت بتكتب special characters وعلامات هو مش فهمة File | Edit | Selection View Go Run Terminal Help | Fundamentals Administrator | C app.cpp 3 | int Price  400; | cout | price; | cout | unrecognized | token CC7 | cout | unrecognized | token CC7 | cout | View Problem | AltF8 | Quick Fix... | Ctrl. | bers | 100; | cout | bers | return | Ln 26, Col 33 Spaces: 2 | UTF-8 | 1Z192022
+
+[00:06:46]
+  Transcript :  نشوف مع بعض زي ما انت شايفة هو بيقولك بقى unrecognized token وهتسمع بقى حاجات عجيبة طول ما انت بتكتب special characters وعلامات هو مش فهمة
+  OCR        : File | Edit | Selection View Go Run Terminal Help | Fundamentals Administrator | app.cpp | int Price  400; | cout | price; | cout | n1um1111 | cout | n1um1111; | cout | bers | 100; | cout | bers | return | Ln 26, Col 33 | Spaces: 2 | UTF-8
+  Combined   :  نشوف مع بعض زي ما انت شايفة هو بيقولك بقى unrecognized token وهتسمع بقى حاجات عجيبة طول ما انت بتكتب special characters وعلامات هو مش فهمة File | Edit | Selection View Go Run Terminal Help | Fundamentals Administrator | app.cpp | int Price  400; | cout | price; | cout | n1um1111 | cout | n1um1111; | cout | bers | 100; | cout | bers | return | Ln 26, Col 33 | Spaces: 2 | UTF-8
+
+[00:06:52]
+  Transcript :  حلو جدا الكلام ده
+  OCR        : File | Edit | Selection View Go Run Terminal Help | Fundamentals Administrator | app.cpp | writing Style | include iostream | using namespace std; | int main | intprice  -100;   -Declare A-New-Variable | price 200;. .   UpdateTheValue | intPrice  400; | cout | t price; | cout | int n1um1111 | 1   10; | cout | n1um1111; | cout | bers | 100; | Ln 33, Col 2 Spaces: 2 | UTF-8
+  Combined   :  حلو جدا الكلام ده File | Edit | Selection View Go Run Terminal Help | Fundamentals Administrator | app.cpp | writing Style | include iostream | using namespace std; | int main | intprice  -100;   -Declare A-New-Variable | price 200;. .   UpdateTheValue | intPrice  400; | cout | t price; | cout | int n1um1111 | 1   10; | cout | n1um1111; | cout | bers | 100; | Ln 33, Col 2 Spaces: 2 | UTF-8
+
+[00:06:54]
+  Transcript : 
+  OCR        : File | Edit | Selection View Go Run Terminal | Help | Fundamentals Administrator | C app.cpp | Naming Rules | Must Be Unique | Case Sensitive | Cannot Start | WithNumbers | Nums -Or Letters Or -Underscore | No -White Space Or Special Characters | Reserved Keywords Class, Public | Best-Practices | Related-Names | Writing Style | include iostream | using namespace std; | Ln 33, Col 2 Spaces: 2 | UTF-8
+  Combined   :  File | Edit | Selection View Go Run Terminal | Help | Fundamentals Administrator | C app.cpp | Naming Rules | Must Be Unique | Case Sensitive | Cannot Start | WithNumbers | Nums -Or Letters Or -Underscore | No -White Space Or Special Characters | Reserved Keywords Class, Public | Best-Practices | Related-Names | Writing Style | include iostream | using namespace std; | Ln 33, Col 2 Spaces: 2 | UTF-8
+
+[00:07:00]
+  Transcript : 
+  OCR        : File | Edit | Selection | View Go Run Terminal | Help | Fundamentals Administrator | app.cpp | Naming-Rules | Must Be Unique | CaseSensitive | Cannot | Start | WithNumbers | Nums | Letters | Underscore | White | Space | Special-Characters | Reserved | Keywords | Class, | Public | Best Practices | RelatedNames | Writing Style | include iostream | using namespace std; | Ln 33, Col 2 Spaces: 2 | UTF-8 | 12192022
+  Combined   :  File | Edit | Selection | View Go Run Terminal | Help | Fundamentals Administrator | app.cpp | Naming-Rules | Must Be Unique | CaseSensitive | Cannot | Start | WithNumbers | Nums | Letters | Underscore | White | Space | Special-Characters | Reserved | Keywords | Class, | Public | Best Practices | RelatedNames | Writing Style | include iostream | using namespace std; | Ln 33, Col 2 Spaces: 2 | UTF-8 | 12192022
+
+[00:07:06]
+  Transcript : 
+  OCR        : For Recording  Gfx | PC Icons | zoom | Camtasia | Logitech | Logi Settings | HandBrake | LogiTune | OBS Studio | Snagit 2022 | Snagit Editor | Zoom | Photoshop | This PC | Recycle Bin | Telegram | FileZilla | Thunderbird | Todoist | Tasks | Code  Productivity | Record | Code | Cmder | Atom | Prepros | Chrome | Firefox Dev | Front-End | Codewars | Fundament... | Boostrap5 | Hostinger | ImpFuncs | ProbSolving | ElzeroWeek | BeforeProg | Stats | One Minute | Share | WhatIsVar | Rec.txt | WhatIsVar... | Shorts 91 Vid | 4287 Bronze | 1860 Frm 4K | 12192022
+  Combined   :  For Recording  Gfx | PC Icons | zoom | Camtasia | Logitech | Logi Settings | HandBrake | LogiTune | OBS Studio | Snagit 2022 | Snagit Editor | Zoom | Photoshop | This PC | Recycle Bin | Telegram | FileZilla | Thunderbird | Todoist | Tasks | Code  Productivity | Record | Code | Cmder | Atom | Prepros | Chrome | Firefox Dev | Front-End | Codewars | Fundament... | Boostrap5 | Hostinger | ImpFuncs | ProbSolving | ElzeroWeek | BeforeProg | Stats | One Minute | Share | WhatIsVar | Rec.txt | WhatIsVar... | Shorts 91 Vid | 4287 Bronze | 1860 Frm 4K | 12192022
+
+[00:07:07]
+  Transcript :  اسم الفولدر بيها تخيل
+  OCR        : None
+  Combined   :  اسم الفولدر بيها تخيل
+
+[00:07:08]
+  Transcript :  بص كده new
+  OCR        : None
+  Combined   :  بص كده new
+
+[00:07:09]
+  Transcript :  فولدر هسميه
+  OCR        : None
+  Combined   :  فولدر هسميه
+
+[00:07:12]
+  Transcript :  كون متقدرش
+  OCR        : None
+  Combined   :  كون متقدرش
+
+[00:07:14]
+  Transcript :  هسميه اوكس
+  OCR        : None
+  Combined   :  هسميه اوكس
+
+[00:07:15]
+  Transcript :  متقدرش الاسماء دي
+  OCR        : None
+  Combined   :  متقدرش الاسماء دي
+
+[00:07:18]
+  Transcript :  محجوزة للنظام فعشان كده
+  OCR        : None
+  Combined   :  محجوزة للنظام فعشان كده
+
+[00:07:20]
+  Transcript :  النظام مش بيسمح لك ان انت
+  OCR        : None
+  Combined   :  النظام مش بيسمح لك ان انت
+
+[00:07:24]
+  Transcript :  تسمي اسم فولدر بالاسم ده
+  OCR        : For Recording  Gfx | PC Icons | New fo | zoom | Open | Enter | Logitech | Logi Settings | HandBrake | LogiTune | OBS Studio | Snagit 2022 | Snagit Editor | Zoom | Photoshop | This PC | Recycle Bin | Telegram | FileZilla | Thunderbird | Todoist | Tasks | Pin to Quick access | Pin to Start | Code  Productivity | Record | Compress to ZIP file | Copy as path | CtrlShiftC | Cmder | Atom | Prepros | Chrome | Firefox Dev | Front-End | Codewars | Fundament... | Boostrap5 | Hostinger | ImpFuncs | ProbSolving | ElzeroWeek | BeforeProg | Properties | AltEnter | Open in Terminal | Stats | Show more options | ShiftF10 | One Minute | Share | WhatIsVar | Rec.txt | WhatIsVar... | Shorts 91 Vid | 4287 Bronze | 1860 Frm 4K | 12192022
+  Combined   :  تسمي اسم فولدر بالاسم ده For Recording  Gfx | PC Icons | New fo | zoom | Open | Enter | Logitech | Logi Settings | HandBrake | LogiTune | OBS Studio | Snagit 2022 | Snagit Editor | Zoom | Photoshop | This PC | Recycle Bin | Telegram | FileZilla | Thunderbird | Todoist | Tasks | Pin to Quick access | Pin to Start | Code  Productivity | Record | Compress to ZIP file | Copy as path | CtrlShiftC | Cmder | Atom | Prepros | Chrome | Firefox Dev | Front-End | Codewars | Fundament... | Boostrap5 | Hostinger | ImpFuncs | ProbSolving | ElzeroWeek | BeforeProg | Properties | AltEnter | Open in Terminal | Stats | Show more options | ShiftF10 | One Minute | Share | WhatIsVar | Rec.txt | WhatIsVar... | Shorts 91 Vid | 4287 Bronze | 1860 Frm 4K | 12192022
+
+[00:07:26]
+  Transcript :  بالتالي نفس القصة هنا
+  OCR        : For Recording  Gfx | PC Icons | zoom | Camtasia | Logitech | Logi Settings | HandBrake | LogiTune | OBS Studio | Snagit 2022 | Snagit Editor | Zoom | Photoshop | This PC | Recycle Bin | Telegram | FileZilla | Thunderbird | Todoist | Tasks | Code  Productivity | Record | Code | Cmder | Atom | Prepros | Chrome | Firefox Dev | Front-End | Codewars | Fundament... | Boostrap5 | Hostinger | ImpFuncs | ProbSolving | ElzeroWeek | BeforeProg | Stats | One Minute | Share | WhatIsVar | Rec.txt | WhatIsVar... | Shorts 91 Vid | 4287 Bronze | 1860 Frm 4K | 12192022
+  Combined   :  بالتالي نفس القصة هنا For Recording  Gfx | PC Icons | zoom | Camtasia | Logitech | Logi Settings | HandBrake | LogiTune | OBS Studio | Snagit 2022 | Snagit Editor | Zoom | Photoshop | This PC | Recycle Bin | Telegram | FileZilla | Thunderbird | Todoist | Tasks | Code  Productivity | Record | Code | Cmder | Atom | Prepros | Chrome | Firefox Dev | Front-End | Codewars | Fundament... | Boostrap5 | Hostinger | ImpFuncs | ProbSolving | ElzeroWeek | BeforeProg | Stats | One Minute | Share | WhatIsVar | Rec.txt | WhatIsVar... | Shorts 91 Vid | 4287 Bronze | 1860 Frm 4K | 12192022
+
+[00:07:28]
+  Transcript :  احنا عندنا كلمات محجوزة
+  OCR        : C Reserved Words | Not secure | umsl.edulawtonb224oview2a.html | Life | ESNext | Progress | AcademyRes | Practice | Share | NewTools | Work | Business | GTargets | Other bookmarks | C Reserved Words | double | switch | auto | else | operator | template | break | enum | private | this | case | extern | protected | throw | catch | float | public | char | register | typedef | class | friend | return | union | const | goto | short | unsigned | continue | signed | virtual | default | inline | sizeof | void | delete | static | volatile | long | struct | while | Back to Previous Page | Document: | Local Date: | Last Modified On: | 12192022
+  Combined   :  احنا عندنا كلمات محجوزة C Reserved Words | Not secure | umsl.edulawtonb224oview2a.html | Life | ESNext | Progress | AcademyRes | Practice | Share | NewTools | Work | Business | GTargets | Other bookmarks | C Reserved Words | double | switch | auto | else | operator | template | break | enum | private | this | case | extern | protected | throw | catch | float | public | char | register | typedef | class | friend | return | union | const | goto | short | unsigned | continue | signed | virtual | default | inline | sizeof | void | delete | static | volatile | long | struct | while | Back to Previous Page | Document: | Local Date: | Last Modified On: | 12192022
+
+[00:07:28]
+  Transcript :  زي اللي حضرتك شايفها دي
+  OCR        : None
+  Combined   :  زي اللي حضرتك شايفها دي
+
+[00:07:29]
+  Transcript :  ما ينفعش اسمي المتغير بالاسماء المحجوزة للغة
+  OCR        : None
+  Combined   :  ما ينفعش اسمي المتغير بالاسماء المحجوزة للغة
+
+[00:07:34]
+  Transcript :  يعني ايه
+  OCR        : File | Edit | Selection | View Go Run Terminal | Help | Fundamentals Administrator | app.cpp | Naming Rules | Must Be Unique | Case Sensitive | Cannot Start | WithNumbers | Nums | Or-Letters | Underscore | No White | Space | Special Characters | Reserved- Keywords | sClass, | Public | Best-Practices | Related-Names | Writing Style | include iostream | using namespace std; | Ln 33, Col 2 Spaces: 2 | UTF-8 | 1Z192022
+  Combined   :  يعني ايه File | Edit | Selection | View Go Run Terminal | Help | Fundamentals Administrator | app.cpp | Naming Rules | Must Be Unique | Case Sensitive | Cannot Start | WithNumbers | Nums | Or-Letters | Underscore | No White | Space | Special Characters | Reserved- Keywords | sClass, | Public | Best-Practices | Related-Names | Writing Style | include iostream | using namespace std; | Ln 33, Col 2 Spaces: 2 | UTF-8 | 1Z192022
+
+[00:07:36]
+  Transcript :  يعني انا ما اقدرش اجي اقوله هنا
+  OCR        : File | Edit | Selection View Go Run Terminal Help | Fundamentals Administrator | app.cpp | intPrice  400; | cout price; | cout | n1um1111 | cout | n1um1111; | cout | bers | 100; | cout | bers | return | Ln 33, Col 2 Spaces: 2 | UTF-8 | 1Z19202Z
+  Combined   :  يعني انا ما اقدرش اجي اقوله هنا File | Edit | Selection View Go Run Terminal Help | Fundamentals Administrator | app.cpp | intPrice  400; | cout price; | cout | n1um1111 | cout | n1um1111; | cout | bers | 100; | cout | bers | return | Ln 33, Col 2 Spaces: 2 | UTF-8 | 1Z19202Z
+
+[00:07:40]
+  Transcript :  ان انا مثلا عايز انشئ متغير اسمه public
+  OCR        : File | Edit | Selection | View Go Run Terminal Help | Fundamentals Administrator | e inplace | app.cpp | inplaceindex | inplaceindext | inplacet | placetype | 0inplacetypet | constexpr inline std::in | indexsequence | placet std::inplace | indexsequencefor | initializerlist | inline | File: utility | return 0; | Ln 33, Col 5 Spaces: 2 | UTF-8 | 1Z192022
+  Combined   :  ان انا مثلا عايز انشئ متغير اسمه public File | Edit | Selection | View Go Run Terminal Help | Fundamentals Administrator | e inplace | app.cpp | inplaceindex | inplaceindext | inplacet | placetype | 0inplacetypet | constexpr inline std::in | indexsequence | placet std::inplace | indexsequencefor | initializerlist | inline | File: utility | return 0; | Ln 33, Col 5 Spaces: 2 | UTF-8 | 1Z192022
+
+[00:07:42]
+  Transcript :  انت public بيساوي الف
+  OCR        : File | Edit | Selection View Go Run Terminal Help | Fundamentals Administrator | C app.cpp | int -Pr1ce  400; | cout | price; | cout | n1um1111 | cout | n1um1111; | cout | bers | 100; | cout | bers | cout | int public | return | Bllal | Ln 33, Col 14 Spaces: 2 | UTF-8 | 1Z192022
+  Combined   :  انت public بيساوي الف File | Edit | Selection View Go Run Terminal Help | Fundamentals Administrator | C app.cpp | int -Pr1ce  400; | cout | price; | cout | n1um1111 | cout | n1um1111; | cout | bers | 100; | cout | bers | cout | int public | return | Bllal | Ln 33, Col 14 Spaces: 2 | UTF-8 | 1Z192022
+
+[00:07:44]
+  Transcript :  نشوف مع بعض
+  OCR        : None
+  Combined   :  نشوف مع بعض
+
+[00:07:45]
+  Transcript :  بعد كده see out
+  OCR        : None
+  Combined   :  بعد كده see out
+
+[00:07:47]
+  Transcript :  public
+  OCR        : None
+  Combined   :  public
+
+[00:07:50]
+  Transcript :  بص ايه ده ده مفيش حاجة عامة
+  OCR        : File | Edit | Selection View Go Run Terminal Help | Fundamentals Administrator | app.cpp | intPrice  400; | cout | price; | cout | n1um1111 | cout | n1um1111; | cout | bers | 100; | cout | bers | cout | public | 1000; | cout  public; | return | Ln 34, Col 18 Spaces: 2 | UTF-8 | 12192022
+  Combined   :  بص ايه ده ده مفيش حاجة عامة File | Edit | Selection View Go Run Terminal Help | Fundamentals Administrator | app.cpp | intPrice  400; | cout | price; | cout | n1um1111 | cout | n1um1111; | cout | bers | 100; | cout | bers | cout | public | 1000; | cout  public; | return | Ln 34, Col 18 Spaces: 2 | UTF-8 | 12192022
+
+[00:07:52]
+  Transcript :  طب انت عايز ايه ما الاسم سليم اهو
+  OCR        : File | Edit | Selection View Go Run Terminal Help | Fundamentals Administrator | app.cpp | int Price  400; | cout | price; | cout | n1um1111 | cout | n1um1111; | cout | bers | 100; | cout | expected | identifierCC40 | cout | View | Problem | AltF8 | Quick Fix.. Ctrl. | public | 1000; | cout | public; | return 0; | Ln 34, Col 18 Spaces: 2 | UTF-8 | 1Z192022
+  Combined   :  طب انت عايز ايه ما الاسم سليم اهو File | Edit | Selection View Go Run Terminal Help | Fundamentals Administrator | app.cpp | int Price  400; | cout | price; | cout | n1um1111 | cout | n1um1111; | cout | bers | 100; | cout | expected | identifierCC40 | cout | View | Problem | AltF8 | Quick Fix.. Ctrl. | public | 1000; | cout | public; | return 0; | Ln 34, Col 18 Spaces: 2 | UTF-8 | 1Z192022
+
+[00:07:54]
+  Transcript :  الاسم سليم
+  OCR        : File | Edit | Selection View Go Run Terminal Help | Fundamentals Administrator | C app.cpp 2 | int Pr1ce  400; | cout | price; | cout | n1um1111 | cout | n1um1111; | cout | bers | 100; | cout | bers | cout | public | 1000; | cout | public; | return | Ln 36, Col 2 Spaces: 2 | UTF-8 | 12192022
+  Combined   :  الاسم سليم File | Edit | Selection View Go Run Terminal Help | Fundamentals Administrator | C app.cpp 2 | int Pr1ce  400; | cout | price; | cout | n1um1111 | cout | n1um1111; | cout | bers | 100; | cout | bers | cout | public | 1000; | cout | public; | return | Ln 36, Col 2 Spaces: 2 | UTF-8 | 12192022
+
+[00:07:54]
+  Transcript :  بس هو محجوز للغة في حضرتك ما تقدرش
+  OCR        : None
+  Combined   :  بس هو محجوز للغة في حضرتك ما تقدرش
+
+[00:07:57]
+  Transcript :  لكن لو قلت له Publix حطيت حرف اس
+  OCR        : None
+  Combined   :  لكن لو قلت له Publix حطيت حرف اس
+
+[00:08:00]
+  Transcript :  ده كده ما بقاش طبع الاسماء المحجوزة فما عندكش مشكلة خالص وهيكمل معاك وكله تمام وزي الفل
+  OCR        : File | Edit | Selection View Go Run Terminal Help | Fundamentals Administrator | C app.cpp | int Pr1ce  400; | cout | tprice; | cout | n1um1111 | cout | n1um1111; | cout | bers | 100; | cout | bers | cout | publics | 1000; | cout | publics; | int publics | publics | File: app.cpp | Ln 34, Col 18 Spaces: 2 | UTF-8 | 1Z192022
+  Combined   :  ده كده ما بقاش طبع الاسماء المحجوزة فما عندكش مشكلة خالص وهيكمل معاك وكله تمام وزي الفل File | Edit | Selection View Go Run Terminal Help | Fundamentals Administrator | C app.cpp | int Pr1ce  400; | cout | tprice; | cout | n1um1111 | cout | n1um1111; | cout | bers | 100; | cout | bers | cout | publics | 1000; | cout | publics; | int publics | publics | File: app.cpp | Ln 34, Col 18 Spaces: 2 | UTF-8 | 1Z192022
+
+[00:08:02]
+  Transcript :  ده كده ما بقاش طبع الاسماء المحجوزة فما عندكش مشكلة خالص وهيكمل معاك وكله تمام وزي الفل
+  OCR        : File | Edit | Selection View Go Run Terminal Help | Fundamentals Administrator | app.cpp | intPrice 400; | cout | tprice; | cout | int n1um1111 | cout | n1um1111; | cout | bers | 100; | cout | bers | cout | publics | 1000; | cout | publics; | return | Ln 36, Col 2 Spaces: 2 | UTF-8
+  Combined   :  ده كده ما بقاش طبع الاسماء المحجوزة فما عندكش مشكلة خالص وهيكمل معاك وكله تمام وزي الفل File | Edit | Selection View Go Run Terminal Help | Fundamentals Administrator | app.cpp | intPrice 400; | cout | tprice; | cout | int n1um1111 | cout | n1um1111; | cout | bers | 100; | cout | bers | cout | publics | 1000; | cout | publics; | return | Ln 36, Col 2 Spaces: 2 | UTF-8
+
+[00:08:06]
+  Transcript :  ده كده ما بقاش طبع الاسماء المحجوزة فما عندكش مشكلة خالص وهيكمل معاك وكله تمام وزي الفل
+  OCR        : File | Edit | Selection View Go Run Terminal Help | Fundamentals Administrator | C app.cpp | Variables NamingRules  Best Practices | Naming Rules | Must -Be Unique | Case Sensitive | Cannot | Start | With-Numbers | Nums | Letters | Underscore | No White | Space | Special | Characters | Reserved Keywords | Class, | Public | Best Practices | Related-Names | Writing Style | include iostream | Ln 36, Col 2 Spaces: 2 | UTF-8 | 1Z192022
+  Combined   :  ده كده ما بقاش طبع الاسماء المحجوزة فما عندكش مشكلة خالص وهيكمل معاك وكله تمام وزي الفل File | Edit | Selection View Go Run Terminal Help | Fundamentals Administrator | C app.cpp | Variables NamingRules  Best Practices | Naming Rules | Must -Be Unique | Case Sensitive | Cannot | Start | With-Numbers | Nums | Letters | Underscore | No White | Space | Special | Characters | Reserved Keywords | Class, | Public | Best Practices | Related-Names | Writing Style | include iostream | Ln 36, Col 2 Spaces: 2 | UTF-8 | 1Z192022
+
+[00:08:06]
+  Transcript :  دي كده شباب الرولز اللي بتحكم تسمية المتغير بتاعنا
+  OCR        : None
+  Combined   :  دي كده شباب الرولز اللي بتحكم تسمية المتغير بتاعنا
+
+[00:08:12]
+  Transcript :  تعالوا بقى نشوف ايه قصة البيست براكسس
+  OCR        : File | Edit | Selection View Go Run Terminal Help | Fundamentals Administrator | app.cpp | intPrice  400; | cout | price; | cout | int n1um1111 | cout | n1um1111; | cout | bers | 100; | cout | bers | cout | publics  1000; | cout | publics; | return0; | Ln 5, Col 1 197 selected | Spaces: 2 | UTF-8 | 12192022
+  Combined   :  تعالوا بقى نشوف ايه قصة البيست براكسس File | Edit | Selection View Go Run Terminal Help | Fundamentals Administrator | app.cpp | intPrice  400; | cout | price; | cout | int n1um1111 | cout | n1um1111; | cout | bers | 100; | cout | bers | cout | publics  1000; | cout | publics; | return0; | Ln 5, Col 1 197 selected | Spaces: 2 | UTF-8 | 12192022
+
+[00:08:18]
+  Transcript :  احنا و احنا بنتعامل مع لغات البرمجة عندنا حاجة اسمها كودينج ستايل او الرايتن كودينج ستايل
+  OCR        : File | Edit | Selection View Go Run Terminal Help | Fundamentals Administrator | C app.cpp | NamingRuies | Must Be -Unique | Case Sensitive | Cannot Start | With-Numbers | Nums Or Letters | Underscore | No White Space | Special-Characters | Reserved-Keywords | Class, | Public | Best-Practices | Related-Names | Writing Style | include iostream | using | namespace std; | int main | Ln 35, Col 26 Spaces: 2 | UTF-8 | 1Z192022
+  Combined   :  احنا و احنا بنتعامل مع لغات البرمجة عندنا حاجة اسمها كودينج ستايل او الرايتن كودينج ستايل File | Edit | Selection View Go Run Terminal Help | Fundamentals Administrator | C app.cpp | NamingRuies | Must Be -Unique | Case Sensitive | Cannot Start | With-Numbers | Nums Or Letters | Underscore | No White Space | Special-Characters | Reserved-Keywords | Class, | Public | Best-Practices | Related-Names | Writing Style | include iostream | using | namespace std; | int main | Ln 35, Col 26 Spaces: 2 | UTF-8 | 1Z192022
+
+[00:08:22]
+  Transcript :  في طريقة وانت بتكتب اسم المتغير ليها اسم معين
+  OCR        : File | Edit | Selection View Go Run Terminal Help | Fundamentals Administrator | app.cpp | Best-Practices | Related-Names | WritingStyle | include iostream | usingnamespacestd; | int main | intprice 100; -DeclareANew-Variable | price 200; . . .   Update- The-Value | int-Price  400; | cout  price; | cout | int-n1um1111 10; | Ln 35, Col 26 Spaces: 2 | UTF-8 | 1Z192022
+  Combined   :  في طريقة وانت بتكتب اسم المتغير ليها اسم معين File | Edit | Selection View Go Run Terminal Help | Fundamentals Administrator | app.cpp | Best-Practices | Related-Names | WritingStyle | include iostream | usingnamespacestd; | int main | intprice 100; -DeclareANew-Variable | price 200; . . .   Update- The-Value | int-Price  400; | cout  price; | cout | int-n1um1111 10; | Ln 35, Col 26 Spaces: 2 | UTF-8 | 1Z192022
+
+[00:08:23]
+  Transcript :  نبص بصة كده هنا على الصفحة دي
+  OCR        : None
+  Combined   :  نبص بصة كده هنا على الصفحة دي
+
+[00:08:26]
+  Transcript :  هنا عندي الطريقة دي
+  OCR        : C Reserved Words | elzero.org?p11875previewtrue | Life | ESNext | Progress | AcademyRes | Practice | Share | New Tools | Work | Business | GTargets | Other bookmarks | jill ploi | Example | Name | Languages | elzeroWebSchool | Camel Case | C, C, JavaScript | ElzeroWebSchool | Pascal Case | Python | elzerowebschool | Snake Case | elzero-web-school | Kebab Case | ELZEROWEBSCHOOL | Screaming Snake Case | Lalig il l | Made With By Osama Elzero  2022 | 1Z192022
+  Combined   :  هنا عندي الطريقة دي C Reserved Words | elzero.org?p11875previewtrue | Life | ESNext | Progress | AcademyRes | Practice | Share | New Tools | Work | Business | GTargets | Other bookmarks | jill ploi | Example | Name | Languages | elzeroWebSchool | Camel Case | C, C, JavaScript | ElzeroWebSchool | Pascal Case | Python | elzerowebschool | Snake Case | elzero-web-school | Kebab Case | ELZEROWEBSCHOOL | Screaming Snake Case | Lalig il l | Made With By Osama Elzero  2022 | 1Z192022
+
+[00:08:28]
+  Transcript :  عندي متغير مكوّن من أكتر من كلمة
+  OCR        : None
+  Combined   :  عندي متغير مكوّن من أكتر من كلمة
+
+[00:08:30]
+  Transcript :  بتكتب أول كلمة كلها small
+  OCR        : None
+  Combined   :  بتكتب أول كلمة كلها small
+
+[00:08:32]
+  Transcript :  وأول حرف من الكلمة اللي بعدها capital
+  OCR        : None
+  Combined   :  وأول حرف من الكلمة اللي بعدها capital
+
+[00:08:34]
+  Transcript :  دي بتسمى camel case
+  OCR        : None
+  Combined   :  دي بتسمى camel case
+
+[00:08:36]
+  Transcript :  هي عاملة زي السنم بتاع الجمل كده
+  OCR        : None
+  Combined   :  هي عاملة زي السنم بتاع الجمل كده
+
+[00:08:38]
+  Transcript :  هتلاحظ أنه هو شكل الجمل
+  OCR        : None
+  Combined   :  هتلاحظ أنه هو شكل الجمل
+
+[00:08:40]
+  Transcript :  ممكن تكتبها كده في جوجل
+  OCR        : None
+  Combined   :  ممكن تكتبها كده في جوجل
+
+[00:08:42]
+  Transcript :  عشان تشوف شكلها بص
+  OCR        : C Reserved Words | CCamel Case - Google Search | google.comsearch?qCamelCaseoqCamelCaseaqschrome..69i57.222j0j1sourceidchromeieUTF-8 | Life | ESNext | Progress | Academy Res | Practice | Share | New Tools | Work | Business | GTargets | Other bookmarks | Google | Camel Case | Images | VideosBooks | NewsMore | Tools | About 85,500,000 results 0.37 seconds | https:en.wikipedia.org wiki Camelcase : | Camel case - Wikipedia | camel Case | Case naming convention ex | Camel case is the practice of writing phrases without spaces or punctuation, The format | wcht | indicates the separation of words with a sinqle capitalized letter, .. | Snake case  Title case  Naming convention  Capitalization | More images | People also ask | Camel case | What is CamelCase example? | Camel case is the practice of writing phrases without | spaces or punctuation. The format indicates the | What is CamelCase vs PascalCase? | separation of words with a sinqle capitalized letter, | What is camel case rule? | and the first word starting with either case. Common | examples include iPhone and eBay. Wikipedia | In which case is the word camel in? | Advantages | Feedback | Hashtags | https:www.techtarget.com  whatis definition  Camel... | What is the CamelCase naming convention? - TechTarget | Feedback | CamelCase is a way to separate the words in a phrase by making the first letter of each word | capitalized and not using spaces. It is commonly used in web URLs. | See results about | https:www.theserverside.com answer  Pascal-case-vs-c... | camel case | Pascal case vs. camel case: Whats the difference? I TechTarget | Dictionary definition | Mar 26, 2021  Camel case and Pascal case are similar. Both demand variables made from | compound words and have the first letter of each appended word .. | https:languagetool.org insights  post  camel-case | Capitalization of Single Letters?What is Camel Case? | 1Z192022
+  Combined   :  عشان تشوف شكلها بص C Reserved Words | CCamel Case - Google Search | google.comsearch?qCamelCaseoqCamelCaseaqschrome..69i57.222j0j1sourceidchromeieUTF-8 | Life | ESNext | Progress | Academy Res | Practice | Share | New Tools | Work | Business | GTargets | Other bookmarks | Google | Camel Case | Images | VideosBooks | NewsMore | Tools | About 85,500,000 results 0.37 seconds | https:en.wikipedia.org wiki Camelcase : | Camel case - Wikipedia | camel Case | Case naming convention ex | Camel case is the practice of writing phrases without spaces or punctuation, The format | wcht | indicates the separation of words with a sinqle capitalized letter, .. | Snake case  Title case  Naming convention  Capitalization | More images | People also ask | Camel case | What is CamelCase example? | Camel case is the practice of writing phrases without | spaces or punctuation. The format indicates the | What is CamelCase vs PascalCase? | separation of words with a sinqle capitalized letter, | What is camel case rule? | and the first word starting with either case. Common | examples include iPhone and eBay. Wikipedia | In which case is the word camel in? | Advantages | Feedback | Hashtags | https:www.techtarget.com  whatis definition  Camel... | What is the CamelCase naming convention? - TechTarget | Feedback | CamelCase is a way to separate the words in a phrase by making the first letter of each word | capitalized and not using spaces. It is commonly used in web URLs. | See results about | https:www.theserverside.com answer  Pascal-case-vs-c... | camel case | Pascal case vs. camel case: Whats the difference? I TechTarget | Dictionary definition | Mar 26, 2021  Camel case and Pascal case are similar. Both demand variables made from | compound words and have the first letter of each appended word .. | https:languagetool.org insights  post  camel-case | Capitalization of Single Letters?What is Camel Case? | 1Z192022
+
+[00:08:44]
+  Transcript :  شكل الجمل هو يوضحها لك
+  OCR        : C Reserved Words | Camel Case - Google Search | google.comsearch?qCamelCasesourceInmstbmischsaXved2ahUKEwj93af8yIT8AhUECuwKHYVRAL8QAUoAXoECAEQAwbiw1920bih929dpr1 | Life | ESNext | Progress | AcademyRes | Practice | Share | NewTools | Work | Business | GTargets | Other bookmarks | Google | Camel Case | OSAMA | ELZERO | Images | Videos | Books | News | :More | Tools | Collections SafeSearch | pascal case | programming | snake case | java | naming | iphone | upper | convention | python | notation | kate spade | word | macb | CamelCase | Camel case | camelCase | lowercase | From Wiipedae, the free encycopedie | Redinected fron CanelCasel | CamelCase naming convention examples | Explained | Camel case sylized as | camelCase | MiXeDcAsE | camelCase: also known as | camelCase | camel caps or more formaly | Proper Case | as medial capitats is the | snakecase | practice of writng phrases | Omlrive | such that each word or | PascalCase | Title Case | abbreviation in the middle of | kebab-case | the phrase begins with a | snakecase | capital letter, with no | UPPERCASE | intervening spaces or | camslCaso is named after the | Tump of is prooeding capitat letal. | examples include Phone | punctuation. Common | imlar to The hump of conmon damols. | w Wikipedia | TechTarget | Khalil Stemmler | Junior to Expert | Computer Hope | CD Cloud Logix | Wikimedia Commons | Camel case - Wikipedia | What is the CamelCase naming convention? | Pascal Case  Naming Conventions | Naming Convention, Camel Case  Kebab | What is Camelcase? | Quick Reads  Camel case vs Snake ca.. | File:CamelCase,syg - Wikimedia Co. | IDENTIPIANT | View Go Debug Taska Window Hela | UpmComelC | Aplien | patilic clams Whertrfe | 4lecathet | Welcome | case.json x | Naming conventions in Java | perCamelCas | pubitc int Uhertir gets rets | Saleus Enum | FataErw | ISON | Raw Duns | Headers | Esremenhs | EperCamalCa | Save Capy | Y Fimer J5ON | camelCase; canelCase, | PascalCase: PascalCase | camelCase | Exmplien | 0Emapla | OpprCoon | publte stringTome grt ret | 1y0: | sancy | snakecase; snakecase | Harface | OpporCanelCa | Exgosssot | paullc strlang Sumane  get, set | Lascttiame | Daveli | kebab-case: kebab-case | y kinn Can | noun: a compound word that uses capital | Hethode | laperCandCase | puolix atrieng Address  grts srt; | cxxy: | Seattie | letters to delineate words. Doesnt | isowCamedCaon | Sybem Towr | frac | puetlc string dvanarlmagort get set | include the first letter. | Faarme | hyellam | emplaysett: | Pracmtle | puhtic strleg Role  get uets | firstham | andrew | pulllc string Eoracttwec  ert sets. | Lastiane: | fuller | OTWAINO | city; | TacoNa | Twaino | Stack Overflow | BinaryIntellect Knowledge Base | Medium | TechTarget | Camel Case - Twaino | asp.net core 1.0 web api use camelcase .. | Camel Casing in ASP.NET Core Web API | Camel, Pascal, Snake, and Kebab Case | What is the CamelCase | codecase my great variable name | usling systam; | space tost | snakecase | camelCase | myGreatVariableNamo | 0 references | mygreatvariablename | 2ass Program | WHAT IS | 0 refenences | mygreatvariablename | CamelCase | CAMELCASE? | statie soid Mainstringl args | MyGreatVariableName | LORL.COM | onsole,writetinesThe time is nowj | var now w DateTimo,Mowz | MyGreatVariabieName | my.great:variable.name | my-great-variable-name | my great variable name | The Social Media Butterfly | Visual Studio Marketplace | MathWorks | Alfred forum | ESL Library | Waiting for www.google.com... | Convert Naming Convention - File | Code Case - Share your Workflows | What Is CamelCas | 12192022
+  Combined   :  شكل الجمل هو يوضحها لك C Reserved Words | Camel Case - Google Search | google.comsearch?qCamelCasesourceInmstbmischsaXved2ahUKEwj93af8yIT8AhUECuwKHYVRAL8QAUoAXoECAEQAwbiw1920bih929dpr1 | Life | ESNext | Progress | AcademyRes | Practice | Share | NewTools | Work | Business | GTargets | Other bookmarks | Google | Camel Case | OSAMA | ELZERO | Images | Videos | Books | News | :More | Tools | Collections SafeSearch | pascal case | programming | snake case | java | naming | iphone | upper | convention | python | notation | kate spade | word | macb | CamelCase | Camel case | camelCase | lowercase | From Wiipedae, the free encycopedie | Redinected fron CanelCasel | CamelCase naming convention examples | Explained | Camel case sylized as | camelCase | MiXeDcAsE | camelCase: also known as | camelCase | camel caps or more formaly | Proper Case | as medial capitats is the | snakecase | practice of writng phrases | Omlrive | such that each word or | PascalCase | Title Case | abbreviation in the middle of | kebab-case | the phrase begins with a | snakecase | capital letter, with no | UPPERCASE | intervening spaces or | camslCaso is named after the | Tump of is prooeding capitat letal. | examples include Phone | punctuation. Common | imlar to The hump of conmon damols. | w Wikipedia | TechTarget | Khalil Stemmler | Junior to Expert | Computer Hope | CD Cloud Logix | Wikimedia Commons | Camel case - Wikipedia | What is the CamelCase naming convention? | Pascal Case  Naming Conventions | Naming Convention, Camel Case  Kebab | What is Camelcase? | Quick Reads  Camel case vs Snake ca.. | File:CamelCase,syg - Wikimedia Co. | IDENTIPIANT | View Go Debug Taska Window Hela | UpmComelC | Aplien | patilic clams Whertrfe | 4lecathet | Welcome | case.json x | Naming conventions in Java | perCamelCas | pubitc int Uhertir gets rets | Saleus Enum | FataErw | ISON | Raw Duns | Headers | Esremenhs | EperCamalCa | Save Capy | Y Fimer J5ON | camelCase; canelCase, | PascalCase: PascalCase | camelCase | Exmplien | 0Emapla | OpprCoon | publte stringTome grt ret | 1y0: | sancy | snakecase; snakecase | Harface | OpporCanelCa | Exgosssot | paullc strlang Sumane  get, set | Lascttiame | Daveli | kebab-case: kebab-case | y kinn Can | noun: a compound word that uses capital | Hethode | laperCandCase | puolix atrieng Address  grts srt; | cxxy: | Seattie | letters to delineate words. Doesnt | isowCamedCaon | Sybem Towr | frac | puetlc string dvanarlmagort get set | include the first letter. | Faarme | hyellam | emplaysett: | Pracmtle | puhtic strleg Role  get uets | firstham | andrew | pulllc string Eoracttwec  ert sets. | Lastiane: | fuller | OTWAINO | city; | TacoNa | Twaino | Stack Overflow | BinaryIntellect Knowledge Base | Medium | TechTarget | Camel Case - Twaino | asp.net core 1.0 web api use camelcase .. | Camel Casing in ASP.NET Core Web API | Camel, Pascal, Snake, and Kebab Case | What is the CamelCase | codecase my great variable name | usling systam; | space tost | snakecase | camelCase | myGreatVariableNamo | 0 references | mygreatvariablename | 2ass Program | WHAT IS | 0 refenences | mygreatvariablename | CamelCase | CAMELCASE? | statie soid Mainstringl args | MyGreatVariableName | LORL.COM | onsole,writetinesThe time is nowj | var now w DateTimo,Mowz | MyGreatVariabieName | my.great:variable.name | my-great-variable-name | my great variable name | The Social Media Butterfly | Visual Studio Marketplace | MathWorks | Alfred forum | ESL Library | Waiting for www.google.com... | Convert Naming Convention - File | Code Case - Share your Workflows | What Is CamelCas | 12192022
+
+[00:08:46]
+  Transcript :  بسمينها camel case
+  OCR        : C Reserved Words | Camel Case - Google Search | google.comsearch?qCamelCasesourceInmstbmischsaXved2ahUKEwj93af8yIT8AhUECuwKHYVRAL8QAUoAXoECAEQAwbiw1920bih929dpr1imgrcMkI7Md9ySYvegM | Life | ESNext | Progress | AcademyRes | Practice | Share | New Tools | Work | Business | GTargets | Other bookmarks | Google | OSAMA | Camel Case | camel | CamelCase naming convention examples | Wikipedia | Explained | camelCase | Lurteit | snakecase | Raylitaton | Harperbutie | PascalCase | w Wikipedia | TechTarget | Khalil Stemmler | Camel case - Wikipedia | What is the CamelCase naming convention? | Pascal Case  Naming Conventions .. | CamelCase | Camel case | lowercase | From Wipedia, the free encyckopedia | Redirectet fron CanelCase | Camel case sylized as | MiXeDcAsE | camelCase: also known as | camel caps or more formally | camelCase | Proper Case | as medial capitala is the | practice of writing phrases | such that each word or | Title Case | abbreviation in the midde of | the phrase begins with a | kebab-case | snakecase | capital letter, with no | UPPERCASE | intervening spaces or | camslCaso is named affter the | punctuation. Common | examples include Phone | simlar to the hump of common camels | Junior to Expert | Computer Hope | CD Cloud Logix | Wikimedia Commons | Naming Convention, Camel Case  Keb. | What is Camelcase? | Quick Reads  Camel case vs Sn.. | File:CamelCase.svg- Wikimedia. | IDENTIFPIANT | Imtplecalhostd8e91agiemgl | Clanon | UpperCamelCaon | AcpOeron | Tordixes | UperCameCase | poblde int? Userte  get: set: | Iscathnt aus | Wilues Exum | UperCameCase | rareigel?nerta | JSON | Rasw Data | Headers | Eseremenhs | UpperCimwlCae | Save Copy | Y Filter 15ON | Exxplan | sowCamelCo | pobilde string toetacttede  grt: set: | Calsrs.corebantes | OpporCaon | publle string Theme  grts wt | Iarfaco | cporCanelCace | Eupouszit | cirsttime: | Iancy | Motude | Isleve | lastiame: | Seattle | Davolin | UpperCandCase | puolic string Address  grts srt | cityt | UpceCamelCas | Seder Tet | Faante | publlc string dvanarlixageert get; oet | Iypeliems | emp1ayectt: | palltc crrling kole prt ont 1 | firstirme: | Aedirew | pulililc string Conactowall aet seta | LestNane: | Tarow | uller | csty: | OTHAINO | Twaino | Stack Overflow | BinaryIntellect Knowledge Base | Camel Case - Twaino | asp.net core 1.0 web api use camelcase .. | Camel Casing in ASP.NET Core Web API | Helg | Camel case - Wikipedia | CALAJAON | Welcome | casejson | Naming conventions in Java | Images may be subject to copyright. Learn More | PascalCase: PascalCase | camelCase: canelCase | camelCase | snakecase: snakecase | kebab-case: kebab-case | noun: a compound word that uses capital | Related content | letters to delineate words. Doesnt | assagest tod inseny Bt | include the first letter. | Camel Ca | https:en.wikipedia.orgwikiCamelcase | 1Z192022
+  Combined   :  بسمينها camel case C Reserved Words | Camel Case - Google Search | google.comsearch?qCamelCasesourceInmstbmischsaXved2ahUKEwj93af8yIT8AhUECuwKHYVRAL8QAUoAXoECAEQAwbiw1920bih929dpr1imgrcMkI7Md9ySYvegM | Life | ESNext | Progress | AcademyRes | Practice | Share | New Tools | Work | Business | GTargets | Other bookmarks | Google | OSAMA | Camel Case | camel | CamelCase naming convention examples | Wikipedia | Explained | camelCase | Lurteit | snakecase | Raylitaton | Harperbutie | PascalCase | w Wikipedia | TechTarget | Khalil Stemmler | Camel case - Wikipedia | What is the CamelCase naming convention? | Pascal Case  Naming Conventions .. | CamelCase | Camel case | lowercase | From Wipedia, the free encyckopedia | Redirectet fron CanelCase | Camel case sylized as | MiXeDcAsE | camelCase: also known as | camel caps or more formally | camelCase | Proper Case | as medial capitala is the | practice of writing phrases | such that each word or | Title Case | abbreviation in the midde of | the phrase begins with a | kebab-case | snakecase | capital letter, with no | UPPERCASE | intervening spaces or | camslCaso is named affter the | punctuation. Common | examples include Phone | simlar to the hump of common camels | Junior to Expert | Computer Hope | CD Cloud Logix | Wikimedia Commons | Naming Convention, Camel Case  Keb. | What is Camelcase? | Quick Reads  Camel case vs Sn.. | File:CamelCase.svg- Wikimedia. | IDENTIFPIANT | Imtplecalhostd8e91agiemgl | Clanon | UpperCamelCaon | AcpOeron | Tordixes | UperCameCase | poblde int? Userte  get: set: | Iscathnt aus | Wilues Exum | UperCameCase | rareigel?nerta | JSON | Rasw Data | Headers | Eseremenhs | UpperCimwlCae | Save Copy | Y Filter 15ON | Exxplan | sowCamelCo | pobilde string toetacttede  grt: set: | Calsrs.corebantes | OpporCaon | publle string Theme  grts wt | Iarfaco | cporCanelCace | Eupouszit | cirsttime: | Iancy | Motude | Isleve | lastiame: | Seattle | Davolin | UpperCandCase | puolic string Address  grts srt | cityt | UpceCamelCas | Seder Tet | Faante | publlc string dvanarlixageert get; oet | Iypeliems | emp1ayectt: | palltc crrling kole prt ont 1 | firstirme: | Aedirew | pulililc string Conactowall aet seta | LestNane: | Tarow | uller | csty: | OTHAINO | Twaino | Stack Overflow | BinaryIntellect Knowledge Base | Camel Case - Twaino | asp.net core 1.0 web api use camelcase .. | Camel Casing in ASP.NET Core Web API | Helg | Camel case - Wikipedia | CALAJAON | Welcome | casejson | Naming conventions in Java | Images may be subject to copyright. Learn More | PascalCase: PascalCase | camelCase: canelCase | camelCase | snakecase: snakecase | kebab-case: kebab-case | noun: a compound word that uses capital | Related content | letters to delineate words. Doesnt | assagest tod inseny Bt | include the first letter. | Camel Ca | https:en.wikipedia.orgwikiCamelcase | 1Z192022
+
+[00:08:48]
+  Transcript :  ليه عشان أول حرف من الكلمة الأولى small
+  OCR        : C Reserved Words | Camel Case - Google Search | google.comsearch?qCamelCasesourceInmstbmischsaXved2ahUKEwj93af8yIT8AhUECuwKHYVRAL8QAUoAXoECAEQAwbiw1920bih929dpr1imgrcMkI7Md9ySYvegM | Life | ESNext | Progress | AcademyRes | Practice | Share | New Tools | Work | Business | GTargets | Other bookmarks | Google | OSAMA | Camel Case | camel | CamelCase naming convention examples | Wikipedia | Explained | camelCase | Lurteit | snakecase | Harperbutie | PascalCase | w Wikipedia | TechTarget | Khalil Stemmler | Camel case - Wikipedia | What is the CamelCase naming convention? | Pascal Case  Naming Conventions .. | CamelCase | Camel case | lowercase | From Wipedia, the free encyckopedia | Redirectet fron CanelCase | Camel case sylized as | MiXeDcAsE | camelCase: also known as | camel caps or more formally | camelCase | Proper Case | as medial capitals is the | practice of writing phrases | such that each word or | Title Case | abbreviation in the midde of | the phrase begins with a | kebab-case | snakecase | capital letter, with no | UPPERCASE | intervening spaces or | camalCaso is named affter the | punctuation. Common | examples include Phone | simlar to the hump of common camels | Junior to Expert | Computer Hope | CD Cloud Logix | Wikimedia Commons | Naminq Convention, Camel Case  Keb.. | What is Camelcase? | Quick Reads  Camel case vs Sn.. | File:CamelCase.svg - Wikimedia.. | IDENTIFPIANT | Imtpuecalhostd8e91agilemg | UpperCamelCaon | AcpOeron | Tordixes | UperCameCase | poblide int? Userte  get: set: | Iscathnt aus | Wilues Exum | UpoerdCanelCase | rareigel?nerta | JSON | Rasw Data | Headers | Eseremenhs | UpperCimelCae | Save Copy | Y Filter 15ON | Exxplan | Uow CamalCo | pobild string toetacttrde grt: set | Calsrs.corebantes | OpporCaon | publde string Theme  grts wt | cporCanelCace | Eupouszit | Cirsthime: | Iancy | Isleve | lastiame: | Seattle | Davolin | Merode | UpperCandCase | puolic string Address  grts srt | cityt | UpceCamelCas | Seder Tet | Faante | publlc string dvanarlixageort  get; oet: | oeCand | Iyperliems | emp1ayectt: | pallie crrling kole prt ont | firstirme: | Aedirew | pulililc strieng Contactowall aet seta | LestNane: | Tarow | uller | csty: | OTHAINO | Twaino | Stack Overflow | BinaryIntellect Knowledge Base | Camel Case - Twaino | asp.net core 1.0 web api use camelcase .. | Camel Casing in ASP.NET Core Web API | Helg | Camel case - Wikipedia | CALAJAON | Welcome | casejson | Naming conventions in Java | Images may be subject to copyright. Learn More | PascalCase: PascalCase | camelCase: canelCase | camelCase | snakecase: snakecase | kebab-case: kebab-case | noun: a compound word that uses capital | Related content | letters to delineate words. Doesnt | acuigt ont iroey to | include the first letter. | Camel Ca | Waiting for www.google.com... | 1Z192022
+  Combined   :  ليه عشان أول حرف من الكلمة الأولى small C Reserved Words | Camel Case - Google Search | google.comsearch?qCamelCasesourceInmstbmischsaXved2ahUKEwj93af8yIT8AhUECuwKHYVRAL8QAUoAXoECAEQAwbiw1920bih929dpr1imgrcMkI7Md9ySYvegM | Life | ESNext | Progress | AcademyRes | Practice | Share | New Tools | Work | Business | GTargets | Other bookmarks | Google | OSAMA | Camel Case | camel | CamelCase naming convention examples | Wikipedia | Explained | camelCase | Lurteit | snakecase | Harperbutie | PascalCase | w Wikipedia | TechTarget | Khalil Stemmler | Camel case - Wikipedia | What is the CamelCase naming convention? | Pascal Case  Naming Conventions .. | CamelCase | Camel case | lowercase | From Wipedia, the free encyckopedia | Redirectet fron CanelCase | Camel case sylized as | MiXeDcAsE | camelCase: also known as | camel caps or more formally | camelCase | Proper Case | as medial capitals is the | practice of writing phrases | such that each word or | Title Case | abbreviation in the midde of | the phrase begins with a | kebab-case | snakecase | capital letter, with no | UPPERCASE | intervening spaces or | camalCaso is named affter the | punctuation. Common | examples include Phone | simlar to the hump of common camels | Junior to Expert | Computer Hope | CD Cloud Logix | Wikimedia Commons | Naminq Convention, Camel Case  Keb.. | What is Camelcase? | Quick Reads  Camel case vs Sn.. | File:CamelCase.svg - Wikimedia.. | IDENTIFPIANT | Imtpuecalhostd8e91agilemg | UpperCamelCaon | AcpOeron | Tordixes | UperCameCase | poblide int? Userte  get: set: | Iscathnt aus | Wilues Exum | UpoerdCanelCase | rareigel?nerta | JSON | Rasw Data | Headers | Eseremenhs | UpperCimelCae | Save Copy | Y Filter 15ON | Exxplan | Uow CamalCo | pobild string toetacttrde grt: set | Calsrs.corebantes | OpporCaon | publde string Theme  grts wt | cporCanelCace | Eupouszit | Cirsthime: | Iancy | Isleve | lastiame: | Seattle | Davolin | Merode | UpperCandCase | puolic string Address  grts srt | cityt | UpceCamelCas | Seder Tet | Faante | publlc string dvanarlixageort  get; oet: | oeCand | Iyperliems | emp1ayectt: | pallie crrling kole prt ont | firstirme: | Aedirew | pulililc strieng Contactowall aet seta | LestNane: | Tarow | uller | csty: | OTHAINO | Twaino | Stack Overflow | BinaryIntellect Knowledge Base | Camel Case - Twaino | asp.net core 1.0 web api use camelcase .. | Camel Casing in ASP.NET Core Web API | Helg | Camel case - Wikipedia | CALAJAON | Welcome | casejson | Naming conventions in Java | Images may be subject to copyright. Learn More | PascalCase: PascalCase | camelCase: canelCase | camelCase | snakecase: snakecase | kebab-case: kebab-case | noun: a compound word that uses capital | Related content | letters to delineate words. Doesnt | acuigt ont iroey to | include the first letter. | Camel Ca | Waiting for www.google.com... | 1Z192022
+
+[00:08:50]
+  Transcript :  وأول حرف من الكلمة الثانية capital
+  OCR        : C Reserved Words | Camel Case - Google Search | google.comsearch?qCamelCasesourceInmstbmischsaXved2ahUKEwj93af8yIT8AhUECuwKHYVRAL8QAUoAXoECAEQAwbiw1920bih929dpr1imgrcMkI7Md9ySYvegM | Life | ESNext | Progress | Academy Res | Practice | Share | New Tools | Work | Business | GTargets | Other bookmarks | Google | OSAMA | Camel Case | CamelCase naming convention examples | Wikipedia | Explained | camelCase | Rackliarpet | wkay | intting | snakecase | Raxylitation | Harperbutine | PascalCase | w Wikipedia | TechTarget | Khalil Stemmler | Camel case - Wikipedia | What is the CamelCase naming convention? | Pascal Case  Naming Conventions . | CamelCase | Camel case | lowercase | From Wikibedia, the free entyckopedia | Redincted fron CanelCase | Camel case stylized as | MiXeDcAsE | camelCase: also known as | camel caps or more formally | camelCase | Proper Case | as medial capitals is tho | practice of writing phrases | abbreviation in the middle of | such that each word or | Title Case | the ptrase begins with a | kebab-case | snakecase | capital letter, with no | UPPERCASE | intervening spaces or | camelCase is named after the | punctuation Common | examples include Phone | simlar to the hump of coromon camels. | Junior to Expert | Computer Hope | CD Cloud Logix | Wikimedia Commons | Naminq Convention, Camel Case  Keb... | What is Camelcase? | Quick Reads  Camel case vs Sn.. | File:CamelCase.svq - Wikimedia. | IDENTIPIANT | EOMPSE | Imtplecalhostdse91agileme | Elsion | UnperCamelCase | AppOmrge | UpperCamelCase | Emnatmet | phite int Uerte  get set | Incathant 9s | UpperCanelCase | roreligymeal | ISON | Raw Data | Headers | Esemends | OpperCamwdCase | palie virual sher ser  get set | Save Copy | V Eimer 15ON | Exaplion | UscwCamelCana | pablic string Contacttede grt; ret: | OpporCase | puhite string fame  prt st 1 | UperGanel.ase | Cirsthame: | luncy | Pemode | Isleve | lastlames | Seattle | Davniie | Laper CanelCase | pablix string Addess  get set; | city: | Syber Tet | Paamalty | pablle snrling ivanarinagrt get, uet | Iyediems | emglayec10: | Fragrels | pulllic srrling kote get snt | firstliame: | Andres | Uzow CarnedC | patic string Coetactwad 1 aet sets 1 | Lastiame: | uller | city: | Tacoma | OTHAING | Twaino | Stack Overflow | BinaryIntellect Knowledge Base | Camel Case - Twaino | asp.net core 1.0 web api use camelcase | Camel Casinq in ASP.NET Core Web API | Camel case - Wikipedia | Welcome | case,json x | Naming conventions in Java | Images may be subject to copyright. Learn More | cametCase: canelCase | PascalCase: PascalCase | camelCase | snakecase: snakecase | kebab-case: | kebab-case | noun: a compound word that uses capital | Related content | letters to delineate words. Doesnt | artoges ont pianry to | include the first letter. | Camel Ca | https:en.wikipedia.orgwikiCamelcase | 1Z192022
+  Combined   :  وأول حرف من الكلمة الثانية capital C Reserved Words | Camel Case - Google Search | google.comsearch?qCamelCasesourceInmstbmischsaXved2ahUKEwj93af8yIT8AhUECuwKHYVRAL8QAUoAXoECAEQAwbiw1920bih929dpr1imgrcMkI7Md9ySYvegM | Life | ESNext | Progress | Academy Res | Practice | Share | New Tools | Work | Business | GTargets | Other bookmarks | Google | OSAMA | Camel Case | CamelCase naming convention examples | Wikipedia | Explained | camelCase | Rackliarpet | wkay | intting | snakecase | Raxylitation | Harperbutine | PascalCase | w Wikipedia | TechTarget | Khalil Stemmler | Camel case - Wikipedia | What is the CamelCase naming convention? | Pascal Case  Naming Conventions . | CamelCase | Camel case | lowercase | From Wikibedia, the free entyckopedia | Redincted fron CanelCase | Camel case stylized as | MiXeDcAsE | camelCase: also known as | camel caps or more formally | camelCase | Proper Case | as medial capitals is tho | practice of writing phrases | abbreviation in the middle of | such that each word or | Title Case | the ptrase begins with a | kebab-case | snakecase | capital letter, with no | UPPERCASE | intervening spaces or | camelCase is named after the | punctuation Common | examples include Phone | simlar to the hump of coromon camels. | Junior to Expert | Computer Hope | CD Cloud Logix | Wikimedia Commons | Naminq Convention, Camel Case  Keb... | What is Camelcase? | Quick Reads  Camel case vs Sn.. | File:CamelCase.svq - Wikimedia. | IDENTIPIANT | EOMPSE | Imtplecalhostdse91agileme | Elsion | UnperCamelCase | AppOmrge | UpperCamelCase | Emnatmet | phite int Uerte  get set | Incathant 9s | UpperCanelCase | roreligymeal | ISON | Raw Data | Headers | Esemends | OpperCamwdCase | palie virual sher ser  get set | Save Copy | V Eimer 15ON | Exaplion | UscwCamelCana | pablic string Contacttede grt; ret: | OpporCase | puhite string fame  prt st 1 | UperGanel.ase | Cirsthame: | luncy | Pemode | Isleve | lastlames | Seattle | Davniie | Laper CanelCase | pablix string Addess  get set; | city: | Syber Tet | Paamalty | pablle snrling ivanarinagrt get, uet | Iyediems | emglayec10: | Fragrels | pulllic srrling kote get snt | firstliame: | Andres | Uzow CarnedC | patic string Coetactwad 1 aet sets 1 | Lastiame: | uller | city: | Tacoma | OTHAING | Twaino | Stack Overflow | BinaryIntellect Knowledge Base | Camel Case - Twaino | asp.net core 1.0 web api use camelcase | Camel Casinq in ASP.NET Core Web API | Camel case - Wikipedia | Welcome | case,json x | Naming conventions in Java | Images may be subject to copyright. Learn More | cametCase: canelCase | PascalCase: PascalCase | camelCase | snakecase: snakecase | kebab-case: | kebab-case | noun: a compound word that uses capital | Related content | letters to delineate words. Doesnt | artoges ont pianry to | include the first letter. | Camel Ca | https:en.wikipedia.orgwikiCamelcase | 1Z192022
+
+[00:08:51]
+  Transcript :  فعمل زي سنم الجمل بالشكل ده
+  OCR        : None
+  Combined   :  فعمل زي سنم الجمل بالشكل ده
+
+[00:08:53]
+  Transcript :  حلو جدا
+  OCR        : None
+  Combined   :  حلو جدا
+
+[00:08:56]
+  Transcript : 
+  OCR        : C Reserved Words | elzero.org?p11875previewtrue | Life | ESNext | Progress | AcademyRes | Practice | Share | NewTools | Work | Business | GTargets | Other bookmarks | jill plei | Example | Name | Languages | elzeroWebSchool | Camel Case | C, C, JavaScript | ElzeroWebSchool | PascalCase | Python | elzerowebschool | Snake Case | elzero-web-school | Kebab Case | ELZERO WEBSCHOOL | Screaming Snake Case | Laligiill pllblh | Made With By Osama Elzero  2022 | 1Z192022
+  Combined   :  C Reserved Words | elzero.org?p11875previewtrue | Life | ESNext | Progress | AcademyRes | Practice | Share | NewTools | Work | Business | GTargets | Other bookmarks | jill plei | Example | Name | Languages | elzeroWebSchool | Camel Case | C, C, JavaScript | ElzeroWebSchool | PascalCase | Python | elzerowebschool | Snake Case | elzero-web-school | Kebab Case | ELZERO WEBSCHOOL | Screaming Snake Case | Laligiill pllblh | Made With By Osama Elzero  2022 | 1Z192022
+
+[00:09:05]
+  Transcript :  ده وسكريمينج سنيك كيس نفسها بس الحروف كلها كابيتل وهنا كاتب لك
+  OCR        : None
+  Combined   :  ده وسكريمينج سنيك كيس نفسها بس الحروف كلها كابيتل وهنا كاتب لك
+
+[00:09:10]
+  Transcript :  بعض اللغات اللي بتستخدم الرايتنج ستايل ده بالشكل ده ليه قلتلك ان
+  OCR        : None
+  Combined   :  بعض اللغات اللي بتستخدم الرايتنج ستايل ده بالشكل ده ليه قلتلك ان
+
+[00:09:16]
+  Transcript :  في فرق بين القوانين وفي فرق بين البيست براكسس القوانين لو ما
+  OCR        : File | Edit | Selection View Go Run Terminal Help | Fundamentals Administrator | C app.cpp | Variables NamingRules  BestPractices | Naming | Rules | Must Be Unique | CaseSensitive | Cannot | Start | WithNumbers | Nums | Letters | Underscore | No White | Space | Special | lCharacters | Reserved Keywords | Class, | Public | Best Practices | Related-Names | Writing-Style | include iostream | Ln 35, Col 2 | Spaces: 2 | UTF-8
+  Combined   :  في فرق بين القوانين وفي فرق بين البيست براكسس القوانين لو ما File | Edit | Selection View Go Run Terminal Help | Fundamentals Administrator | C app.cpp | Variables NamingRules  BestPractices | Naming | Rules | Must Be Unique | CaseSensitive | Cannot | Start | WithNumbers | Nums | Letters | Underscore | No White | Space | Special | lCharacters | Reserved Keywords | Class, | Public | Best Practices | Related-Names | Writing-Style | include iostream | Ln 35, Col 2 | Spaces: 2 | UTF-8
+
+[00:09:19]
+  Transcript :  مشتش عليها بتطلع لك يعني غصب عنك لازم تمشي عليها لكن البيست
+  OCR        : None
+  Combined   :  مشتش عليها بتطلع لك يعني غصب عنك لازم تمشي عليها لكن البيست
+
+[00:09:24]
+  Transcript :  براكسس دي احسن الممارسات اللي الناس بتستعملها. لكن انت لو ممشتش
+  OCR        : None
+  Combined   :  براكسس دي احسن الممارسات اللي الناس بتستعملها. لكن انت لو ممشتش
+
+[00:09:30]
+  Transcript :  عليها الكود هيشتغل. يعني لو انا جيت هنا قلت له انت وسامة بيساوي
+  OCR        : File | Edit | Selection View Go Run Terminal Help | Fundamentals Administrator | app.cpp | int main | intprice 100; DeclareANew Variable | price 200;   UpdateThe Value | int Price 400; | cout price; | cout | intn1um111110; | cout | n1um1111; | cout | bers | 100; | cout | bers | cout | int publics  1000; | cout publics; | cout n | Ln 2, Col 42 14 selected Spaces: 2 | UTF-8 | 12192022
+  Combined   :  عليها الكود هيشتغل. يعني لو انا جيت هنا قلت له انت وسامة بيساوي File | Edit | Selection View Go Run Terminal Help | Fundamentals Administrator | app.cpp | int main | intprice 100; DeclareANew Variable | price 200;   UpdateThe Value | int Price 400; | cout price; | cout | intn1um111110; | cout | n1um1111; | cout | bers | 100; | cout | bers | cout | int publics  1000; | cout publics; | cout n | Ln 2, Col 42 14 selected Spaces: 2 | UTF-8 | 12192022
+
+[00:09:32]
+  Transcript :  عليها الكود هيشتغل. يعني لو انا جيت هنا قلت له انت وسامة بيساوي
+  OCR        : File | Edit | Selection | View | Run Terminal Help | Fundamentals Administrator | app.cpp | cout | n bers | 100; | cout | numbers; | cout | publics | 1000; | cout | publics; | cout | return 0; | Ln 35, Col 33 | Spaces: 2 | UTF-8 | 12192022
+  Combined   :  عليها الكود هيشتغل. يعني لو انا جيت هنا قلت له انت وسامة بيساوي File | Edit | Selection | View | Run Terminal Help | Fundamentals Administrator | app.cpp | cout | n bers | 100; | cout | numbers; | cout | publics | 1000; | cout | publics; | cout | return 0; | Ln 35, Col 33 | Spaces: 2 | UTF-8 | 12192022
+
+[00:09:34]
+  Transcript :  عليها الكود هيشتغل. يعني لو انا جيت هنا قلت له انت وسامة بيساوي
+  OCR        : File | Edit | Selection | View | Run Terminal Help | Fundamentals Administrator | app.cpp | cout | numbers | 100; | cout | numbers; | cout | publics  1000; | cout | publics; | cout | return 0; | Ln 36, Col 7 Spaces: 2 | UTF-8 | 12192022
+  Combined   :  عليها الكود هيشتغل. يعني لو انا جيت هنا قلت له انت وسامة بيساوي File | Edit | Selection | View | Run Terminal Help | Fundamentals Administrator | app.cpp | cout | numbers | 100; | cout | numbers; | cout | publics  1000; | cout | publics; | cout | return 0; | Ln 36, Col 7 Spaces: 2 | UTF-8 | 12192022
+
+[00:09:38]
+  Transcript :  مية وجيت قلت له سي اوت وسامة للشكل ده. الراجل ده مش هيزعل مني
+  OCR        : File | Edit | Selection View | Run Terminal Help | Fundamentals Administrator | app.cpp | cout | 100; | bers | cout | bers | cout | publics  1000; | cout | publics; | cout | OSAMA | 100; | cout | return | Ln 37, Col 8 Spaces: 2 | UTF-8 | 12192022
+  Combined   :  مية وجيت قلت له سي اوت وسامة للشكل ده. الراجل ده مش هيزعل مني File | Edit | Selection View | Run Terminal Help | Fundamentals Administrator | app.cpp | cout | 100; | bers | cout | bers | cout | publics  1000; | cout | publics; | cout | OSAMA | 100; | cout | return | Ln 37, Col 8 Spaces: 2 | UTF-8 | 12192022
+
+[00:09:42]
+  Transcript :  وهيشغل الكود ومش هيعمل اي مشكلة. خلينا اكتب له خمسمية عشان رقم
+  OCR        : File | Edit | Selection | View | Run Terminal Help | Fundamentals Administrator | app.cpp | cout | bers | 100; | cout | bers | cout | publics  1000; | cout | publics; | cout | :n ; | int OSAMA | 100; | cout  OSAMA; | return | Ln 39, Col 2 Spaces: 2 | UTF-8 | 12192022
+  Combined   :  وهيشغل الكود ومش هيعمل اي مشكلة. خلينا اكتب له خمسمية عشان رقم File | Edit | Selection | View | Run Terminal Help | Fundamentals Administrator | app.cpp | cout | bers | 100; | cout | bers | cout | publics  1000; | cout | publics; | cout | :n ; | int OSAMA | 100; | cout  OSAMA; | return | Ln 39, Col 2 Spaces: 2 | UTF-8 | 12192022
+
+[00:09:48]
+  Transcript :  الارقام ما كتبناش قبل كده. اهو. في مشكلة يا شباب خمسمية. الراجل
+  OCR        : File | Edit | Selection | View | Run Terminal Help | Fundamentals Administrator | app.cpp | cout | Debug CC File | bers | 100; | Run Code | cout | bers | Run CC File | cout | publics  1000; | cout | publics; | cout | OSAMA | 500; | cout | OSAMA; | return | Ln 36, Col 16 Spaces: 2 | UTF-8 | 1Z192022
+  Combined   :  الارقام ما كتبناش قبل كده. اهو. في مشكلة يا شباب خمسمية. الراجل File | Edit | Selection | View | Run Terminal Help | Fundamentals Administrator | app.cpp | cout | Debug CC File | bers | 100; | Run Code | cout | bers | Run CC File | cout | publics  1000; | cout | publics; | cout | OSAMA | 500; | cout | OSAMA; | return | Ln 36, Col 16 Spaces: 2 | UTF-8 | 1Z192022
+
+[00:09:50]
+  Transcript :  الارقام ما كتبناش قبل كده. اهو. في مشكلة يا شباب خمسمية. الراجل
+  OCR        : File | Edit | Selection | View | Run Terminal Help | OFundamentals Administrator | app.cpp | cout | 100; | bers | cout | bers | cout | publics  1000; | cout | publics; | cout | OUTPUT | TERMINAL | DEBUG CONSOLE | PROBLEMS | Code | 1000 | Doneexited with code0 in 0.508 seconds | Ln 36, Col 16 Spaces: 2 | UTF-8 | 1Z192022
+  Combined   :  الارقام ما كتبناش قبل كده. اهو. في مشكلة يا شباب خمسمية. الراجل File | Edit | Selection | View | Run Terminal Help | OFundamentals Administrator | app.cpp | cout | 100; | bers | cout | bers | cout | publics  1000; | cout | publics; | cout | OUTPUT | TERMINAL | DEBUG CONSOLE | PROBLEMS | Code | 1000 | Doneexited with code0 in 0.508 seconds | Ln 36, Col 16 Spaces: 2 | UTF-8 | 1Z192022
+
+[00:09:52]
+  Transcript :  الزعلان وبيقول لي عدك العيب. بس ده style او طريقة مش تبع الناس مش بتمشي علي
+  OCR        : File | Edit | Selection | View | Run Terminal Help | OFundamentals Administrator | app.cpp | cout | bers | 100; | cout | bers | cout | publics  1000; | cout | publics; | cout | OSAMA | 500; | cout | OSAMA; | return | Ln 37, Col 17 | Spaces: 2 | UTF-8 | 12192022
+  Combined   :  الزعلان وبيقول لي عدك العيب. بس ده style او طريقة مش تبع الناس مش بتمشي علي File | Edit | Selection | View | Run Terminal Help | OFundamentals Administrator | app.cpp | cout | bers | 100; | cout | bers | cout | publics  1000; | cout | publics; | cout | OSAMA | 500; | cout | OSAMA; | return | Ln 37, Col 17 | Spaces: 2 | UTF-8 | 12192022
+
+[00:10:06]
+  Transcript :  بشكل ده ومش بتكتب الاسم بالشكل ده. فهنا كتب لك كده يوضح لك دي
+  OCR        : File | Edit | Selection | View | Go Run Terminal Help | Fundamentals Administrator | app.cpp | cout | intn1um1111 | cout | n1um1111; | cout | bers | 100; | cout | bers | cout | publics 1000; | cout | publics; | cout | OSAMA | 500;Bad | cout | OSAMA; | return | Ln 36, Col 27 | Spaces: 2 | UTF-8
+  Combined   :  بشكل ده ومش بتكتب الاسم بالشكل ده. فهنا كتب لك كده يوضح لك دي File | Edit | Selection | View | Go Run Terminal Help | Fundamentals Administrator | app.cpp | cout | intn1um1111 | cout | n1um1111; | cout | bers | 100; | cout | bers | cout | publics 1000; | cout | publics; | cout | OSAMA | 500;Bad | cout | OSAMA; | return | Ln 36, Col 27 | Spaces: 2 | UTF-8
+
+[00:10:06]
+  Transcript :  bad style عشان بس لو حد شافه على الموقع ما يقولش ان احنا متعمدين
+  OCR        : None
+  Combined   :  bad style عشان بس لو حد شافه على الموقع ما يقولش ان احنا متعمدين
+
+[00:10:14]
+  Transcript :  يعني نكتبها كده. الحاجة طبعا المهمة واللي اتكلمنا عليها بس
+  OCR        : File | Edit | Selection View Go Run Terminal Help | Fundamentals Administrator | C app.cpp | Naming Ruies | Must -Be Unique | Case Sensitive | Cannot | Start | WithNumbers | Nums Or | Letters | Underscore | No White | Space | Special-Characters | Reserved-Keywords | Class, | Public | Best-Practices | Related-Names | Writing Style | include iostream | using | namespace std; | int main | Ln 36, Col 12 5 selected Spaces: 2 | UTF-8 | 2192022
+  Combined   :  يعني نكتبها كده. الحاجة طبعا المهمة واللي اتكلمنا عليها بس File | Edit | Selection View Go Run Terminal Help | Fundamentals Administrator | C app.cpp | Naming Ruies | Must -Be Unique | Case Sensitive | Cannot | Start | WithNumbers | Nums Or | Letters | Underscore | No White | Space | Special-Characters | Reserved-Keywords | Class, | Public | Best-Practices | Related-Names | Writing Style | include iostream | using | namespace std; | int main | Ln 36, Col 12 5 selected Spaces: 2 | UTF-8 | 2192022
+
+[00:10:16]
+  Transcript :  كتبتها هنا عشان افكرك بها هو ان الاسم يكون مرتبط بالبيانات
+  OCR        : None
+  Combined   :  كتبتها هنا عشان افكرك بها هو ان الاسم يكون مرتبط بالبيانات
+
+[00:10:20]
+  Transcript :  بتاعتك. يعني يسيبك خالص من قصة ان انت تيجي هنا كده تقول لي
+  OCR        : File | Edit | Selection View Go Run Terminal Help | OFundamentals Administrator | app.cpp | intprice 100; -   Declare A-New Variable | price 200; | .   UpdateTheValue | intPrice 400; | cout  price; | cout | intn1um1111 | l    10; | cout | n1um1111; | cout | bers | 100; | cout | bers | cout | intpublics  1000; | cout | publics; | cout | OSAMA | 500;  Bad Style | cout | OSAMA; | Ln 13, Col 7 13 selected | Spaces: 2 | UTF-8 | 2192022
+  Combined   :  بتاعتك. يعني يسيبك خالص من قصة ان انت تيجي هنا كده تقول لي File | Edit | Selection View Go Run Terminal Help | OFundamentals Administrator | app.cpp | intprice 100; -   Declare A-New Variable | price 200; | .   UpdateTheValue | intPrice 400; | cout  price; | cout | intn1um1111 | l    10; | cout | n1um1111; | cout | bers | 100; | cout | bers | cout | intpublics  1000; | cout | publics; | cout | OSAMA | 500;  Bad Style | cout | OSAMA; | Ln 13, Col 7 13 selected | Spaces: 2 | UTF-8 | 2192022
+
+[00:10:22]
+  Transcript :  بتاعتك. يعني يسيبك خالص من قصة ان انت تيجي هنا كده تقول لي
+  OCR        : File | Edit | Selection View | Run Terminal | Help | Fundamentals Administrator | app.cpp | cout | bers | 100; | cout | bers | cout | publics | s    1000; | const | char | 18nn | cout | publics; | cout | OSAMA | 500; | Bad Style | cout | OSAMA; | return | Ln 35, Col 21 Spaces: 2 | UTF-8 | 1Z192022
+  Combined   :  بتاعتك. يعني يسيبك خالص من قصة ان انت تيجي هنا كده تقول لي File | Edit | Selection View | Run Terminal | Help | Fundamentals Administrator | app.cpp | cout | bers | 100; | cout | bers | cout | publics | s    1000; | const | char | 18nn | cout | publics; | cout | OSAMA | 500; | Bad Style | cout | OSAMA; | return | Ln 35, Col 21 Spaces: 2 | UTF-8 | 1Z192022
+
+[00:10:24]
+  Transcript :  انت اكس بيساوي الف وبعد كده سي اوت الاكس ده هو الاكس ده باش
+  OCR        : File | Edit | Selection | View | Run Terminal | Help | Fundamentals Administrator | app.cpp | cout | bers | 100; | cout | bers | cout | publics  1000; | cout | publics; | cout | OSAMA | 500;Bad-Style | cout | OSAMA; | cout | return | Ln 38, Col 21 Spaces: 2 | UTF-8 | 1Z192022
+  Combined   :  انت اكس بيساوي الف وبعد كده سي اوت الاكس ده هو الاكس ده باش File | Edit | Selection | View | Run Terminal | Help | Fundamentals Administrator | app.cpp | cout | bers | 100; | cout | bers | cout | publics  1000; | cout | publics; | cout | OSAMA | 500;Bad-Style | cout | OSAMA; | cout | return | Ln 38, Col 21 Spaces: 2 | UTF-8 | 1Z192022
+
+[00:10:30]
+  Transcript :  عباره عن ايه معلش انا مش فاهم الاكس ده عباره عن ايه انت فاهم
+  OCR        : None
+  Combined   :  عباره عن ايه معلش انا مش فاهم الاكس ده عباره عن ايه انت فاهم
+
+[00:10:33]
+  Transcript :  اه بس انا مش فاهم فهنا انا بختار اسم ومعبر عن البيانات اللي
+  OCR        : None
+  Combined   :  اه بس انا مش فاهم فهنا انا بختار اسم ومعبر عن البيانات اللي
+
+[00:10:40]
+  Transcript :  هيتعمل لها او هتتخزن زي ما احنا عاملين كده هنا برايس فانا
+  OCR        : File | Edit | Selection View Go Run Terminal Help | Fundamentals Administrator | app.cpp | intPrice  400; | cout | price; | cout | n1um1111 | cout | n1um1111; | cout | bers | 100; | cout | bers | cout | publics | 1000; | cout | publics; | cout | int OSAMA | 500; Bad Style | cout | OSAMA; | cout | intx 1000; | cout | Ln 40, Col 13 Spaces: 2 | UTF-8 | 12192022
+  Combined   :  هيتعمل لها او هتتخزن زي ما احنا عاملين كده هنا برايس فانا File | Edit | Selection View Go Run Terminal Help | Fundamentals Administrator | app.cpp | intPrice  400; | cout | price; | cout | n1um1111 | cout | n1um1111; | cout | bers | 100; | cout | bers | cout | publics | 1000; | cout | publics; | cout | int OSAMA | 500; Bad Style | cout | OSAMA; | cout | intx 1000; | cout | Ln 40, Col 13 Spaces: 2 | UTF-8 | 12192022
+
+[00:10:42]
+  Transcript :  عارف ان ده تبع البيانات نم مثلا وتكتب نم خاص بحاجة دي كلها تجارب
+  OCR        : File | Edit | Selection View Go Run Terminal Help | Fundamentals Administrator | app.cpp | writing Style | include iostream | using | namespace std; | int main | int100 | intprice 100;  Declare A-New-Variable | price 200; | UpdateThe- Value | intPrice  400; | cout price; | cout | int-n1um1111 10; | cout | n1um1111; | cout | bers | 100; | Ln 40, Col 13 | Spaces: 2 | UTF-8 | 12192022
+  Combined   :  عارف ان ده تبع البيانات نم مثلا وتكتب نم خاص بحاجة دي كلها تجارب File | Edit | Selection View Go Run Terminal Help | Fundamentals Administrator | app.cpp | writing Style | include iostream | using | namespace std; | int main | int100 | intprice 100;  Declare A-New-Variable | price 200; | UpdateThe- Value | intPrice  400; | cout price; | cout | int-n1um1111 10; | cout | n1um1111; | cout | bers | 100; | Ln 40, Col 13 | Spaces: 2 | UTF-8 | 12192022
+
+[00:10:44]
+  Transcript :  عارف ان ده تبع البيانات نم مثلا وتكتب نم خاص بحاجة دي كلها تجارب
+  OCR        : File | Edit | Selection View Go Run Terminal Help | Fundamentals Administrator | app.cpp | intprice 100;    Declare A-New-Variable | price  200; | .   -Update- TheValue | intPrice  400; | cout | nrice: | int n1um1111 | cout | intn1um1111 | cout | n1um1111; | cout | bers | 100; | cout | bers | cout | intpublics  1000; | cout | publics; | cout | OSAMA | 500; Bad Style | cout | OSAMA; | Ln 40, Col 13 | Spaces: 2 | UTF-8 | 1Z1920z2
+  Combined   :  عارف ان ده تبع البيانات نم مثلا وتكتب نم خاص بحاجة دي كلها تجارب File | Edit | Selection View Go Run Terminal Help | Fundamentals Administrator | app.cpp | intprice 100;    Declare A-New-Variable | price  200; | .   -Update- TheValue | intPrice  400; | cout | nrice: | int n1um1111 | cout | intn1um1111 | cout | n1um1111; | cout | bers | 100; | cout | bers | cout | intpublics  1000; | cout | publics; | cout | OSAMA | 500; Bad Style | cout | OSAMA; | Ln 40, Col 13 | Spaces: 2 | UTF-8 | 1Z1920z2
+
+[00:10:46]
+  Transcript :  فتمام او البابليك عدد مثلا الناس او عدد ممبرز لكن تكتب اكس
+  OCR        : File | Edit | Selection | View | Go Run Terminal Help | Fundamentals Administrator | app.cpp | cout | int-n1um1111 | cout | n1um1111; | cout | bers | 100; | cout | bers | cout | publics 1000; | cout | publics; | cout | int OSAMA | 500; Bad Style | cout | OSAMA; | cout | intx  1000; | cout  x; | return 0; | Ln 40, Col 13 Spaces: 2 | UTF-8 | 12192022
+  Combined   :  فتمام او البابليك عدد مثلا الناس او عدد ممبرز لكن تكتب اكس File | Edit | Selection | View | Go Run Terminal Help | Fundamentals Administrator | app.cpp | cout | int-n1um1111 | cout | n1um1111; | cout | bers | 100; | cout | bers | cout | publics 1000; | cout | publics; | cout | int OSAMA | 500; Bad Style | cout | OSAMA; | cout | intx  1000; | cout  x; | return 0; | Ln 40, Col 13 Spaces: 2 | UTF-8 | 12192022
+
+[00:10:48]
+  Transcript :  فتمام او البابليك عدد مثلا الناس او عدد ممبرز لكن تكتب اكس
+  OCR        : File | Edit | Selection | View | Run Terminal Help | Fundamentals Administrator | app.cpp | cout | numbers | 100; | cout | num bers; | cout | publics | publics | s 1000; | cout | publics; | cout | OSAMA | 500;  -Bad Style | cout | OSAMA; | cout | int x  1000; | cout  x; | return 0; | Ln 40, Col 13 | Spaces: 2 | UTF-8 | 1Z192022
+  Combined   :  فتمام او البابليك عدد مثلا الناس او عدد ممبرز لكن تكتب اكس File | Edit | Selection | View | Run Terminal Help | Fundamentals Administrator | app.cpp | cout | numbers | 100; | cout | num bers; | cout | publics | publics | s 1000; | cout | publics; | cout | OSAMA | 500;  -Bad Style | cout | OSAMA; | cout | int x  1000; | cout  x; | return 0; | Ln 40, Col 13 | Spaces: 2 | UTF-8 | 1Z192022
+
+[00:10:51]
+  Transcript :  X, N, Z
+  OCR        : None
+  Combined   :  X, N, Z
+
+[00:10:53]
+  Transcript :  الحاجات دي
+  OCR        : None
+  Combined   :  الحاجات دي
+
+[00:10:54]
+  Transcript :  مش مفهوم هنا المتغير ده بيعبر عنه
+  OCR        : File | Edit | Selection | View | Run Terminal Help | Fundamentals Administrator | app.cpp | cout | bers | 100; | cout | bers | cout | intpublics | s   1000; | cout | publics; | cout | intOSAMA | 500;  -Bad Style | cout | OSAMA; | cout | intx  1000; | cout  x; | return 0; | Ln 40, Col 13 | Spaces: 2 | UTF-8 | 12192022
+  Combined   :  مش مفهوم هنا المتغير ده بيعبر عنه File | Edit | Selection | View | Run Terminal Help | Fundamentals Administrator | app.cpp | cout | bers | 100; | cout | bers | cout | intpublics | s   1000; | cout | publics; | cout | intOSAMA | 500;  -Bad Style | cout | OSAMA; | cout | intx  1000; | cout  x; | return 0; | Ln 40, Col 13 | Spaces: 2 | UTF-8 | 12192022
+
+[00:10:58]
+  Transcript :  فالاسم مهم جدا ان حضرتك تعمله
+  OCR        : File | Edit | Selection View Go Run Terminal Help | OFundamentals Administrator | C app.cpp | Variables NamingRules -Best Practices | Naming Rules | Must Be Unique | CaseSensitive | Cannot | Start | WithNumbers | Nums | Letters | Underscore | No White | Space | Special | LCharacters | Reserved Keywords | Class, | Public | Best-Practices | Related-Names | Writing Style | include iostream | Ln 40, Col 13 | Spaces: 2 | UTF-8 | 121192022
+  Combined   :  فالاسم مهم جدا ان حضرتك تعمله File | Edit | Selection View Go Run Terminal Help | OFundamentals Administrator | C app.cpp | Variables NamingRules -Best Practices | Naming Rules | Must Be Unique | CaseSensitive | Cannot | Start | WithNumbers | Nums | Letters | Underscore | No White | Space | Special | LCharacters | Reserved Keywords | Class, | Public | Best-Practices | Related-Names | Writing Style | include iostream | Ln 40, Col 13 | Spaces: 2 | UTF-8 | 121192022
+
+[00:10:58]
+  Transcript :  يارب يا جماعة
+  OCR        : None
+  Combined   :  يارب يا جماعة
+
+[00:11:00]
+  Transcript :  ده سيكون بسيط وسهل وعجبك
+  OCR        : None
+  Combined   :  ده سيكون بسيط وسهل وعجبك
+
+[00:11:01]
+  Transcript :  واشوفكو ان شاء الله في فيديو جديد
+  OCR        : None
+  Combined   :  واشوفكو ان شاء الله في فيديو جديد
+
+[00:11:03]
+  Transcript :  والسلام عليكم
+  OCR        : None
+  Combined   :  والسلام عليكم
+

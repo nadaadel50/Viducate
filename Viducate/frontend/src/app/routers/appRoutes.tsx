@@ -53,7 +53,6 @@ export function AppRoutes() {
               </SelectedTopicProvider>
             }
           />{" "}
-
         </Route>
         <Route
           path={AppRoutesNames.sucessSendEmail}

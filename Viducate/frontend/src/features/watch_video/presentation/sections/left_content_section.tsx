@@ -3,7 +3,6 @@ import { ContentLearningCard } from "../widgets/content_learning_card";
 import { SearchTopicBar } from "../widgets/search_topic_bar";
 import { useSelectedTopic } from "../context/topic_context";
 import { useVideoData } from "../../../../core/hooks/useVideoData";
-import { STORAGE_KEYS } from "../../../../core/constants";
 
 export function LeftContentSection() {
   const [searchQuery, setSearchQuery] = useState<string>("");
@@ -12,19 +11,27 @@ export function LeftContentSection() {
     currentTime,
     setSelectedTopic,
     setSeekTo
-
-    
   } = useSelectedTopic();
-  const { data: topics } = useVideoData();
-
-  // derive current topic from time
-  const currentTopicIndex = topics!.findIndex(
-    (topic) => currentTime >= topic.start_time && currentTime <= topic.end_time,
-  );
+  const { data: videoData } = useVideoData();
+  const topics=videoData?.topics
+  
+  const currentTopicIndex = topics
+  ? topics.findIndex(
+      (topic) =>
+        currentTime >= topic.start_time &&
+        currentTime < topic.end_time
+    )
+  :-1;
+  // console.log("the currecnt topic index is ")
+  // console.log(currentTopicIndex)
 
   //  sync selected topic with video
   useEffect(() => {
     if (currentTopicIndex === -1) return;
+
+    // console.log("the currecnt time and index")
+    // console.log(currentTime)
+    // console.log(currentTopicIndex)
 
     const newTopic = topics![currentTopicIndex];
 
@@ -57,6 +64,7 @@ export function LeftContentSection() {
               isSelected={currentTopicIndex === index}
               onClick={() => {
                 setSelectedTopic(card);
+                console.log("clicked")
                 setSeekTo(card.start_time);
               }}
               cardInfo={card}

@@ -1,0 +1,93 @@
+{
+  "total_segments": 2,
+  "segments": [
+    {
+      "segment_number": 1,
+      "start_time": "00:00:00",
+      "end_time": "00:01:39",
+      "main_topic": "Introduction to Big O notation",
+      "title": "Basics of Big O notation in computer science",
+      "sub_topics": [
+        {
+          "name": "Introduction to the topic",
+          "start_time": "00:00:00",
+          "end_time": "00:00:19",
+          "description": "Hey, what's going on everybody? It's your bro, hope you're doing well, and in this video I'm going to describe the very basics of Big O notation in, well, computer science."
+        },
+        {
+          "name": "Definition of Big O notation",
+          "start_time": "00:00:19",
+          "end_time": "00:00:48",
+          "description": "So a common phrase used with Big O notation is, how code slows as data grows. It describes the performance of an algorithm as the amount of data increases. And really, this notation is machine independent. What we're really focusing on is the number of steps to complete an algorithm, because some machines are going to run certain algorithms faster than others."
+        },
+        {
+          "name": "Ignoring smaller operations",
+          "start_time": "00:00:42",
+          "end_time": "00:00:51",
+          "description": "And three, we tend to ignore smaller operations. If we had some task that took n plus one, we would just reduce it to just n, because that plus one really isn't going to make"
+        },
+        {
+          "name": "Examples of Big O notation",
+          "start_time": "00:00:51",
+          "end_time": "00:01:16",
+          "description": "So here's a few examples of big O notation. We have O O O and O And N is really just the amount of data that we passing in It a variable like x What we focusing on is the performance of an algorithm as the amount of data increases, and n is a representation of the amount of data that we're passing in."
+        },
+        {
+          "name": "Concrete example of a function",
+          "start_time": "00:01:12",
+          "end_time": "00:01:39",
+          "description": "Here's a more concrete example. I have a function named addup. We will add up to a certain number depending on what we pass in as an argument. The for loop within here will iterate once up to whatever number that n is, add i to sum, then return it. What if n was a large number like a million? Well, it's going to take just above a million steps to complete this function."
+        }
+      ],
+      "key_points": [
+        "Big O notation describes the performance of an algorithm as the amount of data increases",
+        "It is machine independent",
+        "Smaller operations are ignored"
+      ]
+    },
+    {
+      "segment_number": 2,
+      "start_time": "00:01:39",
+      "end_time": "00:06:22",
+      "main_topic": "Runtime complexities and examples",
+      "title": "Understanding different types of runtime complexities",
+      "sub_topics": [
+        {
+          "name": "Linear time complexity",
+          "start_time": "00:01:39",
+          "end_time": "00:02:06",
+          "description": "This function is said to have a runtime complexity of O of n, linear time. As the amount of data increases, it's going to increase the amount of steps linearly or proportionally."
+        },
+        {
+          "name": "Constant time complexity",
+          "start_time": "00:02:06",
+          "end_time": "00:02:31",
+          "description": "So this function is going to have a runtime complexity of O of one. The input size doesn't matter. The amount of data that we have really doesn't matter. It's going to be completed in the same amount of steps."
+        },
+        {
+          "name": "Graph representation of runtime complexities",
+          "start_time": "00:02:31",
+          "end_time": "00:02:54",
+          "description": "Here's a graph that I made to represent the different runtime complexities. We have data on the x-axis represented by n. So data will increase as we go more to the right, and we have time on the y-axis."
+        },
+        {
+          "name": "Explanation of different runtime complexities",
+          "start_time": "00:02:54",
+          "end_time": "00:05:59",
+          "description": "So let begin with O of 1 constant time. Anything that has a runtime complexity of O of 1 will take the same amount of time regardless of the data size. A few examples would include the random access of an element within an array and inserting at the beginning of a linked list."
+        },
+        {
+          "name": "Comparison of runtime complexities",
+          "start_time": "00:05:59",
+          "end_time": "00:06:22",
+          "description": "So if I had to give a letter grade to each of these runtime complexities when working with large data sets with constant time, this would be an A, like an A+. Logarithmic time would be a B, it's pretty good."
+        }
+      ],
+      "key_points": [
+        "Different types of runtime complexities include constant, linear, logarithmic, quasi-linear, quadratic, and factorial time",
+        "Each type of runtime complexity has its own characteristics and examples",
+        "Understanding runtime complexities is important for efficient algorithm design"
+      ]
+    }
+  ]
+}

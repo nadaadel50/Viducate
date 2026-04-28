@@ -12,7 +12,7 @@ type VideoStatus =
   | 'completed'
   | 'failed';
 
-export const useProcessingStatus = (videoId: string | undefined) => {
+export const useProcessingStatus = (videoId: number | undefined) => {
   const [progress, setProgress] = useState(0);
   const [status, setStatus] = useState<VideoStatus>('pending');
 

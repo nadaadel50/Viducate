@@ -32,6 +32,12 @@ class Settings:
     SUPABASE_BUCKET_NAME: str = os.getenv("SUPABASE_BUCKET_NAME", "viducate-videos")
     SUPABASE_BUCKET_PUBLIC: bool = os.getenv("SUPABASE_BUCKET_PUBLIC", "false").lower() == "true"
 
+    R2_ACCOUNT_ID: str = os.getenv("R2_ACCOUNT_ID")
+    R2_ACCESS_KEY: str = os.getenv("R2_ACCESS_KEY")
+    R2_SECRET_KEY: str = os.getenv("R2_SECRET_KEY")
+    R2_BUCKET_NAME: str = os.getenv("R2_BUCKET_NAME", "viducate")
+    R2_PUBLIC_URL: str = os.getenv("R2_PUBLIC_URL", "")
+
     GEMINI_API_KEY: str = os.getenv("GEMINI_API_KEY")
     GROQ_API_KEY: str = os.getenv("GROQ_API_KEY")
 

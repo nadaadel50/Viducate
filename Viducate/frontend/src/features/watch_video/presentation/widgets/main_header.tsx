@@ -14,8 +14,9 @@ export function MainHeader() {
   const { selectedTopic } = useSelectedTopic();
   return (
     <div className=" pt-12  ">
-      <h1 className="text-4xl font-bold tracking-tight text-slate-900">
+      <h1 className="text-4xl font-bold tracking-tight text-slate-900 mb-6 ">
         {selectedTopic?.title}
+       
       </h1>
 
       <div className="flex justify-between items-center mt-2">

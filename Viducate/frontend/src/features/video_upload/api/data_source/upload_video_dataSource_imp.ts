@@ -45,7 +45,7 @@ export class UploadVideoDataSourceImp implements UploadVideoDataSource {
 
     const confirmRes = await this.uploadVideoService.confirmUpload(videoId);
 
-    console.log(confirmRes)
+    // console.log(confirmRes)
 
     return {
       success: true,
