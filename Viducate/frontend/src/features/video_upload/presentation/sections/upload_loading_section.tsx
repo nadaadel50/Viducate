@@ -1,8 +1,9 @@
 import { Video } from "lucide-react";
 import { UploadBtn } from "../componants/upload_btn";
-import { useVideoId } from "../../../../core/hooks/useVideoId";
+
 import { AppRoutesNames } from "../../../../app/routers/routes";
 import { useNavigate } from "react-router";
+import { useLearningSession } from "../../../../core/hooks/useLearningContent";
 
 type UploadLoadingSectionProps = {
   title: string;
@@ -15,7 +16,7 @@ export function UploadLoadingSection({
   handleCancel,
   progress,
 }: UploadLoadingSectionProps) {
-  const {videoId}=useVideoId()
+  const {videoId}=useLearningSession()
   const navigate=useNavigate()
   return (
     <>

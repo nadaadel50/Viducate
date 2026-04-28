@@ -7,9 +7,10 @@ import {
   Minimize,
   Gauge,
 } from "lucide-react";
-import { useSelectedTopic } from "../context/topic_context";
+
 import { useVideoData } from "../../../../core/hooks/useVideoData";
 import { STORAGE_KEYS } from "../../../../core/constants";
+import { useLearningSession } from "../../../../core/hooks/useLearningContent";
 
 const SPEED_OPTIONS = [0.5, 0.75, 1, 1.25, 1.5, 2];
 
@@ -39,7 +40,7 @@ export function VideoPlayer() {
     [],
   );
   const { currentTime, setCurrentTime, selectedTopic, seekTo, setSeekTo } =
-    useSelectedTopic();
+    useLearningSession();
   const { data: topics } = useVideoData();
   const [lastSeekTime, setLastSeekTime] = useState<number | null>(null);
   const [pauseStart, setPauseStart] = useState<number | null>(null);

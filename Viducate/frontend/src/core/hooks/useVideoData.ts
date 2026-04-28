@@ -1,9 +1,10 @@
 import { useQuery } from "@tanstack/react-query";
 import { getTopicsUseCase } from "../di/watch_video_container";
-import { useVideoId } from "./useVideoId";
 import { TopicsRequest } from "../../features/watch_video/domin/entity/topics_request";
-import { TopicResponse } from "../../features/watch_video/domin/entity/topic_response";
+import { useLearningSession } from "./useLearningContent";
 import { VideoResponse } from "../../features/watch_video/domin/entity/video_response";
+import { TopicResponse } from "../../features/watch_video/domin/entity/topic_response";
+
 
 
 export function useVideoData() {
@@ -20,7 +21,7 @@ export function useVideoData() {
   // )
 
  
-  const {videoId}=useVideoId()
+  const {videoId}=useLearningSession()
  //const videoId=1
 
     // it should not take the video id from here  it should take from the data but know let it 3
@@ -37,6 +38,7 @@ export function useVideoData() {
      console.log("🔥 fetching...");
      console.log(result.data)
      return result.data
+     //return fakeVideos
     },
     enabled: !!videoId,
     staleTime: Infinity,

@@ -1,6 +1,7 @@
 import { Clock4, Save, FolderUp, Share2 } from "lucide-react";
-import { useSelectedTopic } from "../context/topic_context";
+
 import { MediaBtn } from "./media_btn";
+import { useLearningSession } from "../../../../core/hooks/useLearningContent";
 
 export function MainHeader() {
   const formatDuration = (start: number, end: number) => {
@@ -11,7 +12,7 @@ export function MainHeader() {
 
     return `${minutes}:${seconds.toString().padStart(2, "0")}`;
   };
-  const { selectedTopic } = useSelectedTopic();
+  const { selectedTopic } = useLearningSession();
   return (
     <div className=" pt-12  ">
       <h1 className="text-4xl font-bold tracking-tight text-slate-900 mb-6 ">

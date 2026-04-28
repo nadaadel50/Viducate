@@ -9,5 +9,6 @@ export const STORAGE_KEYS = {
    currentTime: "lms_current_time",
   selectedTopic: "lms_selected_topic",
    marks:"marks",
+   video_Id : "video_id"
 
 };

@@ -7,7 +7,8 @@ import { uploadURLUseCase } from "../../../../core/di/upload_video_container";
 import { UrlRequest } from "../../domain/entity/url_request";
 import { useNavigate } from "react-router";
 import { AppRoutesNames } from "../../../../app/routers/routes";
-import  { useVideoId } from "../../../../core/hooks/useVideoId";
+import { useLearningSession } from "../../../../core/hooks/useLearningContent";
+
 
 
 type UploadLinkSectionProps={
@@ -15,7 +16,7 @@ type UploadLinkSectionProps={
 }
 
 export function UploadLinkSection({handleError}:UploadLinkSectionProps) {
-  const { setVideoId  } = useVideoId();
+  const { setVideoId  } = useLearningSession();
   
   const { url, handleUrlChange, linkError, handlePaste } = useLinkHandlers();
   const {

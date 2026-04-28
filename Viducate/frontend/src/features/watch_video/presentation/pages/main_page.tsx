@@ -1,20 +1,21 @@
 import { LeftContentSection } from "../sections/left_content_section";
 import { RightContentSection } from "../sections/right_content_section";
 import { useVideoData } from "../../../../core/hooks/useVideoData";
-import { useSelectedTopic } from "../context/topic_context";
+
 import { useEffect, useState } from "react";
 import Loading from "../../../../core/widgets/loading";
 import { ErrorMessage } from "../../../../core/widgets/error";
 import { LanguageInitModal } from "../../../video_upload/presentation/componants/LanguageInitModal";
 import { CustomizeExperienceModal } from "../../../video_upload/presentation/componants/CustomizeExperienceModal";
-import { useVideoId } from "../../../../core/hooks/useVideoId";
+import { useLearningSession } from "../../../../core/hooks/useLearningContent";
+
 export function MainPage() {
-  const { videoId } = useVideoId();
+  const { videoId, selectedTopic, setSelectedTopic  } = useLearningSession();
 
   const { data: data, isLoading, error } = useVideoData();
   //lets say that data came from useVideoData is fake data right now
 
-  const { selectedTopic, setSelectedTopic } = useSelectedTopic();
+
   //  const videoId = selectedTopic?.video_id;
 
   const [isInitOpen, setIsInitOpen] = useState(false);
