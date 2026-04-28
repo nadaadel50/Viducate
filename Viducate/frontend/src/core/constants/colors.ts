@@ -22,6 +22,7 @@ export const COLORS = {
   border: {
     default: "#dcdde5",
     focus: "#6366f1",
+
   },
 
   text: {
@@ -66,6 +67,10 @@ export const COLORS = {
     secondry: "#ffffff",
     background:"#ececf7"
 
+  },
+  animation: {
+    orbitBorder: "rgba(53, 158, 255, 0.15)",
+    glow: "rgba(90, 11, 177, 0.3)",
   }
 
   

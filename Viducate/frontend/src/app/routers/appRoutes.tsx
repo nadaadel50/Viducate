@@ -17,6 +17,9 @@ import { SelectedTopicProvider } from "../../features/watch_video/presentation/c
 import TestModalsPage from "../../features/video_upload/presentation/pages/test_modals_page";
 import {ProcessingPage }from "../../features/video_upload/presentation/pages/processing_page";
 import AuthSuccess from "../../features/auth/presentation/pages/AuthSuccess";
+import { GeneratingSummaryPage } from '../../features/summarization/presentation/pages/GeneratingSummaryPage';
+import SummaryPage from "../../features/summarization/presentation/pages/SummaryPage";
+
 export function AppRoutes() {
     return (
         <BrowserRouter>
@@ -26,7 +29,8 @@ export function AppRoutes() {
         <Route path="/signup" element={<SignupPage />} />
         <Route path="/auth/callback" element={<AuthSuccess />} />
         <Route path="/forgot-password" element={<ForgetPasswordPage />} />
-
+        <Route path="/generating-summary" element={<GeneratingSummaryPage />} />
+        <Route path="/summary" element={<SummaryPage />} />
 
             /* here we will put all the public routes that don't need authentication to access them like landing page, signup */
            /* for example */
