@@ -43,7 +43,7 @@ export function FlashCard({ isFliped, cardData, onClick }: FlashCardProps) {
           flex flex-col items-center justify-center 
           p-12 rounded-2xl bg-white"
         >
-          <h3 className="text-3xl font-bold text-slate-900 leading-tight tracking-tight">
+          <h3 className="text-3xl font-bold text-slate-900 leading-tight tracking-tight p-8">
             {cardData.question}
           </h3>
 
@@ -61,7 +61,7 @@ export function FlashCard({ isFliped, cardData, onClick }: FlashCardProps) {
           flex flex-col items-center justify-center 
           rounded-2xl bg-white"
         >
-          <p className="text-[#4f46e5] font-medium text-lg">
+          <p className="text-[#4f46e5] font-medium text-lg p-8">
             {cardData.answer}
           </p>
 

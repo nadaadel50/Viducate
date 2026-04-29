@@ -18,9 +18,10 @@ export class FlashCardDataSourceImp implements FlashCardDataSoruce {
   }
   async getSegmentFlashCard(req: SegmentFlashCardRequest): Promise<ApiResult<Segment>> {
     try{
-      console.log(req.segmentId,req.videoId)
+  
       const response=await this.service.getSegmentsFlashCards(toFlashCardDto(req))
       const resonseEntity=toSegmentEntity(response)
+    
       return{
         success:true,
         data:resonseEntity

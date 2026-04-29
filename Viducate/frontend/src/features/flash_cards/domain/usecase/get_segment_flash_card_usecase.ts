@@ -5,6 +5,8 @@ import type { FlashCardRepo } from "../repository/flash_card_repo";
 
 export const GetSegmentFlahsCardUseCase = (repo: FlashCardRepo) => {
   return async (req: SegmentFlashCardRequest): Promise<ApiResult<Segment>> => {
+    console.log("came here ya aya")
+   
     return repo.getSegmentFlashCard(req);
   };
 };

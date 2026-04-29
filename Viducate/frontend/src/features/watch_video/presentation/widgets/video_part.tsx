@@ -66,7 +66,7 @@ export function VideoPlayer() {
   }, [markers]);
   // ── topic change ──────────────────────────────────────────────────────────
   useEffect(() => {
-    console.log("topics in video player:", topics);
+   // console.log("topics in video player:", topics);
     setCurrentTopicName(selectedTopic?.title || "");
     if (selectedTopic && videoRef.current) {
       setTopicStartTime(Date.now());

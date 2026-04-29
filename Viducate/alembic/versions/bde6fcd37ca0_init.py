@@ -1,8 +1,8 @@
 """init
 
-Revision ID: 24b683249a65
+Revision ID: bde6fcd37ca0
 Revises: 
-Create Date: 2026-04-20 10:45:04.863482
+Create Date: 2026-04-29 15:51:57.117341
 
 """
 from typing import Sequence, Union
@@ -12,7 +12,7 @@ import sqlalchemy as sa
 
 
 # revision identifiers, used by Alembic.
-revision: str = '24b683249a65'
+revision: str = 'bde6fcd37ca0'
 down_revision: Union[str, Sequence[str], None] = None
 branch_labels: Union[str, Sequence[str], None] = None
 depends_on: Union[str, Sequence[str], None] = None
@@ -70,6 +70,20 @@ def upgrade() -> None:
     sa.PrimaryKeyConstraint('vid')
     )
     op.create_index(op.f('ix_video_content_hash'), 'video', ['content_hash'], unique=False)
+    op.create_table('content_preferences',
+    sa.Column('id', sa.Integer(), nullable=False),
+    sa.Column('user_id', sa.Integer(), nullable=True),
+    sa.Column('video_id', sa.Integer(), nullable=True),
+    sa.Column('summary_language', sa.String(length=10), nullable=True),
+    sa.Column('quiz_language', sa.String(length=10), nullable=True),
+    sa.Column('flashcard_language', sa.String(length=10), nullable=True),
+    sa.Column('created_at', sa.TIMESTAMP(), server_default=sa.text('now()'), nullable=True),
+    sa.Column('updated_at', sa.TIMESTAMP(), server_default=sa.text('now()'), nullable=True),
+    sa.ForeignKeyConstraint(['user_id'], ['user.id'], ondelete='CASCADE'),
+    sa.ForeignKeyConstraint(['video_id'], ['video.vid'], ondelete='CASCADE'),
+    sa.PrimaryKeyConstraint('id'),
+    sa.UniqueConstraint('video_id')
+    )
     op.create_table('topic_segment',
     sa.Column('segment_id', sa.Integer(), nullable=False),
     sa.Column('vid_id', sa.Integer(), nullable=True),
@@ -93,6 +107,21 @@ def upgrade() -> None:
     sa.PrimaryKeyConstraint('sum_id'),
     sa.UniqueConstraint('video_id')
     )
+    op.create_table('flashcard',
+    sa.Column('flashcard_id', sa.Integer(), autoincrement=True, nullable=False),
+    sa.Column('segment_id', sa.Integer(), nullable=False),
+    sa.Column('video_id', sa.Integer(), nullable=False),
+    sa.Column('question', sa.Text(), nullable=False),
+    sa.Column('answer', sa.Text(), nullable=False),
+    sa.Column('language', sa.String(length=10), nullable=True),
+    sa.Column('difficulty', sa.String(length=20), nullable=True),
+    sa.Column('created_at', sa.TIMESTAMP(), server_default=sa.text('now()'), nullable=True),
+    sa.ForeignKeyConstraint(['segment_id'], ['topic_segment.segment_id'], ondelete='CASCADE'),
+    sa.ForeignKeyConstraint(['video_id'], ['video.vid'], ondelete='CASCADE'),
+    sa.PrimaryKeyConstraint('flashcard_id')
+    )
+    op.create_index(op.f('ix_flashcard_segment_id'), 'flashcard', ['segment_id'], unique=False)
+    op.create_index(op.f('ix_flashcard_video_id'), 'flashcard', ['video_id'], unique=False)
     op.create_table('keypoints',
     sa.Column('keypoint_id', sa.Integer(), nullable=False),
     sa.Column('segment_id', sa.Integer(), nullable=True),
@@ -131,8 +160,12 @@ def downgrade() -> None:
     op.drop_table('subtopics')
     op.drop_table('segment_summary')
     op.drop_table('keypoints')
+    op.drop_index(op.f('ix_flashcard_video_id'), table_name='flashcard')
+    op.drop_index(op.f('ix_flashcard_segment_id'), table_name='flashcard')
+    op.drop_table('flashcard')
     op.drop_table('video_summary')
     op.drop_table('topic_segment')
+    op.drop_table('content_preferences')
     op.drop_index(op.f('ix_video_content_hash'), table_name='video')
     op.drop_table('video')
     op.drop_table('settings')

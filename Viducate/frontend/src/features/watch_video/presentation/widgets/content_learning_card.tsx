@@ -27,10 +27,7 @@ export function ContentLearningCard({
       onClick={() => {
         onClick();
         setSelectedTopic(cardInfo);
-        console.log("time is")
-        console.log(cardInfo.start_time)
-        
-      
+       
       }}
       className={`cursor-pointer group relative rounded-2xl bg-white/70  p-4 transition-all hover:bg-white hover:border-primary/40 hover:shadow-soft ${isSelected ? "border-2 border-[#4f46e5] shadow-xl shadow-[#4f46e5]/15" : "border border-slate-200/60 w-80"}`}
     >
@@ -75,9 +72,7 @@ export function ContentLearningCard({
         />
         <ContentGenerationBtn
            onClick={() => {
-             
-              
-               navigate(`/flashcards/${cardInfo.segment_number}`)
+              navigate(`/WatchVideo/flashcards/${cardInfo.segment_id}`)
             }}
           icon={<Layers />}
           label={"cards"}

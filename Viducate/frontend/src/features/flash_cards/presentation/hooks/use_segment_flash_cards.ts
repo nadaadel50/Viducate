@@ -4,17 +4,15 @@ import { useLearningSession } from "../../../../core/hooks/useLearningContent";
 
 export const useSegmentFlashcards = (segmentId:number) => {
     const{videoId}=useLearningSession()
-  // return useQuery({
-  //   queryKey: ["flashcards", segmentId],
-  //   queryFn: () => getSegmentFlahsCardUseCase({
-  //       videoId:videoId!,
-  //       segmentId:segmentId
-  //   })
-  // });
+    console.log("here")
+    console.log(segmentId,videoId)
+ 
 
   return useQuery({
-    queryKey: ["topics", segmentId],
+   queryKey: ["flashcards", videoId, segmentId],
    queryFn: async () => {
+    console.log("ehre here here here")
+ 
      const result = await getSegmentFlahsCardUseCase({
         videoId:videoId!,
         segmentId:segmentId
@@ -28,7 +26,7 @@ export const useSegmentFlashcards = (segmentId:number) => {
 
      return result.data
     },
-    enabled: !!videoId,
+    enabled: !!videoId &&segmentId!=null,
     staleTime: Infinity,
     refetchOnWindowFocus: false,
     refetchOnMount: false,
