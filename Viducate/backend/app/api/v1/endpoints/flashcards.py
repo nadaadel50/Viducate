@@ -76,3 +76,21 @@ def get_flashcards_by_segment(
 ):
     service = FlashcardService(db)
     return service.get_by_segment(video_id, segment_id, current_user.id)
+
+
+
+@router.post(
+    "/video/{video_id}/segment/{segment_id}/generate",
+    response_model=FlashcardsBySegmentResponse,
+    status_code=status.HTTP_200_OK,
+    summary="Generate flashcards for a specific segment",
+    description="Generates (or returns cached) flashcards for a single segment by ID.",
+)
+def generate_flashcards_for_segment_endpoint(
+    video_id:   int,
+    segment_id: int,
+    db: Session = Depends(get_db),
+    current_user=Depends(get_current_user),
+):
+    service = FlashcardService(db)
+    return service.get_or_generate_segment(video_id, segment_id, current_user.id)
