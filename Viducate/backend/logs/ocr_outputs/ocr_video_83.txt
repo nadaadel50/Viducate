@@ -1,5 +1,0 @@
-# OCR Output — video_id=83
-# Language: en
-# Total segments: 1
-
-[00:20:13] 3 - 1 | 1-1;
