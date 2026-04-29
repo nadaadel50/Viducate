@@ -1,4 +1,0 @@
-# OCR Output — video_id=73
-# Language: None
-# Total segments: 0
-
