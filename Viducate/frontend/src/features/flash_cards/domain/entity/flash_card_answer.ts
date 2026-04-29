@@ -1,10 +1,10 @@
 import type { Difficulty } from "./difficaulty";
-import type { Flashcard } from "./flash_card_entity";
+
 
 export type FlashcardAnswer = {
-  cardInfo:Flashcard
+  cardId:number
   selectedDifficulty: Difficulty
-  retriveTime:number
+nextReviewAt:number
 
 
 };

@@ -23,10 +23,11 @@ export function AppRoutes() {
     <BrowserRouter>
       <Routes>
         <Route path="/" element={<LoginPage />} />
+         {/* <Route path="/" element={<FlashCards />} />{" "} */}
         <Route path="/signup" element={<SignupPage />} />
         <Route path="/auth/callback" element={<AuthSuccess />} />
         <Route path="/forgot-password" element={<ForgetPasswordPage />} />
-        <Route path="/" element={<ForgetPasswordPage />} /> /* for example */
+
         <Route path="/test-modals" element={<TestModalsPage />} /> /* for
         <Route element={<ProtectedRoute />}>
           {" "}
@@ -34,10 +35,11 @@ export function AppRoutes() {
           <Route path="/ProcessingPage" element={<ProcessingPage />} />
           {/* <Route path="/WatchVideo" element={<MainPage />} />
           <Route path="/flashcards/:segmentId" element={<FlashCards />} /> */}
-          // app_routes.tsx
+       
           <Route path="/WatchVideo" element={<WatchLayout />}>
             <Route index element={<MainPage />} /> {/* /WatchVideo */}
-            <Route path="/flashcards/:segmentId" element={<FlashCards />} />{" "}
+            <Route path="flashcards/:segmentId" element={<FlashCards />} />
+            {" "}
             {/* /WatchVideo/flashcards */}
           </Route>{" "}
         </Route>

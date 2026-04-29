@@ -92,20 +92,6 @@ export function FlashCard({ isFliped, cardData, onClick }: FlashCardProps) {
   </button>
 </div>
 
-      {/* <div className="absolute -bottom-5 left-1/2 transform -translate-x-1/2 z-20">
-        <button
-          onClick={(e) => {
-            e.stopPropagation(); // becase i have 2 flip fn
-            onClick();
-          }}
-          className="flex  items-center gap-2 bg-[#4f46e5] text-white px-8 py-3 rounded-full shadow-lg shadow-[#4f46e5]/30 hover:shadow-[#4f46e5]/50 transition-all active:scale-95 font-bold text-lg tracking-wide group/btn cursor-pointer"
-        >
-          <span>Flip Card</span>
-          <span className="material-symbols-outlined text-[20px] group-hover/btn:rotate-180 transition-transform duration-500">
-            sync
-          </span>
-        </button>
-      </div> */}
     </div>
   );
 }
