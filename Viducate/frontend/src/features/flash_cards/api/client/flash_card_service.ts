@@ -8,7 +8,7 @@ export class FlashCardService {
  async getSegmentsFlashCards(reqDto: SegmentFlashcardRequestDto): Promise<SegmentDto> {
  
 
-  const response = await apiClient.get(`/flashcards/video/${reqDto.videoId}/segment/${reqDto.segmentId}/`, {
+  const response = await apiClient.post(`/flashcards/video/${reqDto.videoId}/segment/${reqDto.segmentId}/generate`, {
    
   });
 

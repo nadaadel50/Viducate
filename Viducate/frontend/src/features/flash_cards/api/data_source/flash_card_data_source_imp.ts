@@ -21,6 +21,8 @@ export class FlashCardDataSourceImp implements FlashCardDataSoruce {
   
       const response=await this.service.getSegmentsFlashCards(toFlashCardDto(req))
       const resonseEntity=toSegmentEntity(response)
+      console.log("my flash card is ")
+      console.log(resonseEntity)
     
       return{
         success:true,

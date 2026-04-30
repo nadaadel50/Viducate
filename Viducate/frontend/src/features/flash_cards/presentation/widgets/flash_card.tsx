@@ -2,9 +2,9 @@ import { useNavigate } from "react-router";
 import type { Flashcard } from "../../domain/entity/flash_card_entity";
 import { AppRoutesNames } from "../../../../app/routers/routes";
 import { useLearningSession } from "../../../../core/hooks/useLearningContent";
-import { STORAGE_KEYS } from "../../../../core/constants";
-import { FilePlay, PlayCircle } from "lucide-react";
-import { useSegmentFlashcards } from "../hooks/use_segment_flash_cards";
+
+import { FilePlay } from "lucide-react";
+
 
 type FlashCardProps = {
   cardData: Flashcard;

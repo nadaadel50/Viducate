@@ -61,11 +61,11 @@ export function FinishSessionCard({ answers, onEndSession }: Props) {
             >
               <span className="flex items-center gap-2">
                 Ready to review
-                <span className="text-lg group-hover:animate-bounce">🔥</span>
+                <span className="text-lg group-hover:animate-bounce">😎</span>
               </span>
 
               {/* glow effect */}
-              <div className="absolute inset-0 rounded-2xl bg-green-400 opacity-0 group-hover:opacity-20 blur-xl transition"></div>
+              <div className="absolute inset-0 rounded-2xl bg-blue-600 opacity-0 group-hover:opacity-20 blur-xl transition"></div>
             </button>
           ) : (
             <p className="text-4xl font-bold">{formatTime(timeLeft)}</p>
@@ -89,7 +89,7 @@ export function FinishSessionCard({ answers, onEndSession }: Props) {
             End Session
           </span>
 
-          <div className="absolute inset-0 rounded-2xl bg-gradient-to-r from-indigo-500 to-purple-500 opacity-0 group-hover:opacity-100 transition duration-300"></div>
+          <div className="absolute inset-0 rounded-2xl bg-gradient-to-br from-[#359EFF] to-[#5A0BB1] opacity-0 group-hover:opacity-100 transition duration-300"></div>
         </button>
 
         <p className="absolute -bottom-6 text-xs text-gray-500 text-center">

@@ -2,17 +2,18 @@ import { useEffect, useState } from "react";
 import { CompeleteProgress } from "../widgets/complete_progress";
 import { FlashCard } from "../widgets/flash_card";
 import { UserLevelBtn } from "../widgets/user_level_btn";
-import type { Flashcard, Segment } from "../../domain/entity/flash_card_entity";
+import type { Flashcard } from "../../domain/entity/flash_card_entity";
 import type { FlashcardAnswer } from "../../domain/entity/flash_card_answer";
 import { Difficulty } from "../../domain/entity/difficaulty";
 import { DIFFICULTY_TIME } from "../../domain/entity/difficaulty_time";
-import { useParams, useSearchParams } from "react-router";
+import { useParams } from "react-router";
 import { useSegmentFlashcards } from "../hooks/use_segment_flash_cards";
 import Loading from "../../../../core/widgets/loading";
 import ErrorMessage from "../../../../core/widgets/error";
-import CompleteSessionAnimation from "../../../../core/animations/complete_ani";
 import FinishSessionCard from "../section/finish_flash_cards";
 import { STORAGE_KEYS } from "../../../../core/constants";
+import { LoadingScreen } from "../../../../core/widgets/advanced_loading";
+import { Layers } from "lucide-react";
 
 export function FlashCards() {
   const { segmentId } = useParams<{ segmentId: string }>();
@@ -25,16 +26,17 @@ export function FlashCards() {
   // add this with the other useState calls
   const [reviewCards, setReviewCards] = useState<Flashcard[] | null>(null);
 
+  // LOAD session for this specific segment
   useEffect(() => {
-   
     setCurrentIndex(0);
     setIsFlipped(false);
     setIsFinished(false);
     setReviewCards(null);
     setAnswers([]);
 
-    
-    const saved = localStorage.getItem(STORAGE_KEYS.flashcardSession);
+    const saved = localStorage.getItem(
+      `${STORAGE_KEYS.flashcardSession}_${segmentIdNumber}`,
+    );
     if (!saved) {
       setCheckExistFirst(true);
       return;
@@ -42,27 +44,22 @@ export function FlashCards() {
 
     try {
       const parsed = JSON.parse(saved);
-     
-      if (parsed.segmentId === segmentIdNumber) {
-        setAnswers(parsed.answers || []);
-        setCurrentIndex(parsed.currentIndex || 0);
-        setReviewCards(parsed.reviewCards || null);
-        setIsFinished(parsed.isFinished || false);
-      } else {
-      
-        localStorage.removeItem(STORAGE_KEYS.flashcardSession);
-      }
+      setAnswers(parsed.answers || []);
+      setCurrentIndex(parsed.currentIndex || 0);
+      setReviewCards(parsed.reviewCards || null);
+      setIsFinished(parsed.isFinished || false);
     } catch (e) {
       console.error("Failed to parse session", e);
     }
 
     setCheckExistFirst(true);
-  }, [segmentIdNumber]); 
+  }, [segmentIdNumber]);
 
-  // this fn to get the data if exist from local storage
+  // SAVE session for this specific segment
   useEffect(() => {
-    if (!checkExistFirst) return; // to make sure that see if exist data first then if not set new data
-    // in the save useEffect
+    if (!checkExistFirst) return;
+    if (!flashcardsData || flashcardsData.flashcards.length === 0) return;
+
     const data = {
       segmentId: segmentIdNumber,
       answers,
@@ -70,68 +67,43 @@ export function FlashCards() {
       isFinished,
       reviewCards,
     };
-    localStorage.setItem(STORAGE_KEYS.flashcardSession, JSON.stringify(data));
-  }, [answers, currentIndex, isFinished, reviewCards]);
-
+    localStorage.setItem(
+      `${STORAGE_KEYS.flashcardSession}_${segmentIdNumber}`,
+      JSON.stringify(data),
+    );
+  }, [
+    answers,
+    currentIndex,
+    isFinished,
+    reviewCards,
+    segmentIdNumber,
+    checkExistFirst,
+  ]);
   const {
     data: flashcardsData,
     isLoading,
     error,
   } = useSegmentFlashcards(segmentIdNumber);
-  if (isLoading && !flashcardsData) return <Loading />;
-  if (error) return <ErrorMessage errorMessage={error.message} />;
 
-  // const flashcardsData: Segment = {
-  //   segment_id: 1,
-  //   segment_number: 1,
-  //   title: "React Basics",
-  //   start_time: 0,
-  //   end_time: 0,
-  //   start_time_label: "",
-  //   end_time_label: "",
-  //   flashcards: [
-  //     {
-  //       flashcard_id: 1,
-  //       segment_id: 1,
-  //       video_id: 101,
-  //       question: "What is React?",
-  //       answer: "A JavaScript library for building user interfaces.",
-  //       language: "en",
-  //       difficulty: "easy",
-  //       created_at: "2026-04-26T04:06:17.875Z",
-  //       segment_start_time: 0,
-  //       segment_end_time: 0,
-  //       segment_start_label: "",
-  //     },
-  //     {
-  //       flashcard_id: 2,
-  //       segment_id: 1,
-  //       video_id: 101,
-  //       question: "What is JSX?",
-  //       answer:
-  //         "A syntax extension for JavaScript that looks like HTML and is used in React.",
-  //       language: "en",
-  //       difficulty: "easy",
-  //       created_at: "2026-04-26T04:06:17.875Z",
-  //       segment_start_time: 0,
-  //       segment_end_time: 0,
-  //       segment_start_label: "",
-  //     },
-  //     {
-  //       flashcard_id: 3,
-  //       segment_id: 1,
-  //       video_id: 101,
-  //       question: "What is a component in React?",
-  //       answer: "A reusable piece of UI that can be a function or class.",
-  //       language: "en",
-  //       difficulty: "easy",
-  //       created_at: "2026-04-26T04:06:17.875Z",
-  //       segment_start_time: 0,
-  //       segment_end_time: 0,
-  //       segment_start_label: "",
-  //     },
-  //   ],
-  // };
+  if (isLoading)
+    return (
+      <LoadingScreen
+        icon={<Layers />}
+        titlePrefix={"Cooking up your flashcards"}
+        titleHighlight={"they’ll be ready soon"}
+        subtitle={"Turning key concepts into easy-to-review flashcards"}
+      />
+    );
+  if (error) return <ErrorMessage errorMessage={error.message} />;
+  if (!flashcardsData || flashcardsData.flashcards.length === 0)
+    return (
+      <LoadingScreen
+        icon={<Layers />}
+        titlePrefix={"Cooking up your flashcards"}
+        titleHighlight={"they’ll be ready soon"}
+        subtitle={"Turning key concepts into easy-to-review flashcards"}
+      />
+    );
   if (flashcardsData) {
     // this fn when finish the session
 
@@ -141,7 +113,7 @@ export function FlashCards() {
         const cardsToReview = flashcardsData.flashcards.filter((c) =>
           dueIds.has(c.flashcard_id),
         );
-        setReviewCards(cardsToReview); // only the due cards
+        setReviewCards(cardsToReview);
         setCurrentIndex(0);
         setIsFinished(false);
       } else {
@@ -149,7 +121,7 @@ export function FlashCards() {
         setReviewCards(null);
         setCurrentIndex(0);
         setIsFinished(false);
-        localStorage.removeItem(STORAGE_KEYS.flashcardSession);
+       localStorage.removeItem(`${STORAGE_KEYS.flashcardSession}_${segmentIdNumber}`);
       }
     };
 
@@ -189,7 +161,6 @@ export function FlashCards() {
     };
     const activeCards = reviewCards ?? flashcardsData.flashcards;
     const totalCards = activeCards.length;
-
     const safeIndex = currentIndex >= totalCards ? 0 : currentIndex;
     const currentCard = activeCards[safeIndex];
 
