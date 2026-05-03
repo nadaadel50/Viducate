@@ -12,8 +12,6 @@ type PlayerState = {
 };
 
 type PlayerAPI = {
-  play: () => void;
-  pause: () => void;
   seek: (time: number) => void;
   getCurrentTime: () => number;
   getDuration: () => number;
@@ -28,73 +26,50 @@ type VideoStateSetters = {
   setPlayerState: React.Dispatch<React.SetStateAction<PlayerState>>;
   setCurrentTime: (t: number) => void;
   setPlaybackRate: (r: number) => void;
- 
 };
 
 type ControllerProps = {
   player: PlayerAPI;
   analytics: AnalyticsAPI;
-  videoState:VideoStateSetters
-  
+  videoState: VideoStateSetters;
 };
-
 
 // ── hook ──────────────────────────────────────────────────────────────────────
 
 export function useVideoController({
   player,
   analytics,
-  videoState
+  videoState,
 }: ControllerProps) {
-
   const pauseStartRef = useRef<number | null>(null);
   const lastSeekTimeRef = useRef<number | null>(null);
   const [markers, setMarkers] = useState<Marker[]>([]);
-const [showSpeedMenu, setShowSpeedMenu] = useState(false);
+  const [showSpeedMenu, setShowSpeedMenu] = useState(false);
 
-  // ▶️ first play
   const handleStart = () => {
-    player.play();
-    videoState.setPlayerState((p) => ({ ...p, started: true, isPlaying: true }));
+    // no player.play() — ReactPlayer will play because isPlaying becomes true
+    videoState.setPlayerState((p) => ({
+      ...p,
+      started: true,
+      isPlaying: true,
+    }));
   };
 
-  // ⏯ toggle play / pause
   const handleToggle = (isPlaying: boolean) => {
     if (isPlaying) {
-      player.pause();
+      // no player.pause()
       videoState.setPlayerState((p) => ({ ...p, isPlaying: false }));
     } else {
-      player.play();
-      videoState.setPlayerState((p) => ({ ...p, isPlaying: true, started: true }));
+      // no player.play()
+      videoState.setPlayerState((p) => ({
+        ...p,
+        isPlaying: true,
+        started: true,
+      }));
     }
   };
 
-  // ⏱ time update → progress bar
-  const handleTimeUpdate = () => {
-    const current = player.getCurrentTime();
-    const duration = player.getDuration();
-    videoState.setCurrentTime(current);
-    if (duration) {
-      videoState.setPlayerState((p) => ({ ...p, progress: (current / duration) * 100 }));
-    }
-  };
-
-  // 📦 metadata ready → store duration
-  const handleLoadedMetadata = () => {
-    videoState.setPlayerState((p) => ({ ...p, duration: player.getDuration() }));
-  };
-
-  // 🎯 seeked event → record for stuck detection
-  const handleSeek = () => {
-    const time = player.getCurrentTime();
-    lastSeekTimeRef.current = time;
-    analytics.addSeekEvent(time);
-  };
-
-  // ▶️ play event → check if user was stuck before resuming
   const handlePlay = () => {
-    videoState.setPlayerState((p) => ({ ...p, isPlaying: true }));
-
     const pauseStart = pauseStartRef.current;
     const lastSeekTime = lastSeekTimeRef.current;
 
@@ -111,13 +86,38 @@ const [showSpeedMenu, setShowSpeedMenu] = useState(false);
     pauseStartRef.current = null;
   };
 
-
-  
-
-  // ⏸ pause event → record when pause started
   const handlePause = () => {
-    videoState.setPlayerState((p) => ({ ...p, isPlaying: false }));
     pauseStartRef.current = Date.now();
+  };
+
+  // ⏱ time update → progress bar
+  const handleTimeUpdate = () => {
+    const current = player.getCurrentTime();
+    const duration = player.getDuration();
+    videoState.setCurrentTime(current);
+    if (duration) {
+      videoState.setPlayerState((p) => ({ ...p, progress: (current / duration) * 100 }));
+    }
+  };
+  // const handleTimeUpdate = (currentTime: number) => {
+  //   videoState.setCurrentTime(currentTime);
+  //   const duration = player.getDuration();
+  //   if (duration) {
+  //     videoState.setPlayerState((p) => ({
+  //       ...p,
+  //       progress: (currentTime / duration) * 100,
+  //     }));
+  //   }
+  // };
+
+  const handleLoadedMetadata = () => {
+    videoState.setPlayerState((p) => ({ ...p, duration:player.getDuration() }));
+  };
+  
+  const handleSeek = () => {
+    const time = player.getCurrentTime();
+    lastSeekTimeRef.current = time;
+    analytics.addSeekEvent(time);
   };
 
   // ⚡ speed change
@@ -126,10 +126,8 @@ const [showSpeedMenu, setShowSpeedMenu] = useState(false);
     videoState.setPlaybackRate(speed);
     setShowSpeedMenu(false);
   };
-  
 
-
-   const handleAddMarker = () => {
+  const handleAddMarker = () => {
     setMarkers([...markers, { time: player.getCurrentTime() }]);
   };
 
@@ -145,6 +143,6 @@ const [showSpeedMenu, setShowSpeedMenu] = useState(false);
     markers,
     showSpeedMenu,
     setShowSpeedMenu,
-    handleAddMarker
+    handleAddMarker,
   };
 }

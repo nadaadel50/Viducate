@@ -14,6 +14,7 @@ export function useVideoAnalytics(
   const [lastPopupTime, setLastPopupTime] = useState(0);
   const [stuckReason, setStuckReason] = useState<StuckReason>(StuckReasons.DEAFULT);
   const [timeSpent, setTimeSpent] = useState(0);
+  
 
   useEffect(() => {
     const interval = setInterval(() => {
@@ -81,5 +82,6 @@ export function useVideoAnalytics(
     setShowPopup,
     triggerStuck,
     addSeekEvent,
+    setEvents
   };
 }

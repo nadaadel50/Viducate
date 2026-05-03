@@ -1,12 +1,4 @@
 import { useEffect, useRef, useState } from "react";
-import {
-  CirclePlus,
-  Pause,
-  Play,
-  Maximize,
-  Minimize,
-  Gauge,
-} from "lucide-react";
 
 import { useVideoData } from "../../../../core/hooks/useVideoData";
 import { STORAGE_KEYS } from "../../../../core/constants";
@@ -15,15 +7,14 @@ import { useVideoPlayer } from "../hook/useVideoPlayer";
 import { useVideoAnalytics } from "../hook/useVideoAnalytics";
 import { useVideoUI } from "../hook/use_video_ui";
 import { useVideoController } from "../hook/use_video_controller";
-import { VideoProgressBar } from "../widgets/video_progress_bar";
-import { VideoControls } from "../widgets/video_controls";
-import { StuckPopup } from "../widgets/stuck_popup";
+import { VideoProgressBar } from "../widgets/video_widgets/video_progress_bar";
+import { VideoControls } from "../widgets/video_widgets/video_controls";
+import { StuckPopup } from "../widgets/video_widgets/stuck_popup";
 import { getStuckMessage } from "../util/get_stuck_message";
-
-const SPEED_OPTIONS = [0.5, 0.75, 1, 1.25, 1.5, 2];
+import { InitialPlayOverlay } from "../widgets/video_widgets/intial_overLay";
+import ReactPlayer from "react-player";
 
 export function VideoPlayer() {
-  const videoRef = useRef<HTMLVideoElement | null>(null);
   const containerRef = useRef<HTMLDivElement | null>(null);
   const progressRef = useRef<HTMLDivElement | null>(null);
 
@@ -35,25 +26,25 @@ export function VideoPlayer() {
   });
 
   const [showTopicEnd, setShowTopicEnd] = useState(false);
-
-  const [events, setEvents] = useState<{ time: number; timestamp: number }[]>(
-    [],
-  );
   const { currentTime, setCurrentTime, selectedTopic, seekTo, setSeekTo } =
     useLearningSession();
   const { data: topics } = useVideoData();
 
   const [topicStartTime, setTopicStartTime] = useState<number | null>(null);
-
   const [topicDuration, setTopicDuration] = useState(0);
-
   const [currentTopicName, setCurrentTopicName] = useState("");
 
-  const { play, pause, seek, getCurrentTime, setSpeed, getDuration } =
-    useVideoPlayer(videoRef);
-  const [playbackRate, setPlaybackRate] = useState(1);
+  // ← playerRef comes from the hook, no argument needed
+  const {
+    playerRef,
 
-  // const [markers, setMarkers] = useState<Marker[]>([]);
+    seek,
+    getCurrentTime,
+    setSpeed,
+    getDuration,
+  } = useVideoPlayer();
+
+  const [playbackRate, setPlaybackRate] = useState(1);
 
   const {
     showPopup,
@@ -62,6 +53,7 @@ export function VideoPlayer() {
     triggerStuck,
     addSeekEvent,
     setTimeSpent,
+    setEvents,
   } = useVideoAnalytics(
     playerState.isPlaying,
     topicDuration,
@@ -91,112 +83,93 @@ export function VideoPlayer() {
     setShowSpeedMenu,
     handleAddMarker,
   } = useVideoController({
-    player: { play, pause, seek, getCurrentTime, getDuration, setSpeed },
+    player: { seek, getCurrentTime, getDuration, setSpeed },
     analytics: { addSeekEvent, triggerStuck },
-    videoState: {
-      setPlayerState,
-      setCurrentTime,
-      setPlaybackRate,
-  
-    },
+    videoState: { setPlayerState, setCurrentTime, setPlaybackRate },
   });
 
-  // this fn to handle marks
   useEffect(() => {
     sessionStorage.setItem(STORAGE_KEYS.marks, JSON.stringify(markers));
   }, [markers]);
 
-  // this fn to handle topic change by listen to every change to selectedTopic so if change this fn work and setStart time to time of the new topic
   useEffect(() => {
     setCurrentTopicName(selectedTopic?.title || "");
-    if (selectedTopic && videoRef.current) {
+    if (selectedTopic) {
       setTopicStartTime(Date.now());
       setTopicDuration(
         (selectedTopic.end_time - selectedTopic.start_time) * 1000,
       );
-      setTimeSpent(0); // this for stuck detection
+      setTimeSpent(0);
     }
     setEvents([]);
   }, [selectedTopic]);
 
-  // when i click on the left section then change the current time so i  want the video player to progress to new currenct time
   useEffect(() => {
-    if (seekTo === null || !videoRef.current) return;
+    if (seekTo === null) return;
     seek(seekTo);
     setSeekTo(null);
   }, [seekTo]);
 
-  // take it from local storage when reload the page for first time
   useEffect(() => {
     seek(currentTime);
   }, []);
 
-  // ── handlers ──────────────────────────────────────────────────────────────
-
   const handleProgressClick = (e: React.MouseEvent<HTMLDivElement>) => {
-    if (!videoRef.current || !progressRef.current) return;
+    if (!progressRef.current) return;
     const rect = progressRef.current.getBoundingClientRect();
-    const clickX = e.clientX - rect.left;
-    seek((clickX / rect.width) * getDuration());
+    seek(((e.clientX - rect.left) / rect.width) * getDuration());
   };
 
   return (
     <div className="flex flex-col items-center w-full">
-      {/* ── outer container (also the fullscreen root) ── */}
       <div
         ref={containerRef}
         className="relative w-full max-w-5xl bg-black rounded-xl overflow-hidden shadow-md group"
         style={{ height: isFullscreen ? "100vh" : "350px" }}
-        onMouseMove={() => {
-          resetHideTimer();
-        }}
-        onMouseLeave={() => {
-          handleMouseLeave();
-        }}
+        onMouseMove={resetHideTimer}
+        onMouseLeave={handleMouseLeave}
       >
-        <video
-          ref={videoRef}
+        <ReactPlayer
+          ref={playerRef}
           src={topics?.video_url}
-          onSeeked={handleSeek}
-          onTimeUpdate={handleTimeUpdate}
-          onLoadedMetadata={handleLoadedMetadata}
+          playing={playerState.isPlaying}
+          playbackRate={playbackRate}
+          onReady={() => {
+            const internalPlayer = (
+              playerRef.current as any
+            )?.getInternalPlayer();
+            if (internalPlayer) {
+              playerRef.current = internalPlayer;
+              internalPlayer.currentTime = currentTime;
+            }
+          }}
+          width="100%"
+          height="100%"
+          onTimeUpdate={() => handleTimeUpdate()}
+          onDurationChange={() => handleLoadedMetadata()}
+          // onTimeUpdate={(e: React.SyntheticEvent<HTMLVideoElement>) =>
+          //   handleTimeUpdate(e.currentTarget.currentTime)
+          // }
+          // onDurationChange={(e: React.SyntheticEvent<HTMLVideoElement>) =>
+          //   handleLoadedMetadata(e.currentTarget.duration)
+          // }
           onPlay={handlePlay}
           onPause={handlePause}
-          onEnded={() => {
-            setPlayerState((prev) => ({ ...prev, isPlaying: false }));
-            setShowTopicEnd(true);
-          }}
-          onClick={() => {
-            handleToggle(playerState.isPlaying);
-          }}
-          className="w-full h-full object-cover cursor-pointer"
+          onSeeked={handleSeek}
+          onEnded={() => setPlayerState((p) => ({ ...p, isPlaying: false }))}
+          onClick={() => handleToggle(playerState.isPlaying)}
+          style={{ width: "100%", height: "100%", objectFit: "cover" }}
         />
 
-        {/* initial play button */}
-        {!playerState.started && (
-          <div className="absolute inset-0 flex items-center justify-center z-10">
-            <button
-              onClick={handleStart}
-              className="cursor-pointer bg-gradient-to-br from-[#359EFF]/70 to-[#5A0BB1]/70
-                hover:from-[#5A0BB1] hover:to-[#359EFF]
-                text-white p-5 rounded-full transition-all duration-300 scale-100 hover:scale-110"
-            >
-              <Play className="w-8 h-8" />
-            </button>
-          </div>
-        )}
+        {!playerState.started && <InitialPlayOverlay onStart={handleStart} />}
 
-        {/* ── custom controls bar ── */}
         {playerState.started && (
           <div
-            className={`absolute bottom-0 left-0 right-0 z-30 transition-opacity duration-300 
+            className={`absolute bottom-0 left-0 right-0 z-30 transition-opacity duration-300
               ${showControls ? "opacity-100" : "opacity-0 pointer-events-none"}`}
           >
-            {/* gradient scrim */}
             <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/30 to-transparent pointer-events-none rounded-b-xl" />
-
             <div className="relative px-4 pb-3 pt-8 flex flex-col gap-2">
-              {/* progress bar */}
               <VideoProgressBar
                 progress={playerState.progress}
                 duration={playerState.duration}
@@ -207,8 +180,6 @@ export function VideoPlayer() {
                 onMarkerClick={(time) => seek(time)}
                 progressRef={progressRef}
               />
-
-              {/* bottom row */}
               <VideoControls
                 isPlaying={playerState.isPlaying}
                 currentTime={currentTime}
@@ -228,30 +199,15 @@ export function VideoPlayer() {
         )}
       </div>
 
-      {/* stuck popup */}
-      {showPopup && <StuckPopup reason={getStuckMessage(stuckReason)} onHelp={()=>{
-        // open chat
-      } } onDismiss={()=>{
-        setShowPopup(false)
-      } }/>}
-
-      {/* topic-end overlay
-      <div
-        onClick={() => {
-          setShowTopicEnd(false);
-        }}
-        className={`fixed inset-0 z-50
-    flex items-center justify-center 
-    bg-black/60 transition-all duration-500
-    ${
-      showTopicEnd
-        ? " opacity-100 pointer-events-auto"
-        : "opacity-0 pointer-events-none"
-    }
-  `}
-      >
-        <TopicEndSection />
-      </div> */}
+      {showPopup && (
+        <StuckPopup
+          reason={getStuckMessage(stuckReason)}
+          onHelp={() => {
+            /* open chat */
+          }}
+          onDismiss={() => setShowPopup(false)}
+        />
+      )}
     </div>
   );
 }

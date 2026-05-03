@@ -1,4 +1,4 @@
-import type { TopicResponse } from "../../domin/entity/topic_response";
+import type { TopicResponse } from "../../../domin/entity/topic_response";
 
 
 type Marker = { time: number };
