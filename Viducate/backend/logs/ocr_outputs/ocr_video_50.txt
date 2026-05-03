@@ -1,0 +1,10 @@
+<<<<<<< HEAD:Viducate/backend/logs/ocr_outputs/ocr_video_14.txt
+# OCR Output — video_id=14
+# Language: None
+# Total segments: 0
+=======
+# OCR Output — video_id=50
+# Language: en
+# Total segments: 67
+>>>>>>> 810a6c7ad0fc957aba52bcf6927de069d996f4a9:Viducate/backend/logs/ocr_outputs/ocr_video_50.txt
+
