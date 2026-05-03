@@ -5,7 +5,7 @@ import {
   FileText,
   Brain,
 } from "lucide-react";
-import { VideoPlayer } from "../widgets/video_part";
+import { VideoPlayer } from "./video_part";
 import { TranscriptSearch } from "../widgets/transcript_search";
 import { FinalGeneratedBtn } from "../widgets/final_generated_btn";
 import { MainHeader } from "../widgets/main_header";

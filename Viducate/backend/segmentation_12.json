@@ -3,77 +3,78 @@
   "segments": [
     {
       "segment_number": 1,
-      "start_time": "00:00:27",
-      "end_time": "00:01:06",
-      "main_topic": "شرح الفنكشن",
-      "title": "تحويل عدد إلى كلمة",
+      "start_time": "00:00:00",
+      "end_time": "00:01:16",
+      "main_topic": "Introduction to Big O Notation",
+      "title": "Introduction and Basics of Big O Notation",
       "sub_topics": [
         {
-          "name": "شرح Condition",
-          "start_time": "00:00:27",
-          "end_time": "00:00:38",
-          "description": "لكلمة واحد قود واحد وعشرين قود بشكل ده. عظيم جدا. الفنكشن بتاعتنا يا شباب محتاجة condition. condition عبارة عن ايه? انه number موديولاس اتنين بيساوي سفر. معناه انه عدد زوجي."
+          "name": "Introduction to the Video",
+          "start_time": "00:00:00",
+          "end_time": "00:00:14",
+          "description": "Hey, what's going on everybody? It's your bro, hope you're doing well, and in this video I'm going to 1322-34 describe the very basics of Big O notation in, well, computer science. So sit back, relax, and enjoy the show."
         },
         {
-          "name": "إرجاع قيمة",
-          "start_time": "00:00:38",
-          "end_time": "00:01:06",
-          "description": "فارجع لي كلمة ايهن غير كده رجع لي كلمة قود. يعني بسيطة جدا جدا. ايه هو الشرط بتاعنا? انه اهو اتنين بيساوي سفر."
+          "name": "Basic Concept of Big O Notation",
+          "start_time": "00:00:14",
+          "end_time": "00:01:16",
+          "description": "Oh yeah, Big O notation. So a common phrase used with Big O notation is, how code slows as data grows. It describes the performance of an algorithm as the amount of data increases. And really, this notation is machine independent. What we're really focusing on is the number of steps to complete an algorithm, because some machines are going to run certain algorithms faster than others. And three, we tend to ignore smaller operations. If we had some task that took n plus one, we would just reduce it to just n, because that plus one really isn't going to make"
         }
       ],
       "key_points": [
-        "شرح Condition",
-        "إرجاع قيمة"
+        "Big O notation describes the performance of an algorithm",
+        "Machine independent",
+        "Ignores smaller operations"
       ]
     },
     {
       "segment_number": 2,
-      "start_time": "00:01:06",
-      "end_time": "00:03:43",
-      "main_topic": "تحويل سترينج",
-      "title": "إرجاع سترينج معكوس",
+      "start_time": "00:01:16",
+      "end_time": "00:03:06",
+      "main_topic": "Examples of Big O Notation",
+      "title": "Example Functions and Their Runtime Complexities",
       "sub_topics": [
         {
-          "name": "حزء đầu tiên",
-          "start_time": "00:01:06",
-          "end_time": "00:01:40",
-          "description": "طيب عظيم جدا دي اصاب مت طيب دي هساب مت دي له بنزين طيب الحلول طبعا زي حضراتكم شايفين نفس الفكرة حاطت هو كوسين هنا ما لهمش داعي خلص خاني نخش على اللي بعده بيدي لك سترينج حضرتك بتعكسه"
+          "name": "Example of a Linear Time Complexity",
+          "start_time": "00:01:16",
+          "end_time": "00:01:53",
+          "description": "Here's a more concrete example. I have a function named addup. We will add up to a certain number depending on what we pass in as an argument. The for loop within here will iterate once up to whatever number that n is, add i to sum, then return it. What if n was a large number like a million? Well, it's going to take just above a million steps to complete this function. This function is said to have a runtime complexity of O of n, linear time. As the amount of data increases, it's going to increase the amount of steps linearly or proportionally."
         },
         {
-          "name": "إستخدام مكونات اللغة",
-          "start_time": "00:01:40",
-          "end_time": "00:03:43",
-          "description": "يعني ايه مكونات اللغة? اول حاجة هو using namespace std ;|hنا اجيب الحل ده. يعني ايه مكونات اللغة? اول حاجة هو using namespace std ;"
+          "name": "Example of a Constant Time Complexity",
+          "start_time": "00:01:53",
+          "end_time": "00:03:06",
+          "description": "Now another way which we could write the same function is to take sum equals n times n plus 1 divided by 2. We will get the exact same sum. So if n was, let's say, a million, this is still only going to take a couple seconds. steps. Three steps, not a million steps. So this function is going to have a runtime complexity of O of one. The input size doesn't matter. The amount of data that we have really doesn't matter. It's going to be completed in the same amount of steps."
         }
       ],
       "key_points": [
-        "حزء đầu tiên",
-        "إستخدام مكونات اللغة"
+        "Linear time complexity example",
+        "Constant time complexity example"
       ]
     },
     {
       "segment_number": 3,
-      "start_time": "00:03:43",
-      "end_time": "00:05:48",
-      "main_topic": "تحويل بوليان",
-      "title": "إرجاع بوليان كسترينج",
+      "start_time": "00:03:06",
+      "end_time": "00:06:22",
+      "main_topic": "Runtime Complexities and Their Comparison",
+      "title": "Different Types of Runtime Complexities and Their Comparison",
       "sub_topics": [
         {
-          "name": "حزء أول",
-          "start_time": "00:03:43",
-          "end_time": "00:04:19",
-          "description": "خلينا نشوف مع بعض. كله تمام نديره Submit. الحمد لله. هتلاقي زي ما قلت لحضرتك بقى حلول كتير جدا فيها Built-in functions include algorithm | return std::stringstr.rbegin, str.rend;"
+          "name": "Introduction to Different Runtime Complexities",
+          "start_time": "00:03:06",
+          "end_time": "00:04:00",
+          "description": "Let begin with O of 1 constant time. Anything that has a runtime complexity of O of 1 will take the same amount of time regardless of the data size. A few examples would include the random access of an element within an array and inserting at the beginning of a linked list. So O of 1 is extremely fast. Next we have O of log n, also known as logarithmic time. One example is binary search."
         },
         {
-          "name": "إستخدام الحالة",
-          "start_time": "00:04:19",
-          "end_time": "00:05:48",
-          "description": "طيب بناء على ايه او ايه الشرط بتاعنا الشرط بتاعنا ال b البوليان فاليو اللي هو هيده لنا بص بقى حل المسألة دي بسيط وهايف جدا هقوله الشرط بتاعنا هو ال b بس هتقوله ال b بتساوي true"
+          "name": "Comparison of Different Runtime Complexities",
+          "start_time": "00:04:00",
+          "end_time": "00:06:22",
+          "description": "O is also known as linear time. As the amount of data increases, the time it takes to complete something will increase proportionally linearly. That would include looping through the elements in an array and searching through a linked list. Next we have O of N log N, also known as quasi-linear time. This would include a quick sort, merge sort, and heap sort. We'll talk about these concepts in future videos. So for the most part, this is very similar to linear time. Unless we're working with a large data set, then anything using O of N log N is going to start to slow down when we work with larger data sets, hence this curve here."
         }
       ],
       "key_points": [
-        "حزء أول",
-        "إستخدام الحالة"
+        "Different types of runtime complexities",
+        "Comparison of runtime complexities"
       ]
     }
   ]
