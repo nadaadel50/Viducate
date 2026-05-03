@@ -1,0 +1,251 @@
+{
+  "total_segments": 9,
+  "segments": [
+    {
+      "segment_number": 1,
+      "start_time": "00:00:00",
+      "end_time": "00:02:27",
+      "main_topic": "Introduction to Programming Basics",
+      "title": "Introduction to Struct",
+      "sub_topics": [
+        {
+          "name": "Introduction to the Lecture",
+          "start_time": "00:00:00",
+          "end_time": "00:00:15",
+          "description": "بسم الله والحمد لله والصلاة والسلام على رسول الله صلى الله عليه وسلم أهلا وسهلا بحضراتكم جميعا في اللقاء الحادي عشر ضمن السلسلة التعليمية Programming Basics for Beginners أو أساسيات البرمجة المبتدئة"
+        },
+        {
+          "name": "Introduction to Struct",
+          "start_time": "00:00:15",
+          "end_time": "00:02:27",
+          "description": "اليوم هنتكلم في موضوع مهم جدا يا شباب وهو موضوع الاستراكت Struct | St xruct: collection of a fixed number of components members. | accessed by name | - Members may be of different types. | - For Example : to store a student record which includes different data | items like studentno. Fname, Lname, TotalMarks, GPA. ..... | -Syntax for Definina Struct is : | Struct structname | Datatype identifier 2: | Datatype identifier 1; | Datatype Identifiern: | -Eastee 11"
+        }
+      ],
+      "key_points": [
+        "Introduction to the lecture",
+        "Introduction to Struct"
+      ]
+    },
+    {
+      "segment_number": 2,
+      "start_time": "00:02:27",
+      "end_time": "00:10:10",
+      "main_topic": "Struct in Programming",
+      "title": "Defining and Using Struct",
+      "sub_topics": [
+        {
+          "name": "Defining a Struct",
+          "start_time": "00:02:27",
+          "end_time": "00:04:20",
+          "description": "استرداد عبارة عن مجموعة محددة من الألمانات أو من الممبر | اقدر اوصل لكل ممبر منهم بينين. او هتغلط وتقول لي زي الاري لا خلي بالك الاري | number of elements Accessed array items first name first name last name last name item"
+        },
+        {
+          "name": "Using a Struct",
+          "start_time": "00:04:20",
+          "end_time": "00:10:10",
+          "description": "المهمة جدا أن الممبرز بتاعة الاسترائكت ممكن تكون | of different data types. مش شرط زي الاري يكونوا كلهم من نفس النوع. | فاكر انت هنا قلنا في الاري ايه؟ | fixed number of elements والشرط ان الاليمنس دي او الائتم دي تكون كلها من نفس | data type. لازم يكونوا كلهم integral لازم يكونوا كلهم double لازم يكونوا كلهم float. | لكن هنا لا، سأقوم بإسترائيل | كل إيطام فيه ممكن أن يكون مدى تطيب مختلف | كما في هذه الحالة | الـ Student Number ده رقم | الفلسطينيين واللسطينيين ده String | Total Marks ده ممكن يكون Float | الجي بي ايه ممكن يكون Float صح؟"
+        }
+      ],
+      "key_points": [
+        "Defining a Struct",
+        "Using a Struct"
+      ]
+    },
+    {
+      "segment_number": 3,
+      "start_time": "00:10:10",
+      "end_time": "00:15:07",
+      "main_topic": "Working with Struct",
+      "title": "Assigning and Comparing Struct Variables",
+      "sub_topics": [
+        {
+          "name": "Assigning Struct Variables",
+          "start_time": "00:10:10",
+          "end_time": "00:12:20",
+          "description": "دعنا نرجع الـ slides For Example : To store an Employee data liko empno, fname, Iname. | salary. bonus, netsalary: | Iname, | هنا انا عملت معك الجزء ده | الذي هنا عرفنا وعملنا define أو definition للـ employee | ويقوم بإمكاني المثال الذي شرحته وانتهى الوقت | Once, a new struct is defined, we can use it as any other data type. | struct Employee | Emp 1 | Emp 2 | Empno | Empno: | Fname: | Fname: | Lname | Lname | salary: | Salary | Salary | netsalary: | bomus: | Bonus | Bonus | Netsalary: | Netsalary: | Employee emp1 , emp 2:"
+        },
+        {
+          "name": "Comparing Struct Variables",
+          "start_time": "00:12:20",
+          "end_time": "00:15:07",
+          "description": "هل ينفع اقول كده؟ ينفع اول mp2 يسوي mp1؟ اه الاجابة يس ينفع. | سيقوم بعمل كل data item في m1 يأخذ منه نسخة ويضعها في المقابل في m2 | سيأخذ كل data item في m1 يأخذ نسخة منه ويضعها في المقابل في m2 | يعني اقوم بقى هنا. اقوم بقى هنا. بعد ما خلصت الكود ده اقوله. خلي Value of one st: ruct variable can be assigned to | of the same type using an assignment statemo | Employee emp1, emp2: | emp2 | -emp | copies the contents orde | . Compare atruct variboies memoer-wse | -No aogregate relational operations allowed m, , ... | To compare the values of emp1 and emp2 | if cmpl.cmp nomcmp2.cmp no | cmp1.fname-cmp2.fnamecmpl.salary-emp2.salary"
+        }
+      ],
+      "key_points": [
+        "Assigning Struct Variables",
+        "Comparing Struct Variables"
+      ]
+    },
+    {
+      "segment_number": 4,
+      "start_time": "00:15:12",
+      "end_time": "00:16:09",
+      "main_topic": "Comparing Struct Variables",
+      "title": "How to Compare Struct Variables",
+      "sub_topics": [
+        {
+          "name": "Introduction to Comparing Struct Variables",
+          "start_time": "00:15:12",
+          "end_time": "00:15:16",
+          "description": "لا يعاوز أقارن بينهم أعمل إيه؟ أمسك الـ employee number بتاع employee 1 أقارنه بالـ employee number بتاع employee 2"
+        },
+        {
+          "name": "Comparing Data Items",
+          "start_time": "00:15:16",
+          "end_time": "00:15:30",
+          "description": "أمسك الـ first name بتاع E1 أقارنه بالـ first name بتاع E2 وهكذا لكن لا يمكنني أن أستخدم الـ Relational Operators بين الـ Extract Variables نفسها"
+        },
+        {
+          "name": "Comparing Data Items Continuation",
+          "start_time": "00:15:30",
+          "end_time": "00:16:09",
+          "description": "ها؟ خلاص واضحة دي يبقى أنت في المقارنة هتقارن بين الـ Data Items خلي بالك، هتقارن بين الـ Data Items اللي داخل الـ Extract Variable مع المقابل لها من الـ Extract Variable التاني"
+        }
+      ],
+      "key_points": [
+        "Comparing struct variables",
+        "Data items comparison",
+        "Relational operators"
+      ]
+    },
+    {
+      "segment_number": 5,
+      "start_time": "00:16:09",
+      "end_time": "00:20:18",
+      "main_topic": " Passing Struct Variables to Functions",
+      "title": "How to Pass Struct Variables to Functions",
+      "sub_topics": [
+        {
+          "name": "Introduction to Passing Struct Variables",
+          "start_time": "00:16:09",
+          "end_time": "00:16:18",
+          "description": "و الان انا اقام فقط منوید القط fake un"
+        },
+        {
+          "name": "Passing Struct Variables",
+          "start_time": "00:16:18",
+          "end_time": "00:17:15",
+          "description": "ي Hamilton versus E2 e1.fname Ahmed; | e1.bonus-500; | cout e2.fname e2.1name n; | e1 e2 | output from: | Build"
+        },
+        {
+          "name": "Passing Struct Variables Continuation",
+          "start_time": "00:17:15",
+          "end_time": "00:20:18",
+          "description": "struct Variables and | Functions | - A struct variable can be passed as a parametor | by value or by reference | Afunction can return a value | of type | struct distancetype | int feet; | float inches: | diatancelype Adddistancns distancetyped1, distancetree d2 | distancetyps Acddistances distancatype d1, distancetype d2 | resultfent a1.feet 2.neet | distancetype result | result inches d2.inches d2 inches | return result;"
+        }
+      ],
+      "key_points": [
+        "Passing struct variables to functions",
+        "Returning struct variables from functions",
+        "Struct variables as function parameters"
+      ]
+    },
+    {
+      "segment_number": 6,
+      "start_time": "00:20:18",
+      "end_time": "00:27:55",
+      "main_topic": "Arrays in Structs",
+      "title": "How to Use Arrays in Structs",
+      "sub_topics": [
+        {
+          "name": "Introduction to Arrays in Structs",
+          "start_time": "00:20:18",
+          "end_time": "00:21:15",
+          "description": "نعملين محاضرة كاملة عن موضوع الفانكشن"
+        },
+        {
+          "name": "Using Arrays in Structs",
+          "start_time": "00:21:15",
+          "end_time": "00:25:36",
+          "description": "طيب فانا هقول تعالوا نطلبهم من الـ user هنفع؟ ها هقوله see out feet and inches for the first distance slash n 2cn X X"
+        },
+        {
+          "name": "Arrays in Structs Example",
+          "start_time": "00:25:36",
+          "end_time": "00:27:55",
+          "description": "آيام عادي خالص زي في حالتنا دي شايف؟ عندي طالب اسمه student استركته جواه بياناته Arrays in structs | Thig | float marks3: | s1.sname-Ahmed Ibrahim. | s1.marks1- 70; | s1.maks0 80: | s1.marks2"
+        }
+      ],
+      "key_points": [
+        "Arrays in structs",
+        "Using arrays in structs",
+        "Example of arrays in structs"
+      ]
+    },
+    {
+      "segment_number": 7,
+      "start_time": "00:27:56",
+      "end_time": "00:30:23",
+      "main_topic": "Student Struct",
+      "title": "Defining a Student Struct",
+      "sub_topics": [
+        {
+          "name": "Defining a Student Struct",
+          "start_time": "00:27:56",
+          "end_time": "00:28:14",
+          "description": "بعد ايه ايه تاني من بياناته عندي الجيو ايه بتاعه؟ انا افترض ان ايه بتاعه بيساوي اربعة ونص طيب درجات الطالب بقى الاسمه محمد ابراهيم ده sno; | s1.nane Mohared Ibrahin; | 51.gpa 4.5;"
+        },
+        {
+          "name": "Accessing Struct Members",
+          "start_time": "00:28:14",
+          "end_time": "00:30:23",
+          "description": "واحدة واحدة هقول اس واحد دوت ماركس صح؟ ماركس دي عري طب يا استاذنا انت خدت ازاي؟ توصل لعنصر عنصر داخل العري صح؟ اه ازاي؟ بقى افتحققسين المربعين وبكتب الاندكس بتاع العنص"
+        }
+      ],
+      "key_points": [
+        "Defining a struct for a student",
+        "Accessing struct members using the dot operator"
+      ]
+    },
+    {
+      "segment_number": 8,
+      "start_time": "00:30:23",
+      "end_time": "00:33:37",
+      "main_topic": "Arrays of Structs",
+      "title": "Working with Arrays of Structs",
+      "sub_topics": [
+        {
+          "name": "Defining an Array of Structs",
+          "start_time": "00:30:23",
+          "end_time": "00:31:09",
+          "description": "انا اريد اعمل ري و لكن اسمها x. x دي فيها خمس عناصر. انا اريد اخلي نوعها student."
+        },
+        {
+          "name": "Accessing Array Elements",
+          "start_time": "00:31:09",
+          "end_time": "00:33:37",
+          "description": "ينفع؟ اه انا اتفقنا. انا اتفقنا. انا اتفقنا. Globul Sempe | float gpa ; | student x 5"
+        }
+      ],
+      "key_points": [
+        "Defining an array of structs",
+        "Accessing array elements"
+      ]
+    },
+    {
+      "segment_number": 9,
+      "start_time": "00:33:37",
+      "end_time": "00:35:55",
+      "main_topic": "Structs Within Structs",
+      "title": "Using Structs Within Structs",
+      "sub_topics": [
+        {
+          "name": "Defining a Struct Within a Struct",
+          "start_time": "00:33:37",
+          "end_time": "00:34:20",
+          "description": "في كل الاتا ايتيم في الولاس و الولاس واللاس والادرس عمل ايه الراجل؟ قال لك بدل ما يكون شكله صعب كده أنا هقسمه structs"
+        },
+        {
+          "name": "Accessing Nested Struct Members",
+          "start_time": "00:34:20",
+          "end_time": "00:35:55",
+          "description": "وبصوا شكله ازاي في الاخر عمل في ايه قالك النام نوعه استرقت اللي هو النام تايب شايف الادرس نوعه الادرس تايب الهاير ديت نوعه الديت تايب وهكذا"
+        }
+      ],
+      "key_points": [
+        "Defining a struct within a struct",
+        "Accessing nested struct members"
+      ]
+    }
+  ]
+}

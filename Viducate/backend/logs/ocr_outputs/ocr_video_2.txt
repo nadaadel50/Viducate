@@ -1,8 +1,0 @@
-# OCR Output — video_id=2
-# Language: en
-# Total segments: 4
-
-[00:00:02] Containers
-[00:14:14] 25G3 | VMAPPI | EC2 0.3 | 10GB | Hyperisor | 6cpo | 100GB | 15GB | 10pu | Running | 10000 | outomemtoy | L Heavy | very Less
-[00:14:22] Model2 | Modei1 | Mantainenct | C10224 | Docker | Docker | VMEC2 | IBMHP | physical | Light | weint
-[00:25:08] Abhishek Veeramalla
