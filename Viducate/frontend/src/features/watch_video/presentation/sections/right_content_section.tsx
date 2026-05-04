@@ -13,16 +13,13 @@ import { MainHeader } from "../widgets/main_header";
 export function RightContentSection() {
   return (
     <div className="min-h-screen w-full flex flex-col justify-center items-center">
-      
       {/* centered container */}
       <div className="w-full max-w-5xl px-8 ">
-        
         {/* 🔹 HEADER (aligned with content start) */}
         <MainHeader />
 
         {/* 🔹 CONTENT */}
         <div className="flex-1 pb-10">
-          
           {/* video */}
           <div className="mt-6">
             <VideoPlayer />
@@ -48,35 +45,34 @@ export function RightContentSection() {
         </div>
 
         {/* 🔹 FOOTER */}
-        <div className="border-t border-slate-200 bg-white/80 backdrop-blur p-4 sticky bottom-0">
-          <div className="grid grid-cols-2 gap-3">
-            <FinalGeneratedBtn
-              variant="quiz"
-              icon={<FileQuestion size={20} />}
-              label="Final Quiz"
-              onClick={() => {}}
-            />
-            <FinalGeneratedBtn
-              variant="summary"
-              icon={<FileText size={20} />}
-              label="Final Summary"
-              onClick={() => {}}
-            />
-            <FinalGeneratedBtn
-              variant="flashcards"
-              icon={<FileQuestion size={20} />}
-              label="Final Flashcards"
-              onClick={() => {}}
-            />
-            <FinalGeneratedBtn
-              variant="mindmap"
-              icon={<Brain size={20} />}
-              label="Final Mind Map"
-              onClick={() => {}}
-            />
-          </div>
+      </div>
+      <div className="w-full border-t border-slate-200 bg-white/80 backdrop-blur p-4 sticky bottom-0 ">
+        <div className="grid grid-cols-2 gap-3">
+          <FinalGeneratedBtn
+            variant="quiz"
+            icon={<FileQuestion size={20} />}
+            label="Final Quiz"
+            onClick={() => {}}
+          />
+          <FinalGeneratedBtn
+            variant="summary"
+            icon={<FileText size={20} />}
+            label="Final Summary"
+            onClick={() => {}}
+          />
+          <FinalGeneratedBtn
+            variant="flashcards"
+            icon={<FileQuestion size={20} />}
+            label="Final Flashcards"
+            onClick={() => {}}
+          />
+          <FinalGeneratedBtn
+            variant="mindmap"
+            icon={<Brain size={20} />}
+            label="Final Mind Map"
+            onClick={() => {}}
+          />
         </div>
-
       </div>
     </div>
   );

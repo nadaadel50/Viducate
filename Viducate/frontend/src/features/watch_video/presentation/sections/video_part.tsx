@@ -34,17 +34,8 @@ export function VideoPlayer() {
   const [topicDuration, setTopicDuration] = useState(0);
   const [currentTopicName, setCurrentTopicName] = useState("");
 
-  // ← playerRef comes from the hook, no argument needed
-  const {
-    playerRef,
-
-    seek,
-    getCurrentTime,
-    setSpeed,
-    getDuration,
-  } = useVideoPlayer();
-
-  const [playbackRate, setPlaybackRate] = useState(1);
+  const { play,pause,playerRef, seek, getCurrentTime, setSpeed, getDuration } =
+    useVideoPlayer();
 
   const {
     showPopup,
@@ -80,12 +71,13 @@ export function VideoPlayer() {
     handleSpeedChange,
     markers,
     showSpeedMenu,
+    playbackRate,
     setShowSpeedMenu,
     handleAddMarker,
   } = useVideoController({
-    player: { seek, getCurrentTime, getDuration, setSpeed },
+    player: { seek, getCurrentTime, getDuration, setSpeed,play,pause },
     analytics: { addSeekEvent, triggerStuck },
-    videoState: { setPlayerState, setCurrentTime, setPlaybackRate },
+    videoState: { setPlayerState, setCurrentTime },
   });
 
   useEffect(() => {
@@ -135,10 +127,12 @@ export function VideoPlayer() {
           playing={playerState.isPlaying}
           playbackRate={playbackRate}
           onReady={() => {
+            // check if the video player is ready to use or not (not the react player)
             const internalPlayer = (
               playerRef.current as any
             )?.getInternalPlayer();
             if (internalPlayer) {
+              console.log("iam in interanl the time is", currentTime);
               playerRef.current = internalPlayer;
               internalPlayer.currentTime = currentTime;
             }
@@ -146,18 +140,18 @@ export function VideoPlayer() {
           width="100%"
           height="100%"
           onTimeUpdate={() => handleTimeUpdate()}
-          onDurationChange={() => handleLoadedMetadata()}
-          // onTimeUpdate={(e: React.SyntheticEvent<HTMLVideoElement>) =>
-          //   handleTimeUpdate(e.currentTarget.currentTime)
-          // }
-          // onDurationChange={(e: React.SyntheticEvent<HTMLVideoElement>) =>
-          //   handleLoadedMetadata(e.currentTarget.duration)
-          // }
+          onDurationChange={(e: React.SyntheticEvent<HTMLVideoElement>) => {
+            playerRef.current = e.currentTarget;
+            if (currentTime > 0) {
+              e.currentTarget.currentTime = currentTime;
+            }
+            handleLoadedMetadata();
+          }}
           onPlay={handlePlay}
           onPause={handlePause}
           onSeeked={handleSeek}
           onEnded={() => setPlayerState((p) => ({ ...p, isPlaying: false }))}
-          onClick={() => handleToggle(playerState.isPlaying)}
+          // onClick={() => handleToggle(playerState.isPlaying)}
           style={{ width: "100%", height: "100%", objectFit: "cover" }}
         />
 
