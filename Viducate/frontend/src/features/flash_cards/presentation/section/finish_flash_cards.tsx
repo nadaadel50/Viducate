@@ -2,7 +2,7 @@ import { useEffect, useState } from "react";
 import CompleteSessionAnimation from "../../../../core/animations/complete_ani";
 import type { FlashcardAnswer } from "../../domain/entity/flash_card_answer";
 import { StatCard } from "../widgets/state_card";
-import { STORAGE_KEYS } from "../../../../core/constants";
+import { useToast } from "../../../../core/hooks/useToastMessage";
 
 type Props = {
   answers: FlashcardAnswer[];
@@ -10,6 +10,8 @@ type Props = {
 };
 
 export function FinishSessionCard({ answers, onEndSession }: Props) {
+ const {showToast}=useToast()
+
   const formatTime = (seconds: number) => {
     const m = Math.floor(seconds / 60);
     const s = seconds % 60;
@@ -45,8 +47,12 @@ export function FinishSessionCard({ answers, onEndSession }: Props) {
     ? Math.max(0, Math.floor((nextReviewAt - now) / 1000))
     : 0;
 
+   
+
+
+
   return (
-    <div className="flex-1 flex flex-col items-center  justify-center p-10 w-full max-w-5xl mx-auto gap-10 bg-white shadow-lg rounded-3xl">
+    <div className="flex-1 flex flex-col items-center  justify-center p-10   mx-auto gap-10 ">
       <CompleteSessionAnimation />
 
       <div className="text-center">

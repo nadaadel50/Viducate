@@ -49,7 +49,7 @@ export function MainPage() {
 
   return (
     <>
-      <div className="flex font-display bg-[#f8fafc]">
+      <div className="flex font-display bg-[#f8fafc] ">
         <div className="flex-1 border-r border-slate-200">
           <LeftContentSection />
         </div>

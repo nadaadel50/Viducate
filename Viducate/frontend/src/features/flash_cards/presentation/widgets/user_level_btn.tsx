@@ -2,12 +2,12 @@ import type { Difficulty } from "../../domain/entity/difficaulty";
 
 const difficultyStyles = {
   easy: {
-    border: "border-blue-200 hover:border-blue-300 dark:hover:border-blue-800",
-    text: "text-blue-600 dark:text-blue-400",
-    bg: "bg-blue-50 dark:bg-blue-900/10",
-    hoverBg: "hover:bg-blue-100 dark:hover:bg-blue-900/20",
-    iconBg: "bg-blue-100 dark:bg-blue-900/30",
-    iconHoverBg: "group-hover:bg-blue-200 dark:group-hover:bg-blue-800/50",
+    border: "border-blue-200 hover:border-blue-300 ",
+    text: "text-blue-600 ",
+    bg: "bg-blue-50",
+    hoverBg: "hover:bg-blue-100 ",
+    iconBg: "bg-blue-100 ",
+    iconHoverBg: "group-hover:bg-blue-200 ",
     icon: "thumb_up",
     time: "1d",
   },

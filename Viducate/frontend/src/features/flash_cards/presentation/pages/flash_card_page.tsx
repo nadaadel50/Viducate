@@ -6,7 +6,7 @@ import type { Flashcard } from "../../domain/entity/flash_card_entity";
 import type { FlashcardAnswer } from "../../domain/entity/flash_card_answer";
 import { Difficulty } from "../../domain/entity/difficaulty";
 import { DIFFICULTY_TIME } from "../../domain/entity/difficaulty_time";
-import { useParams } from "react-router";
+import { useNavigate, useParams } from "react-router";
 import { useSegmentFlashcards } from "../hooks/use_segment_flash_cards";
 import Loading from "../../../../core/widgets/loading";
 import ErrorMessage from "../../../../core/widgets/error";
@@ -25,6 +25,7 @@ export function FlashCards() {
   const [checkExistFirst, setCheckExistFirst] = useState(false);
   // add this with the other useState calls
   const [reviewCards, setReviewCards] = useState<Flashcard[] | null>(null);
+  const navigate=useNavigate()
 
   // LOAD session for this specific segment
   useEffect(() => {
@@ -87,25 +88,30 @@ export function FlashCards() {
 
   if (isLoading)
     return (
-      <LoadingScreen
+     <div className="w-screen flex items-center justify-center">
+       <LoadingScreen
         icon={<Layers />}
         titlePrefix={"Cooking up your flashcards"}
         titleHighlight={"they’ll be ready soon"}
         subtitle={"Turning key concepts into easy-to-review flashcards"}
       />
+     </div>
     );
   if (error) return <ErrorMessage errorMessage={error.message} />;
   if (!flashcardsData || flashcardsData.flashcards.length === 0)
-    return (
-      <LoadingScreen
+   return(
+     <div className="w-full flex items-center justify-center">
+         <LoadingScreen
         icon={<Layers />}
         titlePrefix={"Cooking up your flashcards"}
         titleHighlight={"they’ll be ready soon"}
         subtitle={"Turning key concepts into easy-to-review flashcards"}
       />
-    );
+      </div>
+   );
   if (flashcardsData) {
-    // this fn when finish the session
+    
+   // this fn when finish the session
 
     const resetSession = (dueCards?: FlashcardAnswer[]) => {
       if (dueCards && dueCards.length > 0) {
@@ -122,6 +128,8 @@ export function FlashCards() {
         setCurrentIndex(0);
         setIsFinished(false);
        localStorage.removeItem(`${STORAGE_KEYS.flashcardSession}_${segmentIdNumber}`);
+       navigate(-1)
+       
       }
     };
 
@@ -165,10 +173,11 @@ export function FlashCards() {
     const currentCard = activeCards[safeIndex];
 
     return (
-      <div className="w-full font-display bg-gradient-to-br from-slate-50 via-indigo-50 to-purple-100 min-h-screen flex items-center justify-center">
-        <div className="absolute top-0 left-0 w-96 h-96 bg-purple-300 opacity-20 rounded-full blur-3xl"></div>
+      //bg-gradient-to-br from-slate-50 via-indigo-50 to-purple-100
+      <div className="w-200 h-180 bg-white/60 rounded-4xl font-display   flex items-center justify-center">
+        {/* <div className="absolute top-0 left-0 w-96 h-96 bg-purple-300 opacity-20 rounded-full blur-3xl"></div>
 
-        <div className="absolute bottom-0 right-0 w-96 h-96 bg-blue-300 opacity-20 rounded-full blur-3xl"></div>
+        <div className="absolute bottom-0 right-0 w-96 h-96 bg-blue-300 opacity-20 rounded-full blur-3xl"></div> */}
 
         <div className="relative z-20 w-full">
           {!isFinished && (
@@ -215,5 +224,7 @@ export function FlashCards() {
         </div>
       </div>
     );
+
+   
   }
 }

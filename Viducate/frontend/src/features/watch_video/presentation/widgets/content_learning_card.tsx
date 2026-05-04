@@ -8,7 +8,8 @@ import { ContentGenerationBtn } from "./content_genration_btn";
 import type { TopicResponse } from "../../domin/entity/topic_response";
 import { useLearningSession } from "../../../../core/hooks/useLearningContent";
 import { useNavigate } from "react-router";
-import { AppRoutesNames } from "../../../../app/routers/routes";
+import { useDueFlashcards } from "../../../flash_cards/presentation/hooks/use_due_flash_cards";
+
 
 
 export function ContentLearningCard({
@@ -22,6 +23,11 @@ export function ContentLearningCard({
 }) {
   const { setSelectedTopic } = useLearningSession();
   const navigate=useNavigate()
+   const { isDueForSegment } = useDueFlashcards();
+  
+  const isDue = isDueForSegment(cardInfo.segment_id);
+ 
+
   return (
     <div
       onClick={() => {
@@ -38,6 +44,14 @@ export function ContentLearningCard({
         >
           {cardInfo.title}
         </h4>
+
+          {isDue && (
+            <span className="flex items-center gap-1 text-green-600 text-[10px] font-bold bg-green-50 px-2 py-0.5 rounded-full">
+              <span className="w-1.5 h-1.5 rounded-full bg-green-500 animate-pulse" />
+              Review
+            </span>
+          )}
+        
 
         <span className="text-[10px] font-bold  text-slate-400 bg-slate-100 px-2.5 py-1 rounded-full group-hover:text-slate-600 transition-colors">
           {
@@ -76,6 +90,7 @@ export function ContentLearningCard({
             }}
           icon={<Layers />}
           label={"cards"}
+          isDue={isDue}
         />
       </div>
     </div>

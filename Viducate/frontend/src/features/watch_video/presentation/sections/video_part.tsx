@@ -126,17 +126,17 @@ export function VideoPlayer() {
           src={topics?.video_url}
           playing={playerState.isPlaying}
           playbackRate={playbackRate}
-          onReady={() => {
-            // check if the video player is ready to use or not (not the react player)
-            const internalPlayer = (
-              playerRef.current as any
-            )?.getInternalPlayer();
-            if (internalPlayer) {
-              console.log("iam in interanl the time is", currentTime);
-              playerRef.current = internalPlayer;
-              internalPlayer.currentTime = currentTime;
-            }
-          }}
+          // onReady={() => {
+          //   // check if the video player is ready to use or not (not the react player)
+          //   const internalPlayer = (
+          //     playerRef.current as any
+          //   )?.getInternalPlayer();
+          //   if (internalPlayer) {
+          //     console.log("iam in interanl the time is", currentTime);
+          //     playerRef.current = internalPlayer;
+          //     internalPlayer.currentTime = currentTime;
+          //   }
+          // }}
           width="100%"
           height="100%"
           onTimeUpdate={() => handleTimeUpdate()}

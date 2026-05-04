@@ -1,340 +1,355 @@
-[00:00:00]
-  Transcript :  Hey, what's going on everybody? It's your bro, hope you're doing well, and in this video I'm going to
-  OCR        : 1322-34
-  Combined   :  Hey, what's going on everybody? It's your bro, hope you're doing well, and in this video I'm going to 1322-34
+[00:00:02]
+  Transcript :  طيب اتكلمت معاكم في الفيديو اللي فات
+  OCR        : Mathematics | Modular | Exponentiation | MATH | Arabic | coding
+  Combined   :  طيب اتكلمت معاكم في الفيديو اللي فات Mathematics | Modular | Exponentiation | MATH | Arabic | coding
 
-[00:00:04]
-  Transcript :  describe the very basics of Big O notation in, well, computer science. So sit back, relax, and enjoy the show.
+[00:00:05]
+  Transcript :  اللي هو فيديو الانتوشن
   OCR        : None
-  Combined   :  describe the very basics of Big O notation in, well, computer science. So sit back, relax, and enjoy the show.
+  Combined   :  اللي هو فيديو الانتوشن
 
-[00:00:14]
-  Transcript :  Oh yeah, Big O notation. So a common phrase used with Big O notation is,
+[00:00:06]
+  Transcript :  اتكلمنا الاول عن elevator
   OCR        : None
-  Combined   :  Oh yeah, Big O notation. So a common phrase used with Big O notation is,
+  Combined   :  اتكلمنا الاول عن elevator
 
-[00:00:19]
-  Transcript :  how code slows as data grows. It describes the performance of an algorithm as the amount of data
+[00:00:08]
+  Transcript :  بعد كده اتكلمنا عن slavery
   OCR        : None
-  Combined   :  how code slows as data grows. It describes the performance of an algorithm as the amount of data
+  Combined   :  بعد كده اتكلمنا عن slavery
 
-[00:00:25]
-  Transcript :  increases. And really, this notation is machine independent. What we're really focusing on is the
-  OCR        : None
-  Combined   :  increases. And really, this notation is machine independent. What we're really focusing on is the
+[00:00:12]
+  Transcript :  واخر حاجة خالص اتكلمنا عليها
+  OCR        : main.cpp MrAlgorithms - Code:Blocks 17.12 | File Edit View | Search Project Build Debug Fortran wxSmith Tools Tools Plugins DoxyBlocks Settings Help | Debug | global | binaryExponentiationint x, int n : int | QQSC | Management | main.cpp | Projects | Symbols | Files | return result; | Workspace | MrAlgorithms | Sources | int binaryExponentiationint x,int n | int resultl; | whilen0 | ifn21resultresultx; | xxx; | nn2; | return result; | int modularExponentiationint x,int n,int M | int resultl; | whilen0 | ifpower21resultresultxM; | xxxM; | nn2; | Logs  others | Codes:Blocks | Search results | Cooc X | Build log | Buld messages | .CppCheckVera | CppCheckVera messages | Cacope | Debugger | DoxyBlocks | Fortran info | E:careercompetitive programmingMrAlgorithmsmain.cpp | Windows CRLF | WINDOWS-1252 | Line 33, Col 15, Pos 717 | Insert | Modified | ReadWrite | default | Type here to search | 10:36 AM | 11232020
+  Combined   :  واخر حاجة خالص اتكلمنا عليها main.cpp MrAlgorithms - Code:Blocks 17.12 | File Edit View | Search Project Build Debug Fortran wxSmith Tools Tools Plugins DoxyBlocks Settings Help | Debug | global | binaryExponentiationint x, int n : int | QQSC | Management | main.cpp | Projects | Symbols | Files | return result; | Workspace | MrAlgorithms | Sources | int binaryExponentiationint x,int n | int resultl; | whilen0 | ifn21resultresultx; | xxx; | nn2; | return result; | int modularExponentiationint x,int n,int M | int resultl; | whilen0 | ifpower21resultresultxM; | xxxM; | nn2; | Logs  others | Codes:Blocks | Search results | Cooc X | Build log | Buld messages | .CppCheckVera | CppCheckVera messages | Cacope | Debugger | DoxyBlocks | Fortran info | E:careercompetitive programmingMrAlgorithmsmain.cpp | Windows CRLF | WINDOWS-1252 | Line 33, Col 15, Pos 717 | Insert | Modified | ReadWrite | default | Type here to search | 10:36 AM | 11232020
 
-[00:00:31]
-  Transcript :  number of steps to complete an algorithm, because some machines are going to run certain algorithms
+[00:00:13]
+  Transcript :  اللي هو المодular
   OCR        : None
-  Combined   :  number of steps to complete an algorithm, because some machines are going to run certain algorithms
+  Combined   :  اللي هو المодular
 
-[00:00:36]
-  Transcript :  faster than others. And three, we tend to ignore smaller operations. If we had some task that took
+[00:00:13]
+  Transcript :  وقلنا ان
   OCR        : None
-  Combined   :  faster than others. And three, we tend to ignore smaller operations. If we had some task that took
+  Combined   :  وقلنا ان
+
+[00:00:15]
+  Transcript :  conservative power مش احسن حاجة بتاخد time كبير
+  OCR        : None
+  Combined   :  conservative power مش احسن حاجة بتاخد time كبير
+
+[00:00:18]
+  Transcript :  فانا انا حسنوا ان انا استعمل
+  OCR        : None
+  Combined   :  فانا انا حسنوا ان انا استعمل
+
+[00:00:20]
+  Transcript :  permission
+  OCR        : None
+  Combined   :  permission
+
+[00:00:21]
+  Transcript :  تاخد log n
+  OCR        : None
+  Combined   :  تاخد log n
+
+[00:00:22]
+  Transcript :  وبعد كده قلنا
+  OCR        : File Edit View Search Project Build Debug Fortran wxSmith Tools Tools Plugins DoxyBlocks Settings Help | int result1; | resultresultx; | n--; | binaryExponentiationint x,int n | Code::Blocks X | Ccoc X | Build messages | Cscope | Line 27, Col 25, Pos 605
+  Combined   :  وبعد كده قلنا File Edit View Search Project Build Debug Fortran wxSmith Tools Tools Plugins DoxyBlocks Settings Help | int result1; | resultresultx; | n--; | binaryExponentiationint x,int n | Code::Blocks X | Ccoc X | Build messages | Cscope | Line 27, Col 25, Pos 605
+
+[00:00:24]
+  Transcript :  مد لل fab
+  OCR        : None
+  Combined   :  مد لل fab
+
+[00:00:27]
+  Transcript :  بس كده
+  OCR        : None
+  Combined   :  بس كده
+
+[00:00:28]
+  Transcript :  وقلت لك ان في شوية مشاكل في الكود ده
+  OCR        : None
+  Combined   :  وقلت لك ان في شوية مشاكل في الكود ده
+
+[00:00:32]
+  Transcript :  وان انا جاي في الفيديو ده
+  OCR        : Search | Project | Build Debug | Fortran wxSmith Tools Tools Plugins DoxyBlocks Settings Help | G:II | QS C | Symbois | CppCheckVera
+  Combined   :  وان انا جاي في الفيديو ده Search | Project | Build Debug | Fortran wxSmith Tools Tools Plugins DoxyBlocks Settings Help | G:II | QS C | Symbois | CppCheckVera
+
+[00:00:32]
+  Transcript :  يعني اتمنى ان انت تكون فكرت وحالة المشاكل لواحدك
+  OCR        : None
+  Combined   :  يعني اتمنى ان انت تكون فكرت وحالة المشاكل لواحدك
+
+[00:00:35]
+  Transcript :  لكن انا يعني جاي احلها معاك في الفيديو ده
+  OCR        : None
+  Combined   :  لكن انا يعني جاي احلها معاك في الفيديو ده
+
+[00:00:38]
+  Transcript :  طيب اول مشكلة ايه
+  OCR        : None
+  Combined   :  طيب اول مشكلة ايه
+
+[00:00:39]
+  Transcript :  اول مشكلة ان الكلام ده انتجر
+  OCR        : None
+  Combined   :  اول مشكلة ان الكلام ده انتجر
 
 [00:00:42]
-  Transcript :  n plus one, we would just reduce it to just n, because that plus one really isn't going to make
+  Transcript :  ف يعني احسن حاجة ان انا خليه long long
   OCR        : None
-  Combined   :  n plus one, we would just reduce it to just n, because that plus one really isn't going to make
+  Combined   :  ف يعني احسن حاجة ان انا خليه long long
 
-[00:00:48]
-  Transcript :  So here's a few examples of big O notation.
+[00:00:46]
+  Transcript :  لان غالبا في الموديولار اكسبونيشن انت تحسب باور لارقام كبيرة
   OCR        : None
-  Combined   :  So here's a few examples of big O notation.
+  Combined   :  لان غالبا في الموديولار اكسبونيشن انت تحسب باور لارقام كبيرة
 
 [00:00:51]
-  Transcript :  We have O O O and O And N is really just the amount of data that we passing in It a variable like x What we focusing on is the performance of an algorithm as the amount
+  Transcript :  long long integer long long data type long long data types
   OCR        : None
-  Combined   :  We have O O O and O And N is really just the amount of data that we passing in It a variable like x What we focusing on is the performance of an algorithm as the amount
+  Combined   :  long long integer long long data type long long data types
 
 [00:01:06]
-  Transcript :  of data increases, and n is a representation of the amount of data that we're passing in.
+  Transcript :  خليها long long
   OCR        : None
-  Combined   :  of data increases, and n is a representation of the amount of data that we're passing in.
+  Combined   :  خليها long long
 
-[00:01:12]
-  Transcript :  Here's a more concrete example. I have a function named addup. We will add up to a certain number
+[00:01:07]
+  Transcript :  طيب
   OCR        : None
-  Combined   :  Here's a more concrete example. I have a function named addup. We will add up to a certain number
+  Combined   :  طيب
+
+[00:01:08]
+  Transcript :  ايه المشكلة اللي هتبقى موجودة
+  OCR        : None
+  Combined   :  ايه المشكلة اللي هتبقى موجودة
+
+[00:01:10]
+  Transcript :  المشكلة اللي هتبقى موجودة
+  OCR        : None
+  Combined   :  المشكلة اللي هتبقى موجودة
+
+[00:01:11]
+  Transcript :  لو انا long long في long long
+  OCR        : None
+  Combined   :  لو انا long long في long long
+
+[00:01:13]
+  Transcript :  لو قلنا مثلا 10.18
+  OCR        : None
+  Combined   :  لو قلنا مثلا 10.18
 
 [00:01:16]
-  Transcript :  depending on what we pass in as an argument. The for loop within here will iterate once up to
+  Transcript :  فهل
   OCR        : None
-  Combined   :  depending on what we pass in as an argument. The for loop within here will iterate once up to
+  Combined   :  فهل
 
-[00:01:22]
-  Transcript :  whatever number that n is, add i to sum, then return it. What if n was a large number like a
+[00:01:17]
+  Transcript :  10.18 في 10.18
   OCR        : None
-  Combined   :  whatever number that n is, add i to sum, then return it. What if n was a large number like a
+  Combined   :  10.18 في 10.18
 
-[00:01:28]
-  Transcript :  million? Well, it's going to take just above a million steps to complete this function.
+[00:01:20]
+  Transcript :  دي فيه data type تقدر بتهندلها
   OCR        : None
-  Combined   :  million? Well, it's going to take just above a million steps to complete this function.
+  Combined   :  دي فيه data type تقدر بتهندلها
 
-[00:01:33]
-  Transcript :  This function is said to have a runtime complexity of O of n, linear time. As the amount of data
+[00:01:23]
+  Transcript :  لا
   OCR        : None
-  Combined   :  This function is said to have a runtime complexity of O of n, linear time. As the amount of data
+  Combined   :  لا
 
-[00:01:39]
-  Transcript :  increases, it's going to increase the amount of steps linearly or proportionally. Now another way
+[00:01:23]
+  Transcript :  طيب أنا عايز المود صح
   OCR        : None
-  Combined   :  increases, it's going to increase the amount of steps linearly or proportionally. Now another way
+  Combined   :  طيب أنا عايز المود صح
+
+[00:01:26]
+  Transcript :  فاكرين قوانين المود
+  OCR        : None
+  Combined   :  فاكرين قوانين المود
+
+[00:01:27]
+  Transcript :  هنا بقى نستعمل قوانين المود
+  OCR        : None
+  Combined   :  هنا بقى نستعمل قوانين المود
+
+[00:01:30]
+  Transcript :  في درس الموديلر اسميتيك
+  OCR        : None
+  Combined   :  في درس الموديلر اسميتيك
+
+[00:01:31]
+  Transcript :  أو الانتوائشن بتاع الموديلر اسميتيك
+  OCR        : None
+  Combined   :  أو الانتوائشن بتاع الموديلر اسميتيك
+
+[00:01:34]
+  Transcript :  تعالوا كده
+  OCR        : GitHub - marioeidMr-Algorithm | github.commarioeidMr-Algorithms | Paused | Why GitHub? Team Enterprise Explore Marketplace Pricing | Sign in | Sign up | marioeidMr-Algorithms | Watch | Star | Code | Issues | Pull requests | Actions | ① Security | Insights | Join GitHub today | Dismiss | GitHub is home to over 50 million developers working together to host and review code, | manage projects, and build software together. | Sign up | master | 1 branch 0 tags | Go to file | Code | About | you will find all your pdfs and codes | marioeid updated | ba47236 1 minute ago | 12 commits | here enjoy. | 1- Introduction to Math | updated | 1 minute ago | 2- Math and Number Theory1 - Mod.. updated | 1 minute ago | Releases | No releases published | Packages | No packages published | 10:37 AM
+  Combined   :  تعالوا كده GitHub - marioeidMr-Algorithm | github.commarioeidMr-Algorithms | Paused | Why GitHub? Team Enterprise Explore Marketplace Pricing | Sign in | Sign up | marioeidMr-Algorithms | Watch | Star | Code | Issues | Pull requests | Actions | ① Security | Insights | Join GitHub today | Dismiss | GitHub is home to over 50 million developers working together to host and review code, | manage projects, and build software together. | Sign up | master | 1 branch 0 tags | Go to file | Code | About | you will find all your pdfs and codes | marioeid updated | ba47236 1 minute ago | 12 commits | here enjoy. | 1- Introduction to Math | updated | 1 minute ago | 2- Math and Number Theory1 - Mod.. updated | 1 minute ago | Releases | No releases published | Packages | No packages published | 10:37 AM
+
+[00:01:35]
+  Transcript :  نفتح الربوز تريد بتاعتنا
+  OCR        : None
+  Combined   :  نفتح الربوز تريد بتاعتنا
+
+[00:01:37]
+  Transcript :  نفتح الموديلر اسميتيك كودز
+  OCR        : None
+  Combined   :  نفتح الموديلر اسميتيك كودز
+
+[00:01:44]
+  Transcript :  كان فيه كود للمالتبليكيشن
+  OCR        : CMr-AlgorithmsModularArithmc | github.commarioeidMr-Algorithmsblobmaster2-20Math20and20Number20Theory120-20ModularArithmetic2-ModualrArithmeticcodesModularArithmetic.cpp | define ull unsigned long long | define dd double | define ld long double | define PQ priorityqueue | define pii pairint,int | define pll pairll.1l: | define 5 second | define F first | define MP makepair | define end1 n | using namespace std; | const int sz-1e61; | int arrsz; | 11 add11 a,11 b,11 m | returnambmm; | 11 mul11 a,11 b,11 m | return  am bmm; | 11 sub11 a,11 b,11 m | return  am - bmmm; | int main | IOS; | int n; | cinn; | int m; | cinm; | forint 10;1n;1 | couti-------1mend1;
+  Combined   :  كان فيه كود للمالتبليكيشن CMr-AlgorithmsModularArithmc | github.commarioeidMr-Algorithmsblobmaster2-20Math20and20Number20Theory120-20ModularArithmetic2-ModualrArithmeticcodesModularArithmetic.cpp | define ull unsigned long long | define dd double | define ld long double | define PQ priorityqueue | define pii pairint,int | define pll pairll.1l: | define 5 second | define F first | define MP makepair | define end1 n | using namespace std; | const int sz-1e61; | int arrsz; | 11 add11 a,11 b,11 m | returnambmm; | 11 mul11 a,11 b,11 m | return  am bmm; | 11 sub11 a,11 b,11 m | return  am - bmmm; | int main | IOS; | int n; | cinn; | int m; | cinm; | forint 10;1n;1 | couti-------1mend1;
+
+[00:01:44]
+  Transcript :  هذا هو
+  OCR        : None
+  Combined   :  هذا هو
 
 [00:01:46]
-  Transcript :  which we could write the same function is to take sum equals n times n plus 1 divided by 2.
+  Transcript :  فاكرين السطر ده كان بيعمل ايه
   OCR        : None
-  Combined   :  which we could write the same function is to take sum equals n times n plus 1 divided by 2.
+  Combined   :  فاكرين السطر ده كان بيعمل ايه
 
-[00:01:53]
-  Transcript :  We will get the exact same sum. So if n was, let's say, a million, this is still only going to take a couple seconds.
+[00:01:48]
+  Transcript :  اذا احنا خدنا السطر ده
   OCR        : None
-  Combined   :  We will get the exact same sum. So if n was, let's say, a million, this is still only going to take a couple seconds.
+  Combined   :  اذا احنا خدنا السطر ده
+
+[00:01:52]
+  Transcript :  وحطنا هنا
+  OCR        : None
+  Combined   :  وحطنا هنا
+
+[00:01:54]
+  Transcript :  ونزلنا
+  OCR        : iterativePowerint x, int n : int | define PQ priority queue | define pll pairll,ll | define S second | define endl n | usinq namespace std; | const int szle6l; | 1l mul ll a,ll b,1l m | return a8mbm8m; | int iterativePowerint x,int n | . CppCheckVera messages | Line 21, Col 2, Pos 493 | 10:38 AM
+  Combined   :  ونزلنا iterativePowerint x, int n : int | define PQ priority queue | define pll pairll,ll | define S second | define endl n | usinq namespace std; | const int szle6l; | 1l mul ll a,ll b,1l m | return a8mbm8m; | int iterativePowerint x,int n | . CppCheckVera messages | Line 21, Col 2, Pos 493 | 10:38 AM
 
 [00:02:00]
-  Transcript :  steps. Three steps, not a million steps. So this function is going to have a runtime complexity of
+  Transcript :  تحت نقول
   OCR        : None
-  Combined   :  steps. Three steps, not a million steps. So this function is going to have a runtime complexity of
+  Combined   :  تحت نقول
 
-[00:02:06]
-  Transcript :  O of one. The input size doesn't matter. The amount of data that we have really doesn't matter.
-  OCR        : None
-  Combined   :  O of one. The input size doesn't matter. The amount of data that we have really doesn't matter.
+[00:02:04]
+  Transcript : None
+  OCR        : Search Project | modularExponentiationint x, int n, int M : int | Cccc X | Line 48, Col 16, Pos 976
+  Combined   : Search Project | modularExponentiationint x, int n, int M : int | Cccc X | Line 48, Col 16, Pos 976
 
-[00:02:11]
-  Transcript :  It's going to be completed in the same amount of steps. So this function is way better than this
+[00:02:05]
+  Transcript :  هشيل الكلام ده كله
   OCR        : None
-  Combined   :  It's going to be completed in the same amount of steps. So this function is way better than this
+  Combined   :  هشيل الكلام ده كله
 
-[00:02:17]
-  Transcript :  previous one. Three steps is better than a million steps. And the reason that this isn't O of three,
-  OCR        : None
-  Combined   :  previous one. Three steps is better than a million steps. And the reason that this isn't O of three,
+[00:02:22]
+  Transcript :  طيب احنا عملنا ايه كده? اللي احنا عملناه كده هنا
+  OCR        : long long mul long long a, long long b, long long m | ifpower21resultresuitxsM; | xmulx,x, M; | Codew:Blocks | Line 48, Col 20, Pos 980
+  Combined   :  طيب احنا عملنا ايه كده? اللي احنا عملناه كده هنا long long mul long long a, long long b, long long m | ifpower21resultresuitxsM; | xmulx,x, M; | Codew:Blocks | Line 48, Col 20, Pos 980
 
-[00:02:23]
-  Transcript :  because this takes three steps, is that we really don't care about smaller operations. In the grand
+[00:02:25]
+  Transcript :  نحن نأخذ A مد M في B مد M
   OCR        : None
-  Combined   :  because this takes three steps, is that we really don't care about smaller operations. In the grand
+  Combined   :  نحن نأخذ A مد M في B مد M
 
-[00:02:27]
-  Transcript :  scheme of things, they really won't make much of a difference. So we would just shorten this and say
+[00:02:29]
+  Transcript :  فأنت ستقول لي حسن الموضوع كيف
   OCR        : None
-  Combined   :  scheme of things, they really won't make much of a difference. So we would just shorten this and say
+  Combined   :  فأنت ستقول لي حسن الموضوع كيف
 
-[00:02:31]
-  Transcript :  that this is O of 1 constant time. The input size doesn't matter. Here's a graph that I made to
-  OCR        : None
-  Combined   :  that this is O of 1 constant time. The input size doesn't matter. Here's a graph that I made to
+[00:02:32]
+  Transcript :  سأقول لك أنا قلت المعلومة دي قبل كده في الفيديو بتاع الموديولار أرثماتيك
+  OCR        : mullong long a, long long b, long long m : long | define MP make pair | 1l mul ll a,ll b,ll m | return ambm8m; | Codes:Blocks X | Line 19, Col 25, Pos 484
+  Combined   :  سأقول لك أنا قلت المعلومة دي قبل كده في الفيديو بتاع الموديولار أرثماتيك mullong long a, long long b, long long m : long | define MP make pair | 1l mul ll a,ll b,ll m | return ambm8m; | Codes:Blocks X | Line 19, Col 25, Pos 484
 
 [00:02:36]
-  Transcript :  represent the different runtime complexities. We have data on the x-axis represented by n. So data
+  Transcript :  إن لما نأخذ B مد M الرقم بتاعي هيبقى فرنج من 0 ل M-1
   OCR        : None
-  Combined   :  represent the different runtime complexities. We have data on the x-axis represented by n. So data
+  Combined   :  إن لما نأخذ B مد M الرقم بتاعي هيبقى فرنج من 0 ل M-1
 
-[00:02:43]
-  Transcript :  will increase as we go more to the right, and we have time on the y-axis. I did add an asterisk next
+[00:02:41]
+  Transcript :  ولما أخذ A مد M الرقم بتاعي هيبقى من فرنج 0 ل M-1
   OCR        : None
-  Combined   :  will increase as we go more to the right, and we have time on the y-axis. I did add an asterisk next
+  Combined   :  ولما أخذ A مد M الرقم بتاعي هيبقى من فرنج 0 ل M-1
 
-[00:02:50]
-  Transcript :  to time because some of these times can vary depending on what machine you're using, so these
+[00:02:46]
+  Transcript :  فالورست كيس عندي هنا M-1 في M-1 لكل مد M
   OCR        : None
-  Combined   :  to time because some of these times can vary depending on what machine you're using, so these
+  Combined   :  فالورست كيس عندي هنا M-1 في M-1 لكل مد M
+
+[00:02:51]
+  Transcript :  وده طبعا احنا كده قللنا رقم كبير جدا لو الام صغيرة
+  OCR        : None
+  Combined   :  وده طبعا احنا كده قللنا رقم كبير جدا لو الام صغيرة
 
 [00:02:54]
-  Transcript :  can vary Another way to look at this is number of steps So as we increase on the y these algorithms are going to perform with increasingly more time They going to get slower So let
+  Transcript :  والام في المسائل غالبا بتبقى صغيرة بتبقى عشق اس 9 بلا السبعة
   OCR        : None
-  Combined   :  can vary Another way to look at this is number of steps So as we increase on the y these algorithms are going to perform with increasingly more time They going to get slower So let
+  Combined   :  والام في المسائل غالبا بتبقى صغيرة بتبقى عشق اس 9 بلا السبعة
 
-[00:03:06]
-  Transcript :  begin with O of 1 constant time. Anything that has a runtime complexity of O of 1 will take the same
+[00:03:00]
+  Transcript :  بيقولك هاتلي المود دل عشق اس 9 بلا السبعة بتبقى رقم برايم يعني
   OCR        : None
-  Combined   :  begin with O of 1 constant time. Anything that has a runtime complexity of O of 1 will take the same
+  Combined   :  بيقولك هاتلي المود دل عشق اس 9 بلا السبعة بتبقى رقم برايم يعني
 
-[00:03:12]
-  Transcript :  amount of time regardless of the data size. A few examples would include the random access of an
+[00:03:04]
+  Transcript :  فبتبقى صغيرة جدا طبعا عشق اس 9 فعشق اس 9 تفت معك
   OCR        : None
-  Combined   :  amount of time regardless of the data size. A few examples would include the random access of an
+  Combined   :  فبتبقى صغيرة جدا طبعا عشق اس 9 فعشق اس 9 تفت معك
 
-[00:03:17]
-  Transcript :  element within an array and inserting at the beginning of a linked list. So O of 1 is extremely
-  OCR        : None
-  Combined   :  element within an array and inserting at the beginning of a linked list. So O of 1 is extremely
+[00:03:11]
+  Transcript :  بس هي دي المشاكل اللي كانت في الكود
+  OCR        : mullong long a, long long b, long long m: long | 11 mulll a,1l b,1l m | return ambmm; | Logs others | Cccc | Line 19, Col 17, Pos 476 | 10:39 AM
+  Combined   :  بس هي دي المشاكل اللي كانت في الكود mullong long a, long long b, long long m: long | 11 mulll a,1l b,1l m | return ambmm; | Logs others | Cccc | Line 19, Col 17, Pos 476 | 10:39 AM
 
-[00:03:23]
-  Transcript :  fast. Next we have O of log n, also known as logarithmic time. One example is binary search.
+[00:03:11]
+  Transcript :  فيديو النهاردة قصير مش طويل بس اهتم بليكويت دي
   OCR        : None
-  Combined   :  fast. Next we have O of log n, also known as logarithmic time. One example is binary search.
+  Combined   :  فيديو النهاردة قصير مش طويل بس اهتم بليكويت دي
 
-[00:03:30]
-  Transcript :  We haven't talked about this yet. We'll talk about a few of these algorithms in future videos,
+[00:03:15]
+  Transcript :  وأنا أتمنى منك أن أنت تحل
   OCR        : None
-  Combined   :  We haven't talked about this yet. We'll talk about a few of these algorithms in future videos,
+  Combined   :  وأنا أتمنى منك أن أنت تحل
 
-[00:03:34]
-  Transcript :  but anything that has a runtime complexity of O of log n will actually take, I don't want to say
+[00:03:18]
+  Transcript :  مسألة على الموديولار
   OCR        : None
-  Combined   :  but anything that has a runtime complexity of O of log n will actually take, I don't want to say
+  Combined   :  مسألة على الموديولار
+
+[00:03:21]
+  Transcript :  قبل ما أديك المسألة
+  OCR        : 4is. | Xmulx,x,M; | return 0;
+  Combined   :  قبل ما أديك المسألة 4is. | Xmulx,x,M; | return 0;
+
+[00:03:22]
+  Transcript :  المرة الجاية
+  OCR        : None
+  Combined   :  المرة الجاية
+
+[00:03:24]
+  Transcript :  وبس كده
+  OCR        : None
+  Combined   :  وبس كده
+
+[00:03:26]
+  Transcript :  انجوي
+  OCR        : None
+  Combined   :  انجوي
 
 [00:03:40]
-  Transcript :  less and less time, but increasingly less time to complete. So as the data size increases,
-  OCR        : None
-  Combined   :  less and less time, but increasingly less time to complete. So as the data size increases,
+  Transcript : None
+  OCR        : you will find your pdf and code | in the github link in the describtion below | support me to continue making a good content | SUBSCRIBE | click on the subscribe button to | receive notificatio
+  Combined   : you will find your pdf and code | in the github link in the describtion below | support me to continue making a good content | SUBSCRIBE | click on the subscribe button to | receive notificatio
 
-[00:03:47]
-  Transcript :  this algorithm is going to be more and more efficient compared to the early stages with a
+[00:03:45]
+  Transcript :  اشتركوا في القناة
   OCR        : None
-  Combined   :  this algorithm is going to be more and more efficient compared to the early stages with a
-
-[00:03:51]
-  Transcript :  small dataset. O is also known as linear time. As the amount of
-  OCR        : None
-  Combined   :  small dataset. O is also known as linear time. As the amount of
-
-[00:03:56]
-  Transcript :  data increases, the time it takes to complete something will
-  OCR        : None
-  Combined   :  data increases, the time it takes to complete something will
-
-[00:04:00]
-  Transcript :  increase proportionally linearly. That would include looping through the elements in an array
-  OCR        : None
-  Combined   :  increase proportionally linearly. That would include looping through the elements in an array
-
-[00:04:04]
-  Transcript :  and searching through a linked list. Next we have O of N log N, also known as quasi-linear time.
-  OCR        : None
-  Combined   :  and searching through a linked list. Next we have O of N log N, also known as quasi-linear time.
-
-[00:04:11]
-  Transcript :  This would include a quick sort, merge sort, and heap sort. We'll talk about these concepts in
-  OCR        : None
-  Combined   :  This would include a quick sort, merge sort, and heap sort. We'll talk about these concepts in
-
-[00:04:16]
-  Transcript :  future videos. So for the most part, this is very similar to linear time. Unless we're working with
-  OCR        : None
-  Combined   :  future videos. So for the most part, this is very similar to linear time. Unless we're working with
-
-[00:04:22]
-  Transcript :  a large data set, then anything using O of N log N is going to start to slow down when we work with
-  OCR        : None
-  Combined   :  a large data set, then anything using O of N log N is going to start to slow down when we work with
-
-[00:04:29]
-  Transcript :  larger data sets, hence this curve here. Then we have O of n squared, also known as quadratic time.
-  OCR        : None
-  Combined   :  larger data sets, hence this curve here. Then we have O of n squared, also known as quadratic time.
-
-[00:04:35]
-  Transcript :  A few examples would include insertion sort, selection sort, and bubble sort. As the amount
-  OCR        : None
-  Combined   :  A few examples would include insertion sort, selection sort, and bubble sort. As the amount
-
-[00:04:41]
-  Transcript :  of data increases, it's going to take increasingly more and more time to complete anything that has a
-  OCR        : None
-  Combined   :  of data increases, it's going to take increasingly more and more time to complete anything that has a
-
-[00:04:46]
-  Transcript :  runtime complexity of O of n squared. So just to compare linear time and quadratic time, with linear
-  OCR        : None
-  Combined   :  runtime complexity of O of n squared. So just to compare linear time and quadratic time, with linear
-
-[00:04:53]
-  Transcript :  time if our data set was a thousand if n equals a thousand it going to take a thousand steps they proportional they linear but if we were using quadratic time if n was a thousand then a thousand squared would be a
-  OCR        : None
-  Combined   :  time if our data set was a thousand if n equals a thousand it going to take a thousand steps they proportional they linear but if we were using quadratic time if n was a thousand then a thousand squared would be a
-
-[00:05:06]
-  Transcript :  million. So if our data set was a thousand, if we're using quadratic time, it's going to take a million
-  OCR        : None
-  Combined   :  million. So if our data set was a thousand, if we're using quadratic time, it's going to take a million
-
-[00:05:11]
-  Transcript :  steps then, way more than linear time. So quadratic time is extremely slow with large data sets, but in
-  OCR        : None
-  Combined   :  steps then, way more than linear time. So quadratic time is extremely slow with large data sets, but in
-
-[00:05:18]
-  Transcript :  the case of a small data set, it could actually be faster, as you can see by the graph here. And lastly,
-  OCR        : None
-  Combined   :  the case of a small data set, it could actually be faster, as you can see by the graph here. And lastly,
-
-[00:05:23]
-  Transcript :  we have O of n factorial, also known as factorial time, and one place where this is used is with the
-  OCR        : None
-  Combined   :  we have O of n factorial, also known as factorial time, and one place where this is used is with the
-
-[00:05:30]
-  Transcript :  traveling salesman problem, which I might discuss in a future video. So this is extremely slow,
-  OCR        : None
-  Combined   :  traveling salesman problem, which I might discuss in a future video. So this is extremely slow,
-
-[00:05:36]
-  Transcript :  so if I had to give a letter grade to each of these runtime complexities when working with
-  OCR        : None
-  Combined   :  so if I had to give a letter grade to each of these runtime complexities when working with
-
-[00:05:41]
-  Transcript :  large data sets with constant time, this would be an A, like an A+. Logarithmic time would be a B,
-  OCR        : None
-  Combined   :  large data sets with constant time, this would be an A, like an A+. Logarithmic time would be a B,
-
-[00:05:47]
-  Transcript :  it's pretty good.
-  OCR        : None
-  Combined   :  it's pretty good.
-
-[00:05:48]
-  Transcript :  Linear time is C, it's okay.
-  OCR        : None
-  Combined   :  Linear time is C, it's okay.
-
-[00:05:50]
-  Transcript :  Quasi-linear time is a D, it's just barely passing.
-  OCR        : None
-  Combined   :  Quasi-linear time is a D, it's just barely passing.
-
-[00:05:54]
-  Transcript :  Quadratic time would be an F,
-  OCR        : None
-  Combined   :  Quadratic time would be an F,
-
-[00:05:56]
-  Transcript :  and factorial time, well, you get expelled from school.
-  OCR        : None
-  Combined   :  and factorial time, well, you get expelled from school.
-
-[00:05:59]
-  Transcript :  Although,
-  OCR        : None
-  Combined   :  Although,
-
-[00:06:00]
-  Transcript :  some of these runtime complexities are actually faster when working with a smaller data set,
-  OCR        : None
-  Combined   :  some of these runtime complexities are actually faster when working with a smaller data set,
-
-[00:06:05]
-  Transcript :  so keep that in mind. Well, that's the very basics of Big O notation. It's notation used
-  OCR        : None
-  Combined   :  so keep that in mind. Well, that's the very basics of Big O notation. It's notation used
-
-[00:06:11]
-  Transcript :  to describe the performance of an algorithm as the amount of data increases. So if you can,
-  OCR        : None
-  Combined   :  to describe the performance of an algorithm as the amount of data increases. So if you can,
-
-[00:06:16]
-  Transcript :  give this video a thumbs up, drop a random comment down below, and well, that's Big O notation in
-  OCR        : None
-  Combined   :  give this video a thumbs up, drop a random comment down below, and well, that's Big O notation in
-
-[00:06:22]
-  Transcript :  computer science.
-  OCR        : None
-  Combined   :  computer science.
+  Combined   :  اشتركوا في القناة
 
