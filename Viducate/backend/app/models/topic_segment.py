@@ -21,5 +21,6 @@ class TopicSegment(Base):
     # quizzes = relationship("Quiz", back_populates="segment")
     segment_summary = relationship("SegmentSummary", uselist=False, back_populates="segment")
     flashcards     = relationship("Flashcard",       back_populates="segment", cascade="all, delete-orphan")  
+    quizzes = relationship("Quiz", back_populates="segment", cascade="all, delete-orphan")
 
     __table_args__ = (UniqueConstraint("vid_id", "segment_number", name="uq_vid_segment"),)

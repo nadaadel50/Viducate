@@ -1,0 +1,170 @@
+{
+  "total_segments": 6,
+  "segments": [
+    {
+      "segment_number": 1,
+      "start_time": "00:00",
+      "end_time": "00:02:30",
+      "main_topic": "Introduction to Fuzzy Logic",
+      "title": "Introduction to Fuzzy Logic and Control Systems",
+      "sub_topics": [
+        {
+          "name": "Introduction to Fuzzy Logic",
+          "start_time": "00:00",
+          "end_time": "00:00:29",
+          "description": "نبتدي. طيب احنا هنكمل الفازي كنترول سيستم. Fuzzy Logic | Control | Sabah Sayed | Department of Computer Science | Focuity of Computers and Arcjfciol Inteligence | Caire University | Egypt"
+        },
+        {
+          "name": "Outline of Fuzzy Control Systems",
+          "start_time": "00:00:19",
+          "end_time": "00:00:41",
+          "description": "Outline | Defuzzification Techniques | Fuzzy ControlsArchitecture | - ComponentsSteps | - Examples"
+        },
+        {
+          "name": "Defuzzification Techniques",
+          "start_time": "00:00:41",
+          "end_time": "00:02:30",
+          "description": "زي ما اتفقنا عكده ادي آآ بيتعامل بأكثر من طريقة. خلاص? اي اول طريقة اسمها ودي بحاول اجيب فيها اللي عندها بيبقى اعلى 1- Max membership principle: Also known as the | height method, this scheme is limited to peaked | output functions. This method is given by the | algebraic expression: | µC z µC z, for all 2 Z, | where z is the defuzzified | value | If multiple peaks exist, the middle one is chosen."
+        }
+      ],
+      "key_points": [
+        "Fuzzy Logic",
+        "Control Systems",
+        "Defuzzification Techniques"
+      ]
+    },
+    {
+      "segment_number": 2,
+      "start_time": "00:02:30",
+      "end_time": "00:05:18",
+      "main_topic": "Fuzzy Inference",
+      "title": "Fuzzy Inference and Mamdani Method",
+      "sub_topics": [
+        {
+          "name": "Fuzzy Inference",
+          "start_time": "00:02:30",
+          "end_time": "00:03:38",
+          "description": "هي اللي باخدها وبادرة فيها. تمام? هم كلهم بيختلفوا بس في ايه انهي انا اخدها اللي هي زي دي. خلاص اللي هي على ال اكس اكسس. الايه الممبرشيب بون. هي دي زت زت ستار بتاعتك."
+        },
+        {
+          "name": "Mamdani Method",
+          "start_time": "00:03:38",
+          "end_time": "00:05:18",
+          "description": "طيب. لو انا 2- Mean Max membership: This method | also | called middle-of-maxima is closely related to | the first method, except that the locations of the | maximum membership can be nonuniqe | i.e., | the maximum membership can be a plateau | rather than a single point. | This method is given by | the expression:"
+        }
+      ],
+      "key_points": [
+        "Fuzzy Inference",
+        "Mamdani Method",
+        "Defuzzification"
+      ]
+    },
+    {
+      "segment_number": 3,
+      "start_time": "00:05:18",
+      "end_time": "00:14:23",
+      "main_topic": "Fuzzy Inference and Rule Evaluation",
+      "title": "Fuzzy Inference and Rule Evaluation",
+      "sub_topics": [
+        {
+          "name": "Rule Evaluation",
+          "start_time": "00:05:18",
+          "end_time": "00:06:25",
+          "description": "Mamdani Fuzzy Inference | We examine a simple two-input cne-output problem that includes three rules: | Rule: 1 | x is A3 | Rule: 1 | y is B1 | prejectfunding | is adequate | THEN | z is C1 | THEN | risk | projectstaffing | is small | is low | Bule: 2 | x is A2 | Rule: 2 | y is B2 | projectfunding | prejectstafing | is marginal | is large | THEN | z Is C2 | THEN | risk | Is normal | Bule: 3 | Buk:3 | THEN | x is A1 | z is C3 | THEN | projectfunding | is inadequate | is high"
+        },
+        {
+          "name": "Aggregation of Rule Outputs",
+          "start_time": "00:06:25",
+          "end_time": "00:11:08",
+          "description": "The second step is to take the fuzzified inputs, Jeau 0.5, Puc.sz | 0.2, μα 0.1 and γ 0.7, and apply them to the antecedents of the | fuzzy rules. | If a given fuzzy rule has multiple antecedents, the fuzzy operator AND or | OR is used to obtain a single number that represents the result of the | antecedent evaluation."
+        },
+        {
+          "name": "Defuzzification",
+          "start_time": "00:11:08",
+          "end_time": "00:14:23",
+          "description": "Step 2: Rule Evaluation | The second step is to take the fuzzified inputs, Jeau 0.5, Puc-sz | 0.2, μjy-81 0.1 and 4γ-t2 0.7, and apply them to the antecedents of the | fuzzy rules. | If a given fuzzy rule has multiple antecedents, the fuzzy operator AND or | OR is used to obtain a single number that represents the result of the | antecedent evaluation."
+        }
+      ],
+      "key_points": [
+        "Rule Evaluation",
+        "Aggregation of Rule Outputs",
+        "Defuzzification"
+      ]
+    },
+    {
+      "segment_number": 4,
+      "start_time": "00:14:41",
+      "end_time": "00:15:50",
+      "main_topic": "Fuzzy Inference Process",
+      "title": "Introduction to Fuzzy Inference",
+      "sub_topics": [
+        {
+          "name": "Introduction to Fuzzy Sets",
+          "start_time": "00:14:41",
+          "end_time": "00:15:02",
+          "description": "كده همزلت. اشوف هيبليهم كلهم. يعني مسلا هيكون عندي فازي ست في µa,ex max αaα, μyx | Hz-elx min ααx, jyx"
+        },
+        {
+          "name": "Fuzzified Inputs",
+          "start_time": "00:15:02",
+          "end_time": "00:15:50",
+          "description": "The second step is to take the fuzzified inputs, Jeau, 0.5, Pqa2 | 0.2, μyαt | 0.1 and jhy-d2 | fuzzy rules | 0.7, and apply them to the antecedents of the | This number Ithe truth valuel is then applied to the conseguent"
+        }
+      ],
+      "key_points": [
+        "Fuzzy sets",
+        "Fuzzified inputs"
+      ]
+    },
+    {
+      "segment_number": 5,
+      "start_time": "00:15:50",
+      "end_time": "00:17:56",
+      "main_topic": "Defuzzification Methods",
+      "title": "Defuzzification Techniques",
+      "sub_topics": [
+        {
+          "name": "Defuzzification Introduction",
+          "start_time": "00:15:50",
+          "end_time": "00:16:00",
+          "description": "Step 4: Defuzzification | The last step in the fuzzy inference process is defuzzification. | Fugziness helps us to evaluate the rules, but the final output of a fuzzy | system has to be a crisp number"
+        },
+        {
+          "name": "Centroid Method",
+          "start_time": "00:16:00",
+          "end_time": "00:17:56",
+          "description": "Step 4: Defuzzification centroid | There are several defuzzification methods, but probably the most | popular one is the centroid technique. It finds the point where a | vertical line would slice the aggregate set into two equal masses."
+        }
+      ],
+      "key_points": [
+        "Defuzzification",
+        "Centroid method"
+      ]
+    },
+    {
+      "segment_number": 6,
+      "start_time": "00:17:56",
+      "end_time": "00:23:15",
+      "main_topic": "Fuzzy Logic and Inference",
+      "title": "Fuzzy Logic and Inference Rules",
+      "sub_topics": [
+        {
+          "name": "Weighted Average Method",
+          "start_time": "00:17:56",
+          "end_time": "00:18:15",
+          "description": "Another method is weighted average method where centroid of each | of the fuzzy sets is weighted by the membership value, divided by the | sum of memberships."
+        },
+        {
+          "name": "Fuzzy Inference and Logic",
+          "start_time": "00:18:15",
+          "end_time": "00:23:15",
+          "description": "Using triangular membership function, Predict | the Cp for Op 30 and Pdp90 ? | Example | Given a stock market with varlables.: | Opening price Op | Previous day price Pdlp | Closing price Cp"
+        }
+      ],
+      "key_points": [
+        "Weighted average method",
+        "Fuzzy inference and logic"
+      ]
+    }
+  ]
+}
