@@ -1,0 +1,55 @@
+[0.0 --> 3.0]  Welcome back everyone.
+[3.0 --> 8.0]  In this video, I want to introduce you all to a VideoPlayer component.
+[8.0 --> 13.0]  The package we will be making use of is React Player.
+[13.0 --> 22.0]  This package is capable of playing a variety of URLs like YouTube, Twitch, Dailymotion, Vimeo and so on.
+[22.0 --> 24.0]  Let's begin.
+[24.0 --> 31.1]  As always, I've started off by creating a new project using create react app.
+[31.1 --> 42.0]  Now open the terminal and run the command yarn add react-player.
+[42.0 --> 46.2]  Once the installation is done, we should be able to use the component provided by this
+[46.2 --> 47.2]  package.
+[47.2 --> 54.2]  I'm going to head over to app.js and clear out the header section.
+[54.2 --> 71.6]  I also going to edit the app and modify the app class to be displayFlex justifyContentCenter
+[71.6 --> 79.4]  Alright, now we can import our react player component.
+[79.4 --> 84.3]  React player from React player.
+[84.3 --> 88.6]  Now using this component is really simple.
+[88.6 --> 97.5]  We specify React player and then pass in a URL prop.
+[97.5 --> 104.2]  The value I'm going to add the URL to the React Redux tutorial.
+[104.2 --> 106.0]  And that is all there is to it.
+[106.0 --> 112.3]  Let's save the file and in the terminal, run the command yarn start.
+[114.3 --> 119.9]  When the page loads, you can see that we have a video player on our side.
+[120.0 --> 126.0]  screen. If I click inside the player the video starts.
+[126.0 --> 134.0]  Hey guys, my name is Vishwan. Click again and the video pauses. It works but I would also like to see
+[134.0 --> 142.6]  the native player controls. For that we can pass in the controls prop. So on the react player component
+[142.6 --> 155.0]  we specify controls now if we go back to the browser you can see that we get the
+[155.0 --> 163.5]  play and the pause button the volume control the progress bar and all the
+[163.5 --> 170.2]  other controls as well now the other two main props which you might be interested
+[170.2 --> 172.9]  is the width and the height.
+[172.9 --> 189.1]  By default the width is set to 640 pixels and the height is set to 360 pixels let change that since I don have much space to work with I going to set the width to
+[189.1 --> 201.5]  be equal to 480 pixels and the height to be equal to 240 pixels if you save this
+[201.5 --> 208.3]  and take a look at the browser you can see that we have a smaller video player
+[208.3 --> 214.8]  you can of course increase the size depending on your viewport all right the
+[214.8 --> 220.8]  last set of props I want to discuss is the callback props these are basically
+[220.8 --> 225.9]  events that get called when something happens with respect to the media player
+[225.9 --> 232.9]  We can have onReady, onStart, onPause, onEnded, and onError.
+[232.9 --> 239.9]  There are a few more props, but these are something that would be of interest to you.
+[240.0 --> 247.8]  I'm going to simply add log statements so let me quickly copy paste the code so
+[247.8 --> 254.2]  we have on ready where we log on ready callback on start on pause on ended on
+[254.2 --> 261.7]  error and they all have a console log statement if I save this go back to the
+[261.7 --> 270.9]  browser open the DevTools console let me reload the page and on page load you can
+[270.9 --> 277.6]  see that we first have the on ready callback fired I play the video we get
+[277.6 --> 284.7]  the on start callback. I pause the video we get on paused callback and if
+[284.7 --> 288.0]  If we try to, let's say, end this video,
+[288.0 --> 290.7]  you get the onEnded callback.
+[290.7 --> 305.8]  And if I go back change the URL to an invalid URL go back to the browser we get onErd callback So we weren able to load the video
+[305.8 --> 310.7]  Finally, let's just try to play a Twitch video.
+[310.7 --> 315.4]  Now the only channel I watch on Twitch is one called T90 Official.
+[315.4 --> 319.2]  He basically streams Age of Empires, which is a game I love.
+[319.2 --> 321.9]  So let's just use that URL.
+[321.9 --> 327.1]  So the URL, I'm going to replace the UOT1 with the Twitch one.
+[327.1 --> 329.3]  If you go back to the browser,
+[333.3 --> 337.1]  you can see that we are able to play the Twitch video.
+[337.1 --> 344.4]  Again, there are tons of other props that might be of use based on your requirements.
+[344.4 --> 351.3]  My intention is to simply introduce you to the library and you explore all the remaining features.
+[351.3 --> 355.3]  Well then, that is about the React player npm package.
+[355.3 --> 359.3]  Thank you guys for watching, don't forget to subscribe, and I'll see you guys in the next video.
+[360.0 --> 360.1]  Thank you.
