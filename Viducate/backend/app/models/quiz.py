@@ -35,10 +35,10 @@ class QuizQuestion(Base):
     choice_b = Column(Text, nullable=False)
     choice_c = Column(Text, nullable=False)
     choice_d = Column(Text, nullable=False)
-    correct_answer = Column(String(1), nullable=False)   # "a" | "b" | "c" | "d"
+    correct_answer = Column(String(1), nullable=False)   
     correct_answer_text = Column(Text, nullable=False)
     explanation = Column(Text, nullable=True)
-    video_timestamp = Column(Integer, nullable=True)     # seconds — where in video this comes from
+    video_timestamp = Column(Integer, nullable=True)     # seconds 
     timestamp_label = Column(String(12), nullable=True)  # "00:02:35"
     created_at = Column(TIMESTAMP, server_default=func.now())
 

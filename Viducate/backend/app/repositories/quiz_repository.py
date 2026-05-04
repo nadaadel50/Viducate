@@ -1,10 +1,3 @@
-"""
-quiz_repository.py
-──────────────────
-All DB operations for Quiz and QuizQuestion.
-No caching logic here — service layer decides when to generate.
-"""
-
 from sqlalchemy.orm import Session, joinedload
 from app.models.quiz import Quiz, QuizQuestion
 from typing import Optional, List
@@ -14,7 +7,6 @@ class QuizRepository:
     def __init__(self, db: Session):
         self.db = db
 
-    # ─── Quiz ─────────────────────────────────────────────────────────────────
 
     def create_quiz(self, data: dict) -> Quiz:
         quiz = Quiz(**data)
@@ -30,7 +22,6 @@ class QuizRepository:
             .first()
         )
 
-    # ─── Questions ────────────────────────────────────────────────────────────
 
     def bulk_create_questions(self, questions: list[dict]) -> List[QuizQuestion]:
         objs = [QuizQuestion(**q) for q in questions]

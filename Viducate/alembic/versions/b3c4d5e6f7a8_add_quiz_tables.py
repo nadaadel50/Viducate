@@ -1,9 +1,3 @@
-"""add quiz and quiz_question tables
-
-Revision ID: b3c4d5e6f7a8
-Revises: fa8f140f993b
-Create Date: 2026-05-04 00:00:00.000000
-"""
 from typing import Sequence, Union
 from alembic import op
 import sqlalchemy as sa

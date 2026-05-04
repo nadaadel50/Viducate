@@ -9,7 +9,6 @@ class QuizGenerateRequest(BaseModel):
     difficulty: Literal["easy", "medium", "hard"] = "medium"
 
 
-# ─── Response building blocks ─────────────────────────────────────────────────
 
 class QuizChoices(BaseModel):
     a: str
@@ -22,11 +21,11 @@ class QuizQuestionResponse(BaseModel):
     question_id:         int
     question_text:       str
     choices:             QuizChoices
-    correct_answer:      str          # "a" | "b" | "c" | "d"
+    correct_answer:      str          
     correct_answer_text: str
     explanation:         Optional[str] = None
-    video_timestamp:     Optional[int] = None   # raw seconds
-    timestamp_label:     Optional[str] = None   # "00:02:35"
+    video_timestamp:     Optional[int] = None   
+    timestamp_label:     Optional[str] = None  
     segment_id:          Optional[int] = None
 
     model_config = {"from_attributes": False}

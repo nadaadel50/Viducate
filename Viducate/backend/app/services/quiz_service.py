@@ -1,14 +1,3 @@
-"""
-quiz_service.py
-───────────────
-Business logic:
-  - validate video ownership + processing status
-  - resolve language from content preferences
-  - call quiz engine (no caching — always fresh)
-  - persist quiz + questions to DB
-  - build response
-"""
-
 import logging
 from sqlalchemy.orm import Session, joinedload
 from fastapi import HTTPException, status
@@ -56,7 +45,7 @@ class QuizService:
         self.quiz_repo = QuizRepository(db)
         self.video_repo = VideoRepository(db)
 
-    # ─── Internal helpers ─────────────────────────────────────────────────────
+  
 
     def _get_video_or_404(self, video_id: int) -> Video:
         video = self.video_repo.get_by_id(video_id)
@@ -124,8 +113,6 @@ class QuizService:
             "created_at":      quiz.created_at,
         }
 
-    # ─── Public methods ───────────────────────────────────────────────────────
-
     def generate_segment_quiz(
         self,
         video_id: int,
@@ -156,7 +143,7 @@ class QuizService:
             f"difficulty={difficulty} lang={language}"
         )
 
-        # 1. Call LLM — always fresh
+        
         raw_questions = generate_segment_quiz(
             segment_title=segment.title,
             main_topic=segment.main_topic or segment.title,
@@ -172,7 +159,6 @@ class QuizService:
                 detail="Failed to generate quiz questions. Please try again.",
             )
 
-        # 2. Persist quiz header
         quiz = self.quiz_repo.create_quiz({
             "video_id":   video_id,
             "segment_id": segment_id,
@@ -181,7 +167,7 @@ class QuizService:
             "quiz_type":  "segment",
         })
 
-        # 3. Persist questions
+    
         question_rows = []
         for q in raw_questions:
             ts = q.get("video_timestamp") or segment.start_time
@@ -203,7 +189,7 @@ class QuizService:
         self.quiz_repo.bulk_create_questions(question_rows)
         self.db.commit()
 
-        # 4. Re-fetch for clean response
+    
         questions = self.quiz_repo.get_questions_by_quiz(quiz.quiz_id)
         logger.info(
             f"[QuizService] Segment quiz saved | quiz_id={quiz.quiz_id} | "
@@ -241,7 +227,7 @@ class QuizService:
                 detail="No segments found for this video. Run processing first.",
             )
 
-        # Build segment dicts for engine
+       
         segments_data = []
         segment_map = {}   # segment_number → TopicSegment object
         for seg in segments:
@@ -264,7 +250,7 @@ class QuizService:
             f"segments={len(segments)} | difficulty={difficulty} | lang={language}"
         )
 
-        # 1. Call LLM — always fresh
+        
         raw_questions = generate_video_quiz(
             video_title=video.title,
             segments=segments_data,
@@ -278,7 +264,7 @@ class QuizService:
                 detail="Failed to generate video quiz. Please try again.",
             )
 
-        # 2. Persist quiz header (no segment_id for whole-video quiz)
+        
         quiz = self.quiz_repo.create_quiz({
             "video_id":   video_id,
             "segment_id": None,
@@ -287,7 +273,7 @@ class QuizService:
             "quiz_type":  "video",
         })
 
-        # 3. Persist questions
+        
         question_rows = []
         for q in raw_questions:
             seg_num = q.get("segment_number")

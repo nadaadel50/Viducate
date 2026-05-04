@@ -1,10 +1,3 @@
-"""
-quiz_engine.py
-──────────────
-Calls Groq to generate MCQ questions.
-No caching — fresh questions every call.
-"""
-
 import json
 import logging
 import re

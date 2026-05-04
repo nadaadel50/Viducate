@@ -29,7 +29,6 @@ def get_current_user(
     return AuthService(db).get_current_user(credentials.credentials)
 
 
-# ─── Segment quiz ─────────────────────────────────────────────────────────────
 
 @router.post(
     "/video/{video_id}/segment/{segment_id}",
@@ -63,8 +62,6 @@ def generate_segment_quiz(
     return result
 
 
-# ─── Whole-video quiz ─────────────────────────────────────────────────────────
-
 @router.post(
     "/video/{video_id}",
     response_model=QuizResponse,
@@ -95,7 +92,6 @@ def generate_video_quiz(
     return result
 
 
-# ─── Fetch existing quiz ──────────────────────────────────────────────────────
 
 @router.get(
     "/{quiz_id}",
