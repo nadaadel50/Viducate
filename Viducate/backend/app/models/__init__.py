@@ -19,9 +19,10 @@ from .keypoints import Keypoint
 # from .mindmap import Mindmap
 from .content_preferences import ContentPreferences
 from .flashcard import Flashcard  
+from .quiz import Quiz, QuizQuestion
 
 __all__ = [
-    "Base", "User", "Settings", "Video","TopicSegment", "Subtopic", "Keypoint", "VideoSummary", "SegmentSummary", "ContentPreferences", "Flashcard"
+    "Base", "User", "Settings", "Video","TopicSegment", "Subtopic", "Keypoint", "VideoSummary", "SegmentSummary", "ContentPreferences", "Flashcard", "Quiz", "QuizQuestion"
 ]
 
 # "UserAnalytics","Video", "VideoSummary", "Slide",
