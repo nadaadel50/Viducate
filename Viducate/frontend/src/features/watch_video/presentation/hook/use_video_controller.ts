@@ -1,6 +1,6 @@
   import { useRef, useState } from "react";
-  import type { Marker } from "../../domin/entity/mark_entity";
-  import { StuckReasons } from "../../domin/entity/stuck_reason";
+  import type { Marker } from "../types/mark_parms";
+  import { StuckReasons } from "../types/stuck_reason";
 
   // ── types ─────────────────────────────────────────────────────────────────────
 

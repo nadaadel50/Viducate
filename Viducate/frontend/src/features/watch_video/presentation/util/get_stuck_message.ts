@@ -1,4 +1,4 @@
-import { StuckReasons, type StuckReason } from "../../domin/entity/stuck_reason";
+import { StuckReasons, type StuckReason } from "../types/stuck_reason";
 
 export const getStuckMessage = (reason: StuckReason):string => {
   switch (reason) {

@@ -1,18 +1,29 @@
 import { apiClient } from "../../../../core/api/apiClient";
+import type { SematicResults } from "../model/semantic_result";
+import type { SemanticSearchRequestDto } from "../model/semantic_search_request_dto";
 import type { TopicRequestDto } from "../model/topic_request_dto";
-import type { TopicResponseDto } from "../model/topic_response_dto";
 import type { VideoResponseDto } from "../model/video_response_dto";
 
 export class WatchVideoService {
+  async getTopics(reqDto: TopicRequestDto): Promise<VideoResponseDto> {
+    const response = await apiClient.get(
+      `/segments/videos/${reqDto.video_id}`,
+      {},
+    );
 
- async getTopics(reqDto: TopicRequestDto): Promise<VideoResponseDto> {
- 
+    return response.data;
+  }
 
-  const response = await apiClient.get(`/segments/videos/${reqDto.video_id}`, {
-   
-  });
+  async getSearchResult(
+   reqDto:SemanticSearchRequestDto
+  ): Promise<SematicResults> {
+    const response = await apiClient.post(
+      `/semantic_search/video/${reqDto.videoId}/search`,
+      {
+        query: reqDto.query,
+      },
+    );
 
-  return response.data;
-}
-
+    return response.data;
+  }
 }
