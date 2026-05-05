@@ -1,91 +1,119 @@
-export const QuizOptions = ({ question, selectedId, onSelect, isReviewMode }: any) => (
-  <div className="space-y-4">
-    
-    <h2 className="text-xl sm:text-2xl font-bold text-slate-900 dark:text-white">
-      {question.text}
-    </h2>
 
-    <div className="flex flex-col gap-3">
-      {question.options.map((option: any, index: number) => {
-        const isCorrect = option.id === question.correctOptionId;
-        const isSelected = selectedId === option.id;
+import { COLORS } from "../../../../core/constants";
+import { useQuizOptions } from "../hooks/useQuizOptions.ts";
+import { FormattedMessage } from 'react-intl';
+export const QuizOptions = ({
+  question,
+  selectedId,
+  onSelect,
+  isReviewMode,
+}: any) => {
 
-        const label = String.fromCharCode(65 + index); // A B C D
+  const { options, getOptionStyle } = useQuizOptions({
+    question,
+    selectedId,
+    isReviewMode,
+  });
 
-        let style = `
-          border-transparent
-          bg-white dark:bg-slate-800
-          hover:bg-slate-50 dark:hover:bg-slate-700/40
-        `;
+  if (!question) return null;
 
-        if (isReviewMode) {
-          if (isCorrect)
-            style = "border-green-500 bg-green-50 dark:bg-green-900/20";
-          else if (isSelected)
-            style = "border-red-500 bg-red-50 dark:bg-red-900/20";
-        } else if (isSelected) {
-          style = `
-            border-indigo-600 
-            bg-indigo-50 dark:bg-indigo-900/20
-          `;
-        }
+  return (
+    <div className="space-y-6">
+      <div className="space-y-4 px-2">
+        <h2
+          className="text-2xl sm:text-3xl font-black leading-tight"
+          style={{ color: COLORS.text.primary }}
+        >
+          {question.question_text}
+        </h2>
 
-        return (
-          <label key={option.id} className="cursor-pointer group">
-            <input
-              type="radio"
-              className="sr-only"
-              checked={isSelected}
-              onChange={() => onSelect(option.id)}
-            />
+        {isReviewMode && question.video_timestamp && (
+          <button
+            onClick={() =>
+              console.log("Jumping to second:", question.video_timestamp)
+            }
+            className="flex items-center gap-2 px-4 py-2 rounded-xl transition-all hover:scale-105 active:scale-95 shadow-sm"
+            style={{
+              backgroundColor: COLORS.icon.background,
+              color: COLORS.brand.primary,
+            }}
+          >
+            <span className="material-symbols-outlined text-xl">
+              play_circle
+            </span>
+            <span className="text-sm font-bold uppercase tracking-wide">
+              <FormattedMessage id="quiz.go_to_watch" values={{ timestamp_label: question.timestamp_label }} />
+            </span>
+          </button>
+        )}
+      </div>
 
-            <div
-              className={`
-                flex items-center justify-between
-                p-4 rounded-xl border-2 transition-all duration-200
-                ${style}
-              `}
-            >
-              
-              {/* LEFT: radio + text */}
-              <div className="flex items-center gap-3">
-                
-                {/* Radio */}
-                <div
-                  className={`
-                    w-4 h-4 rounded-full border-2 flex items-center justify-center
-                    ${isSelected ? "border-indigo-600 bg-indigo-600" : "border-slate-300"}
-                  `}
-                >
-                  {isSelected && <div className="w-1.5 h-1.5 bg-white rounded-full" />}
+      <div className="flex flex-col gap-3">
+        {options.map((option) => {
+          const { style, isCorrect, isSelected, label } =
+            getOptionStyle(option.id);
+
+          return (
+            <label key={option.id} className="cursor-pointer group">
+              <input
+                type="radio"
+                className="sr-only"
+                checked={isSelected}
+                onChange={() => onSelect(option.id)}
+                disabled={isReviewMode}
+              />
+
+              <div
+                className="flex items-center justify-between p-5 rounded-2xl shadow-sm transition-all duration-200 hover:translate-x-1"
+                style={style}
+              >
+                <div className="flex items-center gap-4">
+                  <div
+                    className="w-5 h-5 rounded-full border-2 flex items-center justify-center"
+                    style={{
+                      borderColor: isSelected
+                        ? COLORS.brand.primary
+                        : COLORS.border.default,
+                      backgroundColor: isSelected
+                        ? COLORS.brand.primary
+                        : "transparent",
+                    }}
+                  >
+                    {isSelected && (
+                      <div className="w-2 h-2 bg-white rounded-full" />
+                    )}
+                  </div>
+
+                  <span
+                    className="text-base font-semibold"
+                    style={{ color: COLORS.text.primary }}
+                  >
+                    {option.text}
+                  </span>
                 </div>
 
-                <span className="text-sm sm:text-base font-medium text-slate-800 dark:text-white">
-                  {option.text}
-                </span>
+                <div className="flex items-center gap-2">
+                  {isReviewMode && isCorrect && (
+                    <span className="material-symbols-outlined text-green-600">
+                      check_circle
+                    </span>
+                  )}
+
+                  {isReviewMode && isSelected && !isCorrect && (
+                    <span className="material-symbols-outlined text-red-600">
+                      cancel
+                    </span>
+                  )}
+
+                  <span className="text-sm font-bold opacity-30">
+                    {label}
+                  </span>
+                </div>
               </div>
-
-              {/* RIGHT: A B C D */}
-              <span className="text-xs font-bold text-slate-400">
-                {label}
-              </span>
-
-              {/* Review Icons */}
-              {isReviewMode && (
-                isCorrect ? (
-                  <span className="material-symbols-outlined text-green-600 text-[18px] ml-2">
-                    check_circle
-                  </span>
-                ) : isSelected ? (
-                  <span className="material-symbols-outlined text-red-600 text-[18px] ml-2">
-                    cancel
-                  </span>
-                ) : null
-              )}
-            </div>
-          </label>
-        );
-      })}
+            </label>
+          );
+        })}
+      </div>
     </div>
-  </div>
-);
+  );
+};

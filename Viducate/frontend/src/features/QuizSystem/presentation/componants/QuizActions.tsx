@@ -1,72 +1,57 @@
-interface Props {
-  isLast: boolean;
-  isFirst: boolean;
-  isReviewMode: boolean;
-  onNext: () => void;
-  onPrevious: () => void;
-  onReset: () => void;
-  disabledNext?: boolean;
-}
 
-export const QuizActions = ({
-  isLast,
-  isFirst,
-  isReviewMode,
-  onNext,
-  onPrevious,
-  onReset,
-  disabledNext,
-}: Props) => {
+import { FormattedMessage } from 'react-intl';
+import { COLORS } from "../../../../core/constants";
+
+export const QuizActions = ({ isLast, isFirst, isReviewMode, onNext, onPrevious, canSubmit, onBackToVideo }: any) => {
+
+  const showNextBtn = !isReviewMode || (isReviewMode && !isLast);
+
   return (
-    <div className="bg-white dark:bg-slate-800 p-4 rounded-xl shadow-sm border border-slate-100">
-
-      {isReviewMode && isLast ? (
+    <div className="bg-white dark:bg-slate-800 p-4 rounded-xl shadow-sm border border-slate-100 flex flex-col gap-3">
+      
+      <div className="flex justify-between items-center w-full gap-2">
+        
         <button
-          onClick={onReset}
-          className="w-full py-3 bg-slate-900 text-white rounded-lg font-semibold text-sm hover:brightness-110 transition"
+          onClick={onPrevious}
+          disabled={isFirst}
+          className="w-12 h-12 flex items-center justify-center rounded-lg transition hover:bg-slate-50 disabled:opacity-30"
+          style={{ color: COLORS.text.secondary }}
         >
-          Back to Results
+          <span className="material-symbols-outlined">arrow_back</span>
         </button>
-      ) : (
-<div className="flex justify-between items-center pt-1 w-full">
 
-  {/* Previous */}
-  <button
-    onClick={onPrevious}
-    disabled={isFirst}
-    className="w-12 h-12 flex items-center justify-center rounded-lg
-    text-slate-600 dark:text-slate-300
-    hover:bg-slate-100 dark:hover:bg-slate-700
-    transition
-    disabled:opacity-50 disabled:cursor-not-allowed"
-  >
-    <span className="material-symbols-outlined text-[22px]">
-      arrow_back
-    </span>
-  </button>
+        
+        {showNextBtn && (
+          <button
+            onClick={onNext}
+            disabled={isLast && !canSubmit && !isReviewMode}
+            className="flex-1 px-4 py-3 rounded-xl font-bold text-white transition flex items-center justify-center gap-2"
+            style={{ 
+              background: (isLast && !isReviewMode) ? COLORS.state.success : COLORS.brand.gradient,
+              opacity: (isLast && !canSubmit && !isReviewMode) ? 0.5 : 1
+            }}
+          >
+            <span className="whitespace-nowrap">
+              <FormattedMessage id={isLast && !isReviewMode ? "quiz.submit" : "quiz.next"} />
+            </span>
+            <span className="material-symbols-outlined">
+              {isLast && !isReviewMode ? "done" : "arrow_forward"}
+            </span>
+          </button>
+        )}
+      </div>
 
-  {/* Next */}
-  <button
-    onClick={onNext}
-    disabled={disabledNext}
-    className="px-6 py-3 bg-gradient-to-br from-[#359EFF] to-[#5A0BB1]
-    hover:brightness-110 text-white rounded-lg font-bold
-    shadow-lg shadow-[#359EFF]/30 transition-all
-    flex items-center gap-3 whitespace-nowrap
-    disabled:opacity-50 disabled:cursor-not-allowed"
-  >
-    <span className="whitespace-nowrap">
-      {isLast ? "Submit" : "Next Question"}
-    </span>
 
-    <span className="material-symbols-outlined text-[20px] shrink-0">
-      {isLast ? "done" : "arrow_forward"}
-    </span>
-  </button>
-
-</div>
+      {isReviewMode && (
+        <button 
+          onClick={onBackToVideo}
+          className="w-full py-3 rounded-xl font-bold border-2 transition flex items-center justify-center gap-2 hover:bg-slate-50"
+          style={{ borderColor: COLORS.brand.primary, color: COLORS.brand.primary }}
+        >
+          <span className="material-symbols-outlined text-sm">movie</span>
+          <FormattedMessage id="quiz.back_to_video" />
+        </button>
       )}
-
     </div>
   );
 };

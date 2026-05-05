@@ -1,66 +1,39 @@
-import { useQuiz } from '../hooks/useQuiz';
+
 import { QuizProgressBar } from '../componants/QuizProgressBar';
 import { QuizOptions } from '../componants/QuizOptions';
 import { QuestionMap } from '../componants/QuestionMap';
 import { QuizResultCard } from '../componants/QuizResultCard';
 import { QuizTimer } from '../componants/QuizTimer';
 import { QuizActions } from '../componants/QuizActions';
+import { COLORS } from "../../../../core/constants";
+import { useQuiz } from '../hooks/useQuiz';
 
 const MOCK_QUESTIONS = [
   {
-    id: '1',
-    text: "What is the primary function of the amygdala?",
-    options: [
-      { id: 'a', text: 'Processing memory, decision-making and emotional responses.' },
-      { id: 'b', text: 'Regulating body temperature and hunger' },
-      { id: 'c', text: 'Controlling motor function and balance.' },
-      { id: 'd', text: 'Processing visual information from the eyes.' }
-    ],
-    correctOptionId: 'a'
+    question_id: 1,
+    question_text: "What is the primary function of the amygdala?",
+    choices: {
+      a: "Processing memory and emotional responses.",
+      b: "Regulating body temperature.",
+      c: "Controlling motor function.",
+      d: "Processing visual information."
+    },
+    correct_answer: "a",
+    video_timestamp: 135,
+    timestamp_label: "02:15"
   },
   {
-    id: '2',
-    text: "Which part of the brain processes vision?",
-    options: [
-      { id: 'a', text: 'Frontal lobe' },
-      { id: 'b', text: 'Parietal lobe' },
-      { id: 'c', text: 'Temporal lobe' },
-      { id: 'd', text: 'Occipital lobe' }
-    ],
-    correctOptionId: 'd'
-  },
-  {
-    id: '3',
-    text: "What is the largest organ in the human body?",
-    options: [
-      { id: 'a', text: 'Heart' },
-      { id: 'b', text: 'Skin' },
-      { id: 'c', text: 'Liver' },
-      { id: 'd', text: 'Brain' }
-    ],
-    correctOptionId: 'b'
-  },
-  {
-    id: '4',
-    text: "What is the basic unit of the brain?",
-    options: [
-      { id: 'a', text: 'Neuron' },
-      { id: 'b', text: 'Synapse' },
-      { id: 'c', text: 'Glial cell' },
-      { id: 'd', text: 'Axon' }
-    ],
-    correctOptionId: 'a'
-  },
-  {
-    id: '5',
-    text: "Which neurotransmitter is linked to reward?",
-    options: [
-      { id: 'a', text: 'Serotonin' },
-      { id: 'b', text: 'Dopamine' },
-      { id: 'c', text: 'GABA' },
-      { id: 'd', text: 'Acetylcholine' }
-    ],
-    correctOptionId: 'b'
+    question_id: 2,
+    question_text: "Which part of the brain processes vision?",
+    choices: {
+      a: "Frontal lobe",
+      b: "Parietal lobe",
+      c: "Temporal lobe",
+      d: "Occipital lobe"
+    },
+    correct_answer: "d",
+    video_timestamp: 450,
+    timestamp_label: "07:30"
   }
 ];
 
@@ -68,87 +41,66 @@ export const QuizPage = () => {
   const {
     currentIndex, setCurrentIndex, currentQuestion,
     answers, handleSelect, timeLeft, quizState,
-    setQuizState, isReviewMode, startReview,
-    resetQuiz, calculateScore, progress
-  } = useQuiz(MOCK_QUESTIONS, 15);
+    setQuizState, isReviewMode, setIsReviewMode,
+    calculateScore, progress, isAllAnswered, resetQuiz
+  } = useQuiz(MOCK_QUESTIONS, 15, () => console.log("New Quiz"));
 
-  // RESULT OVERLAY
-  if (quizState === 'results') {
-    const stats = calculateScore();
-    return (
-      <div className="fixed inset-0 z-50 flex items-center justify-center">
-        <div className="absolute inset-0 bg-black/40 backdrop-blur-sm"></div>
-        <div className="relative z-10">
-          <QuizResultCard 
-            percentage={stats.percentage}
-            score={stats.score}
-            total={stats.total}
-            onRetry={resetQuiz}
-            onReview={startReview}
-          />
-        </div>
-      </div>
-    );
-  }
+  const stats = calculateScore();
 
   return (
-  <main className="min-h-screen bg-[#f5f7fb] py-10">
-  <div className="w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <main className="min-h-screen py-10 relative" style={{ background: COLORS.background.light }}>
+      
+      {quizState === 'results' && (
+        <QuizResultCard 
+          stats={stats} 
+          onTakeAnother={resetQuiz}
+          onReview={() => { setIsReviewMode(true); setQuizState('playing'); setCurrentIndex(0); }}
+        />
+      )}
 
-
+      <div className="w-full max-w-7xl mx-auto px-4">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-6 lg:gap-10">
 
-          {/* LEFT */}
-          <div className="lg:col-span-7 space-y-4">
-
+          {/* {left side: Progress + question and options} */}
+          <div className="lg:col-span-8 space-y-8">
             <QuizProgressBar 
-              current={currentIndex + 1}
-              total={MOCK_QUESTIONS.length}
-              percentage={progress}
+               current={currentIndex + 1} 
+               total={MOCK_QUESTIONS.length} 
+               percentage={progress} 
             />
-
+            
+  
             <QuizOptions 
-              question={currentQuestion}
-              selectedId={answers[currentQuestion.id]}
-              onSelect={handleSelect}
-              isReviewMode={isReviewMode}
+              question={currentQuestion} 
+              
+              selectedId={answers[currentQuestion.question_id]} 
+              onSelect={handleSelect} 
+              isReviewMode={isReviewMode} 
             />
-
           </div>
 
-          {/* RIGHT */}
-          <div className="lg:col-span-5 space-y-4">
-
+          {/* right side: timer and actions */}
+          <div className="lg:col-span-4 space-y-4">
             <QuizTimer timeLeft={timeLeft} />
-
             <QuizActions 
-  isFirst={currentIndex === 0}
-  isLast={currentIndex === MOCK_QUESTIONS.length - 1}
-  isReviewMode={isReviewMode}
-  disabledNext={!answers[currentQuestion.id]}
-
-  onPrevious={() => setCurrentIndex(prev => prev - 1)}
-
-  onNext={() => {
-    if (currentIndex === MOCK_QUESTIONS.length - 1) {
-      setQuizState('results');
-    } else {
-      setCurrentIndex(prev => prev + 1);
-    }
-  }}
-
-  onReset={resetQuiz}
-/>
-
-            <QuestionMap 
-              questions={MOCK_QUESTIONS}
-              currentIndex={currentIndex}
-              answers={answers}
-              onNavigate={setCurrentIndex}
+              isFirst={currentIndex === 0}
+              isLast={currentIndex === MOCK_QUESTIONS.length - 1}
+              isReviewMode={isReviewMode}
+              canSubmit={isAllAnswered}
+              onPrevious={() => setCurrentIndex(prev => prev - 1)}
+              onNext={() => {
+                if (currentIndex === MOCK_QUESTIONS.length - 1 && !isReviewMode) setQuizState('results');
+                else if (currentIndex < MOCK_QUESTIONS.length - 1) setCurrentIndex(prev => prev + 1);
+              }}
+              onBackToVideo={() => console.log("Back")}
             />
-
+            <QuestionMap 
+              questions={MOCK_QUESTIONS} 
+              currentIndex={currentIndex} 
+              answers={answers} 
+              onNavigate={setCurrentIndex} 
+            />
           </div>
-
         </div>
       </div>
     </main>
