@@ -1,0 +1,107 @@
+{
+  "total_segments": 3,
+  "segments": [
+    {
+      "segment_number": 1,
+      "start_time": "00:00:00",
+      "end_time": "00:01:16",
+      "main_topic": "Introduction to Big O notation",
+      "title": "Introduction to Big O notation in computer science",
+      "sub_topics": [
+        {
+          "name": "Introduction to the topic",
+          "start_time": "00:00:00",
+          "end_time": "00:00:14",
+          "description": "Hey, what's going on everybody? It's your bro, hope you're doing well, and in this video I'm going to describe the very basics of Big O notation in, well, computer science."
+        },
+        {
+          "name": "What is Big O notation?",
+          "start_time": "00:00:14",
+          "end_time": "00:00:31",
+          "description": "Oh yeah, Big O notation. So a common phrase used with Big O notation is, how code slows as data grows. It describes the performance of an algorithm as the amount of data increases. And really, this notation is machine independent."
+        },
+        {
+          "name": "Ignoring smaller operations",
+          "start_time": "00:00:31",
+          "end_time": "00:00:48",
+          "description": "What we're really focusing on is the number of steps to complete an algorithm, because some machines are going to run certain algorithms faster than others. And three, we tend to ignore smaller operations. If we had some task that took n plus one, we would just reduce it to just n, because that plus one really isn't going to make"
+        },
+        {
+          "name": "Examples of Big O notation",
+          "start_time": "00:00:48",
+          "end_time": "00:01:16",
+          "description": "So here's a few examples of big O notation. We have O O O and O And N is really just the amount of data that we passing in It a variable like x What we focusing on is the performance of an algorithm as the amount of data increases, and n is a representation of the amount of data that we're passing in."
+        }
+      ],
+      "key_points": [
+        "Big O notation describes algorithm performance",
+        "Machine independent",
+        "Ignoring smaller operations"
+      ]
+    },
+    {
+      "segment_number": 2,
+      "start_time": "00:01:16",
+      "end_time": "00:02:36",
+      "main_topic": "Examples of runtime complexities",
+      "title": "Linear and constant time complexities",
+      "sub_topics": [
+        {
+          "name": "Linear time complexity example",
+          "start_time": "00:01:16",
+          "end_time": "00:01:46",
+          "description": "Here's a more concrete example. I have a function named addup. We will add up to a certain number depending on what we pass in as an argument. The for loop within here will iterate once up to whatever number that n is, add i to sum, then return it. What if n was a large number like a million? Well, it's going to take just above a million steps to complete this function."
+        },
+        {
+          "name": "Constant time complexity example",
+          "start_time": "00:01:46",
+          "end_time": "00:02:06",
+          "description": "Now another way which we could write the same function is to take sum equals n times n plus 1 divided by 2. We will get the exact same sum. So if n was, let's say, a million, this is still only going to take a couple seconds. steps. Three steps, not a million steps."
+        },
+        {
+          "name": "Why constant time is O(1)",
+          "start_time": "00:02:06",
+          "end_time": "00:02:36",
+          "description": "So this function is going to have a runtime complexity of O of one. The input size doesn't matter. The amount of data that we have really doesn't matter. It's going to be completed in the same amount of steps. So this function is way better than this previous one. Three steps is better than a million steps."
+        }
+      ],
+      "key_points": [
+        "Linear time complexity example",
+        "Constant time complexity example",
+        "Why constant time is O(1)"
+      ]
+    },
+    {
+      "segment_number": 3,
+      "start_time": "00:02:36",
+      "end_time": "00:06:22",
+      "main_topic": "More runtime complexities and comparison",
+      "title": "Logarithmic, quasi-linear, quadratic, and factorial time complexities",
+      "sub_topics": [
+        {
+          "name": "Graph representation of runtime complexities",
+          "start_time": "00:02:36",
+          "end_time": "00:02:54",
+          "description": "Here's a graph that I made to represent the different runtime complexities. We have data on the x-axis represented by n. So data will increase as we go more to the right, and we have time on the y-axis. I did add an asterisk next to time because some of these times can vary depending on what machine you're using, so these can vary"
+        },
+        {
+          "name": "Explanation of different runtime complexities",
+          "start_time": "00:02:54",
+          "end_time": "00:05:23",
+          "description": "Another way to look at this is number of steps So as we increase on the y these algorithms are going to perform with increasingly more time They going to get slower So let begin with O of 1 constant time. Anything that has a runtime complexity of O of 1 will take the same amount of time regardless of the data size. A few examples would include the random access of an element within an array and inserting at the beginning of a linked list."
+        },
+        {
+          "name": "Comparison of runtime complexities",
+          "start_time": "00:05:23",
+          "end_time": "00:06:22",
+          "description": "So if I had to give a letter grade to each of these runtime complexities when working with large data sets with constant time, this would be an A, like an A+. Logarithmic time would be a B, it's pretty good. Linear time is C, it's okay. Quasi-linear time is a D, it's just barely passing. Quadratic time would be an F, and factorial time, well, you get expelled from school."
+        }
+      ],
+      "key_points": [
+        "Graph representation of runtime complexities",
+        "Explanation of different runtime complexities",
+        "Comparison of runtime complexities"
+      ]
+    }
+  ]
+}

@@ -1,68 +1,69 @@
-[0.0 --> 4.7]  Hey, what's going on everybody? It's your bro, hope you're doing well, and in this video I'm going to
-[4.7 --> 12.1]  describe the very basics of Big O notation in, well, computer science. So sit back, relax, and enjoy the show.
-[14.0 --> 19.4]  Oh yeah, Big O notation. So a common phrase used with Big O notation is,
-[19.8 --> 25.7]  how code slows as data grows. It describes the performance of an algorithm as the amount of data
-[25.7 --> 31.6]  increases. And really, this notation is machine independent. What we're really focusing on is the
-[31.6 --> 36.4]  number of steps to complete an algorithm, because some machines are going to run certain algorithms
-[36.4 --> 42.9]  faster than others. And three, we tend to ignore smaller operations. If we had some task that took
-[42.9 --> 48.4]  n plus one, we would just reduce it to just n, because that plus one really isn't going to make
-[48.4 --> 51.4]  So here's a few examples of big O notation.
-[51.4 --> 66.8]  We have O O O and O And N is really just the amount of data that we passing in It a variable like x What we focusing on is the performance of an algorithm as the amount
-[66.8 --> 72.1]  of data increases, and n is a representation of the amount of data that we're passing in.
-[72.3 --> 76.9]  Here's a more concrete example. I have a function named addup. We will add up to a certain number
-[76.9 --> 82.5]  depending on what we pass in as an argument. The for loop within here will iterate once up to
-[82.5 --> 88.9]  whatever number that n is, add i to sum, then return it. What if n was a large number like a
-[88.9 --> 93.0]  million? Well, it's going to take just above a million steps to complete this function.
-[93.5 --> 99.7]  This function is said to have a runtime complexity of O of n, linear time. As the amount of data
-[99.7 --> 106.2]  increases, it's going to increase the amount of steps linearly or proportionally. Now another way
-[106.2 --> 113.3]  which we could write the same function is to take sum equals n times n plus 1 divided by 2.
-[113.5 --> 120.0]  We will get the exact same sum. So if n was, let's say, a million, this is still only going to take a couple seconds.
-[120.0 --> 126.7]  steps. Three steps, not a million steps. So this function is going to have a runtime complexity of
-[126.7 --> 131.1]  O of one. The input size doesn't matter. The amount of data that we have really doesn't matter.
-[131.4 --> 137.1]  It's going to be completed in the same amount of steps. So this function is way better than this
-[137.1 --> 142.8]  previous one. Three steps is better than a million steps. And the reason that this isn't O of three,
-[143.0 --> 147.7]  because this takes three steps, is that we really don't care about smaller operations. In the grand
-[147.7 --> 151.9]  scheme of things, they really won't make much of a difference. So we would just shorten this and say
-[151.9 --> 157.0]  that this is O of 1 constant time. The input size doesn't matter. Here's a graph that I made to
-[157.0 --> 163.5]  represent the different runtime complexities. We have data on the x-axis represented by n. So data
-[163.5 --> 170.4]  will increase as we go more to the right, and we have time on the y-axis. I did add an asterisk next
-[170.4 --> 174.8]  to time because some of these times can vary depending on what machine you're using, so these
-[174.8 --> 186.4]  can vary Another way to look at this is number of steps So as we increase on the y these algorithms are going to perform with increasingly more time They going to get slower So let
-[186.4 --> 192.6]  begin with O of 1 constant time. Anything that has a runtime complexity of O of 1 will take the same
-[192.6 --> 198.0]  amount of time regardless of the data size. A few examples would include the random access of an
-[198.0 --> 203.9]  element within an array and inserting at the beginning of a linked list. So O of 1 is extremely
-[203.9 --> 210.8]  fast. Next we have O of log n, also known as logarithmic time. One example is binary search.
-[210.8 --> 214.7]  We haven't talked about this yet. We'll talk about a few of these algorithms in future videos,
-[214.7 --> 220.9]  but anything that has a runtime complexity of O of log n will actually take, I don't want to say
-[220.9 --> 226.9]  less and less time, but increasingly less time to complete. So as the data size increases,
-[227.4 --> 231.8]  this algorithm is going to be more and more efficient compared to the early stages with a
-[231.8 --> 236.6]  small dataset. O is also known as linear time. As the amount of
-[236.6 --> 239.9]  data increases, the time it takes to complete something will
-[240.0 --> 244.8]  increase proportionally linearly. That would include looping through the elements in an array
-[244.8 --> 251.6]  and searching through a linked list. Next we have O of N log N, also known as quasi-linear time.
-[251.8 --> 256.8]  This would include a quick sort, merge sort, and heap sort. We'll talk about these concepts in
-[256.8 --> 262.3]  future videos. So for the most part, this is very similar to linear time. Unless we're working with
-[262.3 --> 269.4]  a large data set, then anything using O of N log N is going to start to slow down when we work with
-[269.4 --> 275.6]  larger data sets, hence this curve here. Then we have O of n squared, also known as quadratic time.
-[275.8 --> 281.0]  A few examples would include insertion sort, selection sort, and bubble sort. As the amount
-[281.0 --> 286.6]  of data increases, it's going to take increasingly more and more time to complete anything that has a
-[286.6 --> 293.3]  runtime complexity of O of n squared. So just to compare linear time and quadratic time, with linear
-[293.3 --> 306.2]  time if our data set was a thousand if n equals a thousand it going to take a thousand steps they proportional they linear but if we were using quadratic time if n was a thousand then a thousand squared would be a
-[306.2 --> 311.9]  million. So if our data set was a thousand, if we're using quadratic time, it's going to take a million
-[311.9 --> 318.7]  steps then, way more than linear time. So quadratic time is extremely slow with large data sets, but in
-[318.7 --> 323.9]  the case of a small data set, it could actually be faster, as you can see by the graph here. And lastly,
-[323.9 --> 330.2]  we have O of n factorial, also known as factorial time, and one place where this is used is with the
-[330.2 --> 336.2]  traveling salesman problem, which I might discuss in a future video. So this is extremely slow,
-[336.4 --> 341.3]  so if I had to give a letter grade to each of these runtime complexities when working with
-[341.3 --> 347.1]  large data sets with constant time, this would be an A, like an A+. Logarithmic time would be a B,
-[347.1 --> 348.1]  it's pretty good.
-[348.1 --> 350.7]  Linear time is C, it's okay.
-[350.7 --> 354.4]  Quasi-linear time is a D, it's just barely passing.
-[354.4 --> 356.2]  Quadratic time would be an F,
-[356.2 --> 359.1]  and factorial time, well, you get expelled from school.
-[359.1 --> 359.9]  Although,
-[360.0 --> 365.3]  some of these runtime complexities are actually faster when working with a smaller data set,
-[365.3 --> 371.2]  so keep that in mind. Well, that's the very basics of Big O notation. It's notation used
-[371.2 --> 377.0]  to describe the performance of an algorithm as the amount of data increases. So if you can,
-[377.0 --> 382.5]  give this video a thumbs up, drop a random comment down below, and well, that's Big O notation in
-[382.5 --> 384.1]  computer science.
+[0.0 --> 5.3]  طيب اتكلمت معاكم في الفيديو اللي فات
+[5.3 --> 6.6]  اللي هو فيديو الانتوشن
+[6.6 --> 8.3]  اتكلمنا الاول عن elevator
+[8.3 --> 10.4]  بعد كده اتكلمنا عن slavery
+[11.1 --> 13.3]  واخر حاجة خالص اتكلمنا عليها
+[13.3 --> 14.0]  اللي هو المодular
+[14.0 --> 15.7]  وقلنا ان
+[15.7 --> 18.3]  conservative power مش احسن حاجة بتاخد time كبير
+[18.3 --> 20.4]  فانا انا حسنوا ان انا استعمل
+[20.4 --> 21.2]  permission
+[21.2 --> 22.6]  تاخد log n
+[22.6 --> 24.2]  وبعد كده قلنا
+[24.2 --> 26.5]  مد لل fab
+[27.5 --> 28.7]  بس كده
+[28.7 --> 30.7]  وقلت لك ان في شوية مشاكل في الكود ده
+[30.7 --> 32.8]  وان انا جاي في الفيديو ده
+[32.8 --> 35.4]  يعني اتمنى ان انت تكون فكرت وحالة المشاكل لواحدك
+[35.4 --> 38.6]  لكن انا يعني جاي احلها معاك في الفيديو ده
+[38.6 --> 39.9]  طيب اول مشكلة ايه
+[39.9 --> 42.9]  اول مشكلة ان الكلام ده انتجر
+[42.9 --> 46.9]  ف يعني احسن حاجة ان انا خليه long long
+[46.9 --> 51.2]  لان غالبا في الموديولار اكسبونيشن انت تحسب باور لارقام كبيرة
+[51.2 --> 66.8]  long long integer long long data type long long data types
+[66.8 --> 67.7]  خليها long long
+[67.7 --> 68.7]  طيب
+[68.7 --> 70.2]  ايه المشكلة اللي هتبقى موجودة
+[70.2 --> 71.6]  المشكلة اللي هتبقى موجودة
+[71.6 --> 73.5]  لو انا long long في long long
+[73.5 --> 76.1]  لو قلنا مثلا 10.18
+[76.1 --> 77.5]  فهل
+[77.5 --> 80.3]  10.18 في 10.18
+[80.3 --> 83.1]  دي فيه data type تقدر بتهندلها
+[83.1 --> 83.7]  لا
+[83.7 --> 86.4]  طيب أنا عايز المود صح
+[86.4 --> 88.0]  فاكرين قوانين المود
+[88.0 --> 90.0]  هنا بقى نستعمل قوانين المود
+[90.0 --> 91.6]  في درس الموديلر اسميتيك
+[91.6 --> 94.0]  أو الانتوائشن بتاع الموديلر اسميتيك
+[94.0 --> 95.2]  تعالوا كده
+[95.2 --> 97.1]  نفتح الربوز تريد بتاعتنا
+[97.1 --> 101.7]  نفتح الموديلر اسميتيك كودز
+[101.7 --> 104.8]  كان فيه كود للمالتبليكيشن
+[104.8 --> 106.1]  هذا هو
+[106.1 --> 108.4]  فاكرين السطر ده كان بيعمل ايه
+[108.4 --> 112.7]  اذا احنا خدنا السطر ده
+[112.7 --> 114.6]  وحطنا هنا
+[114.6 --> 119.9]  ونزلنا
+[120.0 --> 123.4]  تحت نقول
+[125.2 --> 129.0]  هشيل الكلام ده كله
+[140.1 --> 145.4]  طيب احنا عملنا ايه كده? اللي احنا عملناه كده هنا
+[145.4 --> 149.4]  نحن نأخذ A مد M في B مد M
+[149.4 --> 152.4]  فأنت ستقول لي حسن الموضوع كيف
+[152.4 --> 156.4]  سأقول لك أنا قلت المعلومة دي قبل كده في الفيديو بتاع الموديولار أرثماتيك
+[156.4 --> 161.4]  إن لما نأخذ B مد M الرقم بتاعي هيبقى فرنج من 0 ل M-1
+[161.4 --> 166.4]  ولما أخذ A مد M الرقم بتاعي هيبقى من فرنج 0 ل M-1
+[166.4 --> 171.4]  فالورست كيس عندي هنا M-1 في M-1 لكل مد M
+[171.4 --> 174.9]  وده طبعا احنا كده قللنا رقم كبير جدا لو الام صغيرة
+[174.9 --> 180.5]  والام في المسائل غالبا بتبقى صغيرة بتبقى عشق اس 9 بلا السبعة
+[180.5 --> 184.2]  بيقولك هاتلي المود دل عشق اس 9 بلا السبعة بتبقى رقم برايم يعني
+[184.2 --> 188.1]  فبتبقى صغيرة جدا طبعا عشق اس 9 فعشق اس 9 تفت معك
+[188.1 --> 191.7]  بس هي دي المشاكل اللي كانت في الكود
+[191.7 --> 195.6]  فيديو النهاردة قصير مش طويل بس اهتم بليكويت دي
+[195.6 --> 198.7]  وأنا أتمنى منك أن أنت تحل
+[198.7 --> 201.0]  مسألة على الموديولار
+[201.0 --> 202.9]  قبل ما أديك المسألة
+[202.9 --> 204.0]  المرة الجاية
+[204.0 --> 206.5]  وبس كده
+[206.5 --> 206.9]  انجوي
+[225.6 --> 255.6]  اشتركوا في القناة

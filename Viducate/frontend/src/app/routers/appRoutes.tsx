@@ -15,32 +15,36 @@ import AuthSuccess from "../../features/auth/presentation/pages/AuthSuccess";
 import { GeneratingSummaryPage } from '../../features/summarization/presentation/pages/GeneratingSummaryPage';
 import SummaryPage from "../../features/summarization/presentation/pages/SummaryPage";
 import {QuizPage} from "../../features/QuizSystem/presentation/pages/QuizPage";
+
+import { FlashCards } from "../../features/flash_cards/presentation/pages/flash_card_page";
+import { WatchLayout } from "../../features/watch_video/presentation/pages/watch_outlet";
 export function AppRoutes() {
   return (
     <BrowserRouter>
       <Routes>
         <Route path="/" element={<LoginPage />} />
+         {/* <Route path="/" element={<FlashCards />} />{" "} */}
         <Route path="/signup" element={<SignupPage />} />
         <Route path="/auth/callback" element={<AuthSuccess />} />
         <Route path="/forgot-password" element={<ForgetPasswordPage />} />
-        <Route path="/" element={<ForgetPasswordPage />} /> /* for example */
+
         <Route path="/test-modals" element={<TestModalsPage />} /> /* for
         <Route path="/generating-summary" element={<GeneratingSummaryPage />} />
         <Route path="/summary" element={<SummaryPage />} />
         <Route path="/quiz" element={<QuizPage />} />
         <Route element={<ProtectedRoute />}>
           {" "}
-        
           <Route path="/UploadVideoPage" element={<UploadVideoPage />} />
           <Route path="/ProcessingPage" element={<ProcessingPage />} />
-          <Route
-            path="/WatchVideo"
-            element={
-              
-                <MainPage />
-             
-            }
-          />{" "}
+          {/* <Route path="/WatchVideo" element={<MainPage />} />
+          <Route path="/flashcards/:segmentId" element={<FlashCards />} /> */}
+       
+          <Route path="/WatchVideo" element={<WatchLayout />}>
+            <Route index element={<MainPage />} /> {/* /WatchVideo */}
+            <Route path="flashcards/:segmentId" element={<FlashCards />} />
+            {" "}
+            {/* /WatchVideo/flashcards */}
+          </Route>{" "}
         </Route>
         <Route
           path={AppRoutesNames.sucessSendEmail}

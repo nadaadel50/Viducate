@@ -1,390 +1,340 @@
 [00:00:00]
-  Transcript :  يا أهلاً بكل أحبابي وأصدقائي في فيديو جديد على قناة اليوتيوب
-  OCR        : None
-  Combined   :  يا أهلاً بكل أحبابي وأصدقائي في فيديو جديد على قناة اليوتيوب
+  Transcript :  Hey, what's going on everybody? It's your bro, hope you're doing well, and in this video I'm going to
+  OCR        : 1322-34
+  Combined   :  Hey, what's going on everybody? It's your bro, hope you're doing well, and in this video I'm going to 1322-34
 
-[00:00:05]
-  Transcript :  الحقيقة يا جماعة أنا النهاردة في قمة السعادة
+[00:00:04]
+  Transcript :  describe the very basics of Big O notation in, well, computer science. So sit back, relax, and enjoy the show.
   OCR        : None
-  Combined   :  الحقيقة يا جماعة أنا النهاردة في قمة السعادة
-
-[00:00:08]
-  Transcript :  عارف لما تشتغل على حاجة والحاجة دي تتعب فيها قوي
-  OCR        : None
-  Combined   :  عارف لما تشتغل على حاجة والحاجة دي تتعب فيها قوي
-
-[00:00:11]
-  Transcript :  وتبتري تظهر على أرض الواقع وتبقى راضي عنها
-  OCR        : None
-  Combined   :  وتبتري تظهر على أرض الواقع وتبقى راضي عنها
+  Combined   :  describe the very basics of Big O notation in, well, computer science. So sit back, relax, and enjoy the show.
 
 [00:00:14]
-  Transcript :  دي حاجة لوحدها يعني بالدنيا كلها
+  Transcript :  Oh yeah, Big O notation. So a common phrase used with Big O notation is,
   OCR        : None
-  Combined   :  دي حاجة لوحدها يعني بالدنيا كلها
+  Combined   :  Oh yeah, Big O notation. So a common phrase used with Big O notation is,
 
-[00:00:17]
-  Transcript :  الناس القريبين مني واللي اشتغلوا معايا عارفين
+[00:00:19]
+  Transcript :  how code slows as data grows. It describes the performance of an algorithm as the amount of data
   OCR        : None
-  Combined   :  الناس القريبين مني واللي اشتغلوا معايا عارفين
-
-[00:00:20]
-  Transcript :  إن أنا مبرداش بأي حاجة كده بالسهل
-  OCR        : None
-  Combined   :  إن أنا مبرداش بأي حاجة كده بالسهل
-
-[00:00:22]
-  Transcript :  يعني لازم الحاجة أبقى بدأ فيها قوي على قد مقدر
-  OCR        : None
-  Combined   :  يعني لازم الحاجة أبقى بدأ فيها قوي على قد مقدر
+  Combined   :  how code slows as data grows. It describes the performance of an algorithm as the amount of data
 
 [00:00:25]
-  Transcript :  وبهتم قوي إن حاجتي تكون كويسة
+  Transcript :  increases. And really, this notation is machine independent. What we're really focusing on is the
   OCR        : None
-  Combined   :  وبهتم قوي إن حاجتي تكون كويسة
+  Combined   :  increases. And really, this notation is machine independent. What we're really focusing on is the
 
-[00:00:27]
-  Transcript :  وبعد سنة ونص من التعب أنا وفريق عمل كامل كان شغال معايا
+[00:00:31]
+  Transcript :  number of steps to complete an algorithm, because some machines are going to run certain algorithms
   OCR        : None
-  Combined   :  وبعد سنة ونص من التعب أنا وفريق عمل كامل كان شغال معايا
-
-[00:00:32]
-  Transcript :  أخيراً قدرنا دلوقتي نشوف كتاب السي شارب بيزيكس
-  OCR        : None
-  Combined   :  أخيراً قدرنا دلوقتي نشوف كتاب السي شارب بيزيكس
+  Combined   :  number of steps to complete an algorithm, because some machines are going to run certain algorithms
 
 [00:00:36]
-  Transcript :  اللي بفضل الله سبحانه وتعالى كنت أنا القائم على هذا المشروع
+  Transcript :  faster than others. And three, we tend to ignore smaller operations. If we had some task that took
   OCR        : None
-  Combined   :  اللي بفضل الله سبحانه وتعالى كنت أنا القائم على هذا المشروع
-
-[00:00:39]
-  Transcript :  وقدرت أن أنا أعمل كتاب الحمد لله رب العالمين
-  OCR        : None
-  Combined   :  وقدرت أن أنا أعمل كتاب الحمد لله رب العالمين
+  Combined   :  faster than others. And three, we tend to ignore smaller operations. If we had some task that took
 
 [00:00:42]
-  Transcript :  أنا راضي عنه بنسبة كبيرة جداً
+  Transcript :  n plus one, we would just reduce it to just n, because that plus one really isn't going to make
   OCR        : None
-  Combined   :  أنا راضي عنه بنسبة كبيرة جداً
+  Combined   :  n plus one, we would just reduce it to just n, because that plus one really isn't going to make
 
-[00:00:44]
-  Transcript :  في الكتاب ده هنشرح كل حاجة ببساطة
+[00:00:48]
+  Transcript :  So here's a few examples of big O notation.
   OCR        : None
-  Combined   :  في الكتاب ده هنشرح كل حاجة ببساطة
+  Combined   :  So here's a few examples of big O notation.
 
-[00:00:47]
-  Transcript :  هنتكلم عن المقدمة عن البرمجة عموماً
+[00:00:51]
+  Transcript :  We have O O O and O And N is really just the amount of data that we passing in It a variable like x What we focusing on is the performance of an algorithm as the amount
   OCR        : None
-  Combined   :  هنتكلم عن المقدمة عن البرمجة عموماً
+  Combined   :  We have O O O and O And N is really just the amount of data that we passing in It a variable like x What we focusing on is the performance of an algorithm as the amount
 
-[00:00:50]
-  Transcript :  هنتكلم عن المتغيرات
+[00:01:06]
+  Transcript :  of data increases, and n is a representation of the amount of data that we're passing in.
   OCR        : None
-  Combined   :  هنتكلم عن المتغيرات
-
-[00:00:52]
-  Transcript :  هنتكلم عن الجمل
-  OCR        : None
-  Combined   :  هنتكلم عن الجمل
-
-[00:00:53]
-  Transcript : 
-  OCR        : None
-  Combined   : 
-
-[00:01:05]
-  Transcript :  يعني حرفيا لو انت لسه مبتدئ أو ما تعرفش اي حاجة عن البرمجة
-  OCR        : None
-  Combined   :  يعني حرفيا لو انت لسه مبتدئ أو ما تعرفش اي حاجة عن البرمجة
-
-[00:01:09]
-  Transcript :  الكتاب هيسهل عليك التعلم بشكل غير عادي
-  OCR        : None
-  Combined   :  الكتاب هيسهل عليك التعلم بشكل غير عادي
+  Combined   :  of data increases, and n is a representation of the amount of data that we're passing in.
 
 [00:01:12]
-  Transcript :  هتحس في الكتاب ان فيه واحد صاحبك قاعد معاك
+  Transcript :  Here's a more concrete example. I have a function named addup. We will add up to a certain number
   OCR        : None
-  Combined   :  هتحس في الكتاب ان فيه واحد صاحبك قاعد معاك
+  Combined   :  Here's a more concrete example. I have a function named addup. We will add up to a certain number
 
-[00:01:15]
-  Transcript :  وبيقسم لك الحاجة واحدة واحدة بالراحة
+[00:01:16]
+  Transcript :  depending on what we pass in as an argument. The for loop within here will iterate once up to
   OCR        : None
-  Combined   :  وبيقسم لك الحاجة واحدة واحدة بالراحة
-
-[00:01:18]
-  Transcript :  وبعدين بيجمع حالك في الآخر
-  OCR        : None
-  Combined   :  وبعدين بيجمع حالك في الآخر
-
-[00:01:19]
-  Transcript :  انا مش بشرح في الكتاب مجرد مفاهيم نظرية وخلاص
-  OCR        : None
-  Combined   :  انا مش بشرح في الكتاب مجرد مفاهيم نظرية وخلاص
+  Combined   :  depending on what we pass in as an argument. The for loop within here will iterate once up to
 
 [00:01:22]
-  Transcript :  احنا بنحلم مع بعض مسائل كتير جدا
+  Transcript :  whatever number that n is, add i to sum, then return it. What if n was a large number like a
   OCR        : None
-  Combined   :  احنا بنحلم مع بعض مسائل كتير جدا
+  Combined   :  whatever number that n is, add i to sum, then return it. What if n was a large number like a
 
-[00:01:25]
-  Transcript :  المسائل بتخليك فاهم كل الحاجات اللي اتشرحت لك نظريا
+[00:01:28]
+  Transcript :  million? Well, it's going to take just above a million steps to complete this function.
   OCR        : None
-  Combined   :  المسائل بتخليك فاهم كل الحاجات اللي اتشرحت لك نظريا
+  Combined   :  million? Well, it's going to take just above a million steps to complete this function.
 
-[00:01:29]
-  Transcript :  وقادر انك تطبقها عمليا
+[00:01:33]
+  Transcript :  This function is said to have a runtime complexity of O of n, linear time. As the amount of data
   OCR        : None
-  Combined   :  وقادر انك تطبقها عمليا
+  Combined   :  This function is said to have a runtime complexity of O of n, linear time. As the amount of data
 
-[00:01:31]
-  Transcript :  والكتاب ده مش صغير
+[00:01:39]
+  Transcript :  increases, it's going to increase the amount of steps linearly or proportionally. Now another way
   OCR        : None
-  Combined   :  والكتاب ده مش صغير
+  Combined   :  increases, it's going to increase the amount of steps linearly or proportionally. Now another way
 
-[00:01:32]
-  Transcript :  ما بنتكلمش مثلا عن حاجة 200 صفحة
+[00:01:46]
+  Transcript :  which we could write the same function is to take sum equals n times n plus 1 divided by 2.
   OCR        : None
-  Combined   :  ما بنتكلمش مثلا عن حاجة 200 صفحة
-
-[00:01:35]
-  Transcript :  ولا 250 صفحة ولا 300 صفحة
-  OCR        : None
-  Combined   :  ولا 250 صفحة ولا 300 صفحة
-
-[00:01:37]
-  Transcript :  احنا بنتكلم عن كتاب ربعمية 65 صفحة
-  OCR        : None
-  Combined   :  احنا بنتكلم عن كتاب ربعمية 65 صفحة
-
-[00:01:41]
-  Transcript :  بيشرح اساسيات بس
-  OCR        : None
-  Combined   :  بيشرح اساسيات بس
-
-[00:01:43]
-  Transcript :  فتخيل النهاردة مدى العمقه والتفاصيل اللي موجودة جواه
-  OCR        : None
-  Combined   :  فتخيل النهاردة مدى العمقه والتفاصيل اللي موجودة جواه
-
-[00:01:47]
-  Transcript :  بالاضافة ان هو متصمم بشكل كويس جدا
-  OCR        : None
-  Combined   :  بالاضافة ان هو متصمم بشكل كويس جدا
-
-[00:01:50]
-  Transcript :  الوان زي ما انت شايف هتلاقي فيه رسومات
-  OCR        : None
-  Combined   :  الوان زي ما انت شايف هتلاقي فيه رسومات
+  Combined   :  which we could write the same function is to take sum equals n times n plus 1 divided by 2.
 
 [00:01:53]
-  Transcript :  هتلاقي فيه اشكال انفو جرافس بتشجعها كده وانت شايفها كده وشكلها جميل
+  Transcript :  We will get the exact same sum. So if n was, let's say, a million, this is still only going to take a couple seconds.
   OCR        : None
-  Combined   :  هتلاقي فيه اشكال انفو جرافس بتشجعها كده وانت شايفها كده وشكلها جميل
-
-[00:01:57]
-  Transcript :  هتلاقي الكود نفسه شكله حلو ومحطوط في قطاعه
-  OCR        : None
-  Combined   :  هتلاقي الكود نفسه شكله حلو ومحطوط في قطاعه
+  Combined   :  We will get the exact same sum. So if n was, let's say, a million, this is still only going to take a couple seconds.
 
 [00:02:00]
-  Transcript :  كويس يعني البرمغة ما بقيتش مملة ما بقيتش حاجة صعبة ما بقيتش حاجة اللي هو انت لازم تشوفها ابيض و سود ولازم تشوفها باشكال مش كويسة والكلام ده كله
+  Transcript :  steps. Three steps, not a million steps. So this function is going to have a runtime complexity of
   OCR        : None
-  Combined   :  كويس يعني البرمغة ما بقيتش مملة ما بقيتش حاجة صعبة ما بقيتش حاجة اللي هو انت لازم تشوفها ابيض و سود ولازم تشوفها باشكال مش كويسة والكلام ده كله
+  Combined   :  steps. Three steps, not a million steps. So this function is going to have a runtime complexity of
 
-[00:02:09]
-  Transcript :  لا احنا عملنا حساب كل التفاصيل دي بفضل الله في الكتاب
+[00:02:06]
+  Transcript :  O of one. The input size doesn't matter. The amount of data that we have really doesn't matter.
   OCR        : None
-  Combined   :  لا احنا عملنا حساب كل التفاصيل دي بفضل الله في الكتاب
+  Combined   :  O of one. The input size doesn't matter. The amount of data that we have really doesn't matter.
 
-[00:02:12]
-  Transcript :  عشان نفتح نفس الناس اللي تذاكر منه
+[00:02:11]
+  Transcript :  It's going to be completed in the same amount of steps. So this function is way better than this
   OCR        : None
-  Combined   :  عشان نفتح نفس الناس اللي تذاكر منه
-
-[00:02:15]
-  Transcript :  فانت النهاردة لو بادئ في البرمغة
-  OCR        : None
-  Combined   :  فانت النهاردة لو بادئ في البرمغة
+  Combined   :  It's going to be completed in the same amount of steps. So this function is way better than this
 
 [00:02:17]
-  Transcript :  او انت بتذاكر لغة السي شارب
+  Transcript :  previous one. Three steps is better than a million steps. And the reason that this isn't O of three,
   OCR        : None
-  Combined   :  او انت بتذاكر لغة السي شارب
+  Combined   :  previous one. Three steps is better than a million steps. And the reason that this isn't O of three,
 
-[00:02:19]
-  Transcript :  او بتاخدها في الكلية
+[00:02:23]
+  Transcript :  because this takes three steps, is that we really don't care about smaller operations. In the grand
   OCR        : None
-  Combined   :  او بتاخدها في الكلية
+  Combined   :  because this takes three steps, is that we really don't care about smaller operations. In the grand
 
-[00:02:20]
-  Transcript :  او بذاكرها في اي مكان
+[00:02:27]
+  Transcript :  scheme of things, they really won't make much of a difference. So we would just shorten this and say
   OCR        : None
-  Combined   :  او بذاكرها في اي مكان
+  Combined   :  scheme of things, they really won't make much of a difference. So we would just shorten this and say
 
-[00:02:21]
-  Transcript :  وحابب ان يكون معاك نسخة ورقية
+[00:02:31]
+  Transcript :  that this is O of 1 constant time. The input size doesn't matter. Here's a graph that I made to
   OCR        : None
-  Combined   :  وحابب ان يكون معاك نسخة ورقية
-
-[00:02:24]
-  Transcript :  تراجع منها لمذاكرة بتاعتك
-  OCR        : None
-  Combined   :  تراجع منها لمذاكرة بتاعتك
-
-[00:02:25]
-  Transcript :  تقراها مثلا وانت في الصفر او الكلام ده كله
-  OCR        : None
-  Combined   :  تقراها مثلا وانت في الصفر او الكلام ده كله
-
-[00:02:28]
-  Transcript :  فكتاب السي شارب بيزكس ان شاء الله هيبقى مناسب جدا ليك
-  OCR        : None
-  Combined   :  فكتاب السي شارب بيزكس ان شاء الله هيبقى مناسب جدا ليك
-
-[00:02:33]
-  Transcript :  الجميل في الأمر إن إحنا عاملين عروض كويسة جداً على الكتاب ده
-  OCR        : None
-  Combined   :  الجميل في الأمر إن إحنا عاملين عروض كويسة جداً على الكتاب ده
+  Combined   :  that this is O of 1 constant time. The input size doesn't matter. Here's a graph that I made to
 
 [00:02:36]
-  Transcript :  لو اشتريت الكتاب مع كورسات السي شارب بتاعتنا
+  Transcript :  represent the different runtime complexities. We have data on the x-axis represented by n. So data
   OCR        : None
-  Combined   :  لو اشتريت الكتاب مع كورسات السي شارب بتاعتنا
-
-[00:02:39]
-  Transcript :  هيبقى ليك نسبة خصم
-  OCR        : None
-  Combined   :  هيبقى ليك نسبة خصم
-
-[00:02:41]
-  Transcript :  لو اشتريت دبلومة الويب كلها
-  OCR        : None
-  Combined   :  لو اشتريت دبلومة الويب كلها
+  Combined   :  represent the different runtime complexities. We have data on the x-axis represented by n. So data
 
 [00:02:43]
-  Transcript :  هتاخد نسبة خصم أكبر على الكتاب
+  Transcript :  will increase as we go more to the right, and we have time on the y-axis. I did add an asterisk next
   OCR        : None
-  Combined   :  هتاخد نسبة خصم أكبر على الكتاب
-
-[00:02:45]
-  Transcript :  وطبعاً أنا مش هنسى حبيبنا وأصدقائنا
-  OCR        : None
-  Combined   :  وطبعاً أنا مش هنسى حبيبنا وأصدقائنا
-
-[00:02:48]
-  Transcript :  اللي قريدي مشتركين معنا في الدبلومة
-  OCR        : None
-  Combined   :  اللي قريدي مشتركين معنا في الدبلومة
+  Combined   :  will increase as we go more to the right, and we have time on the y-axis. I did add an asterisk next
 
 [00:02:50]
-  Transcript :  واللي هيكون لهم نسبة خصم أكبر من كل الكلام ده كله
+  Transcript :  to time because some of these times can vary depending on what machine you're using, so these
   OCR        : None
-  Combined   :  واللي هيكون لهم نسبة خصم أكبر من كل الكلام ده كله
+  Combined   :  to time because some of these times can vary depending on what machine you're using, so these
 
 [00:02:54]
-  Transcript :  الكتاب هتلاقيه بتفاصيله كلها على موقع IT Legend
+  Transcript :  can vary Another way to look at this is number of steps So as we increase on the y these algorithms are going to perform with increasingly more time They going to get slower So let
   OCR        : None
-  Combined   :  الكتاب هتلاقيه بتفاصيله كلها على موقع IT Legend
+  Combined   :  can vary Another way to look at this is number of steps So as we increase on the y these algorithms are going to perform with increasingly more time They going to get slower So let
 
-[00:02:57]
-  Transcript :  هسيب لكم اللينك بتاع المنتج نفسه في الـ Description
+[00:03:06]
+  Transcript :  begin with O of 1 constant time. Anything that has a runtime complexity of O of 1 will take the same
   OCR        : None
-  Combined   :  هسيب لكم اللينك بتاع المنتج نفسه في الـ Description
+  Combined   :  begin with O of 1 constant time. Anything that has a runtime complexity of O of 1 will take the same
 
-[00:03:00]
-  Transcript :  تقدر انك تدخل عليه وتتفرج
+[00:03:12]
+  Transcript :  amount of time regardless of the data size. A few examples would include the random access of an
   OCR        : None
-  Combined   :  تقدر انك تدخل عليه وتتفرج
-
-[00:03:02]
-  Transcript :  وتقدر انك تتواصل مع خدمة العملة بتاعتنا
-  OCR        : None
-  Combined   :  وتقدر انك تتواصل مع خدمة العملة بتاعتنا
-
-[00:03:05]
-  Transcript :  عشان ينفذولك اي طلب انت عاوزه
-  OCR        : None
-  Combined   :  عشان ينفذولك اي طلب انت عاوزه
-
-[00:03:07]
-  Transcript :  ايا كانت الباقة اللي انت هتاخدها
-  OCR        : None
-  Combined   :  ايا كانت الباقة اللي انت هتاخدها
-
-[00:03:08]
-  Transcript :  هتشتري الكتاب لوحده او مع كرسات السي شارب
-  OCR        : None
-  Combined   :  هتشتري الكتاب لوحده او مع كرسات السي شارب
-
-[00:03:11]
-  Transcript :  او مع دبلومة الويب كلها
-  OCR        : None
-  Combined   :  او مع دبلومة الويب كلها
-
-[00:03:13]
-  Transcript :  وطبعا لو انت مش عارف دبلومة الويب
-  OCR        : None
-  Combined   :  وطبعا لو انت مش عارف دبلومة الويب
-
-[00:03:14]
-  Transcript :  واحنا بنقدم فيها ايه
-  OCR        : None
-  Combined   :  واحنا بنقدم فيها ايه
-
-[00:03:15]
-  Transcript :  فانت طبعا فايتك كتير جدا
-  OCR        : None
-  Combined   :  فانت طبعا فايتك كتير جدا
+  Combined   :  amount of time regardless of the data size. A few examples would include the random access of an
 
 [00:03:17]
-  Transcript :  فانا هسيبلك في الديسكريبشن فيديو تاني
+  Transcript :  element within an array and inserting at the beginning of a linked list. So O of 1 is extremely
   OCR        : None
-  Combined   :  فانا هسيبلك في الديسكريبشن فيديو تاني
+  Combined   :  element within an array and inserting at the beginning of a linked list. So O of 1 is extremely
 
-[00:03:19]
-  Transcript :  بيشرحلك دبلومة الويب بكل تفاصيلها
+[00:03:23]
+  Transcript :  fast. Next we have O of log n, also known as logarithmic time. One example is binary search.
   OCR        : None
-  Combined   :  بيشرحلك دبلومة الويب بكل تفاصيلها
+  Combined   :  fast. Next we have O of log n, also known as logarithmic time. One example is binary search.
 
-[00:03:21]
-  Transcript :  وإحنا بنعمل فيها إيه بإزاي بنساعد الناس من الصفر
+[00:03:30]
+  Transcript :  We haven't talked about this yet. We'll talk about a few of these algorithms in future videos,
   OCR        : None
-  Combined   :  وإحنا بنعمل فيها إيه بإزاي بنساعد الناس من الصفر
-
-[00:03:24]
-  Transcript :  إن هم يتعلموا البرمجة ويوصلوا النتيجة كويسة
-  OCR        : None
-  Combined   :  إن هم يتعلموا البرمجة ويوصلوا النتيجة كويسة
-
-[00:03:27]
-  Transcript :  أنا بزلت مجهود كدير قوي قوي قوي في الكتاب ده
-  OCR        : None
-  Combined   :  أنا بزلت مجهود كدير قوي قوي قوي في الكتاب ده
-
-[00:03:31]
-  Transcript :  وأتمنى إن شاء الله إنه هو يكون خير ومساعد وصديق
-  OCR        : None
-  Combined   :  وأتمنى إن شاء الله إنه هو يكون خير ومساعد وصديق
+  Combined   :  We haven't talked about this yet. We'll talk about a few of these algorithms in future videos,
 
 [00:03:34]
-  Transcript :  لكل الناس اللي هتصق فيه وتخليه معاها في الشنطة بتاعتها
+  Transcript :  but anything that has a runtime complexity of O of log n will actually take, I don't want to say
   OCR        : None
-  Combined   :  لكل الناس اللي هتصق فيه وتخليه معاها في الشنطة بتاعتها
-
-[00:03:38]
-  Transcript :  ويبقى جزء من حياتها اليومية
-  OCR        : None
-  Combined   :  ويبقى جزء من حياتها اليومية
+  Combined   :  but anything that has a runtime complexity of O of log n will actually take, I don't want to say
 
 [00:03:40]
-  Transcript :  أشوفكم على خير إن شاء الله في فيديو جاي
+  Transcript :  less and less time, but increasingly less time to complete. So as the data size increases,
   OCR        : None
-  Combined   :  أشوفكم على خير إن شاء الله في فيديو جاي
+  Combined   :  less and less time, but increasingly less time to complete. So as the data size increases,
 
-[00:03:42]
-  Transcript :  سلام عليكم
+[00:03:47]
+  Transcript :  this algorithm is going to be more and more efficient compared to the early stages with a
   OCR        : None
-  Combined   :  سلام عليكم
+  Combined   :  this algorithm is going to be more and more efficient compared to the early stages with a
+
+[00:03:51]
+  Transcript :  small dataset. O is also known as linear time. As the amount of
+  OCR        : None
+  Combined   :  small dataset. O is also known as linear time. As the amount of
+
+[00:03:56]
+  Transcript :  data increases, the time it takes to complete something will
+  OCR        : None
+  Combined   :  data increases, the time it takes to complete something will
+
+[00:04:00]
+  Transcript :  increase proportionally linearly. That would include looping through the elements in an array
+  OCR        : None
+  Combined   :  increase proportionally linearly. That would include looping through the elements in an array
+
+[00:04:04]
+  Transcript :  and searching through a linked list. Next we have O of N log N, also known as quasi-linear time.
+  OCR        : None
+  Combined   :  and searching through a linked list. Next we have O of N log N, also known as quasi-linear time.
+
+[00:04:11]
+  Transcript :  This would include a quick sort, merge sort, and heap sort. We'll talk about these concepts in
+  OCR        : None
+  Combined   :  This would include a quick sort, merge sort, and heap sort. We'll talk about these concepts in
+
+[00:04:16]
+  Transcript :  future videos. So for the most part, this is very similar to linear time. Unless we're working with
+  OCR        : None
+  Combined   :  future videos. So for the most part, this is very similar to linear time. Unless we're working with
+
+[00:04:22]
+  Transcript :  a large data set, then anything using O of N log N is going to start to slow down when we work with
+  OCR        : None
+  Combined   :  a large data set, then anything using O of N log N is going to start to slow down when we work with
+
+[00:04:29]
+  Transcript :  larger data sets, hence this curve here. Then we have O of n squared, also known as quadratic time.
+  OCR        : None
+  Combined   :  larger data sets, hence this curve here. Then we have O of n squared, also known as quadratic time.
+
+[00:04:35]
+  Transcript :  A few examples would include insertion sort, selection sort, and bubble sort. As the amount
+  OCR        : None
+  Combined   :  A few examples would include insertion sort, selection sort, and bubble sort. As the amount
+
+[00:04:41]
+  Transcript :  of data increases, it's going to take increasingly more and more time to complete anything that has a
+  OCR        : None
+  Combined   :  of data increases, it's going to take increasingly more and more time to complete anything that has a
+
+[00:04:46]
+  Transcript :  runtime complexity of O of n squared. So just to compare linear time and quadratic time, with linear
+  OCR        : None
+  Combined   :  runtime complexity of O of n squared. So just to compare linear time and quadratic time, with linear
+
+[00:04:53]
+  Transcript :  time if our data set was a thousand if n equals a thousand it going to take a thousand steps they proportional they linear but if we were using quadratic time if n was a thousand then a thousand squared would be a
+  OCR        : None
+  Combined   :  time if our data set was a thousand if n equals a thousand it going to take a thousand steps they proportional they linear but if we were using quadratic time if n was a thousand then a thousand squared would be a
+
+[00:05:06]
+  Transcript :  million. So if our data set was a thousand, if we're using quadratic time, it's going to take a million
+  OCR        : None
+  Combined   :  million. So if our data set was a thousand, if we're using quadratic time, it's going to take a million
+
+[00:05:11]
+  Transcript :  steps then, way more than linear time. So quadratic time is extremely slow with large data sets, but in
+  OCR        : None
+  Combined   :  steps then, way more than linear time. So quadratic time is extremely slow with large data sets, but in
+
+[00:05:18]
+  Transcript :  the case of a small data set, it could actually be faster, as you can see by the graph here. And lastly,
+  OCR        : None
+  Combined   :  the case of a small data set, it could actually be faster, as you can see by the graph here. And lastly,
+
+[00:05:23]
+  Transcript :  we have O of n factorial, also known as factorial time, and one place where this is used is with the
+  OCR        : None
+  Combined   :  we have O of n factorial, also known as factorial time, and one place where this is used is with the
+
+[00:05:30]
+  Transcript :  traveling salesman problem, which I might discuss in a future video. So this is extremely slow,
+  OCR        : None
+  Combined   :  traveling salesman problem, which I might discuss in a future video. So this is extremely slow,
+
+[00:05:36]
+  Transcript :  so if I had to give a letter grade to each of these runtime complexities when working with
+  OCR        : None
+  Combined   :  so if I had to give a letter grade to each of these runtime complexities when working with
+
+[00:05:41]
+  Transcript :  large data sets with constant time, this would be an A, like an A+. Logarithmic time would be a B,
+  OCR        : None
+  Combined   :  large data sets with constant time, this would be an A, like an A+. Logarithmic time would be a B,
+
+[00:05:47]
+  Transcript :  it's pretty good.
+  OCR        : None
+  Combined   :  it's pretty good.
+
+[00:05:48]
+  Transcript :  Linear time is C, it's okay.
+  OCR        : None
+  Combined   :  Linear time is C, it's okay.
+
+[00:05:50]
+  Transcript :  Quasi-linear time is a D, it's just barely passing.
+  OCR        : None
+  Combined   :  Quasi-linear time is a D, it's just barely passing.
+
+[00:05:54]
+  Transcript :  Quadratic time would be an F,
+  OCR        : None
+  Combined   :  Quadratic time would be an F,
+
+[00:05:56]
+  Transcript :  and factorial time, well, you get expelled from school.
+  OCR        : None
+  Combined   :  and factorial time, well, you get expelled from school.
+
+[00:05:59]
+  Transcript :  Although,
+  OCR        : None
+  Combined   :  Although,
+
+[00:06:00]
+  Transcript :  some of these runtime complexities are actually faster when working with a smaller data set,
+  OCR        : None
+  Combined   :  some of these runtime complexities are actually faster when working with a smaller data set,
+
+[00:06:05]
+  Transcript :  so keep that in mind. Well, that's the very basics of Big O notation. It's notation used
+  OCR        : None
+  Combined   :  so keep that in mind. Well, that's the very basics of Big O notation. It's notation used
+
+[00:06:11]
+  Transcript :  to describe the performance of an algorithm as the amount of data increases. So if you can,
+  OCR        : None
+  Combined   :  to describe the performance of an algorithm as the amount of data increases. So if you can,
+
+[00:06:16]
+  Transcript :  give this video a thumbs up, drop a random comment down below, and well, that's Big O notation in
+  OCR        : None
+  Combined   :  give this video a thumbs up, drop a random comment down below, and well, that's Big O notation in
+
+[00:06:22]
+  Transcript :  computer science.
+  OCR        : None
+  Combined   :  computer science.
 

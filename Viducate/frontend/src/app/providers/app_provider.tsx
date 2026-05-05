@@ -7,6 +7,7 @@ import { useScrollRestore } from "../../core/hooks/useScrollRestore";
 import { IntWrapper } from "../../core/l10n/intWrapper";
 import { AuthProvider } from "../../features/auth/presentation/context/auth_provider";
 import { LearningSessionProvider } from "../../core/contexts/learning_content_context/learning_constent_provider";
+import { ToastProvider } from "../../core/contexts/toast_message_context/toast_message_provider";
 
 const queryClient = new QueryClient({
   defaultOptions: {
@@ -43,7 +44,9 @@ export function AppProviders({ children }: { children: React.ReactNode }) {
       <AuthProvider>
         <LanguageProvider>
           <IntWrapper>
-            <LearningSessionProvider>{children}</LearningSessionProvider>
+           <ToastProvider>
+             <LearningSessionProvider>{children}</LearningSessionProvider>
+           </ToastProvider>
           </IntWrapper>
         </LanguageProvider>
       </AuthProvider>

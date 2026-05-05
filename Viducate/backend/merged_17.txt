@@ -1,0 +1,275 @@
+[00:00:00]
+  Transcript :  Welcome back everyone.
+  OCR        : None
+  Combined   :  Welcome back everyone.
+
+[00:00:03]
+  Transcript :  In this video, I want to introduce you all to a VideoPlayer component.
+  OCR        : None
+  Combined   :  In this video, I want to introduce you all to a VideoPlayer component.
+
+[00:00:10]
+  Transcript :  The package we will be making use of is React Player.
+  OCR        : GitHub - CookPetereact-player: | github.comCookPetereact-player | Why GitHub? | Enterprise Explore Marketplace Pricing | Search | Sign in | Sign up | CookPete  react-player | Watch | Fork | Code | Issues27 | IPull requests 5 | Actions | Security | l. Insights | Join GitHub today | Dismiss | GitHub is home to over 40 million developers working together to host | and review code, manage projects, and build software together. | Sign up | A React component for playing a variety of URLs, including file paths, YouTube, Facebook, Twitch, SoundCloud, Streamable, Vimeo, Wistia | and DailyMotion https:cookpete.comreact-player | react | media | player | video | audio | youtube | facebook | twitch | soundcloud | streamable | vimeo | wistia | dailymotion | clash
+  Combined   :  The package we will be making use of is React Player. GitHub - CookPetereact-player: | github.comCookPetereact-player | Why GitHub? | Enterprise Explore Marketplace Pricing | Search | Sign in | Sign up | CookPete  react-player | Watch | Fork | Code | Issues27 | IPull requests 5 | Actions | Security | l. Insights | Join GitHub today | Dismiss | GitHub is home to over 40 million developers working together to host | and review code, manage projects, and build software together. | Sign up | A React component for playing a variety of URLs, including file paths, YouTube, Facebook, Twitch, SoundCloud, Streamable, Vimeo, Wistia | and DailyMotion https:cookpete.comreact-player | react | media | player | video | audio | youtube | facebook | twitch | soundcloud | streamable | vimeo | wistia | dailymotion | clash
+
+[00:00:13]
+  Transcript :  This package is capable of playing a variety of URLs like YouTube, Twitch, Dailymotion, Vimeo and so on.
+  OCR        : None
+  Combined   :  This package is capable of playing a variety of URLs like YouTube, Twitch, Dailymotion, Vimeo and so on.
+
+[00:00:22]
+  Transcript :  Let's begin.
+  OCR        : None
+  Combined   :  Let's begin.
+
+[00:00:24]
+  Transcript :  As always, I've started off by creating a new project using create react app.
+  OCR        : None
+  Combined   :  As always, I've started off by creating a new project using create react app.
+
+[00:00:31]
+  Transcript :  Now open the terminal and run the command yarn add react-player.
+  OCR        : None
+  Combined   :  Now open the terminal and run the command yarn add react-player.
+
+[00:00:42]
+  Transcript :  Once the installation is done, we should be able to use the component provided by this
+  OCR        : None
+  Combined   :  Once the installation is done, we should be able to use the component provided by this
+
+[00:00:46]
+  Transcript :  package.
+  OCR        : None
+  Combined   :  package.
+
+[00:00:47]
+  Transcript :  I'm going to head over to app.js and clear out the header section.
+  OCR        : None
+  Combined   :  I'm going to head over to app.js and clear out the header section.
+
+[00:00:54]
+  Transcript :  I also going to edit the app and modify the app class to be displayFlex justifyContentCenter
+  OCR        : None
+  Combined   :  I also going to edit the app and modify the app class to be displayFlex justifyContentCenter
+
+[00:01:11]
+  Transcript :  Alright, now we can import our react player component.
+  OCR        : None
+  Combined   :  Alright, now we can import our react player component.
+
+[00:01:19]
+  Transcript :  React player from React player.
+  OCR        : None
+  Combined   :  React player from React player.
+
+[00:01:24]
+  Transcript :  Now using this component is really simple.
+  OCR        : None
+  Combined   :  Now using this component is really simple.
+
+[00:01:28]
+  Transcript :  We specify React player and then pass in a URL prop.
+  OCR        : None
+  Combined   :  We specify React player and then pass in a URL prop.
+
+[00:01:37]
+  Transcript :  The value I'm going to add the URL to the React Redux tutorial.
+  OCR        : None
+  Combined   :  The value I'm going to add the URL to the React Redux tutorial.
+
+[00:01:44]
+  Transcript :  And that is all there is to it.
+  OCR        : None
+  Combined   :  And that is all there is to it.
+
+[00:01:46]
+  Transcript :  Let's save the file and in the terminal, run the command yarn start.
+  OCR        : None
+  Combined   :  Let's save the file and in the terminal, run the command yarn start.
+
+[00:01:54]
+  Transcript :  When the page loads, you can see that we have a video player on our side.
+  OCR        : None
+  Combined   :  When the page loads, you can see that we have a video player on our side.
+
+[00:02:04]
+  Transcript :  screen. If I click inside the player the video starts.
+  OCR        : React App | localhost:3000 | React Redux Tutorials - 1 - Introduction | React Redux | Watch later | Share | Introduction | YouTube
+  Combined   :  screen. If I click inside the player the video starts. React App | localhost:3000 | React Redux Tutorials - 1 - Introduction | React Redux | Watch later | Share | Introduction | YouTube
+
+[00:02:06]
+  Transcript :  Hey guys, my name is Vishwan. Click again and the video pauses. It works but I would also like to see
+  OCR        : None
+  Combined   :  Hey guys, my name is Vishwan. Click again and the video pauses. It works but I would also like to see
+
+[00:02:14]
+  Transcript :  the native player controls. For that we can pass in the controls prop. So on the react player component
+  OCR        : More videos | React | Async Actions | Getting Started | Action payload | setState
+  Combined   :  the native player controls. For that we can pass in the controls prop. So on the react player component More videos | React | Async Actions | Getting Started | Action payload | setState
+
+[00:02:22]
+  Transcript :  we specify controls now if we go back to the browser you can see that we get the
+  OCR        : None
+  Combined   :  we specify controls now if we go back to the browser you can see that we get the
+
+[00:02:39]
+  Transcript :  play and the pause button the volume control the progress bar and all the
+  OCR        : Watchilater | act Redux | Mute m | 0:01  15:00
+  Combined   :  play and the pause button the volume control the progress bar and all the Watchilater | act Redux | Mute m | 0:01  15:00
+
+[00:02:43]
+  Transcript :  other controls as well now the other two main props which you might be interested
+  OCR        : None
+  Combined   :  other controls as well now the other two main props which you might be interested
+
+[00:02:50]
+  Transcript :  is the width and the height.
+  OCR        : None
+  Combined   :  is the width and the height.
+
+[00:02:52]
+  Transcript :  By default the width is set to 640 pixels and the height is set to 360 pixels let change that since I don have much space to work with I going to set the width to
+  OCR        : None
+  Combined   :  By default the width is set to 640 pixels and the height is set to 360 pixels let change that since I don have much space to work with I going to set the width to
+
+[00:03:09]
+  Transcript :  be equal to 480 pixels and the height to be equal to 240 pixels if you save this
+  OCR        : None
+  Combined   :  be equal to 480 pixels and the height to be equal to 240 pixels if you save this
+
+[00:03:23]
+  Transcript :  and take a look at the browser you can see that we have a smaller video player
+  OCR        : GitHub - CookPetereact-player | ①localhost:3000 | Redux is for JavaScript applications | 1:39  15:00 | Connecting...
+  Combined   :  and take a look at the browser you can see that we have a smaller video player GitHub - CookPetereact-player | ①localhost:3000 | Redux is for JavaScript applications | 1:39  15:00 | Connecting...
+
+[00:03:28]
+  Transcript :  you can of course increase the size depending on your viewport all right the
+  OCR        : None
+  Combined   :  you can of course increase the size depending on your viewport all right the
+
+[00:03:34]
+  Transcript :  last set of props I want to discuss is the callback props these are basically
+  OCR        : None
+  Combined   :  last set of props I want to discuss is the callback props these are basically
+
+[00:03:40]
+  Transcript :  events that get called when something happens with respect to the media player
+  OCR        : None
+  Combined   :  events that get called when something happens with respect to the media player
+
+[00:03:45]
+  Transcript :  We can have onReady, onStart, onPause, onEnded, and onError.
+  OCR        : None
+  Combined   :  We can have onReady, onStart, onPause, onEnded, and onError.
+
+[00:03:52]
+  Transcript :  There are a few more props, but these are something that would be of interest to you.
+  OCR        : None
+  Combined   :  There are a few more props, but these are something that would be of interest to you.
+
+[00:04:00]
+  Transcript :  I'm going to simply add log statements so let me quickly copy paste the code so
+  OCR        : None
+  Combined   :  I'm going to simply add log statements so let me quickly copy paste the code so
+
+[00:04:07]
+  Transcript :  we have on ready where we log on ready callback on start on pause on ended on
+  OCR        : None
+  Combined   :  we have on ready where we log on ready callback on start on pause on ended on
+
+[00:04:14]
+  Transcript :  error and they all have a console log statement if I save this go back to the
+  OCR        : None
+  Combined   :  error and they all have a console log statement if I save this go back to the
+
+[00:04:22]
+  Transcript :  browser open the DevTools console let me reload the page and on page load you can
+  OCR        : eact Redux | IntroductiO | Back | AltLeft Arrow | Forward | AltRight Arrow | Reload | CtrlR | Save as... | CtrlS | Print... | CtrlP | Cast... | Translate to English | Redux DevTools | View page source | CtrlU | Inspect | CtrlShift1
+  Combined   :  browser open the DevTools console let me reload the page and on page load you can eact Redux | IntroductiO | Back | AltLeft Arrow | Forward | AltRight Arrow | Reload | CtrlR | Save as... | CtrlS | Print... | CtrlP | Cast... | Translate to English | Redux DevTools | View page source | CtrlU | Inspect | CtrlShift1
+
+[00:04:32]
+  Transcript :  see that we first have the on ready callback fired I play the video we get
+  OCR        : Elements | Console | Sources | Network | Performance | React Redux Tutorials-1 - Introduction | Filter | Default levels5 hidden | HMRWaiting for update signal from WDS... | log.js:24 | react-dom.dovelopment.js:24994 | Download the React DevTools for a better development experience: https:fb.me | react-devtools | A cookie associated with a cross-site resource at http:youtube. localhost:1 | com was set without the SameSite attribute. It has been blocked, as Chrome | now only delivers cookies with cross-site requests if they are set with | Samesite-None and Secure. You can review cookies in developer tools under | ApplicationStorageCookies and see more details at https:wdw,chromestatus.co | mfeature5088147346030592and https:www.chromestatus.comfeature56335216221 | 8B032. | onReady callback | App.js:13
+  Combined   :  see that we first have the on ready callback fired I play the video we get Elements | Console | Sources | Network | Performance | React Redux Tutorials-1 - Introduction | Filter | Default levels5 hidden | HMRWaiting for update signal from WDS... | log.js:24 | react-dom.dovelopment.js:24994 | Download the React DevTools for a better development experience: https:fb.me | react-devtools | A cookie associated with a cross-site resource at http:youtube. localhost:1 | com was set without the SameSite attribute. It has been blocked, as Chrome | now only delivers cookies with cross-site requests if they are set with | Samesite-None and Secure. You can review cookies in developer tools under | ApplicationStorageCookies and see more details at https:wdw,chromestatus.co | mfeature5088147346030592and https:www.chromestatus.comfeature56335216221 | 8B032. | onReady callback | App.js:13
+
+[00:04:42]
+  Transcript :  the on start callback. I pause the video we get on paused callback and if
+  OCR        : Default levels2 hidden | react-dom.deve1opment.js:24994 | A cookie associated with a cross-site resource at httpiyoutuhe. localhost:1 | CODEVOLUTION | ApplicationStorageCookies and see more details at https:ww.chromestatus.co | 0:0315:00 | 88032. | onReadycallback | App.j:13 | on5tart callback | ARRjs:14 | onPause callback | ARRaj:15
+  Combined   :  the on start callback. I pause the video we get on paused callback and if Default levels2 hidden | react-dom.deve1opment.js:24994 | A cookie associated with a cross-site resource at httpiyoutuhe. localhost:1 | CODEVOLUTION | ApplicationStorageCookies and see more details at https:ww.chromestatus.co | 0:0315:00 | 88032. | onReadycallback | App.j:13 | on5tart callback | ARRjs:14 | onPause callback | ARRaj:15
+
+[00:04:44]
+  Transcript :  If we try to, let's say, end this video,
+  OCR        : None
+  Combined   :  If we try to, let's say, end this video,
+
+[00:04:47]
+  Transcript :  you get the onEnded callback.
+  OCR        : None
+  Combined   :  you get the onEnded callback.
+
+[00:04:58]
+  Transcript :  And if I go back change the URL to an invalid URL go back to the browser we get onErd callback So we weren able to load the video
+  OCR        : Default levels | SameSite-None and Secure. You can review cookies in developer tools under | ApplicationStorageCookies and see nore details at https:ww.chromestatus.co | mfeature5088147346030592 and https:www.chromestatus.comfeature56335216221 | HMR Waiting for update signal fron WDS... | lug.js:24 | 0:00 | react-dom.development.1s:24994 | A Cross-Origin Read Blocking CoRB blocked cross-origin response h localhost:1 | ttps:ws.youtube,comwatch?y-9boMom5X9a with MIME type texthtml. See http | siwald.chronestatus.comfeature56297e9824e32768 for more detai1s. | onError callback | Anp.1s:17
+  Combined   :  And if I go back change the URL to an invalid URL go back to the browser we get onErd callback So we weren able to load the video Default levels | SameSite-None and Secure. You can review cookies in developer tools under | ApplicationStorageCookies and see nore details at https:ww.chromestatus.co | mfeature5088147346030592 and https:www.chromestatus.comfeature56335216221 | HMR Waiting for update signal fron WDS... | lug.js:24 | 0:00 | react-dom.development.1s:24994 | A Cross-Origin Read Blocking CoRB blocked cross-origin response h localhost:1 | ttps:ws.youtube,comwatch?y-9boMom5X9a with MIME type texthtml. See http | siwald.chronestatus.comfeature56297e9824e32768 for more detai1s. | onError callback | Anp.1s:17
+
+[00:05:05]
+  Transcript :  Finally, let's just try to play a Twitch video.
+  OCR        : None
+  Combined   :  Finally, let's just try to play a Twitch video.
+
+[00:05:10]
+  Transcript :  Now the only channel I watch on Twitch is one called T90 Official.
+  OCR        : None
+  Combined   :  Now the only channel I watch on Twitch is one called T90 Official.
+
+[00:05:15]
+  Transcript :  He basically streams Age of Empires, which is a game I love.
+  OCR        : None
+  Combined   :  He basically streams Age of Empires, which is a game I love.
+
+[00:05:19]
+  Transcript :  So let's just use that URL.
+  OCR        : None
+  Combined   :  So let's just use that URL.
+
+[00:05:21]
+  Transcript :  So the URL, I'm going to replace the UOT1 with the Twitch one.
+  OCR        : None
+  Combined   :  So the URL, I'm going to replace the UOT1 with the Twitch one.
+
+[00:05:27]
+  Transcript :  If you go back to the browser,
+  OCR        : None
+  Combined   :  If you go back to the browser,
+
+[00:05:33]
+  Transcript :  you can see that we are able to play the Twitch video.
+  OCR        : None
+  Combined   :  you can see that we are able to play the Twitch video.
+
+[00:05:39]
+  Transcript :  Again, there are tons of other props that might be of use based on your requirements.
+  OCR        : T900fficial | Hidden Cup 3  Day | HMRWaiting for update signal fron WDS... | react-dom,dovelopment.js:24994 | A cookie associated with a cross-site resource at http:scorecar localhost:1 | dresearch.com was set without the SameSiteattribute. It has been blocked, | 04:16:02 | 08:51:50 | with SameSite-None and Secure. You can review cookies in developer tools | as Chrome now only delivers cookies with cross-site requests if they are set | under ApplicationStorageCookies and see more details at httos:wiar.chromesta | itch | tus.comfeature5o8B14734603e592and https:www.chromestatus.comfeature56335 | 21622188032. | Invalid operation: t.channel is not implemented | video.d43cebe...js:25 | ARp1:12 | ARRj:15 | GET https:api.twitch.tvkrakenuser 401 | video.d43cebe...js:6 | failed to resolve properties promise | Response type: cors, url: https:api.twitch.tvkrakenuser, redirected: | video.d43cebe...js:41 | false, status: 401, ok: false, - | Resource interpreted as Document but transferred with MIME | tracking,ts:46 | type imagegif: https:s.amazon-adsystem.comiui3?pid-a30f442a-e833-4308-a302 | -987199caf562dcct. | onStart callback | App.js:14 | ARR.js:15
+  Combined   :  Again, there are tons of other props that might be of use based on your requirements. T900fficial | Hidden Cup 3  Day | HMRWaiting for update signal fron WDS... | react-dom,dovelopment.js:24994 | A cookie associated with a cross-site resource at http:scorecar localhost:1 | dresearch.com was set without the SameSiteattribute. It has been blocked, | 04:16:02 | 08:51:50 | with SameSite-None and Secure. You can review cookies in developer tools | as Chrome now only delivers cookies with cross-site requests if they are set | under ApplicationStorageCookies and see more details at httos:wiar.chromesta | itch | tus.comfeature5o8B14734603e592and https:www.chromestatus.comfeature56335 | 21622188032. | Invalid operation: t.channel is not implemented | video.d43cebe...js:25 | ARp1:12 | ARRj:15 | GET https:api.twitch.tvkrakenuser 401 | video.d43cebe...js:6 | failed to resolve properties promise | Response type: cors, url: https:api.twitch.tvkrakenuser, redirected: | video.d43cebe...js:41 | false, status: 401, ok: false, - | Resource interpreted as Document but transferred with MIME | tracking,ts:46 | type imagegif: https:s.amazon-adsystem.comiui3?pid-a30f442a-e833-4308-a302 | -987199caf562dcct. | onStart callback | App.js:14 | ARR.js:15
+
+[00:05:44]
+  Transcript :  My intention is to simply introduce you to the library and you explore all the remaining features.
+  OCR        : None
+  Combined   :  My intention is to simply introduce you to the library and you explore all the remaining features.
+
+[00:05:51]
+  Transcript :  Well then, that is about the React player npm package.
+  OCR        : None
+  Combined   :  Well then, that is about the React player npm package.
+
+[00:05:55]
+  Transcript :  Thank you guys for watching, don't forget to subscribe, and I'll see you guys in the next video.
+  OCR        : None
+  Combined   :  Thank you guys for watching, don't forget to subscribe, and I'll see you guys in the next video.
+
+[00:06:00]
+  Transcript :  Thank you.
+  OCR        : None
+  Combined   :  Thank you.
+

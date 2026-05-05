@@ -1,5 +1,6 @@
 # OCR Output — video_id=1
 # Language: en
+<<<<<<< HEAD
 # Total segments: 33
 
 [00:00:00] Fuzzy Logic | Control | Sabah Sayed | Department of Computer Science | Focuity of Computers and Arcjfciol Inteligence | Caire University | Egypt
@@ -35,3 +36,8 @@
 [00:18:26] CentroidC1 0D30504 | CentroidC2  204060804 | CentroidC3 - 50701001004 80,
 [00:18:48] Example | Given a stock market with varlables.: | Opening price Op | Previous day price Pdlp | Closing price Cp | From the domcin eagerts, it is known tat: | Pdp has 3 fuzzy sets L, M, H range 0 - 100 | Op has 3 furzy sets L, M, H range 0 - 100 | Cp has 5 fluzzy sets VL, L, M, H, VH range 0 - 100 | With the foillowing rules: | R1: If OpL, AND PdpL THEN CpVL | R2: If OpcL OR Pdp L THEN CgcL | R3: If OpM AND PdpNOTH THEN CpM | R4: If OpH OR PdpH THEN CpH | R5: If OpAND PtpHl THEN CpVH | Using triangular membership function, Predict | the Cp for Op  30 and Pdp90 ?
 [00:18:58] CentroidC1  0030504 | CentroidC2  204060-804 | CentroidC3 - 50701001004
+=======
+# Total segments: 1
+
+[00:00:00] 1322-34
+>>>>>>> 117281413049aeb131520c7d488311d3cf4b4fba

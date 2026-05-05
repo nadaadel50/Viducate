@@ -13,10 +13,6 @@ export function MainPage() {
   const { videoId, selectedTopic, setSelectedTopic  } = useLearningSession();
 
   const { data: data, isLoading, error } = useVideoData();
-  //lets say that data came from useVideoData is fake data right now
-
-
-  //  const videoId = selectedTopic?.video_id;
 
   const [isInitOpen, setIsInitOpen] = useState(false);
   const [isCustomizeOpen, setIsCustomizeOpen] = useState(false);
@@ -53,7 +49,7 @@ export function MainPage() {
 
   return (
     <>
-      <div className="flex font-display bg-[#f8fafc]">
+      <div className="flex font-display bg-[#f8fafc] ">
         <div className="flex-1 border-r border-slate-200">
           <LeftContentSection />
         </div>
