@@ -117,7 +117,7 @@ async def transcribe(url: str, video_id: int, language: str = None) -> str:
             for segment in full_transcript:
                 f.write(f"[{segment['start']:.1f} --> {segment['end']:.1f}] {segment['text']}\n")
 
-        return full_transcript, video_file
+        return full_transcript, video_file, lang
 
     finally:
         if audio_file and os.path.exists(audio_file):

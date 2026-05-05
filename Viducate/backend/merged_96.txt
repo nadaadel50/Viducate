@@ -1,0 +1,2290 @@
+[00:00:00]
+  Transcript :  بسم الله والحمد لله والصلاة والسلام على رسول الله صلى الله عليه وسلم
+  OCR        : None
+  Combined   :  بسم الله والحمد لله والصلاة والسلام على رسول الله صلى الله عليه وسلم
+
+[00:00:05]
+  Transcript :  أهلا وسهلا بحضراتكم جميعا في اللقاء الحادي عشر
+  OCR        : None
+  Combined   :  أهلا وسهلا بحضراتكم جميعا في اللقاء الحادي عشر
+
+[00:00:08]
+  Transcript :  ضمن السلسلة التعليمية Programming Basics for Beginners
+  OCR        : None
+  Combined   :  ضمن السلسلة التعليمية Programming Basics for Beginners
+
+[00:00:11]
+  Transcript :  أو أساسيات البرمجة المبتدئة
+  OCR        : None
+  Combined   :  أو أساسيات البرمجة المبتدئة
+
+[00:00:15]
+  Transcript :  اليوم هنتكلم في موضوع مهم جدا يا شباب وهو موضوع الاستراكت
+  OCR        : Struct | St xruct: collection of a fixed number of components members. | accessed by name | - Members may be of different types. | - For Example : to store a student record which includes different data | items like studentno. Fname, Lname, TotalMarks, GPA. ..... | -Syntax for Definina Struct is : | Struct structname | Datatype identifier 2: | Datatype identifier 1; | Datatype Identifiern: | -Eastee 11
+  Combined   :  اليوم هنتكلم في موضوع مهم جدا يا شباب وهو موضوع الاستراكت Struct | St xruct: collection of a fixed number of components members. | accessed by name | - Members may be of different types. | - For Example : to store a student record which includes different data | items like studentno. Fname, Lname, TotalMarks, GPA. ..... | -Syntax for Definina Struct is : | Struct structname | Datatype identifier 2: | Datatype identifier 1; | Datatype Identifiern: | -Eastee 11
+
+[00:00:21]
+  Transcript :  يعني ايه الاستراكت؟
+  OCR        : None
+  Combined   :  يعني ايه الاستراكت؟
+
+[00:00:23]
+  Transcript :  الفكرة في الدرس بتاع النهاردة
+  OCR        : None
+  Combined   :  الفكرة في الدرس بتاع النهاردة
+
+[00:00:25]
+  Transcript :  هو أن نتنقل من كنا نستخدم الـ data types التي تأتي جاهزة مع لغة البرمجة مثل الـ integer و الـ double و float و string وما إلى ذلك
+  OCR        : Stzuct: collection of a fixed number of components members. | iterns like studentno. Fname, Lname, TotalMarks, GPA. ..... | Syntax for Defining Struct is : | Datatype Identifier 2; | Datatype Identifier n: | Lasten 11
+  Combined   :  هو أن نتنقل من كنا نستخدم الـ data types التي تأتي جاهزة مع لغة البرمجة مثل الـ integer و الـ double و float و string وما إلى ذلك Stzuct: collection of a fixed number of components members. | iterns like studentno. Fname, Lname, TotalMarks, GPA. ..... | Syntax for Defining Struct is : | Datatype Identifier 2; | Datatype Identifier n: | Lasten 11
+
+[00:00:35]
+  Transcript :  هو أن نتنقل من كنا نستخدم الـ data types التي تأتي جاهزة مع لغة البرمجة مثل الـ integer و الـ double و float و string وما إلى ذلك
+  OCR        : Stzruct: collection of a fixed number of components members | itemns like studentno, Fname, Lname, TotalMarks, GPA. ...... | -Syntax for Defining Struct is :
+  Combined   :  هو أن نتنقل من كنا نستخدم الـ data types التي تأتي جاهزة مع لغة البرمجة مثل الـ integer و الـ double و float و string وما إلى ذلك Stzruct: collection of a fixed number of components members | itemns like studentno, Fname, Lname, TotalMarks, GPA. ...... | -Syntax for Defining Struct is :
+
+[00:00:39]
+  Transcript :  إلا أني أعمل أنا data types يخصني يتناسب مع احتياجاتي
+  OCR        : None
+  Combined   :  إلا أني أعمل أنا data types يخصني يتناسب مع احتياجاتي
+
+[00:00:45]
+  Transcript :  Student Record
+  OCR        : None
+  Combined   :  Student Record
+
+[00:01:05]
+  Transcript :  Student Record أو ملف بتاع الطالب أو السجل بتاع الطالب فيه بيانات زي الـ Student Number والـ First Name مثلاً والـ Lost Name والـ Total Marks الدرجات بتاعته
+  OCR        : None
+  Combined   :  Student Record أو ملف بتاع الطالب أو السجل بتاع الطالب فيه بيانات زي الـ Student Number والـ First Name مثلاً والـ Lost Name والـ Total Marks الدرجات بتاعته
+
+[00:01:19]
+  Transcript :  وممكن يكون عندي لستة بالكورسات كلها لدراسها وكل درجة خادها في كل كورس وما إلى ذلك
+  OCR        : None
+  Combined   :  وممكن يكون عندي لستة بالكورسات كلها لدراسها وكل درجة خادها في كل كورس وما إلى ذلك
+
+[00:01:31]
+  Transcript :  في الحالة دي لو انا حبيت اعمل برنامج زي ده بالاسلوب العادي اللي انا تعلمته لحد النهاردة
+  OCR        : None
+  Combined   :  في الحالة دي لو انا حبيت اعمل برنامج زي ده بالاسلوب العادي اللي انا تعلمته لحد النهاردة
+
+[00:01:39]
+  Transcript :  همسك كل طالب واعمله عدد فاريابلز متناسبة مع عدد الـ data items اللي انا عاوز احفظها عنه
+  OCR        : None
+  Combined   :  همسك كل طالب واعمله عدد فاريابلز متناسبة مع عدد الـ data items اللي انا عاوز احفظها عنه
+
+[00:01:47]
+  Transcript :  فالطالب يوجد رقم الطالب واسم الأول والاسم الثاني والعض الدرجات والجي بي اي وممكن يكون عندي
+  OCR        : None
+  Combined   :  فالطالب يوجد رقم الطالب واسم الأول والاسم الثاني والعض الدرجات والجي بي اي وممكن يكون عندي
+
+[00:02:00]
+  Transcript :  لدي أيضاً خمس أو عشر كورسات بدرجاتهم.
+  OCR        : None
+  Combined   :  لدي أيضاً خمس أو عشر كورسات بدرجاتهم.
+
+[00:02:03]
+  Transcript :  يعني أنا المطلوب مني أعمل لكل طالب 15
+  OCR        : None
+  Combined   :  يعني أنا المطلوب مني أعمل لكل طالب 15
+
+[00:02:07]
+  Transcript :  فهنافرد أني لدي 20 طالب
+  OCR        : None
+  Combined   :  فهنافرد أني لدي 20 طالب
+
+[00:02:11]
+  Transcript :  يبقى 15 في 20.
+  OCR        : None
+  Combined   :  يبقى 15 في 20.
+
+[00:02:14]
+  Transcript :  لو 100 طالب يبقى 15 في 100.
+  OCR        : None
+  Combined   :  لو 100 طالب يبقى 15 في 100.
+
+[00:02:17]
+  Transcript :  طبعاً شيء لا يتصور.
+  OCR        : None
+  Combined   :  طبعاً شيء لا يتصور.
+
+[00:02:20]
+  Transcript :  ما ينفعش.
+  OCR        : None
+  Combined   :  ما ينفعش.
+
+[00:02:22]
+  Transcript :  فالحل قالوا
+  OCR        : None
+  Combined   :  فالحل قالوا
+
+[00:02:24]
+  Transcript :  هنعمل ما يسمى باللستركت.
+  OCR        : None
+  Combined   :  هنعمل ما يسمى باللستركت.
+
+[00:02:27]
+  Transcript :  استرداد عبارة عن مجموعة محددة من الألمانات أو من الممبر
+  OCR        : None
+  Combined   :  استرداد عبارة عن مجموعة محددة من الألمانات أو من الممبر
+
+[00:02:43]
+  Transcript :  اقدر اوصل لكل ممبر منهم بينين. او هتغلط وتقول لي زي الاري لا خلي بالك الاري
+  OCR        : None
+  Combined   :  اقدر اوصل لكل ممبر منهم بينين. او هتغلط وتقول لي زي الاري لا خلي بالك الاري
+
+[00:02:53]
+  Transcript :  number of elements Accessed array items first name first name last name last name item
+  OCR        : None
+  Combined   :  number of elements Accessed array items first name first name last name last name item
+
+[00:03:25]
+  Transcript :  المهمة جدا أن الممبرز بتاعة الاسترائكت ممكن تكون
+  OCR        : None
+  Combined   :  المهمة جدا أن الممبرز بتاعة الاسترائكت ممكن تكون
+
+[00:03:31]
+  Transcript :  of different data types. مش شرط زي الاري يكونوا كلهم من نفس النوع.
+  OCR        : None
+  Combined   :  of different data types. مش شرط زي الاري يكونوا كلهم من نفس النوع.
+
+[00:03:36]
+  Transcript :  فاكر انت هنا قلنا في الاري ايه؟
+  OCR        : None
+  Combined   :  فاكر انت هنا قلنا في الاري ايه؟
+
+[00:03:39]
+  Transcript :  fixed number of elements والشرط ان الاليمنس دي او الائتم دي تكون كلها من نفس
+  OCR        : None
+  Combined   :  fixed number of elements والشرط ان الاليمنس دي او الائتم دي تكون كلها من نفس
+
+[00:03:45]
+  Transcript :  data type. لازم يكونوا كلهم integral لازم يكونوا كلهم double لازم يكونوا كلهم float.
+  OCR        : None
+  Combined   :  data type. لازم يكونوا كلهم integral لازم يكونوا كلهم double لازم يكونوا كلهم float.
+
+[00:03:50]
+  Transcript :  لكن هنا لا، سأقوم بإسترائيل
+  OCR        : None
+  Combined   :  لكن هنا لا، سأقوم بإسترائيل
+
+[00:03:54]
+  Transcript :  كل إيطام فيه ممكن أن يكون مدى تطيب مختلف
+  OCR        : None
+  Combined   :  كل إيطام فيه ممكن أن يكون مدى تطيب مختلف
+
+[00:03:57]
+  Transcript :  كما في هذه الحالة
+  OCR        : None
+  Combined   :  كما في هذه الحالة
+
+[00:04:00]
+  Transcript :  الـ Student Number ده رقم
+  OCR        : None
+  Combined   :  الـ Student Number ده رقم
+
+[00:04:02]
+  Transcript :  الفلسطينيين واللسطينيين ده String
+  OCR        : None
+  Combined   :  الفلسطينيين واللسطينيين ده String
+
+[00:04:05]
+  Transcript :  Total Marks ده ممكن يكون Float
+  OCR        : None
+  Combined   :  Total Marks ده ممكن يكون Float
+
+[00:04:07]
+  Transcript :  الجي بي ايه ممكن يكون Float صح؟
+  OCR        : None
+  Combined   :  الجي بي ايه ممكن يكون Float صح؟
+
+[00:04:10]
+  Transcript :  يبقى اذا قادي الميزة التانية
+  OCR        : None
+  Combined   :  يبقى اذا قادي الميزة التانية
+
+[00:04:12]
+  Transcript :  ان كل الـ Data Items دي
+  OCR        : None
+  Combined   :  ان كل الـ Data Items دي
+
+[00:04:14]
+  Transcript :  او كل الـ Data Members دي
+  OCR        : None
+  Combined   :  او كل الـ Data Members دي
+
+[00:04:16]
+  Transcript :  مش شرط ابدا يكونوا من نفس الـ Data Time
+  OCR        : None
+  Combined   :  مش شرط ابدا يكونوا من نفس الـ Data Time
+
+[00:04:18]
+  Transcript :  ممكن يكونوا من انواع مختلفة
+  OCR        : None
+  Combined   :  ممكن يكونوا من انواع مختلفة
+
+[00:04:20]
+  Transcript :  خلاص؟ طيب
+  OCR        : None
+  Combined   :  خلاص؟ طيب
+
+[00:04:22]
+  Transcript :  بعرفوا ازاي الـ Struct
+  OCR        : None
+  Combined   :  بعرفوا ازاي الـ Struct
+
+[00:04:24]
+  Transcript :  بقول كده بكتب كلمة Struct
+  OCR        : None
+  Combined   :  بقول كده بكتب كلمة Struct
+
+[00:04:26]
+  Transcript :  ثم بكتب اسم الـ Struct Name
+  OCR        : None
+  Combined   :  ثم بكتب اسم الـ Struct Name
+
+[00:04:28]
+  Transcript :  ثم بكتب اسم الـ struct name
+  OCR        : None
+  Combined   :  ثم بكتب اسم الـ struct name
+
+[00:04:30]
+  Transcript :  اسمه انت عاوز نسميه ايه؟
+  OCR        : None
+  Combined   :  اسمه انت عاوز نسميه ايه؟
+
+[00:04:32]
+  Transcript :  عاوز نسميه student عاوز نسميه employee
+  OCR        : None
+  Combined   :  عاوز نسميه student عاوز نسميه employee
+
+[00:04:34]
+  Transcript :  زي ما انت حابب
+  OCR        : None
+  Combined   :  زي ما انت حابب
+
+[00:04:36]
+  Transcript :  وبفتح قسين
+  OCR        : None
+  Combined   :  وبفتح قسين
+
+[00:04:38]
+  Transcript :  وبكتب كل data item عندي
+  OCR        : None
+  Combined   :  وبكتب كل data item عندي
+
+[00:04:40]
+  Transcript :  كل member عندي
+  OCR        : None
+  Combined   :  كل member عندي
+
+[00:04:42]
+  Transcript :  و data type بتاعي
+  OCR        : None
+  Combined   :  و data type بتاعي
+
+[00:04:44]
+  Transcript :  خلانا ناخد مثال تقرب شوية بالفكرة
+  OCR        : For Example : To store an Employee clata like  empno, fname, Iname. | salary, bonus, netsalary : | Struct Employee | cmpno: | string | fname: | string | Iname: | float | salary. | float | bonus | float netsalary:
+  Combined   :  خلانا ناخد مثال تقرب شوية بالفكرة For Example : To store an Employee clata like  empno, fname, Iname. | salary, bonus, netsalary : | Struct Employee | cmpno: | string | fname: | string | Iname: | float | salary. | float | bonus | float netsalary:
+
+[00:04:46]
+  Transcript :  هنا انا عاوز اسجل بيانات
+  OCR        : None
+  Combined   :  هنا انا عاوز اسجل بيانات
+
+[00:04:48]
+  Transcript :  employee زي مثلا
+  OCR        : None
+  Combined   :  employee زي مثلا
+
+[00:04:50]
+  Transcript :  employee number
+  OCR        : None
+  Combined   :  employee number
+
+[00:04:52]
+  Transcript :  first name
+  OCR        : None
+  Combined   :  first name
+
+[00:04:54]
+  Transcript :  last name
+  OCR        : For Example : To store an Employee data like empno, fname, Iname | salary, bonus , netsalary : | empno: | salary, | bonus:
+  Combined   :  last name For Example : To store an Employee data like empno, fname, Iname | salary, bonus , netsalary : | empno: | salary, | bonus:
+
+[00:05:08]
+  Transcript :  شوف كم بقى المشكلات اللي هتقابلها والارهاق والغلطات اللي هتعملوا لو انت خزنت عن كل موظف ستة فاريبل
+  OCR        : None
+  Combined   :  شوف كم بقى المشكلات اللي هتقابلها والارهاق والغلطات اللي هتعملوا لو انت خزنت عن كل موظف ستة فاريبل
+
+[00:05:15]
+  Transcript :  فأريح من كده انك تعمل ايه تعمل استركت هسميه امبليي سميه اكس سميه زد اه فانا هسميه امبليي وافتح قسين وحطت ال data items بنوعها
+  OCR        : None
+  Combined   :  فأريح من كده انك تعمل ايه تعمل استركت هسميه امبليي سميه اكس سميه زد اه فانا هسميه امبليي وافتح قسين وحطت ال data items بنوعها
+
+[00:05:43]
+  Transcript :  اقول ان عندي امبليي ننظر ده رقم عندي فرست نيم ده سترينج عندي لست نيم ده سترينج عندي سانري ده فلوت وهكذا ماشي خلينا نعمل انا وانت تعال انا اعمل اهو هروح هنا فوق المين
+  OCR        : Giotal Seepe | sinclude iostream | include string | using namespace std; | sint main
+  Combined   :  اقول ان عندي امبليي ننظر ده رقم عندي فرست نيم ده سترينج عندي لست نيم ده سترينج عندي سانري ده فلوت وهكذا ماشي خلينا نعمل انا وانت تعال انا اعمل اهو هروح هنا فوق المين Giotal Seepe | sinclude iostream | include string | using namespace std; | sint main
+
+[00:05:44]
+  Transcript :  ويكتب كلمة استراجت
+  OCR        : None
+  Combined   :  ويكتب كلمة استراجت
+
+[00:05:47]
+  Transcript :  وأقول أنا عاوز أعمل استراجت
+  OCR        : None
+  Combined   :  وأقول أنا عاوز أعمل استراجت
+
+[00:05:49]
+  Transcript :  عشان أسجل فيه بيانات الموظفين
+  OCR        : None
+  Combined   :  عشان أسجل فيه بيانات الموظفين
+
+[00:05:53]
+  Transcript :  فهيسمي أمبلي
+  OCR        : Binclude iostream | struct employee | Bint main
+  Combined   :  فهيسمي أمبلي Binclude iostream | struct employee | Bint main
+
+[00:05:54]
+  Transcript :  وبفتح القسين بتوها المجموعة
+  OCR        : None
+  Combined   :  وبفتح القسين بتوها المجموعة
+
+[00:05:57]
+  Transcript :  وأقول والله أنا عندي الأمبلي نمبر ده
+  OCR        : None
+  Combined   :  وأقول والله أنا عندي الأمبلي نمبر ده
+
+[00:06:00]
+  Transcript :  وعندي الـ First name , The string وعندي الـ Last name , The string
+  OCR        : None
+  Combined   :  وعندي الـ First name , The string وعندي الـ Last name , The string
+
+[00:06:12]
+  Transcript :  وعندي السلري , ده رقم ممكن يكون فيك سور فأنا أخليه float
+  OCR        : None
+  Combined   :  وعندي السلري , ده رقم ممكن يكون فيك سور فأنا أخليه float
+
+[00:06:20]
+  Transcript :  وعند البونس ده برضه رقم ممكن يكون فيه كسور فانا اخليه float
+  OCR        : None
+  Combined   :  وعند البونس ده برضه رقم ممكن يكون فيه كسور فانا اخليه float
+
+[00:06:27]
+  Transcript :  وعند النيت سالري ده رقم يبقى فيه كسور فانا اخليه float
+  OCR        : None
+  Combined   :  وعند النيت سالري ده رقم يبقى فيه كسور فانا اخليه float
+
+[00:06:34]
+  Transcript :  برحتي اهو واضح؟ طيب وهي كان فيه ايه تاني هنا كده عملنا كده
+  OCR        : None
+  Combined   :  برحتي اهو واضح؟ طيب وهي كان فيه ايه تاني هنا كده عملنا كده
+
+[00:06:43]
+  Transcript :  واحد اثنين ثلاثة اربعة خمسة ست لا تمام
+  OCR        : minclude iostream | Bstruct employee | int empno; | fname; | typedef std:basicstringcharstd:chartrailtscherstdallocatorchar-stdestring | tIoat salary; | float bonus; | float netsalary ;
+  Combined   :  واحد اثنين ثلاثة اربعة خمسة ست لا تمام minclude iostream | Bstruct employee | int empno; | fname; | typedef std:basicstringcharstd:chartrailtscherstdallocatorchar-stdestring | tIoat salary; | float bonus; | float netsalary ;
+
+[00:06:45]
+  Transcript :  بدل ما كنت أعمل عن كل موظف ستة موظف
+  OCR        : None
+  Combined   :  بدل ما كنت أعمل عن كل موظف ستة موظف
+
+[00:06:53]
+  Transcript :  employee data items
+  OCR        : struct empi | string fname; | string lname; | float salary ; | float net salary ; | int main
+  Combined   :  employee data items struct empi | string fname; | string lname; | float salary ; | float net salary ; | int main
+
+[00:07:05]
+  Transcript :  و اصبح كأن عندك data type جديد
+  OCR        : None
+  Combined   :  و اصبح كأن عندك data type جديد
+
+[00:07:13]
+  Transcript :  زي و زي الـ integer زي و زي الـ float
+  OCR        : struct | employee | empno; | Iname; | salary | bonus; | net salary ;
+  Combined   :  زي و زي الـ integer زي و زي الـ float struct | employee | empno; | Iname; | salary | bonus; | net salary ;
+
+[00:07:14]
+  Transcript :  انت ما بتكون عاوز تعرف variable من data type معين بتعمل ايه
+  OCR        : None
+  Combined   :  انت ما بتكون عاوز تعرف variable من data type معين بتعمل ايه
+
+[00:07:18]
+  Transcript :  بكتب اسم data type
+  OCR        : None
+  Combined   :  بكتب اسم data type
+
+[00:07:20]
+  Transcript :  وبكتب جنبه اسم الـ variable صح؟
+  OCR        : None
+  Combined   :  وبكتب جنبه اسم الـ variable صح؟
+
+[00:07:23]
+  Transcript :  يعني لأنا مثلا اعاوز اعمل انتجر x الجملة دي معناها ايه معناها للـ x ده variable من الـ data type اللي اسمه انتجر صح ؟
+  OCR        : stringfname; | stringlname;
+  Combined   :  يعني لأنا مثلا اعاوز اعمل انتجر x الجملة دي معناها ايه معناها للـ x ده variable من الـ data type اللي اسمه انتجر صح ؟ stringfname; | stringlname;
+
+[00:07:33]
+  Transcript :  شوف انا هعمل ايه انا عندي data type اسمه employee انا عملته جديد
+  OCR        : string Iname; | int ;
+  Combined   :  شوف انا هعمل ايه انا عندي data type اسمه employee انا عملته جديد string Iname; | int ;
+
+[00:07:36]
+  Transcript :  هاخد منه variable ولكن اسمه imp طبعا هنا اداني خاطئ لان انا كتبت capital اه هو اسمه employee
+  OCR        : None
+  Combined   :  هاخد منه variable ولكن اسمه imp طبعا هنا اداني خاطئ لان انا كتبت capital اه هو اسمه employee
+
+[00:07:46]
+  Transcript :  انا عاوز ااخد منه variable ولكن اسمه e1 شغط زي و زي ايه data type
+  OCR        : None
+  Combined   :  انا عاوز ااخد منه variable ولكن اسمه e1 شغط زي و زي ايه data type
+
+[00:07:53]
+  Transcript :  ممكن اخذ منه اثنين variable اه اي وان و اي تو
+  OCR        : None
+  Combined   :  ممكن اخذ منه اثنين variable اه اي وان و اي تو
+
+[00:08:03]
+  Transcript :  ايه ده تفايد بالزبط. طيب وبعدين انا عاوز اوصل للأيتمز اللي جوه اللي استركت.
+  OCR        : intempno; | employee e1, e2;
+  Combined   :  ايه ده تفايد بالزبط. طيب وبعدين انا عاوز اوصل للأيتمز اللي جوه اللي استركت. intempno; | employee e1, e2;
+
+[00:08:13]
+  Transcript :  يعني انا عاوز الامبلي اللي هو اسمه اي وان ده احط له البيانات بتاعته. او عمل ايه اروح كاتب اي وان.
+  OCR        : employee f1, e2; | employee el
+  Combined   :  يعني انا عاوز الامبلي اللي هو اسمه اي وان ده احط له البيانات بتاعته. او عمل ايه اروح كاتب اي وان. employee f1, e2; | employee el
+
+[00:08:23]
+  Transcript :  حشوفت اللي حصل شوفت الكمبيير ساعدك ازاي نزلك لستة بالداتة ايتمز. فانا اقول الامبلي نمبر.
+  OCR        : int emlpno; | float salary; | public: float employeecbonus | empno | File structicpp | fname | Iname | netsalary | celerv
+  Combined   :  حشوفت اللي حصل شوفت الكمبيير ساعدك ازاي نزلك لستة بالداتة ايتمز. فانا اقول الامبلي نمبر. int emlpno; | float salary; | public: float employeecbonus | empno | File structicpp | fname | Iname | netsalary | celerv
+
+[00:08:33]
+  Transcript :  اول مثلا يساوي 10. المليون .فرستنيم بتساوي مثلا انا اسمه ولاكن اسمه احمد. المليون .لاستنيم ولاكن اسمه احمد ابراهيم فيبقى
+  OCR        : Int empno; | e1.empno  10; | e1.f | berus | pullic. float empleyee bonus | Fie structucpe
+  Combined   :  اول مثلا يساوي 10. المليون .فرستنيم بتساوي مثلا انا اسمه ولاكن اسمه احمد. المليون .لاستنيم ولاكن اسمه احمد ابراهيم فيبقى Int empno; | e1.empno  10; | e1.f | berus | pullic. float empleyee bonus | Fie structucpe
+
+[00:08:43]
+  Transcript :  اول مثلا يساوي 10. المليون .فرستنيم بتساوي مثلا انا اسمه ولاكن اسمه احمد. المليون .لاستنيم ولاكن اسمه احمد ابراهيم فيبقى
+  OCR        : e1.fname - Ahmed; | e1.1name
+  Combined   :  اول مثلا يساوي 10. المليون .فرستنيم بتساوي مثلا انا اسمه ولاكن اسمه احمد. المليون .لاستنيم ولاكن اسمه احمد ابراهيم فيبقى e1.fname - Ahmed; | e1.1name
+
+[00:08:53]
+  Transcript :  variable item salary 3 3000
+  OCR        : e1.lname Ibrahim; | public : float employeecbonus | File structucpp
+  Combined   :  variable item salary 3 3000 e1.lname Ibrahim; | public : float employeecbonus | File structucpp
+
+[00:09:03]
+  Transcript :  variable item salary 3 3000
+  OCR        : int emllpno; | e1.1name Ibrahim; | e1.salary
+  Combined   :  variable item salary 3 3000 int emllpno; | e1.1name Ibrahim; | e1.salary
+
+[00:09:05]
+  Transcript :  عاوز اديله البونس بتاعه يبقى اي وان دوت بونس يساوي مثلا 500
+  OCR        : None
+  Combined   :  عاوز اديله البونس بتاعه يبقى اي وان دوت بونس يساوي مثلا 500
+
+[00:09:17]
+  Transcript :  طيب عاوز احسب انا النت سالري ينفع اقول ا اي واحد دوت النت سالري اقول بتساوي قيمة الراتب بتاعه
+  OCR        : benus | hmed; | rahim; | 300; | selary
+  Combined   :  طيب عاوز احسب انا النت سالري ينفع اقول ا اي واحد دوت النت سالري اقول بتساوي قيمة الراتب بتاعه benus | hmed; | rahim; | 300; | selary
+
+[00:09:27]
+  Transcript :  ومتخزنه في السلري
+  OCR        : Float netsalary ; | main | e1.empno - 10; | e1.fname - Ahmed | e1.lname Ibrahim | e1.sa1ary  3000; | e1.bonus500; | e1.netsalary  e1.
+  Combined   :  ومتخزنه في السلري Float netsalary ; | main | e1.empno - 10; | e1.fname - Ahmed | e1.lname Ibrahim | e1.sa1ary  3000; | e1.bonus500; | e1.netsalary  e1.
+
+[00:09:29]
+  Transcript :  زائد قيمة البونس
+  OCR        : None
+  Combined   :  زائد قيمة البونس
+
+[00:09:33]
+  Transcript :  يبقى زائد
+  OCR        : None
+  Combined   :  يبقى زائد
+
+[00:09:37]
+  Transcript :  السهولة
+  OCR        : Float salary ; | e1.salary  3000; | e1.netsalary  e1.salary  e1.bon
+  Combined   :  السهولة Float salary ; | e1.salary  3000; | e1.netsalary  e1.salary  e1.bon
+
+[00:09:41]
+  Transcript :  وهكذا امسك الموظف الثاني والموظف الثالث والموظف العاشر
+  OCR        : None
+  Combined   :  وهكذا امسك الموظف الثاني والموظف الثالث والموظف العاشر
+
+[00:09:45]
+  Transcript :  بدل ما كنت كل واحدة أعمل له فانيابلز تخصه
+  OCR        : None
+  Combined   :  بدل ما كنت كل واحدة أعمل له فانيابلز تخصه
+
+[00:09:51]
+  Transcript :  لا هي فانيابلز واحدة كتبتها مرة واحدة في استراجت
+  OCR        : None
+  Combined   :  لا هي فانيابلز واحدة كتبتها مرة واحدة في استراجت
+
+[00:09:56]
+  Transcript :  وأصبح عندي استامبا كده
+  OCR        : None
+  Combined   :  وأصبح عندي استامبا كده
+
+[00:10:00]
+  Transcript :  سوف نعرف الـ variable من الـ Stumpody أو من الـ data type
+  OCR        : None
+  Combined   :  سوف نعرف الـ variable من الـ Stumpody أو من الـ data type
+
+[00:10:10]
+  Transcript :  مثل ما انا عملت في السطر
+  OCR        : None
+  Combined   :  مثل ما انا عملت في السطر
+
+[00:10:14]
+  Transcript :  وابحة دي يا شباب، يبقى دي الفكرة من الـ Struct
+  OCR        : None
+  Combined   :  وابحة دي يا شباب، يبقى دي الفكرة من الـ Struct
+
+[00:10:19]
+  Transcript :  دعنا نرجع الـ slides
+  OCR        : For Example : To store an Employee data liko empno, fname, Iname. | salary. bonus, netsalary: | Iname,
+  Combined   :  دعنا نرجع الـ slides For Example : To store an Employee data liko empno, fname, Iname. | salary. bonus, netsalary: | Iname,
+
+[00:10:21]
+  Transcript :  هنا انا عملت معك الجزء ده
+  OCR        : None
+  Combined   :  هنا انا عملت معك الجزء ده
+
+[00:10:23]
+  Transcript :  الذي هنا عرفنا وعملنا define أو definition للـ employee
+  OCR        : None
+  Combined   :  الذي هنا عرفنا وعملنا define أو definition للـ employee
+
+[00:10:29]
+  Transcript :  ويقوم بإمكاني المثال الذي شرحته وانتهى الوقت
+  OCR        : Once, a new struct is defined, we can use it as any other data type. | struct Employee | Emp 1 | Emp 2 | Empno | Empno: | Fname: | Fname: | Lname | Lname | salary: | Salary | Salary | netsalary: | bomus: | Bonus | Bonus | Netsalary: | Netsalary: | Employee emp1 , emp 2:
+  Combined   :  ويقوم بإمكاني المثال الذي شرحته وانتهى الوقت Once, a new struct is defined, we can use it as any other data type. | struct Employee | Emp 1 | Emp 2 | Empno | Empno: | Fname: | Fname: | Lname | Lname | salary: | Salary | Salary | netsalary: | bomus: | Bonus | Bonus | Netsalary: | Netsalary: | Employee emp1 , emp 2:
+
+[00:10:32]
+  Transcript :  لو عاوز أخذ variables من هذا الـ data type الجديد
+  OCR        : None
+  Combined   :  لو عاوز أخذ variables من هذا الـ data type الجديد
+
+[00:10:36]
+  Transcript :  فأنا أقول ألي اسم الـ employee أو اسم الـ struct
+  OCR        : None
+  Combined   :  فأنا أقول ألي اسم الـ employee أو اسم الـ struct
+
+[00:10:40]
+  Transcript :  أو الـ data type الجديد وبعدين أحدد أسماء variables
+  OCR        : None
+  Combined   :  أو الـ data type الجديد وبعدين أحدد أسماء variables
+
+[00:10:44]
+  Transcript :  employee 1 و employee 2. أرى هنا أعمل لي مكانين إزاي
+  OCR        : None
+  Combined   :  employee 1 و employee 2. أرى هنا أعمل لي مكانين إزاي
+
+[00:10:48]
+  Transcript :  أعمل لي مكان هنا ومستنيني جاهز
+  OCR        : None
+  Combined   :  أعمل لي مكان هنا ومستنيني جاهز
+
+[00:11:12]
+  Transcript :  values I ampes role Prince Sarah which saw significant accessories junk a call 2
+  OCR        : To Access the Memebers of the struct, Lse the Operator | cmpno; | fname : | float salary: | Salary: | Netsalary | Int main | Employee cmp1: | emp1.cmpno12: | cmp1.Inamc-Ali: | cmp1.fname-Ahumod: | cmpL.salary3ooo; | cmp1.bonus-500. | cmpl.netsalary cmpl. salary  cmp1.bonus
+  Combined   :  values I ampes role Prince Sarah which saw significant accessories junk a call 2 To Access the Memebers of the struct, Lse the Operator | cmpno; | fname : | float salary: | Salary: | Netsalary | Int main | Employee cmp1: | emp1.cmpno12: | cmp1.Inamc-Ali: | cmp1.fname-Ahumod: | cmpL.salary3ooo; | cmp1.bonus-500. | cmpl.netsalary cmpl. salary  cmp1.bonus
+
+[00:11:12]
+  Transcript :  هنا برضو السلايد دي بتقول لو انت عاوز توصل لأيتم معين هتعمل ايه؟
+  OCR        : None
+  Combined   :  هنا برضو السلايد دي بتقول لو انت عاوز توصل لأيتم معين هتعمل ايه؟
+
+[00:11:20]
+  Transcript :  تكتب اسم الـ variable.اسم الـ item اللي انت عاوز توصله
+  OCR        : None
+  Combined   :  تكتب اسم الـ variable.اسم الـ item اللي انت عاوز توصله
+
+[00:11:25]
+  Transcript :  اسم الـ variable.اسم المعلومة اللي انت عاوز تعمل له setting
+  OCR        : None
+  Combined   :  اسم الـ variable.اسم المعلومة اللي انت عاوز تعمل له setting
+
+[00:11:29]
+  Transcript :  يعني هنا مثلا اما قال الملي 1.ملي number بيسوي 12
+  OCR        : None
+  Combined   :  يعني هنا مثلا اما قال الملي 1.ملي number بيسوي 12
+
+[00:11:33]
+  Transcript :  عارف عمل ايه؟ راح على الملي number ده وكتب فيه كام 12
+  OCR        : None
+  Combined   :  عارف عمل ايه؟ راح على الملي number ده وكتب فيه كام 12
+
+[00:11:38]
+  Transcript :  أما قلنا الانبليه واحد فرستينيم بيساو أحمد
+  OCR        : None
+  Combined   :  أما قلنا الانبليه واحد فرستينيم بيساو أحمد
+
+[00:11:41]
+  Transcript :  راح عند الفرستينيم
+  OCR        : None
+  Combined   :  راح عند الفرستينيم
+
+[00:11:43]
+  Transcript :  الـ data item الاسمه فرستينيم وحط أحمد
+  OCR        : None
+  Combined   :  الـ data item الاسمه فرستينيم وحط أحمد
+
+[00:11:45]
+  Transcript :  وهكذا
+  OCR        : None
+  Combined   :  وهكذا
+
+[00:11:47]
+  Transcript :  يبقى انت
+  OCR        : None
+  Combined   :  يبقى انت
+
+[00:11:49]
+  Transcript :  اللي حد ده وقت اتعلمت
+  OCR        : None
+  Combined   :  اللي حد ده وقت اتعلمت
+
+[00:11:51]
+  Transcript :  أعمله ازاي؟ أعمل الـ extract ازاي؟
+  OCR        : None
+  Combined   :  أعمله ازاي؟ أعمل الـ extract ازاي؟
+
+[00:11:53]
+  Transcript :  أعرف variable منه ازاي؟
+  OCR        : None
+  Combined   :  أعرف variable منه ازاي؟
+
+[00:11:56]
+  Transcript :  عادي خالص زائدة طيب باستخدمه
+  OCR        : None
+  Combined   :  عادي خالص زائدة طيب باستخدمه
+
+[00:11:58]
+  Transcript :  ثم أوصل data item زيباً
+  OCR        : None
+  Combined   :  ثم أوصل data item زيباً
+
+[00:12:04]
+  Transcript :  باستخدام ال . operator. هل انا ممكن اطبع عليها ال assignment وال comparison؟ اه ايه المشكلة؟
+  OCR        : To Accoss tho Memobers of the struct, use the Operator | Ahmed | Lname: | 3000 | flout | netsulary; | Bonus: | 3500 | cmp1.cmpno12: | cmp1.InameAli: | cmp1.fname-Alumod: | emp1.bomus-500. | empl.net salarym cmpl salary  cmpl.bomus
+  Combined   :  باستخدام ال . operator. هل انا ممكن اطبع عليها ال assignment وال comparison؟ اه ايه المشكلة؟ To Accoss tho Memobers of the struct, use the Operator | Ahmed | Lname: | 3000 | flout | netsulary; | Bonus: | 3500 | cmp1.cmpno12: | cmp1.InameAli: | cmp1.fname-Alumod: | emp1.bomus-500. | empl.net salarym cmpl salary  cmpl.bomus
+
+[00:12:14]
+  Transcript :  ال assignment اللي هي ايه؟ يعني مثلا بيقول لي لو عندي employee اسمه mp1 و عندي mp2 اسمه mp2
+  OCR        : Assignment and Comparison | Value of one st ruct variable can be assigned to anotier stzuct variable | of the same type using an assignment statement | Example : | Employee emp1. emp2; | emp2 -emp1; | copies the contents of emp1 into emp2 | - Compare struct: variables member-wise | - No apgregate relational operations allowed | - To compare the values of emp1 and emp2 | empl.fname - emp2.fname empl.salary- emp2.salary | if empl.emp nomcmp2.emp no
+  Combined   :  ال assignment اللي هي ايه؟ يعني مثلا بيقول لي لو عندي employee اسمه mp1 و عندي mp2 اسمه mp2 Assignment and Comparison | Value of one st ruct variable can be assigned to anotier stzuct variable | of the same type using an assignment statement | Example : | Employee emp1. emp2; | emp2 -emp1; | copies the contents of emp1 into emp2 | - Compare struct: variables member-wise | - No apgregate relational operations allowed | - To compare the values of emp1 and emp2 | empl.fname - emp2.fname empl.salary- emp2.salary | if empl.emp nomcmp2.emp no
+
+[00:12:20]
+  Transcript :  هل ينفع اقول كده؟ ينفع اول mp2 يسوي mp1؟ اه الاجابة يس ينفع.
+  OCR        : None
+  Combined   :  هل ينفع اقول كده؟ ينفع اول mp2 يسوي mp1؟ اه الاجابة يس ينفع.
+
+[00:12:26]
+  Transcript :  سيقوم بعمل كل data item في m1 يأخذ منه نسخة ويضعها في المقابل في m2
+  OCR        : None
+  Combined   :  سيقوم بعمل كل data item في m1 يأخذ منه نسخة ويضعها في المقابل في m2
+
+[00:12:35]
+  Transcript :  سيأخذ كل data item في m1 يأخذ نسخة منه ويضعها في المقابل في m2
+  OCR        : None
+  Combined   :  سيأخذ كل data item في m1 يأخذ نسخة منه ويضعها في المقابل في m2
+
+[00:12:43]
+  Transcript :  يعني اقوم بقى هنا. اقوم بقى هنا. بعد ما خلصت الكود ده اقوله. خلي
+  OCR        : Value of one st ruct variable can be assigned to | of the same type using an assignment statemont | another struct variable | Example: | emp2 | -emp | copies the contents orde | . Compare atruct variboies memoer-wse | -No aogregate relational operations allowed | emp1.fname-emp2.fnameempl.salary | -empZsalary
+  Combined   :  يعني اقوم بقى هنا. اقوم بقى هنا. بعد ما خلصت الكود ده اقوله. خلي Value of one st ruct variable can be assigned to | of the same type using an assignment statemont | another struct variable | Example: | emp2 | -emp | copies the contents orde | . Compare atruct variboies memoer-wse | -No aogregate relational operations allowed | emp1.fname-emp2.fnameempl.salary | -empZsalary
+
+[00:12:53]
+  Transcript :  E2 variable employee 1 array array array
+  OCR        : employee el, e2; | el.empno  10; | e1. fname - Ahmed; | el.lname Ibrahin; | el.salary  3000; | el.netsalary  e1.salary  e1.bonus;
+  Combined   :  E2 variable employee 1 array array array employee el, e2; | el.empno  10; | e1. fname - Ahmed; | el.lname Ibrahin; | el.salary  3000; | el.netsalary  e1.salary  e1.bonus;
+
+[00:13:03]
+  Transcript :  E2 variable employee 1 array array array
+  OCR        : e1.fnane  Ahmed; | el.lname-Ibrahin; | e1.netsalary  e1.salary  e1.bonus; | e2  e1;
+  Combined   :  E2 variable employee 1 array array array e1.fnane  Ahmed; | el.lname-Ibrahin; | e1.netsalary  e1.salary  e1.bonus; | e2  e1;
+
+[00:13:08]
+  Transcript :  في الاري انما ينفع هنا في الاستركت. اننا نعمل assignment بين two struct
+  OCR        : None
+  Combined   :  في الاري انما ينفع هنا في الاستركت. اننا نعمل assignment بين two struct
+
+[00:13:12]
+  Transcript :  او بين two struct variables زي كده. طب ايه اللي هيحصل كده؟ هيروح ماسك
+  OCR        : None
+  Combined   :  او بين two struct variables زي كده. طب ايه اللي هيحصل كده؟ هيروح ماسك
+
+[00:13:17]
+  Transcript :  سوف يمسك المنبر بتاعه ويضع في 10
+  OCR        : None
+  Combined   :  سوف يمسك المنبر بتاعه ويضع في 10
+
+[00:13:23]
+  Transcript :  المنبر يضع في احمد
+  OCR        : el. fgane  Amed; | el.Iname-Ibrahin;
+  Combined   :  المنبر يضع في احمد el. fgane  Amed; | el.Iname-Ibrahin;
+
+[00:13:25]
+  Transcript :  ويضع اتجربت لك
+  OCR        : None
+  Combined   :  ويضع اتجربت لك
+
+[00:13:28]
+  Transcript :  سأعمل مثلا سي اوت
+  OCR        : None
+  Combined   :  سأعمل مثلا سي اوت
+
+[00:13:33]
+  Transcript :  للاي 2 ضد فرست نيم
+  OCR        : e1.lnane Ibrahin; | el.salary - 3000; | el.bonus509 boni | el.netsala | lary  el.bonus; | hanet | hname | cout  e2.fna | 10..
+  Combined   :  للاي 2 ضد فرست نيم e1.lnane Ibrahin; | el.salary - 3000; | el.bonus509 boni | el.netsala | lary  el.bonus; | hanet | hname | cout  e2.fna | 10..
+
+[00:13:35]
+  Transcript :  وهعمل لها كونكتنشن
+  OCR        : None
+  Combined   :  وهعمل لها كونكتنشن
+
+[00:13:38]
+  Transcript :  مع
+  OCR        : None
+  Combined   :  مع
+
+[00:13:41]
+  Transcript :  إلقيتو .last name
+  OCR        : None
+  Combined   :  إلقيتو .last name
+
+[00:13:49]
+  Transcript :  عشان بس أثبت لك اللي أنا عملته
+  OCR        : eint main | e1.fnane  Ahned; | e1.lname Ibrahin; | el.netsalary  el.salary  e1.bonus; | cout  e2.fnane   e2.Inane
+  Combined   :  عشان بس أثبت لك اللي أنا عملته eint main | e1.fnane  Ahned; | e1.lname Ibrahin; | el.netsalary  el.salary  e1.bonus; | cout  e2.fnane   e2.Inane
+
+[00:13:52]
+  Transcript :  تعال نجرب كده أو أعمل control F5 عشان أرن
+  OCR        : None
+  Combined   :  تعال نجرب كده أو أعمل control F5 عشان أرن
+
+[00:13:59]
+  Transcript :  طبع كام؟ طبع أحمد إبراهيم
+  OCR        : CWindowdsysten2henduexe | aleed | Press | Thrahin. | contimue | TOrE
+  Combined   :  طبع كام؟ طبع أحمد إبراهيم CWindowdsysten2henduexe | aleed | Press | Thrahin. | contimue | TOrE
+
+[00:14:19]
+  Transcript :  رحمد إبراهيم ده تبعته من اي 2. طيب انا اي 2 ده محطتش هي بيدي قيم صح؟ اه بس انا خليت اي 2 بيساوي اي 1 فاصبح القيم اللي في اي 1 اتنسخت وتحطت فين في اي 2. ماشي؟ يبقى انا ممكن اعمل assignment بالسهول. طيب تعال نرجع للسلايد. طيب هنا خلاص قدرنا نعمل assignment. طيب في حالة comparison هعمل ايه؟ هنا خلي بالك ان في
+  OCR        : Value of one st: ruct variable can be assigned to another st ruct variable | of the same type using an assignment statomo | Employee emp1, emp2: | emp2 emp1; | Compare atruct variables member-wise | - No aggregate relational operations allowed m, , ... | To compare the values of emp1 and emp2 | if cmpl.cmp nomcmp2.cmp no | cmp1.fname-cmp2.fnamecmpl.salary-emp2.salary
+  Combined   :  رحمد إبراهيم ده تبعته من اي 2. طيب انا اي 2 ده محطتش هي بيدي قيم صح؟ اه بس انا خليت اي 2 بيساوي اي 1 فاصبح القيم اللي في اي 1 اتنسخت وتحطت فين في اي 2. ماشي؟ يبقى انا ممكن اعمل assignment بالسهول. طيب تعال نرجع للسلايد. طيب هنا خلاص قدرنا نعمل assignment. طيب في حالة comparison هعمل ايه؟ هنا خلي بالك ان في Value of one st: ruct variable can be assigned to another st ruct variable | of the same type using an assignment statomo | Employee emp1, emp2: | emp2 emp1; | Compare atruct variables member-wise | - No aggregate relational operations allowed m, , ... | To compare the values of emp1 and emp2 | if cmpl.cmp nomcmp2.cmp no | cmp1.fname-cmp2.fnamecmpl.salary-emp2.salary
+
+[00:14:28]
+  Transcript :  الكمباريزون ما ينفعشي عشان اعرف اعمل compare بين struct variable
+  OCR        : None
+  Combined   :  الكمباريزون ما ينفعشي عشان اعرف اعمل compare بين struct variable
+
+[00:14:33]
+  Transcript :  و struct variable ثاني ما ينفعشي استخدم معاهم
+  OCR        : None
+  Combined   :  و struct variable ثاني ما ينفعشي استخدم معاهم
+
+[00:14:37]
+  Transcript :  relational operator. relational operators اللي هي ايه اللي هي كانت equal equal
+  OCR        : None
+  Combined   :  relational operator. relational operators اللي هي ايه اللي هي كانت equal equal
+
+[00:14:42]
+  Transcript :  والاكبر من والاصغر من والاكبر من او يساوي وما الى ذلك. لا يجوز
+  OCR        : None
+  Combined   :  والاكبر من والاصغر من والاكبر من او يساوي وما الى ذلك. لا يجوز
+
+[00:14:47]
+  Transcript :  استخدام relational operator في المقارنة بين two struct variables. اما
+  OCR        : None
+  Combined   :  استخدام relational operator في المقارنة بين two struct variables. اما
+
+[00:14:52]
+  Transcript :  data item variable data item variable employee 1 employee 2
+  OCR        : None
+  Combined   :  data item variable data item variable employee 1 employee 2
+
+[00:15:07]
+  Transcript :  لا يعاوز أقارن بينهم أعمل إيه؟ أمسك الـ employee number بتاع employee 1
+  OCR        : None
+  Combined   :  لا يعاوز أقارن بينهم أعمل إيه؟ أمسك الـ employee number بتاع employee 1
+
+[00:15:12]
+  Transcript :  أقارنه بالـ employee number بتاع employee 2
+  OCR        : None
+  Combined   :  أقارنه بالـ employee number بتاع employee 2
+
+[00:15:16]
+  Transcript :  هل بلد؟ أمسك الـ first name بتاع E1 أقارنه بالـ first name بتاع E2 وهكذا
+  OCR        : None
+  Combined   :  هل بلد؟ أمسك الـ first name بتاع E1 أقارنه بالـ first name بتاع E2 وهكذا
+
+[00:15:23]
+  Transcript :  لكن لا يمكنني أن أستخدم الـ Relational Operators بين الـ Extract Variables نفسها
+  OCR        : None
+  Combined   :  لكن لا يمكنني أن أستخدم الـ Relational Operators بين الـ Extract Variables نفسها
+
+[00:15:30]
+  Transcript :  ها؟ خلاص واضحة دي
+  OCR        : None
+  Combined   :  ها؟ خلاص واضحة دي
+
+[00:15:32]
+  Transcript :  يبقى أنت في المقارنة هتقارن بين الـ Data Items
+  OCR        : None
+  Combined   :  يبقى أنت في المقارنة هتقارن بين الـ Data Items
+
+[00:15:36]
+  Transcript :  خلي بالك، هتقارن بين الـ Data Items اللي داخل الـ Extract Variable
+  OCR        : None
+  Combined   :  خلي بالك، هتقارن بين الـ Data Items اللي داخل الـ Extract Variable
+
+[00:15:40]
+  Transcript :  مع المقابل لها من الـ Extract Variable التاني
+  OCR        : None
+  Combined   :  مع المقابل لها من الـ Extract Variable التاني
+
+[00:15:44]
+  Transcript :  هيبقى الكود كده، شايف؟
+  OCR        : None
+  Combined   :  هيبقى الكود كده، شايف؟
+
+[00:15:45]
+  Transcript :  هنا مثلاً إيه في الـ Embry 1. Embry Number
+  OCR        : None
+  Combined   :  هنا مثلاً إيه في الـ Embry 1. Embry Number
+
+[00:15:48]
+  Transcript :  Equal Equal Embry 2. Embry Number
+  OCR        : None
+  Combined   :  Equal Equal Embry 2. Embry Number
+
+[00:15:51]
+  Transcript :  يبقى انت قارنت data item الاسم الملي number من الـ variable الاولاني مع data item الاسم الملي number من الـ variable الثاني
+  OCR        : None
+  Combined   :  يبقى انت قارنت data item الاسم الملي number من الـ variable الاولاني مع data item الاسم الملي number من الـ variable الثاني
+
+[00:16:00]
+  Transcript :  و هكذا吧 كذا امئة ات якلك اخر یا اثنان يساوي كذا .
+  OCR        : None
+  Combined   :  و هكذا吧 كذا امئة ات якلك اخر یا اثنان يساوي كذا .
+
+[00:16:08]
+  Transcript :  ان conquer ادراك في الكود
+  OCR        : Value of one struct variable can be | assigned to | Example | Employee emp1, emp2 | Emp no: | copies the contents of | iame: | sary: | Compare atruct varis | No aggregate relational operations allowed  , , ..... | To compare the values of empi and emp2 | if empl.empnommemp2.cmpno | empl.fname | -emp2.fname  emp1.salary | -emp2.salar
+  Combined   :  ان conquer ادراك في الكود Value of one struct variable can be | assigned to | Example | Employee emp1, emp2 | Emp no: | copies the contents of | iame: | sary: | Compare atruct varis | No aggregate relational operations allowed  , , ..... | To compare the values of empi and emp2 | if empl.empnommemp2.cmpno | empl.fname | -emp2.fname  emp1.salary | -emp2.salar
+
+[00:16:09]
+  Transcript :  و الان انا اقام فقط منвид القط fake un
+  OCR        : None
+  Combined   :  و الان انا اقام فقط منвид القط fake un
+
+[00:16:18]
+  Transcript :  ي Hamilton versus E2
+  OCR        : e1.fname  Ahmed; | e1.bonus-500; | cout  e2.fname     e2.1name  n; | e1 e2 | output from: | Build
+  Combined   :  ي Hamilton versus E2 e1.fname  Ahmed; | e1.bonus-500; | cout  e2.fname     e2.1name  n; | e1 e2 | output from: | Build
+
+[00:16:20]
+  Transcript :  المقبل الامبن سأشاب فان الان الحالي
+  OCR        : None
+  Combined   :  المقبل الامبن سأشاب فان الان الحالي
+
+[00:16:21]
+  Transcript :  الاسلوب اخبط لان ربط ايakatÉ
+  OCR        : None
+  Combined   :  الاسلوب اخبط لان ربط ايakatÉ
+
+[00:16:28]
+  Transcript :  لان انا ابعدت سأخدante teriyactual operator
+  OCR        : e1. fname  Ahmed; | if e12e2 | ort no operator a matches these operands
+  Combined   :  لان انا ابعدت سأخدante teriyactual operator e1. fname  Ahmed; | if e12e2 | ort no operator a matches these operands
+
+[00:16:29]
+  Transcript :  لو انت عاوز تقارب منهم يبقى هتقارن كل داتا اتم بالمقابل لي في الفاريابل التاني فاقول
+  OCR        : None
+  Combined   :  لو انت عاوز تقارب منهم يبقى هتقارن كل داتا اتم بالمقابل لي في الفاريابل التاني فاقول
+
+[00:16:38]
+  Transcript :  اي وان دوت مثلا سالري اكبر من مثلا اي تو دوت سالري وهكذا
+  OCR        : cout  e2.fname | e2.1name  n; | ifg1.sal e2 | Jorus | frame | salery | public: float employeessalary
+  Combined   :  اي وان دوت مثلا سالري اكبر من مثلا اي تو دوت سالري وهكذا cout  e2.fname | e2.1name  n; | ifg1.sal e2 | Jorus | frame | salery | public: float employeessalary
+
+[00:16:48]
+  Transcript :  E1 E2 English Operator E2 A
+  OCR        : el.lname Ibrahim; | cout  e2.fname    e2.1name  n; | if  e1.salary  e2.salary  e | out from: | - Bufld started: Profect: Structs, Configuration: Debug Wr | FiFor ReefrnersiStn
+  Combined   :  E1 E2 English Operator E2 A el.lname Ibrahim; | cout  e2.fname    e2.1name  n; | if  e1.salary  e2.salary  e | out from: | - Bufld started: Profect: Structs, Configuration: Debug Wr | FiFor ReefrnersiStn
+
+[00:17:04]
+  Transcript :  E1 E2 English Operator E2 A
+  OCR        : cout  e2.fname   e2.1name  n; | if  e1.salary e2.salary  e1.bonus  e2.bonus | - Bufld started: Project: Structs, Configuration: Debug Win | uct.cpe | FEar.ReefnnersiStructssDeby
+  Combined   :  E1 E2 English Operator E2 A cout  e2.fname   e2.1name  n; | if  e1.salary e2.salary  e1.bonus  e2.bonus | - Bufld started: Project: Structs, Configuration: Debug Win | uct.cpe | FEar.ReefnnersiStructssDeby
+
+[00:17:05]
+  Transcript :  بالـ To Struct Variable
+  OCR        : None
+  Combined   :  بالـ To Struct Variable
+
+[00:17:07]
+  Transcript :  لا، سأتقارن كل هذا
+  OCR        : None
+  Combined   :  لا، سأتقارن كل هذا
+
+[00:17:09]
+  Transcript :  بالـ To Item المقابل له
+  OCR        : None
+  Combined   :  بالـ To Item المقابل له
+
+[00:17:11]
+  Transcript :  حسنا، نرجع إلى سلايد
+  OCR        : None
+  Combined   :  حسنا، نرجع إلى سلايد
+
+[00:17:14]
+  Transcript : None
+  OCR        : struct Variables and | Functions | - A struct variable can be passed as a parametor | by value or by reference | Afunction can return a value | of type | struct distancetype | int feet; | float inches: | diatancelype Adddistancns distancetype df,distancetree d2 | distancetyps Acddistances distancatype d1, distancetype d2 | resultfent a1.feet  2.neet | distancetype result | result inches  d2.inches  d2 inches | return result;
+  Combined   : struct Variables and | Functions | - A struct variable can be passed as a parametor | by value or by reference | Afunction can return a value | of type | struct distancetype | int feet; | float inches: | diatancelype Adddistancns distancetype df,distancetree d2 | distancetyps Acddistances distancatype d1, distancetype d2 | resultfent a1.feet  2.neet | distancetype result | result inches  d2.inches  d2 inches | return result;
+
+[00:17:15]
+  Transcript :  هنا، بيكلمني عن
+  OCR        : None
+  Combined   :  هنا، بيكلمني عن
+
+[00:17:17]
+  Transcript :  ماذا؟
+  OCR        : None
+  Combined   :  ماذا؟
+
+[00:17:19]
+  Transcript :  وفنكشن
+  OCR        : None
+  Combined   :  وفنكشن
+
+[00:17:21]
+  Transcript :  هو لا ينفع
+  OCR        : None
+  Combined   :  هو لا ينفع
+
+[00:17:24]
+  Transcript :  إذا أبعدم Struct Variable كبرامتر لفونكشن، الإجابة اي تفتكر؟
+  OCR        : Variables | A struct variable can | be passed as | a parameter | value or by reference. | A function can return a value | struct dietancetype | Int feet: | float inches | distencebype Adddistenoes distamoetyped1, distancetype d2: | distancetype Adddistancen distancetype d1, distancetype d2 | resultfeet a1.fent  2.nee | distancetype result: | result inches  d2.inches  d2.inches
+  Combined   :  إذا أبعدم Struct Variable كبرامتر لفونكشن، الإجابة اي تفتكر؟ Variables | A struct variable can | be passed as | a parameter | value or by reference. | A function can return a value | struct dietancetype | Int feet: | float inches | distencebype Adddistenoes distamoetyped1, distancetype d2: | distancetype Adddistancen distancetype d1, distancetype d2 | resultfeet a1.fent  2.nee | distancetype result: | result inches  d2.inches  d2.inches
+
+[00:17:27]
+  Transcript :  الإجابة ايه؟ طبعاً، ليه؟ ما هنأتفقنا بقى؟
+  OCR        : None
+  Combined   :  الإجابة ايه؟ طبعاً، ليه؟ ما هنأتفقنا بقى؟
+
+[00:17:30]
+  Transcript :  لو أنت خدت بالك من قهلة دي وطبعتها، هترتاح خالص
+  OCR        : None
+  Combined   :  لو أنت خدت بالك من قهلة دي وطبعتها، هترتاح خالص
+
+[00:17:34]
+  Transcript :  الـ Struct زيه زي أي تطيب جديدًا عملته
+  OCR        : struct Variables | passed | value | or by reference. | int feet: | distancelype Adddistances distancetype d1,distancetype d2 | distancetype Adddisancen distancatype di, distancetype d2 | resultfent  a1.fent  2.nee
+  Combined   :  الـ Struct زيه زي أي تطيب جديدًا عملته struct Variables | passed | value | or by reference. | int feet: | distancelype Adddistances distancetype d1,distancetype d2 | distancetype Adddisancen distancatype di, distancetype d2 | resultfent  a1.fent  2.nee
+
+[00:17:39]
+  Transcript :  يبقى الذي يسرى على تطيبس العادية يسرى عليه، هو أنت بش ممكن تبعث Variables من أي تطيب كبرامتر في الفونكشن؟
+  OCR        : None
+  Combined   :  يبقى الذي يسرى على تطيبس العادية يسرى عليه، هو أنت بش ممكن تبعث Variables من أي تطيب كبرامتر في الفونكشن؟
+
+[00:17:48]
+  Transcript :  نفسك كما يمكن أن أبعث Struct variable كبرامتر للفنكشن
+  OCR        : None
+  Combined   :  نفسك كما يمكن أن أبعث Struct variable كبرامتر للفنكشن
+
+[00:17:54]
+  Transcript :  مثل في حالتنا هنا مثلاً أنا لدي Struct اسمه Distance Type
+  OCR        : None
+  Combined   :  مثل في حالتنا هنا مثلاً أنا لدي Struct اسمه Distance Type
+
+[00:18:00]
+  Transcript :  المسافة عندنا هنفترض ان فيها two items الفيت اللي هي القدم والانشز اللي هي البوصة
+  OCR        : None
+  Combined   :  المسافة عندنا هنفترض ان فيها two items الفيت اللي هي القدم والانشز اللي هي البوصة
+
+[00:18:09]
+  Transcript :  طيب لو انا عاوز اجمع two distances ينفع او هعمل function اسمها add distance
+  OCR        : None
+  Combined   :  طيب لو انا عاوز اجمع two distances ينفع او هعمل function اسمها add distance
+
+[00:18:17]
+  Transcript :  هضعت فيها two parameters اللي اتنين نوعهم ايه distance او d1 نوع distance طيب و d2 نوع distance طيب
+  OCR        : None
+  Combined   :  هضعت فيها two parameters اللي اتنين نوعهم ايه distance او d1 نوع distance طيب و d2 نوع distance طيب
+
+[00:18:29]
+  Transcript :  طيب النجمع distance على distance تفتكر الناتج يكون ايه؟ يكون distance صح؟
+  OCR        : None
+  Combined   :  طيب النجمع distance على distance تفتكر الناتج يكون ايه؟ يكون distance صح؟
+
+[00:18:35]
+  Transcript :  اهو خليت return value نوعها برضو ايه؟ distance
+  OCR        : None
+  Combined   :  اهو خليت return value نوعها برضو ايه؟ distance
+
+[00:18:45]
+  Transcript :  زي ما مجمع integer على integer الناتج ايه؟ integer صح؟ اهو خذت بلا؟ تعال نجرب انا وانت
+  OCR        : A struct variable | can be | by value or by reference, | float inches; | distancelype Adddistancmsdistancetype d1,distancetype d2 | in main | distancetype Adddissancen distancatype di, distancetype d2 | resuft feet d1 beet d2feet | retum result;
+  Combined   :  زي ما مجمع integer على integer الناتج ايه؟ integer صح؟ اهو خذت بلا؟ تعال نجرب انا وانت A struct variable | can be | by value or by reference, | float inches; | distancelype Adddistancmsdistancetype d1,distancetype d2 | in main | distancetype Adddissancen distancatype di, distancetype d2 | resuft feet d1 beet d2feet | retum result;
+
+[00:18:55]
+  Transcript :  distance type struct distance type distance 2 data items float
+  OCR        : cument Outline | struct distancety
+  Combined   :  distance type struct distance type distance 2 data items float cument Outline | struct distancety
+
+[00:19:10]
+  Transcript :  وعاوز اعمل function تجمع two distances. هنفع؟ اه ينفع. اه هعمل function اسمها add distances مثلا.
+  OCR        : None
+  Combined   :  وعاوز اعمل function تجمع two distances. هنفع؟ اه ينفع. اه هعمل function اسمها add distances مثلا.
+
+[00:19:23]
+  Transcript :  أبعد لها اثنين مختلفة و اتنين مختلفة و اتنين مختلفة
+  OCR        : None
+  Combined   :  أبعد لها اثنين مختلفة و اتنين مختلفة و اتنين مختلفة
+
+[00:19:30]
+  Transcript :  فأنا سأقول ادي دستانس
+  OCR        : None
+  Combined   :  فأنا سأقول ادي دستانس
+
+[00:19:33]
+  Transcript :  طيب دي واحد
+  OCR        : None
+  Combined   :  طيب دي واحد
+
+[00:19:39]
+  Transcript :  و دي واحد و دي واحد
+  OCR        : float inches ; | Eadd distances  distance type d1 , distand
+  Combined   :  و دي واحد و دي واحد float inches ; | Eadd distances  distance type d1 , distand
+
+[00:19:42]
+  Transcript :  و دي واحد و دي واحد
+  OCR        : None
+  Combined   :  و دي واحد و دي واحد
+
+[00:19:45]
+  Transcript :  يبقى انا كده امت باعت لها
+  OCR        : None
+  Combined   :  يبقى انا كده امت باعت لها
+
+[00:19:48]
+  Transcript :  طيب يا سيدي انت بما تكون بتجمع انتجر زائد انتجر
+  OCR        : None
+  Combined   :  طيب يا سيدي انت بما تكون بتجمع انتجر زائد انتجر
+
+[00:19:51]
+  Transcript :  إنتجر صح؟
+  OCR        : None
+  Combined   :  إنتجر صح؟
+
+[00:19:52]
+  Transcript :  طب عد مع distance ده distance
+  OCR        : None
+  Combined   :  طب عد مع distance ده distance
+
+[00:19:53]
+  Transcript :  النتج إيه اللي تبني فيلم أنت مضكحة إيه؟
+  OCR        : None
+  Combined   :  النتج إيه اللي تبني فيلم أنت مضكحة إيه؟
+
+[00:19:56]
+  Transcript :  distance يبقى نهاج هنا
+  OCR        : None
+  Combined   :  distance يبقى نهاج هنا
+
+[00:19:57]
+  Transcript :  أقول إن دي هترجع
+  OCR        : None
+  Combined   :  أقول إن دي هترجع
+
+[00:20:00]
+  Transcript :  قيمة نوعها distance
+  OCR        : None
+  Combined   :  قيمة نوعها distance
+
+[00:20:02]
+  Transcript :  ماشي؟
+  OCR        : None
+  Combined   :  ماشي؟
+
+[00:20:04]
+  Transcript :  هذه الدكلياريشن
+  OCR        : None
+  Combined   :  هذه الدكلياريشن
+
+[00:20:06]
+  Transcript :  بتاع الفانكشن
+  OCR        : sstruct distancetype | int feet ; | 8 distance typel add distances  distancetype d1, distancetyped | Dufput | Shew eutput from | Buld
+  Combined   :  بتاع الفانكشن sstruct distancetype | int feet ; | 8 distance typel add distances  distancetype d1, distancetyped | Dufput | Shew eutput from | Buld
+
+[00:20:08]
+  Transcript :  تعالوا نعمل ال body بتاع الفانكشن
+  OCR        : None
+  Combined   :  تعالوا نعمل ال body بتاع الفانكشن
+
+[00:20:10]
+  Transcript :  أو ال definition بتاعه
+  OCR        : None
+  Combined   :  أو ال definition بتاعه
+
+[00:20:12]
+  Transcript :  هاجي تحت الميل
+  OCR        : None
+  Combined   :  هاجي تحت الميل
+
+[00:20:14]
+  Transcript :  هو هكو الناس مثل الفانكشن
+  OCR        : None
+  Combined   :  هو هكو الناس مثل الفانكشن
+
+[00:20:16]
+  Transcript :  بتتعمل لو ناسي ارجع للمحاضرة
+  OCR        : distance type adddistances distancetype d1, distancetype d2 | utput | ghow cutput fror: | 2--bucid atarted: Rrafect:Stractt.Confiearetion Delage Mlntd - | 2struet.epe | 1 Structa.vespraj- E:VforBeginneraStructaDebugStructa.exe | ussssessnn Teiid:1 succeeded,0 ralled,0 up-to-date,0skipped
+  Combined   :  بتتعمل لو ناسي ارجع للمحاضرة distance type adddistances distancetype d1, distancetype d2 | utput | ghow cutput fror: | 2--bucid atarted: Rrafect:Stractt.Confiearetion Delage Mlntd - | 2struet.epe | 1 Structa.vespraj- E:VforBeginneraStructaDebugStructa.exe | ussssessnn Teiid:1 succeeded,0 ralled,0 up-to-date,0skipped
+
+[00:20:18]
+  Transcript :  نعملين محاضرة كاملة
+  OCR        : None
+  Combined   :  نعملين محاضرة كاملة
+
+[00:20:20]
+  Transcript :  عن موضوع الفانكشن
+  OCR        : None
+  Combined   :  عن موضوع الفانكشن
+
+[00:20:22]
+  Transcript :  هاجي هنا
+  OCR        : None
+  Combined   :  هاجي هنا
+
+[00:20:24]
+  Transcript :  انت ما تكون بتجمع رقمين
+  OCR        : None
+  Combined   :  انت ما تكون بتجمع رقمين
+
+[00:20:26]
+  Transcript :  بتعمل ايه؟ بعمل variable ثالث
+  OCR        : sdistancetype adddistances  distancetype d1, distancetype d2 | atput | how oulput from: | 1y-sBud2d started: Prefiect: Seracta. Confiearatlon: Debue Hln3g - | 2 struct.er | 1Structa.vexpraj -E:VferBeginnera 5tructaDebugdtructa.exe | ssseseess Budld: 1 succeeded, 0 reiled, e up-to-date,  skipped
+  Combined   :  بتعمل ايه؟ بعمل variable ثالث sdistancetype adddistances  distancetype d1, distancetype d2 | atput | how oulput from: | 1y-sBud2d started: Prefiect: Seracta. Confiearatlon: Debue Hln3g - | 2 struct.er | 1Structa.vexpraj -E:VferBeginnera 5tructaDebugdtructa.exe | ssseseess Budld: 1 succeeded, 0 reiled, e up-to-date,  skipped
+
+[00:20:28]
+  Transcript :  سوف نتعامل الناتج بشكل جمع. سأقوم بشكل جمع. سأقوم بشكل جمع.
+  OCR        : None
+  Combined   :  سوف نتعامل الناتج بشكل جمع. سأقوم بشكل جمع. سأقوم بشكل جمع.
+
+[00:20:44]
+  Transcript :  هل ينفع اول دي واحد زائد دي اثنين؟
+  OCR        : distancetype adddistances  distancetype d1 , distancetype d2 | distancetype result; | aeput | how oulput fromc | 1s-e- Bud2d started: Preject: Structs, Configuration: Debug kin32 | 1struct.cpp | 1Structa.vespraj -E: VferBegirners 5tructaDebugdtructa.exe | ssseeeeess Budld: 1 succeeded, 0 redled,  up-to-date, e skipped
+  Combined   :  هل ينفع اول دي واحد زائد دي اثنين؟ distancetype adddistances  distancetype d1 , distancetype d2 | distancetype result; | aeput | how oulput fromc | 1s-e- Bud2d started: Preject: Structs, Configuration: Debug kin32 | 1struct.cpp | 1Structa.vespraj -E: VferBegirners 5tructaDebugdtructa.exe | ssseeeeess Budld: 1 succeeded, 0 redled,  up-to-date, e skipped
+
+[00:20:54]
+  Transcript :  equal minus extract variables
+  OCR        : distancetype adddistances  distancetype d1,distancetype d2 | distancetype result ; | result 1 d2 | eput | Iy-ses Dudid atarted: Profect: Stracta. Confiearation: Debue Hlnsz s | 2struct.epe | 1 Structa.vexpraj- E:Vfor Beginnera StructaDebugStructa.exe | ssseeeees Budld: 1 succeeded, 0 reiled,  up-to-date, 0 skipped
+  Combined   :  equal minus extract variables distancetype adddistances  distancetype d1,distancetype d2 | distancetype result ; | result 1 d2 | eput | Iy-ses Dudid atarted: Profect: Stracta. Confiearation: Debue Hlnsz s | 2struct.epe | 1 Structa.vexpraj- E:Vfor Beginnera StructaDebugStructa.exe | ssseeeees Budld: 1 succeeded, 0 reiled,  up-to-date, 0 skipped
+
+[00:21:04]
+  Transcript :  equal minus extract variables
+  OCR        : result | uput | how output frome | 2---bucid atarted: Fraject:Stractt. Coefsguret Lon Delage Mlnda | 1 Structa.vexpraj-E:VforBeginnera StructaDebugStructa.exe | seeeeeeess Budld: 1 succended, e feiled, e up-to-date, 0 skipped
+  Combined   :  equal minus extract variables result | uput | how output frome | 2---bucid atarted: Fraject:Stractt. Coefsguret Lon Delage Mlnda | 1 Structa.vexpraj-E:VforBeginnera StructaDebugStructa.exe | seeeeeeess Budld: 1 succended, e feiled, e up-to-date, 0 skipped
+
+[00:21:14]
+  Transcript :  أجمعه على المقابل لي في دي اثنين. يعني ازاي هعمل كده؟ بص. هقول
+  OCR        : distancetype adddistances distancetype d1, distancetype d2 | rest | aput | how cutput fror: | Sa---bucid atarted: Pratect:Structt.Confiearetion: Debae Mlnda .- | 2 struct.ep | 1Structa.vexpraj-E:VforBeginneraStructaDebugStructa.exe | ssseeeeess Budld: 1 succeeded, 0 reiled, e up-to-date, e skipped
+  Combined   :  أجمعه على المقابل لي في دي اثنين. يعني ازاي هعمل كده؟ بص. هقول distancetype adddistances distancetype d1, distancetype d2 | rest | aput | how cutput fror: | Sa---bucid atarted: Pratect:Structt.Confiearetion: Debae Mlnda .- | 2 struct.ep | 1Structa.vexpraj-E:VforBeginneraStructaDebugStructa.exe | ssseeeeess Budld: 1 succeeded, 0 reiled, e up-to-date, e skipped
+
+[00:21:15]
+  Transcript :  الريزولت .feet بتساوي ال D1.feet زائد ال D2.Afeet خلي بالك يبقى مسكت ال data item اللي اسمه feet من D1 جمعته على المقابل ليه في D2.
+  OCR        : None
+  Combined   :  الريزولت .feet بتساوي ال D1.feet زائد ال D2.Afeet خلي بالك يبقى مسكت ال data item اللي اسمه feet من D1 جمعته على المقابل ليه في D2.
+
+[00:21:33]
+  Transcript :  و الريسولت . inches يساوي D1. inches زائد D2.A inches
+  OCR        : None
+  Combined   :  و الريسولت . inches يساوي D1. inches زائد D2.A inches
+
+[00:21:45]
+  Transcript :  برافو عليك
+  OCR        : None
+  Combined   :  برافو عليك
+
+[00:21:46]
+  Transcript :  همسك كل data item من هنا
+  OCR        : distancetype adddistances  distancetype d1, distancetype d2 | result .feet  d1.feet  d2.feet; | result.inches  d1.inches  d2.inches | 1y-e-Bud2d started: Prafect:Structa. Confieuretlon: Debue Hin3g | 2 struct.cr | 17Structa-vesaral-E:Vfar BeeirneraiStructaDeaugidisructa-ese | aemememsne Bedid:1succeeded.a feiind.eup-tn-date.esilioond -
+  Combined   :  همسك كل data item من هنا distancetype adddistances  distancetype d1, distancetype d2 | result .feet  d1.feet  d2.feet; | result.inches  d1.inches  d2.inches | 1y-e-Bud2d started: Prafect:Structa. Confieuretlon: Debue Hin3g | 2 struct.cr | 17Structa-vesaral-E:Vfar BeeirneraiStructaDeaugidisructa-ese | aemememsne Bedid:1succeeded.a feiind.eup-tn-date.esilioond -
+
+[00:21:50]
+  Transcript :  اجمعه على المقابل لي في الـ variable الثاني
+  OCR        : None
+  Combined   :  اجمعه على المقابل لي في الـ variable الثاني
+
+[00:21:56]
+  Transcript :  طيب انا كده خلصت اعمل return لمن؟
+  OCR        : distancetype adddistances distancetype d1,distancetype d2 | result.inches  d1.inches  d2.inches; | how culput fror: | 1 struct.cpp | 1Structa.vexpraj-E:VforBeginnera StructaDebugStructa.exe | sssseeeess Budld: 1 succeeded, 0 redled, 0 up-to-date,  skipped
+  Combined   :  طيب انا كده خلصت اعمل return لمن؟ distancetype adddistances distancetype d1,distancetype d2 | result.inches  d1.inches  d2.inches; | how culput fror: | 1 struct.cpp | 1Structa.vexpraj-E:VforBeginnera StructaDebugStructa.exe | sssseeeess Budld: 1 succeeded, 0 redled, 0 up-to-date,  skipped
+
+[00:22:00]
+  Transcript :  انا كتبت كتاب ترتين مقرأة
+  OCR        : None
+  Combined   :  انا كتبت كتاب ترتين مقرأة
+
+[00:22:02]
+  Transcript :  اقوم بعمل return
+  OCR        : None
+  Combined   :  اقوم بعمل return
+
+[00:22:04]
+  Transcript :  للرزولت
+  OCR        : None
+  Combined   :  للرزولت
+
+[00:22:07]
+  Transcript :  صح؟ ماشي؟
+  OCR        : result .feet - d1.feet  d2.feet; | .... | 1Structa.vexpraj- E:VforBeginnera StructaDebugStructa.exe | eeeemnmenn tudid: 1aucceeded.a reiind.up-te-date,0 saleped
+  Combined   :  صح؟ ماشي؟ result .feet - d1.feet  d2.feet; | .... | 1Structa.vexpraj- E:VforBeginnera StructaDebugStructa.exe | eeeemnmenn tudid: 1aucceeded.a reiind.up-te-date,0 saleped
+
+[00:22:08]
+  Transcript :  خلصت انت كده؟ تمام
+  OCR        : None
+  Combined   :  خلصت انت كده؟ تمام
+
+[00:22:10]
+  Transcript :  عاوز استدعيها
+  OCR        : None
+  Combined   :  عاوز استدعيها
+
+[00:22:12]
+  Transcript :  عشان ادربها ينفع
+  OCR        : None
+  Combined   :  عشان ادربها ينفع
+
+[00:22:14]
+  Transcript :  اقوم بعمل هنا distance type
+  OCR        : None
+  Combined   :  اقوم بعمل هنا distance type
+
+[00:22:17]
+  Transcript :  اقوم بعمل منه variable
+  OCR        : distancetype adddistances  distancetype d1, distancetype d | dista | cdencamindeterminate | dencrnnabont | al denormprement | edist | b de1 | distoncetype | distance | tremplateclassrlt stodisitesaterbaisUniltdife | File wutili, Namespace std | Last | div,t | DOMAIN | Cupat | Show output frorn:
+  Combined   :  اقوم بعمل منه variable distancetype adddistances  distancetype d1, distancetype d | dista | cdencamindeterminate | dencrnnabont | al denormprement | edist | b de1 | distoncetype | distance | tremplateclassrlt stodisitesaterbaisUniltdife | File wutili, Namespace std | Last | div,t | DOMAIN | Cupat | Show output frorn:
+
+[00:22:20]
+  Transcript :  اسمه ولكل
+  OCR        : None
+  Combined   :  اسمه ولكل
+
+[00:22:22]
+  Transcript :  وستفتكد ان يكون اسمه واحد
+  OCR        : None
+  Combined   :  وستفتكد ان يكون اسمه واحد
+
+[00:22:24]
+  Transcript :  ازعل منك جدا
+  OCR        : None
+  Combined   :  ازعل منك جدا
+
+[00:22:26]
+  Transcript :  انا اكدت على الكلام كتير اثناء شرحانا للفنشة
+  OCR        : None
+  Combined   :  انا اكدت على الكلام كتير اثناء شرحانا للفنشة
+
+[00:22:28]
+  Transcript :  يسيدي X ويقوم بعمل distance type ثاني اسمه Y
+  OCR        : None
+  Combined   :  يسيدي X ويقوم بعمل distance type ثاني اسمه Y
+
+[00:22:34]
+  Transcript :  طيب فانا هقول تعالوا نطلبهم من الـ user هنفع؟ ها هقوله see out
+  OCR        : None
+  Combined   :  طيب فانا هقول تعالوا نطلبهم من الـ user هنفع؟ ها هقوله see out
+
+[00:22:41]
+  Transcript :  feet and inches for the first distance slash n 2cn X X
+  OCR        : None
+  Combined   :  feet and inches for the first distance slash n 2cn X X
+
+[00:23:25]
+  Transcript :  وقرأت المساحة الأولى. نفس الكلام ستكرره مع المسافة الثانية.
+  OCR        : s distancetype adddistances  distancetype d1 , distancetype d | gint main | distancetype x, y ; | cout  Enter Feet and Inches for the 1st distancen | cin x.feet  x.inches; | t  Enter Feet and Inches for the 1st distancen | cin x.feet  x.inches; | Cupa | how nutput fhom:
+  Combined   :  وقرأت المساحة الأولى. نفس الكلام ستكرره مع المسافة الثانية. s distancetype adddistances  distancetype d1 , distancetype d | gint main | distancetype x, y ; | cout  Enter Feet and Inches for the 1st distancen | cin x.feet  x.inches; | t  Enter Feet and Inches for the 1st distancen | cin x.feet  x.inches; | Cupa | how nutput fhom:
+
+[00:23:26]
+  Transcript :  فأقول له هنا For the second distance.
+  OCR        : None
+  Combined   :  فأقول له هنا For the second distance.
+
+[00:23:31]
+  Transcript :  وطبعاً هقرأ بcm.
+  OCR        : None
+  Combined   :  وطبعاً هقرأ بcm.
+
+[00:23:33]
+  Transcript :  بس هنا هنا نسميه y.
+  OCR        : None
+  Combined   :  بس هنا هنا نسميه y.
+
+[00:23:36]
+  Transcript :  فأنا هقرأ y.feet و y.a. inches.
+  OCR        : None
+  Combined   :  فأنا هقرأ y.feet و y.a. inches.
+
+[00:23:40]
+  Transcript :  نستدعي الفنكشن اسمها ايه؟
+  OCR        : None
+  Combined   :  نستدعي الفنكشن اسمها ايه؟
+
+[00:23:43]
+  Transcript :  Add Underscore Distances
+  OCR        : None
+  Combined   :  Add Underscore Distances
+
+[00:23:46]
+  Transcript :  هنا بيقول لي انا باخد اثنين distance
+  OCR        : None
+  Combined   :  هنا بيقول لي انا باخد اثنين distance
+
+[00:23:49]
+  Transcript :  اكتبهم انا عاير فانا محضرهم لك اهو
+  OCR        : distance type adddistances  distancetype d1 , distancetype d | distancetype x , y ; | cout  Enter Feet and Inches for the 2nd distancen; | cin y.feet  y.inches: | adddistances | distancetype adid ditarcesidistancefype dl. | Output | Show oalput frorn:
+  Combined   :  اكتبهم انا عاير فانا محضرهم لك اهو distance type adddistances  distancetype d1 , distancetype d | distancetype x , y ; | cout  Enter Feet and Inches for the 2nd distancen; | cin y.feet  y.inches: | adddistances | distancetype adid ditarcesidistancefype dl. | Output | Show oalput frorn:
+
+[00:23:52]
+  Transcript :  ادي distance الاولى اسمها x والادي distance التانية اسمها ايه
+  OCR        : None
+  Combined   :  ادي distance الاولى اسمها x والادي distance التانية اسمها ايه
+
+[00:23:55]
+  Transcript :  1
+  OCR        : None
+  Combined   :  1
+
+[00:23:59]
+  Transcript :  طيب الاد distance دي بترجع ايه؟
+  OCR        : cout  Enter Feet and Inches for the 1st distancen; | cin y.feet  y.inches; | adddistances x, y; | dietenct bypla dstarcmsidistanct fype dl, dotanctbpe d | ueput | how cutput frome | 1s-.- Bud2d started: Preject: Structs, Configuration: Debug Mind2 | 1Structs.vcxproj-E:Vror Beginners Structs Detug5tructs.exe | seeeeeeee Build: 1 succeeded,  failed,  up-to-date, 8 skipped
+  Combined   :  طيب الاد distance دي بترجع ايه؟ cout  Enter Feet and Inches for the 1st distancen; | cin y.feet  y.inches; | adddistances x, y; | dietenct bypla dstarcmsidistanct fype dl, dotanctbpe d | ueput | how cutput frome | 1s-.- Bud2d started: Preject: Structs, Configuration: Debug Mind2 | 1Structs.vcxproj-E:Vror Beginners Structs Detug5tructs.exe | seeeeeeee Build: 1 succeeded,  failed,  up-to-date, 8 skipped
+
+[00:24:09]
+  Transcript :  ترجع distance ، إذا لم يمكن أن نستقبل فيها الناتج ، سأقوم بحقه x, y و z ، سأقوم بحقه z تساوي الناتج
+  OCR        : distancetype x , y , z; | add distances x , y; | how culput frome | 1s-- Bud2d started: Preject: Structs, Configuration: Debug Hind2 | 1 Structs.vcxproj - E:Vror Beginners 5tructsDeoug5tructs.exe | ussennn Bulld: 1succeeded. a feilied. up-te-date,0 unleped
+  Combined   :  ترجع distance ، إذا لم يمكن أن نستقبل فيها الناتج ، سأقوم بحقه x, y و z ، سأقوم بحقه z تساوي الناتج distancetype x , y , z; | add distances x , y; | how culput frome | 1s-- Bud2d started: Preject: Structs, Configuration: Debug Hind2 | 1 Structs.vcxproj - E:Vror Beginners 5tructsDeoug5tructs.exe | ussennn Bulld: 1succeeded. a feilied. up-te-date,0 unleped
+
+[00:24:10]
+  Transcript :  ينفع هذا الكلام ؟ طبعا ، عاد ، سأقوم بحقه
+  OCR        : None
+  Combined   :  ينفع هذا الكلام ؟ طبعا ، عاد ، سأقوم بحقه
+
+[00:24:19]
+  Transcript :  ودخولنا نضيف filmingale��는 Z.feet و suggest aimsв.
+  OCR        : int main O | distancetype x , , z; | z add distances x , y; | cout  z.feet | 80 .. | how cutput from: | 1s-- Bud2d started: Preject: Structs, Configunation: Debug kind2 | 1 Structs.vexproj - E:Vror Beginners5tructsDeoug5tructs.exe | seeeemeee Build: 1 succeeded, 0 failed,  up-to-date, 6 skipped ese.s
+  Combined   :  ودخولنا نضيف filmingale��는 Z.feet و suggest aimsв. int main O | distancetype x , , z; | z add distances x , y; | cout  z.feet | 80 .. | how cutput from: | 1s-- Bud2d started: Preject: Structs, Configunation: Debug kind2 | 1 Structs.vexproj - E:Vror Beginners5tructsDeoug5tructs.exe | seeeemeee Build: 1 succeeded, 0 failed,  up-to-date, 6 skipped ese.s
+
+[00:24:35]
+  Transcript :  قد يبقى ما 6 سد و نظيفه صفحات بالعمال في المفاomet واندخل النتابعة لما كيفية التجارة والدخل النتابعة للعمال الخير У gener.
+  OCR        : distance type x , y , z; | z adddistances x , y; | cout  z. feet | jg.inchesn; | 1s-- Bud2d started: Preject: Structs, Configuration: Debug kind2 | 1Structs.vexproj - E:Vrar Beginners 5tructs Deoug5tructs.exe | seeeeeeen Build: 1 succeeded, o failed, e up-to-date,  skipped
+  Combined   :  قد يبقى ما 6 سد و نظيفه صفحات بالعمال في المفاomet واندخل النتابعة لما كيفية التجارة والدخل النتابعة للعمال الخير У gener. distance type x , y , z; | z adddistances x , y; | cout  z. feet | jg.inchesn; | 1s-- Bud2d started: Preject: Structs, Configuration: Debug kind2 | 1Structs.vexproj - E:Vrar Beginners 5tructs Deoug5tructs.exe | seeeeeeen Build: 1 succeeded, o failed, e up-to-date,  skipped
+
+[00:24:38]
+  Transcript :  أدوس control F5
+  OCR        : None
+  Combined   :  أدوس control F5
+
+[00:24:43]
+  Transcript :  هنا سألني عن الفيت والإنش
+  OCR        : None
+  Combined   :  هنا سألني عن الفيت والإنش
+
+[00:24:45]
+  Transcript :  for the first distance
+  OCR        : 1s-- Bud2d started: Praject: Structs, Configuration: Debug kind2 | 2 atruct.cp | 1Structs.vexprof- E:Vfer Beginners Structs Deoug5tructs.exe | uessnnnnn tulld:1succeeded. a feilied. up-te-date, shlpped
+  Combined   :  for the first distance 1s-- Bud2d started: Praject: Structs, Configuration: Debug kind2 | 2 atruct.cp | 1Structs.vexprof- E:Vfer Beginners Structs Deoug5tructs.exe | uessnnnnn tulld:1succeeded. a feilied. up-te-date, shlpped
+
+[00:24:47]
+  Transcript :  فأنا أخذ الفيت
+  OCR        : None
+  Combined   :  فأنا أخذ الفيت
+
+[00:24:48]
+  Transcript :  نقول 30 feet مثلا
+  OCR        : None
+  Combined   :  نقول 30 feet مثلا
+
+[00:24:50]
+  Transcript :  ونفترض
+  OCR        : None
+  Combined   :  ونفترض
+
+[00:24:55]
+  Transcript :  inches 20 feet 20 3
+  OCR        : distancetype x , y, z; | 3Cvfindownlaystern3hherd.me | Enter Feet and Incben for the Ist distance
+  Combined   :  inches 20 feet 20 3 distancetype x , y, z; | 3Cvfindownlaystern3hherd.me | Enter Feet and Incben for the Ist distance
+
+[00:25:12]
+  Transcript :  صح لو خطب لك 30 زايد 20 كام 50 مراوض عليك جمع الفيت الأولى مع الفيت التاني
+  OCR        : None
+  Combined   :  صح لو خطب لك 30 زايد 20 كام 50 مراوض عليك جمع الفيت الأولى مع الفيت التاني
+
+[00:25:20]
+  Transcript :  والانشيز بتاعة الاولى معنا انشيز بتاعة اخرى خمسة ونص وتلاتة ونص تسعة
+  OCR        : None
+  Combined   :  والانشيز بتاعة الاولى معنا انشيز بتاعة اخرى خمسة ونص وتلاتة ونص تسعة
+
+[00:25:29]
+  Transcript :  واضح يا جماعة؟ يبقى اذا انا الاسترقت اما بقض منه variable بتعامل معاك انه data type عادي خالص
+  OCR        : CvMfindouslayster.cmd.ae | Enter Pent and Inche: far the lst distance | Enter Peet asd Incbes for the 2nd distance
+  Combined   :  واضح يا جماعة؟ يبقى اذا انا الاسترقت اما بقض منه variable بتعامل معاك انه data type عادي خالص CvMfindouslayster.cmd.ae | Enter Pent and Inche: far the lst distance | Enter Peet asd Incbes for the 2nd distance
+
+[00:25:36]
+  Transcript :  اقدر ابعثه بالfunction عادي خالص زي اي data type تاني
+  OCR        : None
+  Combined   :  اقدر ابعثه بالfunction عادي خالص زي اي data type تاني
+
+[00:25:40]
+  Transcript :  اقدر اعمله character value عادي خالص زي ما انا عملت هنا
+  OCR        : None
+  Combined   :  اقدر اعمله character value عادي خالص زي ما انا عملت هنا
+
+[00:25:45]
+  Transcript :  ومتحه السلاسة كأنه variable من أي داتة طيب انت تتعامل معها.
+  OCR        : None
+  Combined   :  ومتحه السلاسة كأنه variable من أي داتة طيب انت تتعامل معها.
+
+[00:25:53]
+  Transcript :  طيب خلانا نرجع للسليد.
+  OCR        : value or by reforence | distancelype Adddistancms distancetype d1, distancetype d2: | distancetype Adddietancen distancetype di, distancetype d2 | dlistancetype result: | resuft feet a1.5eet d2feet | reaut inches  d inches  d2.inches
+  Combined   :  طيب خلانا نرجع للسليد. value or by reforence | distancelype Adddistancms distancetype d1, distancetype d2: | distancetype Adddietancen distancetype di, distancetype d2 | dlistancetype result: | resuft feet a1.5eet d2feet | reaut inches  d inches  d2.inches
+
+[00:25:55]
+  Transcript :  طيب Arrays in structs يعني ايه؟
+  OCR        : None
+  Combined   :  طيب Arrays in structs يعني ايه؟
+
+[00:26:03]
+  Transcript :  هل أنا ممكن يكون عندي data item داخل اللي استركت نوع array؟
+  OCR        : Arrays | structs | struct Student | studentno: | fout | sname : | flout marks31 | s1.student no-120; | Student s1: | s1.sname-Ahmed Ibrahim: | s1.GPA3.56 | s1.mars0  80: | s1.marks1  70: | s1.marks2
+  Combined   :  هل أنا ممكن يكون عندي data item داخل اللي استركت نوع array؟ Arrays | structs | struct Student | studentno: | fout | sname : | flout marks31 | s1.student no-120; | Student s1: | s1.sname-Ahmed Ibrahim: | s1.GPA3.56 | s1.mars0  80: | s1.marks1  70: | s1.marks2
+
+[00:26:05]
+  Transcript :  آيام عادي خالص
+  OCR        : None
+  Combined   :  آيام عادي خالص
+
+[00:26:07]
+  Transcript :  زي في حالتنا دي شايف؟
+  OCR        : None
+  Combined   :  زي في حالتنا دي شايف؟
+
+[00:26:09]
+  Transcript :  عندي طالب اسمه student استركته
+  OCR        : None
+  Combined   :  عندي طالب اسمه student استركته
+
+[00:26:13]
+  Transcript :  جواه بياناته
+  OCR        : Arrays in structs | Thig | float marks3: | s1.sname-Ahmed Ibrahim. | s1.marks1- 70; | s1.maks0  80: | s1.marks2 90:
+  Combined   :  جواه بياناته Arrays in structs | Thig | float marks3: | s1.sname-Ahmed Ibrahim. | s1.marks1- 70; | s1.maks0  80: | s1.marks2 90:
+
+[00:26:14]
+  Transcript :  بياناته اللي هي student رمب الرقم والنيل والجي بي اي والماركس بتاعته
+  OCR        : None
+  Combined   :  بياناته اللي هي student رمب الرقم والنيل والجي بي اي والماركس بتاعته
+
+[00:26:20]
+  Transcript :  طب الماركس بتاعته عندي ثلاث درجات
+  OCR        : None
+  Combined   :  طب الماركس بتاعته عندي ثلاث درجات
+
+[00:26:23]
+  Transcript :  فعملتهم في array شايف؟
+  OCR        : None
+  Combined   :  فعملتهم في array شايف؟
+
+[00:26:26]
+  Transcript :  اضع الانضافة لديه ماركس دي اراي العناصر اللي فيها float.
+  OCR        : None
+  Combined   :  اضع الانضافة لديه ماركس دي اراي العناصر اللي فيها float.
+
+[00:26:34]
+  Transcript :  ينفع الكلام ده؟ اه ينفع. اهو تعالوا نجرب انا وانت.
+  OCR        : marks131 | s1.student no -120 | s1.sname-Ahumed Ibrahim: | s1.mads0  80: | s1.marls1 - 70: | sL.maks2
+  Combined   :  ينفع الكلام ده؟ اه ينفع. اهو تعالوا نجرب انا وانت. marks131 | s1.student no -120 | s1.sname-Ahumed Ibrahim: | s1.mads0  80: | s1.marls1 - 70: | sL.maks2
+
+[00:26:36]
+  Transcript :  هنا انا هعمل استراجت اسمه student. ده طالب. طالب ده عندي دي شوية بيانات. منها ايه؟ منها رقمه.
+  OCR        : None
+  Combined   :  هنا انا هعمل استراجت اسمه student. ده طالب. طالب ده عندي دي شوية بيانات. منها ايه؟ منها رقمه.
+
+[00:26:48]
+  Transcript :  GPA
+  OCR        : None
+  Combined   :  GPA
+
+[00:27:06]
+  Transcript :  درجاته دي عبارة عن 3 درجات فأنا عملت له قرية
+  OCR        : None
+  Combined   :  درجاته دي عبارة عن 3 درجات فأنا عملت له قرية
+
+[00:27:10]
+  Transcript :  ممكن يكون عشرة اعمل له قرية ب10 فأنا اخليها ماركس اهو
+  OCR        : None
+  Combined   :  ممكن يكون عشرة اعمل له قرية ب10 فأنا اخليها ماركس اهو
+
+[00:27:15]
+  Transcript :  حطت فيها 3 درجات
+  OCR        : None
+  Combined   :  حطت فيها 3 درجات
+
+[00:27:18]
+  Transcript :  يبقى انا كده اهو ده البناء بتاع الايه الستودنت عندي
+  OCR        : None
+  Combined   :  يبقى انا كده اهو ده البناء بتاع الايه الستودنت عندي
+
+[00:27:23]
+  Transcript :  طيب عاوز ادخل بيانات طالب فانا جيت خدت في المين هنا قلت ستودينت عندي طالب مثلا وليكن اسمه اس وان
+  OCR        : None
+  Combined   :  طيب عاوز ادخل بيانات طالب فانا جيت خدت في المين هنا قلت ستودينت عندي طالب مثلا وليكن اسمه اس وان
+
+[00:27:41]
+  Transcript :  اس وان ده عاوز احط بيانات فقلت له والله اس وان دوت اس نمبر مثلا بيساوي هنفترض ان رقم الطالب ده الف او او اس وان دوت نيم
+  OCR        : stuct student | int sno; | string nane; | float gpa; | float marks3; | student s1; | 51.sno 1290;
+  Combined   :  اس وان ده عاوز احط بيانات فقلت له والله اس وان دوت اس نمبر مثلا بيساوي هنفترض ان رقم الطالب ده الف او او اس وان دوت نيم stuct student | int sno; | string nane; | float gpa; | float marks3; | student s1; | 51.sno 1290;
+
+[00:27:47]
+  Transcript :  كنت له مثلا ده بيساوي محمد
+  OCR        : None
+  Combined   :  كنت له مثلا ده بيساوي محمد
+
+[00:27:50]
+  Transcript :  إبراهيم ادي اسمه مثلا يعني
+  OCR        : None
+  Combined   :  إبراهيم ادي اسمه مثلا يعني
+
+[00:27:55]
+  Transcript :  طيب
+  OCR        : struct student | s1.sno 1290; | s1.nane Mohaned Ibrahin;
+  Combined   :  طيب struct student | s1.sno 1290; | s1.nane Mohaned Ibrahin;
+
+[00:27:56]
+  Transcript :  وبعد ايه ايه تاني من بياناته عندي الجيو
+  OCR        : None
+  Combined   :  وبعد ايه ايه تاني من بياناته عندي الجيو
+
+[00:28:00]
+  Transcript :  ايه بتاعه؟ انا افترض ان ايه بتاعه بيساوي اربعة ونص
+  OCR        : None
+  Combined   :  ايه بتاعه؟ انا افترض ان ايه بتاعه بيساوي اربعة ونص
+
+[00:28:05]
+  Transcript :  طيب درجات الطالب بقى الاسمه محمد ابراهيم ده
+  OCR        : sno; | s1.nane Mohared Ibrahin; | 51.gpa  4.5;
+  Combined   :  طيب درجات الطالب بقى الاسمه محمد ابراهيم ده sno; | s1.nane Mohared Ibrahin; | 51.gpa  4.5;
+
+[00:28:08]
+  Transcript :  واحدة واحدة هقول اس واحد
+  OCR        : None
+  Combined   :  واحدة واحدة هقول اس واحد
+
+[00:28:11]
+  Transcript :  دوت ماركس صح؟ ماركس دي عري
+  OCR        : None
+  Combined   :  دوت ماركس صح؟ ماركس دي عري
+
+[00:28:14]
+  Transcript :  طب يا استاذنا انت خدت ازاي؟
+  OCR        : None
+  Combined   :  طب يا استاذنا انت خدت ازاي؟
+
+[00:28:17]
+  Transcript :  توصل لعنصر عنصر داخل العري صح؟ اه ازاي؟
+  OCR        : None
+  Combined   :  توصل لعنصر عنصر داخل العري صح؟ اه ازاي؟
+
+[00:28:21]
+  Transcript :  بقى افتحققسين المربعين وبكتب الاندكس بتاع العنص
+  OCR        : None
+  Combined   :  بقى افتحققسين المربعين وبكتب الاندكس بتاع العنص
+
+[00:28:25]
+  Transcript :  فانا اقول ماركس اوف زيرو
+  OCR        : None
+  Combined   :  فانا اقول ماركس اوف زيرو
+
+[00:28:27]
+  Transcript :  يبقى ايه ماركس اف زيرو يعني ايه الدرجة رقم واحد صحب؟ صحب لأ
+  OCR        : None
+  Combined   :  يبقى ايه ماركس اف زيرو يعني ايه الدرجة رقم واحد صحب؟ صحب لأ
+
+[00:28:32]
+  Transcript :  مش انت عارف الاري زيرو بيزد وهتكون ناسي
+  OCR        : None
+  Combined   :  مش انت عارف الاري زيرو بيزد وهتكون ناسي
+
+[00:28:35]
+  Transcript :  لو ناسي ارجع للسلايب
+  OCR        : None
+  Combined   :  لو ناسي ارجع للسلايب
+
+[00:28:37]
+  Transcript :  الاري زيرو بيزد يعني اول عنصر في الاري رقمه كام صف
+  OCR        : None
+  Combined   :  الاري زيرو بيزد يعني اول عنصر في الاري رقمه كام صف
+
+[00:28:42]
+  Transcript :  فانا اقول للماركس اف زيرو بيساوي مثلا خمسين
+  OCR        : None
+  Combined   :  فانا اقول للماركس اف زيرو بيساوي مثلا خمسين
+
+[00:28:47]
+  Transcript :  يبقى ايزا درجة الطالب الاولى دي خمسين
+  OCR        : float sarks3; | s1.nane Mohaned Ibrahim; | s1.gpa  4.5; | s1.marks0  50;
+  Combined   :  يبقى ايزا درجة الطالب الاولى دي خمسين float sarks3; | s1.nane Mohaned Ibrahim; | s1.gpa  4.5; | s1.marks0  50;
+
+[00:28:49]
+  Transcript :  اسواحد دوت ماركس
+  OCR        : None
+  Combined   :  اسواحد دوت ماركس
+
+[00:28:58]
+  Transcript :  80 of 2 90
+  OCR        : string nare; | 51.marks1  80;
+  Combined   :  80 of 2 90 string nare; | 51.marks1  80;
+
+[00:29:08]
+  Transcript :  أحط array كdata item داخل
+  OCR        : s1.marks  80; | s1.marks2 90;
+  Combined   :  أحط array كdata item داخل s1.marks  80; | s1.marks2 90;
+
+[00:29:11]
+  Transcript :  الايه الاستراكت. ما عنديش مشكلة.
+  OCR        : None
+  Combined   :  الايه الاستراكت. ما عنديش مشكلة.
+
+[00:29:18]
+  Transcript :  ما عندكش مشكلة ايه؟ هتفتكر ان هي فيها مشكلة. لا!
+  OCR        : string name; | s1.narks0  50; | s1.narks1  88;
+  Combined   :  ما عندكش مشكلة ايه؟ هتفتكر ان هي فيها مشكلة. لا! string name; | s1.narks0  50; | s1.narks1  88;
+
+[00:29:19]
+  Transcript :  أنا ممكن أحط array داخل الاستراكت.
+  OCR        : None
+  Combined   :  أنا ممكن أحط array داخل الاستراكت.
+
+[00:29:23]
+  Transcript :  اكتب اسم الاري
+  OCR        : None
+  Combined   :  اكتب اسم الاري
+
+[00:29:28]
+  Transcript :  و اكتب الانديكس
+  OCR        : float narks3; | s1.marks0 50; | s1.narksY  80;
+  Combined   :  و اكتب الانديكس float narks3; | s1.marks0 50; | s1.narksY  80;
+
+[00:29:29]
+  Transcript :  بتاع الائتم اللي عاوز اتعامل معي
+  OCR        : None
+  Combined   :  بتاع الائتم اللي عاوز اتعامل معي
+
+[00:29:31]
+  Transcript :  خلاص واضحة؟ تمام
+  OCR        : None
+  Combined   :  خلاص واضحة؟ تمام
+
+[00:29:33]
+  Transcript :  نرجع للسلايد
+  OCR        : None
+  Combined   :  نرجع للسلايد
+
+[00:29:35]
+  Transcript :  هنا بيقول بقى
+  OCR        : None
+  Combined   :  هنا بيقول بقى
+
+[00:29:38]
+  Transcript :  structs in arrays
+  OCR        : struct Employor | net salary: | int main 0 | Employce an51: | arrfo.fname-Ahmod: | arr01.cmpno12: | anrO InameAli: | arfOL.salary3000; | arr0.bonus-500. | anrO.nctsalarym arrf0salary  arr0.bomus:
+  Combined   :  structs in arrays struct Employor | net salary: | int main 0 | Employce an51: | arrfo.fname-Ahmod: | arr01.cmpno12: | anrO InameAli: | arfOL.salary3000; | arr0.bonus-500. | anrO.nctsalarym arrf0salary  arr0.bomus:
+
+[00:29:39]
+  Transcript :  يعني ايه؟
+  OCR        : None
+  Combined   :  يعني ايه؟
+
+[00:29:41]
+  Transcript :  ينفع تعمل الاري
+  OCR        : None
+  Combined   :  ينفع تعمل الاري
+
+[00:29:43]
+  Transcript :  الائتم اللي فيها
+  OCR        : None
+  Combined   :  الائتم اللي فيها
+
+[00:29:45]
+  Transcript :  نوعها struct
+  OCR        : None
+  Combined   :  نوعها struct
+
+[00:29:47]
+  Transcript :  ايه المشكلة؟
+  OCR        : None
+  Combined   :  ايه المشكلة؟
+
+[00:29:49]
+  Transcript :  ما اتفقت لو انت لو قادة اللي انا قلتها لك
+  OCR        : None
+  Combined   :  ما اتفقت لو انت لو قادة اللي انا قلتها لك
+
+[00:29:54]
+  Transcript :  حفظت عليها و سترتخل الاسترات كمه؟
+  OCR        : struct Employcr | salary; | net salary | Employce an5. | anrfO. fname-Ahmed: | an01.cmpno12: | arO. InomeAli: | arrf0.bonus-500. | ar01.salary3000; | anrO.nctsalarym arr0salary  arr0.bomus:
+  Combined   :  حفظت عليها و سترتخل الاسترات كمه؟ struct Employcr | salary; | net salary | Employce an5. | anrfO. fname-Ahmed: | an01.cmpno12: | arO. InomeAli: | arrf0.bonus-500. | ar01.salary3000; | anrO.nctsalarym arr0salary  arr0.bomus:
+
+[00:29:55]
+  Transcript :  كمه؟ كمه؟ كمه؟
+  OCR        : None
+  Combined   :  كمه؟ كمه؟ كمه؟
+
+[00:29:57]
+  Transcript :  كمه؟ كمه؟
+  OCR        : None
+  Combined   :  كمه؟ كمه؟
+
+[00:30:00]
+  Transcript :  من ايه ده طيب؟ مش ممكن تعمل array of integers ممكن تعمل array of float
+  OCR        : None
+  Combined   :  من ايه ده طيب؟ مش ممكن تعمل array of integers ممكن تعمل array of float
+
+[00:30:05]
+  Transcript :  اه يبقى ورده يمكن تعمل array of struct ازاي شوف المثال ده
+  OCR        : None
+  Combined   :  اه يبقى ورده يمكن تعمل array of struct ازاي شوف المثال ده
+
+[00:30:10]
+  Transcript :  شايف هنا؟ هنا عندي struct اسمه employee
+  OCR        : None
+  Combined   :  شايف هنا؟ هنا عندي struct اسمه employee
+
+[00:30:14]
+  Transcript :  وبعدين دي هنا عمل array فيها خمسة employees هنفع؟ عارنا اعملها
+  OCR        : None
+  Combined   :  وبعدين دي هنا عمل array فيها خمسة employees هنفع؟ عارنا اعملها
+
+[00:30:20]
+  Transcript :  انا هعملها لك بقى النظام على بتاع ال student ده
+  OCR        : structs in Arrays | tloat | Employce anf51 | arrfo.fname-Ahmed: | am01.cmpno12: | snrfo.InomeAli: | an0L.salary3000; | aro,netsalary? an0salary  an0.bonus:
+  Combined   :  انا هعملها لك بقى النظام على بتاع ال student ده structs in Arrays | tloat | Employce anf51 | arrfo.fname-Ahmed: | am01.cmpno12: | snrfo.InomeAli: | an0L.salary3000; | aro,netsalary? an0salary  an0.bonus:
+
+[00:30:23]
+  Transcript :  شونت هنا عملت ال student؟ طيب هعمل انا ايه؟ بوس الكود ده انا هشيره اه
+  OCR        : None
+  Combined   :  شونت هنا عملت ال student؟ طيب هعمل انا ايه؟ بوس الكود ده انا هشيره اه
+
+[00:30:29]
+  Transcript :  انا اريد اعمل ري و لكن اسمها x.
+  OCR        : None
+  Combined   :  انا اريد اعمل ري و لكن اسمها x.
+
+[00:30:34]
+  Transcript :  x دي فيها خمس عناصر.
+  OCR        : int smej | string name: | fowt gpa | floutearks3s | wint nain
+  Combined   :  x دي فيها خمس عناصر. int smej | string name: | fowt gpa | floutearks3s | wint nain
+
+[00:30:37]
+  Transcript :  انا اريد اخلي نوعها student.
+  OCR        : None
+  Combined   :  انا اريد اخلي نوعها student.
+
+[00:30:41]
+  Transcript :  ينفع؟ اه انا اتفقنا.
+  OCR        : None
+  Combined   :  ينفع؟ اه انا اتفقنا.
+
+[00:30:43]
+  Transcript :  انا اتفقنا.
+  OCR        : None
+  Combined   :  انا اتفقنا.
+
+[00:30:44]
+  Transcript :  انا اتفقنا.
+  OCR        : Globul Sempe | float gpa ; | student x 5
+  Combined   :  انا اتفقنا. Globul Sempe | float gpa ; | student x 5
+
+[00:30:45]
+  Transcript :  صح؟
+  OCR        : None
+  Combined   :  صح؟
+
+[00:30:46]
+  Transcript :  يبقى انا دلوقتي الاري دي اسمها x.
+  OCR        : None
+  Combined   :  يبقى انا دلوقتي الاري دي اسمها x.
+
+[00:30:49]
+  Transcript :  فيها خمس عناصر كل عنصر منهم نوعه student.
+  OCR        : None
+  Combined   :  فيها خمس عناصر كل عنصر منهم نوعه student.
+
+[00:30:53]
+  Transcript :  طيب.
+  OCR        : None
+  Combined   :  طيب.
+
+[00:30:54]
+  Transcript :  student x
+  OCR        : Globul Scmpe | student x 5 ; | 100 . | Dutput
+  Combined   :  student x Globul Scmpe | student x 5 ; | 100 . | Dutput
+
+[00:31:05]
+  Transcript :  طيب بياناته يبقى اقول .
+  OCR        : None
+  Combined   :  طيب بياناته يبقى اقول .
+
+[00:31:07]
+  Transcript :  ليه ؟
+  OCR        : None
+  Combined   :  ليه ؟
+
+[00:31:09]
+  Transcript :  ليه انا اقولت . ما هو بقى
+  OCR        : Glokal Scepe | markes | public : float student:gpa | File struct cpp | neme | Dufiput
+  Combined   :  ليه انا اقولت . ما هو بقى Glokal Scepe | markes | public : float student:gpa | File struct cpp | neme | Dufiput
+
+[00:31:10]
+  Transcript :  الـ x of zero
+  OCR        : None
+  Combined   :  الـ x of zero
+
+[00:31:11]
+  Transcript :  ده نوع ايه ؟
+  OCR        : None
+  Combined   :  ده نوع ايه ؟
+
+[00:31:12]
+  Transcript :  الستودنت ده struct
+  OCR        : None
+  Combined   :  الستودنت ده struct
+
+[00:31:14]
+  Transcript :  عشان اوصل الى البيانات اللي فيه بكتب . صح ؟
+  OCR        : None
+  Combined   :  عشان اوصل الى البيانات اللي فيه بكتب . صح ؟
+
+[00:31:19]
+  Transcript :  اقول مثلا . student number
+  OCR        : Globul Scepre | 100  -
+  Combined   :  اقول مثلا . student number Globul Scepre | 100  -
+
+[00:31:21]
+  Transcript :  يساوي عليكم 1000
+  OCR        : None
+  Combined   :  يساوي عليكم 1000
+
+[00:31:29]
+  Transcript :  طيب عاوز العنصر الاولاني احط ال name بتاعه فانا بقول . name اقول مثلا يساوي احمد
+  OCR        : Globul Sempre | x0.sno 1000; | marks | name
+  Combined   :  طيب عاوز العنصر الاولاني احط ال name بتاعه فانا بقول . name اقول مثلا يساوي احمد Globul Sempre | x0.sno 1000; | marks | name
+
+[00:31:44]
+  Transcript :  طيب العنصر الاولاني ده عاوز احط ال gba بتاعه فبقول . gba مثلا يساوي 3.5 مثلا وهكذا
+  OCR        : x0.name -ahmed; | x0.gpa | public : float studentigpa | File: struct.cpp
+  Combined   :  طيب العنصر الاولاني ده عاوز احط ال gba بتاعه فبقول . gba مثلا يساوي 3.5 مثلا وهكذا x0.name -ahmed; | x0.gpa | public : float studentigpa | File: struct.cpp
+
+[00:31:49]
+  Transcript :  ممكن استخدام الفلوق مع الري دي
+  OCR        : None
+  Combined   :  ممكن استخدام الفلوق مع الري دي
+
+[00:31:54]
+  Transcript :  اه ازاي ازاي ارري ممكن استخدام الفلوق معه
+  OCR        : Global Scope | udent x5 | 0.sno 1000; | x0.gpa 3.5;
+  Combined   :  اه ازاي ازاي ارري ممكن استخدام الفلوق معه Global Scope | udent x5 | 0.sno 1000; | x0.gpa 3.5;
+
+[00:31:58]
+  Transcript :  يعني اذا ممكن اعمل كم
+  OCR        : None
+  Combined   :  يعني اذا ممكن اعمل كم
+
+[00:32:00]
+  Transcript :  اقول 4
+  OCR        : None
+  Combined   :  اقول 4
+
+[00:32:02]
+  Transcript :  إنتجر
+  OCR        : None
+  Combined   :  إنتجر
+
+[00:32:04]
+  Transcript :  i يساوي 0
+  OCR        : for int i | x0.sno- 1000; | x0.name ahmed;
+  Combined   :  i يساوي 0 for int i | x0.sno- 1000; | x0.name ahmed;
+
+[00:32:06]
+  Transcript :  مثلا
+  OCR        : None
+  Combined   :  مثلا
+
+[00:32:08]
+  Transcript :  والi أصغر من 5
+  OCR        : None
+  Combined   :  والi أصغر من 5
+
+[00:32:10]
+  Transcript :  والi بلاس بلاس
+  OCR        : None
+  Combined   :  والi بلاس بلاس
+
+[00:32:12]
+  Transcript :  مثلا
+  OCR        : None
+  Combined   :  مثلا
+
+[00:32:14]
+  Transcript :  ماشي
+  OCR        : None
+  Combined   :  ماشي
+
+[00:32:16]
+  Transcript :  واطلب من الوزر يدخل بيانات
+  OCR        : None
+  Combined   :  واطلب من الوزر يدخل بيانات
+
+[00:32:18]
+  Transcript :  زي مدى حاج
+  OCR        : None
+  Combined   :  زي مدى حاج
+
+[00:32:20]
+  Transcript :  اقول له
+  OCR        : None
+  Combined   :  اقول له
+
+[00:32:22]
+  Transcript :  enter
+  OCR        : None
+  Combined   :  enter
+
+[00:32:24]
+  Transcript :  student
+  OCR        : None
+  Combined   :  student
+
+[00:32:26]
+  Transcript :  data
+  OCR        : None
+  Combined   :  data
+
+[00:32:33]
+  Transcript :  وممكن احدده كمانا اقول له دخل الـ student number و الـ student name مثلا و الـ gba
+  OCR        : Glokal Seepe | istruct student | for int i θ ; i5 ; i | cout  Enter Student data | Oufput
+  Combined   :  وممكن احدده كمانا اقول له دخل الـ student number و الـ student name مثلا و الـ gba Glokal Seepe | istruct student | for int i θ ; i5 ; i | cout  Enter Student data | Oufput
+
+[00:32:40]
+  Transcript :  هنفترض يعني
+  OCR        : None
+  Combined   :  هنفترض يعني
+
+[00:32:44]
+  Transcript :  خلينا اعملها لك عشان شكلك شاكك في الموضوع
+  OCR        : for int i  θ ; i5 ; i | cout  Enter Student data sno, sname, gba n | Show output from: | 1--..-- Buiid started: Project: Structs, Configuration: Debug Win32 ---.- | struct.cpp | -sssssssss Build: 1 succeeded, 0 failed, 0 up-to-date, 0 | Structs.vcxpref-E:vfor BeelenerssStructsDetugstructs.exe
+  Combined   :  خلينا اعملها لك عشان شكلك شاكك في الموضوع for int i  θ ; i5 ; i | cout  Enter Student data sno, sname, gba n | Show output from: | 1--..-- Buiid started: Project: Structs, Configuration: Debug Win32 ---.- | struct.cpp | -sssssssss Build: 1 succeeded, 0 failed, 0 up-to-date, 0 | Structs.vcxpref-E:vfor BeelenerssStructsDetugstructs.exe
+
+[00:32:46]
+  Transcript :  وانك المفروض انت تعلمت الكلام
+  OCR        : None
+  Combined   :  وانك المفروض انت تعلمت الكلام
+
+[00:32:49]
+  Transcript :  سي اين هتقرأ فين بقى البيانات
+  OCR        : None
+  Combined   :  سي اين هتقرأ فين بقى البيانات
+
+[00:32:54]
+  Transcript :  اسم الاري اكس
+  OCR        : for int i  θ ; i5; i | cinx | cout  Enter Student data sno , sname , gba n; | Show output from | 2------ Dulid atarted: Project: Structs, Configuratsen: Debvg Nin32 ee-- | struct-cpp | ssesssssss Budld: 1 succeeted, e failed, e up-to-date, 0 seipped | Structs.vexpref- E:ForBegInners5tructsDeoug5tructs.exe
+  Combined   :  اسم الاري اكس for int i  θ ; i5; i | cinx | cout  Enter Student data sno , sname , gba n; | Show output from | 2------ Dulid atarted: Project: Structs, Configuratsen: Debvg Nin32 ee-- | struct-cpp | ssesssssss Budld: 1 succeeted, e failed, e up-to-date, 0 seipped | Structs.vexpref- E:ForBegInners5tructsDeoug5tructs.exe
+
+[00:32:55]
+  Transcript :  I Student Number
+  OCR        : None
+  Combined   :  I Student Number
+
+[00:33:06]
+  Transcript :  الطالب متخزن في القرية اسمها X
+  OCR        : None
+  Combined   :  الطالب متخزن في القرية اسمها X
+
+[00:33:08]
+  Transcript :  رقمه I . . Name
+  OCR        : None
+  Combined   :  رقمه I . . Name
+
+[00:33:13]
+  Transcript :  اقول مثلا بيساوي كذا
+  OCR        : for int i  θ; i5; i | cout  Enter Student data sno , sname, gba n; | cinxi.sno  xi.name | puing sudn | Show cutput from | 1s-s- Buiid sterted: Project: Structs, Configuration: Debug Nin32 | structs-vcxono1- E:rorBeelrnersSifructsemueSitnucts.exe | eessssses Budld: 1succeeted,0 failed,0 up-to-date,0 sicippec
+  Combined   :  اقول مثلا بيساوي كذا for int i  θ; i5; i | cout  Enter Student data sno , sname, gba n; | cinxi.sno  xi.name | puing sudn | Show cutput from | 1s-s- Buiid sterted: Project: Structs, Configuration: Debug Nin32 | structs-vcxono1- E:rorBeelrnersSifructsemueSitnucts.exe | eessssses Budld: 1succeeted,0 failed,0 up-to-date,0 sicippec
+
+[00:33:15]
+  Transcript :  اللي الوزر هيبعته
+  OCR        : None
+  Combined   :  اللي الوزر هيبعته
+
+[00:33:16]
+  Transcript :  ماشي
+  OCR        : None
+  Combined   :  ماشي
+
+[00:33:17]
+  Transcript :  وقوله كمان دخلي الجيب ايه
+  OCR        : None
+  Combined   :  وقوله كمان دخلي الجيب ايه
+
+[00:33:19]
+  Transcript :  بتاع الطالب اللي في ال X
+  OCR        : None
+  Combined   :  بتاع الطالب اللي في ال X
+
+[00:33:23]
+  Transcript :  لعنصر رقم i.gba
+  OCR        : cinxi.sno  xi.name  xi | 1s-- Buiid sterted: Project: Structs, Configuration: Debug Nin32 | Structs.vexprej- E:vfor BegImnersStructsDeugn5tructs.exe | Budld: 1 succeeded, e failed, e up-to-date, 0 scipped
+  Combined   :  لعنصر رقم i.gba cinxi.sno  xi.name  xi | 1s-- Buiid sterted: Project: Structs, Configuration: Debug Nin32 | Structs.vexprej- E:vfor BegImnersStructsDeugn5tructs.exe | Budld: 1 succeeded, e failed, e up-to-date, 0 scipped
+
+[00:33:25]
+  Transcript :  صحة يا جماعة
+  OCR        : None
+  Combined   :  صحة يا جماعة
+
+[00:33:28]
+  Transcript :  ماضحة دي يا شباب؟ تمام
+  OCR        : None
+  Combined   :  ماضحة دي يا شباب؟ تمام
+
+[00:33:33]
+  Transcript :  يبقى انت كده قريت اهو بيانات الطالب وخزنته
+  OCR        : student  5 ; | cout  Enter Student data sno , snane , gba n; | cinxi.sno  xi.name  xi-gpa ; | Outpul | 1------ Build started: Project: Structs, Configuration: Debug Win32 | assssens Build: 1 succeeded, 0 failed, 0 up-to-date,  siclpped | Structs.vcxproj- E:Vfor begieners Structs betugStructs.exe
+  Combined   :  يبقى انت كده قريت اهو بيانات الطالب وخزنته student  5 ; | cout  Enter Student data sno , snane , gba n; | cinxi.sno  xi.name  xi-gpa ; | Outpul | 1------ Build started: Project: Structs, Configuration: Debug Win32 | assssens Build: 1 succeeded, 0 failed, 0 up-to-date,  siclpped | Structs.vcxproj- E:Vfor begieners Structs betugStructs.exe
+
+[00:33:34]
+  Transcript :  وهاكسبة. يبقى انت معنكش مشكلة ابدا
+  OCR        : None
+  Combined   :  وهاكسبة. يبقى انت معنكش مشكلة ابدا
+
+[00:33:37]
+  Transcript :  في انك تعمل
+  OCR        : None
+  Combined   :  في انك تعمل
+
+[00:33:40]
+  Transcript :  ال data types اللي جواها او ال R
+  OCR        : None
+  Combined   :  ال data types اللي جواها او ال R
+
+[00:33:43]
+  Transcript :  اللي عناصر اللي جواها كلها نوعها A struct
+  OCR        : finame: | toat | arrf0.fname-Ahmod: | ar01.cmpno12: | srfo.lnameAli: | arf01.salary3000: | arrf0bonus-500. | anrfO.nct salarym arr0salary  arrf0.bomus:
+  Combined   :  اللي عناصر اللي جواها كلها نوعها A struct finame: | toat | arrf0.fname-Ahmod: | ar01.cmpno12: | srfo.lnameAli: | arf01.salary3000: | arrf0bonus-500. | anrfO.nct salarym arr0salary  arrf0.bomus:
+
+[00:33:46]
+  Transcript :  اذا بقى بيتناقش معايا في ايه؟ هل ممكن
+  OCR        : None
+  Combined   :  اذا بقى بيتناقش معايا في ايه؟ هل ممكن
+
+[00:33:49]
+  Transcript :  داخل الاستركت أستخدم من استركت آخر
+  OCR        : None
+  Combined   :  داخل الاستركت أستخدم من استركت آخر
+
+[00:33:53]
+  Transcript :  ينفع لمنفاشي
+  OCR        : structs within a struct | struet | emp loyeeType | asumuct ramenyyen | atring | ati Lag | firetname. | aiddiena | atringfinat. | atring | atring | lastname, | emp1Dy | airing lants | atring | atring | addreaalj | ateuct adidcwsatype | ostyr | atzing addreselz | atainyaddresed | stater | h.1.remont.h.; | nipv | atring esty | ataing | state | ht redayz | aseing Tay | h.izeyear; | quitdayi | quitmonth; | atauct catetyoee | quityearr | phoner | int moeth; | onliphomer | faxs | LonyeaEr | pagerr | ena117 | stauct costacttype | double | aalaryr | dept1D: | ateing phane. | atring fax | saing cnllploney | ering pagme | atring emall
+  Combined   :  ينفع لمنفاشي structs within a struct | struet | emp loyeeType | asumuct ramenyyen | atring | ati Lag | firetname. | aiddiena | atringfinat. | atring | atring | lastname, | emp1Dy | airing lants | atring | atring | addreaalj | ateuct adidcwsatype | ostyr | atzing addreselz | atainyaddresed | stater | h.1.remont.h.; | nipv | atring esty | ataing | state | ht redayz | aseing Tay | h.izeyear; | quitdayi | quitmonth; | atauct catetyoee | quityearr | phoner | int moeth; | onliphomer | faxs | LonyeaEr | pagerr | ena117 | stauct costacttype | double | aalaryr | dept1D: | ateing phane. | atring fax | saing cnllploney | ering pagme | atring emall
+
+[00:33:54]
+  Transcript :  أنا أعوزك أنت جاو
+  OCR        : None
+  Combined   :  أنا أعوزك أنت جاو
+
+[00:33:55]
+  Transcript :  أكيد ينفع ما انا اتفقنا
+  OCR        : None
+  Combined   :  أكيد ينفع ما انا اتفقنا
+
+[00:33:57]
+  Transcript :  الاستركت زي وزي إبرا ثات
+  OCR        : None
+  Combined   :  الاستركت زي وزي إبرا ثات
+
+[00:34:00]
+  Transcript :  الذي يجعله دولة الرائعة تاخد من الانتغر وتاخد من الفلوت وتاخد من الانتغر
+  OCR        : None
+  Combined   :  الذي يجعله دولة الرائعة تاخد من الانتغر وتاخد من الفلوت وتاخد من الانتغر
+
+[00:34:07]
+  Transcript :  ومن الانتغر وخذ من التغرق تاني ينفع
+  OCR        : None
+  Combined   :  ومن الانتغر وخذ من التغرق تاني ينفع
+
+[00:34:11]
+  Transcript :  مثل المثال الصغير لن نفذه على فكرة
+  OCR        : None
+  Combined   :  مثل المثال الصغير لن نفذه على فكرة
+
+[00:34:14]
+  Transcript :  لكن اشتحه لك بمتع البساط
+  OCR        : None
+  Combined   :  لكن اشتحه لك بمتع البساط
+
+[00:34:18]
+  Transcript :  يوجد طرح اسمه امبليه
+  OCR        : stroct | loyeeType | atmuct namelype | eicatnamer | aiddlena | atring ficat. | lastnamej | etaking lant | ataing aiddieu | empTDy | addrezala | addaesa2 | atuuct addreearthype | oityr | atrine adtremel | tipv | ataingadidreasd | i.nt | hiremonth: | atring esty: | ataing atatio | ateing Ti | htredayz | quitdaya | ateuct datelype | pehoner | Let monkh. | on Ilphomer | Las dagy | tot yeaer | ema1.17 | atauut contacttype | deptID: | artring phane. | atring fax: | aarine cnllploee | rtring papee | atring emalL
+  Combined   :  يوجد طرح اسمه امبليه stroct | loyeeType | atmuct namelype | eicatnamer | aiddlena | atring ficat. | lastnamej | etaking lant | ataing aiddieu | empTDy | addrezala | addaesa2 | atuuct addreearthype | oityr | atrine adtremel | tipv | ataingadidreasd | i.nt | hiremonth: | atring esty: | ataing atatio | ateing Ti | htredayz | quitdaya | ateuct datelype | pehoner | Let monkh. | on Ilphomer | Las dagy | tot yeaer | ema1.17 | atauut contacttype | deptID: | artring phane. | atring fax: | aarine cnllploee | rtring papee | atring emalL
+
+[00:34:20]
+  Transcript :  وفي كل الاتا ايتيم
+  OCR        : None
+  Combined   :  وفي كل الاتا ايتيم
+
+[00:34:23]
+  Transcript :  في الولاس و الولاس واللاس والادرس
+  OCR        : None
+  Combined   :  في الولاس و الولاس واللاس والادرس
+
+[00:34:26]
+  Transcript :  عمل ايه الراجل؟
+  OCR        : None
+  Combined   :  عمل ايه الراجل؟
+
+[00:34:28]
+  Transcript :  قال لك بدل ما يكون شكله صعب كده أنا هقسمه structs هقسمه
+  OCR        : employeeType | struct nameType | firotname | firat, | middlename | mididle; | laatname | lasts | empID; | addreasl; | address2; | atruct addreaaType | etty; | state, | stringaddressl | stxing | addrean2, | cityi | remo | steing | hireday | hireyear, | zipi | quitday; | struct dateType | quityearj | phone, | int month | cellphones | int day; | year | pager; | email; | deptID; | salarys
+  Combined   :  قال لك بدل ما يكون شكله صعب كده أنا هقسمه structs هقسمه employeeType | struct nameType | firotname | firat, | middlename | mididle; | laatname | lasts | empID; | addreasl; | address2; | atruct addreaaType | etty; | state, | stringaddressl | stxing | addrean2, | cityi | remo | steing | hireday | hireyear, | zipi | quitday; | struct dateType | quityearj | phone, | int month | cellphones | int day; | year | pager; | email; | deptID; | salarys
+
+[00:34:34]
+  Transcript :  ينفع؟ اه عادي عمل struct اسمه name type
+  OCR        : None
+  Combined   :  ينفع؟ اه عادي عمل struct اسمه name type
+
+[00:34:38]
+  Transcript :  حط فيه بيانات name
+  OCR        : firstnamer | firat; | middleLame | lastr | middle, | addreaal; | eitys | zipj | addrema2; | cstyi | emonths | hireyear; | zeday | int months | iat yearr | fax;
+  Combined   :  حط فيه بيانات name firstnamer | firat; | middleLame | lastr | middle, | addreaal; | eitys | zipj | addrema2; | cstyi | emonths | hireyear; | zeday | int months | iat yearr | fax;
+
+[00:34:43]
+  Transcript :  وعمل struct اسمه address type
+  OCR        : None
+  Combined   :  وعمل struct اسمه address type
+
+[00:34:45]
+  Transcript :  حط فيه بيانات الادرس الادرس واحد والادرس 2 وا وا وا وا وا
+  OCR        : None
+  Combined   :  حط فيه بيانات الادرس الادرس واحد والادرس 2 وا وا وا وا وا
+
+[00:34:49]
+  Transcript :  وعمل struct اسمه date type حط فيه بيانات date
+  OCR        : None
+  Combined   :  وعمل struct اسمه date type حط فيه بيانات date
+
+[00:34:52]
+  Transcript :  month وday و leave
+  OCR        : firstnames | middlenam | middle; | first, | laatnames | lant: | addressl; | atruct addreaafype | ciey; | otring | addressl, | otxing | zipa | addreaa2; | state: | zip7 | quityear, | int years | day; | faxr
+  Combined   :  month وday و leave firstnames | middlenam | middle; | first, | laatnames | lant: | addressl; | atruct addreaafype | ciey; | otring | addressl, | otxing | zipa | addreaa2; | state: | zip7 | quityear, | int years | day; | faxr
+
+[00:34:54]
+  Transcript :  وعمل struct اسمه contact type حط فيه بيانات ال contact
+  OCR        : None
+  Combined   :  وعمل struct اسمه contact type حط فيه بيانات ال contact
+
+[00:34:57]
+  Transcript :  الى الهاتف والسيلفون والفاكس وواواوا
+  OCR        : None
+  Combined   :  الى الهاتف والسيلفون والفاكس وواواوا
+
+[00:35:02]
+  Transcript :  في الاخر بقى بصوا رقا هنا
+  OCR        : street | emp leyeeType | ficetname. | atring finat. | lastnane, | ataing middieu | etring | addreats2 | ateuct adidcesatype | atring addreonlz | atainyaddiresn2 | h:1.remont.h.: | hntredayz | ateing Tgy | alzeyearr | quitdayr | guitmonthy | ateuct datetype | strime | quiCyearr | peoner | int month: | atrime | onliphoner | Las dayy | Lon yeaer | emailz | stauct costactlype | nalary: | atring phane. | aiainq cnl.lplonay | string papur
+  Combined   :  في الاخر بقى بصوا رقا هنا street | emp leyeeType | ficetname. | atring finat. | lastnane, | ataing middieu | etring | addreats2 | ateuct adidcesatype | atring addreonlz | atainyaddiresn2 | h:1.remont.h.: | hntredayz | ateing Tgy | alzeyearr | quitdayr | guitmonthy | ateuct datetype | strime | quiCyearr | peoner | int month: | atrime | onliphoner | Las dayy | Lon yeaer | emailz | stauct costactlype | nalary: | atring phane. | aiainq cnl.lplonay | string papur
+
+[00:35:03]
+  Transcript :  الاسترقت ايب ليه طيب شايف اللي كان الكبير ده
+  OCR        : None
+  Combined   :  الاسترقت ايب ليه طيب شايف اللي كان الكبير ده
+
+[00:35:06]
+  Transcript :  بصوا شكله ازاي في الاخر
+  OCR        : None
+  Combined   :  بصوا شكله ازاي في الاخر
+
+[00:35:08]
+  Transcript :  عمل في ايه قالك النام
+  OCR        : None
+  Combined   :  عمل في ايه قالك النام
+
+[00:35:10]
+  Transcript :  نوعه استرقت اللي هو النام تايب شايف
+  OCR        : None
+  Combined   :  نوعه استرقت اللي هو النام تايب شايف
+
+[00:35:14]
+  Transcript :  الادرس
+  OCR        : None
+  Combined   :  الادرس
+
+[00:35:17]
+  Transcript :  نوعه الادرس تايب
+  OCR        : None
+  Combined   :  نوعه الادرس تايب
+
+[00:35:20]
+  Transcript :  الهاير ديت نوعه الديت تايب وهكذا
+  OCR        : None
+  Combined   :  الهاير ديت نوعه الديت تايب وهكذا
+
+[00:35:24]
+  Transcript :  فيبقى اذا انا داخل الاستركت ممكن استخدم من الاستركت تاني
+  OCR        : None
+  Combined   :  فيبقى اذا انا داخل الاستركت ممكن استخدم من الاستركت تاني
+
+[00:35:30]
+  Transcript :  ما عنديش مشكلة. خلاص وضع؟ وبكده يبقى انهينا كلامنا عنا
+  OCR        : None
+  Combined   :  ما عنديش مشكلة. خلاص وضع؟ وبكده يبقى انهينا كلامنا عنا
+
+[00:35:36]
+  Transcript :  دوع الاستركت. الفكرة الكبيرة اللي تعلمناها النهاردة اللي انا
+  OCR        : None
+  Combined   :  دوع الاستركت. الفكرة الكبيرة اللي تعلمناها النهاردة اللي انا
+
+[00:35:40]
+  Transcript :  ممكن اعمل باتا تايبس بايدي تتناسب مع احتياجاتي بغض النظر عن
+  OCR        : None
+  Combined   :  ممكن اعمل باتا تايبس بايدي تتناسب مع احتياجاتي بغض النظر عن
+
+[00:35:47]
+  Transcript :  الباتا تايبس اللي هي موجودة باي لغة برمجة. خلاص؟ وعرفنا ازاي
+  OCR        : None
+  Combined   :  الباتا تايبس اللي هي موجودة باي لغة برمجة. خلاص؟ وعرفنا ازاي
+
+[00:35:52]
+  Transcript :  التي تعمل معها بمنتهى السؤال
+  OCR        : None
+  Combined   :  التي تعمل معها بمنتهى السؤال
+
+[00:35:53]
+  Transcript :  شكرا
+  OCR        : None
+  Combined   :  شكرا
+
+[00:35:55]
+  Transcript : None
+  OCR        : streek | axauct nametyoe | atxing | atring finats | 1ast | atxing | addre6s2 | stuuct addcesatype | atring addreoelz | asaing esty | atainqaddresed | h:i.remont.h.: | tate | h1redayz | aseing Tgh | guigmonth | axauct catatyee | quitday | 1nt wonthe | oniphomer | Lon yeaEr | ema.1.17 | malaryr | aiaing onl.lploney | sring papur | otring emall
+  Combined   : streek | axauct nametyoe | atxing | atring finats | 1ast | atxing | addre6s2 | stuuct addcesatype | atring addreoelz | asaing esty | atainqaddresed | h:i.remont.h.: | tate | h1redayz | aseing Tgh | guigmonth | axauct catatyee | quitday | 1nt wonthe | oniphomer | Lon yeaEr | ema.1.17 | malaryr | aiaing onl.lploney | sring papur | otring emall
+

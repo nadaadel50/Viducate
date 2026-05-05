@@ -1,0 +1,79 @@
+# OCR Output — video_id=95
+# Language: en
+# Total segments: 75
+
+[00:04:54] Scope of a variable | Glodavariable declared outside of every function definition. | Can be aocessed from any function that has no local variables with the same | name. In case the function has a local variable with the same name as the | global variable. | Int x; | int main | int sum intx, inty
+[00:06:11] int x  100 : | intX 10; | inty  50; | cout eeGlobalXc:x  Main Xxee | intx.x: | 7-109; | y100: | x-250; | cout-cc | inner block x :
+[00:07:43] Decument Outsi | scopeagp X | ilobal Scope | include iostream | main | using namespace std; | int sum int x , int y; | intsupint x , int y | int resuit; | result  x  yi | return result;
+[00:07:53] scopes-qpp | Global Scepe | int sumint x , int y | int result ; | result - x  yi
+[00:08:03] xcopes-qpp | Global Scope | cout result; | sint sumint x , int y | result  x  y;
+[00:08:33] topes-qpp | sumfintx int.y | int sum int x , int y: | int i; | result - x  y;
+[00:08:43] ainclude iostream | cout  i;
+[00:09:21] int g; | int result; | result - x y;
+[00:09:31] int i | cout | gint sumint x , int y
+[00:09:51] cout  g; | cout  gs
+[00:10:01] sinclude iostream | g- 100; | cout g; | uint sumint x , int y
+[00:10:11] Bintsumint x , int y | 1000;
+[00:10:21] using namespace std: | g- 1000;
+[00:10:31] intmain | GLOBAL | int y10; | Loval | int y  50; | cout GlobalX::x  Main Xx | int x,x: | Lacal | z-100; | y100; | x250; | innerblockx :
+[00:11:20] include | iostream | Oulpnal
+[00:11:30] scopescpp | Binclude iostream | main0 | int x  10; | mint main
+[00:11:56] int x | cout   n
+[00:12:06] sint main | Ant x  50; | but  x n;
+[00:12:16] int  - 10; | 300.
+[00:12:26] int  - 104 | int x  50; | cout  x n;
+[00:13:04] scopes.cpp | mainθ | int  - 50;
+[00:13:14] -include iostream | coutk x n:
+[00:13:24] einclude iostream | cint main
+[00:13:34] scepesapo | int x - 50;
+[00:13:44] sepesppx | Global Scupe | eint main | cout  : | File | shiib.h | cdeclaburt0 | acoe | acosl | acest | addresscf | addconst | atldcv | addJualuereference
+[00:14:24] cout  : :x n; | cout local x
+[00:14:34] edomsisytemn32 | mlese | x 50 | my bey | conttnue
+[00:14:44] 1oca1 x  x n; | CvWindowalavaten ITemd.eve | local  58 | contimue
+[00:14:54] cout   local x   x n; | CvyWindowalavaten S7icmd.eve | loca1 x 58 | comtimue
+[00:15:40] int   10; | cout    local x  x n; | ifrom inner block  x :
+[00:15:50] cout from inner block x | 300 .
+[00:16:00] cout    local x   x n; | cout  ; :x n; | cout from inner block | x n : | CroWindiowalayatem3Zvcmd.exe | from immer Ilock 58 | Joca1x 58 | Proos any hey to continue | 100S
+[00:16:10] bcout   1oca1 x   x n; | cout  :;x n; | cout from inner block   x n :
+[00:16:37] Olebal Sicope | minclude iostream | cout  ::x n | cout from inner block   x n ; | cout  From inner block
+[00:16:47] intmaly | cout   1ocal x   x n; | cout from inner b1ock   x n : | cout  From inner block   ::x n; | Shew output from: | Build
+[00:16:57] cout  ::x n; | cout   1oca1 x   x n; | cout from inner block   x n | Shew ouftput from: | Ipud
+[00:17:07] int x - 10; | cout from inner block -  x n | C:Windowauyatem3Zxcmd.exe | Press | Fron | amyhey | Inmep hockid | to comtinue | Shew out | butput
+[00:17:17] cout  - local x  x n; | out from inner block   x n ; | 200. | Ourpult | Shew oufput from:
+[00:18:22] cout   1oca1    x n; | cout frominner block   x n | int x  100; | cout  Frominner block   ::x n; | 100 . | Durput
+[00:18:32] cout from inner block  x n | cout  From inner block   x n; | Dutput
+[00:18:42] cout   loca1 x  x n; | cout  jcom inner block   x n; | Pron inner hloek 10a | CoyWindowsaystrem2vomdiese | Prens | anybey | to onntimue | Show
+[00:18:52] int   100; | From inner block   x n; | CWindowsVoystrem32omad.ewe | Pron | any key to cantinue | Snnep b1o0k 16 | Shew
+[00:19:02] cout   local    x n; | CWindowssystrem32homd.ese | anykey to Gontimue | Snner block 16
+[00:19:12] cout  From inner block   x n | 200  . | Output
+[00:19:22] cout   1ocal    x n; | cout   Global x | Buld | scopes.cPo | seventn program,vexpred-Error Beginnersseventh | Bulld: 1 succeeded,  railed,  up-to-dete,
+[00:19:34] cout   Globa1 x  ::x  n : | Sherw oufiput from:
+[00:19:44] cout  loca1   x n; | cout   Globa1 x  : :x  n ; | CiWindowcdayctem72icmdese | Fron Inner Sleck 10a | Irenn | Glehal xis | to continue | tput | horw
+[00:19:54] couta From inner block   x n; | 100; | coutk  Globa1 x  : :x  n ; | scopes.epo | sevenen program,wexpred-i EPor Beginnerssseventn | Butld: 1 succeeded,6 railed,e up to-date,
+[00:20:07] 1oca1     n; | int x  1001 | 100  -- | Shew oufput from | sevenen program,wexpred- Eror Beginnerssseventh | scopes.cps | Butld: 1 succeeded, failed, up-to-date,
+[00:20:17] int  - 1010. | Show oufput from: | scopes.cpo | sevenen program,wexpred-i Eror Beginnerssseventh | Build: 1 succeeded, railed,  up-to-date,
+[00:20:27] Using global variables causes side effects | - A function that uses global variables is not independent | - If more than one function uses the same global variable and something goes | wrong. | - It is diffioult to find what went wrong and where Problems caused in one area | of the program may appear to be from another area. | - To prevent the global variable to be modified use the Const Keyword | Const float pi  3.14:
+[00:20:47] A function that uses global variables is not independent | If more than one function uses the same global variable and something goes | - It is difficult to find what went wrong and where Problems caused in one area | Const floatpi  3.14
+[00:20:57] more UFsan one ncron useg Ue same gouevartde and someuling goes | To prevent the global variable to be modified use the Const Keyword
+[00:23:45] Flnat spheneanes iat rattius; | flaat sohare wlane int caties | fleat pi - 3.18 | pi - 5.17; | float heneanes Ciat ratius | reture a  p  ractien.  radtes  ratlus | flnat sphereiolane lnt radlux | reliare 43  pi  radies  raliuens  ranliass
+[00:25:21] Static and Automatic Variables | Automatic variable | -memory is allocated at block entry and de-allocated at block exit | - By default, variables declared within a block are automatic variables | int issueticket int x , int y | int ticketno0; | cout cFlightNo :cflightno oea; | cout cTicket no :  ticketno n: | cout cIssued For: pname cinnn;
+[00:25:31] Automatic variable: | int ticketne0; | cout ocFlightNo : cflightno cea; | cout -cTicket no :  ticketno a: | cout cIssued For:pnameinnn:
+[00:28:51] Slebel Soopel | issueticket125,name; | cout  Enter your name as written in your passportn; | cin  name; | cout  Enter your name as written in your passportn; | issue ticket125,name | in  name | issue ticket125,name; | void issue ticket int flight no string pname | int ticket  0; | cout t t.............................. n; | cout Fight No : flight no ; | cout Ticket no :    ticketno n; | cout Issued For: pname n n n;
+[00:29:01] issue ticket125 ,name; | void issue ticket int flight no, string pname | int ticketno  0; | cout t t........................... n; | cout F1ight No :  flight no ; | cout Ticket no : ticketnon
+[00:29:11] Slebel Scopel | issue ticket125 name; | cout  Enter your name as written in your passportn | issue ticket125,name;: | void issueticket int flightno , string pname | int ticket no  0; | cout t | CWndowdayten Zandas | cout F1 | teryouur name | as seitten | in your passpurt | cout Tig | cout Iss
+[00:29:24] Glital Scope | cout  Enter your name as written in your passport n | 1n  name1 | in  name; | void issue ticket int flightno , string pname | cout ct | CoWrdowlsytewlZonde | Exter pouer nane as vrllten in pour passpere | cout Ti | Pl.igle 8s  1.25 | hmed | insued Por: mohaned | Exter your name as velsten in pour posspees
+[00:29:34] cin  namej | cout it At............. | cout F1at No :  flightno ; | cout Ticket no :  ticket no n | cout Issued For:pname nsn; | TCoWindouctlayctamZicndaxe | nobaned. | MPuLLes | yeer
+[00:29:45] cin name; | void issueticket int flightno, string pnane | cout ct ...................... | cout F1ight No :  flightno ; | cout Ticket no :c  ticket no en | cout Issued For: pname n Wn; | CiWindowclavrtenCTondeve | shuuued | Fart | Enter | your nane at urstten in yesr pnsspoort
+[00:29:55] cout Enter your nane as written inyour passportn | issueticket | 5CinWiendowrloenkendZredeve | ufuered | PHLEPOPE | void issueticket | Frmed Por-mohamed | int ticketno aleed | Inter your name ar vritter in | parepart | coutct . | Fliglic Mo : 125 | ssned For: alonod | Seknt o. | cFlight H | cTicket n | cout Issued | riplen Ho 1 | seed Peri4bosllah | schet
+[00:30:10] issoeticket125Aamej | ceet cc Enter your name as werittes is your passportles | cin 35 name1 | cout e Eniter your same as weritten is your passportse; | issoeticket125same | cin name: | issoeticket125jsume: | wosd issueticket int elightno , strang prame | 3sst ticket no  0; | cout eTickt no :  tickeetno n; | cout r1light No : ef1ightno a; | cout Issued For:   prume dcn V n;
+[00:30:20] 1n  name; | static int ticket no  : | cout Flight No: flightno ; | cout Ticket no :   ticket no yn; | cout Issued For:pname n n n; | Phow cuncut froer
+[00:30:31] static int ticketno  0; | cout ct t.......n........... | cout Flight No:flightno ; | cout Issued For:pname n n n
+[00:30:46] Issueticket1 | aCoWindewlsylewctZemdese | 738ghe Me 125 | sheed | Ennned Feeisleed | lcket::i | mobaned. | Exker yeur name an urittes in yeee pmemport | static int ticket | 1sght Mo : 125 | scket s. .2 | cout cct t.. | ssundPee:mlsmnd | cout cF1ight No | Ester yesr rase ac urittes | cout Ticket no | cout Issued Fo | Show curzal Hrom | Bulia: : succeecnd,  eadlel,  up-to-date,
+[00:30:56] issue ticket | cout  Ente | Plaghe M : 125 | Fonaed Fae:enlurwed | ichot o . 2 | Evter yoer eare as uriston | yeur pussgoort | void issueticke | static int ticket no - θ; | cout cct rassssssssssss | cout cF1ight No :  f1ight no cn; | how celyal Hrowy | 1 succeecnd,  eadlec,  up-tu-date
+[00:31:06] cout s Ente | Plaghe m : 125 | Schot o . 2 | Foter seer eeee os sristen | yeurpussgors | cout ct tsasssss | cout Issued For:  pname n n n: | Show oufgul from: | Li4. : succeecnd,  ealled,  up-to-date,
+[00:31:16] issue ticket125,namo; | cin  name | static int Nicketno - θ; | cout cct tasssssssss | cout cF1ight No : f1ight no n; | : succeecnd,  eadled,  up-to-dat
+[00:31:26] void issueticket int flightno | , yring prame | static int ticketno - θ; | edel andubanicatingr char, atdcharrais-charn, atdsalecaturs | cout ct tssssasskss | cout cF1ight No : f1ight no cn; | cout Issued For: pname n nn; | 241 : succeeced,  dalinl,  up-tu-date,
+[00:31:36] void issue ticket int flightno , string, pname | cout ct tsssssskss | cout Issued For:  pname n n n; | hove cofoad Hromy
+[00:31:49] cin name | cout  Enter your nase as written in your passportn; | 1ssue ticket125,name | static int ticket no  θ; | cout F1ight No :  flightno n; | cout Ticket no :  ticket novn | Show oufyut from: | eneme Bulid. : cuccencnd,  dalinl,  up-to-date,
+[00:31:59] issue ticket125name | in  name1 | issueticket125,namo; | void issue ticket int flight no , string pname | cout cct txxx....ss.ssn. | cout Flight No :flight no n; | cout Ticket no ;    ticketno n; | cout Issued For:   pname n n n; | Show cataad trom | ula. : succeecnt,  dali,  up-to-dat
+[00:32:09] void issueticket int flightno , string prame | cout ct txsssassxs | cout cF1ight No :  f1ight no cn1 | hove cofaad Hromy

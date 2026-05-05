@@ -97,7 +97,7 @@ async def run_processing_pipeline(video_id: int, language: str):
         repo.update_status(video_id, "transcribing")
         video = repo.get_by_id(video_id)
         # transcript = await transcribe(video.url, video_id=video_id)
-        transcript, video_path = await transcribe(video.url, video_id=video_id)
+        transcript, video_path, Transcribt_lang  = await transcribe(video.url, video_id=video_id)
         logger.info(f"Transcript: {transcript}")
 
         # ── Step 2: OCR ───────────────────────────────────────────────────
@@ -106,10 +106,13 @@ async def run_processing_pipeline(video_id: int, language: str):
         loop = asyncio.get_event_loop()
         ocr_service = OCRService(db)
 
-        ocr_segments = await loop.run_in_executor(
+        ocr_result = await loop.run_in_executor(
             None,
             lambda: ocr_service.run(video_path, video_id)
         )
+
+        ocr_segments = ocr_result["segments"]
+        ocr_language  = ocr_result["language"]
         # ocr_segments = await loop.run_in_executor(
         #     None,
         #     lambda: OCRService(db).run(video_id)
@@ -127,7 +130,7 @@ async def run_processing_pipeline(video_id: int, language: str):
         repo.update_status(video_id, "segmenting")
         segment_repo = SegmentRepository(db)
 
-        segments_result = await segment_topics(merged, video_id)
+        segments_result = await segment_topics(merged, video_id,ocr_language,Transcribt_lang)
         logger.info(f"[Pipeline] Segments generated: {segments_result['total_segments']}")
 
         # SAVE TO DATABASE
