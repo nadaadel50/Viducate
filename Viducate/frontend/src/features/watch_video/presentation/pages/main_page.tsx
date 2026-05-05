@@ -8,6 +8,7 @@ import { ErrorMessage } from "../../../../core/widgets/error";
 import { LanguageInitModal } from "../../../video_upload/presentation/componants/LanguageInitModal";
 import { CustomizeExperienceModal } from "../../../video_upload/presentation/componants/CustomizeExperienceModal";
 import { useLearningSession } from "../../../../core/hooks/useLearningContent";
+import { ChatProvider } from "../../../chat_bot/presenation/context/chatbot_provider";
 
 export function MainPage() {
   const { videoId, selectedTopic, setSelectedTopic  } = useLearningSession();
@@ -55,7 +56,9 @@ export function MainPage() {
         </div>
 
         <div className="flex-[3.5]">
-          <RightContentSection />
+         <ChatProvider>
+           <RightContentSection />
+         </ChatProvider>
         </div>
       </div>
       <LanguageInitModal

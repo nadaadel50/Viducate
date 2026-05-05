@@ -4,13 +4,17 @@ import {
   FileQuestion,
   FileText,
   Brain,
+  MessageCircle,
 } from "lucide-react";
 import { VideoPlayer } from "./video_part";
 import { TranscriptSearch } from "../widgets/transcript_search";
 import { FinalGeneratedBtn } from "../widgets/final_generated_btn";
 import { MainHeader } from "../widgets/main_header";
+import { ChatBotOpenBtn } from "../../../chat_bot/presenation/widgets/chat_bot_open_btn";
 
 export function RightContentSection() {
+  
+  
   return (
     <div className="min-h-screen w-full flex flex-col justify-center items-center">
       {/* centered container */}
@@ -74,6 +78,9 @@ export function RightContentSection() {
           />
         </div>
       </div>
+      <ChatBotOpenBtn/>
+
+     
     </div>
   );
 }
