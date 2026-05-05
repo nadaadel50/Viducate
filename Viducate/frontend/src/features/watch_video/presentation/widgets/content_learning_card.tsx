@@ -9,8 +9,10 @@ import type { TopicResponse } from "../../domin/entity/topic_response";
 import { useLearningSession } from "../../../../core/hooks/useLearningContent";
 import { useNavigate } from "react-router";
 import { useDueFlashcards } from "../../../flash_cards/presentation/hooks/use_due_flash_cards";
+import { useState } from "react";
 
-
+import { QuizDifficultyModal } from "../../../QuizSystem/presentation/componants/QuizDifficultyModal";
+import { SummaryStyleModal } from "../../../summarization/presentation/componants/SummaryStyleModal";
 
 export function ContentLearningCard({
   isSelected,
@@ -25,10 +27,13 @@ export function ContentLearningCard({
   const navigate=useNavigate()
    const { isDueForSegment } = useDueFlashcards();
   
+  const [isQuizModalOpen, setIsQuizModalOpen] = useState(false);
+  const [isSummaryModalOpen, setIsSummaryModalOpen] = useState(false);
   const isDue = isDueForSegment(cardInfo.segment_id);
  
 
   return (
+    <>
     <div
       onClick={() => {
         onClick();
@@ -75,12 +80,12 @@ export function ContentLearningCard({
           label={"Watch"}
         />
         <ContentGenerationBtn
-          onClick={() => {}}
+          onClick={() => setIsSummaryModalOpen(true)}
           icon={<NotebookText />}
           label={"Summary"}
         />
         <ContentGenerationBtn
-          onClick={() => {}}
+          onClick={() => setIsQuizModalOpen(true)}
           icon={<FileQuestion />}
           label={"Quiz"}
         />
@@ -94,5 +99,17 @@ export function ContentLearningCard({
         />
       </div>
     </div>
+
+    
+      <QuizDifficultyModal 
+        isOpen={isQuizModalOpen} 
+        onClose={() => setIsQuizModalOpen(false)} 
+      />
+      
+      <SummaryStyleModal 
+        isOpen={isSummaryModalOpen} 
+        onClose={() => setIsSummaryModalOpen(false)} 
+      />
+    </>
   );
 }
