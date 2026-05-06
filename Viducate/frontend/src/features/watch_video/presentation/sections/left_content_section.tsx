@@ -10,7 +10,8 @@ export function LeftContentSection() {
   const {
     currentTime,
     setSelectedTopic,
-    setSeekTo
+    setSeekTo,
+    completedTopicIds
   } = useLearningSession();
   const { data: videoData } = useVideoData();
   const topics=videoData?.topics
@@ -53,8 +54,11 @@ export function LeftContentSection() {
       {/* LIST */}
       <div className="flex-1 overflow-y-auto">
         <div className="flex flex-col gap-3 p-4 max-w-md mx-auto w-full">
+          
           {filteredCards.map((card, index) => (
+            
             <ContentLearningCard
+            
               key={index}
               isSelected={currentTopicIndex === index}
               onClick={() => {

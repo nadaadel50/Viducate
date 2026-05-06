@@ -1,4 +1,5 @@
 import {
+  CheckIcon,
   FileQuestion,
   Layers,
   NotebookText,
@@ -10,8 +11,6 @@ import { useLearningSession } from "../../../../core/hooks/useLearningContent";
 import { useNavigate } from "react-router";
 import { useDueFlashcards } from "../../../flash_cards/presentation/hooks/use_due_flash_cards";
 
-
-
 export function ContentLearningCard({
   isSelected,
   onClick,
@@ -21,22 +20,25 @@ export function ContentLearningCard({
   onClick: () => void;
   cardInfo: TopicResponse;
 }) {
-  const { setSelectedTopic } = useLearningSession();
-  const navigate=useNavigate()
-   const { isDueForSegment } = useDueFlashcards();
-  
+  const { setSelectedTopic, completedTopicIds } = useLearningSession();
+  const navigate = useNavigate();
+  const { isDueForSegment } = useDueFlashcards();
+
   const isDue = isDueForSegment(cardInfo.segment_id);
- 
 
   return (
     <div
       onClick={() => {
         onClick();
         setSelectedTopic(cardInfo);
-       
       }}
       className={`cursor-pointer group relative rounded-2xl bg-white/70  p-4 transition-all hover:bg-white hover:border-primary/40 hover:shadow-soft ${isSelected ? "border-2 border-[#4f46e5] shadow-xl shadow-[#4f46e5]/15" : "border border-slate-200/60 w-80"}`}
     >
+      {completedTopicIds.has(cardInfo.segment_id) && (
+        <div className="absolute -top-2.5 -right-2.5 w-6 h-6 rounded-full bg-emerald-500 flex items-center justify-center shadow-sm ring-2 ring-white">
+          <CheckIcon className="w-3.5 h-3.5 text-white stroke-[3]" />
+        </div>
+      )}
       {/* Title */}
       <div className="flex justify-between items-start">
         <h4
@@ -45,18 +47,16 @@ export function ContentLearningCard({
           {cardInfo.title}
         </h4>
 
-          {isDue && (
-            <span className="flex items-center gap-1 text-green-600 text-[10px] font-bold bg-green-50 px-2 py-0.5 rounded-full">
-              <span className="w-1.5 h-1.5 rounded-full bg-green-500 animate-pulse" />
-              Review
-            </span>
-          )}
-        
+        {isDue && (
+          <span className="flex items-center gap-1 text-green-600 text-[10px] font-bold bg-green-50 px-2 py-0.5 rounded-full">
+            <span className="w-1.5 h-1.5 rounded-full bg-green-500 animate-pulse" />
+            Review
+          </span>
+        )}
 
         <span className="text-[10px] font-bold  text-slate-400 bg-slate-100 px-2.5 py-1 rounded-full group-hover:text-slate-600 transition-colors">
-          {
-          Math.floor((cardInfo.start_time) / 60)}:
-          {Math.floor((cardInfo.start_time) % 60)
+          {Math.floor(cardInfo.start_time / 60)}:
+          {Math.floor(cardInfo.start_time % 60)
             .toString()
             .padStart(2, "0")}
         </span>
@@ -85,9 +85,9 @@ export function ContentLearningCard({
           label={"Quiz"}
         />
         <ContentGenerationBtn
-           onClick={() => {
-              navigate(`/WatchVideo/flashcards/${cardInfo.segment_id}`)
-            }}
+          onClick={() => {
+            navigate(`/WatchVideo/flashcards/${cardInfo.segment_id}`);
+          }}
           icon={<Layers />}
           label={"cards"}
           isDue={isDue}

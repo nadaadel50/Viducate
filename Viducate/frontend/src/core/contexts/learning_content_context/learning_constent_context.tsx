@@ -8,6 +8,8 @@ export type LearningSessionContextType = {
   currentTime: number;
 
   seekTo: number | null;
+  completedTopicIds: Set<number>;  
+  
 
   setVideoId: (id: number | null) => void;
 
@@ -20,4 +22,8 @@ export type LearningSessionContextType = {
   setSeekTo: React.Dispatch<
     React.SetStateAction<number | null>
   >;
+   toggleTopicComplete: (topicId: number) => void;
+
+
+  //  goToNextTopic: () => void;
 };

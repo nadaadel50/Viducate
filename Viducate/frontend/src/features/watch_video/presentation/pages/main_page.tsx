@@ -8,9 +8,11 @@ import { ErrorMessage } from "../../../../core/widgets/error";
 import { LanguageInitModal } from "../../../video_upload/presentation/componants/LanguageInitModal";
 import { CustomizeExperienceModal } from "../../../video_upload/presentation/componants/CustomizeExperienceModal";
 import { useLearningSession } from "../../../../core/hooks/useLearningContent";
+import { useMainBtn } from "../hook/use_main_btn";
 
 export function MainPage() {
   const { videoId, selectedTopic, setSelectedTopic  } = useLearningSession();
+  
 
   const { data: data, isLoading, error } = useVideoData();
 
@@ -32,8 +34,7 @@ export function MainPage() {
   useEffect(() => {
     if (data && data.topics.length > 0 && !selectedTopic) {
       setSelectedTopic(data.topics[0]);
-     
-      
+    
     }
   }, [data?.topics, selectedTopic, setSelectedTopic]);
 
@@ -47,10 +48,12 @@ export function MainPage() {
   if (isLoading && !data) return <Loading />;
   if (error) return <ErrorMessage errorMessage={error.message} />;
 
-  return (
+ else{
+ 
+   return (
     <>
       <div className="flex font-display bg-[#f8fafc] ">
-        <div className="flex-1 border-r border-slate-200">
+        <div className="flex-1 border-r border-slate-200 h-screen ">
           <LeftContentSection />
         </div>
 
@@ -71,4 +74,5 @@ export function MainPage() {
       />
     </>
   );
+ }
 }
