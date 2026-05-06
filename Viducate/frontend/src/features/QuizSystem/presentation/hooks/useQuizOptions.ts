@@ -1,17 +1,14 @@
-import { useMemo } from "react";
-import { COLORS } from "../../../../core/constants";
 
-interface Question {
-  question_text: string;
-  choices: Record<string, string>;
-  correct_answer: string;
-}
+import { COLORS } from "../../../../core/constants";
+import { QuizQuestionEntity } from "../../domain/entity/quiz_entity"; // ✅
 
 interface UseQuizOptionsParams {
-  question: Question;
+  question: QuizQuestionEntity; // ✅ بدل الـ local interface
   selectedId: string | null;
   isReviewMode: boolean;
 }
+
+
 
 export const useQuizOptions = ({
   question,
@@ -19,16 +16,7 @@ export const useQuizOptions = ({
   isReviewMode,
 }: UseQuizOptionsParams) => {
 
-  // will remove
-  const options = useMemo(() => {
-    if (!question?.choices) return [];
-
-    return Object.entries(question.choices).map(([key, value]) => ({
-      id: key,
-      text: value,
-    }));
-  }, [question]);
-
+const options = question.choices; 
 
   const getOptionStyle = (optionId: string) => {
     const isCorrect = optionId === question.correct_answer;

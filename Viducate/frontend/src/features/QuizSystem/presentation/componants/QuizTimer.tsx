@@ -1,6 +1,6 @@
 import { FormattedMessage } from "react-intl";
 import { COLORS } from "../../../../core/constants";
-export const QuizTimer = ({ timeLeft }: any) => {
+export const QuizTimer = ({ timeLeft }: { timeLeft: number }) => {
   const min = Math.floor(timeLeft / 60);
   const sec = timeLeft % 60;
   return (
