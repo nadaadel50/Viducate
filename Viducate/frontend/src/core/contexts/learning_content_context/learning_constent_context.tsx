@@ -2,6 +2,9 @@ import type { TopicResponse } from "../../../features/watch_video/domin/entity/t
 
 export type LearningSessionContextType = {
   videoId: number | null;
+  videoTitle: string|null
+
+  topics:TopicResponse[]|null
 
   selectedTopic: TopicResponse | null;
 
@@ -10,6 +13,9 @@ export type LearningSessionContextType = {
   seekTo: number | null;
 
   setVideoId: (id: number | null) => void;
+   setVideoTitle: (title: string | null) => void;
+
+   setTopics: (topics:TopicResponse[]|null) => void;
 
   setSelectedTopic: React.Dispatch<
     React.SetStateAction<TopicResponse | null>

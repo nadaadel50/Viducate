@@ -11,7 +11,8 @@ import { useLearningSession } from "../../../../core/hooks/useLearningContent";
 import { ChatProvider } from "../../../chat_bot/presenation/context/chatbot_provider";
 
 export function MainPage() {
-  const { videoId, selectedTopic, setSelectedTopic  } = useLearningSession();
+  const { videoId, selectedTopic, setSelectedTopic, setTopics } =
+    useLearningSession();
 
   const { data: data, isLoading, error } = useVideoData();
 
@@ -31,12 +32,14 @@ export function MainPage() {
   }, [videoId]);
 
   useEffect(() => {
-    if (data && data.topics.length > 0 && !selectedTopic) {
+    if (!data || data.topics.length === 0) return;
+
+    setTopics(data.topics);
+
+    if (!selectedTopic) {
       setSelectedTopic(data.topics[0]);
-     
-      
     }
-  }, [data?.topics, selectedTopic, setSelectedTopic]);
+  }, [data]); 
 
   const handleGoToCustomize = () => {
     setIsInitOpen(false);
@@ -56,9 +59,9 @@ export function MainPage() {
         </div>
 
         <div className="flex-[3.5]">
-         <ChatProvider>
-           <RightContentSection />
-         </ChatProvider>
+          <ChatProvider>
+            <RightContentSection />
+          </ChatProvider>
         </div>
       </div>
       <LanguageInitModal

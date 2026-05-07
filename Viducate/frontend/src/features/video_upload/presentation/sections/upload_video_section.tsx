@@ -77,7 +77,7 @@ export function UploadVideoSection({
       }
     
 
-     // console.log(response.data);
+     
        setVideoId(response.data.videoId);
       
     } catch (error) {

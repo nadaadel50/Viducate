@@ -10,6 +10,7 @@ export const STORAGE_KEYS = {
   selectedTopic: "lms_selected_topic",
    marks:"marks",
    video_Id : "video_id",
-   flashcardSession:"flashcards-session"
+   flashcardSession:"flashcards-session",
+   topics:"video_topics"
 
 };
