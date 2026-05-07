@@ -1,114 +1,149 @@
 import { useEffect, useState } from "react";
-import { COLORS } from '../../../../core/constants/colors';
-import { SummaryHeader } from '../componants/SummaryHeader';
-import { TakeawayList } from '../componants/TakeawayList';
-import { QuizCard } from '../componants/QuizCard';
-import { ToolsCard } from '../componants/ToolsCard';
+
+import { COLORS } from "../../../../core/constants/colors";
+
+import { SummaryHeader } from "../componants/SummaryHeader";
+import { TakeawayList } from "../componants/TakeawayList";
+import { QuizCard } from "../componants/QuizCard";
+import { ToolsCard } from "../componants/ToolsCard";
+import { TermTooltip } from "../componants/TermTooltip";
+import { GeneratingSummaryPage } from "./GeneratingSummaryPage";
+
+type ContentItem = {
+  text: string;
+  type: "normal" | "term";
+  tooltip?: string;
+};
+
+type Section = {
+  heading: string;
+  content: ContentItem[];
+};
 
 type SummaryData = {
   title: string;
   takeaways: string[];
-  content: {
-    type: "heading" | "paragraph";
-    text: string;
-    highlights?: string[];
-  }[];
+  sections: Section[];
 };
 
 const SummaryPage = () => {
   const [data, setData] = useState<SummaryData | null>(null);
 
-  //Fake API
+  // Fake API
   useEffect(() => {
     setTimeout(() => {
       setData({
         title: "Topic Summary: Introduction to Psychology",
+
         takeaways: [
           "Psychology is the scientific study of the mind and behavior.",
           "The nature vs. nurture debate remains central to development.",
           "Early psychological theories were influenced by philosophy.",
-          "Understanding research methods is critical for evaluating claims."
+          "Understanding research methods is critical for evaluating claims.",
         ],
-        content: [
+
+        sections: [
           {
-            type: "heading",
-            text: "Core Concepts & Terminology"
+            heading: "Core Concepts & Terminology",
+
+            content: [
+              {
+                text: "Neuroplasticity",
+                type: "term",
+                tooltip:
+                  "The brain's ability to reorganize itself by forming new neural connections",
+              },
+
+              {
+                text:
+                  " describes the brain's ability to adapt and change based on experience.",
+                type: "normal",
+              },
+            ],
           },
+
           {
-            type: "paragraph",
-            text: "Neuroplasticity describes the brain's ability to adapt and change based on experience.",
-            highlights: ["Neuroplasticity"]
+            heading: "Historical Context",
+
+            content: [
+              {
+                text: "Structuralism",
+                type: "term",
+                tooltip:
+                  "An early school of psychology that aimed to analyze the structure of the mind",
+              },
+
+              {
+                text:
+                  " focused on breaking mental processes into their basic components.",
+                type: "normal",
+              },
+            ],
           },
-          {
-            type: "heading",
-            text: "Historical Context"
-          },
-          {
-            type: "paragraph",
-            text: "Structuralism focused on breaking mental processes into their basic components."
-          }
-        ]
+        ],
       });
     }, 1000);
   }, []);
-
-
+if (!data) {
+  return <GeneratingSummaryPage />;
+}
   return (
-    <div className="min-h-screen flex flex-col" style={{ backgroundColor: COLORS.background.light }}>
+    <div
+      className="min-h-screen flex flex-col"
+      style={{ backgroundColor: COLORS.background.light }}
+    >
       <main className="flex-1 w-full max-w-7xl mx-auto px-4 md:px-6 py-8">
-        
         <div className="flex flex-col lg:flex-row gap-8 items-start">
           
           {/* Main Content */}
-          <article 
+          <article
             className="flex-1 w-full min-w-0 rounded-xl shadow-sm p-8 md:p-12"
             style={{ backgroundColor: COLORS.layout.leftBackground }}
           >
-            <SummaryHeader title={data?.title || ""} />
+            <SummaryHeader
+              title={data?.title || ""}
+              time="5 min read"
+            />
 
             <TakeawayList items={data?.takeaways || []} />
 
-            {/* Dynamic Content */}
-            <section className="space-y-8">
-              {data?.content.map((item, index) => {
-                
-                if (item.type === "heading") {
-                  return (
-                    <h3
-                      key={index}
-                      className="text-xl font-bold"
-                      style={{ color: COLORS.text.primary }}
-                    >
-                      {item.text}
-                    </h3>
-                  );
-                }
+            {/* Sections */}
+            <section className="space-y-10">
+              {data?.sections.map((section, index) => (
+                <div key={index} className="space-y-4">
+                  
+                  <h3
+                    className="text-2xl font-bold"
+                    style={{ color: COLORS.text.primary }}
+                  >
+                    {section.heading}
+                  </h3>
 
-                if (item.type === "paragraph") {
-                  let text = item.text;
+                  <p
+                    className="text-lg leading-relaxed flex flex-wrap gap-[2px]"
+                    style={{ color: COLORS.text.secondary }}
+                  >
+                    {section.content.map((item, idx) => {
 
-                  // Highlight logic
-                  item.highlights?.forEach(word => {
-                    text = text.replace(
-                      word,
-                      `<span class="px-1 mx-1 rounded font-medium" style="background:#FEF9C3;color:#000">${word}</span>`
-                    );
-                  });
+                      if (item.type === "term") {
+                        return (
+                          <TermTooltip
+                            key={idx}
+                            text={item.text}
+                            tooltip={item.tooltip || ""}
+                          />
+                        );
+                      }
 
-                  return (
-                    <p
-                      key={index}
-                      className="text-lg leading-relaxed"
-                      style={{ color: COLORS.text.secondary }}
-                      dangerouslySetInnerHTML={{ __html: text }}
-                    />
-                  );
-                }
-
-                return null;
-              })}
-
-            
+                      return (
+                        <span key={idx}>
+                          {item.text}
+                        </span>
+                      );
+                    })}
+                  </p>
+                </div>
+              ))}
             </section>
           </article>
 
@@ -117,7 +152,7 @@ const SummaryPage = () => {
             <QuizCard />
             <ToolsCard />
           </aside>
-          
+
         </div>
       </main>
     </div>

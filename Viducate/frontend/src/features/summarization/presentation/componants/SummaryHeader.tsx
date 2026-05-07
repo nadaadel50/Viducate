@@ -2,7 +2,11 @@
 import { Clock } from 'lucide-react';
 import { COLORS } from '../../../../core/constants/colors';
 
-export const SummaryHeader = ({ title }: { title: string }) => (
+interface SummaryHeaderProps {
+  title: string;
+  time: string;
+}
+export const SummaryHeader = ({ title, time }: SummaryHeaderProps) =>(
   <div className="mb-8">
     <div className="flex items-center gap-4 mb-4">
       <span 
@@ -13,7 +17,7 @@ export const SummaryHeader = ({ title }: { title: string }) => (
         AI Summary Ready
       </span>
       <span className="text-sm font-medium flex items-center gap-1" style={{ color: COLORS.brand.primary }}>
-        <Clock size={14} /> 5 min read
+        <Clock size={14} /> {time}
       </span>
     </div>
     <h1 className="text-4xl font-extrabold mb-2" style={{ color: COLORS.text.primary }}>{title}</h1>

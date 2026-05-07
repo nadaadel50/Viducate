@@ -9,6 +9,10 @@ export const AppRoutesNames = {
   signup: "/signup",
   ProcessingPage: "/ProcessingPage",
   uploadPage:"/UploadVideoPage",
-  wathcVideo:"/WatchVideo"
+  wathcVideo:"/WatchVideo",
+  studyNotes:"/study-notes",
+  summary:"/summary",
+  generatingSummary:"/generating-summary",
+  
 
 };

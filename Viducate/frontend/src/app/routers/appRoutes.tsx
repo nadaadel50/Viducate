@@ -19,7 +19,7 @@ import { ProcessingPage } from "../../features/video_upload/presentation/pages/p
 import AuthSuccess from "../../features/auth/presentation/pages/AuthSuccess";
 import { GeneratingSummaryPage } from '../../features/summarization/presentation/pages/GeneratingSummaryPage';
 import SummaryPage from "../../features/summarization/presentation/pages/SummaryPage";
-
+import StudyNotesPage from "../../features/summarization/presentation/pages/StudyNotesPage";
 export function AppRoutes() {
   return (
     <BrowserRouter>
@@ -32,6 +32,7 @@ export function AppRoutes() {
         <Route path="/test-modals" element={<TestModalsPage />} /> /* for
         <Route path="/generating-summary" element={<GeneratingSummaryPage />} />
         <Route path="/summary" element={<SummaryPage />} />
+        <Route path="/study-notes" element={<StudyNotesPage />} />
         <Route element={<ProtectedRoute />}>
           {" "}
         
