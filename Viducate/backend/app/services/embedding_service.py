@@ -107,8 +107,17 @@ def store_embeddings(video_id: int, segments: list, video_lang: str = 'ar') -> N
             detail=f"Failed to store embeddings for video_id={video_id}"
         )
 
+def time_to_seconds(time_str: str) -> int:
+    parts = time_str.split(":")
+    if len(parts) == 3:
+        h, m, s = parts
+        return int(h) * 3600 + int(m) * 60 + int(s)
+    elif len(parts) == 2:
+        m, s = parts
+        return int(m) * 60 + int(s)
+    return 0
 
-SIMILARITY_THRESHOLD = 0.89
+SIMILARITY_THRESHOLD = 0.75
 
 def search(video_id: int, query: str, db: Session, n_results: int = 5) -> list:
     try:
@@ -116,23 +125,26 @@ def search(video_id: int, query: str, db: Session, n_results: int = 5) -> list:
             name=f"video_{video_id}",
             metadata={"hnsw:space": "cosine"}
         )
+        # query_ar = translate_query(query, target_lang='ar')
+        # query_en = translate_query(query, target_lang='en')
 
-        query_ar = translate_query(query, target_lang='ar')
-        query_en = translate_query(query, target_lang='en')
+        # results_ar = collection.query(query_embeddings=[get_embedding(query_ar, is_query=True)], n_results=n_results)
+        # results_en = collection.query(query_embeddings=[get_embedding(query_en, is_query=True)], n_results=n_results)
 
-        results_ar = collection.query(query_embeddings=[get_embedding(query_ar, is_query=True)], n_results=n_results)
-        results_en = collection.query(query_embeddings=[get_embedding(query_en, is_query=True)], n_results=n_results)
+        results = collection.query(
+            query_embeddings=[get_embedding(query, is_query=True)],
+            n_results=n_results
+        )
 
         seen = set()
         filtered = []
 
-        for results in [results_ar, results_en]:
-            for i in range(len(results["metadatas"][0])):
-                score = round(1 - (results["distances"][0][i] / 2), 4)
-
+        for i in range(len(results["metadatas"][0])):
+                raw_distance = results["distances"][0][i]
+                score = round(1 - raw_distance, 4)
+                print(f"[DEBUG] dist={raw_distance:.4f} | score={score:.4f} | {results['metadatas'][0][i]['sub_topic_name']}")
                 if score < SIMILARITY_THRESHOLD:
                     continue
-
                 meta = results["metadatas"][0][i]
                 key = meta["sub_topic_name"]
 
@@ -151,7 +163,8 @@ def search(video_id: int, query: str, db: Session, n_results: int = 5) -> list:
                     "title": meta["title"],
                     "sub_topic_name": meta["sub_topic_name"],
                     "sub_topic_description": meta["sub_topic_description"],
-                    "start_time": meta["start_time"],
+                    # "start_time": meta["start_time"],
+                    "start_time": time_to_seconds(meta["start_time"]),
                     "score": score
                 })
 

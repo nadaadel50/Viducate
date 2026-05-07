@@ -14,6 +14,7 @@ from app.api.v1.endpoints.summary import router as summary_router
 from app.api.v1.endpoints.preferences import router as preferences_router
 from app.api.v1.endpoints.flashcards import router as flashcards_router
 from app.api.v1.endpoints.quiz import router as quiz_router
+from app.api.v1.endpoints.chat import router as chat_router
 
 import asyncio
 import sys
@@ -58,6 +59,9 @@ app.include_router(summary_router, prefix="/api/v1")
 app.include_router(preferences_router, prefix="/api/v1")
 app.include_router(flashcards_router, prefix="/api/v1")
 app.include_router(quiz_router, prefix="/api/v1")
+
+app.include_router(chat_router, prefix="/api/v1")
+
 
 @app.get("/", tags=["Health"])
 def root():
