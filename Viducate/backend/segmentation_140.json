@@ -1,0 +1,232 @@
+{
+  "total_segments": 9,
+  "segments": [
+    {
+      "segment_number": 1,
+      "start_time": "00:00:00",
+      "end_time": "00:01:19",
+      "main_topic": "Introduction to Binary Exponentiation",
+      "title": "What is Binary Exponentiation?",
+      "sub_topics": [
+        {
+          "name": "Introduction to the Topic",
+          "start_time": "00:00:00",
+          "end_time": "00:00:11",
+          "description": "What's up guys, Mike the Coder here. Today we are going to go over binary exponentiation. BT8OM | Binary expune | Type haese to seaech"
+        },
+        {
+          "name": "Definition of Binary Exponentiation",
+          "start_time": "00:00:11",
+          "end_time": "00:01:19",
+          "description": "So what is binary exponentiation? Sometimes you need to calculate a number to the power of something to a very large number, right? But sometimes you get overflow. And sometimes it's really slow to do it. So this is a way to help you to solve this problem of calculating a number raised to a large power."
+        }
+      ],
+      "key_points": [
+        "Binary Exponentiation",
+        "Calculating a number to a large power"
+      ]
+    },
+    {
+      "segment_number": 2,
+      "start_time": "00:01:19",
+      "end_time": "00:05:13",
+      "main_topic": "Understanding Binary Exponentiation",
+      "title": "How Binary Exponentiation Works",
+      "sub_topics": [
+        {
+          "name": "Multiplication and Exponents",
+          "start_time": "00:01:19",
+          "end_time": "00:02:23",
+          "description": "Okay, so the first thing you need to know, remember multiplication. So if I do x times y times z, right? Remember, x times y times z, if I change the order of them, parentheses, evaluate which one's first, it's still the same number, right?"
+        },
+        {
+          "name": "Splitting Exponents into Two Groups",
+          "start_time": "00:02:23",
+          "end_time": "00:05:13",
+          "description": "So if I have a number and I raise it to a very large power, how do you calculate this? Well, what you could do normally is you could just take this number and multiply it by itself, b times, right? b times. And why does this work? Because anything raised to power, you couldn't just multiply by itself b times, right?"
+        }
+      ],
+      "key_points": [
+        "Multiplication",
+        "Exponents",
+        "Splitting Exponents"
+      ]
+    },
+    {
+      "segment_number": 3,
+      "start_time": "00:05:13",
+      "end_time": "00:10:48",
+      "main_topic": "Applying Binary Exponentiation",
+      "title": "Example and Code Implementation",
+      "sub_topics": [
+        {
+          "name": "Example of Binary Exponentiation",
+          "start_time": "00:05:13",
+          "end_time": "00:07:14",
+          "description": "Okay, so let's go over an example. So let's say I have three to the 13. So what do I wanna do? I basically want to split this exponent by the powers of two."
+        },
+        {
+          "name": "Code Implementation of Binary Exponentiation",
+          "start_time": "00:07:14",
+          "end_time": "00:10:48",
+          "description": "So let's say I want to get A to the B power, right? Take a power of A and raise it to B. Okay so how would you do this in code First of all I need a result There going to be one because this is going to be the answer that I going to return okay I need a result with my answer of A raised to B power."
+        }
+      ],
+      "key_points": [
+        "Example",
+        "Code Implementation",
+        "Binary Exponentiation Algorithm"
+      ]
+    },
+    {
+      "segment_number": 4,
+      "start_time": "00:11:22",
+      "end_time": "00:13:20",
+      "main_topic": "Binary Exponentiation",
+      "title": "Understanding Binary Exponentiation",
+      "sub_topics": [
+        {
+          "name": "Introduction to Binary Exponentiation",
+          "start_time": "00:11:22",
+          "end_time": "00:11:40",
+          "description": "Remember our exponent B? because that's how you convert into binary, right? It local alinaigus Colsmppet T | EMPIONG | prlmes - vectorebaoln 1, true; | r-20 1 -223 1 ng5 | for 11 j -s 1i j s; j - s | primes1 - falae; | 3² 9 | 3 2 2 | Jnng Jong res 11 | 6561813 | lanion 1641 i deurk | type hare to sach"
+        },
+        {
+          "name": "Understanding the Binary Exponentiation Process",
+          "start_time": "00:11:40",
+          "end_time": "00:13:20",
+          "description": "The binary 1101, okay? So what I have to check first is while b is greater than zero. And the reason why I'm checking this first is because we're reducing our exponent every single time. PRORCT | ILasal elininaa Dodsu | EIMPIONS | WneOW | prlames - vectorchool 1, true | for 11 1 - 2; 1 ng 1 | prams1 1 | for 11 j - ; 1i j si j 1 | primex1 - false; | Dang Dang hinpowfLong long lang long | Jong Jong res 1: | type hare to sea | arwou"
+        }
+      ],
+      "key_points": [
+        "Binary Exponentiation",
+        "Reducing Exponent"
+      ]
+    },
+    {
+      "segment_number": 5,
+      "start_time": "00:13:20",
+      "end_time": "00:14:30",
+      "main_topic": "Binary Exponentiation with Modulus",
+      "title": "Binary Exponentiation with Modulus",
+      "sub_topics": [
+        {
+          "name": "Introduction to Binary Exponentiation with Modulus",
+          "start_time": "00:13:20",
+          "end_time": "00:13:41",
+          "description": "Now, let's say I want to take the previous answer, a raised to b power, but I want to mod by a large number of n. Large by m. Modded by m."
+        },
+        {
+          "name": "Understanding the Binary Exponentiation with Modulus Process",
+          "start_time": "00:13:41",
+          "end_time": "00:14:30",
+          "description": "okay so if you want to do this mod by m i have the code down here so this is to raise a to the MORCT | TPOON | DongalilingublindowLong long a, Long long , Jong Jong | mg Fog bipow Long | ase aong res 1: | rture rog | b 1; | reture rns | baol allsortec | boolfatifortdy :1 arr.sinn- 1;1 | 1f ksarifatua,k1 - 1.f1rst | Type lere to seancs"
+        }
+      ],
+      "key_points": [
+        "Modulus Operation",
+        "Binary Exponentiation with Modulus"
+      ]
+    },
+    {
+      "segment_number": 6,
+      "start_time": "00:14:30",
+      "end_time": "00:16:21",
+      "main_topic": "Recursive Approach to Binary Exponentiation",
+      "title": "Recursive Approach to Binary Exponentiation",
+      "sub_topics": [
+        {
+          "name": "Introduction to Recursive Approach",
+          "start_time": "00:14:30",
+          "end_time": "00:15:10",
+          "description": "So yeah, that's basically the gist of this. And in the end, we just return result. PORCT | TOOMS | Jang langBinpowlong long , lang longs | Type lare to seaeih | aYwou"
+        },
+        {
+          "name": "Understanding the Recursive Approach Process",
+          "start_time": "00:15:10",
+          "end_time": "00:16:21",
+          "description": "i don actually want to do that because uh it actually way slower but if you FTPHOOMS | , is | b h; | reture resj | Jang Dong kinpowdlong long Dong T, Jong long | 1ang Jang res - ; | wlle o | 14081 | Type lave to seaecl"
+        }
+      ],
+      "key_points": [
+        "Recursive Approach",
+        "Binary Exponentiation"
+      ]
+    },
+    {
+      "segment_number": 7,
+      "start_time": "00:00",
+      "end_time": "00:16",
+      "main_topic": "Introduction to Recursive Algorithms",
+      "title": "Introduction to Algorithm Complexity",
+      "sub_topics": [
+        {
+          "name": "Introduction to Algorithm",
+          "start_time": "00:00",
+          "end_time": "00:08",
+          "description": "n, Lang lang h | Lang lamy res hsmpeuin, a 21: | returs 1: | cuturn re r. | retars res re4 | the coenexponding set bit in as"
+        },
+        {
+          "name": "Complexity Comparison",
+          "start_time": "00:08",
+          "end_time": "00:16",
+          "description": "Athough the compiewify ofl both approaches is icenticasl, thin appeoach wil be laetar in pesctice since we | The secondt seoroalch accomelinihes the same fssk wihoad rocumion"
+        }
+      ],
+      "key_points": [
+        "Algorithm Complexity",
+        "Recursive Approach"
+      ]
+    },
+    {
+      "segment_number": 8,
+      "start_time": "00:16",
+      "end_time": "00:32",
+      "main_topic": "Recursive Algorithm Implementation",
+      "title": "Understanding Recursive Algorithms",
+      "sub_topics": [
+        {
+          "name": "Difficulty of Algorithm",
+          "start_time": "00:16",
+          "end_time": "00:24",
+          "description": "I guess but it's not it's not too easy i guess but yeah rate com subscribe i'll check you Linr hin | iritmscwn, alpelnaironaryany"
+        },
+        {
+          "name": "Calculation Example",
+          "start_time": "00:24",
+          "end_time": "00:32",
+          "description": "3 2 2 81 | z 2² so² 656a | So is get the final answer tor 3 we ony nend to mutipy tvoe of them xkpping 32 secause the conesponding bt in as ix not urt"
+        }
+      ],
+      "key_points": [
+        "Recursive Calculation",
+        "Algorithm Example"
+      ]
+    },
+    {
+      "segment_number": 9,
+      "start_time": "00:32",
+      "end_time": "00:48",
+      "main_topic": "Large Power Computation",
+      "title": "Computing Large Powers of e",
+      "sub_topics": [
+        {
+          "name": "Introduction to Large Power Computation",
+          "start_time": "00:32",
+          "end_time": "00:40",
+          "description": "y1 -6561 81 31084323 | The final complionly o bhs ziporihe is Clloga we have lo compude lage powioms of e"
+        },
+        {
+          "name": "Recursive Approach for Large Power Computation",
+          "start_time": "00:40",
+          "end_time": "00:48",
+          "description": "and then hawo to do of mosd liagns | epicysiors lo oir the frs ansmor boe Phor | Trhe toliwing recursivo apysoarih cxpyresses the sane doa"
+        }
+      ],
+      "key_points": [
+        "Large Power Computation",
+        "Recursive Formula"
+      ]
+    }
+  ]
+}

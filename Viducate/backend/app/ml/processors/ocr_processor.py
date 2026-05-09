@@ -358,6 +358,8 @@ class OCRProcessor:
     # -- Pre-flight thresholds ---------------------------------------------------
     TEXT_CONTENT_SCORE_THRESHOLD = 0.012    # If lower → skip OCR completely
     TEXT_CONTENT_SAMPLE_COUNT    = 10       # Number of frames used in pre-flight check
+    TEXT_FRAMES_MIN_RATIO        = 0.15  # لو أقل من 15% من الـ frames فيها text → skip
+
 
     YOUTUBE_PATTERNS = [
         "youtube.com/watch",
@@ -402,12 +404,9 @@ class OCRProcessor:
     # check if text is from slides or code 
     # --------------------------------------------
     def _is_code_video(self, cap, total_frames: int) -> bool:
-        """
-        Detects if the video is code-based by checking for dark background
-        (common in code editors like VS Code / IntelliJ).
-        """
         sample_indices = np.linspace(0, total_frames - 1, 5, dtype=int)
         dark_frame_count = 0
+        code_content_count = 0
 
         for idx in sample_indices:
             cap.set(cv2.CAP_PROP_POS_FRAMES, int(idx))
@@ -416,14 +415,36 @@ class OCRProcessor:
                 continue
 
             gray = cv2.cvtColor(frame, cv2.COLOR_BGR2GRAY)
-           # Code editors usually have dark themes → low brightness
             mean_brightness = np.mean(gray)
-            if mean_brightness < 80:  # dark theme
+            
+            # Heuristic 1: dark theme
+            if mean_brightness < 80:
                 dark_frame_count += 1
 
-        is_code = dark_frame_count >= 3 
+            # Heuristic 2: uniform background (code editors have solid bg)
+            # + vertical structure (indentation lines)
+            edges = cv2.Canny(gray, 50, 150)
+            
+            # كود بيبقى فيه خطوط أفقية كتير ومتساوية (الأسطر)
+            kernel_h = cv2.getStructuringElement(cv2.MORPH_RECT, (40, 1))
+            h_lines  = cv2.morphologyEx(edges, cv2.MORPH_OPEN, kernel_h)
+            h_density = np.count_nonzero(h_lines) / h_lines.size
+
+            # كود بيبقى فيه خطوط رأسية (indentation)
+            kernel_v = cv2.getStructuringElement(cv2.MORPH_RECT, (1, 20))
+            v_lines  = cv2.morphologyEx(edges, cv2.MORPH_OPEN, kernel_v)
+            v_density = np.count_nonzero(v_lines) / v_lines.size
+
+            # الكود بيبقى فيه نسبة أفقي/رأسي معينة
+            if h_density > 0.01 and v_density > 0.002:
+                code_content_count += 1
+
+        is_dark_code  = dark_frame_count >= 3
+        is_light_code = code_content_count >= 3 and dark_frame_count < 3
+
+        is_code = is_dark_code or is_light_code
         print(f"[OCRProcessor] Video type: {'CODE' if is_code else 'SLIDES'} "
-            f"(dark frames: {dark_frame_count}/5)")
+            f"(dark={dark_frame_count}/5, code_structure={code_content_count}/5)")
         return is_code
 
 
@@ -490,6 +511,7 @@ class OCRProcessor:
         """
         sample_indices = np.linspace(0, total_frames - 1, self.TEXT_CONTENT_SAMPLE_COUNT, dtype=int)
         text_scores    = []
+        frames_with_text = 0  # عداد الـ frames اللي فيها text فعلاً
 
         for idx in sample_indices:
             cap.set(cv2.CAP_PROP_POS_FRAMES, int(idx))
@@ -511,15 +533,29 @@ class OCRProcessor:
             score = edge_density * 0.4 + h_density * 2.5
             text_scores.append(score)
 
+            # لو الـ frame دي فيها text regions حقيقية → عدّها
+            if self._frame_has_text_regions(gray):
+                frames_with_text += 1
+
         if not text_scores:
             # Could not read frames → fallback to running OCR to avoid missing content
             return True
 
         avg_score = float(np.mean(text_scores))
-        print(f"[OCRProcessor] Pre-flight text score: {avg_score:.4f} "
-              f"(threshold={self.TEXT_CONTENT_SCORE_THRESHOLD})")
+        text_ratio       = frames_with_text / len(text_scores)
 
-        return avg_score > self.TEXT_CONTENT_SCORE_THRESHOLD
+        print(f"[OCRProcessor] Pre-flight: avg_score={avg_score:.4f} | "
+            f"frames_with_text={frames_with_text}/{len(text_scores)} ({text_ratio:.0%})")
+
+        return {
+        "has_text":   avg_score > self.TEXT_CONTENT_SCORE_THRESHOLD,
+        "text_ratio": text_ratio,
+        "avg_score":  avg_score
+    }
+        # print(f"[OCRProcessor] Pre-flight text score: {avg_score:.4f} "
+        #       f"(threshold={self.TEXT_CONTENT_SCORE_THRESHOLD})")
+
+        # return avg_score > self.TEXT_CONTENT_SCORE_THRESHOLD
 
 
 
@@ -650,14 +686,26 @@ class OCRProcessor:
         changed_ratio = np.count_nonzero(diff > 20) / diff.size
         return changed_ratio < self.DIFF_THRESHOLD
 
-    def _clean_text(self, text: str) -> str:
+    def _clean_text(self, text: str, is_code: bool = False) -> str:
         text = " ".join(text.split())
-        text = "".join(
-            c for c in text
-            if c.isalnum()
-            or c in " .,!?;:،؛؟-"
-            or '\u0600' <= c <= '\u06FF'
-        )
+        
+        if is_code:
+            # not clean symbols
+            text = "".join(
+                c for c in text
+                if c.isalnum()
+                or c in " .,!?;:،؛؟-{}()[]<>=+*/\\#@&|^%~`'\""
+                or '\u0600' <= c <= '\u06FF'
+            )
+        else:
+            # cleaning slides
+            text = "".join(
+                c for c in text
+                if c.isalnum()
+                or c in " .,!?;:،؛؟-"
+                or '\u0600' <= c <= '\u06FF'
+            )
+        
         return text.strip()
 
     def _is_duplicate(self, new_text: str, last_text: str) -> bool:
@@ -665,6 +713,12 @@ class OCRProcessor:
             return False
         return SequenceMatcher(None, last_text, new_text).ratio() > self.DUP_RATIO
 
+    def _is_url_or_browser_content(self, line: str) -> bool:
+        url_patterns = [
+            r'https?://', r'www\.', r'\.com', r'\.org', r'\.net',
+            r'Imps\.', r'Imts\.'  # OCR بيقرأ https غلط كده
+        ]
+        return any(re.search(p, line, re.IGNORECASE) for p in url_patterns)
     # --------------------------------------------
     # VIDEO DOWNLOAD
     # --------------------------------------------
@@ -674,7 +728,7 @@ class OCRProcessor:
     # --------------------------------------------
     # RUN OCR ON SINGLE FRAME
     # --------------------------------------------
-    def _run_ocr_on_frame(self, frame, paddle_lang: str) -> List[str]:
+    def _run_ocr_on_frame(self, frame, paddle_lang: str, is_code: bool = False) -> List[str]:
         lines = []
         ocr   = self._get_ocr(paddle_lang)
 
@@ -693,7 +747,7 @@ class OCRProcessor:
         for txt, score in zip(rec_texts, rec_scores):
             if score < self.OCR_CONFIDENCE:
                 continue
-            cleaned = self._clean_text(txt)
+            cleaned = self._clean_text(txt, is_code=is_code)
             if cleaned and len(cleaned) >= self.MIN_TEXT_LEN:
                 lines.append(cleaned)
 
@@ -704,13 +758,8 @@ class OCRProcessor:
     # MAIN ENTRY POINT
     # --------------------------------------------
     def process_from_file(self, video_path: str) -> Dict:
-        """
-        Main OCR pipeline with:
-        - Pre-flight check for text content
-        - Optimized language detection using a single frame
-        """
-        cap         = None
-        is_temp     = False   # Flag: indicates if the file is temporary and should be deleted later
+        cap     = None
+        is_temp = False
 
         try:
             # ----- 1. Open video ---------------------------------------------
@@ -728,46 +777,41 @@ class OCRProcessor:
             print(f"[OCRProcessor] Length   : {duration_min:.1f} min ({total_frames} frames)")
             print(f"[OCRProcessor] Sampling : every {step} frames = every {self.SAMPLE_INTERVAL}s")
 
-            # ----- 2. Pre-flight check: does the video contain text? -----
+            # ----- 2. Pre-flight check ---------------------------------------
             print(f"[OCRProcessor] Running pre-flight text content check...")
-            if not self._video_has_text_content(cap, total_frames):
-                print(f"[OCRProcessor] ⏭  No text content detected — skipping OCR entirely.")
-                return {
-                    "segments": [],
-                    "total":    0,
-                    "language": None,
-                    "url_type": "local"
-                }
-
-             # Reset after pre-flight
+            preflight = self._video_has_text_content(cap, total_frames)
             cap.set(cv2.CAP_PROP_POS_FRAMES, 0)
 
-            # ---- 3. Language detection (single-frame OCR) ----------
+            if not preflight["has_text"]:
+                print(f"[OCRProcessor] ⏭ Low text score → skip OCR")
+                return {"segments": [], "total": 0, "language": None, "url_type": "local"}
+
+            # ----- 3. Detect video type (code vs slides) ---------------------
+            is_code_video = self._is_code_video(cap, total_frames)
+            cap.set(cv2.CAP_PROP_POS_FRAMES, 0)
+
+            # لو مش كود وtext قليل → skip
+            if not is_code_video and preflight["text_ratio"] < self.TEXT_FRAMES_MIN_RATIO:
+                print(f"[OCRProcessor] ⏭ Text too sparse ({preflight['text_ratio']:.0%}) → skip OCR")
+                return {"segments": [], "total": 0, "language": None, "url_type": "local"}
+
+            # ---- 4. Language detection ---------------------------------------
             print(f"[OCRProcessor] Auto-detecting language...")
             detected_lang = self._detect_language_fast(cap, total_frames)
             paddle_lang   = self._get_paddle_lang(detected_lang)
-
-            # Reset after language detection
             cap.set(cv2.CAP_PROP_POS_FRAMES, 0)
 
             print(f"[OCRProcessor] Detected language : {detected_lang} → paddle_lang={paddle_lang}")
             print(f"[OCRProcessor] Sensitivity       : skip if <{self.DIFF_THRESHOLD*100:.0f}% pixels changed")
 
-
-            # ---- 4. Detect video type (code vs slides) -----------
-            is_code_video = self._is_code_video(cap, total_frames)
-            cap.set(cv2.CAP_PROP_POS_FRAMES, 0) # Reset again after detection
-
-
-
-            # ---- 5. Main OCR loop --------------------------------------
-            prev_gray = None
-            last_text = ""
-            frame_idx = 0
-            ocr_count = 0
-            segments  = []
+            # ---- 5. Main OCR loop -------------------------------------------
+            prev_gray      = None
+            last_text      = ""
+            frame_idx      = 0
+            ocr_count      = 0
+            segments       = []
             last_ocr_frame = -9999
-            OCR_COOLDOWN   = int(fps * 5)  # Run OCR at most every 5 seconds
+            OCR_COOLDOWN   = int(fps * 5)
 
             while True:
                 ret, frame = cap.read()
@@ -775,8 +819,6 @@ class OCRProcessor:
                     break
 
                 frame_idx += 1
-                
-
                 step = int(fps * self.SAMPLE_INTERVAL)
 
                 if frame_idx < last_ocr_frame + step:
@@ -788,8 +830,7 @@ class OCRProcessor:
                 if np.count_nonzero(edges) / edges.size < 0.015:
                     prev_gray = curr_gray
                     continue
-                
-            
+
                 if self._frames_are_same(prev_gray, curr_gray):
                     prev_gray = curr_gray
                     continue
@@ -801,32 +842,33 @@ class OCRProcessor:
                 prev_gray = curr_gray
 
                 if frame_idx - last_ocr_frame < OCR_COOLDOWN:
-                 continue
+                    continue
 
-                ocr_count += 1
-                frame_small = cv2.resize(frame, (0, 0), fx=0.6, fy=0.6)
-                
-                lines = self._run_ocr_on_frame(frame_small, paddle_lang)
+                ocr_count   += 1
+                frame_small  = cv2.resize(frame, (0, 0), fx=0.6, fy=0.6)
+                if is_code_video:
+                    mean_brightness = np.mean(cv2.cvtColor(frame_small, cv2.COLOR_BGR2GRAY))
+                    if mean_brightness > 150:  # light theme → invert
+                        frame_small = cv2.bitwise_not(frame_small)
 
-                #  filter noisy lines
+                lines        = self._run_ocr_on_frame(frame_small, paddle_lang, is_code=is_code_video)
+                lines = [l for l in lines if not self._is_url_or_browser_content(l)]
+
+
                 if is_code_video:
                     filtered_lines = [l for l in lines if self._line_score(l) >= 1.5]
                     lines = filtered_lines if filtered_lines else lines
 
-                if len(lines) < 1:
-                    continue
-
-                last_ocr_frame = frame_idx
-
                 if not lines:
                     continue
 
-                page_text = " | ".join(lines)
+                last_ocr_frame = frame_idx
+                page_text      = " | ".join(lines)
 
                 if self._is_duplicate(page_text, last_text):
-                    secs    = int(frame_idx / fps)
-                    mm, ss  = divmod(secs, 60)
-                    hh, mm  = divmod(mm, 60)
+                    secs   = int(frame_idx / fps)
+                    mm, ss = divmod(secs, 60)
+                    hh, mm = divmod(mm, 60)
                     print(f"[OCRProcessor] Duplicate at {hh:02d}:{mm:02d}:{ss:02d} — skipped")
                     continue
 
@@ -848,14 +890,12 @@ class OCRProcessor:
 
                 if ocr_count % 20 == 0:
                     pct = frame_idx / total_frames * 100
-                    print(f"[OCRProcessor] {pct:5.1f}% | "
-                          f"OCR runs: {ocr_count} | Saved: {len(segments)}")
+                    print(f"[OCRProcessor] {pct:5.1f}% | OCR runs: {ocr_count} | Saved: {len(segments)}")
 
             print(f"\n[OCRProcessor] ✅ Done!")
             print(f"[OCRProcessor] OCR ran on  : {ocr_count} unique frames")
             print(f"[OCRProcessor] Saved       : {len(segments)} segments")
             segments = self._deduplicate_segments(segments)
-
 
             return {
                 "segments": segments,
@@ -869,9 +909,8 @@ class OCRProcessor:
                 cap.release()
                 print(f"[OCRProcessor] Video capture released.")
 
-           
             if is_temp and os.path.exists(video_path):
-                time.sleep(0.5)  # let OS release file handle (Windows)
+                time.sleep(0.5)
                 try:
                     os.remove(video_path)
                     print(f"[OCRProcessor] Temp file deleted.")
