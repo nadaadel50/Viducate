@@ -12,32 +12,16 @@ def is_noise(part: str) -> bool:
     if re.search(r'https?://|\.com|\.org|www\.', part):
         return True
     
-<<<<<<< HEAD
-    # percent of digits exist is high
     if len(part) > 0 and len(re.findall(r'\d', part)) / len(part) > 0.3:
         return True
     
-    # (OCR errors)
-=======
-    if len(part) > 0 and len(re.findall(r'\d', part)) / len(part) > 0.3:
-        return True
-    
->>>>>>> f90fa34ad3d6deb8d76c4b6e668163073960f3e3
     weird_chars = len(re.findall(r'[^a-zA-Z0-9\u0600-\u06FF\s\.\,\!\?\-]', part))
     if len(part) > 0 and weird_chars / len(part) > 0.2:
         return True
     
-<<<<<<< HEAD
-    # 
     if len(part.split()) == 1 and len(part) < 4:
         return True
     
-    # (OCR artifact)
-=======
-    if len(part.split()) == 1 and len(part) < 4:
-        return True
-    
->>>>>>> f90fa34ad3d6deb8d76c4b6e668163073960f3e3
     if re.search(r'(.)\1{3,}', part):
         return True
     
@@ -85,20 +69,11 @@ def clean_transcript(text: str) -> str:
     
     return '\n'.join(cleaned)
 
-<<<<<<< HEAD
-
-# --------------------------------segmentations--------------------------------
-def estimate_tokens(text: str) -> int:
-    return len(text) 
-
-def chunk_text(text: str, max_words: int = 4000) -> list:
-=======
 # --------------------------------segmentations--------------------------------
 def estimate_tokens(text: str) -> int:
     return len(text)
 
 def chunk_text(text: str, max_words: int = 2500) -> list:
->>>>>>> f90fa34ad3d6deb8d76c4b6e668163073960f3e3
     words = text.split()
     chunks = []
     for i in range(0, len(words), max_words):
@@ -113,37 +88,6 @@ def build_prompt(merged_text: str, final_language: str = "ar") -> str:
 You are an expert educational content analyzer.
 Analyze the following video transcript and segment it into main topics and sub-topics.
 
-<<<<<<< HEAD
-Rules:
-1. Each sub-topic description MUST be the EXACT text from the transcript, not a summary.
-2. Return ONLY valid JSON, no extra text, no markdown.
-3. start_time and end_time MUST be taken exactly from the transcript timestamps, not estimated.
-4. Determine the number of segments naturally based on the content - don't force a specific number.
-5. Each segment should represent a clearly distinct topic or concept.
-6. Each segment should have at least 2 sub_topics.
-7. description MUST be a complete sentence or paragraph from the transcript, not just a fragment and NEVER include timestamps like [00:22:30] inside the description field.
-8. Never cut a sentence in the middle - always include the full thought.
-9. Every minute of the transcript MUST be covered by a sub_topic. No gaps allowed between sub_topics.
-10. sub_topics must be consecutive and cover the full time range of their parent segment.
-11. key_points should only include the most important concepts, maximum 3 points per segment.
-12. key_points MUST contain only Arabic or English - no other languages
-13. VERY IMPORTANT:
-- If the transcript is in Arabic → ALL output MUST be in Arabic, main_topic MUST be in Arabic, title MUST be in Arabic, key_points MUST be in Arabic
-- If the transcript is in Arabic → sub_topic names MUST be in Arabic
-- If the transcript is in Arabic →  Sub-topic names MUST be clean Arabic phrases only.
-- If the transcript is in Arabic →  Remove any foreign words, symbols, or non-Arabic characters.
-- If the transcript is in Arabic →  Do NOT mix languages in any field.
-- If the transcript is in Arabic →  If a word is unclear or corrupted, rewrite it in correct Arabic.
-
-14. DO NOT translate into English under any condition if the transcript is Arabic.
-15. QUALITY RULES:
-- key_points MUST contain only Arabic or English - no other languages
-- If transcript text is repetitive or unclear, use the OCR/slide content instead
-- NEVER generate empty or placeholder segments
-- If a segment has no clear content, merge it with the previous segment
-- NEVER invent or hallucinate content not present in the transcript
-16. Format:
-=======
 CRITICAL RULES - READ CAREFULLY:
 
 1. DESCRIPTION MUST BE VERBATIM:
@@ -181,7 +125,6 @@ CRITICAL RULES - READ CAREFULLY:
 
 6. Return ONLY valid JSON, no markdown, no extra text.
 7. Format:
->>>>>>> f90fa34ad3d6deb8d76c4b6e668163073960f3e3
 {{
   "total_segments": number,
   "segments": [
@@ -209,33 +152,19 @@ Transcript:
 """
 
 
-<<<<<<< HEAD
-async def call_groq_with_retry(client: Groq, chunk: str, chunk_index: int, max_retries: int = 3) -> list:
-
-    current_chunk = chunk
-    
-    for attempt in range(max_retries):
-        try:
-            prompt = build_prompt(current_chunk)
-=======
 async def call_groq_with_retry(client: Groq, chunk: str, chunk_index: int, final_language: str = "ar", max_retries: int = 3) -> list:
     current_chunk = chunk
 
     for attempt in range(max_retries):
         try:
             prompt = build_prompt(current_chunk, final_language=final_language)
->>>>>>> f90fa34ad3d6deb8d76c4b6e668163073960f3e3
             estimated_tokens = estimate_tokens(prompt)
             logger.info(f"[Segmentation] Chunk {chunk_index+1}, attempt {attempt+1}, ~{estimated_tokens} tokens")
 
             response = client.chat.completions.create(
                 model="llama-3.3-70b-versatile",
                 messages=[{"role": "user", "content": prompt}],
-<<<<<<< HEAD
-                max_tokens=2500, 
-=======
                 max_tokens=2500,
->>>>>>> f90fa34ad3d6deb8d76c4b6e668163073960f3e3
             )
 
             text = response.choices[0].message.content.strip()
@@ -251,16 +180,6 @@ async def call_groq_with_retry(client: Groq, chunk: str, chunk_index: int, final
 
             if is_token_error and attempt < max_retries - 1:
                 logger.warning(
-<<<<<<< HEAD
-                    f"[Segmentation] Chunk {chunk_index+1} too large, skipping..."
-                )
-                return []
-
-            elif not is_token_error and attempt < max_retries - 1:
-                # network error 
-                import asyncio
-                wait_time = 2 ** attempt  # exponential backoff: 1s, 2s, 4s
-=======
                     f"[Segmentation] Chunk {chunk_index+1} too large (attempt {attempt+1}), splitting in half..."
                 )
                 words = current_chunk.split()
@@ -279,7 +198,6 @@ async def call_groq_with_retry(client: Groq, chunk: str, chunk_index: int, final
             elif not is_token_error and attempt < max_retries - 1:
                 import asyncio
                 wait_time = 2 ** attempt
->>>>>>> f90fa34ad3d6deb8d76c4b6e668163073960f3e3
                 logger.warning(f"[Segmentation] Non-token error: {e}, retrying in {wait_time}s...")
                 await asyncio.sleep(wait_time)
             else:
@@ -289,11 +207,7 @@ async def call_groq_with_retry(client: Groq, chunk: str, chunk_index: int, final
     return []
 
 
-<<<<<<< HEAD
-async def segment_topics(merged: list, video_id: int) -> dict:
-=======
 async def segment_topics(merged: list, video_id: int, ocr_language: str ,transcript_language: str) -> dict:
->>>>>>> f90fa34ad3d6deb8d76c4b6e668163073960f3e3
     logger.info(f"[Segmentation] Starting: video_id={video_id}")
 
     valid_languages = {"ar", "en"}
@@ -314,38 +228,22 @@ async def segment_topics(merged: list, video_id: int, ocr_language: str ,transcr
     for seg in merged:
         if seg.get("combined_text") and seg["combined_text"] != "None":
             clean_text += f"[{seg['timestamp']}] {seg['combined_text']}\n"
-<<<<<<< HEAD
-        # fallback: transcript
-=======
->>>>>>> f90fa34ad3d6deb8d76c4b6e668163073960f3e3
         elif seg.get("transcript_text") and seg["transcript_text"] != "None":
             clean_text += f"[{seg['timestamp']}] {seg['transcript_text']}\n"
         # fallback: ocr 
         elif seg.get("ocr_text") and len(seg.get("ocr_text", "")) > 20:
             clean_text += f"[{seg['timestamp']}] {seg['ocr_text']}\n"
-<<<<<<< HEAD
-    
-    clean_text = clean_transcript(clean_text)
-    chunks = chunk_text(clean_text, max_words=4000)
-    logger.info(f"[Segmentation] Split into {len(chunks)} chunks (max 4000 words each)")
-=======
 
     clean_text = clean_transcript(clean_text)
     chunks = chunk_text(clean_text, max_words=2500)
     logger.info(f"[Segmentation] Split into {len(chunks)} chunks (max 2500 words each)")
->>>>>>> f90fa34ad3d6deb8d76c4b6e668163073960f3e3
 
     client = Groq(api_key=settings.GROQ_API_KEY)
     all_segments = []
 
     for i, chunk in enumerate(chunks):
         logger.info(f"[Segmentation] Processing chunk {i+1}/{len(chunks)}")
-<<<<<<< HEAD
-        
-        segments = await call_groq_with_retry(client, chunk, chunk_index=i)
-=======
         segments = await call_groq_with_retry(client, chunk, chunk_index=i, final_language=final_language)
->>>>>>> f90fa34ad3d6deb8d76c4b6e668163073960f3e3
         all_segments.extend(segments)
 
     for idx, seg in enumerate(all_segments):
