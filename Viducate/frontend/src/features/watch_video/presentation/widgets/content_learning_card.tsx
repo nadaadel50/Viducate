@@ -23,7 +23,7 @@ export function ContentLearningCard({
   onClick: () => void;
   cardInfo: TopicResponse;
 }) {
-  const { setSelectedTopic } = useLearningSession();
+  const { setSelectedTopic ,videoId} = useLearningSession();
   const navigate=useNavigate()
    const { isDueForSegment } = useDueFlashcards();
   
@@ -31,7 +31,6 @@ export function ContentLearningCard({
   const [isSummaryModalOpen, setIsSummaryModalOpen] = useState(false);
   const isDue = isDueForSegment(cardInfo.segment_id);
  
-
   return (
     <>
     <div
@@ -101,11 +100,20 @@ export function ContentLearningCard({
     </div>
 
     
-      <QuizDifficultyModal 
-        isOpen={isQuizModalOpen} 
-        onClose={() => setIsQuizModalOpen(false)} 
+      <QuizDifficultyModal
+        isOpen={isQuizModalOpen}
+        onClose={() => setIsQuizModalOpen(false)}
+        onSelect={(difficulty) => {
+          setIsQuizModalOpen(false);
+          navigate(`/quiz/${cardInfo.segment_id}`, {
+            state: {
+              difficulty,
+              videoId,
+              segmentId: cardInfo.segment_id,
+            },
+          });
+        }}
       />
-      
       <SummaryStyleModal 
         isOpen={isSummaryModalOpen} 
         onClose={() => setIsSummaryModalOpen(false)} 
