@@ -1,169 +1,262 @@
 {
-  "total_segments": 6,
+  "total_segments": 10,
   "segments": [
     {
       "segment_number": 1,
-      "start_time": "00:00",
-      "end_time": "00:02:30",
-      "main_topic": "Introduction to Fuzzy Logic",
-      "title": "Introduction to Fuzzy Logic and Control Systems",
+      "start_time": "00:00:00",
+      "end_time": "00:01:46",
+      "main_topic": "Introduction to Genetic Programming",
+      "title": "What is Genetic Programming?",
       "sub_topics": [
         {
-          "name": "Introduction to Fuzzy Logic",
-          "start_time": "00:00",
-          "end_time": "00:00:29",
-          "description": "نبتدي. طيب احنا هنكمل الفازي كنترول سيستم. Fuzzy Logic | Control | Sabah Sayed | Department of Computer Science | Focuity of Computers and Arcjfciol Inteligence | Caire University | Egypt"
+          "name": "Definition of Genetic Programming",
+          "start_time": "00:00:00",
+          "end_time": "00:00:10",
+          "description": "بس نستفر. طيب سهلة قوي. ويعني زيها زي خلاص تعتبر ايه? تعتبر GENETIC PROGRAMMING | 622021"
         },
         {
-          "name": "Outline of Fuzzy Control Systems",
-          "start_time": "00:00:19",
-          "end_time": "00:00:41",
-          "description": "Outline | Defuzzification Techniques | Fuzzy ControlsArchitecture | - ComponentsSteps | - Examples"
-        },
-        {
-          "name": "Defuzzification Techniques",
-          "start_time": "00:00:41",
-          "end_time": "00:02:30",
-          "description": "زي ما اتفقنا عكده ادي آآ بيتعامل بأكثر من طريقة. خلاص? اي اول طريقة اسمها ودي بحاول اجيب فيها اللي عندها بيبقى اعلى 1- Max membership principle: Also known as the | height method, this scheme is limited to peaked | output functions. This method is given by the | algebraic expression: | µC z µC z, for all 2 Z, | where z is the defuzzified | value | If multiple peaks exist, the middle one is chosen."
+          "name": "The Challenge of Genetic Programming",
+          "start_time": "00:00:10",
+          "end_time": "00:00:12",
+          "description": "بس نستفر. طيب سهلة قوي. ويعني زيها زي خلاص تعتبر ايه? تعتبر THE CHALLENGE | How can computers learn to solve problems without | being explicitly programmed? In other words, how can | computers be made to do what is needed to be done, | without being told exactly how to do it? | Attributed to Arthur Samuel 1959"
         }
       ],
       "key_points": [
-        "Fuzzy Logic",
-        "Control Systems",
-        "Defuzzification Techniques"
+        "Genetic Programming",
+        "The Challenge"
       ]
     },
     {
       "segment_number": 2,
-      "start_time": "00:02:30",
-      "end_time": "00:05:18",
-      "main_topic": "Fuzzy Inference",
-      "title": "Fuzzy Inference and Mamdani Method",
+      "start_time": "00:01:46",
+      "end_time": "00:04:22",
+      "main_topic": "Genetic Programming Basics",
+      "title": "How Genetic Programming Works",
       "sub_topics": [
         {
-          "name": "Fuzzy Inference",
-          "start_time": "00:02:30",
-          "end_time": "00:03:38",
-          "description": "هي اللي باخدها وبادرة فيها. تمام? هم كلهم بيختلفوا بس في ايه انهي انا اخدها اللي هي زي دي. خلاص اللي هي على ال اكس اكسس. الايه الممبرشيب بون. هي دي زت زت ستار بتاعتك."
+          "name": "Genetic Programming Process",
+          "start_time": "00:01:46",
+          "end_time": "00:02:00",
+          "description": "يعني ايه? كل اللي كنا بنقوله على بيتقال على خلاص الفرق الوحيد"
         },
         {
-          "name": "Mamdani Method",
-          "start_time": "00:03:38",
-          "end_time": "00:05:18",
-          "description": "طيب. لو انا 2- Mean Max membership: This method | also | called middle-of-maxima is closely related to | the first method, except that the locations of the | maximum membership can be nonuniqe | i.e., | the maximum membership can be a plateau | rather than a single point. | This method is given by | the expression:"
+          "name": "Genetic Algorithm",
+          "start_time": "00:02:00",
+          "end_time": "00:02:07",
+          "description": "ان اتخصصت في حالة واحدة. خلاص فالكروموزوم بتاعها بقى لي واحد."
         }
       ],
       "key_points": [
-        "Fuzzy Inference",
-        "Mamdani Method",
-        "Defuzzification"
+        "Genetic Algorithm",
+        "Genetic Programming Process"
       ]
     },
     {
       "segment_number": 3,
-      "start_time": "00:05:18",
-      "end_time": "00:14:23",
-      "main_topic": "Fuzzy Inference and Rule Evaluation",
-      "title": "Fuzzy Inference and Rule Evaluation",
+      "start_time": "00:04:22",
+      "end_time": "00:07:18",
+      "main_topic": "Tree-Based Representation",
+      "title": "Using Trees to Represent Programs",
       "sub_topics": [
         {
-          "name": "Rule Evaluation",
-          "start_time": "00:05:18",
+          "name": "Tree-Based Representation Introduction",
+          "start_time": "00:04:22",
+          "end_time": "00:05:05",
+          "description": "ازاي? طيب ليه? ليه عملنا حاجة زي لان اغلب في بتبقى"
+        },
+        {
+          "name": "Tree-Based Representation Example",
+          "start_time": "00:05:05",
           "end_time": "00:06:25",
-          "description": "Mamdani Fuzzy Inference | We examine a simple two-input cne-output problem that includes three rules: | Rule: 1 | x is A3 | Rule: 1 | y is B1 | prejectfunding | is adequate | THEN | z is C1 | THEN | risk | projectstaffing | is small | is low | Bule: 2 | x is A2 | Rule: 2 | y is B2 | projectfunding | prejectstafing | is marginal | is large | THEN | z Is C2 | THEN | risk | Is normal | Bule: 3 | Buk:3 | THEN | x is A1 | z is C3 | THEN | projectfunding | is inadequate | is high"
-        },
-        {
-          "name": "Aggregation of Rule Outputs",
-          "start_time": "00:06:25",
-          "end_time": "00:11:08",
-          "description": "The second step is to take the fuzzified inputs, Jeau 0.5, Puc.sz | 0.2, μα 0.1 and γ 0.7, and apply them to the antecedents of the | fuzzy rules. | If a given fuzzy rule has multiple antecedents, the fuzzy operator AND or | OR is used to obtain a single number that represents the result of the | antecedent evaluation."
-        },
-        {
-          "name": "Defuzzification",
-          "start_time": "00:11:08",
-          "end_time": "00:14:23",
-          "description": "Step 2: Rule Evaluation | The second step is to take the fuzzified inputs, Jeau 0.5, Puc-sz | 0.2, μjy-81 0.1 and 4γ-t2 0.7, and apply them to the antecedents of the | fuzzy rules. | If a given fuzzy rule has multiple antecedents, the fuzzy operator AND or | OR is used to obtain a single number that represents the result of the | antecedent evaluation."
+          "description": "ممكن اقترح مثلا ييميز حل وهو بيحاولش بحسن حل لتالي حيك تقصو دي ولا"
         }
       ],
       "key_points": [
-        "Rule Evaluation",
-        "Aggregation of Rule Outputs",
-        "Defuzzification"
+        "Tree-Based Representation",
+        "Program Representation"
       ]
     },
     {
       "segment_number": 4,
-      "start_time": "00:14:41",
-      "end_time": "00:15:50",
-      "main_topic": "Fuzzy Inference Process",
-      "title": "Introduction to Fuzzy Inference",
+      "start_time": "00:07:18",
+      "end_time": "00:12:20",
+      "main_topic": "Genetic Operations",
+      "title": "Genetic Operations in Genetic Programming",
       "sub_topics": [
         {
-          "name": "Introduction to Fuzzy Sets",
-          "start_time": "00:14:41",
-          "end_time": "00:15:02",
-          "description": "كده همزلت. اشوف هيبليهم كلهم. يعني مسلا هيكون عندي فازي ست في µa,ex max αaα, μyx | Hz-elx min ααx, jyx"
+          "name": "Genetic Operations Introduction",
+          "start_time": "00:07:18",
+          "end_time": "00:08:26",
+          "description": "يبقى انا عايزة ايه? كأنها كأنها اللي بيكتب لي بتاعي. GENETIC PROGRAMMING GP | One of the central problems in computer science is how to make | computers solve problems without being explicitly programmed | to do so."
         },
         {
-          "name": "Fuzzified Inputs",
-          "start_time": "00:15:02",
-          "end_time": "00:15:50",
-          "description": "The second step is to take the fuzzified inputs, Jeau, 0.5, Pqa2 | 0.2, μyαt | 0.1 and jhy-d2 | fuzzy rules | 0.7, and apply them to the antecedents of the | This number Ithe truth valuel is then applied to the conseguent"
+          "name": "Genetic Operations Example",
+          "start_time": "00:08:26",
+          "end_time": "00:10:14",
+          "description": "طيب عملوها ليه لاني كانت مشكلة كبيرة في الكمبيوتر سايينس ان | انا ايه هاو تو ميك كومبيوتر صولف بروبلمز وزوي"
         }
       ],
       "key_points": [
-        "Fuzzy sets",
-        "Fuzzified inputs"
+        "Genetic Operations",
+        "Genetic Programming"
       ]
     },
     {
       "segment_number": 5,
-      "start_time": "00:15:50",
-      "end_time": "00:17:56",
-      "main_topic": "Defuzzification Methods",
-      "title": "Defuzzification Techniques",
+      "start_time": "00:12:20",
+      "end_time": "00:20:14",
+      "main_topic": "Comparison of Genetic Algorithm and Genetic Programming",
+      "title": "Genetic Algorithm vs Genetic Programming",
       "sub_topics": [
         {
-          "name": "Defuzzification Introduction",
-          "start_time": "00:15:50",
-          "end_time": "00:16:00",
-          "description": "Step 4: Defuzzification | The last step in the fuzzy inference process is defuzzification. | Fugziness helps us to evaluate the rules, but the final output of a fuzzy | system has to be a crisp number"
+          "name": "Comparison Introduction",
+          "start_time": "00:12:20",
+          "end_time": "00:14:05",
+          "description": "احنا قلنا زيها زي ال genetic algorithm. خلاص? هي تعتبر"
         },
         {
-          "name": "Centroid Method",
-          "start_time": "00:16:00",
-          "end_time": "00:17:56",
-          "description": "Step 4: Defuzzification centroid | There are several defuzzification methods, but probably the most | popular one is the centroid technique. It finds the point where a | vertical line would slice the aggregate set into two equal masses."
+          "name": "Comparison Example",
+          "start_time": "00:14:05",
+          "end_time": "00:16:06",
+          "description": "هيبقى الفرق ما بين الجينيتك والجينيتك بروغرامنج. طيب احنا قلنا ان احنا هنستخدم كروموزوم في"
         }
       ],
       "key_points": [
-        "Defuzzification",
-        "Centroid method"
+        "Genetic Algorithm",
+        "Genetic Programming",
+        "Comparison"
       ]
     },
     {
       "segment_number": 6,
-      "start_time": "00:17:56",
-      "end_time": "00:23:15",
-      "main_topic": "Fuzzy Logic and Inference",
-      "title": "Fuzzy Logic and Inference Rules",
+      "start_time": "00:21:10",
+      "end_time": "00:23:05",
+      "main_topic": "Genetic Programming Basics",
+      "title": "Introduction to Genetic Programming",
       "sub_topics": [
         {
-          "name": "Weighted Average Method",
-          "start_time": "00:17:56",
-          "end_time": "00:18:15",
-          "description": "Another method is weighted average method where centroid of each | of the fuzzy sets is weighted by the membership value, divided by the | sum of memberships."
+          "name": "Genetic Programming Definition",
+          "start_time": "00:21:10",
+          "end_time": "00:21:24",
+          "description": "point as the root | of the subtree to be | replaced | Remarkably | advised to | be very small | Koza92, | like 0.05 | Banzhaf et al. 98 | The size of the | child | can exceed the size of the | parent"
         },
         {
-          "name": "Fuzzy Inference and Logic",
-          "start_time": "00:18:15",
-          "end_time": "00:23:15",
-          "description": "Using triangular membership function, Predict | the Cp for Op 30 and Pdp90 ? | Example | Given a stock market with varlables.: | Opening price Op | Previous day price Pdlp | Closing price Cp"
+          "name": "Subtree Mutation",
+          "start_time": "00:21:24",
+          "end_time": "00:22:10",
+          "description": "Subtree Mutation: | Parents | Offspring | Replace the | Mutaion | mutation point by | Point | Peint | randomly | generated tree. | Point Mutation: | Randomly Generated | Randomly select a | Sub-tree | node and replace | it with another | primitive."
+        },
+        {
+          "name": "Mutation Point",
+          "start_time": "00:22:10",
+          "end_time": "00:23:05",
+          "description": "بيتعامل ازاي? احنا متفقين ان هو صح? صح? بيحصل في الكروموزوم. يبقى اي تشينج بيحصل في بتاعتي ده يعتبر ايه? طيب هحدد بقى ازاي هحدد اي حتة عاملو اسمها اسمها تمام?"
         }
       ],
       "key_points": [
-        "Weighted average method",
-        "Fuzzy inference and logic"
+        "Genetic programming is a field of research",
+        "Subtree mutation is a type of genetic operator",
+        "Mutation point is a key concept in genetic programming"
+      ]
+    },
+    {
+      "segment_number": 7,
+      "start_time": "00:23:05",
+      "end_time": "00:24:32",
+      "main_topic": "Genetic Programming Operators",
+      "title": "Crossover and Mutation Operators",
+      "sub_topics": [
+        {
+          "name": "Crossover Operator",
+          "start_time": "00:23:05",
+          "end_time": "00:23:30",
+          "description": "Most common mutation: replace randomly | chosen subtree by randomly generated tree"
+        },
+        {
+          "name": "Mutation Operator",
+          "start_time": "00:23:30",
+          "end_time": "00:24:32",
+          "description": "هغيرها بحاجة random خلاص. طلعت ال random عندي دي ايه? واي بس. احنا عندنا دلوقتي الكروموزوم بتاعي فعد الباقي برحت."
+        }
+      ],
+      "key_points": [
+        "Crossover operator exchanges subtrees between parents",
+        "Mutation operator replaces a subtree with a randomly generated one"
+      ]
+    },
+    {
+      "segment_number": 8,
+      "start_time": "00:24:32",
+      "end_time": "00:26:42",
+      "main_topic": "Genetic Programming vs Random Search",
+      "title": "Comparing Genetic Programming to Random Search",
+      "sub_topics": [
+        {
+          "name": "Genetic Programming vs Random Search",
+          "start_time": "00:24:32",
+          "end_time": "00:25:30",
+          "description": "The best evolved program was found to be significantly superior to the | best randomly generated proeram Genetic Proeramming FAQ. 2002"
+        },
+        {
+          "name": "Random Search Limitations",
+          "start_time": "00:25:30",
+          "end_time": "00:26:42",
+          "description": "عملوها بتثبت ان ايه? ان انا لما اشتغل بالجينيتك احسن من اني Just Randomly | for 200 generations, with a popalation size of 1000 per generation,"
+        }
+      ],
+      "key_points": [
+        "Genetic programming outperforms random search",
+        "Random search has limitations in terms of solution quality"
+      ]
+    },
+    {
+      "segment_number": 9,
+      "start_time": "00:26:42",
+      "end_time": "00:30:05",
+      "main_topic": "Genetic Programming Applications",
+      "title": "Credit Scoring and Maze Navigation",
+      "sub_topics": [
+        {
+          "name": "Credit Scoring",
+          "start_time": "00:26:42",
+          "end_time": "00:27:31",
+          "description": "يعني بيعمل قروض والقروض دي هو بيبقى مش عارف يقول يوافق عليها ولا لأ"
+        },
+        {
+          "name": "Maze Navigation",
+          "start_time": "00:27:31",
+          "end_time": "00:30:05",
+          "description": "ده أبلي يعني بروبلم تاني بيستقدم برضو فيها الجنيةك برغمينج ايه موز. دي اللاعبة اللي هي بتاعة الفارو والجبنة."
+        }
+      ],
+      "key_points": [
+        "Genetic programming can be applied to credit scoring",
+        "Maze navigation is another application of genetic programming"
+      ]
+    },
+    {
+      "segment_number": 10,
+      "start_time": "00:30:05",
+      "end_time": "00:36:20",
+      "main_topic": "Genetic Programming Implementation",
+      "title": "Fitness Functions and Program Generation",
+      "sub_topics": [
+        {
+          "name": "Fitness Functions",
+          "start_time": "00:30:05",
+          "end_time": "00:31:19",
+          "description": "A fitness function: | Each function and terminal other than the | root node shall cost one unit to execute"
+        },
+        {
+          "name": "Program Generation",
+          "start_time": "00:31:19",
+          "end_time": "00:36:20",
+          "description": "هنجنرية مجموعة رولز راندم. فنقول مسلا ايه? number of children equal to and salary greater than. ايه دي. زاوسن."
+        }
+      ],
+      "key_points": [
+        "Fitness functions are used to evaluate program quality",
+        "Programs are generated using genetic operators and fitness functions"
       ]
     }
   ]
