@@ -1,12 +1,13 @@
 import logging
-from sqlalchemy.orm import Session
+from sqlalchemy.orm import Session, joinedload
 from fastapi import HTTPException, status
 
 from app.models.video import Video
 from app.models.topic_segment import TopicSegment
 from app.models.flashcard import Flashcard
 from app.repositories.flashcard_repository import FlashcardRepository
-from app.ml.processors.flashcard_processor import process_flashcards
+from app.ml.processors.flashcard_processor import CARDS_PER_SEGMENT, _resolve_language, process_flashcards
+from app.ml.engines.flashcard_engine import generate_flashcards_for_segment
 
 logger = logging.getLogger(__name__)
 
@@ -166,3 +167,79 @@ class FlashcardService:
 
         cards = self.repo.get_by_segment(segment_id)
         return _build_segment_dict(seg, cards)
+    
+
+
+    def get_or_generate_segment(self, video_id: int, segment_id: int, user_id: int) -> dict:
+        """
+        Returns flashcards for a single segment.
+        Generates them if not cached yet.
+        """
+        video = self._get_video_or_404(video_id)
+        self._check_ownership(video, user_id)
+        self._check_processing_complete(video)
+
+        segment = (
+            self.db.query(TopicSegment)
+            .options(joinedload(TopicSegment.subtopics))
+            .filter(
+                TopicSegment.segment_id == segment_id,
+                TopicSegment.vid_id == video_id,
+            )
+            .first()
+        )
+        if not segment:
+            raise HTTPException(
+                status_code=status.HTTP_404_NOT_FOUND,
+                detail=f"Segment {segment_id} not found for video {video_id}",
+            )
+
+        # check cache
+        existing_cards = self.repo.get_by_segment(segment_id)
+        if existing_cards:
+            logger.info(
+                f"[FlashcardService] Cache hit — {len(existing_cards)} cards "
+                f"for segment_id={segment_id}"
+            )
+            return _build_segment_dict(segment, existing_cards)
+
+        # generate
+        language = _resolve_language(self.db, user_id, video_id, video.language or "en")
+
+        subtopics_data = [
+            {"name": st.name, "description": st.description}
+            for st in segment.subtopics
+            if st.name
+        ]
+
+        cards = generate_flashcards_for_segment(
+            segment_title=segment.title,
+            main_topic=segment.main_topic or segment.title,
+            subtopics=subtopics_data,
+            language=language,
+            num_cards=CARDS_PER_SEGMENT,
+        )
+
+        if not cards:
+            raise HTTPException(
+                status_code=status.HTTP_422_UNPROCESSABLE_ENTITY,
+                detail=f"Failed to generate flashcards for segment {segment_id}",
+            )
+
+        for card in cards:
+            self.db.add(Flashcard(
+                segment_id=segment_id,
+                video_id=video_id,
+                question=card["question"],
+                answer=card["answer"],
+                language=language,
+                difficulty=card.get("difficulty", "medium"),
+            ))
+        self.db.commit()
+
+        logger.info(
+            f"[FlashcardService] Generated {len(cards)} cards "
+            f"for segment_id={segment_id} in '{language}'"
+        )
+
+        return _build_segment_dict(segment, self.repo.get_by_segment(segment_id))

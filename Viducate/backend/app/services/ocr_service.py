@@ -45,7 +45,10 @@ class OCRService:
                 f"segments={len(segments)} | lang={detected_language}"
             )
 
-            return segments   # ← same as transcript variable
+            return {
+                "segments": segments,
+                "language": detected_language
+            }   # ← same as transcript variable
 
         except HTTPException:
             raise

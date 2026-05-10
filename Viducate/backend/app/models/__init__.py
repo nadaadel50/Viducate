@@ -10,20 +10,19 @@ from .topic_segment import TopicSegment
 from .segment_summary import SegmentSummary
 from .subtopics import Subtopic
 from .keypoints import Keypoint
-# from .quiz import Quiz
-# from .question import Question
-# from .answer_options import AnswerOption
 # from .user_quiz_attempts import UserQuizAttempts
-# from .chat_history import ChatHistory
 # from .stuck_event import StuckEvent
 # from .mindmap import Mindmap
 from .content_preferences import ContentPreferences
 from .flashcard import Flashcard  
-
+from .quiz import Quiz, QuizQuestion
+from .chat_session import ChatSession  
+from .chat_message import ChatMessage  
 __all__ = [
-    "Base", "User", "Settings", "Video","TopicSegment", "Subtopic", "Keypoint", "VideoSummary", "SegmentSummary", "ContentPreferences", "Flashcard"
+    "Base", "User", "Settings", "Video","TopicSegment", "Subtopic", 
+    "Keypoint", "VideoSummary", "SegmentSummary", "ContentPreferences", "Flashcard", "Quiz", "QuizQuestion"
+    ,"ChatSession","ChatMessage"
 ]
 
-# "UserAnalytics","Video", "VideoSummary", "Slide",
-# "TopicSegment", "SegmentSummary", "Subtopic", "Keypoint", "Quiz", "Question",
-# "AnswerOption", "UserQuizAttempts", "ChatHistory", "StuckEvent", "Mindmap"
+# "UserAnalytics","Slide",
+# "AnswerOption", "UserQuizAttempts",, "StuckEvent", "Mindmap"
