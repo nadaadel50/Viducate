@@ -5,7 +5,7 @@ from fastapi import HTTPException, status
 from app.repositories.chat_repository import ChatRepository
 from app.ml.engines.chat_engine import generate_answer
 from app.services.embedding_service import search
-from app.schemas.chat_schema import MessageResponse
+from app.schemas.chat_schema import AskResponse, MessageResponse, SessionResponse
 
 logger = logging.getLogger(__name__)
 
@@ -40,10 +40,13 @@ def create_session(video_id: int, db: Session):
 def ask(session_id: int, video_id: int, question: str, current_time: int | None, db: Session):
     repo = ChatRepository(db)
 
-    # 1. Get session
-    session = repo.get_session(session_id)
-    if not session:
-        raise HTTPException(status_code=status.HTTP_404_NOT_FOUND, detail="Session not found")
+    if session_id is None or session_id == 0:
+        session = repo.create_session(video_id=video_id, title=question[:100])
+        session_id = session.session_id
+    else:
+        session = repo.get_session(session_id)
+        if not session or session.video_id != video_id:
+            raise HTTPException(status_code=status.HTTP_404_NOT_FOUND, detail="Session not found")
 
     # 2. Get history from DB
     messages = repo.get_session_messages(session_id)
@@ -64,9 +67,21 @@ def ask(session_id: int, video_id: int, question: str, current_time: int | None,
         current_time=current_time
     )
 
-    return MessageResponse(
-        message_id=message.message_id,
-        role="assistant",
-        content=message.answer,
-        time=message.current_time
+    return AskResponse(
+        session=SessionResponse(
+            session_id=session.session_id,
+            title=session.title,   
+            video_id=video_id,
+
+        ),
+        message=MessageResponse(
+            message_id=message.message_id,
+            content=message.answer,
+        )
     )
+    # return MessageResponse(
+    #     message_id=message.message_id,
+    #     role="assistant",
+    #     content=message.answer,
+    #     time=message.current_time
+    # )
