@@ -19,10 +19,9 @@ def get_current_user(
 
 
 @router.post("/video/{video_id}/search")
-def semantic_search(video_id: int, request: SearchRequest):
+def semantic_search(video_id: int, request: SearchRequest, db: Session = Depends(get_db)):
     try:
-        results = search(video_id, request.query)
+        results = search(video_id, request.query, db)
         return {"results": results}
     except Exception as e:
         raise HTTPException(status_code=status.HTTP_500_INTERNAL_SERVER_ERROR, detail=str(e))
-

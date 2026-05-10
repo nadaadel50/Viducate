@@ -107,6 +107,15 @@ def store_embeddings(video_id: int, segments: list, video_lang: str = 'ar') -> N
             detail=f"Failed to store embeddings for video_id={video_id}"
         )
 
+def time_to_seconds(time_str: str) -> int:
+    parts = time_str.split(":")
+    if len(parts) == 3:
+        h, m, s = parts
+        return int(h) * 3600 + int(m) * 60 + int(s)
+    elif len(parts) == 2:
+        m, s = parts
+        return int(m) * 60 + int(s)
+    return 0
 
 SIMILARITY_THRESHOLD = 0.75
 
@@ -154,7 +163,8 @@ def search(video_id: int, query: str, db: Session, n_results: int = 5) -> list:
                     "title": meta["title"],
                     "sub_topic_name": meta["sub_topic_name"],
                     "sub_topic_description": meta["sub_topic_description"],
-                    "start_time": meta["start_time"],
+                    # "start_time": meta["start_time"],
+                    "start_time": time_to_seconds(meta["start_time"]),
                     "score": score
                 })
 
