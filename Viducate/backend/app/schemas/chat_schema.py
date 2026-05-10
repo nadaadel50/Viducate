@@ -3,33 +3,31 @@ from typing import Optional
 
 from pydantic import BaseModel
 
-class CreateSessionRequest(BaseModel):
-     video_id: int
 
 class SessionResponse(BaseModel):
     session_id: int
-    video_id: int
-    created_at: datetime.datetime
-
+    title: str  | None = None
     class Config:
         from_attributes = True
 
 
 class ChatRequest(BaseModel):
      video_id: int
-     session_id: int
+     session_id: int | None = None  # Optional
      question: str
      current_time: Optional[int] = None
 
 
 class MessageResponse(BaseModel):
     message_id: int
-    role: str        # "user" or "assistant"
     content: str
-    time: Optional[int] = None
-
     class Config:
         from_attributes = True
+
+
+class AskResponse(BaseModel):
+    session: SessionResponse
+    message: MessageResponse
 
 
 class MessageSessionResponse(BaseModel):

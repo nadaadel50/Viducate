@@ -11,8 +11,8 @@ class ChatRepository:
         self.db = db
 
      # session
-     def create_session(self, video_id: int) -> ChatSession:
-          session = ChatSession(video_id=video_id)
+     def create_session(self, video_id: int, title: str = None) -> ChatSession:
+          session = ChatSession(video_id=video_id, title=title)
           self.db.add(session)
           self.db.commit()
           self.db.refresh(session)

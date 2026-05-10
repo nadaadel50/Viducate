@@ -6,7 +6,7 @@ from sqlalchemy.orm import Session
 from app.dependencies import get_db
 
 from app.schemas.chat_schema import (
-    CreateSessionRequest,
+    AskResponse,
     SessionResponse,
     ChatRequest,
     ChatResponse,
@@ -29,13 +29,7 @@ def get_current_user(
     return AuthService(db).get_current_user(credentials.credentials)
 
 
-
-@router.post("/sessions", response_model=SessionResponse, status_code=status.HTTP_201_CREATED)
-def create_chat_session(body: CreateSessionRequest, db: Session = Depends(get_db), current_user = Depends(get_current_user)):
-    return create_session(video_id=body.video_id, db=db)
-
-
-@router.post("/ask", response_model=MessageResponse)
+@router.post("/ask", response_model=AskResponse)
 def ask_question(body: ChatRequest, db: Session = Depends(get_db),current_user = Depends(get_current_user)):
     return ask(
         video_id=body.video_id,
