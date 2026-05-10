@@ -4,6 +4,7 @@ import { ChatBotDataSourceImp } from "../../features/chat_bot/api/data_source/ch
 import { ChatBotRepoImp } from "../../features/chat_bot/data/respository/chat_bot_repo_imp";
 import { GetSessionMessages } from "../../features/chat_bot/domain/usecase/get_all_session_messages";
 import { GetAnswer } from "../../features/chat_bot/domain/usecase/get_answer";
+import { GetSessions } from "../../features/chat_bot/domain/usecase/get_sessions";
 
 
 
@@ -13,6 +14,7 @@ const repository = new ChatBotRepoImp(dataSource);
 
 export const getAnswerCardUseCase =  GetAnswer(repository);
 export const getSessionMessagesUseCase = GetSessionMessages (repository);
+export const getSessionsUseCase = GetSessions (repository);
 
 
 

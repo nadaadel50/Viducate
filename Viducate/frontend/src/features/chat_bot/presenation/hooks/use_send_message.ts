@@ -6,12 +6,15 @@ import type { UserAsk } from "../../domain/entity/user_ask";
 export function useSendMessage (){
   const mutation= useMutation({
     mutationFn: async (req: UserAsk) => {
+      console.log("came heror to get the answer")
       const response =
         await getAnswerCardUseCase(req)
 
       if (!response.success) {
         throw new Error("get answer chatbot failed");
       }
+      console.log("lets get answer")
+      console.log(response.data)
 
       return response.data;
     },

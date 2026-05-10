@@ -57,13 +57,13 @@ export function RecentChatsSidebar(props: RecentChatsSidebarProps) {
           Recent Chats
         </p>
 
-        <div className="space-y-2">
+        {/* <div className="space-y-2">
           {props.sessions.map((session)=>{
             return <ChatHistoryCard key={session.id} title={session.title}/>
 
           })}
        
-        </div>
+        </div> */}
       </div>
     </div>
   );

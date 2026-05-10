@@ -11,12 +11,33 @@ import type { AllSessionMessagesRequest } from "../../domain/entity/all_chat_mes
 import type { ChatMessage } from "../../domain/entity/chat_message";
 import { toAllSessionMessagesRequestDto } from "../models/all_session_messages_req_dto";
 import { toChatMessage } from "../models/chat_message_dto";
+import type { ChatSession } from "../../domain/entity/chat_session";
+import { toChatSession } from "../models/chat_sessions_response_dto";
 
 export class ChatBotDataSourceImp implements ChatBotDataSource {
   private service: ChatBotService;
   constructor(service: ChatBotService) {
     this.service = service;
   }
+
+  async getAllSessions(videoId: number): Promise<ApiResult<ChatSession[]>> {
+    try {
+      const response = await this.service.getSessions(videoId);
+
+      const resonseEntity: ChatSession[] = response.map((dto) =>
+        toChatSession(dto),
+      );
+
+      return {
+        success: true,
+        data: resonseEntity,
+      };
+    } catch (error) {
+      const message = handleApiError(error);
+      return { success: false, error: message };
+    }
+  }
+
   async getAllSessionMessages(
     req: AllSessionMessagesRequest,
   ): Promise<ApiResult<ChatMessage[]>> {
@@ -24,6 +45,7 @@ export class ChatBotDataSourceImp implements ChatBotDataSource {
       const response = await this.service.getSessionMessages(
         toAllSessionMessagesRequestDto(req),
       );
+
       const resonseEntity: ChatMessage[] = response.map((dto) =>
         toChatMessage(dto),
       );
@@ -41,7 +63,10 @@ export class ChatBotDataSourceImp implements ChatBotDataSource {
   async getAnswer(req: UserAsk): Promise<ApiResult<ChatResponse>> {
     try {
       const response = await this.service.getAnswer(toChatRequestDto(req));
+
       const resonseEntity = toChatResponse(response);
+
+      console.log(resonseEntity);
 
       return {
         success: true,

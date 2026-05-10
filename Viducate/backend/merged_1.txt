@@ -1,1080 +1,1275 @@
 [00:00:00]
-  Transcript :  نبتدي. طيب احنا هنكمل الفازي كنترول سيستم.
-  OCR        : Fuzzy Logic | Control | Sabah Sayed | Department of Computer Science | Focuity of Computers and Arcjfciol Inteligence | Caire University | Egypt
-  Combined   :  نبتدي. طيب احنا هنكمل الفازي كنترول سيستم. Fuzzy Logic | Control | Sabah Sayed | Department of Computer Science | Focuity of Computers and Arcjfciol Inteligence | Caire University | Egypt
+  Transcript :  What's up guys, Mike the Coder here. Today we are going to go over binary exponentiation.
+  OCR        : BT8OM | Binary expune | Type haese to seaech
+  Combined   :  What's up guys, Mike the Coder here. Today we are going to go over binary exponentiation. BT8OM | Binary expune | Type haese to seaech
 
-[00:00:19]
-  Transcript : None
-  OCR        : Outline | Defuzzification Techniques | Fuzzy ControlsArchitecture | - ComponentsSteps | - Examples
-  Combined   : Outline | Defuzzification Techniques | Fuzzy ControlsArchitecture | - ComponentsSteps | - Examples
-
-[00:00:21]
-  Transcript :  زي ما اتفقنا عكده ادي آآ بيتعامل بأكثر من طريقة. خلاص?
+[00:00:05]
+  Transcript :  So what is binary exponentiation? Sometimes you need to calculate a number to the power of
   OCR        : None
-  Combined   :  زي ما اتفقنا عكده ادي آآ بيتعامل بأكثر من طريقة. خلاص?
+  Combined   :  So what is binary exponentiation? Sometimes you need to calculate a number to the power of
+
+[00:00:11]
+  Transcript :  something to a very large number, right? But sometimes you get overflow. And sometimes it's
+  OCR        : None
+  Combined   :  something to a very large number, right? But sometimes you get overflow. And sometimes it's
+
+[00:00:17]
+  Transcript :  really slow to do it. So this is a way to help you to solve this problem of calculating a number
+  OCR        : None
+  Combined   :  really slow to do it. So this is a way to help you to solve this problem of calculating a number
+
+[00:00:24]
+  Transcript :  raised to a large power. Okay, so the first thing you need to know, remember multiplication.
+  OCR        : None
+  Combined   :  raised to a large power. Okay, so the first thing you need to know, remember multiplication.
 
 [00:00:29]
-  Transcript :  اي اول طريقة اسمها ودي بحاول اجيب فيها اللي عندها بيبقى اعلى
-  OCR        : 1- Max membership principle: Also known as the | height method, this scheme is limited to peaked | output functions. This method is given by the | algebraic expression: | µC z  µC z, for all 2 Z, | where z is the defuzzified | value | If multiple peaks exist, the middle one is chosen.
-  Combined   :  اي اول طريقة اسمها ودي بحاول اجيب فيها اللي عندها بيبقى اعلى 1- Max membership principle: Also known as the | height method, this scheme is limited to peaked | output functions. This method is given by the | algebraic expression: | µC z  µC z, for all 2 Z, | where z is the defuzzified | value | If multiple peaks exist, the middle one is chosen.
-
-[00:00:41]
-  Transcript :  هي اللي باخدها وبادرة فيها. تمام? هم كلهم بيختلفوا بس في
+  Transcript :  So if I do x times y times z, right?
   OCR        : None
-  Combined   :  هي اللي باخدها وبادرة فيها. تمام? هم كلهم بيختلفوا بس في
+  Combined   :  So if I do x times y times z, right?
 
-[00:00:47]
-  Transcript :  ايه انهي انا اخدها اللي هي زي دي. خلاص اللي هي على ال اكس اكسس.
+[00:00:35]
+  Transcript :  Remember, x times y times z, if I change the order of them, parentheses, evaluate which
   OCR        : None
-  Combined   :  ايه انهي انا اخدها اللي هي زي دي. خلاص اللي هي على ال اكس اكسس.
+  Combined   :  Remember, x times y times z, if I change the order of them, parentheses, evaluate which
+
+[00:00:42]
+  Transcript :  one's first, it's still the same number, right?
+  OCR        : None
+  Combined   :  one's first, it's still the same number, right?
+
+[00:00:45]
+  Transcript :  So if x and y and z are three different numbers, right?
+  OCR        : None
+  Combined   :  So if x and y and z are three different numbers, right?
+
+[00:00:48]
+  Transcript :  And if I change the order of the way I'm multiplying them, it's still the same thing, okay?
+  OCR        : None
+  Combined   :  And if I change the order of the way I'm multiplying them, it's still the same thing, okay?
 
 [00:00:53]
-  Transcript : 
+  Transcript :  So that the first thing you have to remember okay Because that just how it works So if I change the order of multiplication it still the same number when you evaluating
   OCR        : None
-  Combined   : 
+  Combined   :  So that the first thing you have to remember okay Because that just how it works So if I change the order of multiplication it still the same number when you evaluating
 
-[00:01:12]
-  Transcript :  الايه الممبرشيب بون. هي دي زت زت ستار بتاعتك. طيب. لو انا
-  OCR        : 2- Mean Max membership: This method | also | called middle-of-maxima is closely related to | the first method, except that the locations of the | maximum membership can be nonuniqe | i.e., | the maximum membership can be a plateau | rather than a single point. | This method is given by | the expression:
-  Combined   :  الايه الممبرشيب بون. هي دي زت زت ستار بتاعتك. طيب. لو انا 2- Mean Max membership: This method | also | called middle-of-maxima is closely related to | the first method, except that the locations of the | maximum membership can be nonuniqe | i.e., | the maximum membership can be a plateau | rather than a single point. | This method is given by | the expression:
+[00:01:06]
+  Transcript :  Okay, so now what we're going to do
+  OCR        : Enbs | Dapy Thenyped | CM-M- | Binary expunent | Fese | Dasw | Feleences | -404 | Type lave to seaes
+  Combined   :  Okay, so now what we're going to do Enbs | Dapy Thenyped | CM-M- | Binary expunent | Fese | Dasw | Feleences | -404 | Type lave to seaes
+
+[00:01:07]
+  Transcript :  is that we are going to calculate some number,
+  OCR        : None
+  Combined   :  is that we are going to calculate some number,
+
+[00:01:11]
+  Transcript :  let's say A, raised to a large power, right?
+  OCR        : None
+  Combined   :  let's say A, raised to a large power, right?
 
 [00:01:14]
-  Transcript :  عندي اكتر من بوينت بقى الممبرشيب بتاعهم بون. جهت الطريقة
+  Transcript :  I don't know, like B or something.
   OCR        : None
-  Combined   :  عندي اكتر من بوينت بقى الممبرشيب بتاعهم بون. جهت الطريقة
+  Combined   :  I don't know, like B or something.
+
+[00:01:16]
+  Transcript :  This very large power, right?
+  OCR        : None
+  Combined   :  This very large power, right?
 
 [00:01:19]
-  Transcript :  التانية بتقول لك خد المين ماكس ممبرشيب. يعني لو انا عندي هنا
+  Transcript :  This very large power.
   OCR        : None
-  Combined   :  التانية بتقول لك خد المين ماكس ممبرشيب. يعني لو انا عندي هنا
+  Combined   :  This very large power.
 
-[00:01:22]
-  Transcript :  عند الاي كانت بوان وعند البي كمان بوان من الاي للبي خلاص?
+[00:01:21]
+  Transcript :  Okay, so what is the first thing you need to understand?
   OCR        : None
-  Combined   :  عند الاي كانت بوان وعند البي كمان بوان من الاي للبي خلاص?
+  Combined   :  Okay, so what is the first thing you need to understand?
+
+[00:01:25]
+  Transcript :  If you take a number and you raise it to a very large power, how do you calculate this?
+  OCR        : None
+  Combined   :  If you take a number and you raise it to a very large power, how do you calculate this?
 
 [00:01:29]
-  Transcript :  يعني مش دي ايه? ده مش بوينت واحدة. يبقى هاخد الاي بلاس البي
+  Transcript :  Well, what you could do normally is you could just take this number and multiply it by itself,
   OCR        : None
-  Combined   :  يعني مش دي ايه? ده مش بوينت واحدة. يبقى هاخد الاي بلاس البي
+  Combined   :  Well, what you could do normally is you could just take this number and multiply it by itself,
 
-[00:01:41]
-  Transcript :  واقسمهم على الاتنين. وهي دي له طلعان للزد ستور. الطريقة
-  OCR        : 3- Centroid method: This procedure also called | center of area or center of gravity is the most | prevalent and physically appealing of all the | defuzzification methods Sugeno, 1985; it is given | by the algebraic expression: | jcz  z dz | cz d: | - where  denotes an algebraic integration
-  Combined   :  واقسمهم على الاتنين. وهي دي له طلعان للزد ستور. الطريقة 3- Centroid method: This procedure also called | center of area or center of gravity is the most | prevalent and physically appealing of all the | defuzzification methods Sugeno, 1985; it is given | by the algebraic expression: | jcz  z dz | cz d: | - where  denotes an algebraic integration
-
-[00:01:42]
-  Transcript :  الثالثة اللي هي دي كأنك بتعمل ايه? كأنك بتعمل التكامل ده
+[00:01:33]
+  Transcript :  b times, right?
   OCR        : None
-  Combined   :  الثالثة اللي هي دي كأنك بتعمل ايه? كأنك بتعمل التكامل ده
+  Combined   :  b times, right?
 
-[00:01:59]
-  Transcript :  بتاع الماز. خلاص? كأنك بتعمل تكامل ده بتاعه. طيب.
-  OCR        : 4 - Weighted average method: The weighted average | method is the most frequently used in fuzzy applications | since it is one of the more computationally efficient | methods. Unfortunately, it is usually restricted to | symmetrical output membership functions. It is given by | the algebraic expression: | ucz.z | where  denotes the algebreje sam and where Z is the centroid of each | symmetric membership function. The weighted average method is formed | by weighting cach membership function in the output by its respective | membership value.
-  Combined   :  بتاع الماز. خلاص? كأنك بتعمل تكامل ده بتاعه. طيب. 4 - Weighted average method: The weighted average | method is the most frequently used in fuzzy applications | since it is one of the more computationally efficient | methods. Unfortunately, it is usually restricted to | symmetrical output membership functions. It is given by | the algebraic expression: | ucz.z | where  denotes the algebreje sam and where Z is the centroid of each | symmetric membership function. The weighted average method is formed | by weighting cach membership function in the output by its respective | membership value.
+[00:01:34]
+  Transcript :  b times.
+  OCR        : None
+  Combined   :  b times.
+
+[00:01:36]
+  Transcript :  b times.
+  OCR        : None
+  Combined   :  b times.
+
+[00:01:38]
+  Transcript :  And why does this work?
+  OCR        : None
+  Combined   :  And why does this work?
+
+[00:01:40]
+  Transcript :  Because anything raised to power, you couldn't just multiply by itself b times, right?
+  OCR        : None
+  Combined   :  Because anything raised to power, you couldn't just multiply by itself b times, right?
+
+[00:01:44]
+  Transcript :  That's the definition of how power works.
+  OCR        : None
+  Combined   :  That's the definition of how power works.
+
+[00:01:46]
+  Transcript :  If I raise 2 to the third, it's just 2 times 2 times 2, right?
+  OCR        : None
+  Combined   :  If I raise 2 to the third, it's just 2 times 2 times 2, right?
+
+[00:01:50]
+  Transcript :  And you could just evaluate that, right?
+  OCR        : None
+  Combined   :  And you could just evaluate that, right?
+
+[00:01:52]
+  Transcript :  The problem is that this is pretty slow
+  OCR        : None
+  Combined   :  The problem is that this is pretty slow
+
+[00:01:54]
+  Transcript :  because if you just evaluate this
+  OCR        : None
+  Combined   :  because if you just evaluate this
+
+[00:01:56]
+  Transcript :  like this many number of times,
+  OCR        : None
+  Combined   :  like this many number of times,
+
+[00:01:58]
+  Transcript :  it's pretty slow.
+  OCR        : None
+  Combined   :  it's pretty slow.
 
 [00:02:00]
-  Transcript :  الطريقة الرابعة ازي الطريقة اللي احنا بنستخدمها ودي اللي انتو
+  Transcript :  faster way to do this so first of all this just evaluating this would take o of n time right so if
   OCR        : None
-  Combined   :  الطريقة الرابعة ازي الطريقة اللي احنا بنستخدمها ودي اللي انتو
+  Combined   :  faster way to do this so first of all this just evaluating this would take o of n time right so if
 
-[00:02:03]
-  Transcript :  هتعملوها في اللي انتو هتستخدموها في اللي هي زي ما انا كنت
+[00:02:06]
+  Transcript :  i had uh if i had n n numbers right if i had n numbers for a to the n power this is going to be
   OCR        : None
-  Combined   :  هتعملوها في اللي انتو هتستخدموها في اللي هي زي ما انا كنت
+  Combined   :  i had uh if i had n n numbers right if i had n numbers for a to the n power this is going to be
 
-[00:02:09]
-  Transcript :  شرحتها لكم في من شوية ان انا بجيب هنا هي تمام? طيب والسنترويد
+[00:02:16]
+  Transcript :  o of n time complexity right because it would take this this many number of design numbers would
   OCR        : None
-  Combined   :  شرحتها لكم في من شوية ان انا بجيب هنا هي تمام? طيب والسنترويد
+  Combined   :  o of n time complexity right because it would take this this many number of design numbers would
 
-[00:02:21]
-  Transcript :  ده بحسبه ازاي? ده بس هنا على اي لو عندي الاي والبي بضرب الاي
-  OCR        : 4 - Weighted average method: Example | The two functions shown | would result in the following | general form for the | defuzzified value: | a0.5  b0.9 | 0.5  0.9
-  Combined   :  ده بحسبه ازاي? ده بس هنا على اي لو عندي الاي والبي بضرب الاي 4 - Weighted average method: Example | The two functions shown | would result in the following | general form for the | defuzzified value: | a0.5  b0.9 | 0.5  0.9
-
-[00:02:30]
-  Transcript :  اللي هي بتاعة الفازي ست في الاي في بتاع الفازي ست دي.
+[00:02:23]
+  Transcript :  take this this much number of time in order to calculate that many number of times in order to
   OCR        : None
-  Combined   :  اللي هي بتاعة الفازي ست في الاي في بتاع الفازي ست دي.
+  Combined   :  take this this much number of time in order to calculate that many number of times in order to
 
-[00:02:39]
-  Transcript :  بلاس بتاعة الفازي ست التانية على مجموعة الاي ده اللي انا
+[00:02:29]
+  Transcript :  go with okay so there's a way to do this instead now we're going to look at a different way to
   OCR        : None
-  Combined   :  بلاس بتاعة الفازي ست التانية على مجموعة الاي ده اللي انا
+  Combined   :  go with okay so there's a way to do this instead now we're going to look at a different way to
 
-[00:02:51]
-  Transcript :  بعمله. عشان اطلع الزد. طيب بعمل ده ازاي? لازم عشان اعمل
-  OCR        : 4- Weighted average method: getting the centroid | The centroid of symmetrical fuzzy sets is the center | point on the x-axis. | Example: centroid  10 | For non-symmetric fuzzy sets trapezoidal or | triangular: | -Add defining points of fuzzy set and divide by their number. | Example: centroid of triangular set 0,7,20 | 07203  9
-  Combined   :  بعمله. عشان اطلع الزد. طيب بعمل ده ازاي? لازم عشان اعمل 4- Weighted average method: getting the centroid | The centroid of symmetrical fuzzy sets is the center | point on the x-axis. | Example: centroid  10 | For non-symmetric fuzzy sets trapezoidal or | triangular: | -Add defining points of fuzzy set and divide by their number. | Example: centroid of triangular set 0,7,20 | 07203  9
-
-[00:02:53]
-  Transcript : 
+[00:02:35]
+  Transcript :  evaluate the numbers using and log of n time okay we're going to try to do this in log of n time
   OCR        : None
-  Combined   : 
+  Combined   :  evaluate the numbers using and log of n time okay we're going to try to do this in log of n time
+
+[00:02:41]
+  Transcript :  okay okay so let's say i have a number a and it's raised to the b power b plus c okay b plus c okay
+  OCR        : None
+  Combined   :  okay okay so let's say i have a number a and it's raised to the b power b plus c okay b plus c okay
+
+[00:02:52]
+  Transcript :  So this is the definition of multiplication for laws of exponents right Like if I take anything to the power and this is like a number right I basically what I do what I doing is I could
+  OCR        : None
+  Combined   :  So this is the definition of multiplication for laws of exponents right Like if I take anything to the power and this is like a number right I basically what I do what I doing is I could
 
 [00:03:06]
-  Transcript :  هي عبارة عن يعني متعرف بسري بوينتز. فانا بس كل اللي بعمله
+  Transcript :  split whatever number into two numbers, right? Into two numbers. Like if I have a very large
   OCR        : None
-  Combined   :  هي عبارة عن يعني متعرف بسري بوينتز. فانا بس كل اللي بعمله
+  Combined   :  split whatever number into two numbers, right? Into two numbers. Like if I have a very large
 
-[00:03:12]
-  Transcript :  بجمع البيدي دي وبقسمع العددها. خلاص? فبصتوا هنا في في الاجزامبل
+[00:03:14]
+  Transcript :  exponent, I could just split them up. And if I could split them up into two different computations,
   OCR        : None
-  Combined   :  بجمع البيدي دي وبقسمع العددها. خلاص? فبصتوا هنا في في الاجزامبل
+  Combined   :  exponent, I could just split them up. And if I could split them up into two different computations,
 
-[00:03:18]
-  Transcript :  ده الفوزي سات دي كان ومتعرفة بالبوينت زيرو وسبن وتويني.
+[00:03:20]
+  Transcript :  that'll be better right it's better if i could split them up evaluate it once then i don't have
   OCR        : None
-  Combined   :  ده الفوزي سات دي كان ومتعرفة بالبوينت زيرو وسبن وتويني.
+  Combined   :  that'll be better right it's better if i could split them up evaluate it once then i don't have
 
-[00:03:25]
-  Transcript :  يبقى ازاي يجيب بتاع الفوزي سات دي? هجمع الزيرو بلاس السبن بلاس
+[00:03:26]
+  Transcript :  to evaluate the second one again right so if i have a very large exponent raised to a very large
   OCR        : None
-  Combined   :  يبقى ازاي يجيب بتاع الفوزي سات دي? هجمع الزيرو بلاس السبن بلاس
+  Combined   :  to evaluate the second one again right so if i have a very large exponent raised to a very large
 
 [00:03:30]
-  Transcript :  التويني. خلاص يديني وما هقسم على الدتني ناين. يبقى عند ناين
+  Transcript :  exponent so if i have a raised to a very large exponent right if i could be basically split up
   OCR        : None
-  Combined   :  التويني. خلاص يديني وما هقسم على الدتني ناين. يبقى عند ناين
+  Combined   :  exponent so if i have a raised to a very large exponent right if i could be basically split up
 
-[00:03:38]
-  Transcript :  ده بتاعي. فناين دي هي اللي هتتضرب في الايين في
+[00:03:37]
+  Transcript :  into two two multiplications b plus c right and that's just that's just how evaluating it okay
   OCR        : None
-  Combined   :  ده بتاعي. فناين دي هي اللي هتتضرب في الايين في
+  Combined   :  into two two multiplications b plus c right and that's just that's just how evaluating it okay
 
-[00:03:46]
-  Transcript :  اف ممبرشيب. طب لو هو ترابي زويدا هيبقى ليه فور بوينتز.
-  OCR        : Fuzzy Inference | The most commonly used fuzzy inference technique is the so- | called Mamdani method. | Mamdanis model expresses the output using fuzzy terms instead | of mathematical combinations of the input variable. | All defuzzification techniques previously discussed belong to | Mamdanis model. | The Mamdani-style fuzzy inference process is performed in four | steps: | 1.Fuzzification of the input variables | 2.Rule evaluation inference | 3. Aggregation of the rule outputs composition | 4.Defuzzification.
-  Combined   :  اف ممبرشيب. طب لو هو ترابي زويدا هيبقى ليه فور بوينتز. Fuzzy Inference | The most commonly used fuzzy inference technique is the so- | called Mamdani method. | Mamdanis model expresses the output using fuzzy terms instead | of mathematical combinations of the input variable. | All defuzzification techniques previously discussed belong to | Mamdanis model. | The Mamdani-style fuzzy inference process is performed in four | steps: | 1.Fuzzification of the input variables | 2.Rule evaluation inference | 3. Aggregation of the rule outputs composition | 4.Defuzzification.
-
-[00:03:49]
-  Transcript :  هجمعي الفور بوينتز وهيسمع على الاربان. تمام? ده اللي انتم
+[00:03:43]
+  Transcript :  now let's say instead of having like a super duper large number um let's say i have a to the 2b
   OCR        : None
-  Combined   :  هجمعي الفور بوينتز وهيسمع على الاربان. تمام? ده اللي انتم
+  Combined   :  now let's say instead of having like a super duper large number um let's say i have a to the 2b
+
+[00:03:50]
+  Transcript :  right?
+  OCR        : None
+  Combined   :  right?
+
+[00:03:52]
+  Transcript :  A to the 2B, I could actually split this into
+  OCR        : None
+  Combined   :  A to the 2B, I could actually split this into
 
 [00:03:54]
-  Transcript :  هتعملوه. هتعملوه خلاص? يبقى حسنا
+  Transcript :  A to the B
   OCR        : None
-  Combined   :  هتعملوه. هتعملوه خلاص? يبقى حسنا
+  Combined   :  A to the B
+
+[00:03:57]
+  Transcript :  times A to the B
+  OCR        : None
+  Combined   :  times A to the B
 
 [00:04:00]
-  Transcript :  كده قدرنا نحسب ال اي والبي اللي هما بتاعت ال اي الفاضي سبس
+  Transcript :  right? That's splitting up into two groups, B plus B. And this is actually equal to A to the B
   OCR        : None
-  Combined   :  كده قدرنا نحسب ال اي والبي اللي هما بتاعت ال اي الفاضي سبس
+  Combined   :  right? That's splitting up into two groups, B plus B. And this is actually equal to A to the B
 
-[00:04:05]
-  Transcript :  بتاعتي. ونضرب ونقسم على اي مجموعهم. كده يطلعنا ال اي
+[00:04:08]
+  Transcript :  squared, right? A to the B, B times B is equal to A to the B squared. So if I actually know the
   OCR        : None
-  Combined   :  بتاعتي. ونضرب ونقسم على اي مجموعهم. كده يطلعنا ال اي
+  Combined   :  squared, right? A to the B, B times B is equal to A to the B squared. So if I actually know the
 
-[00:04:11]
-  Transcript :  بتاعت الاوتوت. في دي خلاص? طيب. الفاضي في اكتر من فاضي في
+[00:04:19]
+  Transcript :  calculation of one of these values of A to the B power, one of these values, I don't have to
   OCR        : None
-  Combined   :  بتاعت الاوتوت. في دي خلاص? طيب. الفاضي في اكتر من فاضي في
+  Combined   :  calculation of one of these values of A to the B power, one of these values, I don't have to
 
-[00:04:29]
-  Transcript :  مامداني وفي سوجينو. احنا مش ناخد سوجينو خلاص احنا الطريقة اللي
-  OCR        : 2. Rule evaluation inference | 4 Defuzzification.
-  Combined   :  مامداني وفي سوجينو. احنا مش ناخد سوجينو خلاص احنا الطريقة اللي 2. Rule evaluation inference | 4 Defuzzification.
-
-[00:04:32]
-  Transcript :  احنا اخدناها دي اللي هي بتاعت المامداني. بتاعت مامداني. بيعمل
+[00:04:25]
+  Transcript :  recalculate this over and over again, right? I don't have to actually recompute these values
   OCR        : None
-  Combined   :  احنا اخدناها دي اللي هي بتاعت المامداني. بتاعت مامداني. بيعمل
+  Combined   :  recalculate this over and over again, right? I don't have to actually recompute these values
 
-[00:04:35]
-  Transcript :  دي بيعمل ودي خلاص ده مش مش حاجة مؤثرة قوي عندي خلاص ممكن
+[00:04:30]
+  Transcript :  over and over again. I could just take the previous value and just multiply it by itself,
   OCR        : None
-  Combined   :  دي بيعمل ودي خلاص ده مش مش حاجة مؤثرة قوي عندي خلاص ممكن
+  Combined   :  over and over again. I could just take the previous value and just multiply it by itself,
+
+[00:04:34]
+  Transcript :  but I don't have to completely recompute A times A times AB times. If I just have
+  OCR        : None
+  Combined   :  but I don't have to completely recompute A times A times AB times. If I just have
+
+[00:04:42]
+  Transcript :  the one of the exponents on the exponents, I could just split them up into two groups,
+  OCR        : None
+  Combined   :  the one of the exponents on the exponents, I could just split them up into two groups,
 
 [00:04:47]
-  Transcript :  ندخلها بوه يعني احنا قريت دي عملناها خلاص احنا قريت دي عمناها
+  Transcript :  and then I'll be able to just calculate it once, and then I could just square it.
   OCR        : None
-  Combined   :  ندخلها بوه يعني احنا قريت دي عملناها خلاص احنا قريت دي عمناها
+  Combined   :  and then I'll be able to just calculate it once, and then I could just square it.
 
-[00:04:56]
-  Transcript : 
-  OCR        : Mamdani Fuzzy Inference | We examine a simple two-input cne-output problem that includes three rules: | Rule: 1 | x is A3 | Rule: 1 | y is B1 | prejectfunding | is adequate | THEN | z is C1 | THEN | risk | projectstaffing | is small | is low | Bule: 2 | x is A2 | Rule: 2 | y is B2 | projectfunding | prejectstafing | is marginal | is large | THEN | z Is C2 | THEN | risk | Is normal | Bule: 3 | Buk:3 | THEN | x is A1 | z is C3 | THEN | projectfunding | is inadequate | is high
-  Combined   :  Mamdani Fuzzy Inference | We examine a simple two-input cne-output problem that includes three rules: | Rule: 1 | x is A3 | Rule: 1 | y is B1 | prejectfunding | is adequate | THEN | z is C1 | THEN | risk | projectstaffing | is small | is low | Bule: 2 | x is A2 | Rule: 2 | y is B2 | projectfunding | prejectstafing | is marginal | is large | THEN | z Is C2 | THEN | risk | Is normal | Bule: 3 | Buk:3 | THEN | x is A1 | z is C3 | THEN | projectfunding | is inadequate | is high
+[00:04:51]
+  Transcript :  So that what this binary exponentiation is doing Basically if we have some power some number raised to a power we could actually split it If it an even number we could actually split them into two different groups And then you could actually just calculate one of them once
+  OCR        : None
+  Combined   :  So that what this binary exponentiation is doing Basically if we have some power some number raised to a power we could actually split it If it an even number we could actually split them into two different groups And then you could actually just calculate one of them once
 
 [00:05:06]
-  Transcript :  از اصري. خلاص? زن زد از سي وان. الاي هي الفازي ستس بتاعة
+  Transcript :  And then you could just square it so that you don't actually have to multiply it by itself n times.
   OCR        : None
-  Combined   :  از اصري. خلاص? زن زد از سي وان. الاي هي الفازي ستس بتاعة
+  Combined   :  And then you could just square it so that you don't actually have to multiply it by itself n times.
 
-[00:05:18]
-  Transcript :  الاكس. الاولي. البي هي الفازي ستس بتاعة الواي. الايموت التاني.
+[00:05:13]
+  Transcript :  It would be log base 2 of n because you're splitting into two groups every single time.
   OCR        : None
-  Combined   :  الاكس. الاولي. البي هي الفازي ستس بتاعة الواي. الايموت التاني.
+  Combined   :  It would be log base 2 of n because you're splitting into two groups every single time.
+
+[00:05:20]
+  Transcript :  And you only have that number of calculations.
+  OCR        : None
+  Combined   :  And you only have that number of calculations.
 
 [00:05:22]
-  Transcript :  والس هي الفيزي سادس بتاعت الاي الاوتوت اللي هو زد. تمام? طبعا كل رول هنا احطي لكم هنا اجزامبل عليها. خلاص?
+  Transcript :  you're not actually doing it over and over and over again.
   OCR        : None
-  Combined   :  والس هي الفيزي سادس بتاعت الاي الاوتوت اللي هو زد. تمام? طبعا كل رول هنا احطي لكم هنا اجزامبل عليها. خلاص?
+  Combined   :  you're not actually doing it over and over and over again.
 
-[00:05:34]
-  Transcript :  الاجزامبل ده من الاسايمت اللي هيتعمل. طيب اه الرول التاني بتقول لي في
+[00:05:25]
+  Transcript :  Okay, so let's go over an example.
   OCR        : None
-  Combined   :  الاجزامبل ده من الاسايمت اللي هيتعمل. طيب اه الرول التاني بتقول لي في
+  Combined   :  Okay, so let's go over an example.
+
+[00:05:28]
+  Transcript :  So let's say I have three to the 13.
+  OCR        : None
+  Combined   :  So let's say I have three to the 13.
+
+[00:05:30]
+  Transcript :  So what do I wanna do?
+  OCR        : None
+  Combined   :  So what do I wanna do?
+
+[00:05:31]
+  Transcript :  I basically want to split this exponent
+  OCR        : None
+  Combined   :  I basically want to split this exponent
+
+[00:05:33]
+  Transcript :  by the powers of two.
+  OCR        : None
+  Combined   :  by the powers of two.
+
+[00:05:36]
+  Transcript :  So anything that has like,
+  OCR        : None
+  Combined   :  So anything that has like,
+
+[00:05:38]
+  Transcript :  split this exponent to its powers of two.
+  OCR        : None
+  Combined   :  split this exponent to its powers of two.
 
 [00:05:41]
-  Transcript :  في الـ X is A2 and Y is B2 than Z is A C2. في رول 3 عندي antecedent 1
+  Transcript :  So then basically I would be able to just calculate
   OCR        : None
-  Combined   :  في الـ X is A2 and Y is B2 than Z is A C2. في رول 3 عندي antecedent 1
+  Combined   :  So then basically I would be able to just calculate
 
-[00:05:54]
-  Transcript :  اللي هو X is A1 than Z is A C3. طيب. اول استابع منها اللي هي الفوزي
-  OCR        : Step 1: Fuzzification | The first step is to take the crisp inputs, x1 and y1 project fundling and | project staffing and determine the degree to which these inputs | belong to each of the appropriate fuzzy sets. | Crisp Jeysr | Cripo Input | F x - 41  0.5 | Pr-20.1
-  Combined   :  اللي هو X is A1 than Z is A C3. طيب. اول استابع منها اللي هي الفوزي Step 1: Fuzzification | The first step is to take the crisp inputs, x1 and y1 project fundling and | project staffing and determine the degree to which these inputs | belong to each of the appropriate fuzzy sets. | Crisp Jeysr | Cripo Input | F x - 41  0.5 | Pr-20.1
+[00:05:44]
+  Transcript :  one of the values once, one of the groups once,
+  OCR        : None
+  Combined   :  one of the values once, one of the groups once,
+
+[00:05:47]
+  Transcript :  and then just square it.
+  OCR        : None
+  Combined   :  and then just square it.
+
+[00:05:48]
+  Transcript :  So if I could have this exponent,
+  OCR        : None
+  Combined   :  So if I could have this exponent,
+
+[00:05:50]
+  Transcript :  I could split into powers of two,
+  OCR        : None
+  Combined   :  I could split into powers of two,
+
+[00:05:51]
+  Transcript :  then that'll be fine.
+  OCR        : None
+  Combined   :  then that'll be fine.
+
+[00:05:52]
+  Transcript :  So how would you split this 13 into its powers of two?
+  OCR        : None
+  Combined   :  So how would you split this 13 into its powers of two?
+
+[00:05:57]
+  Transcript :  Well, 13 base 10, right?
+  OCR        : None
+  Combined   :  Well, 13 base 10, right?
 
 [00:06:00]
-  Transcript :  اللي هو ايه? برسم الفاضي بتاعتي وبعرف اجيب الايه? بتاعت
+  Transcript :  Actually, in binary, it's 1, 1, 0, 1, I think.
   OCR        : None
-  Combined   :  اللي هو ايه? برسم الفاضي بتاعتي وبعرف اجيب الايه? بتاعت
+  Combined   :  Actually, in binary, it's 1, 1, 0, 1, I think.
 
-[00:06:08]
-  Transcript :  خلاص في الفاضي ايه? دي. تمام? عملناها كزا مرة في وخلاص بقى
+[00:06:03]
+  Transcript :  1, 1, 0, 1.
   OCR        : None
-  Combined   :  خلاص في الفاضي ايه? دي. تمام? عملناها كزا مرة في وخلاص بقى
+  Combined   :  1, 1, 0, 1.
 
-[00:06:15]
-  Transcript :  انتم كده فهمتوها. طيب مشكلة زي ما زميلتكم كتب تسأل احنا هنا
-  OCR        : To accurately get the membership degree of the | crisp value provided, equations of lines of the | different fuzzy sets should be determined. Then you | can get value of y membership by substituting in | line equations by x value crisp value | values are not accurate
-  Combined   :  انتم كده فهمتوها. طيب مشكلة زي ما زميلتكم كتب تسأل احنا هنا To accurately get the membership degree of the | crisp value provided, equations of lines of the | different fuzzy sets should be determined. Then you | can get value of y membership by substituting in | line equations by x value crisp value | values are not accurate
+[00:06:04]
+  Transcript :  Yeah.
+  OCR        : None
+  Combined   :  Yeah.
 
-[00:06:25]
-  Transcript :  بنجيبها من على الايه من على الرسمة. طب لو انا هعمل لها اعملها
-  OCR        : Crip Japar | Crisp Input | Pr-2t 0.1
-  Combined   :  بنجيبها من على الايه من على الرسمة. طب لو انا هعمل لها اعملها Crip Japar | Crisp Input | Pr-2t 0.1
+[00:06:05]
+  Transcript :  So 0, 2, 0, 2, 1, 2, 2, 3.
+  OCR        : None
+  Combined   :  So 0, 2, 0, 2, 1, 2, 2, 3.
+
+[00:06:07]
+  Transcript :  Okay, yeah.
+  OCR        : None
+  Combined   :  Okay, yeah.
+
+[00:06:10]
+  Transcript :  2, 0, 2, 1, 2, 2.
+  OCR        : None
+  Combined   :  2, 0, 2, 1, 2, 2.
+
+[00:06:11]
+  Transcript :  Okay, yeah.
+  OCR        : None
+  Combined   :  Okay, yeah.
+
+[00:06:12]
+  Transcript :  So this is in binary.
+  OCR        : None
+  Combined   :  So this is in binary.
+
+[00:06:14]
+  Transcript :  The binary of 13 to the 10 is 1, 1, 0, 1.
+  OCR        : None
+  Combined   :  The binary of 13 to the 10 is 1, 1, 0, 1.
+
+[00:06:19]
+  Transcript :  So if you split this number into its binary equivalent, right,
+  OCR        : None
+  Combined   :  So if you split this number into its binary equivalent, right,
 
 [00:06:26]
-  Transcript :  في الكود. هعرف اجيبها ازاي? بص كده معي مش الفازي ست زي اللي
+  Transcript :  it would actually tell you the powers of 2 that you could do.
   OCR        : None
-  Combined   :  في الكود. هعرف اجيبها ازاي? بص كده معي مش الفازي ست زي اللي
+  Combined   :  it would actually tell you the powers of 2 that you could do.
 
-[00:06:33]
-  Transcript :  انا بشوف ما بينها ما بين اللي هو دي عبر عبر عن صح? لو انا
+[00:06:29]
+  Transcript :  So once you're given this binary number of 1101, you could actually get this is actually equal to 2 to the third.
   OCR        : None
-  Combined   :  انا بشوف ما بينها ما بين اللي هو دي عبر عبر عن صح? لو انا
+  Combined   :  So once you're given this binary number of 1101, you could actually get this is actually equal to 2 to the third.
 
-[00:06:40]
-  Transcript :  قدرت اجيب بتاعت ده وعودت فيه بالاكس بطلعي المقابلة لي.
+[00:06:36]
+  Transcript :  So how I'm getting this is because this is 0 power, 1st power, 2nd, 3rd.
   OCR        : None
-  Combined   :  قدرت اجيب بتاعت ده وعودت فيه بالاكس بطلعي المقابلة لي.
+  Combined   :  So how I'm getting this is because this is 0 power, 1st power, 2nd, 3rd.
 
-[00:06:49]
-  Transcript : 
+[00:06:42]
+  Transcript :  This is the 0th power, 2 to the 0, 2 to the 1, 2 to the 2, 2 to the 3.
   OCR        : None
-  Combined   : 
+  Combined   :  This is the 0th power, 2 to the 0, 2 to the 1, 2 to the 2, 2 to the 3.
 
-[00:07:10]
-  Transcript :  اقول وهي تكون فحطة ان انا اعملها بايزي. ارسمها. واشوفها
+[00:06:46]
+  Transcript :  So 13 to base 10 is actually equal to 1 times 2 to the third plus 1 times 2 to the second plus 1 times 2 to the first This is actually 0 times 2 to the first plus 1 times 2 to the 1st This is actually 0 times 2 to the 1st plus 1 times 2 to the 0th
   OCR        : None
-  Combined   :  اقول وهي تكون فحطة ان انا اعملها بايزي. ارسمها. واشوفها
+  Combined   :  So 13 to base 10 is actually equal to 1 times 2 to the third plus 1 times 2 to the second plus 1 times 2 to the first This is actually 0 times 2 to the first plus 1 times 2 to the 1st This is actually 0 times 2 to the 1st plus 1 times 2 to the 0th
+
+[00:07:06]
+  Transcript :  Okay?
+  OCR        : None
+  Combined   :  Okay?
+
+[00:07:07]
+  Transcript :  So that's what this,
+  OCR        : None
+  Combined   :  So that's what this,
+
+[00:07:09]
+  Transcript :  if you convert this into binary and its equivalent,
+  OCR        : None
+  Combined   :  if you convert this into binary and its equivalent,
+
+[00:07:12]
+  Transcript :  these would be what the powers are.
+  OCR        : None
+  Combined   :  these would be what the powers are.
+
+[00:07:14]
+  Transcript :  Right?
+  OCR        : None
+  Combined   :  Right?
+
+[00:07:14]
+  Transcript :  2 to the 3rd, 2nd, 1st, 0.
+  OCR        : None
+  Combined   :  2 to the 3rd, 2nd, 1st, 0.
+
+[00:07:16]
+  Transcript :  Okay?
+  OCR        : None
+  Combined   :  Okay?
+
+[00:07:17]
+  Transcript :  So now you're given this.
+  OCR        : None
+  Combined   :  So now you're given this.
 
 [00:07:19]
-  Transcript :  على الرسم بايه دي وخلاص دي ما بتطلع ليش عشان اطلع دي اجزاكت
+  Transcript :  Now that you know after splitting into its binary equivalence,
   OCR        : None
-  Combined   :  على الرسم بايه دي وخلاص دي ما بتطلع ليش عشان اطلع دي اجزاكت
+  Combined   :  Now that you know after splitting into its binary equivalence,
 
-[00:07:26]
-  Transcript :  يبقى انا محتاجة اجيب بتاعة ده واللاين ده وعوض فيهم دي اللي هي
+[00:07:22]
+  Transcript :  you could just now use these values.
   OCR        : None
-  Combined   :  يبقى انا محتاجة اجيب بتاعة ده واللاين ده وعوض فيهم دي اللي هي
+  Combined   :  you could just now use these values.
 
-[00:07:41]
-  Transcript :  بتاعي يطلع لي المقابلة ليها. طيب ازاي بقى اطلع بتاعة
-  OCR        : To get membership of crisp value p30, we | need to get equations for the lines where | the value 30 intersects with L1  L2.
-  Combined   :  بتاعي يطلع لي المقابلة ليها. طيب ازاي بقى اطلع بتاعة To get membership of crisp value p30, we | need to get equations for the lines where | the value 30 intersects with L1  L2.
-
-[00:07:41]
-  Transcript :  اللاين. سهلة جدا.
+[00:07:25]
+  Transcript :  as a way to, these values as a way to split your exponent.
   OCR        : None
-  Combined   :  اللاين. سهلة جدا.
+  Combined   :  as a way to, these values as a way to split your exponent.
 
-[00:07:51]
-  Transcript :  ننسك مثلا. الاي الال ون. ده.
-  OCR        : L1: 1-get 2 points on the line: 0,1, 50,0 | 2-get slope  y2-y1x2-x1  0-150-0 -150 | 3-line equation: y  ax  b a  slope | 4-line equation: y  -x50  b, substitute by one of | the points to get b. | 1  0  b  b1 | y  -x50  1 | 7- To get membership substitute by x30, | 8- y -30501  0.4 | 9- μp  30  0.4 | L2: use same steps.
-  Combined   :  ننسك مثلا. الاي الال ون. ده. L1: 1-get 2 points on the line: 0,1, 50,0 | 2-get slope  y2-y1x2-x1  0-150-0 -150 | 3-line equation: y  ax  b a  slope | 4-line equation: y  -x50  b, substitute by one of | the points to get b. | 1  0  b  b1 | y  -x50  1 | 7- To get membership substitute by x30, | 8- y -30501  0.4 | 9- μp  30  0.4 | L2: use same steps.
-
-[00:07:53]
-  Transcript :  ده عشان اجيب بتاعته مبدئيا هو لاين فالاكوشن بتاعته تبقى ايه
+[00:07:32]
+  Transcript :  So 3 to the 13 is actually equal to 3 to the 8, right?
   OCR        : None
-  Combined   :  ده عشان اجيب بتاعته مبدئيا هو لاين فالاكوشن بتاعته تبقى ايه
+  Combined   :  So 3 to the 13 is actually equal to 3 to the 8, right?
+
+[00:07:38]
+  Transcript :  Because 2 to the 3rd is 8, 3 to the 8, times 3 to the 4th times 3 to the 1st.
+  OCR        : None
+  Combined   :  Because 2 to the 3rd is 8, 3 to the 8, times 3 to the 4th times 3 to the 1st.
+
+[00:07:48]
+  Transcript :  Okay, so this is like 12 plus 1 is, yeah, 12 plus 1 is 13.
+  OCR        : None
+  Combined   :  Okay, so this is like 12 plus 1 is, yeah, 12 plus 1 is 13.
+
+[00:07:55]
+  Transcript :  So, so yeah, this would be, these would be your exponents, 8, 4, 1.
+  OCR        : None
+  Combined   :  So, so yeah, this would be, these would be your exponents, 8, 4, 1.
 
 [00:08:00]
-  Transcript :  y بتساوي e x بلس b. خلاص? e x بلس b. وانا دلوقتي هدفي ان انا ايه اشوف
+  Transcript :  So this would be your exponents of what the values you want, 8, 4, 1.
   OCR        : None
-  Combined   :  y بتساوي e x بلس b. خلاص? e x بلس b. وانا دلوقتي هدفي ان انا ايه اشوف
+  Combined   :  So this would be your exponents of what the values you want, 8, 4, 1.
+
+[00:08:03]
+  Transcript :  Okay.
+  OCR        : None
+  Combined   :  Okay.
+
+[00:08:03]
+  Transcript : None
+  OCR        : 3io  11 0 1 | Type hase to seaet | anwou
+  Combined   : 3io  11 0 1 | Type hase to seaet | anwou
+
+[00:08:03]
+  Transcript :  So now that I have the exponents 8, 4, and 1,
+  OCR        : None
+  Combined   :  So now that I have the exponents 8, 4, and 1,
+
+[00:08:06]
+  Transcript :  what am I going to do to basically stop doing like calculations
+  OCR        : None
+  Combined   :  what am I going to do to basically stop doing like calculations
 
 [00:08:11]
-  Transcript :  ال value بتاعت الايه والبي بكام. عشان اكتب الايكوشن ايه بتاعت
+  Transcript :  so over and over again?
   OCR        : None
-  Combined   :  ال value بتاعت الايه والبي بكام. عشان اكتب الايكوشن ايه بتاعت
+  Combined   :  so over and over again?
 
-[00:08:16]
-  Transcript :  اللاين. اي لين في الدنيا هيدي الاكوشن بتاعته. تمام كده? طيب.
+[00:08:13]
+  Transcript :  Okay.
   OCR        : None
-  Combined   :  اللاين. اي لين في الدنيا هيدي الاكوشن بتاعته. تمام كده? طيب.
+  Combined   :  Okay.
 
-[00:08:22]
-  Transcript :  عشان اعرف اجيب الاي. الاي ده بنقول عليه السلوب بتاع الاي
-  OCR        : None
-  Combined   :  عشان اعرف اجيب الاي. الاي ده بنقول عليه السلوب بتاع الاي
+[00:08:13]
+  Transcript :  So what I'm going to do is I'm going to actually label 3 to the 1st,
+  OCR        : 33  334. 3 | 13 1101 | 3 a e 2 | Lype hame to sei | anwow
+  Combined   :  So what I'm going to do is I'm going to actually label 3 to the 1st, 33  334. 3 | 13 1101 | 3 a e 2 | Lype hame to sei | anwow
 
-[00:08:30]
-  Transcript :  بتاع اللاين. الفاني بتاعته بتساوي اي نقطتين نجيب اي نقطتين
+[00:08:17]
+  Transcript :  3 to the 2nd, 3 to the 3rd.
   OCR        : None
-  Combined   :  بتاع اللاين. الفاني بتاعته بتساوي اي نقطتين نجيب اي نقطتين
+  Combined   :  3 to the 2nd, 3 to the 3rd.
+
+[00:08:21]
+  Transcript :  No, not 3 to the 3rd.
+  OCR        : None
+  Combined   :  No, not 3 to the 3rd.
+
+[00:08:23]
+  Transcript :  I'm about 3 to the 4th and 3 to the 8th.
+  OCR        : None
+  Combined   :  I'm about 3 to the 4th and 3 to the 8th.
+
+[00:08:26]
+  Transcript :  Okay.
+  OCR        : None
+  Combined   :  Okay.
+
+[00:08:26]
+  Transcript :  Okay, so what is 3 to the first power?
+  OCR        : None
+  Combined   :  Okay, so what is 3 to the first power?
+
+[00:08:31]
+  Transcript :  That's just 3, okay?
+  OCR        : None
+  Combined   :  That's just 3, okay?
+
+[00:08:33]
+  Transcript :  So now given this 3, I could just square it.
+  OCR        : None
+  Combined   :  So now given this 3, I could just square it.
 
 [00:08:35]
-  Transcript :  على اللاين. اللاين ده نقطتين عادي من اكس بزيرو وواي بون.
+  Transcript :  So if I take 3 square, 3 square is just going to be 9, right?
   OCR        : None
-  Combined   :  على اللاين. اللاين ده نقطتين عادي من اكس بزيرو وواي بون.
+  Combined   :  So if I take 3 square, 3 square is just going to be 9, right?
 
 [00:08:40]
-  Transcript :  يبقى زيرو وون. دي البوينت الاولى. تمام? البوينت التانية
+  Transcript :  So that's 3 square, that's 9.
   OCR        : None
-  Combined   :  يبقى زيرو وون. دي البوينت الاولى. تمام? البوينت التانية
+  Combined   :  So that's 3 square, that's 9.
 
-[00:08:46]
-  Transcript :  X 50 Y 0 ZB 2 A Y2 Y1 X2 X1 2 1 x2 2 0
+[00:08:42]
+  Transcript :  So because I know this power, 3 to the second, 3 to the fourth,
   OCR        : None
-  Combined   :  X 50 Y 0 ZB 2 A Y2 Y1 X2 X1 2 1 x2 2 0
+  Combined   :  So because I know this power, 3 to the second, 3 to the fourth,
 
-[00:09:06]
-  Transcript :  ده
+[00:08:47]
+  Transcript :  what is 3 to the fourth?
   OCR        : None
-  Combined   :  ده
+  Combined   :  what is 3 to the fourth?
 
-[00:09:07]
-  Transcript :  minus y1 اللي هي ب 1
+[00:08:48]
+  Transcript :  That's just 3 to the second squared.
   OCR        : None
-  Combined   :  minus y1 اللي هي ب 1
+  Combined   :  That's just 3 to the second squared.
 
-[00:09:10]
-  Transcript :  يبقى 0-1
+[00:08:49]
+  Transcript :  So remember, 3 to the fourth is just 3 to the second squared, right?
   OCR        : None
-  Combined   :  يبقى 0-1
+  Combined   :  So remember, 3 to the fourth is just 3 to the second squared, right?
 
-[00:09:11]
-  Transcript :  50
+[00:08:52]
+  Transcript :  So this is actually just equal to 9 square which is going to equal to 81 So I don have to recalculate over and over again Right Okay so now that I have 81 how do I calculate 3 to the 8th Well 3 to the 8th is actually 3 to the 4th squared right
   OCR        : None
-  Combined   :  50
+  Combined   :  So this is actually just equal to 9 square which is going to equal to 81 So I don have to recalculate over and over again Right Okay so now that I have 81 how do I calculate 3 to the 8th Well 3 to the 8th is actually 3 to the 4th squared right
 
-[00:09:13]
-  Transcript :  الي هي x2
+[00:09:12]
+  Transcript :  because we could just take this previous value and then square it, right, 3 to the 4th laws of
   OCR        : None
-  Combined   :  الي هي x2
+  Combined   :  because we could just take this previous value and then square it, right, 3 to the 4th laws of
 
-[00:09:15]
-  Transcript :  0-0 الي هي x1
+[00:09:16]
+  Transcript :  exponents. So this is actually just equal to 81 squared, which I don't feel like calculating that,
   OCR        : None
-  Combined   :  0-0 الي هي x1
+  Combined   :  exponents. So this is actually just equal to 81 squared, which I don't feel like calculating that,
 
-[00:09:18]
-  Transcript :  بتسوي ايه؟
+[00:09:23]
+  Transcript :  So I'm just going to use my trusty calculator.
   OCR        : None
-  Combined   :  بتسوي ايه؟
+  Combined   :  So I'm just going to use my trusty calculator.
 
-[00:09:20]
-  Transcript :  minus 1
-  OCR        : None
-  Combined   :  minus 1
+[00:09:25]
+  Transcript : None
+  OCR        : 313 3 34. 3 | 13g  11 01 | 3²29 | 3:1.2 | 3342 | Type here to sesarch
+  Combined   : 313 3 34. 3 | 13g  11 01 | 3²29 | 3:1.2 | 3342 | Type here to sesarch
 
-[00:09:20]
-  Transcript :  50
+[00:09:26]
+  Transcript :  What is 81 squared?
   OCR        : None
-  Combined   :  50
+  Combined   :  What is 81 squared?
 
-[00:09:22]
-  Transcript :  خلاص يبقى انا كده جبت القيمة بتاعت الاي.
+[00:09:28]
+  Transcript :  81 times 81.
   OCR        : None
-  Combined   :  خلاص يبقى انا كده جبت القيمة بتاعت الاي.
+  Combined   :  81 times 81.
 
-[00:09:29]
-  Transcript :  يبقى الايكوشن بقت واي ايكوال ماينس اكس. اوبر ففتي بلوس بي.
+[00:09:30]
+  Transcript :  Can I do that?
   OCR        : None
-  Combined   :  يبقى الايكوشن بقت واي ايكوال ماينس اكس. اوبر ففتي بلوس بي.
+  Combined   :  Can I do that?
+
+[00:09:32]
+  Transcript :  Yeah, okay.
+  OCR        : None
+  Combined   :  Yeah, okay.
+
+[00:09:33]
+  Transcript :  That's 6, 5, 6, 1.
+  OCR        : None
+  Combined   :  That's 6, 5, 6, 1.
 
 [00:09:35]
-  Transcript :  عايز اجيب البي. همي ايه? هعوض باي باي باي بوينت من دول يا اي
+  Transcript :  So it's 6, 5, 6, 1.
+  OCR        : Acps | Ennument | Saer nat wults | 6561 | Exocumanty | 2n 81 44 nOP Cherd CM O21 | 08-81 44-0OP-Cherd C3s 022 | 085-44-44-00P-Chend 0Me4-023 | 085-61-44-P0P-Chardt CMj-034 | 08-61-4-PP-Chert Cj-025 | 81 - What does Bl etand for? The Free | Oictionary | c8-41-41-0P-Cnd CM-021 | Lnosing for snsine cedinton ol fn aramor b 1 sanes iy at as | 28 88 44 nOP-Chard C3 029 | dabtee of atbrevators ant achym i - stat cen I | liched i Dhe tianith iargesl ant reosd adltccatve diclurary | 085-81 44.00P-Cher CM-000 | sland tar? The Fhn I | Open renats ins browser
+  Combined   :  So it's 6, 5, 6, 1. Acps | Ennument | Saer nat wults | 6561 | Exocumanty | 2n 81 44 nOP Cherd CM O21 | 08-81 44-0OP-Cherd C3s 022 | 085-44-44-00P-Chend 0Me4-023 | 085-61-44-P0P-Chardt CMj-034 | 08-61-4-PP-Chert Cj-025 | 81 - What does Bl etand for? The Free | Oictionary | c8-41-41-0P-Cnd CM-021 | Lnosing for snsine cedinton ol fn aramor b 1 sanes iy at as | 28 88 44 nOP-Chard C3 029 | dabtee of atbrevators ant achym i - stat cen I | liched i Dhe tianith iargesl ant reosd adltccatve diclurary | 085-81 44.00P-Cher CM-000 | sland tar? The Fhn I | Open renats ins browser
+
+[00:09:37]
+  Transcript :  So now that I have these, have these values, right?
   OCR        : None
-  Combined   :  عايز اجيب البي. همي ايه? هعوض باي باي باي بوينت من دول يا اي
+  Combined   :  So now that I have these, have these values, right?
 
 [00:09:42]
-  Transcript :  الاولى يا التانية. في الاكوشن يطلع لي البي. تمام? عوضت بالاي
+  Transcript :  I could just calculate what 3 to 13 is.
   OCR        : None
-  Combined   :  الاولى يا التانية. في الاكوشن يطلع لي البي. تمام? عوضت بالاي
+  Combined   :  I could just calculate what 3 to 13 is.
 
-[00:09:49]
-  Transcript :  ب .1. .1 ال y فيها ب .1 يبقى 1 equal.
-  OCR        : None
-  Combined   :  ب .1. .1 ال y فيها ب .1 يبقى 1 equal.
+[00:09:45]
+  Transcript :  So 3 to 8 is 6, 5, 6, 1.
+  OCR        : 333343 | 31101 | 3 z i e 2 | 38342 | Tyspe have to sersecth
+  Combined   :  So 3 to 8 is 6, 5, 6, 1. 333343 | 31101 | 3 z i e 2 | 38342 | Tyspe have to sersecth
 
-[00:09:54]
-  Transcript :  ال x ب zero يبدأ كله ب zero.
+[00:09:47]
+  Transcript :  So that's just 6, 5, 6, 1, right?
   OCR        : None
-  Combined   :  ال x ب zero يبدأ كله ب zero.
+  Combined   :  So that's just 6, 5, 6, 1, right?
 
-[00:09:57]
-  Transcript :  plus ال b.
+[00:09:52]
+  Transcript :  Because I just calculated this.
   OCR        : None
-  Combined   :  plus ال b.
+  Combined   :  Because I just calculated this.
 
-[00:09:58]
-  Transcript :  1 equal a.
+[00:09:53]
+  Transcript :  And now we're going to just take this one, we're going to multiply by 3 to 4, which is going to be 81.
   OCR        : None
-  Combined   :  1 equal a.
+  Combined   :  And now we're going to just take this one, we're going to multiply by 3 to 4, which is going to be 81.
 
 [00:10:00]
-  Transcript :  بي بل بي هنا اكوال ون. يبقى انا كده قدرت اعمل بتاعت اللاين.
+  Transcript :  And we're going to multiply by three to the first, which is three.
   OCR        : None
-  Combined   :  بي بل بي هنا اكوال ون. يبقى انا كده قدرت اعمل بتاعت اللاين.
+  Combined   :  And we're going to multiply by three to the first, which is three.
 
-[00:10:04]
-  Transcript :  يبقى اللاين ده بتاعت عبارة عن وي ايكوال مينس اكس. طيب انا
+[00:10:02]
+  Transcript :  So the amount of computations I took was way less because I didn't have to calculate three
   OCR        : None
-  Combined   :  يبقى اللاين ده بتاعت عبارة عن وي ايكوال مينس اكس. طيب انا
+  Combined   :  So the amount of computations I took was way less because I didn't have to calculate three
 
-[00:10:13]
-  Transcript :  بعد دلوقتي عايزة اجيب للاكس بتاعت ايه بسيرتي. خلاص? يبقى
+[00:10:07]
+  Transcript :  times three times three times three times three times three times three, 13 times.
   OCR        : None
-  Combined   :  بعد دلوقتي عايزة اجيب للاكس بتاعت ايه بسيرتي. خلاص? يبقى
+  Combined   :  times three times three times three times three times three times three, 13 times.
 
-[00:10:22]
-  Transcript :  اعمل ايه? بتاعتي موجودة يبقى هعود عن طلع لي ايه? طلع لي
+[00:10:12]
+  Transcript :  So how many operations did I actually do?
   OCR        : None
-  Combined   :  اعمل ايه? بتاعتي موجودة يبقى هعود عن طلع لي ايه? طلع لي
+  Combined   :  So how many operations did I actually do?
+
+[00:10:16]
+  Transcript :  So if you were to count it, it would actually just be log base two of n, where n is 13.
+  OCR        : None
+  Combined   :  So if you were to count it, it would actually just be log base two of n, where n is 13.
+
+[00:10:20]
+  Transcript :  So like if we actually just count it, I don't feel like counting how many I did.
+  OCR        : None
+  Combined   :  So like if we actually just count it, I don't feel like counting how many I did.
+
+[00:10:24]
+  Transcript :  But yeah, basically your answer would just be six, five, six, one times 83 times three.
+  OCR        : None
+  Combined   :  But yeah, basically your answer would just be six, five, six, one times 83 times three.
+
+[00:10:28]
+  Transcript :  and that's your final operations, right?
+  OCR        : None
+  Combined   :  and that's your final operations, right?
 
 [00:10:32]
-  Transcript :  بتاعكو اللي هي ايه? اللي هي او بوينت فور. يبقى متأكدا ان
+  Transcript :  This would be your final answer.
   OCR        : None
-  Combined   :  بتاعكو اللي هي ايه? اللي هي او بوينت فور. يبقى متأكدا ان
+  Combined   :  This would be your final answer.
 
-[00:10:38]
-  Transcript :  الاو بوينت فور دي مضبوطة. ولا هي او بوينت سري او فايف ولا ولا
+[00:10:33]
+  Transcript :  I don't feel like putting in my calculator
   OCR        : None
-  Combined   :  الاو بوينت فور دي مضبوطة. ولا هي او بوينت سري او فايف ولا ولا
+  Combined   :  I don't feel like putting in my calculator
 
-[00:10:45]
-  Transcript : 
+[00:10:35]
+  Transcript :  to do this for you, so yeah.
   OCR        : None
-  Combined   : 
+  Combined   :  to do this for you, so yeah.
+
+[00:10:36]
+  Transcript :  So this is basically the gist
+  OCR        : None
+  Combined   :  So this is basically the gist
+
+[00:10:37]
+  Transcript :  of how you would do this by hand
+  OCR        : None
+  Combined   :  of how you would do this by hand
+
+[00:10:39]
+  Transcript :  and how you do this by the computer.
+  OCR        : None
+  Combined   :  and how you do this by the computer.
+
+[00:10:41]
+  Transcript :  So I'm going to explain how to do it by code now, okay?
+  OCR        : None
+  Combined   :  So I'm going to explain how to do it by code now, okay?
+
+[00:10:44]
+  Transcript :  Okay, guys, so how would you do this in code, okay?
+  OCR        : 2000 | STPHOONS | Dong long hirpowLong Long o, long longb | Jong long htnpowLong long o, Long longb, long long n | 1ang Jang res - :: | whlle o | 1081 | re - re s | 391; | reture rasg | p1yse har to st
+  Combined   :  Okay, guys, so how would you do this in code, okay? 2000 | STPHOONS | Dong long hirpowLong Long o, long longb | Jong long htnpowLong long o, Long longb, long long n | 1ang Jang res - :: | whlle o | 1081 | re - re s | 391; | reture rasg | p1yse har to st
+
+[00:10:48]
+  Transcript :  So let's say I want to get A to the B power, right?
+  OCR        : None
+  Combined   :  So let's say I want to get A to the B power, right?
+
+[00:10:52]
+  Transcript :  Take a power of A and raise it to B.
+  OCR        : None
+  Combined   :  Take a power of A and raise it to B.
+
+[00:10:54]
+  Transcript : None
+  OCR        : MOMCT | Lacal alistisue Cob | STPOOM | prlames - vectorcbooln  1, true; | for 11 1 - 2; s  i  ng 1 | f primes1 1 | for 1i j - i  1; 5   1 - 1 | primes1- false; | Dang Dang hinpowfLong long Lang long | Tye lere to sesnch
+  Combined   : MOMCT | Lacal alistisue Cob | STPOOM | prlames - vectorcbooln  1, true; | for 11 1 - 2; s  i  ng 1 | f primes1 1 | for 1i j - i  1; 5   1 - 1 | primes1- false; | Dang Dang hinpowfLong long Lang long | Tye lere to sesnch
+
+[00:10:54]
+  Transcript :  Okay so how would you do this in code First of all I need a result There going to be one because this is going to be the answer that I going to return okay I need a result with my answer of A
+  OCR        : None
+  Combined   :  Okay so how would you do this in code First of all I need a result There going to be one because this is going to be the answer that I going to return okay I need a result with my answer of A
+
+[00:11:05]
+  Transcript :  raised to B power.
+  OCR        : None
+  Combined   :  raised to B power.
 
 [00:11:06]
-  Transcript :  تمام.
+  Transcript :  Okay, so what am I going to do?
   OCR        : None
-  Combined   :  تمام.
-
-[00:11:07]
-  Transcript :  تمام.
-  OCR        : Step 2: Rule Evaluation | The second step is to take the fuzzified inputs, Jeau  0.5, Puc-sz | 0.2, μjy-81  0.1 and 4γ-t2  0.7, and apply them to the antecedents of the | fuzzy rules. | If a given fuzzy rule has multiple antecedents, the fuzzy operator AND or | OR is used to obtain a single number that represents the result of the | antecedent evaluation. | This number the truth value is then applied to the consequent | membership function.
-  Combined   :  تمام. Step 2: Rule Evaluation | The second step is to take the fuzzified inputs, Jeau  0.5, Puc-sz | 0.2, μjy-81  0.1 and 4γ-t2  0.7, and apply them to the antecedents of the | fuzzy rules. | If a given fuzzy rule has multiple antecedents, the fuzzy operator AND or | OR is used to obtain a single number that represents the result of the | antecedent evaluation. | This number the truth value is then applied to the consequent | membership function.
+  Combined   :  Okay, so what am I going to do?
 
 [00:11:08]
-  Transcript :  انا انا ما فيمتش خطة دي. انا فيمتش خطة. انا فيمتش خطة.
+  Transcript :  First, remember we have our exponent B, right?
   OCR        : None
-  Combined   :  انا انا ما فيمتش خطة دي. انا فيمتش خطة. انا فيمتش خطة.
+  Combined   :  First, remember we have our exponent B, right?
 
-[00:11:13]
-  Transcript :  بعد اللاين بعد ما احنا جبنا السلوب وجبنا البي. اه عملنا ايه ما
+[00:11:12]
+  Transcript :  So we have our exponent B
   OCR        : None
-  Combined   :  بعد اللاين بعد ما احنا جبنا السلوب وجبنا البي. اه عملنا ايه ما
+  Combined   :  So we have our exponent B
 
-[00:11:18]
-  Transcript :  مش عارف. جبني السلوب وجبنا البي بقى خلاص بقى معي بتاعت اللاين.
+[00:11:14]
+  Transcript :  and we have to basically do this
   OCR        : None
-  Combined   :  مش عارف. جبني السلوب وجبنا البي بقى خلاص بقى معي بتاعت اللاين.
+  Combined   :  and we have to basically do this
 
-[00:11:23]
-  Transcript :  فقدرت انا اجيب الواي اللي انا عايزة. انا جبت بتاعت الواين.
+[00:11:16]
+  Transcript :  certain number of times of calculations, right?
   OCR        : None
-  Combined   :  فقدرت انا اجيب الواي اللي انا عايزة. انا جبت بتاعت الواين.
+  Combined   :  certain number of times of calculations, right?
 
-[00:11:31]
-  Transcript :  دلوقتي لو عوضت باي اكس اي اكس معي. يعني اي ايموت. عايزة اجيبه
+[00:11:20]
+  Transcript :  Every time we're actually going to divide by two.
   OCR        : None
-  Combined   :  دلوقتي لو عوضت باي اكس اي اكس معي. يعني اي ايموت. عايزة اجيبه
+  Combined   :  Every time we're actually going to divide by two.
+
+[00:11:22]
+  Transcript :  Remember our exponent B?
+  OCR        : None
+  Combined   :  Remember our exponent B?
+
+[00:11:26]
+  Transcript :  because that's how you convert into binary, right?
+  OCR        : It local alinaigus Colsmppet T | EMPIONG | prlaes - vectorebaoln  1, true; | r-20 1 -223  1  ng5 | for 11 j -s  1i j  s; j - s | primes1 - falae; | 3² 9 | 3 2 2 | Jnng Jong res  11 | 6561813 | lanion 1641 i deurk | type hare to sach
+  Combined   :  because that's how you convert into binary, right? It local alinaigus Colsmppet T | EMPIONG | prlaes - vectorebaoln  1, true; | r-20 1 -223  1  ng5 | for 11 j -s  1i j  s; j - s | primes1 - falae; | 3² 9 | 3 2 2 | Jnng Jong res  11 | 6561813 | lanion 1641 i deurk | type hare to sach
+
+[00:11:28]
+  Transcript :  The binary 1101, okay?
+  OCR        : None
+  Combined   :  The binary 1101, okay?
+
+[00:11:30]
+  Transcript :  So what I have to check first is while b is greater than zero.
+  OCR        : None
+  Combined   :  So what I have to check first is while b is greater than zero.
+
+[00:11:34]
+  Transcript :  And the reason why I'm checking this first
+  OCR        : None
+  Combined   :  And the reason why I'm checking this first
+
+[00:11:36]
+  Transcript :  is because we're reducing our exponent every single time.
+  OCR        : PRORCT | ILasal elininaa Dodsu | EIMPIONS | WneOW | prlames - vectorchool  1, true | for 11 1 - 2;   1  ng 1 | prams1 1 | for 11 j - ;  1i j  si j  1 | primex1 - false; | Dang Dang hinpowfLong long lang long | Jong Jong res  1: | type hare to sea | arwou
+  Combined   :  is because we're reducing our exponent every single time. PRORCT | ILasal elininaa Dodsu | EIMPIONS | WneOW | prlames - vectorchool  1, true | for 11 1 - 2;   1  ng 1 | prams1 1 | for 11 j - ;  1i j  si j  1 | primex1 - false; | Dang Dang hinpowfLong long lang long | Jong Jong res  1: | type hare to sea | arwou
+
+[00:11:40]
+  Transcript :  So that's why we have to check while b is greater than zero.
+  OCR        : None
+  Combined   :  So that's why we have to check while b is greater than zero.
+
+[00:11:42]
+  Transcript :  Okay, each time this happens,
+  OCR        : None
+  Combined   :  Okay, each time this happens,
+
+[00:11:43]
+  Transcript :  I'm going to shift right by one,
+  OCR        : None
+  Combined   :  I'm going to shift right by one,
+
+[00:11:46]
+  Transcript :  which is just dividing it by two.
+  OCR        : None
+  Combined   :  which is just dividing it by two.
 
 [00:11:48]
-  Transcript :  بتاعتم يعني اجيبه الواي. تمام. ماشي. احبار? اتبخط الواي. تمام يا
-  OCR        : The second step is to take the fuzzified inputs, Jeau  0.5, Puc.sz | 0.2, μα 0.1 and γ 0.7, and apply them to the antecedents of the
-  Combined   :  بتاعتم يعني اجيبه الواي. تمام. ماشي. احبار? اتبخط الواي. تمام يا The second step is to take the fuzzified inputs, Jeau  0.5, Puc.sz | 0.2, μα 0.1 and γ 0.7, and apply them to the antecedents of the
-
-[00:11:49]
-  Transcript :  دكتور. طميم. بعد كده الاستابع البعضاء اللي هي زي ما اتفقنا
+  Transcript :  So we could just do while shift right equals to one.
   OCR        : None
-  Combined   :  دكتور. طميم. بعد كده الاستابع البعضاء اللي هي زي ما اتفقنا
+  Combined   :  So we could just do while shift right equals to one.
 
-[00:11:55]
-  Transcript :  بيبع عندي وعلى حسب هي اروا ولا انت بجيبي
+[00:11:52]
+  Transcript :  I think that's the right.
   OCR        : None
-  Combined   :  بيبع عندي وعلى حسب هي اروا ولا انت بجيبي
+  Combined   :  I think that's the right.
+
+[00:11:53]
+  Transcript :  That's the right way to do it.
+  OCR        : None
+  Combined   :  That's the right way to do it.
+
+[00:11:57]
+  Transcript :  Okay. This is just dividing
+  OCR        : None
+  Combined   :  Okay. This is just dividing
 
 [00:12:00]
-  Transcript :  او
-  OCR        : RECALL: | To evaluate the disjunction of the rule antecedents, we use the OR fuzzy | operation union: | operation.Typically, fuzzy expert systems make use of the classical fuzzy | µa, ex  max ueα, μyx | Similarly, in order to evaluate the conjunction of the rule antecedents, we | apply the AND fuzry operation intersection: | β2-gx  min αGx, AsI
-  Combined   :  او RECALL: | To evaluate the disjunction of the rule antecedents, we use the OR fuzzy | operation union: | operation.Typically, fuzzy expert systems make use of the classical fuzzy | µa, ex  max ueα, μyx | Similarly, in order to evaluate the conjunction of the rule antecedents, we | apply the AND fuzry operation intersection: | β2-gx  min αGx, AsI
-
-[00:12:08]
-  Transcript :  تمام? طيب احنا امتى مصدد من الاور رادكت? اول هو بيديك
+  Transcript :  Riding by two, pretty much.
   OCR        : None
-  Combined   :  تمام? طيب احنا امتى مصدد من الاور رادكت? اول هو بيديك
+  Combined   :  Riding by two, pretty much.
+
+[00:12:01]
+  Transcript :  Okay.
+  OCR        : None
+  Combined   :  Okay.
+
+[00:12:02]
+  Transcript :  So while this is occurring, what I'm going to do is I need to check if my current power,
+  OCR        : None
+  Combined   :  So while this is occurring, what I'm going to do is I need to check if my current power,
+
+[00:12:09]
+  Transcript :  a B, right, is if it's odd or even.
+  OCR        : None
+  Combined   :  a B, right, is if it's odd or even.
+
+[00:12:13]
+  Transcript :  Okay.
+  OCR        : None
+  Combined   :  Okay.
 
 [00:12:14]
-  Transcript :  الرول زي ما هي. يعني بص هنا الرول. اللي هي بزيرو. او الواي
+  Transcript :  So if it's odd, so I need to check if it's odd.
   OCR        : None
-  Combined   :  الرول زي ما هي. يعني بص هنا الرول. اللي هي بزيرو. او الواي
+  Combined   :  So if it's odd, so I need to check if it's odd.
 
-[00:12:21]
-  Transcript :  از بي ون. اللي هي بون. هو مزيني او وعندي الرقمين زيرو او ايه?
+[00:12:17]
+  Transcript :  If it's odd, then I'm just going to multiply my result by A once, right?
   OCR        : None
-  Combined   :  از بي ون. اللي هي بون. هو مزيني او وعندي الرقمين زيرو او ايه?
+  Combined   :  If it's odd, then I'm just going to multiply my result by A once, right?
 
-[00:12:26]
-  Transcript :  في الاول باخد الماكسيمام يبقى هيتلع علي ايه? او بوينت عين لمين?
-  OCR        : None
-  Combined   :  في الاول باخد الماكسيمام يبقى هيتلع علي ايه? او بوينت عين لمين?
+[00:12:24]
+  Transcript :  Because the reason why I need to do that is because if it's odd, then I just multiply
+  OCR        : 3110 | 3 a i e 2 | 0, 2 | Type hese to seamh
+  Combined   :  Because the reason why I need to do that is because if it's odd, then I just multiply 3110 | 3 a i e 2 | 0, 2 | Type hese to seamh
 
-[00:12:33]
-  Transcript :  اللي بعد الزن في الرول دي. ان الز ده تلفيس تي وان. خلاص? الرول
+[00:12:27]
+  Transcript :  it by itself.
   OCR        : None
-  Combined   :  اللي بعد الزن في الرول دي. ان الز ده تلفيس تي وان. خلاص? الرول
+  Combined   :  it by itself.
+
+[00:12:28]
+  Transcript :  if it's even I'll just square it
+  OCR        : None
+  Combined   :  if it's even I'll just square it
+
+[00:12:31]
+  Transcript :  because if it's even
+  OCR        : None
+  Combined   :  because if it's even
+
+[00:12:32]
+  Transcript :  I would take my previous result and I would just square it
+  OCR        : None
+  Combined   :  I would take my previous result and I would just square it
+
+[00:12:35]
+  Transcript :  if it's odd
+  OCR        : None
+  Combined   :  if it's odd
+
+[00:12:36]
+  Transcript :  like this 3 to the first equal 3
+  OCR        : None
+  Combined   :  like this 3 to the first equal 3
+
+[00:12:38]
+  Transcript :  I just multiply it by A
+  OCR        : None
+  Combined   :  I just multiply it by A
 
 [00:12:40]
-  Transcript :  اللي بعدها كتبتقولي الاكس اي اي تو? ودي كتطلع علي ب او
-  OCR        : None
-  Combined   :  اللي بعدها كتبتقولي الاكس اي اي تو? ودي كتطلع علي ب او
+  Transcript :  so to check if it's odd
+  OCR        : HEF PORCT | Cavy | It local alintisue Colwppe | smpoow wnnow | prlmes - vectorchooln  1, trae | for 11 1 - 2; 1  i  ng 1 | if primes1 | for 11 j - ;  1; j  s1 j - 1 | primes1 - false; | Dang Dong binpowLong Long Long long2 | b x 1; | p tye hevr to serath
+  Combined   :  so to check if it's odd HEF PORCT | Cavy | It local alintisue Colwppe | smpoow wnnow | prlmes - vectorchooln  1, trae | for 11 1 - 2; 1  i  ng 1 | if primes1 | for 11 j - ;  1; j  s1 j - 1 | primes1 - false; | Dang Dong binpowLong Long Long long2 | b x 1; | p tye hevr to serath
 
-[00:12:45]
-  Transcript :  ودي كتطلع علي ب او بوينت سيفن. في الان باخد الاي الماني من
+[00:12:43]
+  Transcript :  a fast way to do it is just to take
   OCR        : None
-  Combined   :  ودي كتطلع علي ب او بوينت سيفن. في الان باخد الاي الماني من
+  Combined   :  a fast way to do it is just to take
+
+[00:12:44]
+  Transcript :  B and by 1
+  OCR        : None
+  Combined   :  B and by 1
+
+[00:12:47]
+  Transcript :  so if this is odd
+  OCR        : None
+  Combined   :  so if this is odd
+
+[00:12:50]
+  Transcript :  I'm going to take my result
+  OCR        : None
+  Combined   :  I'm going to take my result
 
 [00:12:51]
-  Transcript : 
+  Transcript :  is going to equal to result
   OCR        : None
-  Combined   : 
+  Combined   :  is going to equal to result
+
+[00:12:52]
+  Transcript :  multiply by A
+  OCR        : None
+  Combined   :  multiply by A
+
+[00:13:00]
+  Transcript :  because that just taking and the result in multiplying it once by a a Okay Otherwise I going to square it So to square it that going to equal to So to square it a is just going to equal to a times a
+  OCR        : EIMPOONS | for 1 i - 2; i    n | if prsmes1 | for 1i j  i  i; j  n; j  i | primes1 - dalses | Jang Dong binpowLong long o, long longb | Jong lang res - 1i | wille o | res  res  a; | Type here to seac
+  Combined   :  because that just taking and the result in multiplying it once by a a Okay Otherwise I going to square it So to square it that going to equal to So to square it a is just going to equal to a times a EIMPOONS | for 1 i - 2; i    n | if prsmes1 | for 1i j  i  i; j  n; j  i | primes1 - dalses | Jang Dong binpowLong long o, long longb | Jong lang res - 1i | wille o | res  res  a; | Type here to seac
+
+[00:13:10]
+  Transcript :  because that just taking and the result in multiplying it once by a a Okay Otherwise I going to square it So to square it that going to equal to So to square it a is just going to equal to a times a
+  OCR        : MOSCT | TTPOONS | is primes1 | for 1i j -   1; 5  n; 1 - 1 | primesj - falise; | Jang Dang binpowLong long , Long long | Jong lang res  11 | res - res | b 2 1j | Type leve to seanch
+  Combined   :  because that just taking and the result in multiplying it once by a a Okay Otherwise I going to square it So to square it that going to equal to So to square it a is just going to equal to a times a MOSCT | TTPOONS | is primes1 | for 1i j -   1; 5  n; 1 - 1 | primesj - falise; | Jang Dang binpowLong long , Long long | Jong lang res  11 | res - res | b 2 1j | Type leve to seanch
 
 [00:13:11]
-  Transcript :  زي ما هي للايه للكون سيكونت. هتبقى الزد ايه سي سري. خلاص?
+  Transcript :  So yeah, that's basically the gist of this. And in the end, we just return result.
   OCR        : None
-  Combined   :  زي ما هي للايه للكون سيكونت. هتبقى الزد ايه سي سري. خلاص?
+  Combined   :  So yeah, that's basically the gist of this. And in the end, we just return result.
 
-[00:13:17]
-  Transcript :  انا كده طلعت فانيو للاوكوت اللي هو الزد. في ايه الممبرشيب
+[00:13:20]
+  Transcript : None
+  OCR        : PORCT | TOOMS | Jang langBinpowlong long , lang longs | Type lare to seaeih | aYwou
+  Combined   : PORCT | TOOMS | Jang langBinpowlong long , lang longs | Type lare to seaeih | aYwou
+
+[00:13:21]
+  Transcript :  This is basically the code, the iterative way to solve this problem.
   OCR        : None
-  Combined   :  انا كده طلعت فانيو للاوكوت اللي هو الزد. في ايه الممبرشيب
+  Combined   :  This is basically the code, the iterative way to solve this problem.
 
-[00:13:22]
-  Transcript :  بتاعته. في السي وان وفي السي تو وفي السي سي. فانا نقص ان انا
+[00:13:30]
+  Transcript :  Because if you do this iteratively, this is going to basically, what this is going to do,
+  OCR        : STHOOM | lang lang hinpowlong long , lang longs | Jong lang des - 11 | whlle | 1041 | reture res | Tembal Fanmd | Type hese to sesants
+  Combined   :  Because if you do this iteratively, this is going to basically, what this is going to do, STHOOM | lang lang hinpowlong long , lang longs | Jong lang des - 11 | whlle | 1041 | reture res | Tembal Fanmd | Type hese to sesants
+
+[00:13:30]
+  Transcript :  it's the fastest way to do this log of n time.
   OCR        : None
-  Combined   :  بتاعته. في السي وان وفي السي تو وفي السي سي. فانا نقص ان انا
+  Combined   :  it's the fastest way to do this log of n time.
 
-[00:13:28]
-  Transcript :  عمل ايه? اعمل لهم مع بعض انها الاجريجيشن دي. واطلع ايه?
+[00:13:33]
+  Transcript :  Log base 2 of n, because that's the number of times you do it.
   OCR        : None
-  Combined   :  عمل ايه? اعمل لهم مع بعض انها الاجريجيشن دي. واطلع ايه?
+  Combined   :  Log base 2 of n, because that's the number of times you do it.
 
-[00:13:34]
-  Transcript :  من الديفوزي فيكيش.
-  OCR        : The most common method of | correlating the rule consequent | with the truth value of the rule | antecedent is to cut the | Degee d | Mewbershap | consequent membership | function at the level of the | antecedent truth. This method | is called clipping alpha-cut. | However, clipping is still often | preferred because it involves | less complex and faster | clipping | mathematics, and generates an | aggregated output surface that | is easier to defuzzify.
-  Combined   :  من الديفوزي فيكيش. The most common method of | correlating the rule consequent | with the truth value of the rule | antecedent is to cut the | Degee d | Mewbershap | consequent membership | function at the level of the | antecedent truth. This method | is called clipping alpha-cut. | However, clipping is still often | preferred because it involves | less complex and faster | clipping | mathematics, and generates an | aggregated output surface that | is easier to defuzzify.
+[00:13:36]
+  Transcript :  Okay, yeah.
+  OCR        : None
+  Combined   :  Okay, yeah.
 
 [00:13:37]
-  Transcript :  طب مالش يا دكتور. ممكن? سؤال? نه. طب. هو احنا الحتة اللي
+  Transcript :  So yeah, that's pretty much how bin power works.
   OCR        : None
-  Combined   :  طب مالش يا دكتور. ممكن? سؤال? نه. طب. هو احنا الحتة اللي
+  Combined   :  So yeah, that's pretty much how bin power works.
 
-[00:13:44]
-  Transcript :  فاتت دايت. اللي هو سنحطي اللي هي في سي تو. اه.
-  OCR        : Step 3: Aggregation of the rule outputs | Aggregation is the process of unification of the outputs of all rules. | We take the membership functions of all rule consequents previously | clipped and combine them into a single fuzzy set. | The inout of the aggresation process is the list of clipped conseguent | variable. | membership functions, and the output is one fuzzy set for each output | is C1 0.1 | : is C2 0.2 | is C3 0.5
-  Combined   :  فاتت دايت. اللي هو سنحطي اللي هي في سي تو. اه. Step 3: Aggregation of the rule outputs | Aggregation is the process of unification of the outputs of all rules. | We take the membership functions of all rule consequents previously | clipped and combine them into a single fuzzy set. | The inout of the aggresation process is the list of clipped conseguent | variable. | membership functions, and the output is one fuzzy set for each output | is C1 0.1 | : is C2 0.2 | is C3 0.5
-
-[00:13:49]
-  Transcript :  استيبتو كانت شغالها على الآن
+[00:13:41]
+  Transcript :  Now, let's say I want to take the previous answer, a raised to b power,
   OCR        : None
-  Combined   :  استيبتو كانت شغالها على الآن
+  Combined   :  Now, let's say I want to take the previous answer, a raised to b power,
 
-[00:13:51]
-  Transcript :  استيبتو يا دكتور استيبتو
+[00:13:45]
+  Transcript :  but I want to mod by a large number of n.
   OCR        : None
-  Combined   :  استيبتو يا دكتور استيبتو
+  Combined   :  but I want to mod by a large number of n.
 
-[00:13:53]
-  Transcript :  ما عليش ممكن استضادتها عشان بس
+[00:13:48]
+  Transcript :  Large by m.
   OCR        : None
-  Combined   :  ما عليش ممكن استضادتها عشان بس
+  Combined   :  Large by m.
 
-[00:13:55]
-  Transcript :  زي؟
-  OCR        : Degyee of | Memberslap
-  Combined   :  زي؟ Degyee of | Memberslap
+[00:13:50]
+  Transcript :  Modded by m.
+  OCR        : None
+  Combined   :  Modded by m.
+
+[00:13:57]
+  Transcript :  okay so if you want to do this mod by m i have the code down here so this is to raise a to the
+  OCR        : MORCT | TPOON | DongalilingublindowLong long a, Long long , Jong Jong | mg Fog bipow Long | ase aong res  1: | rture rog | b  1; | reture rns | baol allsortec | boolfatifortdy :1  arr.sinn- 1;1 | 1f ksarifatua,k1 - 1.f1rst | Type lere to seancs
+  Combined   :  okay so if you want to do this mod by m i have the code down here so this is to raise a to the MORCT | TPOON | DongalilingublindowLong long a, Long long , Jong Jong | mg Fog bipow Long | ase aong res  1: | rture rog | b  1; | reture rns | baol allsortec | boolfatifortdy :1  arr.sinn- 1;1 | 1f ksarifatua,k1 - 1.f1rst | Type lere to seancs
 
 [00:14:00]
-  Transcript :  ايوه لسيبتم دي هي الا اي اكس ايز اي تو دي اللي احنا جبناها
+  Transcript :  b power and I'm taking this the answer mod by m sometimes you have to mod by a large number to
   OCR        : None
-  Combined   :  ايوه لسيبتم دي هي الا اي اكس ايز اي تو دي اللي احنا جبناها
+  Combined   :  b power and I'm taking this the answer mod by m sometimes you have to mod by a large number to
 
-[00:14:08]
-  Transcript :  الزيرو بونت اتنين دي اللي احنا جبناها من المعادلة الخط بتاعت الفوزي
-  OCR        : None
-  Combined   :  الزيرو بونت اتنين دي اللي احنا جبناها من المعادلة الخط بتاعت الفوزي
+[00:14:07]
+  Transcript :  prevent overflow and that's what you would do it's basically the same thing as the previous code the
+  OCR        : Enmutants | wnnow | Jang Dang hlmpowLong Long o, Long long h, long Fong  t | 1 0 1 | res - res  a x g | v 3 1; | return reng | bool a11sertud | for int i  nj i  arr,sized - 1j 1 | if ks.firet  a1  1.first | retar falnej | P tyse ler to seh
+  Combined   :  prevent overflow and that's what you would do it's basically the same thing as the previous code the Enmutants | wnnow | Jang Dang hlmpowLong Long o, Long long h, long Fong  t | 1 0 1 | res - res  a x g | v 3 1; | return reng | bool a11sertud | for int i  nj i  arr,sized - 1j 1 | if ks.firet  a1  1.first | retar falnej | P tyse ler to seh
 
 [00:14:12]
-  Transcript :  اللي فات? جبنا معادلة الخط وعوضنا فيها بال اكس. الفاليو
+  Transcript :  only difference is that you are going to mod by m each time so like in this scenario when you
   OCR        : None
-  Combined   :  اللي فات? جبنا معادلة الخط وعوضنا فيها بال اكس. الفاليو
+  Combined   :  only difference is that you are going to mod by m each time so like in this scenario when you
 
-[00:14:16]
-  Transcript :  اللي بيجي هاني في الاكس. طلعتني الاو بس الخط بتاع الاي تو? ده
+[00:14:17]
+  Transcript :  multiply by a itself you just mod by m okay and in this scenario when you square a times a you mod
+  OCR        : Jang Dong hinpowLong Jong s, Dang Dang D, Jong Jong m1 | Inng Jing res  11 | wlle | res  res  X g | return resg | bgolallserteic | far int i  aj 1  arr,sizef - 1j 1n | if xs.firet  a1  1.f1rst | retarn falsej | Optimine your PC | b best. | P type here to sesanh
+  Combined   :  multiply by a itself you just mod by m okay and in this scenario when you square a times a you mod Jang Dong hinpowLong Jong s, Dang Dang D, Jong Jong m1 | Inng Jing res  11 | wlle | res  res  X g | return resg | bgolallserteic | far int i  aj 1  arr,sizef - 1j 1n | if xs.firet  a1  1.f1rst | retarn falsej | Optimine your PC | b best. | P type here to sesanh
+
+[00:14:27]
+  Transcript :  by m. And yeah, in the beginning, you should also mod by m because that would reduce your a down.
+  OCR        : Jong long hinpowlong long ,lang Dang,Jong Jong n1 | whlle 0 | Tang Jong res  1 | 1f   1 | -...K; | res - res a x g | b 1; | bool a1lsertud | for int i  nj i  arr,sized - 1j 1n | if ks.first  k1  1.first | retarn falseg | Type here to serancths
+  Combined   :  by m. And yeah, in the beginning, you should also mod by m because that would reduce your a down. Jong long hinpowlong long ,lang Dang,Jong Jong n1 | whlle 0 | Tang Jong res  1 | 1f   1 | -...K; | res - res a x g | b 1; | bool a1lsertud | for int i  nj i  arr,sized - 1j 1n | if ks.first  k1  1.first | retarn falseg | Type here to serancths
+
+[00:14:30]
+  Transcript :  And the reason why this works is because if you take two numbers, right, if you do a mod by m,
   OCR        : None
-  Combined   :  اللي بيجي هاني في الاكس. طلعتني الاو بس الخط بتاع الاي تو? ده
+  Combined   :  And the reason why this works is because if you take two numbers, right, if you do a mod by m,
 
-[00:14:23]
-  Transcript :  الخط بتاع اي اه بقول لفوزي سات هيبقى ليها الخط بتاعها. يا وفي
+[00:14:37]
+  Transcript :  multiply a mod by m, those two numbers are going to be modded together. It's going to be the same
   OCR        : None
-  Combined   :  الخط بتاع اي اه بقول لفوزي سات هيبقى ليها الخط بتاعها. يا وفي
+  Combined   :  multiply a mod by m, those two numbers are going to be modded together. It's going to be the same
 
-[00:14:28]
-  Transcript :  فازي ست هيبليها خطين كمان. تمام? اشوف هيبليها خطين. لو في
+[00:14:44]
+  Transcript :  number as a times a, a squared mod by m, right? If you mod them individually, it's going to equal
   OCR        : None
-  Combined   :  فازي ست هيبليها خطين كمان. تمام? اشوف هيبليها خطين. لو في
+  Combined   :  number as a times a, a squared mod by m, right? If you mod them individually, it's going to equal
 
-[00:14:41]
-  Transcript :  كده همزلت. اشوف هيبليهم كلهم. يعني مسلا هيكون عندي فازي ست في
-  OCR        : µa,ex  max αaα, μyx | Hz-elx  min ααx, jyx
-  Combined   :  كده همزلت. اشوف هيبليهم كلهم. يعني مسلا هيكون عندي فازي ست في µa,ex  max αaα, μyx | Hz-elx  min ααx, jyx
-
-[00:14:43]
-  Transcript :  النص كده. بصوا شايفين دي. ليها خط اهو وخط اهو. صح? تمام? فدي
+[00:14:50]
+  Transcript :  to the same number.
   OCR        : None
-  Combined   :  النص كده. بصوا شايفين دي. ليها خط اهو وخط اهو. صح? تمام? فدي
+  Combined   :  to the same number.
 
-[00:15:02]
-  Transcript : 
-  OCR        : The second step is to take the fuzzified inputs, Jeau,  0.5, Pqa2 | 0.2, μyαt | 0.1 and jhy-d2 | fuzzy rules | 0.7, and apply them to the antecedents of the | This number Ithe truth valuel is then applied to the conseguent
-  Combined   :  The second step is to take the fuzzified inputs, Jeau,  0.5, Pqa2 | 0.2, μyαt | 0.1 and jhy-d2 | fuzzy rules | 0.7, and apply them to the antecedents of the | This number Ithe truth valuel is then applied to the conseguent
-
-[00:15:12]
-  Transcript :  الايه. يعني مش محتاجة ان احنا نعملها لواحدة عشان كده انا
-  OCR        : The inout of the aegresation process is the list of clipped conseguent | is 2 0.2 | : is C3 0.5
-  Combined   :  الايه. يعني مش محتاجة ان احنا نعملها لواحدة عشان كده انا The inout of the aegresation process is the list of clipped conseguent | is 2 0.2 | : is C3 0.5
-
-[00:15:17]
-  Transcript :  اختصرتها في الايه? في المحاضرة اللي فاتت. اللي هو بقول انا
+[00:14:51]
+  Transcript :  So that's the reason why binpow
   OCR        : None
-  Combined   :  اختصرتها في الايه? في المحاضرة اللي فاتت. اللي هو بقول انا
+  Combined   :  So that's the reason why binpow
 
-[00:15:21]
-  Transcript :  الزد ده طلع اه بو بوينت وان في وطلع بو بوينت في في في
-  OCR        : None
-  Combined   :  الزد ده طلع اه بو بوينت وان في وطلع بو بوينت في في في
+[00:15:00]
+  Transcript :  for the raised to the b power mod by m works in this case So yeah I could also show you the recursive way to do it i don actually want to do that because uh it actually way slower but if you
+  OCR        : FTPHOOMS | ,  is | b  h; | reture resj | Jang Dong kinpowdlong long  long Dong T, Jong long | 1ang Jang res - ; | wlle o | 14081 | Type lave to seaecl
+  Combined   :  for the raised to the b power mod by m works in this case So yeah I could also show you the recursive way to do it i don actually want to do that because uh it actually way slower but if you FTPHOOMS | ,  is | b  h; | reture resj | Jang Dong kinpowdlong long  long Dong T, Jong long | 1ang Jang res - ; | wlle o | 14081 | Type lave to seaecl
 
-[00:15:31]
-  Transcript :  فجمعتهم كلهم في رسمة واحدة. وو بوينت وان وو بوينت وان رسمت
-  OCR        : None
-  Combined   :  فجمعتهم كلهم في رسمة واحدة. وو بوينت وان وو بوينت وان رسمت
+[00:15:10]
+  Transcript :  go here i could just show you right here so this is a recursive way to do it um what they're doing
+  OCR        : LF x  fand n oven | Implementation | Finl Ihe recursive apprsech. which is a drect tnersiddion of the recursive formula | Dang Dany kinpawilang Deng a, Lang Lang b | returs 3. | returs res  res K | nature res  2e | the camespioriding sot bit in as futhough the conpiesity of both aproacthes is candcal, this approaich wil bo lastor is pradica since wo | The secand aporoach accoenptines the sacee tesk without socunsics t cpmicutes al the eoerees in a looe ant anutclies bhe oaes aylt | kove Ro cvedunad of te ervrsive calsd | Jong Dong tinpewCong beng a, Lang Lang  4 | .... | P tyee lase to sesarih
+  Combined   :  go here i could just show you right here so this is a recursive way to do it um what they're doing LF x  fand n oven | Implementation | Finl Ihe recursive apprsech. which is a drect tnersiddion of the recursive formula | Dang Dany kinpawilang Deng a, Lang Lang b | returs 3. | returs res  res K | nature res  2e | the camespioriding sot bit in as futhough the conpiesity of both aproacthes is candcal, this approaich wil bo lastor is pradica since wo | The secand aporoach accoenptines the sacee tesk without socunsics t cpmicutes al the eoerees in a looe ant anutclies bhe oaes aylt | kove Ro cvedunad of te ervrsive calsd | Jong Dong tinpewCong beng a, Lang Lang  4 | .... | P tyee lase to sesarih
 
-[00:15:37]
-  Transcript :  الايه? رسمت التلاتة فاضي ست سبتو او في رسمة واحدة خلاص?
+[00:15:20]
+  Transcript :  is is that uh if they're dividing b by two every time like what we do but um what they're doing is
+  OCR        : tfstand ns ovem | α-e tfseandnodd | Finst the recursve aoertact. whict is a dinect tnansiatica ot the eecursive tormula | Dong Dnng hinpeulang lnng n, Lang Lang a 1 | rsture 1. | returs ren  2ren. | the comesponding sweit bit in as. AUlhough fhe complexdy ofl both approechen is idendical, this approwch wil be lanier in pracdice simoe we | Thy saesrrd sporoech agsomplywes Te jsamy fosk wilhowd sisymion. I comgden all Ew powers in e loop, eny mullgilens fhe omes wy | here the ovethoad ci the recunsive cals | Dany Dany hinpawdlany Dang n, Lang Lany h | Lany lamy res  1 | Type lere to sesarchy
+  Combined   :  is is that uh if they're dividing b by two every time like what we do but um what they're doing is tfstand ns ovem | α-e tfseandnodd | Finst the recursve aoertact. whict is a dinect tnansiatica ot the eecursive tormula | Dong Dnng hinpeulang lnng n, Lang Lang a 1 | rsture 1. | returs ren  2ren. | the comesponding sweit bit in as. AUlhough fhe complexdy ofl both approechen is idendical, this approwch wil be lanier in pracdice simoe we | Thy saesrrd sporoech agsomplywes Te jsamy fosk wilhowd sisymion. I comgden all Ew powers in e loop, eny mullgilens fhe omes wy | here the ovethoad ci the recunsive cals | Dany Dany hinpawdlany Dang n, Lang Lany h | Lany lamy res  1 | Type lere to sesarchy
+
+[00:15:23]
+  Transcript :  that you're going to recursively call the result dividing by two every time and then they return
   OCR        : None
-  Combined   :  الايه? رسمت التلاتة فاضي ست سبتو او في رسمة واحدة خلاص?
+  Combined   :  that you're going to recursively call the result dividing by two every time and then they return
+
+[00:15:30]
+  Transcript :  the answer multiply by itself they calculate the answer so here what they're doing is that
+  OCR        : if s  6 and n oven | Fist he recursive scprmecth, which as e cinect Inemiefios of The recumive Rormuie | 2omg 2ong Kungw2ong Dang a, Lang Lan a | Lang 3ong ree  bimpowis, i  3c | alss | caturs res res | cuturs e . | te conesosiding sol cal ans as AUllcugl- Bho carplsoniy of botl approacthes is icwnidical, this axpeoach wit be lantor is practicar sinco we | The secand approact accoinplishes the same task withcut secunsics. I canpufes al the powerx in a loop, and anuliples the cnes wit | hove Tho cnorlosd of the socursive calls | 3ong bong Kinpew.long beng a, Lang lang b | Lang Long res 3 | r  r  s | Type lere to sesawits
+  Combined   :  the answer multiply by itself they calculate the answer so here what they're doing is that if s  6 and n oven | Fist he recursive scprmecth, which as e cinect Inemiefios of The recumive Rormuie | 2omg 2ong Kungw2ong Dang a, Lang Lan a | Lang 3ong ree  bimpowis, i  3c | alss | caturs res res | cuturs e . | te conesosiding sol cal ans as AUllcugl- Bho carplsoniy of botl approacthes is icwnidical, this axpeoach wit be lantor is practicar sinco we | The secand approact accoinplishes the same task withcut secunsics. I canpufes al the powerx in a loop, and anuliples the cnes wit | hove Tho cnorlosd of the socursive calls | 3ong bong Kinpew.long beng a, Lang lang b | Lang Long res 3 | r  r  s | Type lere to sesawits
+
+[00:15:40]
+  Transcript :  if b is equal to zero they return one so that's kind of like what the same thing as the the regular
+  OCR        : ifs band ns ovem | Finst the recursive apprcach, which is a dinect tnansiadions of the xocunsive formula | Domy Dony hinpavdlany lang a, Lang Lang h | Lang 2am res  hpew, 5 J 21 | rofure1 | roture re  res a | The sayord sporowech scsomplsihwes The same bask wilhcal secursicn. I coriejydes al the yowers ins a loop, and mullijles The cmes wilty | Fhe comnespomding set bit in ins. Aulhough the compionifhy el both woprmacthens is iclendicsl. thin aeoeoswch wrill be lanloe in prsctice simce wre | hiove the cyorhoad of the secumnive calls | Damy Dany hunpmaiDany Deny a, Lany Lany h1 | Lang lam ree 1 | re  res  ; | Eype hare to sch
+  Combined   :  if b is equal to zero they return one so that's kind of like what the same thing as the the regular ifs band ns ovem | Finst the recursive apprcach, which is a dinect tnansiadions of the xocunsive formula | Domy Dony hinpavdlany lang a, Lang Lang h | Lang 2am res  hpew, 5 J 21 | rofure1 | roture re  res a | The sayord sporowech scsomplsihwes The same bask wilhcal secursicn. I coriejydes al the yowers ins a loop, and mullijles The cmes wilty | Fhe comnespomding set bit in ins. Aulhough the compionifhy el both woprmacthens is iclendicsl. thin aeoeoswch wrill be lanloe in prsctice simce wre | hiove the cyorhoad of the secumnive calls | Damy Dany hunpmaiDany Deny a, Lany Lany h1 | Lang lam ree 1 | re  res  ; | Eype hare to sch
+
+[00:15:41]
+  Transcript :  approach of doing it the iterative approach right because we're dividing by two every time and then
+  OCR        : None
+  Combined   :  approach of doing it the iterative approach right because we're dividing by two every time and then
 
 [00:15:50]
-  Transcript :  وظللت الايه? على حسب لكل فاضي ست. تمام كده? هعمل
-  OCR        : Step 4: Defuzzification | The last step in the fuzzy inference process is defuzzification. | Fugziness helps us to evaluate the rules, but the final output of a fuzzy | system has to be a crisp number | The input for the defuzzification process is the aggregate output fuzzy set | and the output is a single number.
-  Combined   :  وظللت الايه? على حسب لكل فاضي ست. تمام كده? هعمل Step 4: Defuzzification | The last step in the fuzzy inference process is defuzzification. | Fugziness helps us to evaluate the rules, but the final output of a fuzzy | system has to be a crisp number | The input for the defuzzification process is the aggregate output fuzzy set | and the output is a single number.
+  Transcript :  we we pretty much multiply by itself so this is kind of checking it out okay um then they take
+  OCR        : α4²- fx oudnodd | if s  0 and n oven | Firstl the reursive apprisarth wleict is a dnect tnereddion oif the aocursive tovmuse | Jong long KinpevClong leng s, Lang lang b | Lang lamg res  hinpmu,  31; | raturs | caturn re re  a | refurn res  res | The second sporoech accoeclinhes the same task withoad recumicn. I compufen al the zorern in a loop, and multclen the cmes at | hove tho ovodioad cit the secunsive cals | the comexponding set bit in as. Athough the conpieuity of both approacthes is icendical, thix appeoach wil be fawter in prsctica since we | Song Dnng hinpewClang lang n, Lang lang b | Lang lamy res  1 | while h - | Tye heve ko searlth
+  Combined   :  we we pretty much multiply by itself so this is kind of checking it out okay um then they take α4²- fx oudnodd | if s  0 and n oven | Firstl the reursive apprisarth wleict is a dnect tnereddion oif the aocursive tovmuse | Jong long KinpevClong leng s, Lang lang b | Lang lamg res  hinpmu,  31; | raturs | caturn re re  a | refurn res  res | The second sporoech accoeclinhes the same task withoad recumicn. I compufen al the zorern in a loop, and multclen the cmes at | hove tho ovodioad cit the secunsive cals | the comexponding set bit in as. Athough the conpieuity of both approacthes is icendical, thix appeoach wil be fawter in prsctica since we | Song Dnng hinpewClang lang n, Lang lang b | Lang lamy res  1 | while h - | Tye heve ko searlth
 
-[00:15:51]
-  Transcript :  دلوقتي. دي فوزيفيكيشن هعمله لكم هنا بطريقتين. انتم معيني?
+[00:15:54]
+  Transcript :  their result by recursively calling b over two that many number of times that's what the result is
   OCR        : None
-  Combined   :  دلوقتي. دي فوزيفيكيشن هعمله لكم هنا بطريقتين. انتم معيني?
+  Combined   :  their result by recursively calling b over two that many number of times that's what the result is
 
-[00:16:00]
-  Transcript :  ها? سمعيني? سمعين حضرتك يا بكتور. تمام? تمام? طيب. هعملها هنا
-  OCR        : Step 4: Defuzzification centroid | There are several defuzzification methods, but probably the most | popular one is the centroid technique. It finds the point where a | vertical line would slice the aggregate set into two equal masses. | Mathematically this centre of gravity CoG can be expressed as: | μxxdx | μxdx
-  Combined   :  ها? سمعيني? سمعين حضرتك يا بكتور. تمام? تمام? طيب. هعملها هنا Step 4: Defuzzification centroid | There are several defuzzification methods, but probably the most | popular one is the centroid technique. It finds the point where a | vertical line would slice the aggregate set into two equal masses. | Mathematically this centre of gravity CoG can be expressed as: | μxxdx | μxdx
+[00:16:03]
+  Transcript :  So here they're checking if mod by 2 is not equal to 0.
+  OCR        : if x  0 and n even | α4²-e tx eadnod | First the reursive acprsarth wlvict is a cnert tnerecdtions oif the aocursve lovmue | Dong Dong tinpewClong leng 8, lang lang b | 1ang lang res  himpmun, a  3: | raturs k: | retorn res T res | The second seoroach accompliohes the vene fask yithoat rocumicn. I congdos al the zorern in a loop, and multclen the cmes ayt | the comexponding set bit in as. Athough the conpliexity of botn apprcacthes is icentical, thix appeoach wril be faster in prsctica since we | hove the cvpdhoad of the socursive cails | Dong Gnng binpwCang Gong inu . Lang lang b | while h | Lang lamy res  1: | Tye have ko Mearlt
+  Combined   :  So here they're checking if mod by 2 is not equal to 0. if x  0 and n even | α4²-e tx eadnod | First the reursive acprsarth wlvict is a cnert tnerecdtions oif the aocursve lovmue | Dong Dong tinpewClong leng 8, lang lang b | 1ang lang res  himpmun, a  3: | raturs k: | retorn res T res | The second seoroach accompliohes the vene fask yithoat rocumicn. I congdos al the zorern in a loop, and multclen the cmes ayt | the comexponding set bit in as. Athough the conpliexity of botn apprcacthes is icentical, thix appeoach wril be faster in prsctica since we | hove the cvpdhoad of the socursive cails | Dong Gnng binpwCang Gong inu . Lang lang b | while h | Lang lamy res  1: | Tye have ko Mearlt
 
-[00:16:12]
-  Transcript :  بطريقتين. اول طريقة اللي هي الايه? السنترويد. دي بعملها ازاي?
-  OCR        : Deee of | Mvbershy | 67.4 | 0  10  20   0.1  30 - 40  50  60   0 2  70  80  90  100 1  0.5 | 0.1  0.1  0.1  0.2  0 .2  0.2  0.2  0.5  0.5  0.5 - 0.5 | 67.4
-  Combined   :  بطريقتين. اول طريقة اللي هي الايه? السنترويد. دي بعملها ازاي? Deee of | Mvbershy | 67.4 | 0  10  20   0.1  30 - 40  50  60   0 2  70  80  90  100 1  0.5 | 0.1  0.1  0.1  0.2  0 .2  0.2  0.2  0.5  0.5  0.5 - 0.5 | 67.4
+[00:16:05]
+  Transcript :  That's what this is doing.
+  OCR        : None
+  Combined   :  That's what this is doing.
+
+[00:16:07]
+  Transcript :  So this checks if it's odd.
+  OCR        : None
+  Combined   :  So this checks if it's odd.
+
+[00:16:08]
+  Transcript :  So if it's odd, we just multiply res times a by itself once.
+  OCR        : None
+  Combined   :  So if it's odd, we just multiply res times a by itself once.
+
+[00:16:14]
+  Transcript :  And we're not calculating.
+  OCR        : None
+  Combined   :  And we're not calculating.
 
 [00:16:16]
-  Transcript :  دي زي ما قلت لكم كده اللي هو التكامل بتاع الناس. بعمله
+  Transcript :  We just multiply a once.
   OCR        : None
-  Combined   :  دي زي ما قلت لكم كده اللي هو التكامل بتاع الناس. بعمله
+  Combined   :  We just multiply a once.
+
+[00:16:18]
+  Transcript :  Otherwise, we multiply res times res itself.
+  OCR        : iEs  0and as ovem | Fint the recunive acernach, nhich as a cinect tnanwiatios of the fecumive formuix | Damg lang hinpewlang lang n, Lang lang b | naturs ree  ree  a | returs res  res: | The soconed aponecas acccenplisitees Ihe sare lask wilicul socursice I corjualos al the piowers in a toop wnt anutiytes tho cwos wln | The comnesiposding set bi in as iulhcugh the compioniy oif boteh woprnarcthers is dlienidinsl, thes sppwnzich wrill he lanslor in prsctice simce ws | hore the overhoed of the rocursive cafls | 2ay Dany eunpevd2any Deny a, Lang Lang 0 1 | Lang Jang r9e 1 | . . .: | Eype lare to seawct
+  Combined   :  Otherwise, we multiply res times res itself. iEs  0and as ovem | Fint the recunive acernach, nhich as a cinect tnanwiatios of the fecumive formuix | Damg lang hinpewlang lang n, Lang lang b | naturs ree  ree  a | returs res  res: | The soconed aponecas acccenplisitees Ihe sare lask wilicul socursice I corjualos al the piowers in a toop wnt anutiytes tho cwos wln | The comnesiposding set bi in as iulhcugh the compioniy oif boteh woprnarcthers is dlienidinsl, thes sppwnzich wrill he lanslor in prsctice simce ws | hore the overhoed of the rocursive cafls | 2ay Dany eunpevd2any Deny a, Lang Lang 0 1 | Lang Jang r9e 1 | . . .: | Eype lare to seawct
 
 [00:16:21]
-  Transcript :  بالحسابات عن طريق ان انا. بشوف. هناك او بوينت وال. لان هي فاضي
+  Transcript :  So this is the recursive approach to do it.
   OCR        : None
-  Combined   :  بالحسابات عن طريق ان انا. بشوف. هناك او بوينت وال. لان هي فاضي
+  Combined   :  So this is the recursive approach to do it.
 
-[00:16:27]
-  Transcript :  سبت. تمام? فعند زيرو وعند تان وعند اللي هي الجزء ده كانت
-  OCR        : None
-  Combined   :  سبت. تمام? فعند زيرو وعند تان وعند اللي هي الجزء ده كانت
+[00:16:28]
+  Transcript :  so yeah that's pretty much the gist of um how to do binary exponentiation uh it's it's not too
+  OCR        : α²- tf x  aad n odd | 11 x  e and n ovem | Fist the racursive apprsacdh: whvich is a dinect linrsiations of the aocunsive formula | Song long Kinpewlong lieng n, Lang lang h | Lang lamy res  hsmpeuin, a  21: | returs 1: | cuturn re r. | retars res  re4 | the coenexponding set bit in as. Athough the compiewify ofl both approaches is icenticasl, thin appeoach wil be laetar in pesctice since we | The secondt seoroalch accomelinihes the same fssk wihoad rocumion. I compafos al the gowern in as looe, and multclen the omes wytht | thve the overboad of the secuansive cas | Dong Dong kinpuclang lnng n, Lang lang k | Lang Lamg ree - 31 | Tye heve to seseith
+  Combined   :  so yeah that's pretty much the gist of um how to do binary exponentiation uh it's it's not too α²- tf x  aad n odd | 11 x  e and n ovem | Fist the racursive apprsacdh: whvich is a dinect linrsiations of the aocunsive formula | Song long Kinpewlong lieng n, Lang lang h | Lang lamy res  hsmpeuin, a  21: | returs 1: | cuturn re r. | retars res  re4 | the coenexponding set bit in as. Athough the compiewify ofl both approaches is icenticasl, thin appeoach wil be laetar in pesctice since we | The secondt seoroalch accomelinihes the same fssk wihoad rocumion. I compafos al the gowern in as looe, and multclen the omes wytht | thve the overboad of the secuansive cas | Dong Dong kinpuclang lnng n, Lang lang k | Lang Lamg ree - 31 | Tye heve to seseith
+
+[00:16:38]
+  Transcript :  difficult i guess but it's not it's not too easy i guess but yeah rate com subscribe i'll check you
+  OCR        : Linr hin | iritmscwn, alpelnaironaryany.him | 3  2  2  81 | z  2²  so² 656a | So is get the final answer tor 3 we ony nend to mutipy tvoe of them xkpping 32 secause the conesponding bt in as ix not urt | y1 -6561 81 31084323 | The final complionly o bhs ziporihe is Clloga we have lo compude lage powioms of e, and then hawo to do of mosd liagns | epicysiors lo oir the frs ansmor boe Phor | Trhe toliwing recursivo apysoarih cxpyresses the sane doa | if s - 0 | α4²- tx σud nodd | Ls  6 and n ovea | Fist the recursive apersech, which is a dinect tnersiation of the rolisive formulat | Song long kinpewlong beng a, Lang lang b 4 | Lang lang res  hsmpewis, a  2: | returs k: | return res  res  a | P type lese to seseth
+  Combined   :  difficult i guess but it's not it's not too easy i guess but yeah rate com subscribe i'll check you Linr hin | iritmscwn, alpelnaironaryany.him | 3  2  2  81 | z  2²  so² 656a | So is get the final answer tor 3 we ony nend to mutipy tvoe of them xkpping 32 secause the conesponding bt in as ix not urt | y1 -6561 81 31084323 | The final complionly o bhs ziporihe is Clloga we have lo compude lage powioms of e, and then hawo to do of mosd liagns | epicysiors lo oir the frs ansmor boe Phor | Trhe toliwing recursivo apysoarih cxpyresses the sane doa | if s - 0 | α4²- tx σud nodd | Ls  6 and n ovea | Fist the recursive apersech, which is a dinect tnersiation of the rolisive formulat | Song long kinpewlong beng a, Lang lang b 4 | Lang lang res  hsmpewis, a  2: | returs k: | return res  res  a | P type lese to seseth
 
 [00:16:39]
-  Transcript :  تمام? عند وعند كانت
+  Transcript :  guys later peace
   OCR        : None
-  Combined   :  تمام? عند وعند كانت
-
-[00:16:48]
-  Transcript :  O 70 80 90 100 O O A
-  OCR        : None
-  Combined   :  O 70 80 90 100 O O A
-
-[00:17:11]
-  Transcript :  بوينت. عند البيت دي كانت بوينت وان. عند البيت دي بوينت وان. هنا
-  OCR        : None
-  Combined   :  بوينت. عند البيت دي كانت بوينت وان. عند البيت دي بوينت وان. هنا
-
-[00:17:15]
-  Transcript :  كانت بوينت وان. هنا طلعت لوينت تون. هنا بوينت تون. كلهم بجمعهم
-  OCR        : None
-  Combined   :  كانت بوينت وان. هنا طلعت لوينت تون. هنا بوينت تون. كلهم بجمعهم
-
-[00:17:25]
-  Transcript :  تحتهم. خلاص وديتني هنا ايه. ممكن اعملها بطريقة تانية اللي هي
-  OCR        : Step 4: Defuzzification weighted | average | Another method is weighted average method where centroid of each | of the fuzzy sets is weighted by the membership value, divided by the | sum of memberships. | CentroidC1  0030504  20 | CentroidC2  2040-60-804  50 | CentroidC3  50701001004  80 | Z  200.1  500.2  800.5  0.1  0.2  0.5 | Z  65
-  Combined   :  تحتهم. خلاص وديتني هنا ايه. ممكن اعملها بطريقة تانية اللي هي Step 4: Defuzzification weighted | average | Another method is weighted average method where centroid of each | of the fuzzy sets is weighted by the membership value, divided by the | sum of memberships. | CentroidC1  0030504  20 | CentroidC2  2040-60-804  50 | CentroidC3  50701001004  80 | Z  200.1  500.2  800.5  0.1  0.2  0.5 | Z  65
-
-[00:17:27]
-  Transcript :  العشان اعمل يبقى محتاجة حسب بتاع كل فازي ست. بتاع الفازي
-  OCR        : None
-  Combined   :  العشان اعمل يبقى محتاجة حسب بتاع كل فازي ست. بتاع الفازي
-
-[00:17:36]
-  Transcript :  ست اللي هي سي وان. هتبقى ايه قلنا بنجمع عدد النقط بنجمع النقط
-  OCR        : None
-  Combined   :  ست اللي هي سي وان. هتبقى ايه قلنا بنجمع عدد النقط بنجمع النقط
-
-[00:17:43]
-  Transcript :  بنقسم على عددهم. خلاص النقط بتاعتي كان زيرو زيرو وصيرتي وفيفتي
-  OCR        : None
-  Combined   :  بنقسم على عددهم. خلاص النقط بتاعتي كان زيرو زيرو وصيرتي وفيفتي
-
-[00:17:49]
-  Transcript :  جمعتهم مع بعض وقسمت على الفور. فادديني ده الايه?
-  OCR        : None
-  Combined   :  جمعتهم مع بعض وقسمت على الفور. فادديني ده الايه?
-
-[00:17:56]
-  Transcript :  وهكذا عملت في وفي
-  OCR        : None
-  Combined   :  وهكذا عملت في وفي
-
-[00:18:00]
-  Transcript :  خلاص طلعت هعمل ايه? هاضرب كل في بتاعها. وجمعهم واقسم على
-  OCR        : None
-  Combined   :  خلاص طلعت هعمل ايه? هاضرب كل في بتاعها. وجمعهم واقسم على
-
-[00:18:15]
-  Transcript :  المجموعة بتاعي ايه? طلع لي ايه? خمسة وستين. خدوا بالكم
-  OCR        : Degrer of | Mesvbershjy | 9  10  20   0.1  30  40  50  60   0.2  70  80  90  100 1  0.5 | 0.1  0.1  01  0.2 | .0.2  1.2  0.2  0.5  0.5  0.5 - 0.5
-  Combined   :  المجموعة بتاعي ايه? طلع لي ايه? خمسة وستين. خدوا بالكم Degrer of | Mesvbershjy | 9  10  20   0.1  30  40  50  60   0.2  70  80  90  100 1  0.5 | 0.1  0.1  01  0.2 | .0.2  1.2  0.2  0.5  0.5  0.5 - 0.5
-
-[00:18:15]
-  Transcript :  الارقام ايه غير معضة. يعني الطرق بتاعة بتفرق معي اللي
-  OCR        : None
-  Combined   :  الارقام ايه غير معضة. يعني الطرق بتاعة بتفرق معي اللي
-
-[00:18:26]
-  Transcript :  بتطلعه على حسب الطريقة. طيب ايه الطريقة المفضلة? ايه?
-  OCR        : CentroidC1 0D30504 | CentroidC2  204060804 | CentroidC3 - 50701001004 80,
-  Combined   :  بتطلعه على حسب الطريقة. طيب ايه الطريقة المفضلة? ايه? CentroidC1 0D30504 | CentroidC2  204060804 | CentroidC3 - 50701001004 80,
-
-[00:18:29]
-  Transcript :  ودي اللي انت برضو هتشتعله بيه. يبقى في بتاعتي محتاجة
-  OCR        : None
-  Combined   :  ودي اللي انت برضو هتشتعله بيه. يبقى في بتاعتي محتاجة
-
-[00:18:35]
-  Transcript :  اعمل ان انا هحسب لرفوز لاندي. ان انا ايه اجمع على حسب
-  OCR        : None
-  Combined   :  اعمل ان انا هحسب لرفوز لاندي. ان انا ايه اجمع على حسب
-
-[00:18:48]
-  Transcript : None
-  OCR        : Example | Given a stock market with varlables.: | Opening price Op | Previous day price Pdlp | Closing price Cp | From the domcin eagerts, it is known tat: | Pdp has 3 fuzzy sets L, M, H range 0 - 100 | Op has 3 furzy sets L, M, H range 0 - 100 | Cp has 5 fluzzy sets VL, L, M, H, VH range 0 - 100 | With the foillowing rules: | R1: If OpL, AND PdpL THEN CpVL | R2: If OpcL OR Pdp L THEN CgcL | R3: If OpM AND PdpNOTH THEN CpM | R4: If OpH OR PdpH THEN CpH | R5: If OpAND PtpHl THEN CpVH | Using triangular membership function, Predict | the Cp for Op  30 and Pdp90 ?
-  Combined   : Example | Given a stock market with varlables.: | Opening price Op | Previous day price Pdlp | Closing price Cp | From the domcin eagerts, it is known tat: | Pdp has 3 fuzzy sets L, M, H range 0 - 100 | Op has 3 furzy sets L, M, H range 0 - 100 | Cp has 5 fluzzy sets VL, L, M, H, VH range 0 - 100 | With the foillowing rules: | R1: If OpL, AND PdpL THEN CpVL | R2: If OpcL OR Pdp L THEN CgcL | R3: If OpM AND PdpNOTH THEN CpM | R4: If OpH OR PdpH THEN CpH | R5: If OpAND PtpHl THEN CpVH | Using triangular membership function, Predict | the Cp for Op  30 and Pdp90 ?
-
-[00:18:58]
-  Transcript :  Data Classes
-  OCR        : CentroidC1  0030504 | CentroidC2  204060-804 | CentroidC3 - 50701001004
-  Combined   :  Data Classes CentroidC1  0030504 | CentroidC2  204060-804 | CentroidC3 - 50701001004
-
-[00:19:14]
-  Transcript :  او بس انت بقى في القصائي انت مش هتعمل مكانها فين لان مش هيبقى فيه ورق وهترسم
-  OCR        : None
-  Combined   :  او بس انت بقى في القصائي انت مش هتعمل مكانها فين لان مش هيبقى فيه ورق وهترسم
-
-[00:19:22]
-  Transcript :  مهمتها بتجيب degree of membership لكل input.
-  OCR        : None
-  Combined   :  مهمتها بتجيب degree of membership لكل input.
-
-[00:19:29]
-  Transcript :  degree of membership.
-  OCR        : None
-  Combined   :  degree of membership.
-
-[00:19:32]
-  Transcript :  الـ degree of membership دي لقى في الخطة بتاعت الفوزيفاي دي صح؟
-  OCR        : None
-  Combined   :  الـ degree of membership دي لقى في الخطة بتاعت الفوزيفاي دي صح؟
-
-[00:19:36]
-  Transcript :  او.
-  OCR        : None
-  Combined   :  او.
-
-[00:19:41]
-  Transcript :  يعني دلولة تمام دي بتاع الخطة بتاعت الفوزيفاي.
-  OCR        : None
-  Combined   :  يعني دلولة تمام دي بتاع الخطة بتاعت الفوزيفاي.
-
-[00:19:44]
-  Transcript :  انما بعد كده بنقدر نشوف الليه خطة بتاعت اللوجيك دي على اساس الجملة اللي حدد لك. هتدهلنا بقى ولا تتحدد ازاي بقى.
-  OCR        : None
-  Combined   :  انما بعد كده بنقدر نشوف الليه خطة بتاعت اللوجيك دي على اساس الجملة اللي حدد لك. هتدهلنا بقى ولا تتحدد ازاي بقى.
-
-[00:19:51]
-  Transcript :  زي ما
-  OCR        : None
-  Combined   :  زي ما
-
-[00:19:51]
-  Transcript :  الرولز برضو
-  OCR        : None
-  Combined   :  الرولز برضو
-
-[00:19:53]
-  Transcript :  انا زي ما قلتلكم كده هتديكم رولز
-  OCR        : None
-  Combined   :  انا زي ما قلتلكم كده هتديكم رولز
-
-[00:19:55]
-  Transcript :  لان الرولز
-  OCR        : None
-  Combined   :  لان الرولز
-
-[00:19:58]
-  Transcript :  دي في الاصل بيحطها اكسبرت
-  OCR        : None
-  Combined   :  دي في الاصل بيحطها اكسبرت
-
-[00:20:00]
-  Transcript :  البروبلم في الدومين بتاع البروبلم او بتتعامل بالنيوران ناترك او
-  OCR        : None
-  Combined   :  البروبلم في الدومين بتاع البروبلم او بتتعامل بالنيوران ناترك او
-
-[00:20:04]
-  Transcript :  بالجينيتيك امفل. فانا هديها لكم. دكتور ما عليش شوح نفس
-  OCR        : None
-  Combined   :  بالجينيتيك امفل. فانا هديها لكم. دكتور ما عليش شوح نفس
-
-[00:20:09]
-  Transcript :  انترويد اللي هنا دولة حسبوا جابوا مينة? مجموعة النقط بتاعة
-  OCR        : None
-  Combined   :  انترويد اللي هنا دولة حسبوا جابوا مينة? مجموعة النقط بتاعة
-
-[00:20:15]
-  Transcript :  الفازي ست على عدد النقط. مجموعة النقط اللي كانت محقاها ايه
-  OCR        : None
-  Combined   :  الفازي ست على عدد النقط. مجموعة النقط اللي كانت محقاها ايه
-
-[00:20:21]
-  Transcript :  بالزبط? مجموعة النقط اللي رسمنا بيها الفازي ست. اه اوكي ده اللي
-  OCR        : None
-  Combined   :  بالزبط? مجموعة النقط اللي رسمنا بيها الفازي ست. اه اوكي ده اللي
-
-[00:20:27]
-  Transcript :  هو الشيء بنفسه يعني؟
-  OCR        : None
-  Combined   :  هو الشيء بنفسه يعني؟
-
-[00:20:30]
-  Transcript :  اوه بتاعت الشيء بنفسه
-  OCR        : None
-  Combined   :  اوه بتاعت الشيء بنفسه
-
-[00:20:36]
-  Transcript :  معلشش يا دكتور معلش رسا مسا كنت
-  OCR        : None
-  Combined   :  معلشش يا دكتور معلش رسا مسا كنت
-
-[00:20:39]
-  Transcript :  هي النت كان فيه مشكلة بس
-  OCR        : None
-  Combined   :  هي النت كان فيه مشكلة بس
-
-[00:20:41]
-  Transcript :  اه اه اترات الفوزيفاي دي دي
-  OCR        : None
-  Combined   :  اه اه اترات الفوزيفاي دي دي
-
-[00:20:43]
-  Transcript :  دي اللي هي الخطوة بتاعت اللي احنا منحقدت زي ما احنا قلنا اللي هي مكانها
-  OCR        : None
-  Combined   :  دي اللي هي الخطوة بتاعت اللي احنا منحقدت زي ما احنا قلنا اللي هي مكانها
-
-[00:20:46]
-  Transcript :  زي ما حدثتك قلت كده مكانها على الوعي صح؟
-  OCR        : None
-  Combined   :  زي ما حدثتك قلت كده مكانها على الوعي صح؟
-
-[00:20:50]
-  Transcript :  ايوه
-  OCR        : None
-  Combined   :  ايوه
-
-[00:20:52]
-  Transcript :  logic logic
-  OCR        : None
-  Combined   :  logic logic
-
-[00:21:05]
-  Transcript :  الانفرانس. او الرول انفرانس نapply الرول انفرانس.
-  OCR        : None
-  Combined   :  الانفرانس. او الرول انفرانس نapply الرول انفرانس.
-
-[00:21:12]
-  Transcript :  يعني ابتدي ابلاي الرول بتاعتي رول يسمي付ه ايه بتقولي لو هو في الفاظي سيت الفلانية فاديب الدجري اف ممبر شاب بتاعتها.
-  OCR        : None
-  Combined   :  يعني ابتدي ابلاي الرول بتاعتي رول يسمي付ه ايه بتقولي لو هو في الفاظي سيت الفلانية فاديب الدجري اف ممبر شاب بتاعتها.
-
-[00:21:20]
-  Transcript :  عند ولا قور مع فاظي سيت تانية اروح اديب الدجري اف ممبر شاب.
-  OCR        : None
-  Combined   :  عند ولا قور مع فاظي سيت تانية اروح اديب الدجري اف ممبر شاب.
-
-[00:21:24]
-  Transcript :  واشوف الرقمين هاخد منهم الميلمم ولا الماكسيم
-  OCR        : None
-  Combined   :  واشوف الرقمين هاخد منهم الميلمم ولا الماكسيم
-
-[00:21:28]
-  Transcript :  ولا هاخد رقم زي ما هو
-  OCR        : None
-  Combined   :  ولا هاخد رقم زي ما هو
-
-[00:21:30]
-  Transcript :  لما هو الواحد ما فيش كنا كتر
-  OCR        : None
-  Combined   :  لما هو الواحد ما فيش كنا كتر
-
-[00:21:34]
-  Transcript :  ماشي تمام تمام يا دكتور
-  OCR        : None
-  Combined   :  ماشي تمام تمام يا دكتور
-
-[00:21:36]
-  Transcript :  وبعد ما احنا عملنا الانفلنس
-  OCR        : None
-  Combined   :  وبعد ما احنا عملنا الانفلنس
-
-[00:21:38]
-  Transcript :  بنبتدي ان احنا نعمل خطط
-  OCR        : None
-  Combined   :  بنبتدي ان احنا نعمل خطط
-
-[00:21:41]
-  Transcript :  ديفوزي
-  OCR        : None
-  Combined   :  ديفوزي
-
-[00:21:43]
-  Transcript :  ديفوزي فيكيشن
-  OCR        : None
-  Combined   :  ديفوزي فيكيشن
-
-[00:21:45]
-  Transcript :  ديفوزي فيكيشن
-  OCR        : None
-  Combined   :  ديفوزي فيكيشن
-
-[00:21:47]
-  Transcript :  ايه
-  OCR        : None
-  Combined   :  ايه
-
-[00:21:49]
-  Transcript :  ان احنا بنبتدي نحصل اللي هي الويتد مين او نشوف التكامل
-  OCR        : None
-  Combined   :  ان احنا بنبتدي نحصل اللي هي الويتد مين او نشوف التكامل
-
-[00:21:53]
-  Transcript :  حتى الوردي صح؟
-  OCR        : None
-  Combined   :  حتى الوردي صح؟
-
-[00:21:55]
-  Transcript :  بحسب التنسلويدز بتاعة الفوزيست بتاعة الأوفوت
-  OCR        : None
-  Combined   :  بحسب التنسلويدز بتاعة الفوزيست بتاعة الأوفوت
-
-[00:22:00]
-  Transcript :  اه. دي بنحسب الـSyndroids وبندربها في الأرقام اللي هي طالعة من logic. او من inference يعني. صح؟
-  OCR        : None
-  Combined   :  اه. دي بنحسب الـSyndroids وبندربها في الأرقام اللي هي طالعة من logic. او من inference يعني. صح؟
-
-[00:22:08]
-  Transcript :  او بنعمل الـ equation بقى. بنسمع على اللي هو متوسط يعني. تمام. طب مالش يا دكتور اللي بنعمل هي مبنية على التكامل دي دي حاجة شبه اللي هي زي
-  OCR        : None
-  Combined   :  او بنعمل الـ equation بقى. بنسمع على اللي هو متوسط يعني. تمام. طب مالش يا دكتور اللي بنعمل هي مبنية على التكامل دي دي حاجة شبه اللي هي زي
-
-[00:22:18]
-  Transcript :  زي normal distribution او حاجة زي bubble dynasty function او حاجة كده التكامل بتاعها كله بواحد لو هي جمعت كلها فاحنا
-  OCR        : None
-  Combined   :  زي normal distribution او حاجة زي bubble dynasty function او حاجة كده التكامل بتاعها كله بواحد لو هي جمعت كلها فاحنا
-
-[00:22:25]
-  Transcript :  نشوف هي واضحة نسبة قد ايه زي. انا لديت لك انا وردها لك
-  OCR        : None
-  Combined   :  نشوف هي واضحة نسبة قد ايه زي. انا لديت لك انا وردها لك
-
-[00:22:30]
-  Transcript :  بالحسابات. بضع لما تعمل الاكويتشن لو انت عايز تعملها
-  OCR        : None
-  Combined   :  بالحسابات. بضع لما تعمل الاكويتشن لو انت عايز تعملها
-
-[00:22:35]
-  Transcript :  بالحساب. هتعملها زي ايه? التكامل اللي هو ايه? المساحة
-  OCR        : None
-  Combined   :  بالحساب. هتعملها زي ايه? التكامل اللي هو ايه? المساحة
-
-[00:22:41]
-  Transcript :  تحت الكرب. تمام? فاحنا بنجمع هو المساحة لتحت الكرب. فانا
-  OCR        : None
-  Combined   :  تحت الكرب. تمام? فاحنا بنجمع هو المساحة لتحت الكرب. فانا
-
-[00:22:46]
-  Transcript :  جمعتها لك بالطريقة الثانية. الهدف ان انا بوريك ان انا
-  OCR        : None
-  Combined   :  جمعتها لك بالطريقة الثانية. الهدف ان انا بوريك ان انا
-
-[00:22:50]
-  Transcript :  المختلفة هتطلع لي اركام مختلفة. تمام? ده الهدف.
-  OCR        : None
-  Combined   :  المختلفة هتطلع لي اركام مختلفة. تمام? ده الهدف.
-
-[00:22:58]
-  Transcript :  اه طبعا قريبة من بعض طبعا. مش نفس الرولز ونفس الانبوت.
-  OCR        : None
-  Combined   :  اه طبعا قريبة من بعض طبعا. مش نفس الرولز ونفس الانبوت.
-
-[00:23:04]
-  Transcript :  تمام. تمام. اي سؤال يا شغف? اه كده انا شرحت لكم كل حاجة ممكن
-  OCR        : None
-  Combined   :  تمام. تمام. اي سؤال يا شغف? اه كده انا شرحت لكم كل حاجة ممكن
-
-[00:23:15]
-  Transcript :  استخدموها في ودعم يعني
-  OCR        : None
-  Combined   :  استخدموها في ودعم يعني
+  Combined   :  guys later peace
 

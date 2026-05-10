@@ -1,68 +1,250 @@
-[0.0 --> 4.7]  Hey, what's going on everybody? It's your bro, hope you're doing well, and in this video I'm going to
-[4.7 --> 12.1]  describe the very basics of Big O notation in, well, computer science. So sit back, relax, and enjoy the show.
-[14.0 --> 19.4]  Oh yeah, Big O notation. So a common phrase used with Big O notation is,
-[19.8 --> 25.7]  how code slows as data grows. It describes the performance of an algorithm as the amount of data
-[25.7 --> 31.6]  increases. And really, this notation is machine independent. What we're really focusing on is the
-[31.6 --> 36.4]  number of steps to complete an algorithm, because some machines are going to run certain algorithms
-[36.4 --> 42.9]  faster than others. And three, we tend to ignore smaller operations. If we had some task that took
-[42.9 --> 48.4]  n plus one, we would just reduce it to just n, because that plus one really isn't going to make
-[48.4 --> 51.4]  So here's a few examples of big O notation.
-[51.4 --> 66.8]  We have O O O and O And N is really just the amount of data that we passing in It a variable like x What we focusing on is the performance of an algorithm as the amount
-[66.8 --> 72.1]  of data increases, and n is a representation of the amount of data that we're passing in.
-[72.3 --> 76.9]  Here's a more concrete example. I have a function named addup. We will add up to a certain number
-[76.9 --> 82.5]  depending on what we pass in as an argument. The for loop within here will iterate once up to
-[82.5 --> 88.9]  whatever number that n is, add i to sum, then return it. What if n was a large number like a
-[88.9 --> 93.0]  million? Well, it's going to take just above a million steps to complete this function.
-[93.5 --> 99.7]  This function is said to have a runtime complexity of O of n, linear time. As the amount of data
-[99.7 --> 106.2]  increases, it's going to increase the amount of steps linearly or proportionally. Now another way
-[106.2 --> 113.3]  which we could write the same function is to take sum equals n times n plus 1 divided by 2.
-[113.5 --> 120.0]  We will get the exact same sum. So if n was, let's say, a million, this is still only going to take a couple seconds.
-[120.0 --> 126.7]  steps. Three steps, not a million steps. So this function is going to have a runtime complexity of
-[126.7 --> 131.1]  O of one. The input size doesn't matter. The amount of data that we have really doesn't matter.
-[131.4 --> 137.1]  It's going to be completed in the same amount of steps. So this function is way better than this
-[137.1 --> 142.8]  previous one. Three steps is better than a million steps. And the reason that this isn't O of three,
-[143.0 --> 147.7]  because this takes three steps, is that we really don't care about smaller operations. In the grand
-[147.7 --> 151.9]  scheme of things, they really won't make much of a difference. So we would just shorten this and say
-[151.9 --> 157.0]  that this is O of 1 constant time. The input size doesn't matter. Here's a graph that I made to
-[157.0 --> 163.5]  represent the different runtime complexities. We have data on the x-axis represented by n. So data
-[163.5 --> 170.4]  will increase as we go more to the right, and we have time on the y-axis. I did add an asterisk next
-[170.4 --> 174.8]  to time because some of these times can vary depending on what machine you're using, so these
-[174.8 --> 186.4]  can vary Another way to look at this is number of steps So as we increase on the y these algorithms are going to perform with increasingly more time They going to get slower So let
-[186.4 --> 192.6]  begin with O of 1 constant time. Anything that has a runtime complexity of O of 1 will take the same
-[192.6 --> 198.0]  amount of time regardless of the data size. A few examples would include the random access of an
-[198.0 --> 203.9]  element within an array and inserting at the beginning of a linked list. So O of 1 is extremely
-[203.9 --> 210.8]  fast. Next we have O of log n, also known as logarithmic time. One example is binary search.
-[210.8 --> 214.7]  We haven't talked about this yet. We'll talk about a few of these algorithms in future videos,
-[214.7 --> 220.9]  but anything that has a runtime complexity of O of log n will actually take, I don't want to say
-[220.9 --> 226.9]  less and less time, but increasingly less time to complete. So as the data size increases,
-[227.4 --> 231.8]  this algorithm is going to be more and more efficient compared to the early stages with a
-[231.8 --> 236.6]  small dataset. O is also known as linear time. As the amount of
-[236.6 --> 239.9]  data increases, the time it takes to complete something will
-[240.0 --> 244.8]  increase proportionally linearly. That would include looping through the elements in an array
-[244.8 --> 251.6]  and searching through a linked list. Next we have O of N log N, also known as quasi-linear time.
-[251.8 --> 256.8]  This would include a quick sort, merge sort, and heap sort. We'll talk about these concepts in
-[256.8 --> 262.3]  future videos. So for the most part, this is very similar to linear time. Unless we're working with
-[262.3 --> 269.4]  a large data set, then anything using O of N log N is going to start to slow down when we work with
-[269.4 --> 275.6]  larger data sets, hence this curve here. Then we have O of n squared, also known as quadratic time.
-[275.8 --> 281.0]  A few examples would include insertion sort, selection sort, and bubble sort. As the amount
-[281.0 --> 286.6]  of data increases, it's going to take increasingly more and more time to complete anything that has a
-[286.6 --> 293.3]  runtime complexity of O of n squared. So just to compare linear time and quadratic time, with linear
-[293.3 --> 306.2]  time if our data set was a thousand if n equals a thousand it going to take a thousand steps they proportional they linear but if we were using quadratic time if n was a thousand then a thousand squared would be a
-[306.2 --> 311.9]  million. So if our data set was a thousand, if we're using quadratic time, it's going to take a million
-[311.9 --> 318.7]  steps then, way more than linear time. So quadratic time is extremely slow with large data sets, but in
-[318.7 --> 323.9]  the case of a small data set, it could actually be faster, as you can see by the graph here. And lastly,
-[323.9 --> 330.2]  we have O of n factorial, also known as factorial time, and one place where this is used is with the
-[330.2 --> 336.2]  traveling salesman problem, which I might discuss in a future video. So this is extremely slow,
-[336.4 --> 341.3]  so if I had to give a letter grade to each of these runtime complexities when working with
-[341.3 --> 347.1]  large data sets with constant time, this would be an A, like an A+. Logarithmic time would be a B,
-[347.1 --> 348.1]  it's pretty good.
-[348.1 --> 350.7]  Linear time is C, it's okay.
-[350.7 --> 354.4]  Quasi-linear time is a D, it's just barely passing.
-[354.4 --> 356.2]  Quadratic time would be an F,
-[356.2 --> 359.1]  and factorial time, well, you get expelled from school.
-[359.1 --> 359.9]  Although,
-[360.0 --> 365.3]  some of these runtime complexities are actually faster when working with a smaller data set,
-[365.3 --> 371.2]  so keep that in mind. Well, that's the very basics of Big O notation. It's notation used
-[371.2 --> 377.0]  to describe the performance of an algorithm as the amount of data increases. So if you can,
-[377.0 --> 382.5]  give this video a thumbs up, drop a random comment down below, and well, that's Big O notation in
-[382.5 --> 384.1]  computer science.
+[0.0 --> 5.5]  What's up guys, Mike the Coder here. Today we are going to go over binary exponentiation.
+[5.8 --> 11.1]  So what is binary exponentiation? Sometimes you need to calculate a number to the power of
+[11.1 --> 17.4]  something to a very large number, right? But sometimes you get overflow. And sometimes it's
+[17.4 --> 24.6]  really slow to do it. So this is a way to help you to solve this problem of calculating a number
+[24.6 --> 29.1]  raised to a large power. Okay, so the first thing you need to know, remember multiplication.
+[29.1 --> 33.9]  So if I do x times y times z, right?
+[35.3 --> 42.7]  Remember, x times y times z, if I change the order of them, parentheses, evaluate which
+[42.7 --> 45.0]  one's first, it's still the same number, right?
+[45.4 --> 48.5]  So if x and y and z are three different numbers, right?
+[48.8 --> 53.2]  And if I change the order of the way I'm multiplying them, it's still the same thing, okay?
+[53.3 --> 64.9]  So that the first thing you have to remember okay Because that just how it works So if I change the order of multiplication it still the same number when you evaluating
+[65.1 --> 67.7]  Okay, so now what we're going to do
+[67.7 --> 70.9]  is that we are going to calculate some number,
+[71.2 --> 74.0]  let's say A, raised to a large power, right?
+[74.4 --> 76.0]  I don't know, like B or something.
+[76.9 --> 79.4]  This very large power, right?
+[80.0 --> 80.9]  This very large power.
+[81.4 --> 84.0]  Okay, so what is the first thing you need to understand?
+[85.0 --> 88.9]  If you take a number and you raise it to a very large power, how do you calculate this?
+[89.0 --> 92.6]  Well, what you could do normally is you could just take this number and multiply it by itself,
+[93.4 --> 94.3]  b times, right?
+[94.6 --> 95.6]  b times.
+[96.8 --> 97.8]  b times.
+[98.8 --> 100.2]  And why does this work?
+[100.3 --> 104.4]  Because anything raised to power, you couldn't just multiply by itself b times, right?
+[104.5 --> 106.2]  That's the definition of how power works.
+[106.2 --> 109.7]  If I raise 2 to the third, it's just 2 times 2 times 2, right?
+[110.6 --> 112.3]  And you could just evaluate that, right?
+[112.3 --> 114.5]  The problem is that this is pretty slow
+[114.5 --> 116.4]  because if you just evaluate this
+[116.4 --> 118.7]  like this many number of times,
+[118.7 --> 119.9]  it's pretty slow.
+[120.0 --> 126.4]  faster way to do this so first of all this just evaluating this would take o of n time right so if
+[126.4 --> 136.8]  i had uh if i had n n numbers right if i had n numbers for a to the n power this is going to be
+[136.8 --> 143.7]  o of n time complexity right because it would take this this many number of design numbers would
+[143.7 --> 149.1]  take this this much number of time in order to calculate that many number of times in order to
+[149.1 --> 155.5]  go with okay so there's a way to do this instead now we're going to look at a different way to
+[155.5 --> 161.4]  evaluate the numbers using and log of n time okay we're going to try to do this in log of n time
+[161.4 --> 172.2]  okay okay so let's say i have a number a and it's raised to the b power b plus c okay b plus c okay
+[172.2 --> 186.3]  So this is the definition of multiplication for laws of exponents right Like if I take anything to the power and this is like a number right I basically what I do what I doing is I could
+[186.3 --> 194.4]  split whatever number into two numbers, right? Into two numbers. Like if I have a very large
+[194.4 --> 200.6]  exponent, I could just split them up. And if I could split them up into two different computations,
+[200.6 --> 206.4]  that'll be better right it's better if i could split them up evaluate it once then i don't have
+[206.4 --> 210.8]  to evaluate the second one again right so if i have a very large exponent raised to a very large
+[210.8 --> 217.2]  exponent so if i have a raised to a very large exponent right if i could be basically split up
+[217.2 --> 223.7]  into two two multiplications b plus c right and that's just that's just how evaluating it okay
+[223.7 --> 230.2]  now let's say instead of having like a super duper large number um let's say i have a to the 2b
+[230.2 --> 231.3]  right?
+[232.2 --> 234.9]  A to the 2B, I could actually split this into
+[234.9 --> 237.8]  A to the B
+[237.8 --> 239.6]  times A to the B
+[240.0 --> 248.2]  right? That's splitting up into two groups, B plus B. And this is actually equal to A to the B
+[248.2 --> 259.3]  squared, right? A to the B, B times B is equal to A to the B squared. So if I actually know the
+[259.3 --> 265.5]  calculation of one of these values of A to the B power, one of these values, I don't have to
+[265.5 --> 270.3]  recalculate this over and over again, right? I don't have to actually recompute these values
+[270.3 --> 274.8]  over and over again. I could just take the previous value and just multiply it by itself,
+[274.8 --> 282.2]  but I don't have to completely recompute A times A times AB times. If I just have
+[282.2 --> 287.5]  the one of the exponents on the exponents, I could just split them up into two groups,
+[287.6 --> 291.1]  and then I'll be able to just calculate it once, and then I could just square it.
+[291.1 --> 306.9]  So that what this binary exponentiation is doing Basically if we have some power some number raised to a power we could actually split it If it an even number we could actually split them into two different groups And then you could actually just calculate one of them once
+[306.9 --> 313.2]  And then you could just square it so that you don't actually have to multiply it by itself n times.
+[313.3 --> 320.6]  It would be log base 2 of n because you're splitting into two groups every single time.
+[320.7 --> 322.8]  And you only have that number of calculations.
+[322.8 --> 325.6]  you're not actually doing it over and over and over again.
+[325.9 --> 328.3]  Okay, so let's go over an example.
+[328.4 --> 329.6]  So let's say I have three to the 13.
+[330.2 --> 331.2]  So what do I wanna do?
+[331.3 --> 333.6]  I basically want to split this exponent
+[333.6 --> 335.8]  by the powers of two.
+[336.4 --> 337.3]  So anything that has like,
+[338.6 --> 340.7]  split this exponent to its powers of two.
+[341.2 --> 344.6]  So then basically I would be able to just calculate
+[344.6 --> 347.5]  one of the values once, one of the groups once,
+[347.5 --> 348.3]  and then just square it.
+[348.7 --> 350.1]  So if I could have this exponent,
+[350.2 --> 351.2]  I could split into powers of two,
+[351.2 --> 352.1]  then that'll be fine.
+[352.1 --> 357.1]  So how would you split this 13 into its powers of two?
+[357.2 --> 359.9]  Well, 13 base 10, right?
+[360.0 --> 363.3]  Actually, in binary, it's 1, 1, 0, 1, I think.
+[363.4 --> 364.2]  1, 1, 0, 1.
+[364.7 --> 364.8]  Yeah.
+[365.5 --> 367.5]  So 0, 2, 0, 2, 1, 2, 2, 3.
+[367.6 --> 367.9]  Okay, yeah.
+[370.1 --> 371.2]  2, 0, 2, 1, 2, 2.
+[371.2 --> 372.0]  Okay, yeah.
+[372.3 --> 373.8]  So this is in binary.
+[374.5 --> 378.2]  The binary of 13 to the 10 is 1, 1, 0, 1.
+[379.6 --> 385.1]  So if you split this number into its binary equivalent, right,
+[386.3 --> 389.2]  it would actually tell you the powers of 2 that you could do.
+[389.2 --> 395.9]  So once you're given this binary number of 1101, you could actually get this is actually equal to 2 to the third.
+[396.4 --> 401.3]  So how I'm getting this is because this is 0 power, 1st power, 2nd, 3rd.
+[402.4 --> 406.1]  This is the 0th power, 2 to the 0, 2 to the 1, 2 to the 2, 2 to the 3.
+[406.1 --> 426.1]  So 13 to base 10 is actually equal to 1 times 2 to the third plus 1 times 2 to the second plus 1 times 2 to the first This is actually 0 times 2 to the first plus 1 times 2 to the 1st This is actually 0 times 2 to the 1st plus 1 times 2 to the 0th
+[426.4 --> 426.6]  Okay?
+[427.2 --> 428.2]  So that's what this,
+[429.2 --> 431.7]  if you convert this into binary and its equivalent,
+[432.0 --> 433.8]  these would be what the powers are.
+[434.2 --> 434.6]  Right?
+[434.7 --> 436.7]  2 to the 3rd, 2nd, 1st, 0.
+[436.9 --> 437.1]  Okay?
+[437.8 --> 439.1]  So now you're given this.
+[439.1 --> 442.7]  Now that you know after splitting into its binary equivalence,
+[442.8 --> 444.5]  you could just now use these values.
+[445.0 --> 452.3]  as a way to, these values as a way to split your exponent.
+[452.5 --> 458.3]  So 3 to the 13 is actually equal to 3 to the 8, right?
+[458.3 --> 468.0]  Because 2 to the 3rd is 8, 3 to the 8, times 3 to the 4th times 3 to the 1st.
+[468.5 --> 474.9]  Okay, so this is like 12 plus 1 is, yeah, 12 plus 1 is 13.
+[475.0 --> 479.3]  So, so yeah, this would be, these would be your exponents, 8, 4, 1.
+[480.0 --> 483.4]  So this would be your exponents of what the values you want, 8, 4, 1.
+[483.6 --> 483.7]  Okay.
+[484.0 --> 486.7]  So now that I have the exponents 8, 4, and 1,
+[486.8 --> 491.4]  what am I going to do to basically stop doing like calculations
+[491.4 --> 493.1]  so over and over again?
+[493.2 --> 493.3]  Okay.
+[493.4 --> 497.0]  So what I'm going to do is I'm going to actually label 3 to the 1st,
+[497.6 --> 499.9]  3 to the 2nd, 3 to the 3rd.
+[501.5 --> 502.6]  No, not 3 to the 3rd.
+[503.1 --> 506.5]  I'm about 3 to the 4th and 3 to the 8th.
+[506.5 --> 506.9]  Okay.
+[506.9 --> 511.5]  Okay, so what is 3 to the first power?
+[511.6 --> 512.8]  That's just 3, okay?
+[513.3 --> 515.6]  So now given this 3, I could just square it.
+[515.8 --> 520.6]  So if I take 3 square, 3 square is just going to be 9, right?
+[520.9 --> 522.2]  So that's 3 square, that's 9.
+[522.9 --> 526.8]  So because I know this power, 3 to the second, 3 to the fourth,
+[527.3 --> 528.0]  what is 3 to the fourth?
+[528.1 --> 529.4]  That's just 3 to the second squared.
+[529.5 --> 532.3]  So remember, 3 to the fourth is just 3 to the second squared, right?
+[532.6 --> 552.4]  So this is actually just equal to 9 square which is going to equal to 81 So I don have to recalculate over and over again Right Okay so now that I have 81 how do I calculate 3 to the 8th Well 3 to the 8th is actually 3 to the 4th squared right
+[552.4 --> 556.6]  because we could just take this previous value and then square it, right, 3 to the 4th laws of
+[556.6 --> 563.7]  exponents. So this is actually just equal to 81 squared, which I don't feel like calculating that,
+[563.7 --> 565.6]  So I'm just going to use my trusty calculator.
+[566.1 --> 567.9]  What is 81 squared?
+[568.3 --> 570.0]  81 times 81.
+[570.7 --> 571.3]  Can I do that?
+[572.7 --> 573.1]  Yeah, okay.
+[573.3 --> 575.2]  That's 6, 5, 6, 1.
+[575.6 --> 577.6]  So it's 6, 5, 6, 1.
+[578.0 --> 582.2]  So now that I have these, have these values, right?
+[582.3 --> 584.6]  I could just calculate what 3 to 13 is.
+[585.0 --> 587.6]  So 3 to 8 is 6, 5, 6, 1.
+[587.8 --> 592.6]  So that's just 6, 5, 6, 1, right?
+[592.6 --> 593.5]  Because I just calculated this.
+[593.7 --> 599.9]  And now we're going to just take this one, we're going to multiply by 3 to 4, which is going to be 81.
+[600.0 --> 601.9]  And we're going to multiply by three to the first, which is three.
+[602.3 --> 607.5]  So the amount of computations I took was way less because I didn't have to calculate three
+[607.5 --> 612.3]  times three times three times three times three times three times three, 13 times.
+[612.5 --> 615.1]  So how many operations did I actually do?
+[616.1 --> 620.5]  So if you were to count it, it would actually just be log base two of n, where n is 13.
+[620.6 --> 624.2]  So like if we actually just count it, I don't feel like counting how many I did.
+[624.6 --> 628.7]  But yeah, basically your answer would just be six, five, six, one times 83 times three.
+[628.7 --> 632.0]  and that's your final operations, right?
+[632.3 --> 633.3]  This would be your final answer.
+[633.3 --> 635.0]  I don't feel like putting in my calculator
+[635.0 --> 636.6]  to do this for you, so yeah.
+[636.9 --> 637.9]  So this is basically the gist
+[637.9 --> 639.0]  of how you would do this by hand
+[639.0 --> 641.2]  and how you do this by the computer.
+[641.3 --> 644.4]  So I'm going to explain how to do it by code now, okay?
+[644.7 --> 647.7]  Okay, guys, so how would you do this in code, okay?
+[648.3 --> 652.2]  So let's say I want to get A to the B power, right?
+[652.6 --> 654.4]  Take a power of A and raise it to B.
+[654.9 --> 665.1]  Okay so how would you do this in code First of all I need a result There going to be one because this is going to be the answer that I going to return okay I need a result with my answer of A
+[665.1 --> 665.8]  raised to B power.
+[666.3 --> 667.7]  Okay, so what am I going to do?
+[668.9 --> 672.4]  First, remember we have our exponent B, right?
+[673.0 --> 674.5]  So we have our exponent B
+[674.5 --> 676.8]  and we have to basically do this
+[676.8 --> 680.1]  certain number of times of calculations, right?
+[680.4 --> 682.2]  Every time we're actually going to divide by two.
+[682.6 --> 683.7]  Remember our exponent B?
+[683.7 --> 687.8]  because that's how you convert into binary, right?
+[688.2 --> 689.6]  The binary 1101, okay?
+[690.1 --> 693.0]  So what I have to check first is while b is greater than zero.
+[694.4 --> 695.9]  And the reason why I'm checking this first
+[695.9 --> 699.8]  is because we're reducing our exponent every single time.
+[700.1 --> 702.2]  So that's why we have to check while b is greater than zero.
+[702.4 --> 703.8]  Okay, each time this happens,
+[704.0 --> 706.2]  I'm going to shift right by one,
+[706.4 --> 707.6]  which is just dividing it by two.
+[708.2 --> 712.1]  So we could just do while shift right equals to one.
+[712.3 --> 713.3]  I think that's the right.
+[713.7 --> 717.9]  That's the right way to do it.
+[717.9 --> 719.9]  Okay. This is just dividing
+[720.0 --> 721.4]  Riding by two, pretty much.
+[721.6 --> 721.7]  Okay.
+[722.8 --> 728.9]  So while this is occurring, what I'm going to do is I need to check if my current power,
+[729.2 --> 733.7]  a B, right, is if it's odd or even.
+[734.0 --> 734.2]  Okay.
+[734.4 --> 737.2]  So if it's odd, so I need to check if it's odd.
+[737.2 --> 743.0]  If it's odd, then I'm just going to multiply my result by A once, right?
+[743.1 --> 747.8]  Because the reason why I need to do that is because if it's odd, then I just multiply
+[747.8 --> 748.5]  it by itself.
+[748.5 --> 751.1]  if it's even I'll just square it
+[751.1 --> 752.6]  because if it's even
+[752.6 --> 755.3]  I would take my previous result and I would just square it
+[755.3 --> 756.4]  if it's odd
+[756.4 --> 758.7]  like this 3 to the first equal 3
+[758.7 --> 760.5]  I just multiply it by A
+[760.5 --> 763.1]  so to check if it's odd
+[763.1 --> 764.9]  a fast way to do it is just to take
+[764.9 --> 767.2]  B and by 1
+[767.2 --> 770.4]  so if this is odd
+[770.4 --> 771.8]  I'm going to take my result
+[771.8 --> 773.0]  is going to equal to result
+[773.0 --> 774.6]  multiply by A
+[774.6 --> 790.8]  because that just taking and the result in multiplying it once by a a Okay Otherwise I going to square it So to square it that going to equal to So to square it a is just going to equal to a times a
+[791.9 --> 796.3]  So yeah, that's basically the gist of this. And in the end, we just return result.
+[801.1 --> 804.5]  This is basically the code, the iterative way to solve this problem.
+[805.0 --> 810.8]  Because if you do this iteratively, this is going to basically, what this is going to do,
+[810.8 --> 812.7]  it's the fastest way to do this log of n time.
+[813.6 --> 815.8]  Log base 2 of n, because that's the number of times you do it.
+[816.7 --> 817.4]  Okay, yeah.
+[817.7 --> 820.0]  So yeah, that's pretty much how bin power works.
+[821.4 --> 825.5]  Now, let's say I want to take the previous answer, a raised to b power,
+[825.5 --> 828.0]  but I want to mod by a large number of n.
+[828.6 --> 830.2]  Large by m.
+[830.8 --> 831.6]  Modded by m.
+[831.6 --> 839.9]  okay so if you want to do this mod by m i have the code down here so this is to raise a to the
+[840.0 --> 846.2]  b power and I'm taking this the answer mod by m sometimes you have to mod by a large number to
+[846.2 --> 852.2]  prevent overflow and that's what you would do it's basically the same thing as the previous code the
+[852.2 --> 857.3]  only difference is that you are going to mod by m each time so like in this scenario when you
+[857.3 --> 864.9]  multiply by a itself you just mod by m okay and in this scenario when you square a times a you mod
+[864.9 --> 870.1]  by m. And yeah, in the beginning, you should also mod by m because that would reduce your a down.
+[870.7 --> 877.2]  And the reason why this works is because if you take two numbers, right, if you do a mod by m,
+[877.4 --> 884.4]  multiply a mod by m, those two numbers are going to be modded together. It's going to be the same
+[884.4 --> 890.8]  number as a times a, a squared mod by m, right? If you mod them individually, it's going to equal
+[890.8 --> 891.4]  to the same number.
+[891.8 --> 894.0]  So that's the reason why binpow
+[894.0 --> 908.5]  for the raised to the b power mod by m works in this case So yeah I could also show you the recursive way to do it i don actually want to do that because uh it actually way slower but if you
+[908.5 --> 914.0]  go here i could just show you right here so this is a recursive way to do it um what they're doing
+[914.0 --> 923.9]  is is that uh if they're dividing b by two every time like what we do but um what they're doing is
+[923.9 --> 929.9]  that you're going to recursively call the result dividing by two every time and then they return
+[929.9 --> 935.3]  the answer multiply by itself they calculate the answer so here what they're doing is that
+[935.3 --> 941.9]  if b is equal to zero they return one so that's kind of like what the same thing as the the regular
+[941.9 --> 947.3]  approach of doing it the iterative approach right because we're dividing by two every time and then
+[947.3 --> 954.2]  we we pretty much multiply by itself so this is kind of checking it out okay um then they take
+[954.2 --> 959.7]  their result by recursively calling b over two that many number of times that's what the result is
+[960.0 --> 965.8]  So here they're checking if mod by 2 is not equal to 0.
+[965.9 --> 966.9]  That's what this is doing.
+[967.4 --> 968.6]  So this checks if it's odd.
+[968.9 --> 973.6]  So if it's odd, we just multiply res times a by itself once.
+[974.4 --> 976.4]  And we're not calculating.
+[976.7 --> 978.2]  We just multiply a once.
+[978.7 --> 981.5]  Otherwise, we multiply res times res itself.
+[981.8 --> 984.4]  So this is the recursive approach to do it.
+[984.4 --> 992.7]  so yeah that's pretty much the gist of um how to do binary exponentiation uh it's it's not too
+[992.7 --> 999.2]  difficult i guess but it's not it's not too easy i guess but yeah rate com subscribe i'll check you
+[999.2 --> 1000.3]  guys later peace

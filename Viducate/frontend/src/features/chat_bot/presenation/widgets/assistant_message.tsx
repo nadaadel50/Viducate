@@ -16,7 +16,8 @@ export function AssistantMessage(props:AssistantMessageProps){
                 </span>
 
                 <div className="bg-white  rounded-3xl rounded-tl-none px-6 py-4 max-w-[80%] shadow-lg shadow-[#4f46e5]/10">
-                  <p className="text-sm leading-relaxed">
+                  <p dir="auto"
+                   className="text-sm leading-relaxed">
                     {props.message}
                   </p>
                 </div>

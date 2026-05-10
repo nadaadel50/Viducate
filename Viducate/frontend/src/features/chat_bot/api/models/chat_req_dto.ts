@@ -4,7 +4,7 @@ import type { UserAsk } from "../../domain/entity/user_ask";
 export type ChatRequestDto = {
   
   video_id: number;
-  session_id?:number
+  session_id?:number|null
   question: string;
   current_time?: number;
 };

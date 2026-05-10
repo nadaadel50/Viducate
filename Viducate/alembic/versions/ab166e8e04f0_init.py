@@ -1,8 +1,8 @@
 """init
 
-Revision ID: bde6fcd37ca0
+Revision ID: ab166e8e04f0
 Revises: 
-Create Date: 2026-04-29 15:51:57.117341
+Create Date: 2026-05-10 14:34:00.134327
 
 """
 from typing import Sequence, Union
@@ -12,7 +12,7 @@ import sqlalchemy as sa
 
 
 # revision identifiers, used by Alembic.
-revision: str = 'bde6fcd37ca0'
+revision: str = 'ab166e8e04f0'
 down_revision: Union[str, Sequence[str], None] = None
 branch_labels: Union[str, Sequence[str], None] = None
 depends_on: Union[str, Sequence[str], None] = None
@@ -70,6 +70,14 @@ def upgrade() -> None:
     sa.PrimaryKeyConstraint('vid')
     )
     op.create_index(op.f('ix_video_content_hash'), 'video', ['content_hash'], unique=False)
+    op.create_table('chat_sessions',
+    sa.Column('session_id', sa.Integer(), autoincrement=True, nullable=False),
+    sa.Column('title', sa.String(length=255), nullable=True),
+    sa.Column('video_id', sa.Integer(), nullable=True),
+    sa.Column('created_at', sa.TIMESTAMP(), server_default=sa.text('now()'), nullable=True),
+    sa.ForeignKeyConstraint(['video_id'], ['video.vid'], ),
+    sa.PrimaryKeyConstraint('session_id')
+    )
     op.create_table('content_preferences',
     sa.Column('id', sa.Integer(), nullable=False),
     sa.Column('user_id', sa.Integer(), nullable=True),
@@ -100,12 +108,23 @@ def upgrade() -> None:
     op.create_table('video_summary',
     sa.Column('sum_id', sa.Integer(), nullable=False),
     sa.Column('video_id', sa.Integer(), nullable=True),
-    sa.Column('content', sa.Text(), nullable=False),
+    sa.Column('content', sa.JSON(), nullable=False),
     sa.Column('language', sa.String(length=10), nullable=True),
     sa.Column('created_at', sa.TIMESTAMP(), server_default=sa.text('now()'), nullable=True),
     sa.ForeignKeyConstraint(['video_id'], ['video.vid'], ondelete='CASCADE'),
     sa.PrimaryKeyConstraint('sum_id'),
     sa.UniqueConstraint('video_id')
+    )
+    op.create_table('chat_messages',
+    sa.Column('message_id', sa.Integer(), autoincrement=True, nullable=False),
+    sa.Column('session_id', sa.Integer(), nullable=True),
+    sa.Column('question', sa.Text(), nullable=False),
+    sa.Column('answer', sa.Text(), nullable=False),
+    sa.Column('current_time', sa.Integer(), nullable=True),
+    sa.Column('question_at', sa.TIMESTAMP(), server_default=sa.text('now()'), nullable=True),
+    sa.Column('answer_at', sa.TIMESTAMP(), nullable=True),
+    sa.ForeignKeyConstraint(['session_id'], ['chat_sessions.session_id'], ),
+    sa.PrimaryKeyConstraint('message_id')
     )
     op.create_table('flashcard',
     sa.Column('flashcard_id', sa.Integer(), autoincrement=True, nullable=False),
@@ -130,10 +149,24 @@ def upgrade() -> None:
     sa.ForeignKeyConstraint(['segment_id'], ['topic_segment.segment_id'], ondelete='CASCADE'),
     sa.PrimaryKeyConstraint('keypoint_id')
     )
+    op.create_table('quiz',
+    sa.Column('quiz_id', sa.Integer(), autoincrement=True, nullable=False),
+    sa.Column('video_id', sa.Integer(), nullable=False),
+    sa.Column('segment_id', sa.Integer(), nullable=True),
+    sa.Column('difficulty', sa.String(length=20), nullable=True),
+    sa.Column('language', sa.String(length=10), nullable=True),
+    sa.Column('quiz_type', sa.String(length=20), nullable=True),
+    sa.Column('created_at', sa.TIMESTAMP(), server_default=sa.text('now()'), nullable=True),
+    sa.ForeignKeyConstraint(['segment_id'], ['topic_segment.segment_id'], ondelete='CASCADE'),
+    sa.ForeignKeyConstraint(['video_id'], ['video.vid'], ondelete='CASCADE'),
+    sa.PrimaryKeyConstraint('quiz_id')
+    )
+    op.create_index(op.f('ix_quiz_segment_id'), 'quiz', ['segment_id'], unique=False)
+    op.create_index(op.f('ix_quiz_video_id'), 'quiz', ['video_id'], unique=False)
     op.create_table('segment_summary',
     sa.Column('summary_id', sa.Integer(), nullable=False),
     sa.Column('segment_id', sa.Integer(), nullable=True),
-    sa.Column('content', sa.Text(), nullable=False),
+    sa.Column('content', sa.JSON(), nullable=False),
     sa.Column('language', sa.String(length=10), nullable=True),
     sa.Column('created_at', sa.TIMESTAMP(), server_default=sa.text('now()'), nullable=True),
     sa.ForeignKeyConstraint(['segment_id'], ['topic_segment.segment_id'], ondelete='CASCADE'),
@@ -151,21 +184,48 @@ def upgrade() -> None:
     sa.ForeignKeyConstraint(['segment_id'], ['topic_segment.segment_id'], ondelete='CASCADE'),
     sa.PrimaryKeyConstraint('subtopic_id')
     )
+    op.create_table('quiz_question',
+    sa.Column('question_id', sa.Integer(), autoincrement=True, nullable=False),
+    sa.Column('quiz_id', sa.Integer(), nullable=False),
+    sa.Column('segment_id', sa.Integer(), nullable=True),
+    sa.Column('question_text', sa.Text(), nullable=False),
+    sa.Column('choice_a', sa.Text(), nullable=False),
+    sa.Column('choice_b', sa.Text(), nullable=False),
+    sa.Column('choice_c', sa.Text(), nullable=False),
+    sa.Column('choice_d', sa.Text(), nullable=False),
+    sa.Column('correct_answer', sa.String(length=1), nullable=False),
+    sa.Column('correct_answer_text', sa.Text(), nullable=False),
+    sa.Column('explanation', sa.Text(), nullable=True),
+    sa.Column('video_timestamp', sa.Integer(), nullable=True),
+    sa.Column('timestamp_label', sa.String(length=12), nullable=True),
+    sa.Column('created_at', sa.TIMESTAMP(), server_default=sa.text('now()'), nullable=True),
+    sa.ForeignKeyConstraint(['quiz_id'], ['quiz.quiz_id'], ondelete='CASCADE'),
+    sa.ForeignKeyConstraint(['segment_id'], ['topic_segment.segment_id'], ondelete='SET NULL'),
+    sa.PrimaryKeyConstraint('question_id')
+    )
+    op.create_index(op.f('ix_quiz_question_quiz_id'), 'quiz_question', ['quiz_id'], unique=False)
     # ### end Alembic commands ###
 
 
 def downgrade() -> None:
     """Downgrade schema."""
     # ### commands auto generated by Alembic - please adjust! ###
+    op.drop_index(op.f('ix_quiz_question_quiz_id'), table_name='quiz_question')
+    op.drop_table('quiz_question')
     op.drop_table('subtopics')
     op.drop_table('segment_summary')
+    op.drop_index(op.f('ix_quiz_video_id'), table_name='quiz')
+    op.drop_index(op.f('ix_quiz_segment_id'), table_name='quiz')
+    op.drop_table('quiz')
     op.drop_table('keypoints')
     op.drop_index(op.f('ix_flashcard_video_id'), table_name='flashcard')
     op.drop_index(op.f('ix_flashcard_segment_id'), table_name='flashcard')
     op.drop_table('flashcard')
+    op.drop_table('chat_messages')
     op.drop_table('video_summary')
     op.drop_table('topic_segment')
     op.drop_table('content_preferences')
+    op.drop_table('chat_sessions')
     op.drop_index(op.f('ix_video_content_hash'), table_name='video')
     op.drop_table('video')
     op.drop_table('settings')

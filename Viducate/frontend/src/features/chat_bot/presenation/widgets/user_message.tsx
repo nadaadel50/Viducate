@@ -11,7 +11,8 @@ export function UserMessage(props:UserMessageProps){
         <div className="flex flex-col items-end gap-3">
            
               <div className={`bg-[#4f46e5] text-white rounded-3xl rounded-tr-none px-6 py-4 max-w-[80%] shadow-lg shadow-[#4f46e5]/10`}>
-                <p className="text-sm leading-relaxed">
+                <p dir="auto"
+                 className="text-sm leading-relaxed">
                   {props.message}
                 </p>
               </div>

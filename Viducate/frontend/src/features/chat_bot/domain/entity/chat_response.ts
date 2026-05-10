@@ -5,7 +5,8 @@ export type ChatResponse = {
   };
 
   message: {
-    answer: string;
+    message_id:number;
+    content: string;
   };
 
 };

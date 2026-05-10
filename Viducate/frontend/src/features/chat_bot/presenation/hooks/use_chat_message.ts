@@ -3,17 +3,13 @@ import type { Message } from "../../domain/entity/message";
 import { useSendMessage } from "./use_send_message";
 import { success } from "zod";
 import { useLearningSession } from "../../../../core/hooks/useLearningContent";
-import type { ChatSession } from "../../domain/entity/chat_session";
-import { STORAGE_KEYS } from "../../../../core/constants";
+
 
 export function useChatMessages(open: boolean) {
   const [messages, setMessages] = useState<Message[]>([]);
   const [input, setInput] = useState("");
   const [sessionId, setSessionId] = useState<number | null>(null);
-  const [sessions, setSessions] = useState<ChatSession[]>(() => {
-    const storedSessions = localStorage.getItem(STORAGE_KEYS.chatSessions);
-    return storedSessions ? JSON.parse(storedSessions) : [];
-  });
+  //const {sessions, addSession} = useSessions();
 
   const messagesEndRef = useRef<HTMLDivElement | null>(null);
   const { sendMessage, isLoading, error, reset } = useSendMessage();
@@ -40,10 +36,7 @@ export function useChatMessages(open: boolean) {
     });
   }, [messages]);
 
-  // save the session
-  useEffect(() => {
-    localStorage.setItem(STORAGE_KEYS.chatSessions, JSON.stringify(sessions));
-  }, [sessions]);
+
 
   function handleSend() {
     if (!input.trim()) return;
@@ -69,38 +62,30 @@ export function useChatMessages(open: boolean) {
         onSuccess: (data) => {
           if (!sessionId) {
             setSessionId(data.session.id);
-        
+           
           }
+          // addSession({ id: data.session.id, title: data.session.title,created_at: Date.now(),last_message_at:Date.now() });
+        
           setMessages((prev) => [
             ...prev,
             {
               id: crypto.randomUUID(),
               role: "assistant",
-              content: data.message.answer,
+              content: data.message.content,
               time: Date.now(),
             },
           ]);
 
-          setSessions((prev) => {
-            const filtered = prev.filter(
-              (session) => session.id !== data.session.id,
-            );
-
-            return [
-              {
-                id: data.session.id,
-                title: data.session.title,
-                updatedAt: Date.now(),
-              },
-              ...filtered,
-            ];
-          });
+         
         },
       },
     );
 
     setInput("");
   }
+
+
+
   function handleOpenRecentChats() {
     setOpenRecentChats(!openRecentChats);
   }
@@ -122,6 +107,6 @@ export function useChatMessages(open: boolean) {
     openRecentChats,
     handleOpenRecentChats,
     clearMessages,
-    sessions,
+    //sessions,
   };
 }
