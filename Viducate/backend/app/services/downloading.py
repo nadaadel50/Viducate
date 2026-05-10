@@ -2,21 +2,47 @@ import os
 import uuid
 import tempfile
 import yt_dlp
+import requests
 from fastapi import HTTPException, status
 
+
+def _is_direct_url(url: str) -> bool:
+    """Check if the URL is a direct file link (R2 or S3 presigned)"""
+    direct_domains = [
+        "r2.cloudflarestorage.com",
+        "s3.amazonaws.com",
+        "storage.googleapis.com",
+    ]
+    return any(domain in url for domain in direct_domains)
+
+
+def _download_direct(url: str, output_path: str) -> str:
+    """Download file directly using requests"""
+    response = requests.get(url, stream=True, timeout=300)
+    if response.status_code != 200:
+        raise HTTPException(
+            status_code=status.HTTP_400_BAD_REQUEST,
+            detail=f"Failed to download video: HTTP {response.status_code}"
+        )
+    with open(output_path, "wb") as f:
+        for chunk in response.iter_content(chunk_size=8192):
+            if chunk:
+                f.write(chunk)
+    return output_path
 
 
 def download_video(url: str, video_id: int) -> str:
     temp_dir = tempfile.gettempdir()
     unique_id = uuid.uuid4().hex
+    output_path = os.path.join(temp_dir, f"video_{video_id}_{unique_id}.mp4")
 
-    output_path = os.path.join(
-        temp_dir,
-        f"video_{video_id}_{unique_id}.mp4"
-    )
+    # If R2 or S3, download directly
+    if _is_direct_url(url):
+        return _download_direct(url, output_path)
 
+    # Otherwise, use yt-dlp
     ydl_opts = {
-        'format': 'bestvideo+bestaudio/best',
+        'format': 'bestvideo[height<=360][ext=mp4]+bestaudio[ext=m4a]/best[height<=360]',
         'merge_output_format': 'mp4',
         'outtmpl': output_path.replace(".mp4", ".%(ext)s"),
         'quiet': True,
@@ -29,7 +55,6 @@ def download_video(url: str, video_id: int) -> str:
         ydl.download([url])
 
     final_file = None
-
     if os.path.exists(output_path):
         final_file = output_path
     else:
@@ -39,13 +64,10 @@ def download_video(url: str, video_id: int) -> str:
                 final_file = candidate
                 break
 
-
-
     if not final_file or not os.path.exists(final_file):
         raise HTTPException(
             status_code=status.HTTP_400_BAD_REQUEST,
             detail="Video download failed"
         )
-
 
     return final_file

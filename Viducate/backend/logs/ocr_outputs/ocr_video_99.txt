@@ -1,9 +1,0 @@
-# OCR Output — video_id=99
-# Language: en
-# Total segments: 5
-
-[00:00:00] Prince Sattam Bin Abdulaziz University | pleaiàa | College of Compater Engineering and Seiences | Oriented Programming | Object | Classes | Objects
-[00:01:47] What is Class ? Why we need It ? | Student 1 | Student 2 | Data: | 1- Studentname | 2- UniversityId | 3- BirthDate | 4- Address | 5-GPA | 6- StudyLevel | Operations | 1- Modify GPA | 2- Change Study level | 3- Get Student Name | 4- Get Student Address
-[00:05:56] Student 3 | 1-Studentname | 2-Universityid | 1-Studentname | Class Student | 3-Birth Date | 2-UniversityId | 1- Student name | 1-Studentname | 2-UniversityId | 3-Birth Date
-[00:12:44] Objects and Classes | Classes: Where Objects Come From | A class is code that describes a particular type of object. It specifies the | data that an object can hold the objects fields, and the actions that an | object can perform the objects methods. | You can think of a class as a code blueprint that can be used to create | a particular type of object.
-[00:14:06] When a program is running, it can use the class to create, in | memory, as many objects of a specific type as needed. | Each object that is created from a class is called an instance of | the class.
