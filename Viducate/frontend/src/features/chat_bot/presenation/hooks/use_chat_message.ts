@@ -3,15 +3,22 @@ import type { Message } from "../../domain/entity/message";
 import { useSendMessage } from "./use_send_message";
 import { success } from "zod";
 import { useLearningSession } from "../../../../core/hooks/useLearningContent";
+import type { ChatSession } from "../../domain/entity/chat_session";
+import { STORAGE_KEYS } from "../../../../core/constants";
 
 export function useChatMessages(open: boolean) {
   const [messages, setMessages] = useState<Message[]>([]);
   const [input, setInput] = useState("");
+  const [sessionId, setSessionId] = useState<number | null>(null);
+  const [sessions, setSessions] = useState<ChatSession[]>(() => {
+    const storedSessions = localStorage.getItem(STORAGE_KEYS.chatSessions);
+    return storedSessions ? JSON.parse(storedSessions) : [];
+  });
 
   const messagesEndRef = useRef<HTMLDivElement | null>(null);
   const { sendMessage, isLoading, error, reset } = useSendMessage();
-  const {videoId}=useLearningSession()
-    const[openRecentChats,setOpenRecentChats]=useState<boolean>(false);
+  const { videoId } = useLearningSession();
+  const [openRecentChats, setOpenRecentChats] = useState<boolean>(false);
 
   // prevent body scroll
   useEffect(() => {
@@ -33,6 +40,11 @@ export function useChatMessages(open: boolean) {
     });
   }, [messages]);
 
+  // save the session
+  useEffect(() => {
+    localStorage.setItem(STORAGE_KEYS.chatSessions, JSON.stringify(sessions));
+  }, [sessions]);
+
   function handleSend() {
     if (!input.trim()) return;
 
@@ -50,27 +62,52 @@ export function useChatMessages(open: boolean) {
     sendMessage(
       {
         videoId: videoId!,
-        question: input.trim(),   
+        question: input.trim(),
+        session_id: sessionId,
       },
       {
         onSuccess: (data) => {
+          if (!sessionId) {
+            setSessionId(data.session.id);
+        
+          }
           setMessages((prev) => [
             ...prev,
             {
-              id: data.id,
+              id: crypto.randomUUID(),
               role: "assistant",
-              content: data.answer,
+              content: data.message.answer,
               time: Date.now(),
             },
           ]);
+
+          setSessions((prev) => {
+            const filtered = prev.filter(
+              (session) => session.id !== data.session.id,
+            );
+
+            return [
+              {
+                id: data.session.id,
+                title: data.session.title,
+                updatedAt: Date.now(),
+              },
+              ...filtered,
+            ];
+          });
         },
       },
     );
 
     setInput("");
   }
-  function handleOpenRecentChats(){
-    setOpenRecentChats(!openRecentChats)
+  function handleOpenRecentChats() {
+    setOpenRecentChats(!openRecentChats);
+  }
+
+  function clearMessages() {
+    setMessages([]);
+    setSessionId(null);
   }
 
   return {
@@ -83,6 +120,8 @@ export function useChatMessages(open: boolean) {
     error,
     success,
     openRecentChats,
-    handleOpenRecentChats
+    handleOpenRecentChats,
+    clearMessages,
+    sessions,
   };
 }

@@ -42,9 +42,9 @@ export function useVideoData() {
     //  return fakeVideos
     },
     enabled: !!videoId,
-    staleTime: Infinity,
-    refetchOnWindowFocus: false,
-    refetchOnMount: false,
-    refetchOnReconnect: false,
+    // staleTime: Infinity,
+    // refetchOnWindowFocus: false,
+    // refetchOnMount: false,
+    // refetchOnReconnect: false,
   });
 }

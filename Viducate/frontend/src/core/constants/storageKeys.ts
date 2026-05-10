@@ -11,6 +11,7 @@ export const STORAGE_KEYS = {
    marks:"marks",
    video_Id : "video_id",
    flashcardSession:"flashcards-session",
-   topics:"video_topics"
+   topics:"video_topics",
+   chatSessions:"chat_sessions"
 
 };

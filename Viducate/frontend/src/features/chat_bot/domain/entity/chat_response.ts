@@ -1,7 +1,11 @@
 export type ChatResponse = {
-  id: string;
-  answer: string;
-  createdAt:number
+  session: {
+    id: number;
+    title: string;
+  };
 
+  message: {
+    answer: string;
+  };
 
 };

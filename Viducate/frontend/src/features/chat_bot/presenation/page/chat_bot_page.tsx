@@ -4,7 +4,6 @@ import { ChatHeader } from "../widgets/chat_header";
 import { ChatMessages } from "../widgets/chat_messages";
 import { ChatInputBtn } from "../widgets/chat_input_btn";
 import { useChatMessages } from "../hooks/use_chat_message";
-import { useState } from "react";
 import { RecentChatsSidebar } from "../widgets/recent_chat_sideBar";
 
 export function ChatBotPage() {
@@ -20,6 +19,8 @@ export function ChatBotPage() {
     messagesEndRef,
     openRecentChats,
     handleOpenRecentChats,
+    clearMessages,
+    sessions
   } = useChatMessages(open);
 
   return (
@@ -49,13 +50,15 @@ export function ChatBotPage() {
       ${openRecentChats ? "translate-x-0" : "translate-x-full"}
     `}
   >
-    <RecentChatsSidebar handleOpenSession={ handleOpenRecentChats} />
+    <RecentChatsSidebar handleOpenSession={ handleOpenRecentChats} handleClearMessages={clearMessages} sessions={sessions} />
   </div>
       
 
         {/* my contnet */}
 
-        <div className="flex flex-col h-full w-full">
+        <div
+        onClick={openRecentChats?handleOpenRecentChats:undefined}
+         className="flex flex-col h-full w-full">
           {/* header */}
           <ChatHeader
             handleOpenSession={handleOpenRecentChats}
