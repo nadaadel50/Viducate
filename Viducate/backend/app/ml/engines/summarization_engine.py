@@ -118,7 +118,11 @@ def safe_json_load(raw: str) -> dict:
 
 
 def summarize_segment(segment_title: str, main_topic: str, subtopics: list[dict], language: str = "en") -> dict:
-    lang_note = "Respond in Arabic." if language == "ar" else "Respond in English."
+    lang_note = (
+        "Respond in Arabic, BUT keep all technical terms, code, and programming concepts in English as-is (do not translate terms like 'Fuzzy Logic', 'membership', 'defuzzification', 'centroid', etc.). "
+        "Section headings, explanations, takeaways, tooltips, and conclusion must be in Arabic. "
+        "Technical terms inside 'term' blocks and highlights stay in English."
+    ) if language == "ar" else "Respond in English."
 
     subtopics_text = "\n".join(
         f"- {st['name']}: {st['description']}" for st in subtopics
@@ -135,6 +139,11 @@ def summarize_segment(segment_title: str, main_topic: str, subtopics: list[dict]
         - Do NOT hallucinate information not present in the input
         - Keep the output educational and beginner-friendly
         - Organize information into sections with clear headings
+        - When language is Arabic:
+            - Keep technical terminology in English
+            - Do NOT transliterate English terms into Arabic
+            - Do NOT invent Arabic versions of technical concepts
+            - Arabic is only for explanations and educational text, NOT for technical terms
 
         {lang_note}
 
@@ -151,7 +160,8 @@ def summarize_segment(segment_title: str, main_topic: str, subtopics: list[dict]
         - Never return null values
         - Never return empty arrays
 
-        Return EXACTLY this JSON structure:
+        Return JSON using the SAME STRUCTURE and FIELD NAMES as this example.
+        The values themselves should adapt to the requested language.
         {SEGMENT_JSON_STRUCTURE}
         
         SECTION RULES:
@@ -180,6 +190,13 @@ def summarize_segment(segment_title: str, main_topic: str, subtopics: list[dict]
         - highlights must appear EXACTLY in text
 
         - Keep explanations concise and educational
+
+        LANGUAGE RULES:
+        - Headings should be in Arabic when language='ar'
+        - Conclusion should be in Arabic when language='ar'
+        - Explanations should be in Arabic when language='ar'
+        - Technical terms MUST remain in English
+        - highlights containing technical terms MUST remain in English
         """
 
 
@@ -196,7 +213,11 @@ def summarize_segment(segment_title: str, main_topic: str, subtopics: list[dict]
 
 
 def summarize_full_video(video_title: str, segments: list[dict], language: str = "en") -> dict:
-    lang_note = "Respond in Arabic." if language == "ar" else "Respond in English."
+    lang_note = (
+        "Respond in Arabic, BUT keep all technical terms, code, and programming concepts in English as-is (do not translate terms like 'Fuzzy Logic', 'membership', 'defuzzification', 'centroid', etc.). "
+        "Section headings, explanations, takeaways, tooltips, and conclusion must be in Arabic. "
+        "Technical terms inside 'term' blocks and highlights stay in English."
+    ) if language == "ar" else "Respond in English."
 
     segments_text = ""
 
@@ -233,6 +254,11 @@ def summarize_full_video(video_title: str, segments: list[dict], language: str =
     - Keep explanations concise and educational
     - Do NOT hallucinate information
     - Organize information into logical sections
+    - When language is Arabic:
+        - Keep technical terminology in English
+        - Do NOT transliterate English terms into Arabic
+        - Do NOT invent Arabic versions of technical concepts
+        - Arabic is only for explanations and educational text, NOT for technical terms
 
     {lang_note}
 
@@ -250,7 +276,8 @@ def summarize_full_video(video_title: str, segments: list[dict], language: str =
     - Never return null values
     - Never return empty arrays
 
-    Return EXACTLY this structure:
+    Return JSON using the SAME STRUCTURE and FIELD NAMES as this example.
+    The values themselves should adapt to the requested language.
     {FULL_VIDEO_JSON_STRUCTURE}
 
     SECTION RULES:
@@ -278,6 +305,13 @@ def summarize_full_video(video_title: str, segments: list[dict], language: str =
       - may contain highlights
       - highlights must appear EXACTLY in text
       - Keep explanations concise and educational
+
+    LANGUAGE RULES:
+    - Headings should be in Arabic when language='ar'
+    - Conclusion should be in Arabic when language='ar'
+    - Explanations should be in Arabic when language='ar'
+    - Technical terms MUST remain in English
+    - highlights containing technical terms MUST remain in English
     """
 
     response = client.chat.completions.create(

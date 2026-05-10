@@ -1,0 +1,125 @@
+[00:00:00]
+  Transcript :  In the morning everyone, we have a presentation about environmental responsibilities.
+  OCR        : Stem | Reat-h | Basoonsbil
+  Combined   :  In the morning everyone, we have a presentation about environmental responsibilities. Stem | Reat-h | Basoonsbil
+
+[00:00:07]
+  Transcript :  Introduction, environmental and moral responsibilities to protect environmental.
+  OCR        : None
+  Combined   :  Introduction, environmental and moral responsibilities to protect environmental.
+
+[00:00:20]
+  Transcript :  Save the police, environmental must provide a safe, clean and hazard fee environment.
+  OCR        : Lesm | Safe | Workolace | Dentation
+  Combined   :  Save the police, environmental must provide a safe, clean and hazard fee environment. Lesm | Safe | Workolace | Dentation
+
+[00:00:23]
+  Transcript :  This assessment, we must identify and manage risks in the workplace.
+  OCR        : None
+  Combined   :  This assessment, we must identify and manage risks in the workplace.
+
+[00:00:30]
+  Transcript :  Training and guidance, employers should be training employees about workplace safety procedures.
+  OCR        : LaIsa | Rlisk | Assessment | Okjetis
+  Combined   :  Training and guidance, employers should be training employees about workplace safety procedures. LaIsa | Rlisk | Assessment | Okjetis
+
+[00:00:40]
+  Transcript :  Detective movement, employers must provide PPE such as helmets, gloves and masks we need.
+  OCR        : A212 | Corsen | Period 1-3 | Training | Guidance | Reablts | Drsntation
+  Combined   :  Detective movement, employers must provide PPE such as helmets, gloves and masks we need. A212 | Corsen | Period 1-3 | Training | Guidance | Reablts | Drsntation
+
+[00:00:50]
+  Transcript :  The people should pay fairly weight according to labor laws Working hours the girls must respect working hours and overtime payers
+  OCR        : A313 | Larsen | Perod 13 | Fair Pay | Re able to | prupaa | Dreentation
+  Combined   :  The people should pay fairly weight according to labor laws Working hours the girls must respect working hours and overtime payers A313 | Larsen | Perod 13 | Fair Pay | Re able to | prupaa | Dreentation
+
+[00:01:00]
+  Transcript :  The people should pay fairly weight according to labor laws Working hours the girls must respect working hours and overtime payers
+  OCR        : Period1-3 | Working Hours | Chjoctines | Empliyantis muat sepecal warking hours | pspesa | Dresatation
+  Combined   :  The people should pay fairly weight according to labor laws Working hours the girls must respect working hours and overtime payers Period1-3 | Working Hours | Chjoctines | Empliyantis muat sepecal warking hours | pspesa | Dresatation
+
+[00:01:10]
+  Transcript :  people of opportunities
+  OCR        : Lorsen | Period 13 | Objechineg | Equal Opportunitie | Reableto | prepeis a | preiataction
+  Combined   :  people of opportunities Lorsen | Period 13 | Objechineg | Equal Opportunitie | Reableto | prepeis a | preiataction
+
+[00:01:11]
+  Transcript :  they should ensure fairness and avoid discrimination
+  OCR        : None
+  Combined   :  they should ensure fairness and avoid discrimination
+
+[00:01:15]
+  Transcript :  or harassment
+  OCR        : None
+  Combined   :  or harassment
+
+[00:01:19]
+  Transcript :  health support, face adequate medical homes
+  OCR        : None
+  Combined   :  health support, face adequate medical homes
+
+[00:01:23]
+  Transcript :  or emergency living as a road should be provided.
+  OCR        : None
+  Combined   :  or emergency living as a road should be provided.
+
+[00:01:30]
+  Transcript :  Insurance and compensation.
+  OCR        : Perrod | Insurance | Compensation | Objectints | Reable to | psparss | Dresetation
+  Combined   :  Insurance and compensation. Perrod | Insurance | Compensation | Objectints | Reable to | psparss | Dresetation
+
+[00:01:32]
+  Transcript :  Employers must ensure employees can provide compensation in case of injury.
+  OCR        : None
+  Combined   :  Employers must ensure employees can provide compensation in case of injury.
+
+[00:01:40]
+  Transcript :  Respect and rights.
+  OCR        : Perad | Respect  Rights | Objectives | Imploven-mund repenct cnttiolvi | temTilly | prepasa | Dreratation
+  Combined   :  Respect and rights. Perad | Respect  Rights | Objectives | Imploven-mund repenct cnttiolvi | temTilly | prepasa | Dreratation
+
+[00:01:41]
+  Transcript :  Employers must respect employee rights and feel their failure.
+  OCR        : None
+  Combined   :  Employers must respect employee rights and feel their failure.
+
+[00:01:46]
+  Transcript :  Communication.
+  OCR        : None
+  Combined   :  Communication.
+
+[00:01:50]
+  Transcript :  Open communication about safety and global-based issues is essential.
+  OCR        : 4212 | Communication | ferod13 | Obyjectineg | Reableti | plepaa | Dreintation
+  Combined   :  Open communication about safety and global-based issues is essential. 4212 | Communication | ferod13 | Obyjectineg | Reableti | plepaa | Dreintation
+
+[00:01:55]
+  Transcript :  Sustainability.
+  OCR        : None
+  Combined   :  Sustainability.
+
+[00:01:57]
+  Transcript :  Players should encourage the community.
+  OCR        : None
+  Combined   :  Players should encourage the community.
+
+[00:02:00]
+  Transcript :  legal practices in the world and peace. Employee growth. Employers should provide opportunities
+  OCR        : A2s2 | Periad:13 | Sustainability | Objectinegs | theworjase | proparss | Drentation
+  Combined   :  legal practices in the world and peace. Employee growth. Employers should provide opportunities A2s2 | Periad:13 | Sustainability | Objectinegs | theworjase | proparss | Drentation
+
+[00:02:10]
+  Transcript :  for skill development and career growth. In the end, employer and small societies build
+  OCR        : Employee | Growth | Dresntal
+  Combined   :  for skill development and career growth. In the end, employer and small societies build Employee | Growth | Dresntal
+
+[00:02:16]
+  Transcript :  trust, safety and productivity. Team members are Mohammed Elf, Mohammed Shambi and Naadi
+  OCR        : None
+  Combined   :  trust, safety and productivity. Team members are Mohammed Elf, Mohammed Shambi and Naadi
+
+[00:02:27]
+  Transcript :  Thank you.
+  OCR        : None
+  Combined   :  Thank you.
+
