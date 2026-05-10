@@ -35,3 +35,13 @@ def get_segment_summaries(
 ):
     service = SummaryService(db)
     return service.get_or_generate_segment_summaries(video_id, current_user.id)
+
+@router.get("/video/{video_id}/segment/{segment_id}")
+def get_segment_summary(
+    video_id: int,
+    segment_id: int,
+    db: Session = Depends(get_db),
+    current_user=Depends(get_current_user),
+):
+    service = SummaryService(db)
+    return service.get_or_generate_single_segment_summary(video_id, segment_id, current_user.id)
