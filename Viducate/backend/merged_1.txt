@@ -1,1570 +1,1055 @@
 [00:00:00]
-  Transcript :  بس نستفر. طيب سهلة قوي. ويعني زيها زي خلاص تعتبر ايه? تعتبر
-  OCR        : GENETIC PROGRAMMING | 622021
-  Combined   :  بس نستفر. طيب سهلة قوي. ويعني زيها زي خلاص تعتبر ايه? تعتبر GENETIC PROGRAMMING | 622021
+  Transcript :  نبتدي. طيب احنا هنكمل الفازي كنترول سيستم.
+  OCR        : Fuzzy Logic | Control | Sabah Sayed | Department of Computer Science | Focuity of Computers and Arcjfciol Inteligence | Caire University | Egypt
+  Combined   :  نبتدي. طيب احنا هنكمل الفازي كنترول سيستم. Fuzzy Logic | Control | Sabah Sayed | Department of Computer Science | Focuity of Computers and Arcjfciol Inteligence | Caire University | Egypt
 
-[00:00:10]
-  Transcript :  بس نستفر. طيب سهلة قوي. ويعني زيها زي خلاص تعتبر ايه? تعتبر
-  OCR        : THE CHALLENGE | How can computers learn to solve problems without | being explicitly programmed? In other words, how can | computers be made to do what is needed to be done, | without being told exactly how to do it? | Attributed to Arthur Samuel 1959
-  Combined   :  بس نستفر. طيب سهلة قوي. ويعني زيها زي خلاص تعتبر ايه? تعتبر THE CHALLENGE | How can computers learn to solve problems without | being explicitly programmed? In other words, how can | computers be made to do what is needed to be done, | without being told exactly how to do it? | Attributed to Arthur Samuel 1959
+[00:00:19]
+  Transcript : None
+  OCR        : Outline | Defuzzification Techniques | Fuzzy ControlsArchitecture | - ComponentsSteps | - Examples
+  Combined   : Outline | Defuzzification Techniques | Fuzzy ControlsArchitecture | - ComponentsSteps | - Examples
 
-[00:00:12]
-  Transcript :  يعني ايه? كل اللي كنا بنقوله على بيتقال على خلاص الفرق الوحيد
+[00:00:22]
+  Transcript :  زي ما اتفقنا عكده ادي الفازي فيكيشن. آآ بيتعامل بقى اكثر من
   OCR        : None
-  Combined   :  يعني ايه? كل اللي كنا بنقوله على بيتقال على خلاص الفرق الوحيد
+  Combined   :  زي ما اتفقنا عكده ادي الفازي فيكيشن. آآ بيتعامل بقى اكثر من
 
-[00:00:24]
-  Transcript :  ان اتخصصت في حالة واحدة. خلاص فالكروموزوم بتاعها بقى لي واحد.
-  OCR        : None
-  Combined   :  ان اتخصصت في حالة واحدة. خلاص فالكروموزوم بتاعها بقى لي واحد.
+[00:00:29]
+  Transcript :  طريقة. خلاص? اي اول طريقة اسمها ودي بحاول اجيب فيها اللي
+  OCR        : 1- Max membership principle: Also known as the | height method, this scheme is limited to peaked | output functions. This method is given by the | algebraic expression: | µC z  µC z, for all 2 Z, | where z is the defuzzified | value | If multiple peaks exist, the middle one is chosen.
+  Combined   :  طريقة. خلاص? اي اول طريقة اسمها ودي بحاول اجيب فيها اللي 1- Max membership principle: Also known as the | height method, this scheme is limited to peaked | output functions. This method is given by the | algebraic expression: | µC z  µC z, for all 2 Z, | where z is the defuzzified | value | If multiple peaks exist, the middle one is chosen.
 
-[00:00:31]
-  Transcript :  مش زي الجينيتك الجريزم كده كنت بعض اشوف انا هستخدم انهي
+[00:00:39]
+  Transcript :  عندها بيبقى اعلى هي اللي باخدها وبادروا فيها. تمام? هم كلهم
   OCR        : None
-  Combined   :  مش زي الجينيتك الجريزم كده كنت بعض اشوف انا هستخدم انهي
-
-[00:00:35]
-  Transcript :  وينفع دو وينفع دو. الخلام اللي احنا كنا بنقوله لأ. انا هنا
-  OCR        : None
-  Combined   :  وينفع دو وينفع دو. الخلام اللي احنا كنا بنقوله لأ. انا هنا
-
-[00:00:40]
-  Transcript :  الجينيتك برو جرامنج بحتاج بس فيها او بعملها بالاساس عشان
-  OCR        : None
-  Combined   :  الجينيتك برو جرامنج بحتاج بس فيها او بعملها بالاساس عشان
+  Combined   :  عندها بيبقى اعلى هي اللي باخدها وبادروا فيها. تمام? هم كلهم
 
 [00:00:46]
-  Transcript :  اجينيريت ايه برو جرامو. اجينيريت برو جرامو. خلاص? لا. فبالنجر
+  Transcript :  بيختلفوا بس في اي اي انا اخدها اللي هي دي. خلاص? اللي على
   OCR        : None
-  Combined   :  اجينيريت ايه برو جرامو. اجينيريت برو جرامو. خلاص? لا. فبالنجر
+  Combined   :  بيختلفوا بس في اي اي انا اخدها اللي هي دي. خلاص? اللي على
 
-[00:00:54]
-  Transcript :  with the alt canh storms learn to solve the problem without being as perfectly programmed computer progrations
+[00:00:52]
+  Transcript : 
   OCR        : None
-  Combined   :  with the alt canh storms learn to solve the problem without being as perfectly programmed computer progrations
-
-[00:01:05]
-  Transcript :  بروغرامنج خلاص? يحللي بروغرام معينة. من غير اما جيب بروغرام
-  OCR        : None
-  Combined   :  بروغرامنج خلاص? يحللي بروغرام معينة. من غير اما جيب بروغرام
-
-[00:01:09]
-  Transcript :  اروع ادو اشرح له البروبلم بتاعتي اقول له اكتب لها كوز يحلها.
-  OCR        : None
-  Combined   :  اروع ادو اشرح له البروبلم بتاعتي اقول له اكتب لها كوز يحلها.
+  Combined   : 
 
 [00:01:12]
-  Transcript :  خلاص? فاهمين الفكرة? يبقى الجينيتك بروغرامنج هدفها تطلع لي
-  OCR        : None
-  Combined   :  خلاص? فاهمين الفكرة? يبقى الجينيتك بروغرامنج هدفها تطلع لي
+  Transcript :  الايه الممبرشيب بون. هي دي زت زت ستار بتاعتك. طيب. لو انا
+  OCR        : 2- Mean Max membership: This method | also | called middle-of-maxima is closely related to | the first method, except that the locations of the | maximum membership can be nonuniqe | i.e., | the maximum membership can be a plateau | rather than a single point. | This method is given by | the expression:
+  Combined   :  الايه الممبرشيب بون. هي دي زت زت ستار بتاعتك. طيب. لو انا 2- Mean Max membership: This method | also | called middle-of-maxima is closely related to | the first method, except that the locations of the | maximum membership can be nonuniqe | i.e., | the maximum membership can be a plateau | rather than a single point. | This method is given by | the expression:
 
-[00:01:18]
-  Transcript :  في الاخر بروغرام. يبقى الكروموزوم بتاعي هو بروغرام. الكروموزوم
+[00:01:14]
+  Transcript :  عندي اكتر من بوينت بقى الممبرشيب بتاعهم بون. جهت الطريقة
   OCR        : None
-  Combined   :  في الاخر بروغرام. يبقى الكروموزوم بتاعي هو بروغرام. الكروموزوم
+  Combined   :  عندي اكتر من بوينت بقى الممبرشيب بتاعهم بون. جهت الطريقة
 
-[00:01:23]
-  Transcript :  بتاعي هو تمام? ده بيحل ايه معينة? الهي اللي بتشتغل
+[00:01:19]
+  Transcript :  تانية بتقول لك خد المين يعني لو انا عندي هنا عند الا كانت
   OCR        : None
-  Combined   :  بتاعي هو تمام? ده بيحل ايه معينة? الهي اللي بتشتغل
+  Combined   :  تانية بتقول لك خد المين يعني لو انا عندي هنا عند الا كانت
 
-[00:01:32]
-  Transcript :  عليها طيب.
-  OCR        : CRITERION FOR SUCCESS | The aim is .. to get machines to exhibit behavior, which if | done by humans, would be assumed to involve the use | of intelligence. | Arthur Samuel 1983 | Gax02s
-  Combined   :  عليها طيب. CRITERION FOR SUCCESS | The aim is .. to get machines to exhibit behavior, which if | done by humans, would be assumed to involve the use | of intelligence. | Arthur Samuel 1983 | Gax02s
+[00:01:24]
+  Transcript :  وعند البي كمان من الا للبي خلاص يعني مش دي ايه ده لين مش
+  OCR        : None
+  Combined   :  وعند البي كمان من الا للبي خلاص يعني مش دي ايه ده لين مش
+
+[00:01:33]
+  Transcript :  واحد يبقى هيخد الا بلاس البي واقسمهم على الاتنين وهي دي
+  OCR        : None
+  Combined   :  واحد يبقى هيخد الا بلاس البي واقسمهم على الاتنين وهي دي
+
+[00:01:41]
+  Transcript :  اللي هتطلعان للزد ستور الطريقة التالتة اللي هي السنترويد دي
+  OCR        : 3- Centroid method: This procedure also called | center of area or center of gravity is the most | prevalent and physically appealing of all the | defuzzification methods Sugeno, 1985; it is given | by the algebraic expression: | jcz  z dz | cz d: | - where  denotes an algebraic integration
+  Combined   :  اللي هتطلعان للزد ستور الطريقة التالتة اللي هي السنترويد دي 3- Centroid method: This procedure also called | center of area or center of gravity is the most | prevalent and physically appealing of all the | defuzzification methods Sugeno, 1985; it is given | by the algebraic expression: | jcz  z dz | cz d: | - where  denotes an algebraic integration
 
 [00:01:46]
-  Transcript :  يبقى انا عايزة ايه? كأنها كأنها اللي بيكتب لي بتاعي.
-  OCR        : GENETIC PROGRAMMING GP | One of the central problems in computer science is how to make | computers solve problems without being explicitly programmed | to do so. | Genetic programming offers a solution through the evolution of | computer programs by methods of natural selection. It is an | extension of the Genetic Algorithm. | Gax2s
-  Combined   :  يبقى انا عايزة ايه? كأنها كأنها اللي بيكتب لي بتاعي. GENETIC PROGRAMMING GP | One of the central problems in computer science is how to make | computers solve problems without being explicitly programmed | to do so. | Genetic programming offers a solution through the evolution of | computer programs by methods of natural selection. It is an | extension of the Genetic Algorithm. | Gax2s
-
-[00:01:48]
-  Transcript :  طيب عملوها ليه لاني كانت مشكلة كبيرة في الكمبيوتر سايينس ان
+  Transcript :  كأنك بتعمل ايه? كأنك بتعمل التكامل ده بتاع الماز. خلاص?
   OCR        : None
-  Combined   :  طيب عملوها ليه لاني كانت مشكلة كبيرة في الكمبيوتر سايينس ان
+  Combined   :  كأنك بتعمل ايه? كأنك بتعمل التكامل ده بتاع الماز. خلاص?
 
-[00:01:56]
-  Transcript :  انا ايه هاو تو ميك كومبيوتر صولف بروبلمز وزوي
-  OCR        : None
-  Combined   :  انا ايه هاو تو ميك كومبيوتر صولف بروبلمز وزوي
+[00:01:59]
+  Transcript :  كأنك بتعمل التكامل. زه بتاعه. طيب
+  OCR        : 4 - Weighted average method: The weighted average | method is the most frequently used in fuzzy applications | since it is one of the more computationally efficient | methods. Unfortunately, it is usually restricted to | symmetrical output membership functions. It is given by | the algebraic expression: | ucz.z | where  denotes the algebreje sam and where Z is the centroid of each | symmetric membership function. The weighted average method is formed | by weighting cach membership function in the output by its respective | membership value.
+  Combined   :  كأنك بتعمل التكامل. زه بتاعه. طيب 4 - Weighted average method: The weighted average | method is the most frequently used in fuzzy applications | since it is one of the more computationally efficient | methods. Unfortunately, it is usually restricted to | symmetrical output membership functions. It is given by | the algebraic expression: | ucz.z | where  denotes the algebreje sam and where Z is the centroid of each | symmetric membership function. The weighted average method is formed | by weighting cach membership function in the output by its respective | membership value.
 
 [00:02:00]
-  Transcript :  ايه بين الاكتبلاك في ايه بروغرام ده من غير ما يجي هو اللي يجي
+  Transcript :  الطريقة الرابعة دي الطريقة اللي احنا بنستخدمها ودي اللي انتو
   OCR        : None
-  Combined   :  ايه بين الاكتبلاك في ايه بروغرام ده من غير ما يجي هو اللي يجي
+  Combined   :  الطريقة الرابعة دي الطريقة اللي احنا بنستخدمها ودي اللي انتو
 
-[00:02:04]
-  Transcript :  انالايز الايه ايه البروبلم وهو اللي يجي اكتب لها الكود بتاعه
+[00:02:03]
+  Transcript :  هتعملوها في الاساين اللي انتو هتستخدموها في الاساين اللي هي
   OCR        : None
-  Combined   :  انالايز الايه ايه البروبلم وهو اللي يجي اكتب لها الكود بتاعه
+  Combined   :  هتعملوها في الاساين اللي انتو هتستخدموها في الاساين اللي هي
 
-[00:02:07]
-  Transcript :  خلاص فالجينيتيك بروغرام دي بتوفر ايه استوليوشن عن طريق
+[00:02:06]
+  Transcript :  زي ما انا كنت شرحتها لكم في من شوية ان انا بجيب
   OCR        : None
-  Combined   :  خلاص فالجينيتيك بروغرام دي بتوفر ايه استوليوشن عن طريق
+  Combined   :  زي ما انا كنت شرحتها لكم في من شوية ان انا بجيب
 
-[00:02:11]
-  Transcript :  ايه بروغرام دي بقى بتبتدي بتاعها بسام اه بروغرام والبروغرامز دي
+[00:02:21]
+  Transcript :  هنا هي تمام طيب والسنترويد ده بحسبه ازاي? ده بس هنا على اي?
+  OCR        : 4 - Weighted average method: Example | The two functions shown | would result in the following | general form for the | defuzzified value: | a0.5  b0.9 | 0.5  0.9
+  Combined   :  هنا هي تمام طيب والسنترويد ده بحسبه ازاي? ده بس هنا على اي? 4 - Weighted average method: Example | The two functions shown | would result in the following | general form for the | defuzzified value: | a0.5  b0.9 | 0.5  0.9
+
+[00:02:26]
+  Transcript :  لو عندي الاي والبي بضرب الاي اللي هي بتاعت الفازي سات في الاي
   OCR        : None
-  Combined   :  ايه بروغرام دي بقى بتبتدي بتاعها بسام اه بروغرام والبروغرامز دي
+  Combined   :  لو عندي الاي والبي بضرب الاي اللي هي بتاعت الفازي سات في الاي
 
-[00:02:18]
-  Transcript :  بتفضل من ايه ايه لالتانية تعزل فيها بناء على الفيتنس لحد ما
+[00:02:34]
+  Transcript :  في بتاع الفازي سات دي. بلاس بتاعت البي في بتاع الفازي سات
   OCR        : None
-  Combined   :  بتفضل من ايه ايه لالتانية تعزل فيها بناء على الفيتنس لحد ما
+  Combined   :  في بتاع الفازي سات دي. بلاس بتاعت البي في بتاع الفازي سات
 
-[00:02:25]
-  Transcript :  وتوصل في الآخر لأحسن program. يحللي A يحللي program G. طميم? معتمدة على
+[00:02:45]
+  Transcript :  التانية على مجموعة الاي. ده اللي انا بعمله. عشان اطلع
   OCR        : None
-  Combined   :  وتوصل في الآخر لأحسن program. يحللي A يحللي program G. طميم? معتمدة على
+  Combined   :  التانية على مجموعة الاي. ده اللي انا بعمله. عشان اطلع
 
-[00:02:32]
-  Transcript :  natural A selection. احنا قلنا زيها زي ال genetic algorithm. خلاص? هي تعتبر
+[00:02:51]
+  Transcript :  الزد. طيب. بعمل ده ازاي? لازم عشان اعمل ده اطلع الاي والبي.
+  OCR        : 4- Weighted average method: getting the centroid | The centroid of symmetrical fuzzy sets is the center | point on the x-axis. | Example: centroid  10 | For non-symmetric fuzzy sets trapezoidal or | triangular: | -Add defining points of fuzzy set and divide by their number. | Example: centroid of triangular set 0,7,20 | 07203  9
+  Combined   :  الزد. طيب. بعمل ده ازاي? لازم عشان اعمل ده اطلع الاي والبي. 4- Weighted average method: getting the centroid | The centroid of symmetrical fuzzy sets is the center | point on the x-axis. | Example: centroid  10 | For non-symmetric fuzzy sets trapezoidal or | triangular: | -Add defining points of fuzzy set and divide by their number. | Example: centroid of triangular set 0,7,20 | 07203  9
+
+[00:02:54]
+  Transcript :  points
   OCR        : None
-  Combined   :  natural A selection. احنا قلنا زيها زي ال genetic algorithm. خلاص? هي تعتبر
+  Combined   :  points
 
-[00:02:39]
-  Transcript :  extension لل genetic algorithm.
+[00:03:06]
+  Transcript :  هي عبارة عن يعني متعرف بسري بوينتز. فانا بس كل اللي بعمله
   OCR        : None
-  Combined   :  extension لل genetic algorithm.
+  Combined   :  هي عبارة عن يعني متعرف بسري بوينتز. فانا بس كل اللي بعمله
 
-[00:02:46]
-  Transcript :  ممكن اقترح مثلا ييميز حل وهو بيحاولش بحسن حل لتالي حيك تقصو دي ولا
+[00:03:12]
+  Transcript :  بجمع البيدي دي وبقسمع العددها. خلاص? فبصتوا هنا في في
   OCR        : None
-  Combined   :  ممكن اقترح مثلا ييميز حل وهو بيحاولش بحسن حل لتالي حيك تقصو دي ولا
+  Combined   :  بجمع البيدي دي وبقسمع العددها. خلاص? فبصتوا هنا في في
 
-[00:02:53]
-  Transcript :  kunne Cruise over melodic
+[00:03:18]
+  Transcript :  الاجزامبل ده. الفازي ست دي كان ومتعرفة بالبيدي. زير وسبن
   OCR        : None
-  Combined   :  kunne Cruise over melodic
+  Combined   :  الاجزامبل ده. الفازي ست دي كان ومتعرفة بالبيدي. زير وسبن
 
-[00:03:05]
-  Transcript :  Pipراهromagnet الكروسوف يوضم ق烈
+[00:03:24]
+  Transcript :  وتويني. يبقى ازاي يجيب بتاع الفوزي ست دي? هجمع الزيرو بلوس
   OCR        : None
-  Combined   :  Pipراهromagnet الكروسوف يوضم ق烈
+  Combined   :  وتويني. يبقى ازاي يجيب بتاع الفوزي ست دي? هجمع الزيرو بلوس
 
-[00:03:08]
-  Transcript :  يرى هنالك أشياء هذه howls
+[00:03:30]
+  Transcript :  السبن بلوس التويني. خلاص يديني وتويني سبن. وهسمع على
   OCR        : None
-  Combined   :  يرى هنالك أشياء هذه howls
+  Combined   :  السبن بلوس التويني. خلاص يديني وتويني سبن. وهسمع على
 
-[00:03:13]
-  Transcript :  seine اذنظر بالبديوين هنعمل هنا
+[00:03:34]
+  Transcript :  الثري. ادتني ناين. يبقى عند ناين هن. ده بتاعي. فناين دي هي اللي
   OCR        : None
-  Combined   :  seine اذنظر بالبديوين هنعمل هنا
+  Combined   :  الثري. ادتني ناين. يبقى عند ناين هن. ده بتاعي. فناين دي هي اللي
 
-[00:03:17]
-  Transcript :  ل tokens
+[00:03:46]
+  Transcript :  هتتضرب في الاين في الدجري اف مامبرشم. طب لو هترابيزويدا
+  OCR        : Fuzzy Inference | The most commonly used fuzzy inference technique is the so- | called Mamdani method. | Mamdanis model expresses the output using fuzzy terms instead | of mathematical combinations of the input variable. | All defuzzification techniques previously discussed belong to | Mamdanis model. | The Mamdani-style fuzzy inference process is performed in four | steps: | 1.Fuzzification of the input variables | 2.Rule evaluation inference | 3. Aggregation of the rule outputs composition | 4.Defuzzification.
+  Combined   :  هتتضرب في الاين في الدجري اف مامبرشم. طب لو هترابيزويدا Fuzzy Inference | The most commonly used fuzzy inference technique is the so- | called Mamdani method. | Mamdanis model expresses the output using fuzzy terms instead | of mathematical combinations of the input variable. | All defuzzification techniques previously discussed belong to | Mamdanis model. | The Mamdani-style fuzzy inference process is performed in four | steps: | 1.Fuzzification of the input variables | 2.Rule evaluation inference | 3. Aggregation of the rule outputs composition | 4.Defuzzification.
+
+[00:03:48]
+  Transcript :  هيبقى ليه فور بوينتس. هجمعي الفور بوينتس وهسمع على الاربعة.
   OCR        : None
-  Combined   :  ل tokens
+  Combined   :  هيبقى ليه فور بوينتس. هجمعي الفور بوينتس وهسمع على الاربعة.
 
-[00:03:19]
-  Transcript :  عندما تحدثنا عنه قلنا انه أهلเห��들이
+[00:03:52]
+  Transcript :  تمام? ده اللي انتم هتعملوه هتعملوه خلاص? يبقى هاتف
   OCR        : None
-  Combined   :  عندما تحدثنا عنه قلنا انه أهلเห��들이
-
-[00:03:21]
-  Transcript :  مجموعة الحلول ايه المتاحة بتاعتي. مجموعة الحلول اللي انا
-  OCR        : None
-  Combined   :  مجموعة الحلول ايه المتاحة بتاعتي. مجموعة الحلول اللي انا
-
-[00:03:26]
-  Transcript :  بدور فيها على ايه فيهم. يبقى هي مجموعة من بدورها على
-  OCR        : None
-  Combined   :  بدور فيها على ايه فيهم. يبقى هي مجموعة من بدورها على
-
-[00:03:31]
-  Transcript :  هو عندي هنا ايه في صح? يبقى بتاعتي عبارة عن ايه عن
-  OCR        : None
-  Combined   :  هو عندي هنا ايه في صح? يبقى بتاعتي عبارة عن ايه عن
-
-[00:03:38]
-  Transcript :  فوسيفول كمبيوتر بروغرام. او او الهيلي فت ايه? يبقى انا سرش
-  OCR        : None
-  Combined   :  فوسيفول كمبيوتر بروغرام. او او الهيلي فت ايه? يبقى انا سرش
-
-[00:03:47]
-  Transcript :  بزبط عبارة عن ايه فوسيفول كمبيوتر بروغرام. وانا بسرش فيهم
-  OCR        : None
-  Combined   :  بزبط عبارة عن ايه فوسيفول كمبيوتر بروغرام. وانا بسرش فيهم
-
-[00:03:53]
-  Transcript :  على الاوكتمايز بروغرام او الهيلي فت بروغرام اللي هيسولف البروغرام
-  OCR        : None
-  Combined   :  على الاوكتمايز بروغرام او الهيلي فت بروغرام اللي هيسولف البروغرام
-
-[00:03:59]
-  Transcript :  بتاعتي. هنشوف يتاكد.
-  OCR        : Why Genetic Programming? | For many problems | machine learning and | artificiali | intelligence, | most natural representation | for a solution is a computer program. Koza, 1994
-  Combined   :  بتاعتي. هنشوف يتاكد. Why Genetic Programming? | For many problems | machine learning and | artificiali | intelligence, | most natural representation | for a solution is a computer program. Koza, 1994
+  Combined   :  تمام? ده اللي انتم هتعملوه هتعملوه خلاص? يبقى هاتف
 
 [00:04:00]
-  Transcript :  ازاي? طيب ليه? ليه عملنا حاجة زي لان اغلب في بتبقى
+  Transcript :  كده قدرنا نحسب ال اي والبي اللي هما ال اي بتاعت ال اي الفاضي
   OCR        : None
-  Combined   :  ازاي? طيب ليه? ليه عملنا حاجة زي لان اغلب في بتبقى
+  Combined   :  كده قدرنا نحسب ال اي والبي اللي هما ال اي بتاعت ال اي الفاضي
 
-[00:04:13]
-  Transcript :  محتاجة. اه هو اللي خلاص فنبعد لما عدو اعمله لأ انا خلي
+[00:04:05]
+  Transcript :  ساتس بتاعتي. وندرف ونقسم على اي مجموعهم. كده بطلعنا ال اي
   OCR        : None
-  Combined   :  محتاجة. اه هو اللي خلاص فنبعد لما عدو اعمله لأ انا خلي
+  Combined   :  ساتس بتاعتي. وندرف ونقسم على اي مجموعهم. كده بطلعنا ال اي
 
-[00:04:22]
-  Transcript :  بتعمله. واختاروا بتاعة
-  OCR        : For many problems in machine learning and | artificial intelligence. the most natural representation | program for Genetic Programming
-  Combined   :  بتعمله. واختاروا بتاعة For many problems in machine learning and | artificial intelligence. the most natural representation | program for Genetic Programming
+[00:04:11]
+  Transcript :  بتاعت الاوتوت. في دي خلاص? طيب. الفاضي في اكتر من فاضي في
+  OCR        : None
+  Combined   :  بتاعت الاوتوت. في دي خلاص? طيب. الفاضي في اكتر من فاضي في
+
+[00:04:29]
+  Transcript :  مامداني وفي سوجينو. احنا مش ناخد سوجينو. خلاص احنا الطريقة اللي
+  OCR        : 2. Rule evaluation inference | 4 Defuzzification.
+  Combined   :  مامداني وفي سوجينو. احنا مش ناخد سوجينو. خلاص احنا الطريقة اللي 2. Rule evaluation inference | 4 Defuzzification.
 
 [00:04:32]
-  Transcript :  بتاعت الكرومزوم تبقى عبارة عن ايه? خلاص? يبقى انا عندي
-  OCR        : artificial intelligence, the most natural representation | A parse tree is a good representation of a computer
-  Combined   :  بتاعت الكرومزوم تبقى عبارة عن ايه? خلاص? يبقى انا عندي artificial intelligence, the most natural representation | A parse tree is a good representation of a computer
+  Transcript :  احنا اخدناها دي اللي هي بتاعت المامداني. بتاعت مامداني. بيعمل
+  OCR        : None
+  Combined   :  احنا اخدناها دي اللي هي بتاعت المامداني. بتاعت مامداني. بيعمل
 
 [00:04:36]
-  Transcript :  وحيدة في ال جينياتيك مروجراميج انهاي ال بورس تري. وهنعرف
+  Transcript :  دي بيعمل ورول ودي خلاص ده مش مش حاجة مؤثرة قوي عندي. خلاص
   OCR        : None
-  Combined   :  وحيدة في ال جينياتيك مروجراميج انهاي ال بورس تري. وهنعرف
+  Combined   :  دي بيعمل ورول ودي خلاص ده مش مش حاجة مؤثرة قوي عندي. خلاص
 
-[00:04:42]
-  Transcript :  دلوقتي هم ليختاروا ال بورس تري. ده بتاع الجينياتيك
-  OCR        : generation | 1  pooulotion size ?4 | select two | individuols | perfom clossover | with probabity D | performn muliation | with probobity p | infermediate pool | add affspring to | i  i  2 | GA flowchart
-  Combined   :  دلوقتي هم ليختاروا ال بورس تري. ده بتاع الجينياتيك generation | 1  pooulotion size ?4 | select two | individuols | perfom clossover | with probabity D | performn muliation | with probobity p | infermediate pool | add affspring to | i  i  2 | GA flowchart
+[00:04:47]
+  Transcript :  ممكن ندخلها جوة يعني احنا قريضي عملناها خلاص احنا قريضي عمناها
+  OCR        : None
+  Combined   :  ممكن ندخلها جوة يعني احنا قريضي عملناها خلاص احنا قريضي عمناها
 
-[00:04:46]
+[00:04:56]
   Transcript : 
-  OCR        : None
-  Combined   : 
+  OCR        : Mamdani Fuzzy Inference | We examine a simple two-input cne-output problem that includes three rules: | Rule: 1 | x is A3 | Rule: 1 | y is B1 | prejectfunding | is adequate | THEN | z is C1 | THEN | risk | projectstaffing | is small | is low | Bule: 2 | x is A2 | Rule: 2 | y is B2 | projectfunding | prejectstafing | is marginal | is large | THEN | z Is C2 | THEN | risk | Is normal | Bule: 3 | Buk:3 | THEN | x is A1 | z is C3 | THEN | projectfunding | is inadequate | is high
+  Combined   :  Mamdani Fuzzy Inference | We examine a simple two-input cne-output problem that includes three rules: | Rule: 1 | x is A3 | Rule: 1 | y is B1 | prejectfunding | is adequate | THEN | z is C1 | THEN | risk | projectstaffing | is small | is low | Bule: 2 | x is A2 | Rule: 2 | y is B2 | projectfunding | prejectstafing | is marginal | is large | THEN | z Is C2 | THEN | risk | Is normal | Bule: 3 | Buk:3 | THEN | x is A1 | z is C3 | THEN | projectfunding | is inadequate | is high
 
-[00:05:05]
-  Transcript :  عليهم تمام? وبعد كده بايه باخد ده وحطه في البول بتاعتي
+[00:05:06]
+  Transcript :  از اي سري. خلاص? زين زد از سي وان. الاي هي الفوزي ستس بتاعة
   OCR        : None
-  Combined   :  عليهم تمام? وبعد كده بايه باخد ده وحطه في البول بتاعتي
+  Combined   :  از اي سري. خلاص? زين زد از سي وان. الاي هي الفوزي ستس بتاعة
 
-[00:05:17]
-  Transcript :  وعلى حسب انا بعمل ايه? خلاص? طيب اما الكلام ده هيخصل ازاي في
+[00:05:18]
+  Transcript :  الاكس. الاولي. البي هي الفوزي ستس بتاعة الواي. الانبوت التاني.
   OCR        : None
-  Combined   :  وعلى حسب انا بعمل ايه? خلاص? طيب اما الكلام ده هيخصل ازاي في
+  Combined   :  الاكس. الاولي. البي هي الفوزي ستس بتاعة الواي. الانبوت التاني.
 
-[00:05:27]
-  Transcript :  هيبقى فيه تعديل بسيط هنا. انا قدت بعمل خلاص? هنا في
+[00:05:22]
+  Transcript :  والس هي الفازي سادس بتاعت الاي الاوتوت اللي هو الزت. تمام? طبعا كل رول هنا احطي لكم هنا اجزامبل عليها. خلاص? الاجزامبل ده من الاسايمنت اللي هيتعمل. طيب اه الرول التاني بتقول لي في
   OCR        : None
-  Combined   :  هيبقى فيه تعديل بسيط هنا. انا قدت بعمل خلاص? هنا في
+  Combined   :  والس هي الفازي سادس بتاعت الاي الاوتوت اللي هو الزت. تمام? طبعا كل رول هنا احطي لكم هنا اجزامبل عليها. خلاص? الاجزامبل ده من الاسايمنت اللي هيتعمل. طيب اه الرول التاني بتقول لي في
 
-[00:05:34]
-  Transcript :  اه انا هعمل يا يعني يا دا يا دا بناء على يعني هعمل خلاص?
+[00:05:41]
+  Transcript :  الاكس از اي تو اند واي از بي تو زل زد از اي تي تو. في رول سريع عندي
   OCR        : None
-  Combined   :  اه انا هعمل يا يعني يا دا يا دا بناء على يعني هعمل خلاص?
+  Combined   :  الاكس از اي تو اند واي از بي تو زل زد از اي تي تو. في رول سريع عندي
 
-[00:05:43]
-  Transcript :  نمبر كده واشوف هو انا هعمل خلاص? هعمل خلاص? هعمل خلاص? هعمل
-  OCR        : None
-  Combined   :  نمبر كده واشوف هو انا هعمل خلاص? هعمل خلاص? هعمل خلاص? هعمل
+[00:05:54]
+  Transcript :  انتسدنت واحد اللي هو الاكس از اي وان زل زد از اي سي سري. طيب. اول
+  OCR        : Step 1: Fuzzification | The first step is to take the crisp inputs, x1 and y1 project fundling and | project staffing and determine the degree to which these inputs | belong to each of the appropriate fuzzy sets. | Crisp Jeysr | Cripo Input | F x - 41  0.5 | Pr-20.1
+  Combined   :  انتسدنت واحد اللي هو الاكس از اي وان زل زد از اي سي سري. طيب. اول Step 1: Fuzzification | The first step is to take the crisp inputs, x1 and y1 project fundling and | project staffing and determine the degree to which these inputs | belong to each of the appropriate fuzzy sets. | Crisp Jeysr | Cripo Input | F x - 41  0.5 | Pr-20.1
 
-[00:05:51]
-  Transcript :  اعملها ببوردو بي سي وهنا بايه ببوردو بي ام. تمام? يبقى الفرق ما بين
+[00:05:58]
+  Transcript :  استاب اعملها اللي هي الفازي فيها.
   OCR        : None
-  Combined   :  اعملها ببوردو بي سي وهنا بايه ببوردو بي ام. تمام? يبقى الفرق ما بين
+  Combined   :  استاب اعملها اللي هي الفازي فيها.
 
 [00:06:00]
-  Transcript :  الان ما يا بمشي في وساعتها هبقى انا كده اخدت اتنين
+  Transcript :  اللي هو ايه? برسم الفاضي سادسة بتاعتي وبعرف اجيب الايه?
   OCR        : None
-  Combined   :  الان ما يا بمشي في وساعتها هبقى انا كده اخدت اتنين
+  Combined   :  اللي هو ايه? برسم الفاضي سادسة بتاعتي وبعرف اجيب الايه?
 
-[00:06:07]
-  Transcript :  كروموزومز اشتغلت بيهم او همشي بالميوتاشن وساعتها هشتغل على
+[00:06:04]
+  Transcript :  بتاعت خلاص في الفاضي ايه? سادسة دي. تمام? عملناها كزا مرة في
   OCR        : None
-  Combined   :  كروموزومز اشتغلت بيهم او همشي بالميوتاشن وساعتها هشتغل على
+  Combined   :  بتاعت خلاص في الفاضي ايه? سادسة دي. تمام? عملناها كزا مرة في
 
-[00:06:14]
-  Transcript :  تمام? في الجينيتك انا كنت بعمل كروس اوبر والوف سبرينج اللي
-  OCR        : None
-  Combined   :  تمام? في الجينيتك انا كنت بعمل كروس اوبر والوف سبرينج اللي
-
-[00:06:20]
-  Transcript :  بيطلع كنت بعمل علي ميوتاشن. فكنت بعمل للتنين. تمام? ده
-  OCR        : None
-  Combined   :  بيطلع كنت بعمل علي ميوتاشن. فكنت بعمل للتنين. تمام? ده
+[00:06:15]
+  Transcript :  وخلاص بقى انتم كده فهمتوها. طيب مشكلة زي ما زميلتكم كدت
+  OCR        : To accurately get the membership degree of the | crisp value provided, equations of lines of the | different fuzzy sets should be determined. Then you | can get value of y membership by substituting in | line equations by x value crisp value | values are not accurate
+  Combined   :  وخلاص بقى انتم كده فهمتوها. طيب مشكلة زي ما زميلتكم كدت To accurately get the membership degree of the | crisp value provided, equations of lines of the | different fuzzy sets should be determined. Then you | can get value of y membership by substituting in | line equations by x value crisp value | values are not accurate
 
 [00:06:25]
-  Transcript :  الفرق في الايه? في الجينيتك. في ما بين الجينيتك والجينيتك
-  OCR        : None
-  Combined   :  الفرق في الايه? في الجينيتك. في ما بين الجينيتك والجينيتك
+  Transcript :  بتسأل احنا هنا بنجيبها من على الايه? من على الرسمة. طب لو انا
+  OCR        : Crip Japar | Crisp Input | Pr-2t 0.1
+  Combined   :  بتسأل احنا هنا بنجيبها من على الايه? من على الرسمة. طب لو انا Crip Japar | Crisp Input | Pr-2t 0.1
 
-[00:06:30]
-  Transcript :  بروغرامنج. طيب احنا قلنا ان احنا هنستخدم كروموزوم في
+[00:06:25]
+  Transcript :  هعمل لها اعملها في الكود. هعرف اجيبها ازاي? بص كده معي مش الفاز
   OCR        : None
-  Combined   :  بروغرامنج. طيب احنا قلنا ان احنا هنستخدم كروموزوم في
+  Combined   :  هعمل لها اعملها في الكود. هعرف اجيبها ازاي? بص كده معي مش الفاز
 
-[00:06:36]
-  Transcript :  الجينيتك بروغرامنج. اش معنى? عشان هي انسف حاجة اقدر ايه
+[00:06:32]
+  Transcript :  يست زي اللي انا بشوف ما بينها ما بين اللي هو دي عبر عبر عن
   OCR        : None
-  Combined   :  الجينيتك بروغرامنج. اش معنى? عشان هي انسف حاجة اقدر ايه
+  Combined   :  يست زي اللي انا بشوف ما بينها ما بين اللي هو دي عبر عبر عن
 
-[00:06:44]
-  Transcript :  الكمبيوتر ايه بروغرام. او الكمبيوتر بروغرام ده ممكن يكون
+[00:06:38]
+  Transcript :  صح? لو انا قدرت اجيب بتاعت ده وعودت فيه بالاكس بطلع لي
   OCR        : None
-  Combined   :  الكمبيوتر ايه بروغرام. او الكمبيوتر بروغرام ده ممكن يكون
+  Combined   :  صح? لو انا قدرت اجيب بتاعت ده وعودت فيه بالاكس بطلع لي
 
 [00:06:47]
-  Transcript :  معمولة عشان ايه? يا اما هيحل صح? او
-  OCR        : None
-  Combined   :  معمولة عشان ايه? يا اما هيحل صح? او
-
-[00:06:54]
   Transcript : 
   OCR        : None
   Combined   : 
 
-[00:07:07]
-  Transcript :  الكمبيوتر فالتلات حاجات دول اقدر عمل لهم بالبارس تريد عشان كده
+[00:07:10]
+  Transcript :  اقول وهي تكون فحطة ان انا اعملها بايزي. ارسمها. واشوفها
   OCR        : None
-  Combined   :  الكمبيوتر فالتلات حاجات دول اقدر عمل لهم بالبارس تريد عشان كده
+  Combined   :  اقول وهي تكون فحطة ان انا اعملها بايزي. ارسمها. واشوفها
 
-[00:07:13]
-  Transcript :  اخترنا الايه تبقى هي الايه الكرموزوم فمسلا لو انا عندي
+[00:07:19]
+  Transcript :  كده على الرسم بايز دي وخلاص دي ما بتطلع ليش عشان اطلع دي
   OCR        : None
-  Combined   :  اخترنا الايه تبقى هي الايه الكرموزوم فمسلا لو انا عندي
+  Combined   :  كده على الرسم بايز دي وخلاص دي ما بتطلع ليش عشان اطلع دي
 
-[00:07:18]
-  Transcript :  الاتواتفكس. يعني ايه? يعني بكتب الابريتور قبل بتاعته.
+[00:07:26]
+  Transcript :  اجزاكت يبقى انا محتاجة اجيب بتاعة ده واللاين ده وعوض فيهم
   OCR        : None
-  Combined   :  الاتواتفكس. يعني ايه? يعني بكتب الابريتور قبل بتاعته.
+  Combined   :  اجزاكت يبقى انا محتاجة اجيب بتاعة ده واللاين ده وعوض فيهم
 
-[00:07:37]
-  Transcript :  حلاص? ملتبلاي للاكس والسابن. وهكزا. فدي طريقة اسمع بريفكس.
-  OCR        : Using Trees To Represent Computer Programs | 2 3  X 7 Y 5 | waxs
-  Combined   :  حلاص? ملتبلاي للاكس والسابن. وهكزا. فدي طريقة اسمع بريفكس. Using Trees To Represent Computer Programs | 2 3  X 7 Y 5 | waxs
-
-[00:07:38]
-  Transcript :  طيب. لما اجرى بريزينت الاتواتفكس دي بالبارس تري بحط ايه? اول
+[00:07:34]
+  Transcript :  بالسرط دي اللي هي بتاعي يطلع لي المقابلة ليها. طيب ازاي بقى
   OCR        : None
-  Combined   :  طيب. لما اجرى بريزينت الاتواتفكس دي بالبارس تري بحط ايه? اول
+  Combined   :  بالسرط دي اللي هي بتاعي يطلع لي المقابلة ليها. طيب ازاي بقى
 
-[00:07:48]
-  Transcript :  الابريتور الاولاني ده هو هو تمام? مين الابريتور بتاعته? التو والسري
-  OCR        : None
-  Combined   :  الابريتور الاولاني ده هو هو تمام? مين الابريتور بتاعته? التو والسري
+[00:07:41]
+  Transcript :  اطلع بتاعة سهلة جدا.
+  OCR        : To get membership of crisp value p30, we | need to get equations for the lines where | the value 30 intersects with L1  L2.
+  Combined   :  اطلع بتاعة سهلة جدا. To get membership of crisp value p30, we | need to get equations for the lines where | the value 30 intersects with L1  L2.
 
-[00:07:54]
-  Transcript :  والكوز ده اللي هو فيه مين? اللي هو فيه ملتبليكيشن للأكس والسيبل.
+[00:07:51]
+  Transcript :  نمسك مثلا ال اي ال ال اون. ده. ال اي ده عشان اجيب بتاعته
+  OCR        : L1: 1-get 2 points on the line: 0,1, 50,0 | 2-get slope  y2-y1x2-x1  0-150-0 -150 | 3-line equation: y  ax  b a  slope | 4-line equation: y  -x50  b, substitute by one of | the points to get b. | 1  0  b  b1 | y  -x50  1 | 7- To get membership substitute by x30, | 8- y -30501  0.4 | 9- μp  30  0.4 | L2: use same steps.
+  Combined   :  نمسك مثلا ال اي ال ال اون. ده. ال اي ده عشان اجيب بتاعته L1: 1-get 2 points on the line: 0,1, 50,0 | 2-get slope  y2-y1x2-x1  0-150-0 -150 | 3-line equation: y  ax  b a  slope | 4-line equation: y  -x50  b, substitute by one of | the points to get b. | 1  0  b  b1 | y  -x50  1 | 7- To get membership substitute by x30, | 8- y -30501  0.4 | 9- μp  30  0.4 | L2: use same steps.
+
+[00:07:56]
+  Transcript :  مبدئيا هو ال اي فالاقوشن بتاعته تبقى ايه?
   OCR        : None
-  Combined   :  والكوز ده اللي هو فيه مين? اللي هو فيه ملتبليكيشن للأكس والسيبل.
+  Combined   :  مبدئيا هو ال اي فالاقوشن بتاعته تبقى ايه?
 
 [00:08:00]
-  Transcript :  القوزة اللي فيه للواي والفايف. خلاص? فدي كده دي في
+  Transcript :  اي? بتساوي اي اكس بلاس بي. حلاص? اي اكس بلاس بي. وانا
   OCR        : None
-  Combined   :  القوزة اللي فيه للواي والفايف. خلاص? فدي كده دي في
+  Combined   :  اي? بتساوي اي اكس بلاس بي. حلاص? اي اكس بلاس بي. وانا
 
-[00:08:08]
-  Transcript :  البورس تري. من في البورس تري عن مثلا عندي حسين. يا اللي هي
+[00:08:09]
+  Transcript :  دلوقتي هدفي ان انا ايه اشوف الفاليو بتاعت الايه والبي بكام
   OCR        : None
-  Combined   :  البورس تري. من في البورس تري عن مثلا عندي حسين. يا اللي هي
+  Combined   :  دلوقتي هدفي ان انا ايه اشوف الفاليو بتاعت الايه والبي بكام
 
-[00:08:16]
-  Transcript :  الابريتور دي نسميها الخلاص? او اللي هي يمين اللي هي بتاع
+[00:08:13]
+  Transcript :  عشان اكتب الايكويشن ايه بتاعت الايه. اي لاين في الدنيا هيدي
   OCR        : None
-  Combined   :  الابريتور دي نسميها الخلاص? او اللي هي يمين اللي هي بتاع
+  Combined   :  عشان اكتب الايكويشن ايه بتاعت الايه. اي لاين في الدنيا هيدي
 
-[00:08:22]
-  Transcript :  الابريتور. اللي هي الحاجات اللي بيقابلها عليها الابريتور. فالابريتور
+[00:08:18]
+  Transcript :  الايكويشن بتاعته. تمام كده? طيب. عشان اعرف اجيب الايه.
   OCR        : None
-  Combined   :  الابريتور. اللي هي الحاجات اللي بيقابلها عليها الابريتور. فالابريتور
+  Combined   :  الايكويشن بتاعته. تمام كده? طيب. عشان اعرف اجيب الايه.
 
-[00:08:26]
-  Transcript :  مثلا بلاز ده بيقبلوية على وعلى ايه? وعلى ال ايه? وعلى
+[00:08:25]
+  Transcript :  الايه ده بنقول عليه بتاع الايه بتاع الاين. بتاعته بتساوي اي
   OCR        : None
-  Combined   :  مثلا بلاز ده بيقبلوية على وعلى ايه? وعلى ال ايه? وعلى
-
-[00:08:30]
-  Transcript :  ال ايه? ال ايه? ال ايه دي. ال ايه دي مين بتاعها? ال اكس
-  OCR        : None
-  Combined   :  ال ايه? ال ايه? ال ايه دي. ال ايه دي مين بتاعها? ال اكس
+  Combined   :  الايه ده بنقول عليه بتاع الايه بتاع الاين. بتاعته بتساوي اي
 
 [00:08:33]
-  Transcript :  وستيفن. يبقى ال ايكس ده مش بس بس صح? بيمسل لي فده تيرميل.
+  Transcript :  نقطتين نجيب اي نقطتين على الاين. الاين ده نقطتين عايمين اكس بزيرو
   OCR        : None
-  Combined   :  وستيفن. يبقى ال ايكس ده مش بس بس صح? بيمسل لي فده تيرميل.
+  Combined   :  نقطتين نجيب اي نقطتين على الاين. الاين ده نقطتين عايمين اكس بزيرو
 
-[00:08:40]
-  Transcript :  يعني ايه يعني حاجة مش بتتنفذ. تحاجة لها قيمة بس. لها يعني حاجة
+[00:08:39]
+  Transcript :  وواي بون. يبقى زيرو وون. دي الوينت الاولى. تمام? الوينت
   OCR        : None
-  Combined   :  يعني ايه يعني حاجة مش بتتنفذ. تحاجة لها قيمة بس. لها يعني حاجة
+  Combined   :  وواي بون. يبقى زيرو وون. دي الوينت الاولى. تمام? الوينت
 
-[00:08:47]
-  Transcript :  3 structure
+[00:08:45]
+  Transcript :  x 50 y 0 2 a y2 y1 x2 x1 equation 2 1 x2 2
   OCR        : None
-  Combined   :  3 structure
+  Combined   :  x 50 y 0 2 a y2 y1 x2 x1 equation 2 1 x2 2
 
 [00:09:06]
-  Transcript :  الـ
+  Transcript :  0. ده. minus y1 اللي هي ب 1. يبقى 0-1. 50 اللي هي x2. minus 0 اللي هي
   OCR        : None
-  Combined   :  الـ
+  Combined   :  0. ده. minus y1 اللي هي ب 1. يبقى 0-1. 50 اللي هي x2. minus 0 اللي هي
 
-[00:09:08]
-  Transcript :  هعمله إزاي؟
+[00:09:17]
+  Transcript :  الاكس وان. بتسوي ايه? مينس وان ديفايد ايه? خلاص يبقى انا كده
   OCR        : None
-  Combined   :  هعمله إزاي؟
+  Combined   :  الاكس وان. بتسوي ايه? مينس وان ديفايد ايه? خلاص يبقى انا كده
 
-[00:09:11]
-  Transcript :  هنشوف إزاي
+[00:09:25]
+  Transcript :  جبت القيمة بتاعت الاي.
   OCR        : None
-  Combined   :  هنشوف إزاي
+  Combined   :  جبت القيمة بتاعت الاي.
 
-[00:09:14]
-  Transcript :  الـ
+[00:09:29]
+  Transcript :  يبقى الاكوشن بقت واي ايكوال ماينس اكس اوفر ففتي بلوس بي.
   OCR        : None
-  Combined   :  الـ
+  Combined   :  يبقى الاكوشن بقت واي ايكوال ماينس اكس اوفر ففتي بلوس بي.
 
-[00:09:16]
-  Transcript :  الـ
+[00:09:35]
+  Transcript :  عايز اجيب البي. اعمل ايه? هعوض باي باي باي بوينت من دول يا اي
   OCR        : None
-  Combined   :  الـ
+  Combined   :  عايز اجيب البي. اعمل ايه? هعوض باي باي باي بوينت من دول يا اي
 
-[00:09:19]
-  Transcript :  الـ
+[00:09:42]
+  Transcript :  الاولى يا التانية. في الاكوشن يطلع لي البي.
   OCR        : None
-  Combined   :  الـ
-
-[00:09:21]
-  Transcript :  دايما ببقيه خلاص زي والاي والرنك ايه سليكشن. اللي هو
-  OCR        : None
-  Combined   :  دايما ببقيه خلاص زي والاي والرنك ايه سليكشن. اللي هو
-
-[00:09:31]
-  Transcript :  دايما بنستخدم خلاص اللي هو كل اللي طلع بستبدله بالاي بالجنريشن
-  OCR        : None
-  Combined   :  دايما بنستخدم خلاص اللي هو كل اللي طلع بستبدله بالاي بالجنريشن
-
-[00:09:39]
-  Transcript :  الازم. فده حاجة اللي انا بستخدمه في
-  OCR        : None
-  Combined   :  الازم. فده حاجة اللي انا بستخدمه في
+  Combined   :  الاولى يا التانية. في الاكوشن يطلع لي البي.
 
 [00:09:47]
-  Transcript :  الانتشاكي سيكون الانتشاكي براندوم جنرايشن للانتشاكي بتاعي
-  OCR        : Genetic Operations | Random Generation of the initial population | of possible solutions
-  Combined   :  الانتشاكي سيكون الانتشاكي براندوم جنرايشن للانتشاكي بتاعي Genetic Operations | Random Generation of the initial population | of possible solutions
+  Transcript :  تمام؟ عوضت بالA في point one. point one الY فيها بone. يبقى one equal.
+  OCR        : None
+  Combined   :  تمام؟ عوضت بالA في point one. point one الY فيها بone. يبقى one equal.
 
 [00:09:53]
-  Transcript :  بالنسبة الانتشاكي براندوم سوليوشن
+  Transcript :  الX بزيرو يبقى ده كله بزيرو. plus B. one equal A.
   OCR        : None
-  Combined   :  بالنسبة الانتشاكي براندوم سوليوشن
+  Combined   :  الX بزيرو يبقى ده كله بزيرو. plus B. one equal A.
 
 [00:10:00]
-  Transcript :  يعني ايه? يعني يكون فيها بلاس وطول سري. يكون فيها ملتباة
+  Transcript :  بي بل بي هنا اكوال ون. يبقى انا كده قدرت اعمل بتاعت اللاين.
   OCR        : None
-  Combined   :  يعني ايه? يعني يكون فيها بلاس وطول سري. يكون فيها ملتباة
+  Combined   :  بي بل بي هنا اكوال ون. يبقى انا كده قدرت اعمل بتاعت اللاين.
 
-[00:10:06]
-  Transcript :  وسيفن وفايف. خلاص? ادي كده ايه? خلاص? لو انا بحل ايه?
+[00:10:05]
+  Transcript :  يبقى اللاين ده بتاعت عبارة عن وي ايكوال ماينس اكس. طيب انا
   OCR        : None
-  Combined   :  وسيفن وفايف. خلاص? ادي كده ايه? خلاص? لو انا بحل ايه?
+  Combined   :  يبقى اللاين ده بتاعت عبارة عن وي ايكوال ماينس اكس. طيب انا
 
-[00:10:14]
-  Transcript :  بتاعتي عبارة عن ان انا بحل ايه? بحل بيها اكوشن.
+[00:10:13]
+  Transcript :  بعد الوقت عايزة اجيب للاكس بتاعت ايه بسيرتي. خلاص? يبقى
   OCR        : None
-  Combined   :  بتاعتي عبارة عن ان انا بحل ايه? بحل بيها اكوشن.
+  Combined   :  بعد الوقت عايزة اجيب للاكس بتاعت ايه بسيرتي. خلاص? يبقى
 
-[00:10:20]
-  Transcript :  مثلا. طيب. بعد الانشياليزيشن بشوف. هعمل ميوتاشن ولا هعمل
-  OCR        : Mutation of promising solutions to create new | gf.possible solutions | possible solutions
-  Combined   :  مثلا. طيب. بعد الانشياليزيشن بشوف. هعمل ميوتاشن ولا هعمل Mutation of promising solutions to create new | gf.possible solutions | possible solutions
-
-[00:10:25]
-  Transcript :  لو هعمل هعدل في الايه? في التري بتاعتي. هنشوف التعديل هيبقى
+[00:10:22]
+  Transcript :  عمل ايه? بتاعتي موجودة يبقى هعود عن طلعني ايه? طلعني بتاعتي
   OCR        : None
-  Combined   :  لو هعمل هعدل في الايه? في التري بتاعتي. هنشوف التعديل هيبقى
+  Combined   :  عمل ايه? بتاعتي موجودة يبقى هعود عن طلعني ايه? طلعني بتاعتي
 
-[00:10:43]
-  Transcript :  ازاي? خلاص? لو هعمل يبقى ايه? برضو هنشوفها ازاي? يبقى هنا.
-  OCR        : Randomly Generating Programs | and uses basic arithmetic to return an answer | runcuon set  , -, ,1 | rermunas set  ontegers, X, Y
-  Combined   :  ازاي? خلاص? لو هعمل يبقى ايه? برضو هنشوفها ازاي? يبقى هنا. Randomly Generating Programs | and uses basic arithmetic to return an answer | runcuon set  , -, ,1 | rermunas set  ontegers, X, Y
+[00:10:33]
+  Transcript :  اللي هي ايه? اللي هي او بوينت فور. يبقى متأكدا ان دي مزبوطة.
+  OCR        : None
+  Combined   :  اللي هي ايه? اللي هي او بوينت فور. يبقى متأكدا ان دي مزبوطة.
 
-[00:10:53]
-  Transcript :  هجنريت بس لازم وانا بعمل انا عندي كتير قوي. انا
-  OCR        : Randomly generate a program that takes two arguments | Function set  o, -, , | Terminal set  integers, X, Y
-  Combined   :  هجنريت بس لازم وانا بعمل انا عندي كتير قوي. انا Randomly generate a program that takes two arguments | Function set  o, -, , | Terminal set  integers, X, Y
+[00:10:40]
+  Transcript :  ولا هي او بوينت سري او فايف ولا ولا الكلام ده. خلاص? اجي
+  OCR        : None
+  Combined   :  ولا هي او بوينت سري او فايف ولا ولا الكلام ده. خلاص? اجي
 
-[00:10:54]
+[00:10:48]
   Transcript : 
   OCR        : None
   Combined   : 
 
-[00:11:09]
-  Transcript :  استخدام انا ايه ايه ايه مجموعة من الايه. فاقول مسلا انا هعمل
-  OCR        : None
-  Combined   :  استخدام انا ايه ايه ايه مجموعة من الايه. فاقول مسلا انا هعمل
+[00:11:07]
+  Transcript :  تمام.
+  OCR        : Step 2: Rule Evaluation | The second step is to take the fuzzified inputs, Jeau  0.5, Puc-sz | 0.2, μjy-81  0.1 and 4γ-t2  0.7, and apply them to the antecedents of the | fuzzy rules. | If a given fuzzy rule has multiple antecedents, the fuzzy operator AND or | OR is used to obtain a single number that represents the result of the | antecedent evaluation. | This number the truth value is then applied to the consequent | membership function.
+  Combined   :  تمام. Step 2: Rule Evaluation | The second step is to take the fuzzified inputs, Jeau  0.5, Puc-sz | 0.2, μjy-81  0.1 and 4γ-t2  0.7, and apply them to the antecedents of the | fuzzy rules. | If a given fuzzy rule has multiple antecedents, the fuzzy operator AND or | OR is used to obtain a single number that represents the result of the | antecedent evaluation. | This number the truth value is then applied to the consequent | membership function.
 
-[00:11:15]
-  Transcript :  واحدة ايه بلس وليها اكس واي. عشان هو قال لي في الترمينالز اكس
+[00:11:13]
+  Transcript :  بعد الليين بعد ما احنا جبنا السلوب وجبنا البي ااعمالنا ايه ما مش
   OCR        : None
-  Combined   :  واحدة ايه بلس وليها اكس واي. عشان هو قال لي في الترمينالز اكس
+  Combined   :  بعد الليين بعد ما احنا جبنا السلوب وجبنا البي ااعمالنا ايه ما مش
 
-[00:11:20]
-  Transcript :  والانتجر. خلاص يعني واعمل واحدة تانية هي مسلا فيها ادتها كده
+[00:11:18]
+  Transcript :  عارف. جبنا السلوب وجبنا البي بقى خلاص بقى معي اكويشن هيسي
   OCR        : None
-  Combined   :  والانتجر. خلاص يعني واعمل واحدة تانية هي مسلا فيها ادتها كده
+  Combined   :  عارف. جبنا السلوب وجبنا البي بقى خلاص بقى معي اكويشن هيسي
 
-[00:11:26]
-  Transcript :  انتجر وفيها اكس. وفيها مسلا هنا. خلاص? فانا بعمل ايه? بعمل على
+[00:11:22]
+  Transcript :  بتاعت اللاين. فقدرت انا اجيب الواي اللي اللي انا عايز. انا
   OCR        : None
-  Combined   :  انتجر وفيها اكس. وفيها مسلا هنا. خلاص? فانا بعمل ايه? بعمل على
+  Combined   :  بتاعت اللاين. فقدرت انا اجيب الواي اللي اللي انا عايز. انا
 
-[00:11:39]
-  Transcript :  اساس الفونشن ست والترمينال ست اللي متحددين عن طريق مين? عن طريق
+[00:11:28]
+  Transcript :  جبت الاكوشن. الاكوشن بتاعت اللاين. دلوقتي لو عوضت باي اكس اي اكس
   OCR        : None
-  Combined   :  اساس الفونشن ست والترمينال ست اللي متحددين عن طريق مين? عن طريق
+  Combined   :  جبت الاكوشن. الاكوشن بتاعت اللاين. دلوقتي لو عوضت باي اكس اي اكس
 
-[00:11:44]
-  Transcript :  البروبلم اللي انا بحلها.
+[00:11:34]
+  Transcript :  معي. يعني اي ايموت. عايز اجيبه البيت او بتاعتم يعني اجيبه الواي.
   OCR        : None
-  Combined   :  البروبلم اللي انا بحلها.
+  Combined   :  معي. يعني اي ايموت. عايز اجيبه البيت او بتاعتم يعني اجيبه الواي.
+
+[00:11:48]
+  Transcript :  تمام. ماشي. احبار? اي بخط ال اكس يتلاعني الواي. تمام يا دكتور.
+  OCR        : The second step is to take the fuzzified inputs, Jeau  0.5, Puc.sz | 0.2, μα 0.1 and γ 0.7, and apply them to the antecedents of the
+  Combined   :  تمام. ماشي. احبار? اي بخط ال اكس يتلاعني الواي. تمام يا دكتور. The second step is to take the fuzzified inputs, Jeau  0.5, Puc.sz | 0.2, μα 0.1 and γ 0.7, and apply them to the antecedents of the
 
 [00:11:50]
-  Transcript :  احراص او لو هو يعني ممكن يكون عندي واحد كده اكس.
+  Transcript :  طمام اوكي. بعد كده الاستياد اللي بعدها اللي هي
   OCR        : None
-  Combined   :  احراص او لو هو يعني ممكن يكون عندي واحد كده اكس.
+  Combined   :  طمام اوكي. بعد كده الاستياد اللي بعدها اللي هي
+
+[00:11:53]
+  Transcript :  زي ما اتفقنا بيبع عندي وعلى حسب هي اروا لاني بجيب
+  OCR        : None
+  Combined   :  زي ما اتفقنا بيبع عندي وعلى حسب هي اروا لاني بجيب
 
 [00:12:00]
-  Transcript :  لو هو خلاص مش ايه مش محتاج حاجة. لو هو دي محتاجة ايه
-  OCR        : None
-  Combined   :  لو هو خلاص مش ايه مش محتاج حاجة. لو هو دي محتاجة ايه
+  Transcript :  المين او الماكس.
+  OCR        : RECALL: | To evaluate the disjunction of the rule antecedents, we use the OR fuzzy | operation union: | operation.Typically, fuzzy expert systems make use of the classical fuzzy | µa, ex  max ueα, μyx | Similarly, in order to evaluate the conjunction of the rule antecedents, we | apply the AND fuzry operation intersection: | β2-gx  min αGx, AsI
+  Combined   :  المين او الماكس. RECALL: | To evaluate the disjunction of the rule antecedents, we use the OR fuzzy | operation union: | operation.Typically, fuzzy expert systems make use of the classical fuzzy | µa, ex  max ueα, μyx | Similarly, in order to evaluate the conjunction of the rule antecedents, we | apply the AND fuzry operation intersection: | β2-gx  min αGx, AsI
 
-[00:12:07]
-  Transcript :  برامتر. فهعمل لها ايه تاني احط فيه بتاعتها. البرامتر دي لو
+[00:12:08]
+  Transcript :  تمام? طب احنا امتى مستدم الاور رادوك? اول هو بيديك
   OCR        : None
-  Combined   :  برامتر. فهعمل لها ايه تاني احط فيه بتاعتها. البرامتر دي لو
+  Combined   :  تمام? طب احنا امتى مستدم الاور رادوك? اول هو بيديك
 
 [00:12:14]
-  Transcript :  طلعت اكس مسلا او طلعت يبقى انا كده خلصت. طيب لو البرامتر ده
+  Transcript :  الرول زي ما هي. يعني بص هنا الرول. او الهاي بزيرو. او الواي
   OCR        : None
-  Combined   :  طلعت اكس مسلا او طلعت يبقى انا كده خلصت. طيب لو البرامتر ده
+  Combined   :  الرول زي ما هي. يعني بص هنا الرول. او الهاي بزيرو. او الواي
 
-[00:12:20]
-  Transcript :  طلع يبقى هكمل واجيب لها برامتر. البرامتر ده طلع
+[00:12:21]
+  Transcript :  از بي ون. اللي هي بون. هو مزيني او وعندي الرقمين زيرو او ايه.
   OCR        : None
-  Combined   :  طلع يبقى هكمل واجيب لها برامتر. البرامتر ده طلع
+  Combined   :  از بي ون. اللي هي بون. هو مزيني او وعندي الرقمين زيرو او ايه.
 
-[00:12:34]
-  Transcript :  اكمل واجيب له برامتر. خلاص? وهكزا. كده عملت
-  OCR        : Function set  , -, , | Randomly select either a function of a terminalto | represent our program | If a function was selected, recursively generate random | programs to act as arguments
-  Combined   :  اكمل واجيب له برامتر. خلاص? وهكزا. كده عملت Function set  , -, , | Randomly select either a function of a terminalto | represent our program | If a function was selected, recursively generate random | programs to act as arguments
-
-[00:12:37]
-  Transcript :  اهو بلاس. اخترت فدي فهجيب لها ايه برامتر? اخترت اخترت هنا
+[00:12:26]
+  Transcript :  فالقول باخض الماكسيمم يبقى هيتلعني ايه? او بوينت وين لمين?
   OCR        : None
-  Combined   :  اهو بلاس. اخترت فدي فهجيب لها ايه برامتر? اخترت اخترت هنا
+  Combined   :  فالقول باخض الماكسيمم يبقى هيتلعني ايه? او بوينت وين لمين?
 
-[00:12:47]
-  Transcript :  برامتر التاني خلاص مش هكمل تحتين. جيت اختار هنا برامتر
+[00:12:33]
+  Transcript :  للي بعد الزيان في الرول دي. ان الز دة تلفيس تي 1. خلاص?
   OCR        : None
-  Combined   :  برامتر التاني خلاص مش هكمل تحتين. جيت اختار هنا برامتر
+  Combined   :  للي بعد الزيان في الرول دي. ان الز دة تلفيس تي 1. خلاص?
 
-[00:12:59]
+[00:12:39]
+  Transcript :  الرول اللي بعدها كتبتقوللي ال X is A two. ودي قطلعلي ب او
+  OCR        : None
+  Combined   :  الرول اللي بعدها كتبتقوللي ال X is A two. ودي قطلعلي ب او
+
+[00:12:44]
+  Transcript :  وينت ال Y is B two. دي قطلعلي ب او مور سيفن. في الانت باخض
+  OCR        : None
+  Combined   :  وينت ال Y is B two. دي قطلعلي ب او مور سيفن. في الانت باخض
+
+[00:12:50]
   Transcript : 
-  OCR        : Tree based representation | Trees are a universal form, e.g. consider | Arithmetic formula | 2,nx3 1 | Logical formula | x true   x V y  v z  x y | Program | while i  20 | i  i 1
-  Combined   :  Tree based representation | Trees are a universal form, e.g. consider | Arithmetic formula | 2,nx3 1 | Logical formula | x true   x V y  v z  x y | Program | while i  20 | i  i 1
-
-[00:13:08]
-  Transcript :  لو عندي فورملا شفنا الاريسماتيك شفنا الاريسماتيك اللي فاتت ودي
   OCR        : None
-  Combined   :  لو عندي فورملا شفنا الاريسماتيك شفنا الاريسماتيك اللي فاتت ودي
+  Combined   : 
 
-[00:13:13]
-  Transcript :  اكزامبل اهو تاني هتتعمل ازاي? خلاص? همثل دي ازاي? خلاص? لمين?
+[00:13:11]
+  Transcript :  زي ما هي لل ايه للكون سيكونت. هتبقى الزد ايه سي سري. خلاص?
   OCR        : None
-  Combined   :  اكزامبل اهو تاني هتتعمل ازاي? خلاص? همثل دي ازاي? خلاص? لمين?
+  Combined   :  زي ما هي لل ايه للكون سيكونت. هتبقى الزد ايه سي سري. خلاص?
 
-[00:13:19]
-  Transcript :  ده بقى مكتوب ايه? خلاص? انا عندي في الطريقة اللي بمثل بيها
+[00:13:17]
+  Transcript :  انا كده طلعت فانيو للاوكوت اللي هو الزد في ايه الممبرشيب بتاعته.
   OCR        : None
-  Combined   :  ده بقى مكتوب ايه? خلاص? انا عندي في الطريقة اللي بمثل بيها
+  Combined   :  انا كده طلعت فانيو للاوكوت اللي هو الزد في ايه الممبرشيب بتاعته.
 
-[00:13:25]
-  Transcript :  الماثماتيكة الفورملا يا بريفكس يا بوست فيكس يا اين فكس. اين فكس
+[00:13:23]
+  Transcript :  في السي وان وفي السي تو وفي السي سي. فانا انا اقص ان انا اعمل ايه? اعمل لهم
   OCR        : None
-  Combined   :  الماثماتيكة الفورملا يا بريفكس يا بوست فيكس يا اين فكس. اين فكس
+  Combined   :  في السي وان وفي السي تو وفي السي سي. فانا انا اقص ان انا اعمل ايه? اعمل لهم
 
-[00:13:31]
-  Transcript :  يعني ما بين بتوهم. يعني يعني يعني يعني يعني يعني يعني يجي بعد
-  OCR        : None
-  Combined   :  يعني ما بين بتوهم. يعني يعني يعني يعني يعني يعني يعني يجي بعد
+[00:13:34]
+  Transcript :  مع بعض انها الاجريجيشن دي. واطلع ايه? من الديفوزي فيكيشن.
+  OCR        : The most common method of | correlating the rule consequent | with the truth value of the rule | antecedent is to cut the | Degee d | Mewbershap | consequent membership | function at the level of the | antecedent truth. This method | is called clipping alpha-cut. | However, clipping is still often | preferred because it involves | less complex and faster | clipping | mathematics, and generates an | aggregated output surface that | is easier to defuzzify.
+  Combined   :  مع بعض انها الاجريجيشن دي. واطلع ايه? من الديفوزي فيكيشن. The most common method of | correlating the rule consequent | with the truth value of the rule | antecedent is to cut the | Degee d | Mewbershap | consequent membership | function at the level of the | antecedent truth. This method | is called clipping alpha-cut. | However, clipping is still often | preferred because it involves | less complex and faster | clipping | mathematics, and generates an | aggregated output surface that | is easier to defuzzify.
 
-[00:13:38]
-  Transcript :  تمام? هنا دي اين فكس. ال اكس ال اا ال بلوس و ايه دي خلاص?
+[00:13:37]
+  Transcript :  طب مالش يا دكتور. ممكن? سؤال? انا. طب. هو احنا الحتة اللي فاتت
   OCR        : None
-  Combined   :  تمام? هنا دي اين فكس. ال اكس ال اا ال بلوس و ايه دي خلاص?
+  Combined   :  طب مالش يا دكتور. ممكن? سؤال? انا. طب. هو احنا الحتة اللي فاتت
 
-[00:13:47]
-  Transcript :  هذا عبارة عن عملية ايه حسابية برضو. اللي هي الدوت. وهيها الابرن
+[00:13:44]
+  Transcript :  الديت. اللي هو انا اقلت اللي هي في سي بطو. او. سي بطو سنتشغلها
+  OCR        : Step 3: Aggregation of the rule outputs | Aggregation is the process of unification of the outputs of all rules. | We take the membership functions of all rule consequents previously | clipped and combine them into a single fuzzy set. | The inout of the aggresation process is the list of clipped conseguent | variable. | membership functions, and the output is one fuzzy set for each output | is C1 0.1 | : is C2 0.2 | is C3 0.5
+  Combined   :  الديت. اللي هو انا اقلت اللي هي في سي بطو. او. سي بطو سنتشغلها Step 3: Aggregation of the rule outputs | Aggregation is the process of unification of the outputs of all rules. | We take the membership functions of all rule consequents previously | clipped and combine them into a single fuzzy set. | The inout of the aggresation process is the list of clipped conseguent | variable. | membership functions, and the output is one fuzzy set for each output | is C1 0.1 | : is C2 0.2 | is C3 0.5
+
+[00:13:51]
+  Transcript :  يا دكتور
   OCR        : None
-  Combined   :  هذا عبارة عن عملية ايه حسابية برضو. اللي هي الدوت. وهيها الابرن
+  Combined   :  يا دكتور
 
 [00:13:53]
-  Transcript :  تضبطوها ايه. والنحية التانية فيها برضو الماينس. والابرن
+  Transcript :  استيبتو
   OCR        : None
-  Combined   :  تضبطوها ايه. والنحية التانية فيها برضو الماينس. والابرن
+  Combined   :  استيبتو
+
+[00:13:55]
+  Transcript :  ممكن استطاعتها عشان بس
+  OCR        : Degyee of | Memberslap
+  Combined   :  ممكن استطاعتها عشان بس Degyee of | Memberslap
+
+[00:13:56]
+  Transcript :  دي؟
+  OCR        : None
+  Combined   :  دي؟
 
 [00:14:00]
-  Transcript :  انتبتوه ال اكس بلس تري. وي الواي على ايه خمشة زائل ايه. تمام?
+  Transcript :  ها؟
   OCR        : None
-  Combined   :  انتبتوه ال اكس بلس تري. وي الواي على ايه خمشة زائل ايه. تمام?
+  Combined   :  ها؟
 
-[00:14:05]
-  Transcript :  ادي كده مثلت الايه? ماسيماتيكال فورمولا ديه التري. هنا بمثل
+[00:14:02]
+  Transcript :  ايواة للسبتو دي
   OCR        : None
-  Combined   :  ادي كده مثلت الايه? ماسيماتيكال فورمولا ديه التري. هنا بمثل
+  Combined   :  ايواة للسبتو دي
+
+[00:14:04]
+  Transcript :  هي
+  OCR        : None
+  Combined   :  هي
+
+[00:14:06]
+  Transcript :  الف اكس ايز اي تو دي
+  OCR        : None
+  Combined   :  الف اكس ايز اي تو دي
+
+[00:14:08]
+  Transcript :  اللي احنا جبناها
+  OCR        : None
+  Combined   :  اللي احنا جبناها
 
 [00:14:10]
-  Transcript :  الفورمولا بالتري. انا عندي اكس عند رو. امفلاي اكس او الواي او
+  Transcript :  من المعادلة الخط بتاعت الفوزي
   OCR        : None
-  Combined   :  الفورمولا بالتري. انا عندي اكس عند رو. امفلاي اكس او الواي او
+  Combined   :  من المعادلة الخط بتاعت الفوزي
 
-[00:14:17]
-  Transcript :  اكس. اف اند قول لي اف اه اه او قوس في زد. اف اند قول لي اف. اكس
+[00:14:12]
+  Transcript :  اللي فات؟
   OCR        : None
-  Combined   :  اكس. اف اند قول لي اف اه اه او قوس في زد. اف اند قول لي اف. اكس
+  Combined   :  اللي فات؟
+
+[00:14:14]
+  Transcript :  جبنا معادلة الخط وعوضنا فيها بال اكس
+  OCR        : None
+  Combined   :  جبنا معادلة الخط وعوضنا فيها بال اكس
+
+[00:14:16]
+  Transcript :  الواليو اللي بجيها لي في ال اكس
+  OCR        : None
+  Combined   :  الواليو اللي بجيها لي في ال اكس
+
+[00:14:18]
+  Transcript :  طلعتني
+  OCR        : None
+  Combined   :  طلعتني
+
+[00:14:20]
+  Transcript :  ال او بس الخط بتاع
+  OCR        : None
+  Combined   :  ال او بس الخط بتاع
+
+[00:14:22]
+  Transcript :  ال اي تو؟
+  OCR        : None
+  Combined   :  ال اي تو؟
 
 [00:14:24]
-  Transcript :  and y. دي لها ال by conditional ودي لها ال employ. وال or وال end. تماموا
+  Transcript :  ده الخط بتاع اي تو؟
   OCR        : None
-  Combined   :  and y. دي لها ال by conditional ودي لها ال employ. وال or وال end. تماموا
+  Combined   :  ده الخط بتاع اي تو؟
 
-[00:14:31]
-  Transcript :  عندي كمان النط. على حسب بقى terminals اللي هو ايه هيديهاني
+[00:14:26]
+  Transcript :  اه بقول لي فوزي سات هيبقى ليها الخط بتاعها
   OCR        : None
-  Combined   :  عندي كمان النط. على حسب بقى terminals اللي هو ايه هيديهاني
+  Combined   :  اه بقول لي فوزي سات هيبقى ليها الخط بتاعها
+
+[00:14:28]
+  Transcript :  لها وفي فازي ست هيبقى ليها خطين كمان. تمام? هاي قطع فين? لو
+  OCR        : None
+  Combined   :  لها وفي فازي ست هيبقى ليها خطين كمان. تمام? هاي قطع فين? لو
 
 [00:14:35]
-  Transcript :  وال function set. طيب دي لما حبها مسكلة عمسكلها ازاي? دي برضو
+  Transcript :  في كده مزل. هاي قطع فين? مش هيب لهم كلهم.
   OCR        : None
-  Combined   :  وال function set. طيب دي لما حبها مسكلة عمسكلها ازاي? دي برضو
+  Combined   :  في كده مزل. هاي قطع فين? مش هيب لهم كلهم.
 
-[00:14:40]
-  Transcript :  in fix. employ في النص. مين ه employ مين? ال x or true هت employ ال ايه
+[00:14:41]
+  Transcript :  يعني مسلا هيكون عندي فازي ست في النص كده. بصوا شايفين دي? ليها
+  OCR        : µa,ex  max αaα, μyx | Hz-elx  min ααx, jyx
+  Combined   :  يعني مسلا هيكون عندي فازي ست في النص كده. بصوا شايفين دي? ليها µa,ex  max αaα, μyx | Hz-elx  min ααx, jyx
+
+[00:14:46]
+  Transcript :  خط اهو وخط اهو. صح? ماشي. تمام? فدي مسلا لو اسمها ميديم فاسمي
   OCR        : None
-  Combined   :  in fix. employ في النص. مين ه employ مين? ال x or true هت employ ال ايه
+  Combined   :  خط اهو وخط اهو. صح? ماشي. تمام? فدي مسلا لو اسمها ميديم فاسمي
 
-[00:14:48]
-  Transcript :  القوس ده كله. اللي هو عباره عن اور لحاجتين. الاكس اور الواي
-  OCR        : None
-  Combined   :  القوس ده كله. اللي هو عباره عن اور لحاجتين. الاكس اور الواي
-
-[00:14:54]
+[00:15:02]
   Transcript : 
-  OCR        : None
-  Combined   : 
+  OCR        : The second step is to take the fuzzified inputs, Jeau,  0.5, Pqa2 | 0.2, μyαt | 0.1 and jhy-d2 | fuzzy rules | 0.7, and apply them to the antecedents of the | This number Ithe truth valuel is then applied to the conseguent
+  Combined   :  The second step is to take the fuzzified inputs, Jeau,  0.5, Pqa2 | 0.2, μyαt | 0.1 and jhy-d2 | fuzzy rules | 0.7, and apply them to the antecedents of the | This number Ithe truth valuel is then applied to the conseguent
 
-[00:15:06]
-  Transcript :  وقلت لك هاتلي الفونكشن ست والترميل ست. المستخدمة هنا.
-  OCR        : None
-  Combined   :  وقلت لك هاتلي الفونكشن ست والترميل ست. المستخدمة هنا.
+[00:15:12]
+  Transcript :  الايه. يعني مش محتاجة ان احنا نعملها لواحدة. عشان كده انا
+  OCR        : The inout of the aegresation process is the list of clipped conseguent | is 2 0.2 | : is C3 0.5
+  Combined   :  الايه. يعني مش محتاجة ان احنا نعملها لواحدة. عشان كده انا The inout of the aegresation process is the list of clipped conseguent | is 2 0.2 | : is C3 0.5
 
-[00:15:11]
-  Transcript :  تعرف? الفونكشن ست هنا هتبقى مين? هتبقى الاي والمينس والديفايد
+[00:15:17]
+  Transcript :  اختصرتها في الايه? في المحاضرة اللي فاتت. اللي هو بقول انا
   OCR        : None
-  Combined   :  تعرف? الفونكشن ست هنا هتبقى مين? هتبقى الاي والمينس والديفايد
+  Combined   :  اختصرتها في الايه? في المحاضرة اللي فاتت. اللي هو بقول انا
 
-[00:15:20]
-  Transcript :  ويه كمان? والضط. تمام? والترنل ست هنا هتبقى مين? هتبقى
+[00:15:21]
+  Transcript :  الزد ده طلع اه بو بوينت وان في وطلع بو بوينت في في في
   OCR        : None
-  Combined   :  ويه كمان? والضط. تمام? والترنل ست هنا هتبقى مين? هتبقى
+  Combined   :  الزد ده طلع اه بو بوينت وان في وطلع بو بوينت في في في
 
 [00:15:30]
-  Transcript :  والسري والواي والفايف والون. خلاص كل الحاجات اللي انا
+  Transcript :  فجمعتهم كلهم في رسمة واحدة. وو بوينت وان وو بوينت وان رسمت
   OCR        : None
-  Combined   :  والسري والواي والفايف والون. خلاص كل الحاجات اللي انا
+  Combined   :  فجمعتهم كلهم في رسمة واحدة. وو بوينت وان وو بوينت وان رسمت
 
-[00:15:35]
-  Transcript :  مستخدمها كايه? كباريوز او معي يا شباب?
+[00:15:37]
+  Transcript :  الايه? رسمت التلاتة فاضي ستس بتوعه في رسمة واحدة خلاص?
   OCR        : None
-  Combined   :  مستخدمها كايه? كباريوز او معي يا شباب?
+  Combined   :  الايه? رسمت التلاتة فاضي ستس بتوعه في رسمة واحدة خلاص?
 
-[00:15:43]
-  Transcript :  يبقى انا كده هو بقول لكم على خرية الايه? اسؤال ممكن تيجي
+[00:15:50]
+  Transcript :  وظللت الايه? على حسب لكل فاضي ست. تمام كده? هعني
+  OCR        : Step 4: Defuzzification | The last step in the fuzzy inference process is defuzzification. | Fugziness helps us to evaluate the rules, but the final output of a fuzzy | system has to be a crisp number | The input for the defuzzification process is the aggregate output fuzzy set | and the output is a single number.
+  Combined   :  وظللت الايه? على حسب لكل فاضي ست. تمام كده? هعني Step 4: Defuzzification | The last step in the fuzzy inference process is defuzzification. | Fugziness helps us to evaluate the rules, but the final output of a fuzzy | system has to be a crisp number | The input for the defuzzification process is the aggregate output fuzzy set | and the output is a single number.
+
+[00:15:51]
+  Transcript :  دلوقتي. دي فوزيفيكيشن هعمله لكم هنا بطريق تيم. انسوا معيني?
   OCR        : None
-  Combined   :  يبقى انا كده هو بقول لكم على خرية الايه? اسؤال ممكن تيجي
-
-[00:15:53]
-  Transcript :  ازاي? ممكن اجيب لك وقول لك هاتلي وممكن اديك انا الفورمولة
-  OCR        : x true | x  yzxy | true
-  Combined   :  ازاي? ممكن اجيب لك وقول لك هاتلي وممكن اديك انا الفورمولة x true | x  yzxy | true
-
-[00:15:55]
-  Transcript :  وقول لك اعملي ايه? اعملي
-  OCR        : None
-  Combined   :  وقول لك اعملي ايه? اعملي
+  Combined   :  دلوقتي. دي فوزيفيكيشن هعمله لكم هنا بطريق تيم. انسوا معيني?
 
 [00:16:00]
-  Transcript :  الفورمولة دي في شكل كروموزوم. في شكل تري. تمام? طيب. احنا كده
-  OCR        : None
-  Combined   :  الفورمولة دي في شكل كروموزوم. في شكل تري. تمام? طيب. احنا كده
+  Transcript :  ها? سمعيني? سمعين حضرتك يا بكتور. تمام? تمام? طيب. هعملها هنا
+  OCR        : Step 4: Defuzzification centroid | There are several defuzzification methods, but probably the most | popular one is the centroid technique. It finds the point where a | vertical line would slice the aggregate set into two equal masses. | Mathematically this centre of gravity CoG can be expressed as: | μxxdx | μxdx
+  Combined   :  ها? سمعيني? سمعين حضرتك يا بكتور. تمام? تمام? طيب. هعملها هنا Step 4: Defuzzification centroid | There are several defuzzification methods, but probably the most | popular one is the centroid technique. It finds the point where a | vertical line would slice the aggregate set into two equal masses. | Mathematically this centre of gravity CoG can be expressed as: | μxxdx | μxdx
 
-[00:16:06]
-  Transcript :  اتكلمنا على المسيماسيك الفورمولة واللوديكال فورمولة. طب هوا
-  OCR        : None
-  Combined   :  اتكلمنا على المسيماسيك الفورمولة واللوديكال فورمولة. طب هوا
+[00:16:12]
+  Transcript :  بطريقتين. اول طريقة اللي هي الايه? السنترويد. دي بعملها ازاي?
+  OCR        : Deee of | Mvbershy | 67.4 | 0  10  20   0.1  30 - 40  50  60   0 2  70  80  90  100 1  0.5 | 0.1  0.1  0.1  0.2  0 .2  0.2  0.2  0.5  0.5  0.5 - 0.5 | 67.4
+  Combined   :  بطريقتين. اول طريقة اللي هي الايه? السنترويد. دي بعملها ازاي? Deee of | Mvbershy | 67.4 | 0  10  20   0.1  30 - 40  50  60   0 2  70  80  90  100 1  0.5 | 0.1  0.1  0.1  0.2  0 .2  0.2  0.2  0.5  0.5  0.5 - 0.5 | 67.4
 
-[00:16:09]
-  Transcript :  بقى عادي. زي اللي احنا بتعوضين عليه في الكودنج.
+[00:16:16]
+  Transcript :  دي زي ما قلت لكم كده اللي هو التكامل بتاع الناس. بعمله
   OCR        : None
-  Combined   :  بقى عادي. زي اللي احنا بتعوضين عليه في الكودنج.
+  Combined   :  دي زي ما قلت لكم كده اللي هو التكامل بتاع الناس. بعمله
 
-[00:16:14]
-  Transcript :  هعمل ايه? زي ما انتم شايفين كده. بصوا ادي ودي بعدي متفرق ما
+[00:16:21]
+  Transcript :  بالحسابات عن طريق ان انا. بشوف. هنا كانت او بوينت وون لان هي
   OCR        : None
-  Combined   :  هعمل ايه? زي ما انتم شايفين كده. بصوا ادي ودي بعدي متفرق ما
+  Combined   :  بالحسابات عن طريق ان انا. بشوف. هنا كانت او بوينت وون لان هي
 
-[00:16:22]
-  Transcript :  بينهم بسيمي كولن. فده الايه? سيمي كولن دي? اعتبرها كفانش.
+[00:16:27]
+  Transcript :  فاضي ست? تمام? فعند زيرو وعند تان وعند الجزء ده كانت
   OCR        : None
-  Combined   :  بينهم بسيمي كولن. فده الايه? سيمي كولن دي? اعتبرها كفانش.
+  Combined   :  فاضي ست? تمام? فعند زيرو وعند تان وعند الجزء ده كانت
 
-[00:16:26]
-  Transcript :  بتفرع ما بين مين ومين في اللوبة هم. لهي الانشيالزيشن
+[00:16:39]
+  Transcript :  تمام? عند وعند كانت
   OCR        : None
-  Combined   :  بتفرع ما بين مين ومين في اللوبة هم. لهي الانشيالزيشن
+  Combined   :  تمام? عند وعند كانت
 
-[00:16:32]
-  Transcript :  بتاعت اللوب. والويل نفسها. الجوها مين? جوها و بادي. الكون
+[00:16:46]
+  Transcript :  الديجري اوف ممبرشيب او بوينت تو. فهجمعهم مضرف او بوينت تو.
   OCR        : None
-  Combined   :  بتاعت اللوب. والويل نفسها. الجوها مين? جوها و بادي. الكون
+  Combined   :  الديجري اوف ممبرشيب او بوينت تو. فهجمعهم مضرف او بوينت تو.
 
-[00:16:38]
-  Transcript :  دي هاخده ناحية اللي هي الاي عقلة من التويني. و هيبقى في
-  OCR        : None
-  Combined   :  دي هاخده ناحية اللي هي الاي عقلة من التويني. و هيبقى في
-
-[00:16:43]
-  Transcript :  الاي الاستثمانت اللي موجودة هنا. هي هنا اه لاي واحد. لو بتاع
-  OCR        : None
-  Combined   :  الاي الاستثمانت اللي موجودة هنا. هي هنا اه لاي واحد. لو بتاع
-
-[00:16:48]
-  Transcript :  الانكرماند فجوه الاي اي اي اي اي اي اي اي بلاس وان.
-  OCR        : None
-  Combined   :  الانكرماند فجوه الاي اي اي اي اي اي اي اي بلاس وان.
-
-[00:16:58]
+[00:16:50]
   Transcript : 
-  OCR        : In GA, chromosomes are linear structures | strings, integer string, permutations | Tree shaped chromosomes are non-linear | structures | In GA, the size of the chromosomes is fixed | Trees in GP may vary in depth and width
-  Combined   :  In GA, chromosomes are linear structures | strings, integer string, permutations | Tree shaped chromosomes are non-linear | structures | In GA, the size of the chromosomes is fixed | Trees in GP may vary in depth and width
-
-[00:17:15]
-  Transcript :  الجينيتك والكروموزوم بتاع الجينيتك ايه الفرق ما بينهم?
-  OCR        : while | 20 i
-  Combined   :  الجينيتك والكروموزوم بتاع الجينيتك ايه الفرق ما بينهم? while | 20 i
-
-[00:17:17]
-  Transcript :  خلقنا نفكر شوية بقى ما اطلعش كده على طول. الفرق ما بينهم?
   OCR        : None
-  Combined   :  خلقنا نفكر شوية بقى ما اطلعش كده على طول. الفرق ما بينهم?
+  Combined   : 
 
-[00:17:23]
-  Transcript :  يقول لي الفرق ما بين
+[00:17:07]
+  Transcript :  بقى اللي انا ايه اللي حسبته ده. بتاعت كل عند دي كانت بأهو
   OCR        : None
-  Combined   :  يقول لي الفرق ما بين
+  Combined   :  بقى اللي انا ايه اللي حسبته ده. بتاعت كل عند دي كانت بأهو
+
+[00:17:13]
+  Transcript :  عند دي بأهو بوينت وان هنا كانت بأهو بوينت وان. هنا طلعت لأهو
+  OCR        : None
+  Combined   :  عند دي بأهو بوينت وان هنا كانت بأهو بوينت وان. هنا طلعت لأهو
+
+[00:17:25]
+  Transcript :  هنا بكلهم بجمعهم تحتهم. خلاص وديتني هنا ايه. ممكن اعملها
+  OCR        : Step 4: Defuzzification weighted | average | Another method is weighted average method where centroid of each | of the fuzzy sets is weighted by the membership value, divided by the | sum of memberships. | CentroidC1  0030504  20 | CentroidC2  2040-60-804  50 | CentroidC3  50701001004  80 | Z  200.1  500.2  800.5  0.1  0.2  0.5 | Z  65
+  Combined   :  هنا بكلهم بجمعهم تحتهم. خلاص وديتني هنا ايه. ممكن اعملها Step 4: Defuzzification weighted | average | Another method is weighted average method where centroid of each | of the fuzzy sets is weighted by the membership value, divided by the | sum of memberships. | CentroidC1  0030504  20 | CentroidC2  2040-60-804  50 | CentroidC3  50701001004  80 | Z  200.1  500.2  800.5  0.1  0.2  0.5 | Z  65
 
 [00:17:26]
-  Transcript :  genetic algorithm chromosome
+  Transcript :  بطريقة تانية اللي هي الايه. عشان اعمل ايه. عشان اعمل ايه
   OCR        : None
-  Combined   :  genetic algorithm chromosome
+  Combined   :  بطريقة تانية اللي هي الايه. عشان اعمل ايه. عشان اعمل ايه
 
-[00:17:29]
-  Transcript :  why genetic programming chromosome
+[00:17:31]
+  Transcript :  يبقى محتاجة احسب بتاع كل فازي ست. بتاع الفازي ست اللي هي
   OCR        : None
-  Combined   :  why genetic programming chromosome
+  Combined   :  يبقى محتاجة احسب بتاع كل فازي ست. بتاع الفازي ست اللي هي
 
-[00:17:33]
-  Transcript :  هو genetic algorithm chromosome
+[00:17:39]
+  Transcript :  هتبقى ايه قلنا بنجمع عدد النقط بنجمع النقط بنقسم على عددهم.
   OCR        : None
-  Combined   :  هو genetic algorithm chromosome
+  Combined   :  هتبقى ايه قلنا بنجمع عدد النقط بنجمع النقط بنقسم على عددهم.
 
-[00:17:35]
-  Transcript :  ما صنع يا دكتور
+[00:17:45]
+  Transcript :  خلاص النقط بتاعتي كان زيرو زيرو وصيرتي وفيفتي جمعتهم مع بعض
   OCR        : None
-  Combined   :  ما صنع يا دكتور
-
-[00:17:38]
-  Transcript :  اوه انا سمعي ايو انا سمعي
-  OCR        : None
-  Combined   :  اوه انا سمعي ايو انا سمعي
-
-[00:17:40]
-  Transcript :  ايو ايو ايو ايو ايو ايو
-  OCR        : None
-  Combined   :  ايو ايو ايو ايو ايو ايو
-
-[00:17:42]
-  Transcript :  genetic algorithm representation اكيد بتاع
-  OCR        : None
-  Combined   :  genetic algorithm representation اكيد بتاع
-
-[00:17:44]
-  Transcript :  بتاع الكرمسوم بتاعي
-  OCR        : None
-  Combined   :  بتاع الكرمسوم بتاعي
-
-[00:17:47]
-  Transcript :  او اا طبع مني
-  OCR        : None
-  Combined   :  او اا طبع مني
-
-[00:17:48]
-  Transcript :  على شكل ارقام
-  OCR        : None
-  Combined   :  على شكل ارقام
+  Combined   :  خلاص النقط بتاعتي كان زيرو زيرو وصيرتي وفيفتي جمعتهم مع بعض
 
 [00:17:50]
-  Transcript :  يكون على شكل أرقام بقى
+  Transcript :  وقسمت على الفور. فالداني ده لقيه اسنترويد بتاع ستي وان.
   OCR        : None
-  Combined   :  يكون على شكل أرقام بقى
-
-[00:17:52]
-  Transcript :  سواء كان بقى double أو character
-  OCR        : None
-  Combined   :  سواء كان بقى double أو character
-
-[00:17:54]
-  Transcript :  على حسب إحنا بنعمل
-  OCR        : None
-  Combined   :  على حسب إحنا بنعمل
+  Combined   :  وقسمت على الفور. فالداني ده لقيه اسنترويد بتاع ستي وان.
 
 [00:17:56]
-  Transcript :  لأنما هنا
+  Transcript :  وهكذا عملت في السي تو وفي السي سلي.
   OCR        : None
-  Combined   :  لأنما هنا
-
-[00:17:58]
-  Transcript :  الrepresentation ناضح كبيرا
-  OCR        : None
-  Combined   :  الrepresentation ناضح كبيرا
+  Combined   :  وهكذا عملت في السي تو وفي السي سلي.
 
 [00:18:00]
-  Transcript :  انه على شكل زي حاجات الماس. ده دي اول حاجة. شكله ماس او شكله على شكله بروغرام يعني. زي الويل لوب او اي امكان يعني احنا الصادم لايه? او سيمي كولن.
+  Transcript :  خلاص طلعت هعمل ايه? هادرب كل في بتاعها. وجمعهم واقسم على
   OCR        : None
-  Combined   :  انه على شكل زي حاجات الماس. ده دي اول حاجة. شكله ماس او شكله على شكله بروغرام يعني. زي الويل لوب او اي امكان يعني احنا الصادم لايه? او سيمي كولن.
+  Combined   :  خلاص طلعت هعمل ايه? هادرب كل في بتاعها. وجمعهم واقسم على
 
-[00:18:10]
-  Transcript :  انا سهل عليك. انا سهل عليك. وما انت بتقول الكلام صح. بس احنا عايزين نحطه ايه? بشكل احسن. احنا هنقارن ما بين الحاجتين. هنقارن على اساس ايه? تمام? هنقارن على اساس ايه? اول حاجة شكل الكروموزوم. الفورمات بتاعه.
+[00:18:15]
+  Transcript :  المجموعة بتاع ال ايه. طلع لي ايه? خمسة وستين. خدوا بالكم
+  OCR        : Degrer of | Mesvbershjy | 9  10  20   0.1  30  40  50  60   0.2  70  80  90  100 1  0.5 | 0.1  0.1  01  0.2 | .0.2  1.2  0.2  0.5  0.5  0.5 - 0.5
+  Combined   :  المجموعة بتاع ال ايه. طلع لي ايه? خمسة وستين. خدوا بالكم Degrer of | Mesvbershjy | 9  10  20   0.1  30  40  50  60   0.2  70  80  90  100 1  0.5 | 0.1  0.1  01  0.2 | .0.2  1.2  0.2  0.5  0.5  0.5 - 0.5
+
+[00:18:15]
+  Transcript :  الارقام ايه غير معضة. يعني الطرق بتاعة بتفرق معي اللي
   OCR        : None
-  Combined   :  انا سهل عليك. انا سهل عليك. وما انت بتقول الكلام صح. بس احنا عايزين نحطه ايه? بشكل احسن. احنا هنقارن ما بين الحاجتين. هنقارن على اساس ايه? تمام? هنقارن على اساس ايه? اول حاجة شكل الكروموزوم. الفورمات بتاعه.
+  Combined   :  الارقام ايه غير معضة. يعني الطرق بتاعة بتفرق معي اللي
+
+[00:18:26]
+  Transcript :  بتطلعه. على حسب الطريقة. طيب ايه الطريقة المفضلة? ايه?
+  OCR        : CentroidC1 0D30504 | CentroidC2  204060804 | CentroidC3 - 50701001004 80,
+  Combined   :  بتطلعه. على حسب الطريقة. طيب ايه الطريقة المفضلة? ايه? CentroidC1 0D30504 | CentroidC2  204060804 | CentroidC3 - 50701001004 80,
 
 [00:18:29]
-  Transcript :  الفورمات الخروموزوم بتاعي الـ genetic algorithm دائماً كان بيبقى شكل
+  Transcript :  ودي اللي انت برضو هتشتغلو بيه. يبقى في بتاعتي الدي فازي
   OCR        : None
-  Combined   :  الفورمات الخروموزوم بتاعي الـ genetic algorithm دائماً كان بيبقى شكل
+  Combined   :  ودي اللي انت برضو هتشتغلو بيه. يبقى في بتاعتي الدي فازي
 
-[00:18:33]
-  Transcript :  R-R, صح؟ فهو linear. معي؟ لكن؟ نعم؟ سمعني ولا ايه؟ سامي يا
+[00:18:34]
+  Transcript :  فكيش المحتاج اعمل ان انا هحسب لفازي ستس اللي عندي. الستاب
   OCR        : None
-  Combined   :  R-R, صح؟ فهو linear. معي؟ لكن؟ نعم؟ سمعني ولا ايه؟ سامي يا
+  Combined   :  فكيش المحتاج اعمل ان انا هحسب لفازي ستس اللي عندي. الستاب
 
-[00:18:42]
-  Transcript :  خضرتك تمام. اه. من حيث الـ format بتاعه فهو كان الـ genetic algorithm
+[00:18:40]
+  Transcript :  الطاية ان انا ايه اجمع على حسب دي.
   OCR        : None
-  Combined   :  خضرتك تمام. اه. من حيث الـ format بتاعه فهو كان الـ genetic algorithm
+  Combined   :  الطاية ان انا ايه اجمع على حسب دي.
 
 [00:18:48]
-  Transcript :  قلنا انه هو دائماً بيبقى R-R والـ R-R دي على حسب بالقلم انت
-  OCR        : None
-  Combined   :  قلنا انه هو دائماً بيبقى R-R والـ R-R دي على حسب بالقلم انت
+  Transcript : None
+  OCR        : Example | Given a stock market with varlables.: | Opening price Op | Previous day price Pdlp | Closing price Cp | From the domcin eagerts, it is known tat: | Pdp has 3 fuzzy sets L, M, H range 0 - 100 | Op has 3 furzy sets L, M, H range 0 - 100 | Cp has 5 fluzzy sets VL, L, M, H, VH range 0 - 100 | With the foillowing rules: | R1: If OpL, AND PdpL THEN CpVL | R2: If OpcL OR Pdp L THEN CgcL | R3: If OpM AND PdpNOTH THEN CpM | R4: If OpH OR PdpH THEN CpH | R5: If OpAND PtpHl THEN CpVH | Using triangular membership function, Predict | the Cp for Op  30 and Pdp90 ?
+  Combined   : Example | Given a stock market with varlables.: | Opening price Op | Previous day price Pdlp | Closing price Cp | From the domcin eagerts, it is known tat: | Pdp has 3 fuzzy sets L, M, H range 0 - 100 | Op has 3 furzy sets L, M, H range 0 - 100 | Cp has 5 fluzzy sets VL, L, M, H, VH range 0 - 100 | With the foillowing rules: | R1: If OpL, AND PdpL THEN CpVL | R2: If OpcL OR Pdp L THEN CgcL | R3: If OpM AND PdpNOTH THEN CpM | R4: If OpH OR PdpH THEN CpH | R5: If OpAND PtpHl THEN CpVH | Using triangular membership function, Predict | the Cp for Op  30 and Pdp90 ?
 
-[00:18:51]
-  Transcript :  binary zero or one integral
-  OCR        : None
-  Combined   :  binary zero or one integral
+[00:18:58]
+  Transcript :  Data Lab
+  OCR        : CentroidC1  0030504 | CentroidC2  204060-804 | CentroidC3 - 50701001004
+  Combined   :  Data Lab CentroidC1  0030504 | CentroidC2  204060-804 | CentroidC3 - 50701001004
 
-[00:19:11]
-  Transcript :  مش لينير. نون لينير. تاني حاجة. من حيث الاني كان لينير. كان لينير
+[00:19:05]
+  Transcript :  ونحن في البداية نحن نقوم بشكل مثل الفوزي. الفوزي في دي اللي نحن نحدد مكانها فيه. كل نقطة مكانها فيه.
   OCR        : None
-  Combined   :  مش لينير. نون لينير. تاني حاجة. من حيث الاني كان لينير. كان لينير
+  Combined   :  ونحن في البداية نحن نقوم بشكل مثل الفوزي. الفوزي في دي اللي نحن نحدد مكانها فيه. كل نقطة مكانها فيه.
 
-[00:19:20]
-  Transcript :  ثابت صح? نكون اول حاجة بنعملها لما نيجي نحل في الجيماتيك
+[00:19:13]
+  Transcript :  هذا اللي بيقابلك فيه. ماشي؟
   OCR        : None
-  Combined   :  ثابت صح? نكون اول حاجة بنعملها لما نيجي نحل في الجيماتيك
+  Combined   :  هذا اللي بيقابلك فيه. ماشي؟
 
-[00:19:24]
-  Transcript :  الوزن نقول ايه? واللينس بتاع الكروموزوم كام? هي كام جين?
+[00:19:15]
+  Transcript :  او بس انت بقى في الاساين انت مش هتعمل مكانها فيه لان مش هيبقى فيه ورق وهترسم
   OCR        : None
-  Combined   :  الوزن نقول ايه? واللينس بتاع الكروموزوم كام? هي كام جين?
+  Combined   :  او بس انت بقى في الاساين انت مش هتعمل مكانها فيه لان مش هيبقى فيه ورق وهترسم
 
-[00:19:29]
-  Transcript :  صح كده? فهو بتاعه ثابت. ما بيتغيرش. لكن زي ما انتم شايفين
+[00:19:22]
+  Transcript :  انت الفوذيفيكيشن مهمتها بتجيب الـ degree of membership لكل input
   OCR        : None
-  Combined   :  صح كده? فهو بتاعه ثابت. ما بيتغيرش. لكن زي ما انتم شايفين
+  Combined   :  انت الفوذيفيكيشن مهمتها بتجيب الـ degree of membership لكل input
+
+[00:19:28]
+  Transcript :  degree of membership
+  OCR        : None
+  Combined   :  degree of membership
+
+[00:19:32]
+  Transcript :  الـ degree of membership دي اللي في الخطة بتاعت الفوذيفاي دي صح؟
+  OCR        : None
+  Combined   :  الـ degree of membership دي اللي في الخطة بتاعت الفوذيفاي دي صح؟
 
 [00:19:36]
-  Transcript :  هنا كده. دي هيبقى الصيز جداها ايه? مش ثابت. بصوا كده. بصوا
+  Transcript :  او
   OCR        : None
-  Combined   :  هنا كده. دي هيبقى الصيز جداها ايه? مش ثابت. بصوا كده. بصوا
+  Combined   :  او
 
-[00:19:41]
-  Transcript :  هنا في الاكزامبر اللي انا كنت بوعمله لكم لما وقت لكم ايه?
+[00:19:37]
+  Transcript :  اوه. يعني دلولة تمامي بتاع الخطة بتاعة الفوزيفاي. انما بعد كده بنقدر نشوف الليه خطة بتاعة
   OCR        : None
-  Combined   :  هنا في الاكزامبر اللي انا كنت بوعمله لكم لما وقت لكم ايه?
+  Combined   :  اوه. يعني دلولة تمامي بتاع الخطة بتاعة الفوزيفاي. انما بعد كده بنقدر نشوف الليه خطة بتاعة
 
-[00:19:43]
-  Transcript :  هعمل لمجموع من الكروموزومز. الكروموزومز دي الصيز بتاعها
+[00:19:47]
+  Transcript :  اللوجيك دي على اساس الجملة اللي حدودك هتدهلنا بقى ولا تتحدد ازاي بقى. الرولز برضو انا زي ما
   OCR        : None
-  Combined   :  هعمل لمجموع من الكروموزومز. الكروموزومز دي الصيز بتاعها
+  Combined   :  اللوجيك دي على اساس الجملة اللي حدودك هتدهلنا بقى ولا تتحدد ازاي بقى. الرولز برضو انا زي ما
 
-[00:19:48]
-  Transcript :  سابت? الساعة بتاعها مختلف. ما بين كل يعني كل تري ليها ساعة
+[00:19:54]
+  Transcript :  قلت لكم كده هتديكم رولز. لان الرولز دي في الاطل بيحطها اكسبورت
   OCR        : None
-  Combined   :  سابت? الساعة بتاعها مختلف. ما بين كل يعني كل تري ليها ساعة
-
-[00:19:53]
-  Transcript :  غير التاني صح? لان هو بالضبط لان هو انا بختار
-  OCR        : None
-  Combined   :  غير التاني صح? لان هو بالضبط لان هو انا بختار
+  Combined   :  قلت لكم كده هتديكم رولز. لان الرولز دي في الاطل بيحطها اكسبورت
 
 [00:20:00]
-  Transcript :  من الـ function set و terminal set وعن حسن ما يطلع معيه. تلع terminal هستوب
+  Transcript :  في البروبلم في الدومين بتاع البروبلم او بتتعامل بالنيوران
   OCR        : None
-  Combined   :  من الـ function set و terminal set وعن حسن ما يطلع معيه. تلع terminal هستوب
+  Combined   :  في البروبلم في الدومين بتاع البروبلم او بتتعامل بالنيوران
 
-[00:20:13]
-  Transcript :  تلع function هكمل. فيبقى الكروموزوم هنا variable lens مش fixed lens. خلاص?
-  OCR        : 2nx3-x1 | x true   x V y  z  x y | i  i1
-  Combined   :  تلع function هكمل. فيبقى الكروموزوم هنا variable lens مش fixed lens. خلاص? 2nx3-x1 | x true   x V y  z  x y | i  i1
-
-[00:20:14]
-  Transcript :  ادي اهيه المقارنة اهيه? في الـ genetic algorithm. خلاص? في الـ tree
+[00:20:04]
+  Transcript :  ناترك او بالجيناتك امفر. فانا هديها لكم. دكتور ما عليش هواح
   OCR        : None
-  Combined   :  ادي اهيه المقارنة اهيه? في الـ genetic algorithm. خلاص? في الـ tree
+  Combined   :  ناترك او بالجيناتك امفر. فانا هديها لكم. دكتور ما عليش هواح
 
-[00:20:22]
-  Transcript :  هيبقى non linear structure. بالنسبة للـ lens هيبقى في الـ genetic algorithm
+[00:20:09]
+  Transcript :  نفس الانترويد اللي هنا دولة حسبوا جابوا مينة? مجموعة النقط
   OCR        : None
-  Combined   :  هيبقى non linear structure. بالنسبة للـ lens هيبقى في الـ genetic algorithm
+  Combined   :  نفس الانترويد اللي هنا دولة حسبوا جابوا مينة? مجموعة النقط
 
-[00:20:28]
-  Transcript :  بالنسبة للجينيتيك برو جراميج هيبقى ايه? في الدبس والويتس.
+[00:20:15]
+  Transcript :  بتاعة الفازي ست على عدد النقط. مجموعة النقط اللي كانت نحققها
   OCR        : None
-  Combined   :  بالنسبة للجينيتيك برو جراميج هيبقى ايه? في الدبس والويتس.
+  Combined   :  بتاعة الفازي ست على عدد النقط. مجموعة النقط اللي كانت نحققها
 
-[00:20:33]
-  Transcript :  يعني العمق والعمق بتاعه. بتاع الترين. طيب. اه ده كده على
+[00:20:21]
+  Transcript :  ايه بالزبط? مجموعة النقط اللي رسمنا بها الفازي ست. اه اوكي ده
   OCR        : None
-  Combined   :  يعني العمق والعمق بتاعه. بتاع الترين. طيب. اه ده كده على
+  Combined   :  ايه بالزبط? مجموعة النقط اللي رسمنا بها الفازي ست. اه اوكي ده
+
+[00:20:27]
+  Transcript :  هو الشيف نفسه
+  OCR        : None
+  Combined   :  هو الشيف نفسه
+
+[00:20:30]
+  Transcript :  اوه
+  OCR        : None
+  Combined   :  اوه
+
+[00:20:31]
+  Transcript :  الشيف نفسه
+  OCR        : None
+  Combined   :  الشيف نفسه
+
+[00:20:32]
+  Transcript :  معرفش يا دكتور
+  OCR        : None
+  Combined   :  معرفش يا دكتور
+
+[00:20:37]
+  Transcript :  معرفش فقط
+  OCR        : None
+  Combined   :  معرفش فقط
+
+[00:20:38]
+  Transcript :  هي النت كان فيه مشكلة
+  OCR        : None
+  Combined   :  هي النت كان فيه مشكلة
+
+[00:20:41]
+  Transcript :  تلوات الفوزيفاي
+  OCR        : None
+  Combined   :  تلوات الفوزيفاي
+
+[00:20:43]
+  Transcript :  دي الخطوة بتاعت
+  OCR        : None
+  Combined   :  دي الخطوة بتاعت
+
+[00:20:44]
+  Transcript :  اللي احنا منحقدت زي ما احنا قلنا
+  OCR        : None
+  Combined   :  اللي احنا منحقدت زي ما احنا قلنا
+
+[00:20:46]
+  Transcript :  اللي هي مكانها
+  OCR        : None
+  Combined   :  اللي هي مكانها
 
 [00:20:47]
-  Transcript :  الايه? على العترين. نشوف بعد التتعمل ازاي? خلاص? لو انا عايزة
-  OCR        : Mutation | Mutation | two parameters: | - Probability Pm | choose | mutation vs. | recombination | - Probability | chose | internal | point as the root | of the subtree to be | replaced | Remarkably | advised to | be very small | Koza92, | like 0.05 | Banzhaf et al. 98 | The size of the | child | can exceed the size of the | parent
-  Combined   :  الايه? على العترين. نشوف بعد التتعمل ازاي? خلاص? لو انا عايزة Mutation | Mutation | two parameters: | - Probability Pm | choose | mutation vs. | recombination | - Probability | chose | internal | point as the root | of the subtree to be | replaced | Remarkably | advised to | be very small | Koza92, | like 0.05 | Banzhaf et al. 98 | The size of the | child | can exceed the size of the | parent
+  Transcript :  زي ما حدثتك قلت كده مكانها
+  OCR        : None
+  Combined   :  زي ما حدثتك قلت كده مكانها
 
-[00:20:53]
+[00:20:49]
+  Transcript :  على الوعي صح
+  OCR        : None
+  Combined   :  على الوعي صح
+
+[00:20:50]
+  Transcript :  ايو
+  OCR        : None
+  Combined   :  ايو
+
+[00:20:51]
   Transcript : 
   OCR        : None
   Combined   : 
 
-[00:21:10]
-  Transcript :  انا اصلا هعمل اه هعمل ولا هعمل نفس الكلام اللي بنقوله في
+[00:21:25]
+  Transcript :  اشوف الرقمين هاخد منهم الميليمم ولا الماكسيم ولا هاخد رقم زي ما هو
   OCR        : None
-  Combined   :  انا اصلا هعمل اه هعمل ولا هعمل نفس الكلام اللي بنقوله في
+  Combined   :  اشوف الرقمين هاخد منهم الميليمم ولا الماكسيم ولا هاخد رقم زي ما هو
 
-[00:21:21]
-  Transcript :  جنتك. اما بتبقى صغيرة والبي بتبقى قيمتها اكبر. طيب نفسه
-  OCR        : Subtree Mutation: | Parents | Offspring | Replace the | Mutaion | mutation point by | Point | Peint | randomly | generated tree. | Point Mutation: | Randomly Generated | Randomly select a | Sub-tree | node and replace | it with another | primitive.
-  Combined   :  جنتك. اما بتبقى صغيرة والبي بتبقى قيمتها اكبر. طيب نفسه Subtree Mutation: | Parents | Offspring | Replace the | Mutaion | mutation point by | Point | Peint | randomly | generated tree. | Point Mutation: | Randomly Generated | Randomly select a | Sub-tree | node and replace | it with another | primitive.
-
-[00:21:24]
-  Transcript :  بيتعامل ازاي? احنا متفقين ان هو صح? صح? بيحصل في الكروموزوم.
+[00:21:29]
+  Transcript :  لو هو الواحد ما فيش كناكتر. ماشي تمام تمام يا دكتور. وبعد ما
   OCR        : None
-  Combined   :  بيتعامل ازاي? احنا متفقين ان هو صح? صح? بيحصل في الكروموزوم.
+  Combined   :  لو هو الواحد ما فيش كناكتر. ماشي تمام تمام يا دكتور. وبعد ما
 
-[00:21:31]
-  Transcript :  يبقى اي تشينج بيحصل في بتاعتي ده يعتبر ايه? طيب هحدد بقى ازاي
+[00:21:37]
+  Transcript :  احنا عملنا الانفرنس بنبتدي ان احنا نعمل خططة
   OCR        : None
-  Combined   :  يبقى اي تشينج بيحصل في بتاعتي ده يعتبر ايه? طيب هحدد بقى ازاي
+  Combined   :  احنا عملنا الانفرنس بنبتدي ان احنا نعمل خططة
 
-[00:21:39]
-  Transcript :  هحدد اي حتة عاملو اسمها اسمها تمام?
+[00:21:41]
+  Transcript :  ديفوزي فيكيشن
   OCR        : None
-  Combined   :  هحدد اي حتة عاملو اسمها اسمها تمام?
+  Combined   :  ديفوزي فيكيشن
 
-[00:21:46]
-  Transcript :  المutation point of duty هو الراندوم
+[00:21:47]
+  Transcript :  نحن نحصل اللي هي الويتد مين او نشوف التكامل اللي حتة الوردي صح؟
   OCR        : None
-  Combined   :  المutation point of duty هو الراندوم
-
-[00:21:50]
-  Transcript :  المutation point of duty هو الراندوم
-  OCR        : None
-  Combined   :  المutation point of duty هو الراندوم
+  Combined   :  نحن نحصل اللي هي الويتد مين او نشوف التكامل اللي حتة الوردي صح؟
 
 [00:21:54]
-  Transcript :  تمام
+  Transcript :  نحن نحن بتاعة الفوزي ستس بتاعة الاوكت
   OCR        : None
-  Combined   :  تمام
+  Combined   :  نحن نحن بتاعة الفوزي ستس بتاعة الاوكت
 
 [00:22:00]
-  Transcript :  اسلكت بتاعتي ولي اكون ان هي ايه? دي. صلة عند تمام? ده بتاعي.
+  Transcript :  اه. دي بنحسب الـSyndroids وبندربها في الأرقام اللي هي طالعة من Logic. أو من A inference يعني. صح؟
   OCR        : None
-  Combined   :  اسلكت بتاعتي ولي اكون ان هي ايه? دي. صلة عند تمام? ده بتاعي.
+  Combined   :  اه. دي بنحسب الـSyndroids وبندربها في الأرقام اللي هي طالعة من Logic. أو من A inference يعني. صح؟
 
-[00:22:10]
-  Transcript :  يبقى انا محتاجة عند النقطة دي في التري اعمل ايه? اعمل تعديل.
+[00:22:08]
+  Transcript :  او بنعمل الـ Equation بقى. بنعمل على اللون توسط يعني. تمام. طب مالش يا دكتور اللي بنعمل هي ما بنعملها على التكامل دي دي حاجة شبه اللي هي زي
   OCR        : None
-  Combined   :  يبقى انا محتاجة عند النقطة دي في التري اعمل ايه? اعمل تعديل.
+  Combined   :  او بنعمل الـ Equation بقى. بنعمل على اللون توسط يعني. تمام. طب مالش يا دكتور اللي بنعمل هي ما بنعملها على التكامل دي دي حاجة شبه اللي هي زي
 
-[00:22:16]
-  Transcript :  التعديل ده اللي هو هعمل ايه? هروح اجنرات واستبدلها بيها. خلاص?
+[00:22:18]
+  Transcript :  زي Normal Distribution أو حاجة زي الـ Bable T-Dainisty Function أو حاجة كده التكامل بتاعها كله بواحد لو هي جمعت كلها فاحنا نمتدي نشوف هي واضح نسبة قد ايه زي
   OCR        : None
-  Combined   :  التعديل ده اللي هو هعمل ايه? هروح اجنرات واستبدلها بيها. خلاص?
+  Combined   :  زي Normal Distribution أو حاجة زي الـ Bable T-Dainisty Function أو حاجة كده التكامل بتاعها كله بواحد لو هي جمعت كلها فاحنا نمتدي نشوف هي واضح نسبة قد ايه زي
 
-[00:22:25]
-  Transcript :  فانا هنا عملت ايه? عملت ده وليه الواي وليه الديفجن والاكس
+[00:22:27]
+  Transcript :  انا لديت لك اكوشن بدلا لما تعمل انا وردها لك بالحسابات. بدلا لما
   OCR        : None
-  Combined   :  فانا هنا عملت ايه? عملت ده وليه الواي وليه الديفجن والاكس
+  Combined   :  انا لديت لك اكوشن بدلا لما تعمل انا وردها لك بالحسابات. بدلا لما
 
 [00:22:33]
-  Transcript :  والتول. دي صبت ريه عملتها عملتها راندم. اروح ابدلها
+  Transcript :  تعمل الاكوشن لو انت عايز تعملها بالحساب. اه هتعملها زي ايه?
   OCR        : None
-  Combined   :  والتول. دي صبت ريه عملتها عملتها راندم. اروح ابدلها
+  Combined   :  تعمل الاكوشن لو انت عايز تعملها بالحساب. اه هتعملها زي ايه?
 
-[00:22:43]
-  Transcript :  بالسجن. فيبقى عندي الكروموزوم في الاخرى هاته. تمام? اهو ايجزامبل
-  OCR        : Most common mutation: replace randomly | chosen subtree by randomly generated tree
-  Combined   :  بالسجن. فيبقى عندي الكروموزوم في الاخرى هاته. تمام? اهو ايجزامبل Most common mutation: replace randomly | chosen subtree by randomly generated tree
-
-[00:22:46]
-  Transcript : 
-  OCR        : None
-  Combined   : 
-
-[00:23:05]
-  Transcript :  هغيرها بحاجة random خلاص. طلعت ال random عندي دي ايه? واي بس.
-  OCR        : None
-  Combined   :  هغيرها بحاجة random خلاص. طلعت ال random عندي دي ايه? واي بس.
-
-[00:23:12]
-  Transcript :  احنا عندنا دلوقتي الكروموزوم بتاعي فعد الباقي برحت. تمام?
-  OCR        : None
-  Combined   :  احنا عندنا دلوقتي الكروموزوم بتاعي فعد الباقي برحت. تمام?
-
-[00:23:22]
-  Transcript :  عندي اهو برضو على انا كان عندي بالشكل ده اي كان عندي الكروموزوم
-  OCR        : None
-  Combined   :  عندي اهو برضو على انا كان عندي بالشكل ده اي كان عندي الكروموزوم
-
-[00:23:30]
-  Transcript :  بالشكل ده زي ما انتم شايفين معي هعمل تلع هنا دي عند
-  OCR        : None
-  Combined   :  بالشكل ده زي ما انتم شايفين معي هعمل تلع هنا دي عند
-
-[00:23:42]
-  Transcript :  الاستريكس. تمام? هعمل ايه? انه عند الاستريكس هبتدي هقطع
-  OCR        : None
-  Combined   :  الاستريكس. تمام? هعمل ايه? انه عند الاستريكس هبتدي هقطع
-
-[00:23:55]
-  Transcript :  وهحط اتانية معمولة. طبعا نفت نحيك. تمام بالشكل. طرح?
-  OCR        : 2 3   4 2 3 Y 5 | Delete the node and its | children, and replace with | a randomly generated | program Subtree
-  Combined   :  وهحط اتانية معمولة. طبعا نفت نحيك. تمام بالشكل. طرح? 2 3   4 2 3 Y 5 | Delete the node and its | children, and replace with | a randomly generated | program Subtree
-
-[00:24:00]
-  Transcript :  كده الكوموزوم بعد ما عملت له خلاص? سهلة اول جينيتك
-  OCR        : None
-  Combined   :  كده الكوموزوم بعد ما عملت له خلاص? سهلة اول جينيتك
-
-[00:24:05]
-  Transcript :  واسئلتها كلها سهلة. يعني لو جبت لك اعمل مثلا عند
-  OCR        : None
-  Combined   :  واسئلتها كلها سهلة. يعني لو جبت لك اعمل مثلا عند
-
-[00:24:10]
-  Transcript :  البيوت دي. خلاص? عند البيوت دي هتشيل يعني هي البيوت وكل
-  OCR        : None
-  Combined   :  البيوت دي. خلاص? عند البيوت دي هتشيل يعني هي البيوت وكل
-
-[00:24:19]
-  Transcript :  اللي تحتها في البيوت ويتحط بدلو ايه? حاجة معمولة رندم. يا اما
-  OCR        : None
-  Combined   :  اللي تحتها في البيوت ويتحط بدلو ايه? حاجة معمولة رندم. يا اما
-
-[00:24:28]
-  Transcript :  انا هديها لك اما انت هتحط حاجة من عندك. طيب. ديجي للكو اللي هو
-  OCR        : Recombination  Crossover | Most common recombination: | exchange two | chosen | subtrees among the parents | Recombination | pc to | recombination vs. | mutation | point within each | parent as | crossover | point | The size of offspring can exceed that of the | parents
-  Combined   :  انا هديها لك اما انت هتحط حاجة من عندك. طيب. ديجي للكو اللي هو Recombination  Crossover | Most common recombination: | exchange two | chosen | subtrees among the parents | Recombination | pc to | recombination vs. | mutation | point within each | parent as | crossover | point | The size of offspring can exceed that of the | parents
-
-[00:24:32]
-  Transcript :  الكروس اوفر. برضو بيبقى عندي بي سي بتاعة الكروس اوفر وبتبقى
-  OCR        : None
-  Combined   :  الكروس اوفر. برضو بيبقى عندي بي سي بتاعة الكروس اوفر وبتبقى
-
-[00:24:37]
-  Transcript :  كبيرة غالبا ايه او بوينت اه او بوينت سيفن تمام? بعمل ازاي? برضو
-  OCR        : None
-  Combined   :  كبيرة غالبا ايه او بوينت اه او بوينت سيفن تمام? بعمل ازاي? برضو
-
-[00:24:52]
-  Transcript :  random random
-  OCR        : Subtree Crossover | Parent 1 | Parent 2 | Child 1 | Child 2
-  Combined   :  random random Subtree Crossover | Parent 1 | Parent 2 | Child 1 | Child 2
-
-[00:25:06]
-  Transcript :  التاني. هنا ما فيش الجين رقم كزا فانختار واحدة للاتنين. لا.
-  OCR        : None
-  Combined   :  التاني. هنا ما فيش الجين رقم كزا فانختار واحدة للاتنين. لا.
-
-[00:25:11]
-  Transcript :  هنا ايه كل حاجة مختلفة. يعني كل تدي ويها الشكل بتاعها. اختار
-  OCR        : None
-  Combined   :  هنا ايه كل حاجة مختلفة. يعني كل تدي ويها الشكل بتاعها. اختار
-
-[00:25:17]
-  Transcript :  وان في البرانت الاولاني وفينت تو في البرانت التاني. تمام?
-  OCR        : None
-  Combined   :  وان في البرانت الاولاني وفينت تو في البرانت التاني. تمام?
-
-[00:25:22]
-  Transcript :  وهبتدي ابدل الايه الثل مع بعض. فيهي اخد دي وابدله مع
-  OCR        : None
-  Combined   :  وهبتدي ابدل الايه الثل مع بعض. فيهي اخد دي وابدله مع
-
-[00:25:30]
-  Transcript :  الثلاغ دي. فايتلعني عندي بالشكل ايه ده? ما كان هنا
-  OCR        : None
-  Combined   :  الثلاغ دي. فايتلعني عندي بالشكل ايه ده? ما كان هنا
-
-[00:25:35]
-  Transcript :  ده كان بتاعه عبارة عن الوقتي هيبقى ايه? عبارة عن دوت. اللي
-  OCR        : None
-  Combined   :  ده كان بتاعه عبارة عن الوقتي هيبقى ايه? عبارة عن دوت. اللي
-
-[00:25:43]
-  Transcript :  هو ضرب. خلاص? وهنا بتاع كان ايه? كان دوت وبلاس. دلوقتي هيبقى
-  OCR        : None
-  Combined   :  هو ضرب. خلاص? وهنا بتاع كان ايه? كان دوت وبلاس. دلوقتي هيبقى
-
-[00:26:00]
-  Transcript :  ايه? هيبقى دي اللي انا خدتها من ايه من خلاص? هبدلهم مع بعض.
-  OCR        : Crossover | X  3 Y | -  25 X 7
-  Combined   :  ايه? هيبقى دي اللي انا خدتها من ايه من خلاص? هبدلهم مع بعض. Crossover | X  3 Y | -  25 X 7
-
-[00:26:13]
-  Transcript :  هبتدي بقى ابدل دي مع دي
-  OCR        : None
-  Combined   :  هبتدي بقى ابدل دي مع دي
-
-[00:26:22]
-  Transcript : None
-  OCR        : X   25 X Y | - 3 7 | Swap the two nodes
-  Combined   : X   25 X Y | - 3 7 | Swap the two nodes
-
-[00:26:24]
-  Transcript :  تمام بدلتهم فدول ايه
-  OCR        : None
-  Combined   :  تمام بدلتهم فدول ايه
-
-[00:26:32]
-  Transcript :  هنا بيكور ان لو انا اعملت او لو انا عملت ايه? لمجموعة من
-  OCR        : What About | t Just Randomly | Generating Programs? | Is Genetic Programming really better than just randomly | for 200 generations, with a population size of 1000 per generation, | against 200,000 randomly generated algorithms | best randomly generated program Genetic Programming FAQ, 2002
-  Combined   :  هنا بيكور ان لو انا اعملت او لو انا عملت ايه? لمجموعة من What About | t Just Randomly | Generating Programs? | Is Genetic Programming really better than just randomly | for 200 generations, with a population size of 1000 per generation, | against 200,000 randomly generated algorithms | best randomly generated program Genetic Programming FAQ, 2002
-
-[00:26:42]
-  Transcript :  وعملها ايه? اشوفها هتفيت معي ولا لا? خلاص? دي يعني كانت كده
-  OCR        : What | About | : Just Randomly | Generating | Programs? | creating new functions? | Yes! | Pete Angeline compared the result of evolving a tic-tac-toe algorithm | against 200,000 randomly renerated algorithms | The best evolved program was found to be significantly superior to the | best randomly generated proeram Genetic Proeramming FAQ. 2002
-  Combined   :  وعملها ايه? اشوفها هتفيت معي ولا لا? خلاص? دي يعني كانت كده What | About | : Just Randomly | Generating | Programs? | creating new functions? | Yes! | Pete Angeline compared the result of evolving a tic-tac-toe algorithm | against 200,000 randomly renerated algorithms | The best evolved program was found to be significantly superior to the | best randomly generated proeram Genetic Proeramming FAQ. 2002
-
-[00:26:47]
-  Transcript :  عملوها بتثبت ان ايه? ان انا لما اشتغل بالجينيتك احسن من اني
-  OCR        : None
-  Combined   :  عملوها بتثبت ان ايه? ان انا لما اشتغل بالجينيتك احسن من اني
-
-[00:27:03]
-  Transcript : 
-  OCR        : Just Randomly | for 200 generations, with a popalation size of 1000 per generation, | Tnebesrandomosneratedogrwn-lsnetisetemwingFau2n02 | -The best evolved program was found to be significantly superior to the | functions survive to reproduce in each generation
-  Combined   :  Just Randomly | for 200 generations, with a popalation size of 1000 per generation, | Tnebesrandomosneratedogrwn-lsnetisetemwingFau2n02 | -The best evolved program was found to be significantly superior to the | functions survive to reproduce in each generation
-
-[00:27:13]
-  Transcript :  بتجايد بتاعتي بحيس تطلع ايه? تطلع في الاخر. زيها زي
-  OCR        : best randomly generated proeram Genetic Proeramming FAQ. 2o02 | The key lies in using a fitness measure to determine which
-  Combined   :  بتجايد بتاعتي بحيس تطلع ايه? تطلع في الاخر. زيها زي best randomly generated proeram Genetic Proeramming FAQ. 2o02 | The key lies in using a fitness measure to determine which
-
-[00:27:19]
-  Transcript :  الجينيتيك الالغريزمي بسط. هي ايه? بتعتبر جينيتيك الالوز. طيب
-  OCR        : None
-  Combined   :  الجينيتيك الالغريزمي بسط. هي ايه? بتعتبر جينيتيك الالوز. طيب
-
-[00:27:23]
-  Transcript :  هنا بقى ايكزامبل اهم. انا عندي في بنك خلاص. والبنك ده بيختار اه
-  OCR        : Introductory example: | credit scoring | Bank wants to distinguish good from bad loan | applicants | Model needed that matches historical data | No of | Salary | Marital | children | status | ID-1 | 45000 | Married | ID-2 | 30000 | Single | ID-3 | 40000 | Divorced
-  Combined   :  هنا بقى ايكزامبل اهم. انا عندي في بنك خلاص. والبنك ده بيختار اه Introductory example: | credit scoring | Bank wants to distinguish good from bad loan | applicants | Model needed that matches historical data | No of | Salary | Marital | children | status | ID-1 | 45000 | Married | ID-2 | 30000 | Single | ID-3 | 40000 | Divorced
-
-[00:27:31]
-  Transcript :  يعني بيعمل قروض والقروض دي هو بيبقى مش عارف يقول يوافق عليها
-  OCR        : None
-  Combined   :  يعني بيعمل قروض والقروض دي هو بيبقى مش عارف يقول يوافق عليها
-
-[00:27:36]
-  Transcript :  ولا لأ يعني بيتقدم له طلبات الناس عايزين يعملوا كرد وهو
-  OCR        : None
-  Combined   :  ولا لأ يعني بيتقدم له طلبات الناس عايزين يعملوا كرد وهو
-
-[00:27:41]
-  Transcript :  مش عارف على اساس ايه يقول اه او لأ. خلاص? فهو عايز يعمل او
-  OCR        : None
-  Combined   :  مش عارف على اساس ايه يقول اه او لأ. خلاص? فهو عايز يعمل او
-
-[00:27:46]
-  Transcript :  يعمل تقول له يقول يعني يقول مش هيقبل القرد او يعني تمام?
-  OCR        : None
-  Combined   :  يعمل تقول له يقول يعني يقول مش هيقبل القرد او يعني تمام?
-
-[00:28:00]
-  Transcript :  يبقى ايه الحل بتاع البروبلم دي? الحل عبارة على خلاص ياخد
-  OCR        : None
-  Combined   :  يبقى ايه الحل بتاع البروبلم دي? الحل عبارة على خلاص ياخد
-
-[00:28:07]
-  Transcript :  ويقول له يطلع او تزيله او او تمام? طيب هو عنده ايه بالشكل ده?
-  OCR        : None
-  Combined   :  ويقول له يطلع او تزيله او او تمام? طيب هو عنده ايه بالشكل ده?
-
-[00:28:15]
-  Transcript :  ما يبص على العدد عند اللي متقدم بالكارد ده. وستلقى لي بتاعه.
-  OCR        : None
-  Combined   :  ما يبص على العدد عند اللي متقدم بالكارد ده. وستلقى لي بتاعه.
-
-[00:28:20]
-  Transcript :  وهو متجاوز ولا لأ? ده بتاعي. فيطلق
-  OCR        : None
-  Combined   :  وهو متجاوز ولا لأ? ده بتاعي. فيطلق
-
-[00:28:35]
-  Transcript :  ايه بقى? الرول اللي هتكمباين الانبوت بس تتبقى ايه? احسن رول.
-  OCR        : A possible model: | IF NOC  2 AND S  800OO THEN good ELSE bad | -In general: | IF formula THEN good ELSE bad | Only unknown is the right formula, hence | Our search space phenotypes is the set of formulas | Natural fitness of a formula: percentage of well classified | cases of the model it stands for | Natural representation of formulas genotypes is: parse trees
-  Combined   :  ايه بقى? الرول اللي هتكمباين الانبوت بس تتبقى ايه? احسن رول. A possible model: | IF NOC  2 AND S  800OO THEN good ELSE bad | -In general: | IF formula THEN good ELSE bad | Only unknown is the right formula, hence | Our search space phenotypes is the set of formulas | Natural fitness of a formula: percentage of well classified | cases of the model it stands for | Natural representation of formulas genotypes is: parse trees
-
-[00:28:37]
-  Transcript :  في الاول هنجنرية مجموعة رولز راندم. فنقول مسلا ايه?
-  OCR        : None
-  Combined   :  في الاول هنجنرية مجموعة رولز راندم. فنقول مسلا ايه?
-
-[00:28:41]
-  Transcript :  number of children equal to and salary greater than. ايه دي. زاوسن. طب عندنا
-  OCR        : None
-  Combined   :  number of children equal to and salary greater than. ايه دي. زاوسن. طب عندنا
-
-[00:28:48]
-  Transcript :  مش عندنا خالص. زن. جود. جود يعني ايه بوان. الس هيبقى زاند.
-  OCR        : None
-  Combined   :  مش عندنا خالص. زن. جود. جود يعني ايه بوان. الس هيبقى زاند.
-
-[00:28:54]
-  Transcript : 
-  OCR        : None
-  Combined   : 
-
-[00:29:06]
-  Transcript :  هعمل اهي. همستلها عادي بالايه? زي ما اتفقنا.
-  OCR        : None
-  Combined   :  هعمل اهي. همستلها عادي بالايه? زي ما اتفقنا.
-
-[00:29:16]
-  Transcript :  وهبتدي بقى ايه? هي مجموعة المتاحة.
-  OCR        : None
-  Combined   :  وهبتدي بقى ايه? هي مجموعة المتاحة.
-
-[00:29:24]
-  Transcript :  اه وهبتدي بقى امشي في ال اي في بتاع ال جينيتك برو جرامنج.
-  OCR        : None
-  Combined   :  اه وهبتدي بقى امشي في ال اي في بتاع ال جينيتك برو جرامنج.
-
-[00:29:32]
-  Transcript :  بعد ما يوصلني ال اي في الاخر احسن اي احسن فورملا. اطلع بيها ايه
-  OCR        : IF NOC  2 AND S  80000 | THEN | goodELSEbad | can be represented by the following | tree | 80000
-  Combined   :  بعد ما يوصلني ال اي في الاخر احسن اي احسن فورملا. اطلع بيها ايه IF NOC  2 AND S  80000 | THEN | goodELSEbad | can be represented by the following | tree | 80000
-
-[00:29:35]
-  Transcript :  الاول بداية ان هو الزير اول وان. تمام? اعمل ازاي بالري.
-  OCR        : None
-  Combined   :  الاول بداية ان هو الزير اول وان. تمام? اعمل ازاي بالري.
-
-[00:29:41]
-  Transcript :  at the end.
-  OCR        : None
-  Combined   :  at the end.
-
-[00:29:42]
-  Transcript :  in number of children equal to.
-  OCR        : None
-  Combined   :  in number of children equal to.
-
-[00:29:46]
-  Transcript :  وستالري غير فرزان الـ 80,000
-  OCR        : None
-  Combined   :  وستالري غير فرزان الـ 80,000
-
-[00:29:55]
-  Transcript : None
-  OCR        : Building a Better Mouse | Apply Genetic Programming to the problem of | navigating a maze
-  Combined   : Building a Better Mouse | Apply Genetic Programming to the problem of | navigating a maze
-
-[00:29:55]
-  Transcript :  ده أبلي يعني بروبلم تاني بيستقدم برضو فيها الجنيةك برغمينج
-  OCR        : None
-  Combined   :  ده أبلي يعني بروبلم تاني بيستقدم برضو فيها الجنيةك برغمينج
-
-[00:30:05]
-  Transcript :  ايه موز. دي اللاعبة اللي هي بتاعة الفارو والجبنة. الفارو
-  OCR        : What are our terminal and function sets? | - Function Set | If-Movement-Blocked, While-Not-At-Cheese
-  Combined   :  ايه موز. دي اللاعبة اللي هي بتاعة الفارو والجبنة. الفارو What are our terminal and function sets? | - Function Set | If-Movement-Blocked, While-Not-At-Cheese
-
-[00:30:07]
-  Transcript :  يمشي في اتجاهات معينة لحد ما يوصل ايه للجبنة. احنا عايزين
-  OCR        : None
-  Combined   :  يمشي في اتجاهات معينة لحد ما يوصل ايه للجبنة. احنا عايزين
-
-[00:30:14]
-  Transcript :  نعمل احسن يخلي ايه? يخلي الموز ده يوصل. قبل ما يحصله ايه?
-  OCR        : None
-  Combined   :  نعمل احسن يخلي ايه? يخلي الموز ده يوصل. قبل ما يحصله ايه?
-
-[00:30:20]
-  Transcript :  ويموت. يموت من الجواة.
-  OCR        : None
-  Combined   :  ويموت. يموت من الجواة.
-
-[00:30:29]
-  Transcript :  بتاعتي.
-  OCR        : None
-  Combined   :  بتاعتي.
-
-[00:30:32]
-  Transcript :  واي بقى ايه على حسب البروبريم زي ما قلنا.
-  OCR        : None
-  Combined   :  واي بقى ايه على حسب البروبريم زي ما قلنا.
-
-[00:30:44]
-  Transcript :  والي اكون انها ايه. دي الحاجات اللي ممكن يعملها. تمام?
-  OCR        : How to get the starving mouse to the | cheese?
-  Combined   :  والي اكون انها ايه. دي الحاجات اللي ممكن يعملها. تمام? How to get the starving mouse to the | cheese?
-
-[00:30:58]
-  Transcript :  one possible solution why not add the cheese
-  OCR        : One possible solution: | Nhile not st. the chean | If the way abead is blocked | Othervise | Turn1eft 90degrees | Move forward | Turn right 90degrees | Bllocked
-  Combined   :  one possible solution why not add the cheese One possible solution: | Nhile not st. the chean | If the way abead is blocked | Othervise | Turn1eft 90degrees | Move forward | Turn right 90degrees | Bllocked
-
-[00:31:06]
-  Transcript :  اعملي if the way head is blocked. لو الطريق قدامك ايه مقفول. turn left
-  OCR        : None
-  Combined   :  اعملي if the way head is blocked. لو الطريق قدامك ايه مقفول. turn left
-
-[00:31:12]
-  Transcript :  90 degree. خلاص. otherwise move forward. طلعما بقى الطريق مفتوح امشي قدام
-  OCR        : None
-  Combined   :  90 degree. خلاص. otherwise move forward. طلعما بقى الطريق مفتوح امشي قدام
-
-[00:31:19]
-  Transcript :  وبعد جاتر نرويت ايه? ده هل هو بيحل الحل? مش عارفين. نعرف
-  OCR        : None
-  Combined   :  وبعد جاتر نرويت ايه? ده هل هو بيحل الحل? مش عارفين. نعرف
-
-[00:31:35]
-  Transcript :  ازاي عن طريق الفتنس? ايه الفتنس هنا?
-  OCR        : A fitness function: | Each function and terminal other than the | root node shall cost one unit to execute | If the mouse spends more than 100 units, | it dies of hunger | The fitness measure for a program is | determined be executing the program, | then squarine the sum of the total units | spent and the final distance from the exit | A lower fitness measure is preferable to a | Bocked? | higher fitness measure
-  Combined   :  ازاي عن طريق الفتنس? ايه الفتنس هنا? A fitness function: | Each function and terminal other than the | root node shall cost one unit to execute | If the mouse spends more than 100 units, | it dies of hunger | The fitness measure for a program is | determined be executing the program, | then squarine the sum of the total units | spent and the final distance from the exit | A lower fitness measure is preferable to a | Bocked? | higher fitness measure
-
-[00:31:40]
-  Transcript :  هنقول ان كل ستاب بيعملها بتكلفني ايه? one unit. تمام? لو الماوس ده عدى
-  OCR        : None
-  Combined   :  هنقول ان كل ستاب بيعملها بتكلفني ايه? one unit. تمام? لو الماوس ده عدى
-
-[00:31:53]
-  Transcript :  قبل ما يوصل للشيز يبا هاي ضاي. يبا انا كده خسرت في النعام.
-  OCR        : None
-  Combined   :  قبل ما يوصل للشيز يبا هاي ضاي. يبا انا كده خسرت في النعام.
-
-[00:32:00]
-  Transcript :  تمام? خيب يبقى يعني هو عمل تمام? وفقه قد اي عشان يوصل
-  OCR        : None
-  Combined   :  تمام? خيب يبقى يعني هو عمل تمام? وفقه قد اي عشان يوصل
-
-[00:32:22]
-  Transcript :  للايه للا تياز. هي الفاتنس دي. وكل ما دي تكون اقل كل ما يكون
-  OCR        : None
-  Combined   :  للايه للا تياز. هي الفاتنس دي. وكل ما دي تكون اقل كل ما يكون
-
-[00:32:30]
-  Transcript :  احسن فيبقى دي ايه? مانيمايزيشن ايه? وده لقيه ال
-  OCR        : None
-  Combined   :  احسن فيبقى دي ايه? مانيمايزيشن ايه? وده لقيه ال
-
-[00:32:37]
-  Transcript :  الى للايه اللي احنا كنا قيلينه من شوية. هنعمل ايه بعد كده?
-  OCR        : None
-  Combined   :  الى للايه اللي احنا كنا قيلينه من شوية. هنعمل ايه بعد كده?
-
-[00:32:44]
-  Transcript :  هنبتدي نمشي في الايه. في بتاعة دي نعمل
-  OCR        : None
-  Combined   :  هنبتدي نمشي في الايه. في بتاعة دي نعمل
-
-[00:32:50]
-  Transcript : 
-  OCR        : None
-  Combined   : 
-
-[00:33:13]
-  Transcript :  وفي كل مرة طبعا بحس خلاص بناء على الايه? على الفيتنس اللي
-  OCR        : None
-  Combined   :  وفي كل مرة طبعا بحس خلاص بناء على الايه? على الفيتنس اللي
-
-[00:33:20]
-  Transcript :  محددنا هنا في البروبلم. تمام? قدي شكل ايه? تاني اهو كون نظوم اهو
-  OCR        : While not at the cheece | it the wey ahead is clocked | Otherwise | Turn left 90 degrees | Nove forvard ooe apace | While not at the cheese | Mowe forward one space | Turn right 50 degrees | Turn left 30 degrees
-  Combined   :  محددنا هنا في البروبلم. تمام? قدي شكل ايه? تاني اهو كون نظوم اهو While not at the cheece | it the wey ahead is clocked | Otherwise | Turn left 90 degrees | Nove forvard ooe apace | While not at the cheese | Mowe forward one space | Turn right 50 degrees | Turn left 30 degrees
-
-[00:33:25]
-  Transcript :  بيقول لك ايه? why not add the cheese if the way head is blocked turn left
-  OCR        : None
-  Combined   :  بيقول لك ايه? why not add the cheese if the way head is blocked turn left
-
-[00:33:30]
-  Transcript :  مانتي اي ديجري otherwise move forward one space. هنا while not add the cheese move
-  OCR        : None
-  Combined   :  مانتي اي ديجري otherwise move forward one space. هنا while not add the cheese move
-
-[00:33:37]
-  Transcript :  forward one space turn right. بعدين turn left. اعمل ميوتاشن ازاي? لو انا
-  OCR        : None
-  Combined   :  forward one space turn right. بعدين turn left. اعمل ميوتاشن ازاي? لو انا
-
-[00:33:45]
-  Transcript :  عايز عمل ده. هاجي هنا في كانت موفي هخليها ايه اي واحدة بقى
-  OCR        : None
-  Combined   :  عايز عمل ده. هاجي هنا في كانت موفي هخليها ايه اي واحدة بقى
-
-[00:33:56]
-  Transcript :  من اي حقيقة بطلعها تمام?
-  OCR        : 1t the weyahead Is blocked | othervise | Tarn left 90 degrees | Move forvard one apace | Mowe forward cne space | Crossover: | Turn 1eft 0 degrees | While not at the chense | Tt the way aheadis blocked | While not at the cheean | nove forvard one space | Turn Ieft so degrees | Tarn right 50 degrees | rurn left 50 degrees | Move forvard coe apace
-  Combined   :  من اي حقيقة بطلعها تمام? 1t the weyahead Is blocked | othervise | Tarn left 90 degrees | Move forvard one apace | Mowe forward cne space | Crossover: | Turn 1eft 0 degrees | While not at the chense | Tt the way aheadis blocked | While not at the cheean | nove forvard one space | Turn Ieft so degrees | Tarn right 50 degrees | rurn left 50 degrees | Move forvard coe apace
-
-[00:34:00]
-  Transcript :  طيب لو الاتنين الكروموزومز اللي قدامي دول. الكروموزوم ده
-  OCR        : None
-  Combined   :  طيب لو الاتنين الكروموزومز اللي قدامي دول. الكروموزوم ده
-
-[00:34:05]
-  Transcript :  والكروموزوم ده هعمل لهم بقى هاجي عند معينة واعمل ايه?
-  OCR        : None
-  Combined   :  والكروموزوم ده هعمل لهم بقى هاجي عند معينة واعمل ايه?
-
-[00:34:12]
-  Transcript :  واعمل خلاص هنا مين الو اهو اخترت هنا السطرين دول وهنا
-  OCR        : None
-  Combined   :  واعمل خلاص هنا مين الو اهو اخترت هنا السطرين دول وهنا
-
-[00:34:19]
-  Transcript :  اخترت السطر ده وابدلهم ببعض. فيطلع لي ايه اتنين ايه?
-  OCR        : None
-  Combined   :  اخترت السطر ده وابدلهم ببعض. فيطلع لي ايه اتنين ايه?
-
-[00:34:26]
-  Transcript :  كروموزومز. وطبعا بحث بالفيتنس وعلى حساب بقى ايه? الفيتنس الايه?
-  OCR        : after 4202 generatiecs, with 1000 pregrsno per generation | If the way ahead is blocked | Turn riqht 90 degreoa | Move torward one space | Move forward one space | otheruise | Move forward one space | Move forward one space | Is this better? | Move forwardone space | Move forward one space | Turn left 90 degraea | If the way ahead is blocked | Turn 1eft 90 degrees | Move forward one space
-  Combined   :  كروموزومز. وطبعا بحث بالفيتنس وعلى حساب بقى ايه? الفيتنس الايه? after 4202 generatiecs, with 1000 pregrsno per generation | If the way ahead is blocked | Turn riqht 90 degreoa | Move torward one space | Move forward one space | otheruise | Move forward one space | Move forward one space | Is this better? | Move forwardone space | Move forward one space | Turn left 90 degraea | If the way ahead is blocked | Turn 1eft 90 degrees | Move forward one space
-
-[00:34:28]
-  Transcript :  الاحسن بالنسبة لي هي اللي بعمل لها وهكزا. تمام? هفضل عامل
-  OCR        : None
-  Combined   :  الاحسن بالنسبة لي هي اللي بعمل لها وهكزا. تمام? هفضل عامل
-
-[00:34:37]
-  Transcript :  كده. تمام? لحد ما اوصل للايه? او
-  OCR        : after 4202 peneraticrs, with 1000 poegramns per generatien | Turn riqht 90 degroea | Move torward one cpace | Move | forward one space | Turn right 90 degrees | Moveforwardone space | Fitness measare: 2809 | If the way ahead is b1ocked | Tugn Jeft90degreee
-  Combined   :  كده. تمام? لحد ما اوصل للايه? او after 4202 peneraticrs, with 1000 poegramns per generatien | Turn riqht 90 degroea | Move torward one cpace | Move | forward one space | Turn right 90 degrees | Moveforwardone space | Fitness measare: 2809 | If the way ahead is b1ocked | Tugn Jeft90degreee
-
-[00:34:45]
-  Transcript :  بس كانت اي سؤال?
-  OCR        : None
-  Combined   :  بس كانت اي سؤال?
-
-[00:34:54]
-  Transcript : 
-  OCR        : None
-  Combined   : 
-
-[00:35:05]
-  Transcript :  انا شايف بنا في حاجات هتبقى صعبة جدا يا اما كده ما بقاشش لي لازمة البروجرامر بقى مالوش لازمة
-  OCR        : None
-  Combined   :  انا شايف بنا في حاجات هتبقى صعبة جدا يا اما كده ما بقاشش لي لازمة البروجرامر بقى مالوش لازمة
-
-[00:35:11]
-  Transcript :  ما بقى تحل اي حاجة بقى لو لو هتقدر تحل اي حاجة
-  OCR        : None
-  Combined   :  ما بقى تحل اي حاجة بقى لو لو هتقدر تحل اي حاجة
-
-[00:35:15]
-  Transcript :  البروجرامر هو اللي يعمل الجيناتك برامج
-  OCR        : None
-  Combined   :  البروجرامر هو اللي يعمل الجيناتك برامج
-
-[00:35:17]
-  Transcript :  مخلص واحد يعمل
-  OCR        : None
-  Combined   :  مخلص واحد يعمل
-
-[00:35:19]
-  Transcript :  البروجرامر المستوى عيني دي لو هاتم
-  OCR        : None
-  Combined   :  البروجرامر المستوى عيني دي لو هاتم
-
-[00:35:21]
-  Transcript :  البروغرامر دهاتي مستوى بقى على بدل ما يروح يعمل بقى يعمل
-  OCR        : None
-  Combined   :  البروغرامر دهاتي مستوى بقى على بدل ما يروح يعمل بقى يعمل
-
-[00:35:26]
-  Transcript :  اه جيمياتيك بروغرامنج تعمل هي البروغرامز.
-  OCR        : None
-  Combined   :  اه جيمياتيك بروغرامنج تعمل هي البروغرامز.
-
-[00:35:30]
-  Transcript :  بص ينتبق عليها ينتبق على قولنا فيش او للبروغرامنج
-  OCR        : None
-  Combined   :  بص ينتبق عليها ينتبق على قولنا فيش او للبروغرامنج
-
-[00:35:39]
-  Transcript :  عشان تتحل بالجيمياتيك بروغرامنج خلاص ان هي يبقى ليها مجر فتنس
-  OCR        : None
-  Combined   :  عشان تتحل بالجيمياتيك بروغرامنج خلاص ان هي يبقى ليها مجر فتنس
-
-[00:35:43]
-  Transcript :  يعني اقدر اقيد رئيس بيها. وان هي يبقى اقدر اقسم بتاعها.
-  OCR        : None
-  Combined   :  يعني اقدر اقيد رئيس بيها. وان هي يبقى اقدر اقسم بتاعها.
-
-[00:35:50]
-  Transcript :  خلاص لأجزاء كومبوننت ان هي الجين. الجين هنا في الجينتك كبروغراميج ايه بالمناسبة? الجين هنا عبارة عن ايه?
+[00:22:38]
+  Transcript :  التكابل اللي هو الايه? المساحة تحت الكيرف. تمام? فاحنا بنجمع هو
   OCR        : None
-  Combined   :  خلاص لأجزاء كومبوننت ان هي الجين. الجين هنا في الجينتك كبروغراميج ايه بالمناسبة? الجين هنا عبارة عن ايه?
+  Combined   :  التكابل اللي هو الايه? المساحة تحت الكيرف. تمام? فاحنا بنجمع هو
 
-[00:36:00]
-  Transcript :  انا بس موالتاش. موالتاش. ينطبق عليها اللي ينطبق على ال جينيتيك
+[00:22:45]
+  Transcript :  المساحة لتحت الكيرف. فانا جمعتها لك بالطريقة الثي. الهدف ان انا
   OCR        : None
-  Combined   :  انا بس موالتاش. موالتاش. ينطبق عليها اللي ينطبق على ال جينيتيك
+  Combined   :  المساحة لتحت الكيرف. فانا جمعتها لك بالطريقة الثي. الهدف ان انا
 
-[00:36:16]
-  Transcript :  الالجوريثم. ما في برضو كنا بنقول ان هي صعبة تتحل بالجينيتيك
+[00:22:49]
+  Transcript :  بوريك ان انا المختلفة هتطلع لي ارقام مختلفة.
   OCR        : None
-  Combined   :  الالجوريثم. ما في برضو كنا بنقول ان هي صعبة تتحل بالجينيتيك
+  Combined   :  بوريك ان انا المختلفة هتطلع لي ارقام مختلفة.
 
-[00:36:20]
-  Transcript :  الالجوريثم او بيفيد. نفس الحكاية. ما فيش حاجة بتتعمل يعني. لو
+[00:22:56]
+  Transcript :  تمام? ده الهدف. او طبعا او طبعا او طبعا. مش نفس ونفس
   OCR        : None
-  Combined   :  الالجوريثم او بيفيد. نفس الحكاية. ما فيش حاجة بتتعمل يعني. لو
+  Combined   :  تمام? ده الهدف. او طبعا او طبعا او طبعا. مش نفس ونفس
 
-[00:36:26]
-  Transcript :  دي كانت حلت كل حاجة ما كانش يختاروا وباع الجورزمات تانية
+[00:23:04]
+  Transcript :  الانبوت. تمام. تمام. اي سؤال يا شغف? اه كده انا شرحت لكم كل
   OCR        : None
-  Combined   :  دي كانت حلت كل حاجة ما كانش يختاروا وباع الجورزمات تانية
+  Combined   :  الانبوت. تمام. تمام. اي سؤال يا شغف? اه كده انا شرحت لكم كل
 
-[00:36:30]
-  Transcript :  بعدهم. باكيد يعني.
+[00:23:15]
+  Transcript :  حيجة ممكن تستخدموها في وده عم متى يعني الانبوت
   OCR        : None
-  Combined   :  بعدهم. باكيد يعني.
+  Combined   :  حيجة ممكن تستخدموها في وده عم متى يعني الانبوت
 

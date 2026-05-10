@@ -18,7 +18,6 @@ class Video(Base):
     upload_date = Column(TIMESTAMP, server_default=func.now())
     created_at = Column(TIMESTAMP, server_default=func.now())
 
-    # NEW FIELD (for caching)
     content_hash = Column(String(64), index=True, nullable=True)
 
     user = relationship("User", back_populates="videos")
@@ -27,4 +26,10 @@ class Video(Base):
     content_preferences = relationship("ContentPreferences", uselist=False, back_populates="video")
     quizzes = relationship("Quiz", back_populates="video", cascade="all, delete-orphan")
     sessions = relationship("ChatSession", back_populates="video")
+    mindmap = relationship(
+        "Mindmap",
+        back_populates="video",
+        uselist=False,
+        cascade="all, delete-orphan",
+    ) 
     
