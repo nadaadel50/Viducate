@@ -104,15 +104,21 @@ export function ContentLearningCard({
         isOpen={isQuizModalOpen}
         onClose={() => setIsQuizModalOpen(false)}
         onSelect={(difficulty) => {
-          setIsQuizModalOpen(false);
-          navigate(`/quiz/${cardInfo.segment_id}`, {
-            state: {
-              difficulty,
-              videoId,
-              segmentId: cardInfo.segment_id,
-            },
-          });
-        }}
+  setIsQuizModalOpen(false);
+
+  const quizKey = `${cardInfo.segment_id}_${difficulty}_${Date.now()}`;
+
+  localStorage.setItem('active_quiz_key', quizKey);
+
+  navigate(`/quiz/${cardInfo.segment_id}`, {
+    state: {
+      difficulty,
+      videoId,
+      segmentId: cardInfo.segment_id,
+      quizKey,
+    },
+  });
+}}
       />
       <SummaryStyleModal 
         isOpen={isSummaryModalOpen} 

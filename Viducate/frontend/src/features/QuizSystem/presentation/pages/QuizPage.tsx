@@ -9,38 +9,54 @@ import { COLORS } from '../../../../core/constants';
 import { useQuiz } from '../hooks/useQuiz';
 import { useGenerateQuiz } from '../hooks/useGenerateQuiz';
 import { GeneratingQuizPage } from './GeneratingQuizPage';
-import { useEffect ,  useState} from 'react';
-const generateQuizKey = (segmentId: string | undefined, videoId: string, difficulty: string) =>
-  `${segmentId ?? videoId}_${difficulty}_${Date.now()}`;
-
+import { useEffect  } from 'react';
 export const QuizPage = () => {
   const { state } = useLocation();
+  const quizKey =
+  state?.quizKey ||
+  localStorage.getItem('active_quiz_key') ||
+  '';
   const navigate = useNavigate();
 
   const { difficulty, videoId, segmentId } = state;
-   const [quizKey] = useState(() => 
-  generateQuizKey(segmentId, videoId, difficulty)
-);
+
   const { quiz, isPending , generate } = useGenerateQuiz({
     videoId,
     segmentId,
     mode: segmentId ? 'segment' : 'video',
     difficulty,
   });
-  useEffect(() => {
-  generate();
+  const savedQuiz = localStorage.getItem(`quiz_data_${quizKey}`);
+
+const localQuiz = savedQuiz ? JSON.parse(savedQuiz) : null;
+const finalQuiz = localQuiz || quiz;
+const questions = finalQuiz?.questions ?? [];
+useEffect(() => {
+  if (!localQuiz) {
+    generate();
+  }
 }, []);
+useEffect(() => {
+  if (quiz) {
+    localStorage.setItem(
+      `quiz_data_${quizKey}`,
+      JSON.stringify(quiz)
+    );
+  }
+}, [quiz, quizKey]);
   const {
     currentIndex, setCurrentIndex, currentQuestion,
     answers, handleSelect, timeLeft, quizState,
     setQuizState, isReviewMode, setIsReviewMode,
     calculateScore, progress, isAllAnswered, resetQuiz,
-  } = useQuiz( quiz?.questions ?? [], segmentId ? 5 : 15, () => navigate(-1),quizKey);
+  } = useQuiz( questions, segmentId ? 5 : 15, () => navigate(-1),quizKey);
 
-  if (isPending || !quiz) return <GeneratingQuizPage />;
+  if (isPending || !finalQuiz) return <GeneratingQuizPage />;
+
+
 
   const stats = calculateScore();
-  const questions = quiz.questions;
+  
 
   return (
     <main className="min-h-screen py-10 relative" style={{ background: COLORS.background.light }}>

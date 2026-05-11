@@ -5,44 +5,44 @@ export const useQuiz = (questions: any[], initialTime: number, onNewQuiz: () => 
   const [currentIndex, setCurrentIndex] = useState(() => {
     const savedKey = localStorage.getItem('quiz_key');
     if (savedKey !== quizKey) return 0;
-    const saved = localStorage.getItem('quiz_index');
+    const saved = localStorage.getItem(`quiz_index_${quizKey}`);
     return saved ? parseInt(saved) : 0;
   });
 
   const [answers, setAnswers] = useState<Record<string, string>>(() => {
     const savedKey = localStorage.getItem('quiz_key');
     if (savedKey !== quizKey) return {};
-    const saved = localStorage.getItem('quiz_answers');
+    const saved = localStorage.getItem(`quiz_answers_${quizKey}`);
     return saved ? JSON.parse(saved) : {};
   });
 
   const [timeLeft, setTimeLeft] = useState(() => {
     const savedKey = localStorage.getItem('quiz_key');
     if (savedKey !== quizKey) return initialTime * 60;
-    const saved = localStorage.getItem('quiz_time');
+    const saved = localStorage.getItem(`quiz_time_${quizKey}`);
     return saved ? parseInt(saved) : initialTime * 60;
   });
 
   const [quizState, setQuizState] = useState<'playing' | 'results'>(() => {
     const savedKey = localStorage.getItem('quiz_key');
     if (savedKey !== quizKey) return 'playing';
-    const saved = localStorage.getItem('quiz_state');
+    const saved = localStorage.getItem(`quiz_state_${quizKey}`);
     return (saved as 'playing' | 'results') || 'playing';
   });
 
   const [isReviewMode, setIsReviewMode] = useState(() => {
     const savedKey = localStorage.getItem('quiz_key');
     if (savedKey !== quizKey) return false;
-    return localStorage.getItem('quiz_isReview') === 'true';
+    return localStorage.getItem(`quiz_isReview_${quizKey}`) === 'true';
   });
 
   useEffect(() => {
     localStorage.setItem('quiz_key', quizKey);
-    localStorage.setItem('quiz_index', currentIndex.toString());
-    localStorage.setItem('quiz_answers', JSON.stringify(answers));
-    localStorage.setItem('quiz_time', timeLeft.toString());
-    localStorage.setItem('quiz_state', quizState);
-    localStorage.setItem('quiz_isReview', isReviewMode.toString());
+    localStorage.setItem(`quiz_index_${quizKey}`, currentIndex.toString());
+    localStorage.setItem(`quiz_answers_${quizKey}`, JSON.stringify(answers));
+    localStorage.setItem(`quiz_time_${quizKey}`, timeLeft.toString());
+    localStorage.setItem(`quiz_state_${quizKey}`, quizState);
+    localStorage.setItem(`quiz_isReview_${quizKey}`, isReviewMode.toString());
   }, [quizKey, currentIndex, answers, timeLeft, quizState, isReviewMode]);
 
   useEffect(() => {
@@ -69,7 +69,12 @@ export const useQuiz = (questions: any[], initialTime: number, onNewQuiz: () => 
   };
 
   const resetQuiz = () => {
-    localStorage.clear();
+localStorage.removeItem(`quiz_answers_${quizKey}`);
+localStorage.removeItem(`quiz_index_${quizKey}`);
+localStorage.removeItem(`quiz_time_${quizKey}`);
+localStorage.removeItem(`quiz_state_${quizKey}`);
+localStorage.removeItem(`quiz_isReview_${quizKey}`);
+localStorage.removeItem(`quiz_data_${quizKey}`);
     setCurrentIndex(0);
     setAnswers({});
     setTimeLeft(initialTime * 60);
