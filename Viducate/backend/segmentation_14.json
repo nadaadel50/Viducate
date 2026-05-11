@@ -4,79 +4,85 @@
     {
       "segment_number": 1,
       "start_time": "00:00:00",
-      "end_time": "00:01:19",
-      "main_topic": "مدخل الفيديو وتقديم الكتاب",
-      "title": "يا أهلاً بكل أحبابي وأصدقائي في فيديو جديد على قناة اليوتيوب",
+      "end_time": "00:01:16",
+      "main_topic": "Introduction to Big O Notation",
+      "title": "Introduction and Basics of Big O Notation",
       "sub_topics": [
         {
-          "name": "مقدمة الفيديو",
+          "name": "Introduction to the Video",
           "start_time": "00:00:00",
-          "end_time": "00:00:25",
-          "description": "يا أهلاً بكل أحبابي وأصدقائي في فيديو جديد على قناة اليوتيوب الحقيقة يا جماعة أنا النهاردة في قمة السعادة عارف لما تشتغل على حاجة والحاجة دي تتعب فيها قوي وتبتري تظهر على أرض الواقع وتبقى راضي عنها دي حاجة لوحدها يعني بالدنيا كلها الناس القريبين مني واللي اشتغلوا معايا عارفين إن أنا مبرداش بأي حاجة كده بالسهل"
+          "end_time": "00:00:14",
+          "description": "Hey, what's going on everybody? It's your bro, hope you're doing well, and in this video I'm going to 1322-34 describe the very basics of Big O notation in, well, computer science. So sit back, relax, and enjoy the show."
         },
         {
-          "name": "تقرير عن الكتاب",
-          "start_time": "00:00:25",
-          "end_time": "00:01:19",
-          "description": "يعني لازم الحاجة أبقى بدأ فيها قوي على قد مقدر وبهتم قوي إن حاجتي تكون كويسة وبعد سنة ونص من التعب أنا وفريق عمل كامل كان شغال معايا أخيراً قدرنا دلوقتي نشوف كتاب السي شارب بيزيكس اللي بفضل الله سبحانه وتعالى كنت أنا القائم على هذا المشروع وقدرت أن أنا أعمل كتاب الحمد لله رب العالمين أنا راضي عنه بنسبة كبيرة جداً"
+          "name": "Defining Big O Notation",
+          "start_time": "00:00:14",
+          "end_time": "00:01:16",
+          "description": "Oh yeah, Big O notation. So a common phrase used with Big O notation is, how code slows as data grows. It describes the performance of an algorithm as the amount of data increases. And really, this notation is machine independent. What we're really focusing on is the number of steps to complete an algorithm, because some machines are going to run certain algorithms faster than others. And three, we tend to ignore smaller operations. If we had some task that took n plus one, we would just reduce it to just n, because that plus one really isn't going to make"
         }
       ],
       "key_points": [
-        "كتاب السي شارب بيزكس",
-        "فريق عمل completo",
-        "سنة ونص من التعب"
+        "Big O notation describes performance of an algorithm",
+        "It's machine independent",
+        "Ignoring smaller operations"
       ]
     },
     {
       "segment_number": 2,
-      "start_time": "00:01:19",
-      "end_time": "00:02:09",
-      "main_topic": "شرح محتوى الكتاب",
-      "title": "في الكتاب ده هنشرح كل حاجة ببساطة",
+      "start_time": "00:01:16",
+      "end_time": "00:03:06",
+      "main_topic": "Understanding Big O Notation",
+      "title": "Examples and Explanation of Big O Notation",
       "sub_topics": [
         {
-          "name": "موضوعات الكتاب",
-          "start_time": "00:01:19",
-          "end_time": "00:01:41",
-          "description": "في الكتاب ده هنشرح كل حاجة ببساطة هنتكلم عن المقدمة عن البرمجة عموماً هنتكلم عن المتغيرات هنتكلم عن الجمل يعني حرفيا لو انت لسه مبتدئ أو ما تعرفش اي حاجة عن البرمجة الكتاب هيسهل عليك التعلم بشكل غير عادي"
+          "name": "Example of a Function with Linear Time Complexity",
+          "start_time": "00:01:16",
+          "end_time": "00:02:06",
+          "description": "Here's a more concrete example. I have a function named addup. We will add up to a certain number depending on what we pass in as an argument. The for loop within here will iterate once up to whatever number that n is, add i to sum, then return it. What if n was a large number like a million? Well, it's going to take just above a million steps to complete this function. This function is said to have a runtime complexity of O of n, linear time. As the amount of data increases, it's going to increase the amount of steps linearly or proportionally."
         },
         {
-          "name": " đặc điểm الكتاب",
-          "start_time": "00:01:41",
-          "end_time": "00:02:09",
-          "description": "هتاحس في الكتاب ان فيه واحد صاحبك قاعد معاك وبيقسم لك الحاجة واحدة واحدة بالراحة وبعدين بيجمع حالك في الآخر انا مش بشرح في الكتاب مجرد مفاهيم نظرية وخلاص احنا بنحلم مع بعض مسائل كتير جداً الكتاب ده مش صغير ما بنتكلمش مثلا عن حاجة 200 صفحة ولا 250 صفحة ولا 300 صفحة"
+          "name": "Alternative Implementation with Constant Time Complexity",
+          "start_time": "00:02:06",
+          "end_time": "00:03:06",
+          "description": "Now another way which we could write the same function is to take sum equals n times n plus 1 divided by 2. We will get the exact same sum. So if n was, let's say, a million, this is still only going to take a couple seconds. steps. Three steps, not a million steps. So this function is going to have a runtime complexity of O of one. The input size doesn't matter. The amount of data that we have really doesn't matter. It's going to be completed in the same amount of steps."
         }
       ],
       "key_points": [
-        "المقدمة",
-        "البرمجة",
-        "المتغيرات"
+        "O(n) represents linear time complexity",
+        "O(1) represents constant time complexity",
+        "Alternative implementation can reduce time complexity"
       ]
     },
     {
       "segment_number": 3,
-      "start_time": "00:02:09",
-      "end_time": "00:03:42",
-      "main_topic": "الخصومات والعروض",
-      "title": "الجميل في الأمر إن إحنا عاملين عروض كويسة جداً على الكتاب ده",
+      "start_time": "00:03:06",
+      "end_time": "00:06:22",
+      "main_topic": "Big O Notation Types and Comparison",
+      "title": "Types of Big O Notation and Their Characteristics",
       "sub_topics": [
         {
-          "name": "عروض الكتاب",
-          "start_time": "00:02:09",
-          "end_time": "00:02:45",
-          "description": "احنا عملنا حساب كل التفاصيل دي بفضل الله في الكتاب عشان نفتح نفس الناس اللي تذاكر منه فانت النهاردة لو بادئ في البرمغة او انت بتذاكر لغة السي شارب او بتاخدها في الكلية او بذاكرها في اي مكان وحابب ان يكون معاك نسخة ورقية تراجع منها لمذاكرة بتاعتك تقراها مثلا وانت في الصفر او الكلام ده كله"
+          "name": "Constant Time Complexity",
+          "start_time": "00:03:06",
+          "end_time": "00:03:23",
+          "description": "So let begin with O of 1 constant time. Anything that has a runtime complexity of O of 1 will take the same amount of time regardless of the data size. A few examples would include the random access of an element within an array and inserting at the beginning of a linked list."
         },
         {
-          "name": "دبلومة الويب",
-          "start_time": "00:02:45",
-          "end_time": "00:03:42",
-          "description": "فكتاب السي شارب بيزكس ان شاء الله هيبقى مناسب جدا ليك الجميل في الأمر إن إحنا عاملين عروض كويسة جدا على الكتاب ده لو اشتريت الكتاب مع كورسات السي شارب بتاعتنا هيبقى ليك نسبة خصم لو اشتريت دبلومة الويب كلها هتاخد نسبة خصم أكبر على الكتاب وطبعا أنا مش هنسى حبيبنا وأصدقائنا اللي قريدي مشتركين معنا في الدبلومة"
+          "name": "Logarithmic, Linear, and Quasi-Linear Time Complexity",
+          "start_time": "00:03:23",
+          "end_time": "00:04:29",
+          "description": "Next we have O of log n, also known as logarithmic time. One example is binary search. We haven't talked about this yet. We'll talk about a few of these algorithms in future videos, but anything that has a runtime complexity of O of log n will actually take, I don't want to say less and less time, but increasingly less time to complete. So as the data size increases, this algorithm is going to be more and more efficient compared to the early stages with a small dataset. O is also known as linear time. As the amount of data increases, the time it takes to complete something will increase proportionally linearly. That would include looping through the elements in an array and searching through a linked list. Next we have O of N log N, also known as quasi-linear time."
+        },
+        {
+          "name": "Quadratic and Factorial Time Complexity",
+          "start_time": "00:04:29",
+          "end_time": "00:06:22",
+          "description": "Then we have O of n squared, also known as quadratic time. A few examples would include insertion sort, selection sort, and bubble sort. As the amount of data increases, it's going to take increasingly more and more time to complete anything that has a runtime complexity of O of n squared. So just to compare linear time and quadratic time, with linear time if our data set was a thousand if n equals a thousand it going to take a thousand steps they proportional they linear but if we were using quadratic time if n was a thousand then a thousand squared would be a million. So if our data set was a thousand, if we're using quadratic time, it's going to take a million steps then, way more than linear time. And lastly, we have O of n factorial, also known as factorial time, and one place where this is used is with the traveling salesman problem, which I might discuss in a future video."
         }
       ],
       "key_points": [
-        "عروض الكتاب",
-        "دبلومة الويب",
-        "الخصومات"
+        "O(log n) represents logarithmic time complexity",
+        "O(n) represents linear time complexity",
+        "O(n^2) represents quadratic time complexity"
       ]
     }
   ]

@@ -132,5 +132,28 @@
   "analysis.failed": "فشلت العملية",
   "analysis.error.title": "فشلت عملية التحليل",
   "analysis.error.subtitle": "حدث خطأ أثناء معالجة الفيديو الخاص بك. يرجى المحاولة مرة أخرى.",
-  "analysis.retry": "إعادة محاولة الرفع"
+  "analysis.retry": "إعادة محاولة الرفع",
+
+
+
+
+
+
+
+
+  "quiz.question_count": "السؤال {current} من {total}",
+  "quiz.time_remaining": "الوقت المتبقي",
+  "quiz.min": "دقيقة",
+  "quiz.sec": "ثانية",
+  "quiz.next": "السؤال التالي",
+  "quiz.submit": "تسليم الإجابات",
+  "quiz.completed": "اكتمل الاختبار!",
+  "quiz.result_msg": "عمل رائع! لقد انتهيت من جميع الأسئلة.",
+  "quiz.score_msg": "لقد حصلت على {score} من {total}",
+  "quiz.take_another": "ابدأ اختباراً جديداً",
+  "quiz.review_answers": "مراجعة الإجابات",
+  "quiz.back_to_video": "العودة لمشاهدة الفيديو",
+  "quiz.map_title": "خريطة الأسئلة",
+  "quiz.go_to_watch": "اذهب لمشاهدة عند {timestamp_label}"
+
 }

@@ -1,4 +1,5 @@
 {
+<<<<<<< HEAD
   "total_segments": 10,
   "segments": [
     {
@@ -24,10 +25,39 @@
       "key_points": [
         "Genetic Programming",
         "The Challenge"
+=======
+  "total_segments": 3,
+  "segments": [
+    {
+      "segment_number": 1,
+      "start_time": "00:00:00",
+      "end_time": "00:01:16",
+      "main_topic": "Introduction to Big O Notation",
+      "title": "Introduction to Algorithm Performance",
+      "sub_topics": [
+        {
+          "name": "Introduction to the Video",
+          "start_time": "00:00:00",
+          "end_time": "00:00:14",
+          "description": "Hey, what's going on everybody? It's your bro, hope you're doing well, and in this video I'm going to 1322-34 describe the very basics of Big O notation in, well, computer science. So sit back, relax, and enjoy the show."
+        },
+        {
+          "name": "What is Big O Notation",
+          "start_time": "00:00:14",
+          "end_time": "00:01:16",
+          "description": "Oh yeah, Big O notation. So a common phrase used with Big O notation is, how code slows as data grows. It describes the performance of an algorithm as the amount of data increases. And really, this notation is machine independent. What we're really focusing on is the number of steps to complete an algorithm, because some machines are going to run certain algorithms faster than others. And three, we tend to ignore smaller operations. If we had some task that took n plus one, we would just reduce it to just n, because that plus one really isn't going to make"
+        }
+      ],
+      "key_points": [
+        "Big O notation describes algorithm performance",
+        "Machine independent",
+        "Ignores smaller operations"
+>>>>>>> 117281413049aeb131520c7d488311d3cf4b4fba
       ]
     },
     {
       "segment_number": 2,
+<<<<<<< HEAD
       "start_time": "00:01:46",
       "end_time": "00:04:22",
       "main_topic": "Genetic Programming Basics",
@@ -49,10 +79,41 @@
       "key_points": [
         "Genetic Algorithm",
         "Genetic Programming Process"
+=======
+      "start_time": "00:01:16",
+      "end_time": "00:03:47",
+      "main_topic": "Examples of Big O Notation",
+      "title": "Understanding Big O Notation with Examples",
+      "sub_topics": [
+        {
+          "name": "Example of a Linear Time Algorithm",
+          "start_time": "00:01:16",
+          "end_time": "00:02:06",
+          "description": "Here's a more concrete example. I have a function named addup. We will add up to a certain number depending on what we pass in as an argument. The for loop within here will iterate once up to whatever number that n is, add i to sum, then return it. What if n was a large number like a million? Well, it's going to take just above a million steps to complete this function. This function is said to have a runtime complexity of O of n, linear time. As the amount of data increases, it's going to increase the amount of steps linearly or proportionally."
+        },
+        {
+          "name": "Example of a Constant Time Algorithm",
+          "start_time": "00:02:06",
+          "end_time": "00:03:06",
+          "description": "Now another way which we could write the same function is to take sum equals n times n plus 1 divided by 2. We will get the exact same sum. So if n was, let's say, a million, this is still only going to take a couple seconds. steps. Three steps, not a million steps. So this function is going to have a runtime complexity of O of one. The input size doesn't matter. The amount of data that we have really doesn't matter. It's going to be completed in the same amount of steps."
+        },
+        {
+          "name": "Introduction to Runtime Complexities",
+          "start_time": "00:03:06",
+          "end_time": "00:03:47",
+          "description": "Here's a graph that I made to represent the different runtime complexities. We have data on the x-axis represented by n. So data will increase as we go more to the right, and we have time on the y-axis. I did add an asterisk next to time because some of these times can vary depending on what machine you're using, so these can vary Another way to look at this is number of steps So as we increase on the y these algorithms are going to perform with increasingly more time They going to get slower"
+        }
+      ],
+      "key_points": [
+        "Linear time algorithm example",
+        "Constant time algorithm example",
+        "Introduction to runtime complexities"
+>>>>>>> 117281413049aeb131520c7d488311d3cf4b4fba
       ]
     },
     {
       "segment_number": 3,
+<<<<<<< HEAD
       "start_time": "00:04:22",
       "end_time": "00:07:18",
       "main_topic": "Tree-Based Representation",
@@ -257,6 +318,48 @@
       "key_points": [
         "Fitness functions are used to evaluate program quality",
         "Programs are generated using genetic operators and fitness functions"
+=======
+      "start_time": "00:03:47",
+      "end_time": "00:06:22",
+      "main_topic": "Different Types of Runtime Complexities",
+      "title": "Understanding Different Runtime Complexities",
+      "sub_topics": [
+        {
+          "name": "Constant Time Complexity",
+          "start_time": "00:03:47",
+          "end_time": "00:03:51",
+          "description": "So let begin with O of 1 constant time. Anything that has a runtime complexity of O of 1 will take the same amount of time regardless of the data size."
+        },
+        {
+          "name": "Logarithmic Time Complexity",
+          "start_time": "00:03:51",
+          "end_time": "00:04:00",
+          "description": "Next we have O of log n, also known as logarithmic time. One example is binary search. We haven't talked about this yet. We'll talk about a few of these algorithms in future videos, but anything that has a runtime complexity of O of log n will actually take, I don't want to say less and less time, but increasingly less time to complete."
+        },
+        {
+          "name": "Linear Time and Quasi-Linear Time Complexities",
+          "start_time": "00:04:00",
+          "end_time": "00:04:29",
+          "description": "O is also known as linear time. As the amount of data increases, the time it takes to complete something will increase proportionally linearly. That would include looping through the elements in an array and searching through a linked list. Next we have O of N log N, also known as quasi-linear time. This would include a quick sort, merge sort, and heap sort."
+        },
+        {
+          "name": "Quadratic Time and Factorial Time Complexities",
+          "start_time": "00:04:29",
+          "end_time": "00:06:05",
+          "description": "Then we have O of n squared, also known as quadratic time. A few examples would include insertion sort, selection sort, and bubble sort. As the amount of data increases, it's going to take increasingly more and more time to complete anything that has a runtime complexity of O of n squared. So just to compare linear time and quadratic time, with linear time if our data set was a thousand if n equals a thousand it going to take a thousand steps they proportional they linear but if we were using quadratic time if n was a thousand then a thousand squared would be a million."
+        },
+        {
+          "name": "Conclusion",
+          "start_time": "00:06:05",
+          "end_time": "00:06:22",
+          "description": "Although, some of these runtime complexities are actually faster when working with a smaller data set, so keep that in mind. Well, that's the very basics of Big O notation. It's notation used to describe the performance of an algorithm as the amount of data increases."
+        }
+      ],
+      "key_points": [
+        "Constant time complexity",
+        "Logarithmic time complexity",
+        "Linear and quasi-linear time complexities"
+>>>>>>> 117281413049aeb131520c7d488311d3cf4b4fba
       ]
     }
   ]

@@ -1,106 +1,170 @@
 {
-  "total_segments": 3,
+  "total_segments": 6,
   "segments": [
     {
       "segment_number": 1,
       "start_time": "00:00:00",
-      "end_time": "00:01:16",
-      "main_topic": "Introduction to Big O notation",
-      "title": "Introduction to Big O notation in computer science",
+      "end_time": "00:02:24",
+      "main_topic": "Introduction to Algorithms and Data Structures",
+      "title": "Importance of Algorithms and Data Structures in Computer Science",
       "sub_topics": [
         {
-          "name": "Introduction to the video",
+          "name": "Introduction to the Topic",
           "start_time": "00:00:00",
-          "end_time": "00:00:14",
-          "description": "Hey, what's going on everybody? It's your bro, hope you're doing well, and in this video I'm going to describe the very basics of Big O notation in, well, computer science."
+          "end_time": "00:00:30",
+          "description": "الالجوريزميس وداتا ستركشورز Mr Algorithms Manio Eid - Y | GAlgorithms and Data Structure: | google.comsearch?qjAlgorithmsand1DataStructures8r1z1C1CHBFenEG1164EG11648oqALGORITHMS8ugsIcrpEgZj9HJvbWUqBggBEEUYOzUCAAQRRg5GIAEMgYIARBFGDsyDAgCECMYJxiABBiKBTIHCAMQLhiABDIHCAQQABiABDIG.. | c Courses Aizu Onlins..FawryDigital - Your. | TENoR vOcAL WAR..EGBank Internet Ba.. Start scientific brein..torrent sitems-guc edu-egapp..Bible.is 18 staillQt 6 - Episode 3 - H.. | hHabitify - Habit Trac- | Skills By Mibdis - You | All Bookmerks | Google | Algorithms and Data Structures | Al Mode | Images | Videos | Forums | Short videos | News | More - | Tools | Al Overview | Algorithms and Data Structures DSA are the fundamental building blocks of | computer science, providing the framework for efficient data storage and the logic | Data Structures Algorithms Guide for Developers - | GeeksforGeeks | required to process it. GeaksforGeeks 1 | Aug 8, 2025 Data Structures Algorithms Guide for | Developers Data Structures and Algorithms are foundation.. | Core Concepts | a6 GeeksforGeeks : | Data Structures: Specific formats for organizing, processing, and storing data. | They act like shelves within a proqram to make information easily accessible | What Are Data Structures? I Built In | Algorithms: Step-by-step instructions or formulas designed to solve specific | Sep 30, 2024 - What Are Data Structures? A | data structure is a format for organizing... | problems or perform tasks. | Show morev | GeekstorGeeks | https:ww.geeksforgeeks.org dsa dsa-tutoriel-lear. | DSA Tutorial | 3 hours ago DSA stands for Data Structures and Algorithms. Data structures manage how data is | stored and accessed. Algonithms focus on processing this .. Read more | waSchools | https:Nww.w3schools.com s dra s dsaintro | Introduction to Data Structures and Algorithms | DSA is about finding efficient ways to store and retrieve data, to perform operations on data, and to | solve specific problems. Read more | Roadmap.sh | htps:froadmap.sh- datastructures-and-algorithms | Q Search | 7:45 AM | 462026"
         },
         {
-          "name": "Definition of Big O notation",
-          "start_time": "00:00:14",
+          "name": "Importance of the Subject",
+          "start_time": "00:00:30",
           "end_time": "00:01:16",
-          "description": "So sit back, relax, and enjoy the show. Oh yeah, Big O notation. So a common phrase used with Big O notation is, how code slows as data grows. It describes the performance of an algorithm as the amount of data increases. And really, this notation is machine independent. What we're really focusing on is the number of steps to complete an algorithm, because some machines are going to run certain algorithms faster than others. And three, we tend to ignore smaller operations. If we had some task that took n plus one, we would just reduce it to just n, because that plus one really isn't going to make"
+          "description": "بص يا صديق [00:00:04] السلسلة دي هتبقى على يوتيوب [00:00:06] ازاي اذاكر المواد [00:00:08] هنزلها كلها لكل مواد CS [00:00:10] بس انا جاي اكلمك عن Mr Algorithms Mario Eid - Yc | google.comsearch7qAlgorithmsanclDataStructuresrlz1C1CHBFenEG1164EG1164toqALGORITHMSigsIcrpEgZjaHJvbWUqBggBEEUYOzUCAAQRRg5GIAEMgYIARBFGDsyDAgCECMYJxiABBiKBTIHCAMQLhiABDIHCAQQABiABDIG... | Courses Aizu Onlin.. | FawryDiggital - Your.. | TENOR vOCAL WAR..EGBank Internet Ba.. Start scientific brein..torrent sitecms-guc edu-egapp..Bible.is 18 slall | Qt G - Episode 3 - H.. | courses | ITF1 | ALD51 | Acquire techniques for dlata sets and queries | Acquire libraries for graph algorithms | Acquire aleorithms for number theory | Information In preparation | Aizu Online Judge 2.0 2004-2025 University of Aizu | pagetop"
+        },
+        {
+          "name": "Data Structures and Algorithms Concepts",
+          "start_time": "00:01:16",
+          "end_time": "00:02:00",
+          "description": "data structures Mr Algorithms Marie Eid I - Yc x | GAlgerithms and Data Structure: x | onlinejudge.u-aizu.acjpcourseslist | Courses Aizu Onlin... | TENOR vOCAL WAR.. EG8ank Internet Ba.. Start scientific brein..torrent sitecms-guc edu.egapp..Bible.is 18 slàl | Qt 6 - Episode 3 - H.. | courses | ITF1 | ALD51 | Acquire techniques for dlata sets and queries | Acquire libraries for graph algorithms | Acquire aleorithms for number theory | Information In preparation | Aizu Online Judge 2.0 2004-2025 University of Aizu"
+        },
+        {
+          "name": "Google Interview Process",
+          "start_time": "00:02:00",
+          "end_time": "00:02:24",
+          "description": "GOOLGE INTERVIEW PROCESS | google.comsearch?qGOOLGEINTERVIEWPROCESSrI2z1C1CHBFenEG1164EG1164LoqGOOLGEINTERVIEWPROCESStgsIcrpEgZjaHJvbWUyBggAEEUYOTUCAEQABgNGIAEMgkIAhAAGAOVgAQyCQgDEAAYDRiABDUCAQQABgNGIAE... | FawryDigital - Your | TENOR vOCAL WAR..EGBank Internet Ba.. Start stientific brein...torrent site cms-guc eduegapp..Bible.is 18 alail1 | Qt 6 - Episode 3 - H... | Habitify - Habit Trac. | Skills By Mbdia - You | GOOLGE INTERVIEW PROCESS | These are results for GOOGLEINTERVIEW PROCESS | Search instead for GOOLGE INTERVIEW PROCESS | https:Nwww.google.com applications ; how-we-hire | Our hiring process - Google Careers | Googles hiring process is as unique as its culture. We want all candidates from crtry-level to | leadership to have access to the same information and ... "
         }
       ],
       "key_points": [
-        "Big O notation describes the performance of an algorithm",
-        "It is machine independent",
-        "We ignore smaller operations"
+        "Data Structures and Algorithms are the fundamental building blocks of computer science",
+        "Data Structures manage how data is stored and accessed",
+        "Algorithms focus on processing data"
       ]
     },
     {
       "segment_number": 2,
-      "start_time": "00:01:16",
-      "end_time": "00:02:36",
-      "main_topic": "Examples of Big O notation",
-      "title": "Examples of Big O notation",
+      "start_time": "00:02:25",
+      "end_time": "00:03:07",
+      "main_topic": "Introduction to Algorithms",
+      "title": "Algorithms and Data Structures Introduction",
       "sub_topics": [
         {
-          "name": "Example of linear time complexity",
-          "start_time": "00:01:16",
-          "end_time": "00:01:53",
-          "description": "Here's a more concrete example. I have a function named addup. We will add up to a certain number depending on what we pass in as an argument. The for loop within here will iterate once up to whatever number that n is, add i to sum, then return it. What if n was a large number like a million? Well, it's going to take just above a million steps to complete this function. This function is said to have a runtime complexity of O of n, linear time."
+          "name": "Introduction to Algorithms",
+          "start_time": "00:02:25",
+          "end_time": "00:02:37",
+          "description": "وده جزء مهم هي دي الالجوريزم الالجوريزم في ذات structure كودينج اكسرسايز Mr Algorithms Mario Eid - Yc GAlgorithms and Data Structure: ALDS115 Lesson Courses | GOur hiring process- Google Ca | google.cornaboutcareersapplicationshow-we-hire | FewryDigital - Your. | TENOR VOCAL WAR.EG8ank Internet Ba.. Start scientific brain..torrent site cms-guc eduegapp.Bibleis 18 silsbAlTQt 6 - Episode 3 - H..Habitify - Habit Trec- | Skills By Mibdis - You- | Our hiring process Your resume Who we are Apply online Interviews and more Decision and offer | related assessments, like a coding exercise; if applicable for the role youre applying for. | preferred location if multiple options are available, and give vou an gpportunity to ask guestions."
         },
         {
-          "name": "Example of constant time complexity",
-          "start_time": "00:01:53",
-          "end_time": "00:02:36",
-          "description": "Now another way which we could write the same function is to take sum equals n times n plus 1 divided by 2. We will get the exact same sum. So if n was, let's say, a million, this is still only going to take a couple seconds. steps. Three steps, not a million steps. So this function is going to have a runtime complexity of O of one."
+          "name": "Algorithmic Thinking",
+          "start_time": "00:02:37",
+          "end_time": "00:03:07",
+          "description": "ده بيبقى problem زي على كود فورسز أو زي على ايزو أو زي على أي موقع ده بيبقى أول جزء بعد كده بيبقى فيه حاجات تانية وبيبقى فيه بروجيكتز لازم تعملها لكن ده أول خطوة فأنت حرفيا الالجوريزم في ذات structure مادة مهمة جدا ومهمة كمال لسوق العمل يعني هي مادة هتحتاجها إن كان في الانتربيو وإن هي كمان ستعمق فهمك بعدين جداً أنت هتبقى مختلف جداً عن أي حد بيعمل بروجيكت بس في مادة مهمة"
         }
       ],
       "key_points": [
-        "Linear time complexity example",
-        "Constant time complexity example",
-        "Ignoring smaller operations"
+        "Algorithms are a crucial part of programming",
+        "Data structures manage how data is stored and accessed"
       ]
     },
     {
       "segment_number": 3,
-      "start_time": "00:02:36",
-      "end_time": "00:06:22",
-      "main_topic": "Different types of time complexities",
-      "title": "Different types of time complexities in Big O notation",
+      "start_time": "00:03:07",
+      "end_time": "00:05:54",
+      "main_topic": "Logic Building Problems",
+      "title": "Logic Building Problems and Algorithms",
       "sub_topics": [
         {
-          "name": "Constant time complexity",
-          "start_time": "00:02:36",
-          "end_time": "00:03:06",
-          "description": "Here's a graph that I made to represent the different runtime complexities. We have data on the x-axis represented by n. So data will increase as we go more to the right, and we have time on the y-axis. I did add an asterisk next to time because some of these times can vary depending on what machine you're using, so these can vary"
+          "name": "Logic Building Problems Introduction",
+          "start_time": "00:03:07",
+          "end_time": "00:03:26",
+          "description": "أنا بذكر منها بشكل شخصي Mr Algorithms Marie Eid I - Yo x | Creating Notebook. | ALDS115 Lesson Courses G Our hiring process - Google Ca | notebookIm.google.comnotebooka7df8a1c-b718-4d77-9591-4c264c6c14a0 | Courses Aizu Onin.. | TENOR VOCAL WAR.EG8ank Intermet Ba.. Start scientific brein..torrent sitecms-guc eduegspp.Bibleis 18 silsbTQt 6 - Episode 3 - H.Habitify - Habit Trec- | Loading Notebook... | Create notebook | Settings | Sources | Chat | Loading Notebook... | 0 sources | Saved sources will appear here | Click Add source above to add PDFs, websites, text, | videos, or audio files. Or import a file directly from | Google Drive. | Start typing... | 0 sources | NotebookLM can be inaccurate; please double check its responses."
         },
         {
-          "name": "Logarithmic time complexity",
-          "start_time": "00:03:06",
-          "end_time": "00:03:47",
-          "description": "So let begin with O of 1 constant time. Anything that has a runtime complexity of O of 1 will take the same amount of time regardless of the data size. A few examples would include the random access of an element within an array and inserting at the beginning of a linked list. So O of 1 is extremely fast. Next we have O of log n, also known as logarithmic time."
-        },
-        {
-          "name": "Linear time complexity",
-          "start_time": "00:03:47",
-          "end_time": "00:04:04",
-          "description": "One example is binary search. We haven't talked about this yet. We'll talk about a few of these algorithms in future videos, but anything that has a runtime complexity of O of log n will actually take, I don't want to say less and less time, but increasingly less time to complete. So as the data size increases, this algorithm is going to be more and more efficient compared to the early stages with a small dataset. O is also known as linear time."
-        },
-        {
-          "name": "Quasi-linear time complexity",
-          "start_time": "00:04:04",
-          "end_time": "00:04:29",
-          "description": "As the amount of data increases, the time it takes to complete something will increase proportionally linearly. That would include looping through the elements in an array and searching through a linked list. Next we have O of N log N, also known as quasi-linear time. This would include a quick sort, merge sort, and heap sort."
-        },
-        {
-          "name": "Quadratic time complexity",
-          "start_time": "00:04:29",
-          "end_time": "00:05:18",
-          "description": "So for the most part, this is very similar to linear time. Unless we're working with a large data set, then anything using O of N log N is going to start to slow down when we work with larger data sets, hence this curve here. Then we have O of n squared, also known as quadratic time. A few examples would include insertion sort, selection sort, and bubble sort."
-        },
-        {
-          "name": "Factorial time complexity",
-          "start_time": "00:05:18",
-          "end_time": "00:06:22",
-          "description": "As the amount of data increases, it's going to take increasingly more and more time to complete anything that has a runtime complexity of O of n squared. So just to compare linear time and quadratic time, with linear time if our data set was a thousand if n equals a thousand it going to take a thousand steps they proportional they linear but if we were using quadratic time if n was a thousand then a thousand squared would be a million. So if our data set was a thousand, if we're using quadratic time, it's going to take a million steps then, way more than linear time."
+          "name": "Check Even or Odd Problem",
+          "start_time": "00:03:26",
+          "end_time": "00:05:54",
+          "description": "و الناس بمتعرفش أن اتنرول دلوقتي في بروجرام يعني عملت بها نتائج تحفة طيب انت بتعمل ايه؟ تعال نجيب source تعال نجيب algorithm and data structures Mr Aleorithms Marie Eid I - Y: xI | NotebookLM | ALGO | Crithms and DataStructures | AIl Mode | Course | Algorithms and DataStructures - Google Search | Goog | ALGO | algoexpert | algorithmics loqin | Reports MR Algorithms ..ls WordPress - Bookmarks bar | J ,b ..lsi MR Algorithms - μ.J - Mobile bookmarks | Lecture 02 - SVM.pdf - fileC:UsersMr AlgortihmsDownloadsLecturesLecture 02 - SVM.pdf | Assessments: Berore moving into interviews, you may be asked to take the Googie Hiring Assessment, designed to | 7:49 AM"
         }
       ],
       "key_points": [
-        "Different types of time complexities",
-        "Constant time complexity is the fastest",
-        "Factorial time complexity is the slowest"
+        "Logic building problems are essential for programming",
+        "Algorithms can be used to solve logic building problems"
+      ]
+    },
+    {
+      "segment_number": 4,
+      "start_time": "00:05:56",
+      "end_time": "00:06:20",
+      "main_topic": "Introduction to Checking Even or Odd Numbers",
+      "title": "Checking if a Number is Even or Odd",
+      "sub_topics": [
+        {
+          "name": "Introduction to Checking Even or Odd Numbers",
+          "start_time": "00:05:56",
+          "end_time": "00:06:02",
+          "description": "فحنا لو جينا هنا مثلا احنا ايه نايف أبروتش اللي احنا بنستعملها هنا هو ادنا حاكتين Mr Algorithms Marie Eid I - Yc x | as Check Even or Odd - Geeksfor: | ALDS115 Lesson Courses a6 Logic Building Problems - Geek | geeksforgeeks.orgdsacheck-whether-given-number-even-odd | TENOR vOCAL WAR.EG8ank Internet Ba.. Start scientific brain..torrent sitecms-guc eduegspp. Bibleis 18 silsbålTQt 6 - Episode 3 - H.hHabitify - Habit Trec-"
+        },
+        {
+          "name": "Naive Approach to Check Even or Odd",
+          "start_time": "00:06:02",
+          "end_time": "00:06:20",
+          "description": "check whether it's even or odd a naive approach إن أنا بشوف هو بيقبل اسم على الاثنين ولا لا في أبروش تاني بالبيتوايس as Check Even or Odd - Geeksfort | TENOR VOCAL WAR..EGBank Internet Ba. | Start scientific brain..torrent siteIcms-guceduegapp. | B Bibleis 18 sbàl | o o o O o O, so this we can say it is an even number."
+        }
+      ],
+      "key_points": [
+        "Naive Approach",
+        "Even or Odd Check",
+        "GeeksforGeeks"
+      ]
+    },
+    {
+      "segment_number": 5,
+      "start_time": "00:06:20",
+      "end_time": "00:07:11",
+      "main_topic": "Efficient Approach to Check Even or Odd",
+      "title": "Using Bitwise AND Operator",
+      "sub_topics": [
+        {
+          "name": "Efficient Approach using Bitwise AND Operator",
+          "start_time": "00:06:20",
+          "end_time": "00:06:34",
+          "description": "the module operator هيقولي الإجابة دي صحيحة أو لا اعمل كده بقى كل ما ترفع محاضرة خليه دي لك أسئلة وبعد لما تخلص خالص تجد نفسك ذاكرت المحاضرات كلها وحاليت عليهم على أقل 15 سؤال 20 سؤال Mr Algorithms Mario Eid - Y: x | as Check Even or Odd - Geeksforc ALDS115 Lesson Courses a6 Logic Building Problems - Geek: | TENOR VOCAL WAR. EGBank Internet Bs. Stert scientific brain. torrent ste cmsguceduegspp.Fible is 18 ilsa4ll Qt 6 - Episode 3 - H.. Habitify - Habit Trec-"
+        },
+        {
+          "name": "Explanation of Bitwise AND Operator",
+          "start_time": "00:06:34",
+          "end_time": "00:07:11",
+          "description": "Correct! The naive approach uses the modulo operator to check if the remainder | is O when the,number is divided by 2 1 . | Here is your next question: | Question 2: According to the Efficient Approach, what specific operator is used | instead of the modulo operator, and why is it considered faster?"
+        }
+      ],
+      "key_points": [
+        "Efficient Approach",
+        "Bitwise AND Operator",
+        "Modulo Operator"
+      ]
+    },
+    {
+      "segment_number": 6,
+      "start_time": "00:07:11",
+      "end_time": "00:08:17",
+      "main_topic": "LeetCode 75 and Interview Preparation",
+      "title": "Preparing for Coding Interviews",
+      "sub_topics": [
+        {
+          "name": "LeetCode 75 Study Plan",
+          "start_time": "00:07:11",
+          "end_time": "00:07:33",
+          "description": "هتلاقي 75 Let Code Interview Questions لو انت بعد عندك فكرة عن الالجوريزمس وستركشور وبعد ما تذاكرها وبعد ما تخلص الترم تقدر تشترك في الدورة دي Algorithmic Methods for Deten ALDS1all Lesson Courses | cms - MR Algorithms JI ugls | Logic Building Problems - Geek | mralgorithms.comcoursesleetcodediploma | TENOR vOCAL WAR.. EGBank Internet Bs.Start scientific brain. torrent site ms-guc edu-egapp.Bible,is 18 ilsbll Qt 6 - Episode 3 - H.Habitify - Habit Trec-"
+        },
+        {
+          "name": "Importance of Problem Solving in Interviews",
+          "start_time": "00:07:33",
+          "end_time": "00:08:17",
+          "description": "عشان كده هي مادة مهمة في الشغل يا جماعة هتتسيل فيها هم موقع زي لات كود لكن لات جامعة هتلاقي حتى الطبيكس اللي جاية في الانتربيو مختلفة شوية عن الطبيكس بساعة الجامعة مش اختلاف رهيب LeetCodie 75 - Study Plan - Lee: | Courses Aizu Onlins.. | TENOR VOCAL WAR. | Start scientific brain.. torrent site cms-guc eduegapp.. Eible.is 18 slsàáll Qt 6 - Episode 3 - H. Habitify- Habit Trec-"
+        }
+      ],
+      "key_points": [
+        "LeetCode 75",
+        "Interview Preparation",
+        "Problem Solving"
       ]
     }
   ]

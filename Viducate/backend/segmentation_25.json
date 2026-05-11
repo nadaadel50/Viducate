@@ -1,88 +1,48 @@
 {
-  "total_segments": 3,
+  "total_segments": 1,
   "segments": [
     {
       "segment_number": 1,
-      "start_time": "00:00:00",
-      "end_time": "00:01:16",
-      "main_topic": "Introduction to Big O Notation",
-      "title": "Introduction to Big O Notation and its basics",
+      "start_time": "00:00:02",
+      "end_time": "00:03:45",
+      "main_topic": "Modular Exponentiation",
+      "title": "Modular Exponentiation Explanation and Code",
       "sub_topics": [
         {
-          "name": "Introduction to the video",
-          "start_time": "00:00:00",
-          "end_time": "00:00:14",
-          "description": "Hey, what's going on everybody? It's your bro, hope you're doing well, and in this video I'm going to describe the very basics of Big O notation in, well, computer science."
+          "name": "Introduction to Modular Exponentiation",
+          "start_time": "00:00:02",
+          "end_time": "00:00:18",
+          "description": "طيب اتكلمت معاكم في الفيديو اللي فات Mathematics | Modular | Exponentiation | MATH | Arabic | coding اللي هو فيديو الانتوشن اتكلمنا الاول عن elevator بعد كده اتكلمنا عن slavery واخر حاجة خالص اتكلمنا عليها main.cpp MrAlgorithms - Code:Blocks 17.12 | File Edit View | Search Project Build Debug Fortran wxSmith Tools Tools Plugins DoxyBlocks Settings Help | Debug | global | binaryExponentiationint x, int n : int | QQSC | Management | main.cpp | Projects | Symbols | Files | return result; | Workspace | MrAlgorithms | Sources | int binaryExponentiationint x,int n | int resultl; | whilen0 | ifn21resultresultx; | xxx; | nn2; | return result; | int modularExponentiationint x,int n,int M | int resultl; | whilen0 | ifpower21resultresultxM; | xxxM; | nn2; |"
         },
         {
-          "name": "Introduction to Big O Notation",
-          "start_time": "00:00:14",
-          "end_time": "00:01:16",
-          "description": "So sit back, relax, and enjoy the show. Oh yeah, Big O notation. So a common phrase used with Big O notation is, how code slows as data grows. It describes the performance of an algorithm as the amount of data increases. And really, this notation is machine independent. What we're really focusing on is the number of steps to complete an algorithm, because some machines are going to run certain algorithms faster than others. And three, we tend to ignore smaller operations. If we had some task that took n plus one, we would just reduce it to just n, because that plus one really isn't going to make"
+          "name": "Modular Exponentiation Code Explanation",
+          "start_time": "00:00:18",
+          "end_time": "00:01:17",
+          "description": "اللي هو المودular وقلنا ان conservative power مش احسن حاجة بتاخد time كبير فانا انا حسنوا ان انا استعمل permission تاخد log n وبعد كده قلنا File Edit View Search Project Build Debug Fortran wxSmith Tools Tools Plugins DoxyBlocks Settings Help | int result1; | resultresultx; | n--; | binaryExponentiationint x,int n | Code::Blocks X | Ccoc X | Build messages | Cscope | Line 27, Col 25, Pos 605 مد لل fab بس كده وقلت لك ان في شوية مشاكل في الكود ده وان انا جاي في الفيديو ده Search | Project | Build Debug | Fortran wxSmith Tools Tools Plugins DoxyBlocks Settings Help | G:II | QS C | Symbois | CppCheckVera يعني اتمنى ان انت تكون فكرت وحالة المشاكل لواحدك لكن انا يعني جاي احلها معاك في الفيديو ده طيب اول مشكلة ايه اول مشكلة ان الكلام ده انتجر ف يعني احسن حاجة ان انا خليه long long لان غالبا في الموديولار اكسبونيشن انت تحسب باور لارقام كبيرة"
+        },
+        {
+          "name": "Modular Exponentiation Example and GitHub Link",
+          "start_time": "00:01:17",
+          "end_time": "00:02:00",
+          "description": "خليها long long طيب ايه المشكلة اللي هتبقى موجودة المشكلة اللي هتبقى موجودة لو انا long long في long long لو قلنا مثلا 10.18 فهل 10.18 في 10.18 دي فيه data type تقدر بتهندلها لا طيب أنا عايز المود صح فاكرين قوانين المود هنا بقى نستعمل قوانين المود في درس الموديلر اسميتيك أو الانتوائشن بتاع الموديلر اسميتيك تعالوا كده GitHub - marioeidMr-Algorithm | github.commarioeidMr-Algorithms | Paused | Why GitHub? Team Enterprise Explore Marketplace Pricing | Sign in | Sign up | marioeidMr-Algorithms | Watch | Star | Code | Issues | Pull requests | Actions | ① Security | Insights | Join GitHub today | Dismiss | GitHub is home to over 50 million developers working together to host and review code, | manage projects, and build software together. | Sign up | master | 1 branch 0 tags | Go to file | Code | About | you will find all your pdfs and codes | marioeid updated | ba47236 1 minute ago | 12 commits | here enjoy. | 1- Introduction to Math | updated | 1 minute ago | 2- Math and Number Theory1 - Mod.. updated | 1 minute ago | Releases | No releases published | Packages | No packages published | 10:37 AM"
+        },
+        {
+          "name": "Modular Exponentiation Code and Calculation",
+          "start_time": "00:02:00",
+          "end_time": "00:03:11",
+          "description": "نافتح الربوز تريد بتاعتنا نفتح الموديلر اسميتيك كودز كان فيه كود للمالتبليكيشن CMr-AlgorithmsModularArithmc | github.commarioeidMr-Algorithmsblobmaster2-20Math20and20Number20Theory120-20ModularArithmetic2-ModualrArithmeticcodesModularArithmetic.cpp | define ull unsigned long long | define dd double | define ld long double | define PQ priorityqueue | define pii pairint,int | define pll pairll.1l: | define 5 second | define F first | define MP makepair | define end1 n | using namespace std; | const int sz-1e61; | int arrsz; | 11 add11 a,11 b,11 m | returnambmm; | 11 mul11 a,11 b,11 m | return am bmm; | 11 sub11 a,11 b,11 m | return am - bmmm; | int main | IOS; | int n; | cinn; | int m; | cinm; | forint 10;1n;1 | couti-------1mend1; هذا هو فاكرين السطر ده كان بيعمل ايه اذا احنا خدنا السطر ده وحطنا هنا ونزلنا iterativePowerint x, int n : int | define PQ priority queue | define pll pairll,ll | define S second | define endl n | usinq namespace std; | const int szle6l; | 1l mul ll a,ll b,1l m | return a8mbm8m; | int iterativePowerint x,int n | . CppCheckVera messages | Line 21, Col 2, Pos 493 | 10:38 AM"
+        },
+        {
+          "name": "Conclusion and Call to Action",
+          "start_time": "00:03:11",
+          "end_time": "00:03:45",
+          "description": "فيديو النهاردة قصير مش طويل بس اهتم بليكويت دي وأنا أتمنى منك أن أنت تحل مسألة على الموديولار قبل ما أديك المسألة 4is. | Xmulx,x,M; | return 0; المرة الجاية وبس كده انجوي you will find your pdf and code | in the github link in the describtion below | support me to continue making a good content | SUBSCRIBE | click on the subscribe button to | receive notificatio اشتركوا في القناة"
         }
       ],
       "key_points": [
-        "Big O Notation is used to describe the performance of an algorithm",
-        "It is machine independent",
-        "It ignores smaller operations"
-      ]
-    },
-    {
-      "segment_number": 2,
-      "start_time": "00:01:16",
-      "end_time": "00:02:36",
-      "main_topic": "Understanding Big O Notation",
-      "title": "Understanding Big O Notation with examples",
-      "sub_topics": [
-        {
-          "name": "Example of Big O Notation",
-          "start_time": "00:01:16",
-          "end_time": "00:01:53",
-          "description": "Here's a more concrete example. I have a function named addup. We will add up to a certain number depending on what we pass in as an argument. The for loop within here will iterate once up to whatever number that n is, add i to sum, then return it. What if n was a large number like a million? Well, it's going to take just above a million steps to complete this function."
-        },
-        {
-          "name": "Optimizing the example",
-          "start_time": "00:01:53",
-          "end_time": "00:02:36",
-          "description": "Now another way which we could write the same function is to take sum equals n times n plus 1 divided by 2. We will get the exact same sum. So if n was, let's say, a million, this is still only going to take a couple seconds. steps. Three steps, not a million steps. So this function is going to have a runtime complexity of O of one."
-        }
-      ],
-      "key_points": [
-        "Big O Notation can be optimized",
-        "Example of optimizing a function",
-        "O(1) is constant time"
-      ]
-    },
-    {
-      "segment_number": 3,
-      "start_time": "00:02:36",
-      "end_time": "00:06:22",
-      "main_topic": "Runtime Complexities",
-      "title": "Different types of Runtime Complexities",
-      "sub_topics": [
-        {
-          "name": "Introduction to Runtime Complexities",
-          "start_time": "00:02:36",
-          "end_time": "00:03:06",
-          "description": "Here's a graph that I made to represent the different runtime complexities. We have data on the x-axis represented by n. So data will increase as we go more to the right, and we have time on the y-axis. I did add an asterisk next to time because some of these times can vary depending on what machine you're using, so these can vary"
-        },
-        {
-          "name": "Different types of Runtime Complexities",
-          "start_time": "00:03:06",
-          "end_time": "00:06:22",
-          "description": "Anything that has a runtime complexity of O of 1 will take the same amount of time regardless of the data size. A few examples would include the random access of an element within an array and inserting at the beginning of a linked list. So O of 1 is extremely fast. Next we have O of log n, also known as logarithmic time. One example is binary search. We haven't talked about this yet. We'll talk about a few of these algorithms in future videos, but anything that has a runtime complexity of O of log n will actually take, I don't want to say less and less time, but increasingly less time to complete."
-        },
-        {
-          "name": "Comparison of Runtime Complexities",
-          "start_time": "00:05:11",
-          "end_time": "00:06:22",
-          "description": "So just to compare linear time and quadratic time, with linear time if our data set was a thousand if n equals a thousand it going to take a thousand steps they proportional they linear but if we were using quadratic time if n was a thousand then a thousand squared would be a million. So if our data set was a thousand, if we're using quadratic time, it's going to take a million steps then, way more than linear time."
-        }
-      ],
-      "key_points": [
-        "O(1) is constant time",
-        "O(log n) is logarithmic time",
-        "Comparison of different runtime complexities"
+        "Modular exponentiation is used to calculate the power of a number modulo another number",
+        "The code for modular exponentiation is provided in the video",
+        "The importance of using the correct data type to avoid overflow"
       ]
     }
   ]

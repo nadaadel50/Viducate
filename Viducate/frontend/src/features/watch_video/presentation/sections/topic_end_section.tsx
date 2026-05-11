@@ -4,7 +4,7 @@ import {
   FileText,
   TvMinimalPlay,
 } from "lucide-react";
-import { TopicEndCard } from "../widgets/topic_ended_card";
+import { TopicEndCard } from "../../../../core/componants/topic_ended_card";
 export function TopicEndSection() {
   return (
     <div className="bg-white  p-8 w-200 relative overflow-hidden flex flex-col justify-center items-center  rounded-2xl shadow-xl overflow-hidden animate-fade-in-up">

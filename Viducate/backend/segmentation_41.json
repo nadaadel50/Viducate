@@ -1,0 +1,89 @@
+{
+  "total_segments": 3,
+  "segments": [
+    {
+      "segment_number": 1,
+      "start_time": "00:00:00",
+      "end_time": "00:01:16",
+      "main_topic": "Introduction to Big O Notation",
+      "title": "Introduction to Big O Notation in Computer Science",
+      "sub_topics": [
+        {
+          "name": "Introduction to the Video",
+          "start_time": "00:00:00",
+          "end_time": "00:00:14",
+          "description": "Hey, what's going on everybody? It's your bro, hope you're doing well, and in this video I'm going to describe the very basics of Big O notation in, well, computer science."
+        },
+        {
+          "name": "Introduction to Big O Notation",
+          "start_time": "00:00:14",
+          "end_time": "00:01:16",
+          "description": "So sit back, relax, and enjoy the show. Oh yeah, Big O notation. So a common phrase used with Big O notation is, how code slows as data grows. It describes the performance of an algorithm as the amount of data increases."
+        }
+      ],
+      "key_points": [
+        "Big O notation is used to describe the performance of an algorithm",
+        "It is machine independent",
+        "It focuses on the number of steps to complete an algorithm"
+      ]
+    },
+    {
+      "segment_number": 2,
+      "start_time": "00:01:16",
+      "end_time": "00:02:36",
+      "main_topic": "Examples of Big O Notation",
+      "title": "Understanding Big O Notation with Examples",
+      "sub_topics": [
+        {
+          "name": "Example of a Function with O(n) Runtime Complexity",
+          "start_time": "00:01:16",
+          "end_time": "00:01:46",
+          "description": "Here's a more concrete example. I have a function named addup. We will add up to a certain number depending on what we pass in as an argument. The for loop within here will iterate once up to whatever number that n is, add i to sum, then return it."
+        },
+        {
+          "name": "Example of a Function with O(1) Runtime Complexity",
+          "start_time": "00:01:46",
+          "end_time": "00:02:36",
+          "description": "Now another way which we could write the same function is to take sum equals n times n plus 1 divided by 2. We will get the exact same sum. So if n was, let's say, a million, this is still only going to take a couple seconds."
+        }
+      ],
+      "key_points": [
+        "O(n) runtime complexity is linear",
+        "O(1) runtime complexity is constant",
+        "Constant time is faster than linear time"
+      ]
+    },
+    {
+      "segment_number": 3,
+      "start_time": "00:02:36",
+      "end_time": "00:06:22",
+      "main_topic": "Runtime Complexities and Their Comparative Analysis",
+      "title": "Comparing Different Runtime Complexities",
+      "sub_topics": [
+        {
+          "name": "Introduction to Different Runtime Complexities",
+          "start_time": "00:02:36",
+          "end_time": "00:03:06",
+          "description": "Here's a graph that I made to represent the different runtime complexities. We have data on the x-axis represented by n. So data will increase as we go more to the right, and we have time on the y-axis."
+        },
+        {
+          "name": "Explanation of Different Runtime Complexities",
+          "start_time": "00:03:06",
+          "end_time": "00:06:22",
+          "description": "So let begin with O of 1 constant time. Anything that has a runtime complexity of O of 1 will take the same amount of time regardless of the data size. A few examples would include the random access of an element within an array and inserting at the beginning of a linked list."
+        },
+        {
+          "name": "Comparative Analysis of Runtime Complexities",
+          "start_time": "00:04:53",
+          "end_time": "00:06:22",
+          "description": "So just to compare linear time and quadratic time, with linear time if our data set was a thousand if n equals a thousand it going to take a thousand steps they proportional they linear but if we were using quadratic time if n was a thousand then a thousand squared would be a million."
+        }
+      ],
+      "key_points": [
+        "O(1) is constant time",
+        "O(log n) is logarithmic time",
+        "O(n) is linear time"
+      ]
+    }
+  ]
+}

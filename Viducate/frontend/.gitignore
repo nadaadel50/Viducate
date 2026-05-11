@@ -52,3 +52,6 @@ Thumbs.db
 # Misc
 # =========================
 *.local
+# ignore all txt files
+*.txt
+!requirements.txt

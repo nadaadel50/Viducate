@@ -1,0 +1,47 @@
+// import { Outlet } from "react-router-dom";
+
+// export function WatchLayout() {
+//   return (
+    
+//       <div className="relative ">
+//         <Outlet />
+//       </div>
+    
+//   );
+// }
+
+
+import { Outlet, useLocation, useMatch, useNavigate } from "react-router-dom";
+import { MainPage } from "./main_page";
+
+
+export function WatchLayout() {
+const { pathname } = useLocation();
+  const navigate = useNavigate();
+  
+  const isOverlay = pathname.includes("/WatchVideo/"); 
+
+
+  return (
+    <div className="relative">
+     
+      <div
+        className={`transition-all duration-300 ${
+          isOverlay ? "blur-sm brightness-75 pointer-events-none select-none" : ""
+        }`}
+      > 
+        <MainPage />
+      </div>
+
+      
+      {isOverlay && (
+        <div onClick={()=>navigate(-1)}
+         className="  fixed inset-0 z-50 flex items-center justify-center bg-black/30 backdrop-blur-sm">
+         <div className="  flex items-center justify-center" onClick={(e) => e.stopPropagation()}>
+            <Outlet />
+          </div>
+        </div>
+      )}
+    </div>
+  );
+}

@@ -11,8 +11,6 @@ export function LearningSessionProvider({
 }: {
   children: React.ReactNode;
 }) {
-  
-
   const [seekTo, setSeekTo] = useState<number | null>(null);
 
   const [currentTime, setCurrentTime] = useState<number>(() => {
@@ -20,7 +18,7 @@ export function LearningSessionProvider({
     return saved ? Number(saved) : 0;
   });
 
-  // const [currentTime, setCurrentTime] = useState<number>(0);
+ 
 
   const [selectedTopic, setSelectedTopic] = useState<TopicResponse | null>(
     () => {
@@ -28,9 +26,7 @@ export function LearningSessionProvider({
       return saved ? JSON.parse(saved) : null;
     },
   );
-  //const [selectedTopic, setSelectedTopic] = useState<TopicResponse | null>(null);
 
-  // ───────── SAVE SECTION ─────────
 
   useEffect(() => {
     sessionStorage.setItem(STORAGE_KEYS.currentTime, String(currentTime));
@@ -45,7 +41,7 @@ export function LearningSessionProvider({
     }
   }, [selectedTopic]);
 
-   const [videoId, setVideoIdState] = useState<number | null>(() => {
+  const [videoId, setVideoIdState] = useState<number | null>(() => {
     const stored = sessionStorage.getItem(STORAGE_KEYS.video_Id);
     return stored ? Number(stored) : null;
   });
@@ -58,7 +54,6 @@ export function LearningSessionProvider({
     }
     setVideoIdState(id);
   };
-
 
   return (
     <LearningSessionContext.Provider
