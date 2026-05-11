@@ -7,23 +7,16 @@ import { useLearningSession } from "../../../../core/hooks/useLearningContent";
 export function LeftContentSection() {
   const [searchQuery, setSearchQuery] = useState<string>("");
 
-  const {
-    currentTime,
-    setSelectedTopic,
-    setSeekTo,
-    completedTopicIds
-  } = useLearningSession();
-  const { data: videoData } = useVideoData();
-  const topics=videoData?.topics
+  const { currentTime, setSelectedTopic, setSeekTo, topics } =
+    useLearningSession();
   
-  const currentTopicIndex = topics
-  ? topics.findIndex(
-      (topic) =>
-        currentTime >= topic.start_time &&
-        currentTime < topic.end_time
-    )
-  :-1;
 
+  const currentTopicIndex = topics
+    ? topics.findIndex(
+        (topic) =>
+          currentTime >= topic.start_time && currentTime < topic.end_time,
+      )
+    : -1;
 
   //  sync selected topic with video
   useEffect(() => {
@@ -38,6 +31,7 @@ export function LeftContentSection() {
   }, [currentTopicIndex]);
 
   //  filter
+  if (!topics) return null;
   const filteredCards = topics!.filter((item) => {
     if (!searchQuery) return true;
 
@@ -54,11 +48,8 @@ export function LeftContentSection() {
       {/* LIST */}
       <div className="flex-1 overflow-y-auto">
         <div className="flex flex-col gap-3 p-4 max-w-md mx-auto w-full">
-          
           {filteredCards.map((card, index) => (
-            
             <ContentLearningCard
-            
               key={index}
               isSelected={currentTopicIndex === index}
               onClick={() => {

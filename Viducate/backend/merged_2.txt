@@ -1,340 +1,380 @@
 [00:00:00]
-  Transcript :  Hey, what's going on everybody? It's your bro, hope you're doing well, and in this video I'm going to
-  OCR        : 1322-34
-  Combined   :  Hey, what's going on everybody? It's your bro, hope you're doing well, and in this video I'm going to 1322-34
+  Transcript :  What's up guys, today I'm going to go over the extended Euclidean algorithm.
+  OCR        : None
+  Combined   :  What's up guys, today I'm going to go over the extended Euclidean algorithm.
 
 [00:00:04]
-  Transcript :  describe the very basics of Big O notation in, well, computer science. So sit back, relax, and enjoy the show.
+  Transcript :  So what is the extended Euclidean algorithm?
   OCR        : None
-  Combined   :  describe the very basics of Big O notation in, well, computer science. So sit back, relax, and enjoy the show.
+  Combined   :  So what is the extended Euclidean algorithm?
 
-[00:00:14]
-  Transcript :  Oh yeah, Big O notation. So a common phrase used with Big O notation is,
+[00:00:06]
+  Transcript :  So remember back when the other video when I explained what the Euclidean algorithm does?
   OCR        : None
-  Combined   :  Oh yeah, Big O notation. So a common phrase used with Big O notation is,
+  Combined   :  So remember back when the other video when I explained what the Euclidean algorithm does?
 
-[00:00:19]
-  Transcript :  how code slows as data grows. It describes the performance of an algorithm as the amount of data
+[00:00:11]
+  Transcript :  Euclidean algorithm gets you the greatest common denominator GCD of A and B.
   OCR        : None
-  Combined   :  how code slows as data grows. It describes the performance of an algorithm as the amount of data
+  Combined   :  Euclidean algorithm gets you the greatest common denominator GCD of A and B.
 
-[00:00:25]
-  Transcript :  increases. And really, this notation is machine independent. What we're really focusing on is the
+[00:00:16]
+  Transcript :  Right, given two numbers A and B, it gets you the GCD.
   OCR        : None
-  Combined   :  increases. And really, this notation is machine independent. What we're really focusing on is the
+  Combined   :  Right, given two numbers A and B, it gets you the GCD.
+
+[00:00:20]
+  Transcript :  Now you could actually represent this GCD as a linear combination of two other numbers of X and Y.
+  OCR        : None
+  Combined   :  Now you could actually represent this GCD as a linear combination of two other numbers of X and Y.
+
+[00:00:26]
+  Transcript :  The extended Euclidean algorithm is going to be kind of like the Euclidean algorithm,
+  OCR        : None
+  Combined   :  The extended Euclidean algorithm is going to be kind of like the Euclidean algorithm,
 
 [00:00:31]
-  Transcript :  number of steps to complete an algorithm, because some machines are going to run certain algorithms
+  Transcript :  except that instead now we are trying to find the coefficients x and y,
   OCR        : None
-  Combined   :  number of steps to complete an algorithm, because some machines are going to run certain algorithms
+  Combined   :  except that instead now we are trying to find the coefficients x and y,
 
 [00:00:36]
-  Transcript :  faster than others. And three, we tend to ignore smaller operations. If we had some task that took
+  Transcript :  such that if we multiply a by x and add it with b times y,
   OCR        : None
-  Combined   :  faster than others. And three, we tend to ignore smaller operations. If we had some task that took
+  Combined   :  such that if we multiply a by x and add it with b times y,
 
-[00:00:42]
-  Transcript :  n plus one, we would just reduce it to just n, because that plus one really isn't going to make
+[00:00:41]
+  Transcript :  we are going to get the GCD of a and b.
   OCR        : None
-  Combined   :  n plus one, we would just reduce it to just n, because that plus one really isn't going to make
+  Combined   :  we are going to get the GCD of a and b.
 
-[00:00:48]
-  Transcript :  So here's a few examples of big O notation.
+[00:00:45]
+  Transcript :  So basically we're trying to find a coefficient set.
   OCR        : None
-  Combined   :  So here's a few examples of big O notation.
+  Combined   :  So basically we're trying to find a coefficient set.
 
-[00:00:51]
-  Transcript :  We have O O O and O And N is really just the amount of data that we passing in It a variable like x What we focusing on is the performance of an algorithm as the amount
+[00:00:47]
+  Transcript :  If you multiply them and add together, you'll get the GCD.
   OCR        : None
-  Combined   :  We have O O O and O And N is really just the amount of data that we passing in It a variable like x What we focusing on is the performance of an algorithm as the amount
+  Combined   :  If you multiply them and add together, you'll get the GCD.
 
-[00:01:06]
-  Transcript :  of data increases, and n is a representation of the amount of data that we're passing in.
+[00:00:50]
+  Transcript :  So as an example the GCD of 55 and 80 is equal to 5 So in terms of 55 and 80 five is actually equal to 55 times 3 plus 80 times negative 2 So basically we trying to find the 3 and the negative 2 in this case So guys if you
   OCR        : None
-  Combined   :  of data increases, and n is a representation of the amount of data that we're passing in.
+  Combined   :  So as an example the GCD of 55 and 80 is equal to 5 So in terms of 55 and 80 five is actually equal to 55 times 3 plus 80 times negative 2 So basically we trying to find the 3 and the negative 2 in this case So guys if you
 
-[00:01:12]
-  Transcript :  Here's a more concrete example. I have a function named addup. We will add up to a certain number
+[00:01:08]
+  Transcript :  remember the Euclidean algorithm ends with B equal to 0 and A is equal to the GCD of A and B.
   OCR        : None
-  Combined   :  Here's a more concrete example. I have a function named addup. We will add up to a certain number
+  Combined   :  remember the Euclidean algorithm ends with B equal to 0 and A is equal to the GCD of A and B.
 
-[00:01:16]
-  Transcript :  depending on what we pass in as an argument. The for loop within here will iterate once up to
+[00:01:15]
+  Transcript :  So let's call the GCD of A and B a variable called G, right? So then we could actually work
   OCR        : None
-  Combined   :  depending on what we pass in as an argument. The for loop within here will iterate once up to
+  Combined   :  So let's call the GCD of A and B a variable called G, right? So then we could actually work
 
-[00:01:22]
-  Transcript :  whatever number that n is, add i to sum, then return it. What if n was a large number like a
+[00:01:20]
+  Transcript :  backwards. Basically, we could say that g times one plus zero times zero is equal to g. In this
   OCR        : None
-  Combined   :  whatever number that n is, add i to sum, then return it. What if n was a large number like a
+  Combined   :  backwards. Basically, we could say that g times one plus zero times zero is equal to g. In this
 
-[00:01:28]
-  Transcript :  million? Well, it's going to take just above a million steps to complete this function.
+[00:01:29]
+  Transcript :  case, a is going to equal to g, x is going to equal to one, y is going to equal to zero, b is
   OCR        : None
-  Combined   :  million? Well, it's going to take just above a million steps to complete this function.
+  Combined   :  case, a is going to equal to g, x is going to equal to one, y is going to equal to zero, b is
 
-[00:01:33]
-  Transcript :  This function is said to have a runtime complexity of O of n, linear time. As the amount of data
+[00:01:36]
+  Transcript :  going to equal to zero, because that's the end of the algorithm. And remember that g is the gcd of a
   OCR        : None
-  Combined   :  This function is said to have a runtime complexity of O of n, linear time. As the amount of data
+  Combined   :  going to equal to zero, because that's the end of the algorithm. And remember that g is the gcd of a
 
-[00:01:39]
-  Transcript :  increases, it's going to increase the amount of steps linearly or proportionally. Now another way
+[00:01:43]
+  Transcript :  and b. So now all we have to worry about is we have to go back up and keep track how x and y
   OCR        : None
-  Combined   :  increases, it's going to increase the amount of steps linearly or proportionally. Now another way
+  Combined   :  and b. So now all we have to worry about is we have to go back up and keep track how x and y
 
-[00:01:46]
-  Transcript :  which we could write the same function is to take sum equals n times n plus 1 divided by 2.
+[00:01:49]
+  Transcript :  changes whenever we transition from a b to b a mod b,
   OCR        : None
-  Combined   :  which we could write the same function is to take sum equals n times n plus 1 divided by 2.
+  Combined   :  changes whenever we transition from a b to b a mod b,
 
-[00:01:53]
-  Transcript :  We will get the exact same sum. So if n was, let's say, a million, this is still only going to take a couple seconds.
+[00:01:55]
+  Transcript :  just like the Euclidean algorithm.
   OCR        : None
-  Combined   :  We will get the exact same sum. So if n was, let's say, a million, this is still only going to take a couple seconds.
+  Combined   :  just like the Euclidean algorithm.
+
+[00:01:57]
+  Transcript :  So let's assume that we already found the new coefficient
+  OCR        : None
+  Combined   :  So let's assume that we already found the new coefficient
 
 [00:02:00]
-  Transcript :  steps. Three steps, not a million steps. So this function is going to have a runtime complexity of
+  Transcript :  coefficients x1 and y1 when we transition a b to b a mod b and let's just substitute that into the
   OCR        : None
-  Combined   :  steps. Three steps, not a million steps. So this function is going to have a runtime complexity of
+  Combined   :  coefficients x1 and y1 when we transition a b to b a mod b and let's just substitute that into the
 
 [00:02:06]
-  Transcript :  O of one. The input size doesn't matter. The amount of data that we have really doesn't matter.
+  Transcript :  equation. So substituting the values into the equation we get b times x1 plus a mod b times y1
   OCR        : None
-  Combined   :  O of one. The input size doesn't matter. The amount of data that we have really doesn't matter.
+  Combined   :  equation. So substituting the values into the equation we get b times x1 plus a mod b times y1
 
-[00:02:11]
-  Transcript :  It's going to be completed in the same amount of steps. So this function is way better than this
+[00:02:14]
+  Transcript :  is going to equal to g. We're basically trying to get this equation back to the original equation
   OCR        : None
-  Combined   :  It's going to be completed in the same amount of steps. So this function is way better than this
+  Combined   :  is going to equal to g. We're basically trying to get this equation back to the original equation
 
-[00:02:17]
-  Transcript :  previous one. Three steps is better than a million steps. And the reason that this isn't O of three,
+[00:02:21]
+  Transcript :  of x and y of a times x plus b times y is equal to g. Since we know that the definition of modulus
   OCR        : None
-  Combined   :  previous one. Three steps is better than a million steps. And the reason that this isn't O of three,
-
-[00:02:23]
-  Transcript :  because this takes three steps, is that we really don't care about smaller operations. In the grand
-  OCR        : None
-  Combined   :  because this takes three steps, is that we really don't care about smaller operations. In the grand
-
-[00:02:27]
-  Transcript :  scheme of things, they really won't make much of a difference. So we would just shorten this and say
-  OCR        : None
-  Combined   :  scheme of things, they really won't make much of a difference. So we would just shorten this and say
+  Combined   :  of x and y of a times x plus b times y is equal to g. Since we know that the definition of modulus
 
 [00:02:31]
-  Transcript :  that this is O of 1 constant time. The input size doesn't matter. Here's a graph that I made to
+  Transcript :  of a mod b is equal to a minus a divided by b floor times b we are going to use this to substitute
   OCR        : None
-  Combined   :  that this is O of 1 constant time. The input size doesn't matter. Here's a graph that I made to
+  Combined   :  of a mod b is equal to a minus a divided by b floor times b we are going to use this to substitute
 
-[00:02:36]
-  Transcript :  represent the different runtime complexities. We have data on the x-axis represented by n. So data
+[00:02:38]
+  Transcript :  of back into the equation of a mod b. So in the original equation the gcd is equal to b times x1
   OCR        : None
-  Combined   :  represent the different runtime complexities. We have data on the x-axis represented by n. So data
+  Combined   :  of back into the equation of a mod b. So in the original equation the gcd is equal to b times x1
 
-[00:02:43]
-  Transcript :  will increase as we go more to the right, and we have time on the y-axis. I did add an asterisk next
+[00:02:47]
+  Transcript :  plus a mod b times y1, right?
   OCR        : None
-  Combined   :  will increase as we go more to the right, and we have time on the y-axis. I did add an asterisk next
+  Combined   :  plus a mod b times y1, right?
 
 [00:02:50]
-  Transcript :  to time because some of these times can vary depending on what machine you're using, so these
+  Transcript :  Now after substituting the definition of a mod b
   OCR        : None
-  Combined   :  to time because some of these times can vary depending on what machine you're using, so these
+  Combined   :  Now after substituting the definition of a mod b
 
 [00:02:54]
-  Transcript :  can vary Another way to look at this is number of steps So as we increase on the y these algorithms are going to perform with increasingly more time They going to get slower So let
+  Transcript :  into a mod b this is gonna equal to b times x1 plus parentheses A minus A divided by B floor times by B times by Y1
   OCR        : None
-  Combined   :  can vary Another way to look at this is number of steps So as we increase on the y these algorithms are going to perform with increasingly more time They going to get slower So let
+  Combined   :  into a mod b this is gonna equal to b times x1 plus parentheses A minus A divided by B floor times by B times by Y1
 
-[00:03:06]
-  Transcript :  begin with O of 1 constant time. Anything that has a runtime complexity of O of 1 will take the same
+[00:03:07]
+  Transcript :  Okay, so now if we were to FOIL and rearrange the terms,
   OCR        : None
-  Combined   :  begin with O of 1 constant time. Anything that has a runtime complexity of O of 1 will take the same
+  Combined   :  Okay, so now if we were to FOIL and rearrange the terms,
 
-[00:03:12]
-  Transcript :  amount of time regardless of the data size. A few examples would include the random access of an
+[00:03:11]
+  Transcript :  we get G is going to equal to A times Y1 plus B times parentheses X1 minus Y1 times A divided by B floor.
   OCR        : None
-  Combined   :  amount of time regardless of the data size. A few examples would include the random access of an
+  Combined   :  we get G is going to equal to A times Y1 plus B times parentheses X1 minus Y1 times A divided by B floor.
 
-[00:03:17]
-  Transcript :  element within an array and inserting at the beginning of a linked list. So O of 1 is extremely
+[00:03:22]
+  Transcript :  So now let's compare this equation with ax plus by.
   OCR        : None
-  Combined   :  element within an array and inserting at the beginning of a linked list. So O of 1 is extremely
+  Combined   :  So now let's compare this equation with ax plus by.
 
-[00:03:23]
-  Transcript :  fast. Next we have O of log n, also known as logarithmic time. One example is binary search.
+[00:03:27]
+  Transcript :  So if we were to compare the new equation
   OCR        : None
-  Combined   :  fast. Next we have O of log n, also known as logarithmic time. One example is binary search.
+  Combined   :  So if we were to compare the new equation
 
 [00:03:30]
-  Transcript :  We haven't talked about this yet. We'll talk about a few of these algorithms in future videos,
+  Transcript :  of this new equation with our old equation,
   OCR        : None
-  Combined   :  We haven't talked about this yet. We'll talk about a few of these algorithms in future videos,
+  Combined   :  of this new equation with our old equation,
 
-[00:03:34]
-  Transcript :  but anything that has a runtime complexity of O of log n will actually take, I don't want to say
+[00:03:33]
+  Transcript :  we would see that the x,
   OCR        : None
-  Combined   :  but anything that has a runtime complexity of O of log n will actually take, I don't want to say
+  Combined   :  we would see that the x,
+
+[00:03:36]
+  Transcript :  this x is actually gonna equal to y1.
+  OCR        : None
+  Combined   :  this x is actually gonna equal to y1.
+
+[00:03:39]
+  Transcript :  This x is gonna equal to y1,
+  OCR        : None
+  Combined   :  This x is gonna equal to y1,
 
 [00:03:40]
-  Transcript :  less and less time, but increasingly less time to complete. So as the data size increases,
+  Transcript :  and this y is gonna equal to this x1 minus y
   OCR        : None
-  Combined   :  less and less time, but increasingly less time to complete. So as the data size increases,
+  Combined   :  and this y is gonna equal to this x1 minus y
 
-[00:03:47]
-  Transcript :  this algorithm is going to be more and more efficient compared to the early stages with a
+[00:03:46]
+  Transcript :  times a over b floor, okay?
   OCR        : None
-  Combined   :  this algorithm is going to be more and more efficient compared to the early stages with a
+  Combined   :  times a over b floor, okay?
 
-[00:03:51]
-  Transcript :  small dataset. O is also known as linear time. As the amount of
+[00:03:50]
+  Transcript :  So this x is going to correspond to this y
   OCR        : None
-  Combined   :  small dataset. O is also known as linear time. As the amount of
+  Combined   :  So this x is going to correspond to this y
 
-[00:03:56]
-  Transcript :  data increases, the time it takes to complete something will
+[00:03:53]
+  Transcript :  and this y actually corresponds to this
   OCR        : None
-  Combined   :  data increases, the time it takes to complete something will
+  Combined   :  and this y actually corresponds to this
+
+[00:03:57]
+  Transcript :  if you look at the equations.
+  OCR        : None
+  Combined   :  if you look at the equations.
 
 [00:04:00]
-  Transcript :  increase proportionally linearly. That would include looping through the elements in an array
+  Transcript :  because of the coefficients a and a are the same
   OCR        : None
-  Combined   :  increase proportionally linearly. That would include looping through the elements in an array
+  Combined   :  because of the coefficients a and a are the same
+
+[00:04:02]
+  Transcript :  and b and b are the same.
+  OCR        : None
+  Combined   :  and b and b are the same.
 
 [00:04:04]
-  Transcript :  and searching through a linked list. Next we have O of N log N, also known as quasi-linear time.
+  Transcript :  Knowing this, we get this equation.
   OCR        : None
-  Combined   :  and searching through a linked list. Next we have O of N log N, also known as quasi-linear time.
+  Combined   :  Knowing this, we get this equation.
 
-[00:04:11]
-  Transcript :  This would include a quick sort, merge sort, and heap sort. We'll talk about these concepts in
+[00:04:07]
+  Transcript :  x is gonna equal to y1
   OCR        : None
-  Combined   :  This would include a quick sort, merge sort, and heap sort. We'll talk about these concepts in
+  Combined   :  x is gonna equal to y1
 
-[00:04:16]
-  Transcript :  future videos. So for the most part, this is very similar to linear time. Unless we're working with
+[00:04:09]
+  Transcript :  and y is gonna equal to x1 minus y1
   OCR        : None
-  Combined   :  future videos. So for the most part, this is very similar to linear time. Unless we're working with
+  Combined   :  and y is gonna equal to x1 minus y1
+
+[00:04:12]
+  Transcript :  times floor of a divided by b.
+  OCR        : None
+  Combined   :  times floor of a divided by b.
+
+[00:04:15]
+  Transcript :  Here is the implementation code.
+  OCR        : None
+  Combined   :  Here is the implementation code.
+
+[00:04:17]
+  Transcript :  Basically, when b is equal to zero,
+  OCR        : None
+  Combined   :  Basically, when b is equal to zero,
 
 [00:04:22]
-  Transcript :  a large data set, then anything using O of N log N is going to start to slow down when we work with
+  Transcript :  x is equal to one and y is equal to zero
   OCR        : None
-  Combined   :  a large data set, then anything using O of N log N is going to start to slow down when we work with
+  Combined   :  x is equal to one and y is equal to zero
 
-[00:04:29]
-  Transcript :  larger data sets, hence this curve here. Then we have O of n squared, also known as quadratic time.
+[00:04:25]
+  Transcript :  like we said before.
   OCR        : None
-  Combined   :  larger data sets, hence this curve here. Then we have O of n squared, also known as quadratic time.
+  Combined   :  like we said before.
 
-[00:04:35]
-  Transcript :  A few examples would include insertion sort, selection sort, and bubble sort. As the amount
+[00:04:27]
+  Transcript :  And at this point, a is gonna equal to the GCD,
   OCR        : None
-  Combined   :  A few examples would include insertion sort, selection sort, and bubble sort. As the amount
+  Combined   :  And at this point, a is gonna equal to the GCD,
+
+[00:04:30]
+  Transcript :  so we just return A.
+  OCR        : None
+  Combined   :  so we just return A.
+
+[00:04:32]
+  Transcript :  Otherwise, we are going to create the two new variables,
+  OCR        : None
+  Combined   :  Otherwise, we are going to create the two new variables,
+
+[00:04:36]
+  Transcript :  x1 and y1.
+  OCR        : None
+  Combined   :  x1 and y1.
+
+[00:04:38]
+  Transcript :  Then what we're going to do is we are going to get the GCD
+  OCR        : None
+  Combined   :  Then what we're going to do is we are going to get the GCD
 
 [00:04:41]
-  Transcript :  of data increases, it's going to take increasingly more and more time to complete anything that has a
+  Transcript :  of the values, again, recursively calling the function,
   OCR        : None
-  Combined   :  of data increases, it's going to take increasingly more and more time to complete anything that has a
+  Combined   :  of the values, again, recursively calling the function,
 
 [00:04:46]
-  Transcript :  runtime complexity of O of n squared. So just to compare linear time and quadratic time, with linear
+  Transcript :  and pass in x1 and y1 by reference as x and y.
   OCR        : None
-  Combined   :  runtime complexity of O of n squared. So just to compare linear time and quadratic time, with linear
+  Combined   :  and pass in x1 and y1 by reference as x and y.
 
-[00:04:53]
-  Transcript :  time if our data set was a thousand if n equals a thousand it going to take a thousand steps they proportional they linear but if we were using quadratic time if n was a thousand then a thousand squared would be a
+[00:04:52]
+  Transcript :  So what we're going to get here is we are going to get
   OCR        : None
-  Combined   :  time if our data set was a thousand if n equals a thousand it going to take a thousand steps they proportional they linear but if we were using quadratic time if n was a thousand then a thousand squared would be a
+  Combined   :  So what we're going to get here is we are going to get
+
+[00:04:54]
+  Transcript :  int D is going to equal to GCD of now A transitioned to b right So now gcd of b and now b transition to a mod by b
+  OCR        : None
+  Combined   :  int D is going to equal to GCD of now A transitioned to b right So now gcd of b and now b transition to a mod by b
 
 [00:05:06]
-  Transcript :  million. So if our data set was a thousand, if we're using quadratic time, it's going to take a million
+  Transcript :  So we have b as a mod by b recursively calling in this function.
   OCR        : None
-  Combined   :  million. So if our data set was a thousand, if we're using quadratic time, it's going to take a million
+  Combined   :  So we have b as a mod by b recursively calling in this function.
 
-[00:05:11]
-  Transcript :  steps then, way more than linear time. So quadratic time is extremely slow with large data sets, but in
+[00:05:13]
+  Transcript :  Now we pass in x1 and y1 by reference so that this gets changed during the recursive call when we return out.
   OCR        : None
-  Combined   :  steps then, way more than linear time. So quadratic time is extremely slow with large data sets, but in
-
-[00:05:18]
-  Transcript :  the case of a small data set, it could actually be faster, as you can see by the graph here. And lastly,
-  OCR        : None
-  Combined   :  the case of a small data set, it could actually be faster, as you can see by the graph here. And lastly,
+  Combined   :  Now we pass in x1 and y1 by reference so that this gets changed during the recursive call when we return out.
 
 [00:05:23]
-  Transcript :  we have O of n factorial, also known as factorial time, and one place where this is used is with the
+  Transcript :  okay so now once we have the gcd of these new values of b and a mod by b we are going to set
   OCR        : None
-  Combined   :  we have O of n factorial, also known as factorial time, and one place where this is used is with the
+  Combined   :  okay so now once we have the gcd of these new values of b and a mod by b we are going to set
 
-[00:05:30]
-  Transcript :  traveling salesman problem, which I might discuss in a future video. So this is extremely slow,
+[00:05:31]
+  Transcript :  we're going to change the values of x that was passed in is going to equal to y1 which is the
   OCR        : None
-  Combined   :  traveling salesman problem, which I might discuss in a future video. So this is extremely slow,
+  Combined   :  we're going to change the values of x that was passed in is going to equal to y1 which is the
 
-[00:05:36]
-  Transcript :  so if I had to give a letter grade to each of these runtime complexities when working with
+[00:05:38]
+  Transcript :  values that we returned earlier and y is going to equal to x1 minus y1 times floor of a divided by b
   OCR        : None
-  Combined   :  so if I had to give a letter grade to each of these runtime complexities when working with
-
-[00:05:41]
-  Transcript :  large data sets with constant time, this would be an A, like an A+. Logarithmic time would be a B,
-  OCR        : None
-  Combined   :  large data sets with constant time, this would be an A, like an A+. Logarithmic time would be a B,
-
-[00:05:47]
-  Transcript :  it's pretty good.
-  OCR        : None
-  Combined   :  it's pretty good.
+  Combined   :  values that we returned earlier and y is going to equal to x1 minus y1 times floor of a divided by b
 
 [00:05:48]
-  Transcript :  Linear time is C, it's okay.
+  Transcript :  and then after that we just return d which is the gcd.
   OCR        : None
-  Combined   :  Linear time is C, it's okay.
+  Combined   :  and then after that we just return d which is the gcd.
 
-[00:05:50]
-  Transcript :  Quasi-linear time is a D, it's just barely passing.
+[00:05:52]
+  Transcript :  So at the end of each recursive call x and y gets modified and that x and y
   OCR        : None
-  Combined   :  Quasi-linear time is a D, it's just barely passing.
-
-[00:05:54]
-  Transcript :  Quadratic time would be an F,
-  OCR        : None
-  Combined   :  Quadratic time would be an F,
-
-[00:05:56]
-  Transcript :  and factorial time, well, you get expelled from school.
-  OCR        : None
-  Combined   :  and factorial time, well, you get expelled from school.
-
-[00:05:59]
-  Transcript :  Although,
-  OCR        : None
-  Combined   :  Although,
+  Combined   :  So at the end of each recursive call x and y gets modified and that x and y
 
 [00:06:00]
-  Transcript :  some of these runtime complexities are actually faster when working with a smaller data set,
+  Transcript :  gets modified and x1 and y1 are the new values returned when we have b and a mod by b.
   OCR        : None
-  Combined   :  some of these runtime complexities are actually faster when working with a smaller data set,
+  Combined   :  gets modified and x1 and y1 are the new values returned when we have b and a mod by b.
 
-[00:06:05]
-  Transcript :  so keep that in mind. Well, that's the very basics of Big O notation. It's notation used
+[00:06:08]
+  Transcript :  And that basically gets our x and y function coefficients for the Euclidean algorithm.
   OCR        : None
-  Combined   :  so keep that in mind. Well, that's the very basics of Big O notation. It's notation used
+  Combined   :  And that basically gets our x and y function coefficients for the Euclidean algorithm.
 
-[00:06:11]
-  Transcript :  to describe the performance of an algorithm as the amount of data increases. So if you can,
+[00:06:15]
+  Transcript :  I hope you guys enjoy this video.
   OCR        : None
-  Combined   :  to describe the performance of an algorithm as the amount of data increases. So if you can,
+  Combined   :  I hope you guys enjoy this video.
 
-[00:06:16]
-  Transcript :  give this video a thumbs up, drop a random comment down below, and well, that's Big O notation in
+[00:06:17]
+  Transcript :  Rate, calm, subscribe.
   OCR        : None
-  Combined   :  give this video a thumbs up, drop a random comment down below, and well, that's Big O notation in
+  Combined   :  Rate, calm, subscribe.
 
-[00:06:22]
-  Transcript :  computer science.
+[00:06:18]
+  Transcript :  I'll check you guys later.
   OCR        : None
-  Combined   :  computer science.
+  Combined   :  I'll check you guys later.
+
+[00:06:19]
+  Transcript :  Peace.
+  OCR        : None
+  Combined   :  Peace.
 

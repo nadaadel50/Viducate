@@ -1,68 +1,76 @@
-[0.0 --> 4.7]  Hey, what's going on everybody? It's your bro, hope you're doing well, and in this video I'm going to
-[4.7 --> 12.1]  describe the very basics of Big O notation in, well, computer science. So sit back, relax, and enjoy the show.
-[14.0 --> 19.4]  Oh yeah, Big O notation. So a common phrase used with Big O notation is,
-[19.8 --> 25.7]  how code slows as data grows. It describes the performance of an algorithm as the amount of data
-[25.7 --> 31.6]  increases. And really, this notation is machine independent. What we're really focusing on is the
-[31.6 --> 36.4]  number of steps to complete an algorithm, because some machines are going to run certain algorithms
-[36.4 --> 42.9]  faster than others. And three, we tend to ignore smaller operations. If we had some task that took
-[42.9 --> 48.4]  n plus one, we would just reduce it to just n, because that plus one really isn't going to make
-[48.4 --> 51.4]  So here's a few examples of big O notation.
-[51.4 --> 66.8]  We have O O O and O And N is really just the amount of data that we passing in It a variable like x What we focusing on is the performance of an algorithm as the amount
-[66.8 --> 72.1]  of data increases, and n is a representation of the amount of data that we're passing in.
-[72.3 --> 76.9]  Here's a more concrete example. I have a function named addup. We will add up to a certain number
-[76.9 --> 82.5]  depending on what we pass in as an argument. The for loop within here will iterate once up to
-[82.5 --> 88.9]  whatever number that n is, add i to sum, then return it. What if n was a large number like a
-[88.9 --> 93.0]  million? Well, it's going to take just above a million steps to complete this function.
-[93.5 --> 99.7]  This function is said to have a runtime complexity of O of n, linear time. As the amount of data
-[99.7 --> 106.2]  increases, it's going to increase the amount of steps linearly or proportionally. Now another way
-[106.2 --> 113.3]  which we could write the same function is to take sum equals n times n plus 1 divided by 2.
-[113.5 --> 120.0]  We will get the exact same sum. So if n was, let's say, a million, this is still only going to take a couple seconds.
-[120.0 --> 126.7]  steps. Three steps, not a million steps. So this function is going to have a runtime complexity of
-[126.7 --> 131.1]  O of one. The input size doesn't matter. The amount of data that we have really doesn't matter.
-[131.4 --> 137.1]  It's going to be completed in the same amount of steps. So this function is way better than this
-[137.1 --> 142.8]  previous one. Three steps is better than a million steps. And the reason that this isn't O of three,
-[143.0 --> 147.7]  because this takes three steps, is that we really don't care about smaller operations. In the grand
-[147.7 --> 151.9]  scheme of things, they really won't make much of a difference. So we would just shorten this and say
-[151.9 --> 157.0]  that this is O of 1 constant time. The input size doesn't matter. Here's a graph that I made to
-[157.0 --> 163.5]  represent the different runtime complexities. We have data on the x-axis represented by n. So data
-[163.5 --> 170.4]  will increase as we go more to the right, and we have time on the y-axis. I did add an asterisk next
-[170.4 --> 174.8]  to time because some of these times can vary depending on what machine you're using, so these
-[174.8 --> 186.4]  can vary Another way to look at this is number of steps So as we increase on the y these algorithms are going to perform with increasingly more time They going to get slower So let
-[186.4 --> 192.6]  begin with O of 1 constant time. Anything that has a runtime complexity of O of 1 will take the same
-[192.6 --> 198.0]  amount of time regardless of the data size. A few examples would include the random access of an
-[198.0 --> 203.9]  element within an array and inserting at the beginning of a linked list. So O of 1 is extremely
-[203.9 --> 210.8]  fast. Next we have O of log n, also known as logarithmic time. One example is binary search.
-[210.8 --> 214.7]  We haven't talked about this yet. We'll talk about a few of these algorithms in future videos,
-[214.7 --> 220.9]  but anything that has a runtime complexity of O of log n will actually take, I don't want to say
-[220.9 --> 226.9]  less and less time, but increasingly less time to complete. So as the data size increases,
-[227.4 --> 231.8]  this algorithm is going to be more and more efficient compared to the early stages with a
-[231.8 --> 236.6]  small dataset. O is also known as linear time. As the amount of
-[236.6 --> 239.9]  data increases, the time it takes to complete something will
-[240.0 --> 244.8]  increase proportionally linearly. That would include looping through the elements in an array
-[244.8 --> 251.6]  and searching through a linked list. Next we have O of N log N, also known as quasi-linear time.
-[251.8 --> 256.8]  This would include a quick sort, merge sort, and heap sort. We'll talk about these concepts in
-[256.8 --> 262.3]  future videos. So for the most part, this is very similar to linear time. Unless we're working with
-[262.3 --> 269.4]  a large data set, then anything using O of N log N is going to start to slow down when we work with
-[269.4 --> 275.6]  larger data sets, hence this curve here. Then we have O of n squared, also known as quadratic time.
-[275.8 --> 281.0]  A few examples would include insertion sort, selection sort, and bubble sort. As the amount
-[281.0 --> 286.6]  of data increases, it's going to take increasingly more and more time to complete anything that has a
-[286.6 --> 293.3]  runtime complexity of O of n squared. So just to compare linear time and quadratic time, with linear
-[293.3 --> 306.2]  time if our data set was a thousand if n equals a thousand it going to take a thousand steps they proportional they linear but if we were using quadratic time if n was a thousand then a thousand squared would be a
-[306.2 --> 311.9]  million. So if our data set was a thousand, if we're using quadratic time, it's going to take a million
-[311.9 --> 318.7]  steps then, way more than linear time. So quadratic time is extremely slow with large data sets, but in
-[318.7 --> 323.9]  the case of a small data set, it could actually be faster, as you can see by the graph here. And lastly,
-[323.9 --> 330.2]  we have O of n factorial, also known as factorial time, and one place where this is used is with the
-[330.2 --> 336.2]  traveling salesman problem, which I might discuss in a future video. So this is extremely slow,
-[336.4 --> 341.3]  so if I had to give a letter grade to each of these runtime complexities when working with
-[341.3 --> 347.1]  large data sets with constant time, this would be an A, like an A+. Logarithmic time would be a B,
-[347.1 --> 348.1]  it's pretty good.
-[348.1 --> 350.7]  Linear time is C, it's okay.
-[350.7 --> 354.4]  Quasi-linear time is a D, it's just barely passing.
-[354.4 --> 356.2]  Quadratic time would be an F,
-[356.2 --> 359.1]  and factorial time, well, you get expelled from school.
-[359.1 --> 359.9]  Although,
-[360.0 --> 365.3]  some of these runtime complexities are actually faster when working with a smaller data set,
-[365.3 --> 371.2]  so keep that in mind. Well, that's the very basics of Big O notation. It's notation used
-[371.2 --> 377.0]  to describe the performance of an algorithm as the amount of data increases. So if you can,
-[377.0 --> 382.5]  give this video a thumbs up, drop a random comment down below, and well, that's Big O notation in
-[382.5 --> 384.1]  computer science.
+[0.0 --> 3.8]  What's up guys, today I'm going to go over the extended Euclidean algorithm.
+[4.4 --> 6.3]  So what is the extended Euclidean algorithm?
+[6.8 --> 11.0]  So remember back when the other video when I explained what the Euclidean algorithm does?
+[11.3 --> 16.1]  Euclidean algorithm gets you the greatest common denominator GCD of A and B.
+[16.8 --> 19.2]  Right, given two numbers A and B, it gets you the GCD.
+[20.1 --> 26.6]  Now you could actually represent this GCD as a linear combination of two other numbers of X and Y.
+[26.6 --> 31.1]  The extended Euclidean algorithm is going to be kind of like the Euclidean algorithm,
+[31.2 --> 35.7]  except that instead now we are trying to find the coefficients x and y,
+[36.2 --> 41.4]  such that if we multiply a by x and add it with b times y,
+[41.6 --> 45.0]  we are going to get the GCD of a and b.
+[45.4 --> 47.3]  So basically we're trying to find a coefficient set.
+[47.9 --> 50.9]  If you multiply them and add together, you'll get the GCD.
+[50.9 --> 68.5]  So as an example the GCD of 55 and 80 is equal to 5 So in terms of 55 and 80 five is actually equal to 55 times 3 plus 80 times negative 2 So basically we trying to find the 3 and the negative 2 in this case So guys if you
+[68.5 --> 74.9]  remember the Euclidean algorithm ends with B equal to 0 and A is equal to the GCD of A and B.
+[75.4 --> 81.0]  So let's call the GCD of A and B a variable called G, right? So then we could actually work
+[81.0 --> 89.2]  backwards. Basically, we could say that g times one plus zero times zero is equal to g. In this
+[89.2 --> 96.5]  case, a is going to equal to g, x is going to equal to one, y is going to equal to zero, b is
+[96.5 --> 103.0]  going to equal to zero, because that's the end of the algorithm. And remember that g is the gcd of a
+[103.0 --> 109.2]  and b. So now all we have to worry about is we have to go back up and keep track how x and y
+[109.2 --> 114.2]  changes whenever we transition from a b to b a mod b,
+[115.1 --> 117.7]  just like the Euclidean algorithm.
+[117.7 --> 119.9]  So let's assume that we already found the new coefficient
+[120.0 --> 126.9]  coefficients x1 and y1 when we transition a b to b a mod b and let's just substitute that into the
+[126.9 --> 134.5]  equation. So substituting the values into the equation we get b times x1 plus a mod b times y1
+[134.5 --> 141.2]  is going to equal to g. We're basically trying to get this equation back to the original equation
+[141.2 --> 151.2]  of x and y of a times x plus b times y is equal to g. Since we know that the definition of modulus
+[151.2 --> 158.9]  of a mod b is equal to a minus a divided by b floor times b we are going to use this to substitute
+[158.9 --> 167.5]  of back into the equation of a mod b. So in the original equation the gcd is equal to b times x1
+[167.5 --> 170.9]  plus a mod b times y1, right?
+[170.9 --> 174.1]  Now after substituting the definition of a mod b
+[174.1 --> 186.9]  into a mod b this is gonna equal to b times x1 plus parentheses A minus A divided by B floor times by B times by Y1
+[187.5 --> 191.1]  Okay, so now if we were to FOIL and rearrange the terms,
+[191.1 --> 202.2]  we get G is going to equal to A times Y1 plus B times parentheses X1 minus Y1 times A divided by B floor.
+[202.2 --> 207.1]  So now let's compare this equation with ax plus by.
+[207.8 --> 210.1]  So if we were to compare the new equation
+[210.1 --> 212.8]  of this new equation with our old equation,
+[213.2 --> 215.4]  we would see that the x,
+[216.1 --> 218.9]  this x is actually gonna equal to y1.
+[219.3 --> 220.8]  This x is gonna equal to y1,
+[220.9 --> 226.3]  and this y is gonna equal to this x1 minus y
+[226.3 --> 230.3]  times a over b floor, okay?
+[230.3 --> 233.4]  So this x is going to correspond to this y
+[233.4 --> 237.8]  and this y actually corresponds to this
+[237.8 --> 239.9]  if you look at the equations.
+[240.0 --> 242.4]  because of the coefficients a and a are the same
+[242.4 --> 244.8]  and b and b are the same.
+[244.8 --> 247.3]  Knowing this, we get this equation.
+[247.3 --> 249.4]  x is gonna equal to y1
+[249.4 --> 252.6]  and y is gonna equal to x1 minus y1
+[252.6 --> 255.3]  times floor of a divided by b.
+[255.3 --> 257.8]  Here is the implementation code.
+[257.8 --> 262.9]  Basically, when b is equal to zero,
+[262.9 --> 265.9]  x is equal to one and y is equal to zero
+[265.9 --> 267.1]  like we said before.
+[267.1 --> 270.0]  And at this point, a is gonna equal to the GCD,
+[270.0 --> 271.2]  so we just return A.
+[272.4 --> 276.2]  Otherwise, we are going to create the two new variables,
+[276.5 --> 277.8]  x1 and y1.
+[278.8 --> 281.7]  Then what we're going to do is we are going to get the GCD
+[281.7 --> 286.1]  of the values, again, recursively calling the function,
+[286.3 --> 291.1]  and pass in x1 and y1 by reference as x and y.
+[292.3 --> 294.9]  So what we're going to get here is we are going to get
+[294.9 --> 306.7]  int D is going to equal to GCD of now A transitioned to b right So now gcd of b and now b transition to a mod by b
+[307.0 --> 313.4]  So we have b as a mod by b recursively calling in this function.
+[313.9 --> 323.0]  Now we pass in x1 and y1 by reference so that this gets changed during the recursive call when we return out.
+[323.0 --> 331.8]  okay so now once we have the gcd of these new values of b and a mod by b we are going to set
+[331.8 --> 338.2]  we're going to change the values of x that was passed in is going to equal to y1 which is the
+[338.2 --> 348.1]  values that we returned earlier and y is going to equal to x1 minus y1 times floor of a divided by b
+[348.1 --> 352.5]  and then after that we just return d which is the gcd.
+[352.5 --> 359.9]  So at the end of each recursive call x and y gets modified and that x and y
+[360.0 --> 367.6]  gets modified and x1 and y1 are the new values returned when we have b and a mod by b.
+[369.0 --> 374.9]  And that basically gets our x and y function coefficients for the Euclidean algorithm.
+[375.3 --> 376.5]  I hope you guys enjoy this video.
+[377.1 --> 377.7]  Rate, calm, subscribe.
+[378.0 --> 379.1]  I'll check you guys later.
+[379.2 --> 379.5]  Peace.

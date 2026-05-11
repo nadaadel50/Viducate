@@ -18,16 +18,12 @@ export function LearningSessionProvider({
     return saved ? Number(saved) : 0;
   });
 
- 
-
   const [selectedTopic, setSelectedTopic] = useState<TopicResponse | null>(
     () => {
       const saved = sessionStorage.getItem(STORAGE_KEYS.selectedTopic);
       return saved ? JSON.parse(saved) : null;
     },
   );
-   
-
 
   useEffect(() => {
     sessionStorage.setItem(STORAGE_KEYS.currentTime, String(currentTime));
@@ -55,36 +51,38 @@ export function LearningSessionProvider({
     }
     setVideoIdState(id);
   };
-  const [completedTopicIds, setCompletedTopicIds] = useState<Set<number>>(new Set());
 
-  const toggleTopicComplete = (topicId: number) => {
-  setCompletedTopicIds(prev => {
-    const updated = new Set(prev);
-    if (updated.has(topicId)) {
-      updated.delete(topicId); 
-    } else {
-      updated.add(topicId);
-    }
-    return updated;
+  const [videoTitle, setVideoTitleState] = useState<string | null>(() => {
+    const stored = sessionStorage.getItem(STORAGE_KEYS.title);
+    return stored ? stored : null;
   });
-};
 
+  const setVideoTitle = (title: string | null) => {
+    if (title === null) {
+      sessionStorage.removeItem(STORAGE_KEYS.title);
+    } else {
+      sessionStorage.setItem(STORAGE_KEYS.title, String(title));
+    }
+    setVideoTitleState(title);
+  };
 
+  const [topics, setTopicsState] = useState<TopicResponse[] | null>(() => {
+    const saved = sessionStorage.getItem(STORAGE_KEYS.topics);
+    return saved ? JSON.parse(saved) : null;
+  });
 
-// const handleNextVideo = () => {
-//   if (!selectedTopic) return;
+  useEffect(() => {
+    if (topics) {
+      sessionStorage.setItem(STORAGE_KEYS.topics, JSON.stringify(topics));
+    }
+  }, [topics]);
 
-//   const currentIndex =selectedTopic.segment_id;
-
-//   const nextTopic = ;
-
-//   if (nextTopic) {
-//     setSelectedTopic(nextTopic);
-//     setSeekTo(nextTopic.start_time);  
-//   }
-// };
-
-
+  const setTopics = (topics: TopicResponse[] | null) => {
+    if (topics === null) {
+      sessionStorage.removeItem(STORAGE_KEYS.topics);
+    }
+    setTopicsState(topics);
+  };
 
   return (
     <LearningSessionContext.Provider
@@ -97,11 +95,10 @@ export function LearningSessionProvider({
         setCurrentTime,
         seekTo,
         setSeekTo,
-        completedTopicIds,
-        toggleTopicComplete,
-        // topics,
-        // setTopics
-        
+        videoTitle,
+        setVideoTitle,
+        topics,
+        setTopics,
       }}
     >
       {children}

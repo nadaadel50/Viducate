@@ -11,7 +11,7 @@ import { useLearningSession } from "../../../../core/hooks/useLearningContent";
 import { useMainBtn } from "../hook/use_main_btn";
 
 export function MainPage() {
-  const { videoId, selectedTopic, setSelectedTopic  } = useLearningSession();
+  const { videoId, selectedTopic, setSelectedTopic,setTopics  } = useLearningSession();
   
 
   const { data: data, isLoading, error } = useVideoData();
@@ -32,11 +32,14 @@ export function MainPage() {
   }, [videoId]);
 
   useEffect(() => {
-    if (data && data.topics.length > 0 && !selectedTopic) {
+    if (!data || data.topics.length === 0) return;
+
+    setTopics(data.topics);
+
+    if (!selectedTopic) {
       setSelectedTopic(data.topics[0]);
-    
     }
-  }, [data?.topics, selectedTopic, setSelectedTopic]);
+  }, [data]); 
 
   const handleGoToCustomize = () => {
     setIsInitOpen(false);
