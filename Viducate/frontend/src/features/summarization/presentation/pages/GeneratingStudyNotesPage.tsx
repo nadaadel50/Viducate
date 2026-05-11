@@ -1,5 +1,5 @@
 import { BookOpen } from 'lucide-react';
-import { LoadingScreen } from '../componants/LoadingScreen';
+import { LoadingScreen } from '../../../../core/componants/LoadingScreen';
 import { COLORS } from '../../../../core/constants/colors';
 
 export function GeneratingStudyNotesPage() {

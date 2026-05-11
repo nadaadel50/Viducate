@@ -31,13 +31,14 @@ export function AppRoutes() {
 
         <Route path="/test-modals" element={<TestModalsPage />} /> /* for
         <Route path="/generating-summary" element={<GeneratingSummaryPage />} />
-        <Route path="/summary" element={<SummaryPage />} />
+        
         <Route path="/study-notes" element={<StudyNotesPage />} />
     <Route element={<ProtectedRoute />}>
           {" "}
           <Route path="/UploadVideoPage" element={<UploadVideoPage />} />
           <Route path="/ProcessingPage" element={<ProcessingPage />} />
           <Route path="/quiz/:segmentId" element={<QuizPage />} />
+          <Route path="/summary/:segmentId" element={<SummaryPage />} />
           {/* <Route path="/WatchVideo" element={<MainPage />} />
           <Route path="/flashcards/:segmentId" element={<FlashCards />} /> */}
        

@@ -30,6 +30,18 @@ export function ContentLearningCard({
   const [isQuizModalOpen, setIsQuizModalOpen] = useState(false);
   const [isSummaryModalOpen, setIsSummaryModalOpen] = useState(false);
   const isDue = isDueForSegment(cardInfo.segment_id);
+
+  const handleSummarySelect = (style: "summary" | "study_notes") => {
+    if (style === "summary") {
+      navigate(`/summary/${cardInfo.segment_id}`, {
+        state: { videoId, segmentId: cardInfo.segment_id },
+      });
+    } else {
+      navigate(`/study-notes/${cardInfo.segment_id}`, {
+        state: { videoId, segmentId: cardInfo.segment_id },
+      });
+    }
+  };
  
   return (
     <>
@@ -117,6 +129,7 @@ export function ContentLearningCard({
       <SummaryStyleModal 
         isOpen={isSummaryModalOpen} 
         onClose={() => setIsSummaryModalOpen(false)} 
+        onSelect={handleSummarySelect}
       />
     </>
   );
