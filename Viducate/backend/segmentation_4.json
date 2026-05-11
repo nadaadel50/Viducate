@@ -1,62 +1,155 @@
 {
-  "total_segments": 2,
+  "total_segments": 6,
   "segments": [
     {
       "segment_number": 1,
       "start_time": "00:00:00",
-      "end_time": "00:01:22",
-      "main_topic": "Introduction to Big O Notation",
-      "title": "Basics of Big O Notation in Computer Science",
+      "end_time": "00:01:45",
+      "main_topic": "Introduction to GCD",
+      "title": "Greatest Common Divisor (GCD) Explanation",
       "sub_topics": [
         {
-          "name": "Introduction to the Video",
+          "name": "Definition of GCD",
           "start_time": "00:00:00",
-          "end_time": "00:00:31",
-          "description": "Hey, what's going on everybody? It's your bro, hope you're doing well, and in this video I'm going to describe the very basics of Big O notation in, well, computer science. So sit back, relax, and enjoy the show. Oh yeah, Big O notation."
+          "end_time": "00:00:40",
+          "description": "ged - greatest common duisor | -largest num that divides | both | a and b | -if a and b aie zero, undkeny | if one of numbers aicothernumber What's up guys today we are going to go over the Euclidean algorithm so sometimes you need to find the greatest common divisor of a tune of two numbers and what is the greatest common divisor it's the GCD all right what is the GCD it's basically the largest not possible number that divides both a and b right and when I say a and b it's just like both of your two numbers so this is your a is your b right so the gcd of these two numbers a and b is just the largest possible number that divides both of them right so that you could divide both of them and it'd be fine"
         },
         {
-          "name": "Definition of Big O Notation",
-          "start_time": "00:00:31",
-          "end_time": "00:01:22",
-          "description": "So a common phrase used with Big O notation is, how code slows as data grows. It describes the performance of an algorithm as the amount of data increases. And really, this notation is machine independent. What we're really focusing on is the number of steps to complete an algorithm, because some machines are going to run certain algorithms faster than others. And three, we tend to ignore smaller operations. If we had some task that took n plus one, we would just reduce it to just n, because that plus one really isn't going to make"
+          "name": "GCD when A or B is Zero",
+          "start_time": "00:01:12",
+          "end_time": "00:01:45",
+          "description": "So if A and B are zero, so like if this number is zero and this number is zero, right, the GCD of zero and zero is undefined, okay, because, yeah, zero, zero, there's really no other way, so that's why it's undefined. If one of the values is 0, then it's the other number. So like if A is 0, then the GCD of 0 and B, it would just be B, right? If B is 0, then the GCD of A and 0, B being 0, is going to be A, right?"
         }
       ],
       "key_points": [
-        "Big O notation describes the performance of an algorithm",
-        "It is machine independent",
-        "We ignore smaller operations"
+        "GCD is the largest number that divides both A and B",
+        "GCD of zero and zero is undefined"
       ]
     },
     {
       "segment_number": 2,
-      "start_time": "00:01:22",
-      "end_time": "00:06:22",
-      "main_topic": "Examples and Explaining Big O Notation",
-      "title": "Understanding Big O Notation with Examples",
+      "start_time": "00:01:45",
+      "end_time": "00:04:10",
+      "main_topic": "Euclidean Algorithm",
+      "title": "Introduction to the Euclidean Algorithm",
       "sub_topics": [
         {
-          "name": "Basic Example of Big O Notation",
-          "start_time": "00:01:22",
-          "end_time": "00:01:53",
-          "description": "Here's a few examples of big O notation. We have O O O and O And N is really just the amount of data that we passing in It a variable like x What we focusing on is the performance of an algorithm as the amount of data increases, and n is a representation of the amount of data that we're passing in. Here's a more concrete example. I have a function named addup."
+          "name": "Introduction to the Euclidean Algorithm",
+          "start_time": "00:01:45",
+          "end_time": "00:02:00",
+          "description": "And now we're going to talk about the Euclidean algorithm. Okay, so the Euclidean algorithm is basically an algorithm ged -greatest common divisor | -largest num that divdes | both a and b | gcd a,b | -ifa | p are zero | Undee | if one of numbers | aicothernumber that allows you to find the greatest common divisor of A and B"
         },
         {
-          "name": "Explanation of Different Runtime Complexities",
-          "start_time": "00:01:53",
-          "end_time": "00:05:23",
-          "description": "This function is said to have a runtime complexity of O of n, linear time. As the amount of data increases, it's going to increase the amount of steps linearly or proportionally. Now another way which we could write the same function is to take sum equals n times n plus 1 divided by 2. We will get the exact same sum. So if n was, let's say, a million, this is still only going to take a couple seconds. steps. Three steps, not a million steps. So this function is going to have a runtime complexity of O of one. The input size doesn't matter. The amount of data that we have really doesn't matter. It's going to be completed in the same amount of steps. So this function is way better than this previous one."
-        },
-        {
-          "name": "Graphical Representation and Comparison of Runtime Complexities",
-          "start_time": "00:05:23",
-          "end_time": "00:06:22",
-          "description": "Here's a graph that I made to represent the different runtime complexities. We have data on the x-axis represented by n. So data will increase as we go more to the right, and we have time on the y-axis. I did add an asterisk next to time because some of these times can vary depending on what machine you're using, so these can vary Another way to look at this is number of steps So as we increase on the y these algorithms are going to perform with increasingly more time They going to get slower So let begin with O of 1 constant time."
+          "name": "Time Complexity of the Euclidean Algorithm",
+          "start_time": "00:02:00",
+          "end_time": "00:02:43",
+          "description": "in log of minimum of A, B time. So basically, Euclidean algori thm | find god of a,b in | O logmina,b time | a if b | gcda,b | gcdb, a mad b Basically, what it means is that if there's like, it would just be the, it would find the time, the time it would take to compute the greatest common divisor of A and B is going to be the smallest number of A and B, the small number of A and B."
         }
       ],
       "key_points": [
-        "O(1) is constant time",
-        "O(log n) is logarithmic time",
-        "O(n) is linear time"
+        "The Euclidean algorithm finds the GCD of A and B in O(log min(A, B)) time"
+      ]
+    },
+    {
+      "segment_number": 3,
+      "start_time": "00:04:10",
+      "end_time": "00:11:16",
+      "main_topic": "Proof of Correctness",
+      "title": "Proof of Correctness of the Euclidean Algorithm",
+      "sub_topics": [
+        {
+          "name": "Introduction to the Proof",
+          "start_time": "00:04:10",
+          "end_time": "00:06:28",
+          "description": "Okay, guys, so to do the Euclidean algorithm, what you're going to do is let's write the function integer GCD, integer A, integer B, these are the two parameters that you want to find. So what you're going to do is you're going to first check if B is equal to zero, then you just return A, because that's just the Euclidean algorithm. Otherwise, you return the GCD of B, and then you're going to take the remainder of A divided by B."
+        },
+        {
+          "name": "Proof of the Euclidean Algorithm",
+          "start_time": "00:06:28",
+          "end_time": "00:11:16",
+          "description": "So why this actually works So basically we have to show that the greatest common divisor between a and b is equal to the greatest common divisor of b and um mod of a mod b right when you take the remainder of a mod b when you take the remainder of a and b that's equal the left side equals the right side we have to show this works for all the values of a greater than equal to zero and b is greater than zero so this that's what um we need to show this proof of correctness why this works"
+        }
+      ],
+      "key_points": [
+        "The GCD of A and B is equal to the GCD of B and A mod B"
+      ]
+    },
+    {
+      "segment_number": 4,
+      "start_time": "00:11:21",
+      "end_time": "00:12:37",
+      "main_topic": "Divisibility and Greatest Common Divisor",
+      "title": "Understanding Divisibility and GCD",
+      "sub_topics": [
+        {
+          "name": "Introduction to Divisibility",
+          "start_time": "00:11:21",
+          "end_time": "00:11:49",
+          "description": "value of A mod by B, that D must be divisible by A mod by B at this case because we know, based on this value, how divisibility works from here, A is just subtracted by this value times by this. So we know that D must be divisible by A mod by B. So because we know that D is the greatest common divisor, is divisible by A mod by B, so it basically shows that D is divisible by B -9GT8OM | db and d a b | Theoran: If Pla and p I r | then p1gcdcg, r | Type lave to seiesh and D is divisible by A mod by B."
+        },
+        {
+          "name": "Theorem on Divisibility",
+          "start_time": "00:11:49",
+          "end_time": "00:12:37",
+          "description": "So there's a theorem in math. it's kind of like the transitive property it actually makes sense though if you think about it so if you take, this is the theorem so if you take a number and it's divisible by another number and you take that same number, and it's divisible by another number, say it's R, then this number has to be divisible by the greatest common divisor of both the two numbers. If you think about it logically, it makes sense."
+        }
+      ],
+      "key_points": [
+        "D is divisible by A mod by B",
+        "Theorem on divisibility",
+        "GCD of two numbers"
+      ]
+    },
+    {
+      "segment_number": 5,
+      "start_time": "00:12:37",
+      "end_time": "00:13:41",
+      "main_topic": "GCD of A and B",
+      "title": "Understanding GCD of A and B",
+      "sub_topics": [
+        {
+          "name": "GCD of B and A mod by B",
+          "start_time": "00:12:37",
+          "end_time": "00:13:13",
+          "description": "this is like a theorem so using this theorem you could say that because D is divisible by B and D is divisible by A mod by B this means that D is divisible by the GCD of B and A mod by B Okay So that what this means That what this means"
+        },
+        {
+          "name": "Equation of GCD",
+          "start_time": "00:13:13",
+          "end_time": "00:13:41",
+          "description": "means that if you substitute back what our D was originally, it is equal to the GCD of A and B, d b and d ab | Theoran: If Pla and PIr | d gcdb, a bged 9b | gcd b,ab | Type bave to seierits this GCD of A and B is divisible by the GCD of B and A mod by B."
+        }
+      ],
+      "key_points": [
+        "GCD of B and A mod by B",
+        "Equation of GCD",
+        "D is equal to GCD of A and B"
+      ]
+    },
+    {
+      "segment_number": 6,
+      "start_time": "00:13:41",
+      "end_time": "00:14:33",
+      "main_topic": "Least Common Multiple",
+      "title": "Understanding Least Common Multiple",
+      "sub_topics": [
+        {
+          "name": "Introduction to LCM",
+          "start_time": "00:13:41",
+          "end_time": "00:14:09",
+          "description": "So there's also another thing that you can know about, which is the least common multiple. YOPeMOR | Type have to seamt The least common multiple is just if you take the multiplication of the two numbers and you divide it by the greatest common divisor of the two numbers, Cma,b | Type here to sesmih | M4PM you're going to get the least common multiple, right?"
+        },
+        {
+          "name": "Coding LCM",
+          "start_time": "00:14:09",
+          "end_time": "00:14:33",
+          "description": "And it makes sense, right? If you take two numbers, multiply them together, and you divide it by the greatest common number that is divisible by both of the two numbers, you're going to get the least common multiple. That's just how it works. It's like the definition of the least common multiple. But yeah, we could also even code this right now, actually. m a, b | gcda,5"
+        }
+      ],
+      "key_points": [
+        "Least Common Multiple",
+        "LCM formula",
+        "Coding LCM"
       ]
     }
   ]

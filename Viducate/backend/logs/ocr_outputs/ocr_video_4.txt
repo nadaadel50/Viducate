@@ -1,5 +1,26 @@
 # OCR Output — video_id=4
 # Language: en
-# Total segments: 1
+# Total segments: 22
 
-[00:00:00] 1322-34
+[00:00:00] ged - greatest common duisor | -largest num that divides | both | a and b | -if a and b aie zero, undkeny | if one of numbers aicOothernumber
+[00:01:49] ged -greatest common divisor | -largest num that divdes | both a and b | gcd a,b | -ifa | p are zero | Undee | if one of numbers | aicothernumber
+[00:01:59] Euclidean algori thm | find god of a,b in | O logmina,b time | a if b | gcda,b | gcdb, a mad b
+[00:04:10] BOIT | of Lise Pes
+[00:05:06] PROBCT | Type lere to serwc
+[00:05:49] POICT | TROOWY | Type laere to seieih
+[00:06:14] MORCT | PTPHOONS | Iach aing | st piciet , lst io t | Euclidean algor thm | find ged of a,b in | Ologmin a,b time | gcdb,amalb | Tye hese to sesns | MAPM
+[00:06:24] QGQTOOMO | Euclidean algorithm | -find gcd of a,b in | Ologmina,btimc | S a if b , | gcd b, a mad b | Type lave to seraech | NAPM
+[00:06:39] POBCT | uclidcan | algonthm | find gcd of a,b in | O logmn a, b timc | Type lese to sesacy
+[00:06:49] ASEYT | STPOON | Type here to sesechs
+[00:06:59] Proof | of correctness | Show that | gcd a,bgcd b, a mad b | for all a30,b0
+[00:07:40] let dgcda,b | d a and db
+[00:08:06] dgcda,b | a ba-bL
+[00:10:47] found | down | round down
+[00:10:57] let dgcd ab | dla and db | ab  α-bL | -404 | d1ab | p tye hae to sah | 20400
+[00:11:42] -9GT8OM | db and d a b | Theoran: If Pla and p I r | then p1gcdcg, r | Type lave to seiesh
+[00:13:03] and a  b | a  b | L rand | dgcta- gcdab | gcdb,a9b | Type lae to sea
+[00:13:13] d b and d ab | Theoran: If Pla and PIr | d gcdb, a bged 9b | gcd b,ab | Type bave to seierits
+[00:13:36] YOPeMOR | Type have to seamt
+[00:13:46] Cma,b | Type here to sesmih | M4PM
+[00:14:18] m a, b | gcda,5
+[00:14:28] PORCT | AREIT | Type laeve to sersnch

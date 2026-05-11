@@ -4,7 +4,7 @@ import type { ChatSession } from "../../domain/entity/chat_session";
 type RecentChatsSidebarProps = {
   handleOpenSession: () => void;
   handleClearMessages:()=>void;
-  sessions:ChatSession[];
+  //sessions:ChatSession[];
 };
 
 export function RecentChatsSidebar(props: RecentChatsSidebarProps) {

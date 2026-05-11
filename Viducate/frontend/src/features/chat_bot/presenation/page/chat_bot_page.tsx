@@ -20,7 +20,7 @@ export function ChatBotPage() {
     openRecentChats,
     handleOpenRecentChats,
     clearMessages,
-    sessions
+    //sessions
   } = useChatMessages(open);
 
   return (
@@ -50,7 +50,7 @@ export function ChatBotPage() {
       ${openRecentChats ? "translate-x-0" : "translate-x-full"}
     `}
   >
-    <RecentChatsSidebar handleOpenSession={ handleOpenRecentChats} handleClearMessages={clearMessages} sessions={sessions} />
+    <RecentChatsSidebar handleOpenSession={ handleOpenRecentChats} handleClearMessages={clearMessages}  />
   </div>
       
 
