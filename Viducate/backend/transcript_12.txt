@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 [0.0 --> 4.7]  Hey, what's going on everybody? It's your bro, hope you're doing well, and in this video I'm going to
 [4.7 --> 12.1]  describe the very basics of Big O notation in, well, computer science. So sit back, relax, and enjoy the show.
 [14.0 --> 19.4]  Oh yeah, Big O notation. So a common phrase used with Big O notation is,
@@ -66,3 +67,29 @@
 [371.2 --> 377.0]  to describe the performance of an algorithm as the amount of data increases. So if you can,
 [377.0 --> 382.5]  give this video a thumbs up, drop a random comment down below, and well, that's Big O notation in
 [382.5 --> 384.1]  computer science.
+=======
+[0.0 --> 7.0]  In the morning everyone, we have a presentation about environmental responsibilities.
+[7.0 --> 15.0]  Introduction, environmental and moral responsibilities to protect environmental.
+[15.0 --> 23.0]  Save the police, environmental must provide a safe, clean and hazard fee environment.
+[23.0 --> 30.0]  This assessment, we must identify and manage risks in the workplace.
+[30.0 --> 39.0]  Training and guidance, employers should be training employees about workplace safety procedures.
+[39.0 --> 48.0]  Detective movement, employers must provide PPE such as helmets, gloves and masks we need.
+[48.0 --> 67.0]  The people should pay fairly weight according to labor laws Working hours the girls must respect working hours and overtime payers
+[67.0 --> 71.0]  people of opportunities
+[71.0 --> 75.0]  they should ensure fairness and avoid discrimination
+[75.0 --> 79.0]  or harassment
+[79.0 --> 83.0]  health support, face adequate medical homes
+[83.0 --> 87.0]  or emergency living as a road should be provided.
+[89.0 --> 92.0]  Insurance and compensation.
+[92.0 --> 98.0]  Employers must ensure employees can provide compensation in case of injury.
+[99.0 --> 101.0]  Respect and rights.
+[101.0 --> 106.0]  Employers must respect employee rights and feel their failure.
+[106.0 --> 108.0]  Communication.
+[108.0 --> 113.0]  Open communication about safety and global-based issues is essential.
+[115.0 --> 117.0]  Sustainability.
+[117.0 --> 119.9]  Players should encourage the community.
+[120.0 --> 127.0]  legal practices in the world and peace. Employee growth. Employers should provide opportunities
+[127.0 --> 136.0]  for skill development and career growth. In the end, employer and small societies build
+[136.0 --> 147.0]  trust, safety and productivity. Team members are Mohammed Elf, Mohammed Shambi and Naadi
+[147.0 --> 148.5]  Thank you.
+>>>>>>> e2a05ba1a607defa5750b8a88a717c1b116d66b1

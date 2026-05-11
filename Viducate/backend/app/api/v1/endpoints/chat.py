@@ -7,6 +7,7 @@ from app.dependencies import get_db
 
 from app.schemas.chat_schema import (
     AskResponse,
+    SessionListResponse,
     SessionResponse,
     ChatRequest,
     ChatResponse,
@@ -72,3 +73,23 @@ def get_session_messages(
         ))
     
     return result
+
+
+@router.get("/videos/{video_id}/sessions", response_model=list[SessionListResponse])
+def get_video_sessions(
+    video_id: int,
+    db: Session = Depends(get_db),
+    current_user=Depends(get_current_user)
+):
+    repo = ChatRepository(db)
+    sessions = repo.get_video_sessions(video_id)
+
+    return [
+        SessionListResponse(
+            id=s.session_id,
+            title=s.title,
+            created_at=s.created_at,
+            last_message_at=repo.get_last_message_time(s.session_id)
+        )
+        for s in sessions
+    ]

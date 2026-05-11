@@ -47,3 +47,13 @@ class ChatResponse(BaseModel):
 
     class Config:
         from_attributes = True
+
+
+class SessionListResponse(BaseModel):
+    id: int
+    title: str | None
+    created_at: datetime.datetime
+    last_message_at: datetime.datetime | None
+
+    class Config:
+        from_attributes = True
