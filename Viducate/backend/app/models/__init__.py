@@ -18,10 +18,12 @@ from .flashcard import Flashcard
 from .quiz import Quiz, QuizQuestion
 from .chat_session import ChatSession  
 from .chat_message import ChatMessage  
+from .mindmap import Mindmap
+
 __all__ = [
     "Base", "User", "Settings", "Video","TopicSegment", "Subtopic", 
     "Keypoint", "VideoSummary", "SegmentSummary", "ContentPreferences", "Flashcard", "Quiz", "QuizQuestion"
-    ,"ChatSession","ChatMessage"
+    ,"ChatSession","ChatMessage", "Mindmap"
 ]
 
 # "UserAnalytics","Slide",
