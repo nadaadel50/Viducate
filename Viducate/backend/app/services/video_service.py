@@ -131,6 +131,7 @@ class VideoService:
 
         return {
             "video_id": video.vid,
+            "title": video.title,
             "processing_status": video.processing_status,
             "message": "Upload confirmed. Processing has started.",
         }

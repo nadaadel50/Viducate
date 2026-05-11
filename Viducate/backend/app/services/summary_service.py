@@ -5,8 +5,13 @@ from app.models.video_summary import VideoSummary
 from app.models.segment_summary import SegmentSummary
 from app.models.topic_segment import TopicSegment
 from app.models.video import Video
-from app.ml.processors.summarization_processor import process_summaries
 from app.models.content_preferences import ContentPreferences
+from app.ml.processors.summarization_processor import process_video_summary, process_all_segment_summaries, process_single_segment_summary
+from app.models.content_preferences import ContentPreferences
+from app.models.subtopics import Subtopic
+from sqlalchemy.orm import joinedload
+from app.ml.engines.summarization_engine import summarize_segment
+import json
 
 logger = logging.getLogger(__name__)
 
@@ -39,36 +44,34 @@ class SummaryService:
     def get_or_generate_video_summary(self, video_id: int, user_id: int) -> dict:
         video = self._check_video_belongs_to_user(video_id, user_id)
 
+        lang = self._resolve_language(user_id, video.language)
         existing = self.db.query(VideoSummary).filter(
             VideoSummary.video_id == video_id
         ).first()
 
-        if existing:
-            logger.info(f"Returning cached video summary for video_id={video_id}")
+        if existing and existing.language == lang:
+            logger.info(f"[SummaryService] Cached video summary for {video_id}")
             return {
                 "video_id": video_id,
+                "title": video.title,
                 "summary": existing.content,
                 "language": existing.language,
                 "created_at": existing.created_at,
                 "cached": True
             }
 
-        # Generate
-        lang = self._resolve_language(user_id, video.language)
         logger.info(f"Generating new summary for video_id={video_id}")
-        process_summaries(self.db, video_id, lang)
-
-        new_summary = self.db.query(VideoSummary).filter(
-            VideoSummary.video_id == video_id
-        ).first()
+        video_summary = process_video_summary(self.db, video_id, lang)
 
         return {
             "video_id": video_id,
-            "summary": new_summary.content,
-            "language": new_summary.language,
-            "created_at": new_summary.created_at,
+            "title": video.title,
+            "summary": video_summary.content,
+            "language": video_summary.language,
+            "created_at": video_summary.created_at,
             "cached": False
         }
+
 
     def get_or_generate_segment_summaries(self, video_id: int, user_id: int) -> list:
         video = self._check_video_belongs_to_user(video_id, user_id)
@@ -83,17 +86,9 @@ class SummaryService:
         if not segments:
             raise HTTPException(status_code=status.HTTP_404_NOT_FOUND, detail="No segments found for this video")
 
-        # Check if summaries already exist
-        first_summary = self.db.query(SegmentSummary).filter(
-            SegmentSummary.segment_id == segments[0].segment_id
-        ).first()
+        lang = self._resolve_language(user_id, video.language)
+        process_all_segment_summaries(self.db, video_id, lang)
 
-        if not first_summary:
-            logger.info(f"Generating segment summaries for video_id={video_id}")
-            lang = self._resolve_language(user_id, video.language)
-            process_summaries(self.db, video_id, lang)
-
-        # Fetch and return all
         result = []
         for seg in segments:
             summary = self.db.query(SegmentSummary).filter(
@@ -107,6 +102,40 @@ class SummaryService:
                 "end_time": seg.end_time,
                 "summary": summary.content if summary else None,
                 "language": summary.language if summary else None,
+                "generation_failed": summary is None,
             })
 
         return result
+    
+    def get_or_generate_single_segment_summary(self, video_id: int, segment_id: int, user_id: int) -> dict:
+        video = self._check_video_belongs_to_user(video_id, user_id)
+
+        segment = self.db.query(TopicSegment).filter(
+            TopicSegment.segment_id == segment_id,
+            TopicSegment.vid_id == video_id
+        ).first()
+        if not segment:
+            raise HTTPException(status_code=status.HTTP_404_NOT_FOUND, detail="No segments found for this video")
+
+        lang = self._resolve_language(user_id, video.language)
+
+        summary = process_single_segment_summary(self.db, video_id, segment_id, lang)
+
+        if summary is None:
+            raise HTTPException(
+                status_code=status.HTTP_500_INTERNAL_SERVER_ERROR,
+                detail="Summary generation failed. Please try again.",
+            )
+
+        return {
+            "segment_id": segment_id,
+            "segment_number": segment.segment_number,
+            "title": segment.title,
+            "start_time": segment.start_time,
+            "end_time": segment.end_time,
+            "summary": summary.content,
+            "language": summary.language,
+            "cached": summary.created_at is not None,
+        }
+        
+
