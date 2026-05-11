@@ -1,4 +1,3 @@
-import { useState } from 'react';
 import { useMutation } from '@tanstack/react-query';
 import { generateQuizUseCase } from '../../../../core/di/quiz_container';
 import { QuizRequest } from '../../domain/entity/quiz_request';
@@ -11,31 +10,47 @@ interface UseGenerateQuizOptions {
   videoId: number;
   segmentId?: number;
   mode: QuizMode;
-  onSuccess: (quiz: QuizEntity) => void;
+  difficulty: Difficulty;
 }
 
-export const useGenerateQuiz = ({ videoId, segmentId, mode, onSuccess }: UseGenerateQuizOptions) => {
-  const [difficulty, setDifficulty] = useState<Difficulty>('medium');
+export const useGenerateQuiz = ({
+  videoId,
+  segmentId,
+  mode,
+  difficulty,
+}: UseGenerateQuizOptions) => {
 
-  const { mutate, isPending, isError, error } = useMutation({
-    mutationFn: async (selectedDifficulty: Difficulty) => {
-      const request = new QuizRequest(videoId, selectedDifficulty, segmentId);
+  const mutation = useMutation({
+    mutationFn: async (): Promise<QuizEntity> => {
+
+      const request = new QuizRequest(
+        videoId,
+        difficulty,
+        segmentId
+      );
+
       const result =
         mode === 'segment'
           ? await generateQuizUseCase.generateSegmentQuiz(request)
           : await generateQuizUseCase.generateVideoQuiz(request);
 
-      if (!result.success || !result.data) throw new Error(result.error ?? 'Failed to generate quiz');
+      if (!result.success || !result.data) {
+        throw new Error(result.error || 'Failed to generate quiz');
+      }
+
       return result.data;
     },
-    onSuccess,
   });
 
-  const generate = (selectedDifficulty?: Difficulty) => {
-    const d = selectedDifficulty ?? difficulty;
-    setDifficulty(d);
-    mutate(d);
+  const generate = () => {
+    mutation.mutate();
   };
 
-  return { generate, isPending, isError, error, difficulty, setDifficulty };
+  return {
+    quiz: mutation.data ?? null,
+    isPending: mutation.isPending,
+    isError: mutation.isError,
+    error: mutation.error,
+    generate,
+  };
 };

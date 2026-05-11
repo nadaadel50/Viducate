@@ -64,6 +64,7 @@ export class QuizRepoImp implements QuizRepository {
       request.segmentId!,
       { difficulty: request.difficulty },
     );
+     console.log("SEGMENT QUIZ RESULT:", result);
 
     if (!result.success) return result;
 

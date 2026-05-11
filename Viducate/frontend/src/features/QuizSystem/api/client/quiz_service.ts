@@ -1,11 +1,30 @@
 import { apiClient } from "../../../../core/api/apiClient";
-import type  { QuizRequestDto } from '../model/quiz_request_dto';
+import type { QuizRequestDto } from '../model/quiz_request_dto';
 import type { QuizResponseDto } from '../model/quiz_response_dto';
 
 export const quizService = {
-  generateVideoQuiz: (videoId: number, body: QuizRequestDto): Promise<QuizResponseDto> =>
-    apiClient.post(`quiz/video/${videoId}`, body),
+  generateVideoQuiz: async (
+    videoId: number,
+    body: QuizRequestDto
+  ): Promise<QuizResponseDto> => {
+    const response = await apiClient.post(
+      `quiz/video/${videoId}`,
+      body
+    );
 
-  generateSegmentQuiz: (videoId: number, segmentId: number, body: QuizRequestDto): Promise<QuizResponseDto> =>
-    apiClient.post(`quiz/video/${videoId}/segment/${segmentId}`, body),
-};
+    return response.data;
+  },
+
+  generateSegmentQuiz: async (
+    videoId: number,
+    segmentId: number,
+    body: QuizRequestDto
+  ): Promise<QuizResponseDto> => {
+    const response = await apiClient.post(
+      `quiz/video/${videoId}/segment/${segmentId}`,
+      body
+    );
+
+    return response.data; 
+  },
+}

@@ -33,17 +33,18 @@ export function AppRoutes() {
         <Route path="/generating-summary" element={<GeneratingSummaryPage />} />
         <Route path="/summary" element={<SummaryPage />} />
         <Route path="/study-notes" element={<StudyNotesPage />} />
-        <Route path="/quiz" element={<QuizPage />} />
-        <Route element={<ProtectedRoute />}>
+    <Route element={<ProtectedRoute />}>
           {" "}
           <Route path="/UploadVideoPage" element={<UploadVideoPage />} />
           <Route path="/ProcessingPage" element={<ProcessingPage />} />
+          <Route path="/quiz/:segmentId" element={<QuizPage />} />
           {/* <Route path="/WatchVideo" element={<MainPage />} />
           <Route path="/flashcards/:segmentId" element={<FlashCards />} /> */}
        
           <Route path="/WatchVideo" element={<WatchLayout />}>
             <Route index element={<MainPage />} /> {/* /WatchVideo */}
             <Route path="flashcards/:segmentId" element={<FlashCards />} />
+            
             {" "}
             {/* /WatchVideo/flashcards */}
           </Route>{" "}
