@@ -1,82 +1,140 @@
 {
-  "total_segments": 3,
+  "total_segments": 4,
   "segments": [
     {
       "segment_number": 1,
-      "start_time": "00:00:00",
-      "end_time": "00:01:16",
-      "main_topic": "Introduction to Big O Notation",
-      "title": "Introduction to Algorithm Performance",
+      "start_time": "00:00",
+      "end_time": "00:43",
+      "main_topic": "Introduction to the Euclidean Algorithm",
+      "title": "Introduction to the Euclidean Algorithm Concept",
       "sub_topics": [
         {
-          "name": "Introduction to the Topic",
-          "start_time": "00:00:00",
-          "end_time": "00:00:31",
-          "description": "Hey, what's going on everybody? It's your bro, hope you're doing well, and in this video I'm going to describe the very basics of Big O notation in, well, computer science. So sit back, relax, and enjoy the show. Oh yeah, Big O notation. So a common phrase used with Big O notation is, how code slows as data grows."
+          "name": "Introduction",
+          "start_time": "00:00",
+          "end_time": "00:20",
+          "description": "Welcome to this proof of concept video. Today the goal is to describe the Euclidean algorithm with a visual approach, so it's intuitive enough that you can always figure it out and use it, even if you've forgotten it."
         },
         {
-          "name": "Basic Concept of Big O Notation",
-          "start_time": "00:00:31",
-          "end_time": "00:01:16",
-          "description": "It describes the performance of an algorithm as the amount of data increases. And really, this notation is machine independent. What we're really focusing on is the number of steps to complete an algorithm, because some machines are going to run certain algorithms faster than others. And three, we tend to ignore smaller operations. If we had some task that took n plus one, we would just reduce it to just n, because that plus one really isn't going to make"
+          "name": "Importance of Understanding the Concept",
+          "start_time": "00:20",
+          "end_time": "00:43",
+          "description": "Please, please don't ever use mnemonics and memorization when you're learning math. That may get you through a quiz, maybe, but it's useless beyond that, and if you rely on it regularly, you actually gradually accumulate a deficit in the creative thinking skills that you really need, and math gets harder and harder to keep up with."
         }
       ],
       "key_points": [
-        "Big O notation",
-        "Algorithm performance",
-        "Machine independent"
+        "The Euclidean algorithm is a fundamental concept in mathematics",
+        "It is essential to understand the concept rather than just memorizing it"
       ]
     },
     {
       "segment_number": 2,
-      "start_time": "00:01:16",
-      "end_time": "00:02:36",
-      "main_topic": "Examples of Big O Notation",
-      "title": "Understanding Big O Notation with Examples",
+      "start_time": "00:43",
+      "end_time": "05:07",
+      "main_topic": "The Euclidean Algorithm Process",
+      "title": "Understanding the Euclidean Algorithm Step-by-Step",
       "sub_topics": [
         {
-          "name": "Linear Time Example",
-          "start_time": "00:01:16",
-          "end_time": "00:01:53",
-          "description": "Here's a more concrete example. I have a function named addup. We will add up to a certain number depending on what we pass in as an argument. The for loop within here will iterate once up to whatever number that n is, add i to sum, then return it. What if n was a large number like a million? Well, it's going to take just above a million steps to complete this function."
+          "name": "Introduction to the GCD Concept",
+          "start_time": "00:43",
+          "end_time": "01:05",
+          "description": "So the point today is to guide you to build the Euclidean algorithm for yourself in a visually striking way so that you'll always be able to recreate it for yourself, no memorization involved."
         },
         {
-          "name": "Constant Time Example",
-          "start_time": "00:01:53",
-          "end_time": "00:02:36",
-          "description": "Now another way which we could write the same function is to take sum equals n times n plus 1 divided by 2. We will get the exact same sum. So if n was, let's say, a million, this is still only going to take a couple seconds. steps. Three steps, not a million steps. So this function is going to have a runtime complexity of O of one."
+          "name": "The GCD of Factored Integers",
+          "start_time": "01:05",
+          "end_time": "02:03",
+          "description": "We already talked about the GCD or greatest common divisor of two integers It the largest integer that a factor or divisor of the two that you've got."
+        },
+        {
+          "name": "The Challenge of Factoring Integers",
+          "start_time": "02:03",
+          "end_time": "02:23",
+          "description": "But, as you may have heard, factoring integers is a challenge. We don't have any efficient methods to factor big integers."
+        },
+        {
+          "name": "Introduction to the Euclidean Algorithm",
+          "start_time": "02:23",
+          "end_time": "02:41",
+          "description": "But what we'll see today is that, surprisingly, there's a very fast algorithm to compute the GCD. It's called the Euclidean algorithm and dates back many thousands of years."
+        },
+        {
+          "name": "The Euclidean Algorithm Process",
+          "start_time": "02:41",
+          "end_time": "05:07",
+          "description": "We begin by imagining that you have two big numbers. Here they are, on screen, as two piles of stones. You want to take the GCD, but you don't even want to count all those stones, never mind factor the result."
         }
       ],
       "key_points": [
-        "Linear time",
-        "Constant time",
-        "Runtime complexity"
+        "The Euclidean algorithm is used to find the GCD of two integers",
+        "The algorithm involves repeatedly subtracting the smaller number from the larger one"
       ]
     },
     {
       "segment_number": 3,
-      "start_time": "00:02:36",
-      "end_time": "00:06:22",
-      "main_topic": "Big O Notation Types",
-      "title": "Different Types of Big O Notation",
+      "start_time": "05:07",
+      "end_time": "11:42",
+      "main_topic": "Formalizing the Euclidean Algorithm",
+      "title": "Understanding the Formalized Version of the Euclidean Algorithm",
       "sub_topics": [
         {
-          "name": "Constant Time and Logarithmic Time",
-          "start_time": "00:02:36",
-          "end_time": "00:03:51",
-          "description": "Here's a graph that I made to represent the different runtime complexities. We have data on the x-axis represented by n. So data will increase as we go more to the right, and we have time on the y-axis. I did add an asterisk next to time because some of these times can vary depending on what machine you're using, so these can vary Another way to look at this is number of steps So as we increase on the y these algorithms are going to perform with increasingly more time They going to get slower So let begin with O of 1 constant time."
+          "name": "The Secret Behind the Euclidean Algorithm",
+          "start_time": "05:07",
+          "end_time": "06:06",
+          "description": "So here it is. I'm going to silently step through the process again, but this time with a tiny little something added on top of the visual."
         },
         {
-          "name": "Linear Time, Quasi-Linear Time, and More",
-          "start_time": "00:03:51",
-          "end_time": "00:06:22",
-          "description": "Next we have O of log n, also known as logarithmic time. One example is binary search. We haven't talked about this yet. We'll talk about a few of these algorithms in future videos, but anything that has a runtime complexity of O of log n will actually take, I don't want to say less and less time, but increasingly less time to complete. So as the data size increases, this algorithm is going to be more and more efficient compared to the early stages with a small dataset."
+          "name": "Formalizing the Algorithm",
+          "start_time": "06:06",
+          "end_time": "07:21",
+          "description": "The algorithm is basically the following. Subtract the smaller from the left larger of your pair until you can't do it anymore."
+        },
+        {
+          "name": "The Division Algorithm",
+          "start_time": "07:21",
+          "end_time": "10:00",
+          "description": "So we'll use what's called the division algorithm, which is just the observation that given an A and a B, with B bigger than the A, we can write B as some number of A's plus R, where R is the remainder,"
+        },
+        {
+          "name": "Speeding Up the Euclidean Algorithm",
+          "start_time": "10:00",
+          "end_time": "11:42",
+          "description": "So, now we can speed up the Euclidean algorithm. The key idea is that instead of repeatedly subtracting a, we just do it in one step."
         }
       ],
       "key_points": [
-        "Constant time",
-        "Logarithmic time",
-        "Linear time"
+        "The Euclidean algorithm can be formalized and sped up using the division algorithm",
+        "The algorithm involves repeatedly replacing the larger number with the remainder of the division of the larger number by the smaller number"
+      ]
+    },
+    {
+      "segment_number": 4,
+      "start_time": "00:12:05",
+      "end_time": "00:13:24",
+      "main_topic": "Euclidean Algorithm",
+      "title": "Understanding the Euclidean Algorithm",
+      "sub_topics": [
+        {
+          "name": "Introduction to the Euclidean Algorithm",
+          "start_time": "00:12:05",
+          "end_time": "00:12:26",
+          "description": "we loop back and we just keep repeating. And if at any point one of the entries of our pair is zero, then we're done. Ta-da. Okay, so now I have a challenge for you. Compute the GCD of 180 and 196. So go ahead and pause the video, use the algorithm as it is on the screen, and come back when you've done it."
+        },
+        {
+          "name": "Applying the Euclidean Algorithm",
+          "start_time": "00:12:26",
+          "end_time": "00:13:02",
+          "description": "we're back. Okay, so here's how it went for me. So I began with a pair 180 and 196. 196 is bigger, so I wrote it as some number of 180s plus a remainder, which turned out to be 16. That gives me a new pair, which is 16 and 180. I wrote the larger 180 as some number of 16s. It actually took 11 of them with a remainder of 4. That gives me a new pair, 4 and 16. 16 is four fours with a remainder of zero."
+        },
+        {
+          "name": "Conclusion and Comparison",
+          "start_time": "00:13:02",
+          "end_time": "00:13:24",
+          "description": "My new pair is zero and four, but that has a zero in it, so we're done. The GCD is just the other entry, the four. Notice that you see the four right here as the last non-zero remainder. Okay, that's it. That's the Euclidean algorithm. Here for comparison is the slow Euclidean algorithm. We definitely don't want to do that. And that's the Euclidean algorithm. In the next video, I'll visualize the Euclidean algorithm in a totally different way which is useful for exploring its efficiency."
+        }
+      ],
+      "key_points": [
+        "GCD of 180 and 196 is 4",
+        "Euclidean Algorithm is more efficient than the slow Euclidean algorithm"
       ]
     }
   ]

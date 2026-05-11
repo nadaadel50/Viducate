@@ -5,6 +5,7 @@ import { ChatMessages } from "../widgets/chat_messages";
 import { ChatInputBtn } from "../widgets/chat_input_btn";
 import { useChatMessages } from "../hooks/use_chat_message";
 import { RecentChatsSidebar } from "../widgets/recent_chat_sideBar";
+import { DeleteModal } from "../widgets/delete_message";
 
 export function ChatBotPage() {
   const { closeChat, open } = useChat();
@@ -20,7 +21,13 @@ export function ChatBotPage() {
     openRecentChats,
     handleOpenRecentChats,
     clearMessages,
-    //sessions
+    sessions,
+    handleSelectNewSession,
+    sessionId,
+    openDeleteModal,
+    handleOpenDeleteMessage,
+    handleDeleteSession,
+    isLoadingMessage
   } = useChatMessages(open);
 
   return (
@@ -42,23 +49,38 @@ export function ChatBotPage() {
       ${open ? "translate-x-0 pointer-events-auto" : "translate-x-full"}
     `}
       >
-
         <div
-    className={`
+          className={`
       absolute top-0  right-0 h-full z-10 
       transform transition-transform duration-300 ease-out
       ${openRecentChats ? "translate-x-0" : "translate-x-full"}
     `}
-  >
-    <RecentChatsSidebar handleOpenSession={ handleOpenRecentChats} handleClearMessages={clearMessages}  />
-  </div>
-      
+        >
+          <RecentChatsSidebar
+            selectedSession={sessionId}
+            handleOpenSession={handleOpenRecentChats}
+            handleClearMessages={clearMessages}
+            sessions={sessions}
+            handleSelectNewSession={handleSelectNewSession}
+            setOpenDeleteMessage={handleOpenDeleteMessage}
+          />
+        </div>
+
+        <DeleteModal
+          open={openDeleteModal}
+          onClose={() => handleOpenDeleteMessage(false)}
+          onConfirm={() => {
+            handleDeleteSession()
+            handleOpenDeleteMessage(false);
+          }}
+        />
 
         {/* my contnet */}
 
         <div
-        onClick={openRecentChats?handleOpenRecentChats:undefined}
-         className="flex flex-col h-full w-full">
+          onClick={openRecentChats ? handleOpenRecentChats : undefined}
+          className="flex flex-col h-full w-full"
+        >
           {/* header */}
           <ChatHeader
             handleOpenSession={handleOpenRecentChats}
@@ -67,7 +89,7 @@ export function ChatBotPage() {
 
           {/* messages */}
 
-          <ChatMessages messages={messages} messagesEndRef={messagesEndRef} />
+          <ChatMessages messages={messages} messagesEndRef={messagesEndRef} isLoadingMessage={isLoadingMessage} />
 
           {/* input btn */}
           <ChatInputBtn
@@ -76,9 +98,6 @@ export function ChatBotPage() {
             handleSend={handleSend}
           />
         </div>
-
-
-        
       </div>
     </div>
   );

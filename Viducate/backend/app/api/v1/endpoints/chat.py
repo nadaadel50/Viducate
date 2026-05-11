@@ -93,3 +93,15 @@ def get_video_sessions(
         )
         for s in sessions
     ]
+
+@router.delete("/videos/{video_id}/sessions/{session_id}", status_code=status.HTTP_204_NO_CONTENT)
+def delete_session(
+    video_id: int,
+    session_id: int,
+    db: Session = Depends(get_db),
+    current_user=Depends(get_current_user)
+):
+    repo = ChatRepository(db)
+    deleted = repo.delete(video_id=video_id, session_id=session_id)
+    if not deleted:
+        raise HTTPException(status_code=status.HTTP_404_NOT_FOUND, detail="Session not found")

@@ -13,7 +13,7 @@ export function toChatMessage(
   dto: ChatMessageDto,
 ): ChatMessage {
   return {
-    message_id: dto.message_id,
+    message_id: dto.message_id.toString(),
     role: dto.role,
     content: dto.content,
     time: dto.time,

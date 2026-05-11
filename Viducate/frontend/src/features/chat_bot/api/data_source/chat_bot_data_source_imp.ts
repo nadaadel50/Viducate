@@ -7,17 +7,32 @@ import type { UserAsk } from "../../domain/entity/user_ask";
 import type { ChatResponse } from "../../domain/entity/chat_response";
 import { toChatRequestDto } from "../models/chat_req_dto";
 import { toChatResponse } from "../models/chat_response_dto";
-import type { AllSessionMessagesRequest } from "../../domain/entity/all_chat_messages_req";
+import type { SessionMessagesRequest } from "../../domain/entity/all_chat_messages_req";
 import type { ChatMessage } from "../../domain/entity/chat_message";
 import { toAllSessionMessagesRequestDto } from "../models/all_session_messages_req_dto";
 import { toChatMessage } from "../models/chat_message_dto";
 import type { ChatSession } from "../../domain/entity/chat_session";
 import { toChatSession } from "../models/chat_sessions_response_dto";
+import type { DeleteMessageRequest } from "../../domain/entity/delete_message_req";
+import { toDeleteMessageRequestDto } from "../models/delete_session_req_dto";
 
 export class ChatBotDataSourceImp implements ChatBotDataSource {
   private service: ChatBotService;
   constructor(service: ChatBotService) {
     this.service = service;
+  }
+  async deleteSession(req: DeleteMessageRequest): Promise<ApiResult<void>> {
+    try {
+      await this.service.deleteSession(toDeleteMessageRequestDto(req));
+
+      return {
+        success: true,
+        data: undefined,
+      };
+    } catch (error) {
+      const message = handleApiError(error);
+      return { success: false, error: message };
+    }
   }
 
   async getAllSessions(videoId: number): Promise<ApiResult<ChatSession[]>> {
@@ -39,7 +54,7 @@ export class ChatBotDataSourceImp implements ChatBotDataSource {
   }
 
   async getAllSessionMessages(
-    req: AllSessionMessagesRequest,
+    req: SessionMessagesRequest,
   ): Promise<ApiResult<ChatMessage[]>> {
     try {
       const response = await this.service.getSessionMessages(

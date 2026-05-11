@@ -1,88 +1,138 @@
 {
-  "total_segments": 3,
+  "total_segments": 5,
   "segments": [
     {
       "segment_number": 1,
-      "start_time": "00:00",
-      "end_time": "00:51",
-      "main_topic": "Introduction to Big O Notation",
-      "title": "Introduction to Big O Notation in Computer Science",
+      "start_time": "00:00:00",
+      "end_time": "00:01:26",
+      "main_topic": "Introduction to Multiplicative Inverse",
+      "title": "Introduction to the Concept of Multiplicative Inverse",
       "sub_topics": [
         {
-          "name": "Introduction to the Topic",
-          "start_time": "00:00",
-          "end_time": "00:25",
-          "description": "Hey, what's going on everybody? It's your bro, hope you're doing well, and in this video I'm going to describe the very basics of Big O notation in, well, computer science. So sit back, relax, and enjoy the show. Oh yeah, Big O notation. So a common phrase used with Big O notation is, how code slows as data grows."
+          "name": "Introduction to the Lecture",
+          "start_time": "00:00:00",
+          "end_time": "00:00:24",
+          "description": "Hello everyone, welcome back. In cryptography, the idea of multiplicative inverse is inevitable. And that is why an exclusive lecture is created for you to help you understand the basics of multiplicative inverse under modular arithmetic."
         },
         {
-          "name": "Definition of Big O Notation",
-          "start_time": "00:25",
-          "end_time": "00:51",
-          "description": "It describes the performance of an algorithm as the amount of data increases. And really, this notation is machine independent. What we're really focusing on is the number of steps to complete an algorithm, because some machines are going to run certain algorithms faster than others. And three, we tend to ignore smaller operations. If we had some task that took n plus one, we would just reduce it to just n, because that plus one really isn't going to make"
+          "name": "Outcomes of the Lecture",
+          "start_time": "00:00:24",
+          "end_time": "00:00:48",
+          "description": "By waiting, let's start the outcomes first. Upon the completion of this session, the learner will be able to Outcome number 1, we will know about the multiplicative inverse. Outcome number 2, we will understand multiplicative inverse under modular arithmetic. It means numbers with mod n. And outcome number 3, we will determine whether there exists a multiplicative inverse for a number under modular arithmetic or not."
+        },
+        {
+          "name": "Introduction to Multiplicative Inverse",
+          "start_time": "00:00:48",
+          "end_time": "00:01:26",
+          "description": "Before diving into what is multiplicative inverse under modular arithmetic, let understand the basics of multiplicative inverse Let take the number 5 So when you have a number 5 when that number is multiplied by its inverse then we get the result as 1 So it clear that 1 by 5 is the multiplicative inverse of number 5. So, it's clear that when you have a number A, then 1 by A is the multiplicative inverse for number A."
         }
       ],
       "key_points": [
-        "Big O notation describes the performance of an algorithm",
-        "It is machine independent",
-        "It ignores smaller operations"
+        "Multiplicative inverse is a concept in cryptography",
+        "The lecture covers the basics of multiplicative inverse under modular arithmetic",
+        "The learner will understand the concept of multiplicative inverse"
       ]
     },
     {
       "segment_number": 2,
-      "start_time": "00:51",
-      "end_time": "02:36",
-      "main_topic": "Examples of Big O Notation",
-      "title": "Examples of Big O Notation in Code",
+      "start_time": "00:01:26",
+      "end_time": "00:02:42",
+      "main_topic": "Multiplicative Inverse under Modular Arithmetic",
+      "title": "Understanding Multiplicative Inverse under Modular Arithmetic",
       "sub_topics": [
         {
-          "name": "Example of O(n) Time Complexity",
-          "start_time": "00:51",
-          "end_time": "01:16",
-          "description": "We have O O O and O And N is really just the amount of data that we passing in It a variable like x What we focusing on is the performance of an algorithm as the amount of data increases, and n is a representation of the amount of data that we're passing in. Here's a more concrete example. I have a function named addup. We will add up to a certain number depending on what we pass in as an argument."
+          "name": "Multiplicative Inverse under Modular Arithmetic",
+          "start_time": "00:01:26",
+          "end_time": "00:01:56",
+          "description": "So this is the basic idea behind multiplicative inverse. But the real challenge comes when modular arithmetic is involved. Say when we are dealing with modular arithmetic, that is when we have a number mod n, then the multiplicative inverse concept will be different."
         },
         {
-          "name": "Example of O(1) Time Complexity",
-          "start_time": "01:16",
-          "end_time": "02:36",
-          "description": "This function is said to have a runtime complexity of O of n, linear time. As the amount of data increases, it's going to increase the amount of steps linearly or proportionally. Now another way which we could write the same function is to take sum equals n times n plus 1 divided by 2. We will get the exact same sum. So if n was, let's say, a million, this is still only going to take a couple seconds. steps. Three steps, not a million steps."
+          "name": "Example of Multiplicative Inverse under Modular Arithmetic",
+          "start_time": "00:01:56",
+          "end_time": "00:02:42",
+          "description": "Say, if you have a number a, when that number a is multiplied by its inverse, when the multiplication of A and A inverse, when this value is divided by n, we will get the remainder as 1. So, this is what the idea of multiplicative inverse under modular arithmetic operations."
         }
       ],
       "key_points": [
-        "O(n) time complexity example",
-        "O(1) time complexity example",
-        "Linear time complexity"
+        "Multiplicative inverse under modular arithmetic is different from normal multiplicative inverse",
+        "The concept of multiplicative inverse under modular arithmetic involves finding a number that when multiplied by the original number gives a remainder of 1 when divided by n"
       ]
     },
     {
       "segment_number": 3,
-      "start_time": "02:36",
-      "end_time": "06:22",
-      "main_topic": "Runtime Complexities",
-      "title": "Runtime Complexities and Their Examples",
+      "start_time": "00:02:42",
+      "end_time": "00:04:15",
+      "main_topic": "Finding Multiplicative Inverse under Modular Arithmetic",
+      "title": "Finding the Multiplicative Inverse under Modular Arithmetic",
       "sub_topics": [
         {
-          "name": "O(1) - Constant Time",
-          "start_time": "02:36",
-          "end_time": "03:12",
-          "description": "So let begin with O of 1 constant time. Anything that has a runtime complexity of O of 1 will take the same amount of time regardless of the data size. A few examples would include the random access of an element within an array and inserting at the beginning of a linked list."
+          "name": "Finding Multiplicative Inverse for 3 mod 5",
+          "start_time": "00:02:42",
+          "end_time": "00:03:07",
+          "description": "Let understand things clearly now Let say there is a number 3 Now we are going to find the multiplicative inverse of 3 It is 1 by 3 obviously when it is a normal number But when modular arithmetic is involved mod 5 right So, what is the multiplicative inverse for 3 mod 5?"
         },
         {
-          "name": "O(log n) - Logarithmic Time",
-          "start_time": "03:12",
-          "end_time": "03:40",
-          "description": "Next we have O of log n, also known as logarithmic time. One example is binary search. We haven't talked about this yet. We'll talk about a few of these algorithms in future videos, but anything that has a runtime complexity of O of log n will actually take, I don't want to say less and less time, but increasingly less time to complete."
-        },
-        {
-          "name": "Other Runtime Complexities",
-          "start_time": "03:40",
-          "end_time": "06:22",
-          "description": "O is also known as linear time. As the amount of data increases, the time it takes to complete something will increase proportionally linearly. That would include looping through the elements in an array and searching through a linked list. Next we have O of N log N, also known as quasi-linear time. This would include a quick sort, merge sort, and heap sort. We'll talk about these concepts in future videos."
+          "name": "Example of Finding Multiplicative Inverse for 3 mod 5",
+          "start_time": "00:03:07",
+          "end_time": "00:04:15",
+          "description": "So, we are required to find the multiplicative inverse of 3 mod 5. Not simply 3, it's 3 mod 5. So, what do you mean by this? I already told you when you have a number, that number is multiplied by its inverse, we will get 1 as the remainder when this product is divided by n."
         }
       ],
       "key_points": [
-        "O(1) - Constant Time",
-        "O(log n) - Logarithmic Time",
-        "O(n) - Linear Time"
+        "The multiplicative inverse for 3 mod 5 is 2",
+        "The concept of finding the multiplicative inverse under modular arithmetic involves finding a number that when multiplied by the original number gives a remainder of 1 when divided by n"
+      ]
+    },
+    {
+      "segment_number": 4,
+      "start_time": "00:04:15",
+      "end_time": "00:07:45",
+      "main_topic": "Existence of Multiplicative Inverse under Modular Arithmetic",
+      "title": "Existence of Multiplicative Inverse under Modular Arithmetic",
+      "sub_topics": [
+        {
+          "name": "Existence of Multiplicative Inverse for 2 mod 11",
+          "start_time": "00:04:15",
+          "end_time": "00:05:09",
+          "description": "Let's say we have a number 2 and we are required to find the multiplicative inverse of 2 mod 11. So, what's the idea? When this side is divided by 11, we should get 1 as the remainder. What is there in this side? It's the product."
+        },
+        {
+          "name": "Example of Existence of Multiplicative Inverse for 4 mod 5",
+          "start_time": "00:05:09",
+          "end_time": "00:07:45",
+          "description": "So, 4 when it is multiplied by 4, we get 16. This 16 when it is divided by 5, we get 1 as the remainder. So 4 is the multiplicative inverse for 4 mod 5. Do we have a multiplicative inverse for this? 5, when it is multiplied by its inverse, we should get 1 as the remainder. when this whole side is divided by 10."
+        }
+      ],
+      "key_points": [
+        "The multiplicative inverse for 2 mod 11 is 6",
+        "The multiplicative inverse for 4 mod 5 is 4",
+        "The existence of multiplicative inverse under modular arithmetic depends on the numbers being relatively prime"
+      ]
+    },
+    {
+      "segment_number": 5,
+      "start_time": "00:07:45",
+      "end_time": "00:10:00",
+      "main_topic": "Conclusion and Future Topics",
+      "title": "Conclusion and Future Topics",
+      "sub_topics": [
+        {
+          "name": "Conclusion",
+          "start_time": "00:07:45",
+          "end_time": "00:09:19",
+          "description": "So, in the initial part of this lecture, I told you the multiplicative inverse of 2 is 1 by 2. But the multiplicative inverse of 2 mod 5 and the multiplicative inverse of 2 mod 7 are different. That's what I told you, it's not simply 2, it's 2 mod 5 and 2 mod 7."
+        },
+        {
+          "name": "Future Topics",
+          "start_time": "00:09:19",
+          "end_time": "00:10:00",
+          "description": "The algorithm is the extended Euclidean algorithm. In the coming lectures, I will solve some problems for finding the multiplicative inverse using extended Euclidean algorithm. And that's it guys. I hope now you know about the multiplicative inverse and we also have understood about multiplicative inverse mod n and we also have determined whether there exists a multiplicative inverse for a number and a modular arithmetic or not."
+        }
+      ],
+      "key_points": [
+        "The multiplicative inverse of 2 mod 5 is 3",
+        "The multiplicative inverse of 2 mod 7 is 4",
+        "The extended Euclidean algorithm will be used to find the multiplicative inverse in future lectures"
       ]
     }
   ]

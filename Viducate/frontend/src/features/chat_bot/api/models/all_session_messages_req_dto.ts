@@ -1,4 +1,4 @@
-import type { AllSessionMessagesRequest } from "../../domain/entity/all_chat_messages_req";
+import type { SessionMessagesRequest } from "../../domain/entity/all_chat_messages_req";
 
 export type AllSessionMessagesRequestDto = {
   video_id: number;
@@ -6,7 +6,7 @@ export type AllSessionMessagesRequestDto = {
 };
 
 export function toAllSessionMessagesRequestDto(
-  request: AllSessionMessagesRequest,
+  request: SessionMessagesRequest,
 ): AllSessionMessagesRequestDto {
   return {
     video_id: request.video_id,

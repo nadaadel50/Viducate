@@ -1,340 +1,855 @@
 [00:00:00]
-  Transcript :  Hey, what's going on everybody? It's your bro, hope you're doing well, and in this video I'm going to
-  OCR        : 1322-34
-  Combined   :  Hey, what's going on everybody? It's your bro, hope you're doing well, and in this video I'm going to 1322-34
-
-[00:00:04]
-  Transcript :  describe the very basics of Big O notation in, well, computer science. So sit back, relax, and enjoy the show.
+  Transcript :  Welcome to this proof of concept video. Today the goal is to describe the Euclidean algorithm
   OCR        : None
-  Combined   :  describe the very basics of Big O notation in, well, computer science. So sit back, relax, and enjoy the show.
+  Combined   :  Welcome to this proof of concept video. Today the goal is to describe the Euclidean algorithm
 
-[00:00:14]
-  Transcript :  Oh yeah, Big O notation. So a common phrase used with Big O notation is,
+[00:00:06]
+  Transcript :  with a visual approach, so it's intuitive enough that you can always figure it out and use it,
   OCR        : None
-  Combined   :  Oh yeah, Big O notation. So a common phrase used with Big O notation is,
+  Combined   :  with a visual approach, so it's intuitive enough that you can always figure it out and use it,
 
-[00:00:19]
-  Transcript :  how code slows as data grows. It describes the performance of an algorithm as the amount of data
+[00:00:10]
+  Transcript :  even if you've forgotten it. Please, please don't ever use mnemonics and memorization when you're
   OCR        : None
-  Combined   :  how code slows as data grows. It describes the performance of an algorithm as the amount of data
+  Combined   :  even if you've forgotten it. Please, please don't ever use mnemonics and memorization when you're
 
-[00:00:25]
-  Transcript :  increases. And really, this notation is machine independent. What we're really focusing on is the
+[00:00:15]
+  Transcript :  learning math. That may get you through a quiz, maybe, but it's useless beyond that, and if you
   OCR        : None
-  Combined   :  increases. And really, this notation is machine independent. What we're really focusing on is the
+  Combined   :  learning math. That may get you through a quiz, maybe, but it's useless beyond that, and if you
 
-[00:00:31]
-  Transcript :  number of steps to complete an algorithm, because some machines are going to run certain algorithms
+[00:00:20]
+  Transcript :  rely on it regularly, you actually gradually accumulate a deficit in the creative thinking
   OCR        : None
-  Combined   :  number of steps to complete an algorithm, because some machines are going to run certain algorithms
+  Combined   :  rely on it regularly, you actually gradually accumulate a deficit in the creative thinking
 
-[00:00:36]
-  Transcript :  faster than others. And three, we tend to ignore smaller operations. If we had some task that took
+[00:00:24]
+  Transcript :  skills that you really need, and math gets harder and harder to keep up with. So instead, to really
   OCR        : None
-  Combined   :  faster than others. And three, we tend to ignore smaller operations. If we had some task that took
+  Combined   :  skills that you really need, and math gets harder and harder to keep up with. So instead, to really
 
-[00:00:42]
-  Transcript :  n plus one, we would just reduce it to just n, because that plus one really isn't going to make
+[00:00:29]
+  Transcript :  internalize mathematics, it's important to build it for yourself. The placing of the building blocks
   OCR        : None
-  Combined   :  n plus one, we would just reduce it to just n, because that plus one really isn't going to make
+  Combined   :  internalize mathematics, it's important to build it for yourself. The placing of the building blocks
 
-[00:00:48]
-  Transcript :  So here's a few examples of big O notation.
+[00:00:34]
+  Transcript :  in your mind using your own muscles is what you learn from. So the point today is to guide you to
   OCR        : None
-  Combined   :  So here's a few examples of big O notation.
+  Combined   :  in your mind using your own muscles is what you learn from. So the point today is to guide you to
 
-[00:00:51]
-  Transcript :  We have O O O and O And N is really just the amount of data that we passing in It a variable like x What we focusing on is the performance of an algorithm as the amount
+[00:00:39]
+  Transcript :  build the Euclidean algorithm for yourself in a visually striking way so that you'll always be
   OCR        : None
-  Combined   :  We have O O O and O And N is really just the amount of data that we passing in It a variable like x What we focusing on is the performance of an algorithm as the amount
+  Combined   :  build the Euclidean algorithm for yourself in a visually striking way so that you'll always be
 
-[00:01:06]
-  Transcript :  of data increases, and n is a representation of the amount of data that we're passing in.
+[00:00:43]
+  Transcript :  able to recreate it for yourself, no memorization involved. So we'll use visual intuition today,
   OCR        : None
-  Combined   :  of data increases, and n is a representation of the amount of data that we're passing in.
+  Combined   :  able to recreate it for yourself, no memorization involved. So we'll use visual intuition today,
 
-[00:01:12]
-  Transcript :  Here's a more concrete example. I have a function named addup. We will add up to a certain number
+[00:00:49]
+  Transcript :  but check out our next video for a different fun and famous visualization of the algorithm in action
   OCR        : None
-  Combined   :  Here's a more concrete example. I have a function named addup. We will add up to a certain number
+  Combined   :  but check out our next video for a different fun and famous visualization of the algorithm in action
 
-[00:01:16]
-  Transcript :  depending on what we pass in as an argument. The for loop within here will iterate once up to
+[00:00:54]
+  Transcript :  once you more familiar with it We already talked about the GCD or greatest common divisor of two integers It the largest integer that a factor or divisor of the two that
   OCR        : None
-  Combined   :  depending on what we pass in as an argument. The for loop within here will iterate once up to
+  Combined   :  once you more familiar with it We already talked about the GCD or greatest common divisor of two integers It the largest integer that a factor or divisor of the two that
+
+[00:01:05]
+  Transcript :  you've got. So for example, the GCD of 15 and 12 is the biggest integer dividing
+  OCR        : None
+  Combined   :  you've got. So for example, the GCD of 15 and 12 is the biggest integer dividing
+
+[00:01:10]
+  Transcript :  both of them, namely 3. If you'd like a primer on how to think about the GCD,
+  OCR        : None
+  Combined   :  both of them, namely 3. If you'd like a primer on how to think about the GCD,
+
+[00:01:14]
+  Transcript :  check out our other videos via the links below. But in brief, I'll assume that
+  OCR        : None
+  Combined   :  check out our other videos via the links below. But in brief, I'll assume that
+
+[00:01:18]
+  Transcript :  we're used to thinking about the GCD in terms of the prime factorization of two
+  OCR        : None
+  Combined   :  we're used to thinking about the GCD in terms of the prime factorization of two
 
 [00:01:22]
-  Transcript :  whatever number that n is, add i to sum, then return it. What if n was a large number like a
+  Transcript :  integers. That's why I've shown the factorizations of 12 and 15 here so that
   OCR        : None
-  Combined   :  whatever number that n is, add i to sum, then return it. What if n was a large number like a
+  Combined   :  integers. That's why I've shown the factorizations of 12 and 15 here so that
 
-[00:01:28]
-  Transcript :  million? Well, it's going to take just above a million steps to complete this function.
+[00:01:25]
+  Transcript :  you can see the three sitting in there as the biggest and in fact the only thing
   OCR        : None
-  Combined   :  million? Well, it's going to take just above a million steps to complete this function.
+  Combined   :  you can see the three sitting in there as the biggest and in fact the only thing
 
-[00:01:33]
-  Transcript :  This function is said to have a runtime complexity of O of n, linear time. As the amount of data
+[00:01:29]
+  Transcript :  they have in common. For one more example, the GCD of these two medium-big integers
   OCR        : None
-  Combined   :  This function is said to have a runtime complexity of O of n, linear time. As the amount of data
+  Combined   :  they have in common. For one more example, the GCD of these two medium-big integers
 
-[00:01:39]
-  Transcript :  increases, it's going to increase the amount of steps linearly or proportionally. Now another way
+[00:01:35]
+  Transcript :  is easy to determine because I've handed them to you in factored form. You just
   OCR        : None
-  Combined   :  increases, it's going to increase the amount of steps linearly or proportionally. Now another way
+  Combined   :  is easy to determine because I've handed them to you in factored form. You just
 
-[00:01:46]
-  Transcript :  which we could write the same function is to take sum equals n times n plus 1 divided by 2.
+[00:01:40]
+  Transcript :  have to pick out the common factors and keep those. So I can go prime by prime.
   OCR        : None
-  Combined   :  which we could write the same function is to take sum equals n times n plus 1 divided by 2.
+  Combined   :  have to pick out the common factors and keep those. So I can go prime by prime.
+
+[00:01:43]
+  Transcript :  So here I can grab a single two, two threes, one five and one seven. Somehow in
+  OCR        : None
+  Combined   :  So here I can grab a single two, two threes, one five and one seven. Somehow in
+
+[00:01:50]
+  Transcript :  In my head, these prime factors are building blocks,
+  OCR        : None
+  Combined   :  In my head, these prime factors are building blocks,
 
 [00:01:53]
-  Transcript :  We will get the exact same sum. So if n was, let's say, a million, this is still only going to take a couple seconds.
+  Transcript :  and if we put both of the castles that they form
   OCR        : None
-  Combined   :  We will get the exact same sum. So if n was, let's say, a million, this is still only going to take a couple seconds.
+  Combined   :  and if we put both of the castles that they form
+
+[00:01:55]
+  Transcript :  on top of one another, the GCD is the common part.
+  OCR        : None
+  Combined   :  on top of one another, the GCD is the common part.
+
+[00:01:58]
+  Transcript :  It's the overlap.
+  OCR        : None
+  Combined   :  It's the overlap.
 
 [00:02:00]
-  Transcript :  steps. Three steps, not a million steps. So this function is going to have a runtime complexity of
+  Transcript :  So taking a GCD of factored integers is easy.
   OCR        : None
-  Combined   :  steps. Three steps, not a million steps. So this function is going to have a runtime complexity of
+  Combined   :  So taking a GCD of factored integers is easy.
+
+[00:02:03]
+  Transcript :  But, as you may have heard, factoring integers is a challenge.
+  OCR        : None
+  Combined   :  But, as you may have heard, factoring integers is a challenge.
 
 [00:02:06]
-  Transcript :  O of one. The input size doesn't matter. The amount of data that we have really doesn't matter.
+  Transcript :  We don't have any efficient methods to factor big integers.
   OCR        : None
-  Combined   :  O of one. The input size doesn't matter. The amount of data that we have really doesn't matter.
+  Combined   :  We don't have any efficient methods to factor big integers.
 
-[00:02:11]
-  Transcript :  It's going to be completed in the same amount of steps. So this function is way better than this
+[00:02:09]
+  Transcript :  In fact, we've based much of the security of the internet on the assumption that no one in the world knows a clever, fast way to factor big integers.
   OCR        : None
-  Combined   :  It's going to be completed in the same amount of steps. So this function is way better than this
+  Combined   :  In fact, we've based much of the security of the internet on the assumption that no one in the world knows a clever, fast way to factor big integers.
 
-[00:02:17]
-  Transcript :  previous one. Three steps is better than a million steps. And the reason that this isn't O of three,
+[00:02:16]
+  Transcript :  If someone did, they could upend the entire world overnight.
   OCR        : None
-  Combined   :  previous one. Three steps is better than a million steps. And the reason that this isn't O of three,
+  Combined   :  If someone did, they could upend the entire world overnight.
+
+[00:02:19]
+  Transcript :  So you might expect it to be difficult to take a GCD without factoring.
+  OCR        : None
+  Combined   :  So you might expect it to be difficult to take a GCD without factoring.
 
 [00:02:23]
-  Transcript :  because this takes three steps, is that we really don't care about smaller operations. In the grand
+  Transcript :  But what we'll see today is that, surprisingly, there's a very fast algorithm to compute the GCD.
   OCR        : None
-  Combined   :  because this takes three steps, is that we really don't care about smaller operations. In the grand
+  Combined   :  But what we'll see today is that, surprisingly, there's a very fast algorithm to compute the GCD.
 
-[00:02:27]
-  Transcript :  scheme of things, they really won't make much of a difference. So we would just shorten this and say
+[00:02:29]
+  Transcript :  It's called the Euclidean algorithm and dates back many thousands of years.
   OCR        : None
-  Combined   :  scheme of things, they really won't make much of a difference. So we would just shorten this and say
+  Combined   :  It's called the Euclidean algorithm and dates back many thousands of years.
 
-[00:02:31]
-  Transcript :  that this is O of 1 constant time. The input size doesn't matter. Here's a graph that I made to
+[00:02:33]
+  Transcript :  I think of it as one of the first most fundamental algorithms in mathematics.
   OCR        : None
-  Combined   :  that this is O of 1 constant time. The input size doesn't matter. Here's a graph that I made to
+  Combined   :  I think of it as one of the first most fundamental algorithms in mathematics.
 
-[00:02:36]
-  Transcript :  represent the different runtime complexities. We have data on the x-axis represented by n. So data
+[00:02:37]
+  Transcript :  It's kind of striking that it's even possible, and yet it's actually very simple.
   OCR        : None
-  Combined   :  represent the different runtime complexities. We have data on the x-axis represented by n. So data
+  Combined   :  It's kind of striking that it's even possible, and yet it's actually very simple.
 
-[00:02:43]
-  Transcript :  will increase as we go more to the right, and we have time on the y-axis. I did add an asterisk next
+[00:02:41]
+  Transcript :  We begin by imagining that you have two big numbers.
   OCR        : None
-  Combined   :  will increase as we go more to the right, and we have time on the y-axis. I did add an asterisk next
+  Combined   :  We begin by imagining that you have two big numbers.
 
-[00:02:50]
-  Transcript :  to time because some of these times can vary depending on what machine you're using, so these
+[00:02:45]
+  Transcript :  Here they are, on screen, as two piles of stones.
   OCR        : None
-  Combined   :  to time because some of these times can vary depending on what machine you're using, so these
+  Combined   :  Here they are, on screen, as two piles of stones.
+
+[00:02:48]
+  Transcript :  You want to take the GCD, but you don't even want to count all those stones, never mind factor the result.
+  OCR        : None
+  Combined   :  You want to take the GCD, but you don't even want to count all those stones, never mind factor the result.
 
 [00:02:54]
-  Transcript :  can vary Another way to look at this is number of steps So as we increase on the y these algorithms are going to perform with increasingly more time They going to get slower So let
+  Transcript :  So now here how we going to do this I going to compute the GCD of these two numbers like I playing some sort of children game Okay I going to show you the rules and go through the process without telling you why it works yet anyway and you can see if you can catch the trick
   OCR        : None
-  Combined   :  can vary Another way to look at this is number of steps So as we increase on the y these algorithms are going to perform with increasingly more time They going to get slower So let
+  Combined   :  So now here how we going to do this I going to compute the GCD of these two numbers like I playing some sort of children game Okay I going to show you the rules and go through the process without telling you why it works yet anyway and you can see if you can catch the trick
 
-[00:03:06]
-  Transcript :  begin with O of 1 constant time. Anything that has a runtime complexity of O of 1 will take the same
+[00:03:08]
+  Transcript :  So let's call these pile A and pile B. I'm going to manipulate and change them,
   OCR        : None
-  Combined   :  begin with O of 1 constant time. Anything that has a runtime complexity of O of 1 will take the same
+  Combined   :  So let's call these pile A and pile B. I'm going to manipulate and change them,
 
 [00:03:12]
-  Transcript :  amount of time regardless of the data size. A few examples would include the random access of an
+  Transcript :  but they'll always be pile A on the left and pile B on the right.
   OCR        : None
-  Combined   :  amount of time regardless of the data size. A few examples would include the random access of an
+  Combined   :  but they'll always be pile A on the left and pile B on the right.
 
 [00:03:17]
-  Transcript :  element within an array and inserting at the beginning of a linked list. So O of 1 is extremely
+  Transcript :  First, I'm going to look for copies of pile A inside pile B. I can see two of them here.
   OCR        : None
-  Combined   :  element within an array and inserting at the beginning of a linked list. So O of 1 is extremely
+  Combined   :  First, I'm going to look for copies of pile A inside pile B. I can see two of them here.
 
 [00:03:23]
-  Transcript :  fast. Next we have O of log n, also known as logarithmic time. One example is binary search.
+  Transcript :  There's nothing special about the positioning of the stones.
   OCR        : None
-  Combined   :  fast. Next we have O of log n, also known as logarithmic time. One example is binary search.
+  Combined   :  There's nothing special about the positioning of the stones.
 
-[00:03:30]
-  Transcript :  We haven't talked about this yet. We'll talk about a few of these algorithms in future videos,
+[00:03:25]
+  Transcript :  I'm just going to count out enough stones to call it a copy of pile A.
   OCR        : None
-  Combined   :  We haven't talked about this yet. We'll talk about a few of these algorithms in future videos,
+  Combined   :  I'm just going to count out enough stones to call it a copy of pile A.
 
-[00:03:34]
-  Transcript :  but anything that has a runtime complexity of O of log n will actually take, I don't want to say
+[00:03:29]
+  Transcript :  And then I can see that I can actually do it twice without running out of stones.
   OCR        : None
-  Combined   :  but anything that has a runtime complexity of O of log n will actually take, I don't want to say
+  Combined   :  And then I can see that I can actually do it twice without running out of stones.
+
+[00:03:33]
+  Transcript :  So there are two copies of A inside B.
+  OCR        : None
+  Combined   :  So there are two copies of A inside B.
+
+[00:03:36]
+  Transcript :  Then the rules of the game are that once I've found a copy of the smaller pile in the bigger one,
+  OCR        : None
+  Combined   :  Then the rules of the game are that once I've found a copy of the smaller pile in the bigger one,
 
 [00:03:40]
-  Transcript :  less and less time, but increasingly less time to complete. So as the data size increases,
+  Transcript :  I can subtract it off, by which I mean just remove the stones.
   OCR        : None
-  Combined   :  less and less time, but increasingly less time to complete. So as the data size increases,
+  Combined   :  I can subtract it off, by which I mean just remove the stones.
 
-[00:03:47]
-  Transcript :  this algorithm is going to be more and more efficient compared to the early stages with a
+[00:03:43]
+  Transcript :  So I subtract one copy of A and then another copy of A.
   OCR        : None
-  Combined   :  this algorithm is going to be more and more efficient compared to the early stages with a
+  Combined   :  So I subtract one copy of A and then another copy of A.
+
+[00:03:46]
+  Transcript :  And then what's left, I'll call the new pile B.
+  OCR        : None
+  Combined   :  And then what's left, I'll call the new pile B.
 
 [00:03:51]
-  Transcript :  small dataset. O is also known as linear time. As the amount of
+  Transcript :  So now B is the smaller one.
   OCR        : None
-  Combined   :  small dataset. O is also known as linear time. As the amount of
+  Combined   :  So now B is the smaller one.
+
+[00:03:53]
+  Transcript :  So I look for copies of B inside A.
+  OCR        : None
+  Combined   :  So I look for copies of B inside A.
 
 [00:03:56]
-  Transcript :  data increases, the time it takes to complete something will
+  Transcript :  I think I can count off at least one copy of B.
   OCR        : None
-  Combined   :  data increases, the time it takes to complete something will
+  Combined   :  I think I can count off at least one copy of B.
+
+[00:03:58]
+  Transcript :  So I subtract it off,
+  OCR        : None
+  Combined   :  So I subtract it off,
 
 [00:04:00]
-  Transcript :  increase proportionally linearly. That would include looping through the elements in an array
+  Transcript :  and I'm left with a new pile A. Now A is smaller, so I look for copies of A inside B,
   OCR        : None
-  Combined   :  increase proportionally linearly. That would include looping through the elements in an array
+  Combined   :  and I'm left with a new pile A. Now A is smaller, so I look for copies of A inside B,
 
-[00:04:04]
-  Transcript :  and searching through a linked list. Next we have O of N log N, also known as quasi-linear time.
+[00:04:07]
+  Transcript :  and I see two of them. I subtract each of them off in turn, and that gives me a new pile B.
   OCR        : None
-  Combined   :  and searching through a linked list. Next we have O of N log N, also known as quasi-linear time.
+  Combined   :  and I see two of them. I subtract each of them off in turn, and that gives me a new pile B.
 
-[00:04:11]
-  Transcript :  This would include a quick sort, merge sort, and heap sort. We'll talk about these concepts in
+[00:04:14]
+  Transcript :  Now notice how quickly the piles get small with this process. They're very small now,
   OCR        : None
-  Combined   :  This would include a quick sort, merge sort, and heap sort. We'll talk about these concepts in
+  Combined   :  Now notice how quickly the piles get small with this process. They're very small now,
 
-[00:04:16]
-  Transcript :  future videos. So for the most part, this is very similar to linear time. Unless we're working with
+[00:04:19]
+  Transcript :  but I can do it one more time perhaps. Let me identify a copy of B inside A and subtract it
   OCR        : None
-  Combined   :  future videos. So for the most part, this is very similar to linear time. Unless we're working with
+  Combined   :  but I can do it one more time perhaps. Let me identify a copy of B inside A and subtract it
 
-[00:04:22]
-  Transcript :  a large data set, then anything using O of N log N is going to start to slow down when we work with
+[00:04:25]
+  Transcript :  off. Now I have two small piles. They're so small that I can see that they have three stones each
   OCR        : None
-  Combined   :  a large data set, then anything using O of N log N is going to start to slow down when we work with
+  Combined   :  off. Now I have two small piles. They're so small that I can see that they have three stones each
 
-[00:04:29]
-  Transcript :  larger data sets, hence this curve here. Then we have O of n squared, also known as quadratic time.
+[00:04:31]
+  Transcript :  without even bothering to count. Now here's the trick. I claim the GCD of the original two pile
   OCR        : None
-  Combined   :  larger data sets, hence this curve here. Then we have O of n squared, also known as quadratic time.
+  Combined   :  without even bothering to count. Now here's the trick. I claim the GCD of the original two pile
 
-[00:04:35]
-  Transcript :  A few examples would include insertion sort, selection sort, and bubble sort. As the amount
+[00:04:36]
+  Transcript :  sizes is the same as the GCD of the diminished pair of pile sizes. So the GCD I'm looking for
   OCR        : None
-  Combined   :  A few examples would include insertion sort, selection sort, and bubble sort. As the amount
+  Combined   :  sizes is the same as the GCD of the diminished pair of pile sizes. So the GCD I'm looking for
 
-[00:04:41]
-  Transcript :  of data increases, it's going to take increasingly more and more time to complete anything that has a
+[00:04:42]
+  Transcript :  is the GCD of three and three, which is pretty clearly three. So does it really work? Here's the
   OCR        : None
-  Combined   :  of data increases, it's going to take increasingly more and more time to complete anything that has a
+  Combined   :  is the GCD of three and three, which is pretty clearly three. So does it really work? Here's the
 
-[00:04:46]
-  Transcript :  runtime complexity of O of n squared. So just to compare linear time and quadratic time, with linear
+[00:04:50]
+  Transcript :  actual pile sizes They were 21 and 54 Factoring these I can see that indeed they have a GCD of 3 So it does seem to work at least in this example I claim it always works if you follow the process that I demonstrated Okay so why does it work I show you the secret
   OCR        : None
-  Combined   :  runtime complexity of O of n squared. So just to compare linear time and quadratic time, with linear
+  Combined   :  actual pile sizes They were 21 and 54 Factoring these I can see that indeed they have a GCD of 3 So it does seem to work at least in this example I claim it always works if you follow the process that I demonstrated Okay so why does it work I show you the secret
 
-[00:04:53]
-  Transcript :  time if our data set was a thousand if n equals a thousand it going to take a thousand steps they proportional they linear but if we were using quadratic time if n was a thousand then a thousand squared would be a
+[00:05:07]
+  Transcript :  with a visual trick in a moment, but I encourage you to stop the video right now and ponder why
   OCR        : None
-  Combined   :  time if our data set was a thousand if n equals a thousand it going to take a thousand steps they proportional they linear but if we were using quadratic time if n was a thousand then a thousand squared would be a
+  Combined   :  with a visual trick in a moment, but I encourage you to stop the video right now and ponder why
 
-[00:05:06]
-  Transcript :  million. So if our data set was a thousand, if we're using quadratic time, it's going to take a million
+[00:05:13]
+  Transcript :  does this work. Go ahead, pause and ponder. It'll stay with you so much longer if you figure it out
   OCR        : None
-  Combined   :  million. So if our data set was a thousand, if we're using quadratic time, it's going to take a million
-
-[00:05:11]
-  Transcript :  steps then, way more than linear time. So quadratic time is extremely slow with large data sets, but in
-  OCR        : None
-  Combined   :  steps then, way more than linear time. So quadratic time is extremely slow with large data sets, but in
+  Combined   :  does this work. Go ahead, pause and ponder. It'll stay with you so much longer if you figure it out
 
 [00:05:18]
-  Transcript :  the case of a small data set, it could actually be faster, as you can see by the graph here. And lastly,
+  Transcript :  for yourself. Okay, I hope you have a guess or an idea about why this might work, because once I show
   OCR        : None
-  Combined   :  the case of a small data set, it could actually be faster, as you can see by the graph here. And lastly,
+  Combined   :  for yourself. Okay, I hope you have a guess or an idea about why this might work, because once I show
 
-[00:05:23]
-  Transcript :  we have O of n factorial, also known as factorial time, and one place where this is used is with the
+[00:05:25]
+  Transcript :  you with a visual what's going on, you'll never have this opportunity to figure it out for yourself
   OCR        : None
-  Combined   :  we have O of n factorial, also known as factorial time, and one place where this is used is with the
+  Combined   :  you with a visual what's going on, you'll never have this opportunity to figure it out for yourself
 
-[00:05:30]
-  Transcript :  traveling salesman problem, which I might discuss in a future video. So this is extremely slow,
+[00:05:29]
+  Transcript :  again. Do you want to pause a little longer? Go ahead. Okay, fine. So you want to see my secret.
   OCR        : None
-  Combined   :  traveling salesman problem, which I might discuss in a future video. So this is extremely slow,
+  Combined   :  again. Do you want to pause a little longer? Go ahead. Okay, fine. So you want to see my secret.
 
-[00:05:36]
-  Transcript :  so if I had to give a letter grade to each of these runtime complexities when working with
+[00:05:35]
+  Transcript :  So here it is. I'm going to silently step through the process again, but this time with a tiny little
   OCR        : None
-  Combined   :  so if I had to give a letter grade to each of these runtime complexities when working with
+  Combined   :  So here it is. I'm going to silently step through the process again, but this time with a tiny little
 
-[00:05:41]
-  Transcript :  large data sets with constant time, this would be an A, like an A+. Logarithmic time would be a B,
+[00:05:40]
+  Transcript :  something added on top of the visual.
   OCR        : None
-  Combined   :  large data sets with constant time, this would be an A, like an A+. Logarithmic time would be a B,
-
-[00:05:47]
-  Transcript :  it's pretty good.
-  OCR        : None
-  Combined   :  it's pretty good.
+  Combined   :  something added on top of the visual.
 
 [00:05:48]
-  Transcript :  Linear time is C, it's okay.
+  Transcript :  Did it click?
   OCR        : None
-  Combined   :  Linear time is C, it's okay.
-
-[00:05:50]
-  Transcript :  Quasi-linear time is a D, it's just barely passing.
-  OCR        : None
-  Combined   :  Quasi-linear time is a D, it's just barely passing.
-
-[00:05:54]
-  Transcript :  Quadratic time would be an F,
-  OCR        : None
-  Combined   :  Quadratic time would be an F,
-
-[00:05:56]
-  Transcript :  and factorial time, well, you get expelled from school.
-  OCR        : None
-  Combined   :  and factorial time, well, you get expelled from school.
-
-[00:05:59]
-  Transcript :  Although,
-  OCR        : None
-  Combined   :  Although,
+  Combined   :  Did it click?
 
 [00:06:00]
-  Transcript :  some of these runtime complexities are actually faster when working with a smaller data set,
+  Transcript :  I drew little triangles over the stones to group them into threes. This represents the fact that
   OCR        : None
-  Combined   :  some of these runtime complexities are actually faster when working with a smaller data set,
+  Combined   :  I drew little triangles over the stones to group them into threes. This represents the fact that
 
-[00:06:05]
-  Transcript :  so keep that in mind. Well, that's the very basics of Big O notation. It's notation used
+[00:06:06]
+  Transcript :  the number is divisible by three. So remember the GCD was three, meaning that this is possible. Both
   OCR        : None
-  Combined   :  so keep that in mind. Well, that's the very basics of Big O notation. It's notation used
+  Combined   :  the number is divisible by three. So remember the GCD was three, meaning that this is possible. Both
 
-[00:06:11]
-  Transcript :  to describe the performance of an algorithm as the amount of data increases. So if you can,
+[00:06:12]
+  Transcript :  piles are made up of an integer number of groups of three. So now watch as I step through again
   OCR        : None
-  Combined   :  to describe the performance of an algorithm as the amount of data increases. So if you can,
+  Combined   :  piles are made up of an integer number of groups of three. So now watch as I step through again
 
-[00:06:16]
-  Transcript :  give this video a thumbs up, drop a random comment down below, and well, that's Big O notation in
+[00:06:17]
+  Transcript :  how the process I described never breaks up a group of three. If a pile is divisible by three,
   OCR        : None
-  Combined   :  give this video a thumbs up, drop a random comment down below, and well, that's Big O notation in
+  Combined   :  how the process I described never breaks up a group of three. If a pile is divisible by three,
 
 [00:06:22]
-  Transcript :  computer science.
+  Transcript :  you can subtract off some number of threes. So what's left is still a multiple of three.
   OCR        : None
-  Combined   :  computer science.
+  Combined   :  you can subtract off some number of threes. So what's left is still a multiple of three.
+
+[00:06:26]
+  Transcript :  So watch it happen again.
+  OCR        : None
+  Combined   :  So watch it happen again.
+
+[00:06:30]
+  Transcript :  So this is an example of a cool, useful paradigm in mathematics.
+  OCR        : None
+  Combined   :  So this is an example of a cool, useful paradigm in mathematics.
+
+[00:06:44]
+  Transcript :  If you have a tough problem, replace it with an easier problem that has the same answer.
+  OCR        : None
+  Combined   :  If you have a tough problem, replace it with an easier problem that has the same answer.
+
+[00:06:48]
+  Transcript :  So in our case, the trick is to replace the GCD of A and B, that's the tough problem,
+  OCR        : None
+  Combined   :  So in our case, the trick is to replace the GCD of A and B, that's the tough problem,
+
+[00:06:52]
+  Transcript :  with the GCD of A and B minus A That the easier problem Those are the smaller piles So the answers are the same but the new problem is simpler to deal with So that the Euclidean algorithm Just keep
+  OCR        : None
+  Combined   :  with the GCD of A and B minus A That the easier problem Those are the smaller piles So the answers are the same but the new problem is simpler to deal with So that the Euclidean algorithm Just keep
+
+[00:07:06]
+  Transcript :  simplifying the problem by subtracting one pile of stones from the other until the answer is just
+  OCR        : None
+  Combined   :  simplifying the problem by subtracting one pile of stones from the other until the answer is just
+
+[00:07:10]
+  Transcript :  obvious. So I hope this explanation will stick with you and allow you to rediscover the Euclidean
+  OCR        : None
+  Combined   :  obvious. So I hope this explanation will stick with you and allow you to rediscover the Euclidean
+
+[00:07:16]
+  Transcript :  algorithm anytime you forget it. I'm going to use the rest of this video to formalize the algorithm
+  OCR        : None
+  Combined   :  algorithm anytime you forget it. I'm going to use the rest of this video to formalize the algorithm
+
+[00:07:21]
+  Transcript :  and make it a little faster. So first we'll write down the algorithms as presented, then we'll use a
+  OCR        : None
+  Combined   :  and make it a little faster. So first we'll write down the algorithms as presented, then we'll use a
+
+[00:07:26]
+  Transcript :  trick to speed it up, and then we'll write it down again. That's its more well-known form. And then
+  OCR        : None
+  Combined   :  trick to speed it up, and then we'll write it down again. That's its more well-known form. And then
+
+[00:07:31]
+  Transcript :  we'll finish off with an example. All right, so remember the core of our algorithm was this. The
+  OCR        : None
+  Combined   :  we'll finish off with an example. All right, so remember the core of our algorithm was this. The
+
+[00:07:36]
+  Transcript :  GCD of A and B is the same as the GCD of A and B minus A. So here's a proof of that fact, but it's
+  OCR        : None
+  Combined   :  GCD of A and B is the same as the GCD of A and B minus A. So here's a proof of that fact, but it's
+
+[00:07:44]
+  Transcript :  a little bit boring. This type of formalism is important, but the picture proof is so much more
+  OCR        : None
+  Combined   :  a little bit boring. This type of formalism is important, but the picture proof is so much more
+
+[00:07:48]
+  Transcript :  or visceral in this case.
+  OCR        : None
+  Combined   :  or visceral in this case.
+
+[00:07:49]
+  Transcript :  So you can pause the video if you'd like to enjoy
+  OCR        : None
+  Combined   :  So you can pause the video if you'd like to enjoy
+
+[00:07:51]
+  Transcript :  a little logical walk in the park,
+  OCR        : None
+  Combined   :  a little logical walk in the park,
+
+[00:07:53]
+  Transcript :  and otherwise let's move on.
+  OCR        : None
+  Combined   :  and otherwise let's move on.
+
+[00:07:56]
+  Transcript :  The algorithm is basically the following.
+  OCR        : None
+  Combined   :  The algorithm is basically the following.
+
+[00:07:58]
+  Transcript :  Subtract the smaller from the left
+  OCR        : None
+  Combined   :  Subtract the smaller from the left
+
+[00:08:00]
+  Transcript :  larger of your pair until you can't do it anymore.
+  OCR        : None
+  Combined   :  larger of your pair until you can't do it anymore.
+
+[00:08:03]
+  Transcript :  If you want to write it out for a computer though,
+  OCR        : None
+  Combined   :  If you want to write it out for a computer though,
+
+[00:08:05]
+  Transcript :  we might write it out a bit more carefully like this.
+  OCR        : None
+  Combined   :  we might write it out a bit more carefully like this.
+
+[00:08:08]
+  Transcript :  Start with the pair AB, where A is the smaller one.
+  OCR        : None
+  Combined   :  Start with the pair AB, where A is the smaller one.
+
+[00:08:12]
+  Transcript :  If the two entries are non-zero,
+  OCR        : None
+  Combined   :  If the two entries are non-zero,
+
+[00:08:14]
+  Transcript :  then we're gonna replace AB with the pair A and B minus A.
+  OCR        : None
+  Combined   :  then we're gonna replace AB with the pair A and B minus A.
+
+[00:08:20]
+  Transcript :  Then we will swap the order if needed,
+  OCR        : None
+  Combined   :  Then we will swap the order if needed,
+
+[00:08:22]
+  Transcript :  so that the first entry is the smaller one.
+  OCR        : None
+  Combined   :  so that the first entry is the smaller one.
+
+[00:08:26]
+  Transcript :  And then we'll loop back and repeat
+  OCR        : None
+  Combined   :  And then we'll loop back and repeat
+
+[00:08:27]
+  Transcript :  so that we'll keep doing this over and over.
+  OCR        : None
+  Combined   :  so that we'll keep doing this over and over.
+
+[00:08:30]
+  Transcript :  If at some point you fail the test that both entries are non-zero,
+  OCR        : None
+  Combined   :  If at some point you fail the test that both entries are non-zero,
+
+[00:08:33]
+  Transcript :  so in other words, you come across a zero in your pair,
+  OCR        : None
+  Combined   :  so in other words, you come across a zero in your pair,
+
+[00:08:36]
+  Transcript :  then you're done.
+  OCR        : None
+  Combined   :  then you're done.
+
+[00:08:37]
+  Transcript :  The non-zero entry is the GCD.
+  OCR        : None
+  Combined   :  The non-zero entry is the GCD.
+
+[00:08:40]
+  Transcript :  So I've used zero as a marker to figure out when to stop.
+  OCR        : None
+  Combined   :  So I've used zero as a marker to figure out when to stop.
+
+[00:08:43]
+  Transcript :  So in my visual version, I stopped at the pair 3-3, if you recall,
+  OCR        : None
+  Combined   :  So in my visual version, I stopped at the pair 3-3, if you recall,
+
+[00:08:46]
+  Transcript :  but if I subtract one from the other again, I would get a zero.
+  OCR        : None
+  Combined   :  but if I subtract one from the other again, I would get a zero.
+
+[00:08:49]
+  Transcript :  So zero is just a convenient way to figure out when you've done enough work.
+  OCR        : None
+  Combined   :  So zero is just a convenient way to figure out when you've done enough work.
+
+[00:08:55]
+  Transcript :  Okay also a quick reminder here about taking a GCD with zero So the GCD of n with 0 is n Why is that Well because 0 is weird Everything divides 0
+  OCR        : None
+  Combined   :  Okay also a quick reminder here about taking a GCD with zero So the GCD of n with 0 is n Why is that Well because 0 is weird Everything divides 0
+
+[00:09:06]
+  Transcript :  The definition of divides, that's what's in the lower left here,
+  OCR        : None
+  Combined   :  The definition of divides, that's what's in the lower left here,
+
+[00:09:08]
+  Transcript :  says that a divides b if b is a multiple of a.
+  OCR        : None
+  Combined   :  says that a divides b if b is a multiple of a.
+
+[00:09:12]
+  Transcript :  So, well, 0 is a multiple of anything, since 0 times n is 0.
+  OCR        : None
+  Combined   :  So, well, 0 is a multiple of anything, since 0 times n is 0.
+
+[00:09:16]
+  Transcript :  So, for example, 0 is 0 3s, so it's a multiple of 3.
+  OCR        : None
+  Combined   :  So, for example, 0 is 0 3s, so it's a multiple of 3.
+
+[00:09:19]
+  Transcript :  It's 0 4s, so it's a multiple of 4.
+  OCR        : None
+  Combined   :  It's 0 4s, so it's a multiple of 4.
+
+[00:09:22]
+  Transcript :  So bizarrely, I think of zero as being kind of an infinite castle of blocks.
+  OCR        : None
+  Combined   :  So bizarrely, I think of zero as being kind of an infinite castle of blocks.
+
+[00:09:26]
+  Transcript :  All right.
+  OCR        : None
+  Combined   :  All right.
+
+[00:09:27]
+  Transcript :  So the next question is, how do we know it will end?
+  OCR        : None
+  Combined   :  So the next question is, how do we know it will end?
+
+[00:09:31]
+  Transcript :  Why does it work?
+  OCR        : None
+  Combined   :  Why does it work?
+
+[00:09:32]
+  Transcript :  Well, the numbers keep getting smaller at every stage.
+  OCR        : None
+  Combined   :  Well, the numbers keep getting smaller at every stage.
+
+[00:09:35]
+  Transcript :  And they stay non-negative, since you always take the smaller from the larger.
+  OCR        : None
+  Combined   :  And they stay non-negative, since you always take the smaller from the larger.
+
+[00:09:40]
+  Transcript :  But at the same time, they can't keep getting smaller forever,
+  OCR        : None
+  Combined   :  But at the same time, they can't keep getting smaller forever,
+
+[00:09:43]
+  Transcript :  since there's only finitely many non-negative integers smaller than what we started with.
+  OCR        : None
+  Combined   :  since there's only finitely many non-negative integers smaller than what we started with.
+
+[00:09:48]
+  Transcript :  So it's kind of climbing down a ladder that ends.
+  OCR        : None
+  Combined   :  So it's kind of climbing down a ladder that ends.
+
+[00:09:50]
+  Transcript :  So how does it end?
+  OCR        : None
+  Combined   :  So how does it end?
+
+[00:09:52]
+  Transcript :  Well, we must meet the case that one of them becomes zero.
+  OCR        : None
+  Combined   :  Well, we must meet the case that one of them becomes zero.
+
+[00:09:54]
+  Transcript :  That's the only way it can end.
+  OCR        : None
+  Combined   :  That's the only way it can end.
+
+[00:09:57]
+  Transcript :  So you'll notice that I did call this the slow.
+  OCR        : None
+  Combined   :  So you'll notice that I did call this the slow.
+
+[00:10:00]
+  Transcript :  Clidian algorithm. So for example, you did notice that the example that we did, we actually took two
+  OCR        : None
+  Combined   :  Clidian algorithm. So for example, you did notice that the example that we did, we actually took two
+
+[00:10:05]
+  Transcript :  copies of pile A out of pile B. And in the algorithm, as I just presented it, these are two
+  OCR        : None
+  Combined   :  copies of pile A out of pile B. And in the algorithm, as I just presented it, these are two
+
+[00:10:10]
+  Transcript :  separate steps. So I encourage you to pause here and think about how we might do this more efficiently,
+  OCR        : None
+  Combined   :  separate steps. So I encourage you to pause here and think about how we might do this more efficiently,
+
+[00:10:15]
+  Transcript :  and then continue the video after you've given it a little bit of thought.
+  OCR        : None
+  Combined   :  and then continue the video after you've given it a little bit of thought.
+
+[00:10:21]
+  Transcript :  Okay, how might we make it more efficient? So we'll use what's called the division algorithm,
+  OCR        : None
+  Combined   :  Okay, how might we make it more efficient? So we'll use what's called the division algorithm,
+
+[00:10:26]
+  Transcript :  which is just the observation that given an A and a B, with B bigger than the A,
+  OCR        : None
+  Combined   :  which is just the observation that given an A and a B, with B bigger than the A,
+
+[00:10:32]
+  Transcript :  we can write B as some number of A's plus R, where R is the remainder,
+  OCR        : None
+  Combined   :  we can write B as some number of A's plus R, where R is the remainder,
+
+[00:10:38]
+  Transcript :  which is somewhere between 0 and A minus 1.
+  OCR        : None
+  Combined   :  which is somewhere between 0 and A minus 1.
+
+[00:10:40]
+  Transcript :  The Q stands for quotient.
+  OCR        : None
+  Combined   :  The Q stands for quotient.
+
+[00:10:43]
+  Transcript :  This is the output you get from the good old-fashioned division algorithm that you learned in school.
+  OCR        : None
+  Combined   :  This is the output you get from the good old-fashioned division algorithm that you learned in school.
+
+[00:10:47]
+  Transcript :  So for example, 1016 is made up of 203 copies of 5 with a remainder of 1.
+  OCR        : None
+  Combined   :  So for example, 1016 is made up of 203 copies of 5 with a remainder of 1.
+
+[00:10:54]
+  Transcript :  So importantly it efficient to determine Q more efficient than subtracting off copies of a repeatedly until you can anymore Okay you did this in grade school
+  OCR        : None
+  Combined   :  So importantly it efficient to determine Q more efficient than subtracting off copies of a repeatedly until you can anymore Okay you did this in grade school
+
+[00:11:05]
+  Transcript :  So I won't go into the division algorithm at the moment, but just trust that we can find q and r fairly quickly,
+  OCR        : None
+  Combined   :  So I won't go into the division algorithm at the moment, but just trust that we can find q and r fairly quickly,
+
+[00:11:09]
+  Transcript :  because you did it over and over and over by hand as a kid.
+  OCR        : None
+  Combined   :  because you did it over and over and over by hand as a kid.
+
+[00:11:13]
+  Transcript :  So, now we can speed up the Euclidean algorithm.
+  OCR        : None
+  Combined   :  So, now we can speed up the Euclidean algorithm.
+
+[00:11:16]
+  Transcript :  The key idea is that instead of repeatedly subtracting a, we just do it in one step.
+  OCR        : None
+  Combined   :  The key idea is that instead of repeatedly subtracting a, we just do it in one step.
+
+[00:11:20]
+  Transcript :  So that is we're going to replace AB with A and B minus QA, which is actually just A and then the remainder R.
+  OCR        : None
+  Combined   :  So that is we're going to replace AB with A and B minus QA, which is actually just A and then the remainder R.
+
+[00:11:28]
+  Transcript :  So R is smaller than A. We're already ready to start removing copies of R from A at that point.
+  OCR        : None
+  Combined   :  So R is smaller than A. We're already ready to start removing copies of R from A at that point.
+
+[00:11:35]
+  Transcript :  Okay, so here's the usual not slow version of the Euclidean algorithm. It's classic version.
+  OCR        : None
+  Combined   :  Okay, so here's the usual not slow version of the Euclidean algorithm. It's classic version.
+
+[00:11:42]
+  Transcript :  We begin with a pair A and B, where A is the smaller.
+  OCR        : None
+  Combined   :  We begin with a pair A and B, where A is the smaller.
+
+[00:11:45]
+  Transcript :  If the two entries are non-zero,
+  OCR        : None
+  Combined   :  If the two entries are non-zero,
+
+[00:11:47]
+  Transcript :  then we write B as AQ plus R using the division algorithm.
+  OCR        : None
+  Combined   :  then we write B as AQ plus R using the division algorithm.
+
+[00:11:52]
+  Transcript :  So some number of copies of A with a remainder of R.
+  OCR        : None
+  Combined   :  So some number of copies of A with a remainder of R.
+
+[00:11:57]
+  Transcript :  Then we replace AB with R,
+  OCR        : None
+  Combined   :  Then we replace AB with R,
+
+[00:12:00]
+  Transcript :  A, so R is now the smaller one, so I'm going to stick it in the front, and then we loop back and
+  OCR        : None
+  Combined   :  A, so R is now the smaller one, so I'm going to stick it in the front, and then we loop back and
+
+[00:12:05]
+  Transcript :  we just keep repeating. And if at any point one of the entries of our pair is zero, then we're done.
+  OCR        : None
+  Combined   :  we just keep repeating. And if at any point one of the entries of our pair is zero, then we're done.
+
+[00:12:14]
+  Transcript :  Ta-da. Okay, so now I have a challenge for you. Compute the GCD of 180 and 196. So go ahead and
+  OCR        : None
+  Combined   :  Ta-da. Okay, so now I have a challenge for you. Compute the GCD of 180 and 196. So go ahead and
+
+[00:12:22]
+  Transcript :  pause the video, use the algorithm as it is on the screen, and come back when you've done it.
+  OCR        : None
+  Combined   :  pause the video, use the algorithm as it is on the screen, and come back when you've done it.
+
+[00:12:26]
+  Transcript :  we're back. Okay, so here's how it went for me. So I began with a pair 180 and 196.
+  OCR        : None
+  Combined   :  we're back. Okay, so here's how it went for me. So I began with a pair 180 and 196.
+
+[00:12:36]
+  Transcript :  196 is bigger, so I wrote it as some number of 180s plus a remainder, which turned out to be 16.
+  OCR        : None
+  Combined   :  196 is bigger, so I wrote it as some number of 180s plus a remainder, which turned out to be 16.
+
+[00:12:42]
+  Transcript :  That gives me a new pair, which is 16 and 180. I wrote the larger 180 as some number of 16s.
+  OCR        : None
+  Combined   :  That gives me a new pair, which is 16 and 180. I wrote the larger 180 as some number of 16s.
+
+[00:12:48]
+  Transcript :  It actually took 11 of them with a remainder of 4. That gives me a new pair, 4 and 16.
+  OCR        : None
+  Combined   :  It actually took 11 of them with a remainder of 4. That gives me a new pair, 4 and 16.
+
+[00:12:54]
+  Transcript :  16 is four fours with a remainder of zero. My new pair is zero and four, but that has a zero in it,
+  OCR        : None
+  Combined   :  16 is four fours with a remainder of zero. My new pair is zero and four, but that has a zero in it,
+
+[00:13:02]
+  Transcript :  so we're done. The GCD is just the other entry, the four. Notice that you see the four right here
+  OCR        : None
+  Combined   :  so we're done. The GCD is just the other entry, the four. Notice that you see the four right here
+
+[00:13:07]
+  Transcript :  as the last non-zero remainder. Okay, that's it. That's the Euclidean algorithm. Here for comparison
+  OCR        : None
+  Combined   :  as the last non-zero remainder. Okay, that's it. That's the Euclidean algorithm. Here for comparison
+
+[00:13:14]
+  Transcript :  is the slow Euclidean algorithm. We definitely don't want to do that. And that's the Euclidean
+  OCR        : None
+  Combined   :  is the slow Euclidean algorithm. We definitely don't want to do that. And that's the Euclidean
+
+[00:13:20]
+  Transcript :  algorithm. In the next video, I'll visualize the Euclidean algorithm in a totally different way
+  OCR        : None
+  Combined   :  algorithm. In the next video, I'll visualize the Euclidean algorithm in a totally different way
+
+[00:13:24]
+  Transcript :  which is useful for exploring its efficiency.
+  OCR        : None
+  Combined   :  which is useful for exploring its efficiency.
 

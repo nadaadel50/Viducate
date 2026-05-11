@@ -1,12 +1,14 @@
+import { formatMessageTime } from "../../../../core/utils/fomat_time"
 
 
 type UserMessageProps={
     message:string
-    senededTime:string
+    senededTime:number
    
 }
 
 export function UserMessage(props:UserMessageProps){
+
     return(
         <div className="flex flex-col items-end gap-3">
            
@@ -18,7 +20,7 @@ export function UserMessage(props:UserMessageProps){
               </div>
               <div className="flex items-center gap-2 mr-1">
                 <span className="text-[10px] text-slate-400 font-bold uppercase tracking-wider">
-                 { `You • ${props.senededTime}`}
+                 { `You • ${formatMessageTime(props.senededTime)}`}
                 </span>
               </div>
             </div>

@@ -1,68 +1,116 @@
-[0.0 --> 4.7]  Hey, what's going on everybody? It's your bro, hope you're doing well, and in this video I'm going to
-[4.7 --> 12.1]  describe the very basics of Big O notation in, well, computer science. So sit back, relax, and enjoy the show.
-[14.0 --> 19.4]  Oh yeah, Big O notation. So a common phrase used with Big O notation is,
-[19.8 --> 25.7]  how code slows as data grows. It describes the performance of an algorithm as the amount of data
-[25.7 --> 31.6]  increases. And really, this notation is machine independent. What we're really focusing on is the
-[31.6 --> 36.4]  number of steps to complete an algorithm, because some machines are going to run certain algorithms
-[36.4 --> 42.9]  faster than others. And three, we tend to ignore smaller operations. If we had some task that took
-[42.9 --> 48.4]  n plus one, we would just reduce it to just n, because that plus one really isn't going to make
-[48.4 --> 51.4]  So here's a few examples of big O notation.
-[51.4 --> 66.8]  We have O O O and O And N is really just the amount of data that we passing in It a variable like x What we focusing on is the performance of an algorithm as the amount
-[66.8 --> 72.1]  of data increases, and n is a representation of the amount of data that we're passing in.
-[72.3 --> 76.9]  Here's a more concrete example. I have a function named addup. We will add up to a certain number
-[76.9 --> 82.5]  depending on what we pass in as an argument. The for loop within here will iterate once up to
-[82.5 --> 88.9]  whatever number that n is, add i to sum, then return it. What if n was a large number like a
-[88.9 --> 93.0]  million? Well, it's going to take just above a million steps to complete this function.
-[93.5 --> 99.7]  This function is said to have a runtime complexity of O of n, linear time. As the amount of data
-[99.7 --> 106.2]  increases, it's going to increase the amount of steps linearly or proportionally. Now another way
-[106.2 --> 113.3]  which we could write the same function is to take sum equals n times n plus 1 divided by 2.
-[113.5 --> 120.0]  We will get the exact same sum. So if n was, let's say, a million, this is still only going to take a couple seconds.
-[120.0 --> 126.7]  steps. Three steps, not a million steps. So this function is going to have a runtime complexity of
-[126.7 --> 131.1]  O of one. The input size doesn't matter. The amount of data that we have really doesn't matter.
-[131.4 --> 137.1]  It's going to be completed in the same amount of steps. So this function is way better than this
-[137.1 --> 142.8]  previous one. Three steps is better than a million steps. And the reason that this isn't O of three,
-[143.0 --> 147.7]  because this takes three steps, is that we really don't care about smaller operations. In the grand
-[147.7 --> 151.9]  scheme of things, they really won't make much of a difference. So we would just shorten this and say
-[151.9 --> 157.0]  that this is O of 1 constant time. The input size doesn't matter. Here's a graph that I made to
-[157.0 --> 163.5]  represent the different runtime complexities. We have data on the x-axis represented by n. So data
-[163.5 --> 170.4]  will increase as we go more to the right, and we have time on the y-axis. I did add an asterisk next
-[170.4 --> 174.8]  to time because some of these times can vary depending on what machine you're using, so these
-[174.8 --> 186.4]  can vary Another way to look at this is number of steps So as we increase on the y these algorithms are going to perform with increasingly more time They going to get slower So let
-[186.4 --> 192.6]  begin with O of 1 constant time. Anything that has a runtime complexity of O of 1 will take the same
-[192.6 --> 198.0]  amount of time regardless of the data size. A few examples would include the random access of an
-[198.0 --> 203.9]  element within an array and inserting at the beginning of a linked list. So O of 1 is extremely
-[203.9 --> 210.8]  fast. Next we have O of log n, also known as logarithmic time. One example is binary search.
-[210.8 --> 214.7]  We haven't talked about this yet. We'll talk about a few of these algorithms in future videos,
-[214.7 --> 220.9]  but anything that has a runtime complexity of O of log n will actually take, I don't want to say
-[220.9 --> 226.9]  less and less time, but increasingly less time to complete. So as the data size increases,
-[227.4 --> 231.8]  this algorithm is going to be more and more efficient compared to the early stages with a
-[231.8 --> 236.6]  small dataset. O is also known as linear time. As the amount of
-[236.6 --> 239.9]  data increases, the time it takes to complete something will
-[240.0 --> 244.8]  increase proportionally linearly. That would include looping through the elements in an array
-[244.8 --> 251.6]  and searching through a linked list. Next we have O of N log N, also known as quasi-linear time.
-[251.8 --> 256.8]  This would include a quick sort, merge sort, and heap sort. We'll talk about these concepts in
-[256.8 --> 262.3]  future videos. So for the most part, this is very similar to linear time. Unless we're working with
-[262.3 --> 269.4]  a large data set, then anything using O of N log N is going to start to slow down when we work with
-[269.4 --> 275.6]  larger data sets, hence this curve here. Then we have O of n squared, also known as quadratic time.
-[275.8 --> 281.0]  A few examples would include insertion sort, selection sort, and bubble sort. As the amount
-[281.0 --> 286.6]  of data increases, it's going to take increasingly more and more time to complete anything that has a
-[286.6 --> 293.3]  runtime complexity of O of n squared. So just to compare linear time and quadratic time, with linear
-[293.3 --> 306.2]  time if our data set was a thousand if n equals a thousand it going to take a thousand steps they proportional they linear but if we were using quadratic time if n was a thousand then a thousand squared would be a
-[306.2 --> 311.9]  million. So if our data set was a thousand, if we're using quadratic time, it's going to take a million
-[311.9 --> 318.7]  steps then, way more than linear time. So quadratic time is extremely slow with large data sets, but in
-[318.7 --> 323.9]  the case of a small data set, it could actually be faster, as you can see by the graph here. And lastly,
-[323.9 --> 330.2]  we have O of n factorial, also known as factorial time, and one place where this is used is with the
-[330.2 --> 336.2]  traveling salesman problem, which I might discuss in a future video. So this is extremely slow,
-[336.4 --> 341.3]  so if I had to give a letter grade to each of these runtime complexities when working with
-[341.3 --> 347.1]  large data sets with constant time, this would be an A, like an A+. Logarithmic time would be a B,
-[347.1 --> 348.1]  it's pretty good.
-[348.1 --> 350.7]  Linear time is C, it's okay.
-[350.7 --> 354.4]  Quasi-linear time is a D, it's just barely passing.
-[354.4 --> 356.2]  Quadratic time would be an F,
-[356.2 --> 359.1]  and factorial time, well, you get expelled from school.
-[359.1 --> 359.9]  Although,
-[360.0 --> 365.3]  some of these runtime complexities are actually faster when working with a smaller data set,
-[365.3 --> 371.2]  so keep that in mind. Well, that's the very basics of Big O notation. It's notation used
-[371.2 --> 377.0]  to describe the performance of an algorithm as the amount of data increases. So if you can,
-[377.0 --> 382.5]  give this video a thumbs up, drop a random comment down below, and well, that's Big O notation in
-[382.5 --> 384.1]  computer science.
+[0.1 --> 6.2]  Welcome to this proof-of-concept video. The goal today is to tack on one brilliant little idea to
+[6.2 --> 10.0]  the Euclidean algorithm, to turn it from an algorithm that computes the greatest common
+[10.0 --> 15.0]  divisor into an algorithm that solves linear diaphanian equations, finds modular inverses,
+[15.2 --> 19.9]  performs the Chinese remainder theorem, and much more. So this new algorithm is called the extended
+[19.9 --> 25.7]  Euclidean algorithm. Sometimes it's called magic box. It always seems to come with a pile of opaque
+[25.7 --> 30.6]  rules about adding numbers from one box to the one diagonally below and over to the side, blah,
+[30.6 --> 34.4]  blah, blah, blah, blah. So that's how I first learned it. And I could perform it just fine
+[34.4 --> 39.2]  until I didn't do it for a week. And then like my ATM pin during a pandemic, it's gone from my brain
+[39.2 --> 44.7]  forever. But the truth is the extended Euclidean algorithm is just the Euclidean algorithm plus one
+[44.7 --> 49.9]  clever little idea. No need to memorize anything, really. Don't memorize stuff in math. Just
+[49.9 --> 54.3]  understand the key idea so you can always recreate your mathematics for yourself, anywhere, anytime.
+[54.3 --> 65.5]  To explain what the extended Euclidean algorithm does we need to return to what the Euclidean algorithm does The Euclidean algorithm finds the GCD or greatest common divisor of two integers
+[66.0 --> 70.8]  It's the largest integer that's a factor or divisor of the two that you've got. So for example,
+[71.1 --> 77.2]  the GCD of 15 and 12 is the biggest integer dividing both of them, namely three. If you need
+[77.2 --> 81.2]  a review on the GCD or the Euclidean algorithm, check the links in the description below.
+[82.2 --> 85.7]  Okay, but it's important just how the Euclidean algorithm accomplishes this,
+[85.9 --> 88.3]  the process that gets you to the GCD.
+[88.9 --> 92.7]  It does this by charting a course, giving a recipe, a set of instructions,
+[93.1 --> 98.2]  as to how to add and subtract the two numbers from each other repeatedly to get the GCD.
+[98.7 --> 103.4]  The point of the extended Euclidean algorithm is to capture the process, not just the result.
+[103.9 --> 106.8]  So the extended Euclidean algorithm is exactly the Euclidean one,
+[107.3 --> 111.0]  but plus a little bookkeeping along the way that lets it end up with more information.
+[111.0 --> 115.5]  at the end. That extra information will allow us to do a variety of things,
+[115.6 --> 119.0]  all of which are consequences of solving a linear diaphanine equation.
+[120.0 --> 126.4]  A linear diaphanian equation is a linear equation, first of all, something of the form ax plus by equals c.
+[127.5 --> 131.0]  Say, for example, 2x plus 4y equals 6.
+[131.9 --> 135.4]  But here I'm interested in solving for the integer solutions.
+[136.1 --> 142.6]  So, typically, that means I'm only considering integer a, b, c in the first place, and I'm looking for integer x and y.
+[143.7 --> 146.9]  That's what the word diaphanian refers to, integer solutions.
+[146.9 --> 152.8]  Diophantus was a famous old Greek, and you can pass an enjoyable half hour on Wikipedia if you
+[152.8 --> 157.4]  like. For example, there's a Diophantine equation in the form of a poem from the 5th century,
+[157.6 --> 163.5]  which gives his age a death. Anyway, back to work. An extended Euclidean algorithm will solve
+[163.5 --> 171.9]  linear Diophantine equations. In particular, it will solve ax plus by equals the gcd of a and b.
+[171.9 --> 187.0]  If I want to solve linear equations in greater generality meaning for other values of c besides the GCD of a and b then I can use a solution to this equation to build others I cover that in another video but for now our goal and task is to solve this one
+[187.5 --> 190.0]  Ax plus By equals GCD AB.
+[191.4 --> 196.4]  In other words, we want to find an integer linear combination of A and B that gives the
+[196.4 --> 196.8]  GCD.
+[197.5 --> 201.7]  That is, we want to add and subtract copies of A and B from each other until we get to
+[201.7 --> 202.5]  the GCD.
+[203.2 --> 203.8]  Sound familiar?
+[204.2 --> 206.5]  That's exactly what the Euclidean algorithm does.
+[206.9 --> 209.7]  So we can just watch what we're doing during the Euclidean algorithm
+[209.7 --> 212.8]  and siphon off that bit of extra info along the way.
+[213.5 --> 215.9]  Okay, this will only make sense with an example.
+[216.2 --> 221.8]  Let's take an example of a Euclidean algorithm computation for the GCD of 196 and 180.
+[223.1 --> 228.2]  We start with this pair, 196 and 180, and we perform the division algorithm.
+[228.8 --> 232.7]  That is, we write 196 as some number of copies of 180 plus a remainder.
+[232.7 --> 237.7]  That gives us 196 is 1 times 180 plus 16.
+[237.7 --> 239.9]  Now, the whole trick in the Euclidean
+[240.0 --> 245.6]  algorithm is to replace the bigger number, 196, with the remainder, 16. This makes the problem
+[245.6 --> 251.3]  smaller, and we just have another go at it. Remember that the key here is that the GCD of
+[251.3 --> 258.3]  the first pair, 196 and 180, is the same as the GCD of the new pair, 180 and 16. So solving the
+[258.3 --> 263.9]  smaller problem actually solves the original one. So we start over. We use the division algorithm
+[263.9 --> 271.9]  again. 180 is 11 copies of 16 plus 4. Then we replace 180 with 4, so our new pair is just 16
+[271.9 --> 280.7]  and 4. We divide again, so 16 is 4 copies of 4 plus 0. At this point, we notice the 0, and we check
+[280.7 --> 285.6]  back to the last remainder before that, or the smallest non-zero number we've seen in our various
+[285.6 --> 293.7]  pairs. It's 4, and that tells us that the GCD is 4. Great. Now, for the extended Euclidean algorithm,
+[293.9 --> 310.7]  Okay it will allow us to solve 196x plus 180y equals 4 It important here that I have equals 4 that it the GCD of 196 and 180 that sort of my target The extended Euclidean algorithm specifically answers
+[310.7 --> 316.7]  that particular question. I want to think of this question as asking for a recipe for the number 4
+[316.7 --> 322.4]  in terms of the numbers 196 and 180. So keep that idea of a recipe in mind.
+[323.3 --> 330.1]  Okay, first step of the Euclidean algorithm as before, we write 196 in terms of 180 by the
+[330.1 --> 337.3]  division algorithm. Now what I'm going to do is kind of expand the 196, 180, and 16 into these
+[337.3 --> 343.7]  little recipe cards. The cards are basically a way of attaching extra data to each number. So the
+[343.7 --> 346.3]  the extra data is a value of x and y.
+[346.3 --> 349.5]  That's the recipe, which when plugged into the equation
+[349.5 --> 354.0]  196 plus 180y gives the number.
+[354.0 --> 356.6]  So for example, in the first card,
+[356.6 --> 359.9]  using x equals one and y equals zero in the main equation,
+[360.0 --> 368.6]  196 x plus 180 y will give us 196. That's the recipe. It tells you what x and y to use to get
+[368.6 --> 376.4]  196. The second card tells us what we need to get 180. We need x equals 0 and y equals 1.
+[377.0 --> 384.0]  The third card tells us that we can use x equals 1 and y equals negative 1 to get 16. But wait a
+[384.0 --> 389.2]  second, where'd we get that info from? The first two cards were very clear. To get 196 or 180,
+[389.2 --> 396.1]  It's pretty obvious what to pick for x and y. But 16? So recall that the original equation is
+[396.1 --> 405.3]  written across the top of the cards. 196 is 1 times 180 plus 16. But actually, the other rows
+[405.3 --> 411.9]  of the cards work the same way. So for example, the x values, which is the middle row, satisfy that 1
+[411.9 --> 414.7]  is 1 times 0 plus 1.
+[415.4 --> 427.7]  And the y values 0 is 1 times 1 plus negative 1 So we can figure out what to write on the last card by just picking the thing that makes the equations true
+[428.8 --> 436.7]  So for example, y on the last card needs to be negative 1, because if I take 1 times 1, that's what I need to add to it to get 0.
+[438.1 --> 441.9]  Similarly for the x value, so pause the video here and verify that.
+[441.9 --> 448.2]  okay so there's another way to think about what's happening let's write out the three equations the
+[448.2 --> 454.4]  cards represent one above the other so remember i'm claiming that the first card minus the second
+[454.4 --> 460.9]  card should give the third card so each card is an equation so i'm saying the first equation
+[460.9 --> 467.3]  minus the second one should give the third one and this actually makes sense column by column
+[467.3 --> 472.4]  The left column holds true, 196 minus 180 is 16.
+[473.2 --> 479.4]  The middle column, that's the x's, holds true to 1 minus 0 is 1.
+[480.0 --> 485.3]  And the right column, that's the y's, says that 0 minus 1 is minus 1.
+[487.0 --> 489.0]  That's all there is to the Euclidean algorithm.
+[489.5 --> 494.9]  We just keep a recipe card on each number we come across as we go through the regular Euclidean algorithm.
+[496.0 --> 499.3]  So here's the first line in the algorithm, done as recipe cards.
+[499.7 --> 502.0]  Here's the second line of the Euclidean algorithm.
+[502.0 --> 506.5]  Now we want to make it into the extended Euclidean algorithm by making it into these recipe cards.
+[507.2 --> 512.2]  The recipe for 180 is still valid, so we already know the x and y on the 180 card.
+[512.5 --> 514.1]  We just copy it down from the row above.
+[514.7 --> 516.4]  Okay, same for 16.
+[516.9 --> 519.4]  So all we need to do is figure out the recipe for 4.
+[519.9 --> 528.1]  So we look at the x's, and we see that x equals negative 11 is what's needed on the last card to make the true equation.
+[528.5 --> 531.7]  0 is 11 times 1 minus 11.
+[532.9 --> 547.4]  And finally y has to be 12 Okay so we now have a recipe card for four But 4 is what we were after all along The original question was how to make 4 as a recipe in terms of 196 and 180
+[547.8 --> 552.3]  So we're done. The solution is x equals negative 11 and y equals 12.
+[554.5 --> 559.8]  Okay, now a few comments are in order here. So first, remember that this only works to solve
+[559.8 --> 567.7]  AX plus BY equals the GCD of A and B. That is, it gives us a recipe for GCD AB in terms of A and B.
+[568.5 --> 573.6]  However, if you want a recipe for two times the GCD of A and B, you can just double the recipe
+[573.6 --> 579.0]  you have, double X and double Y, and you double the result. Similarly, you can obtain any multiple
+[579.0 --> 585.8]  of the GCD. It turns out that the equation doesn't have any solutions if C is not a multiple of the
+[585.8 --> 591.8]  GCD. Because both A and B are multiples of the GCD, so it would be pretty hard for C not to be.
+[593.8 --> 599.3]  All right, next comment is that this only gives one solution to the equation, one recipe.
+[600.0 --> 604.6]  You might ask, are there others? Well, in fact, there are, and you can pretty easily access them.
+[604.7 --> 610.5]  So the trick is to add recipes for zero to your recipe for the GCD. So solving linear
+[610.5 --> 615.1]  diaphancene equations in general is going to be a topic for a whole nother video, but those are
+[615.1 --> 620.4]  the key ideas. Okay, and finally, I'll point out one cool application of this algorithm, which is
+[620.4 --> 626.7]  modular inverses. Suppose you want to know, what is the inverse of A modulo B? So you're asking for
+[626.7 --> 634.6]  a solution to ax congruent to 1 mod b. But in other words, that just says ax is equal to 1 plus
+[634.6 --> 642.9]  some number of b's, plus by for some y. So just rearranging a little bit, we have ax minus by
+[642.9 --> 647.9]  equals 1. So you can just solve this using the extended Euclidean algorithm, and it gives you
+[647.9 --> 652.4]  yet another reason why you can only take the modular inverse of something coprime to the
+[652.4 --> 656.9]  modulus. So get out and do some computations and enjoy.

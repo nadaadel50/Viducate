@@ -1,68 +1,159 @@
-[0.0 --> 4.7]  Hey, what's going on everybody? It's your bro, hope you're doing well, and in this video I'm going to
-[4.7 --> 12.1]  describe the very basics of Big O notation in, well, computer science. So sit back, relax, and enjoy the show.
-[14.0 --> 19.4]  Oh yeah, Big O notation. So a common phrase used with Big O notation is,
-[19.8 --> 25.7]  how code slows as data grows. It describes the performance of an algorithm as the amount of data
-[25.7 --> 31.6]  increases. And really, this notation is machine independent. What we're really focusing on is the
-[31.6 --> 36.4]  number of steps to complete an algorithm, because some machines are going to run certain algorithms
-[36.4 --> 42.9]  faster than others. And three, we tend to ignore smaller operations. If we had some task that took
-[42.9 --> 48.4]  n plus one, we would just reduce it to just n, because that plus one really isn't going to make
-[48.4 --> 51.4]  So here's a few examples of big O notation.
-[51.4 --> 66.8]  We have O O O and O And N is really just the amount of data that we passing in It a variable like x What we focusing on is the performance of an algorithm as the amount
-[66.8 --> 72.1]  of data increases, and n is a representation of the amount of data that we're passing in.
-[72.3 --> 76.9]  Here's a more concrete example. I have a function named addup. We will add up to a certain number
-[76.9 --> 82.5]  depending on what we pass in as an argument. The for loop within here will iterate once up to
-[82.5 --> 88.9]  whatever number that n is, add i to sum, then return it. What if n was a large number like a
-[88.9 --> 93.0]  million? Well, it's going to take just above a million steps to complete this function.
-[93.5 --> 99.7]  This function is said to have a runtime complexity of O of n, linear time. As the amount of data
-[99.7 --> 106.2]  increases, it's going to increase the amount of steps linearly or proportionally. Now another way
-[106.2 --> 113.3]  which we could write the same function is to take sum equals n times n plus 1 divided by 2.
-[113.5 --> 120.0]  We will get the exact same sum. So if n was, let's say, a million, this is still only going to take a couple seconds.
-[120.0 --> 126.7]  steps. Three steps, not a million steps. So this function is going to have a runtime complexity of
-[126.7 --> 131.1]  O of one. The input size doesn't matter. The amount of data that we have really doesn't matter.
-[131.4 --> 137.1]  It's going to be completed in the same amount of steps. So this function is way better than this
-[137.1 --> 142.8]  previous one. Three steps is better than a million steps. And the reason that this isn't O of three,
-[143.0 --> 147.7]  because this takes three steps, is that we really don't care about smaller operations. In the grand
-[147.7 --> 151.9]  scheme of things, they really won't make much of a difference. So we would just shorten this and say
-[151.9 --> 157.0]  that this is O of 1 constant time. The input size doesn't matter. Here's a graph that I made to
-[157.0 --> 163.5]  represent the different runtime complexities. We have data on the x-axis represented by n. So data
-[163.5 --> 170.4]  will increase as we go more to the right, and we have time on the y-axis. I did add an asterisk next
-[170.4 --> 174.8]  to time because some of these times can vary depending on what machine you're using, so these
-[174.8 --> 186.4]  can vary Another way to look at this is number of steps So as we increase on the y these algorithms are going to perform with increasingly more time They going to get slower So let
-[186.4 --> 192.6]  begin with O of 1 constant time. Anything that has a runtime complexity of O of 1 will take the same
-[192.6 --> 198.0]  amount of time regardless of the data size. A few examples would include the random access of an
-[198.0 --> 203.9]  element within an array and inserting at the beginning of a linked list. So O of 1 is extremely
-[203.9 --> 210.8]  fast. Next we have O of log n, also known as logarithmic time. One example is binary search.
-[210.8 --> 214.7]  We haven't talked about this yet. We'll talk about a few of these algorithms in future videos,
-[214.7 --> 220.9]  but anything that has a runtime complexity of O of log n will actually take, I don't want to say
-[220.9 --> 226.9]  less and less time, but increasingly less time to complete. So as the data size increases,
-[227.4 --> 231.8]  this algorithm is going to be more and more efficient compared to the early stages with a
-[231.8 --> 236.6]  small dataset. O is also known as linear time. As the amount of
-[236.6 --> 239.9]  data increases, the time it takes to complete something will
-[240.0 --> 244.8]  increase proportionally linearly. That would include looping through the elements in an array
-[244.8 --> 251.6]  and searching through a linked list. Next we have O of N log N, also known as quasi-linear time.
-[251.8 --> 256.8]  This would include a quick sort, merge sort, and heap sort. We'll talk about these concepts in
-[256.8 --> 262.3]  future videos. So for the most part, this is very similar to linear time. Unless we're working with
-[262.3 --> 269.4]  a large data set, then anything using O of N log N is going to start to slow down when we work with
-[269.4 --> 275.6]  larger data sets, hence this curve here. Then we have O of n squared, also known as quadratic time.
-[275.8 --> 281.0]  A few examples would include insertion sort, selection sort, and bubble sort. As the amount
-[281.0 --> 286.6]  of data increases, it's going to take increasingly more and more time to complete anything that has a
-[286.6 --> 293.3]  runtime complexity of O of n squared. So just to compare linear time and quadratic time, with linear
-[293.3 --> 306.2]  time if our data set was a thousand if n equals a thousand it going to take a thousand steps they proportional they linear but if we were using quadratic time if n was a thousand then a thousand squared would be a
-[306.2 --> 311.9]  million. So if our data set was a thousand, if we're using quadratic time, it's going to take a million
-[311.9 --> 318.7]  steps then, way more than linear time. So quadratic time is extremely slow with large data sets, but in
-[318.7 --> 323.9]  the case of a small data set, it could actually be faster, as you can see by the graph here. And lastly,
-[323.9 --> 330.2]  we have O of n factorial, also known as factorial time, and one place where this is used is with the
-[330.2 --> 336.2]  traveling salesman problem, which I might discuss in a future video. So this is extremely slow,
-[336.4 --> 341.3]  so if I had to give a letter grade to each of these runtime complexities when working with
-[341.3 --> 347.1]  large data sets with constant time, this would be an A, like an A+. Logarithmic time would be a B,
-[347.1 --> 348.1]  it's pretty good.
-[348.1 --> 350.7]  Linear time is C, it's okay.
-[350.7 --> 354.4]  Quasi-linear time is a D, it's just barely passing.
-[354.4 --> 356.2]  Quadratic time would be an F,
-[356.2 --> 359.1]  and factorial time, well, you get expelled from school.
-[359.1 --> 359.9]  Although,
-[360.0 --> 365.3]  some of these runtime complexities are actually faster when working with a smaller data set,
-[365.3 --> 371.2]  so keep that in mind. Well, that's the very basics of Big O notation. It's notation used
-[371.2 --> 377.0]  to describe the performance of an algorithm as the amount of data increases. So if you can,
-[377.0 --> 382.5]  give this video a thumbs up, drop a random comment down below, and well, that's Big O notation in
-[382.5 --> 384.1]  computer science.
+[0.0 --> 8.0]  Hello everyone, welcome back.
+[8.0 --> 13.0]  In cryptography, the idea of multiplicative inverse is inevitable.
+[13.0 --> 21.0]  And that is why an exclusive lecture is created for you to help you understand the basics of multiplicative inverse under modular arithmetic.
+[21.0 --> 24.0]  By waiting, let's start the outcomes first.
+[24.0 --> 28.0]  Upon the completion of this session, the learner will be able to
+[28.0 --> 31.9]  Outcome number 1, we will know about the multiplicative inverse.
+[32.4 --> 37.3]  Outcome number 2, we will understand multiplicative inverse under modular arithmetic.
+[37.7 --> 39.5]  It means numbers with mod n.
+[39.9 --> 47.7]  And outcome number 3, we will determine whether there exists a multiplicative inverse for a number under modular arithmetic or not.
+[48.2 --> 52.0]  Before diving into what is multiplicative inverse under modular arithmetic,
+[52.5 --> 67.6]  let understand the basics of multiplicative inverse Let take the number 5 So when you have a number 5 when that number is multiplied by its inverse then we get the result as 1 So it clear that 1 by 5 is the multiplicative
+[67.6 --> 74.6]  inverse of number 5. So, it's clear that when you have a number A, then 1 by A is the multiplicative
+[74.6 --> 80.1]  inverse for number A. So, that A, when it is multiplied by its inverse which is 1 by
+[80.1 --> 86.8]  a will give 1 as the result. So, I am referring this 1 by a as the multiplicative inverse.
+[86.8 --> 92.5]  So this is the basic idea behind multiplicative inverse. But the real challenge comes when
+[92.5 --> 98.0]  modular arithmetic is involved. Say when we are dealing with modular arithmetic, that is
+[98.0 --> 104.3]  when we have a number mod n, then the multiplicative inverse concept will be different. Say, if
+[104.3 --> 110.1]  you have a number a, when that number a is multiplied by its inverse, when the multiplication
+[110.1 --> 114.7]  of A and A inverse, when this value is divided by n,
+[114.7 --> 116.9]  we will get the remainder as 1.
+[116.9 --> 119.9]  So, this is what the idea of multiplicative inverse
+[120.0 --> 122.7]  under modular arithmetic operations.
+[122.7 --> 125.6]  We have already seen this example previously.
+[125.6 --> 129.3]  5 is the number, 1 by 5 is the multiplicative inverse.
+[129.3 --> 133.2]  So, obviously 5 multiplied by 1 by 5 will be 1, isn't it?
+[133.2 --> 138.0]  So, for the number 5, always 1 by 5 is the multiplicative inverse.
+[138.0 --> 142.1]  But, when you are finding multiplicative inverse under mod n,
+[142.1 --> 144.2]  there cannot be a fixed number.
+[144.2 --> 148.9]  For example, the multiplicative inverse for 2 mod 5 is different
+[148.9 --> 152.5]  and the multiplicative inverse for 2 mod 7 is different.
+[152.5 --> 153.9]  You may be thinking like,
+[153.9 --> 157.0]  you are going to find the multiplicative inverse for 2 only.
+[157.0 --> 159.9]  But please note, it's not simply 2.
+[159.9 --> 162.5]  It's 2 mod 5 and 2 mod 7.
+[162.5 --> 167.0]  So, the multiplicative inverse for 2 mod 5 is going to be a different number
+[167.0 --> 171.1]  and the multiplicative inverse for 2 mod 7 may be a different number.
+[171.1 --> 173.4]  We need to have an understanding on this.
+[173.4 --> 187.0]  Let understand things clearly now Let say there is a number 3 Now we are going to find the multiplicative inverse of 3 It is 1 by 3 obviously when it is a normal number But when modular arithmetic is involved mod 5 right
+[187.0 --> 190.0]  So, what is the multiplicative inverse for 3 mod 5?
+[190.0 --> 192.0]  That's the question is actually.
+[192.0 --> 196.0]  So, we are required to find the multiplicative inverse of 3 mod 5.
+[196.0 --> 199.0]  Not simply 3, it's 3 mod 5.
+[199.0 --> 201.0]  So, what do you mean by this?
+[201.0 --> 203.0]  I already told you when you have a number,
+[203.0 --> 205.3]  that number is multiplied by its inverse,
+[205.3 --> 207.5]  we will get 1 as the remainder
+[207.5 --> 210.5]  when this product is divided by n.
+[210.5 --> 213.3]  So, similarly, when we have a number here 3,
+[213.3 --> 216.3]  when this 3 is multiplied by its inverse,
+[216.3 --> 218.8]  then the whole result, that is this product,
+[218.8 --> 220.5]  when it is divided by 5,
+[220.5 --> 222.7]  we should get 1 as the remainder.
+[222.7 --> 224.4]  Let's try the number 1.
+[224.4 --> 225.8]  3 into 1 is 3.
+[225.8 --> 227.8]  So, 3, when it is divided by 5,
+[227.8 --> 229.3]  we get 3 as the remainder.
+[229.3 --> 232.9]  So, 1 is not the multiplicative inverse for 3.
+[233.0 --> 239.9]  Let's try with 2. 3 into 2. 3 into 2 is 6. So, this side we have 6.
+[240.0 --> 243.2]  If 6 is divided by 5, we get 1 as the remainder.
+[243.6 --> 247.0]  So, 2 is the multiplicative inverse of 3 mod 5
+[247.0 --> 250.5]  or 3 is the multiplicative inverse for 2 mod 5.
+[250.9 --> 255.4]  So, it's clear that for 3 mod 5, the multiplicative inverse is 2.
+[255.7 --> 257.2]  Let's say we have a number 2
+[257.2 --> 261.2]  and we are required to find the multiplicative inverse of 2 mod 11.
+[261.7 --> 262.5]  So, what's the idea?
+[262.9 --> 267.6]  When this side is divided by 11, we should get 1 as the remainder.
+[268.0 --> 269.1]  What is there in this side?
+[269.5 --> 270.3]  It's the product.
+[270.7 --> 272.7]  So, 2 is multiplied by which number?
+[273.0 --> 277.1]  We will get 1 as the remainder when this side is divided by 11.
+[277.6 --> 278.6]  Let's try with 1.
+[278.7 --> 279.7]  2 into 1 is 2.
+[280.0 --> 283.1]  2 when it is divided by 11, we get 2 only as the remainder.
+[283.6 --> 284.4]  Let's try 2.
+[284.5 --> 285.5]  2 into 2 is 4.
+[285.7 --> 285.9]  No.
+[286.3 --> 287.7]  2 into 3, 6.
+[287.9 --> 288.1]  No.
+[288.5 --> 289.8]  2 into 4, 8.
+[289.9 --> 290.2]  No.
+[290.6 --> 291.8]  2 into 5, 10.
+[292.1 --> 292.5]  No.
+[292.9 --> 294.0]  2 into 5 is what?
+[294.0 --> 294.5]  10.
+[294.8 --> 309.1]  10 when it is divided by 11 we get 10 as the remainder or minus 1 But we need plus 1 right So let try with 6 So 2 into 6 is 12 12 when it is divided by 11 we get 1 as the remainder
+[309.6 --> 317.0]  So, the multiplicative inverse of 2 mod 11 is 6. Let's see one more number. 4 is multiplied by what
+[317.0 --> 322.3]  number we get 1 as the remainder under mod 5. In other words, what's the multiplicative inverse
+[322.3 --> 323.3]  of 4 mod 5.
+[323.3 --> 328.1]  I request you to pause this video for a while and find out what's the multiplicative inverse
+[328.1 --> 330.6]  for the number 4 mod 5.
+[330.6 --> 332.3]  I hope you are done.
+[332.3 --> 334.3]  Let me reveal the answer for this.
+[334.3 --> 337.3]  So 4 when it is multiplied by 4, we get 16.
+[337.3 --> 341.1]  This 16 when it is divided by 5, we get 1 as the remainder.
+[341.1 --> 344.9]  So 4 is the multiplicative inverse for 4 mod 5.
+[344.9 --> 347.5]  Do we have a multiplicative inverse for this?
+[347.5 --> 352.0]  5, when it is multiplied by its inverse, we should get 1 as the remainder.
+[352.0 --> 354.5]  when this whole side is divided by 10.
+[354.5 --> 356.7]  Just try here 5 into 1.
+[356.7 --> 358.7]  5 into 1 is what? 5.
+[358.7 --> 359.9]  So, 5 when it is divided by 10,
+[360.0 --> 361.7]  Divided by 10, we get 5 as the remainder.
+[362.2 --> 363.0]  Let's try with 2.
+[363.4 --> 364.5]  5 into 2 is 10.
+[364.9 --> 368.6]  10, when it is divided by 10, we get 0 as the remainder, not 1.
+[369.0 --> 371.3]  When you try 3, we get 5 as the remainder.
+[371.7 --> 374.5]  When you try 4, you get 0 as the remainder.
+[374.8 --> 378.2]  So, in this case, you will never get a multiplicative inverse
+[378.2 --> 380.2]  if you start applying all the numbers.
+[380.6 --> 381.6]  Do you agree with me?
+[382.1 --> 383.2]  You know why it is so?
+[383.9 --> 388.3]  Because this 5 and 10 are not relatively prime.
+[388.3 --> 394.6]  So, multiplicative inverse exists only when this number and this number are relatively
+[394.6 --> 397.2]  prime to each other under modular arithmetic.
+[397.7 --> 403.5]  So, in this case, 3 and 5 are relatively prime to each other and that is why we have a multiplicative
+[403.5 --> 404.2]  inverse here.
+[404.6 --> 410.4]  Similarly, when you take this number 2 and 11, so 2 and 11 are relatively prime to each
+[410.4 --> 410.6]  other.
+[411.0 --> 430.1]  In other words GCD of 2 and 11 is 1 and that is why there exists a multiplicative inverse for 2 mod 11 Similarly there exists a multiplicative inverse for 4 mod 5 Because 4 and 5 are relatively prime to each other in other words GCD of 4 comma 5 is 1 And that why there
+[430.1 --> 435.2]  exists a multiplicative inverse. If the GCD of two different numbers is not 1,
+[435.2 --> 440.8]  then it means they are not relatively prime to each other. In such cases, we
+[440.8 --> 445.7]  will never have a multiplicative inverse. So, in this example, we can clearly say that
+[445.7 --> 453.0]  5 mod 10 will not have a multiplicative inverse. You know why? Because 5 and 10 are not relatively
+[453.0 --> 459.9]  prime to each other. The GCD of 5, 10 is 5 and hence we can say that 5 mod 10 does not
+[459.9 --> 465.6]  have a multiplicative inverse. So, in the initial part of this lecture, I told you the multiplicative
+[465.6 --> 471.0]  inverse of 2 is 1 by 2. But the multiplicative inverse of 2 mod 5 and the multiplicative
+[471.0 --> 477.2]  inverse of 2 mod 7 are different. That's what I told you, it's not simply 2, it's 2 mod 5
+[477.2 --> 479.8]  and 2 mod 7. Let's understand that now.
+[480.0 --> 483.5]  See here, the multiplicative inverse of 2 mod 5 is 3.
+[483.9 --> 484.1]  Why?
+[484.8 --> 487.4]  2, when it is multiplied by 3, we get 6.
+[487.7 --> 487.9]  Right?
+[488.0 --> 491.3]  So, 6, when it is divided by 5, we get 1 as the remainder.
+[491.8 --> 494.8]  So, the multiplicative inverse of 2 mod 5 is 3.
+[495.3 --> 499.1]  But, the multiplicative inverse for 2 mod 7 is 4.
+[499.4 --> 499.9]  You know why?
+[500.5 --> 501.9]  2 into 4 is 8.
+[502.2 --> 505.5]  8, when it is divided by 7, we get 1 as the remainder.
+[505.9 --> 508.7]  Now, if you try 3, 2 into 3 is what?
+[508.9 --> 509.3]  6.
+[509.3 --> 512.9]  So 2 when it is divided by 3, we get 6 as the remainder.
+[513.3 --> 515.7]  6 mod 7 or minus 1, isn't it?
+[516.1 --> 518.3]  3 is not the multiplicative inverse here,
+[518.6 --> 521.5]  where 4 is the multiplicative inverse for 2 mod 7.
+[521.9 --> 523.4]  And that is why I told you,
+[523.7 --> 527.3]  multiplicative inverse always vary based on this number,
+[527.4 --> 528.6]  that is the modular number.
+[529.1 --> 532.4]  If you are asked to find the multiplicative inverse for smaller numbers,
+[532.6 --> 534.2]  you can easily start from 1,
+[534.5 --> 546.1]  if 1 is a multiplicative inverse or 2 or 3 and you can go ahead and do that Think if the numbers are big or the prime number is a big prime number Then obviously you can manually go and try this
+[546.6 --> 553.7]  Let's say if the multiplicative inverse is 40,095. Do you think manually trying from 1 to 40,095
+[553.7 --> 559.1]  is easy for you? So obviously we need some algorithms to help us to find the multiplicative
+[559.1 --> 565.4]  inverse easily. The algorithm is the extended Euclidean algorithm. In the coming lectures,
+[565.4 --> 570.3]  I will solve some problems for finding the multiplicative inverse using extended Euclidean
+[570.3 --> 575.9]  algorithm. And that's it guys. I hope now you know about the multiplicative inverse
+[575.9 --> 580.8]  and we also have understood about multiplicative inverse mod n and we also have determined
+[580.8 --> 586.4]  whether there exists a multiplicative inverse for a number and a modular arithmetic or not.
+[586.4 --> 590.2]  I hope you guys enjoyed this presentation and thank you for watching.
+[600.0 --> 601.0]  Thank you.

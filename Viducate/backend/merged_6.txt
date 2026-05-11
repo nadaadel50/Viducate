@@ -1,340 +1,585 @@
 [00:00:00]
-  Transcript :  Hey, what's going on everybody? It's your bro, hope you're doing well, and in this video I'm going to
-  OCR        : 1322-34
-  Combined   :  Hey, what's going on everybody? It's your bro, hope you're doing well, and in this video I'm going to 1322-34
+  Transcript : None
+  OCR        : The Extended Euclidean Algorithm In One Simple Idea | Proof of Concept
+  Combined   : The Extended Euclidean Algorithm In One Simple Idea | Proof of Concept
 
-[00:00:04]
-  Transcript :  describe the very basics of Big O notation in, well, computer science. So sit back, relax, and enjoy the show.
+[00:00:00]
+  Transcript :  Welcome to this proof-of-concept video. The goal today is to tack on one brilliant little idea to
   OCR        : None
-  Combined   :  describe the very basics of Big O notation in, well, computer science. So sit back, relax, and enjoy the show.
+  Combined   :  Welcome to this proof-of-concept video. The goal today is to tack on one brilliant little idea to
 
-[00:00:14]
-  Transcript :  Oh yeah, Big O notation. So a common phrase used with Big O notation is,
+[00:00:06]
+  Transcript :  the Euclidean algorithm, to turn it from an algorithm that computes the greatest common
   OCR        : None
-  Combined   :  Oh yeah, Big O notation. So a common phrase used with Big O notation is,
+  Combined   :  the Euclidean algorithm, to turn it from an algorithm that computes the greatest common
+
+[00:00:09]
+  Transcript :  divisor into an algorithm that solves linear diaphanian equations, finds modular inverses,
+  OCR        : None
+  Combined   :  divisor into an algorithm that solves linear diaphanian equations, finds modular inverses,
+
+[00:00:15]
+  Transcript :  performs the Chinese remainder theorem, and much more. So this new algorithm is called the extended
+  OCR        : None
+  Combined   :  performs the Chinese remainder theorem, and much more. So this new algorithm is called the extended
 
 [00:00:19]
-  Transcript :  how code slows as data grows. It describes the performance of an algorithm as the amount of data
+  Transcript :  Euclidean algorithm. Sometimes it's called magic box. It always seems to come with a pile of opaque
   OCR        : None
-  Combined   :  how code slows as data grows. It describes the performance of an algorithm as the amount of data
+  Combined   :  Euclidean algorithm. Sometimes it's called magic box. It always seems to come with a pile of opaque
 
 [00:00:25]
-  Transcript :  increases. And really, this notation is machine independent. What we're really focusing on is the
+  Transcript :  rules about adding numbers from one box to the one diagonally below and over to the side, blah,
   OCR        : None
-  Combined   :  increases. And really, this notation is machine independent. What we're really focusing on is the
+  Combined   :  rules about adding numbers from one box to the one diagonally below and over to the side, blah,
 
-[00:00:31]
-  Transcript :  number of steps to complete an algorithm, because some machines are going to run certain algorithms
+[00:00:30]
+  Transcript :  blah, blah, blah, blah. So that's how I first learned it. And I could perform it just fine
   OCR        : None
-  Combined   :  number of steps to complete an algorithm, because some machines are going to run certain algorithms
+  Combined   :  blah, blah, blah, blah. So that's how I first learned it. And I could perform it just fine
 
-[00:00:36]
-  Transcript :  faster than others. And three, we tend to ignore smaller operations. If we had some task that took
+[00:00:34]
+  Transcript :  until I didn't do it for a week. And then like my ATM pin during a pandemic, it's gone from my brain
   OCR        : None
-  Combined   :  faster than others. And three, we tend to ignore smaller operations. If we had some task that took
+  Combined   :  until I didn't do it for a week. And then like my ATM pin during a pandemic, it's gone from my brain
 
-[00:00:42]
-  Transcript :  n plus one, we would just reduce it to just n, because that plus one really isn't going to make
+[00:00:39]
+  Transcript :  forever. But the truth is the extended Euclidean algorithm is just the Euclidean algorithm plus one
   OCR        : None
-  Combined   :  n plus one, we would just reduce it to just n, because that plus one really isn't going to make
+  Combined   :  forever. But the truth is the extended Euclidean algorithm is just the Euclidean algorithm plus one
 
-[00:00:48]
-  Transcript :  So here's a few examples of big O notation.
+[00:00:44]
+  Transcript :  clever little idea. No need to memorize anything, really. Don't memorize stuff in math. Just
   OCR        : None
-  Combined   :  So here's a few examples of big O notation.
+  Combined   :  clever little idea. No need to memorize anything, really. Don't memorize stuff in math. Just
 
-[00:00:51]
-  Transcript :  We have O O O and O And N is really just the amount of data that we passing in It a variable like x What we focusing on is the performance of an algorithm as the amount
+[00:00:49]
+  Transcript :  understand the key idea so you can always recreate your mathematics for yourself, anywhere, anytime.
   OCR        : None
-  Combined   :  We have O O O and O And N is really just the amount of data that we passing in It a variable like x What we focusing on is the performance of an algorithm as the amount
+  Combined   :  understand the key idea so you can always recreate your mathematics for yourself, anywhere, anytime.
 
-[00:01:06]
-  Transcript :  of data increases, and n is a representation of the amount of data that we're passing in.
-  OCR        : None
-  Combined   :  of data increases, and n is a representation of the amount of data that we're passing in.
+[00:01:02]
+  Transcript :  To explain what the extended Euclidean algorithm does we need to return to what the Euclidean algorithm does The Euclidean algorithm finds the GCD or greatest common divisor of two integers
+  OCR        : The greatest common divisor ged of a and b | is the largest integer which divides both.
+  Combined   :  To explain what the extended Euclidean algorithm does we need to return to what the Euclidean algorithm does The Euclidean algorithm finds the GCD or greatest common divisor of two integers The greatest common divisor ged of a and b | is the largest integer which divides both.
 
-[00:01:12]
-  Transcript :  Here's a more concrete example. I have a function named addup. We will add up to a certain number
+[00:01:05]
+  Transcript :  It's the largest integer that's a factor or divisor of the two that you've got. So for example,
   OCR        : None
-  Combined   :  Here's a more concrete example. I have a function named addup. We will add up to a certain number
+  Combined   :  It's the largest integer that's a factor or divisor of the two that you've got. So for example,
 
-[00:01:16]
-  Transcript :  depending on what we pass in as an argument. The for loop within here will iterate once up to
+[00:01:11]
+  Transcript :  the GCD of 15 and 12 is the biggest integer dividing both of them, namely three. If you need
   OCR        : None
-  Combined   :  depending on what we pass in as an argument. The for loop within here will iterate once up to
+  Combined   :  the GCD of 15 and 12 is the biggest integer dividing both of them, namely three. If you need
+
+[00:01:17]
+  Transcript :  a review on the GCD or the Euclidean algorithm, check the links in the description below.
+  OCR        : None
+  Combined   :  a review on the GCD or the Euclidean algorithm, check the links in the description below.
 
 [00:01:22]
-  Transcript :  whatever number that n is, add i to sum, then return it. What if n was a large number like a
+  Transcript :  Okay, but it's important just how the Euclidean algorithm accomplishes this,
   OCR        : None
-  Combined   :  whatever number that n is, add i to sum, then return it. What if n was a large number like a
+  Combined   :  Okay, but it's important just how the Euclidean algorithm accomplishes this,
+
+[00:01:25]
+  Transcript :  the process that gets you to the GCD.
+  OCR        : None
+  Combined   :  the process that gets you to the GCD.
 
 [00:01:28]
-  Transcript :  million? Well, it's going to take just above a million steps to complete this function.
+  Transcript :  It does this by charting a course, giving a recipe, a set of instructions,
   OCR        : None
-  Combined   :  million? Well, it's going to take just above a million steps to complete this function.
+  Combined   :  It does this by charting a course, giving a recipe, a set of instructions,
 
 [00:01:33]
-  Transcript :  This function is said to have a runtime complexity of O of n, linear time. As the amount of data
+  Transcript :  as to how to add and subtract the two numbers from each other repeatedly to get the GCD.
   OCR        : None
-  Combined   :  This function is said to have a runtime complexity of O of n, linear time. As the amount of data
+  Combined   :  as to how to add and subtract the two numbers from each other repeatedly to get the GCD.
 
-[00:01:39]
-  Transcript :  increases, it's going to increase the amount of steps linearly or proportionally. Now another way
+[00:01:38]
+  Transcript :  The point of the extended Euclidean algorithm is to capture the process, not just the result.
   OCR        : None
-  Combined   :  increases, it's going to increase the amount of steps linearly or proportionally. Now another way
+  Combined   :  The point of the extended Euclidean algorithm is to capture the process, not just the result.
 
-[00:01:46]
-  Transcript :  which we could write the same function is to take sum equals n times n plus 1 divided by 2.
+[00:01:43]
+  Transcript :  So the extended Euclidean algorithm is exactly the Euclidean one,
   OCR        : None
-  Combined   :  which we could write the same function is to take sum equals n times n plus 1 divided by 2.
+  Combined   :  So the extended Euclidean algorithm is exactly the Euclidean one,
 
-[00:01:53]
-  Transcript :  We will get the exact same sum. So if n was, let's say, a million, this is still only going to take a couple seconds.
+[00:01:47]
+  Transcript :  but plus a little bookkeeping along the way that lets it end up with more information.
   OCR        : None
-  Combined   :  We will get the exact same sum. So if n was, let's say, a million, this is still only going to take a couple seconds.
+  Combined   :  but plus a little bookkeeping along the way that lets it end up with more information.
+
+[00:01:50]
+  Transcript :  at the end. That extra information will allow us to do a variety of things,
+  OCR        : None
+  Combined   :  at the end. That extra information will allow us to do a variety of things,
+
+[00:01:55]
+  Transcript :  all of which are consequences of solving a linear diaphanine equation.
+  OCR        : None
+  Combined   :  all of which are consequences of solving a linear diaphanine equation.
 
 [00:02:00]
-  Transcript :  steps. Three steps, not a million steps. So this function is going to have a runtime complexity of
+  Transcript :  A linear diaphanian equation is a linear equation, first of all, something of the form ax plus by equals c.
   OCR        : None
-  Combined   :  steps. Three steps, not a million steps. So this function is going to have a runtime complexity of
+  Combined   :  A linear diaphanian equation is a linear equation, first of all, something of the form ax plus by equals c.
 
-[00:02:06]
-  Transcript :  O of one. The input size doesn't matter. The amount of data that we have really doesn't matter.
+[00:02:07]
+  Transcript :  Say, for example, 2x plus 4y equals 6.
   OCR        : None
-  Combined   :  O of one. The input size doesn't matter. The amount of data that we have really doesn't matter.
+  Combined   :  Say, for example, 2x plus 4y equals 6.
 
 [00:02:11]
-  Transcript :  It's going to be completed in the same amount of steps. So this function is way better than this
+  Transcript :  But here I'm interested in solving for the integer solutions.
   OCR        : None
-  Combined   :  It's going to be completed in the same amount of steps. So this function is way better than this
+  Combined   :  But here I'm interested in solving for the integer solutions.
 
-[00:02:17]
-  Transcript :  previous one. Three steps is better than a million steps. And the reason that this isn't O of three,
+[00:02:16]
+  Transcript :  So, typically, that means I'm only considering integer a, b, c in the first place, and I'm looking for integer x and y.
   OCR        : None
-  Combined   :  previous one. Three steps is better than a million steps. And the reason that this isn't O of three,
+  Combined   :  So, typically, that means I'm only considering integer a, b, c in the first place, and I'm looking for integer x and y.
 
 [00:02:23]
-  Transcript :  because this takes three steps, is that we really don't care about smaller operations. In the grand
+  Transcript :  That's what the word diaphanian refers to, integer solutions.
   OCR        : None
-  Combined   :  because this takes three steps, is that we really don't care about smaller operations. In the grand
+  Combined   :  That's what the word diaphanian refers to, integer solutions.
 
-[00:02:27]
-  Transcript :  scheme of things, they really won't make much of a difference. So we would just shorten this and say
+[00:02:26]
+  Transcript :  Diophantus was a famous old Greek, and you can pass an enjoyable half hour on Wikipedia if you
   OCR        : None
-  Combined   :  scheme of things, they really won't make much of a difference. So we would just shorten this and say
+  Combined   :  Diophantus was a famous old Greek, and you can pass an enjoyable half hour on Wikipedia if you
 
-[00:02:31]
-  Transcript :  that this is O of 1 constant time. The input size doesn't matter. Here's a graph that I made to
+[00:02:32]
+  Transcript :  like. For example, there's a Diophantine equation in the form of a poem from the 5th century,
   OCR        : None
-  Combined   :  that this is O of 1 constant time. The input size doesn't matter. Here's a graph that I made to
+  Combined   :  like. For example, there's a Diophantine equation in the form of a poem from the 5th century,
 
-[00:02:36]
-  Transcript :  represent the different runtime complexities. We have data on the x-axis represented by n. So data
+[00:02:37]
+  Transcript :  which gives his age a death. Anyway, back to work. An extended Euclidean algorithm will solve
   OCR        : None
-  Combined   :  represent the different runtime complexities. We have data on the x-axis represented by n. So data
+  Combined   :  which gives his age a death. Anyway, back to work. An extended Euclidean algorithm will solve
 
 [00:02:43]
-  Transcript :  will increase as we go more to the right, and we have time on the y-axis. I did add an asterisk next
+  Transcript :  linear Diophantine equations. In particular, it will solve ax plus by equals the gcd of a and b.
   OCR        : None
-  Combined   :  will increase as we go more to the right, and we have time on the y-axis. I did add an asterisk next
+  Combined   :  linear Diophantine equations. In particular, it will solve ax plus by equals the gcd of a and b.
 
-[00:02:50]
-  Transcript :  to time because some of these times can vary depending on what machine you're using, so these
+[00:02:51]
+  Transcript :  If I want to solve linear equations in greater generality meaning for other values of c besides the GCD of a and b then I can use a solution to this equation to build others I cover that in another video but for now our goal and task is to solve this one
   OCR        : None
-  Combined   :  to time because some of these times can vary depending on what machine you're using, so these
+  Combined   :  If I want to solve linear equations in greater generality meaning for other values of c besides the GCD of a and b then I can use a solution to this equation to build others I cover that in another video but for now our goal and task is to solve this one
 
-[00:02:54]
-  Transcript :  can vary Another way to look at this is number of steps So as we increase on the y these algorithms are going to perform with increasingly more time They going to get slower So let
+[00:03:07]
+  Transcript :  Ax plus By equals GCD AB.
   OCR        : None
-  Combined   :  can vary Another way to look at this is number of steps So as we increase on the y these algorithms are going to perform with increasingly more time They going to get slower So let
+  Combined   :  Ax plus By equals GCD AB.
 
-[00:03:06]
-  Transcript :  begin with O of 1 constant time. Anything that has a runtime complexity of O of 1 will take the same
+[00:03:11]
+  Transcript :  In other words, we want to find an integer linear combination of A and B that gives the
   OCR        : None
-  Combined   :  begin with O of 1 constant time. Anything that has a runtime complexity of O of 1 will take the same
+  Combined   :  In other words, we want to find an integer linear combination of A and B that gives the
 
-[00:03:12]
-  Transcript :  amount of time regardless of the data size. A few examples would include the random access of an
+[00:03:16]
+  Transcript :  GCD.
   OCR        : None
-  Combined   :  amount of time regardless of the data size. A few examples would include the random access of an
+  Combined   :  GCD.
 
 [00:03:17]
-  Transcript :  element within an array and inserting at the beginning of a linked list. So O of 1 is extremely
+  Transcript :  That is, we want to add and subtract copies of A and B from each other until we get to
   OCR        : None
-  Combined   :  element within an array and inserting at the beginning of a linked list. So O of 1 is extremely
+  Combined   :  That is, we want to add and subtract copies of A and B from each other until we get to
+
+[00:03:21]
+  Transcript :  the GCD.
+  OCR        : None
+  Combined   :  the GCD.
 
 [00:03:23]
-  Transcript :  fast. Next we have O of log n, also known as logarithmic time. One example is binary search.
+  Transcript :  Sound familiar?
   OCR        : None
-  Combined   :  fast. Next we have O of log n, also known as logarithmic time. One example is binary search.
+  Combined   :  Sound familiar?
 
-[00:03:30]
-  Transcript :  We haven't talked about this yet. We'll talk about a few of these algorithms in future videos,
+[00:03:24]
+  Transcript :  That's exactly what the Euclidean algorithm does.
   OCR        : None
-  Combined   :  We haven't talked about this yet. We'll talk about a few of these algorithms in future videos,
+  Combined   :  That's exactly what the Euclidean algorithm does.
 
-[00:03:34]
-  Transcript :  but anything that has a runtime complexity of O of log n will actually take, I don't want to say
+[00:03:26]
+  Transcript :  So we can just watch what we're doing during the Euclidean algorithm
   OCR        : None
-  Combined   :  but anything that has a runtime complexity of O of log n will actually take, I don't want to say
+  Combined   :  So we can just watch what we're doing during the Euclidean algorithm
 
-[00:03:40]
-  Transcript :  less and less time, but increasingly less time to complete. So as the data size increases,
+[00:03:29]
+  Transcript :  and siphon off that bit of extra info along the way.
   OCR        : None
-  Combined   :  less and less time, but increasingly less time to complete. So as the data size increases,
+  Combined   :  and siphon off that bit of extra info along the way.
 
-[00:03:47]
-  Transcript :  this algorithm is going to be more and more efficient compared to the early stages with a
+[00:03:33]
+  Transcript :  Okay, this will only make sense with an example.
   OCR        : None
-  Combined   :  this algorithm is going to be more and more efficient compared to the early stages with a
+  Combined   :  Okay, this will only make sense with an example.
 
-[00:03:51]
-  Transcript :  small dataset. O is also known as linear time. As the amount of
+[00:03:36]
+  Transcript :  Let's take an example of a Euclidean algorithm computation for the GCD of 196 and 180.
   OCR        : None
-  Combined   :  small dataset. O is also known as linear time. As the amount of
+  Combined   :  Let's take an example of a Euclidean algorithm computation for the GCD of 196 and 180.
 
-[00:03:56]
-  Transcript :  data increases, the time it takes to complete something will
+[00:03:43]
+  Transcript :  We start with this pair, 196 and 180, and we perform the division algorithm.
   OCR        : None
-  Combined   :  data increases, the time it takes to complete something will
+  Combined   :  We start with this pair, 196 and 180, and we perform the division algorithm.
+
+[00:03:48]
+  Transcript :  That is, we write 196 as some number of copies of 180 plus a remainder.
+  OCR        : None
+  Combined   :  That is, we write 196 as some number of copies of 180 plus a remainder.
+
+[00:03:52]
+  Transcript :  That gives us 196 is 1 times 180 plus 16.
+  OCR        : None
+  Combined   :  That gives us 196 is 1 times 180 plus 16.
+
+[00:03:57]
+  Transcript :  Now, the whole trick in the Euclidean
+  OCR        : None
+  Combined   :  Now, the whole trick in the Euclidean
 
 [00:04:00]
-  Transcript :  increase proportionally linearly. That would include looping through the elements in an array
+  Transcript :  algorithm is to replace the bigger number, 196, with the remainder, 16. This makes the problem
   OCR        : None
-  Combined   :  increase proportionally linearly. That would include looping through the elements in an array
+  Combined   :  algorithm is to replace the bigger number, 196, with the remainder, 16. This makes the problem
 
-[00:04:04]
-  Transcript :  and searching through a linked list. Next we have O of N log N, also known as quasi-linear time.
+[00:04:05]
+  Transcript :  smaller, and we just have another go at it. Remember that the key here is that the GCD of
   OCR        : None
-  Combined   :  and searching through a linked list. Next we have O of N log N, also known as quasi-linear time.
+  Combined   :  smaller, and we just have another go at it. Remember that the key here is that the GCD of
 
 [00:04:11]
-  Transcript :  This would include a quick sort, merge sort, and heap sort. We'll talk about these concepts in
+  Transcript :  the first pair, 196 and 180, is the same as the GCD of the new pair, 180 and 16. So solving the
   OCR        : None
-  Combined   :  This would include a quick sort, merge sort, and heap sort. We'll talk about these concepts in
+  Combined   :  the first pair, 196 and 180, is the same as the GCD of the new pair, 180 and 16. So solving the
 
-[00:04:16]
-  Transcript :  future videos. So for the most part, this is very similar to linear time. Unless we're working with
+[00:04:18]
+  Transcript :  smaller problem actually solves the original one. So we start over. We use the division algorithm
   OCR        : None
-  Combined   :  future videos. So for the most part, this is very similar to linear time. Unless we're working with
+  Combined   :  smaller problem actually solves the original one. So we start over. We use the division algorithm
 
-[00:04:22]
-  Transcript :  a large data set, then anything using O of N log N is going to start to slow down when we work with
+[00:04:23]
+  Transcript :  again. 180 is 11 copies of 16 plus 4. Then we replace 180 with 4, so our new pair is just 16
   OCR        : None
-  Combined   :  a large data set, then anything using O of N log N is going to start to slow down when we work with
+  Combined   :  again. 180 is 11 copies of 16 plus 4. Then we replace 180 with 4, so our new pair is just 16
 
-[00:04:29]
-  Transcript :  larger data sets, hence this curve here. Then we have O of n squared, also known as quadratic time.
+[00:04:31]
+  Transcript :  and 4. We divide again, so 16 is 4 copies of 4 plus 0. At this point, we notice the 0, and we check
   OCR        : None
-  Combined   :  larger data sets, hence this curve here. Then we have O of n squared, also known as quadratic time.
+  Combined   :  and 4. We divide again, so 16 is 4 copies of 4 plus 0. At this point, we notice the 0, and we check
 
-[00:04:35]
-  Transcript :  A few examples would include insertion sort, selection sort, and bubble sort. As the amount
+[00:04:40]
+  Transcript :  back to the last remainder before that, or the smallest non-zero number we've seen in our various
   OCR        : None
-  Combined   :  A few examples would include insertion sort, selection sort, and bubble sort. As the amount
+  Combined   :  back to the last remainder before that, or the smallest non-zero number we've seen in our various
 
-[00:04:41]
-  Transcript :  of data increases, it's going to take increasingly more and more time to complete anything that has a
+[00:04:45]
+  Transcript :  pairs. It's 4, and that tells us that the GCD is 4. Great. Now, for the extended Euclidean algorithm,
   OCR        : None
-  Combined   :  of data increases, it's going to take increasingly more and more time to complete anything that has a
-
-[00:04:46]
-  Transcript :  runtime complexity of O of n squared. So just to compare linear time and quadratic time, with linear
-  OCR        : None
-  Combined   :  runtime complexity of O of n squared. So just to compare linear time and quadratic time, with linear
+  Combined   :  pairs. It's 4, and that tells us that the GCD is 4. Great. Now, for the extended Euclidean algorithm,
 
 [00:04:53]
-  Transcript :  time if our data set was a thousand if n equals a thousand it going to take a thousand steps they proportional they linear but if we were using quadratic time if n was a thousand then a thousand squared would be a
+  Transcript :  Okay it will allow us to solve 196x plus 180y equals 4 It important here that I have equals 4 that it the GCD of 196 and 180 that sort of my target The extended Euclidean algorithm specifically answers
   OCR        : None
-  Combined   :  time if our data set was a thousand if n equals a thousand it going to take a thousand steps they proportional they linear but if we were using quadratic time if n was a thousand then a thousand squared would be a
+  Combined   :  Okay it will allow us to solve 196x plus 180y equals 4 It important here that I have equals 4 that it the GCD of 196 and 180 that sort of my target The extended Euclidean algorithm specifically answers
 
-[00:05:06]
-  Transcript :  million. So if our data set was a thousand, if we're using quadratic time, it's going to take a million
+[00:05:10]
+  Transcript :  that particular question. I want to think of this question as asking for a recipe for the number 4
   OCR        : None
-  Combined   :  million. So if our data set was a thousand, if we're using quadratic time, it's going to take a million
+  Combined   :  that particular question. I want to think of this question as asking for a recipe for the number 4
 
-[00:05:11]
-  Transcript :  steps then, way more than linear time. So quadratic time is extremely slow with large data sets, but in
+[00:05:16]
+  Transcript :  in terms of the numbers 196 and 180. So keep that idea of a recipe in mind.
   OCR        : None
-  Combined   :  steps then, way more than linear time. So quadratic time is extremely slow with large data sets, but in
-
-[00:05:18]
-  Transcript :  the case of a small data set, it could actually be faster, as you can see by the graph here. And lastly,
-  OCR        : None
-  Combined   :  the case of a small data set, it could actually be faster, as you can see by the graph here. And lastly,
+  Combined   :  in terms of the numbers 196 and 180. So keep that idea of a recipe in mind.
 
 [00:05:23]
-  Transcript :  we have O of n factorial, also known as factorial time, and one place where this is used is with the
+  Transcript :  Okay, first step of the Euclidean algorithm as before, we write 196 in terms of 180 by the
   OCR        : None
-  Combined   :  we have O of n factorial, also known as factorial time, and one place where this is used is with the
+  Combined   :  Okay, first step of the Euclidean algorithm as before, we write 196 in terms of 180 by the
 
-[00:05:30]
-  Transcript :  traveling salesman problem, which I might discuss in a future video. So this is extremely slow,
-  OCR        : None
-  Combined   :  traveling salesman problem, which I might discuss in a future video. So this is extremely slow,
+[00:05:35]
+  Transcript :  division algorithm. Now what I'm going to do is kind of expand the 196, 180, and 16 into these
+  OCR        : Challenge: Solve 196x 180y 4 | b  q  a  r | Pair 180, 196 | 1961-18016
+  Combined   :  division algorithm. Now what I'm going to do is kind of expand the 196, 180, and 16 into these Challenge: Solve 196x 180y 4 | b  q  a  r | Pair 180, 196 | 1961-18016
 
-[00:05:36]
-  Transcript :  so if I had to give a letter grade to each of these runtime complexities when working with
+[00:05:37]
+  Transcript :  little recipe cards. The cards are basically a way of attaching extra data to each number. So the
   OCR        : None
-  Combined   :  so if I had to give a letter grade to each of these runtime complexities when working with
+  Combined   :  little recipe cards. The cards are basically a way of attaching extra data to each number. So the
 
-[00:05:41]
-  Transcript :  large data sets with constant time, this would be an A, like an A+. Logarithmic time would be a B,
+[00:05:43]
+  Transcript :  the extra data is a value of x and y.
   OCR        : None
-  Combined   :  large data sets with constant time, this would be an A, like an A+. Logarithmic time would be a B,
+  Combined   :  the extra data is a value of x and y.
 
-[00:05:47]
-  Transcript :  it's pretty good.
+[00:05:46]
+  Transcript :  That's the recipe, which when plugged into the equation
   OCR        : None
-  Combined   :  it's pretty good.
+  Combined   :  That's the recipe, which when plugged into the equation
 
-[00:05:48]
-  Transcript :  Linear time is C, it's okay.
+[00:05:49]
+  Transcript :  196 plus 180y gives the number.
   OCR        : None
-  Combined   :  Linear time is C, it's okay.
+  Combined   :  196 plus 180y gives the number.
 
-[00:05:50]
-  Transcript :  Quasi-linear time is a D, it's just barely passing.
+[00:05:53]
+  Transcript :  So for example, in the first card,
   OCR        : None
-  Combined   :  Quasi-linear time is a D, it's just barely passing.
-
-[00:05:54]
-  Transcript :  Quadratic time would be an F,
-  OCR        : None
-  Combined   :  Quadratic time would be an F,
+  Combined   :  So for example, in the first card,
 
 [00:05:56]
-  Transcript :  and factorial time, well, you get expelled from school.
+  Transcript :  using x equals one and y equals zero in the main equation,
   OCR        : None
-  Combined   :  and factorial time, well, you get expelled from school.
-
-[00:05:59]
-  Transcript :  Although,
-  OCR        : None
-  Combined   :  Although,
+  Combined   :  using x equals one and y equals zero in the main equation,
 
 [00:06:00]
-  Transcript :  some of these runtime complexities are actually faster when working with a smaller data set,
+  Transcript :  196 x plus 180 y will give us 196. That's the recipe. It tells you what x and y to use to get
   OCR        : None
-  Combined   :  some of these runtime complexities are actually faster when working with a smaller data set,
+  Combined   :  196 x plus 180 y will give us 196. That's the recipe. It tells you what x and y to use to get
 
-[00:06:05]
-  Transcript :  so keep that in mind. Well, that's the very basics of Big O notation. It's notation used
+[00:06:08]
+  Transcript :  196. The second card tells us what we need to get 180. We need x equals 0 and y equals 1.
   OCR        : None
-  Combined   :  so keep that in mind. Well, that's the very basics of Big O notation. It's notation used
+  Combined   :  196. The second card tells us what we need to get 180. We need x equals 0 and y equals 1.
 
-[00:06:11]
-  Transcript :  to describe the performance of an algorithm as the amount of data increases. So if you can,
+[00:06:17]
+  Transcript :  The third card tells us that we can use x equals 1 and y equals negative 1 to get 16. But wait a
   OCR        : None
-  Combined   :  to describe the performance of an algorithm as the amount of data increases. So if you can,
+  Combined   :  The third card tells us that we can use x equals 1 and y equals negative 1 to get 16. But wait a
 
-[00:06:16]
-  Transcript :  give this video a thumbs up, drop a random comment down below, and well, that's Big O notation in
+[00:06:23]
+  Transcript :  second, where'd we get that info from? The first two cards were very clear. To get 196 or 180,
   OCR        : None
-  Combined   :  give this video a thumbs up, drop a random comment down below, and well, that's Big O notation in
+  Combined   :  second, where'd we get that info from? The first two cards were very clear. To get 196 or 180,
 
-[00:06:22]
-  Transcript :  computer science.
+[00:06:29]
+  Transcript :  It's pretty obvious what to pick for x and y. But 16? So recall that the original equation is
   OCR        : None
-  Combined   :  computer science.
+  Combined   :  It's pretty obvious what to pick for x and y. But 16? So recall that the original equation is
+
+[00:06:37]
+  Transcript :  written across the top of the cards. 196 is 1 times 180 plus 16. But actually, the other rows
+  OCR        : 196118016 | x  1 | y  o | y  1 | 196196-11800 | 161961 180--1 | 180196-0180.1
+  Combined   :  written across the top of the cards. 196 is 1 times 180 plus 16. But actually, the other rows 196118016 | x  1 | y  o | y  1 | 196196-11800 | 161961 180--1 | 180196-0180.1
+
+[00:06:45]
+  Transcript :  of the cards work the same way. So for example, the x values, which is the middle row, satisfy that 1
+  OCR        : None
+  Combined   :  of the cards work the same way. So for example, the x values, which is the middle row, satisfy that 1
+
+[00:06:51]
+  Transcript :  is 1 times 0 plus 1.
+  OCR        : None
+  Combined   :  is 1 times 0 plus 1.
+
+[00:06:55]
+  Transcript :  And the y values 0 is 1 times 1 plus negative 1 So we can figure out what to write on the last card by just picking the thing that makes the equations true
+  OCR        : None
+  Combined   :  And the y values 0 is 1 times 1 plus negative 1 So we can figure out what to write on the last card by just picking the thing that makes the equations true
+
+[00:07:08]
+  Transcript :  So for example, y on the last card needs to be negative 1, because if I take 1 times 1, that's what I need to add to it to get 0.
+  OCR        : None
+  Combined   :  So for example, y on the last card needs to be negative 1, because if I take 1 times 1, that's what I need to add to it to get 0.
+
+[00:07:18]
+  Transcript :  Similarly for the x value, so pause the video here and verify that.
+  OCR        : None
+  Combined   :  Similarly for the x value, so pause the video here and verify that.
+
+[00:07:25]
+  Transcript :  okay so there's another way to think about what's happening let's write out the three equations the
+  OCR        : Challenge: | Solve 196x 180y 4 | 196 1961180.0 | 1801960180.1 | 16  196-1 180-1 | 161961 180-1
+  Combined   :  okay so there's another way to think about what's happening let's write out the three equations the Challenge: | Solve 196x 180y 4 | 196 1961180.0 | 1801960180.1 | 16  196-1 180-1 | 161961 180-1
+
+[00:07:28]
+  Transcript :  cards represent one above the other so remember i'm claiming that the first card minus the second
+  OCR        : None
+  Combined   :  cards represent one above the other so remember i'm claiming that the first card minus the second
+
+[00:07:34]
+  Transcript :  card should give the third card so each card is an equation so i'm saying the first equation
+  OCR        : None
+  Combined   :  card should give the third card so each card is an equation so i'm saying the first equation
+
+[00:07:40]
+  Transcript :  minus the second one should give the third one and this actually makes sense column by column
+  OCR        : None
+  Combined   :  minus the second one should give the third one and this actually makes sense column by column
+
+[00:07:47]
+  Transcript :  The left column holds true, 196 minus 180 is 16.
+  OCR        : None
+  Combined   :  The left column holds true, 196 minus 180 is 16.
+
+[00:07:53]
+  Transcript :  The middle column, that's the x's, holds true to 1 minus 0 is 1.
+  OCR        : None
+  Combined   :  The middle column, that's the x's, holds true to 1 minus 0 is 1.
+
+[00:08:00]
+  Transcript :  And the right column, that's the y's, says that 0 minus 1 is minus 1.
+  OCR        : 196196-1180.0 | -11801960180.1 | 16 196-1 180-1
+  Combined   :  And the right column, that's the y's, says that 0 minus 1 is minus 1. 196196-1180.0 | -11801960180.1 | 16 196-1 180-1
+
+[00:08:06]
+  Transcript :  That's all there is to the Euclidean algorithm.
+  OCR        : None
+  Combined   :  That's all there is to the Euclidean algorithm.
+
+[00:08:09]
+  Transcript :  We just keep a recipe card on each number we come across as we go through the regular Euclidean algorithm.
+  OCR        : None
+  Combined   :  We just keep a recipe card on each number we come across as we go through the regular Euclidean algorithm.
+
+[00:08:16]
+  Transcript :  So here's the first line in the algorithm, done as recipe cards.
+  OCR        : None
+  Combined   :  So here's the first line in the algorithm, done as recipe cards.
+
+[00:08:19]
+  Transcript :  Here's the second line of the Euclidean algorithm.
+  OCR        : None
+  Combined   :  Here's the second line of the Euclidean algorithm.
+
+[00:08:22]
+  Transcript :  Now we want to make it into the extended Euclidean algorithm by making it into these recipe cards.
+  OCR        : None
+  Combined   :  Now we want to make it into the extended Euclidean algorithm by making it into these recipe cards.
+
+[00:08:27]
+  Transcript :  The recipe for 180 is still valid, so we already know the x and y on the 180 card.
+  OCR        : None
+  Combined   :  The recipe for 180 is still valid, so we already know the x and y on the 180 card.
+
+[00:08:32]
+  Transcript :  We just copy it down from the row above.
+  OCR        : None
+  Combined   :  We just copy it down from the row above.
+
+[00:08:34]
+  Transcript :  Okay, same for 16.
+  OCR        : None
+  Combined   :  Okay, same for 16.
+
+[00:08:36]
+  Transcript :  So all we need to do is figure out the recipe for 4.
+  OCR        : None
+  Combined   :  So all we need to do is figure out the recipe for 4.
+
+[00:08:39]
+  Transcript :  So we look at the x's, and we see that x equals negative 11 is what's needed on the last card to make the true equation.
+  OCR        : None
+  Combined   :  So we look at the x's, and we see that x equals negative 11 is what's needed on the last card to make the true equation.
+
+[00:08:48]
+  Transcript :  0 is 11 times 1 minus 11.
+  OCR        : None
+  Combined   :  0 is 11 times 1 minus 11.
+
+[00:08:54]
+  Transcript :  And finally y has to be 12 Okay so we now have a recipe card for four But 4 is what we were after all along The original question was how to make 4 as a recipe in terms of 196 and 180
+  OCR        : y  - 1 | Pair 16, 180 | 180 11164 | x  -11
+  Combined   :  And finally y has to be 12 Okay so we now have a recipe card for four But 4 is what we were after all along The original question was how to make 4 as a recipe in terms of 196 and 180 y  - 1 | Pair 16, 180 | 180 11164 | x  -11
+
+[00:09:07]
+  Transcript :  So we're done. The solution is x equals negative 11 and y equals 12.
+  OCR        : None
+  Combined   :  So we're done. The solution is x equals negative 11 and y equals 12.
+
+[00:09:14]
+  Transcript :  Okay, now a few comments are in order here. So first, remember that this only works to solve
+  OCR        : None
+  Combined   :  Okay, now a few comments are in order here. So first, remember that this only works to solve
+
+[00:09:19]
+  Transcript :  AX plus BY equals the GCD of A and B. That is, it gives us a recipe for GCD AB in terms of A and B.
+  OCR        : None
+  Combined   :  AX plus BY equals the GCD of A and B. That is, it gives us a recipe for GCD AB in terms of A and B.
+
+[00:09:28]
+  Transcript :  However, if you want a recipe for two times the GCD of A and B, you can just double the recipe
+  OCR        : None
+  Combined   :  However, if you want a recipe for two times the GCD of A and B, you can just double the recipe
+
+[00:09:33]
+  Transcript :  you have, double X and double Y, and you double the result. Similarly, you can obtain any multiple
+  OCR        : None
+  Combined   :  you have, double X and double Y, and you double the result. Similarly, you can obtain any multiple
+
+[00:09:38]
+  Transcript :  of the GCD. It turns out that the equation doesn't have any solutions if C is not a multiple of the
+  OCR        : None
+  Combined   :  of the GCD. It turns out that the equation doesn't have any solutions if C is not a multiple of the
+
+[00:09:45]
+  Transcript :  GCD. Because both A and B are multiples of the GCD, so it would be pretty hard for C not to be.
+  OCR        : None
+  Combined   :  GCD. Because both A and B are multiples of the GCD, so it would be pretty hard for C not to be.
+
+[00:09:53]
+  Transcript :  All right, next comment is that this only gives one solution to the equation, one recipe.
+  OCR        : None
+  Combined   :  All right, next comment is that this only gives one solution to the equation, one recipe.
+
+[00:10:00]
+  Transcript :  You might ask, are there others? Well, in fact, there are, and you can pretty easily access them.
+  OCR        : None
+  Combined   :  You might ask, are there others? Well, in fact, there are, and you can pretty easily access them.
+
+[00:10:04]
+  Transcript :  So the trick is to add recipes for zero to your recipe for the GCD. So solving linear
+  OCR        : None
+  Combined   :  So the trick is to add recipes for zero to your recipe for the GCD. So solving linear
+
+[00:10:10]
+  Transcript :  diaphancene equations in general is going to be a topic for a whole nother video, but those are
+  OCR        : None
+  Combined   :  diaphancene equations in general is going to be a topic for a whole nother video, but those are
+
+[00:10:15]
+  Transcript :  the key ideas. Okay, and finally, I'll point out one cool application of this algorithm, which is
+  OCR        : None
+  Combined   :  the key ideas. Okay, and finally, I'll point out one cool application of this algorithm, which is
+
+[00:10:20]
+  Transcript :  modular inverses. Suppose you want to know, what is the inverse of A modulo B? So you're asking for
+  OCR        : None
+  Combined   :  modular inverses. Suppose you want to know, what is the inverse of A modulo B? So you're asking for
+
+[00:10:26]
+  Transcript :  a solution to ax congruent to 1 mod b. But in other words, that just says ax is equal to 1 plus
+  OCR        : None
+  Combined   :  a solution to ax congruent to 1 mod b. But in other words, that just says ax is equal to 1 plus
+
+[00:10:34]
+  Transcript :  some number of b's, plus by for some y. So just rearranging a little bit, we have ax minus by
+  OCR        : None
+  Combined   :  some number of b's, plus by for some y. So just rearranging a little bit, we have ax minus by
+
+[00:10:42]
+  Transcript :  equals 1. So you can just solve this using the extended Euclidean algorithm, and it gives you
+  OCR        : None
+  Combined   :  equals 1. So you can just solve this using the extended Euclidean algorithm, and it gives you
+
+[00:10:47]
+  Transcript :  yet another reason why you can only take the modular inverse of something coprime to the
+  OCR        : None
+  Combined   :  yet another reason why you can only take the modular inverse of something coprime to the
+
+[00:10:52]
+  Transcript :  modulus. So get out and do some computations and enjoy.
+  OCR        : None
+  Combined   :  modulus. So get out and do some computations and enjoy.
 

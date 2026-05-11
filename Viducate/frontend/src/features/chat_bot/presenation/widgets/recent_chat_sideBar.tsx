@@ -1,10 +1,13 @@
 import { History, PanelRight, Plus } from "lucide-react";
-import { ChatHistoryCard } from "./chat_history_card";
 import type { ChatSession } from "../../domain/entity/chat_session";
+import { ChatHistoryCard } from "./chat_history_card";
 type RecentChatsSidebarProps = {
   handleOpenSession: () => void;
-  handleClearMessages:()=>void;
-  //sessions:ChatSession[];
+  handleClearMessages: () => void;
+  sessions: ChatSession[];
+  handleSelectNewSession: (id: number) => void;
+  selectedSession: number | null;
+  setOpenDeleteMessage: (value:boolean) => void;
 };
 
 export function RecentChatsSidebar(props: RecentChatsSidebarProps) {
@@ -13,12 +16,10 @@ export function RecentChatsSidebar(props: RecentChatsSidebarProps) {
       {/* header */}
       <div className="p-4 border-b border-slate-100 flex gap-5">
         <button
-        onClick={()=>{
-        
-         props.handleClearMessages();
-         props.handleOpenSession();
-          
-        }}
+          onClick={() => {
+            props.handleClearMessages();
+            props.handleOpenSession();
+          }}
           className="
           cursor-pointer
             w-full flex items-center justify-center gap-2
@@ -49,21 +50,30 @@ export function RecentChatsSidebar(props: RecentChatsSidebarProps) {
         </div>
       </div>
 
-
-
       {/* chats */}
       <div className="flex-1 overflow-y-auto p-3">
         <p className="text-xs font-semibold text-slate-400 mb-3 px-2">
           Recent Chats
         </p>
 
-        {/* <div className="space-y-2">
-          {props.sessions.map((session)=>{
-            return <ChatHistoryCard key={session.id} title={session.title}/>
-
+        <div className="space-y-2">
+          {props.sessions.map((session) => {
+            return (
+              <ChatHistoryCard
+                key={session.id}
+                session={session}
+                selected={
+                  props.selectedSession
+                    ? session.id === props.selectedSession
+                    : false
+                }
+                handleSelectNewSession={props.handleSelectNewSession}
+                // handleDeleteSession={() => {}}
+                setOpenDeleteMessage={props.setOpenDeleteMessage}
+              />
+            );
           })}
-       
-        </div> */}
+        </div>
       </div>
     </div>
   );

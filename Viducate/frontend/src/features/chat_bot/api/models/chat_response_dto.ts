@@ -22,7 +22,7 @@ export function toChatResponse(dto: ChatResponseDto): ChatResponse {
     },
     message: {
       content: dto.message.content,
-      message_id:dto.message.message_id
+      message_id:dto.message.message_id.toString()
     },
   };
 }
