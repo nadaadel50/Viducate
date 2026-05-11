@@ -28,12 +28,6 @@ export const QuizPage = () => {
     difficulty,
   });
   useEffect(() => {
-  localStorage.removeItem('quiz_key');
-  localStorage.removeItem('quiz_index');
-  localStorage.removeItem('quiz_answers');
-  localStorage.removeItem('quiz_time');
-  localStorage.removeItem('quiz_state');
-  localStorage.removeItem('quiz_isReview');
   generate();
 }, []);
   const {

@@ -2,12 +2,18 @@
 import { COLORS } from "../../../../core/constants";
 import { useQuizOptions } from "../hooks/useQuizOptions.ts";
 import { FormattedMessage } from 'react-intl';
+import { useNavigate } from "react-router";
+import { AppRoutesNames } from "../../../../app/routers/routes";
+import { useLearningSession } from "../../../../core/hooks/useLearningContent";
 export const QuizOptions = ({
   question,
   selectedId,
   onSelect,
   isReviewMode,
 }: any) => {
+  const navigate = useNavigate();
+
+const { setCurrentTime } = useLearningSession();
 
   const { options, getOptionStyle } = useQuizOptions({
     question,
@@ -27,25 +33,34 @@ export const QuizOptions = ({
           {question.question_text}
         </h2>
 
-        {isReviewMode && question.video_timestamp && (
-          <button
-            onClick={() =>
-              console.log("Jumping to second:", question.video_timestamp)
-            }
-            className="flex items-center gap-2 px-4 py-2 rounded-xl transition-all hover:scale-105 active:scale-95 shadow-sm"
-            style={{
-              backgroundColor: COLORS.icon.background,
-              color: COLORS.brand.primary,
-            }}
-          >
-            <span className="material-symbols-outlined text-xl">
-              play_circle
-            </span>
-            <span className="text-sm font-bold uppercase tracking-wide">
-              <FormattedMessage id="quiz.go_to_watch" values={{ timestamp_label: question.timestamp_label }} />
-            </span>
-          </button>
-        )}
+        {isReviewMode &&question.video_timestamp !== null &&
+  question.video_timestamp !== undefined &&  (
+  <button
+    onClick={() => {
+      setCurrentTime(question.video_timestamp);
+
+      navigate(AppRoutesNames.wathcVideo);
+    }}
+    className="flex items-center gap-2 px-4 py-2 rounded-xl transition-all hover:scale-105 active:scale-95 shadow-sm"
+    style={{
+      backgroundColor: COLORS.icon.background,
+      color: COLORS.brand.primary,
+    }}
+  >
+    <span className="material-symbols-outlined text-xl">
+      play_circle
+    </span>
+
+    <span className="text-sm font-bold uppercase tracking-wide">
+      <FormattedMessage
+        id="quiz.go_to_watch"
+        values={{
+          timestamp_label: question.timestamp_label,
+        }}
+      />
+    </span>
+  </button>
+)}
       </div>
 
       <div className="flex flex-col gap-3">
