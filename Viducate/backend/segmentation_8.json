@@ -3,80 +3,103 @@
   "segments": [
     {
       "segment_number": 1,
-      "start_time": "00:00:00",
-      "end_time": "00:01:16",
-      "main_topic": "Introduction to Big O Notation",
-      "title": "Introduction to Big O Notation in Computer Science",
+      "start_time": "00:00",
+      "end_time": "00:44",
+      "main_topic": "Introduction to Modular Arithmetic",
+      "title": "Introduction and Outcomes",
       "sub_topics": [
         {
-          "name": "Introduction to the Video",
-          "start_time": "00:00:00",
-          "end_time": "00:00:14",
-          "description": "Hey, what's going on everybody? It's your bro, hope you're doing well, and in this video I'm going to describe the very basics of Big O notation in, well, computer science. So sit back, relax, and enjoy the show."
+          "name": "Introduction to Modular Arithmetic",
+          "start_time": "00:00",
+          "end_time": "00:23",
+          "description": "Every day, we all are doing a mod-12 operation without even knowing that we are doing this mod-12 operation. Shocking? No worries. Let's dive into the topic of the day, the modular arithmetic part 1 to know this."
         },
         {
-          "name": "Introduction to Big O Notation",
-          "start_time": "00:00:14",
-          "end_time": "00:01:16",
-          "description": "Oh yeah, Big O notation. So a common phrase used with Big O notation is, how code slows as data grows. It describes the performance of an algorithm as the amount of data increases. And really, this notation is machine independent. What we're really focusing on is the number of steps to complete an algorithm, because some machines are going to run certain algorithms faster than others. And three, we tend to ignore smaller operations. If we had some task that took n plus one, we would just reduce it to just n, because that plus one really isn't going to make So here's a few examples of big O notation. We have O O O and O And N is really just the amount of data that we passing in It a variable like x What we focusing on is the performance of an algorithm as the amount of data increases, and n is a representation of the amount of data that we're passing in."
+          "name": "Session Outcomes",
+          "start_time": "00:23",
+          "end_time": "00:44",
+          "description": "Upon the completion of the session, the learner will be able to Outcome number one, we will understand the modular arithmetic operation with examples. Outcome number two, we will understand about congruence. And outcome number three, we will identify valid and invalid congruence."
         }
       ],
       "key_points": [
-        "Big O notation describes the performance of an algorithm as the amount of data increases",
-        "Big O notation is machine independent",
-        "We ignore smaller operations"
+        "Modular Arithmetic",
+        "Session Outcomes"
       ]
     },
     {
       "segment_number": 2,
-      "start_time": "00:01:16",
-      "end_time": "00:03:06",
-      "main_topic": "Understanding Big O Notation",
-      "title": "Understanding Big O Notation with Examples",
+      "start_time": "00:44",
+      "end_time": "04:12",
+      "main_topic": "Modular Arithmetic Operations",
+      "title": "Understanding Modular Arithmetic",
       "sub_topics": [
         {
-          "name": "Example of a Function with Big O Notation",
-          "start_time": "00:01:16",
-          "end_time": "00:02:06",
-          "description": "Here's a more concrete example. I have a function named addup. We will add up to a certain number depending on what we pass in as an argument. The for loop within here will iterate once up to whatever number that n is, add i to sum, then return it. What if n was a large number like a million? Well, it's going to take just above a million steps to complete this function. This function is said to have a runtime complexity of O of n, linear time. As the amount of data increases, it's going to increase the amount of steps linearly or proportionally. Now another way which we could write the same function is to take sum equals n times n plus 1 divided by 2. We will get the exact same sum. So if n was, let's say, a million, this is still only going to take a couple seconds. steps. Three steps, not a million steps. So this function is going to have a runtime complexity of O of one. The input size doesn't matter. The amount of data that we have really doesn't matter. It's going to be completed in the same amount of steps."
+          "name": "What is Modular Arithmetic?",
+          "start_time": "00:44",
+          "end_time": "01:07",
+          "description": "What is this modular arithmetic? Actually, this modular arithmetic is a system of arithmetic for integers. We know integers. And modular arithmetic is a system of arithmetic for integers When it is going to work on integers obviously we are going to wrap around after reaching a certain value called modulus"
         },
         {
-          "name": "Why We Ignore Smaller Operations",
-          "start_time": "00:02:06",
-          "end_time": "00:03:06",
-          "description": "So this function is way better than this previous one. Three steps is better than a million steps. And the reason that this isn't O of three, because this takes three steps, is that we really don't care about smaller operations. In the grand scheme of things, they really won't make much of a difference. So we would just shorten this and say that this is O of 1 constant time. The input size doesn't matter. Here's a graph that I made to represent the different runtime complexities. We have data on the x-axis represented by n. So data will increase as we go more to the right, and we have time on the y-axis. I did add an asterisk next to time because some of these times can vary depending on what machine you're using, so these can vary Another way to look at this is number of steps So as we increase on the y these algorithms are going to perform with increasingly more time They going to get slower"
+          "name": "Wall Clock Example",
+          "start_time": "01:07",
+          "end_time": "02:15",
+          "description": "Here is a clock. We have 24 hours a day. Do we have 24 numbers representing 24 hours in our clock? Definitely no. But still we are able to understand that the 24 hour timing with just 12 numbers. Isn't it? Let's say, if the time is 15 hours, it means it is 3 pm, right?"
+        },
+        {
+          "name": "Mod 12 Operation",
+          "start_time": "02:15",
+          "end_time": "02:44",
+          "description": "Actually, what we are doing is a mod 12 operation. We wrap around every 12 hours. So, what we are doing here is a wrap around operation on these integers. So, here we have only 12 integers represented on the clock and this is a system of arithmetic for integers."
+        },
+        {
+          "name": "Example Calculations",
+          "start_time": "02:44",
+          "end_time": "04:12",
+          "description": "So, 13 is divided by 12 we get the remainder 1 I hope things are clear for you now Before seeing some examples in order to understand things clearly about modular arithmetic let's see what is congruence. Actually, in cryptography, congruence is used which is represented with this symbol instead of equality."
         }
       ],
       "key_points": [
-        "We can write the same function with different runtime complexities",
-        "The input size doesn't matter for O(1) complexity",
-        "We ignore smaller operations"
+        "Modular Arithmetic",
+        "Wall Clock Example",
+        "Mod 12 Operation"
       ]
     },
     {
       "segment_number": 3,
-      "start_time": "00:03:06",
-      "end_time": "00:06:22",
-      "main_topic": "Types of Big O Notation",
-      "title": "Types of Big O Notation and Their Examples",
+      "start_time": "04:12",
+      "end_time": "10:33",
+      "main_topic": "Congruence and Validity",
+      "title": "Understanding Congruence and Validity",
       "sub_topics": [
         {
-          "name": "O(1) - Constant Time",
-          "start_time": "00:03:06",
-          "end_time": "00:03:23",
-          "description": "So let begin with O of 1 constant time. Anything that has a runtime complexity of O of 1 will take the same amount of time regardless of the data size. A few examples would include the random access of an element within an array and inserting at the beginning of a linked list. So O of 1 is extremely fast."
+          "name": "Introduction to Congruence",
+          "start_time": "04:12",
+          "end_time": "05:10",
+          "description": "Let's see what is congruence. Actually, in cryptography, congruence is used which is represented with this symbol instead of equality. Why equality is not preferred in congruence?"
         },
         {
-          "name": "Other Types of Big O Notation",
-          "start_time": "00:03:23",
-          "end_time": "00:06:22",
-          "description": "Next we have O of log n, also known as logarithmic time. One example is binary search. We haven't talked about this yet. We'll talk about a few of these algorithms in future videos, but anything that has a runtime complexity of O of log n will actually take, I don't want to say less and less time, but increasingly less time to complete. So as the data size increases, this algorithm is going to be more and more efficient compared to the early stages with a small dataset. O is also known as linear time. As the amount of data increases, the time it takes to complete something will increase proportionally linearly. That would include looping through the elements in an array and searching through a linked list. Next we have O of N log N, also known as quasi-linear time. This would include a quick sort, merge sort, and heap sort. We'll talk about these concepts in future videos. So for the most part, this is very similar to linear time. Unless we're working with a large data set, then anything using O of N log N is going to start to slow down when we work with larger data sets, hence this curve here. Then we have O of n squared, also known as quadratic time. A few examples would include insertion sort, selection sort, and bubble sort. As the amount of data increases, it's going to take increasingly more and more time to complete anything that has a runtime complexity of O of n squared. So just to compare linear time and quadratic time, with linear time if our data set was a thousand if n equals a thousand it going to take a thousand steps they proportional they linear but if we were using quadratic time if n was a thousand then a thousand squared would be a million. So if our data set was a thousand, if we're using quadratic time, it's going to take a million steps then, way more than linear time. So quadratic time is extremely slow with large data sets, but in the case of a small data set, it could actually be faster, as you can see by the graph here. And lastly, we have O of n factorial, also known as factorial time, and one place where this is used is with the traveling salesman problem, which I might discuss in a future video. So this is extremely slow, so if I had to give a letter grade to each of these runtime complexities when working with large data sets with constant time, this would be an A, like an A+. Logarithmic time would be a B, it's pretty good. Linear time is C, it's okay. Quasi-linear time is a D, it's just barely passing. Quadratic time would be an F, and factorial time, well, you get expelled from school. Although, some of these runtime complexities are actually faster when working with a smaller data set, so keep that in mind."
+          "name": "Examples of Congruence",
+          "start_time": "05:10",
+          "end_time": "06:04",
+          "description": "15 is congruent to 3 mod 12. Since we are dealing with mod 12, let's see the wall clock example. So, the modulus value is 12 as far as a wall clock is concerned, isn't it?"
+        },
+        {
+          "name": "Valid and Invalid Congruences",
+          "start_time": "06:04",
+          "end_time": "08:08",
+          "description": "So, a is congruent to b mod m, what do we mean by this? It means a when it is divided by m, we get the remainder b, right? So, a when it is divided by m, we get the remainder b and we are not worried about this quotient, right?"
+        },
+        {
+          "name": "More Examples and Conclusion",
+          "start_time": "08:08",
+          "end_time": "10:33",
+          "description": "Before we complete, let's see some valid and invalid congruences. The first congruence is 38 is congruent to 2 mod 12. 38 when it is divided by 12, 12 3 times 36 and the remainder is 2, right?"
         }
       ],
       "key_points": [
-        "O(1) is constant time",
-        "O(log n) is logarithmic time",
-        "O(n) is linear time"
+        "Congruence",
+        "Examples of Congruence",
+        "Valid and Invalid Congruences"
       ]
     }
   ]

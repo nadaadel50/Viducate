@@ -4,15 +4,17 @@ import {
   FileQuestion,
   FileText,
   Brain,
+  MessageCircle,
 } from "lucide-react";
 import { VideoPlayer } from "./video_part";
 import { TranscriptSearch } from "../widgets/transcript_search";
 import { FinalGeneratedBtn } from "../widgets/final_generated_btn";
 import { MainHeader } from "../widgets/main_header";
-import { useLearningSession } from "../../../../core/hooks/useLearningContent";
+
 
 export function RightContentSection() {
-  const { selectedTopic, toggleTopicComplete } = useLearningSession();
+  
+  
   return (
     <div className="min-h-screen w-full flex flex-col justify-center items-center">
       {/* centered container */}
@@ -34,22 +36,12 @@ export function RightContentSection() {
 
           {/* actions */}
           <div className="mt-8 flex gap-3">
-            <button
-             onClick={()=>{
-              if(selectedTopic?.segment_id){
-                 toggleTopicComplete(selectedTopic?.segment_id)
-              }
-             
-
-            }}
-             className="cursor-pointer flex-1 flex items-center justify-center gap-3 rounded-xl border border-slate-200 bg-white px-5 py-3 text-sm font-semibold text-slate-700 shadow-sm hover:border-[#4f46e5]/50 hover:bg-slate-50 hover:text-[#4f46e5] transition">
+            <button className="cursor-pointer flex-1 flex items-center justify-center gap-3 rounded-xl border border-slate-200 bg-white px-5 py-3 text-sm font-semibold text-slate-700 shadow-sm hover:border-[#4f46e5]/50 hover:bg-slate-50 hover:text-[#4f46e5] transition">
               <CircleCheckBig size={20} />
               Complete Video
             </button>
 
-            <button
-           
-             className="cursor-pointer flex-1 flex items-center justify-center gap-3 rounded-xl bg-slate-900 px-5 py-3 text-sm font-semibold text-white shadow hover:bg-slate-800 transition">
+            <button className="cursor-pointer flex-1 flex items-center justify-center gap-3 rounded-xl bg-slate-900 px-5 py-3 text-sm font-semibold text-white shadow hover:bg-slate-800 transition">
               Next Video
               <ArrowRight size={20} />
             </button>
@@ -86,6 +78,9 @@ export function RightContentSection() {
           />
         </div>
       </div>
+     
+
+     
     </div>
   );
 }
