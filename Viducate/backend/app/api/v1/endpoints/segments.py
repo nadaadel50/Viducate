@@ -58,6 +58,13 @@ def get_segments_by_video(
                 "end_time": s.end_time,
                 "main_topic": s.main_topic,
                 "title": s.title,
+                "sub_topics": [
+                    {
+                        "name": st.name,
+                        "start_time": st.start_time,
+                    }
+                    for st in s.sub_topics
+                ],
             }
             for s in segments
         ]

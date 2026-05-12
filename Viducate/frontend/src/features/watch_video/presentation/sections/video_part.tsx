@@ -126,6 +126,7 @@ export function VideoPlayer() {
           src={topics?.video_url}
           playing={playerState.isPlaying}
           playbackRate={playbackRate}
+          controls={false}
           // onReady={() => {
           //   // check if the video player is ready to use or not (not the react player)
           //   const internalPlayer = (

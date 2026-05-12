@@ -1,4 +1,3 @@
-import { TopicResponse } from "../../domin/entity/topic_response"
 
 export type TopicResponseDto = {
   segment_id: number

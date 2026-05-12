@@ -1,5 +1,32 @@
 # OCR Output — video_id=28
 # Language: en
-# Total segments: 1
+# Total segments: 28
 
-[00:00:00] 1322-34
+[00:00:00] Autodesk SketchBook - Untitled  100.0 | File Edit Image Window Help | 4G00T | Binary experentartiy | Type here to search | 8:50 PM | 2102021
+[00:01:07] File | Edit | Image Window Help | Clear | 40 I | 8:52 PM
+[00:02:42] Autodesk SketchBook - Untitled 100.0 | Viasn | Scene Collection | Toel | Carrtrab | Scene | Rurestor | 8:54 PM
+[00:08:03] Tool | 32 1 02 | Tos towe to manhs | Saurces | Audis Murer | Scere Tramsibocg | Cantrols | Depley Captuare 2 | Start Strearng | Duratin | Stadia Hods | 9:03 PM
+[00:08:13] 13o 1101 | 32 102 | 9 0 a 40
+[00:09:25] 333343 | 3  3 | 32102 | 343228 | as 40 | 9:04 PM
+[00:09:35] Apps | Documents | More | Best match | 8181 | 81  81 | See web results | 6561 | Folders | Documents | 085-81-44-POP-Chord CMaj-021 | 085-81-44-POP-Chord CMaj-022 | 34 32981 | 085-81-44-POP-Chord CMaj-023 | 085-81-44-POP-Chord CMaj-024 | 085-81-44-POP-Chord CMaj-025 | 085-81-44-POP-Chord CMaj-026 | 81 - What does 81 stand for? The Free | 38 342 | Dictionary | 085-81-44-POP-Chord CMaj-027 | https:acronyms.thefreedictionary.com81 | 085-81-44-POP-Chord CMaji-028 | Looking for online definition of 81 or what 81 stands for? 81 is | listed in the Worlds largest and most authoritative dictionary | 085-81-44-POP-Chord CMaj-029 | database of abbreviations and acronyms 81 - What does 81 | stand for? The Free Dictionary | 085-81-44-POP-Chord CMaj-030 | Open results in browser | Interstate 81 | Wikinedia | 8181 | 5 0 ta 40 | 9:05 PM
+[00:09:45] 4G0T | 3432928
+[00:10:44] EILE | EDIT | VIew | PROJECT | BUILD | DEBUG | TEST | ANALYZE | JOOLS | EXTENSIONS | WINDOW | HELP | Search Ctrl Q | Codeforces | Debug | Local Windows Debugger | Live Share | Server Explorer | algorithm | ullrem.asm | IIrem.asm | Source.cpp:2 | IIdiv.asm | utility | Source.cpp:1 | unorderedmap | vector | printCamera.cs | xutility | Properties | Diagnostic Tools | Codeforces | Global Scope | binpowlong long a, long long b | long long binpowlong long a, long longb | -long long binpowlong long a, long long b, long long m | a  m; | long long res  1; | while b  0 | ifb 1 | res  res  a  m; | a  a  a  m; | b  1; | return res; | Visual Studio 2019 update | No issues found | Version 16.8.5 is downloaded and ready to install. | Error Lst | Output | Find Symbol Results | View details | Items Saved | Add to Source Control | 9:08 PM
+[00:10:54] FILE | view | DEBUG TEST ANALYZE | TOOLS EXTENSIONS WINDOW HELP | Search CtrlQ | Irem.asm | primes  vectorbooln  1, true; | for 1l i  2; i  i  n; i | if primesi | forll j  i  i; j  n; j  i | primesj  false; | -long long binpowlong long a, long long b | Error List
+[00:11:26] AUFE SEDFhBOaNEWntiROE.OBUILD DEBUG TEST | TOOLS | , help | Ildiv.asm | Zor11 i  2Ri  i  n;i | for1l j  i i; j  n; j  i | 3 2 1 0 2 | long long binpowlong longa | long long b | 6561813 | 5  la 40 I | 9:09 PM
+[00:11:36] TOOLS EXTENSIONS WINDOW | Search CtrQ | 30000 | Ilrem.asm | Source.cpp:2 Ildiv.asm | for ll j  i  i; j  n; j  i | whileb  0
+[00:12:24] -Q004G00T | 13o0 1101 | 3432298 | 656181.3 | 5  a 40 | 9:10 PM
+[00:12:40] AFLESEDFTBoqHEWntpROE.0BUILD DEBUG | Source.cpp: | xubility | primes  vectorooln  1, true; | 2forH1 i  2Ri  i  n; D , | for 11 j  i  i; j  n; j  i | long | long long | pimpowlong | long | long | ldng res  1; | white b  0 | Visual Studio 2019 updlate | Version 16.8.5 is downloaded and ready terinstall. | Items Sa | 5 ta 40
+[00:12:50] help | x000 | for ll j  i i; j  n; j  i | if b  1 | Errr List
+[00:13:00] EDIT VIEW PROJECT | TEST ANALYZE | EXTENSIONS WINDOW | 3000 | for ll i  2; i  i  n; i | for1i j  i  i; j  n; j  i | long long binpowlong long a, long long b | res  res  a; | Version 16.8.5 is downloaded and ready to install | 9:11 PM
+[00:13:10] Eedit view | EXTENSIONS WINDOW HELP | for 1i j  i  i; j  n; j  i | a  a | Ready
+[00:13:20] 20000 | lona lona | coreturn | reinteprefcast | ⑧reatekpretpointercast | remeveextentt | rethroverexcentionbuffer | rethrowifnestedn | BE retuerkretumn | returitentporarybuffe | H Ahebyisisgrtoreturn | retu
+[00:13:30] VIEW PROJECT | X000 | long long es  1; | local variable long long res | while b | Search Online | ifb1 | a  a  a; | 9:12 PM
+[00:14:11] VIEW | res  res | long long binpowlong long a, long long b, long long m | if b 1
+[00:14:21] binpowlong long a, long long b, long long m | b 1; | bool allSorted | for int i  0; i  arr.size - 1; i | if ki.first  ki  1.first | return false;
+[00:15:00] b h; | long long binpowlong longa, long long b, long long m | res res  a  m; | 9:13 PM
+[00:15:10] Binary Exponentiation - Competi | New Tab | https:cp-algorithms.comalgebrabinary-exp.html | a fa | if n  0 and n even | a n1 | a if n  0 and n odd | Implementation | First the recursive approach, which is a direct translation of the recursive formula | if b  θ | return 1; | long long res  binpowa, b  2; | if b  2 | return res res a; | else | return res res; | The second approach accomplishes the same task without recursion. It computes all the powers in a loop, and multiplies the ones with | the corresponding set bit in n. Although the complexity of both approaches is identical, this approach will be faster in practice since we | have the overhead of the recursive calls. | while b  θ | res  res a; | a  a a; | a  a 40 D
+[00:15:30] a -c | First the recursive approach, which is a direct translation of the recursive formula: | long long binpowlonglong a, long long b | return res  res a; | return res  res; | have the overhead of the recursive calls | a 40 1 | 9:14 PM
+[00:15:40] Binary Exponentiation - Competi X | return res  res  a; | long long res  i; | 0  la 40 I
+[00:15:50] afrac2 | if b  0 | return i; | h  1.
+[00:16:28] it n  U and n even | 9:15 PM
+[00:16:38] 32  312  32  9 | 34  322  92  81 | 38  342  812  6561 | So to get the final answer for 313, we only need to multiply three of them skipping 32 because the corresponding bit in n is not set: | 313  6561  81  3  1594323 | The final complexity of this algorithm is Olog n: we have to compute log n powers of a, and then have to do at most log n | multiplications to get the final answer from them. | The following recursive approach expresses the same idea | if n  0 | afrac | as-1 | First the recursive approach, which is a direct translation of the rectrsive formula:

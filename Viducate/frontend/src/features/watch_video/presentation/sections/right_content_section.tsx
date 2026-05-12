@@ -12,6 +12,7 @@ import { FinalGeneratedBtn } from "../widgets/final_generated_btn";
 import { MainHeader } from "../widgets/main_header";
 import { ChatBotOpenBtn } from "../../../chat_bot/presenation/widgets/chat_bot_open_btn";
 
+
 export function RightContentSection() {
   
   

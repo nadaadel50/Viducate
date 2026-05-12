@@ -9,7 +9,7 @@ export function LeftContentSection() {
 
   const { currentTime, setSelectedTopic, setSeekTo, topics } =
     useLearningSession();
-  const { data: videoData } = useVideoData();
+  
 
   const currentTopicIndex = topics
     ? topics.findIndex(

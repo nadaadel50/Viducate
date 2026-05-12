@@ -42,6 +42,11 @@ class SegmentSchema(BaseModel):
             raise ValueError("end_time must be greater than start_time")
         return v
 
+class SubTopicBriefResponse(BaseModel):
+    name: str
+    start_time: int
+
+    model_config = {"from_attributes": True}
 
 # =========================
 # 3. RESPONSE (Frontend)
@@ -53,6 +58,7 @@ class SegmentResponse(BaseModel):
     end_time: int
     main_topic: str
     title: str
+    sub_topics: list[SubTopicBriefResponse] = []
 
     model_config = {"from_attributes": True}
 

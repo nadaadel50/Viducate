@@ -1,6 +1,10 @@
 {
 <<<<<<< HEAD
+<<<<<<< HEAD
   "total_segments": 10,
+=======
+  "total_segments": 3,
+>>>>>>> 72c8b84ee425b297821a8c1256d37d9211a996bb
 =======
   "total_segments": 8,
 >>>>>>> e2a05ba1a607defa5750b8a88a717c1b116d66b1
@@ -9,9 +13,15 @@
       "segment_number": 1,
       "start_time": "00:00:00",
 <<<<<<< HEAD
+<<<<<<< HEAD
       "end_time": "00:01:21",
       "main_topic": "Introduction to Binary Exponentiation",
       "title": "Introduction to the Concept of Binary Exponentiation",
+=======
+      "end_time": "00:01:16",
+      "main_topic": "Introduction to Big O Notation",
+      "title": "Introduction to Algorithm Performance",
+>>>>>>> 72c8b84ee425b297821a8c1256d37d9211a996bb
       "sub_topics": [
         {
           "name": "Introduction to the Topic",
@@ -27,8 +37,14 @@
         }
       ],
       "key_points": [
+<<<<<<< HEAD
         "Binary exponentiation is a method to quickly calculate large powers",
         "It helps solve the problem of overflow and slow calculation"
+=======
+        "Big O notation describes algorithm performance",
+        "Machine independent",
+        "Ignores smaller operations"
+>>>>>>> 72c8b84ee425b297821a8c1256d37d9211a996bb
 =======
       "end_time": "00:01:41",
       "main_topic": "Introduction to Fuzzy Logic",
@@ -56,10 +72,17 @@
     {
       "segment_number": 2,
 <<<<<<< HEAD
+<<<<<<< HEAD
       "start_time": "00:01:21",
       "end_time": "00:09:37",
       "main_topic": "Understanding Binary Exponentiation",
       "title": "The Concept of Binary Exponentiation and its Application",
+=======
+      "start_time": "00:01:16",
+      "end_time": "00:03:47",
+      "main_topic": "Examples of Big O Notation",
+      "title": "Understanding Big O Notation with Examples",
+>>>>>>> 72c8b84ee425b297821a8c1256d37d9211a996bb
       "sub_topics": [
         {
           "name": "Understanding the Concept of Binary Exponentiation",
@@ -75,8 +98,14 @@
         }
       ],
       "key_points": [
+<<<<<<< HEAD
         "Binary exponentiation is used to calculate large powers quickly",
         "It works by splitting the exponent into two groups and calculating each group separately"
+=======
+        "Linear time algorithm example",
+        "Constant time algorithm example",
+        "Introduction to runtime complexities"
+>>>>>>> 72c8b84ee425b297821a8c1256d37d9211a996bb
 =======
       "start_time": "00:01:41",
       "end_time": "00:02:51",
@@ -105,10 +134,17 @@
     {
       "segment_number": 3,
 <<<<<<< HEAD
+<<<<<<< HEAD
       "start_time": "00:09:37",
       "end_time": "00:11:20",
       "main_topic": "Implementing Binary Exponentiation in Code",
       "title": "Writing Code to Calculate Binary Exponentiation",
+=======
+      "start_time": "00:03:47",
+      "end_time": "00:06:22",
+      "main_topic": "Different Types of Runtime Complexities",
+      "title": "Understanding Different Runtime Complexities",
+>>>>>>> 72c8b84ee425b297821a8c1256d37d9211a996bb
       "sub_topics": [
         {
           "name": "Initializing Variables and Calculating the Result",
@@ -124,8 +160,14 @@
         }
       ],
       "key_points": [
+<<<<<<< HEAD
         "The code for binary exponentiation involves dividing the exponent by 2 in each iteration",
         "The result is calculated by multiplying the base with the result of the previous iteration"
+=======
+        "Constant time complexity",
+        "Logarithmic time complexity",
+        "Linear and quasi-linear time complexities"
+>>>>>>> 72c8b84ee425b297821a8c1256d37d9211a996bb
 =======
       "start_time": "00:02:51",
       "end_time": "00:04:00",

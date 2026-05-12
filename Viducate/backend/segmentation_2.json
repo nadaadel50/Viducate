@@ -1,5 +1,6 @@
 {
 <<<<<<< HEAD
+<<<<<<< HEAD
   "total_segments": 3,
   "segments": [
     {
@@ -79,6 +80,10 @@
         "Comparison of complexities",
         "Constant time, logarithmic time, linear time, quasi-linear time, quadratic time, and factorial time"
 =======
+  "total_segments": 0,
+  "segments": []
+>>>>>>> 72c8b84ee425b297821a8c1256d37d9211a996bb
+=======
   "total_segments": 1,
   "segments": [
     {
@@ -135,8 +140,12 @@
         "الفعل المجرد هو ما كانت جميع حروفه أصلية",
         "الفعل الصحيح هو الفعل التي سلمت حروفه الأصلية من أحرف العلة",
         "الفعل المعتل هو الفعل الذي به حرف من حروف العلة"
+<<<<<<< HEAD
 >>>>>>> e2a05ba1a607defa5750b8a88a717c1b116d66b1
+=======
+>>>>>>> 72c8b84ee425b297821a8c1256d37d9211a996bb
       ]
     }
   ]
+>>>>>>> e2a05ba1a607defa5750b8a88a717c1b116d66b1
 }

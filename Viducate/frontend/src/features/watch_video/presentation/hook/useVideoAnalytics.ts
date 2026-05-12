@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import { StuckReasons, type StuckReason } from "../../domin/entity/stuck_reason";
+import { StuckReasons, type StuckReason } from "../types/stuck_reason";
 
 export function useVideoAnalytics(
   isPlaying: boolean,

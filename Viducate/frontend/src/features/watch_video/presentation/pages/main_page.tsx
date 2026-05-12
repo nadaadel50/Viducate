@@ -51,10 +51,12 @@ export function MainPage() {
   if (isLoading && !data) return <Loading />;
   if (error) return <ErrorMessage errorMessage={error.message} />;
 
-  return (
+ else{
+ 
+   return (
     <>
       <div className="flex font-display bg-[#f8fafc] ">
-        <div className="flex-1 border-r border-slate-200">
+        <div className="flex-1 border-r border-slate-200 h-screen ">
           <LeftContentSection />
         </div>
 
@@ -77,4 +79,5 @@ export function MainPage() {
       />
     </>
   );
+ }
 }
