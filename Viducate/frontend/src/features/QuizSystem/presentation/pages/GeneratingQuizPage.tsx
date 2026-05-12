@@ -1,6 +1,6 @@
-import { Brain } from 'lucide-react';
-import { LoadingScreen } from '../../../../core/componants/LoadingScreen';
-import { COLORS } from '../../../../core/constants/colors';
+import { Brain } from "lucide-react";
+import { LoadingScreen } from "../../../../core/componants/LoadingScreen";
+import { COLORS } from "../../../../core/constants/colors";
 export function GeneratingQuizPage() {
   return (
     <LoadingScreen

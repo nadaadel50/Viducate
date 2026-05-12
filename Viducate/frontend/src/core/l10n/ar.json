@@ -154,6 +154,6 @@
   "quiz.review_answers": "مراجعة الإجابات",
   "quiz.back_to_video": "العودة لمشاهدة الفيديو",
   "quiz.map_title": "خريطة الأسئلة",
-  "quiz.go_to_watch": "اذهب لمشاهدة عند {timestamp_label}"
-
+  "quiz.go_to_watch": "اذهب لمشاهدة عند {timestamp_label}",
+  "quiz.new_quiz": "اختبار جديد"
 }

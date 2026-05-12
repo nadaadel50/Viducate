@@ -153,6 +153,6 @@
   "quiz.review_answers": "Review Answers",
   "quiz.back_to_video": "Back to Video",
   "quiz.map_title": "Question Map",
-  "quiz.go_to_watch": "Go TO Watch at {timestamp_label}"
-
+  "quiz.go_to_watch": "Go TO Watch at {timestamp_label}",
+  "quiz.new_quiz": "New Quiz"
 }

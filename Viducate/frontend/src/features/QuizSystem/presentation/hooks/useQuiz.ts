@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react';
-
-export const useQuiz = (questions: any[], initialTime: number, onNewQuiz: () => void, quizKey: string) => {
+import { QuizQuestionEntity } from '../../domain/entity/quiz_entity';
+export const useQuiz = (questions: QuizQuestionEntity[], initialTime: number,  quizKey: string) => {
 
   const [currentIndex, setCurrentIndex] = useState(() => {
     const savedKey = localStorage.getItem('quiz_key');
@@ -69,18 +69,17 @@ export const useQuiz = (questions: any[], initialTime: number, onNewQuiz: () => 
   };
 
   const resetQuiz = () => {
-localStorage.removeItem(`quiz_answers_${quizKey}`);
-localStorage.removeItem(`quiz_index_${quizKey}`);
-localStorage.removeItem(`quiz_time_${quizKey}`);
-localStorage.removeItem(`quiz_state_${quizKey}`);
-localStorage.removeItem(`quiz_isReview_${quizKey}`);
-localStorage.removeItem(`quiz_data_${quizKey}`);
+    localStorage.removeItem(`quiz_answers_${quizKey}`);
+    localStorage.removeItem(`quiz_index_${quizKey}`);
+    localStorage.removeItem(`quiz_time_${quizKey}`);
+    localStorage.removeItem(`quiz_state_${quizKey}`);
+    localStorage.removeItem(`quiz_isReview_${quizKey}`);
+    localStorage.removeItem(`quiz_data_${quizKey}`);
     setCurrentIndex(0);
     setAnswers({});
     setTimeLeft(initialTime * 60);
     setQuizState('playing');
     setIsReviewMode(false);
-    onNewQuiz();
   };
 
   const calculateScore = () => {

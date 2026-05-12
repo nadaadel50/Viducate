@@ -9,13 +9,11 @@ type QuizStats = {
 
 type QuizResultCardProps = {
   stats: QuizStats;
-  onTakeAnother: () => void;
   onReview: () => void;
 };
 
 export const QuizResultCard = ({
   stats,
-  onTakeAnother,
   onReview,
 }: QuizResultCardProps) => {
   return (
@@ -54,16 +52,6 @@ export const QuizResultCard = ({
 
         <div className="flex flex-row gap-3 w-full">
 
-          <button
-            onClick={onTakeAnother}
-            className="flex-1 py-4 rounded-2xl font-bold text-white text-sm shadow-md hover:brightness-110 transition-all active:scale-95 flex items-center justify-center gap-2"
-            style={{ backgroundColor: COLORS.button.primary }}
-          >
-            <span className="material-symbols-outlined text-lg">autorenew</span>
-            <span className="whitespace-nowrap">
-              <FormattedMessage id="quiz.take_another" />
-            </span>
-          </button>
 
           <button
             onClick={onReview}

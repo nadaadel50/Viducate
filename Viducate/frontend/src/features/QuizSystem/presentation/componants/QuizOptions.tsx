@@ -5,12 +5,20 @@ import { FormattedMessage } from 'react-intl';
 import { useNavigate } from "react-router";
 import { AppRoutesNames } from "../../../../app/routers/routes";
 import { useLearningSession } from "../../../../core/hooks/useLearningContent";
+import { QuizQuestionEntity } from "../../domain/entity/quiz_entity";
+interface QuizOptionsProps {
+  question: QuizQuestionEntity;
+  selectedId: string | null;
+  onSelect: (optionId: string) => void;
+  isReviewMode: boolean;
+}
+
 export const QuizOptions = ({
   question,
   selectedId,
   onSelect,
   isReviewMode,
-}: any) => {
+}: QuizOptionsProps) => {
   const navigate = useNavigate();
 
 const { setCurrentTime } = useLearningSession();
