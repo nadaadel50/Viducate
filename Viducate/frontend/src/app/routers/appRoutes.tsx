@@ -18,6 +18,7 @@ import { ProcessingPage } from "../../features/video_upload/presentation/pages/p
 import AuthSuccess from "../../features/auth/presentation/pages/AuthSuccess";
 import { FlashCards } from "../../features/flash_cards/presentation/pages/flash_card_page";
 import { WatchLayout } from "../../features/watch_video/presentation/pages/watch_outlet";
+import MindMapPage from "../../features/mindMap/presentation/pages/mindMap_page";
 export function AppRoutes() {
   return (
     <BrowserRouter>
@@ -27,18 +28,19 @@ export function AppRoutes() {
         <Route path="/signup" element={<SignupPage />} />
         <Route path="/auth/callback" element={<AuthSuccess />} />
         <Route path="/forgot-password" element={<ForgetPasswordPage />} />
+         <Route path={AppRoutesNames.mindMap} element={<MindMapPage />} />
 
         <Route path="/test-modals" element={<TestModalsPage />} /> /* for
         <Route element={<ProtectedRoute />}>
           {" "}
           <Route path="/UploadVideoPage" element={<UploadVideoPage />} />
           <Route path="/ProcessingPage" element={<ProcessingPage />} />
-          {/* <Route path="/WatchVideo" element={<MainPage />} />
-          <Route path="/flashcards/:segmentId" element={<FlashCards />} /> */}
+      
        
           <Route path="/WatchVideo" element={<WatchLayout />}>
             <Route index element={<MainPage />} /> {/* /WatchVideo */}
             <Route path="flashcards/:segmentId" element={<FlashCards />} />
+            
             {" "}
             {/* /WatchVideo/flashcards */}
           </Route>{" "}
