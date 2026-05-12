@@ -1,14 +1,14 @@
 
 import {  Download } from 'lucide-react';
 import { COLORS } from '../../../../core/constants/colors';
-
+import { FormattedMessage } from "react-intl";
 export const ToolsCard = () => (
   <div 
     className="rounded-xl shadow-sm   p-2 flex flex-col"
     style={{ backgroundColor: COLORS.layout.leftBackground }}
   >
     <p className="px-4 py-3 text-xs font-bold uppercase tracking-wider" style={{ color: COLORS.text.muted }}>
-      Tools
+       <FormattedMessage id="summary.tools" />
     </p>
     <button className="flex items-center gap-3 p-3 rounded-lg hover:bg-gray-50 transition-colors text-left group">
       
@@ -17,10 +17,10 @@ export const ToolsCard = () => (
       </div>
       <div className="flex-1">
         <h4 className="text-sm font-bold" style={{ color: COLORS.text.primary }}>
-          Export to PDF
+          <FormattedMessage id="summary.exportPdf" />
         </h4>
         <p className="text-xs" style={{ color: COLORS.text.secondary }}>
-          Download for offline
+          <FormattedMessage id="summary.downloadOffline" />
         </p>
       </div>
       <Download className="w-5 h-5" style={{ color: COLORS.text.muted }} />

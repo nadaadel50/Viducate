@@ -1,7 +1,7 @@
 
 import { Clock } from 'lucide-react';
 import { COLORS } from '../../../../core/constants/colors';
-
+import { FormattedMessage } from "react-intl";
 interface SummaryHeaderProps {
   title: string;
   time: string;
@@ -14,7 +14,7 @@ export const SummaryHeader = ({ title, time }: SummaryHeaderProps) =>(
         style={{ backgroundColor: COLORS.state.successLight, color: COLORS.state.success }}
       >
         <span className="w-2 h-2 rounded-full animate-pulse" style={{ backgroundColor: COLORS.state.success }}></span>
-        AI Summary Ready
+         <FormattedMessage id="summary.aiReady" />
       </span>
       <span className="text-sm font-medium flex items-center gap-1" style={{ color: COLORS.brand.primary }}>
         <Clock size={14} /> {time}
