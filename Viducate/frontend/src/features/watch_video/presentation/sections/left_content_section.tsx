@@ -1,15 +1,13 @@
 import { useEffect, useState } from "react";
 import { ContentLearningCard } from "../widgets/content_learning_card";
 import { SearchTopicBar } from "../widgets/search_topic_bar";
-import { useVideoData } from "../../../../core/hooks/useVideoData";
 import { useLearningSession } from "../../../../core/hooks/useLearningContent";
 
 export function LeftContentSection() {
   const [searchQuery, setSearchQuery] = useState<string>("");
 
-  const { currentTime, setSelectedTopic, setSeekTo, topics } =
+  const { currentTime, setSelectedTopic, setSeekTo, topics,videoTitle } =
     useLearningSession();
-  
 
   const currentTopicIndex = topics
     ? topics.findIndex(
@@ -45,6 +43,13 @@ export function LeftContentSection() {
         <SearchTopicBar setSearchQuery={setSearchQuery} />
       </div>
 
+      <div className="px-5 py-2">
+        <div className="flex items-center justify-between">
+            <h2 className="text-xs font-semibold text-slate-400 tracking-wide hover:text-[#4f46e5]">
+              {`${videoTitle} Topics`}
+            </h2>
+        </div>
+      </div>
       {/* LIST */}
       <div className="flex-1 overflow-y-auto">
         <div className="flex flex-col gap-3 p-4 max-w-md mx-auto w-full">

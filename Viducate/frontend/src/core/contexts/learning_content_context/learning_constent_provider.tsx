@@ -84,6 +84,50 @@ export function LearningSessionProvider({
     setTopicsState(topics);
   };
 
+  const [completedTopics, setCompletedTopics] = useState<Set<number>>(() => {
+    const saved = localStorage.getItem(STORAGE_KEYS.completedTopics);
+
+    if (!saved) return new Set();
+
+    return new Set(JSON.parse(saved));
+  });
+
+  useEffect(() => {
+    localStorage.setItem(
+      STORAGE_KEYS.completedTopics,
+      JSON.stringify([...completedTopics]),
+    );
+  }, [completedTopics]);
+  const toggleTopicComplete = (segmentId: number) => {
+    setCompletedTopics((prev) => {
+      const next = new Set(prev);
+      if (next.has(segmentId)) {
+        next.delete(segmentId);
+      } else {
+        next.add(segmentId);
+      }
+      return next;
+    });
+  };
+
+  const goToNextTopic = () => {
+    if (!topics || !selectedTopic) return;
+
+    const currentIndex = topics.findIndex(
+      (topic) => topic.segment_id === selectedTopic.segment_id,
+    );
+
+    if (currentIndex === -1) return;
+
+    const nextTopic = topics[currentIndex + 1];
+
+    if (!nextTopic) return;
+
+    setSelectedTopic(nextTopic);
+
+    setSeekTo(nextTopic.start_time);
+  };
+
   return (
     <LearningSessionContext.Provider
       value={{
@@ -99,6 +143,9 @@ export function LearningSessionProvider({
         setVideoTitle,
         topics,
         setTopics,
+        completedTopics,
+        toggleTopicComplete,
+        goToNextTopic,
       }}
     >
       {children}

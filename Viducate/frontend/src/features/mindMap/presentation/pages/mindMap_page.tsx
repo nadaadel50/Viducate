@@ -24,7 +24,7 @@ const nodeTypes = {
   custom: CustomNode,
 };
 
-export default function App() {
+export default function MindMapPage() {
   const {
     nodes: initialNodes,
     edges: intailEdges,

@@ -1,0 +1,415 @@
+[00:00:00]
+  Transcript :  All right guys welcome back to the channel once again and today someone asked me on my common box
+  OCR        : None
+  Combined   :  All right guys welcome back to the channel once again and today someone asked me on my common box
+
+[00:00:05]
+  Transcript :  like how to make custom node like different different kind of shape so if you can see I
+  OCR        : None
+  Combined   :  like how to make custom node like different different kind of shape so if you can see I
+
+[00:00:10]
+  Transcript :  have already converted this box into the like little bit it looks like ellipses so there's
+  OCR        : None
+  Combined   :  have already converted this box into the like little bit it looks like ellipses so there's
+
+[00:00:17]
+  Transcript :  one way like if you can do like this you can do it otherwise you need to write custom css for that
+  OCR        : None
+  Combined   :  one way like if you can do like this you can do it otherwise you need to write custom css for that
+
+[00:00:22]
+  Transcript :  so I just implemented this thing like this so it's easy like you can write the css for that so
+  OCR        : None
+  Combined   :  so I just implemented this thing like this so it's easy like you can write the css for that so
+
+[00:00:29]
+  Transcript :  So I put the border radius by 50% over here.
+  OCR        : None
+  Combined   :  So I put the border radius by 50% over here.
+
+[00:00:32]
+  Transcript :  And if you want to do it into the code,
+  OCR        : None
+  Combined   :  And if you want to do it into the code,
+
+[00:00:35]
+  Transcript :  so let me guide you where you can do that.
+  OCR        : None
+  Combined   :  so let me guide you where you can do that.
+
+[00:00:37]
+  Transcript :  So see, we have custom node over here.
+  OCR        : None
+  Combined   :  So see, we have custom node over here.
+
+[00:00:41]
+  Transcript :  I already told you how to assign the custom node.
+  OCR        : None
+  Combined   :  I already told you how to assign the custom node.
+
+[00:00:43]
+  Transcript :  So you can see these tools are two node types are the custom nodes we have.
+  OCR        : None
+  Combined   :  So you can see these tools are two node types are the custom nodes we have.
+
+[00:00:51]
+  Transcript :  So first one, if you can see over here, custom node selector one.
+  OCR        : None
+  Combined   :  So first one, if you can see over here, custom node selector one.
+
+[00:00:55]
+  Transcript :  And second one is custom node selector Okay sorry custom node selector and custom node selector one Okay so see over here we have already defined the style properties
+  OCR        : None
+  Combined   :  And second one is custom node selector Okay sorry custom node selector and custom node selector one Okay so see over here we have already defined the style properties
+
+[00:01:05]
+  Transcript :  Like what would be the style if we, so these are the handle type of style.
+  OCR        : None
+  Combined   :  Like what would be the style if we, so these are the handle type of style.
+
+[00:01:09]
+  Transcript :  Okay, but custom color picker node.
+  OCR        : None
+  Combined   :  Okay, but custom color picker node.
+
+[00:01:12]
+  Transcript :  Okay, so what we can do, we can give the style to this one.
+  OCR        : None
+  Combined   :  Okay, so what we can do, we can give the style to this one.
+
+[00:01:18]
+  Transcript :  Or we can write a style into the style.stss by giving the class to this.
+  OCR        : None
+  Combined   :  Or we can write a style into the style.stss by giving the class to this.
+
+[00:01:23]
+  Transcript :  okay let's do a class give a class name over here like class name
+  OCR        : None
+  Combined   :  okay let's do a class give a class name over here like class name
+
+[00:01:30]
+  Transcript :  custom node one okay and let's see into the browser that we are getting that class name or not
+  OCR        : None
+  Combined   :  custom node one okay and let's see into the browser that we are getting that class name or not
+
+[00:01:41]
+  Transcript :  okay so let's reload this page go on now and if you see let's see so you can see custom color
+  OCR        : Activabe Windown | fyou bese to aanct
+  Combined   :  okay so let's reload this page go on now and if you see let's see so you can see custom color Activabe Windown | fyou bese to aanct
+
+[00:01:47]
+  Transcript :  picker so i have created this another node which one is having the class name that i written right
+  OCR        : None
+  Combined   :  picker so i have created this another node which one is having the class name that i written right
+
+[00:01:53]
+  Transcript :  Let's go open this object inside this.
+  OCR        : None
+  Combined   :  Let's go open this object inside this.
+
+[00:01:58]
+  Transcript :  And if you see the custom name
+  OCR        : None
+  Combined   :  And if you see the custom name
+
+[00:02:00]
+  Transcript :  node is coming over here.
+  OCR        : None
+  Combined   :  node is coming over here.
+
+[00:02:02]
+  Transcript :  See this class name is coming over here.
+  OCR        : None
+  Combined   :  See this class name is coming over here.
+
+[00:02:04]
+  Transcript :  So all the input properties inside of this.
+  OCR        : None
+  Combined   :  So all the input properties inside of this.
+
+[00:02:06]
+  Transcript :  So what we can do, or what we can do,
+  OCR        : None
+  Combined   :  So what we can do, or what we can do,
+
+[00:02:08]
+  Transcript :  we can define the class property to this one.
+  OCR        : None
+  Combined   :  we can define the class property to this one.
+
+[00:02:10]
+  Transcript :  Like we can style it like this.
+  OCR        : None
+  Combined   :  Like we can style it like this.
+
+[00:02:13]
+  Transcript :  Okay, so just give a padding.
+  OCR        : None
+  Combined   :  Okay, so just give a padding.
+
+[00:02:16]
+  Transcript :  Let's give a background color first.
+  OCR        : None
+  Combined   :  Let's give a background color first.
+
+[00:02:19]
+  Transcript :  Background color.
+  OCR        : None
+  Combined   :  Background color.
+
+[00:02:21]
+  Transcript :  Okay, so background color would be,
+  OCR        : None
+  Combined   :  Okay, so background color would be,
+
+[00:02:23]
+  Transcript :  I would like to have, let's choose one.
+  OCR        : None
+  Combined   :  I would like to have, let's choose one.
+
+[00:02:26]
+  Transcript :  Okay.
+  OCR        : None
+  Combined   :  Okay.
+
+[00:02:28]
+  Transcript :  this one will be better. Okay give some padding to this padding would be one REM
+  OCR        : None
+  Combined   :  this one will be better. Okay give some padding to this padding would be one REM
+
+[00:02:35]
+  Transcript :  okay and after that just give a border radius border radius will be 50% okay so
+  OCR        : None
+  Combined   :  okay and after that just give a border radius border radius will be 50% okay so
+
+[00:02:46]
+  Transcript :  you can see it's gone to elixirs but if you fix the width and height so I will
+  OCR        : None
+  Combined   :  you can see it's gone to elixirs but if you fix the width and height so I will
+
+[00:02:50]
+  Transcript :  like to put the width equals to 10RM and height also 10K So now it looks like a circle but if we reduce the width and height like 2 arum it would
+  OCR        : None
+  Combined   :  like to put the width equals to 10RM and height also 10K So now it looks like a circle but if we reduce the width and height like 2 arum it would
+
+[00:03:09]
+  Transcript :  be 2 arum and width also would be 2 arum so it's gonna look like a circle.
+  OCR        : None
+  Combined   :  be 2 arum and width also would be 2 arum so it's gonna look like a circle.
+
+[00:03:15]
+  Transcript :  2 arum, 2 arum.
+  OCR        : None
+  Combined   :  2 arum, 2 arum.
+
+[00:03:19]
+  Transcript :  So see, it's looking like a circle and you can connect this node to any of these nodes.
+  OCR        : None
+  Combined   :  So see, it's looking like a circle and you can connect this node to any of these nodes.
+
+[00:03:25]
+  Transcript :  Okay.
+  OCR        : None
+  Combined   :  Okay.
+
+[00:03:25]
+  Transcript :  So that's how you can do.
+  OCR        : None
+  Combined   :  So that's how you can do.
+
+[00:03:27]
+  Transcript :  So about the content thing, you can manage by yourself.
+  OCR        : None
+  Combined   :  So about the content thing, you can manage by yourself.
+
+[00:03:31]
+  Transcript :  But like if you assign the font size, font size will be 10px.
+  OCR        : None
+  Combined   :  But like if you assign the font size, font size will be 10px.
+
+[00:03:37]
+  Transcript :  Okay.
+  OCR        : None
+  Combined   :  Okay.
+
+[00:03:38]
+  Transcript :  So you can see the font size had been reduced as well.
+  OCR        : None
+  Combined   :  So you can see the font size had been reduced as well.
+
+[00:03:41]
+  Transcript :  And if you can see, it's working fine.
+  OCR        : None
+  Combined   :  And if you can see, it's working fine.
+
+[00:03:44]
+  Transcript :  And also you can connect this node like this.
+  OCR        : None
+  Combined   :  And also you can connect this node like this.
+
+[00:03:47]
+  Transcript :  if you connect these pointers.
+  OCR        : None
+  Combined   :  if you connect these pointers.
+
+[00:03:50]
+  Transcript :  Okay, so this is how you can create multiple kind of shapes
+  OCR        : None
+  Combined   :  Okay, so this is how you can create multiple kind of shapes
+
+[00:03:55]
+  Transcript :  for your custom node.
+  OCR        : None
+  Combined   :  for your custom node.
+
+[00:03:57]
+  Transcript :  So what I did, I just did normally,
+  OCR        : None
+  Combined   :  So what I did, I just did normally,
+
+[00:04:00]
+  Transcript :  just assigned a class over here and pick that class and put it into your style.scss.
+  OCR        : None
+  Combined   :  just assigned a class over here and pick that class and put it into your style.scss.
+
+[00:04:05]
+  Transcript :  So you can create a style.scss file over here like this.
+  OCR        : None
+  Combined   :  So you can create a style.scss file over here like this.
+
+[00:04:09]
+  Transcript :  You get a style.scss.
+  OCR        : None
+  Combined   :  You get a style.scss.
+
+[00:04:12]
+  Transcript :  Okay, wait a minute.
+  OCR        : None
+  Combined   :  Okay, wait a minute.
+
+[00:04:14]
+  Transcript :  Let's copy this all this time first.
+  OCR        : None
+  Combined   :  Let's copy this all this time first.
+
+[00:04:17]
+  Transcript :  And we'll see.
+  OCR        : None
+  Combined   :  And we'll see.
+
+[00:04:18]
+  Transcript :  And make this style.scss file this.
+  OCR        : None
+  Combined   :  And make this style.scss file this.
+
+[00:04:24]
+  Transcript :  style.scss.
+  OCR        : None
+  Combined   :  style.scss.
+
+[00:04:27]
+  Transcript :  Okay, I'm not going to reset scss.
+  OCR        : None
+  Combined   :  Okay, I'm not going to reset scss.
+
+[00:04:29]
+  Transcript :  and let's copy that class name or what was that a class name custom or select
+  OCR        : None
+  Combined   :  and let's copy that class name or what was that a class name custom or select
+
+[00:04:35]
+  Transcript :  program okay first copy the styles dot here and let's replace this a with the
+  OCR        : None
+  Combined   :  program okay first copy the styles dot here and let's replace this a with the
+
+[00:04:44]
+  Transcript :  class
+  OCR        : None
+  Combined   :  class
+
+[00:04:48]
+  Transcript :  but we'll see
+  OCR        : None
+  Combined   :  but we'll see
+
+[00:04:51]
+  Transcript :  Okay, so custom node one and you can just put this file inside the react flow.
+  OCR        : None
+  Combined   :  Okay, so custom node one and you can just put this file inside the react flow.
+
+[00:05:00]
+  Transcript :  Okay, so this is my parent component where I'm rendering everything.
+  OCR        : None
+  Combined   :  Okay, so this is my parent component where I'm rendering everything.
+
+[00:05:06]
+  Transcript :  I'll CSS.
+  OCR        : None
+  Combined   :  I'll CSS.
+
+[00:05:10]
+  Transcript :  Okay, now if I will reload my page.
+  OCR        : None
+  Combined   :  Okay, now if I will reload my page.
+
+[00:05:17]
+  Transcript :  So you can see it's coming already like this.
+  OCR        : None
+  Combined   :  So you can see it's coming already like this.
+
+[00:05:22]
+  Transcript :  I didn't do anything and everything is coming from the class.
+  OCR        : None
+  Combined   :  I didn't do anything and everything is coming from the class.
+
+[00:05:27]
+  Transcript :  So it's style.css file.
+  OCR        : None
+  Combined   :  So it's style.css file.
+
+[00:05:29]
+  Transcript :  So that's how you can customize your custom nodes with this style property.
+  OCR        : None
+  Combined   :  So that's how you can customize your custom nodes with this style property.
+
+[00:05:34]
+  Transcript :  And it's very easy.
+  OCR        : None
+  Combined   :  And it's very easy.
+
+[00:05:36]
+  Transcript :  No need to figure out everything and no need to understand everything.
+  OCR        : None
+  Combined   :  No need to figure out everything and no need to understand everything.
+
+[00:05:39]
+  Transcript :  You know, HTML, CSS and React thing.
+  OCR        : None
+  Combined   :  You know, HTML, CSS and React thing.
+
+[00:05:42]
+  Transcript :  So you can do it by way.
+  OCR        : None
+  Combined   :  So you can do it by way.
+
+[00:05:44]
+  Transcript :  So it's very easy library to use.
+  OCR        : None
+  Combined   :  So it's very easy library to use.
+
+[00:05:46]
+  Transcript :  and there's no any kind of hard stuff that you need to learn a lot of things into that just go
+  OCR        : None
+  Combined   :  and there's no any kind of hard stuff that you need to learn a lot of things into that just go
+
+[00:05:51]
+  Transcript :  with that and start learning and you will be able to do anything into that okay thank you so much
+  OCR        : None
+  Combined   :  with that and start learning and you will be able to do anything into that okay thank you so much
+
+[00:05:56]
+  Transcript :  guys thank you for watching and that's it from this review
+  OCR        : None
+  Combined   :  guys thank you for watching and that's it from this review
+

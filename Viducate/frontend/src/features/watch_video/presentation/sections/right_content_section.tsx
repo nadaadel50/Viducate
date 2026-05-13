@@ -13,11 +13,15 @@ import { MainHeader } from "../widgets/main_header";
 import { ChatBotOpenBtn } from "../../../chat_bot/presenation/widgets/chat_bot_open_btn";
 import { useNavigate } from "react-router";
 import { AppRoutesNames } from "../../../../app/routers/routes";
-
+import { useLearningSession } from "../../../../core/hooks/useLearningContent";
 
 export function RightContentSection() {
-  const navigate=useNavigate()
-  
+  const navigate = useNavigate();
+  const { selectedTopic, toggleTopicComplete,goToNextTopic } =
+    useLearningSession();
+
+ 
+
   return (
     <div className="min-h-screen w-full flex flex-col justify-center items-center">
       {/* centered container */}
@@ -39,13 +43,21 @@ export function RightContentSection() {
 
           {/* actions */}
           <div className="mt-8 flex gap-3">
-            <button className="cursor-pointer flex-1 flex items-center justify-center gap-3 rounded-xl border border-slate-200 bg-white px-5 py-3 text-sm font-semibold text-slate-700 shadow-sm hover:border-[#4f46e5]/50 hover:bg-slate-50 hover:text-[#4f46e5] transition">
+            <button
+              onClick={() => {
+                if (selectedTopic)
+                  toggleTopicComplete(selectedTopic.segment_id);
+              }}
+              className="cursor-pointer flex-1 flex items-center justify-center gap-3 rounded-xl border border-slate-200 bg-white px-5 py-3 text-sm font-semibold text-slate-700 shadow-sm hover:border-[#4f46e5]/50 hover:bg-slate-50 hover:text-[#4f46e5] transition"
+            >
               <CircleCheckBig size={20} />
-              Complete Video
+              Complete Topic
             </button>
 
-            <button className="cursor-pointer flex-1 flex items-center justify-center gap-3 rounded-xl bg-slate-900 px-5 py-3 text-sm font-semibold text-white shadow hover:bg-slate-800 transition">
-              Next Video
+            <button
+            onClick={goToNextTopic}
+             className="cursor-pointer flex-1 flex items-center justify-center gap-3 rounded-xl bg-slate-900 px-5 py-3 text-sm font-semibold text-white shadow hover:bg-slate-800 transition">
+              Next Topic
               <ArrowRight size={20} />
             </button>
           </div>
@@ -78,15 +90,12 @@ export function RightContentSection() {
             icon={<Brain size={20} />}
             label="Final Mind Map"
             onClick={() => {
-              navigate(AppRoutesNames.mindMap)
-              
+              navigate(AppRoutesNames.mindMap);
             }}
           />
         </div>
       </div>
-      <ChatBotOpenBtn/>
-
-     
+      <ChatBotOpenBtn />
     </div>
   );
 }

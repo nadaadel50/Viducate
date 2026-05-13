@@ -26,4 +26,7 @@ export type LearningSessionContextType = {
   setSeekTo: React.Dispatch<
     React.SetStateAction<number | null>
   >;
+  completedTopics: Set<number>;  
+  toggleTopicComplete: (segmentId: number) => void;
+  goToNextTopic: () => void;
 };

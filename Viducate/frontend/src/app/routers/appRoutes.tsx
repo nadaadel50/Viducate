@@ -19,6 +19,7 @@ import {QuizPage} from "../../features/QuizSystem/presentation/pages/QuizPage";
 
 import { FlashCards } from "../../features/flash_cards/presentation/pages/flash_card_page";
 import { WatchLayout } from "../../features/watch_video/presentation/pages/watch_outlet";
+import MindMapPage from "../../features/mindMap/presentation/pages/mindMap_page";
 
 export function AppRoutes() {
   return (
@@ -39,11 +40,11 @@ export function AppRoutes() {
           {" "}
           <Route path="/UploadVideoPage" element={<UploadVideoPage />} />
           <Route path="/ProcessingPage" element={<ProcessingPage />} />
+           <Route path={AppRoutesNames.mindMap} element={<MindMapPage />} />
       
           <Route path="/quiz/:segmentId" element={<QuizPage />} />
           <Route path="/summary/:segmentId" element={<SummaryPage />} />
-          {/* <Route path="/WatchVideo" element={<MainPage />} />
-          <Route path="/flashcards/:segmentId" element={<FlashCards />} /> */}
+      
        
           <Route path="/WatchVideo" element={<WatchLayout />}>
             <Route index element={<MainPage />} /> {/* /WatchVideo */}

@@ -1,4 +1,6 @@
 import {
+  Check,
+  CircleCheckBig,
   FileQuestion,
   Layers,
   NotebookText,
@@ -23,7 +25,7 @@ export function ContentLearningCard({
   onClick: () => void;
   cardInfo: TopicResponse;
 }) {
-  const { setSelectedTopic, videoId } = useLearningSession();
+  const { setSelectedTopic, videoId, completedTopics } = useLearningSession();
   const navigate = useNavigate();
   const { isDueForSegment } = useDueFlashcards();
 
@@ -59,7 +61,8 @@ export function ContentLearningCard({
       });
     }
   };
- 
+  const isCompleted = completedTopics.has(cardInfo.segment_id);
+
   return (
     <>
       <div
@@ -76,6 +79,18 @@ export function ContentLearningCard({
           >
             {cardInfo.title}
           </h4>
+
+          {isCompleted && (
+            <div className="absolute -top-3 -right-3">
+             
+              <div className="w-7 h-7 rounded-full bg-white/70 p-[2px] shadow-sm">
+              
+                <div className="w-full h-full rounded-full bg-[#2E9E44] flex items-center justify-center">
+                  <Check size={14} className="text-white stroke-[3]" />
+                </div>
+              </div>
+            </div>
+          )}
 
           {isDue && (
             <span className="flex items-center gap-1 text-green-600 text-[10px] font-bold bg-green-50 px-2 py-0.5 rounded-full">
@@ -147,9 +162,9 @@ export function ContentLearningCard({
           });
         }}
       />
-      <SummaryStyleModal 
-        isOpen={isSummaryModalOpen} 
-        onClose={() => setIsSummaryModalOpen(false)} 
+      <SummaryStyleModal
+        isOpen={isSummaryModalOpen}
+        onClose={() => setIsSummaryModalOpen(false)}
         onSelect={handleSummarySelect}
       />
     </>
