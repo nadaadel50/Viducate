@@ -48,6 +48,18 @@ export function ContentLearningCard({
       setIsQuizModalOpen(true);
     }
   };
+  const handleSummarySelect = (style: "summary" | "study_notes") => {
+    if (style === "summary") {
+      navigate(`/summary/${cardInfo.segment_id}`, {
+        state: { videoId, segmentId: cardInfo.segment_id },
+      });
+    } else {
+      navigate(`/study-notes/${cardInfo.segment_id}`, {
+        state: { videoId, segmentId: cardInfo.segment_id },
+      });
+    }
+  };
+ 
   return (
     <>
       <div
@@ -135,9 +147,10 @@ export function ContentLearningCard({
           });
         }}
       />
-      <SummaryStyleModal
-        isOpen={isSummaryModalOpen}
-        onClose={() => setIsSummaryModalOpen(false)}
+      <SummaryStyleModal 
+        isOpen={isSummaryModalOpen} 
+        onClose={() => setIsSummaryModalOpen(false)} 
+        onSelect={handleSummarySelect}
       />
     </>
   );

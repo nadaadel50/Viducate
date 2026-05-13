@@ -10,6 +10,10 @@ export const AppRoutesNames = {
   uploadPage:"/UploadVideoPage",
   wathcVideo:"/WatchVideo",
   flashCards:"/FlashCards",
-  mindMap:"/MindMap"
+  mindMap:"/MindMap",
+  studyNotes:"/study-notes",
+  summary:"/summary",
+  generatingSummary:"/generating-summary",
+  
 
 };

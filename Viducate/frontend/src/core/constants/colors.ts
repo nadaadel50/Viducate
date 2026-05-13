@@ -17,6 +17,7 @@ export const COLORS = {
     error: "#ef4444",
     danger: "#FF4D4F",
     pending: "#E2E8F0",
+
   },
 
   border: {
@@ -72,6 +73,10 @@ export const COLORS = {
     orbitBorder: "rgba(53, 158, 255, 0.15)",
     glow: "rgba(90, 11, 177, 0.3)",
   }
+
+
+
+  
 
   
 

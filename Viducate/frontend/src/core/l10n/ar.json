@@ -135,6 +135,19 @@
   "analysis.retry": "إعادة محاولة الرفع",
 
 
+  "summary.aiReady": "الملخص جاهز بالذكاء الاصطناعي",
+  "summary.keyTakeaways": "أهم النقاط",
+  "summary.conclusion": "الخلاصة",
+  "summary.exportPdf": "تصدير PDF",
+  "summary.downloadOffline": "تحميل للاستخدام بدون إنترنت",
+  "summary.tools": "الأدوات",
+  "summary.studyNotes": "ملاحظات دراسية",
+  "summary.studyNotesDesc": "نقاط تفصيلية ومفاهيم أساسية للتعلم العميق",
+  "summary.summary": "ملخص",
+  "summary.summaryDesc": "نظرة سريعة ومختصرة للمراجعة",
+  "summary.selectStyleTitle": "اختر نوع الملخص",
+  "summary.selectStyleDesc": "اختر الشكل المناسب لطريقة تعلمك الآن",
+
 
 
 
