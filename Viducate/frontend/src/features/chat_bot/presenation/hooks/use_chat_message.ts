@@ -7,13 +7,15 @@ import { useSessions } from "./use_sessions";
 import { useGetSessionMessages } from "./use_get_session_messages";
 import type { ChatMessage } from "../../domain/entity/chat_message";
 import { useDeleteSession } from "./use_delete_session";
+import { useChat } from "./use_chat";
 
 export function useChatMessages(open: boolean) {
   const [messages, setMessages] = useState<ChatMessage[]>([]);
-  const [input, setInput] = useState("");
+  
   const [sessionId, setSessionId] = useState<number | null>(null);
   
   const { sessions, addSession } = useSessions();
+  const{input,setUserInput}=useChat()
 
   const messagesEndRef = useRef<HTMLDivElement | null>(null);
   const { sendMessage, isLoadingMessage, error, reset } = useSendMessage();
@@ -105,7 +107,7 @@ export function useChatMessages(open: boolean) {
       },
     );
 
-    setInput("");
+    setUserInput("");
   }
 
   function handleOpenRecentChats() {
@@ -143,7 +145,7 @@ export function useChatMessages(open: boolean) {
   return {
     messages,
     input,
-    setInput,
+    setUserInput,
     handleSend,
     messagesEndRef,
     isLoadingMessage,

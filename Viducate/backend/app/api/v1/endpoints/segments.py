@@ -63,7 +63,7 @@ def get_segments_by_video(
                         "name": st.name,
                         "start_time": st.start_time,
                     }
-                    for st in s.sub_topics
+                    for st in s.subtopics
                 ],
             }
             for s in segments

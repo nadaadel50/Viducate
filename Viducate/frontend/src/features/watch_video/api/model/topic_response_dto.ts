@@ -1,4 +1,6 @@
 
+import type { SubTopicDto } from "./sub_topic_dto"
+
 export type TopicResponseDto = {
   segment_id: number
   video_id: number
@@ -6,7 +8,8 @@ export type TopicResponseDto = {
   start_time: number
   end_time: number
   main_topic: string
-  title: string
+  title: string,
+  sub_topics:SubTopicDto[]
 }
 
 

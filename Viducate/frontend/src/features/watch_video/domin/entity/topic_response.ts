@@ -1,3 +1,5 @@
+import type { SubTopic } from "./sub_topic";
+
 export class TopicResponse {
   segment_id: number;
   segment_number: number;
@@ -5,6 +7,7 @@ export class TopicResponse {
   end_time: number;
   main_topic: string;
   title: string;
+  sub_topics:SubTopic[]
 
   constructor(
     segment_id: number,
@@ -12,7 +15,9 @@ export class TopicResponse {
     start_time: number,
     end_time: number,
     main_topic: string,
-    title: string
+    title: string,
+    sub_topics:SubTopic[]
+
   ) {
     this.segment_id = segment_id;
     
@@ -21,5 +26,6 @@ export class TopicResponse {
     this.end_time = end_time;
     this.main_topic = main_topic;
     this.title = title;
+    this.sub_topics=sub_topics
   }
 }

@@ -13,6 +13,9 @@ import { StuckPopup } from "../widgets/video_widgets/stuck_popup";
 import { getStuckMessage } from "../util/get_stuck_message";
 import { InitialPlayOverlay } from "../widgets/video_widgets/intial_overLay";
 import ReactPlayer from "react-player";
+import { useChat } from "../../../chat_bot/presenation/hooks/use_chat";
+import { getClosestSubTopic } from "../util/get_subtopic";
+import { getRandomStuckQuestion } from "../util/get_stuck_question";
 
 export function VideoPlayer() {
   const containerRef = useRef<HTMLDivElement | null>(null);
@@ -34,8 +37,16 @@ export function VideoPlayer() {
   const [topicDuration, setTopicDuration] = useState(0);
   const [currentTopicName, setCurrentTopicName] = useState("");
 
-  const { play,pause,playerRef, seek, getCurrentTime, setSpeed, getDuration } =
-    useVideoPlayer();
+  const {
+    play,
+    pause,
+    playerRef,
+    seek,
+    getCurrentTime,
+    setSpeed,
+    getDuration,
+  } = useVideoPlayer();
+  const { openChat, setUserInput } = useChat();
 
   const {
     showPopup,
@@ -75,7 +86,7 @@ export function VideoPlayer() {
     setShowSpeedMenu,
     handleAddMarker,
   } = useVideoController({
-    player: { seek, getCurrentTime, getDuration, setSpeed,play,pause },
+    player: { seek, getCurrentTime, getDuration, setSpeed, play, pause },
     analytics: { addSeekEvent, triggerStuck },
     videoState: { setPlayerState, setCurrentTime },
   });
@@ -105,6 +116,7 @@ export function VideoPlayer() {
   useEffect(() => {
     seek(currentTime);
   }, []);
+  
 
   const handleProgressClick = (e: React.MouseEvent<HTMLDivElement>) => {
     if (!progressRef.current) return;
@@ -195,14 +207,23 @@ export function VideoPlayer() {
       </div>
 
       {showPopup && (
-        <StuckPopup
-          reason={getStuckMessage(stuckReason)}
-          onHelp={() => {
-            /* open chat */
-          }}
-          onDismiss={() => setShowPopup(false)}
-        />
-      )}
+  <StuckPopup
+    reason={getStuckMessage(stuckReason)}
+    onHelp={() => {
+      openChat();
+      const subtopic = getClosestSubTopic(
+        selectedTopic?.sub_topics ?? [],
+        currentTime,
+      );
+
+      const question=getRandomStuckQuestion(subtopic?.name??"",currentTime)
+
+      setUserInput(question);
+      setShowPopup(false);
+    }}
+    onDismiss={() => setShowPopup(false)}
+  />
+)}
     </div>
   );
 }

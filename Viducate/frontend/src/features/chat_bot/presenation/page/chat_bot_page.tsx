@@ -14,8 +14,7 @@ export function ChatBotPage() {
 
   const {
     messages,
-    input,
-    setInput,
+    
     handleSend,
     messagesEndRef,
     openRecentChats,
@@ -93,8 +92,7 @@ export function ChatBotPage() {
 
           {/* input btn */}
           <ChatInputBtn
-            input={input}
-            setInput={setInput}
+            
             handleSend={handleSend}
           />
         </div>

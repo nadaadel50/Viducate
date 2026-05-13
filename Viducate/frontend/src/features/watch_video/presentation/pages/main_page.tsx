@@ -35,6 +35,8 @@ export function MainPage() {
     if (!data || data.topics.length === 0) return;
 
     setTopics(data.topics);
+    console.log("topics is",data.topics)
+    
 
     if (!selectedTopic) {
       setSelectedTopic(data.topics[0]);
