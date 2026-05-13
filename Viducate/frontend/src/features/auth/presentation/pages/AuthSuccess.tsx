@@ -1,33 +1,32 @@
 import { useEffect } from "react";
 import { useNavigate, useLocation } from "react-router-dom";
 import { AppRoutesNames } from "../../../../app/routers/routes";
+import { useAuth } from "../../../../core/hooks/useAuth";
 
 const AuthSuccess = () => {
   const navigate = useNavigate();
   const location = useLocation();
-
+  const { refreshUser } = useAuth();
   useEffect(() => {
-
+  const handleAuth = async () => {
     const hash = location.hash;
 
-    if (hash) {
-      
-      const params = new URLSearchParams(hash.substring(1));
-      const token = params.get("access_token");
+    if (!hash) return;
 
-      if (token) {
-        
-        localStorage.setItem("token", token);
-        console.log("Token saved successfully!");
+    const params = new URLSearchParams(hash.substring(1));
+    const token = params.get("access_token");
 
-        navigate(AppRoutesNames.uploadPage);//will change it to dashboard soon
-      }
-    }
+    if (!token) return;
 
+    localStorage.setItem("token", token);
+
+    await refreshUser();
     
-    // console.error("No token found in URL hash");
-    
-  }, [location, navigate]);
+    navigate(AppRoutesNames.uploadPage, { replace: true });
+  };
+
+  handleAuth();
+}, [location, navigate, refreshUser]);
 
   return null;
 };

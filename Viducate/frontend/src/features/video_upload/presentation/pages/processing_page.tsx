@@ -1,5 +1,5 @@
 import { useEffect, useMemo } from 'react';
-import { useNavigate} from 'react-router-dom';
+import {  useNavigate} from 'react-router-dom';
 import { XCircle,CheckCircle, X ,RotateCcw} from 'lucide-react';
 import { FormattedMessage } from 'react-intl';
 import { AnalysisStepItem } from '../componants/analysis_step_item';
@@ -16,7 +16,7 @@ export function ProcessingPage() {
   const { status, progress } = useProcessingStatus(videoId!);
   useEffect(() => {
     if (status === 'completed') {
-      const timeout = setTimeout(() => navigate(AppRoutesNames.wathcVideo), 2500);
+      const timeout = setTimeout(() => navigate(AppRoutesNames.wathcVideo, { replace: true }),2500);
       return () => clearTimeout(timeout);
     }
   }, [status, navigate, videoId]);
@@ -107,7 +107,7 @@ export function ProcessingPage() {
         <div className="flex flex-col items-center gap-6 w-full pb-10"> 
           {status === 'failed' ? (
             <button 
-               onClick={() => navigate('/UploadVideoPage')}
+               onClick={() => navigate('/UploadVideoPage', { replace: true })}
                className="flex items-center gap-3 px-8 py-3 rounded-full font-bold text-white transition-all active:scale-95 shadow-lg shadow-indigo-200/50 group"
                style={{ backgroundColor: COLORS.brand.primary }}
      >
@@ -116,7 +116,7 @@ export function ProcessingPage() {
             </button>
           ) : status !== 'completed' && (
             <button 
-              onClick={() => navigate('/UploadVideoPage')}
+              onClick={() => navigate('/UploadVideoPage', { replace: true })}
               className="flex items-center gap-2 text-xs font-bold uppercase tracking-widest transition-all hover:text-red-500 cursor-pointer active:scale-95"
               style={{ color: COLORS.text.muted }}
             >

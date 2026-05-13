@@ -14,6 +14,7 @@ type AuthContextType = {
   signup: (userData: SignupRequest) => Promise<ApiResult<SignupResponseDto>>; 
   logout: () => void;
   loading: boolean;
+  refreshUser: () => Promise<void>;
 };
 export type AuthContextProps = {
   children: React.ReactNode;

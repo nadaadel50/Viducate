@@ -86,7 +86,7 @@ const handleProcess = async (data: AuthFormData) => {
       return;
     }
       localStorage.removeItem(isLogin ? "loginData" : "signupData");
-    navigate(AppRoutesNames.uploadPage); // will move to dashboard soooooooooooooooooooooooooon!!!!!
+    navigate(AppRoutesNames.uploadPage, { replace: true }); // will move to dashboard soooooooooooooooooooooooooon!!!!!
   } catch (err) {
     console.error("Unexpected error:", err); 
     setServerError("Something went wrong");

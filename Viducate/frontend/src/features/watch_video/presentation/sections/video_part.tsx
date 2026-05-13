@@ -214,7 +214,8 @@ export function VideoPlayer() {
         selectedTopic?.sub_topics ?? [],
         currentTime,
       );
-
+      console.log("currentTime =", currentTime);
+     console.log("typeof currentTime =", typeof currentTime);  
       const question=getRandomStuckQuestion(subtopic?.name??"",currentTime)
 
       setUserInput(question);

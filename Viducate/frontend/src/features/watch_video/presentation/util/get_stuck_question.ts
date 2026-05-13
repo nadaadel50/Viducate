@@ -1,14 +1,14 @@
-import { formatMessageTime } from "../../../../core/utils/fomat_time";
+import { formatVideoTime } from "../../../../core/utils/fomat_time";
 
 
 export function getRandomStuckQuestion(
   title: string,
   time: number
 ): string {
-  const formattedTime = formatMessageTime(time);
+  const formattedTime = formatVideoTime(time);
 
-  const topicBadge = `[ 📘 ${title} ]`;
-  const timeBadge = `[ ⏱️ ${formattedTime} ]`;
+  const topicBadge = ` "${title}" `;
+  const timeBadge = ` ${formattedTime} `;
 
   const stuckQuestions = [
     `Can you explain ${topicBadge} in a simpler way at ${timeBadge}?`,
