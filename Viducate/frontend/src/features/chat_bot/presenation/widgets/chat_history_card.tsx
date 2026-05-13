@@ -21,7 +21,7 @@ export function ChatHistoryCard(props: ChatHistoryCardProps) {
   }
 
   return (
-    <button
+    <div
       onClick={() => {
         props.handleSelectNewSession(props.session.id);
       }}
@@ -111,6 +111,6 @@ export function ChatHistoryCard(props: ChatHistoryCardProps) {
         <Trash2 size={16} />
       </button>
       
-    </button>
+    </div>
   );
 }
