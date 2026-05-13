@@ -87,6 +87,11 @@ export const AuthProvider = ({ children }: { children: React.ReactNode }) => {
     
   };
 
+  const refreshUser = async () => {
+  const userData = await authService.getCurrentUser();
+  setUser(userData);
+};
+
   const logout = () => {
     localStorage.removeItem('token');
     sessionStorage.removeItem('token'); 
@@ -95,7 +100,7 @@ export const AuthProvider = ({ children }: { children: React.ReactNode }) => {
   };
 
   return (
-    <AuthContext.Provider value={{ user, login, signup, logout, loading,isAuthenticated:!!user }}>
+    <AuthContext.Provider value={{ user, login, signup, logout, loading,isAuthenticated:!!user, refreshUser }}>
       {!loading && children}
     </AuthContext.Provider>
   );

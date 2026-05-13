@@ -19,13 +19,14 @@ import {QuizPage} from "../../features/QuizSystem/presentation/pages/QuizPage";
 
 import { FlashCards } from "../../features/flash_cards/presentation/pages/flash_card_page";
 import { WatchLayout } from "../../features/watch_video/presentation/pages/watch_outlet";
+import { PublicRoute } from "./publicRoutes";
 import MindMapPage from "../../features/mindMap/presentation/pages/mindMap_page";
 
 export function AppRoutes() {
   return (
     <BrowserRouter>
       <Routes>
-        <Route path="/" element={<LoginPage />} />
+        <Route path="/" element={<PublicRoute><LoginPage /></PublicRoute>} />
          {/* <Route path="/" element={<FlashCards />} />{" "} */}
         <Route path="/signup" element={<SignupPage />} />
         <Route path="/auth/callback" element={<AuthSuccess />} />
