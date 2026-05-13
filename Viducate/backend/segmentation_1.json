@@ -4,219 +4,223 @@
     {
       "segment_number": 1,
       "start_time": "00:00:00",
-      "end_time": "00:01:41",
-      "main_topic": "Introduction to Fuzzy Logic",
-      "title": "Introduction to Fuzzy Logic and Defuzzification Techniques",
+      "end_time": "00:01:46",
+      "main_topic": "Introduction to Genetic Programming",
+      "title": "Definition and Challenges of Genetic Programming",
       "sub_topics": [
         {
-          "name": "Introduction to Fuzzy Logic",
+          "name": "Introduction to Genetic Programming",
           "start_time": "00:00:00",
-          "end_time": "00:00:29",
-          "description": "نبتدي. طيب احنا هنكمل الفازي كنترول سيستم. Fuzzy Logic | Control | Sabah Sayed | Department of Computer Science | Focuity of Computers and Arcjfciol Inteligence | Caire University | Egypt"
+          "end_time": "00:00:12",
+          "description": "-bs nstfr. tyb shhle qwy. wy3ni zyha zy khls tsabr aih? tsabr GENETIC PROGRAMMING | 622021"
         },
         {
-          "name": "Defuzzification Techniques",
-          "start_time": "00:00:29",
-          "end_time": "00:01:41",
-          "description": "زي ما اتفقنا عكده ادي الفازي فيكيشن. آآ بيتعامل بقى اكثر من طريقة. خلاص? اي اول طريقة اسمها ودي بحاول اجيب فيها اللي 1- Max membership principle: Also known as the | height method, this scheme is limited to peaked | output functions. This method is given by the | algebraic expression: | µC z µC z, for all 2 Z, | where z is the defuzzified | value | If multiple peaks exist, the middle one is chosen."
+          "name": "Challenges of Genetic Programming",
+          "start_time": "00:00:12",
+          "end_time": "00:00:31",
+          "description": "THE CHALLENGE | How can computers learn to solve problems without | being explicitly programmed? In other words, how can | computers be made to do what is needed to be done, | without being told exactly how to do it? | Attributed to Arthur Samuel 1959"
+        },
+        {
+          "name": "Basic Concept of Genetic Programming",
+          "start_time": "00:00:31",
+          "end_time": "00:01:46",
+          "description": "يعني ايه? كل اللي كنا بنقوله على بيتقال على خلاص الفرق الوحيد | ان اتخصصت في حالة واحدة. خلاص فالكروموزوم بتاعها بقى لي واحد."
         }
       ],
       "key_points": [
-        "Max membership principle",
-        "Defuzzification techniques"
+        "Genetic Programming is a field of study that involves using principles of genetics and evolution to solve problems",
+        "The goal of Genetic Programming is to create machines that can exhibit intelligent behavior",
+        "Genetic Programming uses a population of candidate solutions and applies operators such as selection, crossover, and mutation to evolve better solutions"
       ]
     },
     {
       "segment_number": 2,
-      "start_time": "00:01:41",
-      "end_time": "00:02:51",
-      "main_topic": "Defuzzification Methods",
-      "title": "Defuzzification Methods",
+      "start_time": "00:01:46",
+      "end_time": "00:07:38",
+      "main_topic": "Representation of Solutions in Genetic Programming",
+      "title": "Tree-Based Representation of Solutions",
       "sub_topics": [
         {
-          "name": "Mean Max Membership Method",
-          "start_time": "00:01:41",
-          "end_time": "00:02:19",
-          "description": "2- Mean Max membership: This method | also | called middle-of-maxima is closely related to | the first method, except that the locations of the | maximum membership can be nonuniqe | i.e., | the maximum membership can be a plateau | rather than a single point."
+          "name": "Tree-Based Representation",
+          "start_time": "00:01:46",
+          "end_time": "00:04:00",
+          "description": "GENETIC PROGRAMMING GP | One of the central problems in computer science is how to make | computers solve problems without being explicitly programmed | to do so. | Genetic programming offers a solution through the evolution of | computer programs by methods of natural selection. It is an | extension of the Genetic Algorithm. | Gax2s"
         },
         {
-          "name": "Centroid Method",
-          "start_time": "00:02:19",
-          "end_time": "00:02:51",
-          "description": "3- Centroid method: This procedure also called | center of area or center of gravity is the most | prevalent and physically appealing of all the | defuzzification methods Sugeno, 1985; it is given | by the algebraic expression: | jcz z dz | cz d: | - where denotes an algebraic integration"
+          "name": "Why Genetic Programming Uses Tree-Based Representation",
+          "start_time": "00:04:00",
+          "end_time": "00:05:05",
+          "description": "طيب عملوها ليه لاني كانت مشكلة كبيرة في الكمبيوتر سايينس ان | انا ايه هاو تو ميك كومبيوتر صولف بروبلمز وزوي | ايه بين الاكتبلاك في ايه بروغرام ده من غير ما يجي هو اللي يجي"
+        },
+        {
+          "name": "Example of Tree-Based Representation",
+          "start_time": "00:05:05",
+          "end_time": "00:07:38",
+          "description": "Using Trees To Represent Computer Programs | 2 3 X 7 Y 5 | waxs"
         }
       ],
       "key_points": [
-        "Mean Max membership method",
-        "Centroid method"
+        "Genetic Programming uses a tree-based representation to encode solutions",
+        "The tree-based representation is a hierarchical structure that consists of nodes and edges",
+        "The nodes in the tree represent functions or terminals, and the edges represent the relationships between them"
       ]
     },
     {
       "segment_number": 3,
-      "start_time": "00:02:51",
-      "end_time": "00:04:00",
-      "main_topic": "Weighted Average Method",
-      "title": "Weighted Average Method",
+      "start_time": "00:07:38",
+      "end_time": "00:20:28",
+      "main_topic": "Genetic Operations in Genetic Programming",
+      "title": "Crossover and Mutation in Genetic Programming",
       "sub_topics": [
         {
-          "name": "Weighted Average Method Description",
-          "start_time": "00:02:51",
-          "end_time": "00:03:24",
-          "description": "4 - Weighted average method: The weighted average | method is the most frequently used in fuzzy applications | since it is one of the more computationally efficient | methods. Unfortunately, it is usually restricted to | symmetrical output membership functions."
+          "name": "Crossover Operation",
+          "start_time": "00:07:38",
+          "end_time": "00:10:00",
+          "description": "طيب. لما اجرى بريزينت الاتواتفكس دي بالبارس تري بحط ايه? اول | الابريتور الاولاني ده هو هو تمام? مين الابريتور بتاعته? التو والسري"
         },
         {
-          "name": "Weighted Average Method Example",
-          "start_time": "00:03:24",
-          "end_time": "00:04:00",
-          "description": "4 - Weighted average method: Example | The two functions shown | would result in the following | general form for the | defuzzified value: | a0.5 b0.9 | 0.5 0.9"
+          "name": "Mutation Operation",
+          "start_time": "00:10:00",
+          "end_time": "00:14:10",
+          "description": "هنشوف ازاي? خلاص? لو هعمل هعدل في الايه? في التري بتاعتي. هنشوف التعديل هيبقى | ازاي? خلاص? لو هعمل يبقى ايه? برزو هنشوفها ازاي? يبقى هنا."
+        },
+        {
+          "name": "Comparison of Genetic Algorithm and Genetic Programming",
+          "start_time": "00:14:10",
+          "end_time": "00:20:28",
+          "description": "الجينيتك والكروموزوم بتاع الجينيتك ايه الفرق ما بينهم? while | 20 i"
         }
       ],
       "key_points": [
-        "Weighted average method",
-        "Example of weighted average method"
+        "Genetic Programming uses crossover and mutation operators to evolve better solutions",
+        "Crossover involves exchanging parts of two parent solutions to create a new offspring solution",
+        "Mutation involves making random changes to a solution to create a new solution"
       ]
     },
     {
       "segment_number": 4,
-      "start_time": "00:04:00",
-      "end_time": "00:07:10",
-      "main_topic": "Fuzzy Inference",
-      "title": "Fuzzy Inference",
+      "start_time": "00:00",
+      "end_time": "00:21:07",
+      "main_topic": "Introduction to Genetic Programming",
+      "title": "Mutation vs Recombination",
       "sub_topics": [
         {
-          "name": "Fuzzy Inference Introduction",
-          "start_time": "00:04:00",
-          "end_time": "00:05:06",
-          "description": "Fuzzy Inference | The most commonly used fuzzy inference technique is the so- | called Mamdani method. | Mamdanis model expresses the output using fuzzy terms instead | of mathematical combinations of the input variable."
+          "name": "Introduction to Mutation",
+          "start_time": "00:00",
+          "end_time": "00:05",
+          "description": "Pm | choose | mutation vs. | recombination | - Probability | chose | internal | point as the root | of the subtree to be | replaced | Remarkably | advised to | be very small | Koza92, | like 0.05 | Banzhaf et al. 98 | The size of the | child | can exceed the size of the | parent"
         },
         {
-          "name": "Mamdani Fuzzy Inference",
-          "start_time": "00:05:06",
-          "end_time": "00:07:10",
-          "description": "Mamdani Fuzzy Inference | We examine a simple two-input cne-output problem that includes three rules: | Rule: 1 | x is A3 | Rule: 1 | y is B1 | prejectfunding | is adequate | THEN | z is C1 | THEN | risk | projectstaffing | is small | is low"
+          "name": "Introduction to Recombination",
+          "start_time": "00:05",
+          "end_time": "00:21:07",
+          "description": "واحدی اللي هي في الاول كده بقول له انا اصلا هعمل اا هعمل | ولا هعمل نفس الكلام اللي بنقوله في ال جناتيك. اما بتبقى سهيرة | والبي تبقى قلمتها اكبر. طيب الميوتاشن نفسه بيتعامل ازاي?"
         }
       ],
       "key_points": [
-        "Fuzzy inference",
-        "Mamdani method"
+        "Mutation",
+        "Recombination",
+        "Genetic Programming"
       ]
     },
     {
       "segment_number": 5,
-      "start_time": "00:07:10",
-      "end_time": "00:14:16",
-      "main_topic": "Fuzzification and Rule Evaluation",
-      "title": "Fuzzification and Rule Evaluation",
+      "start_time": "00:21:07",
+      "end_time": "00:24:00",
+      "main_topic": "Subtree Mutation",
+      "title": "Subtree Mutation and Point Mutation",
       "sub_topics": [
         {
-          "name": "Fuzzification",
-          "start_time": "00:07:10",
-          "end_time": "00:08:00",
-          "description": "Step 1: Fuzzification | The first step is to take the crisp inputs, x1 and y1 project fundling and | determine the degree to which these inputs | belong to each of the appropriate fuzzy sets."
+          "name": "Subtree Mutation",
+          "start_time": "00:21:07",
+          "end_time": "00:22:10",
+          "description": "Subtree Mutation: | Parents | Offspring | Replace the | Mutaion | mutation point by | Point | Peint | randomly | generated tree."
         },
         {
-          "name": "Rule Evaluation",
-          "start_time": "00:08:00",
-          "end_time": "00:14:16",
-          "description": "Step 2: Rule Evaluation | The second step is to take the fuzzified inputs, Jeau 0.5, Puc-sz | 0.2, μjy-81 0.1 and 4γ-t2 0.7, and apply them to the antecedents of the | fuzzy rules."
+          "name": "Point Mutation",
+          "start_time": "00:22:10",
+          "end_time": "00:24:00",
+          "description": "Point Mutation: | Randomly Generated | Randomly select a | Sub-tree | node and replace | it with another | primitive."
         }
       ],
       "key_points": [
-        "Fuzzification",
-        "Rule evaluation"
+        "Subtree Mutation",
+        "Point Mutation"
       ]
     },
     {
       "segment_number": 6,
-      "start_time": "00:14:35",
-      "end_time": "00:15:51",
-      "main_topic": "Fuzzy Inference Process",
-      "title": "Introduction to Fuzzy Inference",
+      "start_time": "00:24:00",
+      "end_time": "00:26:42",
+      "main_topic": "Recombination Crossover",
+      "title": "Recombination Crossover and Mutation",
       "sub_topics": [
         {
-          "name": "Introduction to Fuzzy Inference",
-          "start_time": "00:14:35",
-          "end_time": "00:15:02",
-          "description": "هيبقى ليها خطين كمان. تمام? هاي قطع فين? لو في كده مزل. هاي قطع فين? مش هيب لهم كلهم. يعني مسلا هيكون عندي فازي ست في النص كده. بصوا شايفين دي? ليها µa,ex max αaα, μyx | Hz-elx min ααx, jyx خط اهو وخط اهو. صح? ماشي. تمام? فدي مسلا لو اسمها ميديم فاسمي"
+          "name": "Recombination Crossover",
+          "start_time": "00:24:00",
+          "end_time": "00:25:30",
+          "description": "Recombination Crossover | Parent 1 | Parent 2 | Child 1 | Child 2"
         },
         {
-          "name": "Fuzzified Inputs",
-          "start_time": "00:15:02",
-          "end_time": "00:15:17",
-          "description": "The second step is to take the fuzzified inputs, Jeau, 0.5, Pqa2 | 0.2, μyαt | 0.1 and jhy-d2 | fuzzy rules | 0.7, and apply them to the antecedents of the | This number Ithe truth valuel is then applied to the conseguent الايه. يعني مش محتاجة ان احنا نعملها لواحدة. عشان كده انا"
-        },
-        {
-          "name": "Aggregation Process",
-          "start_time": "00:15:17",
-          "end_time": "00:15:51",
-          "description": "The inout of the aegresation process is the list of clipped conseguent | is 2 0.2 | : is C3 0.5 اختصرتها في الايه? في المحاضرة اللي فاتت. اللي هو بقول انا الزد ده طلع اه بو بوينت وان في وطلع بو بوينت في في في فجمعتهم كلهم في رسمة واحدة. وو بوينت وان وو بوينت وان رسمت الايه? رسمت التلاتة فاضي ستس بتوعه في رسمة واحدة خلاص?"
+          "name": "Mutation vs Recombination",
+          "start_time": "00:25:30",
+          "end_time": "00:26:42",
+          "description": "Crossover | X 3 Y | - 25 X 7 | Swap the two nodes"
         }
       ],
       "key_points": [
-        "Fuzzified Inputs",
-        "Aggregation Process"
+        "Recombination Crossover",
+        "Mutation"
       ]
     },
     {
       "segment_number": 7,
-      "start_time": "00:15:51",
-      "end_time": "00:18:58",
-      "main_topic": "Defuzzification Methods",
-      "title": "Defuzzification Techniques",
+      "start_time": "00:26:42",
+      "end_time": "00:29:16",
+      "main_topic": "Genetic Programming",
+      "title": "Genetic Programming and Randomly Generating Programs",
       "sub_topics": [
         {
-          "name": "Defuzzification Introduction",
-          "start_time": "00:15:51",
-          "end_time": "00:16:00",
-          "description": "Step 4: Defuzzification | The last step in the fuzzy inference process is defuzzification. | Fugziness helps us to evaluate the rules, but the final output of a fuzzy | system has to be a crisp number | The input for the defuzzification process is the aggregate output fuzzy set | and the output is a single number. دلوقتي. دي فوزيفيكيشن هعمله لكم هنا بطريق تيم. انسوا معيني?"
+          "name": "Genetic Programming",
+          "start_time": "00:26:42",
+          "end_time": "00:27:23",
+          "description": "What About | t Just Randomly | Generating Programs? | Is Genetic Programming really better than just randomly | for 200 generations, with a population size of 1000 per generation, | against 200,000 randomly generated algorithms"
         },
         {
-          "name": "Centroid Technique",
-          "start_time": "00:16:00",
-          "end_time": "00:16:21",
-          "description": "Step 4: Defuzzification centroid | There are several defuzzification methods, but probably the most | popular one is the centroid technique. It finds the point where a | vertical line would slice the aggregate set into two equal masses. | Mathematically this centre of gravity CoG can be expressed as: | μxxdx | μxdx بطريقتين. اول طريقة اللي هي الايه? السنترويد. دي بعملها ازاي?"
-        },
-        {
-          "name": "Weighted Average Method",
-          "start_time": "00:16:21",
-          "end_time": "00:17:25",
-          "description": "Deee of | Mvbershy | 67.4 | 0 10 20 0.1 30 - 40 50 60 0 2 70 80 90 100 1 0.5 | 0.1 0.1 0.1 0.2 0 .2 0.2 0.2 0.5 0.5 0.5 - 0.5 دي زي ما قلت لكم كده اللي هو التكامل بتاع الناس. بعمله بالحسابات عن طريق ان انا. بشوف. هنا كانت او بوينت وون لان هي"
+          "name": "Randomly Generating Programs",
+          "start_time": "00:27:23",
+          "end_time": "00:29:16",
+          "description": "The best evolved program was found to be significantly superior to the | best randomly generated proeram Genetic Proeramming FAQ. 2002"
         }
       ],
       "key_points": [
-        "Centroid Technique",
-        "Weighted Average Method"
+        "Genetic Programming",
+        "Randomly Generating Programs"
       ]
     },
     {
       "segment_number": 8,
-      "start_time": "00:18:58",
-      "end_time": "00:23:15",
-      "main_topic": "Fuzzy System Example",
-      "title": "Stock Market Prediction Example",
+      "start_time": "00:29:16",
+      "end_time": "00:36:30",
+      "main_topic": "Genetic Programming Applications",
+      "title": "Applying Genetic Programming to Real-World Problems",
       "sub_topics": [
         {
-          "name": "Fuzzy System Introduction",
-          "start_time": "00:18:58",
-          "end_time": "00:19:13",
-          "description": "Example | Given a stock market with varlables.: | Opening price Op | Previous day price Pdlp | Closing price Cp | From the domcin eagerts, it is known tat: | Pdp has 3 fuzzy sets L, M, H range 0 - 100 | Op has 3 furzy sets L, M, H range 0 - 100 | Cp has 5 fluzzy sets VL, L, M, H, VH range 0 - 100 | With the foillowing rules: | R1: If OpL, AND PdpL THEN CpVL | R2: If OpcL OR Pdp L THEN CgcL | R3: If OpM AND PdpNOTH THEN CpM | R4: If OpH OR PdpH THEN CpH | R5: If OpAND PtpHl THEN CpVH | Using triangular membership function, Predict | the Cp for Op 30 and Pdp90 ?"
+          "name": "Credit Scoring Example",
+          "start_time": "00:29:16",
+          "end_time": "00:30:29",
+          "description": "Introductory example: | credit scoring | Bank wants to distinguish good from bad loan | applicants | Model needed that matches historical data"
         },
         {
-          "name": "Rule Evaluation",
-          "start_time": "00:19:13",
-          "end_time": "00:20:21",
-          "description": "ونحن في البداية نحن نقوم بشكل مثل الفوزي. الفوزي في دي اللي نحن نحدد مكانها فيه. كل نقطة مكانها فيه. هذا اللي بيقابلك فيه. ماشي؟ او بس انت بقى في الاساين انت مش هتعمل مكانها فيه لان مش هيبقى فيه ورق وهترسم انت الفوذيفيكيشن مهمتها بتجيب الـ degree of membership لكل input"
-        },
-        {
-          "name": "Conclusion",
-          "start_time": "00:20:21",
-          "end_time": "00:23:15",
-          "description": "يعني دلولة تمامي بتاع الخطة بتاعة الفوزيفاي. انما بعد كده بنقدر نشوف الليه خطة بتاعة اللوجيك دي على اساس الجملة اللي حدودك هتدهلنا بقى ولا تتحدد ازاي بقى. الرولز برضو انا زي ما قلت لكم كده هتديكم رولز. لان الرولز دي في الاطل بيحطها اكسبورت في البروبلم في الدومين بتاع البروبلم او بتتعامل بالنيوران ناترك او بالجيناتك امفر. فانا هديها لكم. دكتور ما عليش هواح نفس الانترويد اللي هنا دولة حسبوا جابوا مينة?"
+          "name": "Mouse Navigation Example",
+          "start_time": "00:30:29",
+          "end_time": "00:36:30",
+          "description": "Building a Better Mouse | Apply Genetic Programming to the problem of | navigating a maze"
         }
       ],
       "key_points": [
-        "Rule Evaluation",
-        "Fuzzy System Example"
+        "Credit Scoring",
+        "Mouse Navigation"
       ]
     }
   ]

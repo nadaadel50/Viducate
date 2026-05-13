@@ -26,10 +26,6 @@ class Video(Base):
     content_preferences = relationship("ContentPreferences", uselist=False, back_populates="video")
     quizzes = relationship("Quiz", back_populates="video", cascade="all, delete-orphan")
     sessions = relationship("ChatSession", back_populates="video")
-    mindmap = relationship(
-        "Mindmap",
-        back_populates="video",
-        uselist=False,
-        cascade="all, delete-orphan",
-    ) 
+    mindmap = relationship("Mindmap", back_populates="video", uselist=False, cascade="all, delete-orphan") 
+    video_studynotes = relationship("VideoStudyNotes", back_populates="video", uselist=False, cascade="all, delete-orphan")
     
