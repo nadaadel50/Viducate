@@ -133,5 +133,26 @@
   "analysis.failed": "Failed",
   "analysis.error.title": "Analysis Failed",
   "analysis.error.subtitle": "Something went wrong while processing your video. Please try again.",
-  "analysis.retry": "Retry Upload"
+  "analysis.retry": "Retry Upload",
+
+
+
+
+
+  
+  "quiz.question_count": "Question {current} of {total}",
+  "quiz.time_remaining": "Time Remaining",
+  "quiz.min": "MIN",
+  "quiz.sec": "SEC",
+  "quiz.next": "Next Question",
+  "quiz.submit": "Submit Quiz",
+  "quiz.completed": "Quiz Completed!",
+  "quiz.result_msg": "Great job! You have finished the quiz.",
+  "quiz.score_msg": "You scored {score} out of {total}",
+  "quiz.take_another": "Take Another Quiz",
+  "quiz.review_answers": "Review Answers",
+  "quiz.back_to_video": "Back to Video",
+  "quiz.map_title": "Question Map",
+  "quiz.go_to_watch": "Go TO Watch at {timestamp_label}",
+  "quiz.new_quiz": "New Quiz"
 }

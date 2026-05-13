@@ -8,8 +8,7 @@ import { uploadVideoUseCase } from "../../../../core/di/upload_video_container";
 import { UploadVideoRequest } from "../../domain/entity/upload_video_request";
 
 import { useUploadHandlers } from "../hooks/use_upload_handlers";
-import { useNavigate } from "react-router";
-import { AppRoutesNames } from "../../../../app/routers/routes";
+
 import { useLearningSession } from "../../../../core/hooks/useLearningContent";
 
 

@@ -1,8 +1,6 @@
 import { useQuery } from "@tanstack/react-query";
 import { getTopicsUseCase } from "../di/watch_video_container";
 import { TopicsRequest } from "../../features/watch_video/domin/entity/topics_request";
-import { VideoResponse } from "../../features/watch_video/domin/entity/video_response";
-import { TopicResponse } from "../../features/watch_video/domin/entity/topic_response";
 import { useLearningSession } from "./useLearningContent";
 
 

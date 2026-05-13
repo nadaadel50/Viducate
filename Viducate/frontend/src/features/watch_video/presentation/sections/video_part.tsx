@@ -1,5 +1,4 @@
 import { useEffect, useRef, useState } from "react";
-
 import { useVideoData } from "../../../../core/hooks/useVideoData";
 import { STORAGE_KEYS } from "../../../../core/constants";
 import { useLearningSession } from "../../../../core/hooks/useLearningContent";
@@ -105,7 +104,7 @@ export function VideoPlayer() {
       setTimeSpent(0);
     }
     setEvents([]);
-  }, [selectedTopic]);
+  }, [selectedTopic, setEvents, setTimeSpent]);
 
   useEffect(() => {
     if (seekTo === null) return;

@@ -1,5 +1,6 @@
 # OCR Output — video_id=20
 # Language: en
-# Total segments: 1
+# Total segments: 2
 
-[00:00:00] 1322-34
+[00:00:44] JSONPlaceholder Free Fake RES | React App | jsonplaceholder.typicode.com | Try it | Run this code here, in a console or from any site: | fetchhttps:jsonplaceholder.typicode.comtodos1 | .thenresponse  response.json | .thenjson  console.logjson | Run script | I No user data | Reach specific | When to use | ethicalads: | developers on the open | topic: devs | source, privacy-first ad | region: global | network: EthicalAds | type: image | JSONPlaceholder is a free online REST API that you can use whenever you need some fake data. It can be in a README | GitHub, for a demo on CodeSandbox, in code examples on Stack Overflow, ...or simply to test things locally. | Ad by EthicalAds | Type here to search | 12C Wle ailc ENG | 12:37 AM | 282023
+[00:00:54] JSONPlaceholder - Free Fake RES X | No user data | ethicalade: | reqion: global | 12C Wle ailc
