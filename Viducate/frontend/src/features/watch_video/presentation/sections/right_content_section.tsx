@@ -11,10 +11,12 @@ import { TranscriptSearch } from "../widgets/transcript_search";
 import { FinalGeneratedBtn } from "../widgets/final_generated_btn";
 import { MainHeader } from "../widgets/main_header";
 import { ChatBotOpenBtn } from "../../../chat_bot/presenation/widgets/chat_bot_open_btn";
+import { useNavigate } from "react-router";
+import { AppRoutesNames } from "../../../../app/routers/routes";
 
 
 export function RightContentSection() {
-  
+  const navigate=useNavigate()
   
   return (
     <div className="min-h-screen w-full flex flex-col justify-center items-center">
@@ -75,7 +77,10 @@ export function RightContentSection() {
             variant="mindmap"
             icon={<Brain size={20} />}
             label="Final Mind Map"
-            onClick={() => {}}
+            onClick={() => {
+              navigate(AppRoutesNames.mindMap)
+              
+            }}
           />
         </div>
       </div>
