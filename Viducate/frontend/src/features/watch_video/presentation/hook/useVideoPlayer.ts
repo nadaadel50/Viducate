@@ -6,7 +6,7 @@ export function useVideoPlayer() {
   
   const seek = (time: number) => {
     if (playerRef.current){
-      console.log("the time is ",time);
+     
       playerRef.current.currentTime = time;}
      
        

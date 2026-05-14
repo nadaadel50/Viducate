@@ -89,6 +89,7 @@ export function VideoPlayer() {
     analytics: { addSeekEvent, triggerStuck },
     videoState: { setPlayerState, setCurrentTime },
   });
+  
 
   useEffect(() => {
     sessionStorage.setItem(STORAGE_KEYS.marks, JSON.stringify(markers));
@@ -114,6 +115,11 @@ export function VideoPlayer() {
 
   useEffect(() => {
     seek(currentTime);
+    setPlayerState((p) => ({
+    ...p,
+    isPlaying: false,
+    
+  }));
   }, []);
   
 
@@ -138,17 +144,6 @@ export function VideoPlayer() {
           playing={playerState.isPlaying}
           playbackRate={playbackRate}
           controls={false}
-          // onReady={() => {
-          //   // check if the video player is ready to use or not (not the react player)
-          //   const internalPlayer = (
-          //     playerRef.current as any
-          //   )?.getInternalPlayer();
-          //   if (internalPlayer) {
-          //     console.log("iam in interanl the time is", currentTime);
-          //     playerRef.current = internalPlayer;
-          //     internalPlayer.currentTime = currentTime;
-          //   }
-          // }}
           width="100%"
           height="100%"
           onTimeUpdate={() => handleTimeUpdate()}
@@ -167,7 +162,7 @@ export function VideoPlayer() {
           style={{ width: "100%", height: "100%", objectFit: "cover" }}
         />
 
-        {!playerState.started && <InitialPlayOverlay onStart={handleStart} />}
+        {(!playerState.started) && <InitialPlayOverlay onStart={handleStart} />}
 
         {playerState.started && (
           <div

@@ -119,7 +119,7 @@ export const QuizPage = () => {
 
   return (
     <main
-      className="min-h-screen py-10 relative"
+      className="min-h-screen py-10 relative "
       style={{ background: COLORS.background.light }}
     >
 

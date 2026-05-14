@@ -150,6 +150,8 @@
   "summary.summaryDesc": "Concise overview of the topic for quick revision",
   "summary.selectStyleTitle": "Select your summary style",
   "summary.selectStyleDesc": "Choose the format that best fits your learning needs right now",
+    "summary.selectStyleDescr": "Choose the summary style you prefer",  
+
 
   "quiz.question_count": "Question {current} of {total}",
   "quiz.time_remaining": "Time Remaining",

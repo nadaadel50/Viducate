@@ -62,7 +62,7 @@ const StudyNotesPage = () => {
               </p>
             </div>
 
-            <div className="space-y-16">
+            <div className="space-y-16 ">
               {studyNotes.sections.map(
                 (section: StudyNotesSection, index: number) => (
                   <div key={index} className="space-y-6">
@@ -74,7 +74,7 @@ const StudyNotesPage = () => {
                     </h2>
 
                     <div
-                      className="text-lg leading-relaxed whitespace-pre-line"
+                      className="text-lg leading-relaxed whitespace-pre-line "
                       style={{ color: COLORS.text.secondary }}
                     >
                       {section.explanation.map(
@@ -94,9 +94,9 @@ const StudyNotesPage = () => {
                     </div>
 
                     {section.definitions && section.definitions.length > 0 && (
-                      <div className="mt-6 space-y-4">
+                      <div className="mt-6 space-y-4 ">
                         <h3
-                          className="font-bold text-xl"
+                          className="font-bold pb-2 text-2xl border-b-2 border-gray-50"
                           style={{ color: COLORS.text.primary }}
                         >
                           Core Concepts & Terminology

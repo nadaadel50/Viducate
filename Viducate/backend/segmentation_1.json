@@ -1,0 +1,131 @@
+{
+  "total_segments": 5,
+  "segments": [
+    {
+      "segment_number": 1,
+      "start_time": "00:00",
+      "end_time": "00:40",
+      "main_topic": "Introduction to Modular Arithmetic",
+      "title": "Modular Arithmetic Part 1",
+      "sub_topics": [
+        {
+          "name": "Introduction",
+          "start_time": "00:00",
+          "end_time": "00:20",
+          "description": "Every day, we all are doing a mod-12 operation without even knowing that we are doing this mod-12 operation. Shocking? No worries. Let's dive into the topic of the day, the modular arithmetic part 1 to know this."
+        },
+        {
+          "name": "Outcomes",
+          "start_time": "00:20",
+          "end_time": "00:40",
+          "description": "As usual, let's start the session with the outcomes. Upon the completion of the session, the learner will be able to Outcome number one, we will understand the modular arithmetic operation with examples. Outcome number two, we will understand about congruence. And outcome number three, we will identify valid and invalid congruence."
+        }
+      ],
+      "key_points": [
+        "Modular Arithmetic",
+        "Congruence",
+        "Valid and Invalid Congruences"
+      ]
+    },
+    {
+      "segment_number": 2,
+      "start_time": "00:40",
+      "end_time": "02:26",
+      "main_topic": "Modular Arithmetic",
+      "title": "What is Modular Arithmetic",
+      "sub_topics": [
+        {
+          "name": "Definition of Modular Arithmetic",
+          "start_time": "00:40",
+          "end_time": "01:07",
+          "description": "What is this modular arithmetic? Actually, this modular arithmetic is a system of arithmetic for integers. We know integers. And modular arithmetic is a system of arithmetic for integers When it is going to work on integers obviously we are going to wrap around after reaching a certain value called modulus"
+        },
+        {
+          "name": "Example of Modular Arithmetic",
+          "start_time": "01:07",
+          "end_time": "02:26",
+          "description": "Let's understand about these modulars with this example. Here is a clock. We have 24 hours a day. Do we have 24 numbers representing 24 hours in our clock? Definitely no. But still we are able to understand that the 24 hour timing with just 12 numbers."
+        }
+      ],
+      "key_points": [
+        "Modular Arithmetic System",
+        "Wrap Around Operation"
+      ]
+    },
+    {
+      "segment_number": 3,
+      "start_time": "02:26",
+      "end_time": "04:12",
+      "main_topic": "Congruence",
+      "title": "What is Congruence",
+      "sub_topics": [
+        {
+          "name": "Definition of Congruence",
+          "start_time": "02:26",
+          "end_time": "03:09",
+          "description": "Actually, in cryptography, congruence is used which is represented with this symbol instead of equality. Why equality is not preferred in congruence? Let's see some examples. 15 is congruent to 3 mod 12."
+        },
+        {
+          "name": "Examples of Congruence",
+          "start_time": "03:09",
+          "end_time": "04:12",
+          "description": "15 is congruent to 3 mod 12. Since we are dealing with mod 12, let's see the wall clock example. So, the modulus value is 12 as far as a wall clock is concerned, isn't it? So, here also we have mod 12."
+        }
+      ],
+      "key_points": [
+        "Congruence Symbol",
+        "Modulus Value"
+      ]
+    },
+    {
+      "segment_number": 4,
+      "start_time": "04:12",
+      "end_time": "06:04",
+      "main_topic": "Valid and Invalid Congruences",
+      "title": "Examples of Valid and Invalid Congruences",
+      "sub_topics": [
+        {
+          "name": "Valid Congruences",
+          "start_time": "04:12",
+          "end_time": "05:10",
+          "description": "Let's see one more example. 33 is congruent to 3 mod 10. Is it valid? Yes, it is valid because 33 when it is divided by 10, 10, 3 times 30 and the remainder is 3."
+        },
+        {
+          "name": "Invalid Congruences",
+          "start_time": "05:10",
+          "end_time": "06:04",
+          "description": "Then 10 is congruent to minus 2 mod 12. How did we get this? Let's say 10 is here, right? We are going to divide 10 by 12. 10, it is divided by 12. How many times 12 takes 10?"
+        }
+      ],
+      "key_points": [
+        "Valid Congruences",
+        "Invalid Congruences"
+      ]
+    },
+    {
+      "segment_number": 5,
+      "start_time": "06:04",
+      "end_time": "10:33",
+      "main_topic": "Conclusion",
+      "title": "Conclusion and Final Thoughts",
+      "sub_topics": [
+        {
+          "name": "Why Congruence is Preferred",
+          "start_time": "06:04",
+          "end_time": "07:08",
+          "description": "Now, a very important question. Why we are preferring congruence instead of equality Let me tell you that See here it need not be the case that it should be always 33 It can be 23 also"
+        },
+        {
+          "name": "Final Examples and Conclusion",
+          "start_time": "07:08",
+          "end_time": "10:33",
+          "description": "So, 15 is congruent to 3 mod 12, right? Is there a necessity that it should be always 15 here? No, it can be other numbers as well. So, what could be the other number? Let's take 27 here. 27 congruent to 3 mod 12."
+        }
+      ],
+      "key_points": [
+        "Congruence Preference",
+        "Final Examples"
+      ]
+    }
+  ]
+}
