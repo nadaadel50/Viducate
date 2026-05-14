@@ -13,6 +13,7 @@ import TestModalsPage from "../../features/video_upload/presentation/pages/test_
 import { ProcessingPage } from "../../features/video_upload/presentation/pages/processing_page";
 import AuthSuccess from "../../features/auth/presentation/pages/AuthSuccess";
 import { GeneratingSummaryPage } from '../../features/summarization/presentation/pages/GeneratingSummaryPage';
+import { GeneratingStudyNotesPage } from "../../features/summarization/presentation/pages/GeneratingStudyNotesPage";
 import SummaryPage from "../../features/summarization/presentation/pages/SummaryPage";
 import StudyNotesPage from "../../features/summarization/presentation/pages/StudyNotesPage";
 import {QuizPage} from "../../features/QuizSystem/presentation/pages/QuizPage";
@@ -34,7 +35,7 @@ export function AppRoutes() {
       
 
         <Route path="/test-modals" element={<TestModalsPage />} /> /* for
-        <Route path="/generating-summary" element={<GeneratingSummaryPage />} />
+        
         
         <Route path="/study-notes" element={<StudyNotesPage />} />
     <Route element={<ProtectedRoute />}>
@@ -45,6 +46,9 @@ export function AppRoutes() {
       
           <Route path="/quiz/:segmentId" element={<QuizPage />} />
           <Route path="/summary/:segmentId" element={<SummaryPage />} />
+          <Route path="/generating-summary" element={<GeneratingSummaryPage />} />
+          <Route path="/study-notes/:segmentId" element={<StudyNotesPage />} />
+          <Route path="/generating-study-notes" element={<GeneratingStudyNotesPage />} />
       
        
           <Route path="/WatchVideo" element={<WatchLayout />}>

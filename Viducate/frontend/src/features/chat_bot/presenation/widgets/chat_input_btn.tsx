@@ -10,7 +10,6 @@ export function ChatInputBtn(props: ChatInputProps) {
   const { setUserInput, input } = useChat();
   const textareaRef = useRef<HTMLTextAreaElement>(null);
 
-  
   useEffect(() => {
     if (textareaRef.current) {
       textareaRef.current.style.height = "auto";
@@ -44,9 +43,9 @@ export function ChatInputBtn(props: ChatInputProps) {
       <div className="absolute right-4 top-1/2 -translate-y-1/2">
         <button
           onClick={handleSendAndReset}
-          className="p-3 flex items-center justify-center rounded-2xl bg-[#4f46e5]/90 text-white hover:bg-[#4f46e5] transition-all shadow-lg shadow-[#4f46e5]/25 active:scale-95 cursor-pointer"
+          className="w-11 h-11 flex items-center justify-center rounded-full bg-[#4f46e5] text-white hover:bg-[#4f46e5]/90 transition-all shadow-lg shadow-[#4f46e5]/25 active:scale-95 cursor-pointer"
         >
-          <SendHorizontal />
+          <SendHorizontal size={18} />
         </button>
       </div>
     </div>
