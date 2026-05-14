@@ -10,6 +10,7 @@ import type { ApiResult } from '../../../../core/api/apiResult';
 import type { LoginResponseDto } from '../../api/models/login/login_response_dto';
 import type { SignupResponseDto } from '../../api/models/signup/signup_response_dto';
 
+
 export const AuthProvider = ({ children }: { children: React.ReactNode }) => {
   const [user, setUser] = useState<UserDto | null>(null); 
     
@@ -27,6 +28,7 @@ export const AuthProvider = ({ children }: { children: React.ReactNode }) => {
         } catch {
           localStorage.removeItem('token');
           sessionStorage.removeItem('token');
+          window.location.href = '/';
         }
       }
       setLoading(false);

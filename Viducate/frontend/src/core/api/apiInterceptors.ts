@@ -15,14 +15,15 @@ export const setUpApiInterceptors = () => {
     }
   );
 
-  // apiClient.interceptors.response.use(
-  //   (response) => response,
-  //   (error) => {
-  //     if (error.response && error.response.status === 401) {
-  //       localStorage.removeItem('token');
-  //       window.location.href = '/';
-  //     }
-  //     return Promise.reject(error);
-  //   }
-  // );
+  apiClient.interceptors.response.use(
+    (response) => response,
+    (error) => {
+      if (error.response && error.response.status === 401) {
+        localStorage.removeItem('token');
+        sessionStorage.removeItem('token');
+        window.location.href = '/';
+      }
+      return Promise.reject(error);
+    }
+  );
 };
