@@ -7,6 +7,7 @@ from app.models.topic_segment import TopicSegment
 from app.models.studynotes import VideoStudyNotes, SegmentStudyNotes
 from app.models.content_preferences import ContentPreferences
 from app.ml.processors.studynotes_processor import process_video_studynotes,process_single_segment_studynotes
+from app.utils.reading_time import calculate_reading_time
 
 logger = logging.getLogger(__name__)
 
@@ -76,6 +77,7 @@ class StudyNotesService:
                 "cached": True,
                 "study_notes": existing.content,
                 "created_at": existing.created_at,
+                "reading_time": calculate_reading_time(existing.content),
             }
 
         logger.info(
@@ -95,6 +97,7 @@ class StudyNotesService:
             "cached": False,
             "study_notes": notes.content,
             "created_at": notes.created_at,
+            "reading_time": calculate_reading_time(notes.content),
         }
 
     def regenerate_video_studynotes(self, video_id: int, user_id: int) -> dict:
@@ -157,4 +160,5 @@ class StudyNotesService:
             "language": notes.language,
             "study_notes": notes.content,
             "generation_failed": False,
+            "reading_time": calculate_reading_time(notes.content),
         }

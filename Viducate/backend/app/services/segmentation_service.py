@@ -2,7 +2,9 @@ import os
 import json
 import logging
 import re
-from groq import Groq
+# from groq import Groq
+from google import genai
+from google.genai import types
 from app.config import settings
 
 logger = logging.getLogger(__name__)
@@ -152,56 +154,65 @@ Transcript:
 """
 
 
-async def call_groq_with_retry(client: Groq, chunk: str, chunk_index: int, final_language: str = "ar", max_retries: int = 3) -> list:
+async def call_groq_with_retry(client, chunk: str, chunk_index: int, final_language: str = "ar", max_retries: int = 3):
     current_chunk = chunk
 
     for attempt in range(max_retries):
         try:
             prompt = build_prompt(current_chunk, final_language=final_language)
             estimated_tokens = estimate_tokens(prompt)
+
             logger.info(f"[Segmentation] Chunk {chunk_index+1}, attempt {attempt+1}, ~{estimated_tokens} tokens")
 
-            response = client.chat.completions.create(
-                model="llama-3.3-70b-versatile",
-                messages=[{"role": "user", "content": prompt}],
-                max_tokens=2500,
+            response = client.models.generate_content(
+                model="gemini-2.5-flash",
+                contents=prompt,
+                config=types.GenerateContentConfig(
+                    max_output_tokens=30000,
+                    temperature=0.3
+                )
             )
 
-            text = response.choices[0].message.content.strip()
+            text = response.text.strip()
             text = text.replace("```json", "").replace("```", "").strip()
+            if not text.endswith("}"):
+                # قطع عند آخر segment كامل
+                last_bracket = text.rfind("}]")
+                if last_bracket != -1:
+                    text = text[:last_bracket + 2] + "\n}"
+
             result = json.loads(text)
             return result.get("segments", [])
 
         except Exception as e:
             error_str = str(e).lower()
-            is_token_error = any(keyword in error_str for keyword in [
-                "rate_limit", "context_length", "token", "too long", "exceeded", "413", "400"
+
+            is_token_error = any(k in error_str for k in [
+                "rate_limit", "context", "token", "exceeded", "413", "400"
             ])
 
             if is_token_error and attempt < max_retries - 1:
-                logger.warning(
-                    f"[Segmentation] Chunk {chunk_index+1} too large (attempt {attempt+1}), splitting in half..."
-                )
+                logger.warning(f"[Segmentation] Chunk {chunk_index+1} too large, splitting...")
+
                 words = current_chunk.split()
                 if len(words) < 10:
-                    logger.error(f"[Segmentation] Chunk too small to split further, skipping...")
                     return []
 
                 mid = len(words) // 2
                 half1 = " ".join(words[:mid])
                 half2 = " ".join(words[mid:])
 
-                segments_1 = await call_groq_with_retry(client, half1, chunk_index, final_language, max_retries)
-                segments_2 = await call_groq_with_retry(client, half2, chunk_index, final_language, max_retries)
-                return segments_1 + segments_2
+                seg1 = await call_groq_with_retry(client, half1, chunk_index, final_language, max_retries)
+                seg2 = await call_groq_with_retry(client, half2, chunk_index, final_language, max_retries)
 
-            elif not is_token_error and attempt < max_retries - 1:
+                return seg1 + seg2
+
+            elif attempt < max_retries - 1:
                 import asyncio
-                wait_time = 2 ** attempt
-                logger.warning(f"[Segmentation] Non-token error: {e}, retrying in {wait_time}s...")
-                await asyncio.sleep(wait_time)
+                await asyncio.sleep(2 ** attempt)
+
             else:
-                logger.error(f"[Segmentation] Chunk {chunk_index+1} failed after {max_retries} attempts: {e}")
+                logger.error(f"[Segmentation] Chunk {chunk_index+1} failed: {e}")
                 raise
 
     return []
@@ -228,8 +239,7 @@ async def segment_topics(merged: list, video_id: int, ocr_language: str ,transcr
     for seg in merged:
         if seg.get("combined_text") and seg["combined_text"] != "None":
             clean_text += f"[{seg['timestamp']}] {seg['combined_text']}\n"
-        elif seg.get("transcript_text") and seg["transcript_text"] != "None":
-            clean_text += f"[{seg['timestamp']}] {seg['transcript_text']}\n"
+        elif seg.get("transcript_text") and seg["transcript_text"] != "None":clean_text += f"[{seg['timestamp']}] {seg['transcript_text']}\n"
         elif seg.get("ocr_text") and len(seg.get("ocr_text", "")) > 20:
             clean_text += f"[{seg['timestamp']}] {seg['ocr_text']}\n"
 
@@ -237,7 +247,8 @@ async def segment_topics(merged: list, video_id: int, ocr_language: str ,transcr
     chunks = chunk_text(clean_text, max_words=2500)
     logger.info(f"[Segmentation] Split into {len(chunks)} chunks (max 2500 words each)")
 
-    client = Groq(api_key=settings.GROQ_API_KEY)
+    # client = Groq(api_key=settings.GROQ_API_KEY)
+    client = genai.Client(api_key=settings.GEMINI_API_KEY)
     all_segments = []
 
     for i, chunk in enumerate(chunks):
