@@ -1,69 +1,137 @@
-import dagre from "dagre";
+import type { Edge, Node } from "reactflow";
 
-import type {
-  Edge,
-  Node,
-} from "reactflow";
+export function getLayoutedElements(nodes: Node[], edges: Edge[]) {
+//      A -> B
+//      A -> C
 
-const dagreGraph =
-  new dagre.graphlib.Graph();
 
-dagreGraph.setDefaultEdgeLabel(
-  () => ({})
-);
+// childrenMap = {
+//   A: ["B", "C"]
+// }
 
-const nodeWidth = 220;
-const nodeHeight = 80;
+  const childrenMap: Record<string, string[]> = {};
 
-export function getLayoutedElements(
-  nodes: Node[],
-  edges: Edge[]
-) {
- 
+//   parentMap = {
+//   B: "A",
+//   C: "A"
+// }
+  const parentMap: Record<string, string> = {};
 
-  dagreGraph.setGraph({
-    rankdir: "TB",
-    ranksep: 300,
-  nodesep: 200,
-
+  edges.forEach((e) => {
+    if (!childrenMap[e.source]) childrenMap[e.source] = [];
+    childrenMap[e.source].push(e.target);
+    parentMap[e.target] = e.source;
   });
 
+  const rootId = nodes.find((n) => !parentMap[n.id])?.id;
+  if (!rootId) return { nodes, edges };
+
+  // to store the postions of each node
+//   positions = {
+//   A: { x: 100, y: 200 }
+// }
+
+  const positions: Record<string, { x: number; y: number }> = {};
+
+//   level 0 -> radius 0
+// level 1 -> radius 550
+// level 2 -> radius 950   each level is cirular with bigger redius so the nodes don't overlap
+
+    //       level2
+
+    // level1   ROOT   level1
+
+    //       level2
+  const radiusPerLevel = [0, 400, 900, 1300];
+
+  function placeNodes(
+    nodeId: string,
+    level: number,
+    angleStart: number,
+    angleEnd: number,
+   
+
+  ) {
+    const radius = radiusPerLevel[level] ?? level * 320;
+    const angle = (angleStart + angleEnd) / 2;
+
+    positions[nodeId] = {
+      x:  radius * Math.cos(angle),
+      y:  radius * Math.sin(angle),
+    };
+
+    //ex:
+    // radius = 100
+    // angle = 0
+    //  then
+    // x = 100
+    // y = 0
+    // result: nodes will be placed in a circle around the root node
+
+    const children = childrenMap[nodeId] ?? [];
+    if (children.length === 0) return;
+
+    // divide the andle range for the children based on how many children there are
+    // ex:
+    // 0 → 180
+    // 2 children
+    // 0 → 90
+    // 90 → 180
+
+    const angleStep = (angleEnd - angleStart) / children.length;
+    children.forEach((childId, i) => {
+      placeNodes(
+        childId,
+        level + 1,
+        angleStart + i * angleStep,
+        angleStart + (i + 1) * angleStep,
+       
+      );
+    });  // first child  i=0 then angle(0,120)  i=1 then angle(120,240) i=2 then angle(240,360)
+  }
+
+  placeNodes(rootId, 0, 0, 2 * Math.PI); // dfs recursive
  
 
-  nodes.forEach((node) => {
-    dagreGraph.setNode(node.id, {
-      width: nodeWidth,
-      height: nodeHeight,
-    });
-  });
+
+console.log("positions:", JSON.stringify(positions, null, 2));
 
  
+  function getHandle(fromPos: { x: number; y: number }, toPos: { x: number; y: number }) {
+    const dx = toPos.x - fromPos.x;
+    const dy = toPos.y - fromPos.y;
+    const angle = Math.atan2(dy, dx) * (180 / Math.PI); // -180 → 180
 
-  edges.forEach((edge) => {
-    dagreGraph.setEdge(
-      edge.source,
-      edge.target
-    );
-  });
+    // -45 → 45   = يمين
+    // 45  → 135  = تحت
+    // -135 → -45 = فوق
+    // غير كده    = شمال
+    if (angle >= -45 && angle < 45)   return { source: "right",  target: "left"   };
+    if (angle >= 45  && angle < 135)  return { source: "bottom", target: "top"    };
+    if (angle >= -135 && angle < -45) return { source: "top",    target: "bottom" };
+    return                                   { source: "left",   target: "right"  };
+  }
 
-
-
-  dagre.layout(dagreGraph);
+  const layoutedNodes = nodes.map((node) => ({
+    ...node,
+    position: positions[node.id] ?? { x: 0, y: 0 },
+  }));
 
   
+  const layoutedEdges = edges.map((edge) => {
+    const sourcePos = positions[edge.source];
+    const targetPos = positions[edge.target];
 
-  nodes.forEach((node) => {
-    const position =
-      dagreGraph.node(node.id);
+    if (!sourcePos || !targetPos) return edge;
 
-    node.position = {
-      x: position.x,
-      y: position.y,
+    const { source, target } = getHandle(sourcePos, targetPos);
+
+    return {
+      ...edge,
+      sourceHandle: source,
+      targetHandle: target,
     };
   });
 
-  return {
-    nodes,
-    edges,
-  };
+  return { nodes: layoutedNodes, edges: layoutedEdges };
 }
