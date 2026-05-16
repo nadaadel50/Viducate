@@ -43,6 +43,12 @@ class SegmentSchema(BaseModel):
         return v
 
 
+class SubTopicBriefResponse(BaseModel):
+    name: str
+    start_time: int
+
+    model_config = {"from_attributes": True}
+
 # =========================
 # 3. RESPONSE (Frontend)
 # =========================
@@ -53,6 +59,7 @@ class SegmentResponse(BaseModel):
     end_time: int
     main_topic: str
     title: str
+    sub_topics: list[SubTopicBriefResponse] = []
 
     model_config = {"from_attributes": True}
 

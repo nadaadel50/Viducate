@@ -10,6 +10,7 @@ from app.schemas.video import (
     VideoUploadURLRequest,
     PresignedUploadRequest,
 )
+from app.services.classify_video_service import classify_video
 
 
 logger = logging.getLogger(__name__)
@@ -32,7 +33,7 @@ class VideoService:
 
     
     
-    def submit_url(self, user_id: int, request: VideoUploadURLRequest) -> dict:
+    async def submit_url(self, user_id: int, request: VideoUploadURLRequest) -> dict:
         normalized_url = self.caching_service.normalize_youtube_url(request.url)
         content_hash = self.caching_service.generate_hash(normalized_url)
 
@@ -40,6 +41,16 @@ class VideoService:
         if cache_result:
             cache_result["language"] = cache_result.get("language", "en")
             return cache_result
+        
+        #classify_video if film or music or.... not allowed
+        yt_video_id = self.caching_service.extract_youtube_id(normalized_url) 
+        subject = await classify_video(yt_video_id) if yt_video_id else "general"
+
+        if subject == "blocked":
+            raise HTTPException(
+                status_code=status.HTTP_400_BAD_REQUEST,
+                detail="This video category is not allowed"
+            )
             
         video_data = {
             "user_id": user_id,

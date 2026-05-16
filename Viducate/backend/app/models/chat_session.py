@@ -11,5 +11,5 @@ class ChatSession(Base):
     video_id    = Column(Integer, ForeignKey("video.vid"))
     created_at = Column(TIMESTAMP, server_default=func.now())
 
-    messages = relationship("ChatMessage", back_populates="session")
+    messages = relationship("ChatMessage", back_populates="session",cascade="all, delete-orphan")
     video = relationship("Video",back_populates="sessions")

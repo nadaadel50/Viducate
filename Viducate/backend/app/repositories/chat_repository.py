@@ -1,5 +1,4 @@
-import datetime
-
+from sqlalchemy import func
 from sqlalchemy.orm import Session
 from app.models.chat_session import ChatSession
 from app.models.chat_message import ChatMessage
@@ -32,7 +31,7 @@ class ChatRepository:
             question=question,
             answer=answer,
             current_time=current_time,
-            answer_at=datetime.datetime.utcnow()
+            answer_at=func.now()
         )
         self.db.add(message)
         self.db.commit()
@@ -54,3 +53,11 @@ class ChatRepository:
             ChatMessage.session_id == session_id
          ).order_by(ChatMessage.answer_at.desc()).first()
          return msg.answer_at if msg else None
+     
+     def delete(self, video_id: int, session_id:int) -> bool:
+        session = self.get_session(session_id)
+        if not session or session.video_id != video_id:
+            return False
+        self.db.delete(session)
+        self.db.commit()
+        return True

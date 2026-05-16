@@ -4,3 +4,7 @@ ocr_outputs/
 .env
 __pycache__/
 *.pyc
+
+merged_*.txt
+transcript_*.txt
+segmentation_*.json
