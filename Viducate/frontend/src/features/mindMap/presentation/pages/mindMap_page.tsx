@@ -19,6 +19,7 @@ import { LoadingScreen } from "../../../../core/widgets/advanced_loading";
 import { Brain } from "lucide-react";
 import ErrorMessage from "../../../../core/widgets/error";
 import { COLORS } from "../../../../core/constants";
+import { useMindMapController } from "../hooks/use_mind_map_controler";
 
 const nodeTypes = {
   custom: CustomNode,
@@ -27,84 +28,17 @@ const nodeTypes = {
 export default function MindMapPage() {
   const {
     nodes: initialNodes,
-    edges: intailEdges,
+    edges: initialEdges,
     isLoading,
     error,
   } = useMindMapFlow();
-  const [nodes, setNodes, onNodesChange] = useNodesState(initialNodes);
 
-  const [edges, setEdges, onEdgesChange] = useEdgesState(intailEdges);
-  useEffect(() => {
-    setNodes(initialNodes);
-  }, [initialNodes, setNodes]);
 
-  useEffect(() => {
-    setEdges(intailEdges);
-  }, [intailEdges, setEdges]);
-
- const toggleNode = useCallback((nodeId: string) => {
-  setNodes((prev) => {
-    const clickedNode = prev.find((n) => n.id === nodeId);
-    if (!clickedNode) return prev;
-    const nowExpanded = !clickedNode.data.expanded;
-
-    const directChildIds = new Set(
-      edges
-        .filter((e) => e.source === nodeId)
-        .map((e) => e.target)
-    );
-
-    return prev.map((node) => {
-      if (node.id === nodeId) {
-        return {
-          ...node,
-          data: { ...node.data, expanded: nowExpanded },
-        };
-      }
-
-      if (directChildIds.has(node.id)) {
-        return {
-          ...node,
-          hidden: !nowExpanded,
-         
-          data: {
-            ...node.data,
-            expanded: nowExpanded ? node.data.expanded : false,
-          },
-        };
-      }
-
-      return node;
+  const { nodes, edges, onNodesChange, onEdgesChange, onConnect } =
+    useMindMapController({
+      initialNodes,
+      initialEdges,
     });
-  });
-
-  setEdges((prev) => {
-    const directChildEdges = new Set(
-      prev
-        .filter((e) => e.source === nodeId)
-        .map((e) => e.id)
-    );
-
-    const clickedNode = nodes.find((n) => n.id === nodeId);
-    const nowExpanded = !clickedNode?.data.expanded;
-
-    return prev.map((edge) => {
-      if (directChildEdges.has(edge.id)) {
-        return { ...edge, hidden: !nowExpanded };
-      }
-      return edge;
-    });
-  });
-}, [edges, nodes]);
-
-  const nodesWithToggle = nodes.map((node) => ({
-    ...node,
-    data: {
-      ...node.data,
-      onToggle: toggleNode,
-    },
-  }));
-
   if (isLoading) {
     return (
       <LoadingScreen
@@ -117,9 +51,7 @@ export default function MindMapPage() {
   }
   if (error) return <ErrorMessage errorMessage={error.message} />;
 
-  const onConnect = (connection: Connection) => {
-    setEdges((oldEdges) => addEdge(connection, oldEdges));
-  };
+
 
   return (
     <div
@@ -133,7 +65,7 @@ export default function MindMapPage() {
       }}
     >
       <ReactFlow
-        nodes={nodesWithToggle}
+        nodes={nodes}
         edges={edges}
         onNodesChange={onNodesChange}
         onEdgesChange={onEdgesChange}

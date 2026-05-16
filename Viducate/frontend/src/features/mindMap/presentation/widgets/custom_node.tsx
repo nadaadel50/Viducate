@@ -72,7 +72,7 @@ export function CustomNode({ id, data }: NodeProps<CustomNodeData>) {
             marginBottom: "6px",
           }}
         >
-          {data.type}
+          {data.type=="segment"?  "Topic" : data.type}
         </div>
       
 
@@ -80,7 +80,7 @@ export function CustomNode({ id, data }: NodeProps<CustomNodeData>) {
       <div
         style={{
           fontWeight: 700,
-          fontSize: data.type === "root" ? "25px" : "20px",
+          fontSize: data.type === "root" ? "20px" : "15px",
           lineHeight: 1.4,
           letterSpacing: "0.01em",
         }}
