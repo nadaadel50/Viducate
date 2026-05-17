@@ -23,11 +23,16 @@ export type StudyNotesSection = {
   tables?: StudyNotesTable[];
   notes?: string[];
 };
-
+export type ReadingTime = {
+  words: number;
+  minutes: number;
+  label: string;
+};
 export type StudyNotesContent = {
   title: string;
   introduction: string;
   sections: StudyNotesSection[];
+  
 };
 
 export type SegmentStudyNotes = {
@@ -39,6 +44,7 @@ export type SegmentStudyNotes = {
   language: string;
   studyNotes: StudyNotesContent;
   generationFailed: boolean;
+readingTime: ReadingTime;
 };
 export type VideoStudyNotes = {
   videoId: number;
@@ -46,4 +52,5 @@ export type VideoStudyNotes = {
   cached: boolean;
   studyNotes: StudyNotesContent;
   createdAt: string;
+  readingTime: ReadingTime;
 };

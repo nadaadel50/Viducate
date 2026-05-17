@@ -46,8 +46,10 @@ export function AppRoutes() {
       
           <Route path="/quiz/:segmentId" element={<QuizPage />} />
           <Route path="/summary/:segmentId" element={<SummaryPage />} />
+          <Route path="/summary/video/:videoId" element={<SummaryPage />} />
           <Route path="/generating-summary" element={<GeneratingSummaryPage />} />
           <Route path="/study-notes/:segmentId" element={<StudyNotesPage />} />
+          <Route path="/study-notes/video/:videoId" element={<StudyNotesPage />} />
           <Route path="/generating-study-notes" element={<GeneratingStudyNotesPage />} />
       
        

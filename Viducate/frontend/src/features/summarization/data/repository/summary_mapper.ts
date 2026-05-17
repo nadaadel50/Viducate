@@ -8,7 +8,8 @@ export function mapVideoSummary(dto: VideoSummaryResponseDto): VideoSummary {
     summary: dto.summary,
     language: dto.language,
     createdAt: dto.created_at,
-    cached: dto.cached,
+    readingTime: dto.reading_time,
+
   };
 }
 
@@ -22,5 +23,6 @@ export function mapSegmentSummary(dto: SegmentSummaryResponseDto): SegmentSummar
     summary: dto.summary,
     language: dto.language,
     generationFailed: dto.generation_failed,
+    readingTime: dto.reading_time,
   };
 }

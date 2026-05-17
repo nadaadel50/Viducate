@@ -4,7 +4,6 @@ import {
   FileQuestion,
   FileText,
   Brain,
-  MessageCircle,
 } from "lucide-react";
 import { VideoPlayer } from "./video_part";
 import { TranscriptSearch } from "../widgets/transcript_search";
@@ -14,13 +13,25 @@ import { ChatBotOpenBtn } from "../../../chat_bot/presenation/widgets/chat_bot_o
 import { useNavigate } from "react-router";
 import { AppRoutesNames } from "../../../../app/routers/routes";
 import { useLearningSession } from "../../../../core/hooks/useLearningContent";
-
+import { SummaryStyleModal } from "../../../summarization/presentation/componants/SummaryStyleModal";
+import { useState } from "react";
 export function RightContentSection() {
   const navigate = useNavigate();
-  const { selectedTopic, toggleTopicComplete,goToNextTopic } =
+  const { selectedTopic, toggleTopicComplete, goToNextTopic, videoId } =
     useLearningSession();
+  const [isSummaryModalOpen, setIsSummaryModalOpen] = useState(false);
 
- 
+  const handleSummarySelect = (style: "summary" | "study_notes") => {
+    if (style === "summary") {
+      navigate(`/summary/video/${videoId}`, {
+        state: { videoId },
+      });
+    } else {
+      navigate(`/study-notes/video/${videoId}`, {
+        state: { videoId },
+      });
+    }
+  };
 
   return (
     <div className="min-h-screen w-full flex flex-col justify-center items-center">
@@ -77,7 +88,7 @@ export function RightContentSection() {
             variant="summary"
             icon={<FileText size={20} />}
             label="Final Summary"
-            onClick={() => {}}
+            onClick={() => setIsSummaryModalOpen(true)}
           />
           <FinalGeneratedBtn
             variant="flashcards"
@@ -96,6 +107,12 @@ export function RightContentSection() {
         </div>
       </div>
       <ChatBotOpenBtn />
+      <SummaryStyleModal
+        isOpen={isSummaryModalOpen}
+        onClose={() => setIsSummaryModalOpen(false)}
+        onSelect={handleSummarySelect}
+      />
     </div>
+    
   );
 }

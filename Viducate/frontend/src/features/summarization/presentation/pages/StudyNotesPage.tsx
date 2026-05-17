@@ -12,16 +12,27 @@ import type {
   StudyNotesSection,
   StudyNotesContentItem,
 } from "../../domain/entity/study_notes_entity";
+import { useVideoStudyNotes } from "../hooks/use_video_study_notes";
 
 const StudyNotesPage = () => {
-  const { segmentId } = useParams();
+  const { segmentId , videoId: videoIdParam } = useParams();
   const { state: locationState } = useLocation();
-  const { videoId } = locationState || {};
+  const { videoId: videoIdState } = locationState || {};
 
-  const { state, fetch } = useSegmentStudyNotes();
+  const videoId = videoIdState ?? videoIdParam;
+  const isSegment = !!segmentId;
+
+  const segmentHook = useSegmentStudyNotes();
+  const videoHook = useVideoStudyNotes();
+
+  const { state } = isSegment ? segmentHook : videoHook;
 
   useEffect(() => {
-    fetch(Number(videoId), Number(segmentId));
+    if (isSegment) {
+      segmentHook.fetch(Number(videoId), Number(segmentId));
+    } else {
+      videoHook.fetch(Number(videoId));
+    }
   }, [videoId, segmentId]);
 
   if (state.status === "idle" || state.status === "loading") {
@@ -32,7 +43,7 @@ const StudyNotesPage = () => {
     return <p className="text-center text-red-500 mt-20">{state.message}</p>;
   }
 
-  const { studyNotes } = state.data;
+  const { studyNotes, readingTime } = state.data;
 
   return (
     <div
@@ -45,7 +56,7 @@ const StudyNotesPage = () => {
             className="flex-1 w-full rounded-2xl shadow-sm p-8 md:p-12 border border-gray-100"
             style={{ backgroundColor: COLORS.layout.leftBackground }}
           >
-            <SummaryHeader title={studyNotes.title} time="10 min read" />
+            <SummaryHeader title={studyNotes.title} time={readingTime.label} />
 
             <div
               className="mb-12 leading-relaxed text-lg"

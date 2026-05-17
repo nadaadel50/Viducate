@@ -13,16 +13,27 @@ import type {
   SummarySection,
   ContentItem,
 } from "../../domain/entity/summary_entity";
+import { useVideoSummary } from "../hooks/use_video_summary";
 
 const SummaryPage = () => {
-  const { segmentId } = useParams();
+  const { segmentId , videoId: videoIdParam } = useParams();
   const { state: locationState } = useLocation();
-  const { videoId } = locationState || {};
+  const { videoId: videoIdState } = locationState || {};
 
-  const { state, fetch } = useSegmentSummary();
+  const videoId = videoIdState ?? videoIdParam;
+
+  const segmentHook = useSegmentSummary();
+  const videoHook = useVideoSummary();
+
+  const isSegment = !!segmentId;
+  const { state } = isSegment ? segmentHook : videoHook;
 
   useEffect(() => {
-    fetch(Number(videoId), Number(segmentId));
+    if (isSegment) {
+      segmentHook.fetch(Number(videoId), Number(segmentId));
+    } else {
+      videoHook.fetch(Number(videoId));
+    }
   }, [videoId, segmentId]);
 
   if (state.status === "idle" || state.status === "loading") {
@@ -36,7 +47,7 @@ const SummaryPage = () => {
   const cleanText = (text: string) =>
     text.replace(/\*\*/g, "").replace(/\. /g, ".\n");
 
-  const { title, summary } = state.data;
+  const { title, summary, readingTime } = state.data;
 
   return (
     <div
@@ -49,7 +60,7 @@ const SummaryPage = () => {
             className="flex-1 w-full min-w-0 rounded-xl shadow-sm p-8 md:p-12"
             style={{ backgroundColor: COLORS.layout.leftBackground }}
           >
-            <SummaryHeader title={cleanText(title)} time="5 min read" />
+            <SummaryHeader title={cleanText(title)}  time={readingTime.label} />
             <TakeawayList items={summary.takeaways.map(cleanText)} />
 
             <section className="space-y-10">

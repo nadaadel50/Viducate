@@ -14,7 +14,11 @@ export type StudyNotesTableDto = {
   headers: string[];
   rows: string[][];
 };
-
+export type ReadingTimeDto = {
+  words: number;
+  minutes: number;
+  label: string;
+};
 export type StudyNotesSectionDto = {
   heading: string;
   explanation: StudyNotesContentItemDto[];
@@ -28,6 +32,7 @@ export type StudyNotesDto = {
   title: string;
   introduction: string;
   sections: StudyNotesSectionDto[];
+  
 };
 
 export type SegmentStudyNotesResponseDto = {
@@ -39,6 +44,7 @@ export type SegmentStudyNotesResponseDto = {
   language: string;
   study_notes: StudyNotesDto;
   generation_failed: boolean;
+  reading_time: ReadingTimeDto;
 };
 export type VideoStudyNotesResponseDto = {
   video_id: number;
@@ -46,4 +52,5 @@ export type VideoStudyNotesResponseDto = {
   cached: boolean;
   study_notes: StudyNotesDto;
   created_at: string;
+  reading_time: ReadingTimeDto;
 };

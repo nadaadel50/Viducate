@@ -29,6 +29,7 @@ export class StudyNotesRepoImp implements StudyNotesRepository {
         language: dto.language,
         studyNotes: dto.study_notes,
         generationFailed: dto.generation_failed,
+        readingTime: dto.reading_time,
       },
     };
   }
@@ -46,6 +47,7 @@ export class StudyNotesRepoImp implements StudyNotesRepository {
       cached: dto.cached,
       studyNotes: dto.study_notes,
       createdAt: dto.created_at,
+      readingTime: dto.reading_time,
     },
   };
 }

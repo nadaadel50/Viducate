@@ -9,11 +9,16 @@ export type SectionDto = {
   heading: string;
   content: ContentItemDto[];
 };
-
+export type ReadingTimeDto = {
+  words: number;
+  minutes: number;
+  label: string;
+};
 export type SummaryDto = {
   takeaways: string[];
   sections: SectionDto[];
   conclusion: string;
+
 };
 
 export type VideoSummaryResponseDto = {
@@ -23,6 +28,7 @@ export type VideoSummaryResponseDto = {
   language: string;
   created_at: string;
   cached: boolean;
+  reading_time: ReadingTimeDto;
 };
 
 export type SegmentSummaryResponseDto = {
@@ -34,4 +40,5 @@ export type SegmentSummaryResponseDto = {
   summary: SummaryDto;
   language: string;
   generation_failed: boolean;
+  reading_time: ReadingTimeDto;
 };
