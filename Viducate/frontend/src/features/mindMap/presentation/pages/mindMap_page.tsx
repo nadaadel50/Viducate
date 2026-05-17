@@ -14,11 +14,13 @@ import {
 import "reactflow/dist/style.css";
 import { CustomNode } from "../widgets/custom_node";
 import { useMindMapFlow } from "../hooks/use_mind_map";
-import { useEffect } from "react";
+import { useCallback, useEffect } from "react";
 import { LoadingScreen } from "../../../../core/widgets/advanced_loading";
 import { Brain } from "lucide-react";
 import ErrorMessage from "../../../../core/widgets/error";
 import { COLORS } from "../../../../core/constants";
+import { useMindMapController } from "../hooks/use_mind_map_controler";
+import { downloadMindMap } from "../utils/dowenload_mindMap";
 
 const nodeTypes = {
   custom: CustomNode,
@@ -27,21 +29,17 @@ const nodeTypes = {
 export default function MindMapPage() {
   const {
     nodes: initialNodes,
-    edges: intailEdges,
+    edges: initialEdges,
     isLoading,
     error,
   } = useMindMapFlow();
-   const [nodes, setNodes, onNodesChange] = useNodesState(initialNodes);
 
-  const [edges, setEdges, onEdgesChange] = useEdgesState(intailEdges);
-  useEffect(() => {
-    setNodes(initialNodes);
-  }, [initialNodes, setNodes]);
 
-  useEffect(() => {
-    setEdges(intailEdges);
-  }, [intailEdges, setEdges]);
-
+  const { nodes, edges, onNodesChange, onEdgesChange, onConnect } =
+    useMindMapController({
+      initialNodes,
+      initialEdges,
+    });
   if (isLoading) {
     return (
       <LoadingScreen
@@ -54,38 +52,41 @@ export default function MindMapPage() {
   }
   if (error) return <ErrorMessage errorMessage={error.message} />;
 
- 
-  
 
-  const onConnect = (connection: Connection) => {
-
-    setEdges((oldEdges) => addEdge(connection, oldEdges));
-  };
 
   return (
     <div
-       style={{
-    width: "100vw",
-    height: "100vh",
+      style={{
+        width: "100vw",
+        height: "100vh",
 
-    backgroundColor: COLORS.background.light,
+        backgroundColor: COLORS.background.light,
 
-    backgroundImage:
-      COLORS.background.radialGradient,
-  }}
+        backgroundImage: COLORS.background.radialGradient,
+      }}
     >
+
+        <div className="w-500">
+       <button onClick={() => downloadMindMap()} className="px-4 py-2 rounded bg-blue-600 text-white hover:bg-blue-700 transition">
+  Download
+</button>
+      </div>
       <ReactFlow
+      id="mindmap"
         nodes={nodes}
         edges={edges}
         onNodesChange={onNodesChange}
         onEdgesChange={onEdgesChange}
-      onConnect={onConnect}
+        onConnect={onConnect}
         nodeTypes={nodeTypes}
         fitView
       >
         <Background />
         <Controls />
       </ReactFlow>
+
+
+    
     </div>
   );
 }

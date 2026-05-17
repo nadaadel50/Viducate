@@ -13,6 +13,7 @@ export const STORAGE_KEYS = {
    flashcardSession:"flashcards-session",
    topics:"video_topics",
    chatSessions:"chat_sessions",
-   completedTopics:"complete_topics"
+   completedTopics:"complete_topics",
+   mind_map_state:"mindmap-ui-state",
 
 };
