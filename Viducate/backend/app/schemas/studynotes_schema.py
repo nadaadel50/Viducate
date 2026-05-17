@@ -1,6 +1,7 @@
 from pydantic import BaseModel
 from typing import List, Optional, Literal, Union
 from datetime import datetime
+from app.schemas.summary_schema import ReadingTime
 
 class TermBlock(BaseModel):
     text: str
@@ -52,6 +53,7 @@ class VideoStudyNotesResponse(BaseModel):
     cached: bool = False
     study_notes: Optional[StudyNotesContent] = None
     created_at: Optional[datetime] = None
+    reading_time: Optional[ReadingTime] = None
 
     model_config = {"from_attributes": True}
 
@@ -65,5 +67,6 @@ class SegmentStudyNotesResponse(BaseModel):
     language: Optional[str] = None
     study_notes: Optional[StudyNotesContent] = None
     generation_failed: bool = False
+    reading_time: Optional[ReadingTime] = None
 
     model_config = {"from_attributes": True}

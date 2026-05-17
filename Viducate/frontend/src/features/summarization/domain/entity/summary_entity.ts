@@ -9,7 +9,11 @@ export type SummarySection = {
   heading: string;
   content: ContentItem[];
 };
-
+export type ReadingTime = {
+  words: number;
+  minutes: number;
+  label: string;
+};
 export type SummaryContent = {
   takeaways: string[];
   sections: SummarySection[];
@@ -22,7 +26,7 @@ export type VideoSummary = {
   summary: SummaryContent;
   language: string;
   createdAt: string;
-  cached: boolean;
+  readingTime: ReadingTime;
 };
 
 export type SegmentSummary = {
@@ -34,4 +38,5 @@ export type SegmentSummary = {
   summary: SummaryContent;
   language: string;
   generationFailed: boolean;
+  readingTime: ReadingTime;
 };
