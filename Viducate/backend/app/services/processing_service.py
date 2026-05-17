@@ -9,7 +9,7 @@ from app.services.transcription_service import transcribe
 
 from app.services.ocr_service import OCRService
 from app.services.merging_service import merge_transcript_ocr
-from app.services.segmentation_service import segment_topics
+from app.services.segmentation_service import    segment_topics
 from app.repositories.segment_repository import SegmentRepository
 from app.services.embedding_service import store_embeddings
 
@@ -130,6 +130,7 @@ async def run_processing_pipeline(video_id: int, language: str):
         repo.update_status(video_id, "segmenting")
         segment_repo = SegmentRepository(db)
 
+        # logger.info(f"[Pipeline] Segments generated: {segments_result['total_segments']}")
         segments_result = await segment_topics(merged, video_id,ocr_language,Transcribt_lang)
         logger.info(f"[Pipeline] Segments generated: {segments_result['total_segments']}")
 

@@ -61,4 +61,3 @@ class ChatRepository:
         self.db.delete(session)
         self.db.commit()
         return True
-     

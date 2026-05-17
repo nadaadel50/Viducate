@@ -40,16 +40,17 @@ def get_current_user(
         "The video metadata is saved and processing is queued immediately."
     ),
 )
-def submit_video_url(
+async def submit_video_url(
     request: VideoUploadURLRequest,
     background_tasks: BackgroundTasks,
     db: Session = Depends(get_db),
     current_user=Depends(get_current_user),
 ):
     service = VideoService(db)
-    result = service.submit_url(current_user.id, request)
+    result =await  service.submit_url(current_user.id, request)
     if result.get("cached"):
         return result  
+    
 
     background_tasks.add_task(
         run_processing_pipeline,
