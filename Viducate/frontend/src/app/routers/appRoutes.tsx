@@ -22,6 +22,7 @@ import { FlashCards } from "../../features/flash_cards/presentation/pages/flash_
 import { WatchLayout } from "../../features/watch_video/presentation/pages/watch_outlet";
 import { PublicRoute } from "./publicRoutes";
 import MindMapPage from "../../features/mindMap/presentation/pages/mindMap_page";
+import { DashboardPage } from "../../features/dashboard/presentaion/pages/dashboard_page";
 
 export function AppRoutes() {
   return (
@@ -51,6 +52,7 @@ export function AppRoutes() {
           <Route path="/study-notes/:segmentId" element={<StudyNotesPage />} />
           <Route path="/study-notes/video/:videoId" element={<StudyNotesPage />} />
           <Route path="/generating-study-notes" element={<GeneratingStudyNotesPage />} />
+           <Route path={AppRoutesNames.dashboard} element={<DashboardPage />} />
       
        
           <Route path="/WatchVideo" element={<WatchLayout />}>
