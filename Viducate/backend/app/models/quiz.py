@@ -1,4 +1,4 @@
-from sqlalchemy import Column, Integer, Text, String, TIMESTAMP, ForeignKey
+from sqlalchemy import JSON, Column, Integer, Text, String, TIMESTAMP, ForeignKey
 from sqlalchemy.orm import relationship
 from sqlalchemy.sql import func
 from .base import Base
@@ -44,3 +44,14 @@ class QuizQuestion(Base):
 
     quiz = relationship("Quiz", back_populates="questions")
     segment = relationship("TopicSegment")
+
+
+class UserQuizResult(Base):
+    __tablename__ = "user_quiz_results"
+    id = Column(Integer, primary_key=True, autoincrement=True)
+    quiz_id = Column(Integer, ForeignKey("quiz.quiz_id", ondelete="CASCADE"), nullable=False)
+    user_id = Column(Integer, ForeignKey("user.id", ondelete="CASCADE"), nullable=False)
+    correct_count = Column(Integer, nullable=False)
+    wrong_count = Column(Integer, nullable=False)
+    answers = Column(JSON, nullable=True)  # [{question_id, user_answer, is_correct}]
+    submitted_at = Column(TIMESTAMP, server_default=func.now())

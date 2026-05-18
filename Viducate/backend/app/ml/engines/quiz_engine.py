@@ -15,6 +15,12 @@ DIFFICULTY_CONFIGS = {
     "hard":   {"num_questions": 10, "description": "analysis, evaluation, and synthesis questions"},
 }
 
+# DIFFICULTY_CONFIGS = {
+#     "easy":   {"num_questions": 5,  "min": 3,  "max": 10,  "description": "basic recall and definition questions"},
+#     "medium": {"num_questions": 7,  "min": 3,  "max": 10,  "description": "understanding and application questions"},
+#     "hard":   {"num_questions": 10, "min": 3,  "max": 10,  "description": "analysis, evaluation, and synthesis questions"},
+# }
+
 
 def _get_client() -> Groq:
     return Groq(api_key=settings.GROQ_API_KEY)
@@ -69,6 +75,12 @@ RULES:
 6. video_timestamp: estimate the second in the segment where this topic is covered.
    The segment starts at {segment_start_time} seconds. Use values within the segment range.
 7. Return ONLY a valid JSON array, no markdown, no extra text.
+IMPORTANT: Do NOT generate questions about:
+- Video introduction or opening remarks (greetings, announcements, "today we will...")
+- Video conclusions, closing remarks, or "see you next time" content
+- Administrative content like "subscribe", "like", "homework reminders"
+- Meta-content about the lesson structure itself
+Only generate questions about the ACTUAL educational content.
 
 Format:
 [
@@ -128,6 +140,12 @@ RULES:
 6. video_timestamp: the second in the video where this topic is covered (use segment start_time).
 7. segment_number: which segment (1, 2, 3…) this question belongs to.
 8. Return ONLY a valid JSON array, no markdown, no extra text.
+IMPORTANT: Do NOT generate questions about:
+- Video introduction or opening remarks (greetings, announcements, "today we will...")
+- Video conclusions, closing remarks, or "see you next time" content
+- Administrative content like "subscribe", "like", "homework reminders"
+- Meta-content about the lesson structure itself
+Only generate questions about the ACTUAL educational content.
 
 Format:
 [
@@ -256,6 +274,17 @@ def generate_segment_quiz(
         return []
 
     questions = _parse_and_validate(raw, REQUIRED_KEYS)
+    # enforce max limit
+    questions = questions[:10]
+
+    # enforce min quality threshold
+    if len(questions) < 3:
+        logger.warning(
+            f"[QuizEngine] Too few valid questions ({len(questions)}) for segment '{segment_title}'"
+        )
+        return []  # or trigger retry logic
+    
+
     logger.info(f"[QuizEngine] Got {len(questions)} valid questions for segment '{segment_title}'")
     return questions
 
@@ -303,6 +332,8 @@ def generate_video_quiz(
             continue
 
         chunk_questions = _parse_and_validate(raw, REQUIRED_KEYS + ["segment_number"])
+        chunk_questions = chunk_questions[:10]
+
         all_questions.extend(chunk_questions)
 
         # Rate-limit pause between chunks
@@ -310,4 +341,11 @@ def generate_video_quiz(
             time.sleep(3)
 
     logger.info(f"[QuizEngine] Total questions generated for video: {len(all_questions)}")
+    if len(all_questions) > 30:
+        logger.warning(
+            f"[QuizEngine] Clamping video quiz from {len(all_questions)} to 30 questions"
+        )
+        all_questions = all_questions[:30]
+
+        
     return all_questions

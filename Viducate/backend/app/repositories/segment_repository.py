@@ -126,3 +126,32 @@ class SegmentRepository:
     #     self.db.delete(segment)
     #     self.db.commit()
     #     return True
+
+    def update_quality(
+        self,
+        segment_id: int,
+        quality_score: float,
+        quality_flag: bool,
+        retry_count: int = 0,
+    ) -> None:
+        """Update quality metadata on a segment row."""
+        segment = self.db.query(TopicSegment).filter(
+            TopicSegment.segment_id == segment_id
+        ).first()
+        if segment:
+            segment.quality_score = quality_score
+            segment.quality_flag  = quality_flag
+            segment.retry_count   = retry_count
+            self.db.commit()
+
+    def get_flagged_segments(self, video_id: int) -> list:
+        """Return all low-quality segments for a video."""
+        return (
+            self.db.query(TopicSegment)
+            .filter(
+                TopicSegment.vid_id       == video_id,
+                TopicSegment.quality_flag == True,
+            )
+            .order_by(TopicSegment.segment_number)
+            .all()
+        )

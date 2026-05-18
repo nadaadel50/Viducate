@@ -9,8 +9,15 @@ from app.repositories.mindmap_repository import MindmapRepository
 from app.repositories.video_repository import VideoRepository
 from app.ml.engines.mindmap_engine import generate_mindmap
 
+from app.services.quality_service import (
+    score_feature_vs_segmentation,
+    extract_text_from_mindmap,
+)
+from app.services.quality_retry import run_with_quality_retry
+
 logger = logging.getLogger(__name__)
 
+print(" MINDMAP SERVICE LOADED FROM:", __file__)
 
 def _format_seconds(seconds: int) -> str:
     h = seconds // 3600
@@ -113,10 +120,50 @@ class MindmapService:
         segments     = self._get_segments_or_404(video_id)
         engine_input = _segments_to_engine_input(segments)
 
-        result = generate_mindmap(
-            video_title=video.title,
-            segments=engine_input,
+        
+         # Use the first segment as the quality reference (domain anchor)
+        reference_segment = segments[0]
+
+        result, quality = run_with_quality_retry(
+            generator_fn=lambda: generate_mindmap(
+                video_title=video.title,
+                segments=engine_input,
+            ),
+            score_fn=lambda res, seg=reference_segment: score_feature_vs_segmentation(
+                feature_text=extract_text_from_mindmap(res),
+                segment=seg,
+                content_type="mindmap",
+            ),
+            label=f"mindmap video_id={video_id}",
         )
+
+        if result is None:
+            raise HTTPException(
+                status_code=status.HTTP_500_INTERNAL_SERVER_ERROR,
+                detail="Mindmap generation failed.",
+            )
+
+        logger.info(
+            f"[MindmapService] VALIDATION COMPLETE | video_id={video_id} | "
+            f"final_score={quality.get('score', 0.0):.4f} | "
+            f"flag={quality.get('flag')} | "
+            f"retries_used={quality.get('retries', 0)}"
+        )
+
+        if quality.get("flag"):
+            logger.warning(
+                f"[MindmapService] Mindmap quality BELOW threshold "
+                f"(score={quality['score']:.4f} < {quality['threshold']}) "
+                f"after {quality.get('retries', 0) + 1} attempts — saving best result"
+            )
+        else:
+            logger.info(
+                f"[MindmapService]  Mindmap quality PASSED "
+                f"(score={quality['score']:.4f}) in {quality.get('retries', 0) + 1} attempt(s)"
+            )
+
+        
+
 
         mindmap = self.repo.create(
             video_id=video_id,

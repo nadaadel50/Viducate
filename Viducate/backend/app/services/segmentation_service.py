@@ -6,10 +6,13 @@ import re
 from google import genai
 from google.genai import types
 from app.config import settings
+from app.services.quality_service import (
+    extract_source_text_for_segment,
+    score_segmentation,
+)
 
 logger = logging.getLogger(__name__)
 
-# --------------------------------is noise --------------------------------
 def is_noise(part: str) -> bool:
     if re.search(r'https?://|\.com|\.org|www\.', part):
         return True
@@ -82,6 +85,24 @@ def chunk_text(text: str, max_words: int = 2500) -> list:
         chunks.append(" ".join(words[i:i + max_words]))
     return chunks
 
+#********************************************
+# ── Time helpers ──────────────────────────────────────────────────────────────
+
+def _time_str_to_seconds(t: str) -> int:
+    """'00:01:30' or '01:30' or '90' → seconds int."""
+    if not t:
+        return 0
+    parts = str(t).strip().split(":")
+    try:
+        if len(parts) == 3:
+            return int(parts[0]) * 3600 + int(parts[1]) * 60 + int(parts[2])
+        elif len(parts) == 2:
+            return int(parts[0]) * 60 + int(parts[1])
+        else:
+            return int(parts[0])
+    except (ValueError, IndexError):
+        return 0
+#********************************************
 
 def build_prompt(merged_text: str, final_language: str = "ar") -> str:
     lang_instruction = "English" if final_language == "en" else "Arabic"
@@ -270,6 +291,30 @@ async def segment_topics(merged: list, video_id: int, ocr_language: str ,transcr
 
     for idx, seg in enumerate(all_segments):
         seg["segment_number"] = idx + 1
+
+    #********************************************
+    # ── Attach source text and quality score to every segment ────────────────
+    logger.info(f"[Segmentation] Scoring {len(all_segments)} segments vs merged text")
+    for seg in all_segments:
+        start_s = _time_str_to_seconds(seg.get("start_time", "00:00"))
+        end_s   = _time_str_to_seconds(seg.get("end_time",   "00:00"))
+
+        source_text = extract_source_text_for_segment(merged, start_s, end_s)
+        quality     = score_segmentation(
+            segment_title=seg.get("title", ""),
+            segment_main_topic=seg.get("main_topic", ""),
+            source_text=source_text,
+        )
+
+        seg["_source_text"] = source_text
+        seg["_quality"]     = quality
+
+        if quality["flag"]:
+            logger.warning(
+                f"[Segmentation] Low quality segment #{seg['segment_number']} "
+                f"'{seg.get('title', '')}' — score={quality['score']:.4f}"
+            )
+    #********************************************
 
     final_result = {
         "total_segments": len(all_segments),

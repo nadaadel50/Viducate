@@ -9,6 +9,12 @@ from app.repositories.flashcard_repository import FlashcardRepository
 from app.ml.processors.flashcard_processor import CARDS_PER_SEGMENT, _resolve_language, process_flashcards
 from app.ml.engines.flashcard_engine import generate_flashcards_for_segment
 
+from app.services.quality_service import (
+    score_feature_vs_segmentation,
+    extract_text_from_flashcards,  
+)
+from app.services.quality_retry import run_with_quality_retry
+
 logger = logging.getLogger(__name__)
 
 
@@ -108,15 +114,23 @@ class FlashcardService:
         self._check_ownership(video, user_id)
         self._check_processing_complete(video)
 
-        existing_count = self.repo.count_by_video(video_id)
-        cached = existing_count > 0
+        # existing_count = self.repo.count_by_video(video_id)
+        # cached = existing_count > 0
+        segments = self._get_ordered_segments(video_id)
+        segments_with_cards = self.repo.get_segments_with_cards(video_id)
+
+        cached = (
+            len(segments_with_cards) > 0
+            and all(seg.segment_id in segments_with_cards for seg in segments)
+        )
 
         if not cached:
             logger.info(f"[FlashcardService] Cache miss — generating for video_id={video_id}")
+            logger.info(f"[FlashcardService] Calling process_flashcards with validation")
             process_flashcards(self.db, video_id, user_id)
         else:
             logger.info(
-                f"[FlashcardService] Cache hit — {existing_count} cards for video_id={video_id}"
+                f"[FlashcardService] Cache hit — flashcards exist for all segments video_id={video_id}"
             )
 
         segments = self._get_ordered_segments(video_id)
@@ -211,13 +225,35 @@ class FlashcardService:
             for st in segment.subtopics
             if st.name
         ]
+        #*********************************************
+        # cards = generate_flashcards_for_segment(
+        #     segment_title=segment.title,
+        #     main_topic=segment.main_topic or segment.title,
+        #     subtopics=subtopics_data,
+        #     language=language,
+        #     num_cards=CARDS_PER_SEGMENT,
+        # )
 
-        cards = generate_flashcards_for_segment(
-            segment_title=segment.title,
-            main_topic=segment.main_topic or segment.title,
-            subtopics=subtopics_data,
-            language=language,
-            num_cards=CARDS_PER_SEGMENT,
+        # if not cards:
+        #     raise HTTPException(
+        #         status_code=status.HTTP_422_UNPROCESSABLE_ENTITY,
+        #         detail=f"Failed to generate flashcards for segment {segment_id}",
+        #     )
+
+        cards, quality = run_with_quality_retry(
+            generator_fn=lambda seg=segment, subs=subtopics_data: generate_flashcards_for_segment(
+                segment_title=seg.title,
+                main_topic=seg.main_topic or seg.title,
+                subtopics=subs,
+                language=language,
+                num_cards=CARDS_PER_SEGMENT,
+            ),
+            score_fn=lambda result, seg=segment: score_feature_vs_segmentation(
+                feature_text=extract_text_from_flashcards(result),
+                segment=seg,
+                content_type="flashcard",
+            ),
+            label=f"flashcard segment_id={segment_id}",
         )
 
         if not cards:
@@ -226,6 +262,15 @@ class FlashcardService:
                 detail=f"Failed to generate flashcards for segment {segment_id}",
             )
 
+        # Update quality
+        current_score = segment.quality_score or 0.0
+        segment.quality_score = max(current_score, quality.get("score", 0.0))
+        segment.quality_flag  = bool(quality.get("flag", False))
+        segment.retry_count   = (segment.retry_count or 0) + quality.get("retries", 0)
+        self.db.flush()
+        
+        #*********************************************
+        
         for card in cards:
             self.db.add(Flashcard(
                 segment_id=segment_id,
