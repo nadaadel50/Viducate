@@ -62,6 +62,7 @@ class SegmentResponse(BaseModel):
     end_time: int
     main_topic: str
     title: str
+    is_completed:bool
     sub_topics: list[SubTopicBriefResponse] = []
     #********************************************
     quality_score:  Optional[float] = None
