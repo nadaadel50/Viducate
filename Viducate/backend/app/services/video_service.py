@@ -42,7 +42,7 @@ class VideoService:
         self.caching_service = VideoCachingServise(db)
 
     def _check_db_storage_limit(self, user_id: int):
-            used = self.video_repo.get_user_storage_bytes(user_id)
+            used = self.video_repo.get_video_storage_bytes(user_id)
             if used >= DB_STORAGE_THRESHOLD:
                 used_mb = used / (1024 * 1024)
                 raise HTTPException(

@@ -59,6 +59,7 @@ def get_segments_by_video(
                 "end_time": s.end_time,
                 "main_topic": s.main_topic,
                 "title": s.title,
+                "is_completed": s.is_completed,
                 "sub_topics": [
                     {
                         "name": st.name,
