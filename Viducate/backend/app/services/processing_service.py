@@ -9,7 +9,7 @@ from app.services.transcription_service import transcribe
 
 from app.services.ocr_service import OCRService
 from app.services.merging_service import merge_transcript_ocr
-from app.services.segmentation_service import segment_topics
+from app.services.segmentation_service import    segment_topics
 from app.repositories.segment_repository import SegmentRepository
 from app.services.embedding_service import store_embeddings
 
@@ -130,6 +130,7 @@ async def run_processing_pipeline(video_id: int, language: str):
         repo.update_status(video_id, "segmenting")
         segment_repo = SegmentRepository(db)
 
+        # logger.info(f"[Pipeline] Segments generated: {segments_result['total_segments']}")
         segments_result = await segment_topics(merged, video_id,ocr_language,Transcribt_lang)
         logger.info(f"[Pipeline] Segments generated: {segments_result['total_segments']}")
 
@@ -157,6 +158,11 @@ async def run_processing_pipeline(video_id: int, language: str):
 
         # ── Completed Status ─────────────────────────────────────
         repo.update_status(video_id, "completed")
+
+        # ── Calculate & Save Storage Bytes ───────────────────────
+        storage_bytes = repo.get_video_storage_bytes(video_id)
+        repo.update_storage_bytes(video_id, storage_bytes)
+
         logger.info(f"[Pipeline] Completed: video_id={video_id}")
 
     except Exception as e:

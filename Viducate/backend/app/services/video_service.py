@@ -1,4 +1,5 @@
 import logging
+from sqlalchemy import func
 from sqlalchemy.orm import Session
 from fastapi import HTTPException, status
 from app.repositories.video_repository import VideoRepository
@@ -7,12 +8,23 @@ from app.services.processing_service import ProcessingJobService
 from app.services.videoCaching_service import VideoCachingServise
 
 from app.schemas.video import (
+    SaveVideoRequest,
     VideoUploadURLRequest,
     PresignedUploadRequest,
 )
+from app.services.classify_video_service import classify_video
 
 
 logger = logging.getLogger(__name__)
+
+
+# YouTube URL - database
+MAX_DB_STORAGE_BYTES = 50 * 1024 * 1024   # 50 MB
+DB_STORAGE_THRESHOLD = 49 * 1024 * 1024   # 49 MB
+
+# File Upload - Cloudflare R2
+MAX_R2_STORAGE_BYTES = 1 * 1024 * 1024 * 1024   # 1 GB per user
+
 
 class VideoService:
     """
@@ -29,10 +41,39 @@ class VideoService:
         self.job_service = ProcessingJobService(db)
         self.caching_service = VideoCachingServise(db)
 
+    def _check_db_storage_limit(self, user_id: int):
+            used = self.video_repo.get_video_storage_bytes(user_id)
+            if used >= DB_STORAGE_THRESHOLD:
+                used_mb = used / (1024 * 1024)
+                raise HTTPException(
+                    status_code=status.HTTP_403_FORBIDDEN,
+                    detail=f"Storage limit reached. Used: {used_mb:.1f}MB / 50MB. Please delete a video to continue."
+                )
+            
+
+    def _check_r2_storage_limit(self, user_id: int, new_file_size: int):
+        used = self.video_repo.get_user_r2_storage_bytes(user_id)
+        if used + new_file_size > MAX_R2_STORAGE_BYTES:
+            used_gb = used / (1024 * 1024 * 1024)
+            raise HTTPException(
+                status_code=status.HTTP_403_FORBIDDEN,
+                detail=f"Storage limit reached. Used: {used_gb:.2f}GB / 1GB. Please delete a video to continue."
+            )
+        
+    # check_total_r2_storage
+    def _check_total_r2_storage(self, new_file_size: int):
+        total_used = self.video_repo.get_total_r2_storage_bytes()
+        if total_used + new_file_size > 10 * 1024 * 1024 * 1024:  # 10 GB
+            raise HTTPException(
+                status_code=status.HTTP_403_FORBIDDEN,
+                detail="Service storage is full. Please try again later."
+            )
 
     
-    
-    def submit_url(self, user_id: int, request: VideoUploadURLRequest) -> dict:
+    async def submit_url(self, user_id: int, request: VideoUploadURLRequest) -> dict:
+        #First Check database storage 
+        self._check_db_storage_limit(user_id)
+
         normalized_url = self.caching_service.normalize_youtube_url(request.url)
         content_hash = self.caching_service.generate_hash(normalized_url)
 
@@ -40,6 +81,16 @@ class VideoService:
         if cache_result:
             cache_result["language"] = cache_result.get("language", "en")
             return cache_result
+        
+        #classify_video if film or music or.... not allowed
+        yt_video_id = self.caching_service.extract_youtube_id(normalized_url) 
+        subject = await classify_video(yt_video_id) if yt_video_id else "general"
+
+        if subject == "blocked":
+            raise HTTPException(
+                status_code=status.HTTP_400_BAD_REQUEST,
+                detail="This video category is not allowed"
+            )
             
         video_data = {
             "user_id": user_id,
@@ -71,6 +122,10 @@ class VideoService:
         Saves a DB record with status='uploaded' so we have a video_id immediately.
         The frontend PUTs the file directly to S3, then calls /confirm.
         """
+        self._check_r2_storage_limit(user_id, request.file_size)
+        self._check_total_r2_storage(request.file_size)
+
+
         s3_key = self.s3.generate_s3_key(user_id, request.filename)
         presigned_url = self.s3.generate_presigned_upload_url(
             s3_key=s3_key,
@@ -178,3 +233,31 @@ class VideoService:
 
         self.video_repo.delete(video_id)
         return {"message": "Video deleted successfully"}
+    
+
+    def save_video(self, user_id: int, request: SaveVideoRequest) -> dict:
+    
+        video = self.video_repo.get_by_id(request.video_id)
+        if not video:
+            raise HTTPException(status_code=status.HTTP_404_NOT_FOUND, detail="Video not found")
+        if video.user_id != user_id:
+            raise HTTPException(status_code=status.HTTP_403_FORBIDDEN, detail="Not authorized")
+
+
+        for segment in video.segments:
+            if segment.segment_id in request.completed_segment_ids:
+                segment.is_completed = True
+
+        video.bookmarks = request.bookmarks
+
+        video.current_time = request.current_time
+        
+        video.duration = request.duration
+
+        video.last_watched_at = func.now()
+
+        self.db.commit()
+        
+        logger.info(f"Video saved: video_id={request.video_id}, user_id={user_id}")
+        
+        return {"message": "Video saved successfully"}

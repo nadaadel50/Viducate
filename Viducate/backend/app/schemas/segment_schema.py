@@ -48,6 +48,12 @@ class SubTopicBriefResponse(BaseModel):
 
     model_config = {"from_attributes": True}
 
+class SubTopicBriefResponse(BaseModel):
+    name: str
+    start_time: int
+
+    model_config = {"from_attributes": True}
+
 # =========================
 # 3. RESPONSE (Frontend)
 # =========================

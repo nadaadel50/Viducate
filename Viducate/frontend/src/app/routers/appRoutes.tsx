@@ -45,6 +45,7 @@ export function AppRoutes() {
            <Route path={AppRoutesNames.mindMap} element={<MindMapPage />} />
       
           <Route path="/quiz/:segmentId" element={<QuizPage />} />
+          <Route path="/quiz/video/:videoId" element={<QuizPage />} />
           <Route path="/summary/:segmentId" element={<SummaryPage />} />
           <Route path="/summary/video/:videoId" element={<SummaryPage />} />
           <Route path="/generating-summary" element={<GeneratingSummaryPage />} />

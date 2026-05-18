@@ -176,7 +176,11 @@ const SummaryPage = () => {
 
           <aside className="w-full lg:w-80 flex-shrink-0 lg:sticky lg:top-8 space-y-6">
             <QuizCard />
-            <ToolsCard />
+            <ToolsCard
+  type="summary"
+  videoId={Number(videoId)}
+  segmentId={segmentId ? Number(segmentId) : undefined}
+/>
           </aside>
         </div>
       </main>

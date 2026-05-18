@@ -1,142 +1,122 @@
-[0.0 --> 13.0]  Every day, we all are doing a mod-12 operation without even knowing that we are doing this mod-12 operation.
-[13.0 --> 20.0]  Shocking? No worries. Let's dive into the topic of the day, the modular arithmetic part 1 to know this.
-[20.0 --> 23.0]  As usual, let's start the session with the outcomes.
-[23.0 --> 27.0]  Upon the completion of the session, the learner will be able to
-[27.0 --> 32.2]  Outcome number one, we will understand the modular arithmetic operation with examples.
-[32.2 --> 35.3]  Outcome number two, we will understand about congruence.
-[35.3 --> 40.3]  And outcome number three, we will identify valid and invalid congruence.
-[40.3 --> 44.1]  Let's dive into the topic of the day, modular arithmetic.
-[44.1 --> 46.1]  What is this modular arithmetic?
-[46.1 --> 51.1]  Actually, this modular arithmetic is a system of arithmetic for integers.
-[51.1 --> 52.4]  We know integers.
-[52.4 --> 68.0]  And modular arithmetic is a system of arithmetic for integers When it is going to work on integers obviously we are going to wrap around after reaching a certain value called modulus So we are going to work on a system of arithmetic
-[68.0 --> 72.3]  for integers and what we are going to do, we are going to wrap around after reaching
-[72.3 --> 77.4]  a certain value. This value is called as a moduli. I will explain this point when we see
-[77.4 --> 83.0]  an example and why we are dealing this modular arithmetic. Because, this modular arithmetic
-[83.0 --> 86.7]  is the central mathematical concept in cryptography.
-[86.7 --> 91.8]  The widely used cryptographic algorithms are mainly depending on these modular arithmetic.
-[91.8 --> 95.7]  Let's understand about these modulars with this example.
-[95.7 --> 96.7]  Here is a clock.
-[96.7 --> 99.2]  We have 24 hours a day.
-[99.2 --> 103.1]  Do we have 24 numbers representing 24 hours in our clock?
-[103.1 --> 104.3]  Definitely no.
-[104.3 --> 109.2]  But still we are able to understand that the 24 hour timing with just 12 numbers.
-[109.2 --> 110.2]  Isn't it?
-[110.2 --> 114.5]  Let's say, if the time is 15 hours, it means it is 3 pm, right?
-[114.8 --> 119.0]  If the time is 20 hours, it means it is 8 pm, isn't it?
-[119.3 --> 119.5]  Alright.
-[120.0 --> 124.7]  If the time is 23 hours, then obviously it is 11 pm, isn't it?
-[125.1 --> 128.2]  Actually, what we are doing is a mod 12 operation.
-[128.7 --> 130.8]  We wrap around every 12 hours.
-[131.3 --> 135.3]  So, what we are doing here is a wrap around operation on these integers.
-[135.8 --> 138.9]  So, here we have only 12 integers represented on the clock
-[138.9 --> 141.8]  and this is a system of arithmetic for integers.
-[141.8 --> 146.4]  And what we are doing, we are wrapping around after reaching a certain value.
-[146.8 --> 151.0]  Here in the wall clock example, we are wrapping around every 12 hours, right?
-[151.1 --> 152.8]  So, 12 is the modulus here.
-[153.2 --> 156.9]  So, the modulus value as far as a wall clock is concerned is 12.
-[157.1 --> 159.3]  And when we say 13 hours, what we are doing?
-[159.6 --> 164.4]  So, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12.
-[164.7 --> 166.2]  And this is 13, right?
-[166.5 --> 169.5]  And that's why we are able to find that it is 1 PM.
-[169.7 --> 172.4]  When I say it's 13 hours, what we are doing?
-[172.8 --> 188.7]  We are just doing a mod 12 operation on 13 So 13 mod 12 when 13 is divided by 12 we get the remainder 1 I hope things are clear for you now Before seeing some examples in order to understand things clearly about modular arithmetic
-[189.1 --> 194.7]  let's see what is congruence. Actually, in cryptography, congruence is used which is
-[194.7 --> 200.4]  represented with this symbol instead of equality. Why equality is not preferred in congruence?
-[200.4 --> 206.7]  Let's see some examples. 15 is congruent to 3 mod 12. Since we are dealing with mod 12,
-[207.0 --> 212.0]  let's see the wall clock example. So, the modulus value is 12 as far as a wall clock is concerned,
-[212.1 --> 219.5]  isn't it? So, here also we have mod 12. So, when I say 15 hours, what does it mean? We did 15 mod 12,
-[219.7 --> 225.2]  right? So, 15 mod 12 is what? The remainder is 3. So, what we are doing actually is, we are taking
-[225.2 --> 231.7]  this number 15 and we are doing a more 12 operation. So, remember this 15 is here and
-[231.7 --> 238.2]  this 12 is the divisor. So, we are dividing 15 by 12. When it is done, 12, 1 times 12
-[238.2 --> 239.6]  and the remainder is 3.
-[240.0 --> 242.0]  So, 3 is the answer, right?
-[242.1 --> 243.1]  That's what we said.
-[243.2 --> 244.4]  15 hours means what?
-[244.7 --> 246.1]  It's 3 p.m., isn't it?
-[246.4 --> 250.0]  So, 15 is congruent to 3 mod 12.
-[250.6 --> 252.0]  I hope it is understandable.
-[252.4 --> 253.4]  Let's see one more example.
-[253.9 --> 256.9]  23 is congruent to 11 mod 12.
-[257.2 --> 258.1]  How did we get this?
-[258.1 --> 262.5]  Because we are taking the number 23 and we are dividing 23 by 12.
-[262.8 --> 265.4]  So, 12, 1 times 12 and the remainder is what?
-[265.5 --> 265.9]  11.
-[266.6 --> 269.2]  So, that's the answer for this second equation.
-[269.2 --> 273.4]  So, remember 23 is congruent to 11 mod 12.
-[274.0 --> 276.9]  In other words, 23 hours means 11 pm, right?
-[277.3 --> 278.7]  Let's stop dealing with mod 12.
-[278.9 --> 280.1]  Let's take some other numbers.
-[280.5 --> 283.8]  Let's take 33 is congruent to 3 mod 10.
-[284.0 --> 284.5]  Is it valid?
-[285.0 --> 289.0]  Yes, it is valid because 33 when it is divided by 10,
-[289.3 --> 292.0]  10, 3 times 30 and the remainder is 3.
-[292.3 --> 309.5]  So this is also a valid congruence isn it Because always remember when we have this number this is divided by this number and whatever we get as the remainder is this number So this is a colloquial way of explanation but still please understand things in this way for now
-[310.4 --> 317.2]  Then 10 is congruent to minus 2 mod 12. How did we get this? Let's say 10 is here, right?
-[317.8 --> 323.5]  We are going to divide 10 by 12. 10, it is divided by 12. How many times 12 takes 10?
-[323.5 --> 326.8]  12, 0 times 0 and the remainder is what?
-[326.9 --> 327.2]  10.
-[327.6 --> 329.4]  So, here we can have 10 also.
-[329.8 --> 333.7]  So, 10 is congruent to 10 mod 12 is the valid congruence.
-[334.0 --> 337.8]  In other words, 10 mod 12 can be written as minus 2, right?
-[338.0 --> 339.4]  I hope you can remember this.
-[339.6 --> 342.8]  Whenever you have a negative number mod, then what I told you?
-[343.1 --> 345.7]  I asked you to simply add these two numbers, isn't it?
-[345.9 --> 347.1]  I hope you can recollect this.
-[347.5 --> 349.6]  So, minus 2 plus 12 is 10.
-[350.0 --> 352.5]  So, 10 or minus 2 both are perfect.
-[352.5 --> 359.9]  So, in this case, 10 is congruent to 10 mod 12 is also perfect because we are getting the remainder as what? 10.
-[360.0 --> 364.5]  n is congruent to minus 2 mod 12 is also perfectly a valid congruence.
-[364.8 --> 370.1]  So, if we say a is congruent to b mod m, what do we mean by this?
-[370.1 --> 375.5]  It means a when it is divided by m, we get the remainder b, right?
-[375.8 --> 382.8]  So, a when it is divided by m, we get the remainder b and we are not worried about this quotient, right?
-[383.0 --> 384.1]  It may be any times.
-[384.5 --> 389.2]  And this can also be written as a is equal to km plus b.
-[389.5 --> 389.8]  Why?
-[390.0 --> 396.1]  Because this A is the product of M and K by adding the remainder B, right?
-[396.2 --> 399.5]  So, A is equal to M into K plus B.
-[399.8 --> 403.4]  15 is equal to 12 into 1 plus 3, right?
-[403.7 --> 406.8]  Or 23 is equal to 12 into 1 plus 11.
-[407.2 --> 411.0]  It means 12 into 1 is 12 plus 11, which is 23.
-[411.5 --> 412.6]  That's what we got here.
-[413.0 --> 414.3]  Now, a very important question.
-[414.7 --> 428.7]  Why we are preferring congruence instead of equality Let me tell you that See here it need not be the case that it should be always 33 It can be 23 also So 23 is congruent to 3 mod 10 right Why Because
-[428.7 --> 437.2]  23, when it is divided by 10, we get still 3 as the remainder. It can be 23, 33, 43, 53. It can vary,
-[437.6 --> 443.6]  but the remainder is still the same, isn't it? Let's take one more example here. This is 15 is
-[443.6 --> 450.2]  congruent to 3 mod 12, right? Is there a necessity that it should be always 15 here? No, it can be
-[450.2 --> 457.2]  other numbers as well. So, what could be the other number? Let's take 27 here. 27 congruent to 3 mod
-[457.2 --> 465.0]  12. 27 is divided by 12. 12 2 times 24 and the remainder is 3. Still, this is a valid congruence
-[465.0 --> 471.9]  if this 15 is replaced with 27. Here, in this case, we have 10 or even minus 2. Both are same.
-[471.9 --> 476.4]  According to mathematics, minus 2 is a different number, 10 is a different number.
-[476.4 --> 479.9]  But, under modulo 12, minus 2 and 10
-[480.0 --> 484.0]  are the same and that's why we are going for congruence instead of equality.
-[484.0 --> 488.4]  Before we complete, let's see some valid and invalid congruences.
-[488.9 --> 492.9]  The first congruence is 38 is congruent to 2 mod 12.
-[493.3 --> 498.7]  38 when it is divided by 12, 12 3 times 36 and the remainder is 2, right?
-[499.0 --> 501.9]  Is it valid? Yes, it is a valid congruence.
-[502.3 --> 503.8]  Let's see the second congruence.
-[504.2 --> 506.7]  38 is congruent to 14 mod 12.
-[507.3 --> 509.4]  See here, here also we have 38.
-[509.4 --> 512.7]  Here also we are going to perform the same motel operation.
-[513.1 --> 516.7]  But can you see here, here I am using 2, but here I am using 14.
-[516.8 --> 518.1]  Is it a valid congruence?
-[518.6 --> 521.7]  Just pause this video for a while and think about this right answer.
-[522.7 --> 524.8]  It is a valid congruence.
-[525.2 --> 525.7]  You know why?
-[526.1 --> 533.1]  Because when 38 is divided by 12, 12, 2 times it is 24 and the remainder is 14.
-[533.4 --> 548.2]  See we are changing the quotient right So here the quotient value is 3 So 12 threes are 36 and the remainder is 2 Here we are changing the quotient as 2 12 twos are 24 and the remainder is 14 So this is also a valid
-[548.2 --> 555.0]  congruence. Then 5 is congruent to 0 mod 5. That is 5 when it is divided by 5, we get 0 as the
-[555.0 --> 561.1]  remainder. So, this is also a valid congruence. Then comes 10 is congruent to 2 mod 6. 10 when it
-[561.1 --> 568.0]  divided by 6, we get 4 as the remainder, right? So, this is not 2, this is 4, right? So, this is an
-[568.0 --> 575.5]  invalid congruence. Then, 13 is congruent to 3 mod 13. 13, when it is divided by 13, we get 0 as
-[575.5 --> 582.6]  the remainder. But here we have 3. It is an invalid congruence. Then comes the next one, 2 is congruent
-[582.6 --> 587.6]  to minus 3 mod 5. Please pause this video for a while and think about the right answer.
-[587.6 --> 594.6]  It is a valid congruence because 2 when it is divided by 5, we get the remainder 2 itself.
-[594.6 --> 599.9]  Right? So, it is like 2 mod 5. 2 means it can also be written as minus 3.
-[600.0 --> 606.9]  right? Just add these two. Minus 3 plus 5, it is plus 2. It is positive 2, right? So, it can be
-[606.9 --> 614.3]  either positive 2 or minus 3. So, this is also a valid congruence. And finally, minus 8 is congruent
-[614.3 --> 622.2]  to 7 mod 5. I'll give one more congruence. Minus 3 is congruent to minus 8 mod 5. These two are
-[622.2 --> 628.1]  testing exercise for you. I request you to work it out and tell me whether these two are valid or
-[628.1 --> 633.5]  invalid congruences in the comment section. And that's it guys. I hope now you understood the
-[633.5 --> 639.0]  modular arithmetic with examples, we understood about congruence, we also identified some valid
-[639.0 --> 644.3]  and invalid congruences. I hope you guys enjoyed this presentation and thank you for watching.
+[0.0 --> 3.6]  بسم الله الرحمن الرحيم. اللهم صلي وسلم وسيد وبارك على سيدنا
+[3.6 --> 7.1]  محمد. النهاردة يا ريس بازن الله اخر حكايتنا في موضوع الهوكس.
+[7.1 --> 10.8]  اتكلمنا المرات اللي فاتت عن هوكس بلت ان ري اكت. يعني حاجات
+[10.8 --> 14.7]  اصلا الري اكت هي اللي عامله. طيب الري اكت برضو زي ما هي عاملة
+[14.7 --> 18.7]  حاجة بتوفر لك يا ريس انك تعمل الهوك الخاصة بي. ركز معي بقى
+[18.7 --> 22.7]  يا صديقي. عندنا موقع بسيط جدا بيديك اي بي اي فري. وما تقلقش
+[22.7 --> 26.7]  من مواضيع الابي اي بي اي لان ده لي فيديو مفاصل تماما في الكورس ده
+[26.7 --> 29.8]  بازن الله فانا مش عاوزك تركز يعني ايه فيتش يعني ايه اكسوس يعني
+[29.8 --> 32.4]  ايه ايه اي اي اي اي اي اي اي اصلا من الاساس بس المفروض تكون
+[32.4 --> 35.5]  درس المواضيع ده بالتفصيل في الجيفا سكريبت بس علي انا يا رايز
+[35.5 --> 38.8]  بقى في الرياكت هزبط لك الدنيا على الاخر زي ما اتفقنا طيب
+[38.8 --> 43.7]  عندينا الموقع بتاعنا اسمه هتكتب بس على جوجل فيزهر لك
+[43.7 --> 47.4]  الموقع ده. هو عملنا الكودة هو اتقطر خيره وعملنا فتش ومزبط لنا
+[47.4 --> 50.7]  الدنيا على اخر. ما تركزش برضو مع موضوع الفتش ده هوت هيجيله
+[50.7 --> 53.9]  برضو بازن الله فيديو. برضو المفروض ان تكون واضح في موضوع
+[53.9 --> 67.1] 
+[67.1 --> 70.9]  موقع افلام او موقع منتجات او ايا كان بقى الموضوع ده. فبالتالي
+[70.9 --> 74.4]  اصلا اي اكشن في الصفحة او اي في الصفحة طب ما الافلام سابتة زي
+[74.4 --> 77.6]  ما هي. ما بيحصلش اي حاجة يعني. طيب ما المنتجات سابتة زي ما هي.
+[77.6 --> 80.6]  فبالتالي انا محتاج استخدم اللي احنا قلنا عليهم تعرض لي
+[80.6 --> 86.0]  البيانات مرة واحدة بس مع كل للصفحة. مش مع كل للصفحة.
+[86.0 --> 89.3]  ففتكر معايا كده وشغل الزاكرة. وفتكر معايا ايه? فتكر معايا
+[89.3 --> 93.2]  خلاص. تعال فقا نستخدم دلوقتي عشان نعرض البيانات بتاعتنا
+[93.2 --> 97.1]  ريس بمنتهى البساطة. يا دوباك هتكتب احنا بنفكر بعض اهوات
+[97.1 --> 101.0]  بالحوكس اللي احنا ايه ذكرناه. فهنمسك كده هو ترائز. تاخد مننا
+[101.0 --> 104.6]  ارو فانكشن وبتاخد مننا ايه? فبالتالي هوت الموضوع مفيش ابسط
+[104.6 --> 108.3]  منه. بتاعتنا يا. ونشوف هي بقى هتعتمد على ايه بالزبط. في الحالة
+[108.3 --> 111.8]  بتاعتنا احنا عايزين نعتمد على كل فاحنا بمنتهاء البساطة هنسيب
+[111.8 --> 115.2]  الريفو. تعال هنا بمنتهاء البساطة كده هوت عايزين نروح عاملين ايه
+[115.2 --> 119.9]  موضوع ده. حلو. فكده بتاعتنا هتتعرض مرة واحدة بس. تعال بس نشيل واحد ده
+[120.0 --> 123.7]  والبيانات بتاعتنا دلوقتي هتتعرض مرة واحدة بس في الصفحة. تعالك
+[123.7 --> 128.9]  نروح على بتاعنا ونعمل بص كده عندنا ارية هيت زي الفل والارية
+[128.9 --> 132.1]  دي هتلاقي فقال البيانات بتاعتك والدني دي. وتقدر بقى تعمل ماب
+[132.1 --> 135.3]  عليها وتلف وتعرض البيانات دي في الصفحة بتاعتك والكلام ده كله
+[135.3 --> 137.9]  هنجيله بازن الله ما تقلقش. الفكرة بس النهاردة ان احنا
+[137.9 --> 142.2]  عاوزين نتعلم ازاي نعمل خاصة بنا. طيب تعالك بقى رايز نعرف موضوع
+[142.2 --> 146.2]  القسطم هوك ده بقى هيتعمل ازاي? اي رأيك لو انا عندي شوية كده
+[146.2 --> 151.3]  حلوة كتير في بتاعي. فانت يعني بالمنطق هتيجي تبوص شكل بتاعك
+[151.3 --> 156.0]  وكل شوية تروح عامل انت لو عملت اتنين تلاتة بس هتلاقي بتاع شكله
+[156.0 --> 159.1]  كبير قوي. وده مش هيبقى كليل ولا اي حاجة. شايف? المنظر بقى شكل
+[159.1 --> 163.0]  وحش قوي. انت متخيل ده بس في موضوع طيب لو في اي حاجة تانية او
+[163.0 --> 167.2]  تاني احنا اصلا في بنحاول نقلل كل حاجة على قد منقدر. عشان كده
+[167.2 --> 170.8]  ورحة سواء عمل لك الهوكس وكمان عمل لك الكمبوننت بحيز انك تقلل
+[170.8 --> 173.6]  بقى الكود هنا على قد ما تقدر خالص يعني. تهط كل حاجة في
+[173.6 --> 185.8] 
+[185.8 --> 189.1]  عايز تسميها اي اسم يا رايس براحتك ايش حياتك فيها. فانا مسلا
+[189.1 --> 194.2]  هسميها ايه? هسميها يوز محمد هسميها اي حاجة انا عايزها براحتنا.
+[194.2 --> 197.5]  خلاص وانت برضو براحتك سمي الاسم اللي انت عاوزه. فنروح بقى
+[197.5 --> 202.4]  ونعمل زي ما احنا متعاودين خالص يعني. وبعدين نروح جايبين
+[202.4 --> 205.1]  الحاجة اللي احنا عملناها جوا الاب. هفهمك برضو ديني واحدة
+[205.1 --> 207.6]  واحدة بمنطقة البساطة الوقت. طبعا احنا مش محتاجين السطر ده
+[207.6 --> 211.5]  خالص. مش محتاجينه في اي حاجة. وي لازم يكون الاسم ده هو تأوله
+[211.5 --> 214.8]  كابتال. يعني لازم الاسم اللي انت عامله ده. والفنكشن ده
+[214.8 --> 218.3]  لازم يكون كابتال اول وكده. عشان ما ازهر لكش مشكلة ويقعد يقول
+[218.3 --> 222.5]  لك ايه بقى مش عارف ده الكلام ده. حلوة او او الكلام ده يا رايز.
+[222.5 --> 226.0]  احنا مش محتاجين طبعا الريترن دلوقتي وهقول لك ليه? ركز بس
+[226.0 --> 229.7]  معي واحدة واحدة. وهنجي كده عندي الاب وناخد بتاعتنا ديت.
+[229.7 --> 234.1]  ونروح حطنها جوه الكاسطم هناه. طبعا لسه مستداياتش فوق. فعشان
+[234.1 --> 237.2]  كده جايب عليها على محمرة كده تحت. فيدوبك بس ايه? هنمسى حرف
+[237.2 --> 239.9]  ونحطها تاني وبعدين نضغط فكده هو
+[240.0 --> 243.7]  بمنتهى البسطة. حلو حلو قوي يا ريس والله دلوقتي الملامح بدأت
+[243.7 --> 248.2]  ها توضح واحدة واحدة. طيب ركز معي واحدة واحدة. انا عايز النتيجة
+[248.2 --> 253.1]  اللي جالي من هو تتخزن لي في طيب فهروح عامل ايه? هستخدم
+[253.1 --> 256.6]  ركز معي واحدة واحدة والله المواضيع ما فيش ابسط منه. فبرضه
+[256.6 --> 261.1]  هعمل باي اسم انا عاوزه. مسلا يا عم اكس اهو. وبعدين هروح
+[261.1 --> 264.9]  عامل ايه? هعمل ست اكس. كلام جميل وزي العسل والله ما فيش ابسط
+[264.9 --> 268.9]  منه. وبعدين نروح عاملين ايه? نروح عاملين برضو هو هيستدعى لك
+[268.9 --> 272.1]  فوق اهوات بمنتهى البساطة. طيب ركز معي بقى يا صديق. دلوقتي
+[272.1 --> 275.7]  المفروض الفيتش دي هترجع لي ايه? زي ما شوفنا اصلا في الكونسول
+[275.7 --> 281.8]  رجعت لي فبالتالي اللي انا هستقبله في بتاعتي مش رقم. خلاص?
+[281.8 --> 286.2]  فهنستقبل هنا ونحط فضية يعني انا دلوقتي بقى عايز اعمل ايه?
+[286.2 --> 292.3]  عايز اخزن دهوت في بتاعتي. فهعملها ازاي? هنروح مسكين بتاعتنا
+[292.3 --> 308.2] 
+[308.2 --> 312.0]  بتاعة دي. الكلام لحد دلوقتي زي العسل. حلوة اوي. بس حتة
+[312.0 --> 315.4]  دي مش ديناميك لحد دلوقتي يا عمام محمد. انا عايز استقبل
+[315.4 --> 319.0]  اللينك كبرامتر. بحيس ان هو يجي لي هنا البرامتر بتاعي احطه في
+[319.0 --> 322.9]  الفيتش وشكرا. فبالتالي هغير الحتة دي وخليها برضو ايه كبرامتر يعني.
+[322.9 --> 327.1]  فمسلا هسمي دي ار ال هسميه هسميه اي حاجة انت عاوزها براحتك. انا
+[327.1 --> 330.7]  مسلا هسميه وبعدين استقبلنا البرامتر بتاعنا في الحتة دي.
+[330.7 --> 335.1]  حلوة اوي اوي الكلام ده. طيب تعال بقى عند ونشوف العظمة. والله
+[335.1 --> 337.9]  هتشوف العظمة دلوقتي. احنا شلنا الكلام ده كله هو توديني
+[337.9 --> 342.1]  اتنظفته زي الفل. يا دوبك. والله يا دوبك يا ريس. هتروح عامل ايه?
+[342.1 --> 346.4]  هتروح عمل كاستماهيت وهو استدعالك فوق هيت بالاوتو ام بورد وبعدين
+[346.4 --> 350.6]  تروح هتطلها ايه يا رايس هو بيقول لك انا عايز خلاص فيهدوبك
+[350.6 --> 355.6]  هتحط لها بس بتاعي فهتيجي هنا رايس وتروح مسك دهوه وتروح هتطلها
+[355.6 --> 359.9]  بمنطقة البساطة طيب الكلام لحد دلوقتي جميل اوي طيب دلوقتي انا عايز اخد
+[360.0 --> 363.1]  داتة اللي جوه هنا عشان ابدأ اعرضها بمنطقة البساطة. هتاخدها
+[363.1 --> 367.3]  ازاي? عندنا حاجة اسمها ولو انت متعرفش حاجة عنها لازم تسمع
+[367.3 --> 371.0]  فيديو خلاص علشان الموضوع هنا مهم جدا اصلا في الريئات. هنعتمد
+[371.0 --> 373.9]  عليه بشكل كبير جدا في شغلنا اصلا. هنعمل ايه بالدستركشنج بقى?
+[373.9 --> 376.6]  هنسحب من الاخر الداة اللي هي موجودة عندنا دي. فهنعملها
+[376.6 --> 381.8]  ازاي? هنروح عاملين ونعرف اي بس ده هيكون جوه بتوع اي? بتوع
+[381.8 --> 385.5]  الري. خلاصوا هنعمل مسلا الفاريبل ده يكون اسمه ايه مسلا يكون تي.
+[385.5 --> 388.9]  مفيش اي مشكلة. وبمنطقة البساطة رايس اكي ان عندك مسورتين مية
+[388.9 --> 392.0]  بالزبط. هل من المنطق ان عندك المسورة الاولينية راح هتطلها
+[392.0 --> 396.1]  مثلا مربع مقفول او تحطي لها اي شكل تاني غير المسورة. هل من
+[396.1 --> 399.4]  المنطق اللي المية تعدي سليمة حتى له هتطلها مربع يعمل. فكده
+[399.4 --> 402.6]  المية اصلا هتطلع من الجوانب. صح والله غلط? اكيد هتطلع من
+[402.6 --> 405.9]  الجوانب. احنا عاوزين مسورة بشكل داية بحيث ان هي المية تطلع من
+[405.9 --> 409.2]  هنا تروح دخلة في الناحية التانية. نفس الفكرة بالزبط. انا هعمل
+[409.2 --> 413.6]  شكل وهقول له بمنتهى البساطة ان شكل الري اللي جالك من هنا هو
+[413.6 --> 427.3] 
+[427.3 --> 430.8]  فيزبط معاك بشكل جدا ان شاء الله. خلاصه هنعمل بس اليساوة دي
+[430.8 --> 434.1]  ونقدر بقى نستخدم ايه? هنقدر نستخدم الموضوع بتاعنا ده. او
+[434.1 --> 438.4]  بتاعتنا دي. دي اللي جاء لنا منين? اللي جاء لنا من هنا. بفكرة ايه?
+[438.4 --> 443.0]  بفكرة. وبعدين نبدأ نعرض بتاعتنا جوة البرنامج بتاعنا مفيش اي
+[443.0 --> 446.7]  مشكلة رايس والله بص. وبعدين نبدأ بتاعتنا جوة البرنامج
+[446.7 --> 450.0]  بتاعنا مفيش اي مشكلة. ركز معايا كده واحدة واحدة. كده
+[450.0 --> 453.4]  الكنسل بتطلق لتي بازن الله هتتعرض وهتبقى زي الفول. لكده
+[453.4 --> 456.9]  برضه نبص بصة. ونعمل كده بسيط. الداتا بتاعتنا جات حية زي
+[456.9 --> 459.7]  المرة اللي فاتت بالزبط. بس الفكرة ان احنا هنا عملنا اي يا رايس?
+[459.7 --> 464.0]  عملنا هنا شفتوا السطور اللي فاتت كلها لخصناها السطر واحد بس
+[464.0 --> 469.0]  اسمه اتمنى صديقكم فهمت الفكرة بتاعت طبعا انت مش
+[469.0 --> 473.5]  هستخدم عشان تجيب بيانات بس لا يا ريس انت اي مشكلة هتقابلك في
+[473.5 --> 477.9]  البروشيكتر بتاعك وعايز نعملها ابدع انت فيها بقى وعيش حياتك
+[477.9 --> 479.9]  فيها واعمل وزبطها.
+[480.0 --> 482.0]  وحصلنا كده وهندلهلنا وهتبقى زي الفل
+[482.0 --> 484.0]  هنفهمتك الفكرة بتاعت القاسطم هوك بمثال
+[484.0 --> 486.0]  مش شارط تستخدم نفس المثال بالزبط
+[486.0 --> 488.0]  لا يا رايس انا هسيب لك الابداعين تبقى
+[488.0 --> 490.0]  بس اهم حاجة تكون فهمت الفكرة بتاعتها
+[490.0 --> 495.0]  اتمنى صديقي تكون فهمت وابل ما في الفيديو مستش صلى على النبي ويه بس كده
