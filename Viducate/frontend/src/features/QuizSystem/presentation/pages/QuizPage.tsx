@@ -12,6 +12,19 @@ import { GeneratingQuizPage } from "./GeneratingQuizPage";
 import { QuizDifficultyModal } from "../componants/QuizDifficultyModal";
 import { useEffect, useState } from "react";
 
+const SECONDS_PER_QUESTION: Record<"easy" | "medium" | "hard", number> = {
+  easy: 30,
+  medium: 50,
+  hard: 75,
+};
+
+const calcTime = (
+  totalQuestions: number,
+  difficulty: "easy" | "medium" | "hard"
+): number => {
+  return (totalQuestions * SECONDS_PER_QUESTION[difficulty]) / 60; // دقايق
+};
+
 export const QuizPage = () => {
   const { state } = useLocation();
   const navigate = useNavigate();
@@ -43,6 +56,10 @@ export const QuizPage = () => {
   const finalQuiz = localQuiz || quiz;
   const questions = finalQuiz?.questions ?? [];
 
+  const calculatedTime = finalQuiz
+    ? calcTime(finalQuiz.total_questions ?? questions.length, difficulty)
+    : 0;
+
   useEffect(() => {
     if (quiz && activeQuizKey) {
       localStorage.setItem(`quiz_data_${activeQuizKey}`, JSON.stringify(quiz));
@@ -64,34 +81,28 @@ export const QuizPage = () => {
     progress,
     isAllAnswered,
     resetQuiz,
-  } = useQuiz(questions, segmentId ? 5 : 15, activeQuizKey ?? "");
-
+  } = useQuiz(questions, calculatedTime, activeQuizKey ?? "");
 
   const handleSelectDifficulty = (
     newDifficulty: "easy" | "medium" | "hard",
   ) => {
     setIsDifficultyModalOpen(false);
 
-
     if (activeQuizKey) {
       resetQuiz();
     }
-
 
     const newQuizKey = `${segmentId}_${newDifficulty}_${Date.now()}`;
     localStorage.setItem(`active_quiz_key_${segmentId}`, newQuizKey);
 
     setDifficulty(newDifficulty);
     setActiveQuizKey(newQuizKey);
-
-  
     generate();
   };
 
   useEffect(() => {
     if (!activeQuizKey) return;
     const hasLocal = !!localStorage.getItem(`quiz_data_${activeQuizKey}`);
-
     if (!hasLocal) {
       generate();
     }
@@ -102,7 +113,6 @@ export const QuizPage = () => {
         <QuizDifficultyModal
           isOpen={isDifficultyModalOpen}
           onClose={() => {
-
             if (!activeQuizKey) navigate(-1);
             else setIsDifficultyModalOpen(false);
           }}
@@ -122,7 +132,6 @@ export const QuizPage = () => {
       className="min-h-screen py-10 relative "
       style={{ background: COLORS.background.light }}
     >
-
       {quizState === "results" && (
         <QuizResultCard
           stats={stats}

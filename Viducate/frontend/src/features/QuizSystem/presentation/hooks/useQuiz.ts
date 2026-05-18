@@ -1,6 +1,6 @@
-import { useState, useEffect } from 'react';
+import { useState, useEffect, useRef } from 'react';
 import { QuizQuestionEntity } from '../../domain/entity/quiz_entity';
-export const useQuiz = (questions: QuizQuestionEntity[], initialTime: number,  quizKey: string) => {
+export const useQuiz = (questions: QuizQuestionEntity[], initialTime: number, quizKey: string) => {
 
   const [currentIndex, setCurrentIndex] = useState(() => {
     const savedKey = localStorage.getItem('quiz_key');
@@ -16,12 +16,7 @@ export const useQuiz = (questions: QuizQuestionEntity[], initialTime: number,  q
     return saved ? JSON.parse(saved) : {};
   });
 
-  const [timeLeft, setTimeLeft] = useState(() => {
-    const savedKey = localStorage.getItem('quiz_key');
-    if (savedKey !== quizKey) return initialTime * 60;
-    const saved = localStorage.getItem(`quiz_time_${quizKey}`);
-    return saved ? parseInt(saved) : initialTime * 60;
-  });
+  const [timeLeft, setTimeLeft] = useState(0);
 
   const [quizState, setQuizState] = useState<'playing' | 'results'>(() => {
     const savedKey = localStorage.getItem('quiz_key');
@@ -36,11 +31,31 @@ export const useQuiz = (questions: QuizQuestionEntity[], initialTime: number,  q
     return localStorage.getItem(`quiz_isReview_${quizKey}`) === 'true';
   });
 
+  const timeInitialized = useRef(false);
+
+  useEffect(() => {
+    if (questions.length === 0 || initialTime === 0) return;
+
+    const savedKey = localStorage.getItem('quiz_key');
+    const savedTime = localStorage.getItem(`quiz_time_${quizKey}`);
+
+    if (savedTime && savedKey === quizKey) {
+      setTimeLeft(parseInt(savedTime));
+    } else {
+      setTimeLeft(initialTime * 60);
+    }
+
+    timeInitialized.current = true;
+  }, [questions.length, initialTime]);
+
+
   useEffect(() => {
     localStorage.setItem('quiz_key', quizKey);
     localStorage.setItem(`quiz_index_${quizKey}`, currentIndex.toString());
     localStorage.setItem(`quiz_answers_${quizKey}`, JSON.stringify(answers));
-    localStorage.setItem(`quiz_time_${quizKey}`, timeLeft.toString());
+    if (timeLeft > 0) {
+      localStorage.setItem(`quiz_time_${quizKey}`, timeLeft.toString());
+    }
     localStorage.setItem(`quiz_state_${quizKey}`, quizState);
     localStorage.setItem(`quiz_isReview_${quizKey}`, isReviewMode.toString());
   }, [quizKey, currentIndex, answers, timeLeft, quizState, isReviewMode]);
@@ -49,17 +64,19 @@ export const useQuiz = (questions: QuizQuestionEntity[], initialTime: number,  q
     if (quizState !== 'playing' || isReviewMode || timeLeft <= 0) return;
 
     const timer = setInterval(() => {
-      setTimeLeft((prev) => (prev <= 1 ? 0 : prev - 1));
+      setTimeLeft((prev) => {
+        if (prev <= 1) {
+          if (timeInitialized.current) {
+            setQuizState('results');
+          }
+          return 0;
+        }
+        return prev - 1;
+      });
     }, 1000);
 
     return () => clearInterval(timer);
   }, [quizState, isReviewMode, timeLeft]);
-
-  useEffect(() => {
-    if (timeLeft === 0 && !isReviewMode && quizState === 'playing') {
-      setQuizState('results');
-    }
-  }, [timeLeft, isReviewMode, quizState]);
 
   const currentQuestion = questions[currentIndex];
 
@@ -75,9 +92,10 @@ export const useQuiz = (questions: QuizQuestionEntity[], initialTime: number,  q
     localStorage.removeItem(`quiz_state_${quizKey}`);
     localStorage.removeItem(`quiz_isReview_${quizKey}`);
     localStorage.removeItem(`quiz_data_${quizKey}`);
+    timeInitialized.current = false;
     setCurrentIndex(0);
     setAnswers({});
-    setTimeLeft(initialTime * 60);
+    setTimeLeft(0);
     setQuizState('playing');
     setIsReviewMode(false);
   };
@@ -85,9 +103,7 @@ export const useQuiz = (questions: QuizQuestionEntity[], initialTime: number,  q
   const calculateScore = () => {
     let score = 0;
     questions.forEach(q => {
-      if (answers[q.question_id] === q.correct_answer) {
-        score++;
-      }
+      if (answers[q.question_id] === q.correct_answer) score++;
     });
     const percentage = Math.round((score / questions.length) * 100);
     return { score, total: questions.length, percentage };
