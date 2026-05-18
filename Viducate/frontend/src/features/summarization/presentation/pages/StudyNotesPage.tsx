@@ -208,7 +208,11 @@ const StudyNotesPage = () => {
 
           <aside className="w-full lg:w-80 space-y-6 lg:sticky lg:top-8">
             <QuizCard />
-            <ToolsCard />
+            <ToolsCard
+  type="study_notes"
+  videoId={Number(videoId)}
+  segmentId={segmentId ? Number(segmentId) : undefined}
+/>
           </aside>
         </div>
       </main>
