@@ -8,6 +8,7 @@ from app.services.auth_service import AuthService
 from app.services.video_service import VideoService
 from app.services.processing_service import run_processing_pipeline
 from app.schemas.video import (
+    SaveVideoRequest,
     VideoUploadURLRequest,
     VideoURLResponse,
     VideoUploadFileResponse,
@@ -183,3 +184,18 @@ def delete_video(
     service = VideoService(db)
     return service.delete_video(current_user.id, video_id)
     
+
+@router.post(
+    "/{video_id}/save",
+    status_code=status.HTTP_200_OK,
+    summary="Save video progress",
+    description="Save completed segments, bookmarks, and current time for a video.",
+)
+def save_video(
+    video_id: int,
+    request: SaveVideoRequest,
+    db: Session = Depends(get_db),
+    current_user=Depends(get_current_user),
+):
+    service = VideoService(db)
+    return service.save_video(current_user.id, request)

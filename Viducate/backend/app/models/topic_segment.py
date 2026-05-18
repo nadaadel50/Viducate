@@ -1,4 +1,4 @@
-from sqlalchemy import Column, Integer, String, Text, TIMESTAMP, ForeignKey, UniqueConstraint
+from sqlalchemy import Boolean, Column, Integer, String, Text, TIMESTAMP, ForeignKey, UniqueConstraint
 from sqlalchemy.orm import relationship
 from sqlalchemy.sql import func
 from .base import Base
@@ -14,6 +14,7 @@ class TopicSegment(Base):
     start_time = Column(Integer, nullable=False)
     end_time = Column(Integer, nullable=False)
     created_at = Column(TIMESTAMP, server_default=func.now())
+    is_completed = Column(Boolean, default=False)
 
     video = relationship("Video", back_populates="segments")
     keypoints = relationship("Keypoint", back_populates="segment", cascade="all, delete-orphan")
