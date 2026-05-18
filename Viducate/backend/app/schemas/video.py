@@ -1,6 +1,7 @@
 from pydantic import BaseModel, HttpUrl, field_validator
-from typing import Optional, Literal
+from typing import List, Optional, Literal
 from datetime import datetime
+
 
 
 class VideoUploadURLRequest(BaseModel):
@@ -71,6 +72,7 @@ class PresignedUploadRequest(BaseModel):
     language: Optional[Literal["en", "ar"]] = "en"
     subject: Optional[str] = None
     content_type: Optional[str] = "video/mp4"
+    file_size: int  
 
     @field_validator("filename")
     @classmethod
@@ -79,4 +81,30 @@ class PresignedUploadRequest(BaseModel):
         ext = "." + v.rsplit(".", 1)[-1].lower() if "." in v else ""
         if ext not in allowed_extensions:
             raise ValueError(f"File type not allowed. Allowed: {', '.join(allowed_extensions)}")
+        return v
+    
+    @field_validator("file_size")
+    @classmethod
+    def validate_file_size(cls, v):
+        if v <= 0:
+            raise ValueError("File size must be greater than 0")
+        max_single_file = 1 * 1024 * 1024 * 1024  # 1 GB
+        if v > max_single_file:
+            raise ValueError("File size exceeds maximum allowed size of 1GB")
+        return v
+    
+
+
+class SaveVideoRequest(BaseModel):
+    video_id: int
+    completed_segment_ids: List[int] = []
+    bookmarks: List[int] = []
+    current_time: int = 0
+    duration: int = 0 
+
+    @field_validator("current_time")
+    @classmethod
+    def validate_current_time(cls, v):
+        if v < 0:
+            raise ValueError("current_time must be greater than or equal to 0")
         return v

@@ -94,6 +94,7 @@ def get_video_sessions(
         for s in sessions
     ]
 
+
 @router.delete("/videos/{video_id}/sessions/{session_id}", status_code=status.HTTP_204_NO_CONTENT)
 def delete_session(
     video_id: int,
