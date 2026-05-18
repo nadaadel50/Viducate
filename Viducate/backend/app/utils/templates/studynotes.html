@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+<html lang="{{ 'ar' if is_arabic else 'en' }}" dir="{{ 'rtl' if is_arabic else 'ltr' }}">
+<head>
+<meta charset="UTF-8"/>
+<style>
+@font-face {
+  font-family: "UI";
+  src: url("/usr/share/fonts/truetype/dejavu/DejaVuSans.ttf");
+  font-weight: 400;
+}
+@font-face {
+  font-family: "UI";
+  src: url("/usr/share/fonts/truetype/dejavu/DejaVuSans-Bold.ttf");
+  font-weight: 700;
+}
+
+@page {
+  size: A4;
+  margin: 16mm 18mm 16mm 18mm;
+  @top-right {
+    font-family: "UI", sans-serif;
+    font-size: 7pt;
+    color: #9CA3AF;
+    content: "viducate.app";
+    padding-top: 5mm;
+  }
+  @bottom-center {
+    font-family: "UI", sans-serif;
+    font-size: 7pt;
+    color: #9CA3AF;
+    content: counter(page) " of " counter(pages);
+    padding-bottom: 4mm;
+  }
+}
+
+* { box-sizing: border-box; margin: 0; padding: 0; }
+
+body {
+  font-family: "UI", sans-serif;
+  font-size: 10pt;
+  line-height: 1.65;
+  color: #111827;
+  background: #F5F6FA;
+}
+
+.page-shell { 
+  width: 100%; 
+  padding-top: 4mm; 
+} 
+
+.main-card { 
+  background: white; 
+  border-radius: 14px; 
+  padding: 10mm; 
+  border: 1px solid #ECECF3; 
+}
+
+/* ─── Status bar ──────────────────────────────────────────────────────── */
+.status-bar {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 4.5mm;
+}
+[dir="rtl"] .status-bar { flex-direction: row-reverse; }
+
+.badge-ready {
+  background: #F0FDF4;
+  color: #15803D;
+  border: 1px solid #BBF7D0;
+  border-radius: 20px;
+  font-size: 7.5pt;
+  font-weight: 700;
+  padding: 1px 8px;
+}
+.badge-time { color: #6B7280; font-size: 8pt; }
+
+/* ─── Title ───────────────────────────────────────────────────────────── */
+.doc-title {
+  font-size: 24pt;
+  font-weight: 700;
+  color: #111827;
+  line-height: 1.2;
+  margin-bottom: 6mm;
+}
+[dir="rtl"] .doc-title { text-align: right; }
+
+/* ─── Introduction ────────────────────────────────────────────────────── */
+.intro-text {
+  font-size: 10pt;
+  line-height: 1.7;
+  color: #6B7280;
+  margin-bottom: 6mm;
+  border-left: 3px solid #E5E7EB;
+  padding-left: 4mm;
+}
+[dir="rtl"] .intro-text {
+  border-left: none;
+  border-right: 3px solid #E5E7EB;
+  padding-left: 0;
+  padding-right: 4mm;
+  text-align: right;
+}
+
+/* ─── Section ─────────────────────────────────────────────────────────── */
+.section-block { margin-bottom: 10mm; page-break-inside: avoid; }
+
+.section-heading {
+  font-size: 15pt;
+  font-weight: 700;
+  color: #111827;
+  margin-bottom: 3mm;
+  border-bottom: 1.5px solid #E5E7EB;
+  padding-bottom: 1.5mm;
+}
+[dir="rtl"] .section-heading { text-align: right; }
+
+/* ─── Explanation ─────────────────────────────────────────────────────── */
+.explanation {
+  font-size: 10pt;
+  line-height: 1.72;
+  color: #374151;
+  margin-bottom: 3mm;
+}
+[dir="rtl"] .explanation { text-align: right; }
+
+/* ─── Inline chips — same yellow for both type=term AND **x** inline ──── */
+.term {
+  background: #fcf09a;
+  color: #111827;
+  font-weight: 400;
+  border-radius: 3px;
+  padding: 0 3px;
+}
+.important { color: #4F46E5; font-weight: 700; font-size: 10pt; }
+
+/* ─── Sub-labels ──────────────────────────────────────────────────────── */
+.sub-label {
+  font-size: 10pt;
+  font-weight: 700;
+  color: #9CA3AF;
+  text-transform: uppercase;
+  letter-spacing: .07em;
+  margin: 3.5mm 0 1.5mm;
+}
+[dir="rtl"] .sub-label { text-align: right; }
+
+/* ─── Definitions ─────────────────────────────────────────────────────── */
+.def-row { margin-bottom: 2.5mm; }
+.def-term { font-size: 10pt; font-weight: 700; color: #4F46E5; margin-bottom: 0.5mm; }
+[dir="rtl"] .def-term { text-align: right; }
+.def-meaning { font-size: 9.5pt; color: #374151; padding-left: 4mm; line-height: 1.6; }
+[dir="rtl"] .def-meaning { padding-left: 0; padding-right: 4mm; text-align: right; }
+
+/* ─── Examples ────────────────────────────────────────────────────────── */
+.example-item {
+  font-size: 9.5pt;
+  color: #374151;
+  margin-bottom: 2mm;
+  padding-left: 14px;
+  position: relative;
+  line-height: 1.6;
+}
+.example-item::before { content: "→"; position: absolute; left: 0; color: #4F46E5; font-weight: 700; }
+[dir="rtl"] .example-item { padding-left: 0; padding-right: 14px; text-align: right; }
+[dir="rtl"] .example-item::before { left: auto; right: 0; content: "←"; }
+
+/* ─── Tables ──────────────────────────────────────────────────────────── */
+.table-title { font-size: 9pt; font-weight: 700; color: #374151; margin: 3mm 0 1.5mm; }
+[dir="rtl"] .table-title { text-align: right; }
+
+table { width: 100%; border-collapse: collapse; font-size: 9pt; margin-bottom: 3mm; }
+thead tr { background: #4F46E5; }
+thead th { color: #fff; font-weight: 700; padding: 2mm 3mm; text-align: left; }
+[dir="rtl"] thead th { text-align: right; }
+tbody tr:nth-child(even) { background: #F5F3FF; }
+tbody td { padding: 2mm 3mm; border-bottom: 1px solid #E5E7EB; color: #374151; vertical-align: top; }
+
+/* ─── Notes ───────────────────────────────────────────────────────────── */
+.notes-box {
+  background: #FFFBEB;
+  border: 1px solid #FDE68A;
+  border-radius: 6px;
+  padding: 3mm 4mm;
+  margin-top: 2mm;
+}
+.note-item {
+  font-size: 9pt;
+  color: #92400E;
+  margin-bottom: 1.5mm;
+  padding-left: 14px;
+  position: relative;
+  line-height: 1.6;
+}
+.note-item::before { content: "💡"; position: absolute; left: 0; font-size: 8pt; }
+[dir="rtl"] .note-item { padding-left: 0; padding-right: 18px; text-align: right; }
+[dir="rtl"] .note-item::before { left: auto; right: 0; }
+
+.body-text,
+.explanation,
+.conclusion-text {
+  color: #4B5563;
+}
+
+.main-card {
+  max-width: 165mm;
+  margin: auto;
+}
+
+/* ─── Footer ──────────────────────────────────────────────────────────── */
+.footer-strip {
+  margin-top: 10mm;
+  border-top: 1px solid #E5E7EB;
+  padding-top: 3mm;
+  display: flex;
+  justify-content: space-between;
+  font-size: 7.5pt;
+  color: #9CA3AF;
+}
+[dir="rtl"] .footer-strip { flex-direction: row-reverse; }
+</style>
+</head>
+<body>
+
+  <div class="page-shell">
+
+    <div class="main-card">      
+      <!-- Status bar -->
+      <div class="status-bar">
+        <span class="badge-ready">● AI Study Notes Ready</span>
+        {% if reading_time %}
+        <span class="badge-time">⏱ {{ reading_time.label }}</span>
+        {% endif %}
+      </div>
+
+      <!-- Title -->
+      <div class="doc-title">{{ content.title | safe }}</div>
+
+      <!-- Introduction -->
+      {% if content.introduction %}
+      <div class="intro-text">{{ content.introduction | safe }}</div>
+      {% endif %}
+
+      <!-- Sections -->
+      {% for section in content.sections %}
+      <div class="section-block">
+
+        <div class="section-heading">{{ section.heading | safe }}</div>
+
+        <!-- Explanation -->
+        {% if section.explanation %}
+        <div class="explanation">
+          {%- for block in section.explanation -%}
+            {%- if block.type == "term" -%}
+              <span class="term">{{ block.text | safe }}</span>
+            {%- elif block.type == "important" -%}
+              <span class="important">{{ block.text | safe }}</span>
+            {%- else -%}
+              {{ block.text | safe }}
+            {%- endif -%}
+          {%- endfor -%}
+        </div>
+        {% endif %}
+
+        <!-- Definitions -->
+        {% if section.definitions %}
+        <div class="sub-label">Definitions</div>
+        {% for d in section.definitions %}
+        <div class="def-row">
+          <div class="def-term">{{ d.term | safe }}</div>
+          <div class="def-meaning">{{ d.meaning | safe }}</div>
+        </div>
+        {% endfor %}
+        {% endif %}
+
+        <!-- Examples -->
+        {% if section.examples %}
+        <div class="sub-label">Examples</div>
+        {% for ex in section.examples %}
+        <div class="example-item">{{ ex | safe }}</div>
+        {% endfor %}
+        {% endif %}
+
+        <!-- Tables -->
+        {% for tbl in section.tables or [] %}
+        {% if tbl.title %}<div class="table-title">{{ tbl.title | safe }}</div>{% endif %}
+        <table>
+          <thead><tr>{% for h in tbl.headers %}<th>{{ h | safe }}</th>{% endfor %}</tr></thead>
+          <tbody>
+            {% for row in tbl.rows %}
+            <tr>{% for cell in row %}<td>{{ cell | safe }}</td>{% endfor %}</tr>
+            {% endfor %}
+          </tbody>
+        </table>
+        {% endfor %}
+
+        <!-- Notes -->
+        {% if section.notes %}
+        <div class="notes-box">
+          {% for note in section.notes %}
+          <div class="note-item">{{ note | safe }}</div>
+          {% endfor %}
+        </div>
+        {% endif %}
+
+      </div>
+      {% endfor %}
+
+      <!-- Footer -->
+      <div class="footer-strip">
+        <span>Viducate · AI-powered learning</span>
+        <span>{{ generated_at }}</span>
+      </div>
+
+    </div>
+
+  </div>
+
+</body>
+</html>

@@ -158,6 +158,11 @@ async def run_processing_pipeline(video_id: int, language: str):
 
         # ── Completed Status ─────────────────────────────────────
         repo.update_status(video_id, "completed")
+
+        # ── Calculate & Save Storage Bytes ───────────────────────
+        storage_bytes = repo.get_video_storage_bytes(video_id)
+        repo.update_storage_bytes(video_id, storage_bytes)
+
         logger.info(f"[Pipeline] Completed: video_id={video_id}")
 
     except Exception as e:
