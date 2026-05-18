@@ -1,11 +1,20 @@
-export function CardLayout(){
+import type { ContinueLearningEntity } from "../../../domain/entity/continue_learning"
+import { formatVideoTime } from "../../utils/format_dashboard_times"
+
+type CardLayoutProps = {
+ 
+    cardData:ContinueLearningEntity
+  
+  
+}
+export function CardLayout({ cardData }: CardLayoutProps){
     return(
          <div className="relative aspect-video bg-slate-200  overflow-hidden rounded-t-2xl">
               <div
                 className="absolute inset-0 bg-cover bg-center transition-transform duration-700 group-hover:scale-110"
                 style={{
                   backgroundImage:
-                    "url(https://images.unsplash.com/photo-1506744038136-46273834b3fb?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8YXN0cm9waHlzaWNzfGVufDB8fDB8fHww&auto=format&fit=crop&w=800&q=60)",
+                    `url(${cardData.thumbnail_url})`,
                 }}
               ></div>
               <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-60 group-hover:opacity-80 transition-opacity"></div>
@@ -20,7 +29,7 @@ export function CardLayout(){
                 <div className="h-full bg-indigo-500 w-[45%] shadow-[0_0_10px_rgba(99,102,241,0.5)]"></div>
               </div>
               <div className="absolute top-3 right-3 bg-black/50 text-white text-[9px] font-bold px-2.5 py-1 rounded-full backdrop-blur-md border border-white/10">
-                12:40 left
+             {`${formatVideoTime(cardData.remainingTime)} left`}
               </div>
             </div>
     )

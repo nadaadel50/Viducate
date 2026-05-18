@@ -1,6 +1,9 @@
 import { COLORS } from "../../../../core/constants";
+import { useDashboard } from "../hooks/use_dashboard";
 
 export function UserCard() {
+  const {data}=useDashboard()
+  const userName=data?.user.name || "Learner";
     return (
          <div
                 style={{ backgroundImage: COLORS.background.premiumGradient }}
@@ -8,7 +11,7 @@ export function UserCard() {
               >
                 <div className="flex flex-col items-start justify-between relative z-10 gap-3">
                   <h2 className="text-4xl font-bold text-slate-800  tracking-tight">
-                    Hello, Alex! ✨
+                    Hello, {userName}! ✨
                   </h2>
         
                   <p className=" text-slate-700  font-medium leading-relaxed">
