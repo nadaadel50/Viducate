@@ -70,7 +70,7 @@
 [280.5 --> 283.8]  Let's take 33 is congruent to 3 mod 10.
 [284.0 --> 284.5]  Is it valid?
 [285.0 --> 289.0]  Yes, it is valid because 33 when it is divided by 10,
-[289.3 --> 292.0]  10, 3 times 30 and the remainder is 3.
+[289.4 --> 292.0]  10, 3 times 30 and the remainder is 3.
 [292.3 --> 309.5]  So this is also a valid congruence isn it Because always remember when we have this number this is divided by this number and whatever we get as the remainder is this number So this is a colloquial way of explanation but still please understand things in this way for now
 [310.4 --> 317.2]  Then 10 is congruent to minus 2 mod 12. How did we get this? Let's say 10 is here, right?
 [317.8 --> 323.5]  We are going to divide 10 by 12. 10, it is divided by 12. How many times 12 takes 10?

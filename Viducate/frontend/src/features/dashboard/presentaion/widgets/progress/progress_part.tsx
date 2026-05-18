@@ -2,7 +2,7 @@ import { ProgressCard } from "./progress_card";
 
 export function ProgressPart() {
   return (
-    <div className="grid grid-cols-3 gap-6  ">
+    <div className="grid grid-cols-3 gap-3  ">
       <ProgressCard
         iconBackGround="blue-500"
         icon="bookmark"

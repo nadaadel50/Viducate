@@ -17,7 +17,7 @@ export function DashboardPage() {
       {/* user card */}
       <UserCard />
 
-      {/* 4 cards */}
+      {/* 3 cards */}
 
       <ProgressPart />
 
@@ -37,9 +37,9 @@ export function DashboardPage() {
 
       {/* contiune learning */}
 
-      <div className="flex flex-col gap-6">
+      <div className="flex flex-col gap-4 ">
         {/* header */}
-        <h2 className="text-3xl font-bold text-slate-900 ">
+        <h2 className="text-2xl font-bold text-slate-900 ">
           Continue Learning
         </h2>
 
@@ -57,7 +57,7 @@ export function DashboardPage() {
           />
         </div>
 
-        <div className="grid grid-cols-3 gap-8">
+        <div className="grid grid-cols-3 gap-5">
          <ContinueLearningCard />
          <ContinueLearningCard />
          <ContinueLearningCard />

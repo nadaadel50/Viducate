@@ -1,8 +1,8 @@
 """init
 
-Revision ID: 81b47f67c471
+Revision ID: 35605530fb16
 Revises: 
-Create Date: 2026-05-14 10:16:58.070376
+Create Date: 2026-05-18 14:18:09.634541
 
 """
 from typing import Sequence, Union
@@ -12,7 +12,7 @@ import sqlalchemy as sa
 
 
 # revision identifiers, used by Alembic.
-revision: str = '81b47f67c471'
+revision: str = '35605530fb16'
 down_revision: Union[str, Sequence[str], None] = None
 branch_labels: Union[str, Sequence[str], None] = None
 depends_on: Union[str, Sequence[str], None] = None
@@ -66,6 +66,11 @@ def upgrade() -> None:
     sa.Column('upload_date', sa.TIMESTAMP(), server_default=sa.text('now()'), nullable=True),
     sa.Column('created_at', sa.TIMESTAMP(), server_default=sa.text('now()'), nullable=True),
     sa.Column('content_hash', sa.String(length=64), nullable=True),
+    sa.Column('file_size', sa.BigInteger(), nullable=True),
+    sa.Column('storage_bytes', sa.BigInteger(), nullable=True),
+    sa.Column('current_time', sa.Integer(), nullable=True),
+    sa.Column('last_watched_at', sa.TIMESTAMP(), nullable=True),
+    sa.Column('bookmarks', sa.JSON(), nullable=True),
     sa.ForeignKeyConstraint(['user_id'], ['user.id'], ondelete='CASCADE'),
     sa.PrimaryKeyConstraint('vid')
     )
@@ -113,6 +118,7 @@ def upgrade() -> None:
     sa.Column('start_time', sa.Integer(), nullable=False),
     sa.Column('end_time', sa.Integer(), nullable=False),
     sa.Column('created_at', sa.TIMESTAMP(), server_default=sa.text('now()'), nullable=True),
+    sa.Column('is_completed', sa.Boolean(), nullable=True),
     sa.ForeignKeyConstraint(['vid_id'], ['video.vid'], ondelete='CASCADE'),
     sa.PrimaryKeyConstraint('segment_id'),
     sa.UniqueConstraint('vid_id', 'segment_number', name='uq_vid_segment')
