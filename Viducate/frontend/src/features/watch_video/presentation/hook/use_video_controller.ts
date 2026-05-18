@@ -1,6 +1,7 @@
 import { useRef, useState } from "react";
 import type { Marker } from "../types/mark_parms";
 import { StuckReasons } from "../types/stuck_reason";
+import { useLearningSession } from "../../../../core/hooks/useLearningContent";
 
 // ── types ─────────────────────────────────────────────────────────────────────
 
@@ -45,6 +46,7 @@ export function useVideoController({
   const [markers, setMarkers] = useState<Marker[]>([]);
   const [showSpeedMenu, setShowSpeedMenu] = useState(false);
   const [playbackRate, setPlaybackRate] = useState(1);
+   const{setDurationTime}=useLearningSession();
 
   const handleStart = () => {
     videoState.setPlayerState((p) => ({
@@ -108,12 +110,16 @@ export function useVideoController({
     }
   };
 
-  const handleLoadedMetadata = () => {
-    videoState.setPlayerState((p) => ({
-      ...p,
-      duration: player.getDuration(),
-    }));
-  };
+ const handleLoadedMetadata = () => {
+  const duration = player.getDuration();
+  
+  videoState.setPlayerState((p) => ({
+    ...p,
+    duration,
+  }));
+
+  setDurationTime(duration); 
+};
 
   const handleSeek = () => {
     const time = player.getCurrentTime();

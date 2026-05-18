@@ -26,6 +26,7 @@ export function LearningSessionProvider({
   );
 
   useEffect(() => {
+    console.log("Current time updated:", currentTime);
     sessionStorage.setItem(STORAGE_KEYS.currentTime, String(currentTime));
   }, [currentTime]);
 
@@ -128,6 +129,12 @@ export function LearningSessionProvider({
     setSeekTo(nextTopic.start_time);
   };
 
+    const [duration, setDuration] = useState<number>(0);
+    function setDurationTime(newDuration: number) {
+      setDuration(newDuration);
+      
+    }
+
   return (
     <LearningSessionContext.Provider
       value={{
@@ -146,6 +153,8 @@ export function LearningSessionProvider({
         completedTopics,
         toggleTopicComplete,
         goToNextTopic,
+        duration,
+        setDurationTime,
       }}
     >
       {children}

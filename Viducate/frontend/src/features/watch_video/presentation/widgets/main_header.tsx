@@ -2,6 +2,10 @@ import { Clock4, Save, FolderUp, Share2 } from "lucide-react";
 
 import { MediaBtn } from "./media_btn";
 import { useLearningSession } from "../../../../core/hooks/useLearningContent";
+import { useSaveVideoProgress } from "../hook/use_save_video";
+import { STORAGE_KEYS } from "../../../../core/constants";
+import { useHandleSaveProgress } from "../hook/use_handle_save_progress";
+import { Toast } from "../../../../core/componants/toast_message";
 
 export function MainHeader() {
   const formatDuration = (start: number, end: number) => {
@@ -12,12 +16,16 @@ export function MainHeader() {
 
     return `${minutes}:${seconds.toString().padStart(2, "0")}`;
   };
-  const { selectedTopic } = useLearningSession();
+  const { selectedTopic} =
+    useLearningSession();
+
+  const { handleSaveProgress, toastMessage, toastType, clearToast } =
+    useHandleSaveProgress();
   return (
     <div className=" pt-12  ">
+      <Toast message={toastMessage} type={toastType} onClose={clearToast} />
       <h1 className="text-4xl font-bold tracking-tight text-slate-900 mb-6 ">
         {selectedTopic?.title}
-       
       </h1>
 
       <div className="flex justify-between items-center mt-2">
@@ -30,18 +38,22 @@ export function MainHeader() {
           </p>
         </div>
 
-        <div className="flex gap-2">
-          <MediaBtn
+        <div className="flex gap-2 ">
+          {/* <MediaBtn
             icon={<FolderUp size={18} />}
             label="Export"
             onClick={() => {}}
-          />
-          <MediaBtn icon={<Save size={18} />} label="Save" onClick={() => {}} />
+          /> */}
           <MediaBtn
+            icon={<Save size={18} />}
+            label="Save"
+            onClick={handleSaveProgress}
+          />
+          {/* <MediaBtn
             icon={<Share2 size={18} />}
             label="Share"
             onClick={() => {}}
-          />
+          /> */}
         </div>
       </div>
     </div>

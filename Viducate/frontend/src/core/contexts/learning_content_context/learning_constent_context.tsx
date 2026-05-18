@@ -29,4 +29,9 @@ export type LearningSessionContextType = {
   completedTopics: Set<number>;  
   toggleTopicComplete: (segmentId: number) => void;
   goToNextTopic: () => void;
+
+
+  duration: number|null;
+  setDurationTime: (duration: number) => void;
+  
 };

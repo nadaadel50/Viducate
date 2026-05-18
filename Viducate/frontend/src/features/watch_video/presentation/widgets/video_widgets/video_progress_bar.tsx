@@ -1,12 +1,13 @@
+import type { TimeMarker } from "../../../domin/entity/mark";
 import type { TopicResponse } from "../../../domin/entity/topic_response";
 
 
-type Marker = { time: number };
+
 
 type Props = {
   progress: number;
   duration: number;
-  markers: Marker[];
+  markers: TimeMarker[];
   topics: TopicResponse[];
   getDuration: () => number;
   onProgressClick: (e: React.MouseEvent<HTMLDivElement>) => void;
