@@ -15,6 +15,7 @@ import { AppRoutesNames } from "../../../../app/routers/routes";
 import { useLearningSession } from "../../../../core/hooks/useLearningContent";
 import { SummaryStyleModal } from "../../../summarization/presentation/componants/SummaryStyleModal";
 import { useState } from "react";
+import { QuizDifficultyModal } from "../../../QuizSystem/presentation/componants/QuizDifficultyModal";
 export function RightContentSection() {
   const navigate = useNavigate();
   const { selectedTopic, toggleTopicComplete, goToNextTopic, videoId } =
@@ -32,7 +33,24 @@ export function RightContentSection() {
       });
     }
   };
+// أضف state للـ quiz modal
+const [isQuizModalOpen, setIsQuizModalOpen] = useState(false);
 
+// أضف handler للفاينل كويز
+const handleFinalQuizSelect = (difficulty: "easy" | "medium" | "hard") => {
+  setIsQuizModalOpen(false);
+  const quizKey = `video_${videoId}_${difficulty}_${Date.now()}`;
+  localStorage.setItem(`active_quiz_key_video_${videoId}`, quizKey);
+
+  navigate(`/quiz/video/${videoId}`, {
+    state: {
+      difficulty,
+      videoId,
+      segmentId: null,   // null = video mode
+      quizKey,
+    },
+  });
+};
   return (
     <div className="min-h-screen w-full flex flex-col justify-center items-center">
       {/* centered container */}
@@ -79,11 +97,20 @@ export function RightContentSection() {
       <div className="w-full border-t border-slate-200 bg-white/80 backdrop-blur p-4 sticky bottom-0 ">
         <div className="grid grid-cols-2 gap-3">
           <FinalGeneratedBtn
-            variant="quiz"
-            icon={<FileQuestion size={20} />}
-            label="Final Quiz"
-            onClick={() => {}}
-          />
+  variant="quiz"
+  icon={<FileQuestion size={20} />}
+  label="Final Quiz"
+  onClick={() => {
+    const savedKey = localStorage.getItem(`active_quiz_key_video_${videoId}`);
+    if (savedKey) {
+      navigate(`/quiz/video/${videoId}`, {
+        state: { videoId, segmentId: null, quizKey: savedKey },
+      });
+    } else {
+      setIsQuizModalOpen(true);
+    }
+  }}
+/>
           <FinalGeneratedBtn
             variant="summary"
             icon={<FileText size={20} />}
@@ -112,6 +139,11 @@ export function RightContentSection() {
         onClose={() => setIsSummaryModalOpen(false)}
         onSelect={handleSummarySelect}
       />
+      <QuizDifficultyModal
+  isOpen={isQuizModalOpen}
+  onClose={() => setIsQuizModalOpen(false)}
+  onSelect={handleFinalQuizSelect}
+/>
     </div>
     
   );
