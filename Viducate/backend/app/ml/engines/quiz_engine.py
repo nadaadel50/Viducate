@@ -10,16 +10,42 @@ logger = logging.getLogger(__name__)
 MODEL = "llama-3.3-70b-versatile"
 
 DIFFICULTY_CONFIGS = {
-    "easy":   {"num_questions": 5,  "description": "basic recall and definition questions"},
-    "medium": {"num_questions": 7,  "description": "understanding and application questions"},
-    "hard":   {"num_questions": 10, "description": "analysis, evaluation, and synthesis questions"},
+    "easy":   {"description": "basic recall and definition questions",   "subtopics_multiplier": 1.0},
+    "medium": {"description": "understanding and application questions", "subtopics_multiplier": 1.5},
+    "hard":   {"description": "analysis, evaluation, and synthesis questions", "subtopics_multiplier": 2.0},
 }
 
-# DIFFICULTY_CONFIGS = {
-#     "easy":   {"num_questions": 5,  "min": 3,  "max": 10,  "description": "basic recall and definition questions"},
-#     "medium": {"num_questions": 7,  "min": 3,  "max": 10,  "description": "understanding and application questions"},
-#     "hard":   {"num_questions": 10, "min": 3,  "max": 10,  "description": "analysis, evaluation, and synthesis questions"},
-# }
+SEGMENT_MIN_QUESTIONS = 3
+SEGMENT_MAX_QUESTIONS = 10
+VIDEO_MAX_QUESTIONS   = 30
+
+
+def _calc_segment_questions(num_subtopics: int, duration_seconds: int, difficulty: str) -> int:
+    """
+    Dynamically calculates how many questions to generate for a segment.
+    Base: 1 question per subtopic, scaled by difficulty multiplier.
+    Also adds 1 question per every 2 minutes of content.
+    Clamped between SEGMENT_MIN_QUESTIONS and SEGMENT_MAX_QUESTIONS.
+    """
+    multiplier  = DIFFICULTY_CONFIGS[difficulty]["subtopics_multiplier"]
+    base        = round(num_subtopics * multiplier)
+    time_bonus  = duration_seconds // 120          # +1 per 2 minutes
+    total       = base + time_bonus
+    return max(SEGMENT_MIN_QUESTIONS, min(SEGMENT_MAX_QUESTIONS, total))
+
+
+def _calc_video_questions(segments: list[dict], difficulty: str) -> int:
+    """
+    Dynamically calculates total questions for a full-video quiz.
+    Sums estimated questions per segment, capped at VIDEO_MAX_QUESTIONS.
+    """
+    total = 0
+    for seg in segments:
+        num_subtopics   = len(seg.get("subtopics", []))
+        duration        = seg.get("end_time", 0) - seg.get("start_time", 0)
+        total          += _calc_segment_questions(num_subtopics, duration, difficulty)
+    return min(VIDEO_MAX_QUESTIONS, total)
+
 
 
 def _get_client() -> Groq:
@@ -243,13 +269,10 @@ def generate_segment_quiz(
     difficulty: str,
     language: str,
     segment_start_time: int,
+    segment_end_time: int = 0,     
 ) -> list[dict]:
-    """
-    Generates MCQ questions for a single segment.
-    Returns a list of validated question dicts.
-    No caching — always fresh.
-    """
-    num_q = DIFFICULTY_CONFIGS.get(difficulty, DIFFICULTY_CONFIGS["medium"])["num_questions"]
+    duration = max(0, segment_end_time - segment_start_time)
+    num_q    = _calc_segment_questions(len(subtopics), duration, difficulty)
 
     prompt = _build_segment_prompt(
         segment_title=segment_title,
@@ -302,8 +325,8 @@ def generate_video_quiz(
 
     For long videos (>5 segments) we split into chunks and merge.
     """
-    questions_per_segment = 2 if difficulty == "easy" else 3 if difficulty == "medium" else 4
-
+    total_target          = _calc_video_questions(segments, difficulty)
+    questions_per_segment = max(1, total_target // max(len(segments), 1))
     # Split into chunks of 4 segments to avoid token limits
     CHUNK_SIZE = 4
     all_questions: list[dict] = []

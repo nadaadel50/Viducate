@@ -154,13 +154,14 @@ class QuizService:
         
         raw_questions, quality = run_with_quality_retry(
         generator_fn=lambda seg=segment, subs=subtopics_data: generate_segment_quiz(
-            segment_title=seg.title,
-            main_topic=seg.main_topic or seg.title,
-            subtopics=subs,
-            difficulty=difficulty,
-            language=language,
-            segment_start_time=seg.start_time,
-        ),
+        segment_title=seg.title,
+        main_topic=seg.main_topic or seg.title,
+        subtopics=subs,
+        difficulty=difficulty,
+        language=language,
+        segment_start_time=seg.start_time,
+        segment_end_time=seg.end_time,     
+    ),
         score_fn=lambda result, seg=segment: score_feature_vs_segmentation(
             feature_text=extract_text_from_quiz(result),
             segment=seg,
