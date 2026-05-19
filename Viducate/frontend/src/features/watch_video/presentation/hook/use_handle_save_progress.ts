@@ -13,24 +13,28 @@ export function useHandleSaveProgress() {
     "info",
   );
 
-  const { selectedTopic, videoId, completedTopics, duration, currentTime } =
-    useLearningSession();
+  const {
+    selectedTopic,
+    videoId,
+    completedTopics,
+    duration,
+    currentTime,
+    marks,
+  } = useLearningSession();
 
   const { saveVideoProgress, isSavingProgress } = useSaveVideoProgress();
 
   function handleSaveProgress() {
-    console.log("the time is",currentTime)
     if (!selectedTopic || !videoId || !duration) return;
 
-    const bookmarks = sessionStorage.getItem(STORAGE_KEYS.marks)
-      ? JSON.parse(sessionStorage.getItem(STORAGE_KEYS.marks)!)
-      : [];
+    console.log("Completed Topics:", completedTopics);
+    console.log("Marks:", marks);
 
     saveVideoProgress(
       {
         video_id: videoId,
         completed_segment_ids: Array.from(completedTopics),
-        bookmarks,
+        bookmarks: marks,
         current_time: currentTime,
         duration: duration,
       },

@@ -7,12 +7,20 @@ export type VideoResponseDto = {
   video_id: number;
   video_url: string;
   segments: TopicResponseDto[];
+  title: string;
+  current_time: number;
+  last_watched_at: string;
+  bookmarks: number[];
 };
 
 export const mapVideoDtoToEntity = (dto: VideoResponseDto): VideoResponse => {
   return new VideoResponse(
     dto.video_url,
     dto.video_id,
+    dto.title,
+    dto.current_time,
+    dto.last_watched_at,
+    dto.bookmarks,
     dto.segments.map(
       (topic) =>
         new TopicResponse(
@@ -22,6 +30,7 @@ export const mapVideoDtoToEntity = (dto: VideoResponseDto): VideoResponse => {
           topic.end_time,
           topic.main_topic,
           topic.title,
+          topic.is_completed,
           topic.sub_topics.map(
             (subTopic) => new SubTopic(subTopic.name, subTopic.start_time),
           ),

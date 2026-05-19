@@ -54,7 +54,7 @@ class DashboardService:
         # --- Used Storage --------------------------------------------
         used_storage = sum(
             v.storage_bytes for v in videos 
-            if v.storage_bytes
+            if v.storage_bytes and v.processing_status == "completed"
         )
         used_r2_storage = self.video_repo.get_user_r2_storage_bytes(user_id)
 
@@ -62,6 +62,10 @@ class DashboardService:
         # --- Videos List --------------------------------------------
         videos_list = []
         for v in videos:
+            # Only show completed videos
+            if v.processing_status != "completed":
+                continue
+
             total_segments = len(v.segments)
             completed_segments = sum(1 for s in v.segments if s.is_completed)
             progress = int((completed_segments / total_segments) * 100) if total_segments > 0 else 0
@@ -81,7 +85,7 @@ class DashboardService:
                 "video_type": "upload" if v.s3_key else "url", 
             })
 
-        total_videos = len(videos)
+        total_videos = len(videos_list)
 
         return {
             "user": {

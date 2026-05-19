@@ -1,6 +1,5 @@
 import { useQueryClient } from "@tanstack/react-query";
 import { deleteVideoUseCase } from "../../../../../core/di/upload_video_container";
-import { useLearningSession } from "../../../../../core/hooks/useLearningContent";
 import type { ContinueLearningEntity } from "../../../domain/entity/continue_learning";
 import { formatTimeToHoursMinutes } from "../../utils/format_dashboard_times";
 import { useState } from "react";
@@ -20,29 +19,23 @@ export function CardDetails(props: CardDetailsProps) {
 
   const handleDelete = async (videoId: number | null) => {
     if (!videoId) return;
-    const result= await deleteVideoUseCase.deleteVideo(videoId);
-    if(result.success){
+    const result = await deleteVideoUseCase.deleteVideo(videoId);
+    if (result.success) {
       await queryClient.invalidateQueries({
         queryKey: ["dashboard-data"],
       });
-         setToast({
+      setToast({
         message: "Video deleted successfully",
         type: "success",
       });
-      
-    }
-    else{
-          setToast({
+    } else {
+      setToast({
         message: "Failed to delete video",
         type: "error",
       });
     }
-
   };
-  
 
-    
-  
   return (
     <div className="p-4 ">
       {toast && (
@@ -60,9 +53,7 @@ export function CardDetails(props: CardDetailsProps) {
         {props.cardData.duration && (
           <div className="flex items-center gap-3 text-xs text-slate-500">
             <span className="bg-indigo-50 text-indigo-700 px-2 py-0.5 rounded text-[10px] font-semibold">
-              {Math.round(
-                (props.cardData.currentTime / props.cardData.duration) * 100,
-              )}
+              {props.cardData.progress}
               % Complete
             </span>
 

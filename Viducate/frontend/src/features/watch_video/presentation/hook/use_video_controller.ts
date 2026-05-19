@@ -2,6 +2,7 @@ import { useRef, useState } from "react";
 import type { Marker } from "../types/mark_parms";
 import { StuckReasons } from "../types/stuck_reason";
 import { useLearningSession } from "../../../../core/hooks/useLearningContent";
+import { STORAGE_KEYS } from "../../../../core/constants";
 
 // ── types ─────────────────────────────────────────────────────────────────────
 
@@ -43,10 +44,10 @@ export function useVideoController({
 }: ControllerProps) {
   const pauseStartRef = useRef<number | null>(null);
   const lastSeekTimeRef = useRef<number | null>(null);
-  const [markers, setMarkers] = useState<Marker[]>([]);
+  // const [markers, setMarkers] = useState<Marker[]>([]);
   const [showSpeedMenu, setShowSpeedMenu] = useState(false);
   const [playbackRate, setPlaybackRate] = useState(1);
-   const{setDurationTime}=useLearningSession();
+   const{setDurationTime,handleSetMarks,handleAddMark}=useLearningSession();
 
   const handleStart = () => {
     videoState.setPlayerState((p) => ({
@@ -135,9 +136,8 @@ export function useVideoController({
   };
 
   const handleAddMarker = () => {
-    setMarkers([...markers, { time: player.getCurrentTime() }]);
-  };
-
+  handleAddMark(player.getCurrentTime()); 
+};
   return {
     handleStart,
     handleToggle,
@@ -147,7 +147,6 @@ export function useVideoController({
     handlePlay,
     handlePause,
     handleSpeedChange,
-    markers,
     showSpeedMenu,
     playbackRate,
     setPlaybackRate,

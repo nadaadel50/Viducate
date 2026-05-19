@@ -247,6 +247,33 @@ class VideoService:
         for segment in video.segments:
             if segment.segment_id in request.completed_segment_ids:
                 segment.is_completed = True
+            else:
+                segment.is_completed = False  
+
+        video.bookmarks = request.bookmarks
+
+        video.current_time = request.current_time
+        
+        video.duration = request.duration
+
+        video.last_watched_at = func.now()
+
+        self.db.commit()
+        
+        logger.info(f"Video saved: video_id={request.video_id}, user_id={user_id}")
+        
+        return {"message": "Video saved successfully"}
+    
+        video = self.video_repo.get_by_id(request.video_id)
+        if not video:
+            raise HTTPException(status_code=status.HTTP_404_NOT_FOUND, detail="Video not found")
+        if video.user_id != user_id:
+            raise HTTPException(status_code=status.HTTP_403_FORBIDDEN, detail="Not authorized")
+
+
+        for segment in video.segments:
+            if segment.segment_id in request.completed_segment_ids:
+                segment.is_completed = True
 
         video.bookmarks = request.bookmarks
 

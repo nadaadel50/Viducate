@@ -29,12 +29,19 @@ export type LearningSessionContextType = {
     React.SetStateAction<number | null>
   >;
   completedTopics: Set<number>;  
+  handleSetCompletedTopics: (segmentIds: number[]) => void;
   toggleTopicComplete: (segmentId: number) => void;
   goToNextTopic: () => void;
 
 
   duration: number|null;
   setDurationTime: (duration: number) => void;
+
+  marks: number[];
+  handleSetMarks: (marks: number[]) => void;
+  handleAddMark(time: number): void;
+  hasUnsavedChanges: boolean;
+  handleSetHasUnsavedChanges: (hasChanges: boolean) => void;
 
   
 };

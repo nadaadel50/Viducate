@@ -16,7 +16,7 @@ type UploadLinkSectionProps={
 }
 
 export function UploadLinkSection({handleError}:UploadLinkSectionProps) {
-  const { setVideoId,setVideoTitle  } = useLearningSession();
+  const { setVideoId  } = useLearningSession();
   
   const { url, handleUrlChange, linkError, handlePaste } = useLinkHandlers();
   const {
@@ -42,7 +42,6 @@ const navigate=useNavigate();
 
       //add hook vedioId
       setVideoId (response.data.videoId); 
-      setVideoTitle(response.data.title)
       
 
     }

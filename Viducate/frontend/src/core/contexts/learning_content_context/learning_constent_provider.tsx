@@ -13,10 +13,10 @@
 // }) {
 //   const [seekTo, setSeekTo] = useState<number | null>(null);
 
-//   const [currentTime, setCurrentTime] = useState<number>(() => {
-//     const saved = sessionStorage.getItem(STORAGE_KEYS.currentTime);
-//     return saved ? Number(saved) : 0;
-//   });
+  // const [currentTime, setCurrentTime] = useState<number>(() => {
+  //   const saved = sessionStorage.getItem(STORAGE_KEYS.currentTime);
+  //   return saved ? Number(saved) : 0;
+  // });
 
 //   const [selectedTopic, setSelectedTopic] = useState<TopicResponse | null>(
 //     () => {
@@ -25,10 +25,10 @@
 //     },
 //   );
 
-  // useEffect(() => {
-  //   console.log("Current time updated:", currentTime);
-  //   sessionStorage.setItem(STORAGE_KEYS.currentTime, String(currentTime));
-  // }, [currentTime]);
+// useEffect(() => {
+//   console.log("Current time updated:", currentTime);
+//   sessionStorage.setItem(STORAGE_KEYS.currentTime, String(currentTime));
+// }, [currentTime]);
 
 //   useEffect(() => {
 //     if (selectedTopic) {
@@ -132,9 +132,8 @@
 //     const [duration, setDuration] = useState<number>(0);
 //     function setDurationTime(newDuration: number) {
 //       setDuration(newDuration);
-      
+
 //     }
-   
 
 //   return (
 //     <LearningSessionContext.Provider
@@ -164,7 +163,7 @@
 //   );
 // }
 
-import { createContext, useEffect, useState } from "react";
+import { createContext, use, useEffect, useState } from "react";
 import type { TopicResponse } from "../../../features/watch_video/domin/entity/topic_response";
 import type { LearningSessionContextType } from "./learning_constent_context";
 import { STORAGE_KEYS } from "../../constants";
@@ -177,6 +176,22 @@ export function LearningSessionProvider({
 }: {
   children: React.ReactNode;
 }) {
+
+   
+
+
+
+
+  const [hasUnsavedChanges, setHasUnsavedChanges] = useState(false);
+
+  useEffect(() => {
+    console.log("Has unsaved changes:", hasUnsavedChanges);
+  }, [hasUnsavedChanges]);
+
+  const handleSetHasUnsavedChanges = (hasChanges: boolean) => {
+    setHasUnsavedChanges(hasChanges);
+  }
+
   const [seekTo, setSeekTo] = useState<number | null>(null);
 
     const [currentTime, setCurrentTime] = useState<number>(() => {
@@ -184,15 +199,15 @@ export function LearningSessionProvider({
     return saved ? Number(saved) : 0;
   });
 
-    useEffect(() => {
-    console.log("Current time updated:", currentTime);
-    sessionStorage.setItem(STORAGE_KEYS.currentTime, String(currentTime));
-  }, [currentTime]);
-
-  const [selectedTopic, setSelectedTopic] =
-    useState<TopicResponse | null>(null);
-
+  useEffect(() => {
   
+  sessionStorage.setItem(STORAGE_KEYS.currentTime, String(currentTime));
+}, [currentTime]);
+
+  const [selectedTopic, setSelectedTopic] = useState<TopicResponse | null>(
+    null,
+  );
+
   const [videoId, setVideoIdState] = useState<number | null>(() => {
     const stored = sessionStorage.getItem(STORAGE_KEYS.video_Id);
     return stored ? Number(stored) : null;
@@ -207,33 +222,30 @@ export function LearningSessionProvider({
     setVideoIdState(id);
   };
 
-  const [videoTitle, setVideoTitle] = useState<string | null>(
-    null,
+  const [videoTitle, setVideoTitle] = useState<string | null>(null);
+
+  const [topics, setTopics] = useState<TopicResponse[] | null>(null);
+
+  const [marks, setMarks] = useState<number[]>([]);
+
+  function handleSetMarks(marks: number[]) {
+    setMarks(marks);
+  }
+  function handleAddMark(time: number) {
+    const newMark = Math.floor(time);
+    const updated = [...marks, newMark];
+    setMarks(updated);
+    setHasUnsavedChanges(true);
+  }
+
+  const [completedTopics, setCompletedTopics] = useState<Set<number>>(
+    new Set(),
   );
 
-  const [topics, setTopics] = useState<TopicResponse[] | null>(
-    null,
-  );
-
- 
-  const [completedTopics, setCompletedTopics] = useState<
-    Set<number>
-  >(() => {
-    const saved = localStorage.getItem(
-      STORAGE_KEYS.completedTopics,
-    );
-
-    if (!saved) return new Set();
-
-    return new Set(JSON.parse(saved));
-  });
-
-  useEffect(() => {
-    localStorage.setItem(
-      STORAGE_KEYS.completedTopics,
-      JSON.stringify([...completedTopics]),
-    );
-  }, [completedTopics]);
+  const handleSetCompletedTopics = (segmentIds: number[]) => {
+    setCompletedTopics(new Set(segmentIds));
+    // setHasUnsavedChanges(true);
+  };
 
   const toggleTopicComplete = (segmentId: number) => {
     setCompletedTopics((prev) => {
@@ -247,14 +259,14 @@ export function LearningSessionProvider({
 
       return next;
     });
+    setHasUnsavedChanges(true);
   };
 
   const goToNextTopic = () => {
     if (!topics || !selectedTopic) return;
 
     const currentIndex = topics.findIndex(
-      (topic) =>
-        topic.segment_id === selectedTopic.segment_id,
+      (topic) => topic.segment_id === selectedTopic.segment_id,
     );
 
     if (currentIndex === -1) return;
@@ -302,6 +314,12 @@ export function LearningSessionProvider({
 
         duration,
         setDurationTime,
+        marks,
+        handleSetMarks,
+        handleAddMark,
+        handleSetCompletedTopics,
+        hasUnsavedChanges,
+        handleSetHasUnsavedChanges,
       }}
     >
       {children}

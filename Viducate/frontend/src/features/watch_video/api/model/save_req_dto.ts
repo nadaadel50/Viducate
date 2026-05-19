@@ -1,4 +1,3 @@
-import type { TimeMarker } from "../../domin/entity/mark";
 import type { SaveVideoReq } from "../../domin/entity/save_video_req";
 
 
@@ -16,7 +15,7 @@ export function mapSaveVideoReqToDto(
   return {
     video_id: entity.video_id,
     completed_segment_ids: entity.completed_segment_ids,
-     bookmarks: entity.bookmarks.map((b) => Math.floor(b.time)),
+     bookmarks: entity.bookmarks.map((b) => Math.floor(b)),
     current_time: Math.floor(entity.current_time),
     duration: Math.floor(entity.duration),
   };
