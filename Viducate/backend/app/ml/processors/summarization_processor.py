@@ -8,29 +8,51 @@ from app.models.video_summary import VideoSummary
 from app.models.video import Video
 from app.ml.engines.summarization_engine import summarize_segment, summarize_full_video
 
+from app.services.quality_service import (
+    score_feature_vs_segmentation,
+    extract_text_from_summary,
+    build_segment_reference_text,
+)
+from app.services.quality_retry import run_with_quality_retry
+
 logger = logging.getLogger(__name__)
 FAILED_PLACEHOLDER = "Summary generation failed."
 
-def _safe_summarize_segment(segment_title, main_topic, subtopics, language):
-    try:
-        result = summarize_segment(segment_title, main_topic, subtopics, language)
-        if not isinstance(result, dict) or "conclusion" not in result:
-            raise ValueError("Invalid response structure from engine")
-        return result, True
-    except Exception as e:
-        logger.error(f"[Summarization] Engine failed for '{segment_title}': {e}")
-        return None, False 
+#*****************************************
+def _load_segment(db: Session, segment_id: int, video_id: int) -> TopicSegment | None:
+    return (
+        db.query(TopicSegment)
+        .options(joinedload(TopicSegment.subtopics))
+        .filter(
+            TopicSegment.segment_id == segment_id,
+            TopicSegment.vid_id     == video_id,
+        )
+        .first()
+    )
+
+#********************************************
 
 
-def _safe_summarize_video(video_title, segment_summaries, language):
-    try:
-        result = summarize_full_video(video_title, segment_summaries, language)
-        if not isinstance(result, dict) or "conclusion" not in result:
-            raise ValueError("Invalid response structure from engine")
-        return result, True
-    except Exception as e:
-        logger.error(f"[Summarization] Full video engine failed for '{video_title}': {e}")
-        return None, False
+# def _safe_summarize_segment(segment_title, main_topic, subtopics, language):
+#     try:
+#         result = summarize_segment(segment_title, main_topic, subtopics, language)
+#         if not isinstance(result, dict) or "conclusion" not in result:
+#             raise ValueError("Invalid response structure from engine")
+#         return result, True
+#     except Exception as e:
+#         logger.error(f"[Summarization] Engine failed for '{segment_title}': {e}")
+#         return None, False 
+
+
+# def _safe_summarize_video(video_title, segment_summaries, language):
+#     try:
+#         result = summarize_full_video(video_title, segment_summaries, language)
+#         if not isinstance(result, dict) or "conclusion" not in result:
+#             raise ValueError("Invalid response structure from engine")
+#         return result, True
+#     except Exception as e:
+#         logger.error(f"[Summarization] Full video engine failed for '{video_title}': {e}")
+#         return None, False
 
 
 def process_single_segment_summary(
@@ -52,15 +74,10 @@ def process_single_segment_summary(
             db.delete(existing)
             db.flush()
 
-    segment = (
-        db.query(TopicSegment)
-        .options(joinedload(TopicSegment.subtopics))
-        .filter(
-            TopicSegment.segment_id == segment_id,
-            TopicSegment.vid_id == video_id,
-        )
-        .first()
-    )
+    #********************************************
+    segment = _load_segment(db, segment_id, video_id)
+    #********************************************
+
     if not segment:
         raise ValueError(f"Segment {segment_id} not found for video {video_id}")
 
@@ -70,17 +87,63 @@ def process_single_segment_summary(
         if st.description
     ]
 
-    content, success = _safe_summarize_segment(
-        segment_title=segment.title,
-        main_topic=segment.main_topic or segment.title,
-        subtopics=subtopics_data,
-        language=language,
+    #********************************************
+    # content, success = _safe_summarize_segment(
+    #     segment_title=segment.title,
+    #     main_topic=segment.main_topic or segment.title,
+    #     subtopics=subtopics_data,
+    #     language=language,
+    # )
+
+    # if not success or content is None:
+    #     logger.warning(f"[Summarization] Segment {segment_id} generation failed, NOT caching.")
+    #     return None
+   
+    # --------------------------------Generate with quality validation vs stored segmentation--------------------------------
+    content, quality = run_with_quality_retry(
+        generator_fn=lambda seg=segment, subs=subtopics_data: summarize_segment(
+            seg.title,
+            seg.main_topic or seg.title,
+            subs,
+            language,
+        ),
+        score_fn=lambda result, seg=segment: score_feature_vs_segmentation(
+            feature_text=extract_text_from_summary(result),
+            segment=seg,
+            content_type="summary",
+        ),
+        label=f"summary segment_id={segment_id}",
     )
-
-    if not success or content is None:
-        logger.warning(f"[Summarization] Segment {segment_id} generation failed, NOT caching.")
+    # ── End quality validation ────────────────────────────────────────────────
+ 
+    if content is None:
+        logger.warning(
+            f"[Summarization] Segment {segment_id} generation failed — not caching"
+        )
         return None
+ 
+    # Persist quality on the segment row
+    current_score = segment.quality_score or 0.0
+    segment.quality_score = max(current_score, quality.get("score", 0.0))
+    segment.quality_flag  = bool(quality.get("flag", False))
+    segment.retry_count   = (segment.retry_count or 0) + quality.get("retries", 0)
+    db.flush()
+ 
+    logger.info(
+        f"[Summarization] Segment {segment_id} "
+        f"quality_score={segment.quality_score:.4f} "
+        f"flag={segment.quality_flag} "
+        f"retries={quality.get('retries', 0)}"
+    )
+ 
+    if quality.get("flag"):
+        logger.warning(
+            f"[Summarization] Segment {segment_id} summary below threshold "
+            f"(score={quality['score']:.4f}) — saving best attempt"
+        )
 
+
+    #********************************************
     new_summary = SegmentSummary(
         segment_id=segment_id,
         content=content,
@@ -146,23 +209,62 @@ def process_all_segment_summaries(
             if st.description
         ]
 
+        
         logger.info(
             f"[Summarization] Generating segment {segment.segment_number}: '{segment.title}'"
         )
-        content, success = _safe_summarize_segment(
-            segment_title=segment.title,
-            main_topic=segment.main_topic or segment.title,
-            subtopics=subtopics_data,
-            language=language,
+        #********************************************
+        # content, success = _safe_summarize_segment(
+        #     segment_title=segment.title,
+        #     main_topic=segment.main_topic or segment.title,
+        #     subtopics=subtopics_data,
+        #     language=language,
+        # )
+
+        # if not success or content is None:
+
+        #     logger.warning(
+        #         f"[Summarization] Segment {segment.segment_id} failed, "
+        #         f"skipping (will retry next request)."
+        #     )
+        #     continue 
+
+        #validation
+        content, quality = run_with_quality_retry(
+            generator_fn=lambda seg=segment, subs=subtopics_data: summarize_segment(
+                seg.title,
+                seg.main_topic or seg.title,
+                subs,
+                language,
+            ),
+            score_fn=lambda result, seg=segment: score_feature_vs_segmentation(
+                feature_text=extract_text_from_summary(result),
+                segment=seg,
+                content_type="summary",
+            ),
+            label=f"summary segment_id={segment.segment_id}",
+        )
+        # ── End quality validation ─────────────────────────────────────────────
+ 
+        if content is None:
+            logger.warning(
+                f"[Summarization] Segment {segment.segment_id} failed — skipping"
+            )
+            continue
+ 
+        # Persist quality
+        current_score = segment.quality_score or 0.0
+        segment.quality_score = max(current_score, quality.get("score", 0.0))
+        segment.quality_flag  = bool(quality.get("flag", False))
+        segment.retry_count   = (segment.retry_count or 0) + quality.get("retries", 0)
+ 
+        logger.info(
+            f"[Summarization] Segment {segment.segment_id} "
+            f"quality_score={segment.quality_score:.4f} "
+            f"flag={segment.quality_flag}"
         )
 
-        if not success or content is None:
-
-            logger.warning(
-                f"[Summarization] Segment {segment.segment_id} failed, "
-                f"skipping (will retry next request)."
-            )
-            continue 
+        #********************************************
 
         new_summary = SegmentSummary(
             segment_id=segment.segment_id,
@@ -216,21 +318,37 @@ def process_video_summary(
             f"cannot generate video summary."
         )
         return None
+    
+    #********************************************
+    # content, success = _safe_summarize_video(
+    #     video_title=video.title,
+    #     segment_summaries=segment_summaries,
+    #     language=language,
+    # )
 
-    content, success = _safe_summarize_video(
-        video_title=video.title,
-        segment_summaries=segment_summaries,
-        language=language,
+    # if not success or content is None:
+    #     # Do NOT save — next call will retry
+    #     logger.warning(
+    #         f"[Summarization] Video summary generation failed for video {video_id}, "
+    #         f"NOT caching."
+    #     )
+    #     return None
+
+    #validation
+    content, _ = run_with_quality_retry(
+        generator_fn=lambda: summarize_full_video(
+            video.title, segment_summaries, language
+        ),
+        score_fn=lambda result: {"score": 1.0, "flag": False, "threshold": 0.30},
+        label=f"video_summary video_id={video_id}",
     )
-
-    if not success or content is None:
-        # Do NOT save — next call will retry
+ 
+    if content is None:
         logger.warning(
-            f"[Summarization] Video summary generation failed for video {video_id}, "
-            f"NOT caching."
+            f"[Summarization] Video summary generation failed — not caching"
         )
         return None
-
+    #********************************************
     video_summary = VideoSummary(
         video_id=video_id,
         content=content,

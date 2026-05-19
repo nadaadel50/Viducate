@@ -46,6 +46,16 @@ def _build_prompt(
         f"Topic: {segment_title}\n"
         f"Key concepts: {topics_line}\n"
         f"{lang_note}\n\n"
+        f"RULES:\n"
+        f"1. Each flashcard must test understanding of a real educational concept.\n"
+        f"2. Answers must be concise and factual.\n"
+        f"3. Do NOT include explanations, just question and answer.\n\n"
+        f"IMPORTANT:\n"
+        f"Do NOT create flashcards about:\n"
+        f"- Introduction, greetings, or opening remarks\n"
+        f"- Conclusions, closing remarks, or farewell content\n"
+        f"- Administrative announcements or homework reminders\n"
+        f"Only create flashcards about actual educational concepts.\n\n"
         f"Return ONLY a JSON array, no extra text:\n"
         f'[{{"question":"...","answer":"...","difficulty":"easy|medium|hard"}}]'
     )
