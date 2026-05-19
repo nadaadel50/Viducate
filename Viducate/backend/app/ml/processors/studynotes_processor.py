@@ -6,6 +6,12 @@ from app.models.video import Video
 from app.models.studynotes import VideoStudyNotes, SegmentStudyNotes
 from app.ml.engines.studynotes_engine import generate_segment_studynotes, generate_video_studynotes
 
+from app.services.quality_service import (
+    score_feature_vs_segmentation,
+    extract_text_from_studynotes,
+)
+from app.services.quality_retry import run_with_quality_retry
+
 logger = logging.getLogger(__name__)
 
 def process_single_segment_studynotes(db: Session, video_id: int, segment_id: int, language: str) -> SegmentStudyNotes | None:
@@ -47,19 +53,66 @@ def process_single_segment_studynotes(db: Session, video_id: int, segment_id: in
         if st.name
     ]
 
-    content = generate_segment_studynotes(
-        segment_title=segment.title,
-        main_topic=segment.main_topic or segment.title,
-        subtopics=subtopics_data,
-        language=language,
-    )
+    #********************************************
+    # content = generate_segment_studynotes(
+    #     segment_title=segment.title,
+    #     main_topic=segment.main_topic or segment.title,
+    #     subtopics=subtopics_data,
+    #     language=language,
+    # )
 
+    # if content is None:
+    #     logger.warning(
+    #         f"[StudyNotesProcessor] Segment {segment_id} generation failed, NOT caching."
+    #     )
+    #     return None
+    
+    # ── Generate with quality validation ─────────────────────────────────────
+    content, quality = run_with_quality_retry(
+        generator_fn=lambda seg=segment, subs=subtopics_data: (
+            generate_segment_studynotes(
+                segment_title=seg.title,
+                main_topic=seg.main_topic or seg.title,
+                subtopics=subs,
+                language=language,
+            )
+        ),
+        score_fn=lambda result, seg=segment: score_feature_vs_segmentation(
+            feature_text=extract_text_from_studynotes(result),
+            segment=seg,
+            content_type="studynotes",
+        ),
+        label=f"studynotes segment_id={segment_id}",
+    )
+    # ── End quality validation ────────────────────────────────────────────────
+ 
     if content is None:
         logger.warning(
-            f"[StudyNotesProcessor] Segment {segment_id} generation failed, NOT caching."
+            f"[StudyNotesProcessor] Segment {segment_id} generation failed "
+            f"— not caching"
         )
         return None
-
+ 
+    # Persist quality on the segment row
+    current_score = segment.quality_score or 0.0
+    segment.quality_score = max(current_score, quality.get("score", 0.0))
+    segment.quality_flag  = bool(quality.get("flag", False))
+    segment.retry_count   = (segment.retry_count or 0) + quality.get("retries", 0)
+    db.flush()
+ 
+    logger.info(
+        f"[StudyNotesProcessor] Segment {segment_id} "
+        f"quality_score={segment.quality_score:.4f} "
+        f"flag={segment.quality_flag} "
+        f"retries={quality.get('retries', 0)}"
+    )
+ 
+    if quality.get("flag"):
+        logger.warning(
+            f"[StudyNotesProcessor] Segment {segment_id} study notes below "
+            f"threshold (score={quality['score']:.4f}) — saving best attempt"
+        )
+    #********************************************
     new_notes = SegmentStudyNotes(
         segment_id=segment_id,
         content=content,
@@ -167,12 +220,23 @@ def process_video_studynotes(db: Session, video_id: int, language: str) -> Video
         for seg in segments
     ]
 
-    content = generate_video_studynotes(
-        video_title=video.title,
-        segments=segments_data,
-        language=language,
+    #********************************************
+    # content = generate_video_studynotes(
+    #     video_title=video.title,
+    #     segments=segments_data,
+    #     language=language,
+    # )
+    content, _ = run_with_quality_retry(
+        generator_fn=lambda: generate_video_studynotes(
+            video_title=video.title,
+            segments=segments_data,
+            language=language,
+        ),
+        score_fn=lambda result: {"score": 1.0, "flag": False, "threshold": 0.28},
+        label=f"video_studynotes video_id={video_id}",
     )
 
+    #********************************************
     if content is None:
         logger.warning(
             f"[StudyNotesProcessor] Video {video_id} generation failed, NOT caching."

@@ -11,7 +11,10 @@ class SegmentSchema(BaseModel):
     end_time: int
     main_topic: str
     title: str
-
+    #********************************************
+    class Config:
+        from_attributes = True
+    #********************************************
 
     @field_validator("segment_number")
     @classmethod
@@ -64,7 +67,13 @@ class SegmentResponse(BaseModel):
     end_time: int
     main_topic: str
     title: str
+    is_completed:bool
     sub_topics: list[SubTopicBriefResponse] = []
+    #********************************************
+    quality_score:  Optional[float] = None
+    quality_flag:   Optional[bool]  = None
+    retry_count:    Optional[int]   = None
+    #********************************************
 
     model_config = {"from_attributes": True}
 
@@ -73,3 +82,23 @@ class VideoSegmentsResponse(BaseModel):
     video_id: int
     video_url: Optional[str]
     segments: List[SegmentResponse]
+
+
+#********************************************
+class SegmentQualityItem(BaseModel):
+    segment_id:     int
+    segment_number: int
+    title:          str
+    quality_score:  Optional[float]
+    quality_flag:   Optional[bool]
+    retry_count:    Optional[int]
+    model_config = {"from_attributes": True}
+
+
+class VideoQualityResponse(BaseModel):
+    video_id:           int
+    total_segments:     int
+    flagged_segments:   int
+    average_score:      Optional[float]
+    segments:           List[SegmentQualityItem]
+#********************************************

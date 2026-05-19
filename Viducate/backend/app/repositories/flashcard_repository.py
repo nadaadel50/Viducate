@@ -38,3 +38,13 @@ class FlashcardRepository:
         )
         self.db.commit()
         return deleted
+    
+    def get_segments_with_cards(self, video_id: int) -> set:
+        results = (
+            self.db.query(Flashcard.segment_id)
+            .filter(Flashcard.video_id == video_id)
+            .distinct()
+            .all()
+        )
+        return {r[0] for r in results}
+    

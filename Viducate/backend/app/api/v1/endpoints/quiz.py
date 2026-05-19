@@ -16,6 +16,12 @@ from app.services.auth_service import AuthService
 from app.services.quiz_service import QuizService
 from app.repositories.quiz_repository import QuizRepository
 from app.schemas.quiz_schema import QuizGenerateRequest, QuizResponse
+from fastapi import HTTPException
+from app.models.quiz import UserQuizResult
+from app.schemas.quiz_result_schema import (
+    QuizSubmitRequest,
+    QuizSubmitResponse,
+)
 
 router = APIRouter(prefix="/quiz", tags=["Quiz"])
 security = HTTPBearer()
@@ -128,4 +134,89 @@ def get_quiz(
         "total_questions": len(quiz.questions),
         "questions":       [_build_question_response(q) for q in quiz.questions],
         "created_at":      quiz.created_at,
+    }
+
+
+@router.post(
+    "/{quiz_id}/submit",
+    response_model=QuizSubmitResponse,
+    status_code=status.HTTP_201_CREATED,
+    summary="Submit quiz answers and save result",
+    description="Submits user quiz answers, calculates score, and stores the result.",
+)
+def submit_quiz_results(
+    quiz_id: int,
+    request: QuizSubmitRequest,
+    db: Session = Depends(get_db),
+    current_user=Depends(get_current_user),
+):
+    
+    repo = QuizRepository(db)
+
+    # Get quiz with questions
+    quiz = repo.get_quiz_with_questions(quiz_id)
+
+    if not quiz:
+        raise HTTPException(
+            status_code=status.HTTP_404_NOT_FOUND,
+            detail="Quiz not found",
+        )
+
+    # Ownership check
+    from app.repositories.video_repository import VideoRepository
+
+    video = VideoRepository(db).get_by_id(quiz.video_id)
+
+    if not video or video.user_id != current_user.id:
+        raise HTTPException(
+            status_code=status.HTTP_403_FORBIDDEN,
+            detail="Not authorized",
+        )
+
+    # Calculate results
+    correct_count = sum(
+        1 for answer in request.answers if answer.is_correct
+    )
+
+    total = len(request.answers)
+
+    wrong_count = total - correct_count
+
+    score_percentage = (
+        (correct_count / total) * 100
+        if total > 0 else 0
+    )
+
+    # Save result
+    result = UserQuizResult(
+        quiz_id=quiz_id,
+        user_id=current_user.id,
+        correct_count=correct_count,
+        wrong_count=wrong_count,
+        answers=[
+            {
+                "question_id": a.question_id,
+                "user_answer": a.user_answer,
+                "is_correct": a.is_correct,
+            }
+            for a in request.answers
+        ],
+    )
+
+    db.add(result)
+    db.commit()
+    db.refresh(result)
+
+    logger.info(
+        f"Quiz submitted | quiz_id={quiz_id} | "
+        f"user={current_user.id} | "
+        f"score={correct_count}/{total}"
+    )
+
+    return {
+        "quiz_id": quiz_id,
+        "correct_count": correct_count,
+        "wrong_count": wrong_count,
+        "total": total,
+        "score_percentage": round(score_percentage, 2),
     }
