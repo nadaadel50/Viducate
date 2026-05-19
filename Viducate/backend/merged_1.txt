@@ -1,1110 +1,680 @@
 [00:00:00]
-  Transcript :  السلام عليكم ورحمة الله وبركاته
+  Transcript :  Every day, we all are doing a mod-12 operation without even knowing that we are doing this mod-12 operation.
   OCR        : None
-  Combined   :  السلام عليكم ورحمة الله وبركاته
+  Combined   :  Every day, we all are doing a mod-12 operation without even knowing that we are doing this mod-12 operation.
 
-[00:00:02]
-  Transcript :  أهلاً وسهلاً أبناء الطلبة والطالبات
+[00:00:13]
+  Transcript :  Shocking? No worries. Let's dive into the topic of the day, the modular arithmetic part 1 to know this.
   OCR        : None
-  Combined   :  أهلاً وسهلاً أبناء الطلبة والطالبات
+  Combined   :  Shocking? No worries. Let's dive into the topic of the day, the modular arithmetic part 1 to know this.
 
-[00:00:04]
-  Transcript :  دمتم في رعاية الله وحفظي وأمني سبحانه وتعالى
+[00:00:20]
+  Transcript :  As usual, let's start the session with the outcomes.
   OCR        : None
-  Combined   :  دمتم في رعاية الله وحفظي وأمني سبحانه وتعالى
+  Combined   :  As usual, let's start the session with the outcomes.
 
-[00:00:08]
-  Transcript :  النهاردة شباب هناخد درس جديد وهو درس الإعراب والبناء
+[00:00:23]
+  Transcript :  Upon the completion of the session, the learner will be able to
   OCR        : None
-  Combined   :  النهاردة شباب هناخد درس جديد وهو درس الإعراب والبناء
+  Combined   :  Upon the completion of the session, the learner will be able to
 
-[00:00:12]
-  Transcript :  ودرس الإعراب والبناء درس طويل شوية
+[00:00:27]
+  Transcript :  Outcome number one, we will understand the modular arithmetic operation with examples.
   OCR        : None
-  Combined   :  ودرس الإعراب والبناء درس طويل شوية
-
-[00:00:15]
-  Transcript :  فإحنا علشان حضرتك ما تتهش مني
-  OCR        : None
-  Combined   :  فإحنا علشان حضرتك ما تتهش مني
-
-[00:00:17]
-  Transcript :  إحنا هنقسم الدرس ده على ثلاث حلقات أو ثلاث فيديوهات إن شاء الله تتبعهم معنا
-  OCR        : None
-  Combined   :  إحنا هنقسم الدرس ده على ثلاث حلقات أو ثلاث فيديوهات إن شاء الله تتبعهم معنا
-
-[00:00:21]
-  Transcript :  أول درس النهاردة الفيديو ده هنتكلم فيه عن معنى الإعراب ومعنى البناء
-  OCR        : None
-  Combined   :  أول درس النهاردة الفيديو ده هنتكلم فيه عن معنى الإعراب ومعنى البناء
-
-[00:00:26]
-  Transcript :  علشان بعد كده تبقى ايه
-  OCR        : None
-  Combined   :  علشان بعد كده تبقى ايه
-
-[00:00:28]
-  Transcript :  حضرتك فاهم الفرق بينهم كويس
-  OCR        : None
-  Combined   :  حضرتك فاهم الفرق بينهم كويس
-
-[00:00:30]
-  Transcript :  لما دينجر اتكلم
-  OCR        : None
-  Combined   :  لما دينجر اتكلم
+  Combined   :  Outcome number one, we will understand the modular arithmetic operation with examples.
 
 [00:00:32]
-  Transcript :  ازاي نستخرج المعرم المبني من الاسماء والافعال
+  Transcript :  Outcome number two, we will understand about congruence.
   OCR        : None
-  Combined   :  ازاي نستخرج المعرم المبني من الاسماء والافعال
+  Combined   :  Outcome number two, we will understand about congruence.
 
 [00:00:35]
-  Transcript :  تبقى حضرتك ايه
+  Transcript :  And outcome number three, we will identify valid and invalid congruence.
   OCR        : None
-  Combined   :  تبقى حضرتك ايه
-
-[00:00:37]
-  Transcript :  مجمع معانا
-  OCR        : الإعر والبناه | تغير حركة أخر الكلمة بتغير موقعها في الجملة | مثال | أعجتكريالتفوق | كرست المدرستلكريس لتفوقه | كري ليذنكي | وكريم اسم مجروز وماتمة اتجر | لباء حرف جر | مفعولبهمتصوب | التكسرة الظاهرأي أخرة | وعلامة التصب القتحة الظاهرة علي أخره | الضسبة الفقامردطي الخرة | كمةكريم مرة رفعت بالضمة ومرة لصبت بالقحة ومرة جرت بالكسرة | جك سجك
-  Combined   :  مجمع معانا الإعر والبناه | تغير حركة أخر الكلمة بتغير موقعها في الجملة | مثال | أعجتكريالتفوق | كرست المدرستلكريس لتفوقه | كري ليذنكي | وكريم اسم مجروز وماتمة اتجر | لباء حرف جر | مفعولبهمتصوب | التكسرة الظاهرأي أخرة | وعلامة التصب القتحة الظاهرة علي أخره | الضسبة الفقامردطي الخرة | كمةكريم مرة رفعت بالضمة ومرة لصبت بالقحة ومرة جرت بالكسرة | جك سجك
-
-[00:00:38]
-  Transcript :  فبداية كده يلا ألمك معاك
-  OCR        : None
-  Combined   :  فبداية كده يلا ألمك معاك
+  Combined   :  And outcome number three, we will identify valid and invalid congruence.
 
 [00:00:40]
-  Transcript :  ورقتك معاك وكتب معاك الدرس كويس
+  Transcript :  Let's dive into the topic of the day, modular arithmetic.
   OCR        : None
-  Combined   :  ورقتك معاك وكتب معاك الدرس كويس
-
-[00:00:43]
-  Transcript :  ونركز مع بعض يا شباب
-  OCR        : None
-  Combined   :  ونركز مع بعض يا شباب
+  Combined   :  Let's dive into the topic of the day, modular arithmetic.
 
 [00:00:44]
-  Transcript :  ولو حد فيه كمتاه فأي حاجة عايز سؤال
+  Transcript :  What is this modular arithmetic?
   OCR        : None
-  Combined   :  ولو حد فيه كمتاه فأي حاجة عايز سؤال
+  Combined   :  What is this modular arithmetic?
 
 [00:00:46]
-  Transcript :  فأي حاجة سألنا في التعليقات
+  Transcript :  Actually, this modular arithmetic is a system of arithmetic for integers.
   OCR        : None
-  Combined   :  فأي حاجة سألنا في التعليقات
-
-[00:00:48]
-  Transcript :  بسم الله توكننا على الله ولا حول ولا قوة
-  OCR        : None
-  Combined   :  بسم الله توكننا على الله ولا حول ولا قوة
+  Combined   :  Actually, this modular arithmetic is a system of arithmetic for integers.
 
 [00:00:51]
-  Transcript :  إلا بالله العلي العظيم
+  Transcript :  We know integers.
   OCR        : None
-  Combined   :  إلا بالله العلي العظيم
+  Combined   :  We know integers.
 
-[00:01:00]
-  Transcript : 
-  OCR        : والبناء | الإعراب | أول حاجة لازم | نعرفها ايه معني | الإء
-  Combined   :  والبناء | الإعراب | أول حاجة لازم | نعرفها ايه معني | الإء
-
-[00:01:09]
-  Transcript :  التعريف ده وتحفظه كويس جدا علشان تعرف تفرق بيه بعدين الاعراب
+[00:00:52]
+  Transcript :  And modular arithmetic is a system of arithmetic for integers When it is going to work on integers obviously we are going to wrap around after reaching a certain value called modulus So we are going to work on a system of arithmetic
   OCR        : None
-  Combined   :  التعريف ده وتحفظه كويس جدا علشان تعرف تفرق بيه بعدين الاعراب
+  Combined   :  And modular arithmetic is a system of arithmetic for integers When it is going to work on integers obviously we are going to wrap around after reaching a certain value called modulus So we are going to work on a system of arithmetic
 
-[00:01:20]
-  Transcript :  هو تغير حركة اخر الكلمة بتغير موقعها في الجملة يعني حركة
-  OCR        : ألإإعراب والبناء | أول هلجة لازم | نرافهاه مط | تغير حركة آخر الكلمة بتغير موقعها في ال | حميك ينجك
-  Combined   :  هو تغير حركة اخر الكلمة بتغير موقعها في الجملة يعني حركة ألإإعراب والبناء | أول هلجة لازم | نرافهاه مط | تغير حركة آخر الكلمة بتغير موقعها في ال | حميك ينجك
-
-[00:01:21]
-  Transcript :  الكلمة دي بتتغير على حسب
+[00:01:07]
+  Transcript :  for integers and what we are going to do, we are going to wrap around after reaching
   OCR        : None
-  Combined   :  الكلمة دي بتتغير على حسب
+  Combined   :  for integers and what we are going to do, we are going to wrap around after reaching
+
+[00:01:12]
+  Transcript :  a certain value. This value is called as a moduli. I will explain this point when we see
+  OCR        : None
+  Combined   :  a certain value. This value is called as a moduli. I will explain this point when we see
+
+[00:01:17]
+  Transcript :  an example and why we are dealing this modular arithmetic. Because, this modular arithmetic
+  OCR        : None
+  Combined   :  an example and why we are dealing this modular arithmetic. Because, this modular arithmetic
 
 [00:01:23]
-  Transcript :  تغير موقعها في الجملة
+  Transcript :  is the central mathematical concept in cryptography.
   OCR        : None
-  Combined   :  تغير موقعها في الجملة
+  Combined   :  is the central mathematical concept in cryptography.
 
 [00:01:26]
-  Transcript :  تمام طب هنشوف
+  Transcript :  The widely used cryptographic algorithms are mainly depending on these modular arithmetic.
   OCR        : None
-  Combined   :  تمام طب هنشوف
-
-[00:01:27]
-  Transcript :  الكلام ده ماشي ندي
-  OCR        : None
-  Combined   :  الكلام ده ماشي ندي
-
-[00:01:29]
-  Transcript :  مثال المثال ده وركز
-  OCR        : None
-  Combined   :  مثال المثال ده وركز
+  Combined   :  The widely used cryptographic algorithms are mainly depending on these modular arithmetic.
 
 [00:01:31]
-  Transcript :  معي في كويس كريم
+  Transcript :  Let's understand about these modulars with this example.
   OCR        : None
-  Combined   :  معي في كويس كريم
-
-[00:01:33]
-  Transcript :  تلميذ ذكي
-  OCR        : None
-  Combined   :  تلميذ ذكي
+  Combined   :  Let's understand about these modulars with this example.
 
 [00:01:35]
-  Transcript :  وان التشكيل مش مكتوب
+  Transcript :  Here is a clock.
   OCR        : None
-  Combined   :  وان التشكيل مش مكتوب
+  Combined   :  Here is a clock.
 
-[00:01:37]
-  Transcript :  لان البرنامج مش بيدعم التشكيل بس
+[00:01:36]
+  Transcript :  We have 24 hours a day.
   OCR        : None
-  Combined   :  لان البرنامج مش بيدعم التشكيل بس
+  Combined   :  We have 24 hours a day.
 
-[00:01:40]
-  Transcript :  مع بعض احنا ان شاء الله وهنوضح كل حاجة
-  OCR        : الإعراب والبناه | كرمت المدرسة كريما لتفوقه | كريم تليذ نكي | أجيك يسجيك
-  Combined   :  مع بعض احنا ان شاء الله وهنوضح كل حاجة الإعراب والبناه | كرمت المدرسة كريما لتفوقه | كريم تليذ نكي | أجيك يسجيك
-
-[00:01:42]
-  Transcript :  كرمت المدرسة
+[00:01:39]
+  Transcript :  Do we have 24 numbers representing 24 hours in our clock?
   OCR        : None
-  Combined   :  كرمت المدرسة
+  Combined   :  Do we have 24 numbers representing 24 hours in our clock?
 
 [00:01:43]
-  Transcript :  كريما لتفوقه
+  Transcript :  Definitely no.
   OCR        : None
-  Combined   :  كريما لتفوقه
+  Combined   :  Definitely no.
 
-[00:01:45]
-  Transcript :  واعجبته بكريم
+[00:01:44]
+  Transcript :  But still we are able to understand that the 24 hour timing with just 12 numbers.
   OCR        : None
-  Combined   :  واعجبته بكريم
+  Combined   :  But still we are able to understand that the 24 hour timing with just 12 numbers.
 
-[00:01:47]
-  Transcript :  لتفوقه
+[00:01:49]
+  Transcript :  Isn't it?
   OCR        : None
-  Combined   :  لتفوقه
+  Combined   :  Isn't it?
 
 [00:01:50]
-  Transcript :  تمام التلات جمل دولة
-  OCR        : الإعراب والبناء | فول هلجة لازم | تغير حركة آخر الكلمة بتغير موقعها في الجملة | أعجبت بكريم ت | كريم تلميذ نكي
-  Combined   :  تمام التلات جمل دولة الإعراب والبناء | فول هلجة لازم | تغير حركة آخر الكلمة بتغير موقعها في الجملة | أعجبت بكريم ت | كريم تلميذ نكي
-
-[00:01:51]
-  Transcript :  يا شباب وركز معي فيهم كويس
+  Transcript :  Let's say, if the time is 15 hours, it means it is 3 pm, right?
   OCR        : None
-  Combined   :  يا شباب وركز معي فيهم كويس
+  Combined   :  Let's say, if the time is 15 hours, it means it is 3 pm, right?
 
-[00:01:53]
-  Transcript :  إحنا هيهمنا كله الوقت كريم ده
+[00:01:54]
+  Transcript :  If the time is 20 hours, it means it is 8 pm, isn't it?
   OCR        : None
-  Combined   :  إحنا هيهمنا كله الوقت كريم ده
+  Combined   :  If the time is 20 hours, it means it is 8 pm, isn't it?
 
-[00:01:55]
-  Transcript :  كريم ده ماله بقى إيه وضعه
+[00:01:59]
+  Transcript :  Alright.
   OCR        : None
-  Combined   :  كريم ده ماله بقى إيه وضعه
-
-[00:01:57]
-  Transcript :  كريم ده في الجملة
-  OCR        : None
-  Combined   :  كريم ده في الجملة
+  Combined   :  Alright.
 
 [00:02:00]
-  Transcript :  تغير مكانه
+  Transcript :  If the time is 23 hours, then obviously it is 11 pm, isn't it?
   OCR        : None
-  Combined   :  تغير مكانه
-
-[00:02:00]
-  Transcript :  أول مرة جي في أول الكلام وبعد كاف نص الكلام
-  OCR        : None
-  Combined   :  أول مرة جي في أول الكلام وبعد كاف نص الكلام
-
-[00:02:03]
-  Transcript :  وجي بعد كاف نص الكلام قبل حرف جر
-  OCR        : None
-  Combined   :  وجي بعد كاف نص الكلام قبل حرف جر
+  Combined   :  If the time is 23 hours, then obviously it is 11 pm, isn't it?
 
 [00:02:05]
-  Transcript :  فالكلمة كريم
+  Transcript :  Actually, what we are doing is a mod 12 operation.
   OCR        : None
-  Combined   :  فالكلمة كريم
+  Combined   :  Actually, what we are doing is a mod 12 operation.
 
-[00:02:07]
-  Transcript :  اتغير مكانها في الجملة
+[00:02:08]
+  Transcript :  We wrap around every 12 hours.
   OCR        : None
-  Combined   :  اتغير مكانها في الجملة
-
-[00:02:09]
-  Transcript :  فطبيعيا موقعها الإعرابة هيتغير
-  OCR        : None
-  Combined   :  فطبيعيا موقعها الإعرابة هيتغير
+  Combined   :  We wrap around every 12 hours.
 
 [00:02:11]
-  Transcript :  طب هل علامة الإعراب بتاعتها هتبقى سابتة
+  Transcript :  So, what we are doing here is a wrap around operation on these integers.
   OCR        : None
-  Combined   :  طب هل علامة الإعراب بتاعتها هتبقى سابتة
-
-[00:02:13]
-  Transcript :  ولا هتتغير كمان
-  OCR        : الإعراب والباء | الإعر | أعجبت بكريم | كريم تلميد نكي
-  Combined   :  ولا هتتغير كمان الإعراب والباء | الإعر | أعجبت بكريم | كريم تلميد نكي
+  Combined   :  So, what we are doing here is a wrap around operation on these integers.
 
 [00:02:15]
-  Transcript :  ده اللي احنا نشوف
+  Transcript :  So, here we have only 12 integers represented on the clock
   OCR        : None
-  Combined   :  ده اللي احنا نشوف
+  Combined   :  So, here we have only 12 integers represented on the clock
 
-[00:02:16]
-  Transcript :  فأول مثال كريم تلميذون زكي
+[00:02:18]
+  Transcript :  and this is a system of arithmetic for integers.
   OCR        : None
-  Combined   :  فأول مثال كريم تلميذون زكي
+  Combined   :  and this is a system of arithmetic for integers.
 
-[00:02:19]
-  Transcript :  كريم طبعا جملة اسمية
+[00:02:21]
+  Transcript :  And what we are doing, we are wrapping around after reaching a certain value.
   OCR        : None
-  Combined   :  كريم طبعا جملة اسمية
-
-[00:02:22]
-  Transcript :  ابتدأت باسمه اللي هو كريم
-  OCR        : None
-  Combined   :  ابتدأت باسمه اللي هو كريم
-
-[00:02:23]
-  Transcript :  هتعرف ايه
-  OCR        : تغير حركة آخر الكلمة بتغير موقعها في | كرمت المدرسةكريما لتفوقه | كريم تلميذ ذكي
-  Combined   :  هتعرف ايه تغير حركة آخر الكلمة بتغير موقعها في | كرمت المدرسةكريما لتفوقه | كريم تلميذ ذكي
-
-[00:02:24]
-  Transcript :  يبقى طبيعي خالص أركان الجملة اسمية
-  OCR        : None
-  Combined   :  يبقى طبيعي خالص أركان الجملة اسمية
+  Combined   :  And what we are doing, we are wrapping around after reaching a certain value.
 
 [00:02:26]
-  Transcript :  مبتدى وخبر يبقى كريم مبتدى
+  Transcript :  Here in the wall clock example, we are wrapping around every 12 hours, right?
   OCR        : None
-  Combined   :  مبتدى وخبر يبقى كريم مبتدى
+  Combined   :  Here in the wall clock example, we are wrapping around every 12 hours, right?
 
-[00:02:28]
-  Transcript :  مرفوع وعلامة الرفع
+[00:02:31]
+  Transcript :  So, 12 is the modulus here.
   OCR        : None
-  Combined   :  مرفوع وعلامة الرفع
+  Combined   :  So, 12 is the modulus here.
 
-[00:02:30]
-  Transcript :  الضامة الظهرة على اخر
+[00:02:33]
+  Transcript :  So, the modulus value as far as a wall clock is concerned is 12.
   OCR        : None
-  Combined   :  الضامة الظهرة على اخر
+  Combined   :  So, the modulus value as far as a wall clock is concerned is 12.
+
+[00:02:37]
+  Transcript :  And when we say 13 hours, what we are doing?
+  OCR        : None
+  Combined   :  And when we say 13 hours, what we are doing?
+
+[00:02:39]
+  Transcript :  So, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12.
+  OCR        : None
+  Combined   :  So, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12.
+
+[00:02:44]
+  Transcript :  And this is 13, right?
+  OCR        : None
+  Combined   :  And this is 13, right?
+
+[00:02:46]
+  Transcript :  And that's why we are able to find that it is 1 PM.
+  OCR        : None
+  Combined   :  And that's why we are able to find that it is 1 PM.
 
 [00:02:49]
-  Transcript :  الظاهرة
+  Transcript :  When I say it's 13 hours, what we are doing?
   OCR        : None
-  Combined   :  الظاهرة
+  Combined   :  When I say it's 13 hours, what we are doing?
 
-[00:02:50]
-  Transcript :  على ايه على اخر
+[00:02:52]
+  Transcript :  We are just doing a mod 12 operation on 13 So 13 mod 12 when 13 is divided by 12 we get the remainder 1 I hope things are clear for you now Before seeing some examples in order to understand things clearly about modular arithmetic
   OCR        : None
-  Combined   :  على ايه على اخر
+  Combined   :  We are just doing a mod 12 operation on 13 So 13 mod 12 when 13 is divided by 12 we get the remainder 1 I hope things are clear for you now Before seeing some examples in order to understand things clearly about modular arithmetic
 
-[00:02:51]
-  Transcript :  الكلمة الليكلمة كريم
-  OCR        : أكريم تلميذ ذكي | متدأ مرفوع وعلامة الرفع | الضمة الطاهرة علي أخره
-  Combined   :  الكلمة الليكلمة كريم أكريم تلميذ ذكي | متدأ مرفوع وعلامة الرفع | الضمة الطاهرة علي أخره
-
-[00:03:01]
-  Transcript : 
-  OCR        : الجملة | أعجبت | كرمت المدرسةكريمالتفوقه | مرفوع وعلامة الرفع | مة الظاهرة علي أخرة
-  Combined   :  الجملة | أعجبت | كرمت المدرسةكريمالتفوقه | مرفوع وعلامة الرفع | مة الظاهرة علي أخرة
-
-[00:03:05]
-  Transcript :  به منصوب وعلامة النصب
+[00:03:09]
+  Transcript :  let's see what is congruence. Actually, in cryptography, congruence is used which is
   OCR        : None
-  Combined   :  به منصوب وعلامة النصب
-
-[00:03:07]
-  Transcript :  الفتحة الظاهرة
-  OCR        : None
-  Combined   :  الفتحة الظاهرة
-
-[00:03:08]
-  Transcript :  على آخره وركز معا
-  OCR        : None
-  Combined   :  على آخره وركز معا
-
-[00:03:11]
-  Transcript :  يبقى الأول كان مرفوع
-  OCR        : حركة أخر الكلمة بتغير موقعها في الجملة | أعجبت بكريم لتفوقه | كرمت المدرسة كريمالتفوقه | مفعول به منصوب | وعلامة النصب الفتحة الظاهرة علي أخره
-  Combined   :  يبقى الأول كان مرفوع حركة أخر الكلمة بتغير موقعها في الجملة | أعجبت بكريم لتفوقه | كرمت المدرسة كريمالتفوقه | مفعول به منصوب | وعلامة النصب الفتحة الظاهرة علي أخره
-
-[00:03:12]
-  Transcript :  جملة الثانية كان منصوب
-  OCR        : None
-  Combined   :  جملة الثانية كان منصوب
+  Combined   :  let's see what is congruence. Actually, in cryptography, congruence is used which is
 
 [00:03:14]
-  Transcript :  أعجبته بكريما
+  Transcript :  represented with this symbol instead of equality. Why equality is not preferred in congruence?
   OCR        : None
-  Combined   :  أعجبته بكريما
+  Combined   :  represented with this symbol instead of equality. Why equality is not preferred in congruence?
 
-[00:03:16]
-  Transcript :  كريم هنا سبقها حرف جر
+[00:03:20]
+  Transcript :  Let's see some examples. 15 is congruent to 3 mod 12. Since we are dealing with mod 12,
   OCR        : None
-  Combined   :  كريم هنا سبقها حرف جر
-
-[00:03:18]
-  Transcript :  اللي هو حرف الباء
-  OCR        : None
-  Combined   :  اللي هو حرف الباء
-
-[00:03:19]
-  Transcript :  يبقى هنا خلي بالك
-  OCR        : None
-  Combined   :  يبقى هنا خلي بالك
-
-[00:03:21]
-  Transcript :  لما تيجي تعرف تقول الباء
-  OCR        : None
-  Combined   :  لما تيجي تعرف تقول الباء
-
-[00:03:24]
-  Transcript :  حرف جر تمام
-  OCR        : None
-  Combined   :  حرف جر تمام
+  Combined   :  Let's see some examples. 15 is congruent to 3 mod 12. Since we are dealing with mod 12,
 
 [00:03:26]
-  Transcript :  لها محل لهم الاعراب طبعا
+  Transcript :  let's see the wall clock example. So, the modulus value is 12 as far as a wall clock is concerned,
   OCR        : None
-  Combined   :  لها محل لهم الاعراب طبعا
-
-[00:03:27]
-  Transcript :  وكريم اسم مجرور وعلامة الجر
-  OCR        : None
-  Combined   :  وكريم اسم مجرور وعلامة الجر
-
-[00:03:31]
-  Transcript :  الكسرة الظاهرة
-  OCR        : خر الكلمة بتغير موقعها في الجملة | أعجبت بكريم التفوقه | الباء حرف جر | وكريم اسم مجرور وعلامة الجر | الكسرة الظاهرة علىلخ
-  Combined   :  الكسرة الظاهرة خر الكلمة بتغير موقعها في الجملة | أعجبت بكريم التفوقه | الباء حرف جر | وكريم اسم مجرور وعلامة الجر | الكسرة الظاهرة علىلخ
+  Combined   :  let's see the wall clock example. So, the modulus value is 12 as far as a wall clock is concerned,
 
 [00:03:32]
-  Transcript :  على ايه على اخير
+  Transcript :  isn't it? So, here also we have mod 12. So, when I say 15 hours, what does it mean? We did 15 mod 12,
   OCR        : None
-  Combined   :  على ايه على اخير
+  Combined   :  isn't it? So, here also we have mod 12. So, when I say 15 hours, what does it mean? We did 15 mod 12,
 
-[00:03:33]
-  Transcript :  الاعراب ده شباب التلت
+[00:03:39]
+  Transcript :  right? So, 15 mod 12 is what? The remainder is 3. So, what we are doing actually is, we are taking
   OCR        : None
-  Combined   :  الاعراب ده شباب التلت
+  Combined   :  right? So, 15 mod 12 is what? The remainder is 3. So, what we are doing actually is, we are taking
 
-[00:03:36]
-  Transcript :  جمل دول هنا
+[00:03:45]
+  Transcript :  this number 15 and we are doing a more 12 operation. So, remember this 15 is here and
   OCR        : None
-  Combined   :  جمل دول هنا
-
-[00:03:38]
-  Transcript :  كريم اتغير مكانه
-  OCR        : None
-  Combined   :  كريم اتغير مكانه
-
-[00:03:41]
-  Transcript :  في الجملة فهنا بقى
-  OCR        : ألإعرب والبناه | الإر اة | ريملميذ ذكي | وكري سم مروزوعاتة الر | لهاء حرفجر | مفعول به مصوب | وعلامة الصب القتحة الظاهرة علي أخرة | الشرة الطهرةطي أخرة
-  Combined   :  في الجملة فهنا بقى ألإعرب والبناه | الإر اة | ريملميذ ذكي | وكري سم مروزوعاتة الر | لهاء حرفجر | مفعول به مصوب | وعلامة الصب القتحة الظاهرة علي أخرة | الشرة الطهرةطي أخرة
-
-[00:03:41]
-  Transcript :  يتضح لنا ايه هيتضح لنا
-  OCR        : None
-  Combined   :  يتضح لنا ايه هيتضح لنا
-
-[00:03:44]
-  Transcript :  بص بقى وركز في الكلام اللي جاي ده
-  OCR        : None
-  Combined   :  بص بقى وركز في الكلام اللي جاي ده
-
-[00:03:46]
-  Transcript :  كويس تمام ورقتك معك وكتب
-  OCR        : None
-  Combined   :  كويس تمام ورقتك معك وكتب
-
-[00:03:48]
-  Transcript :  ان كلمة كريم
-  OCR        : None
-  Combined   :  ان كلمة كريم
+  Combined   :  this number 15 and we are doing a more 12 operation. So, remember this 15 is here and
 
 [00:03:51]
-  Transcript :  تمام
-  OCR        : أعجت كريلتفوه | كري تلميذ نكي | وكريماسم مجرور وجاتمة الجر | مغعول به متصوب | الكسرة الطاهرةعلي أخره | وعلامة النصب القحة الظاهرة علي أخره | الضمة الطاهرة علر أخرة | يتضح لنا | كلمة كريم مرةبف | اشتراك
-  Combined   :  تمام أعجت كريلتفوه | كري تلميذ نكي | وكريماسم مجرور وجاتمة الجر | مغعول به متصوب | الكسرة الطاهرةعلي أخره | وعلامة النصب القحة الظاهرة علي أخره | الضمة الطاهرة علر أخرة | يتضح لنا | كلمة كريم مرةبف | اشتراك
-
-[00:03:51]
-  Transcript :  مرة رفعت بتضم
+  Transcript :  this 12 is the divisor. So, we are dividing 15 by 12. When it is done, 12, 1 times 12
   OCR        : None
-  Combined   :  مرة رفعت بتضم
-
-[00:03:54]
-  Transcript :  تمام ومرة نصبت بالكسرة جميل برضو
-  OCR        : None
-  Combined   :  تمام ومرة نصبت بالكسرة جميل برضو
+  Combined   :  this 12 is the divisor. So, we are dividing 15 by 12. When it is done, 12, 1 times 12
 
 [00:03:58]
-  Transcript :  ومرة جميلة
+  Transcript :  and the remainder is 3.
   OCR        : None
-  Combined   :  ومرة جميلة
+  Combined   :  and the remainder is 3.
 
-[00:04:01]
-  Transcript :  بطرت بالكسرة
-  OCR        : أعجت كري لتوه | وكريم اسم مجرور وحاتمة الجر | الكرة الطاهرة عليأجر | كلمة كريم مرة رفعت بالضمة ومرة نصبت بالفتحة ومرة جرت بالكسرة
-  Combined   :  بطرت بالكسرة أعجت كري لتوه | وكريم اسم مجرور وحاتمة الجر | الكرة الطاهرة عليأجر | كلمة كريم مرة رفعت بالضمة ومرة نصبت بالفتحة ومرة جرت بالكسرة
-
-[00:04:01]
-  Transcript :  يبقى خلي بالك بقى
+[00:04:00]
+  Transcript :  So, 3 is the answer, right?
   OCR        : None
-  Combined   :  يبقى خلي بالك بقى
+  Combined   :  So, 3 is the answer, right?
+
+[00:04:02]
+  Transcript :  That's what we said.
+  OCR        : None
+  Combined   :  That's what we said.
 
 [00:04:03]
-  Transcript :  ان كريم دي مرة كانت مضمومة
+  Transcript :  15 hours means what?
   OCR        : None
-  Combined   :  ان كريم دي مرة كانت مضمومة
+  Combined   :  15 hours means what?
+
+[00:04:04]
+  Transcript :  It's 3 p.m., isn't it?
+  OCR        : None
+  Combined   :  It's 3 p.m., isn't it?
 
 [00:04:06]
-  Transcript :  مرة كانت منصوبة مرة كانت
+  Transcript :  So, 15 is congruent to 3 mod 12.
   OCR        : None
-  Combined   :  مرة كانت منصوبة مرة كانت
+  Combined   :  So, 15 is congruent to 3 mod 12.
 
-[00:04:07]
-  Transcript :  مكسورة وكمان ممكن تجي
+[00:04:10]
+  Transcript :  I hope it is understandable.
   OCR        : None
-  Combined   :  مكسورة وكمان ممكن تجي
+  Combined   :  I hope it is understandable.
 
-[00:04:09]
-  Transcript :  مكزومة تمام
+[00:04:12]
+  Transcript :  Let's see one more example.
   OCR        : None
-  Combined   :  مكزومة تمام
+  Combined   :  Let's see one more example.
 
-[00:04:11]
-  Transcript :  يبقى ملهاش علامة
+[00:04:13]
+  Transcript :  23 is congruent to 11 mod 12.
   OCR        : None
-  Combined   :  يبقى ملهاش علامة
-
-[00:04:14]
-  Transcript :  سابتة بتاخد الضم مرة
-  OCR        : None
-  Combined   :  سابتة بتاخد الضم مرة
-
-[00:04:15]
-  Transcript :  وتاخد الفتحة وبتاخد الكسرة
-  OCR        : None
-  Combined   :  وتاخد الفتحة وبتاخد الكسرة
+  Combined   :  23 is congruent to 11 mod 12.
 
 [00:04:17]
-  Transcript :  وبتاخد السكون علامات العرب
+  Transcript :  How did we get this?
   OCR        : None
-  Combined   :  وبتاخد السكون علامات العرب
+  Combined   :  How did we get this?
 
-[00:04:19]
-  Transcript :  الاصلية تمام
+[00:04:18]
+  Transcript :  Because we are taking the number 23 and we are dividing 23 by 12.
   OCR        : None
-  Combined   :  الاصلية تمام
+  Combined   :  Because we are taking the number 23 and we are dividing 23 by 12.
 
-[00:04:21]
-  Transcript :  فطبيعا ان هي علامتها بتتغير
+[00:04:22]
+  Transcript :  So, 12, 1 times 12 and the remainder is what?
   OCR        : None
-  Combined   :  فطبيعا ان هي علامتها بتتغير
-
-[00:04:23]
-  Transcript :  يبقى الكلمة اللي
-  OCR        : None
-  Combined   :  يبقى الكلمة اللي
+  Combined   :  So, 12, 1 times 12 and the remainder is what?
 
 [00:04:25]
-  Transcript :  في علامتها بتتغير بتكون اين
+  Transcript :  11.
   OCR        : None
-  Combined   :  في علامتها بتتغير بتكون اين
+  Combined   :  11.
 
-[00:04:27]
-  Transcript :  ركز معاي
+[00:04:26]
+  Transcript :  So, that's the answer for this second equation.
   OCR        : None
-  Combined   :  ركز معاي
+  Combined   :  So, that's the answer for this second equation.
 
-[00:04:28]
-  Transcript :  الكلمة العلامة بتاعتها
+[00:04:29]
+  Transcript :  So, remember 23 is congruent to 11 mod 12.
   OCR        : None
-  Combined   :  الكلمة العلامة بتاعتها
-
-[00:04:31]
-  Transcript :  بتتغير ده يخليها
-  OCR        : None
-  Combined   :  بتتغير ده يخليها
+  Combined   :  So, remember 23 is congruent to 11 mod 12.
 
 [00:04:33]
-  Transcript :  كلمة ايه ده يجعلها كلمة
+  Transcript :  In other words, 23 hours means 11 pm, right?
   OCR        : None
-  Combined   :  كلمة ايه ده يجعلها كلمة
-
-[00:04:35]
-  Transcript :  معربة لان علامة
-  OCR        : None
-  Combined   :  معربة لان علامة
+  Combined   :  In other words, 23 hours means 11 pm, right?
 
 [00:04:37]
-  Transcript :  اعرابها تتغير بحسب موقع
+  Transcript :  Let's stop dealing with mod 12.
   OCR        : None
-  Combined   :  اعرابها تتغير بحسب موقع
+  Combined   :  Let's stop dealing with mod 12.
 
-[00:04:39]
-  Transcript :  موقعها الاعراب في الجملة تمام
+[00:04:38]
+  Transcript :  Let's take some other numbers.
   OCR        : None
-  Combined   :  موقعها الاعراب في الجملة تمام
+  Combined   :  Let's take some other numbers.
 
-[00:04:41]
-  Transcript :  حسب تغير موقعها في الجملة
+[00:04:40]
+  Transcript :  Let's take 33 is congruent to 3 mod 10.
   OCR        : None
-  Combined   :  حسب تغير موقعها في الجملة
+  Combined   :  Let's take 33 is congruent to 3 mod 10.
 
 [00:04:43]
-  Transcript :  كده يا شباب الاعراب
+  Transcript :  Is it valid?
   OCR        : None
-  Combined   :  كده يا شباب الاعراب
+  Combined   :  Is it valid?
 
 [00:04:44]
-  Transcript :  ان شاء الله خدنا عليه مثال
+  Transcript :  Yes, it is valid because 33 when it is divided by 10,
   OCR        : None
-  Combined   :  ان شاء الله خدنا عليه مثال
+  Combined   :  Yes, it is valid because 33 when it is divided by 10,
 
-[00:04:46]
-  Transcript :  يارب يكون ايه اتفاهم لحد كده
+[00:04:49]
+  Transcript :  10, 3 times 30 and the remainder is 3.
   OCR        : None
-  Combined   :  يارب يكون ايه اتفاهم لحد كده
+  Combined   :  10, 3 times 30 and the remainder is 3.
 
-[00:04:48]
-  Transcript :  تعالا بقى نشوف البناء
-  OCR        : أعجت كريلتقوه | اريم ملميذ ذنكي | الباء حرفجر | وكريم اسم مجروزر وعتمة الجر | مفعول به مستصوب | الكبرة الطاهرة علي اخرة | وعلامة النصب القحة الظاهرة علي أخرء | الضمة الظاهرةعلي أخره | إن كلمة كريم مرة رفعت بالضمة ومرة نصبت بالفتحة ومرة جرت بالكسرة | ودايجعلها كلمة معرية لأن علامة اعرابهاتغير حسب تغير موفعهافي الجملة
-  Combined   :  تعالا بقى نشوف البناء أعجت كريلتقوه | اريم ملميذ ذنكي | الباء حرفجر | وكريم اسم مجروزر وعتمة الجر | مفعول به مستصوب | الكبرة الطاهرة علي اخرة | وعلامة النصب القحة الظاهرة علي أخرء | الضمة الظاهرةعلي أخره | إن كلمة كريم مرة رفعت بالضمة ومرة نصبت بالفتحة ومرة جرت بالكسرة | ودايجعلها كلمة معرية لأن علامة اعرابهاتغير حسب تغير موفعهافي الجملة
-
-[00:04:50]
-  Transcript :  البناء هو ايه
+[00:04:52]
+  Transcript :  So this is also a valid congruence isn it Because always remember when we have this number this is divided by this number and whatever we get as the remainder is this number So this is a colloquial way of explanation but
   OCR        : None
-  Combined   :  البناء هو ايه
+  Combined   :  So this is also a valid congruence isn it Because always remember when we have this number this is divided by this number and whatever we get as the remainder is this number So this is a colloquial way of explanation but
 
-[00:04:53]
-  Transcript :  واحفظ التعريف ده زي ما حفظنا
+[00:05:06]
+  Transcript :  still please understand things in this way for now. Then 10 is congruent to minus 2 mod 12.
   OCR        : None
-  Combined   :  واحفظ التعريف ده زي ما حفظنا
+  Combined   :  still please understand things in this way for now. Then 10 is congruent to minus 2 mod 12.
 
-[00:05:04]
-  Transcript : 
-  OCR        : هو ثبوت حركة أخر الكلمة مهماتغير | البنا | بينجك | اخفك
-  Combined   :  هو ثبوت حركة أخر الكلمة مهماتغير | البنا | بينجك | اخفك
-
-[00:05:07]
-  Transcript :  تمام هناك كانت
+[00:05:13]
+  Transcript :  How did we get this? Let's say 10 is here, right? We are going to divide 10 by 12. 10,
   OCR        : None
-  Combined   :  تمام هناك كانت
-
-[00:05:09]
-  Transcript :  بتتغير الكلمة هنا هتكون
-  OCR        : None
-  Combined   :  بتتغير الكلمة هنا هتكون
-
-[00:05:10]
-  Transcript :  الحركة بتاعتها ثابتة لا تتغير
-  OCR        : None
-  Combined   :  الحركة بتاعتها ثابتة لا تتغير
-
-[00:05:14]
-  Transcript :  وركز على كلمة ثبوت
-  OCR        : هو ثبوت حركة أخر الكلمة مهماتغير موقعها في الجملة | البناء | أجيك ينجيك
-  Combined   :  وركز على كلمة ثبوت هو ثبوت حركة أخر الكلمة مهماتغير موقعها في الجملة | البناء | أجيك ينجيك
-
-[00:05:14]
-  Transcript :  طيب ناخد مثال
-  OCR        : None
-  Combined   :  طيب ناخد مثال
-
-[00:05:16]
-  Transcript :  يلا بنا
-  OCR        : None
-  Combined   :  يلا بنا
-
-[00:05:17]
-  Transcript :  هذا تلميذ
-  OCR        : None
-  Combined   :  هذا تلميذ
+  Combined   :  How did we get this? Let's say 10 is here, right? We are going to divide 10 by 12. 10,
 
 [00:05:20]
-  Transcript :  مجتهد وركز في كلمة
+  Transcript :  it is divided by 12. How many times 12 takes 10? 12 0 times 0 and the remainder is what? 10. So,
   OCR        : None
-  Combined   :  مجتهد وركز في كلمة
+  Combined   :  it is divided by 12. How many times 12 takes 10? 12 0 times 0 and the remainder is what? 10. So,
 
-[00:05:23]
-  Transcript :  هذا لأن ده الشهد من
+[00:05:27]
+  Transcript :  here we can have 10 also. So, 10 is congruent to 10 mod 12 is the valid congruence. In other words,
   OCR        : None
-  Combined   :  هذا لأن ده الشهد من
+  Combined   :  here we can have 10 also. So, 10 is congruent to 10 mod 12 is the valid congruence. In other words,
 
-[00:05:24]
-  Transcript :  المثال هذا
+[00:05:35]
+  Transcript :  10 mod 12 can be written as minus 2, right? I hope you can remember this. Whenever you have a negative
   OCR        : None
-  Combined   :  المثال هذا
-
-[00:05:26]
-  Transcript :  تلميذ مجتهد طيب
-  OCR        : None
-  Combined   :  تلميذ مجتهد طيب
-
-[00:05:28]
-  Transcript :  رأيت هذا التلميذ
-  OCR        : None
-  Combined   :  رأيت هذا التلميذ
-
-[00:05:30]
-  Transcript :  يزاكر جميل
-  OCR        : None
-  Combined   :  يزاكر جميل
-
-[00:05:34]
-  Transcript :  كلمة هذا ايه اتغير مكانها في الجملة
-  OCR        : ملصت مل | هذا تلميذ مجتهدرأيت هذا التلميذيذاكر
-  Combined   :  كلمة هذا ايه اتغير مكانها في الجملة ملصت مل | هذا تلميذ مجتهدرأيت هذا التلميذيذاكر
-
-[00:05:34]
-  Transcript :  سلمت
-  OCR        : None
-  Combined   :  سلمت
-
-[00:05:36]
-  Transcript :  على هذا التلميذ
-  OCR        : None
-  Combined   :  على هذا التلميذ
-
-[00:05:38]
-  Transcript :  برضو هذا اتغير
-  OCR        : None
-  Combined   :  برضو هذا اتغير
+  Combined   :  10 mod 12 can be written as minus 2, right? I hope you can remember this. Whenever you have a negative
 
 [00:05:40]
-  Transcript :  مكانها في الجملة اول حاجة
+  Transcript :  number mod, then what I told you? I asked you to simply add these two numbers, isn't it? I hope you
   OCR        : None
-  Combined   :  مكانها في الجملة اول حاجة
+  Combined   :  number mod, then what I told you? I asked you to simply add these two numbers, isn't it? I hope you
 
-[00:05:42]
-  Transcript :  اخليك معايا في كلمة هذا
+[00:05:46]
+  Transcript :  can recollect this. So, minus 2 plus 12 is 10. So, 10 or minus 2 both are perfect. So, in this case,
   OCR        : None
-  Combined   :  اخليك معايا في كلمة هذا
+  Combined   :  can recollect this. So, minus 2 plus 12 is 10. So, 10 or minus 2 both are perfect. So, in this case,
 
-[00:05:44]
-  Transcript :  اللي في المثال الاول
-  OCR        : هو ئبوت حركة آخر الكلمة مهما تغير موقعها في الجملة | سلمت على هذا التلميذ | رأيت هذا التلميذيذاكر | هذاتلميذ مجتهد
-  Combined   :  اللي في المثال الاول هو ئبوت حركة آخر الكلمة مهما تغير موقعها في الجملة | سلمت على هذا التلميذ | رأيت هذا التلميذيذاكر | هذاتلميذ مجتهد
-
-[00:05:45]
-  Transcript :  هذا هنا شباب كنا زمان في ابتدائي
+[00:05:53]
+  Transcript :  10 is congruent to 10 mod 12 is also perfect because we are getting the remainder as what? 10. Or,
   OCR        : None
-  Combined   :  هذا هنا شباب كنا زمان في ابتدائي
-
-[00:05:48]
-  Transcript :  بتتعرب
-  OCR        : None
-  Combined   :  بتتعرب
-
-[00:05:50]
-  Transcript :  يقولك متدأ مرفوع على مترفع
-  OCR        : None
-  Combined   :  يقولك متدأ مرفوع على مترفع
-
-[00:05:54]
-  Transcript :  تضم على طول. وده كان كلام غلط علشان حضراتك كنت لس صغير فانت
-  OCR        : سرأبت هذا التلميذيذاكر | اسم إشارة مبي علي السكون
-  Combined   :  تضم على طول. وده كان كلام غلط علشان حضراتك كنت لس صغير فانت سرأبت هذا التلميذيذاكر | اسم إشارة مبي علي السكون
-
-[00:05:56]
-  Transcript :  كبرت. دلوقتي هزا هنا اسم اشارة.
-  OCR        : None
-  Combined   :  كبرت. دلوقتي هزا هنا اسم اشارة.
+  Combined   :  10 is congruent to 10 mod 12 is also perfect because we are getting the remainder as what? 10. Or,
 
 [00:06:00]
-  Transcript :  وده إعراب ثابت لها
+  Transcript :  n is congruent to minus 2 mod 12 is also perfectly a valid congruence.
   OCR        : None
-  Combined   :  وده إعراب ثابت لها
-
-[00:06:01]
-  Transcript :  اسم إشارة مبني على السكون
-  OCR        : None
-  Combined   :  اسم إشارة مبني على السكون
-
-[00:06:03]
-  Transcript :  على طول كده
-  OCR        : None
-  Combined   :  على طول كده
+  Combined   :  n is congruent to minus 2 mod 12 is also perfectly a valid congruence.
 
 [00:06:04]
-  Transcript :  مهما بقى تغير مكانها في الجمل
+  Transcript :  So, if we say a is congruent to b mod m, what do we mean by this?
   OCR        : None
-  Combined   :  مهما بقى تغير مكانها في الجمل
+  Combined   :  So, if we say a is congruent to b mod m, what do we mean by this?
 
-[00:06:06]
-  Transcript :  هي اسم إشارة
+[00:06:10]
+  Transcript :  It means a when it is divided by m, we get the remainder b, right?
   OCR        : None
-  Combined   :  هي اسم إشارة
-
-[00:06:07]
-  Transcript :  وده إيه من مبني على السكون لأن أخرها ألف والألف ساكن
-  OCR        : None
-  Combined   :  وده إيه من مبني على السكون لأن أخرها ألف والألف ساكن
-
-[00:06:11]
-  Transcript :  في محل رافع
-  OCR        : None
-  Combined   :  في محل رافع
-
-[00:06:12]
-  Transcript :  في محل رافع مبتدأ
-  OCR        : None
-  Combined   :  في محل رافع مبتدأ
+  Combined   :  It means a when it is divided by m, we get the remainder b, right?
 
 [00:06:15]
-  Transcript :  تمام
+  Transcript :  So, a when it is divided by m, we get the remainder b and we are not worried about this quotient, right?
   OCR        : None
-  Combined   :  تمام
+  Combined   :  So, a when it is divided by m, we get the remainder b and we are not worried about this quotient, right?
 
-[00:06:15]
-  Transcript :  هي آه المحل بتاعها المكان بتاعها هنا
+[00:06:22]
+  Transcript :  It may be any times.
   OCR        : None
-  Combined   :  هي آه المحل بتاعها المكان بتاعها هنا
-
-[00:06:18]
-  Transcript :  كان المفروض يكون فيه مبتدأ
-  OCR        : None
-  Combined   :  كان المفروض يكون فيه مبتدأ
-
-[00:06:20]
-  Transcript :  بس إحنا مفيش مبتدأ وجات اسم الإشارة ده
-  OCR        : None
-  Combined   :  بس إحنا مفيش مبتدأ وجات اسم الإشارة ده
-
-[00:06:23]
-  Transcript :  فإحنا ما ينفعش
-  OCR        : None
-  Combined   :  فإحنا ما ينفعش
+  Combined   :  It may be any times.
 
 [00:06:24]
-  Transcript :  كان غلط أن إحنا نقول عليه على طول هو مبتدأ
+  Transcript :  And this can also be written as a is equal to km plus b.
   OCR        : None
-  Combined   :  كان غلط أن إحنا نقول عليه على طول هو مبتدأ
-
-[00:06:27]
-  Transcript :  لكن ده كان علشان حضرك لسه صغير فعلا
-  OCR        : None
-  Combined   :  لكن ده كان علشان حضرك لسه صغير فعلا
+  Combined   :  And this can also be written as a is equal to km plus b.
 
 [00:06:29]
-  Transcript :  فدلوقتي انت بدأت تكبر
+  Transcript :  Why?
   OCR        : None
-  Combined   :  فدلوقتي انت بدأت تكبر
+  Combined   :  Why?
 
-[00:06:31]
-  Transcript :  بدأت تتوسع مدركك في الاعراب
+[00:06:30]
+  Transcript :  Because this A is the product of M and K by adding the remainder B, right?
   OCR        : None
-  Combined   :  بدأت تتوسع مدركك في الاعراب
+  Combined   :  Because this A is the product of M and K by adding the remainder B, right?
 
-[00:06:33]
-  Transcript :  وبتعرف المواقع والكلام ده
+[00:06:36]
+  Transcript :  So, A is equal to M into K plus B.
   OCR        : None
-  Combined   :  وبتعرف المواقع والكلام ده
-
-[00:06:35]
-  Transcript :  فهنا بيكون اعرابها كالقاتي
-  OCR        : None
-  Combined   :  فهنا بيكون اعرابها كالقاتي
-
-[00:06:37]
-  Transcript :  دايما ثابت الكلام ده معنا
-  OCR        : None
-  Combined   :  دايما ثابت الكلام ده معنا
+  Combined   :  So, A is equal to M into K plus B.
 
 [00:06:39]
-  Transcript :  هي اسم اشارة مبنية على السكون
+  Transcript :  15 is equal to 12 into 1 plus 3, right?
   OCR        : None
-  Combined   :  هي اسم اشارة مبنية على السكون
-
-[00:06:41]
-  Transcript :  والمحل بتاعها بقى هو لا بتغير
-  OCR        : None
-  Combined   :  والمحل بتاعها بقى هو لا بتغير
+  Combined   :  15 is equal to 12 into 1 plus 3, right?
 
 [00:06:43]
-  Transcript :  هنا في محل رفع ايه
+  Transcript :  Or 23 is equal to 12 into 1 plus 11.
   OCR        : None
-  Combined   :  هنا في محل رفع ايه
-
-[00:06:45]
-  Transcript :  مبتدأ تمام لان المحل هنا
-  OCR        : None
-  Combined   :  مبتدأ تمام لان المحل هنا
+  Combined   :  Or 23 is equal to 12 into 1 plus 11.
 
 [00:06:47]
-  Transcript :  كان في اول الكلام
+  Transcript :  It means 12 into 1 is 12 plus 11, which is 23.
   OCR        : None
-  Combined   :  كان في اول الكلام
+  Combined   :  It means 12 into 1 is 12 plus 11, which is 23.
 
-[00:06:49]
-  Transcript :  فطبيعي انها كانت تعرف مبتدأ
+[00:06:51]
+  Transcript :  That's what we got here.
   OCR        : None
-  Combined   :  فطبيعي انها كانت تعرف مبتدأ
+  Combined   :  That's what we got here.
 
 [00:06:52]
-  Transcript :  طيب رأيته هذا التلميذ
-  OCR        : هو ثبوت حركة آخر الكلمة مهماتغير موقعها في الجملة | سلمت علي هذا التلميذ | التلميذ يذاكر | مجتهد | هذاتلميذ | سم إشارة بني علي السكون | في محل ريع مبكا | علميسيبين اجيك ينجيك
-  Combined   :  طيب رأيته هذا التلميذ هو ثبوت حركة آخر الكلمة مهماتغير موقعها في الجملة | سلمت علي هذا التلميذ | التلميذ يذاكر | مجتهد | هذاتلميذ | سم إشارة بني علي السكون | في محل ريع مبكا | علميسيبين اجيك ينجيك
+  Transcript :  Now, a very important question.
+  OCR        : None
+  Combined   :  Now, a very important question.
 
-[00:07:02]
-  Transcript : 
-  OCR        : رأبتهذا التلميذ يذاكر | هذا تلميذ مجتهد | اسم إشارة مين | السم إشارة مبني طلي السكون | في محل رفع ميكً | علميسبن أجيك ينجك
-  Combined   :  رأبتهذا التلميذ يذاكر | هذا تلميذ مجتهد | اسم إشارة مين | السم إشارة مبني طلي السكون | في محل رفع ميكً | علميسبن أجيك ينجك
+[00:06:54]
+  Transcript :  Why we are preferring congruence instead of equality Let me tell you that See here it need not be the case that it should be always 33 It can be 23 also So 23 is congruent to 3 mod 10 right Why Because
+  OCR        : None
+  Combined   :  Why we are preferring congruence instead of equality Let me tell you that See here it need not be the case that it should be always 33 It can be 23 also So 23 is congruent to 3 mod 10 right Why Because
 
-[00:07:12]
-  Transcript : 
-  OCR        : رأتذاالتلميذ يذاكر | اسم إشارة مبتي علي السكون | في محل تصب مفعول به
-  Combined   :  رأتذاالتلميذ يذاكر | اسم إشارة مبتي علي السكون | في محل تصب مفعول به
+[00:07:08]
+  Transcript :  23, when it is divided by 10, we get still 3 as the remainder. It can be 23, 33, 43, 53. It can vary,
+  OCR        : None
+  Combined   :  23, when it is divided by 10, we get still 3 as the remainder. It can be 23, 33, 43, 53. It can vary,
+
+[00:07:17]
+  Transcript :  but the remainder is still the same, isn't it? Let's take one more example here. This is 15 is
+  OCR        : None
+  Combined   :  but the remainder is still the same, isn't it? Let's take one more example here. This is 15 is
 
 [00:07:23]
-  Transcript : 
-  OCR        : رأبتهذاالتلميذيذاكر | اسم إشارة مي ع السكون | في محل تصب مغع | في محل رفع ميكاً
-  Combined   :  رأبتهذاالتلميذيذاكر | اسم إشارة مي ع السكون | في محل تصب مغع | في محل رفع ميكاً
-
-[00:07:23]
-  Transcript :  هتعرف ايه طبعا
+  Transcript :  congruent to 3 mod 12, right? Is there a necessity that it should be always 15 here? No, it can be
   OCR        : None
-  Combined   :  هتعرف ايه طبعا
+  Combined   :  congruent to 3 mod 12, right? Is there a necessity that it should be always 15 here? No, it can be
 
-[00:07:25]
-  Transcript :  اسم اشارة مبنية على السكون
+[00:07:30]
+  Transcript :  other numbers as well. So, what could be the other number? Let's take 27 here. 27 congruent to 3 mod
   OCR        : None
-  Combined   :  اسم اشارة مبنية على السكون
-
-[00:07:28]
-  Transcript :  في محل ايه ترى
-  OCR        : None
-  Combined   :  في محل ايه ترى
-
-[00:07:29]
-  Transcript :  في محل جر
-  OCR        : None
-  Combined   :  في محل جر
-
-[00:07:33]
-  Transcript :  اسم ايه مجرور
-  OCR        : سلمت على هذاالتلميذ | رأبتهذاالتلميذ يذاكر | اسم إشارة مبنى على السكون | في محل جر اسم مجرور | فى محل تصب مغعول به | في محل رفع ميكدا
-  Combined   :  اسم ايه مجرور سلمت على هذاالتلميذ | رأبتهذاالتلميذ يذاكر | اسم إشارة مبنى على السكون | في محل جر اسم مجرور | فى محل تصب مغعول به | في محل رفع ميكدا
-
-[00:07:33]
-  Transcript :  تمام ودي التلات حالات شباب
-  OCR        : None
-  Combined   :  تمام ودي التلات حالات شباب
-
-[00:07:35]
-  Transcript :  لكلمة هذا لما تغير
-  OCR        : None
-  Combined   :  لكلمة هذا لما تغير
+  Combined   :  other numbers as well. So, what could be the other number? Let's take 27 here. 27 congruent to 3 mod
 
 [00:07:37]
-  Transcript :  موقعها فين في الجملة
+  Transcript :  12. 27 is divided by 12. 12 2 times 24 and the remainder is 3. Still, this is a valid congruence
   OCR        : None
-  Combined   :  موقعها فين في الجملة
+  Combined   :  12. 27 is divided by 12. 12 2 times 24 and the remainder is 3. Still, this is a valid congruence
 
-[00:07:39]
-  Transcript :  تمام لكن الشاهد بقى
+[00:07:44]
+  Transcript :  if this 15 is replaced with 27. Here, in this case, we have 10 or even minus 2. Both are same.
   OCR        : None
-  Combined   :  تمام لكن الشاهد بقى
-
-[00:07:41]
-  Transcript :  ان هذا دي اخرها دايما
-  OCR        : None
-  Combined   :  ان هذا دي اخرها دايما
-
-[00:07:43]
-  Transcript :  سابت ما تغيرش
-  OCR        : None
-  Combined   :  سابت ما تغيرش
-
-[00:07:45]
-  Transcript :  ولا خدت ضمة مرة ولا خدت مرة فتحة
-  OCR        : None
-  Combined   :  ولا خدت ضمة مرة ولا خدت مرة فتحة
-
-[00:07:47]
-  Transcript :  ولا كسرة ولا سكو ولا
-  OCR        : None
-  Combined   :  ولا كسرة ولا سكو ولا
-
-[00:07:49]
-  Transcript :  اي حاجة من العلامات دي
-  OCR        : None
-  Combined   :  اي حاجة من العلامات دي
+  Combined   :  if this 15 is replaced with 27. Here, in this case, we have 10 or even minus 2. Both are same.
 
 [00:07:51]
-  Transcript :  هي دائما مبنية على السكون
+  Transcript :  According to mathematics, minus 2 is a different number, 10 is a different number.
   OCR        : None
-  Combined   :  هي دائما مبنية على السكون
-
-[00:07:53]
-  Transcript :  لكن محلها الإعرابي بيختلف
-  OCR        : None
-  Combined   :  لكن محلها الإعرابي بيختلف
+  Combined   :  According to mathematics, minus 2 is a different number, 10 is a different number.
 
 [00:07:56]
-  Transcript :  فعلى حسب موقعها في الجملة
+  Transcript :  But, under modulo 12, minus 2 and 10
   OCR        : None
-  Combined   :  فعلى حسب موقعها في الجملة
-
-[00:07:58]
-  Transcript :  وده برضو ما يغيرش على متى
-  OCR        : None
-  Combined   :  وده برضو ما يغيرش على متى
+  Combined   :  But, under modulo 12, minus 2 and 10
 
 [00:08:00]
-  Transcript :  هي علامتها الأساسية هي السكون
+  Transcript :  are the same and that's why we are going for congruence instead of equality.
   OCR        : None
-  Combined   :  هي علامتها الأساسية هي السكون
+  Combined   :  are the same and that's why we are going for congruence instead of equality.
 
-[00:08:01]
-  Transcript :  فما بتتغيرش مهما تغير
+[00:08:04]
+  Transcript :  Before we complete, let's see some valid and invalid congruences.
   OCR        : None
-  Combined   :  فما بتتغيرش مهما تغير
-
-[00:08:03]
-  Transcript :  موقعها في الجملة
-  OCR        : None
-  Combined   :  موقعها في الجملة
-
-[00:08:05]
-  Transcript :  تمام
-  OCR        : None
-  Combined   :  تمام
-
-[00:08:06]
-  Transcript :  كده بقى ان شاء الله
-  OCR        : اسم إشارة مني على السكون | اسم إشارة بتي علي السكون | اسم إشارة مبني علي السكون | في محل تصب مغعول به
-  Combined   :  كده بقى ان شاء الله اسم إشارة مني على السكون | اسم إشارة بتي علي السكون | اسم إشارة مبني علي السكون | في محل تصب مغعول به
+  Combined   :  Before we complete, let's see some valid and invalid congruences.
 
 [00:08:08]
-  Transcript :  تفهم بقى من الامثلة دي ان هو يتضح لنا
+  Transcript :  The first congruence is 38 is congruent to 2 mod 12.
   OCR        : None
-  Combined   :  تفهم بقى من الامثلة دي ان هو يتضح لنا
-
-[00:08:11]
-  Transcript :  ان كلمة
-  OCR        : None
-  Combined   :  ان كلمة
+  Combined   :  The first congruence is 38 is congruent to 2 mod 12.
 
 [00:08:13]
-  Transcript :  هذا دي لا يتغير
+  Transcript :  38 when it is divided by 12, 12 3 times 36 and the remainder is 2, right?
   OCR        : None
-  Combined   :  هذا دي لا يتغير
-
-[00:08:16]
-  Transcript :  علامتها ابدا
-  OCR        : هو ثبوت حركة آخر الكلمة مهما تغير موقعها في الجملة | رأبتهذا التلمي يذاكر | اسم إشارة مبتي على السكون | اسم إشارة مبي عل السكون | في محل ريع مبكداً | أمكت | أ أحمد سعب
-  Combined   :  علامتها ابدا هو ثبوت حركة آخر الكلمة مهما تغير موقعها في الجملة | رأبتهذا التلمي يذاكر | اسم إشارة مبتي على السكون | اسم إشارة مبي عل السكون | في محل ريع مبكداً | أمكت | أ أحمد سعب
-
-[00:08:17]
-  Transcript :  ان كلمة هذا
-  OCR        : None
-  Combined   :  ان كلمة هذا
+  Combined   :  38 when it is divided by 12, 12 3 times 36 and the remainder is 2, right?
 
 [00:08:19]
-  Transcript :  دائما مبنية على السكون
+  Transcript :  Is it valid? Yes, it is a valid congruence.
   OCR        : None
-  Combined   :  دائما مبنية على السكون
+  Combined   :  Is it valid? Yes, it is a valid congruence.
 
-[00:08:21]
-  Transcript :  تمام مهما تغير موقعها الاعرابي
+[00:08:22]
+  Transcript :  Let's see the second congruence.
   OCR        : None
-  Combined   :  تمام مهما تغير موقعها الاعرابي
+  Combined   :  Let's see the second congruence.
 
 [00:08:24]
-  Transcript :  في الجملة تمام
+  Transcript :  38 is congruent to 14 mod 12.
   OCR        : None
-  Combined   :  في الجملة تمام
-
-[00:08:26]
-  Transcript :  تمام يا شباب
-  OCR        : اسم إشارةمبتي علي السكون | في محل ريع ميكا | أن كلمة هذا دانمامبنية علي السكون رغم تغير موقعه
-  Combined   :  تمام يا شباب اسم إشارةمبتي علي السكون | في محل ريع ميكا | أن كلمة هذا دانمامبنية علي السكون رغم تغير موقعه
+  Combined   :  38 is congruent to 14 mod 12.
 
 [00:08:27]
-  Transcript :  ان شاء الله يكون واضح الكلام
+  Transcript :  See here, here also we have 38.
   OCR        : None
-  Combined   :  ان شاء الله يكون واضح الكلام
+  Combined   :  See here, here also we have 38.
 
 [00:08:29]
-  Transcript :  اللي احنا بنقوله دلوقتي ده بقى إيه
+  Transcript :  Here also we are going to perform the same motel operation.
   OCR        : None
-  Combined   :  اللي احنا بنقوله دلوقتي ده بقى إيه
-
-[00:08:31]
-  Transcript :  بداية كده يخلينا
-  OCR        : None
-  Combined   :  بداية كده يخلينا
+  Combined   :  Here also we are going to perform the same motel operation.
 
 [00:08:33]
-  Transcript :  نمهد لكلام بقى اللي
+  Transcript :  But can you see here, here I am using 2, but here I am using 14.
   OCR        : None
-  Combined   :  نمهد لكلام بقى اللي
+  Combined   :  But can you see here, here I am using 2, but here I am using 14.
 
-[00:08:35]
-  Transcript :  الكلام العربي كله بينقسم
+[00:08:36]
+  Transcript :  Is it a valid congruence?
   OCR        : None
-  Combined   :  الكلام العربي كله بينقسم
+  Combined   :  Is it a valid congruence?
 
-[00:08:37]
-  Transcript :  منه المعرب ومنه المبني
+[00:08:38]
+  Transcript :  Just pause this video for a while and think about this right answer.
   OCR        : None
-  Combined   :  منه المعرب ومنه المبني
-
-[00:08:39]
-  Transcript :  وده اللي هنأخذ في الدرس اللي جاي أو الفيديو اللي جاي
-  OCR        : None
-  Combined   :  وده اللي هنأخذ في الدرس اللي جاي أو الفيديو اللي جاي
-
-[00:08:41]
-  Transcript :  إن شاء الله فاتبعوا معنا
-  OCR        : None
-  Combined   :  إن شاء الله فاتبعوا معنا
+  Combined   :  Just pause this video for a while and think about this right answer.
 
 [00:08:42]
-  Transcript :  هناخد المعرب المبني من الأسماء
+  Transcript :  It is a valid congruence.
   OCR        : None
-  Combined   :  هناخد المعرب المبني من الأسماء
+  Combined   :  It is a valid congruence.
+
+[00:08:45]
+  Transcript :  You know why?
+  OCR        : None
+  Combined   :  You know why?
 
 [00:08:46]
-  Transcript :  وهناخد المعرب المبني من إيه
-  OCR        : نغير حركة أخر الكمة بنعير موفعهافي الجئة | موتوت هركة أر الكتمة مهاتغر موفعهافي الجطة | ال الن
-  Combined   :  وهناخد المعرب المبني من إيه نغير حركة أخر الكمة بنعير موفعهافي الجئة | موتوت هركة أر الكتمة مهاتغر موفعهافي الجطة | ال الن
-
-[00:08:47]
-  Transcript :  من الأفعال فتابعونا شباب
+  Transcript :  Because when 38 is divided by 12, 12, 2 times it is 24 and the remainder is 14.
   OCR        : None
-  Combined   :  من الأفعال فتابعونا شباب
-
-[00:08:49]
-  Transcript :  ونشد شوية كده ونذاكر إن شاء الله
-  OCR        : None
-  Combined   :  ونشد شوية كده ونذاكر إن شاء الله
-
-[00:08:51]
-  Transcript :  ربنا يبارك فيكم وينفع بيكم إن شاء الله
-  OCR        : None
-  Combined   :  ربنا يبارك فيكم وينفع بيكم إن شاء الله
+  Combined   :  Because when 38 is divided by 12, 12, 2 times it is 24 and the remainder is 14.
 
 [00:08:53]
-  Transcript :  جزيكم الله خيرا ونفع الله بكم
+  Transcript :  See we are changing the quotient right So here the quotient value is 3 So 12 threes are 36 and the remainder is 2 Here we are changing the quotient as 2 12 twos are 24 and the remainder is 14 So this is also a valid
   OCR        : None
-  Combined   :  جزيكم الله خيرا ونفع الله بكم
+  Combined   :  See we are changing the quotient right So here the quotient value is 3 So 12 threes are 36 and the remainder is 2 Here we are changing the quotient as 2 12 twos are 24 and the remainder is 14 So this is also a valid
 
-[00:08:55]
-  Transcript :  والسلام عليكم ورحمة الله وبركاته
+[00:09:08]
+  Transcript :  congruence. Then 5 is congruent to 0 mod 5. That is 5 when it is divided by 5, we get 0 as the
   OCR        : None
-  Combined   :  والسلام عليكم ورحمة الله وبركاته
+  Combined   :  congruence. Then 5 is congruent to 0 mod 5. That is 5 when it is divided by 5, we get 0 as the
+
+[00:09:14]
+  Transcript :  remainder. So, this is also a valid congruence. Then comes 10 is congruent to 2 mod 6. 10 when it
+  OCR        : None
+  Combined   :  remainder. So, this is also a valid congruence. Then comes 10 is congruent to 2 mod 6. 10 when it
+
+[00:09:21]
+  Transcript :  divided by 6, we get 4 as the remainder, right? So, this is not 2, this is 4, right? So, this is an
+  OCR        : None
+  Combined   :  divided by 6, we get 4 as the remainder, right? So, this is not 2, this is 4, right? So, this is an
+
+[00:09:28]
+  Transcript :  invalid congruence. Then, 13 is congruent to 3 mod 13. 13, when it is divided by 13, we get 0 as
+  OCR        : None
+  Combined   :  invalid congruence. Then, 13 is congruent to 3 mod 13. 13, when it is divided by 13, we get 0 as
+
+[00:09:35]
+  Transcript :  the remainder. But here we have 3. It is an invalid congruence. Then comes the next one, 2 is congruent
+  OCR        : None
+  Combined   :  the remainder. But here we have 3. It is an invalid congruence. Then comes the next one, 2 is congruent
+
+[00:09:42]
+  Transcript :  to minus 3 mod 5. Please pause this video for a while and think about the right answer.
+  OCR        : None
+  Combined   :  to minus 3 mod 5. Please pause this video for a while and think about the right answer.
+
+[00:09:47]
+  Transcript :  It is a valid congruence because 2 when it is divided by 5, we get the remainder 2 itself.
+  OCR        : None
+  Combined   :  It is a valid congruence because 2 when it is divided by 5, we get the remainder 2 itself.
+
+[00:09:54]
+  Transcript :  Right? So, it is like 2 mod 5. 2 means it can also be written as minus 3.
+  OCR        : None
+  Combined   :  Right? So, it is like 2 mod 5. 2 means it can also be written as minus 3.
+
+[00:10:00]
+  Transcript :  right? Just add these two. Minus 3 plus 5, it is plus 2. It is positive 2, right? So, it can be
+  OCR        : None
+  Combined   :  right? Just add these two. Minus 3 plus 5, it is plus 2. It is positive 2, right? So, it can be
+
+[00:10:06]
+  Transcript :  either positive 2 or minus 3. So, this is also a valid congruence. And finally, minus 8 is congruent
+  OCR        : None
+  Combined   :  either positive 2 or minus 3. So, this is also a valid congruence. And finally, minus 8 is congruent
+
+[00:10:14]
+  Transcript :  to 7 mod 5. I'll give one more congruence. Minus 3 is congruent to minus 8 mod 5. These two are
+  OCR        : None
+  Combined   :  to 7 mod 5. I'll give one more congruence. Minus 3 is congruent to minus 8 mod 5. These two are
+
+[00:10:22]
+  Transcript :  testing exercise for you. I request you to work it out and tell me whether these two are valid or
+  OCR        : None
+  Combined   :  testing exercise for you. I request you to work it out and tell me whether these two are valid or
+
+[00:10:28]
+  Transcript :  invalid congruences in the comment section. And that's it guys. I hope now you understood the
+  OCR        : None
+  Combined   :  invalid congruences in the comment section. And that's it guys. I hope now you understood the
+
+[00:10:33]
+  Transcript :  modular arithmetic with examples, we understood about congruence, we also identified some valid
+  OCR        : None
+  Combined   :  modular arithmetic with examples, we understood about congruence, we also identified some valid
+
+[00:10:39]
+  Transcript :  and invalid congruences. I hope you guys enjoyed this presentation and thank you for watching.
+  OCR        : None
+  Combined   :  and invalid congruences. I hope you guys enjoyed this presentation and thank you for watching.
 

@@ -49,7 +49,7 @@ export function UploadVideoSection({
     fileInputRef,
   } = useUploadHandlers(handleTakeVideo);
   
-  const { setVideoId  } = useLearningSession();
+  const { setVideoId,setVideoTitle  } = useLearningSession();
   const handleUploadVideo = async () => {
     if (!videoFile) return;
 
@@ -65,6 +65,7 @@ export function UploadVideoSection({
           "en",
           "technology",
           videoFile.type,
+          videoFile.size
         ),
         (p) => setProgress(p),
         controllerRef.current.signal,
@@ -75,10 +76,10 @@ export function UploadVideoSection({
         return;
       }
     
-
+         
      
        setVideoId(response.data.videoId);
-      
+       setVideoTitle(response.data.title);
     } catch (error) {
       if (error instanceof Error) {
         handleError(error.message);

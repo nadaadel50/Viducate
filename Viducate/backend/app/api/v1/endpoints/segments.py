@@ -50,7 +50,11 @@ def get_segments_by_video(
 
     return {
         "video_id": video_id,
+        "title":video.title,
         "video_url": video.url if video else None,
+        "current_time" :video.current_time ,       
+        "last_watched_at" :video.last_watched_at,
+        "bookmarks":video.bookmarks,
         "segments": [
             {
                 "segment_id": s.segment_id,

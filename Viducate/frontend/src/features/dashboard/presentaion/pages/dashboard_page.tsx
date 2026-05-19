@@ -5,9 +5,10 @@ import { UserCard } from "../widgets/user_card";
 import { LoadingScreen } from "../../../../core/widgets/advanced_loading";
 import { LayoutDashboard } from "lucide-react";
 import { ErrorMessage } from "../../../../core/widgets/error";
-import {  } from "../context/dashboard_context";
+import {} from "../context/dashboard_context";
 import { useDashboard } from "../hooks/use_dashboard";
 import { ContinueLearningPart } from "../widgets/continue_learning/continue_learning_part";
+import { StartUpload } from "../widgets/start_upload";
 
 export function DashboardPage() {
   const { data, isLoading, error } = useDashboard();
@@ -23,23 +24,27 @@ export function DashboardPage() {
   }
   if (error) return <ErrorMessage errorMessage={error.message} />;
 
-  if(data){
+  if (data) {
     return (
-    <div
-      style={{ background: COLORS.background.moreLight }}
-      className="flex flex-col w-full py-5 px-20 font-display min-h-screen gap-10 "
-    >
-      {/* user card */}
-      <UserCard />
+      <div
+        style={{ background: COLORS.background.moreLight }}
+        className="flex flex-col w-full py-5 px-20 font-display min-h-screen gap-10 "
+      >
+        {/* user card */}
+        <UserCard />
 
-      {/* 3 cards */}
+        {/* 3 cards */}
 
-      <ProgressPart />
+        <ProgressPart />
 
-      {/* contiune learning */}
-      <ContinueLearningPart/>
+        {/* contiune learning */}
 
-    </div>
-  );
+        {data.continue_learning?.length > 0 ? (
+          <ContinueLearningPart />
+        ) : (
+          <StartUpload />
+        )}
+      </div>
+    );
   }
 }

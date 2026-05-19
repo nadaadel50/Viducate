@@ -9,4 +9,5 @@ export type ContinueLearningEntity = {
   is_completed: boolean;
   last_watched_at: string;
   created_at: string;
+  video_type: string;
 };

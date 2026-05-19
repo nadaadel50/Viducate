@@ -11,6 +11,7 @@ export type ContinueLearningDto = {
   is_completed: boolean;
   last_watched_at: string;
   created_at: string;
+  video_type: string;
 };
 
 export function mapContinueLearningDtoToEntity(
@@ -27,5 +28,6 @@ export function mapContinueLearningDtoToEntity(
     is_completed: dto.is_completed,
     last_watched_at: dto.last_watched_at,
     created_at: dto.created_at,
+    video_type: dto.video_type,
   };
 }

@@ -7,6 +7,8 @@ export type DashboardStatsDto = {
   total_watch_time_seconds: number;
   total_storage: number;
   used_storage: number;
+  total_r2_storage: number;
+  used_r2_storage: number;
 };
 
 export function mapDashboardStatsDtoToEntity(
@@ -17,5 +19,7 @@ export function mapDashboardStatsDtoToEntity(
     total_watch_time_seconds: dto.total_watch_time_seconds,
     total_storage: dto.total_storage,
     used_storage: dto.used_storage,
+    total_r2_storage: dto.total_r2_storage,
+    used_r2_storage: dto.used_r2_storage,
   };
 }

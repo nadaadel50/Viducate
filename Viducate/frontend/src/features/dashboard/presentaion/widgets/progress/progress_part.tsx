@@ -6,11 +6,8 @@ export function ProgressPart() {
   const { data } = useDashboard();
   const stats = data?.stats;
 
-
-
-
   return (
-    <div className="grid grid-cols-3 gap-3  ">
+    <div className="grid grid-cols-3 gap-4  ">
       <ProgressCard
         iconBackGround="blue-500"
         icon="bookmark"
@@ -23,12 +20,16 @@ export function ProgressPart() {
         title="Watched"
         value={formatTimeToHoursMinutes(stats?.total_watch_time_seconds || 0)}
       />
+    
       <ProgressCard
         iconBackGround="amber-500"
         icon="storage"
         title="Storage"
-        used={stats?.used_storage || 0}
-        total={stats?.total_storage || 1}
+        usedLinked={stats?.used_storage || 0}
+        totalLinked={stats?.total_storage || 1}
+        usedUploaded={stats?.used_r2_storage || 0}
+        totalUploaded={stats?.total_r2_storage || 1}
+       
       />
     </div>
   );

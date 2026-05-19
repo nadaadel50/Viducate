@@ -1,18 +1,30 @@
 import { useDashboard } from "../../hooks/use_dashboard";
 import { ContinueLearningCard } from "./cotinue_learning_card";
+import { VideoFilterButton } from "./video_filter_btn";
 export function ContinueLearningPart() {
-  const{data}=useDashboard ();
+  const { data, uploaded_videos, linked_videos } = useDashboard();
 
-  const cardsData = data?.continue_learning!;
-    return(
-        
- <div className="flex flex-col gap-4 ">
-        {/* header */}
-        <h2 className="text-2xl font-bold text-slate-900 ">
-          Continue Learning
-        </h2>
+  const filteredCards = data?.continue_learning?.filter((card) => {
+    if (uploaded_videos && linked_videos) {
+      return card;
+    }
+    if (uploaded_videos) {
+      return card.video_type == "uploaded";
+    }
+    if (linked_videos) {
+      return card.video_type == "url";
+    }
+    return true;
+  });
 
-        {/* {search} */}
+  const cardsData = filteredCards || data?.continue_learning || [];
+  return (
+    <div className="flex flex-col gap-4 ">
+      {/* header */}
+      <h2 className="text-2xl font-bold text-slate-900 ">Continue Learning</h2>
+
+      {/* {search and filter} */}
+      <div className="flex justify-between">
         <div className="relative w-full max-w-2xl">
           <div className="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
             <span className="material-symbols-outlined text-slate-400">
@@ -26,11 +38,19 @@ export function ContinueLearningPart() {
           />
         </div>
 
+        <div>
+          <VideoFilterButton />
+        </div>
+      </div>
+
+       
         <div className="grid grid-cols-3 gap-5">
           {cardsData.map((card) => (
             <ContinueLearningCard key={card.videoId} cardData={card} />
           ))}
         </div>
-      </div>
-    )
+     
+   
+    </div>
+  );
 }

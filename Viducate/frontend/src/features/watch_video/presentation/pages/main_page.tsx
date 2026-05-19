@@ -9,11 +9,11 @@ import { LanguageInitModal } from "../../../video_upload/presentation/componants
 import { CustomizeExperienceModal } from "../../../video_upload/presentation/componants/CustomizeExperienceModal";
 import { useLearningSession } from "../../../../core/hooks/useLearningContent";
 import { ChatProvider } from "../../../chat_bot/presenation/context/chatbot_provider";
-import { useNavigate } from "react-router";
+
 
 export function MainPage() {
-  const navigate=useNavigate()
-  const { videoId, selectedTopic, setSelectedTopic, setTopics } =
+ 
+  const { videoId, selectedTopic, setSelectedTopic, setTopics} =
     useLearningSession();
 
   const { data: data, isLoading, error } = useVideoData();
@@ -37,7 +37,7 @@ export function MainPage() {
     if (!data || data.topics.length === 0) return;
 
     setTopics(data.topics);
-    console.log("topics is",data.topics)
+  
     
 
     if (!selectedTopic) {

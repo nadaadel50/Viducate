@@ -17,6 +17,10 @@ type DashboardContextType = {
   data: DashboardData | null;
   isLoading: boolean;
   error: Error | null;
+  uploaded_videos:boolean;
+  linked_videos:boolean;
+  handleUploadedVideosChange: (value: boolean) => void;
+  handleLinkedVideosChange: (value: boolean) => void;
 }
 
 // Context

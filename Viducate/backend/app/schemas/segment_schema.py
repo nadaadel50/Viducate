@@ -1,3 +1,5 @@
+from datetime import datetime
+
 from pydantic import BaseModel, field_validator
 from typing import List, Optional
 
@@ -45,11 +47,6 @@ class SegmentSchema(BaseModel):
             raise ValueError("end_time must be greater than start_time")
         return v
 
-class SubTopicBriefResponse(BaseModel):
-    name: str
-    start_time: int
-
-    model_config = {"from_attributes": True}
 
 class SubTopicBriefResponse(BaseModel):
     name: str
@@ -80,7 +77,11 @@ class SegmentResponse(BaseModel):
 
 class VideoSegmentsResponse(BaseModel):
     video_id: int
+    title:str
     video_url: Optional[str]
+    current_time: int
+    last_watched_at: Optional[datetime]
+    bookmarks: List[int]
     segments: List[SegmentResponse]
 
 

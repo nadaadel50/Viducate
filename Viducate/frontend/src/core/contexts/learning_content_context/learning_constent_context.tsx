@@ -4,6 +4,8 @@ export type LearningSessionContextType = {
   videoId: number | null;
   videoTitle: string|null
 
+  //handleSetVideoTitle: (title: string|null) => void;
+
   topics:TopicResponse[]|null
 
   selectedTopic: TopicResponse | null;
@@ -33,5 +35,6 @@ export type LearningSessionContextType = {
 
   duration: number|null;
   setDurationTime: (duration: number) => void;
+
   
 };
