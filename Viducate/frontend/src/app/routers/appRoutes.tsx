@@ -22,7 +22,7 @@ import { FlashCards } from "../../features/flash_cards/presentation/pages/flash_
 import { WatchLayout } from "../../features/watch_video/presentation/pages/watch_outlet";
 import { PublicRoute } from "./publicRoutes";
 import MindMapPage from "../../features/mindMap/presentation/pages/mindMap_page";
-
+import{ProfilePage} from "../../features/Profile/presentation/pages/profile_page";
 export function AppRoutes() {
   return (
     <BrowserRouter>
@@ -34,9 +34,8 @@ export function AppRoutes() {
         <Route path="/forgot-password" element={<ForgetPasswordPage />} />
       
 
-        <Route path="/test-modals" element={<TestModalsPage />} /> /* for
-        
-        
+        <Route path="/test-modals" element={<TestModalsPage />} /> {/* for testing */}
+        <Route path="/profile" element={<ProfilePage />} />
         <Route path="/study-notes" element={<StudyNotesPage />} />
     <Route element={<ProtectedRoute />}>
           {" "}
