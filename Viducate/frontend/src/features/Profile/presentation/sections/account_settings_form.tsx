@@ -23,7 +23,6 @@ export function AccountSettingsForm({
 
   return (
     <section className="bg-white rounded-[1.25rem] border border-slate-200 shadow-sm overflow-hidden hover:shadow-md transition-shadow duration-300">
-      
       {/* Tab Header */}
       <div className="flex border-b border-slate-200">
         <div
@@ -45,19 +44,15 @@ export function AccountSettingsForm({
       </div>
 
       <div className="p-8 sm:p-10">
-        <form
-          onSubmit={handleSave}
-          className="max-w-3xl mx-auto space-y-10"
-        >
-          
+        <form onSubmit={handleSave} className="max-w-3xl mx-auto space-y-10">
           {/* Personal Information */}
           <div>
-            <SectionTitle title="Personal Information" />
+            <SectionTitle titleId="profile.section.personalInfo" />
 
             <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
               <FormField
                 id="firstName"
-                label="First Name"
+                labelId="form.firstName"
                 value={fields.firstName}
                 onChange={setters.setFirstName}
                 required
@@ -65,7 +60,7 @@ export function AccountSettingsForm({
 
               <FormField
                 id="lastName"
-                label="Last Name"
+                labelId="form.lastName"
                 value={fields.lastName}
                 onChange={setters.setLastName}
                 required
@@ -75,59 +70,53 @@ export function AccountSettingsForm({
 
           {/* Security */}
           <div>
-            <SectionTitle title="Security" />
+            <SectionTitle titleId="profile.section.security" />
 
             <div className="space-y-6">
               <FormField
                 id="currentPassword"
-                label="Current Password"
+                labelId="form.currentPassword"
                 type="password"
                 value={fields.currentPassword}
                 onChange={setters.setCurrentPassword}
-                placeholder="••••••••"
+                placeholderId="form.password.placeholder"
               />
 
               <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                 <FormField
                   id="newPassword"
-                  label="New Password"
+                  labelId="form.newPassword"
                   type="password"
                   value={fields.newPassword}
                   onChange={setters.setNewPassword}
-                  placeholder="••••••••"
+                  placeholderId="form.password.placeholder"
                 />
 
                 <FormField
                   id="confirmPassword"
-                  label="Confirm New Password"
+                  labelId="form.confirmPassword"
                   type="password"
                   value={fields.confirmPassword}
                   onChange={setters.setConfirmPassword}
-                  placeholder="••••••••"
+                  placeholderId="form.password.placeholder"
                 />
               </div>
             </div>
           </div>
-
           {/* Form Actions */}
           <div className="pt-5 flex flex-col-reverse sm:flex-row items-center justify-between sm:justify-end gap-4 border-t border-slate-100">
-            
             <SaveFeedback
               type={state.saveMessage.type}
-              text={state.saveMessage.text}
+              messageId={state.saveMessage.messageId}
             />
 
             <div className="flex gap-3 w-full sm:w-auto">
-              
               {/* Cancel Button */}
               <button
                 type="button"
                 className="flex-1 sm:flex-none px-6 py-3 text-slate-500 font-medium hover:text-slate-900 hover:bg-slate-50 rounded-xl transition-all"
               >
-                <FormattedMessage
-                  id="common.cancel"
-                  defaultMessage="Cancel"
-                />
+                <FormattedMessage id="common.cancel" defaultMessage="Cancel" />
               </button>
 
               {/* Save Button */}
@@ -170,11 +159,9 @@ export function AccountSettingsForm({
 
         {/* Delete Account */}
         <div className="pt-12 mt-10 border-t border-slate-100">
-          
-          <SectionTitle title="Delete Account" danger />
+          <SectionTitle titleId="profile.section.deleteAccount" danger />
 
           <div className="p-6 sm:p-8 bg-red-50/70 border border-red-100 rounded-2xl flex flex-col md:flex-row items-center justify-between gap-6 transition-all hover:bg-red-50 hover:shadow-sm">
-            
             <div className="flex-1 text-center md:text-left">
               <p className="text-base font-semibold text-red-800 mb-1.5 flex items-center justify-center md:justify-start gap-2">
                 <AlertTriangle size={18} />
