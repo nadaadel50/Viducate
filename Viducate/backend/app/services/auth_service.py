@@ -227,11 +227,4 @@ class AuthService:
 
         return token, user
     
-    def update_language(self, user_id: int, language: str):
-        user = self.user_repo.get_by_id(user_id)
-        if not user:
-            raise HTTPException(
-                status_code=404,
-                detail="User not found"
-            )
-        return self.user_repo.update_language(user, language)
+

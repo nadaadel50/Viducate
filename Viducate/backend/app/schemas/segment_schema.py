@@ -1,3 +1,5 @@
+from datetime import datetime
+
 from pydantic import BaseModel, field_validator
 from typing import List, Optional
 
@@ -80,7 +82,11 @@ class SegmentResponse(BaseModel):
 
 class VideoSegmentsResponse(BaseModel):
     video_id: int
+    title:str
     video_url: Optional[str]
+    current_time: int
+    last_watched_at: Optional[datetime]
+    bookmarks: List[int]
     segments: List[SegmentResponse]
 
 
