@@ -46,6 +46,7 @@ export class UploadVideoService {
   }
 
   async deleteVideo(video_id:number):Promise<string>{
+    console.log("delete done")
      const response = await apiClient.delete(`/videos/${video_id}`);
      return response.data
 

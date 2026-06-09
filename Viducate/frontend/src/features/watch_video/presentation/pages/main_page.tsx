@@ -9,12 +9,11 @@ import { LanguageInitModal } from "../../../video_upload/presentation/componants
 import { CustomizeExperienceModal } from "../../../video_upload/presentation/componants/CustomizeExperienceModal";
 import { useLearningSession } from "../../../../core/hooks/useLearningContent";
 import { ChatProvider } from "../../../chat_bot/presenation/context/chatbot_provider";
-import { useNavigate } from "react-router";
+import { useUnsavedChangesWarning } from "../hook/use_unsave_changes";
+import { STORAGE_KEYS } from "../../../../core/constants";
 
 export function MainPage() {
-  const navigate=useNavigate()
-  const { videoId, selectedTopic, setSelectedTopic, setTopics } =
-    useLearningSession();
+  const { videoId, hasUnsavedChanges } = useLearningSession();
 
   const { data: data, isLoading, error } = useVideoData();
 
@@ -33,18 +32,6 @@ export function MainPage() {
     }
   }, [videoId]);
 
-  useEffect(() => {
-    if (!data || data.topics.length === 0) return;
-
-    setTopics(data.topics);
-    console.log("topics is",data.topics)
-    
-
-    if (!selectedTopic) {
-      setSelectedTopic(data.topics[0]);
-    }
-  }, [data]); 
-
   const handleGoToCustomize = () => {
     setIsInitOpen(false);
     setTimeout(() => {
@@ -52,36 +39,45 @@ export function MainPage() {
     }, 300);
   };
 
+  useEffect(() => {
+  return () => {
+    sessionStorage.removeItem(STORAGE_KEYS.currentTime);
+   
+  };
+}, []);
+
+
+  useUnsavedChangesWarning(hasUnsavedChanges);
+
   if (isLoading && !data) return <Loading />;
   if (error) return <ErrorMessage errorMessage={error.message} />;
+  else {
+    return (
+      <>
+       
+        <div className="flex font-display bg-[#f8fafc] ">
+          <div className="flex-1 border-r border-slate-200 h-screen ">
+            <LeftContentSection />
+          </div>
 
- else{
- 
-   return (
-    <>
-      <div className="flex font-display bg-[#f8fafc] ">
-        <div className="flex-1 border-r border-slate-200 h-screen ">
-          <LeftContentSection />
+          <div className="flex-[3.5]">
+            <ChatProvider>
+              <RightContentSection />
+            </ChatProvider>
+          </div>
         </div>
+        <LanguageInitModal
+          isOpen={isInitOpen}
+          onClose={() => setIsInitOpen(false)}
+          onCustomize={handleGoToCustomize}
+        />
 
-        <div className="flex-[3.5]">
-          <ChatProvider>
-            <RightContentSection />
-          </ChatProvider>
-        </div>
-      </div>
-      <LanguageInitModal
-        isOpen={isInitOpen}
-        onClose={() => setIsInitOpen(false)}
-        onCustomize={handleGoToCustomize}
-      />
-
-      <CustomizeExperienceModal
-        isOpen={isCustomizeOpen}
-        onClose={() => setIsCustomizeOpen(false)}
-        videoId={videoId}
-      />
-    </>
-  );
- }
+        <CustomizeExperienceModal
+          isOpen={isCustomizeOpen}
+          onClose={() => setIsCustomizeOpen(false)}
+          videoId={videoId}
+        />
+      </>
+    );
+  }
 }

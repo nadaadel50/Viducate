@@ -1,4 +1,5 @@
 {
+<<<<<<< HEAD
   "total_segments": 8,
   "segments": [
     {
@@ -222,6 +223,138 @@
         "Credit Scoring",
         "Mouse Navigation"
       ]
+=======
+  "total_segments": 4,
+  "segments": [
+    {
+      "segment_number": 1,
+      "start_time": "00:00",
+      "end_time": "01:30",
+      "main_topic": "Introduction to Modular Arithmetic",
+      "title": "Understanding Modular Arithmetic and its Importance",
+      "sub_topics": [
+        {
+          "name": "Introduction and Session Outcomes",
+          "start_time": "00:00",
+          "end_time": "00:39",
+          "description": "Every day, we all are doing a mod-12 operation without even knowing that we are doing this mod-12 operation. Shocking? No worries. Let's dive into the topic of the day, the modular arithmetic part 1 to know this. As usual, let's start the session with the outcomes. Upon the completion of the session, the learner will be able to Outcome number one, we will understand the modular arithmetic operation with examples. Outcome number two, we will understand about congruence. And outcome number three, we will identify valid and invalid congruence.",
+          "content_type": "general"
+        },
+        {
+          "name": "Definition and Importance of Modular Arithmetic",
+          "start_time": "00:40",
+          "end_time": "01:30",
+          "description": "Let's dive into the topic of the day, modular arithmetic. What is this modular arithmetic? Actually, this modular arithmetic is a system of arithmetic for integers. We know integers. And modular arithmetic is a system of arithmetic for integers When it is going to work on integers obviously we are going to wrap around after reaching a certain value called modulus So we are going to work on a system of arithmetic for integers and what we are going to do, we are going to wrap around after reaching a certain value. This value is called as a moduli. I will explain this point when we see an example and why we are dealing this modular arithmetic. Because, this modular arithmetic is the central mathematical concept in cryptography. The widely used cryptographic algorithms are mainly depending on these modular arithmetic.",
+          "content_type": "definition"
+        }
+      ],
+      "key_points": [
+        "Understand modular arithmetic operation with examples.",
+        "Understand about congruence.",
+        "Modular arithmetic is a system of arithmetic for integers, wrapping around after a certain value (modulus)."
+      ],
+      "_source_text": "Every day, we all are doing a mod-12 operation without even knowing that we are doing this mod-12 operation. Shocking? No worries. Let's dive into the topic of the day, the modular arithmetic part 1 to know this. As usual, let's start the session with the outcomes. Upon the completion of the session, the learner will be able to Outcome number one, we will understand the modular arithmetic operation with examples. Outcome number two, we will understand about congruence. And outcome number three, we will identify valid and invalid congruence. Let's dive into the topic of the day, modular arithmetic. What is this modular arithmetic? Actually, this modular arithmetic is a system of arithmetic for integers. We know integers. And modular arithmetic is a system of arithmetic for integers When it is going to work on integers obviously we are going to wrap around after reaching a certain value called modulus So we are going to work on a system of arithmetic for integers and what we are going to do, we are going to wrap around after reaching a certain value. This value is called as a moduli. I will explain this point when we see an example and why we are dealing this modular arithmetic. Because, this modular arithmetic is the central mathematical concept in cryptography. The widely used cryptographic algorithms are mainly depending on these modular arithmetic.",
+      "_quality": {
+        "score": 0.8878,
+        "flag": false,
+        "threshold": 0.32
+      }
+    },
+    {
+      "segment_number": 2,
+      "start_time": "01:31",
+      "end_time": "03:08",
+      "main_topic": "Modular Arithmetic in Practice",
+      "title": "Illustrating Modulo Operation with a Clock Example",
+      "sub_topics": [
+        {
+          "name": "Clock Example for Mod-12 Operation",
+          "start_time": "01:31",
+          "end_time": "03:08",
+          "description": "Let's understand about these modulars with this example. Here is a clock. We have 24 hours a day. Do we have 24 numbers representing 24 hours in our clock? Definitely no. But still we are able to understand that the 24 hour timing with just 12 numbers. Isn't it? Let's say, if the time is 15 hours, it means it is 3 pm, right? If the time is 20 hours, it means it is 8 pm, isn't it? Alright. If the time is 23 hours, then obviously it is 11 pm, isn't it? Actually, what we are doing is a mod 12 operation. We wrap around every 12 hours. So, what we are doing here is a wrap around operation on these integers. So, here we have only 12 integers represented on the clock and this is a system of arithmetic for integers. And what we are doing, we are wrapping around after reaching a certain value. Here in the wall clock example, we are wrapping around every 12 hours, right? So, 12 is the modulus here. So, the modulus value as far as a wall clock is concerned is 12. And when we say 13 hours, what we are doing? So, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12. And this is 13, right? And that's why we are able to find that it is 1 PM. When I say it's 13 hours, what we are doing? We are just doing a mod 12 operation on 13 So 13 mod 12 when 13 is divided by 12 we get the remainder 1 I hope things are clear for you now Before seeing some examples in order to understand things clearly about modular arithmetic",
+          "content_type": "example"
+        }
+      ],
+      "key_points": [
+        "Clock example demonstrates mod 12 operation.",
+        "We wrap around every 12 hours.",
+        "The modulus value for a wall clock is 12."
+      ],
+      "_source_text": "Let's understand about these modulars with this example. Here is a clock. We have 24 hours a day. Do we have 24 numbers representing 24 hours in our clock? Definitely no. But still we are able to understand that the 24 hour timing with just 12 numbers. Isn't it? Let's say, if the time is 15 hours, it means it is 3 pm, right? If the time is 20 hours, it means it is 8 pm, isn't it? Alright. If the time is 23 hours, then obviously it is 11 pm, isn't it? Actually, what we are doing is a mod 12 operation. We wrap around every 12 hours. So, what we are doing here is a wrap around operation on these integers. So, here we have only 12 integers represented on the clock and this is a system of arithmetic for integers. And what we are doing, we are wrapping around after reaching a certain value. Here in the wall clock example, we are wrapping around every 12 hours, right? So, 12 is the modulus here. So, the modulus value as far as a wall clock is concerned is 12. And when we say 13 hours, what we are doing? So, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12. And this is 13, right? And that's why we are able to find that it is 1 PM. When I say it's 13 hours, what we are doing? We are just doing a mod 12 operation on 13 So 13 mod 12 when 13 is divided by 12 we get the remainder 1 I hope things are clear for you now Before seeing some examples in order to understand things clearly about modular arithmetic",
+      "_quality": {
+        "score": 0.8826,
+        "flag": false,
+        "threshold": 0.32
+      }
+    },
+    {
+      "segment_number": 3,
+      "start_time": "03:09",
+      "end_time": "06:51",
+      "main_topic": "Introduction to Congruence",
+      "title": "Defining and Explaining Congruence in Modular Arithmetic",
+      "sub_topics": [
+        {
+          "name": "Definition of Congruence and Initial Examples",
+          "start_time": "03:09",
+          "end_time": "06:04",
+          "description": "let's see what is congruence. Actually, in cryptography, congruence is used which is represented with this symbol instead of equality. Why equality is not preferred in congruence? Let's see some examples. 15 is congruent to 3 mod 12. Since we are dealing with mod 12, let's see the wall clock example. So, the modulus value is 12 as far as a wall clock is concerned, isn't it? So, here also we have mod 12. So, when I say 15 hours, what does it mean? We did 15 mod 12, right? So, 15 mod 12 is what? The remainder is 3. So, what we are doing actually is, we are taking this number 15 and we are doing a more 12 operation. So, remember this 15 is here and this 12 is the divisor. So, we are dividing 15 by 12. When it is done, 12, 1 times 12 and the remainder is 3. So, 3 is the answer, right? That's what we said. 15 hours means what? It's 3 p.m., isn't it? So, 15 is congruent to 3 mod 12. I hope it is understandable. Let's see one more example. 23 is congruent to 11 mod 12. How did we get this? Because we are taking the number 23 and we are dividing 23 by 12. So, 12, 1 times 12 and the remainder is what? 11. So, that's the answer for this second equation. So, remember 23 is congruent to 11 mod 12. In other words, 23 hours means 11 pm, right? Let's stop dealing with mod 12. Let's take some other numbers. Let's take 33 is congruent to 3 mod 10. Is it valid? Yes, it is valid because 33 when it is divided by 10, 10, 3 times 30 and the remainder is 3. So this is also a valid congruence isn it Because always remember when we have this number this is divided by this number and whatever we get as the remainder is this number So this is a colloquial way of explanation but still please understand things in this way for now. Then 10 is congruent to minus 2 mod 12. How did we get this? Let's say 10 is here, right? We are going to divide 10 by 12. 10, it is divided by 12. How many times 12 takes 10? 12 0 times 0 and the remainder is what? 10. So, here we can have 10 also. So, 10 is congruent to 10 mod 12 is the valid congruence. In other words, 10 mod 12 can be written as minus 2, right? I hope you can remember this. Whenever you have a negative number mod, then what I told you? I asked you to simply add these two numbers, isn't it? I hope you can recollect this. So, minus 2 plus 12 is 10. So, 10 or minus 2 both are perfect. So, in this case, 10 is congruent to 10 mod 12 is also perfect because we are getting the remainder as what? 10. Or, n is congruent to minus 2 mod 12 is also perfectly a valid congruence.",
+          "content_type": "definition"
+        },
+        {
+          "name": "Formal Representation and Explanation of Congruence",
+          "start_time": "06:04",
+          "end_time": "06:51",
+          "description": "So, if we say a is congruent to b mod m, what do we mean by this? It means a when it is divided by m, we get the remainder b, right? So, a when it is divided by m, we get the remainder b and we are not worried about this quotient, right? It may be any times. And this can also be written as a is equal to km plus b. Why? Because this A is the product of M and K by adding the remainder B, right? So, A is equal to M into K plus B. 15 is equal to 12 into 1 plus 3, right? Or 23 is equal to 12 into 1 plus 11. It means 12 into 1 is 12 plus 11, which is 23. That's what we got here.",
+          "content_type": "definition"
+        }
+      ],
+      "key_points": [
+        "Congruence (≡) is used instead of equality in cryptography.",
+        "a ≡ b mod m means 'a' divided by 'm' gives remainder 'b'.",
+        "a = km + b is an alternative representation of congruence."
+      ],
+      "_source_text": "let's see what is congruence. Actually, in cryptography, congruence is used which is represented with this symbol instead of equality. Why equality is not preferred in congruence? Let's see some examples. 15 is congruent to 3 mod 12. Since we are dealing with mod 12, let's see the wall clock example. So, the modulus value is 12 as far as a wall clock is concerned, isn't it? So, here also we have mod 12. So, when I say 15 hours, what does it mean? We did 15 mod 12, right? So, 15 mod 12 is what? The remainder is 3. So, what we are doing actually is, we are taking this number 15 and we are doing a more 12 operation. So, remember this 15 is here and this 12 is the divisor. So, we are dividing 15 by 12. When it is done, 12, 1 times 12 and the remainder is 3. So, 3 is the answer, right? That's what we said. 15 hours means what? It's 3 p.m., isn't it? So, 15 is congruent to 3 mod 12. I hope it is understandable. Let's see one more example. 23 is congruent to 11 mod 12. How did we get this? Because we are taking the number 23 and we are dividing 23 by 12. So, 12, 1 times 12 and the remainder is what? 11. So, that's the answer for this second equation. So, remember 23 is congruent to 11 mod 12. In other words, 23 hours means 11 pm, right? Let's stop dealing with mod 12. Let's take some other numbers. Let's take 33 is congruent to 3 mod 10. Is it valid? Yes, it is valid because 33 when it is divided by 10, 10, 3 times 30 and the remainder is 3. So this is also a valid congruence isn it Because always remember when we have this number this is divided by this number and whatever we get as the remainder is this number So this is a colloquial way of explanation but still please understand things in this way for now. Then 10 is congruent to minus 2 mod 12. How did we get this? Let's say 10 is here, right? We are going to divide 10 by 12. 10, it is divided by 12. How many times 12 takes 10? 12 0 times 0 and the remainder is what? 10. So, here we can have 10 also. So, 10 is congruent to 10 mod 12 is the valid congruence. In other words, 10 mod 12 can be written as minus 2, right? I hope you can remember this. Whenever you have a negative number mod, then what I told you? I asked you to simply add these two numbers, isn't it? I hope you can recollect this. So, minus 2 plus 12 is 10. So, 10 or minus 2 both are perfect. So, in this case, 10 is congruent to 10 mod 12 is also perfect because we are getting the remainder as what? 10. Or, n is congruent to minus 2 mod 12 is also perfectly a valid congruence. So, if we say a is congruent to b mod m, what do we mean by this? It means a when it is divided by m, we get the remainder b, right? So, a when it is divided by m, we get the remainder b and we are not worried about this quotient, right? It may be any times. And this can also be written as a is equal to km plus b. Why? Because this A is the product of M and K by adding the remainder B, right? So, A is equal to M into K plus B. 15 is equal to 12 into 1 plus 3, right? Or 23 is equal to 12 into 1 plus 11. It means 12 into 1 is 12 plus 11, which is 23.",
+      "_quality": {
+        "score": 0.881,
+        "flag": false,
+        "threshold": 0.32
+      }
+    },
+    {
+      "segment_number": 4,
+      "start_time": "06:52",
+      "end_time": "10:41",
+      "main_topic": "Congruence vs. Equality and Practical Examples",
+      "title": "Distinguishing Congruence from Equality and Identifying Valid Congruences",
+      "sub_topics": [
+        {
+          "name": "Rationale for Using Congruence over Equality",
+          "start_time": "06:52",
+          "end_time": "08:03",
+          "description": "Now, a very important question. Why we are preferring congruence instead of equality Let me tell you that See here it need not be the case that it should be always 33 It can be 23 also So 23 is congruent to 3 mod 10 right Why Because 23, when it is divided by 10, we get still 3 as the remainder. It can be 23, 33, 43, 53. It can vary, but the remainder is still the same, isn't it? Let's take one more example here. This is 15 is congruent to 3 mod 12, right? Is there a necessity that it should be always 15 here? No, it can be other numbers as well. So, what could be the other number? Let's take 27 here. 27 congruent to 3 mod 12. 27 is divided by 12. 12 2 times 24 and the remainder is 3. Still, this is a valid congruence if this 15 is replaced with 27. Here, in this case, we have 10 or even minus 2. Both are same. According to mathematics, minus 2 is a different number, 10 is a different number. But, under modulo 12, minus 2 and 10 are the same and that's why we are going for congruence instead of equality.",
+          "content_type": "comparison"
+        },
+        {
+          "name": "Identifying Valid and Invalid Congruences and Session Summary",
+          "start_time": "08:04",
+          "end_time": "10:41",
+          "description": "Before we complete, let's see some valid and invalid congruences. The first congruence is 38 is congruent to 2 mod 12. 38 when it is divided by 12, 12 3 times 36 and the remainder is 2, right? Is it valid? Yes, it is a valid congruence. Let's see the second congruence. 38 is congruent to 14 mod 12. See here, here also we have 38. Here also we are going to perform the same motel operation. But can you see here, here I am using 2, but here I am using 14. Is it a valid congruence? Just pause this video for a while and think about this right answer. It is a valid congruence. You know why? Because when 38 is divided by 12, 12, 2 times it is 24 and the remainder is 14. See we are changing the quotient right So here the quotient value is 3 So 12 threes are 36 and the remainder is 2 Here we are changing the quotient as 2 12 twos are 24 and the remainder is 14 So this is also a valid congruence. Then 5 is congruent to 0 mod 5. That is 5 when it is divided by 5, we get 0 as the remainder. So, this is also a valid congruence. Then comes 10 is congruent to 2 mod 6. 10 when it divided by 6, we get 4 as the remainder, right? So, this is not 2, this is 4, right? So, this is an invalid congruence. Then, 13 is congruent to 3 mod 13. 13, when it is divided by 13, we get 0 as the remainder. But here we have 3. It is an invalid congruence. Then comes the next one, 2 is congruent to minus 3 mod 5. Please pause this video for a while and think about the right answer. It is a valid congruence because 2 when it is divided by 5, we get the remainder 2 itself. Right? So, it is like 2 mod 5. 2 means it can also be written as minus 3. right? Just add these two. Minus 3 plus 5, it is plus 2. It is positive 2, right? So, it can be either positive 2 or minus 3. So, this is also a valid congruence. And finally, minus 8 is congruent to 7 mod 5. I'll give one more congruence. Minus 3 is congruent to minus 8 mod 5. These two are testing exercise for you. I request you to work it out and tell me whether these two are valid or invalid congruences in the comment section. And that's it guys. I hope now you understood the modular arithmetic with examples, we understood about congruence, we also identified some valid and invalid congruences. I hope you guys enjoyed this presentation and thank you for watching.",
+          "content_type": "example"
+        }
+      ],
+      "key_points": [
+        "Congruence is preferred because different numbers can have the same remainder under a specific modulus.",
+        "38 ≡ 2 mod 12 is a valid congruence.",
+        "10 ≡ 2 mod 6 is an invalid congruence (remainder is 4, not 2)."
+      ],
+      "_source_text": "Now, a very important question. Why we are preferring congruence instead of equality Let me tell you that See here it need not be the case that it should be always 33 It can be 23 also So 23 is congruent to 3 mod 10 right Why Because 23, when it is divided by 10, we get still 3 as the remainder. It can be 23, 33, 43, 53. It can vary, but the remainder is still the same, isn't it? Let's take one more example here. This is 15 is congruent to 3 mod 12, right? Is there a necessity that it should be always 15 here? No, it can be other numbers as well. So, what could be the other number? Let's take 27 here. 27 congruent to 3 mod 12. 27 is divided by 12. 12 2 times 24 and the remainder is 3. Still, this is a valid congruence if this 15 is replaced with 27. Here, in this case, we have 10 or even minus 2. Both are same. According to mathematics, minus 2 is a different number, 10 is a different number. But, under modulo 12, minus 2 and 10 are the same and that's why we are going for congruence instead of equality. Before we complete, let's see some valid and invalid congruences. The first congruence is 38 is congruent to 2 mod 12. 38 when it is divided by 12, 12 3 times 36 and the remainder is 2, right? Is it valid? Yes, it is a valid congruence. Let's see the second congruence. 38 is congruent to 14 mod 12. See here, here also we have 38. Here also we are going to perform the same motel operation. But can you see here, here I am using 2, but here I am using 14. Is it a valid congruence? Just pause this video for a while and think about this right answer. It is a valid congruence. You know why? Because when 38 is divided by 12, 12, 2 times it is 24 and the remainder is 14. See we are changing the quotient right So here the quotient value is 3 So 12 threes are 36 and the remainder is 2 Here we are changing the quotient as 2 12 twos are 24 and the remainder is 14 So this is also a valid congruence. Then 5 is congruent to 0 mod 5. That is 5 when it is divided by 5, we get 0 as the remainder. So, this is also a valid congruence. Then comes 10 is congruent to 2 mod 6. 10 when it divided by 6, we get 4 as the remainder, right? So, this is not 2, this is 4, right? So, this is an invalid congruence. Then, 13 is congruent to 3 mod 13. 13, when it is divided by 13, we get 0 as the remainder. But here we have 3. It is an invalid congruence. Then comes the next one, 2 is congruent to minus 3 mod 5. Please pause this video for a while and think about the right answer. It is a valid congruence because 2 when it is divided by 5, we get the remainder 2 itself. Right? So, it is like 2 mod 5. 2 means it can also be written as minus 3. right? Just add these two. Minus 3 plus 5, it is plus 2. It is positive 2, right? So, it can be either positive 2 or minus 3. So, this is also a valid congruence. And finally, minus 8 is congruent to 7 mod 5. I'll give one more congruence. Minus 3 is congruent to minus 8 mod 5. These two are testing exercise for you. I request you to work it out and tell me whether these two are valid or invalid congruences in the comment section. And that's it guys. I hope now you understood the modular arithmetic with examples, we understood about congruence, we also identified some valid and invalid congruences. I hope you guys enjoyed this presentation and thank you for watching.",
+      "_quality": {
+        "score": 0.8561,
+        "flag": false,
+        "threshold": 0.32
+      }
+>>>>>>> 8bb9d000b594ea3bd024f7c7c574de1b7bb29b51
     }
   ]
 }

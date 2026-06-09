@@ -1,7 +1,9 @@
-import { useRef } from "react";
+import {  useRef } from "react";
+
 
 export function useVideoPlayer() {
   const playerRef = useRef<HTMLVideoElement | null>(null);
+ 
   
   
   const seek = (time: number) => {
@@ -17,9 +19,11 @@ export function useVideoPlayer() {
   const getCurrentTime = () => playerRef.current?.currentTime ?? 0;
   const getDuration = () => playerRef.current?.duration ?? 0;
   
+  
   const setSpeed = (rate: number) => {
     if (playerRef.current) playerRef.current.playbackRate = rate;
   };
+ 
 
   return {play,pause, playerRef, seek, getCurrentTime, getDuration, setSpeed };
 }

@@ -42,7 +42,7 @@ class VideoService:
         self.caching_service = VideoCachingServise(db)
 
     def _check_db_storage_limit(self, user_id: int):
-            used = self.video_repo.get_video_storage_bytes(user_id)
+            used = self.video_repo.get_user_r2_storage_bytes(user_id)
             if used >= DB_STORAGE_THRESHOLD:
                 used_mb = used / (1024 * 1024)
                 raise HTTPException(
@@ -236,6 +236,33 @@ class VideoService:
     
 
     def save_video(self, user_id: int, request: SaveVideoRequest) -> dict:
+    
+        video = self.video_repo.get_by_id(request.video_id)
+        if not video:
+            raise HTTPException(status_code=status.HTTP_404_NOT_FOUND, detail="Video not found")
+        if video.user_id != user_id:
+            raise HTTPException(status_code=status.HTTP_403_FORBIDDEN, detail="Not authorized")
+
+
+        for segment in video.segments:
+            if segment.segment_id in request.completed_segment_ids:
+                segment.is_completed = True
+            else:
+                segment.is_completed = False  
+
+        video.bookmarks = request.bookmarks
+
+        video.current_time = request.current_time
+        
+        video.duration = request.duration
+
+        video.last_watched_at = func.now()
+
+        self.db.commit()
+        
+        logger.info(f"Video saved: video_id={request.video_id}, user_id={user_id}")
+        
+        return {"message": "Video saved successfully"}
     
         video = self.video_repo.get_by_id(request.video_id)
         if not video:

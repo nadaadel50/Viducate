@@ -17,7 +17,7 @@ export function LinkSection({
   return (
     <div className="  bg-gray-50  w-full flex flex-col  mt-10 py-12 border-2  border-gray-200 rounded-2xl   mb-10 ">
       <div className="mx-15 flex flex-col ">
-        <p className=" text-sm font-bold text-gray-900 dark:text-white mb-3">
+        <p className=" text-sm font-bold text-gray-900  mb-3">
           Video URL
         </p>
 

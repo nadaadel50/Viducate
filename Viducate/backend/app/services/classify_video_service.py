@@ -7,6 +7,12 @@ BLOCKED_TOPICS = {
     "film", "gaming", "video_game", "news","lifestyle"
 }
 
+NASHEED_KEYWORDS = {
+    "أنشودة", "نشيد", "أناشيد", "nasheed", "نغم",
+    "معي ربي", "lyrics", "official audio", "official video"
+}
+
+
 async def classify_video(video_id: str) -> str:
     try:
         async with httpx.AsyncClient() as client:
@@ -25,6 +31,8 @@ async def classify_video(video_id: str) -> str:
             return "general"
 
         snippet = items[0]["snippet"]
+        title = snippet.get("title", "").lower()
+
         topic_details = items[0].get("topicDetails", {})
         topic_categories = topic_details.get("topicCategories", [])
 
@@ -39,6 +47,11 @@ async def classify_video(video_id: str) -> str:
 
         if matched:
             return "blocked"
+        
+        # if regioin NASHEED
+        if "religion" in topics_text:
+            if any(kw in title for kw in NASHEED_KEYWORDS):
+                return "blocked"
 
         return "general"
 

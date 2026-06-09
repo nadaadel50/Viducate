@@ -1,0 +1,683 @@
+<<<<<<< HEAD
+=======
+[00:00:00]
+  Transcript :  Every day, we all are doing a mod-12 operation without even knowing that we are doing this mod-12 operation.
+  OCR        : None
+  Combined   :  Every day, we all are doing a mod-12 operation without even knowing that we are doing this mod-12 operation.
+
+[00:00:13]
+  Transcript :  Shocking? No worries. Let's dive into the topic of the day, the modular arithmetic part 1 to know this.
+  OCR        : None
+  Combined   :  Shocking? No worries. Let's dive into the topic of the day, the modular arithmetic part 1 to know this.
+
+[00:00:20]
+  Transcript :  As usual, let's start the session with the outcomes.
+  OCR        : None
+  Combined   :  As usual, let's start the session with the outcomes.
+
+[00:00:23]
+  Transcript :  Upon the completion of the session, the learner will be able to
+  OCR        : None
+  Combined   :  Upon the completion of the session, the learner will be able to
+
+[00:00:27]
+  Transcript :  Outcome number one, we will understand the modular arithmetic operation with examples.
+  OCR        : None
+  Combined   :  Outcome number one, we will understand the modular arithmetic operation with examples.
+
+[00:00:32]
+  Transcript :  Outcome number two, we will understand about congruence.
+  OCR        : None
+  Combined   :  Outcome number two, we will understand about congruence.
+
+[00:00:35]
+  Transcript :  And outcome number three, we will identify valid and invalid congruence.
+  OCR        : None
+  Combined   :  And outcome number three, we will identify valid and invalid congruence.
+
+[00:00:40]
+  Transcript :  Let's dive into the topic of the day, modular arithmetic.
+  OCR        : None
+  Combined   :  Let's dive into the topic of the day, modular arithmetic.
+
+[00:00:44]
+  Transcript :  What is this modular arithmetic?
+  OCR        : None
+  Combined   :  What is this modular arithmetic?
+
+[00:00:46]
+  Transcript :  Actually, this modular arithmetic is a system of arithmetic for integers.
+  OCR        : None
+  Combined   :  Actually, this modular arithmetic is a system of arithmetic for integers.
+
+[00:00:51]
+  Transcript :  We know integers.
+  OCR        : None
+  Combined   :  We know integers.
+
+[00:00:52]
+  Transcript :  And modular arithmetic is a system of arithmetic for integers When it is going to work on integers obviously we are going to wrap around after reaching a certain value called modulus So we are going to work on a system of arithmetic
+  OCR        : None
+  Combined   :  And modular arithmetic is a system of arithmetic for integers When it is going to work on integers obviously we are going to wrap around after reaching a certain value called modulus So we are going to work on a system of arithmetic
+
+[00:01:07]
+  Transcript :  for integers and what we are going to do, we are going to wrap around after reaching
+  OCR        : None
+  Combined   :  for integers and what we are going to do, we are going to wrap around after reaching
+
+[00:01:12]
+  Transcript :  a certain value. This value is called as a moduli. I will explain this point when we see
+  OCR        : None
+  Combined   :  a certain value. This value is called as a moduli. I will explain this point when we see
+
+[00:01:17]
+  Transcript :  an example and why we are dealing this modular arithmetic. Because, this modular arithmetic
+  OCR        : None
+  Combined   :  an example and why we are dealing this modular arithmetic. Because, this modular arithmetic
+
+[00:01:23]
+  Transcript :  is the central mathematical concept in cryptography.
+  OCR        : None
+  Combined   :  is the central mathematical concept in cryptography.
+
+[00:01:26]
+  Transcript :  The widely used cryptographic algorithms are mainly depending on these modular arithmetic.
+  OCR        : None
+  Combined   :  The widely used cryptographic algorithms are mainly depending on these modular arithmetic.
+
+[00:01:31]
+  Transcript :  Let's understand about these modulars with this example.
+  OCR        : None
+  Combined   :  Let's understand about these modulars with this example.
+
+[00:01:35]
+  Transcript :  Here is a clock.
+  OCR        : None
+  Combined   :  Here is a clock.
+
+[00:01:36]
+  Transcript :  We have 24 hours a day.
+  OCR        : None
+  Combined   :  We have 24 hours a day.
+
+[00:01:39]
+  Transcript :  Do we have 24 numbers representing 24 hours in our clock?
+  OCR        : None
+  Combined   :  Do we have 24 numbers representing 24 hours in our clock?
+
+[00:01:43]
+  Transcript :  Definitely no.
+  OCR        : None
+  Combined   :  Definitely no.
+
+[00:01:44]
+  Transcript :  But still we are able to understand that the 24 hour timing with just 12 numbers.
+  OCR        : None
+  Combined   :  But still we are able to understand that the 24 hour timing with just 12 numbers.
+
+[00:01:49]
+  Transcript :  Isn't it?
+  OCR        : None
+  Combined   :  Isn't it?
+
+[00:01:50]
+  Transcript :  Let's say, if the time is 15 hours, it means it is 3 pm, right?
+  OCR        : None
+  Combined   :  Let's say, if the time is 15 hours, it means it is 3 pm, right?
+
+[00:01:54]
+  Transcript :  If the time is 20 hours, it means it is 8 pm, isn't it?
+  OCR        : None
+  Combined   :  If the time is 20 hours, it means it is 8 pm, isn't it?
+
+[00:01:59]
+  Transcript :  Alright.
+  OCR        : None
+  Combined   :  Alright.
+
+[00:02:00]
+  Transcript :  If the time is 23 hours, then obviously it is 11 pm, isn't it?
+  OCR        : None
+  Combined   :  If the time is 23 hours, then obviously it is 11 pm, isn't it?
+
+[00:02:05]
+  Transcript :  Actually, what we are doing is a mod 12 operation.
+  OCR        : None
+  Combined   :  Actually, what we are doing is a mod 12 operation.
+
+[00:02:08]
+  Transcript :  We wrap around every 12 hours.
+  OCR        : None
+  Combined   :  We wrap around every 12 hours.
+
+[00:02:11]
+  Transcript :  So, what we are doing here is a wrap around operation on these integers.
+  OCR        : None
+  Combined   :  So, what we are doing here is a wrap around operation on these integers.
+
+[00:02:15]
+  Transcript :  So, here we have only 12 integers represented on the clock
+  OCR        : None
+  Combined   :  So, here we have only 12 integers represented on the clock
+
+[00:02:18]
+  Transcript :  and this is a system of arithmetic for integers.
+  OCR        : None
+  Combined   :  and this is a system of arithmetic for integers.
+
+[00:02:21]
+  Transcript :  And what we are doing, we are wrapping around after reaching a certain value.
+  OCR        : None
+  Combined   :  And what we are doing, we are wrapping around after reaching a certain value.
+
+[00:02:26]
+  Transcript :  Here in the wall clock example, we are wrapping around every 12 hours, right?
+  OCR        : None
+  Combined   :  Here in the wall clock example, we are wrapping around every 12 hours, right?
+
+[00:02:31]
+  Transcript :  So, 12 is the modulus here.
+  OCR        : None
+  Combined   :  So, 12 is the modulus here.
+
+[00:02:33]
+  Transcript :  So, the modulus value as far as a wall clock is concerned is 12.
+  OCR        : None
+  Combined   :  So, the modulus value as far as a wall clock is concerned is 12.
+
+[00:02:37]
+  Transcript :  And when we say 13 hours, what we are doing?
+  OCR        : None
+  Combined   :  And when we say 13 hours, what we are doing?
+
+[00:02:39]
+  Transcript :  So, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12.
+  OCR        : None
+  Combined   :  So, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12.
+
+[00:02:44]
+  Transcript :  And this is 13, right?
+  OCR        : None
+  Combined   :  And this is 13, right?
+
+[00:02:46]
+  Transcript :  And that's why we are able to find that it is 1 PM.
+  OCR        : None
+  Combined   :  And that's why we are able to find that it is 1 PM.
+
+[00:02:49]
+  Transcript :  When I say it's 13 hours, what we are doing?
+  OCR        : None
+  Combined   :  When I say it's 13 hours, what we are doing?
+
+[00:02:52]
+  Transcript :  We are just doing a mod 12 operation on 13 So 13 mod 12 when 13 is divided by 12 we get the remainder 1 I hope things are clear for you now Before seeing some examples in order to understand things clearly about modular arithmetic
+  OCR        : None
+  Combined   :  We are just doing a mod 12 operation on 13 So 13 mod 12 when 13 is divided by 12 we get the remainder 1 I hope things are clear for you now Before seeing some examples in order to understand things clearly about modular arithmetic
+
+[00:03:09]
+  Transcript :  let's see what is congruence. Actually, in cryptography, congruence is used which is
+  OCR        : None
+  Combined   :  let's see what is congruence. Actually, in cryptography, congruence is used which is
+
+[00:03:14]
+  Transcript :  represented with this symbol instead of equality. Why equality is not preferred in congruence?
+  OCR        : None
+  Combined   :  represented with this symbol instead of equality. Why equality is not preferred in congruence?
+
+[00:03:20]
+  Transcript :  Let's see some examples. 15 is congruent to 3 mod 12. Since we are dealing with mod 12,
+  OCR        : None
+  Combined   :  Let's see some examples. 15 is congruent to 3 mod 12. Since we are dealing with mod 12,
+
+[00:03:26]
+  Transcript :  let's see the wall clock example. So, the modulus value is 12 as far as a wall clock is concerned,
+  OCR        : None
+  Combined   :  let's see the wall clock example. So, the modulus value is 12 as far as a wall clock is concerned,
+
+[00:03:32]
+  Transcript :  isn't it? So, here also we have mod 12. So, when I say 15 hours, what does it mean? We did 15 mod 12,
+  OCR        : None
+  Combined   :  isn't it? So, here also we have mod 12. So, when I say 15 hours, what does it mean? We did 15 mod 12,
+
+[00:03:39]
+  Transcript :  right? So, 15 mod 12 is what? The remainder is 3. So, what we are doing actually is, we are taking
+  OCR        : None
+  Combined   :  right? So, 15 mod 12 is what? The remainder is 3. So, what we are doing actually is, we are taking
+
+[00:03:45]
+  Transcript :  this number 15 and we are doing a more 12 operation. So, remember this 15 is here and
+  OCR        : None
+  Combined   :  this number 15 and we are doing a more 12 operation. So, remember this 15 is here and
+
+[00:03:51]
+  Transcript :  this 12 is the divisor. So, we are dividing 15 by 12. When it is done, 12, 1 times 12
+  OCR        : None
+  Combined   :  this 12 is the divisor. So, we are dividing 15 by 12. When it is done, 12, 1 times 12
+
+[00:03:58]
+  Transcript :  and the remainder is 3.
+  OCR        : None
+  Combined   :  and the remainder is 3.
+
+[00:04:00]
+  Transcript :  So, 3 is the answer, right?
+  OCR        : None
+  Combined   :  So, 3 is the answer, right?
+
+[00:04:02]
+  Transcript :  That's what we said.
+  OCR        : None
+  Combined   :  That's what we said.
+
+[00:04:03]
+  Transcript :  15 hours means what?
+  OCR        : None
+  Combined   :  15 hours means what?
+
+[00:04:04]
+  Transcript :  It's 3 p.m., isn't it?
+  OCR        : None
+  Combined   :  It's 3 p.m., isn't it?
+
+[00:04:06]
+  Transcript :  So, 15 is congruent to 3 mod 12.
+  OCR        : None
+  Combined   :  So, 15 is congruent to 3 mod 12.
+
+[00:04:10]
+  Transcript :  I hope it is understandable.
+  OCR        : None
+  Combined   :  I hope it is understandable.
+
+[00:04:12]
+  Transcript :  Let's see one more example.
+  OCR        : None
+  Combined   :  Let's see one more example.
+
+[00:04:13]
+  Transcript :  23 is congruent to 11 mod 12.
+  OCR        : None
+  Combined   :  23 is congruent to 11 mod 12.
+
+[00:04:17]
+  Transcript :  How did we get this?
+  OCR        : None
+  Combined   :  How did we get this?
+
+[00:04:18]
+  Transcript :  Because we are taking the number 23 and we are dividing 23 by 12.
+  OCR        : None
+  Combined   :  Because we are taking the number 23 and we are dividing 23 by 12.
+
+[00:04:22]
+  Transcript :  So, 12, 1 times 12 and the remainder is what?
+  OCR        : None
+  Combined   :  So, 12, 1 times 12 and the remainder is what?
+
+[00:04:25]
+  Transcript :  11.
+  OCR        : None
+  Combined   :  11.
+
+[00:04:26]
+  Transcript :  So, that's the answer for this second equation.
+  OCR        : None
+  Combined   :  So, that's the answer for this second equation.
+
+[00:04:29]
+  Transcript :  So, remember 23 is congruent to 11 mod 12.
+  OCR        : None
+  Combined   :  So, remember 23 is congruent to 11 mod 12.
+
+[00:04:33]
+  Transcript :  In other words, 23 hours means 11 pm, right?
+  OCR        : None
+  Combined   :  In other words, 23 hours means 11 pm, right?
+
+[00:04:37]
+  Transcript :  Let's stop dealing with mod 12.
+  OCR        : None
+  Combined   :  Let's stop dealing with mod 12.
+
+[00:04:38]
+  Transcript :  Let's take some other numbers.
+  OCR        : None
+  Combined   :  Let's take some other numbers.
+
+[00:04:40]
+  Transcript :  Let's take 33 is congruent to 3 mod 10.
+  OCR        : None
+  Combined   :  Let's take 33 is congruent to 3 mod 10.
+
+[00:04:43]
+  Transcript :  Is it valid?
+  OCR        : None
+  Combined   :  Is it valid?
+
+[00:04:44]
+  Transcript :  Yes, it is valid because 33 when it is divided by 10,
+  OCR        : None
+  Combined   :  Yes, it is valid because 33 when it is divided by 10,
+
+[00:04:49]
+  Transcript :  10, 3 times 30 and the remainder is 3.
+  OCR        : None
+  Combined   :  10, 3 times 30 and the remainder is 3.
+
+[00:04:52]
+  Transcript :  So this is also a valid congruence isn it Because always remember when we have this number this is divided by this number and whatever we get as the remainder is this number So this is a colloquial way of explanation but
+  OCR        : None
+  Combined   :  So this is also a valid congruence isn it Because always remember when we have this number this is divided by this number and whatever we get as the remainder is this number So this is a colloquial way of explanation but
+
+[00:05:06]
+  Transcript :  still please understand things in this way for now. Then 10 is congruent to minus 2 mod 12.
+  OCR        : None
+  Combined   :  still please understand things in this way for now. Then 10 is congruent to minus 2 mod 12.
+
+[00:05:13]
+  Transcript :  How did we get this? Let's say 10 is here, right? We are going to divide 10 by 12. 10,
+  OCR        : None
+  Combined   :  How did we get this? Let's say 10 is here, right? We are going to divide 10 by 12. 10,
+
+[00:05:20]
+  Transcript :  it is divided by 12. How many times 12 takes 10? 12 0 times 0 and the remainder is what? 10. So,
+  OCR        : None
+  Combined   :  it is divided by 12. How many times 12 takes 10? 12 0 times 0 and the remainder is what? 10. So,
+
+[00:05:27]
+  Transcript :  here we can have 10 also. So, 10 is congruent to 10 mod 12 is the valid congruence. In other words,
+  OCR        : None
+  Combined   :  here we can have 10 also. So, 10 is congruent to 10 mod 12 is the valid congruence. In other words,
+
+[00:05:35]
+  Transcript :  10 mod 12 can be written as minus 2, right? I hope you can remember this. Whenever you have a negative
+  OCR        : None
+  Combined   :  10 mod 12 can be written as minus 2, right? I hope you can remember this. Whenever you have a negative
+
+[00:05:40]
+  Transcript :  number mod, then what I told you? I asked you to simply add these two numbers, isn't it? I hope you
+  OCR        : None
+  Combined   :  number mod, then what I told you? I asked you to simply add these two numbers, isn't it? I hope you
+
+[00:05:46]
+  Transcript :  can recollect this. So, minus 2 plus 12 is 10. So, 10 or minus 2 both are perfect. So, in this case,
+  OCR        : None
+  Combined   :  can recollect this. So, minus 2 plus 12 is 10. So, 10 or minus 2 both are perfect. So, in this case,
+
+[00:05:53]
+  Transcript :  10 is congruent to 10 mod 12 is also perfect because we are getting the remainder as what? 10. Or,
+  OCR        : None
+  Combined   :  10 is congruent to 10 mod 12 is also perfect because we are getting the remainder as what? 10. Or,
+
+[00:06:00]
+  Transcript :  n is congruent to minus 2 mod 12 is also perfectly a valid congruence.
+  OCR        : None
+  Combined   :  n is congruent to minus 2 mod 12 is also perfectly a valid congruence.
+
+[00:06:04]
+  Transcript :  So, if we say a is congruent to b mod m, what do we mean by this?
+  OCR        : None
+  Combined   :  So, if we say a is congruent to b mod m, what do we mean by this?
+
+[00:06:10]
+  Transcript :  It means a when it is divided by m, we get the remainder b, right?
+  OCR        : None
+  Combined   :  It means a when it is divided by m, we get the remainder b, right?
+
+[00:06:15]
+  Transcript :  So, a when it is divided by m, we get the remainder b and we are not worried about this quotient, right?
+  OCR        : None
+  Combined   :  So, a when it is divided by m, we get the remainder b and we are not worried about this quotient, right?
+
+[00:06:22]
+  Transcript :  It may be any times.
+  OCR        : None
+  Combined   :  It may be any times.
+
+[00:06:24]
+  Transcript :  And this can also be written as a is equal to km plus b.
+  OCR        : None
+  Combined   :  And this can also be written as a is equal to km plus b.
+
+[00:06:29]
+  Transcript :  Why?
+  OCR        : None
+  Combined   :  Why?
+
+[00:06:30]
+  Transcript :  Because this A is the product of M and K by adding the remainder B, right?
+  OCR        : None
+  Combined   :  Because this A is the product of M and K by adding the remainder B, right?
+
+[00:06:36]
+  Transcript :  So, A is equal to M into K plus B.
+  OCR        : None
+  Combined   :  So, A is equal to M into K plus B.
+
+[00:06:39]
+  Transcript :  15 is equal to 12 into 1 plus 3, right?
+  OCR        : None
+  Combined   :  15 is equal to 12 into 1 plus 3, right?
+
+[00:06:43]
+  Transcript :  Or 23 is equal to 12 into 1 plus 11.
+  OCR        : None
+  Combined   :  Or 23 is equal to 12 into 1 plus 11.
+
+[00:06:47]
+  Transcript :  It means 12 into 1 is 12 plus 11, which is 23.
+  OCR        : None
+  Combined   :  It means 12 into 1 is 12 plus 11, which is 23.
+
+[00:06:51]
+  Transcript :  That's what we got here.
+  OCR        : None
+  Combined   :  That's what we got here.
+
+[00:06:52]
+  Transcript :  Now, a very important question.
+  OCR        : None
+  Combined   :  Now, a very important question.
+
+[00:06:54]
+  Transcript :  Why we are preferring congruence instead of equality Let me tell you that See here it need not be the case that it should be always 33 It can be 23 also So 23 is congruent to 3 mod 10 right Why Because
+  OCR        : None
+  Combined   :  Why we are preferring congruence instead of equality Let me tell you that See here it need not be the case that it should be always 33 It can be 23 also So 23 is congruent to 3 mod 10 right Why Because
+
+[00:07:08]
+  Transcript :  23, when it is divided by 10, we get still 3 as the remainder. It can be 23, 33, 43, 53. It can vary,
+  OCR        : None
+  Combined   :  23, when it is divided by 10, we get still 3 as the remainder. It can be 23, 33, 43, 53. It can vary,
+
+[00:07:17]
+  Transcript :  but the remainder is still the same, isn't it? Let's take one more example here. This is 15 is
+  OCR        : None
+  Combined   :  but the remainder is still the same, isn't it? Let's take one more example here. This is 15 is
+
+[00:07:23]
+  Transcript :  congruent to 3 mod 12, right? Is there a necessity that it should be always 15 here? No, it can be
+  OCR        : None
+  Combined   :  congruent to 3 mod 12, right? Is there a necessity that it should be always 15 here? No, it can be
+
+[00:07:30]
+  Transcript :  other numbers as well. So, what could be the other number? Let's take 27 here. 27 congruent to 3 mod
+  OCR        : None
+  Combined   :  other numbers as well. So, what could be the other number? Let's take 27 here. 27 congruent to 3 mod
+
+[00:07:37]
+  Transcript :  12. 27 is divided by 12. 12 2 times 24 and the remainder is 3. Still, this is a valid congruence
+  OCR        : None
+  Combined   :  12. 27 is divided by 12. 12 2 times 24 and the remainder is 3. Still, this is a valid congruence
+
+[00:07:44]
+  Transcript :  if this 15 is replaced with 27. Here, in this case, we have 10 or even minus 2. Both are same.
+  OCR        : None
+  Combined   :  if this 15 is replaced with 27. Here, in this case, we have 10 or even minus 2. Both are same.
+
+[00:07:51]
+  Transcript :  According to mathematics, minus 2 is a different number, 10 is a different number.
+  OCR        : None
+  Combined   :  According to mathematics, minus 2 is a different number, 10 is a different number.
+
+[00:07:56]
+  Transcript :  But, under modulo 12, minus 2 and 10
+  OCR        : None
+  Combined   :  But, under modulo 12, minus 2 and 10
+
+[00:08:00]
+  Transcript :  are the same and that's why we are going for congruence instead of equality.
+  OCR        : None
+  Combined   :  are the same and that's why we are going for congruence instead of equality.
+
+[00:08:04]
+  Transcript :  Before we complete, let's see some valid and invalid congruences.
+  OCR        : None
+  Combined   :  Before we complete, let's see some valid and invalid congruences.
+
+[00:08:08]
+  Transcript :  The first congruence is 38 is congruent to 2 mod 12.
+  OCR        : None
+  Combined   :  The first congruence is 38 is congruent to 2 mod 12.
+
+[00:08:13]
+  Transcript :  38 when it is divided by 12, 12 3 times 36 and the remainder is 2, right?
+  OCR        : None
+  Combined   :  38 when it is divided by 12, 12 3 times 36 and the remainder is 2, right?
+
+[00:08:19]
+  Transcript :  Is it valid? Yes, it is a valid congruence.
+  OCR        : None
+  Combined   :  Is it valid? Yes, it is a valid congruence.
+
+[00:08:22]
+  Transcript :  Let's see the second congruence.
+  OCR        : None
+  Combined   :  Let's see the second congruence.
+
+[00:08:24]
+  Transcript :  38 is congruent to 14 mod 12.
+  OCR        : None
+  Combined   :  38 is congruent to 14 mod 12.
+
+[00:08:27]
+  Transcript :  See here, here also we have 38.
+  OCR        : None
+  Combined   :  See here, here also we have 38.
+
+[00:08:29]
+  Transcript :  Here also we are going to perform the same motel operation.
+  OCR        : None
+  Combined   :  Here also we are going to perform the same motel operation.
+
+[00:08:33]
+  Transcript :  But can you see here, here I am using 2, but here I am using 14.
+  OCR        : None
+  Combined   :  But can you see here, here I am using 2, but here I am using 14.
+
+[00:08:36]
+  Transcript :  Is it a valid congruence?
+  OCR        : None
+  Combined   :  Is it a valid congruence?
+
+[00:08:38]
+  Transcript :  Just pause this video for a while and think about this right answer.
+  OCR        : None
+  Combined   :  Just pause this video for a while and think about this right answer.
+
+[00:08:42]
+  Transcript :  It is a valid congruence.
+  OCR        : None
+  Combined   :  It is a valid congruence.
+
+[00:08:45]
+  Transcript :  You know why?
+  OCR        : None
+  Combined   :  You know why?
+
+[00:08:46]
+  Transcript :  Because when 38 is divided by 12, 12, 2 times it is 24 and the remainder is 14.
+  OCR        : None
+  Combined   :  Because when 38 is divided by 12, 12, 2 times it is 24 and the remainder is 14.
+
+[00:08:53]
+  Transcript :  See we are changing the quotient right So here the quotient value is 3 So 12 threes are 36 and the remainder is 2 Here we are changing the quotient as 2 12 twos are 24 and the remainder is 14 So this is also a valid
+  OCR        : None
+  Combined   :  See we are changing the quotient right So here the quotient value is 3 So 12 threes are 36 and the remainder is 2 Here we are changing the quotient as 2 12 twos are 24 and the remainder is 14 So this is also a valid
+
+[00:09:08]
+  Transcript :  congruence. Then 5 is congruent to 0 mod 5. That is 5 when it is divided by 5, we get 0 as the
+  OCR        : None
+  Combined   :  congruence. Then 5 is congruent to 0 mod 5. That is 5 when it is divided by 5, we get 0 as the
+
+[00:09:14]
+  Transcript :  remainder. So, this is also a valid congruence. Then comes 10 is congruent to 2 mod 6. 10 when it
+  OCR        : None
+  Combined   :  remainder. So, this is also a valid congruence. Then comes 10 is congruent to 2 mod 6. 10 when it
+
+[00:09:21]
+  Transcript :  divided by 6, we get 4 as the remainder, right? So, this is not 2, this is 4, right? So, this is an
+  OCR        : None
+  Combined   :  divided by 6, we get 4 as the remainder, right? So, this is not 2, this is 4, right? So, this is an
+
+[00:09:28]
+  Transcript :  invalid congruence. Then, 13 is congruent to 3 mod 13. 13, when it is divided by 13, we get 0 as
+  OCR        : None
+  Combined   :  invalid congruence. Then, 13 is congruent to 3 mod 13. 13, when it is divided by 13, we get 0 as
+
+[00:09:35]
+  Transcript :  the remainder. But here we have 3. It is an invalid congruence. Then comes the next one, 2 is congruent
+  OCR        : None
+  Combined   :  the remainder. But here we have 3. It is an invalid congruence. Then comes the next one, 2 is congruent
+
+[00:09:42]
+  Transcript :  to minus 3 mod 5. Please pause this video for a while and think about the right answer.
+  OCR        : None
+  Combined   :  to minus 3 mod 5. Please pause this video for a while and think about the right answer.
+
+[00:09:47]
+  Transcript :  It is a valid congruence because 2 when it is divided by 5, we get the remainder 2 itself.
+  OCR        : None
+  Combined   :  It is a valid congruence because 2 when it is divided by 5, we get the remainder 2 itself.
+
+[00:09:54]
+  Transcript :  Right? So, it is like 2 mod 5. 2 means it can also be written as minus 3.
+  OCR        : None
+  Combined   :  Right? So, it is like 2 mod 5. 2 means it can also be written as minus 3.
+
+[00:10:00]
+  Transcript :  right? Just add these two. Minus 3 plus 5, it is plus 2. It is positive 2, right? So, it can be
+  OCR        : None
+  Combined   :  right? Just add these two. Minus 3 plus 5, it is plus 2. It is positive 2, right? So, it can be
+
+[00:10:06]
+  Transcript :  either positive 2 or minus 3. So, this is also a valid congruence. And finally, minus 8 is congruent
+  OCR        : None
+  Combined   :  either positive 2 or minus 3. So, this is also a valid congruence. And finally, minus 8 is congruent
+
+[00:10:14]
+  Transcript :  to 7 mod 5. I'll give one more congruence. Minus 3 is congruent to minus 8 mod 5. These two are
+  OCR        : None
+  Combined   :  to 7 mod 5. I'll give one more congruence. Minus 3 is congruent to minus 8 mod 5. These two are
+
+[00:10:22]
+  Transcript :  testing exercise for you. I request you to work it out and tell me whether these two are valid or
+  OCR        : None
+  Combined   :  testing exercise for you. I request you to work it out and tell me whether these two are valid or
+
+[00:10:28]
+  Transcript :  invalid congruences in the comment section. And that's it guys. I hope now you understood the
+  OCR        : None
+  Combined   :  invalid congruences in the comment section. And that's it guys. I hope now you understood the
+
+[00:10:33]
+  Transcript :  modular arithmetic with examples, we understood about congruence, we also identified some valid
+  OCR        : None
+  Combined   :  modular arithmetic with examples, we understood about congruence, we also identified some valid
+
+[00:10:39]
+  Transcript :  and invalid congruences. I hope you guys enjoyed this presentation and thank you for watching.
+  OCR        : None
+  Combined   :  and invalid congruences. I hope you guys enjoyed this presentation and thank you for watching.
+
+>>>>>>> 8bb9d000b594ea3bd024f7c7c574de1b7bb29b51

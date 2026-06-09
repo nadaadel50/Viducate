@@ -1,5 +1,4 @@
 # OCR Output — video_id=12
-# Language: en
-# Total segments: 1
+# Language: None
+# Total segments: 0
 
-[00:00:00] 1322-34

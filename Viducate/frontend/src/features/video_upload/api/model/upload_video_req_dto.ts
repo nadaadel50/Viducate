@@ -7,6 +7,7 @@ export type UploadVideoRequestDTO = {
   language: string;
   subject: string;
   content_type: string;
+  file_size: number;
 };
 
 export function uploadFilestoFormData(req: UploadVideoRequest) {
@@ -18,6 +19,7 @@ export function uploadFilestoFormData(req: UploadVideoRequest) {
   formData.append("language", req.language);
   formData.append("subject", req.subject);
   formData.append("content_type", req.content_type);
+  formData.append("file_size", req.file_size.toString());
 
   return formData;
 }

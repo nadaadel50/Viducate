@@ -14,6 +14,7 @@ export const AppRoutesNames = {
   studyNotes:"/study-notes",
   summary:"/summary",
   generatingSummary:"/generating-summary",
+  dashboard:"/dashboard",
   
 
 };

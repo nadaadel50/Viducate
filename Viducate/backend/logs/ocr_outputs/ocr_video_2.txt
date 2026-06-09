@@ -1,4 +1,5 @@
 # OCR Output — video_id=2
-# Language: None
-# Total segments: 0
+# Language: en
+# Total segments: 1
 
+[00:01:46] U,MYLORD,AREMY SM | PROTECT

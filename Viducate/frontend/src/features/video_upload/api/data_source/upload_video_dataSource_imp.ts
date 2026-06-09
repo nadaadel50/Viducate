@@ -29,10 +29,12 @@ export class UploadVideoDataSourceImp implements UploadVideoDataSource {
   let videoId: number | undefined;
 
   try {
+    console.log("Requesting upload link...");
 
     const linkRes = await this.uploadVideoService.requestUploadLink(
       uploadFilestoFormData(uploadReq)
     );
+    console.log("Received upload link:", linkRes);
 
     videoId = linkRes.video_id;
 
@@ -62,6 +64,7 @@ export class UploadVideoDataSourceImp implements UploadVideoDataSource {
         success: true,
         data: {
           videoId: videoId,
+          title: uploadReq.title,
           message: "Upload cancelled",
           processing_status: "cancelled",
         },

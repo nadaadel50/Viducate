@@ -65,6 +65,7 @@ export function UploadVideoSection({
           "en",
           "technology",
           videoFile.type,
+          videoFile.size
         ),
         (p) => setProgress(p),
         controllerRef.current.signal,
@@ -75,7 +76,7 @@ export function UploadVideoSection({
         return;
       }
     
-
+         
      
        setVideoId(response.data.videoId);
       
