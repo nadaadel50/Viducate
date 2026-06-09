@@ -1,11 +1,15 @@
-import React, { useState } from 'react';
-import { BaseModal } from '../../../../core/componants/base_modal';
-import CustumBtnLoader from '../../../../core/componants/custum_btn_loader';
-import { CustumError } from '../../../../core/componants/custum_error';
-import { PreferenceCard } from './PreferenceCard';
+import React, { useEffect, useState } from "react";
+import { BaseModal } from "../../../../core/componants/base_modal";
+import CustumBtnLoader from "../../../../core/componants/custum_btn_loader";
+import { CustumError } from "../../../../core/componants/custum_error";
+import { PreferenceCard } from "../componants/PreferenceCard";
 import { FormattedMessage } from "react-intl";
 import { COLORS } from "../../../../core/constants/colors";
-import { useSavePreferences } from '../hooks/use_save_preferences';
+import { useSavePreferences } from "../hooks/use_save_preferences";
+import { useGetPreferences } from "../hooks/get_user_language_pref";
+import { LoadingScreen } from "../../../../core/componants/LoadingScreen";
+import { Brain } from "lucide-react";
+import { LoadingPreferences } from "../componants/loading_pref";
 
 interface CustomizeProps {
   isOpen: boolean;
@@ -22,7 +26,8 @@ export const CustomizeExperienceModal: React.FC<CustomizeProps> = ({
 }) => {
   const { submitPreferences, isSubmitting } = useSavePreferences();
   const [serverError, setServerError] = useState<string | null>(null);
-
+  const [loading, setLoading] = useState(true);
+  //const { data, isLoading, error } = useGetPreferences();
   const [prefs, setPrefs] = useState<{
     summary: LanguageOption;
     quiz: LanguageOption;
@@ -32,6 +37,16 @@ export const CustomizeExperienceModal: React.FC<CustomizeProps> = ({
     quiz: "Same as Video",
     flashcards: "Same as Video",
   });
+
+  //   useEffect(() => {
+  //   if (!data) return;
+
+  //   setPrefs({
+  //     summary: data.summaryLang,
+  //     quiz: data.quizLang,
+  //     flashcards: data.flashcardsLang,
+  //   });
+  // }, [data]);
 
   const handleSave = async () => {
     try {
@@ -51,17 +66,13 @@ export const CustomizeExperienceModal: React.FC<CustomizeProps> = ({
 
       onClose();
     } catch (error: unknown) {
-      if (
-        typeof error === "object" &&
-        error !== null &&
-        "response" in error
-      ) {
+      if (typeof error === "object" && error !== null && "response" in error) {
         const apiError = error as {
           response: { data: { detail?: string } };
         };
 
         setServerError(
-          apiError.response.data.detail || "Failed to save preferences"
+          apiError.response.data.detail || "Failed to save preferences",
         );
       } else if (error instanceof Error) {
         setServerError(error.message);
@@ -73,6 +84,9 @@ export const CustomizeExperienceModal: React.FC<CustomizeProps> = ({
 
   return (
     <BaseModal isOpen={isOpen} onClose={onClose} maxWidth="max-w-5xl">
+      {loading && (
+       <LoadingPreferences/>
+      )}
       {/* Header */}
       <div className="flex items-start justify-between p-6 pb-4 border-b border-gray-100 bg-white">
         <div className="flex flex-col gap-1 text-left">
@@ -83,10 +97,7 @@ export const CustomizeExperienceModal: React.FC<CustomizeProps> = ({
             <FormattedMessage id="customize.title" />
           </h1>
 
-          <p
-            className="text-sm"
-            style={{ color: COLORS.text.secondary }}
-          >
+          <p className="text-sm" style={{ color: COLORS.text.secondary }}>
             <FormattedMessage id="customize.desc" />
           </p>
         </div>

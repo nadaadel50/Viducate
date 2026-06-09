@@ -5,12 +5,13 @@ import { useVideoData } from "../../../../core/hooks/useVideoData";
 import { useEffect, useState } from "react";
 import Loading from "../../../../core/widgets/loading";
 import { ErrorMessage } from "../../../../core/widgets/error";
-import { LanguageInitModal } from "../../../video_upload/presentation/componants/LanguageInitModal";
-import { CustomizeExperienceModal } from "../../../video_upload/presentation/componants/CustomizeExperienceModal";
+
 import { useLearningSession } from "../../../../core/hooks/useLearningContent";
 import { ChatProvider } from "../../../chat_bot/presenation/context/chatbot_provider";
 import { useUnsavedChangesWarning } from "../hook/use_unsave_changes";
 import { STORAGE_KEYS } from "../../../../core/constants";
+import { CustomizeExperienceModal } from "../../../preferences/presentation/pages/CustomizeExperienceModal";
+import { LanguageInitModal } from "../../../preferences/presentation/componants/LanguageInitModal";
 
 export function MainPage() {
   const { videoId, hasUnsavedChanges } = useLearningSession();

@@ -3,8 +3,8 @@ import { ContentLearningCard } from "../widgets/content_learning_card";
 import { SearchTopicBar } from "../widgets/search_topic_bar";
 import { useLearningSession } from "../../../../core/hooks/useLearningContent";
 import { Languages } from "lucide-react";
-import { is } from "zod/v4/locales";
-import { CustomizeExperienceModal } from "../../../video_upload/presentation/componants/CustomizeExperienceModal";
+import { CustomizeExperienceModal } from "../../../preferences/presentation/pages/CustomizeExperienceModal";
+
 
 export function LeftContentSection() {
   const [searchQuery, setSearchQuery] = useState<string>("");

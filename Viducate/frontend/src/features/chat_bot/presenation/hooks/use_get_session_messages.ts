@@ -7,12 +7,12 @@ export function useGetSessionMessages(req: SessionMessagesRequest) {
     queryKey: ["chat-messages", req.session_id, req.video_id],
 
 queryFn:async () => {
-  console.log("came here to get the messages")
+ 
     const response=await getSessionMessagesUseCase(req);
     if(!response.success){
         throw new Error(response.error);
     }
-    console.log(response.data)
+    
      return response.data
 },
 
