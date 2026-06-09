@@ -1,4 +1,4 @@
-from sqlalchemy import JSON, Column, Integer, Text, String, TIMESTAMP, ForeignKey
+from sqlalchemy import JSON, Column, Integer, Text, String, TIMESTAMP, ForeignKey, UniqueConstraint
 from sqlalchemy.orm import relationship
 from sqlalchemy.sql import func
 from .base import Base
@@ -20,6 +20,8 @@ class Quiz(Base):
     video = relationship("Video", back_populates="quizzes")
     segment = relationship("TopicSegment", back_populates="quizzes")
     questions = relationship("QuizQuestion", back_populates="quiz", cascade="all, delete-orphan")
+    result = relationship("UserQuizResult", back_populates="quiz", uselist=False, cascade="all, delete-orphan")
+
 
 
 class QuizQuestion(Base):
@@ -48,10 +50,19 @@ class QuizQuestion(Base):
 
 class UserQuizResult(Base):
     __tablename__ = "user_quiz_results"
-    id = Column(Integer, primary_key=True, autoincrement=True)
-    quiz_id = Column(Integer, ForeignKey("quiz.quiz_id", ondelete="CASCADE"), nullable=False)
-    user_id = Column(Integer, ForeignKey("user.id", ondelete="CASCADE"), nullable=False)
-    correct_count = Column(Integer, nullable=False)
-    wrong_count = Column(Integer, nullable=False)
-    answers = Column(JSON, nullable=True)  # [{question_id, user_answer, is_correct}]
-    submitted_at = Column(TIMESTAMP, server_default=func.now())
+
+    __table_args__ = (
+        UniqueConstraint("quiz_id", "user_id", name="uq_quiz_user"),
+    )
+
+    id             = Column(Integer, primary_key=True, autoincrement=True)
+    quiz_id        = Column(Integer, ForeignKey("quiz.quiz_id", ondelete="CASCADE"), nullable=False)
+    user_id        = Column(Integer, ForeignKey("user.id",      ondelete="CASCADE"), nullable=False)
+    correct_count  = Column(Integer, nullable=False)
+    wrong_count    = Column(Integer, nullable=False)
+    score          = Column(Integer, nullable=False)         
+    trials         = Column(Integer, nullable=False, default=1)
+    answers        = Column(JSON, nullable=True)          
+    submitted_at   = Column(TIMESTAMP, server_default=func.now(), onupdate=func.now())
+
+    quiz = relationship("Quiz", back_populates="result")

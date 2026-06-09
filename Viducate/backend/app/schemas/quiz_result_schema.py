@@ -11,8 +11,10 @@ class QuizSubmitRequest(BaseModel):
     answers: List[QuizAnswerItem]
 
 class QuizSubmitResponse(BaseModel):
-    quiz_id: int
-    correct_count: int
-    wrong_count: int
-    total: int
-    score_percentage: float
+    quiz_id:          int
+    correct_count:    int
+    wrong_count:      int
+    total:            int
+    score:            int        
+    trials:           int       
+    is_new:           bool  

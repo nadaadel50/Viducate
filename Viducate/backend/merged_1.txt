@@ -1,1110 +1,1095 @@
 [00:00:00]
-  Transcript :  السلام عليكم ورحمة الله وبركاته
-  OCR        : None
-  Combined   :  السلام عليكم ورحمة الله وبركاته
+  Transcript :  نبتدي. طيب احنا هنكمل الفازي كنترول سيستم.
+  OCR        : Fuzzy Logic | Control | Sabah Sayed | Department of Computer Science | Focuity of Computers and Arcjfciol Inteligence | Caire University | Egypt
+  Combined   :  نبتدي. طيب احنا هنكمل الفازي كنترول سيستم. Fuzzy Logic | Control | Sabah Sayed | Department of Computer Science | Focuity of Computers and Arcjfciol Inteligence | Caire University | Egypt
 
-[00:00:02]
-  Transcript :  أهلاً وسهلاً أبناء الطلبة والطالبات
-  OCR        : None
-  Combined   :  أهلاً وسهلاً أبناء الطلبة والطالبات
+[00:00:19]
+  Transcript : None
+  OCR        : Outline | Defuzzification Techniques | Fuzzy ControlsArchitecture | - ComponentsSteps | - Examples
+  Combined   : Outline | Defuzzification Techniques | Fuzzy ControlsArchitecture | - ComponentsSteps | - Examples
 
-[00:00:04]
-  Transcript :  دمتم في رعاية الله وحفظي وأمني سبحانه وتعالى
+[00:00:22]
+  Transcript :  زي ما اتفقنا عكده ادي الفازي فيكيشن. آآ بيتعامل بقى اكثر من
   OCR        : None
-  Combined   :  دمتم في رعاية الله وحفظي وأمني سبحانه وتعالى
+  Combined   :  زي ما اتفقنا عكده ادي الفازي فيكيشن. آآ بيتعامل بقى اكثر من
 
-[00:00:08]
-  Transcript :  النهاردة شباب هناخد درس جديد وهو درس الإعراب والبناء
+[00:00:29]
+  Transcript :  طريقة خلاص? اي اول طريقة اسمها ودي بحاول اجيب فيها اللي
+  OCR        : 1- Max membership principle: Also known as the | height method, this scheme is limited to peaked | output functions. This method is given by the | algebraic expression: | µC z  µC z, for all 2 Z, | where z is the defuzzified | value | If multiple peaks exist, the middle one is chosen.
+  Combined   :  طريقة خلاص? اي اول طريقة اسمها ودي بحاول اجيب فيها اللي 1- Max membership principle: Also known as the | height method, this scheme is limited to peaked | output functions. This method is given by the | algebraic expression: | µC z  µC z, for all 2 Z, | where z is the defuzzified | value | If multiple peaks exist, the middle one is chosen.
+
+[00:00:39]
+  Transcript :  عندها بيبقى اعلى هي اللي باخدها وبادروا فيها. تمام? هم كلهم
   OCR        : None
-  Combined   :  النهاردة شباب هناخد درس جديد وهو درس الإعراب والبناء
-
-[00:00:12]
-  Transcript :  ودرس الإعراب والبناء درس طويل شوية
-  OCR        : None
-  Combined   :  ودرس الإعراب والبناء درس طويل شوية
-
-[00:00:15]
-  Transcript :  فإحنا علشان حضرتك ما تتهش مني
-  OCR        : None
-  Combined   :  فإحنا علشان حضرتك ما تتهش مني
-
-[00:00:17]
-  Transcript :  إحنا هنقسم الدرس ده على ثلاث حلقات أو ثلاث فيديوهات إن شاء الله تتبعهم معنا
-  OCR        : None
-  Combined   :  إحنا هنقسم الدرس ده على ثلاث حلقات أو ثلاث فيديوهات إن شاء الله تتبعهم معنا
-
-[00:00:21]
-  Transcript :  أول درس النهاردة الفيديو ده هنتكلم فيه عن معنى الإعراب ومعنى البناء
-  OCR        : None
-  Combined   :  أول درس النهاردة الفيديو ده هنتكلم فيه عن معنى الإعراب ومعنى البناء
-
-[00:00:26]
-  Transcript :  علشان بعد كده تبقى ايه
-  OCR        : None
-  Combined   :  علشان بعد كده تبقى ايه
-
-[00:00:28]
-  Transcript :  حضرتك فاهم الفرق بينهم كويس
-  OCR        : None
-  Combined   :  حضرتك فاهم الفرق بينهم كويس
-
-[00:00:30]
-  Transcript :  لما دينجر اتكلم
-  OCR        : None
-  Combined   :  لما دينجر اتكلم
-
-[00:00:32]
-  Transcript :  ازاي نستخرج المعرم المبني من الاسماء والافعال
-  OCR        : None
-  Combined   :  ازاي نستخرج المعرم المبني من الاسماء والافعال
-
-[00:00:35]
-  Transcript :  تبقى حضرتك ايه
-  OCR        : None
-  Combined   :  تبقى حضرتك ايه
-
-[00:00:37]
-  Transcript :  مجمع معانا
-  OCR        : الإعر والبناه | تغير حركة أخر الكلمة بتغير موقعها في الجملة | مثال | أعجتكريالتفوق | كرست المدرستلكريس لتفوقه | كري ليذنكي | وكريم اسم مجروز وماتمة اتجر | لباء حرف جر | مفعولبهمتصوب | التكسرة الظاهرأي أخرة | وعلامة التصب القتحة الظاهرة علي أخره | الضسبة الفقامردطي الخرة | كمةكريم مرة رفعت بالضمة ومرة لصبت بالقحة ومرة جرت بالكسرة | جك سجك
-  Combined   :  مجمع معانا الإعر والبناه | تغير حركة أخر الكلمة بتغير موقعها في الجملة | مثال | أعجتكريالتفوق | كرست المدرستلكريس لتفوقه | كري ليذنكي | وكريم اسم مجروز وماتمة اتجر | لباء حرف جر | مفعولبهمتصوب | التكسرة الظاهرأي أخرة | وعلامة التصب القتحة الظاهرة علي أخره | الضسبة الفقامردطي الخرة | كمةكريم مرة رفعت بالضمة ومرة لصبت بالقحة ومرة جرت بالكسرة | جك سجك
-
-[00:00:38]
-  Transcript :  فبداية كده يلا ألمك معاك
-  OCR        : None
-  Combined   :  فبداية كده يلا ألمك معاك
-
-[00:00:40]
-  Transcript :  ورقتك معاك وكتب معاك الدرس كويس
-  OCR        : None
-  Combined   :  ورقتك معاك وكتب معاك الدرس كويس
-
-[00:00:43]
-  Transcript :  ونركز مع بعض يا شباب
-  OCR        : None
-  Combined   :  ونركز مع بعض يا شباب
-
-[00:00:44]
-  Transcript :  ولو حد فيه كمتاه فأي حاجة عايز سؤال
-  OCR        : None
-  Combined   :  ولو حد فيه كمتاه فأي حاجة عايز سؤال
+  Combined   :  عندها بيبقى اعلى هي اللي باخدها وبادروا فيها. تمام? هم كلهم
 
 [00:00:46]
-  Transcript :  فأي حاجة سألنا في التعليقات
+  Transcript :  بيختلفوا بس في اي اي انا اخدها اللي هي دي. خلاص? اللي على
   OCR        : None
-  Combined   :  فأي حاجة سألنا في التعليقات
+  Combined   :  بيختلفوا بس في اي اي انا اخدها اللي هي دي. خلاص? اللي على
 
-[00:00:48]
-  Transcript :  بسم الله توكننا على الله ولا حول ولا قوة
-  OCR        : None
-  Combined   :  بسم الله توكننا على الله ولا حول ولا قوة
-
-[00:00:51]
-  Transcript :  إلا بالله العلي العظيم
-  OCR        : None
-  Combined   :  إلا بالله العلي العظيم
-
-[00:01:00]
+[00:00:52]
   Transcript : 
-  OCR        : والبناء | الإعراب | أول حاجة لازم | نعرفها ايه معني | الإء
-  Combined   :  والبناء | الإعراب | أول حاجة لازم | نعرفها ايه معني | الإء
-
-[00:01:09]
-  Transcript :  التعريف ده وتحفظه كويس جدا علشان تعرف تفرق بيه بعدين الاعراب
   OCR        : None
-  Combined   :  التعريف ده وتحفظه كويس جدا علشان تعرف تفرق بيه بعدين الاعراب
+  Combined   : 
 
-[00:01:20]
-  Transcript :  هو تغير حركة اخر الكلمة بتغير موقعها في الجملة يعني حركة
-  OCR        : ألإإعراب والبناء | أول هلجة لازم | نرافهاه مط | تغير حركة آخر الكلمة بتغير موقعها في ال | حميك ينجك
-  Combined   :  هو تغير حركة اخر الكلمة بتغير موقعها في الجملة يعني حركة ألإإعراب والبناء | أول هلجة لازم | نرافهاه مط | تغير حركة آخر الكلمة بتغير موقعها في ال | حميك ينجك
+[00:01:12]
+  Transcript :  الايه الممبرشيب بون. هي دي زت زت ستار بتاعتك. طيب. لو انا
+  OCR        : 2- Mean Max membership: This method | also | called middle-of-maxima is closely related to | the first method, except that the locations of the | maximum membership can be nonuniqe | i.e., | the maximum membership can be a plateau | rather than a single point. | This method is given by | the expression:
+  Combined   :  الايه الممبرشيب بون. هي دي زت زت ستار بتاعتك. طيب. لو انا 2- Mean Max membership: This method | also | called middle-of-maxima is closely related to | the first method, except that the locations of the | maximum membership can be nonuniqe | i.e., | the maximum membership can be a plateau | rather than a single point. | This method is given by | the expression:
 
-[00:01:21]
-  Transcript :  الكلمة دي بتتغير على حسب
+[00:01:14]
+  Transcript :  عندي اكتر من بوينت بقى الممبرشيب بتاعهم بون. جهت الطريقة
   OCR        : None
-  Combined   :  الكلمة دي بتتغير على حسب
+  Combined   :  عندي اكتر من بوينت بقى الممبرشيب بتاعهم بون. جهت الطريقة
 
-[00:01:23]
-  Transcript :  تغير موقعها في الجملة
+[00:01:19]
+  Transcript :  تانية بتقول لك خد المين يعني لو انا عندي هنا عند الا كانت
   OCR        : None
-  Combined   :  تغير موقعها في الجملة
+  Combined   :  تانية بتقول لك خد المين يعني لو انا عندي هنا عند الا كانت
 
-[00:01:26]
-  Transcript :  تمام طب هنشوف
+[00:01:24]
+  Transcript :  وعند البي كمان من الا للبي خلاص يعني مش دي ايه ده لين مش
   OCR        : None
-  Combined   :  تمام طب هنشوف
-
-[00:01:27]
-  Transcript :  الكلام ده ماشي ندي
-  OCR        : None
-  Combined   :  الكلام ده ماشي ندي
-
-[00:01:29]
-  Transcript :  مثال المثال ده وركز
-  OCR        : None
-  Combined   :  مثال المثال ده وركز
-
-[00:01:31]
-  Transcript :  معي في كويس كريم
-  OCR        : None
-  Combined   :  معي في كويس كريم
+  Combined   :  وعند البي كمان من الا للبي خلاص يعني مش دي ايه ده لين مش
 
 [00:01:33]
-  Transcript :  تلميذ ذكي
+  Transcript :  واحد يبقى هيخد الا بلاس البي واقسمهم على الاتنين وهي دي
   OCR        : None
-  Combined   :  تلميذ ذكي
+  Combined   :  واحد يبقى هيخد الا بلاس البي واقسمهم على الاتنين وهي دي
 
-[00:01:35]
-  Transcript :  وان التشكيل مش مكتوب
+[00:01:41]
+  Transcript :  اللي هتطلعان للزد ستور الطريقة التالتة اللي هي السنترويد دي
+  OCR        : 3- Centroid method: This procedure also called | center of area or center of gravity is the most | prevalent and physically appealing of all the | defuzzification methods Sugeno, 1985; it is given | by the algebraic expression: | jcz  z dz | cz d: | - where  denotes an algebraic integration
+  Combined   :  اللي هتطلعان للزد ستور الطريقة التالتة اللي هي السنترويد دي 3- Centroid method: This procedure also called | center of area or center of gravity is the most | prevalent and physically appealing of all the | defuzzification methods Sugeno, 1985; it is given | by the algebraic expression: | jcz  z dz | cz d: | - where  denotes an algebraic integration
+
+[00:01:46]
+  Transcript :  كأنك بتعمل ايه? كأنك بتعمل التكامل ده بتاع الماز. خلاص?
   OCR        : None
-  Combined   :  وان التشكيل مش مكتوب
+  Combined   :  كأنك بتعمل ايه? كأنك بتعمل التكامل ده بتاع الماز. خلاص?
 
-[00:01:37]
-  Transcript :  لان البرنامج مش بيدعم التشكيل بس
-  OCR        : None
-  Combined   :  لان البرنامج مش بيدعم التشكيل بس
-
-[00:01:40]
-  Transcript :  مع بعض احنا ان شاء الله وهنوضح كل حاجة
-  OCR        : الإعراب والبناه | كرمت المدرسة كريما لتفوقه | كريم تليذ نكي | أجيك يسجيك
-  Combined   :  مع بعض احنا ان شاء الله وهنوضح كل حاجة الإعراب والبناه | كرمت المدرسة كريما لتفوقه | كريم تليذ نكي | أجيك يسجيك
-
-[00:01:42]
-  Transcript :  كرمت المدرسة
-  OCR        : None
-  Combined   :  كرمت المدرسة
-
-[00:01:43]
-  Transcript :  كريما لتفوقه
-  OCR        : None
-  Combined   :  كريما لتفوقه
-
-[00:01:45]
-  Transcript :  واعجبته بكريم
-  OCR        : None
-  Combined   :  واعجبته بكريم
-
-[00:01:47]
-  Transcript :  لتفوقه
-  OCR        : None
-  Combined   :  لتفوقه
-
-[00:01:50]
-  Transcript :  تمام التلات جمل دولة
-  OCR        : الإعراب والبناء | فول هلجة لازم | تغير حركة آخر الكلمة بتغير موقعها في الجملة | أعجبت بكريم ت | كريم تلميذ نكي
-  Combined   :  تمام التلات جمل دولة الإعراب والبناء | فول هلجة لازم | تغير حركة آخر الكلمة بتغير موقعها في الجملة | أعجبت بكريم ت | كريم تلميذ نكي
-
-[00:01:51]
-  Transcript :  يا شباب وركز معي فيهم كويس
-  OCR        : None
-  Combined   :  يا شباب وركز معي فيهم كويس
-
-[00:01:53]
-  Transcript :  إحنا هيهمنا كله الوقت كريم ده
-  OCR        : None
-  Combined   :  إحنا هيهمنا كله الوقت كريم ده
-
-[00:01:55]
-  Transcript :  كريم ده ماله بقى إيه وضعه
-  OCR        : None
-  Combined   :  كريم ده ماله بقى إيه وضعه
-
-[00:01:57]
-  Transcript :  كريم ده في الجملة
-  OCR        : None
-  Combined   :  كريم ده في الجملة
+[00:01:59]
+  Transcript :  كأنك بتعمل التكامل. زه بتاعه. طيب
+  OCR        : 4 - Weighted average method: The weighted average | method is the most frequently used in fuzzy applications | since it is one of the more computationally efficient | methods. Unfortunately, it is usually restricted to | symmetrical output membership functions. It is given by | the algebraic expression: | ucz.z | where  denotes the algebreje sam and where Z is the centroid of each | symmetric membership function. The weighted average method is formed | by weighting cach membership function in the output by its respective | membership value.
+  Combined   :  كأنك بتعمل التكامل. زه بتاعه. طيب 4 - Weighted average method: The weighted average | method is the most frequently used in fuzzy applications | since it is one of the more computationally efficient | methods. Unfortunately, it is usually restricted to | symmetrical output membership functions. It is given by | the algebraic expression: | ucz.z | where  denotes the algebreje sam and where Z is the centroid of each | symmetric membership function. The weighted average method is formed | by weighting cach membership function in the output by its respective | membership value.
 
 [00:02:00]
-  Transcript :  تغير مكانه
+  Transcript :  الطريقة الرابعة دي الطريقة اللي احنا بنستخدمها ودي اللي انتو
   OCR        : None
-  Combined   :  تغير مكانه
-
-[00:02:00]
-  Transcript :  أول مرة جي في أول الكلام وبعد كاف نص الكلام
-  OCR        : None
-  Combined   :  أول مرة جي في أول الكلام وبعد كاف نص الكلام
+  Combined   :  الطريقة الرابعة دي الطريقة اللي احنا بنستخدمها ودي اللي انتو
 
 [00:02:03]
-  Transcript :  وجي بعد كاف نص الكلام قبل حرف جر
+  Transcript :  هتعملوها في الاساين اللي انتو هتستخدموها في الاساين اللي هي
   OCR        : None
-  Combined   :  وجي بعد كاف نص الكلام قبل حرف جر
+  Combined   :  هتعملوها في الاساين اللي انتو هتستخدموها في الاساين اللي هي
 
-[00:02:05]
-  Transcript :  فالكلمة كريم
+[00:02:06]
+  Transcript :  زي ما انا كنت شرحتها لكم في من شوية ان انا بجيب
   OCR        : None
-  Combined   :  فالكلمة كريم
+  Combined   :  زي ما انا كنت شرحتها لكم في من شوية ان انا بجيب
 
-[00:02:07]
-  Transcript :  اتغير مكانها في الجملة
-  OCR        : None
-  Combined   :  اتغير مكانها في الجملة
-
-[00:02:09]
-  Transcript :  فطبيعيا موقعها الإعرابة هيتغير
-  OCR        : None
-  Combined   :  فطبيعيا موقعها الإعرابة هيتغير
-
-[00:02:11]
-  Transcript :  طب هل علامة الإعراب بتاعتها هتبقى سابتة
-  OCR        : None
-  Combined   :  طب هل علامة الإعراب بتاعتها هتبقى سابتة
-
-[00:02:13]
-  Transcript :  ولا هتتغير كمان
-  OCR        : الإعراب والباء | الإعر | أعجبت بكريم | كريم تلميد نكي
-  Combined   :  ولا هتتغير كمان الإعراب والباء | الإعر | أعجبت بكريم | كريم تلميد نكي
-
-[00:02:15]
-  Transcript :  ده اللي احنا نشوف
-  OCR        : None
-  Combined   :  ده اللي احنا نشوف
-
-[00:02:16]
-  Transcript :  فأول مثال كريم تلميذون زكي
-  OCR        : None
-  Combined   :  فأول مثال كريم تلميذون زكي
-
-[00:02:19]
-  Transcript :  كريم طبعا جملة اسمية
-  OCR        : None
-  Combined   :  كريم طبعا جملة اسمية
-
-[00:02:22]
-  Transcript :  ابتدأت باسمه اللي هو كريم
-  OCR        : None
-  Combined   :  ابتدأت باسمه اللي هو كريم
-
-[00:02:23]
-  Transcript :  هتعرف ايه
-  OCR        : تغير حركة آخر الكلمة بتغير موقعها في | كرمت المدرسةكريما لتفوقه | كريم تلميذ ذكي
-  Combined   :  هتعرف ايه تغير حركة آخر الكلمة بتغير موقعها في | كرمت المدرسةكريما لتفوقه | كريم تلميذ ذكي
-
-[00:02:24]
-  Transcript :  يبقى طبيعي خالص أركان الجملة اسمية
-  OCR        : None
-  Combined   :  يبقى طبيعي خالص أركان الجملة اسمية
+[00:02:21]
+  Transcript :  هنا هي تمام طيب والسنترويد ده بحسبه ازاي? ده بس هنا على اي?
+  OCR        : 4 - Weighted average method: Example | The two functions shown | would result in the following | general form for the | defuzzified value: | a0.5  b0.9 | 0.5  0.9
+  Combined   :  هنا هي تمام طيب والسنترويد ده بحسبه ازاي? ده بس هنا على اي? 4 - Weighted average method: Example | The two functions shown | would result in the following | general form for the | defuzzified value: | a0.5  b0.9 | 0.5  0.9
 
 [00:02:26]
-  Transcript :  مبتدى وخبر يبقى كريم مبتدى
+  Transcript :  لو عندي الاي والبي بضرب الاي اللي هي بتاعت الفازي سات في الاي
   OCR        : None
-  Combined   :  مبتدى وخبر يبقى كريم مبتدى
+  Combined   :  لو عندي الاي والبي بضرب الاي اللي هي بتاعت الفازي سات في الاي
 
-[00:02:28]
-  Transcript :  مرفوع وعلامة الرفع
+[00:02:34]
+  Transcript :  في بتاع الفازي سات دي. بلاس بتاعت البي في بتاع الفازي سات
   OCR        : None
-  Combined   :  مرفوع وعلامة الرفع
+  Combined   :  في بتاع الفازي سات دي. بلاس بتاعت البي في بتاع الفازي سات
 
-[00:02:30]
-  Transcript :  الضامة الظهرة على اخر
+[00:02:45]
+  Transcript :  التانية على مجموعة الاي. ده اللي انا بعمله. عشان اطلع
   OCR        : None
-  Combined   :  الضامة الظهرة على اخر
-
-[00:02:49]
-  Transcript :  الظاهرة
-  OCR        : None
-  Combined   :  الظاهرة
-
-[00:02:50]
-  Transcript :  على ايه على اخر
-  OCR        : None
-  Combined   :  على ايه على اخر
+  Combined   :  التانية على مجموعة الاي. ده اللي انا بعمله. عشان اطلع
 
 [00:02:51]
-  Transcript :  الكلمة الليكلمة كريم
-  OCR        : أكريم تلميذ ذكي | متدأ مرفوع وعلامة الرفع | الضمة الطاهرة علي أخره
-  Combined   :  الكلمة الليكلمة كريم أكريم تلميذ ذكي | متدأ مرفوع وعلامة الرفع | الضمة الطاهرة علي أخره
+  Transcript :  الزد. طيب. بعمل ده ازاي? لازم عشان اعمل ده اطلع الاي والبي.
+  OCR        : 4- Weighted average method: getting the centroid | The centroid of symmetrical fuzzy sets is the center | point on the x-axis. | Example: centroid  10 | For non-symmetric fuzzy sets trapezoidal or | triangular: | -Add defining points of fuzzy set and divide by their number. | Example: centroid of triangular set 0,7,20 | 07203  9
+  Combined   :  الزد. طيب. بعمل ده ازاي? لازم عشان اعمل ده اطلع الاي والبي. 4- Weighted average method: getting the centroid | The centroid of symmetrical fuzzy sets is the center | point on the x-axis. | Example: centroid  10 | For non-symmetric fuzzy sets trapezoidal or | triangular: | -Add defining points of fuzzy set and divide by their number. | Example: centroid of triangular set 0,7,20 | 07203  9
 
-[00:03:01]
+[00:02:54]
   Transcript : 
-  OCR        : الجملة | أعجبت | كرمت المدرسةكريمالتفوقه | مرفوع وعلامة الرفع | مة الظاهرة علي أخرة
-  Combined   :  الجملة | أعجبت | كرمت المدرسةكريمالتفوقه | مرفوع وعلامة الرفع | مة الظاهرة علي أخرة
-
-[00:03:05]
-  Transcript :  به منصوب وعلامة النصب
   OCR        : None
-  Combined   :  به منصوب وعلامة النصب
+  Combined   : 
 
-[00:03:07]
-  Transcript :  الفتحة الظاهرة
+[00:03:06]
+  Transcript :  هي عبارة عن يعني متعرف بسري بوينتز. فانا بس كل اللي بعمله
   OCR        : None
-  Combined   :  الفتحة الظاهرة
-
-[00:03:08]
-  Transcript :  على آخره وركز معا
-  OCR        : None
-  Combined   :  على آخره وركز معا
-
-[00:03:11]
-  Transcript :  يبقى الأول كان مرفوع
-  OCR        : حركة أخر الكلمة بتغير موقعها في الجملة | أعجبت بكريم لتفوقه | كرمت المدرسة كريمالتفوقه | مفعول به منصوب | وعلامة النصب الفتحة الظاهرة علي أخره
-  Combined   :  يبقى الأول كان مرفوع حركة أخر الكلمة بتغير موقعها في الجملة | أعجبت بكريم لتفوقه | كرمت المدرسة كريمالتفوقه | مفعول به منصوب | وعلامة النصب الفتحة الظاهرة علي أخره
+  Combined   :  هي عبارة عن يعني متعرف بسري بوينتز. فانا بس كل اللي بعمله
 
 [00:03:12]
-  Transcript :  جملة الثانية كان منصوب
+  Transcript :  بجمع البيدي دي وبقسمع العددها. خلاص? فبصتوا هنا في في
   OCR        : None
-  Combined   :  جملة الثانية كان منصوب
-
-[00:03:14]
-  Transcript :  أعجبته بكريما
-  OCR        : None
-  Combined   :  أعجبته بكريما
-
-[00:03:16]
-  Transcript :  كريم هنا سبقها حرف جر
-  OCR        : None
-  Combined   :  كريم هنا سبقها حرف جر
+  Combined   :  بجمع البيدي دي وبقسمع العددها. خلاص? فبصتوا هنا في في
 
 [00:03:18]
-  Transcript :  اللي هو حرف الباء
+  Transcript :  الاجزامبل ده. الفازي ست دي كان ومتعرفة بالبيدي. زير وسبن
   OCR        : None
-  Combined   :  اللي هو حرف الباء
-
-[00:03:19]
-  Transcript :  يبقى هنا خلي بالك
-  OCR        : None
-  Combined   :  يبقى هنا خلي بالك
-
-[00:03:21]
-  Transcript :  لما تيجي تعرف تقول الباء
-  OCR        : None
-  Combined   :  لما تيجي تعرف تقول الباء
+  Combined   :  الاجزامبل ده. الفازي ست دي كان ومتعرفة بالبيدي. زير وسبن
 
 [00:03:24]
-  Transcript :  حرف جر تمام
+  Transcript :  وتويني. يبقى ازاي يجيب بتاع الفوزي ست دي? هجمع الزيرو بلس السبن
   OCR        : None
-  Combined   :  حرف جر تمام
+  Combined   :  وتويني. يبقى ازاي يجيب بتاع الفوزي ست دي? هجمع الزيرو بلس السبن
 
-[00:03:26]
-  Transcript :  لها محل لهم الاعراب طبعا
+[00:03:30]
+  Transcript :  بلس التويني خلاص يديني وتويني سبن وهسم على ال سري. ادتني ناين.
   OCR        : None
-  Combined   :  لها محل لهم الاعراب طبعا
+  Combined   :  بلس التويني خلاص يديني وتويني سبن وهسم على ال سري. ادتني ناين.
 
-[00:03:27]
-  Transcript :  وكريم اسم مجرور وعلامة الجر
+[00:03:35]
+  Transcript :  يبقى عند ناين هن. ده بتاعي. فناين دي هي اللي هتتضرب في
   OCR        : None
-  Combined   :  وكريم اسم مجرور وعلامة الجر
-
-[00:03:31]
-  Transcript :  الكسرة الظاهرة
-  OCR        : خر الكلمة بتغير موقعها في الجملة | أعجبت بكريم التفوقه | الباء حرف جر | وكريم اسم مجرور وعلامة الجر | الكسرة الظاهرة علىلخ
-  Combined   :  الكسرة الظاهرة خر الكلمة بتغير موقعها في الجملة | أعجبت بكريم التفوقه | الباء حرف جر | وكريم اسم مجرور وعلامة الجر | الكسرة الظاهرة علىلخ
-
-[00:03:32]
-  Transcript :  على ايه على اخير
-  OCR        : None
-  Combined   :  على ايه على اخير
-
-[00:03:33]
-  Transcript :  الاعراب ده شباب التلت
-  OCR        : None
-  Combined   :  الاعراب ده شباب التلت
-
-[00:03:36]
-  Transcript :  جمل دول هنا
-  OCR        : None
-  Combined   :  جمل دول هنا
-
-[00:03:38]
-  Transcript :  كريم اتغير مكانه
-  OCR        : None
-  Combined   :  كريم اتغير مكانه
-
-[00:03:41]
-  Transcript :  في الجملة فهنا بقى
-  OCR        : ألإعرب والبناه | الإر اة | ريملميذ ذكي | وكري سم مروزوعاتة الر | لهاء حرفجر | مفعول به مصوب | وعلامة الصب القتحة الظاهرة علي أخرة | الشرة الطهرةطي أخرة
-  Combined   :  في الجملة فهنا بقى ألإعرب والبناه | الإر اة | ريملميذ ذكي | وكري سم مروزوعاتة الر | لهاء حرفجر | مفعول به مصوب | وعلامة الصب القتحة الظاهرة علي أخرة | الشرة الطهرةطي أخرة
-
-[00:03:41]
-  Transcript :  يتضح لنا ايه هيتضح لنا
-  OCR        : None
-  Combined   :  يتضح لنا ايه هيتضح لنا
-
-[00:03:44]
-  Transcript :  بص بقى وركز في الكلام اللي جاي ده
-  OCR        : None
-  Combined   :  بص بقى وركز في الكلام اللي جاي ده
+  Combined   :  يبقى عند ناين هن. ده بتاعي. فناين دي هي اللي هتتضرب في
 
 [00:03:46]
-  Transcript :  كويس تمام ورقتك معك وكتب
+  Transcript :  الاين في الدجري اف مامبرشم. طب لو هترابيزويدن هيبقى ليه
+  OCR        : Fuzzy Inference | The most commonly used fuzzy inference technique is the so- | called Mamdani method. | Mamdanis model expresses the output using fuzzy terms instead | of mathematical combinations of the input variable. | All defuzzification techniques previously discussed belong to | Mamdanis model. | The Mamdani-style fuzzy inference process is performed in four | steps: | 1.Fuzzification of the input variables | 2.Rule evaluation inference | 3. Aggregation of the rule outputs composition | 4.Defuzzification.
+  Combined   :  الاين في الدجري اف مامبرشم. طب لو هترابيزويدن هيبقى ليه Fuzzy Inference | The most commonly used fuzzy inference technique is the so- | called Mamdani method. | Mamdanis model expresses the output using fuzzy terms instead | of mathematical combinations of the input variable. | All defuzzification techniques previously discussed belong to | Mamdanis model. | The Mamdani-style fuzzy inference process is performed in four | steps: | 1.Fuzzification of the input variables | 2.Rule evaluation inference | 3. Aggregation of the rule outputs composition | 4.Defuzzification.
+
+[00:03:49]
+  Transcript :  هجمع الفور بوينتز وهي سمع على الاربا. تمام? ده اللي انتم هتعملون
   OCR        : None
-  Combined   :  كويس تمام ورقتك معك وكتب
+  Combined   :  هجمع الفور بوينتز وهي سمع على الاربا. تمام? ده اللي انتم هتعملون
 
-[00:03:48]
-  Transcript :  ان كلمة كريم
+[00:03:55]
+  Transcript :  هتعملونه خلاص? يبقى هكذا
   OCR        : None
-  Combined   :  ان كلمة كريم
+  Combined   :  هتعملونه خلاص? يبقى هكذا
 
-[00:03:51]
-  Transcript :  تمام
-  OCR        : أعجت كريلتفوه | كري تلميذ نكي | وكريماسم مجرور وجاتمة الجر | مغعول به متصوب | الكسرة الطاهرةعلي أخره | وعلامة النصب القحة الظاهرة علي أخره | الضمة الطاهرة علر أخرة | يتضح لنا | كلمة كريم مرةبف | اشتراك
-  Combined   :  تمام أعجت كريلتفوه | كري تلميذ نكي | وكريماسم مجرور وجاتمة الجر | مغعول به متصوب | الكسرة الطاهرةعلي أخره | وعلامة النصب القحة الظاهرة علي أخره | الضمة الطاهرة علر أخرة | يتضح لنا | كلمة كريم مرةبف | اشتراك
-
-[00:03:51]
-  Transcript :  مرة رفعت بتضم
+[00:04:00]
+  Transcript :  كده قدرنا نحسب ال اي والبي اللي هما ال اي بتاعت ال اي الفاضي
   OCR        : None
-  Combined   :  مرة رفعت بتضم
+  Combined   :  كده قدرنا نحسب ال اي والبي اللي هما ال اي بتاعت ال اي الفاضي
 
-[00:03:54]
-  Transcript :  تمام ومرة نصبت بالكسرة جميل برضو
+[00:04:05]
+  Transcript :  ساتس بتاعتي. وندرف ونقسم على اي مجموعهم. كده بطلعنا ال اي
   OCR        : None
-  Combined   :  تمام ومرة نصبت بالكسرة جميل برضو
-
-[00:03:58]
-  Transcript :  ومرة جميلة
-  OCR        : None
-  Combined   :  ومرة جميلة
-
-[00:04:01]
-  Transcript :  بطرت بالكسرة
-  OCR        : أعجت كري لتوه | وكريم اسم مجرور وحاتمة الجر | الكرة الطاهرة عليأجر | كلمة كريم مرة رفعت بالضمة ومرة نصبت بالفتحة ومرة جرت بالكسرة
-  Combined   :  بطرت بالكسرة أعجت كري لتوه | وكريم اسم مجرور وحاتمة الجر | الكرة الطاهرة عليأجر | كلمة كريم مرة رفعت بالضمة ومرة نصبت بالفتحة ومرة جرت بالكسرة
-
-[00:04:01]
-  Transcript :  يبقى خلي بالك بقى
-  OCR        : None
-  Combined   :  يبقى خلي بالك بقى
-
-[00:04:03]
-  Transcript :  ان كريم دي مرة كانت مضمومة
-  OCR        : None
-  Combined   :  ان كريم دي مرة كانت مضمومة
-
-[00:04:06]
-  Transcript :  مرة كانت منصوبة مرة كانت
-  OCR        : None
-  Combined   :  مرة كانت منصوبة مرة كانت
-
-[00:04:07]
-  Transcript :  مكسورة وكمان ممكن تجي
-  OCR        : None
-  Combined   :  مكسورة وكمان ممكن تجي
-
-[00:04:09]
-  Transcript :  مكزومة تمام
-  OCR        : None
-  Combined   :  مكزومة تمام
+  Combined   :  ساتس بتاعتي. وندرف ونقسم على اي مجموعهم. كده بطلعنا ال اي
 
 [00:04:11]
-  Transcript :  يبقى ملهاش علامة
+  Transcript :  بتاعت الاوتوت. في دي خلاص? طيب. الفاضي في اكتر من فاضي في
   OCR        : None
-  Combined   :  يبقى ملهاش علامة
+  Combined   :  بتاعت الاوتوت. في دي خلاص? طيب. الفاضي في اكتر من فاضي في
 
-[00:04:14]
-  Transcript :  سابتة بتاخد الضم مرة
+[00:04:29]
+  Transcript :  مامداني وفي سوجينو. احنا مش ناخد سوجينو. خلاص احنا الطريقة اللي
+  OCR        : 2. Rule evaluation inference | 4 Defuzzification.
+  Combined   :  مامداني وفي سوجينو. احنا مش ناخد سوجينو. خلاص احنا الطريقة اللي 2. Rule evaluation inference | 4 Defuzzification.
+
+[00:04:32]
+  Transcript :  احنا اخدناها دي اللي هي بتاعت المامداني. بتاعت مامداني. بيعمل
   OCR        : None
-  Combined   :  سابتة بتاخد الضم مرة
+  Combined   :  احنا اخدناها دي اللي هي بتاعت المامداني. بتاعت مامداني. بيعمل
 
-[00:04:15]
-  Transcript :  وتاخد الفتحة وبتاخد الكسرة
+[00:04:36]
+  Transcript :  دي بيعمل ورول ودي خلاص ده مش مش حاجة مؤثرة قوي عندي. خلاص
   OCR        : None
-  Combined   :  وتاخد الفتحة وبتاخد الكسرة
+  Combined   :  دي بيعمل ورول ودي خلاص ده مش مش حاجة مؤثرة قوي عندي. خلاص
 
-[00:04:17]
-  Transcript :  وبتاخد السكون علامات العرب
+[00:04:47]
+  Transcript :  ممكن ندخلها جوة يعني احنا قريضي عملناها خلاص احنا قريضي عمناها
   OCR        : None
-  Combined   :  وبتاخد السكون علامات العرب
+  Combined   :  ممكن ندخلها جوة يعني احنا قريضي عملناها خلاص احنا قريضي عمناها
 
-[00:04:19]
-  Transcript :  الاصلية تمام
-  OCR        : None
-  Combined   :  الاصلية تمام
-
-[00:04:21]
-  Transcript :  فطبيعا ان هي علامتها بتتغير
-  OCR        : None
-  Combined   :  فطبيعا ان هي علامتها بتتغير
-
-[00:04:23]
-  Transcript :  يبقى الكلمة اللي
-  OCR        : None
-  Combined   :  يبقى الكلمة اللي
-
-[00:04:25]
-  Transcript :  في علامتها بتتغير بتكون اين
-  OCR        : None
-  Combined   :  في علامتها بتتغير بتكون اين
-
-[00:04:27]
-  Transcript :  ركز معاي
-  OCR        : None
-  Combined   :  ركز معاي
-
-[00:04:28]
-  Transcript :  الكلمة العلامة بتاعتها
-  OCR        : None
-  Combined   :  الكلمة العلامة بتاعتها
-
-[00:04:31]
-  Transcript :  بتتغير ده يخليها
-  OCR        : None
-  Combined   :  بتتغير ده يخليها
-
-[00:04:33]
-  Transcript :  كلمة ايه ده يجعلها كلمة
-  OCR        : None
-  Combined   :  كلمة ايه ده يجعلها كلمة
-
-[00:04:35]
-  Transcript :  معربة لان علامة
-  OCR        : None
-  Combined   :  معربة لان علامة
-
-[00:04:37]
-  Transcript :  اعرابها تتغير بحسب موقع
-  OCR        : None
-  Combined   :  اعرابها تتغير بحسب موقع
-
-[00:04:39]
-  Transcript :  موقعها الاعراب في الجملة تمام
-  OCR        : None
-  Combined   :  موقعها الاعراب في الجملة تمام
-
-[00:04:41]
-  Transcript :  حسب تغير موقعها في الجملة
-  OCR        : None
-  Combined   :  حسب تغير موقعها في الجملة
-
-[00:04:43]
-  Transcript :  كده يا شباب الاعراب
-  OCR        : None
-  Combined   :  كده يا شباب الاعراب
-
-[00:04:44]
-  Transcript :  ان شاء الله خدنا عليه مثال
-  OCR        : None
-  Combined   :  ان شاء الله خدنا عليه مثال
-
-[00:04:46]
-  Transcript :  يارب يكون ايه اتفاهم لحد كده
-  OCR        : None
-  Combined   :  يارب يكون ايه اتفاهم لحد كده
-
-[00:04:48]
-  Transcript :  تعالا بقى نشوف البناء
-  OCR        : أعجت كريلتقوه | اريم ملميذ ذنكي | الباء حرفجر | وكريم اسم مجروزر وعتمة الجر | مفعول به مستصوب | الكبرة الطاهرة علي اخرة | وعلامة النصب القحة الظاهرة علي أخرء | الضمة الظاهرةعلي أخره | إن كلمة كريم مرة رفعت بالضمة ومرة نصبت بالفتحة ومرة جرت بالكسرة | ودايجعلها كلمة معرية لأن علامة اعرابهاتغير حسب تغير موفعهافي الجملة
-  Combined   :  تعالا بقى نشوف البناء أعجت كريلتقوه | اريم ملميذ ذنكي | الباء حرفجر | وكريم اسم مجروزر وعتمة الجر | مفعول به مستصوب | الكبرة الطاهرة علي اخرة | وعلامة النصب القحة الظاهرة علي أخرء | الضمة الظاهرةعلي أخره | إن كلمة كريم مرة رفعت بالضمة ومرة نصبت بالفتحة ومرة جرت بالكسرة | ودايجعلها كلمة معرية لأن علامة اعرابهاتغير حسب تغير موفعهافي الجملة
-
-[00:04:50]
-  Transcript :  البناء هو ايه
-  OCR        : None
-  Combined   :  البناء هو ايه
-
-[00:04:53]
-  Transcript :  واحفظ التعريف ده زي ما حفظنا
-  OCR        : None
-  Combined   :  واحفظ التعريف ده زي ما حفظنا
-
-[00:05:04]
+[00:04:56]
   Transcript : 
-  OCR        : هو ثبوت حركة أخر الكلمة مهماتغير | البنا | بينجك | اخفك
-  Combined   :  هو ثبوت حركة أخر الكلمة مهماتغير | البنا | بينجك | اخفك
+  OCR        : Mamdani Fuzzy Inference | We examine a simple two-input cne-output problem that includes three rules: | Rule: 1 | x is A3 | Rule: 1 | y is B1 | prejectfunding | is adequate | THEN | z is C1 | THEN | risk | projectstaffing | is small | is low | Bule: 2 | x is A2 | Rule: 2 | y is B2 | projectfunding | prejectstafing | is marginal | is large | THEN | z Is C2 | THEN | risk | Is normal | Bule: 3 | Buk:3 | THEN | x is A1 | z is C3 | THEN | projectfunding | is inadequate | is high
+  Combined   :  Mamdani Fuzzy Inference | We examine a simple two-input cne-output problem that includes three rules: | Rule: 1 | x is A3 | Rule: 1 | y is B1 | prejectfunding | is adequate | THEN | z is C1 | THEN | risk | projectstaffing | is small | is low | Bule: 2 | x is A2 | Rule: 2 | y is B2 | projectfunding | prejectstafing | is marginal | is large | THEN | z Is C2 | THEN | risk | Is normal | Bule: 3 | Buk:3 | THEN | x is A1 | z is C3 | THEN | projectfunding | is inadequate | is high
 
-[00:05:07]
-  Transcript :  تمام هناك كانت
+[00:05:06]
+  Transcript :  از اي سري. خلاص? زين زد از سي وان. الاي هي الفوزي ستس بتاعة
   OCR        : None
-  Combined   :  تمام هناك كانت
+  Combined   :  از اي سري. خلاص? زين زد از سي وان. الاي هي الفوزي ستس بتاعة
 
-[00:05:09]
-  Transcript :  بتتغير الكلمة هنا هتكون
+[00:05:18]
+  Transcript :  الاكس الاولي. البي هي الفوزي ستس بتاعة الواي. الانبوت التاني.
   OCR        : None
-  Combined   :  بتتغير الكلمة هنا هتكون
+  Combined   :  الاكس الاولي. البي هي الفوزي ستس بتاعة الواي. الانبوت التاني.
 
-[00:05:10]
-  Transcript :  الحركة بتاعتها ثابتة لا تتغير
+[00:05:22]
+  Transcript :  والس هي الفازي سادس بتاعت الاي الاوتبوت اللي هو الزت. تمام? طبعا كل رول هنا احطي لكم هنا اجزامبل عليها. خلاص? الاجزامبل ده من الاسايمنت اللي هيتعمل. طيب اه الرول التاني بتقول لي في
   OCR        : None
-  Combined   :  الحركة بتاعتها ثابتة لا تتغير
+  Combined   :  والس هي الفازي سادس بتاعت الاي الاوتبوت اللي هو الزت. تمام? طبعا كل رول هنا احطي لكم هنا اجزامبل عليها. خلاص? الاجزامبل ده من الاسايمنت اللي هيتعمل. طيب اه الرول التاني بتقول لي في
 
-[00:05:14]
-  Transcript :  وركز على كلمة ثبوت
-  OCR        : هو ثبوت حركة أخر الكلمة مهماتغير موقعها في الجملة | البناء | أجيك ينجيك
-  Combined   :  وركز على كلمة ثبوت هو ثبوت حركة أخر الكلمة مهماتغير موقعها في الجملة | البناء | أجيك ينجيك
-
-[00:05:14]
-  Transcript :  طيب ناخد مثال
+[00:05:41]
+  Transcript :  الاكس از اي تو اند واي از بي تو زل زد از اي تي تو. في رول سريع عندي
   OCR        : None
-  Combined   :  طيب ناخد مثال
-
-[00:05:16]
-  Transcript :  يلا بنا
-  OCR        : None
-  Combined   :  يلا بنا
-
-[00:05:17]
-  Transcript :  هذا تلميذ
-  OCR        : None
-  Combined   :  هذا تلميذ
-
-[00:05:20]
-  Transcript :  مجتهد وركز في كلمة
-  OCR        : None
-  Combined   :  مجتهد وركز في كلمة
-
-[00:05:23]
-  Transcript :  هذا لأن ده الشهد من
-  OCR        : None
-  Combined   :  هذا لأن ده الشهد من
-
-[00:05:24]
-  Transcript :  المثال هذا
-  OCR        : None
-  Combined   :  المثال هذا
-
-[00:05:26]
-  Transcript :  تلميذ مجتهد طيب
-  OCR        : None
-  Combined   :  تلميذ مجتهد طيب
-
-[00:05:28]
-  Transcript :  رأيت هذا التلميذ
-  OCR        : None
-  Combined   :  رأيت هذا التلميذ
-
-[00:05:30]
-  Transcript :  يزاكر جميل
-  OCR        : None
-  Combined   :  يزاكر جميل
-
-[00:05:34]
-  Transcript :  كلمة هذا ايه اتغير مكانها في الجملة
-  OCR        : ملصت مل | هذا تلميذ مجتهدرأيت هذا التلميذيذاكر
-  Combined   :  كلمة هذا ايه اتغير مكانها في الجملة ملصت مل | هذا تلميذ مجتهدرأيت هذا التلميذيذاكر
-
-[00:05:34]
-  Transcript :  سلمت
-  OCR        : None
-  Combined   :  سلمت
-
-[00:05:36]
-  Transcript :  على هذا التلميذ
-  OCR        : None
-  Combined   :  على هذا التلميذ
-
-[00:05:38]
-  Transcript :  برضو هذا اتغير
-  OCR        : None
-  Combined   :  برضو هذا اتغير
-
-[00:05:40]
-  Transcript :  مكانها في الجملة اول حاجة
-  OCR        : None
-  Combined   :  مكانها في الجملة اول حاجة
-
-[00:05:42]
-  Transcript :  اخليك معايا في كلمة هذا
-  OCR        : None
-  Combined   :  اخليك معايا في كلمة هذا
-
-[00:05:44]
-  Transcript :  اللي في المثال الاول
-  OCR        : هو ئبوت حركة آخر الكلمة مهما تغير موقعها في الجملة | سلمت على هذا التلميذ | رأيت هذا التلميذيذاكر | هذاتلميذ مجتهد
-  Combined   :  اللي في المثال الاول هو ئبوت حركة آخر الكلمة مهما تغير موقعها في الجملة | سلمت على هذا التلميذ | رأيت هذا التلميذيذاكر | هذاتلميذ مجتهد
-
-[00:05:45]
-  Transcript :  هذا هنا شباب كنا زمان في ابتدائي
-  OCR        : None
-  Combined   :  هذا هنا شباب كنا زمان في ابتدائي
-
-[00:05:48]
-  Transcript :  بتتعرب
-  OCR        : None
-  Combined   :  بتتعرب
-
-[00:05:50]
-  Transcript :  يقولك متدأ مرفوع على مترفع
-  OCR        : None
-  Combined   :  يقولك متدأ مرفوع على مترفع
+  Combined   :  الاكس از اي تو اند واي از بي تو زل زد از اي تي تو. في رول سريع عندي
 
 [00:05:54]
-  Transcript :  تضم على طول. وده كان كلام غلط علشان حضراتك كنت لس صغير فانت
-  OCR        : سرأبت هذا التلميذيذاكر | اسم إشارة مبي علي السكون
-  Combined   :  تضم على طول. وده كان كلام غلط علشان حضراتك كنت لس صغير فانت سرأبت هذا التلميذيذاكر | اسم إشارة مبي علي السكون
+  Transcript :  انتسدنت واحد اللي هو الاكس از اي وان زل زد از اي سي سري. طيب. اول
+  OCR        : Step 1: Fuzzification | The first step is to take the crisp inputs, x1 and y1 project fundling and | project staffing and determine the degree to which these inputs | belong to each of the appropriate fuzzy sets. | Crisp Jeysr | Cripo Input | F x - 41  0.5 | Pr-20.1
+  Combined   :  انتسدنت واحد اللي هو الاكس از اي وان زل زد از اي سي سري. طيب. اول Step 1: Fuzzification | The first step is to take the crisp inputs, x1 and y1 project fundling and | project staffing and determine the degree to which these inputs | belong to each of the appropriate fuzzy sets. | Crisp Jeysr | Cripo Input | F x - 41  0.5 | Pr-20.1
 
-[00:05:56]
-  Transcript :  كبرت. دلوقتي هزا هنا اسم اشارة.
+[00:05:58]
+  Transcript :  استاب اعمالها اللي هي الفازي فيها.
   OCR        : None
-  Combined   :  كبرت. دلوقتي هزا هنا اسم اشارة.
+  Combined   :  استاب اعمالها اللي هي الفازي فيها.
 
 [00:06:00]
-  Transcript :  وده إعراب ثابت لها
+  Transcript :  اللي هو ايه? برسم الفاضي سادسة بتاعتي وبعرف اجيب الايه?
   OCR        : None
-  Combined   :  وده إعراب ثابت لها
-
-[00:06:01]
-  Transcript :  اسم إشارة مبني على السكون
-  OCR        : None
-  Combined   :  اسم إشارة مبني على السكون
-
-[00:06:03]
-  Transcript :  على طول كده
-  OCR        : None
-  Combined   :  على طول كده
+  Combined   :  اللي هو ايه? برسم الفاضي سادسة بتاعتي وبعرف اجيب الايه?
 
 [00:06:04]
-  Transcript :  مهما بقى تغير مكانها في الجمل
+  Transcript :  بتاعت خلاص في الفاضي ايه? سادسة دي. تمام? عملناها كزا مرة في
   OCR        : None
-  Combined   :  مهما بقى تغير مكانها في الجمل
-
-[00:06:06]
-  Transcript :  هي اسم إشارة
-  OCR        : None
-  Combined   :  هي اسم إشارة
-
-[00:06:07]
-  Transcript :  وده إيه من مبني على السكون لأن أخرها ألف والألف ساكن
-  OCR        : None
-  Combined   :  وده إيه من مبني على السكون لأن أخرها ألف والألف ساكن
-
-[00:06:11]
-  Transcript :  في محل رافع
-  OCR        : None
-  Combined   :  في محل رافع
-
-[00:06:12]
-  Transcript :  في محل رافع مبتدأ
-  OCR        : None
-  Combined   :  في محل رافع مبتدأ
+  Combined   :  بتاعت خلاص في الفاضي ايه? سادسة دي. تمام? عملناها كزا مرة في
 
 [00:06:15]
-  Transcript :  تمام
-  OCR        : None
-  Combined   :  تمام
+  Transcript :  وخلاص بقى انتم كده فهمتوها. طيب مشكلة زي ما زميلتكم كدت
+  OCR        : To accurately get the membership degree of the | crisp value provided, equations of lines of the | different fuzzy sets should be determined. Then you | can get value of y membership by substituting in | line equations by x value crisp value | values are not accurate
+  Combined   :  وخلاص بقى انتم كده فهمتوها. طيب مشكلة زي ما زميلتكم كدت To accurately get the membership degree of the | crisp value provided, equations of lines of the | different fuzzy sets should be determined. Then you | can get value of y membership by substituting in | line equations by x value crisp value | values are not accurate
 
-[00:06:15]
-  Transcript :  هي آه المحل بتاعها المكان بتاعها هنا
-  OCR        : None
-  Combined   :  هي آه المحل بتاعها المكان بتاعها هنا
+[00:06:25]
+  Transcript :  بتسأل احنا هنا بنجيبها من على الايه? من على الرسمة. طب لو انا
+  OCR        : Crip Japar | Crisp Input | Pr-2t 0.1
+  Combined   :  بتسأل احنا هنا بنجيبها من على الايه? من على الرسمة. طب لو انا Crip Japar | Crisp Input | Pr-2t 0.1
 
-[00:06:18]
-  Transcript :  كان المفروض يكون فيه مبتدأ
+[00:06:25]
+  Transcript :  هعمل لها اعملها في الكود. هعرف اجيبها ازاي? بص كده معي مش الفاز
   OCR        : None
-  Combined   :  كان المفروض يكون فيه مبتدأ
+  Combined   :  هعمل لها اعملها في الكود. هعرف اجيبها ازاي? بص كده معي مش الفاز
 
-[00:06:20]
-  Transcript :  بس إحنا مفيش مبتدأ وجات اسم الإشارة ده
+[00:06:32]
+  Transcript :  يست زي اللي انا بشوف ما بينها ما بين اللي هو دي عبر عبر عن
   OCR        : None
-  Combined   :  بس إحنا مفيش مبتدأ وجات اسم الإشارة ده
+  Combined   :  يست زي اللي انا بشوف ما بينها ما بين اللي هو دي عبر عبر عن
 
-[00:06:23]
-  Transcript :  فإحنا ما ينفعش
+[00:06:38]
+  Transcript :  صح? لو انا قدرت اجيب بتاعت ده وعودت فيه بالاكس بطلع لي
   OCR        : None
-  Combined   :  فإحنا ما ينفعش
-
-[00:06:24]
-  Transcript :  كان غلط أن إحنا نقول عليه على طول هو مبتدأ
-  OCR        : None
-  Combined   :  كان غلط أن إحنا نقول عليه على طول هو مبتدأ
-
-[00:06:27]
-  Transcript :  لكن ده كان علشان حضرك لسه صغير فعلا
-  OCR        : None
-  Combined   :  لكن ده كان علشان حضرك لسه صغير فعلا
-
-[00:06:29]
-  Transcript :  فدلوقتي انت بدأت تكبر
-  OCR        : None
-  Combined   :  فدلوقتي انت بدأت تكبر
-
-[00:06:31]
-  Transcript :  بدأت تتوسع مدركك في الاعراب
-  OCR        : None
-  Combined   :  بدأت تتوسع مدركك في الاعراب
-
-[00:06:33]
-  Transcript :  وبتعرف المواقع والكلام ده
-  OCR        : None
-  Combined   :  وبتعرف المواقع والكلام ده
-
-[00:06:35]
-  Transcript :  فهنا بيكون اعرابها كالقاتي
-  OCR        : None
-  Combined   :  فهنا بيكون اعرابها كالقاتي
-
-[00:06:37]
-  Transcript :  دايما ثابت الكلام ده معنا
-  OCR        : None
-  Combined   :  دايما ثابت الكلام ده معنا
-
-[00:06:39]
-  Transcript :  هي اسم اشارة مبنية على السكون
-  OCR        : None
-  Combined   :  هي اسم اشارة مبنية على السكون
-
-[00:06:41]
-  Transcript :  والمحل بتاعها بقى هو لا بتغير
-  OCR        : None
-  Combined   :  والمحل بتاعها بقى هو لا بتغير
-
-[00:06:43]
-  Transcript :  هنا في محل رفع ايه
-  OCR        : None
-  Combined   :  هنا في محل رفع ايه
-
-[00:06:45]
-  Transcript :  مبتدأ تمام لان المحل هنا
-  OCR        : None
-  Combined   :  مبتدأ تمام لان المحل هنا
+  Combined   :  صح? لو انا قدرت اجيب بتاعت ده وعودت فيه بالاكس بطلع لي
 
 [00:06:47]
-  Transcript :  كان في اول الكلام
-  OCR        : None
-  Combined   :  كان في اول الكلام
-
-[00:06:49]
-  Transcript :  فطبيعي انها كانت تعرف مبتدأ
-  OCR        : None
-  Combined   :  فطبيعي انها كانت تعرف مبتدأ
-
-[00:06:52]
-  Transcript :  طيب رأيته هذا التلميذ
-  OCR        : هو ثبوت حركة آخر الكلمة مهماتغير موقعها في الجملة | سلمت علي هذا التلميذ | التلميذ يذاكر | مجتهد | هذاتلميذ | سم إشارة بني علي السكون | في محل ريع مبكا | علميسيبين اجيك ينجيك
-  Combined   :  طيب رأيته هذا التلميذ هو ثبوت حركة آخر الكلمة مهماتغير موقعها في الجملة | سلمت علي هذا التلميذ | التلميذ يذاكر | مجتهد | هذاتلميذ | سم إشارة بني علي السكون | في محل ريع مبكا | علميسيبين اجيك ينجيك
-
-[00:07:02]
   Transcript : 
-  OCR        : رأبتهذا التلميذ يذاكر | هذا تلميذ مجتهد | اسم إشارة مين | السم إشارة مبني طلي السكون | في محل رفع ميكً | علميسبن أجيك ينجك
-  Combined   :  رأبتهذا التلميذ يذاكر | هذا تلميذ مجتهد | اسم إشارة مين | السم إشارة مبني طلي السكون | في محل رفع ميكً | علميسبن أجيك ينجك
-
-[00:07:12]
-  Transcript : 
-  OCR        : رأتذاالتلميذ يذاكر | اسم إشارة مبتي علي السكون | في محل تصب مفعول به
-  Combined   :  رأتذاالتلميذ يذاكر | اسم إشارة مبتي علي السكون | في محل تصب مفعول به
-
-[00:07:23]
-  Transcript : 
-  OCR        : رأبتهذاالتلميذيذاكر | اسم إشارة مي ع السكون | في محل تصب مغع | في محل رفع ميكاً
-  Combined   :  رأبتهذاالتلميذيذاكر | اسم إشارة مي ع السكون | في محل تصب مغع | في محل رفع ميكاً
-
-[00:07:23]
-  Transcript :  هتعرف ايه طبعا
   OCR        : None
-  Combined   :  هتعرف ايه طبعا
+  Combined   : 
 
-[00:07:25]
-  Transcript :  اسم اشارة مبنية على السكون
+[00:07:10]
+  Transcript :  اقول وهي تكون فحطة ان انا اعملها بايدي. ارسمها. واشوفها
   OCR        : None
-  Combined   :  اسم اشارة مبنية على السكون
+  Combined   :  اقول وهي تكون فحطة ان انا اعملها بايدي. ارسمها. واشوفها
 
-[00:07:28]
-  Transcript :  في محل ايه ترى
+[00:07:19]
+  Transcript :  كده على الرسمة بايز دي وخلاص دي ما بتطلع ليش عشان اطلع دي
   OCR        : None
-  Combined   :  في محل ايه ترى
+  Combined   :  كده على الرسمة بايز دي وخلاص دي ما بتطلع ليش عشان اطلع دي
 
-[00:07:29]
-  Transcript :  في محل جر
+[00:07:26]
+  Transcript :  اجزاكت يبقى انا محتاجة اجيب بتاعة ده واللاين ده وعوض فيهم
   OCR        : None
-  Combined   :  في محل جر
+  Combined   :  اجزاكت يبقى انا محتاجة اجيب بتاعة ده واللاين ده وعوض فيهم
 
-[00:07:33]
-  Transcript :  اسم ايه مجرور
-  OCR        : سلمت على هذاالتلميذ | رأبتهذاالتلميذ يذاكر | اسم إشارة مبنى على السكون | في محل جر اسم مجرور | فى محل تصب مغعول به | في محل رفع ميكدا
-  Combined   :  اسم ايه مجرور سلمت على هذاالتلميذ | رأبتهذاالتلميذ يذاكر | اسم إشارة مبنى على السكون | في محل جر اسم مجرور | فى محل تصب مغعول به | في محل رفع ميكدا
-
-[00:07:33]
-  Transcript :  تمام ودي التلات حالات شباب
+[00:07:34]
+  Transcript :  بالسرط دي اللي هي بتاعي يطلع لي المقابلة ليها. طيب ازاي بقى
   OCR        : None
-  Combined   :  تمام ودي التلات حالات شباب
-
-[00:07:35]
-  Transcript :  لكلمة هذا لما تغير
-  OCR        : None
-  Combined   :  لكلمة هذا لما تغير
-
-[00:07:37]
-  Transcript :  موقعها فين في الجملة
-  OCR        : None
-  Combined   :  موقعها فين في الجملة
-
-[00:07:39]
-  Transcript :  تمام لكن الشاهد بقى
-  OCR        : None
-  Combined   :  تمام لكن الشاهد بقى
+  Combined   :  بالسرط دي اللي هي بتاعي يطلع لي المقابلة ليها. طيب ازاي بقى
 
 [00:07:41]
-  Transcript :  ان هذا دي اخرها دايما
-  OCR        : None
-  Combined   :  ان هذا دي اخرها دايما
-
-[00:07:43]
-  Transcript :  سابت ما تغيرش
-  OCR        : None
-  Combined   :  سابت ما تغيرش
-
-[00:07:45]
-  Transcript :  ولا خدت ضمة مرة ولا خدت مرة فتحة
-  OCR        : None
-  Combined   :  ولا خدت ضمة مرة ولا خدت مرة فتحة
-
-[00:07:47]
-  Transcript :  ولا كسرة ولا سكو ولا
-  OCR        : None
-  Combined   :  ولا كسرة ولا سكو ولا
-
-[00:07:49]
-  Transcript :  اي حاجة من العلامات دي
-  OCR        : None
-  Combined   :  اي حاجة من العلامات دي
+  Transcript :  اطلع بتاعة سهلة جدا.
+  OCR        : To get membership of crisp value p30, we | need to get equations for the lines where | the value 30 intersects with L1  L2.
+  Combined   :  اطلع بتاعة سهلة جدا. To get membership of crisp value p30, we | need to get equations for the lines where | the value 30 intersects with L1  L2.
 
 [00:07:51]
-  Transcript :  هي دائما مبنية على السكون
-  OCR        : None
-  Combined   :  هي دائما مبنية على السكون
-
-[00:07:53]
-  Transcript :  لكن محلها الإعرابي بيختلف
-  OCR        : None
-  Combined   :  لكن محلها الإعرابي بيختلف
+  Transcript :  نمسك مثلا ال اي ال ال اون. ده. ال اي ده عشان اجيب بتاعته
+  OCR        : L1: 1-get 2 points on the line: 0,1, 50,0 | 2-get slope  y2-y1x2-x1  0-150-0 -150 | 3-line equation: y  ax  b a  slope | 4-line equation: y  -x50  b, substitute by one of | the points to get b. | 1  0  b  b1 | y  -x50  1 | 7- To get membership substitute by x30, | 8- y -30501  0.4 | 9- μp  30  0.4 | L2: use same steps.
+  Combined   :  نمسك مثلا ال اي ال ال اون. ده. ال اي ده عشان اجيب بتاعته L1: 1-get 2 points on the line: 0,1, 50,0 | 2-get slope  y2-y1x2-x1  0-150-0 -150 | 3-line equation: y  ax  b a  slope | 4-line equation: y  -x50  b, substitute by one of | the points to get b. | 1  0  b  b1 | y  -x50  1 | 7- To get membership substitute by x30, | 8- y -30501  0.4 | 9- μp  30  0.4 | L2: use same steps.
 
 [00:07:56]
-  Transcript :  فعلى حسب موقعها في الجملة
+  Transcript :  مبدئيا هو ال اي فالاقوشن بتاعته تبقى ايه?
   OCR        : None
-  Combined   :  فعلى حسب موقعها في الجملة
-
-[00:07:58]
-  Transcript :  وده برضو ما يغيرش على متى
-  OCR        : None
-  Combined   :  وده برضو ما يغيرش على متى
+  Combined   :  مبدئيا هو ال اي فالاقوشن بتاعته تبقى ايه?
 
 [00:08:00]
-  Transcript :  هي علامتها الأساسية هي السكون
+  Transcript :  اي? بتساوي اي اكس بلاس بي. حلاص? اي اكس بلاس بي. وانا
   OCR        : None
-  Combined   :  هي علامتها الأساسية هي السكون
+  Combined   :  اي? بتساوي اي اكس بلاس بي. حلاص? اي اكس بلاس بي. وانا
 
-[00:08:01]
-  Transcript :  فما بتتغيرش مهما تغير
+[00:08:09]
+  Transcript :  دلوقتي هدفي ان انا ايه اشوف الفاليو بتاعت الايه والبي بكام
   OCR        : None
-  Combined   :  فما بتتغيرش مهما تغير
-
-[00:08:03]
-  Transcript :  موقعها في الجملة
-  OCR        : None
-  Combined   :  موقعها في الجملة
-
-[00:08:05]
-  Transcript :  تمام
-  OCR        : None
-  Combined   :  تمام
-
-[00:08:06]
-  Transcript :  كده بقى ان شاء الله
-  OCR        : اسم إشارة مني على السكون | اسم إشارة بتي علي السكون | اسم إشارة مبني علي السكون | في محل تصب مغعول به
-  Combined   :  كده بقى ان شاء الله اسم إشارة مني على السكون | اسم إشارة بتي علي السكون | اسم إشارة مبني علي السكون | في محل تصب مغعول به
-
-[00:08:08]
-  Transcript :  تفهم بقى من الامثلة دي ان هو يتضح لنا
-  OCR        : None
-  Combined   :  تفهم بقى من الامثلة دي ان هو يتضح لنا
-
-[00:08:11]
-  Transcript :  ان كلمة
-  OCR        : None
-  Combined   :  ان كلمة
+  Combined   :  دلوقتي هدفي ان انا ايه اشوف الفاليو بتاعت الايه والبي بكام
 
 [00:08:13]
-  Transcript :  هذا دي لا يتغير
+  Transcript :  عشان اكتب الايكويشن ايه بتاعت الايه. اي لاين في الدنيا هيدي
   OCR        : None
-  Combined   :  هذا دي لا يتغير
+  Combined   :  عشان اكتب الايكويشن ايه بتاعت الايه. اي لاين في الدنيا هيدي
 
-[00:08:16]
-  Transcript :  علامتها ابدا
-  OCR        : هو ثبوت حركة آخر الكلمة مهما تغير موقعها في الجملة | رأبتهذا التلمي يذاكر | اسم إشارة مبتي على السكون | اسم إشارة مبي عل السكون | في محل ريع مبكداً | أمكت | أ أحمد سعب
-  Combined   :  علامتها ابدا هو ثبوت حركة آخر الكلمة مهما تغير موقعها في الجملة | رأبتهذا التلمي يذاكر | اسم إشارة مبتي على السكون | اسم إشارة مبي عل السكون | في محل ريع مبكداً | أمكت | أ أحمد سعب
-
-[00:08:17]
-  Transcript :  ان كلمة هذا
+[00:08:18]
+  Transcript :  الايكويشن بتاعته. تمام كده? طيب. عشان اعرف اجيب الايه.
   OCR        : None
-  Combined   :  ان كلمة هذا
+  Combined   :  الايكويشن بتاعته. تمام كده? طيب. عشان اعرف اجيب الايه.
 
-[00:08:19]
-  Transcript :  دائما مبنية على السكون
+[00:08:25]
+  Transcript :  الايه ده بنقول عليه اللي بتاع الايه بتاع الايه بتاع الايه بتاع
   OCR        : None
-  Combined   :  دائما مبنية على السكون
-
-[00:08:21]
-  Transcript :  تمام مهما تغير موقعها الاعرابي
-  OCR        : None
-  Combined   :  تمام مهما تغير موقعها الاعرابي
-
-[00:08:24]
-  Transcript :  في الجملة تمام
-  OCR        : None
-  Combined   :  في الجملة تمام
-
-[00:08:26]
-  Transcript :  تمام يا شباب
-  OCR        : اسم إشارةمبتي علي السكون | في محل ريع ميكا | أن كلمة هذا دانمامبنية علي السكون رغم تغير موقعه
-  Combined   :  تمام يا شباب اسم إشارةمبتي علي السكون | في محل ريع ميكا | أن كلمة هذا دانمامبنية علي السكون رغم تغير موقعه
-
-[00:08:27]
-  Transcript :  ان شاء الله يكون واضح الكلام
-  OCR        : None
-  Combined   :  ان شاء الله يكون واضح الكلام
-
-[00:08:29]
-  Transcript :  اللي احنا بنقوله دلوقتي ده بقى إيه
-  OCR        : None
-  Combined   :  اللي احنا بنقوله دلوقتي ده بقى إيه
+  Combined   :  الايه ده بنقول عليه اللي بتاع الايه بتاع الايه بتاع الايه بتاع
 
 [00:08:31]
-  Transcript :  بداية كده يخلينا
+  Transcript :  الايه بتاعته بتساوي اي نقطتين نجيب اي نقطتين على الايه. الايه
   OCR        : None
-  Combined   :  بداية كده يخلينا
-
-[00:08:33]
-  Transcript :  نمهد لكلام بقى اللي
-  OCR        : None
-  Combined   :  نمهد لكلام بقى اللي
-
-[00:08:35]
-  Transcript :  الكلام العربي كله بينقسم
-  OCR        : None
-  Combined   :  الكلام العربي كله بينقسم
+  Combined   :  الايه بتاعته بتساوي اي نقطتين نجيب اي نقطتين على الايه. الايه
 
 [00:08:37]
-  Transcript :  منه المعرب ومنه المبني
+  Transcript :  ده نقطتين عادي مين اكس بزيرو ووي بون. يبقى زيرو وون. بتي
   OCR        : None
-  Combined   :  منه المعرب ومنه المبني
-
-[00:08:39]
-  Transcript :  وده اللي هنأخذ في الدرس اللي جاي أو الفيديو اللي جاي
-  OCR        : None
-  Combined   :  وده اللي هنأخذ في الدرس اللي جاي أو الفيديو اللي جاي
-
-[00:08:41]
-  Transcript :  إن شاء الله فاتبعوا معنا
-  OCR        : None
-  Combined   :  إن شاء الله فاتبعوا معنا
+  Combined   :  ده نقطتين عادي مين اكس بزيرو ووي بون. يبقى زيرو وون. بتي
 
 [00:08:42]
-  Transcript :  هناخد المعرب المبني من الأسماء
+  Transcript :  ال point الاولى. تمام? ال point التانية الاكس بفافتي والي بزيرو.
   OCR        : None
-  Combined   :  هناخد المعرب المبني من الأسماء
+  Combined   :  ال point الاولى. تمام? ال point التانية الاكس بفافتي والي بزيرو.
 
-[00:08:46]
-  Transcript :  وهناخد المعرب المبني من إيه
-  OCR        : نغير حركة أخر الكمة بنعير موفعهافي الجئة | موتوت هركة أر الكتمة مهاتغر موفعهافي الجطة | ال الن
-  Combined   :  وهناخد المعرب المبني من إيه نغير حركة أخر الكمة بنعير موفعهافي الجئة | موتوت هركة أر الكتمة مهاتغر موفعهافي الجطة | ال الن
-
-[00:08:47]
-  Transcript :  من الأفعال فتابعونا شباب
+[00:08:50]
+  Transcript :  زي بي 2 معي كده
   OCR        : None
-  Combined   :  من الأفعال فتابعونا شباب
-
-[00:08:49]
-  Transcript :  ونشد شوية كده ونذاكر إن شاء الله
-  OCR        : None
-  Combined   :  ونشد شوية كده ونذاكر إن شاء الله
-
-[00:08:51]
-  Transcript :  ربنا يبارك فيكم وينفع بيكم إن شاء الله
-  OCR        : None
-  Combined   :  ربنا يبارك فيكم وينفع بيكم إن شاء الله
+  Combined   :  زي بي 2 معي كده
 
 [00:08:53]
-  Transcript :  جزيكم الله خيرا ونفع الله بكم
+  Transcript :  2 1 x2 2
   OCR        : None
-  Combined   :  جزيكم الله خيرا ونفع الله بكم
+  Combined   :  2 1 x2 2
 
-[00:08:55]
-  Transcript :  والسلام عليكم ورحمة الله وبركاته
+[00:09:06]
+  Transcript :  0. ده. minus y1 اللي هي ب 1. يبقى 0-1. 50 اللي هي x2. minus 0 اللي هي
   OCR        : None
-  Combined   :  والسلام عليكم ورحمة الله وبركاته
+  Combined   :  0. ده. minus y1 اللي هي ب 1. يبقى 0-1. 50 اللي هي x2. minus 0 اللي هي
+
+[00:09:17]
+  Transcript :  الاكس وان. بتسوي ايه? مينس وان ديفايد ايه? خلاصي بانا كده
+  OCR        : None
+  Combined   :  الاكس وان. بتسوي ايه? مينس وان ديفايد ايه? خلاصي بانا كده
+
+[00:09:25]
+  Transcript :  جبت القيمة بتاعت الاي.
+  OCR        : None
+  Combined   :  جبت القيمة بتاعت الاي.
+
+[00:09:29]
+  Transcript :  يبقى الاكوشن بقت واي ايكوال ماينس اكس اوفر ففتي بلوس بي.
+  OCR        : None
+  Combined   :  يبقى الاكوشن بقت واي ايكوال ماينس اكس اوفر ففتي بلوس بي.
+
+[00:09:35]
+  Transcript :  عايز اجيب البي. اعمل اي? هعوض باي باي باي بوينت من دول يا اي
+  OCR        : None
+  Combined   :  عايز اجيب البي. اعمل اي? هعوض باي باي باي بوينت من دول يا اي
+
+[00:09:42]
+  Transcript :  الاولى يا التانية. في الاكوشن يطلع لي البي.
+  OCR        : None
+  Combined   :  الاولى يا التانية. في الاكوشن يطلع لي البي.
+
+[00:09:47]
+  Transcript :  تمام؟ عوضت بالA في point one. point one الY فيها بone. يبقى one equal.
+  OCR        : None
+  Combined   :  تمام؟ عوضت بالA في point one. point one الY فيها بone. يبقى one equal.
+
+[00:09:53]
+  Transcript :  الX بزيرو يبقى ده كله بزيرو. plus B. one equal A.
+  OCR        : None
+  Combined   :  الX بزيرو يبقى ده كله بزيرو. plus B. one equal A.
+
+[00:10:00]
+  Transcript :  بي بل بي هنا اكوال ون. يبقى انا كده قدرت اعمل بتاعت اللاين.
+  OCR        : None
+  Combined   :  بي بل بي هنا اكوال ون. يبقى انا كده قدرت اعمل بتاعت اللاين.
+
+[00:10:05]
+  Transcript :  يبقى اللاين ده بتاعت عبارة عن وي ايكوال ماينس اكس. طيب انا
+  OCR        : None
+  Combined   :  يبقى اللاين ده بتاعت عبارة عن وي ايكوال ماينس اكس. طيب انا
+
+[00:10:13]
+  Transcript :  بعد الوقت عايزة اجيب للاكس بتاعت ايه بسيرتي. خلاص? يبقى
+  OCR        : None
+  Combined   :  بعد الوقت عايزة اجيب للاكس بتاعت ايه بسيرتي. خلاص? يبقى
+
+[00:10:22]
+  Transcript :  اعمل ايه? بتاعتي موجودة يبقى هعود عن طلعني ايه? طلعني بتاعتي
+  OCR        : None
+  Combined   :  اعمل ايه? بتاعتي موجودة يبقى هعود عن طلعني ايه? طلعني بتاعتي
+
+[00:10:33]
+  Transcript :  اللي هي ايه? اللي هي او بوينت فور. يبقى متأكدا ان دي مزبوطة.
+  OCR        : None
+  Combined   :  اللي هي ايه? اللي هي او بوينت فور. يبقى متأكدا ان دي مزبوطة.
+
+[00:10:40]
+  Transcript :  ولا هي او بوينت سري او فايف ولا ولا الكلام ده. خلاص? اجي
+  OCR        : None
+  Combined   :  ولا هي او بوينت سري او فايف ولا ولا الكلام ده. خلاص? اجي
+
+[00:10:48]
+  Transcript : 
+  OCR        : None
+  Combined   : 
+
+[00:11:07]
+  Transcript :  تمين.
+  OCR        : Step 2: Rule Evaluation | The second step is to take the fuzzified inputs, Jeau  0.5, Puc-sz | 0.2, μjy-81  0.1 and 4γ-t2  0.7, and apply them to the antecedents of the | fuzzy rules. | If a given fuzzy rule has multiple antecedents, the fuzzy operator AND or | OR is used to obtain a single number that represents the result of the | antecedent evaluation. | This number the truth value is then applied to the consequent | membership function.
+  Combined   :  تمين. Step 2: Rule Evaluation | The second step is to take the fuzzified inputs, Jeau  0.5, Puc-sz | 0.2, μjy-81  0.1 and 4γ-t2  0.7, and apply them to the antecedents of the | fuzzy rules. | If a given fuzzy rule has multiple antecedents, the fuzzy operator AND or | OR is used to obtain a single number that represents the result of the | antecedent evaluation. | This number the truth value is then applied to the consequent | membership function.
+
+[00:11:09]
+  Transcript :  انا مفيمتش حتة دي. انا مفيمتش حتة دي. انا مفيمتش حتة. انا
+  OCR        : None
+  Combined   :  انا مفيمتش حتة دي. انا مفيمتش حتة دي. انا مفيمتش حتة. انا
+
+[00:11:13]
+  Transcript :  دي بعد اللاين بعد ما احنا جبنا السلوب وجبنا البي اه عملنا ايه ما
+  OCR        : None
+  Combined   :  دي بعد اللاين بعد ما احنا جبنا السلوب وجبنا البي اه عملنا ايه ما
+
+[00:11:18]
+  Transcript :  مش عارف. جبني السلوب وجبنا البي بقى خلاص بقى معي ايكوشن هي
+  OCR        : None
+  Combined   :  مش عارف. جبني السلوب وجبنا البي بقى خلاص بقى معي ايكوشن هي
+
+[00:11:22]
+  Transcript :  بتاعت اللاين. فقدرت انا اجيب الواي اللي اللي انا عايزة. انا
+  OCR        : None
+  Combined   :  بتاعت اللاين. فقدرت انا اجيب الواي اللي اللي انا عايزة. انا
+
+[00:11:28]
+  Transcript :  جبت الاكوشن. الاكوشن بتاعت اللاين. دلوقتي لو عوضت باي اكس اي اكس
+  OCR        : None
+  Combined   :  جبت الاكوشن. الاكوشن بتاعت اللاين. دلوقتي لو عوضت باي اكس اي اكس
+
+[00:11:34]
+  Transcript :  معي. يعني اي ايموت. عايز اجيبه البيت او بتاعتم يعني اجيبه الواي.
+  OCR        : None
+  Combined   :  معي. يعني اي ايموت. عايز اجيبه البيت او بتاعتم يعني اجيبه الواي.
+
+[00:11:48]
+  Transcript :  تمام. ماشي. احبار? اي بخط الاكس يتلاعني الواي. تمام يا دكتور.
+  OCR        : The second step is to take the fuzzified inputs, Jeau  0.5, Puc.sz | 0.2, μα 0.1 and γ 0.7, and apply them to the antecedents of the
+  Combined   :  تمام. ماشي. احبار? اي بخط الاكس يتلاعني الواي. تمام يا دكتور. The second step is to take the fuzzified inputs, Jeau  0.5, Puc.sz | 0.2, μα 0.1 and γ 0.7, and apply them to the antecedents of the
+
+[00:11:50]
+  Transcript :  طمام اوكي. بعد كده الاستابع البعدها اللي هي. زي ما اتفقنا
+  OCR        : None
+  Combined   :  طمام اوكي. بعد كده الاستابع البعدها اللي هي. زي ما اتفقنا
+
+[00:11:55]
+  Transcript :  بيبع عندي وعلى حسب هي او ولا ايضي بجيبها
+  OCR        : None
+  Combined   :  بيبع عندي وعلى حسب هي او ولا ايضي بجيبها
+
+[00:12:00]
+  Transcript :  المين او الماكس.
+  OCR        : RECALL: | To evaluate the disjunction of the rule antecedents, we use the OR fuzzy | operation union: | operation.Typically, fuzzy expert systems make use of the classical fuzzy | µa, ex  max ueα, μyx | Similarly, in order to evaluate the conjunction of the rule antecedents, we | apply the AND fuzry operation intersection: | β2-gx  min αGx, AsI
+  Combined   :  المين او الماكس. RECALL: | To evaluate the disjunction of the rule antecedents, we use the OR fuzzy | operation union: | operation.Typically, fuzzy expert systems make use of the classical fuzzy | µa, ex  max ueα, μyx | Similarly, in order to evaluate the conjunction of the rule antecedents, we | apply the AND fuzry operation intersection: | β2-gx  min αGx, AsI
+
+[00:12:08]
+  Transcript :  تمام? طب احنا امتى مستدم الاور رادوك? اول هو بيديك
+  OCR        : None
+  Combined   :  تمام? طب احنا امتى مستدم الاور رادوك? اول هو بيديك
+
+[00:12:14]
+  Transcript :  الرول زي ما هي. يعني بص هنا الرول. او الهاي بزيرو. او الواي
+  OCR        : None
+  Combined   :  الرول زي ما هي. يعني بص هنا الرول. او الهاي بزيرو. او الواي
+
+[00:12:21]
+  Transcript :  از بي ون. اللي هي بون. هو مزيني او وعندي الرقمين زيرو او ايه.
+  OCR        : None
+  Combined   :  از بي ون. اللي هي بون. هو مزيني او وعندي الرقمين زيرو او ايه.
+
+[00:12:26]
+  Transcript :  one. في القول باخد الماكسيمم يبقد هيطلع لي ايه? او point to on.
+  OCR        : None
+  Combined   :  one. في القول باخد الماكسيمم يبقد هيطلع لي ايه? او point to on.
+
+[00:12:32]
+  Transcript :  تمين لمن? اللي بعد اللزن في الرول دي. ان الزل دة تغفز تي
+  OCR        : None
+  Combined   :  تمين لمن? اللي بعد اللزن في الرول دي. ان الزل دة تغفز تي
+
+[00:12:37]
+  Transcript :  وان. خلاص? الرول اللي بعدها قد تقولي the x is a two. ودي كتطلع
+  OCR        : None
+  Combined   :  وان. خلاص? الرول اللي بعدها قد تقولي the x is a two. ودي كتطلع
+
+[00:12:44]
+  Transcript :  علي ب او point to. and the y is b two. دي كتطلع علي ب او point seven. فالاند
+  OCR        : None
+  Combined   :  علي ب او point to. and the y is b two. دي كتطلع علي ب او point seven. فالاند
+
+[00:12:49]
+  Transcript :  a point to
+  OCR        : None
+  Combined   :  a point to
+
+[00:13:11]
+  Transcript :  زي ما هي لل ايه للكون سيكونت. هتبقى الزد ايه سي سري. خلاص?
+  OCR        : None
+  Combined   :  زي ما هي لل ايه للكون سيكونت. هتبقى الزد ايه سي سري. خلاص?
+
+[00:13:17]
+  Transcript :  انا كده طلعت فانيو للاوكوت اللي هو الزد في ايه الممبرشيب بتاعته.
+  OCR        : None
+  Combined   :  انا كده طلعت فانيو للاوكوت اللي هو الزد في ايه الممبرشيب بتاعته.
+
+[00:13:23]
+  Transcript :  في السي وان وفي السي تو وفي السي سي. فانا انا اقص ان انا اعمل ايه? اعمل لهم
+  OCR        : None
+  Combined   :  في السي وان وفي السي تو وفي السي سي. فانا انا اقص ان انا اعمل ايه? اعمل لهم
+
+[00:13:34]
+  Transcript :  مع بعض انها الاجريجيشن دي. واطلع ايه? من الديفوزي فيكيشن.
+  OCR        : The most common method of | correlating the rule consequent | with the truth value of the rule | antecedent is to cut the | Degee d | Mewbershap | consequent membership | function at the level of the | antecedent truth. This method | is called clipping alpha-cut. | However, clipping is still often | preferred because it involves | less complex and faster | clipping | mathematics, and generates an | aggregated output surface that | is easier to defuzzify.
+  Combined   :  مع بعض انها الاجريجيشن دي. واطلع ايه? من الديفوزي فيكيشن. The most common method of | correlating the rule consequent | with the truth value of the rule | antecedent is to cut the | Degee d | Mewbershap | consequent membership | function at the level of the | antecedent truth. This method | is called clipping alpha-cut. | However, clipping is still often | preferred because it involves | less complex and faster | clipping | mathematics, and generates an | aggregated output surface that | is easier to defuzzify.
+
+[00:13:37]
+  Transcript :  طب مالش يا دكتور. ممكن? سؤال? انا. طب. هو احنا الحتة اللي فاتت
+  OCR        : None
+  Combined   :  طب مالش يا دكتور. ممكن? سؤال? انا. طب. هو احنا الحتة اللي فاتت
+
+[00:13:44]
+  Transcript :  الديت. اللي هو انا اقلت اللي هي في سي بطو. اه. سي بطو كانت شغالة
+  OCR        : Step 3: Aggregation of the rule outputs | Aggregation is the process of unification of the outputs of all rules. | We take the membership functions of all rule consequents previously | clipped and combine them into a single fuzzy set. | The inout of the aggresation process is the list of clipped conseguent | variable. | membership functions, and the output is one fuzzy set for each output | is C1 0.1 | : is C2 0.2 | is C3 0.5
+  Combined   :  الديت. اللي هو انا اقلت اللي هي في سي بطو. اه. سي بطو كانت شغالة Step 3: Aggregation of the rule outputs | Aggregation is the process of unification of the outputs of all rules. | We take the membership functions of all rule consequents previously | clipped and combine them into a single fuzzy set. | The inout of the aggresation process is the list of clipped conseguent | variable. | membership functions, and the output is one fuzzy set for each output | is C1 0.1 | : is C2 0.2 | is C3 0.5
+
+[00:13:51]
+  Transcript :  يا دكتور
+  OCR        : None
+  Combined   :  يا دكتور
+
+[00:13:53]
+  Transcript : 
+  OCR        : None
+  Combined   : 
+
+[00:13:53]
+  Transcript :  ممكن استطاعتها
+  OCR        : None
+  Combined   :  ممكن استطاعتها
+
+[00:13:55]
+  Transcript :  عشان بس
+  OCR        : Degyee of | Memberslap
+  Combined   :  عشان بس Degyee of | Memberslap
+
+[00:13:57]
+  Transcript :  دي؟
+  OCR        : None
+  Combined   :  دي؟
+
+[00:14:00]
+  Transcript :  ها؟
+  OCR        : None
+  Combined   :  ها؟
+
+[00:14:02]
+  Transcript :  ايواة للسبتو دي
+  OCR        : None
+  Combined   :  ايواة للسبتو دي
+
+[00:14:04]
+  Transcript :  هي
+  OCR        : None
+  Combined   :  هي
+
+[00:14:06]
+  Transcript :  الف اكس ايز اي تو دي
+  OCR        : None
+  Combined   :  الف اكس ايز اي تو دي
+
+[00:14:08]
+  Transcript :  اللي احنا جبناها
+  OCR        : None
+  Combined   :  اللي احنا جبناها
+
+[00:14:10]
+  Transcript :  من المعادلة الخط بتاعت الفوزي
+  OCR        : None
+  Combined   :  من المعادلة الخط بتاعت الفوزي
+
+[00:14:12]
+  Transcript :  اللي فات؟
+  OCR        : None
+  Combined   :  اللي فات؟
+
+[00:14:14]
+  Transcript :  جبنا معادلة الخط وعوضنا فيها بال اكس
+  OCR        : None
+  Combined   :  جبنا معادلة الخط وعوضنا فيها بال اكس
+
+[00:14:16]
+  Transcript :  الواليو اللي بجيها لي في ال اكس
+  OCR        : None
+  Combined   :  الواليو اللي بجيها لي في ال اكس
+
+[00:14:18]
+  Transcript :  طلعتني
+  OCR        : None
+  Combined   :  طلعتني
+
+[00:14:20]
+  Transcript :  ال او بس الخط بتاع
+  OCR        : None
+  Combined   :  ال او بس الخط بتاع
+
+[00:14:22]
+  Transcript :  ال اي تو؟
+  OCR        : None
+  Combined   :  ال اي تو؟
+
+[00:14:24]
+  Transcript :  ده الخط بتاع اي تو؟
+  OCR        : None
+  Combined   :  ده الخط بتاع اي تو؟
+
+[00:14:26]
+  Transcript :  اه بقول لي فوزي سات هيبقى ليها الخط بتاعها
+  OCR        : None
+  Combined   :  اه بقول لي فوزي سات هيبقى ليها الخط بتاعها
+
+[00:14:28]
+  Transcript :  لها وفي فازي ست هيبقى ليها خطين كمان. تمام? هاي قطع فين? لو
+  OCR        : None
+  Combined   :  لها وفي فازي ست هيبقى ليها خطين كمان. تمام? هاي قطع فين? لو
+
+[00:14:35]
+  Transcript :  في كده مزل. هاي قطع فين? مش هاي بلهم كلهم.
+  OCR        : None
+  Combined   :  في كده مزل. هاي قطع فين? مش هاي بلهم كلهم.
+
+[00:14:41]
+  Transcript :  يعني مسلا هيكون عندي فازي ست في النص كده. بصوا شايفين دي? ليها
+  OCR        : µa,ex  max αaα, μyx | Hz-elx  min ααx, jyx
+  Combined   :  يعني مسلا هيكون عندي فازي ست في النص كده. بصوا شايفين دي? ليها µa,ex  max αaα, μyx | Hz-elx  min ααx, jyx
+
+[00:14:46]
+  Transcript :  خط اهو وخط اهو. صح? ماشي. تمام? فدي مسلا لو اسمها ميديم فاسمي
+  OCR        : None
+  Combined   :  خط اهو وخط اهو. صح? ماشي. تمام? فدي مسلا لو اسمها ميديم فاسمي
+
+[00:15:02]
+  Transcript : 
+  OCR        : The second step is to take the fuzzified inputs, Jeau,  0.5, Pqa2 | 0.2, μyαt | 0.1 and jhy-d2 | fuzzy rules | 0.7, and apply them to the antecedents of the | This number Ithe truth valuel is then applied to the conseguent
+  Combined   :  The second step is to take the fuzzified inputs, Jeau,  0.5, Pqa2 | 0.2, μyαt | 0.1 and jhy-d2 | fuzzy rules | 0.7, and apply them to the antecedents of the | This number Ithe truth valuel is then applied to the conseguent
+
+[00:15:12]
+  Transcript :  الايه. يعني مش محتاجة ان احنا نعملها لواحدة. عشان كده انا
+  OCR        : The inout of the aegresation process is the list of clipped conseguent | is 2 0.2 | : is C3 0.5
+  Combined   :  الايه. يعني مش محتاجة ان احنا نعملها لواحدة. عشان كده انا The inout of the aegresation process is the list of clipped conseguent | is 2 0.2 | : is C3 0.5
+
+[00:15:17]
+  Transcript :  اختصرتها في الايه? في المحاضرة اللي فاتت. اللي هو بقول انا
+  OCR        : None
+  Combined   :  اختصرتها في الايه? في المحاضرة اللي فاتت. اللي هو بقول انا
+
+[00:15:21]
+  Transcript :  الزد ده طلع اه بو بوينت وان في وطلع بو بوينت في في في
+  OCR        : None
+  Combined   :  الزد ده طلع اه بو بوينت وان في وطلع بو بوينت في في في
+
+[00:15:30]
+  Transcript :  فجمعتهم كلهم في رسمة واحدة. وو بوينت وان وو بوينت وان رسمت
+  OCR        : None
+  Combined   :  فجمعتهم كلهم في رسمة واحدة. وو بوينت وان وو بوينت وان رسمت
+
+[00:15:37]
+  Transcript :  الايه? رسمت التلاتة فاضي ستس بتوعه في رسمة واحدة خلاص?
+  OCR        : None
+  Combined   :  الايه? رسمت التلاتة فاضي ستس بتوعه في رسمة واحدة خلاص?
+
+[00:15:50]
+  Transcript :  وظللت الايه? على حسب لكل فاضي ست. تمام كده? هعني
+  OCR        : Step 4: Defuzzification | The last step in the fuzzy inference process is defuzzification. | Fugziness helps us to evaluate the rules, but the final output of a fuzzy | system has to be a crisp number | The input for the defuzzification process is the aggregate output fuzzy set | and the output is a single number.
+  Combined   :  وظللت الايه? على حسب لكل فاضي ست. تمام كده? هعني Step 4: Defuzzification | The last step in the fuzzy inference process is defuzzification. | Fugziness helps us to evaluate the rules, but the final output of a fuzzy | system has to be a crisp number | The input for the defuzzification process is the aggregate output fuzzy set | and the output is a single number.
+
+[00:15:51]
+  Transcript :  دلوقتي. دي فوزيفيكيشن هعمله لكم هنا بطريق تيم. انسوا معيني?
+  OCR        : None
+  Combined   :  دلوقتي. دي فوزيفيكيشن هعمله لكم هنا بطريق تيم. انسوا معيني?
+
+[00:16:00]
+  Transcript :  ها? سمعيني? سمعين حضرتك يا بكتور. تمام? تمام? طيب. هعملها هنا
+  OCR        : Step 4: Defuzzification centroid | There are several defuzzification methods, but probably the most | popular one is the centroid technique. It finds the point where a | vertical line would slice the aggregate set into two equal masses. | Mathematically this centre of gravity CoG can be expressed as: | μxxdx | μxdx
+  Combined   :  ها? سمعيني? سمعين حضرتك يا بكتور. تمام? تمام? طيب. هعملها هنا Step 4: Defuzzification centroid | There are several defuzzification methods, but probably the most | popular one is the centroid technique. It finds the point where a | vertical line would slice the aggregate set into two equal masses. | Mathematically this centre of gravity CoG can be expressed as: | μxxdx | μxdx
+
+[00:16:12]
+  Transcript :  بطريقتين. اول طريقة اللي هي الايه? السنترويد. دي بعملها ازاي?
+  OCR        : Deee of | Mvbershy | 67.4 | 0  10  20   0.1  30 - 40  50  60   0 2  70  80  90  100 1  0.5 | 0.1  0.1  0.1  0.2  0 .2  0.2  0.2  0.5  0.5  0.5 - 0.5 | 67.4
+  Combined   :  بطريقتين. اول طريقة اللي هي الايه? السنترويد. دي بعملها ازاي? Deee of | Mvbershy | 67.4 | 0  10  20   0.1  30 - 40  50  60   0 2  70  80  90  100 1  0.5 | 0.1  0.1  0.1  0.2  0 .2  0.2  0.2  0.5  0.5  0.5 - 0.5 | 67.4
+
+[00:16:16]
+  Transcript :  دي زي ما قلت لكم كده اللي هو التكامل بتاع الناس. بعمله
+  OCR        : None
+  Combined   :  دي زي ما قلت لكم كده اللي هو التكامل بتاع الناس. بعمله
+
+[00:16:21]
+  Transcript :  بالحسابات عن طريق ان انا. بشوف. هنا كانت او بوينت وون لان هي
+  OCR        : None
+  Combined   :  بالحسابات عن طريق ان انا. بشوف. هنا كانت او بوينت وون لان هي
+
+[00:16:27]
+  Transcript :  فاضي ست? تمام? فعند زيرو وعند تان وعند الجزء ده كانت
+  OCR        : None
+  Combined   :  فاضي ست? تمام? فعند زيرو وعند تان وعند الجزء ده كانت
+
+[00:16:39]
+  Transcript :  تمام? عند وعند كانت
+  OCR        : None
+  Combined   :  تمام? عند وعند كانت
+
+[00:16:46]
+  Transcript :  الديجري اوف ممبرشيب او بوينت تو. فهجمعهم مضرف او بوينت تو.
+  OCR        : None
+  Combined   :  الديجري اوف ممبرشيب او بوينت تو. فهجمعهم مضرف او بوينت تو.
+
+[00:16:50]
+  Transcript : 
+  OCR        : None
+  Combined   : 
+
+[00:17:11]
+  Transcript :  عند البيت دي كانت بو بوينت وان. عند البيت دي بو بوينت وان. هنا
+  OCR        : None
+  Combined   :  عند البيت دي كانت بو بوينت وان. عند البيت دي بو بوينت وان. هنا
+
+[00:17:15]
+  Transcript :  كانت بو بوينت وان. هنا طلعت لو بوينت تو. هنا بو بوينت تو. كلهم
+  OCR        : None
+  Combined   :  كانت بو بوينت وان. هنا طلعت لو بوينت تو. هنا بو بوينت تو. كلهم
+
+[00:17:25]
+  Transcript :  بجمعهم تحتهم. خلاص وديتني هنا ايه. ممكن اعملها بطريقة تانية
+  OCR        : Step 4: Defuzzification weighted | average | Another method is weighted average method where centroid of each | of the fuzzy sets is weighted by the membership value, divided by the | sum of memberships. | CentroidC1  0030504  20 | CentroidC2  2040-60-804  50 | CentroidC3  50701001004  80 | Z  200.1  500.2  800.5  0.1  0.2  0.5 | Z  65
+  Combined   :  بجمعهم تحتهم. خلاص وديتني هنا ايه. ممكن اعملها بطريقة تانية Step 4: Defuzzification weighted | average | Another method is weighted average method where centroid of each | of the fuzzy sets is weighted by the membership value, divided by the | sum of memberships. | CentroidC1  0030504  20 | CentroidC2  2040-60-804  50 | CentroidC3  50701001004  80 | Z  200.1  500.2  800.5  0.1  0.2  0.5 | Z  65
+
+[00:17:27]
+  Transcript :  اللي هي الايه. عشان اعمل ايه. عشان اعمل ايه. يبقى محتاجة
+  OCR        : None
+  Combined   :  اللي هي الايه. عشان اعمل ايه. عشان اعمل ايه. يبقى محتاجة
+
+[00:17:32]
+  Transcript :  حسب بتاع كل فازي ست. بتاع الفازي ست اللي هي سي وان.
+  OCR        : None
+  Combined   :  حسب بتاع كل فازي ست. بتاع الفازي ست اللي هي سي وان.
+
+[00:17:39]
+  Transcript :  هتبقى ايه قلنا بنجمع عدد النقط بنجمع النقط بنقسم على
+  OCR        : None
+  Combined   :  هتبقى ايه قلنا بنجمع عدد النقط بنجمع النقط بنقسم على
+
+[00:17:44]
+  Transcript :  عددهم. خلاص النقط بتاعتي كان زيرو زيرو وصيرتي جمعتهم مع بعض
+  OCR        : None
+  Combined   :  عددهم. خلاص النقط بتاعتي كان زيرو زيرو وصيرتي جمعتهم مع بعض
+
+[00:17:50]
+  Transcript :  وقسمت على الفور. فالداني ده لقيه بتاع وهكذا عملت في وفي
+  OCR        : None
+  Combined   :  وقسمت على الفور. فالداني ده لقيه بتاع وهكذا عملت في وفي
+
+[00:18:00]
+  Transcript :  خلاص طلعت هعمل ايه? هادرب كل في بتاعها. وجمعهم واقسم على
+  OCR        : None
+  Combined   :  خلاص طلعت هعمل ايه? هادرب كل في بتاعها. وجمعهم واقسم على
+
+[00:18:15]
+  Transcript :  المجموعة بتاع ال ايه. طلع لي ايه? خمسة وستين. خدوا بالكم
+  OCR        : Degrer of | Mesvbershjy | 9  10  20   0.1  30  40  50  60   0.2  70  80  90  100 1  0.5 | 0.1  0.1  01  0.2 | .0.2  1.2  0.2  0.5  0.5  0.5 - 0.5
+  Combined   :  المجموعة بتاع ال ايه. طلع لي ايه? خمسة وستين. خدوا بالكم Degrer of | Mesvbershjy | 9  10  20   0.1  30  40  50  60   0.2  70  80  90  100 1  0.5 | 0.1  0.1  01  0.2 | .0.2  1.2  0.2  0.5  0.5  0.5 - 0.5
+
+[00:18:15]
+  Transcript :  الارقام ايه غير معضة. يعني الطرق بتاعة بتفرق معي اللي
+  OCR        : None
+  Combined   :  الارقام ايه غير معضة. يعني الطرق بتاعة بتفرق معي اللي
+
+[00:18:26]
+  Transcript :  بتطلعه. على حسب الطريقة. طيب ايه الطريقة المفضلة? ايه?
+  OCR        : CentroidC1 0D30504 | CentroidC2  204060804 | CentroidC3 - 50701001004 80,
+  Combined   :  بتطلعه. على حسب الطريقة. طيب ايه الطريقة المفضلة? ايه? CentroidC1 0D30504 | CentroidC2  204060804 | CentroidC3 - 50701001004 80,
+
+[00:18:29]
+  Transcript :  ودي اللي انت برضو هتشتغلو بيه. يبقى في بتاعتي الدي فازي
+  OCR        : None
+  Combined   :  ودي اللي انت برضو هتشتغلو بيه. يبقى في بتاعتي الدي فازي
+
+[00:18:34]
+  Transcript :  فكيش المحتاج اعمل ان انا هحسب لفازي ستس اللي عندي. الستاب
+  OCR        : None
+  Combined   :  فكيش المحتاج اعمل ان انا هحسب لفازي ستس اللي عندي. الستاب
+
+[00:18:40]
+  Transcript :  الطاية ان انا ايه اجمع على حسب دي.
+  OCR        : None
+  Combined   :  الطاية ان انا ايه اجمع على حسب دي.
+
+[00:18:48]
+  Transcript : None
+  OCR        : Example | Given a stock market with varlables.: | Opening price Op | Previous day price Pdlp | Closing price Cp | From the domcin eagerts, it is known tat: | Pdp has 3 fuzzy sets L, M, H range 0 - 100 | Op has 3 furzy sets L, M, H range 0 - 100 | Cp has 5 fluzzy sets VL, L, M, H, VH range 0 - 100 | With the foillowing rules: | R1: If OpL, AND PdpL THEN CpVL | R2: If OpcL OR Pdp L THEN CgcL | R3: If OpM AND PdpNOTH THEN CpM | R4: If OpH OR PdpH THEN CpH | R5: If OpAND PtpHl THEN CpVH | Using triangular membership function, Predict | the Cp for Op  30 and Pdp90 ?
+  Combined   : Example | Given a stock market with varlables.: | Opening price Op | Previous day price Pdlp | Closing price Cp | From the domcin eagerts, it is known tat: | Pdp has 3 fuzzy sets L, M, H range 0 - 100 | Op has 3 furzy sets L, M, H range 0 - 100 | Cp has 5 fluzzy sets VL, L, M, H, VH range 0 - 100 | With the foillowing rules: | R1: If OpL, AND PdpL THEN CpVL | R2: If OpcL OR Pdp L THEN CgcL | R3: If OpM AND PdpNOTH THEN CpM | R4: If OpH OR PdpH THEN CpH | R5: If OpAND PtpHl THEN CpVH | Using triangular membership function, Predict | the Cp for Op  30 and Pdp90 ?
+
+[00:18:58]
+  Transcript :  Data Lab data
+  OCR        : CentroidC1  0030504 | CentroidC2  204060-804 | CentroidC3 - 50701001004
+  Combined   :  Data Lab data CentroidC1  0030504 | CentroidC2  204060-804 | CentroidC3 - 50701001004
+
+[00:19:05]
+  Transcript :  في البداية نحن نقوم بعمل شيء مثل الفاظي فاظي فاظي فاظي فاظي دي اللي نحن نحدد مكانها فيه
+  OCR        : None
+  Combined   :  في البداية نحن نقوم بعمل شيء مثل الفاظي فاظي فاظي فاظي فاظي دي اللي نحن نحدد مكانها فيه
+
+[00:19:11]
+  Transcript :  كل نقطة مكانها فيه الوائي بتاعها ده اللي بيقابلك فيه ماشي
+  OCR        : None
+  Combined   :  كل نقطة مكانها فيه الوائي بتاعها ده اللي بيقابلك فيه ماشي
+
+[00:19:15]
+  Transcript :  او بس انت بقى في القصائي انت مش هتعمل مكانها فيه لان مش هيبقى فيه ورق وهترسم
+  OCR        : None
+  Combined   :  او بس انت بقى في القصائي انت مش هتعمل مكانها فيه لان مش هيبقى فيه ورق وهترسم
+
+[00:19:22]
+  Transcript :  مهمتها بتجيب degree of membership لكل input.
+  OCR        : None
+  Combined   :  مهمتها بتجيب degree of membership لكل input.
+
+[00:19:29]
+  Transcript :  degree of membership.
+  OCR        : None
+  Combined   :  degree of membership.
+
+[00:19:32]
+  Transcript :  الـ degree of membership دي لقى في الخطة بتاعت الفوزيفاي دي صح؟
+  OCR        : None
+  Combined   :  الـ degree of membership دي لقى في الخطة بتاعت الفوزيفاي دي صح؟
+
+[00:19:36]
+  Transcript :  او.
+  OCR        : None
+  Combined   :  او.
+
+[00:19:41]
+  Transcript :  يعني دلالة تمام دي بتاع الخطة بتاعت الفوزيفاي.
+  OCR        : None
+  Combined   :  يعني دلالة تمام دي بتاع الخطة بتاعت الفوزيفاي.
+
+[00:19:44]
+  Transcript :  انما بعد كده بنقدر نشوف الليه خطة بتاعت اللوجيك دي على اساس الجملة اللي حدد لك.
+  OCR        : None
+  Combined   :  انما بعد كده بنقدر نشوف الليه خطة بتاعت اللوجيك دي على اساس الجملة اللي حدد لك.
+
+[00:19:49]
+  Transcript :  هتدهلنا بقى ولا تتحدد ازاي بقى.
+  OCR        : None
+  Combined   :  هتدهلنا بقى ولا تتحدد ازاي بقى.
+
+[00:19:51]
+  Transcript :  كما أقول لكم سأعطيكم برده
+  OCR        : None
+  Combined   :  كما أقول لكم سأعطيكم برده
+
+[00:19:55]
+  Transcript :  لأن الرؤوس في الأصل يضعها
+  OCR        : None
+  Combined   :  لأن الرؤوس في الأصل يضعها
+
+[00:20:00]
+  Transcript :  في البروبلم في الدومين بتاع البروبلم او بتتعامل بالنيوران
+  OCR        : None
+  Combined   :  في البروبلم في الدومين بتاع البروبلم او بتتعامل بالنيوران
+
+[00:20:04]
+  Transcript :  ناترك او بالجيناتك امفر فانا هديها لكم. دكتور ما عليش هواح
+  OCR        : None
+  Combined   :  ناترك او بالجيناتك امفر فانا هديها لكم. دكتور ما عليش هواح
+
+[00:20:09]
+  Transcript :  نفس الانترويد اللي هنا دولة حسبوا جابوا مينة? مجموعة النقط
+  OCR        : None
+  Combined   :  نفس الانترويد اللي هنا دولة حسبوا جابوا مينة? مجموعة النقط
+
+[00:20:15]
+  Transcript :  بتاعة الفازي ست على عدد النقط. مجموعة النقط اللي كانت نحققها
+  OCR        : None
+  Combined   :  بتاعة الفازي ست على عدد النقط. مجموعة النقط اللي كانت نحققها
+
+[00:20:21]
+  Transcript :  ايه بالزبط? مجموعة النقط اللي رسمنا بها الفازي ست. اه اوكي
+  OCR        : None
+  Combined   :  ايه بالزبط? مجموعة النقط اللي رسمنا بها الفازي ست. اه اوكي
+
+[00:20:27]
+  Transcript :  هل هو الشيف نفسه؟
+  OCR        : None
+  Combined   :  هل هو الشيف نفسه؟
+
+[00:20:30]
+  Transcript :  اوه الشيف نفسه
+  OCR        : None
+  Combined   :  اوه الشيف نفسه
+
+[00:20:36]
+  Transcript :  لا اعرف يا دكتور لا اعرف بس
+  OCR        : None
+  Combined   :  لا اعرف يا دكتور لا اعرف بس
+
+[00:20:39]
+  Transcript :  النت كان فيه مشكلة بس
+  OCR        : None
+  Combined   :  النت كان فيه مشكلة بس
+
+[00:20:42]
+  Transcript :  هذه الخطوة التي احنا منحقدت مكانها
+  OCR        : None
+  Combined   :  هذه الخطوة التي احنا منحقدت مكانها
+
+[00:20:47]
+  Transcript :  مكانها على الوعي
+  OCR        : None
+  Combined   :  مكانها على الوعي
+
+[00:20:50]
+  Transcript :  ايو
+  OCR        : None
+  Combined   :  ايو
+
+[00:20:52]
+  Transcript : 
+  OCR        : None
+  Combined   : 
+
+[00:21:08]
+  Transcript :  اوه الـ افاق بنابات العودة رول ايضا لن في التفاصيل ايضا لكي هنا
+  OCR        : None
+  Combined   :  اوه الـ افاق بنابات العودة رول ايضا لن في التفاصيل ايضا لكي هنا
+
+[00:21:12]
+  Transcript :  يعني ابتدي صوت كنون التفاصيل احدى التفاصيل ايضا به لو هو في الفازي ما يسبق الفلانية فاجيب وضع الى
+  OCR        : None
+  Combined   :  يعني ابتدي صوت كنون التفاصيل احدى التفاصيل ايضا به لو هو في الفازي ما يسبق الفلانية فاجيب وضع الى
+
+[00:21:20]
+  Transcript :  عند ولا اور مع فازي ست تانية اروح اجيب التجريه في ممبرشاب
+  OCR        : None
+  Combined   :  عند ولا اور مع فازي ست تانية اروح اجيب التجريه في ممبرشاب
+
+[00:21:24]
+  Transcript :  واشوف الرقمين هاخد منهم الميليممم ولا الماكسيم
+  OCR        : None
+  Combined   :  واشوف الرقمين هاخد منهم الميليممم ولا الماكسيم
+
+[00:21:28]
+  Transcript :  ولا هاخد الرقم زي ما هو
+  OCR        : None
+  Combined   :  ولا هاخد الرقم زي ما هو
+
+[00:21:30]
+  Transcript :  لما هو الواحد ما فيش كناكتر
+  OCR        : None
+  Combined   :  لما هو الواحد ما فيش كناكتر
+
+[00:21:34]
+  Transcript :  ماشي تمام تمام يا دكتور
+  OCR        : None
+  Combined   :  ماشي تمام تمام يا دكتور
+
+[00:21:36]
+  Transcript :  وبعد ما احنا عملنا الانفلنس
+  OCR        : None
+  Combined   :  وبعد ما احنا عملنا الانفلنس
+
+[00:21:38]
+  Transcript :  بنبتدي ان احنا نعمل خططة
+  OCR        : None
+  Combined   :  بنبتدي ان احنا نعمل خططة
+
+[00:21:41]
+  Transcript :  ديفوزي
+  OCR        : None
+  Combined   :  ديفوزي
+
+[00:21:44]
+  Transcript :  ديفوزي فيكيشن
+  OCR        : None
+  Combined   :  ديفوزي فيكيشن
+
+[00:21:47]
+  Transcript :  ايه
+  OCR        : None
+  Combined   :  ايه
+
+[00:21:49]
+  Transcript :  نحن نحصل اللي هي الويتد مين او نشوف التكامل الحطة الوردي صح؟
+  OCR        : None
+  Combined   :  نحن نحصل اللي هي الويتد مين او نشوف التكامل الحطة الوردي صح؟
+
+[00:21:54]
+  Transcript :  نحسن بتاعة الفوزي ستس بتاعة الاوكت
+  OCR        : None
+  Combined   :  نحسن بتاعة الفوزي ستس بتاعة الاوكت
+
+[00:22:00]
+  Transcript :  اه. دي بنحسب الـSyndroids وبندربها في الأرقام اللي هي طالعة من Logic. أو من A inference يعني. صح؟
+  OCR        : None
+  Combined   :  اه. دي بنحسب الـSyndroids وبندربها في الأرقام اللي هي طالعة من Logic. أو من A inference يعني. صح؟
+
+[00:22:08]
+  Transcript :  او بنعمل الـ Equation بقى. بنعمل على اللون توسط يعني. تمام. طب مالش يا دكتور اللي بنعمل.
+  OCR        : None
+  Combined   :  او بنعمل الـ Equation بقى. بنعمل على اللون توسط يعني. تمام. طب مالش يا دكتور اللي بنعمل.
+
+[00:22:14]
+  Transcript :  اللي بنعمل هي عالتكامل دي دي حاجة شبه اللي هي زي Normal Distribution أو حاجة زي الـ Bable T-Dainisty Function
+  OCR        : None
+  Combined   :  اللي بنعمل هي عالتكامل دي دي حاجة شبه اللي هي زي Normal Distribution أو حاجة زي الـ Bable T-Dainisty Function
+
+[00:22:21]
+  Transcript :  الحاجة كده التكامل بتاعها كله بواحد لو هي جمعت كلها فاحنا نمتدي نشوف هي واضح نسبة قد ايه زي
+  OCR        : None
+  Combined   :  الحاجة كده التكامل بتاعها كله بواحد لو هي جمعت كلها فاحنا نمتدي نشوف هي واضح نسبة قد ايه زي
+
+[00:22:27]
+  Transcript :  انا لديت لك اكوشن بدلا لما تعمل انا وردها لك بالحسابات. بدلا لما
+  OCR        : None
+  Combined   :  انا لديت لك اكوشن بدلا لما تعمل انا وردها لك بالحسابات. بدلا لما
+
+[00:22:33]
+  Transcript :  تعمل الاكوشن لو انت عايز تعملها بالحساب. اه هتعملها زي ايه?
+  OCR        : None
+  Combined   :  تعمل الاكوشن لو انت عايز تعملها بالحساب. اه هتعملها زي ايه?
+
+[00:22:38]
+  Transcript :  التكابل اللي هو الايه? المساحة تحت الكيرف. تمام? فاحنا بنجمع هو
+  OCR        : None
+  Combined   :  التكابل اللي هو الايه? المساحة تحت الكيرف. تمام? فاحنا بنجمع هو
+
+[00:22:45]
+  Transcript :  المساحة لتحت الكيرف. فانا جمعتها لك بالطريقة الثانية. الهدف ان انا
+  OCR        : None
+  Combined   :  المساحة لتحت الكيرف. فانا جمعتها لك بالطريقة الثانية. الهدف ان انا
+
+[00:22:49]
+  Transcript :  بوريك ان انا المختلفة هتطلع لي ارقام مختلفة.
+  OCR        : None
+  Combined   :  بوريك ان انا المختلفة هتطلع لي ارقام مختلفة.
+
+[00:22:56]
+  Transcript :  تمام? ده الهدف. او طبعا او طبعا او طبعا. مش نفس
+  OCR        : None
+  Combined   :  تمام? ده الهدف. او طبعا او طبعا او طبعا. مش نفس
+
+[00:23:03]
+  Transcript :  والنفس. تمام. تمام. اي سؤال يا شغف? اه كده انا شرحت لكم كل
+  OCR        : None
+  Combined   :  والنفس. تمام. تمام. اي سؤال يا شغف? اه كده انا شرحت لكم كل
+
+[00:23:15]
+  Transcript :  حيجة ممكن تستخدموها في وده عمتا يعني الهدف
+  OCR        : None
+  Combined   :  حيجة ممكن تستخدموها في وده عمتا يعني الهدف
 
