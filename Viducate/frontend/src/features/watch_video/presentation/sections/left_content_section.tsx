@@ -2,12 +2,22 @@ import { useEffect, useState } from "react";
 import { ContentLearningCard } from "../widgets/content_learning_card";
 import { SearchTopicBar } from "../widgets/search_topic_bar";
 import { useLearningSession } from "../../../../core/hooks/useLearningContent";
+import { Languages } from "lucide-react";
+import { is } from "zod/v4/locales";
+import { CustomizeExperienceModal } from "../../../video_upload/presentation/componants/CustomizeExperienceModal";
 
 export function LeftContentSection() {
   const [searchQuery, setSearchQuery] = useState<string>("");
+  const [isCustomizeOpen, setIsCustomizeOpen] = useState(false);
 
-  const { currentTime, setSelectedTopic, setSeekTo, topics,videoTitle } =
-    useLearningSession();
+  const {
+    currentTime,
+    setSelectedTopic,
+    setSeekTo,
+    topics,
+    videoTitle,
+    videoId,
+  } = useLearningSession();
 
   const currentTopicIndex = topics
     ? topics.findIndex(
@@ -16,7 +26,6 @@ export function LeftContentSection() {
       )
     : -1;
 
-  //  sync selected topic with video
   useEffect(() => {
     if (currentTopicIndex === -1) return;
 
@@ -45,9 +54,24 @@ export function LeftContentSection() {
 
       <div className="px-5 py-2">
         <div className="flex items-center justify-between">
-            <h2 className="text-xs font-semibold text-slate-400 tracking-wide hover:text-[#4f46e5]">
-              {`${videoTitle} Topics`}
-            </h2>
+          <h2 className="text-xs font-semibold text-slate-400 tracking-wide hover:text-[#4f46e5]">
+            {`${videoTitle} Topics`}
+          </h2>
+
+          <span
+           onClick={() => {
+                console.log("clicked");
+                setIsCustomizeOpen(true);
+              }}
+           className="relative group text-slate-400 hover:text-[#4f46e5] cursor-pointer">
+            <Languages size={18} />
+            <span
+             
+              className="absolute -top-8 left-1/2 -translate-x-1/2 bg-gray-800 text-white text-xs rounded px-2 py-1 whitespace-nowrap opacity-0 group-hover:opacity-100 transition-opacity"
+            >
+              Change Topics Language
+            </span>
+          </span>
         </div>
       </div>
       {/* LIST */}
@@ -66,6 +90,14 @@ export function LeftContentSection() {
           ))}
         </div>
       </div>
+
+      {isCustomizeOpen && (
+        <CustomizeExperienceModal
+          isOpen={isCustomizeOpen}
+          onClose={() => setIsCustomizeOpen(false)}
+          videoId={videoId}
+        />
+      )}
     </div>
   );
 }

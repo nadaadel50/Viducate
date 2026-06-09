@@ -1,17 +1,5 @@
-// import { Outlet } from "react-router-dom";
 
-// export function WatchLayout() {
-//   return (
-    
-//       <div className="relative ">
-//         <Outlet />
-//       </div>
-    
-//   );
-// }
-
-
-import { Outlet, useLocation, useMatch, useNavigate } from "react-router-dom";
+import { Outlet, useLocation, useNavigate } from "react-router-dom";
 import { MainPage } from "./main_page";
 
 

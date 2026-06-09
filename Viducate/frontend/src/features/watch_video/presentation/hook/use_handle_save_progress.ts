@@ -1,6 +1,5 @@
 import { useState } from "react";
 
-import { STORAGE_KEYS } from "../../../../core/constants";
 
 import { useLearningSession } from "../../../../core/hooks/useLearningContent";
 

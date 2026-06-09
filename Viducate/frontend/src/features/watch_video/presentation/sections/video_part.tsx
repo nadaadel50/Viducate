@@ -88,6 +88,7 @@ export function VideoPlayer() {
     player: { seek, getCurrentTime, getDuration, setSpeed, play, pause },
     analytics: { addSeekEvent, triggerStuck },
     videoState: { setPlayerState, setCurrentTime },
+      topicDuration,
   });
   
 
