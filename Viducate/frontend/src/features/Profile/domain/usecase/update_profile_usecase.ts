@@ -1,5 +1,5 @@
 import type { ApiResult } from "../../../../core/api/apiResult";
-import type { UserProfileData } from "../entity/update_response";
+import type { UserProfileData } from "../entity/update_user_data";
 import type { UpdateRequest } from "../entity/update_req";
 import type { ProfileRepository } from "../repository/profile_repository";
 

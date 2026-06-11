@@ -23,6 +23,7 @@ import { WatchLayout } from "../../features/watch_video/presentation/pages/watch
 import { PublicRoute } from "./publicRoutes";
 import MindMapPage from "../../features/mindMap/presentation/pages/mindMap_page";
 import{ProfilePage} from "../../features/Profile/presentation/pages/profile_page";
+import { ProfileProvider } from "../../features/Profile/presentation/context/profile_provider";
 export function AppRoutes() {
   return (
     <BrowserRouter>
@@ -35,7 +36,11 @@ export function AppRoutes() {
       
 
         <Route path="/test-modals" element={<TestModalsPage />} /> {/* for testing */}
-        <Route path="/profile" element={<ProfilePage />} />
+        <Route path="/profile" element={
+          <ProfileProvider>
+            <ProfilePage />
+          </ProfileProvider>
+        } />
         <Route path="/study-notes" element={<StudyNotesPage />} />
     <Route element={<ProtectedRoute />}>
           {" "}

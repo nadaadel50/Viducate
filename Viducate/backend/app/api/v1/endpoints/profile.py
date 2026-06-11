@@ -17,7 +17,7 @@ logger = logging.getLogger(__name__)
 security = HTTPBearer()
 
 @router.get(
-    "/profile",
+    "/profile/get",
     response_model=UserResponse,
     status_code=status.HTTP_200_OK,
     summary="Get user profile",
@@ -52,7 +52,7 @@ def update_language(
     }
 
 @router.patch(
-    "/profile",
+    "/profile/UpdateAccount",
     response_model=UserResponse,
     status_code=status.HTTP_200_OK,
     summary="Update user profile",
@@ -73,7 +73,7 @@ def update_profile(
 
 
 @router.delete(
-    "/profile",
+    "/profile/DeleteAccount",
     status_code=status.HTTP_200_OK,
     summary="Delete account",
     description="Permanently deletes the authenticated user account"

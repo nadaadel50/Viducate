@@ -9,6 +9,20 @@ export class profileService {
   };
 
   static updateProfile = (data: UpdateProfileRequestDto):Promise<UserProfileResponseDto> => {
-    return apiClient.patch('/profile/profile', data);
+    return apiClient.patch('/profile/profile/UpdateAccount', data);
+  };
+  static getUserProfile =async ():Promise<UserProfileResponseDto> => {
+     const response = await apiClient.get(
+    '/profile/profile/get'
+  );
+  
+  return response.data;
+  };
+  static deleteAccount =async ():Promise<string> => {
+     const response = await apiClient.delete(
+    '/profile/profile/DeleteAccount'
+  );
+  
+  return response.data;
   };
 }

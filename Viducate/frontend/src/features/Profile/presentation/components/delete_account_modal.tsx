@@ -50,7 +50,7 @@ export function DeleteAccountModal({ show, isDeleting, onConfirm, onCancel }: De
                     <FormattedMessage id="common.cancel" defaultMessage="Cancel" />
                   </button>
                   <button
-                    onClick={onConfirm}
+                    onClick={onConfirm} 
                     disabled={isDeleting}
                     className="w-full sm:w-auto flex items-center justify-center gap-2 bg-[#e11d48] hover:bg-red-700 text-white px-8 py-3.5 rounded-xl font-bold shadow-md shadow-red-500/20 transition-all active:scale-[0.98] disabled:opacity-70 disabled:cursor-not-allowed"
                   >

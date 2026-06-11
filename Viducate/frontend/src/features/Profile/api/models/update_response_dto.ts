@@ -1,4 +1,4 @@
-import type { UserProfileData } from "../../domain/entity/update_response";
+import type { UserProfileData } from "../../domain/entity/update_user_data";
 
 export interface UserProfileResponseDto {
   id: number;

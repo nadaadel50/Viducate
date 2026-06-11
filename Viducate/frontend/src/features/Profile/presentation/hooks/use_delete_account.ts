@@ -1,21 +1,32 @@
-import { useState } from 'react';
+import { useState } from "react";
+import { useProfileContext } from "./use_profile_context";
+import { useDeleteAccountMutation } from "./use_delete_account_mutaion";
+import { useNavigate } from "react-router-dom";
+import { STORAGE_KEYS } from "../../../../core/constants";
 
 export function useDeleteAccount() {
-  const [showModal, setShowModal]   = useState(false);
+  const { setShowDeleteModal } = useProfileContext();
   const [isDeleting, setIsDeleting] = useState(false);
 
-  const openModal  = () => setShowModal(true);
-  const closeModal = () => setShowModal(false);
+  const openModal = () => setShowDeleteModal(true);
+  const closeModal = () => setShowDeleteModal(false);
+  const { deleteAccount } = useDeleteAccountMutation();
+  const navigate = useNavigate();
 
   const handleDelete = async () => {
     setIsDeleting(true);
-    // TODO: استبدل بـ real API call
-    setTimeout(() => {
-      setIsDeleting(false);
+
+    try {
+       deleteAccount();
+
+      localStorage.removeItem(STORAGE_KEYS.token);
+
       closeModal();
-      alert('Account deleted successfully.');
-    }, 1500);
+      navigate("/", { replace: true });
+    } finally {
+      setIsDeleting(false);
+    }
   };
 
-  return { showModal, isDeleting, openModal, closeModal, handleDelete };
+  return { isDeleting, openModal, closeModal, handleDelete };
 }

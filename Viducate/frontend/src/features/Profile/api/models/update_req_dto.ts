@@ -6,7 +6,7 @@ export interface UpdateProfileRequestDto {
   last_name: string;
   current_password: string;
   new_password: string;
-  confirm_password: string;
+ 
 }
 
 
@@ -17,5 +17,5 @@ export const toUpdateProfileRequestDto = (
   last_name: profile.last_name,
   current_password: profile.current_password,
   new_password: profile.new_password,
-  confirm_password: profile.confirm_password,
+ 
 });
