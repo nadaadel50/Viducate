@@ -1,1095 +1,1155 @@
 [00:00:00]
-  Transcript :  نبتدي. طيب احنا هنكمل الفازي كنترول سيستم.
-  OCR        : Fuzzy Logic | Control | Sabah Sayed | Department of Computer Science | Focuity of Computers and Arcjfciol Inteligence | Caire University | Egypt
-  Combined   :  نبتدي. طيب احنا هنكمل الفازي كنترول سيستم. Fuzzy Logic | Control | Sabah Sayed | Department of Computer Science | Focuity of Computers and Arcjfciol Inteligence | Caire University | Egypt
+  Transcript :  Hello everyone, my name is Abhishek and welcome back to my channel.
+  OCR        : None
+  Combined   :  Hello everyone, my name is Abhishek and welcome back to my channel.
 
-[00:00:19]
-  Transcript : None
-  OCR        : Outline | Defuzzification Techniques | Fuzzy ControlsArchitecture | - ComponentsSteps | - Examples
-  Combined   : Outline | Defuzzification Techniques | Fuzzy ControlsArchitecture | - ComponentsSteps | - Examples
+[00:00:05]
+  Transcript :  Just imagine this, what if you can learn AWS Azure Google Cloud Platform without paying
+  OCR        : None
+  Combined   :  Just imagine this, what if you can learn AWS Azure Google Cloud Platform without paying
+
+[00:00:12]
+  Transcript :  for the services that you are using, without creating an account with these cloud platforms
+  OCR        : None
+  Combined   :  for the services that you are using, without creating an account with these cloud platforms
+
+[00:00:17]
+  Transcript :  and most importantly, without sharing your credit card information.
+  OCR        : None
+  Combined   :  and most importantly, without sharing your credit card information.
 
 [00:00:22]
-  Transcript :  زي ما اتفقنا عكده ادي الفازي فيكيشن. آآ بيتعامل بقى اكثر من
+  Transcript :  Wouldn't that be awesome?
   OCR        : None
-  Combined   :  زي ما اتفقنا عكده ادي الفازي فيكيشن. آآ بيتعامل بقى اكثر من
+  Combined   :  Wouldn't that be awesome?
+
+[00:00:23]
+  Transcript :  Yes.
+  OCR        : None
+  Combined   :  Yes.
+
+[00:00:23]
+  Transcript :  In today's video, I'll show you how you can emulate these cloud providers
+  OCR        : None
+  Combined   :  In today's video, I'll show you how you can emulate these cloud providers
 
 [00:00:29]
-  Transcript :  طريقة خلاص? اي اول طريقة اسمها ودي بحاول اجيب فيها اللي
-  OCR        : 1- Max membership principle: Also known as the | height method, this scheme is limited to peaked | output functions. This method is given by the | algebraic expression: | µC z  µC z, for all 2 Z, | where z is the defuzzified | value | If multiple peaks exist, the middle one is chosen.
-  Combined   :  طريقة خلاص? اي اول طريقة اسمها ودي بحاول اجيب فيها اللي 1- Max membership principle: Also known as the | height method, this scheme is limited to peaked | output functions. This method is given by the | algebraic expression: | µC z  µC z, for all 2 Z, | where z is the defuzzified | value | If multiple peaks exist, the middle one is chosen.
+  Transcript :  so that you don't have to create an account with them
+  OCR        : None
+  Combined   :  so that you don't have to create an account with them
+
+[00:00:31]
+  Transcript :  and you can run everything on your local machine.
+  OCR        : None
+  Combined   :  and you can run everything on your local machine.
+
+[00:00:35]
+  Transcript :  All that you need is just Docker running on your machine.
+  OCR        : None
+  Combined   :  All that you need is just Docker running on your machine.
 
 [00:00:39]
-  Transcript :  عندها بيبقى اعلى هي اللي باخدها وبادروا فيها. تمام? هم كلهم
+  Transcript :  That's it.
   OCR        : None
-  Combined   :  عندها بيبقى اعلى هي اللي باخدها وبادروا فيها. تمام? هم كلهم
+  Combined   :  That's it.
+
+[00:00:41]
+  Transcript :  Now, you might have this question,
+  OCR        : None
+  Combined   :  Now, you might have this question,
+
+[00:00:42]
+  Transcript :  but Abhishek, why is this important?
+  OCR        : None
+  Combined   :  but Abhishek, why is this important?
+
+[00:00:44]
+  Transcript :  I can just create an account with cloud.
+  OCR        : None
+  Combined   :  I can just create an account with cloud.
 
 [00:00:46]
-  Transcript :  بيختلفوا بس في اي اي انا اخدها اللي هي دي. خلاص? اللي على
+  Transcript :  The problem today is that,
   OCR        : None
-  Combined   :  بيختلفوا بس في اي اي انا اخدها اللي هي دي. خلاص? اللي على
+  Combined   :  The problem today is that,
 
-[00:00:52]
-  Transcript : 
+[00:00:48]
+  Transcript :  now if you go three years or four years before,
   OCR        : None
-  Combined   : 
+  Combined   :  now if you go three years or four years before,
 
-[00:01:12]
-  Transcript :  الايه الممبرشيب بون. هي دي زت زت ستار بتاعتك. طيب. لو انا
-  OCR        : 2- Mean Max membership: This method | also | called middle-of-maxima is closely related to | the first method, except that the locations of the | maximum membership can be nonuniqe | i.e., | the maximum membership can be a plateau | rather than a single point. | This method is given by | the expression:
-  Combined   :  الايه الممبرشيب بون. هي دي زت زت ستار بتاعتك. طيب. لو انا 2- Mean Max membership: This method | also | called middle-of-maxima is closely related to | the first method, except that the locations of the | maximum membership can be nonuniqe | i.e., | the maximum membership can be a plateau | rather than a single point. | This method is given by | the expression:
+[00:00:51]
+  Transcript :  when you create an account with cloud,
+  OCR        : None
+  Combined   :  when you create an account with cloud,
+
+[00:00:53]
+  Transcript :  you get one year free trial on AWS Azure and GCP But the problem today you only get of free credits You will end up using these free credits in no time And then your cloud account moves to pay
+  OCR        : None
+  Combined   :  you get one year free trial on AWS Azure and GCP But the problem today you only get of free credits You will end up using these free credits in no time And then your cloud account moves to pay
+
+[00:01:08]
+  Transcript :  as you go model. So if you use some services, either your account will be suspended or you will
+  OCR        : None
+  Combined   :  as you go model. So if you use some services, either your account will be suspended or you will
 
 [00:01:14]
-  Transcript :  عندي اكتر من بوينت بقى الممبرشيب بتاعهم بون. جهت الطريقة
+  Transcript :  be billed on your credit card. This is a reason why a lot of people today, they back out learning
   OCR        : None
-  Combined   :  عندي اكتر من بوينت بقى الممبرشيب بتاعهم بون. جهت الطريقة
+  Combined   :  be billed on your credit card. This is a reason why a lot of people today, they back out learning
 
-[00:01:19]
-  Transcript :  تانية بتقول لك خد المين يعني لو انا عندي هنا عند الا كانت
+[00:01:20]
+  Transcript :  cloud. They just watch some theory
   OCR        : None
-  Combined   :  تانية بتقول لك خد المين يعني لو انا عندي هنا عند الا كانت
+  Combined   :  cloud. They just watch some theory
+
+[00:01:22]
+  Transcript :  videos but when it comes to practicals
+  OCR        : None
+  Combined   :  videos but when it comes to practicals
 
 [00:01:24]
-  Transcript :  وعند البي كمان من الا للبي خلاص يعني مش دي ايه ده لين مش
+  Transcript :  they skip the practical part.
   OCR        : None
-  Combined   :  وعند البي كمان من الا للبي خلاص يعني مش دي ايه ده لين مش
+  Combined   :  they skip the practical part.
 
-[00:01:33]
-  Transcript :  واحد يبقى هيخد الا بلاس البي واقسمهم على الاتنين وهي دي
+[00:01:26]
+  Transcript :  The emulation that
   OCR        : None
-  Combined   :  واحد يبقى هيخد الا بلاس البي واقسمهم على الاتنين وهي دي
+  Combined   :  The emulation that
 
-[00:01:41]
-  Transcript :  اللي هتطلعان للزد ستور الطريقة التالتة اللي هي السنترويد دي
-  OCR        : 3- Centroid method: This procedure also called | center of area or center of gravity is the most | prevalent and physically appealing of all the | defuzzification methods Sugeno, 1985; it is given | by the algebraic expression: | jcz  z dz | cz d: | - where  denotes an algebraic integration
-  Combined   :  اللي هتطلعان للزد ستور الطريقة التالتة اللي هي السنترويد دي 3- Centroid method: This procedure also called | center of area or center of gravity is the most | prevalent and physically appealing of all the | defuzzification methods Sugeno, 1985; it is given | by the algebraic expression: | jcz  z dz | cz d: | - where  denotes an algebraic integration
+[00:01:28]
+  Transcript :  we are going to learn today.
+  OCR        : None
+  Combined   :  we are going to learn today.
+
+[00:01:30]
+  Transcript :  So you can run all
+  OCR        : None
+  Combined   :  So you can run all
+
+[00:01:32]
+  Transcript :  those AWS commands. You can create
+  OCR        : None
+  Combined   :  those AWS commands. You can create
+
+[00:01:34]
+  Transcript :  all those AWS services but
+  OCR        : None
+  Combined   :  all those AWS services but
+
+[00:01:36]
+  Transcript :  everything is running on your local
+  OCR        : None
+  Combined   :  everything is running on your local
+
+[00:01:38]
+  Transcript :  machine. Not only AWS, Azure
+  OCR        : None
+  Combined   :  machine. Not only AWS, Azure
+
+[00:01:40]
+  Transcript :  and GCP as well.
+  OCR        : None
+  Combined   :  and GCP as well.
+
+[00:01:42]
+  Transcript :  Let me show you an example through a whiteboard
+  OCR        : None
+  Combined   :  Let me show you an example through a whiteboard
+
+[00:01:44]
+  Transcript :  you know so that you can understand better
+  OCR        : None
+  Combined   :  you know so that you can understand better
 
 [00:01:46]
-  Transcript :  كأنك بتعمل ايه? كأنك بتعمل التكامل ده بتاع الماز. خلاص?
+  Transcript :  and then I will show you the
   OCR        : None
-  Combined   :  كأنك بتعمل ايه? كأنك بتعمل التكامل ده بتاع الماز. خلاص?
+  Combined   :  and then I will show you the
 
-[00:01:59]
-  Transcript :  كأنك بتعمل التكامل. زه بتاعه. طيب
-  OCR        : 4 - Weighted average method: The weighted average | method is the most frequently used in fuzzy applications | since it is one of the more computationally efficient | methods. Unfortunately, it is usually restricted to | symmetrical output membership functions. It is given by | the algebraic expression: | ucz.z | where  denotes the algebreje sam and where Z is the centroid of each | symmetric membership function. The weighted average method is formed | by weighting cach membership function in the output by its respective | membership value.
-  Combined   :  كأنك بتعمل التكامل. زه بتاعه. طيب 4 - Weighted average method: The weighted average | method is the most frequently used in fuzzy applications | since it is one of the more computationally efficient | methods. Unfortunately, it is usually restricted to | symmetrical output membership functions. It is given by | the algebraic expression: | ucz.z | where  denotes the algebreje sam and where Z is the centroid of each | symmetric membership function. The weighted average method is formed | by weighting cach membership function in the output by its respective | membership value.
+[00:01:48]
+  Transcript :  things practically. But
+  OCR        : None
+  Combined   :  things practically. But
+
+[00:01:50]
+  Transcript :  But before we go there, let me tell you, this is very, very important, especially if you
+  OCR        : None
+  Combined   :  But before we go there, let me tell you, this is very, very important, especially if you
+
+[00:01:55]
+  Transcript :  are practicing cloud or if you're in the state of learning any cloud platform.
+  OCR        : None
+  Combined   :  are practicing cloud or if you're in the state of learning any cloud platform.
 
 [00:02:00]
-  Transcript :  الطريقة الرابعة دي الطريقة اللي احنا بنستخدمها ودي اللي انتو
+  Transcript :  Perfect. Without any further delay, let's head to the byte board.
   OCR        : None
-  Combined   :  الطريقة الرابعة دي الطريقة اللي احنا بنستخدمها ودي اللي انتو
+  Combined   :  Perfect. Without any further delay, let's head to the byte board.
 
-[00:02:03]
-  Transcript :  هتعملوها في الاساين اللي انتو هتستخدموها في الاساين اللي هي
+[00:02:04]
+  Transcript :  Let's take a simple example.
   OCR        : None
-  Combined   :  هتعملوها في الاساين اللي انتو هتستخدموها في الاساين اللي هي
+  Combined   :  Let's take a simple example.
 
-[00:02:06]
-  Transcript :  زي ما انا كنت شرحتها لكم في من شوية ان انا بجيب
+[00:02:07]
+  Transcript :  Imagine you're learning EKS.
   OCR        : None
-  Combined   :  زي ما انا كنت شرحتها لكم في من شوية ان انا بجيب
+  Combined   :  Imagine you're learning EKS.
+
+[00:02:09]
+  Transcript :  You're watching a video on YouTube, maybe video from our channel.
+  OCR        : None
+  Combined   :  You're watching a video on YouTube, maybe video from our channel.
+
+[00:02:13]
+  Transcript :  You understood the theory part.
+  OCR        : None
+  Combined   :  You understood the theory part.
+
+[00:02:14]
+  Transcript :  You learned what is EKS.
+  OCR        : None
+  Combined   :  You learned what is EKS.
+
+[00:02:16]
+  Transcript :  Now the video also has the practical part, the demo part,
+  OCR        : None
+  Combined   :  Now the video also has the practical part, the demo part,
 
 [00:02:21]
-  Transcript :  هنا هي تمام طيب والسنترويد ده بحسبه ازاي? ده بس هنا على اي?
-  OCR        : 4 - Weighted average method: Example | The two functions shown | would result in the following | general form for the | defuzzified value: | a0.5  b0.9 | 0.5  0.9
-  Combined   :  هنا هي تمام طيب والسنترويد ده بحسبه ازاي? ده بس هنا على اي? 4 - Weighted average method: Example | The two functions shown | would result in the following | general form for the | defuzzified value: | a0.5  b0.9 | 0.5  0.9
-
-[00:02:26]
-  Transcript :  لو عندي الاي والبي بضرب الاي اللي هي بتاعت الفازي سات في الاي
+  Transcript :  where the tutor explained how to create EKS cluster,
   OCR        : None
-  Combined   :  لو عندي الاي والبي بضرب الاي اللي هي بتاعت الفازي سات في الاي
+  Combined   :  where the tutor explained how to create EKS cluster,
 
-[00:02:34]
-  Transcript :  في بتاع الفازي سات دي. بلاس بتاعت البي في بتاع الفازي سات
+[00:02:25]
+  Transcript :  how to create a pod within the EKS cluster,
   OCR        : None
-  Combined   :  في بتاع الفازي سات دي. بلاس بتاعت البي في بتاع الفازي سات
+  Combined   :  how to create a pod within the EKS cluster,
+
+[00:02:27]
+  Transcript :  how to deploy a service
+  OCR        : None
+  Combined   :  how to deploy a service
+
+[00:02:29]
+  Transcript :  and how to manage the cluster.
+  OCR        : None
+  Combined   :  and how to manage the cluster.
+
+[00:02:32]
+  Transcript :  Now, obviously you want to practice this.
+  OCR        : None
+  Combined   :  Now, obviously you want to practice this.
+
+[00:02:35]
+  Transcript :  You learn the theory.
+  OCR        : None
+  Combined   :  You learn the theory.
+
+[00:02:36]
+  Transcript :  Only if you practice,
+  OCR        : None
+  Combined   :  Only if you practice,
+
+[00:02:37]
+  Transcript :  you will be confident about EKS.
+  OCR        : None
+  Combined   :  you will be confident about EKS.
+
+[00:02:40]
+  Transcript :  Now, how do you achieve this?
+  OCR        : None
+  Combined   :  Now, how do you achieve this?
+
+[00:02:42]
+  Transcript :  There are two ways.
+  OCR        : None
+  Combined   :  There are two ways.
+
+[00:02:43]
+  Transcript :  One, the obvious thing,
+  OCR        : None
+  Combined   :  One, the obvious thing,
 
 [00:02:45]
-  Transcript :  التانية على مجموعة الاي. ده اللي انا بعمله. عشان اطلع
+  Transcript :  you create an account with AWS.
   OCR        : None
-  Combined   :  التانية على مجموعة الاي. ده اللي انا بعمله. عشان اطلع
+  Combined   :  you create an account with AWS.
+
+[00:02:48]
+  Transcript :  You will get some free credits from AWS.
+  OCR        : None
+  Combined   :  You will get some free credits from AWS.
 
 [00:02:51]
-  Transcript :  الزد. طيب. بعمل ده ازاي? لازم عشان اعمل ده اطلع الاي والبي.
-  OCR        : 4- Weighted average method: getting the centroid | The centroid of symmetrical fuzzy sets is the center | point on the x-axis. | Example: centroid  10 | For non-symmetric fuzzy sets trapezoidal or | triangular: | -Add defining points of fuzzy set and divide by their number. | Example: centroid of triangular set 0,7,20 | 07203  9
-  Combined   :  الزد. طيب. بعمل ده ازاي? لازم عشان اعمل ده اطلع الاي والبي. 4- Weighted average method: getting the centroid | The centroid of symmetrical fuzzy sets is the center | point on the x-axis. | Example: centroid  10 | For non-symmetric fuzzy sets trapezoidal or | triangular: | -Add defining points of fuzzy set and divide by their number. | Example: centroid of triangular set 0,7,20 | 07203  9
+  Transcript :  You will spin up EKS cluster
+  OCR        : None
+  Combined   :  You will spin up EKS cluster
 
 [00:02:54]
-  Transcript : 
+  Transcript :  and you will start learning these things But the problem here is that if you have this EKS cluster running for three to four days all your free credits are expired because AWS only gives you hundred dollars of
   OCR        : None
-  Combined   : 
+  Combined   :  and you will start learning these things But the problem here is that if you have this EKS cluster running for three to four days all your free credits are expired because AWS only gives you hundred dollars of
 
 [00:03:06]
-  Transcript :  هي عبارة عن يعني متعرف بسري بوينتز. فانا بس كل اللي بعمله
+  Transcript :  free credits once you expire the credits your AWS account knows to pay as you go model basically
   OCR        : None
-  Combined   :  هي عبارة عن يعني متعرف بسري بوينتز. فانا بس كل اللي بعمله
+  Combined   :  free credits once you expire the credits your AWS account knows to pay as you go model basically
 
-[00:03:12]
-  Transcript :  بجمع البيدي دي وبقسمع العددها. خلاص? فبصتوا هنا في في
+[00:03:14]
+  Transcript :  now when you want to learn S3 bucket EBS volumes or lambda functions maybe down the line you will
   OCR        : None
-  Combined   :  بجمع البيدي دي وبقسمع العددها. خلاص? فبصتوا هنا في في
+  Combined   :  now when you want to learn S3 bucket EBS volumes or lambda functions maybe down the line you will
 
-[00:03:18]
-  Transcript :  الاجزامبل ده. الفازي ست دي كان ومتعرفة بالبيدي. زير وسبن
+[00:03:21]
+  Transcript :  be charged for creating these services or you might want to suspend this account and
   OCR        : None
-  Combined   :  الاجزامبل ده. الفازي ست دي كان ومتعرفة بالبيدي. زير وسبن
+  Combined   :  be charged for creating these services or you might want to suspend this account and
 
-[00:03:24]
-  Transcript :  وتويني. يبقى ازاي يجيب بتاع الفوزي ست دي? هجمع الزيرو بلس السبن
+[00:03:27]
+  Transcript :  create a new account.
   OCR        : None
-  Combined   :  وتويني. يبقى ازاي يجيب بتاع الفوزي ست دي? هجمع الزيرو بلس السبن
+  Combined   :  create a new account.
+
+[00:03:29]
+  Transcript :  So this is a problem.
+  OCR        : None
+  Combined   :  So this is a problem.
 
 [00:03:30]
-  Transcript :  بلس التويني خلاص يديني وتويني سبن وهسم على ال سري. ادتني ناين.
+  Transcript :  What we are going to learn today is the other way where we will emulate these cloud providers.
   OCR        : None
-  Combined   :  بلس التويني خلاص يديني وتويني سبن وهسم على ال سري. ادتني ناين.
+  Combined   :  What we are going to learn today is the other way where we will emulate these cloud providers.
 
-[00:03:35]
-  Transcript :  يبقى عند ناين هن. ده بتاعي. فناين دي هي اللي هتتضرب في
+[00:03:38]
+  Transcript :  AWS, Azure or Google Cloud Platform.
   OCR        : None
-  Combined   :  يبقى عند ناين هن. ده بتاعي. فناين دي هي اللي هتتضرب في
+  Combined   :  AWS, Azure or Google Cloud Platform.
+
+[00:03:41]
+  Transcript :  What is emulation?
+  OCR        : None
+  Combined   :  What is emulation?
+
+[00:03:42]
+  Transcript :  Emulation is basically mocking the cloud providers.
+  OCR        : None
+  Combined   :  Emulation is basically mocking the cloud providers.
 
 [00:03:46]
-  Transcript :  الاين في الدجري اف مامبرشم. طب لو هترابيزويدن هيبقى ليه
-  OCR        : Fuzzy Inference | The most commonly used fuzzy inference technique is the so- | called Mamdani method. | Mamdanis model expresses the output using fuzzy terms instead | of mathematical combinations of the input variable. | All defuzzification techniques previously discussed belong to | Mamdanis model. | The Mamdani-style fuzzy inference process is performed in four | steps: | 1.Fuzzification of the input variables | 2.Rule evaluation inference | 3. Aggregation of the rule outputs composition | 4.Defuzzification.
-  Combined   :  الاين في الدجري اف مامبرشم. طب لو هترابيزويدن هيبقى ليه Fuzzy Inference | The most commonly used fuzzy inference technique is the so- | called Mamdani method. | Mamdanis model expresses the output using fuzzy terms instead | of mathematical combinations of the input variable. | All defuzzification techniques previously discussed belong to | Mamdanis model. | The Mamdani-style fuzzy inference process is performed in four | steps: | 1.Fuzzification of the input variables | 2.Rule evaluation inference | 3. Aggregation of the rule outputs composition | 4.Defuzzification.
-
-[00:03:49]
-  Transcript :  هجمع الفور بوينتز وهي سمع على الاربا. تمام? ده اللي انتم هتعملون
+  Transcript :  What happens when you mock the cloud providers?
   OCR        : None
-  Combined   :  هجمع الفور بوينتز وهي سمع على الاربا. تمام? ده اللي انتم هتعملون
+  Combined   :  What happens when you mock the cloud providers?
 
-[00:03:55]
-  Transcript :  هتعملونه خلاص? يبقى هكذا
+[00:03:48]
+  Transcript :  so when you mock it all the APS run on your local machine so now when you go
   OCR        : None
-  Combined   :  هتعملونه خلاص? يبقى هكذا
+  Combined   :  so when you mock it all the APS run on your local machine so now when you go
+
+[00:03:54]
+  Transcript :  ahead and let's say you run this command awa cks create cluster the
+  OCR        : None
+  Combined   :  ahead and let's say you run this command awa cks create cluster the
 
 [00:04:00]
-  Transcript :  كده قدرنا نحسب ال اي والبي اللي هما ال اي بتاعت ال اي الفاضي
+  Transcript :  cluster is created but the cluster is created on your local machine it will use the resources on
   OCR        : None
-  Combined   :  كده قدرنا نحسب ال اي والبي اللي هما ال اي بتاعت ال اي الفاضي
+  Combined   :  cluster is created but the cluster is created on your local machine it will use the resources on
 
-[00:04:05]
-  Transcript :  ساتس بتاعتي. وندرف ونقسم على اي مجموعهم. كده بطلعنا ال اي
+[00:04:06]
+  Transcript :  your local machine not on the AWS platform so you will not be charged by AWS but Abhishek is the
   OCR        : None
-  Combined   :  ساتس بتاعتي. وندرف ونقسم على اي مجموعهم. كده بطلعنا ال اي
+  Combined   :  your local machine not on the AWS platform so you will not be charged by AWS but Abhishek is the
 
-[00:04:11]
-  Transcript :  بتاعت الاوتوت. في دي خلاص? طيب. الفاضي في اكتر من فاضي في
+[00:04:15]
+  Transcript :  response exactly similar to response that we get from EKS yes response is exactly similar even
   OCR        : None
-  Combined   :  بتاعت الاوتوت. في دي خلاص? طيب. الفاضي في اكتر من فاضي في
+  Combined   :  response exactly similar to response that we get from EKS yes response is exactly similar even
 
-[00:04:29]
-  Transcript :  مامداني وفي سوجينو. احنا مش ناخد سوجينو. خلاص احنا الطريقة اللي
-  OCR        : 2. Rule evaluation inference | 4 Defuzzification.
-  Combined   :  مامداني وفي سوجينو. احنا مش ناخد سوجينو. خلاص احنا الطريقة اللي 2. Rule evaluation inference | 4 Defuzzification.
-
-[00:04:32]
-  Transcript :  احنا اخدناها دي اللي هي بتاعت المامداني. بتاعت مامداني. بيعمل
+[00:04:23]
+  Transcript :  trust me you will not even understand if you are running these services on AWS or on your local
   OCR        : None
-  Combined   :  احنا اخدناها دي اللي هي بتاعت المامداني. بتاعت مامداني. بيعمل
+  Combined   :  trust me you will not even understand if you are running these services on AWS or on your local
 
-[00:04:36]
-  Transcript :  دي بيعمل ورول ودي خلاص ده مش مش حاجة مؤثرة قوي عندي. خلاص
+[00:04:28]
+  Transcript :  machine. That is the power of mocking. Mocking is not a new concept. If you're into development,
   OCR        : None
-  Combined   :  دي بيعمل ورول ودي خلاص ده مش مش حاجة مؤثرة قوي عندي. خلاص
+  Combined   :  machine. That is the power of mocking. Mocking is not a new concept. If you're into development,
+
+[00:04:34]
+  Transcript :  developers usually mock databases. They mock different types of services, even web servers,
+  OCR        : None
+  Combined   :  developers usually mock databases. They mock different types of services, even web servers,
+
+[00:04:40]
+  Transcript :  so that you don't have to spin up these services on their cloud platform or anywhere else.
+  OCR        : None
+  Combined   :  so that you don't have to spin up these services on their cloud platform or anywhere else.
 
 [00:04:47]
-  Transcript :  ممكن ندخلها جوة يعني احنا قريضي عملناها خلاص احنا قريضي عمناها
+  Transcript :  We are going to apply the same concept for cloud platforms today. Abhishek,
   OCR        : None
-  Combined   :  ممكن ندخلها جوة يعني احنا قريضي عملناها خلاص احنا قريضي عمناها
+  Combined   :  We are going to apply the same concept for cloud platforms today. Abhishek,
 
-[00:04:56]
-  Transcript : 
-  OCR        : Mamdani Fuzzy Inference | We examine a simple two-input cne-output problem that includes three rules: | Rule: 1 | x is A3 | Rule: 1 | y is B1 | prejectfunding | is adequate | THEN | z is C1 | THEN | risk | projectstaffing | is small | is low | Bule: 2 | x is A2 | Rule: 2 | y is B2 | projectfunding | prejectstafing | is marginal | is large | THEN | z Is C2 | THEN | risk | Is normal | Bule: 3 | Buk:3 | THEN | x is A1 | z is C3 | THEN | projectfunding | is inadequate | is high
-  Combined   :  Mamdani Fuzzy Inference | We examine a simple two-input cne-output problem that includes three rules: | Rule: 1 | x is A3 | Rule: 1 | y is B1 | prejectfunding | is adequate | THEN | z is C1 | THEN | risk | projectstaffing | is small | is low | Bule: 2 | x is A2 | Rule: 2 | y is B2 | projectfunding | prejectstafing | is marginal | is large | THEN | z Is C2 | THEN | risk | Is normal | Bule: 3 | Buk:3 | THEN | x is A1 | z is C3 | THEN | projectfunding | is inadequate | is high
-
-[00:05:06]
-  Transcript :  از اي سري. خلاص? زين زد از سي وان. الاي هي الفوزي ستس بتاعة
+[00:04:52]
+  Transcript :  there are so many projects Not really There are very less projects There is a project called local stack I tried this project in the past but it is very heavy So I thought and this is also an enterprise platform
   OCR        : None
-  Combined   :  از اي سري. خلاص? زين زد از سي وان. الاي هي الفوزي ستس بتاعة
+  Combined   :  there are so many projects Not really There are very less projects There is a project called local stack I tried this project in the past but it is very heavy So I thought and this is also an enterprise platform
 
-[00:05:18]
-  Transcript :  الاكس الاولي. البي هي الفوزي ستس بتاعة الواي. الانبوت التاني.
+[00:05:05]
+  Transcript :  So I did not bother about talking it.
   OCR        : None
-  Combined   :  الاكس الاولي. البي هي الفوزي ستس بتاعة الواي. الانبوت التاني.
+  Combined   :  So I did not bother about talking it.
+
+[00:05:07]
+  Transcript :  But now I came across
+  OCR        : None
+  Combined   :  But now I came across
+
+[00:05:09]
+  Transcript :  an open source project called FlowC.
+  OCR        : None
+  Combined   :  an open source project called FlowC.
+
+[00:05:11]
+  Transcript :  Now this is an open source project.
+  OCR        : None
+  Combined   :  Now this is an open source project.
+
+[00:05:13]
+  Transcript :  This is absolutely free and
+  OCR        : None
+  Combined   :  This is absolutely free and
+
+[00:05:15]
+  Transcript :  there are no conditions to it.
+  OCR        : None
+  Combined   :  there are no conditions to it.
+
+[00:05:16]
+  Transcript :  I hope I'm pronouncing the name right.
+  OCR        : None
+  Combined   :  I hope I'm pronouncing the name right.
+
+[00:05:19]
+  Transcript :  I recently explored the project.
+  OCR        : None
+  Combined   :  I recently explored the project.
+
+[00:05:21]
+  Transcript :  So I'm sorry
+  OCR        : None
+  Combined   :  So I'm sorry
 
 [00:05:22]
-  Transcript :  والس هي الفازي سادس بتاعت الاي الاوتبوت اللي هو الزت. تمام? طبعا كل رول هنا احطي لكم هنا اجزامبل عليها. خلاص? الاجزامبل ده من الاسايمنت اللي هيتعمل. طيب اه الرول التاني بتقول لي في
+  Transcript :  if I'm pronouncing the name wrong.
   OCR        : None
-  Combined   :  والس هي الفازي سادس بتاعت الاي الاوتبوت اللي هو الزت. تمام? طبعا كل رول هنا احطي لكم هنا اجزامبل عليها. خلاص? الاجزامبل ده من الاسايمنت اللي هيتعمل. طيب اه الرول التاني بتقول لي في
+  Combined   :  if I'm pronouncing the name wrong.
+
+[00:05:25]
+  Transcript :  Now let me show you how to use Flowsee.
+  OCR        : None
+  Combined   :  Now let me show you how to use Flowsee.
+
+[00:05:28]
+  Transcript :  So simple, just head to their website.
+  OCR        : None
+  Combined   :  So simple, just head to their website.
+
+[00:05:32]
+  Transcript :  So you can see here AWS, Azure and GCP.
+  OCR        : None
+  Combined   :  So you can see here AWS, Azure and GCP.
+
+[00:05:35]
+  Transcript :  They have three different pages.
+  OCR        : None
+  Combined   :  They have three different pages.
+
+[00:05:37]
+  Transcript :  We'll start with AWS.
+  OCR        : None
+  Combined   :  We'll start with AWS.
+
+[00:05:39]
+  Transcript :  So scroll down.
+  OCR        : None
+  Combined   :  So scroll down.
 
 [00:05:41]
-  Transcript :  الاكس از اي تو اند واي از بي تو زل زد از اي تي تو. في رول سريع عندي
+  Transcript :  You have commands here to get started with AWS
   OCR        : None
-  Combined   :  الاكس از اي تو اند واي از بي تو زل زد از اي تي تو. في رول سريع عندي
+  Combined   :  You have commands here to get started with AWS
 
-[00:05:54]
-  Transcript :  انتسدنت واحد اللي هو الاكس از اي وان زل زد از اي سي سري. طيب. اول
-  OCR        : Step 1: Fuzzification | The first step is to take the crisp inputs, x1 and y1 project fundling and | project staffing and determine the degree to which these inputs | belong to each of the appropriate fuzzy sets. | Crisp Jeysr | Cripo Input | F x - 41  0.5 | Pr-20.1
-  Combined   :  انتسدنت واحد اللي هو الاكس از اي وان زل زد از اي سي سري. طيب. اول Step 1: Fuzzification | The first step is to take the crisp inputs, x1 and y1 project fundling and | project staffing and determine the degree to which these inputs | belong to each of the appropriate fuzzy sets. | Crisp Jeysr | Cripo Input | F x - 41  0.5 | Pr-20.1
+[00:05:44]
+  Transcript :  or you can just go up, click on get started.
+  OCR        : None
+  Combined   :  or you can just go up, click on get started.
+
+[00:05:48]
+  Transcript :  So they have the homebrew command because I'm using Mac.
+  OCR        : None
+  Combined   :  So they have the homebrew command because I'm using Mac.
+
+[00:05:51]
+  Transcript :  I'll run this brew install.
+  OCR        : None
+  Combined   :  I'll run this brew install.
+
+[00:05:52]
+  Transcript :  If you are using Windows, go to PowerShell and run this command.
+  OCR        : None
+  Combined   :  If you are using Windows, go to PowerShell and run this command.
+
+[00:05:56]
+  Transcript :  So what does this do?
+  OCR        : None
+  Combined   :  So what does this do?
 
 [00:05:58]
-  Transcript :  استاب اعمالها اللي هي الفازي فيها.
+  Transcript :  This will install
   OCR        : None
-  Combined   :  استاب اعمالها اللي هي الفازي فيها.
+  Combined   :  This will install
 
 [00:06:00]
-  Transcript :  اللي هو ايه? برسم الفاضي سادسة بتاعتي وبعرف اجيب الايه?
+  Transcript :  API is on the local machine.
   OCR        : None
-  Combined   :  اللي هو ايه? برسم الفاضي سادسة بتاعتي وبعرف اجيب الايه?
+  Combined   :  API is on the local machine.
 
-[00:06:04]
-  Transcript :  بتاعت خلاص في الفاضي ايه? سادسة دي. تمام? عملناها كزا مرة في
+[00:06:01]
+  Transcript :  So this will mock everything.
   OCR        : None
-  Combined   :  بتاعت خلاص في الفاضي ايه? سادسة دي. تمام? عملناها كزا مرة في
+  Combined   :  So this will mock everything.
 
-[00:06:15]
-  Transcript :  وخلاص بقى انتم كده فهمتوها. طيب مشكلة زي ما زميلتكم كدت
-  OCR        : To accurately get the membership degree of the | crisp value provided, equations of lines of the | different fuzzy sets should be determined. Then you | can get value of y membership by substituting in | line equations by x value crisp value | values are not accurate
-  Combined   :  وخلاص بقى انتم كده فهمتوها. طيب مشكلة زي ما زميلتكم كدت To accurately get the membership degree of the | crisp value provided, equations of lines of the | different fuzzy sets should be determined. Then you | can get value of y membership by substituting in | line equations by x value crisp value | values are not accurate
+[00:06:03]
+  Transcript :  One single command.
+  OCR        : None
+  Combined   :  One single command.
+
+[00:06:05]
+  Transcript :  Control R, Rue, or you know, you can just copy the command here and paste it.
+  OCR        : None
+  Combined   :  Control R, Rue, or you know, you can just copy the command here and paste it.
+
+[00:06:13]
+  Transcript :  It will not take much time because it is only emulating the APIs,
+  OCR        : None
+  Combined   :  It will not take much time because it is only emulating the APIs,
+
+[00:06:18]
+  Transcript :  but it is not creating all the service on your local machine.
+  OCR        : None
+  Combined   :  but it is not creating all the service on your local machine.
+
+[00:06:22]
+  Transcript :  It says I already have Flossy, which is fine.
+  OCR        : None
+  Combined   :  It says I already have Flossy, which is fine.
 
 [00:06:25]
-  Transcript :  بتسأل احنا هنا بنجيبها من على الايه? من على الرسمة. طب لو انا
-  OCR        : Crip Japar | Crisp Input | Pr-2t 0.1
-  Combined   :  بتسأل احنا هنا بنجيبها من على الايه? من على الرسمة. طب لو انا Crip Japar | Crisp Input | Pr-2t 0.1
-
-[00:06:25]
-  Transcript :  هعمل لها اعملها في الكود. هعرف اجيبها ازاي? بص كده معي مش الفاز
+  Transcript :  Now the next thing is to run Flossy start.
   OCR        : None
-  Combined   :  هعمل لها اعملها في الكود. هعرف اجيبها ازاي? بص كده معي مش الفاز
+  Combined   :  Now the next thing is to run Flossy start.
 
-[00:06:32]
-  Transcript :  يست زي اللي انا بشوف ما بينها ما بين اللي هو دي عبر عبر عن
-  OCR        : None
-  Combined   :  يست زي اللي انا بشوف ما بينها ما بين اللي هو دي عبر عبر عن
+[00:06:28]
+  Transcript : None
+  OCR        : [hastscar/to)
+  Combined   : [hastscar/to)
 
-[00:06:38]
-  Transcript :  صح? لو انا قدرت اجيب بتاعت ده وعودت فيه بالاكس بطلع لي
+[00:06:28]
+  Transcript :  Perfect.
   OCR        : None
-  Combined   :  صح? لو انا قدرت اجيب بتاعت ده وعودت فيه بالاكس بطلع لي
+  Combined   :  Perfect.
 
-[00:06:47]
-  Transcript : 
+[00:06:30]
+  Transcript :  If you want to run Azure,
   OCR        : None
-  Combined   : 
+  Combined   :  If you want to run Azure,
 
-[00:07:10]
-  Transcript :  اقول وهي تكون فحطة ان انا اعملها بايدي. ارسمها. واشوفها
+[00:06:34]
+  Transcript :  then instead of running flow C start,
   OCR        : None
-  Combined   :  اقول وهي تكون فحطة ان انا اعملها بايدي. ارسمها. واشوفها
+  Combined   :  then instead of running flow C start,
+
+[00:06:36]
+  Transcript :  you just have to do flow C easy start.
+  OCR        : None
+  Combined   :  you just have to do flow C easy start.
+
+[00:06:40]
+  Transcript :  Or if you want to do GCP,
+  OCR        : floci | floci | Local GCP. | Zero cost. | ZeroI | restrictions.
+  Combined   :  Or if you want to do GCP, floci | floci | Local GCP. | Zero cost. | ZeroI | restrictions.
+
+[00:06:41]
+  Transcript :  just go to the get started.
+  OCR        : None
+  Combined   :  just go to the get started.
+
+[00:06:43]
+  Transcript :  Instead of flow C start,
+  OCR        : None
+  Combined   :  Instead of flow C start,
+
+[00:06:45]
+  Transcript :  just run in the CLA part flow C GCP start.
+  OCR        : None
+  Combined   :  just run in the CLA part flow C GCP start.
+
+[00:06:50]
+  Transcript :  Cool.
+  OCR        : None
+  Combined   :  Cool.
+
+[00:06:51]
+  Transcript :  We'll go back to AWS.
+  OCR        : None
+  Combined   :  We'll go back to AWS.
+
+[00:07:00]
+  Transcript :  I show you by creating an S3 bucket first Okay So how to create an S3 bucket we will use the same command but before that we have to set up AWS environment variables so you can just say eval flow
+  OCR        : [hashicorp/tao) | Bus 'rieci step' rirst or pass --container cnane> tosee a different
+  Combined   :  I show you by creating an S3 bucket first Okay So how to create an S3 bucket we will use the same command but before that we have to set up AWS environment variables so you can just say eval flow [hashicorp/tao) | Bus 'rieci step' rirst or pass --container cnane> tosee a different
+
+[00:07:09]
+  Transcript :  C ENB so this will set up AWS environment variables for us what happens
+  OCR        : None
+  Combined   :  C ENB so this will set up AWS environment variables for us what happens
+
+[00:07:15]
+  Transcript :  if you don't run this command be careful you have to run it otherwise when you
+  OCR        : None
+  Combined   :  if you don't run this command be careful you have to run it otherwise when you
 
 [00:07:19]
-  Transcript :  كده على الرسمة بايز دي وخلاص دي ما بتطلع ليش عشان اطلع دي
+  Transcript :  run AWS S3 MB for make bucket and followed by my back. So if you run AWS S3 MB followed by name of
   OCR        : None
-  Combined   :  كده على الرسمة بايز دي وخلاص دي ما بتطلع ليش عشان اطلع دي
-
-[00:07:26]
-  Transcript :  اجزاكت يبقى انا محتاجة اجيب بتاعة ده واللاين ده وعوض فيهم
-  OCR        : None
-  Combined   :  اجزاكت يبقى انا محتاجة اجيب بتاعة ده واللاين ده وعوض فيهم
+  Combined   :  run AWS S3 MB for make bucket and followed by my back. So if you run AWS S3 MB followed by name of
 
 [00:07:34]
-  Transcript :  بالسرط دي اللي هي بتاعي يطلع لي المقابلة ليها. طيب ازاي بقى
+  Transcript :  the bucket, there is a possibility. The bucket is created on your actual AWS account. Maybe you
   OCR        : None
-  Combined   :  بالسرط دي اللي هي بتاعي يطلع لي المقابلة ليها. طيب ازاي بقى
+  Combined   :  the bucket, there is a possibility. The bucket is created on your actual AWS account. Maybe you
 
-[00:07:41]
-  Transcript :  اطلع بتاعة سهلة جدا.
-  OCR        : To get membership of crisp value p30, we | need to get equations for the lines where | the value 30 intersects with L1  L2.
-  Combined   :  اطلع بتاعة سهلة جدا. To get membership of crisp value p30, we | need to get equations for the lines where | the value 30 intersects with L1  L2.
+[00:07:40]
+  Transcript :  have set up the account in the past and your AWS CLI is pointing to it. So there is a possibility
+  OCR        : None
+  Combined   :  have set up the account in the past and your AWS CLI is pointing to it. So there is a possibility
+
+[00:07:47]
+  Transcript :  the command that you run here is created on the AWS account.
+  OCR        : None
+  Combined   :  the command that you run here is created on the AWS account.
 
 [00:07:51]
-  Transcript :  نمسك مثلا ال اي ال ال اون. ده. ال اي ده عشان اجيب بتاعته
-  OCR        : L1: 1-get 2 points on the line: 0,1, 50,0 | 2-get slope  y2-y1x2-x1  0-150-0 -150 | 3-line equation: y  ax  b a  slope | 4-line equation: y  -x50  b, substitute by one of | the points to get b. | 1  0  b  b1 | y  -x50  1 | 7- To get membership substitute by x30, | 8- y -30501  0.4 | 9- μp  30  0.4 | L2: use same steps.
-  Combined   :  نمسك مثلا ال اي ال ال اون. ده. ال اي ده عشان اجيب بتاعته L1: 1-get 2 points on the line: 0,1, 50,0 | 2-get slope  y2-y1x2-x1  0-150-0 -150 | 3-line equation: y  ax  b a  slope | 4-line equation: y  -x50  b, substitute by one of | the points to get b. | 1  0  b  b1 | y  -x50  1 | 7- To get membership substitute by x30, | 8- y -30501  0.4 | 9- μp  30  0.4 | L2: use same steps.
+  Transcript :  So definitely run this command.
+  OCR        : None
+  Combined   :  So definitely run this command.
+
+[00:07:53]
+  Transcript :  Well, flow C, env.
+  OCR        : None
+  Combined   :  Well, flow C, env.
 
 [00:07:56]
-  Transcript :  مبدئيا هو ال اي فالاقوشن بتاعته تبقى ايه?
+  Transcript :  Now I'll just do this.
   OCR        : None
-  Combined   :  مبدئيا هو ال اي فالاقوشن بتاعته تبقى ايه?
+  Combined   :  Now I'll just do this.
+
+[00:07:58]
+  Transcript :  My bucket, one, two, three.
+  OCR        : None
+  Combined   :  My bucket, one, two, three.
 
 [00:08:00]
-  Transcript :  اي? بتساوي اي اكس بلاس بي. حلاص? اي اكس بلاس بي. وانا
+  Transcript :  okay let's see what happens there you go make bucket bucket is created I can even verify AWS
   OCR        : None
-  Combined   :  اي? بتساوي اي اكس بلاس بي. حلاص? اي اكس بلاس بي. وانا
+  Combined   :  okay let's see what happens there you go make bucket bucket is created I can even verify AWS
 
 [00:08:09]
-  Transcript :  دلوقتي هدفي ان انا ايه اشوف الفاليو بتاعت الايه والبي بكام
+  Transcript :  s3 LS there you go so my bucket one two three is the name of the bucket that is created in fact we
   OCR        : None
-  Combined   :  دلوقتي هدفي ان انا ايه اشوف الفاليو بتاعت الايه والبي بكام
+  Combined   :  s3 LS there you go so my bucket one two three is the name of the bucket that is created in fact we
 
-[00:08:13]
-  Transcript :  عشان اكتب الايكويشن ايه بتاعت الايه. اي لاين في الدنيا هيدي
-  OCR        : None
-  Combined   :  عشان اكتب الايكويشن ايه بتاعت الايه. اي لاين في الدنيا هيدي
+[00:08:23]
+  Transcript :  can upload file to this bucket as well so there is this comment I'll just copy it and paste it here
+  OCR        : Studie Downloais N eval Srrtoc1 emv) | 226-0 | Downloats5 awt s) | 2926.86 | "> hetle-flect.tet
+  Combined   :  can upload file to this bucket as well so there is this comment I'll just copy it and paste it here Studie Downloais N eval Srrtoc1 emv) | 226-0 | Downloats5 awt s) | 2926.86 | "> hetle-flect.tet
 
-[00:08:18]
-  Transcript :  الايكويشن بتاعته. تمام كده? طيب. عشان اعرف اجيب الايه.
+[00:08:24]
+  Transcript :  upload hello flow c txt to my bucket okay i did not change the name of the bucket but anyways
   OCR        : None
-  Combined   :  الايكويشن بتاعته. تمام كده? طيب. عشان اعرف اجيب الايه.
+  Combined   :  upload hello flow c txt to my bucket okay i did not change the name of the bucket but anyways
 
-[00:08:25]
-  Transcript :  الايه ده بنقول عليه اللي بتاع الايه بتاع الايه بتاع الايه بتاع
-  OCR        : None
-  Combined   :  الايه ده بنقول عليه اللي بتاع الايه بتاع الايه بتاع الايه بتاع
+[00:08:38]
+  Transcript :  now this file is uploaded to my bucket i can also read it so i'll quickly read it and show it to you
+  OCR        : Downloass Nevat Srrtoci enw) | 2926.85-
+  Combined   :  now this file is uploaded to my bucket i can also read it so i'll quickly read it and show it to you Downloass Nevat Srrtoci enw) | 2926.85-
 
-[00:08:31]
-  Transcript :  الايه بتاعته بتساوي اي نقطتين نجيب اي نقطتين على الايه. الايه
+[00:08:40]
+  Transcript :  same aws commands why pay for s3 when flow c is free right similarly we can create eks cluster as
   OCR        : None
-  Combined   :  الايه بتاعته بتساوي اي نقطتين نجيب اي نقطتين على الايه. الايه
+  Combined   :  same aws commands why pay for s3 when flow c is free right similarly we can create eks cluster as
 
-[00:08:37]
-  Transcript :  ده نقطتين عادي مين اكس بزيرو ووي بون. يبقى زيرو وون. بتي
+[00:08:49]
+  Transcript :  but make sure you have Docker running.
   OCR        : None
-  Combined   :  ده نقطتين عادي مين اكس بزيرو ووي بون. يبقى زيرو وون. بتي
+  Combined   :  but make sure you have Docker running.
 
-[00:08:42]
-  Transcript :  ال point الاولى. تمام? ال point التانية الاكس بفافتي والي بزيرو.
+[00:08:52]
+  Transcript :  How do you do that?
   OCR        : None
-  Combined   :  ال point الاولى. تمام? ال point التانية الاكس بفافتي والي بزيرو.
-
-[00:08:50]
-  Transcript :  زي بي 2 معي كده
-  OCR        : None
-  Combined   :  زي بي 2 معي كده
+  Combined   :  How do you do that?
 
 [00:08:53]
-  Transcript :  2 1 x2 2
+  Transcript :  AWS EKS create cluster I hope you know I providing the right details AWS EKS create cluster hyphen hyphen name Let provide the name of the cluster
   OCR        : None
-  Combined   :  2 1 x2 2
+  Combined   :  AWS EKS create cluster I hope you know I providing the right details AWS EKS create cluster hyphen hyphen name Let provide the name of the cluster
 
 [00:09:06]
-  Transcript :  0. ده. minus y1 اللي هي ب 1. يبقى 0-1. 50 اللي هي x2. minus 0 اللي هي
+  Transcript :  I will say demo flow scene.
   OCR        : None
-  Combined   :  0. ده. minus y1 اللي هي ب 1. يبقى 0-1. 50 اللي هي x2. minus 0 اللي هي
+  Combined   :  I will say demo flow scene.
 
-[00:09:17]
-  Transcript :  الاكس وان. بتسوي ايه? مينس وان ديفايد ايه? خلاصي بانا كده
+[00:09:12]
+  Transcript :  Okay, so the command is wrong.
   OCR        : None
-  Combined   :  الاكس وان. بتسوي ايه? مينس وان ديفايد ايه? خلاصي بانا كده
+  Combined   :  Okay, so the command is wrong.
+
+[00:09:14]
+  Transcript :  Let's go to the documentation.
+  OCR        : None
+  Combined   :  Let's go to the documentation.
+
+[00:09:16]
+  Transcript :  Here I have a setup for EKS as well.
+  OCR        : None
+  Combined   :  Here I have a setup for EKS as well.
+
+[00:09:24]
+  Transcript :  First, I'll set up the EKS endpoints.
+  OCR        : (ParanValidation) | <sulcomeand>
+  Combined   :  First, I'll set up the EKS endpoints. (ParanValidation) | <sulcomeand>
 
 [00:09:25]
-  Transcript :  جبت القيمة بتاعت الاي.
+  Transcript :  Okay.
   OCR        : None
-  Combined   :  جبت القيمة بتاعت الاي.
+  Combined   :  Okay.
 
-[00:09:29]
-  Transcript :  يبقى الاكوشن بقت واي ايكوال ماينس اكس اوفر ففتي بلوس بي.
+[00:09:26]
+  Transcript :  We forgot to do this.
   OCR        : None
-  Combined   :  يبقى الاكوشن بقت واي ايكوال ماينس اكس اوفر ففتي بلوس بي.
+  Combined   :  We forgot to do this.
+
+[00:09:28]
+  Transcript :  So AWS endpoint, localhost 4566.
+  OCR        : None
+  Combined   :  So AWS endpoint, localhost 4566.
+
+[00:09:32]
+  Transcript :  AWS default region, US East 1.
+  OCR        : None
+  Combined   :  AWS default region, US East 1.
 
 [00:09:35]
-  Transcript :  عايز اجيب البي. اعمل اي? هعوض باي باي باي بوينت من دول يا اي
+  Transcript :  AWS key ID, test.
   OCR        : None
-  Combined   :  عايز اجيب البي. اعمل اي? هعوض باي باي باي بوينت من دول يا اي
+  Combined   :  AWS key ID, test.
+
+[00:09:37]
+  Transcript :  And AWS secret access key is also test.
+  OCR        : None
+  Combined   :  And AWS secret access key is also test.
 
 [00:09:42]
-  Transcript :  الاولى يا التانية. في الاكوشن يطلع لي البي.
+  Transcript :  Perfect.
   OCR        : None
-  Combined   :  الاولى يا التانية. في الاكوشن يطلع لي البي.
+  Combined   :  Perfect.
 
-[00:09:47]
-  Transcript :  تمام؟ عوضت بالA في point one. point one الY فيها بone. يبقى one equal.
+[00:09:43]
+  Transcript :  So let me run this again.
   OCR        : None
-  Combined   :  تمام؟ عوضت بالA في point one. point one الY فيها بone. يبقى one equal.
+  Combined   :  So let me run this again.
 
-[00:09:53]
-  Transcript :  الX بزيرو يبقى ده كله بزيرو. plus B. one equal A.
+[00:09:48]
+  Transcript :  Cool.
   OCR        : None
-  Combined   :  الX بزيرو يبقى ده كله بزيرو. plus B. one equal A.
+  Combined   :  Cool.
+
+[00:09:49]
+  Transcript :  Now, let's go ahead, create the cluster and try.
+  OCR        : None
+  Combined   :  Now, let's go ahead, create the cluster and try.
+
+[00:09:54]
+  Transcript : None
+  OCR        : turle | Downloars | Tudse | Paport | ANSENOPOINT BRL-MERP://1OCATNOST:ESG6 | abitishekveeramalLapAbnisheks-flac-Studio
+  Combined   : turle | Downloars | Tudse | Paport | ANSENOPOINT BRL-MERP://1OCATNOST:ESG6 | abitishekveeramalLapAbnisheks-flac-Studio
+
+[00:09:55]
+  Transcript :  AWS EKS create cluster,
+  OCR        : None
+  Combined   :  AWS EKS create cluster,
+
+[00:09:57]
+  Transcript :  if an FN name dev cluster, I'm providing
+  OCR        : None
+  Combined   :  if an FN name dev cluster, I'm providing
 
 [00:10:00]
-  Transcript :  بي بل بي هنا اكوال ون. يبقى انا كده قدرت اعمل بتاعت اللاين.
+  Transcript :  a dummy role ARN and I'm providing a dummy VPC configuration as well.
   OCR        : None
-  Combined   :  بي بل بي هنا اكوال ون. يبقى انا كده قدرت اعمل بتاعت اللاين.
+  Combined   :  a dummy role ARN and I'm providing a dummy VPC configuration as well.
 
-[00:10:05]
-  Transcript :  يبقى اللاين ده بتاعت عبارة عن وي ايكوال ماينس اكس. طيب انا
+[00:10:07]
+  Transcript :  Okay, it says dev cluster already exists on my local machine.
   OCR        : None
-  Combined   :  يبقى اللاين ده بتاعت عبارة عن وي ايكوال ماينس اكس. طيب انا
+  Combined   :  Okay, it says dev cluster already exists on my local machine.
 
-[00:10:13]
-  Transcript :  بعد الوقت عايزة اجيب للاكس بتاعت ايه بسيرتي. خلاص? يبقى
+[00:10:11]
+  Transcript :  I'll quickly change it to dev cluster 1.
   OCR        : None
-  Combined   :  بعد الوقت عايزة اجيب للاكس بتاعت ايه بسيرتي. خلاص? يبقى
+  Combined   :  I'll quickly change it to dev cluster 1.
 
-[00:10:22]
-  Transcript :  اعمل ايه? بتاعتي موجودة يبقى هعود عن طلعني ايه? طلعني بتاعتي
+[00:10:15]
+  Transcript : None
+  OCR        : -create44t":-2676-06-09T01:94:72.100G61+05:70- | 1.29 | "arm:awa:jam:=B0o00000a00e:rale/eka-rols" | "resourcesNpcConfig":( | 0.0.0.0/0 | "16.100.6.0/16"
+  Combined   : -create44t":-2676-06-09T01:94:72.100G61+05:70- | 1.29 | "arm:awa:jam:=B0o00000a00e:rale/eka-rols" | "resourcesNpcConfig":( | 0.0.0.0/0 | "16.100.6.0/16"
+
+[00:10:16]
+  Transcript :  Now, unlike on AWS, this will not take 30 minutes or 40 minutes.
   OCR        : None
-  Combined   :  اعمل ايه? بتاعتي موجودة يبقى هعود عن طلعني ايه? طلعني بتاعتي
+  Combined   :  Now, unlike on AWS, this will not take 30 minutes or 40 minutes.
+
+[00:10:20]
+  Transcript :  This will be done in few seconds of time.
+  OCR        : None
+  Combined   :  This will be done in few seconds of time.
+
+[00:10:24]
+  Transcript :  Why?
+  OCR        : None
+  Combined   :  Why?
+
+[00:10:25]
+  Transcript :  Because local Kubernetes cluster is created.
+  OCR        : "cr83t04At*:*2626-06-01TD1:04:22.300662+05:10* | "vpct#": | 'endosintPrivatekccess"; false | 8.0.0.6/8 | "serv1ce1ovdC14r")"10.100.0.9/26" | "tags": ()
+  Combined   :  Because local Kubernetes cluster is created. "cr83t04At*:*2626-06-01TD1:04:22.300662+05:10* | "vpct#": | 'endosintPrivatekccess"; false | 8.0.0.6/8 | "serv1ce1ovdC14r")"10.100.0.9/26" | "tags": ()
+
+[00:10:27]
+  Transcript :  Abhishek, which cluster is created locally?
+  OCR        : None
+  Combined   :  Abhishek, which cluster is created locally?
+
+[00:10:29]
+  Transcript :  it is creating K3S cluster locally.
+  OCR        : None
+  Combined   :  it is creating K3S cluster locally.
 
 [00:10:33]
-  Transcript :  اللي هي ايه? اللي هي او بوينت فور. يبقى متأكدا ان دي مزبوطة.
+  Transcript :  I've already checked it is using K3S.
   OCR        : None
-  Combined   :  اللي هي ايه? اللي هي او بوينت فور. يبقى متأكدا ان دي مزبوطة.
+  Combined   :  I've already checked it is using K3S.
+
+[00:10:35]
+  Transcript :  Now we can point this EKS cluster,
+  OCR        : None
+  Combined   :  Now we can point this EKS cluster,
 
 [00:10:40]
-  Transcript :  ولا هي او بوينت سري او فايف ولا ولا الكلام ده. خلاص? اجي
-  OCR        : None
-  Combined   :  ولا هي او بوينت سري او فايف ولا ولا الكلام ده. خلاص? اجي
+  Transcript :  like we can point the kubeconfig,
+  OCR        : "07081044*.*7026-06-05191:04:22.30066:+05:30- | 9.0.9.0/0
+  Combined   :  like we can point the kubeconfig, "07081044*.*7026-06-05191:04:22.30066:+05:30- | 9.0.9.0/0
 
-[00:10:48]
-  Transcript : 
+[00:10:41]
+  Transcript :  AWS EKS update kubeconfig,
   OCR        : None
-  Combined   : 
+  Combined   :  AWS EKS update kubeconfig,
 
-[00:11:07]
-  Transcript :  تمين.
-  OCR        : Step 2: Rule Evaluation | The second step is to take the fuzzified inputs, Jeau  0.5, Puc-sz | 0.2, μjy-81  0.1 and 4γ-t2  0.7, and apply them to the antecedents of the | fuzzy rules. | If a given fuzzy rule has multiple antecedents, the fuzzy operator AND or | OR is used to obtain a single number that represents the result of the | antecedent evaluation. | This number the truth value is then applied to the consequent | membership function.
-  Combined   :  تمين. Step 2: Rule Evaluation | The second step is to take the fuzzified inputs, Jeau  0.5, Puc-sz | 0.2, μjy-81  0.1 and 4γ-t2  0.7, and apply them to the antecedents of the | fuzzy rules. | If a given fuzzy rule has multiple antecedents, the fuzzy operator AND or | OR is used to obtain a single number that represents the result of the | antecedent evaluation. | This number the truth value is then applied to the consequent | membership function.
-
-[00:11:09]
-  Transcript :  انا مفيمتش حتة دي. انا مفيمتش حتة دي. انا مفيمتش حتة. انا
+[00:10:43]
+  Transcript :  hyphen hyphen name dev cluster one.
   OCR        : None
-  Combined   :  انا مفيمتش حتة دي. انا مفيمتش حتة دي. انا مفيمتش حتة. انا
+  Combined   :  hyphen hyphen name dev cluster one.
 
-[00:11:13]
-  Transcript :  دي بعد اللاين بعد ما احنا جبنا السلوب وجبنا البي اه عملنا ايه ما
+[00:10:46]
+  Transcript :  And now if I do kubectl get pods
   OCR        : None
-  Combined   :  دي بعد اللاين بعد ما احنا جبنا السلوب وجبنا البي اه عملنا ايه ما
+  Combined   :  And now if I do kubectl get pods
+
+[00:10:50]
+  Transcript :  or kubectl get nodes,
+  OCR        : None
+  Combined   :  or kubectl get nodes,
+
+[00:10:52]
+  Transcript :  you can see this is the local Kubernetes cluster but you are using EKS commands You are using AWS command You are using the EKS command to fetch the kube config
+  OCR        : None
+  Combined   :  you can see this is the local Kubernetes cluster but you are using EKS commands You are using AWS command You are using the EKS command to fetch the kube config
+
+[00:11:06]
+  Transcript :  And then the kubectl is pointing to that local cluster.
+  OCR        : None
+  Combined   :  And then the kubectl is pointing to that local cluster.
+
+[00:11:10]
+  Transcript :  This way you can learn 50 different services on AWS.
+  OCR        : None
+  Combined   :  This way you can learn 50 different services on AWS.
+
+[00:11:14]
+  Transcript :  So 47 services are supported.
+  OCR        : None
+  Combined   :  So 47 services are supported.
+
+[00:11:17]
+  Transcript :  KMS is supported.
+  OCR        : None
+  Combined   :  KMS is supported.
 
 [00:11:18]
-  Transcript :  مش عارف. جبني السلوب وجبنا البي بقى خلاص بقى معي ايكوشن هي
+  Transcript :  SQS is supported.
   OCR        : None
-  Combined   :  مش عارف. جبني السلوب وجبنا البي بقى خلاص بقى معي ايكوشن هي
+  Combined   :  SQS is supported.
 
-[00:11:22]
-  Transcript :  بتاعت اللاين. فقدرت انا اجيب الواي اللي اللي انا عايزة. انا
+[00:11:20]
+  Transcript :  Secret manager is supported.
   OCR        : None
-  Combined   :  بتاعت اللاين. فقدرت انا اجيب الواي اللي اللي انا عايزة. انا
+  Combined   :  Secret manager is supported.
 
-[00:11:28]
-  Transcript :  جبت الاكوشن. الاكوشن بتاعت اللاين. دلوقتي لو عوضت باي اكس اي اكس
+[00:11:21]
+  Transcript :  Event bridge.
   OCR        : None
-  Combined   :  جبت الاكوشن. الاكوشن بتاعت اللاين. دلوقتي لو عوضت باي اكس اي اكس
+  Combined   :  Event bridge.
+
+[00:11:24]
+  Transcript :  and similarly on AWS, Azure, multiple services are supported.
+  OCR        : Local Azure. | NOADHIOON
+  Combined   :  and similarly on AWS, Azure, multiple services are supported. Local Azure. | NOADHIOON
+
+[00:11:27]
+  Transcript :  Even on GCP, multiple services are supported.
+  OCR        : None
+  Combined   :  Even on GCP, multiple services are supported.
+
+[00:11:30]
+  Transcript :  Okay, in GCP at the moment, only seven services are supported.
+  OCR        : None
+  Combined   :  Okay, in GCP at the moment, only seven services are supported.
 
 [00:11:34]
-  Transcript :  معي. يعني اي ايموت. عايز اجيبه البيت او بتاعتم يعني اجيبه الواي.
+  Transcript :  But the best part is that this is an open source project.
   OCR        : None
-  Combined   :  معي. يعني اي ايموت. عايز اجيبه البيت او بتاعتم يعني اجيبه الواي.
+  Combined   :  But the best part is that this is an open source project.
 
-[00:11:48]
-  Transcript :  تمام. ماشي. احبار? اي بخط الاكس يتلاعني الواي. تمام يا دكتور.
-  OCR        : The second step is to take the fuzzified inputs, Jeau  0.5, Puc.sz | 0.2, μα 0.1 and γ 0.7, and apply them to the antecedents of the
-  Combined   :  تمام. ماشي. احبار? اي بخط الاكس يتلاعني الواي. تمام يا دكتور. The second step is to take the fuzzified inputs, Jeau  0.5, Puc.sz | 0.2, μα 0.1 and γ 0.7, and apply them to the antecedents of the
-
-[00:11:50]
-  Transcript :  طمام اوكي. بعد كده الاستابع البعدها اللي هي. زي ما اتفقنا
+[00:11:38]
+  Transcript :  So if we keep supporting this project,
   OCR        : None
-  Combined   :  طمام اوكي. بعد كده الاستابع البعدها اللي هي. زي ما اتفقنا
+  Combined   :  So if we keep supporting this project,
+
+[00:11:40]
+  Transcript :  they will add more services to it, right?
+  OCR        : None
+  Combined   :  they will add more services to it, right?
+
+[00:11:44]
+  Transcript :  Of course, there is an alternative.
+  OCR        : None
+  Combined   :  Of course, there is an alternative.
+
+[00:11:46]
+  Transcript :  As I told you, local stack is an enterprise alternative.
+  OCR        : None
+  Combined   :  As I told you, local stack is an enterprise alternative.
+
+[00:11:49]
+  Transcript :  Maybe if you're doing this within your organization,
+  OCR        : None
+  Combined   :  Maybe if you're doing this within your organization,
+
+[00:11:52]
+  Transcript :  probably your DevOps team want to use this concept.
+  OCR        : None
+  Combined   :  probably your DevOps team want to use this concept.
 
 [00:11:55]
-  Transcript :  بيبع عندي وعلى حسب هي او ولا ايضي بجيبها
+  Transcript :  You can head to local stack and you can see probably you can participate.
   OCR        : None
-  Combined   :  بيبع عندي وعلى حسب هي او ولا ايضي بجيبها
+  Combined   :  You can head to local stack and you can see probably you can participate.
 
 [00:12:00]
-  Transcript :  المين او الماكس.
-  OCR        : RECALL: | To evaluate the disjunction of the rule antecedents, we use the OR fuzzy | operation union: | operation.Typically, fuzzy expert systems make use of the classical fuzzy | µa, ex  max ueα, μyx | Similarly, in order to evaluate the conjunction of the rule antecedents, we | apply the AND fuzry operation intersection: | β2-gx  min αGx, AsI
-  Combined   :  المين او الماكس. RECALL: | To evaluate the disjunction of the rule antecedents, we use the OR fuzzy | operation union: | operation.Typically, fuzzy expert systems make use of the classical fuzzy | µa, ex  max ueα, μyx | Similarly, in order to evaluate the conjunction of the rule antecedents, we | apply the AND fuzry operation intersection: | β2-gx  min αGx, AsI
-
-[00:12:08]
-  Transcript :  تمام? طب احنا امتى مستدم الاور رادوك? اول هو بيديك
+  Transcript :  purchase license or you can take subscription of it.
   OCR        : None
-  Combined   :  تمام? طب احنا امتى مستدم الاور رادوك? اول هو بيديك
+  Combined   :  purchase license or you can take subscription of it.
+
+[00:12:03]
+  Transcript :  Abhishek, what will be the advantage
+  OCR        : None
+  Combined   :  Abhishek, what will be the advantage
+
+[00:12:04]
+  Transcript :  if we take the subscription as a DevOps team?
+  OCR        : None
+  Combined   :  if we take the subscription as a DevOps team?
+
+[00:12:07]
+  Transcript :  See, maybe you're doing some proof of concept.
+  OCR        : None
+  Combined   :  See, maybe you're doing some proof of concept.
+
+[00:12:10]
+  Transcript :  Instead of creating a Dev AWS cluster,
+  OCR        : None
+  Combined   :  Instead of creating a Dev AWS cluster,
 
 [00:12:14]
-  Transcript :  الرول زي ما هي. يعني بص هنا الرول. او الهاي بزيرو. او الواي
+  Transcript :  Development AWS cluster,
   OCR        : None
-  Combined   :  الرول زي ما هي. يعني بص هنا الرول. او الهاي بزيرو. او الواي
+  Combined   :  Development AWS cluster,
 
-[00:12:21]
-  Transcript :  از بي ون. اللي هي بون. هو مزيني او وعندي الرقمين زيرو او ايه.
+[00:12:15]
+  Transcript :  you can probably try LocalStack or FlowC.
   OCR        : None
-  Combined   :  از بي ون. اللي هي بون. هو مزيني او وعندي الرقمين زيرو او ايه.
+  Combined   :  you can probably try LocalStack or FlowC.
 
-[00:12:26]
-  Transcript :  one. في القول باخد الماكسيمم يبقد هيطلع لي ايه? او point to on.
+[00:12:19]
+  Transcript :  Opportunities are endless.
   OCR        : None
-  Combined   :  one. في القول باخد الماكسيمم يبقد هيطلع لي ايه? او point to on.
+  Combined   :  Opportunities are endless.
+
+[00:12:22]
+  Transcript :  So you can go ahead, search for FlowC.
+  OCR        : None
+  Combined   :  So you can go ahead, search for FlowC.
+
+[00:12:25]
+  Transcript : None
+  OCR        : Ofloci | 7 GCP services. All of them free. | Fast. Lightweight.Zero overhead. | Taenulees cw ane yuore | aeet orte witx Sitatsis jent, angle fccker ina
+  Combined   : Ofloci | 7 GCP services. All of them free. | Fast. Lightweight.Zero overhead. | Taenulees cw ane yuore | aeet orte witx Sitatsis jent, angle fccker ina
+
+[00:12:25]
+  Transcript :  Just search for FlowC, you will find the website.
+  OCR        : None
+  Combined   :  Just search for FlowC, you will find the website.
+
+[00:12:28]
+  Transcript :  or you can also look for their GitHub repository.
+  OCR        : None
+  Combined   :  or you can also look for their GitHub repository.
 
 [00:12:32]
-  Transcript :  تمين لمن? اللي بعد اللزن في الرول دي. ان الزل دة تغفز تي
+  Transcript :  So this is their GitHub repository.
   OCR        : None
-  Combined   :  تمين لمن? اللي بعد اللزن في الرول دي. ان الزل دة تغفز تي
+  Combined   :  So this is their GitHub repository.
 
-[00:12:37]
-  Transcript :  وان. خلاص? الرول اللي بعدها قد تقولي the x is a two. ودي كتطلع
+[00:12:34]
+  Transcript :  On the GitHub repository,
   OCR        : None
-  Combined   :  وان. خلاص? الرول اللي بعدها قد تقولي the x is a two. ودي كتطلع
+  Combined   :  On the GitHub repository,
+
+[00:12:36]
+  Transcript :  they have complete details in the readme file.
+  OCR        : None
+  Combined   :  they have complete details in the readme file.
+
+[00:12:39]
+  Transcript :  Also, they have good number of stats.
+  OCR        : None
+  Combined   :  Also, they have good number of stats.
+
+[00:12:41]
+  Transcript :  So I hope the project will keep up.
+  OCR        : None
+  Combined   :  So I hope the project will keep up.
 
 [00:12:44]
-  Transcript :  علي ب او point to. and the y is b two. دي كتطلع علي ب او point seven. فالاند
+  Transcript :  Let's hope for the best
   OCR        : None
-  Combined   :  علي ب او point to. and the y is b two. دي كتطلع علي ب او point seven. فالاند
+  Combined   :  Let's hope for the best
+
+[00:12:44]
+  Transcript :  because mocking is very useful for developers.
+  OCR        : None
+  Combined   :  because mocking is very useful for developers.
 
 [00:12:49]
-  Transcript :  a point to
+  Transcript :  As DevOps instance,
   OCR        : None
-  Combined   :  a point to
+  Combined   :  As DevOps instance,
 
-[00:13:11]
-  Transcript :  زي ما هي لل ايه للكون سيكونت. هتبقى الزد ايه سي سري. خلاص?
+[00:12:51]
+  Transcript :  it is good if we also have a mocking environment.
   OCR        : None
-  Combined   :  زي ما هي لل ايه للكون سيكونت. هتبقى الزد ايه سي سري. خلاص?
+  Combined   :  it is good if we also have a mocking environment.
 
-[00:13:17]
-  Transcript :  انا كده طلعت فانيو للاوكوت اللي هو الزد في ايه الممبرشيب بتاعته.
+[00:12:54]
+  Transcript :  Developers mock databases,
   OCR        : None
-  Combined   :  انا كده طلعت فانيو للاوكوت اللي هو الزد في ايه الممبرشيب بتاعته.
+  Combined   :  Developers mock databases,
+
+[00:12:56]
+  Transcript :  developers mock messaging queues,
+  OCR        : None
+  Combined   :  developers mock messaging queues,
+
+[00:12:58]
+  Transcript :  Why not as DevOps and cloud engineers,
+  OCR        : None
+  Combined   :  Why not as DevOps and cloud engineers,
+
+[00:13:01]
+  Transcript :  we mock the cloud platforms.
+  OCR        : None
+  Combined   :  we mock the cloud platforms.
+
+[00:13:03]
+  Transcript :  Perfect.
+  OCR        : None
+  Combined   :  Perfect.
+
+[00:13:04]
+  Transcript :  So I hope you found the video informative.
+  OCR        : None
+  Combined   :  So I hope you found the video informative.
+
+[00:13:07]
+  Transcript :  Let me know if you have any questions.
+  OCR        : None
+  Combined   :  Let me know if you have any questions.
+
+[00:13:09]
+  Transcript :  Honestly, even I'm exploring the mocking very recently.
+  OCR        : None
+  Combined   :  Honestly, even I'm exploring the mocking very recently.
+
+[00:13:14]
+  Transcript :  So if you have any questions
+  OCR        : None
+  Combined   :  So if you have any questions
+
+[00:13:15]
+  Transcript :  and let's say I don't know the answer,
+  OCR        : None
+  Combined   :  and let's say I don't know the answer,
+
+[00:13:18]
+  Transcript :  I'll go back, do a research and get back to you.
+  OCR        : None
+  Combined   :  I'll go back, do a research and get back to you.
+
+[00:13:21]
+  Transcript :  Thank you so much for watching today's video.
+  OCR        : None
+  Combined   :  Thank you so much for watching today's video.
 
 [00:13:23]
-  Transcript :  في السي وان وفي السي تو وفي السي سي. فانا انا اقص ان انا اعمل ايه? اعمل لهم
+  Transcript :  See you all in the next one.
   OCR        : None
-  Combined   :  في السي وان وفي السي تو وفي السي سي. فانا انا اقص ان انا اعمل ايه? اعمل لهم
+  Combined   :  See you all in the next one.
 
-[00:13:34]
-  Transcript :  مع بعض انها الاجريجيشن دي. واطلع ايه? من الديفوزي فيكيشن.
-  OCR        : The most common method of | correlating the rule consequent | with the truth value of the rule | antecedent is to cut the | Degee d | Mewbershap | consequent membership | function at the level of the | antecedent truth. This method | is called clipping alpha-cut. | However, clipping is still often | preferred because it involves | less complex and faster | clipping | mathematics, and generates an | aggregated output surface that | is easier to defuzzify.
-  Combined   :  مع بعض انها الاجريجيشن دي. واطلع ايه? من الديفوزي فيكيشن. The most common method of | correlating the rule consequent | with the truth value of the rule | antecedent is to cut the | Degee d | Mewbershap | consequent membership | function at the level of the | antecedent truth. This method | is called clipping alpha-cut. | However, clipping is still often | preferred because it involves | less complex and faster | clipping | mathematics, and generates an | aggregated output surface that | is easier to defuzzify.
-
-[00:13:37]
-  Transcript :  طب مالش يا دكتور. ممكن? سؤال? انا. طب. هو احنا الحتة اللي فاتت
-  OCR        : None
-  Combined   :  طب مالش يا دكتور. ممكن? سؤال? انا. طب. هو احنا الحتة اللي فاتت
-
-[00:13:44]
-  Transcript :  الديت. اللي هو انا اقلت اللي هي في سي بطو. اه. سي بطو كانت شغالة
-  OCR        : Step 3: Aggregation of the rule outputs | Aggregation is the process of unification of the outputs of all rules. | We take the membership functions of all rule consequents previously | clipped and combine them into a single fuzzy set. | The inout of the aggresation process is the list of clipped conseguent | variable. | membership functions, and the output is one fuzzy set for each output | is C1 0.1 | : is C2 0.2 | is C3 0.5
-  Combined   :  الديت. اللي هو انا اقلت اللي هي في سي بطو. اه. سي بطو كانت شغالة Step 3: Aggregation of the rule outputs | Aggregation is the process of unification of the outputs of all rules. | We take the membership functions of all rule consequents previously | clipped and combine them into a single fuzzy set. | The inout of the aggresation process is the list of clipped conseguent | variable. | membership functions, and the output is one fuzzy set for each output | is C1 0.1 | : is C2 0.2 | is C3 0.5
-
-[00:13:51]
-  Transcript :  يا دكتور
-  OCR        : None
-  Combined   :  يا دكتور
-
-[00:13:53]
-  Transcript : 
-  OCR        : None
-  Combined   : 
-
-[00:13:53]
-  Transcript :  ممكن استطاعتها
-  OCR        : None
-  Combined   :  ممكن استطاعتها
-
-[00:13:55]
-  Transcript :  عشان بس
-  OCR        : Degyee of | Memberslap
-  Combined   :  عشان بس Degyee of | Memberslap
-
-[00:13:57]
-  Transcript :  دي؟
-  OCR        : None
-  Combined   :  دي؟
-
-[00:14:00]
-  Transcript :  ها؟
-  OCR        : None
-  Combined   :  ها؟
-
-[00:14:02]
-  Transcript :  ايواة للسبتو دي
-  OCR        : None
-  Combined   :  ايواة للسبتو دي
-
-[00:14:04]
-  Transcript :  هي
-  OCR        : None
-  Combined   :  هي
-
-[00:14:06]
-  Transcript :  الف اكس ايز اي تو دي
-  OCR        : None
-  Combined   :  الف اكس ايز اي تو دي
-
-[00:14:08]
-  Transcript :  اللي احنا جبناها
-  OCR        : None
-  Combined   :  اللي احنا جبناها
-
-[00:14:10]
-  Transcript :  من المعادلة الخط بتاعت الفوزي
-  OCR        : None
-  Combined   :  من المعادلة الخط بتاعت الفوزي
-
-[00:14:12]
-  Transcript :  اللي فات؟
-  OCR        : None
-  Combined   :  اللي فات؟
-
-[00:14:14]
-  Transcript :  جبنا معادلة الخط وعوضنا فيها بال اكس
-  OCR        : None
-  Combined   :  جبنا معادلة الخط وعوضنا فيها بال اكس
-
-[00:14:16]
-  Transcript :  الواليو اللي بجيها لي في ال اكس
-  OCR        : None
-  Combined   :  الواليو اللي بجيها لي في ال اكس
-
-[00:14:18]
-  Transcript :  طلعتني
-  OCR        : None
-  Combined   :  طلعتني
-
-[00:14:20]
-  Transcript :  ال او بس الخط بتاع
-  OCR        : None
-  Combined   :  ال او بس الخط بتاع
-
-[00:14:22]
-  Transcript :  ال اي تو؟
-  OCR        : None
-  Combined   :  ال اي تو؟
-
-[00:14:24]
-  Transcript :  ده الخط بتاع اي تو؟
-  OCR        : None
-  Combined   :  ده الخط بتاع اي تو؟
-
-[00:14:26]
-  Transcript :  اه بقول لي فوزي سات هيبقى ليها الخط بتاعها
-  OCR        : None
-  Combined   :  اه بقول لي فوزي سات هيبقى ليها الخط بتاعها
-
-[00:14:28]
-  Transcript :  لها وفي فازي ست هيبقى ليها خطين كمان. تمام? هاي قطع فين? لو
-  OCR        : None
-  Combined   :  لها وفي فازي ست هيبقى ليها خطين كمان. تمام? هاي قطع فين? لو
-
-[00:14:35]
-  Transcript :  في كده مزل. هاي قطع فين? مش هاي بلهم كلهم.
-  OCR        : None
-  Combined   :  في كده مزل. هاي قطع فين? مش هاي بلهم كلهم.
-
-[00:14:41]
-  Transcript :  يعني مسلا هيكون عندي فازي ست في النص كده. بصوا شايفين دي? ليها
-  OCR        : µa,ex  max αaα, μyx | Hz-elx  min ααx, jyx
-  Combined   :  يعني مسلا هيكون عندي فازي ست في النص كده. بصوا شايفين دي? ليها µa,ex  max αaα, μyx | Hz-elx  min ααx, jyx
-
-[00:14:46]
-  Transcript :  خط اهو وخط اهو. صح? ماشي. تمام? فدي مسلا لو اسمها ميديم فاسمي
-  OCR        : None
-  Combined   :  خط اهو وخط اهو. صح? ماشي. تمام? فدي مسلا لو اسمها ميديم فاسمي
-
-[00:15:02]
-  Transcript : 
-  OCR        : The second step is to take the fuzzified inputs, Jeau,  0.5, Pqa2 | 0.2, μyαt | 0.1 and jhy-d2 | fuzzy rules | 0.7, and apply them to the antecedents of the | This number Ithe truth valuel is then applied to the conseguent
-  Combined   :  The second step is to take the fuzzified inputs, Jeau,  0.5, Pqa2 | 0.2, μyαt | 0.1 and jhy-d2 | fuzzy rules | 0.7, and apply them to the antecedents of the | This number Ithe truth valuel is then applied to the conseguent
-
-[00:15:12]
-  Transcript :  الايه. يعني مش محتاجة ان احنا نعملها لواحدة. عشان كده انا
-  OCR        : The inout of the aegresation process is the list of clipped conseguent | is 2 0.2 | : is C3 0.5
-  Combined   :  الايه. يعني مش محتاجة ان احنا نعملها لواحدة. عشان كده انا The inout of the aegresation process is the list of clipped conseguent | is 2 0.2 | : is C3 0.5
-
-[00:15:17]
-  Transcript :  اختصرتها في الايه? في المحاضرة اللي فاتت. اللي هو بقول انا
-  OCR        : None
-  Combined   :  اختصرتها في الايه? في المحاضرة اللي فاتت. اللي هو بقول انا
-
-[00:15:21]
-  Transcript :  الزد ده طلع اه بو بوينت وان في وطلع بو بوينت في في في
-  OCR        : None
-  Combined   :  الزد ده طلع اه بو بوينت وان في وطلع بو بوينت في في في
-
-[00:15:30]
-  Transcript :  فجمعتهم كلهم في رسمة واحدة. وو بوينت وان وو بوينت وان رسمت
-  OCR        : None
-  Combined   :  فجمعتهم كلهم في رسمة واحدة. وو بوينت وان وو بوينت وان رسمت
-
-[00:15:37]
-  Transcript :  الايه? رسمت التلاتة فاضي ستس بتوعه في رسمة واحدة خلاص?
-  OCR        : None
-  Combined   :  الايه? رسمت التلاتة فاضي ستس بتوعه في رسمة واحدة خلاص?
-
-[00:15:50]
-  Transcript :  وظللت الايه? على حسب لكل فاضي ست. تمام كده? هعني
-  OCR        : Step 4: Defuzzification | The last step in the fuzzy inference process is defuzzification. | Fugziness helps us to evaluate the rules, but the final output of a fuzzy | system has to be a crisp number | The input for the defuzzification process is the aggregate output fuzzy set | and the output is a single number.
-  Combined   :  وظللت الايه? على حسب لكل فاضي ست. تمام كده? هعني Step 4: Defuzzification | The last step in the fuzzy inference process is defuzzification. | Fugziness helps us to evaluate the rules, but the final output of a fuzzy | system has to be a crisp number | The input for the defuzzification process is the aggregate output fuzzy set | and the output is a single number.
-
-[00:15:51]
-  Transcript :  دلوقتي. دي فوزيفيكيشن هعمله لكم هنا بطريق تيم. انسوا معيني?
-  OCR        : None
-  Combined   :  دلوقتي. دي فوزيفيكيشن هعمله لكم هنا بطريق تيم. انسوا معيني?
-
-[00:16:00]
-  Transcript :  ها? سمعيني? سمعين حضرتك يا بكتور. تمام? تمام? طيب. هعملها هنا
-  OCR        : Step 4: Defuzzification centroid | There are several defuzzification methods, but probably the most | popular one is the centroid technique. It finds the point where a | vertical line would slice the aggregate set into two equal masses. | Mathematically this centre of gravity CoG can be expressed as: | μxxdx | μxdx
-  Combined   :  ها? سمعيني? سمعين حضرتك يا بكتور. تمام? تمام? طيب. هعملها هنا Step 4: Defuzzification centroid | There are several defuzzification methods, but probably the most | popular one is the centroid technique. It finds the point where a | vertical line would slice the aggregate set into two equal masses. | Mathematically this centre of gravity CoG can be expressed as: | μxxdx | μxdx
-
-[00:16:12]
-  Transcript :  بطريقتين. اول طريقة اللي هي الايه? السنترويد. دي بعملها ازاي?
-  OCR        : Deee of | Mvbershy | 67.4 | 0  10  20   0.1  30 - 40  50  60   0 2  70  80  90  100 1  0.5 | 0.1  0.1  0.1  0.2  0 .2  0.2  0.2  0.5  0.5  0.5 - 0.5 | 67.4
-  Combined   :  بطريقتين. اول طريقة اللي هي الايه? السنترويد. دي بعملها ازاي? Deee of | Mvbershy | 67.4 | 0  10  20   0.1  30 - 40  50  60   0 2  70  80  90  100 1  0.5 | 0.1  0.1  0.1  0.2  0 .2  0.2  0.2  0.5  0.5  0.5 - 0.5 | 67.4
-
-[00:16:16]
-  Transcript :  دي زي ما قلت لكم كده اللي هو التكامل بتاع الناس. بعمله
-  OCR        : None
-  Combined   :  دي زي ما قلت لكم كده اللي هو التكامل بتاع الناس. بعمله
-
-[00:16:21]
-  Transcript :  بالحسابات عن طريق ان انا. بشوف. هنا كانت او بوينت وون لان هي
-  OCR        : None
-  Combined   :  بالحسابات عن طريق ان انا. بشوف. هنا كانت او بوينت وون لان هي
-
-[00:16:27]
-  Transcript :  فاضي ست? تمام? فعند زيرو وعند تان وعند الجزء ده كانت
-  OCR        : None
-  Combined   :  فاضي ست? تمام? فعند زيرو وعند تان وعند الجزء ده كانت
-
-[00:16:39]
-  Transcript :  تمام? عند وعند كانت
-  OCR        : None
-  Combined   :  تمام? عند وعند كانت
-
-[00:16:46]
-  Transcript :  الديجري اوف ممبرشيب او بوينت تو. فهجمعهم مضرف او بوينت تو.
-  OCR        : None
-  Combined   :  الديجري اوف ممبرشيب او بوينت تو. فهجمعهم مضرف او بوينت تو.
-
-[00:16:50]
-  Transcript : 
-  OCR        : None
-  Combined   : 
-
-[00:17:11]
-  Transcript :  عند البيت دي كانت بو بوينت وان. عند البيت دي بو بوينت وان. هنا
-  OCR        : None
-  Combined   :  عند البيت دي كانت بو بوينت وان. عند البيت دي بو بوينت وان. هنا
-
-[00:17:15]
-  Transcript :  كانت بو بوينت وان. هنا طلعت لو بوينت تو. هنا بو بوينت تو. كلهم
-  OCR        : None
-  Combined   :  كانت بو بوينت وان. هنا طلعت لو بوينت تو. هنا بو بوينت تو. كلهم
-
-[00:17:25]
-  Transcript :  بجمعهم تحتهم. خلاص وديتني هنا ايه. ممكن اعملها بطريقة تانية
-  OCR        : Step 4: Defuzzification weighted | average | Another method is weighted average method where centroid of each | of the fuzzy sets is weighted by the membership value, divided by the | sum of memberships. | CentroidC1  0030504  20 | CentroidC2  2040-60-804  50 | CentroidC3  50701001004  80 | Z  200.1  500.2  800.5  0.1  0.2  0.5 | Z  65
-  Combined   :  بجمعهم تحتهم. خلاص وديتني هنا ايه. ممكن اعملها بطريقة تانية Step 4: Defuzzification weighted | average | Another method is weighted average method where centroid of each | of the fuzzy sets is weighted by the membership value, divided by the | sum of memberships. | CentroidC1  0030504  20 | CentroidC2  2040-60-804  50 | CentroidC3  50701001004  80 | Z  200.1  500.2  800.5  0.1  0.2  0.5 | Z  65
-
-[00:17:27]
-  Transcript :  اللي هي الايه. عشان اعمل ايه. عشان اعمل ايه. يبقى محتاجة
-  OCR        : None
-  Combined   :  اللي هي الايه. عشان اعمل ايه. عشان اعمل ايه. يبقى محتاجة
-
-[00:17:32]
-  Transcript :  حسب بتاع كل فازي ست. بتاع الفازي ست اللي هي سي وان.
-  OCR        : None
-  Combined   :  حسب بتاع كل فازي ست. بتاع الفازي ست اللي هي سي وان.
-
-[00:17:39]
-  Transcript :  هتبقى ايه قلنا بنجمع عدد النقط بنجمع النقط بنقسم على
-  OCR        : None
-  Combined   :  هتبقى ايه قلنا بنجمع عدد النقط بنجمع النقط بنقسم على
-
-[00:17:44]
-  Transcript :  عددهم. خلاص النقط بتاعتي كان زيرو زيرو وصيرتي جمعتهم مع بعض
-  OCR        : None
-  Combined   :  عددهم. خلاص النقط بتاعتي كان زيرو زيرو وصيرتي جمعتهم مع بعض
-
-[00:17:50]
-  Transcript :  وقسمت على الفور. فالداني ده لقيه بتاع وهكذا عملت في وفي
-  OCR        : None
-  Combined   :  وقسمت على الفور. فالداني ده لقيه بتاع وهكذا عملت في وفي
-
-[00:18:00]
-  Transcript :  خلاص طلعت هعمل ايه? هادرب كل في بتاعها. وجمعهم واقسم على
-  OCR        : None
-  Combined   :  خلاص طلعت هعمل ايه? هادرب كل في بتاعها. وجمعهم واقسم على
-
-[00:18:15]
-  Transcript :  المجموعة بتاع ال ايه. طلع لي ايه? خمسة وستين. خدوا بالكم
-  OCR        : Degrer of | Mesvbershjy | 9  10  20   0.1  30  40  50  60   0.2  70  80  90  100 1  0.5 | 0.1  0.1  01  0.2 | .0.2  1.2  0.2  0.5  0.5  0.5 - 0.5
-  Combined   :  المجموعة بتاع ال ايه. طلع لي ايه? خمسة وستين. خدوا بالكم Degrer of | Mesvbershjy | 9  10  20   0.1  30  40  50  60   0.2  70  80  90  100 1  0.5 | 0.1  0.1  01  0.2 | .0.2  1.2  0.2  0.5  0.5  0.5 - 0.5
-
-[00:18:15]
-  Transcript :  الارقام ايه غير معضة. يعني الطرق بتاعة بتفرق معي اللي
-  OCR        : None
-  Combined   :  الارقام ايه غير معضة. يعني الطرق بتاعة بتفرق معي اللي
-
-[00:18:26]
-  Transcript :  بتطلعه. على حسب الطريقة. طيب ايه الطريقة المفضلة? ايه?
-  OCR        : CentroidC1 0D30504 | CentroidC2  204060804 | CentroidC3 - 50701001004 80,
-  Combined   :  بتطلعه. على حسب الطريقة. طيب ايه الطريقة المفضلة? ايه? CentroidC1 0D30504 | CentroidC2  204060804 | CentroidC3 - 50701001004 80,
-
-[00:18:29]
-  Transcript :  ودي اللي انت برضو هتشتغلو بيه. يبقى في بتاعتي الدي فازي
-  OCR        : None
-  Combined   :  ودي اللي انت برضو هتشتغلو بيه. يبقى في بتاعتي الدي فازي
-
-[00:18:34]
-  Transcript :  فكيش المحتاج اعمل ان انا هحسب لفازي ستس اللي عندي. الستاب
-  OCR        : None
-  Combined   :  فكيش المحتاج اعمل ان انا هحسب لفازي ستس اللي عندي. الستاب
-
-[00:18:40]
-  Transcript :  الطاية ان انا ايه اجمع على حسب دي.
-  OCR        : None
-  Combined   :  الطاية ان انا ايه اجمع على حسب دي.
-
-[00:18:48]
-  Transcript : None
-  OCR        : Example | Given a stock market with varlables.: | Opening price Op | Previous day price Pdlp | Closing price Cp | From the domcin eagerts, it is known tat: | Pdp has 3 fuzzy sets L, M, H range 0 - 100 | Op has 3 furzy sets L, M, H range 0 - 100 | Cp has 5 fluzzy sets VL, L, M, H, VH range 0 - 100 | With the foillowing rules: | R1: If OpL, AND PdpL THEN CpVL | R2: If OpcL OR Pdp L THEN CgcL | R3: If OpM AND PdpNOTH THEN CpM | R4: If OpH OR PdpH THEN CpH | R5: If OpAND PtpHl THEN CpVH | Using triangular membership function, Predict | the Cp for Op  30 and Pdp90 ?
-  Combined   : Example | Given a stock market with varlables.: | Opening price Op | Previous day price Pdlp | Closing price Cp | From the domcin eagerts, it is known tat: | Pdp has 3 fuzzy sets L, M, H range 0 - 100 | Op has 3 furzy sets L, M, H range 0 - 100 | Cp has 5 fluzzy sets VL, L, M, H, VH range 0 - 100 | With the foillowing rules: | R1: If OpL, AND PdpL THEN CpVL | R2: If OpcL OR Pdp L THEN CgcL | R3: If OpM AND PdpNOTH THEN CpM | R4: If OpH OR PdpH THEN CpH | R5: If OpAND PtpHl THEN CpVH | Using triangular membership function, Predict | the Cp for Op  30 and Pdp90 ?
-
-[00:18:58]
-  Transcript :  Data Lab data
-  OCR        : CentroidC1  0030504 | CentroidC2  204060-804 | CentroidC3 - 50701001004
-  Combined   :  Data Lab data CentroidC1  0030504 | CentroidC2  204060-804 | CentroidC3 - 50701001004
-
-[00:19:05]
-  Transcript :  في البداية نحن نقوم بعمل شيء مثل الفاظي فاظي فاظي فاظي فاظي دي اللي نحن نحدد مكانها فيه
-  OCR        : None
-  Combined   :  في البداية نحن نقوم بعمل شيء مثل الفاظي فاظي فاظي فاظي فاظي دي اللي نحن نحدد مكانها فيه
-
-[00:19:11]
-  Transcript :  كل نقطة مكانها فيه الوائي بتاعها ده اللي بيقابلك فيه ماشي
-  OCR        : None
-  Combined   :  كل نقطة مكانها فيه الوائي بتاعها ده اللي بيقابلك فيه ماشي
-
-[00:19:15]
-  Transcript :  او بس انت بقى في القصائي انت مش هتعمل مكانها فيه لان مش هيبقى فيه ورق وهترسم
-  OCR        : None
-  Combined   :  او بس انت بقى في القصائي انت مش هتعمل مكانها فيه لان مش هيبقى فيه ورق وهترسم
-
-[00:19:22]
-  Transcript :  مهمتها بتجيب degree of membership لكل input.
-  OCR        : None
-  Combined   :  مهمتها بتجيب degree of membership لكل input.
-
-[00:19:29]
-  Transcript :  degree of membership.
-  OCR        : None
-  Combined   :  degree of membership.
-
-[00:19:32]
-  Transcript :  الـ degree of membership دي لقى في الخطة بتاعت الفوزيفاي دي صح؟
-  OCR        : None
-  Combined   :  الـ degree of membership دي لقى في الخطة بتاعت الفوزيفاي دي صح؟
-
-[00:19:36]
-  Transcript :  او.
-  OCR        : None
-  Combined   :  او.
-
-[00:19:41]
-  Transcript :  يعني دلالة تمام دي بتاع الخطة بتاعت الفوزيفاي.
-  OCR        : None
-  Combined   :  يعني دلالة تمام دي بتاع الخطة بتاعت الفوزيفاي.
-
-[00:19:44]
-  Transcript :  انما بعد كده بنقدر نشوف الليه خطة بتاعت اللوجيك دي على اساس الجملة اللي حدد لك.
-  OCR        : None
-  Combined   :  انما بعد كده بنقدر نشوف الليه خطة بتاعت اللوجيك دي على اساس الجملة اللي حدد لك.
-
-[00:19:49]
-  Transcript :  هتدهلنا بقى ولا تتحدد ازاي بقى.
-  OCR        : None
-  Combined   :  هتدهلنا بقى ولا تتحدد ازاي بقى.
-
-[00:19:51]
-  Transcript :  كما أقول لكم سأعطيكم برده
-  OCR        : None
-  Combined   :  كما أقول لكم سأعطيكم برده
-
-[00:19:55]
-  Transcript :  لأن الرؤوس في الأصل يضعها
-  OCR        : None
-  Combined   :  لأن الرؤوس في الأصل يضعها
-
-[00:20:00]
-  Transcript :  في البروبلم في الدومين بتاع البروبلم او بتتعامل بالنيوران
-  OCR        : None
-  Combined   :  في البروبلم في الدومين بتاع البروبلم او بتتعامل بالنيوران
-
-[00:20:04]
-  Transcript :  ناترك او بالجيناتك امفر فانا هديها لكم. دكتور ما عليش هواح
-  OCR        : None
-  Combined   :  ناترك او بالجيناتك امفر فانا هديها لكم. دكتور ما عليش هواح
-
-[00:20:09]
-  Transcript :  نفس الانترويد اللي هنا دولة حسبوا جابوا مينة? مجموعة النقط
-  OCR        : None
-  Combined   :  نفس الانترويد اللي هنا دولة حسبوا جابوا مينة? مجموعة النقط
-
-[00:20:15]
-  Transcript :  بتاعة الفازي ست على عدد النقط. مجموعة النقط اللي كانت نحققها
-  OCR        : None
-  Combined   :  بتاعة الفازي ست على عدد النقط. مجموعة النقط اللي كانت نحققها
-
-[00:20:21]
-  Transcript :  ايه بالزبط? مجموعة النقط اللي رسمنا بها الفازي ست. اه اوكي
-  OCR        : None
-  Combined   :  ايه بالزبط? مجموعة النقط اللي رسمنا بها الفازي ست. اه اوكي
-
-[00:20:27]
-  Transcript :  هل هو الشيف نفسه؟
-  OCR        : None
-  Combined   :  هل هو الشيف نفسه؟
-
-[00:20:30]
-  Transcript :  اوه الشيف نفسه
-  OCR        : None
-  Combined   :  اوه الشيف نفسه
-
-[00:20:36]
-  Transcript :  لا اعرف يا دكتور لا اعرف بس
-  OCR        : None
-  Combined   :  لا اعرف يا دكتور لا اعرف بس
-
-[00:20:39]
-  Transcript :  النت كان فيه مشكلة بس
-  OCR        : None
-  Combined   :  النت كان فيه مشكلة بس
-
-[00:20:42]
-  Transcript :  هذه الخطوة التي احنا منحقدت مكانها
-  OCR        : None
-  Combined   :  هذه الخطوة التي احنا منحقدت مكانها
-
-[00:20:47]
-  Transcript :  مكانها على الوعي
-  OCR        : None
-  Combined   :  مكانها على الوعي
-
-[00:20:50]
-  Transcript :  ايو
-  OCR        : None
-  Combined   :  ايو
-
-[00:20:52]
-  Transcript : 
-  OCR        : None
-  Combined   : 
-
-[00:21:08]
-  Transcript :  اوه الـ افاق بنابات العودة رول ايضا لن في التفاصيل ايضا لكي هنا
-  OCR        : None
-  Combined   :  اوه الـ افاق بنابات العودة رول ايضا لن في التفاصيل ايضا لكي هنا
-
-[00:21:12]
-  Transcript :  يعني ابتدي صوت كنون التفاصيل احدى التفاصيل ايضا به لو هو في الفازي ما يسبق الفلانية فاجيب وضع الى
-  OCR        : None
-  Combined   :  يعني ابتدي صوت كنون التفاصيل احدى التفاصيل ايضا به لو هو في الفازي ما يسبق الفلانية فاجيب وضع الى
-
-[00:21:20]
-  Transcript :  عند ولا اور مع فازي ست تانية اروح اجيب التجريه في ممبرشاب
-  OCR        : None
-  Combined   :  عند ولا اور مع فازي ست تانية اروح اجيب التجريه في ممبرشاب
-
-[00:21:24]
-  Transcript :  واشوف الرقمين هاخد منهم الميليممم ولا الماكسيم
-  OCR        : None
-  Combined   :  واشوف الرقمين هاخد منهم الميليممم ولا الماكسيم
-
-[00:21:28]
-  Transcript :  ولا هاخد الرقم زي ما هو
-  OCR        : None
-  Combined   :  ولا هاخد الرقم زي ما هو
-
-[00:21:30]
-  Transcript :  لما هو الواحد ما فيش كناكتر
-  OCR        : None
-  Combined   :  لما هو الواحد ما فيش كناكتر
-
-[00:21:34]
-  Transcript :  ماشي تمام تمام يا دكتور
-  OCR        : None
-  Combined   :  ماشي تمام تمام يا دكتور
-
-[00:21:36]
-  Transcript :  وبعد ما احنا عملنا الانفلنس
-  OCR        : None
-  Combined   :  وبعد ما احنا عملنا الانفلنس
-
-[00:21:38]
-  Transcript :  بنبتدي ان احنا نعمل خططة
-  OCR        : None
-  Combined   :  بنبتدي ان احنا نعمل خططة
-
-[00:21:41]
-  Transcript :  ديفوزي
-  OCR        : None
-  Combined   :  ديفوزي
-
-[00:21:44]
-  Transcript :  ديفوزي فيكيشن
-  OCR        : None
-  Combined   :  ديفوزي فيكيشن
-
-[00:21:47]
-  Transcript :  ايه
-  OCR        : None
-  Combined   :  ايه
-
-[00:21:49]
-  Transcript :  نحن نحصل اللي هي الويتد مين او نشوف التكامل الحطة الوردي صح؟
-  OCR        : None
-  Combined   :  نحن نحصل اللي هي الويتد مين او نشوف التكامل الحطة الوردي صح؟
-
-[00:21:54]
-  Transcript :  نحسن بتاعة الفوزي ستس بتاعة الاوكت
-  OCR        : None
-  Combined   :  نحسن بتاعة الفوزي ستس بتاعة الاوكت
-
-[00:22:00]
-  Transcript :  اه. دي بنحسب الـSyndroids وبندربها في الأرقام اللي هي طالعة من Logic. أو من A inference يعني. صح؟
-  OCR        : None
-  Combined   :  اه. دي بنحسب الـSyndroids وبندربها في الأرقام اللي هي طالعة من Logic. أو من A inference يعني. صح؟
-
-[00:22:08]
-  Transcript :  او بنعمل الـ Equation بقى. بنعمل على اللون توسط يعني. تمام. طب مالش يا دكتور اللي بنعمل.
-  OCR        : None
-  Combined   :  او بنعمل الـ Equation بقى. بنعمل على اللون توسط يعني. تمام. طب مالش يا دكتور اللي بنعمل.
-
-[00:22:14]
-  Transcript :  اللي بنعمل هي عالتكامل دي دي حاجة شبه اللي هي زي Normal Distribution أو حاجة زي الـ Bable T-Dainisty Function
-  OCR        : None
-  Combined   :  اللي بنعمل هي عالتكامل دي دي حاجة شبه اللي هي زي Normal Distribution أو حاجة زي الـ Bable T-Dainisty Function
-
-[00:22:21]
-  Transcript :  الحاجة كده التكامل بتاعها كله بواحد لو هي جمعت كلها فاحنا نمتدي نشوف هي واضح نسبة قد ايه زي
-  OCR        : None
-  Combined   :  الحاجة كده التكامل بتاعها كله بواحد لو هي جمعت كلها فاحنا نمتدي نشوف هي واضح نسبة قد ايه زي
-
-[00:22:27]
-  Transcript :  انا لديت لك اكوشن بدلا لما تعمل انا وردها لك بالحسابات. بدلا لما
-  OCR        : None
-  Combined   :  انا لديت لك اكوشن بدلا لما تعمل انا وردها لك بالحسابات. بدلا لما
-
-[00:22:33]
-  Transcript :  تعمل الاكوشن لو انت عايز تعملها بالحساب. اه هتعملها زي ايه?
-  OCR        : None
-  Combined   :  تعمل الاكوشن لو انت عايز تعملها بالحساب. اه هتعملها زي ايه?
-
-[00:22:38]
-  Transcript :  التكابل اللي هو الايه? المساحة تحت الكيرف. تمام? فاحنا بنجمع هو
-  OCR        : None
-  Combined   :  التكابل اللي هو الايه? المساحة تحت الكيرف. تمام? فاحنا بنجمع هو
-
-[00:22:45]
-  Transcript :  المساحة لتحت الكيرف. فانا جمعتها لك بالطريقة الثانية. الهدف ان انا
-  OCR        : None
-  Combined   :  المساحة لتحت الكيرف. فانا جمعتها لك بالطريقة الثانية. الهدف ان انا
-
-[00:22:49]
-  Transcript :  بوريك ان انا المختلفة هتطلع لي ارقام مختلفة.
-  OCR        : None
-  Combined   :  بوريك ان انا المختلفة هتطلع لي ارقام مختلفة.
-
-[00:22:56]
-  Transcript :  تمام? ده الهدف. او طبعا او طبعا او طبعا. مش نفس
-  OCR        : None
-  Combined   :  تمام? ده الهدف. او طبعا او طبعا او طبعا. مش نفس
-
-[00:23:03]
-  Transcript :  والنفس. تمام. تمام. اي سؤال يا شغف? اه كده انا شرحت لكم كل
-  OCR        : None
-  Combined   :  والنفس. تمام. تمام. اي سؤال يا شغف? اه كده انا شرحت لكم كل
-
-[00:23:15]
-  Transcript :  حيجة ممكن تستخدموها في وده عمتا يعني الهدف
+[00:13:25]
+  Transcript :  Take care.
   OCR        : None
-  Combined   :  حيجة ممكن تستخدموها في وده عمتا يعني الهدف
+  Combined   :  Take care.
 
