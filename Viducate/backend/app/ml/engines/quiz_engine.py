@@ -100,7 +100,9 @@ RULES:
 5. explanation: one sentence explaining why the answer is correct.
 6. video_timestamp: estimate the second in the segment where this topic is covered.
    The segment starts at {segment_start_time} seconds. Use values within the segment range.
-7. Return ONLY a valid JSON array, no markdown, no extra text.
+7. concept: a short concept or skill being tested
+   (e.g. "Gradient Descent", "Binary Search", "Photosynthesis").
+8. Return ONLY a valid JSON array, no markdown, no extra text.
 IMPORTANT: Do NOT generate questions about:
 - Video introduction or opening remarks (greetings, announcements, "today we will...")
 - Video conclusions, closing remarks, or "see you next time" content
@@ -119,7 +121,8 @@ Format:
     "correct_answer": "a",
     "correct_answer_text": "...",
     "explanation": "...",
-    "video_timestamp": {segment_start_time}
+    "video_timestamp": {segment_start_time},
+    "concept": "Name of the main concept tested by this question"
   }}
 ]"""
 
@@ -165,7 +168,8 @@ RULES:
 5. explanation: one sentence explaining why the answer is correct.
 6. video_timestamp: the second in the video where this topic is covered (use segment start_time).
 7. segment_number: which segment (1, 2, 3…) this question belongs to.
-8. Return ONLY a valid JSON array, no markdown, no extra text.
+8. concept: short concept or skill tested.
+9. Return ONLY a valid JSON array, no markdown, no extra text.
 IMPORTANT: Do NOT generate questions about:
 - Video introduction or opening remarks (greetings, announcements, "today we will...")
 - Video conclusions, closing remarks, or "see you next time" content
@@ -185,7 +189,8 @@ Format:
     "correct_answer": "a",
     "correct_answer_text": "...",
     "explanation": "...",
-    "video_timestamp": 0
+    "video_timestamp": 0,
+    "concept": "Name of the main concept tested by this question"
   }}
 ]"""
 
@@ -258,7 +263,7 @@ def _call_groq_with_retry(client: Groq, prompt: str, max_retries: int = 3) -> st
 
 REQUIRED_KEYS = [
     "question_text", "choice_a", "choice_b", "choice_c", "choice_d",
-    "correct_answer", "correct_answer_text",
+    "correct_answer", "correct_answer_text", "concept"
 ]
 
 

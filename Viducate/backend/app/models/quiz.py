@@ -43,6 +43,7 @@ class QuizQuestion(Base):
     video_timestamp = Column(Integer, nullable=True)     # seconds 
     timestamp_label = Column(String(12), nullable=True)  # "00:02:35"
     created_at = Column(TIMESTAMP, server_default=func.now())
+    concept = Column(String(255), nullable=True)
 
     quiz = relationship("Quiz", back_populates="questions")
     segment = relationship("TopicSegment")

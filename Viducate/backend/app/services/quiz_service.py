@@ -42,6 +42,7 @@ def _build_question_response(q: QuizQuestion) -> dict:
         "video_timestamp":     q.video_timestamp,
         "timestamp_label":     q.timestamp_label,
         "segment_id":          q.segment_id,
+        "concept":             q.concept,
     }
 
 
@@ -229,6 +230,7 @@ class QuizService:
                 "explanation":         q.get("explanation"),
                 "video_timestamp":     ts,
                 "timestamp_label":     _format_seconds(int(ts)),
+                "concept":             q.get("concept"),
             })
 
         self.quiz_repo.bulk_create_questions(question_rows)
@@ -371,6 +373,7 @@ class QuizService:
                 "explanation":         q.get("explanation"),
                 "video_timestamp":     int(ts),
                 "timestamp_label":     _format_seconds(int(ts)),
+                "concept":             q.get("concept"),
             })
 
         self.quiz_repo.bulk_create_questions(question_rows)

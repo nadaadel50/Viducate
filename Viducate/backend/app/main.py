@@ -19,7 +19,7 @@ from app.api.v1.endpoints.studynotes import router as studynotes_router
 from app.api.v1.endpoints.export import router as export_router
 from app.api.v1.endpoints.dashboard import router as dashboard_router
 from app.api.v1.endpoints.profile import router as profile_router
-
+from app.api.v1.endpoints.report import router as report_router
 
 
 import asyncio
@@ -70,7 +70,7 @@ app.include_router(studynotes_router, prefix="/api/v1")
 app.include_router(export_router, prefix="/api/v1")
 app.include_router(dashboard_router, prefix="/api/v1")
 app.include_router(profile_router, prefix="/api/v1")
-
+app.include_router(report_router, prefix="/api/v1")
 
 
 @app.get("/", tags=["Health"])
