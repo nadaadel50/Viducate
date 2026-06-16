@@ -247,6 +247,8 @@ class VideoService:
         for segment in video.segments:
             if segment.segment_id in request.completed_segment_ids:
                 segment.is_completed = True
+            else:
+                segment.is_completed = False  
 
         video.bookmarks = request.bookmarks
 

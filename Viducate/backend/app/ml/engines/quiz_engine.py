@@ -10,10 +10,42 @@ logger = logging.getLogger(__name__)
 MODEL = "llama-3.3-70b-versatile"
 
 DIFFICULTY_CONFIGS = {
-    "easy":   {"num_questions": 5,  "description": "basic recall and definition questions"},
-    "medium": {"num_questions": 7,  "description": "understanding and application questions"},
-    "hard":   {"num_questions": 10, "description": "analysis, evaluation, and synthesis questions"},
+    "easy":   {"description": "basic recall and definition questions",   "subtopics_multiplier": 1.0},
+    "medium": {"description": "understanding and application questions", "subtopics_multiplier": 1.5},
+    "hard":   {"description": "analysis, evaluation, and synthesis questions", "subtopics_multiplier": 2.0},
 }
+
+SEGMENT_MIN_QUESTIONS = 3
+SEGMENT_MAX_QUESTIONS = 10
+VIDEO_MAX_QUESTIONS   = 30
+
+
+def _calc_segment_questions(num_subtopics: int, duration_seconds: int, difficulty: str) -> int:
+    """
+    Dynamically calculates how many questions to generate for a segment.
+    Base: 1 question per subtopic, scaled by difficulty multiplier.
+    Also adds 1 question per every 2 minutes of content.
+    Clamped between SEGMENT_MIN_QUESTIONS and SEGMENT_MAX_QUESTIONS.
+    """
+    multiplier  = DIFFICULTY_CONFIGS[difficulty]["subtopics_multiplier"]
+    base        = round(num_subtopics * multiplier)
+    time_bonus  = duration_seconds // 120          # +1 per 2 minutes
+    total       = base + time_bonus
+    return max(SEGMENT_MIN_QUESTIONS, min(SEGMENT_MAX_QUESTIONS, total))
+
+
+def _calc_video_questions(segments: list[dict], difficulty: str) -> int:
+    """
+    Dynamically calculates total questions for a full-video quiz.
+    Sums estimated questions per segment, capped at VIDEO_MAX_QUESTIONS.
+    """
+    total = 0
+    for seg in segments:
+        num_subtopics   = len(seg.get("subtopics", []))
+        duration        = seg.get("end_time", 0) - seg.get("start_time", 0)
+        total          += _calc_segment_questions(num_subtopics, duration, difficulty)
+    return min(VIDEO_MAX_QUESTIONS, total)
+
 
 
 def _get_client() -> Groq:
@@ -68,7 +100,15 @@ RULES:
 5. explanation: one sentence explaining why the answer is correct.
 6. video_timestamp: estimate the second in the segment where this topic is covered.
    The segment starts at {segment_start_time} seconds. Use values within the segment range.
-7. Return ONLY a valid JSON array, no markdown, no extra text.
+7. concept: a short concept or skill being tested
+   (e.g. "Gradient Descent", "Binary Search", "Photosynthesis").
+8. Return ONLY a valid JSON array, no markdown, no extra text.
+IMPORTANT: Do NOT generate questions about:
+- Video introduction or opening remarks (greetings, announcements, "today we will...")
+- Video conclusions, closing remarks, or "see you next time" content
+- Administrative content like "subscribe", "like", "homework reminders"
+- Meta-content about the lesson structure itself
+Only generate questions about the ACTUAL educational content.
 
 Format:
 [
@@ -81,7 +121,8 @@ Format:
     "correct_answer": "a",
     "correct_answer_text": "...",
     "explanation": "...",
-    "video_timestamp": {segment_start_time}
+    "video_timestamp": {segment_start_time},
+    "concept": "Name of the main concept tested by this question"
   }}
 ]"""
 
@@ -127,7 +168,14 @@ RULES:
 5. explanation: one sentence explaining why the answer is correct.
 6. video_timestamp: the second in the video where this topic is covered (use segment start_time).
 7. segment_number: which segment (1, 2, 3…) this question belongs to.
-8. Return ONLY a valid JSON array, no markdown, no extra text.
+8. concept: short concept or skill tested.
+9. Return ONLY a valid JSON array, no markdown, no extra text.
+IMPORTANT: Do NOT generate questions about:
+- Video introduction or opening remarks (greetings, announcements, "today we will...")
+- Video conclusions, closing remarks, or "see you next time" content
+- Administrative content like "subscribe", "like", "homework reminders"
+- Meta-content about the lesson structure itself
+Only generate questions about the ACTUAL educational content.
 
 Format:
 [
@@ -141,7 +189,8 @@ Format:
     "correct_answer": "a",
     "correct_answer_text": "...",
     "explanation": "...",
-    "video_timestamp": 0
+    "video_timestamp": 0,
+    "concept": "Name of the main concept tested by this question"
   }}
 ]"""
 
@@ -214,7 +263,7 @@ def _call_groq_with_retry(client: Groq, prompt: str, max_retries: int = 3) -> st
 
 REQUIRED_KEYS = [
     "question_text", "choice_a", "choice_b", "choice_c", "choice_d",
-    "correct_answer", "correct_answer_text",
+    "correct_answer", "correct_answer_text", "concept"
 ]
 
 
@@ -225,13 +274,10 @@ def generate_segment_quiz(
     difficulty: str,
     language: str,
     segment_start_time: int,
+    segment_end_time: int = 0,     
 ) -> list[dict]:
-    """
-    Generates MCQ questions for a single segment.
-    Returns a list of validated question dicts.
-    No caching — always fresh.
-    """
-    num_q = DIFFICULTY_CONFIGS.get(difficulty, DIFFICULTY_CONFIGS["medium"])["num_questions"]
+    duration = max(0, segment_end_time - segment_start_time)
+    num_q    = _calc_segment_questions(len(subtopics), duration, difficulty)
 
     prompt = _build_segment_prompt(
         segment_title=segment_title,
@@ -256,6 +302,17 @@ def generate_segment_quiz(
         return []
 
     questions = _parse_and_validate(raw, REQUIRED_KEYS)
+    # enforce max limit
+    questions = questions[:10]
+
+    # enforce min quality threshold
+    if len(questions) < 3:
+        logger.warning(
+            f"[QuizEngine] Too few valid questions ({len(questions)}) for segment '{segment_title}'"
+        )
+        return []  # or trigger retry logic
+    
+
     logger.info(f"[QuizEngine] Got {len(questions)} valid questions for segment '{segment_title}'")
     return questions
 
@@ -273,8 +330,8 @@ def generate_video_quiz(
 
     For long videos (>5 segments) we split into chunks and merge.
     """
-    questions_per_segment = 2 if difficulty == "easy" else 3 if difficulty == "medium" else 4
-
+    total_target          = _calc_video_questions(segments, difficulty)
+    questions_per_segment = max(1, total_target // max(len(segments), 1))
     # Split into chunks of 4 segments to avoid token limits
     CHUNK_SIZE = 4
     all_questions: list[dict] = []
@@ -303,6 +360,8 @@ def generate_video_quiz(
             continue
 
         chunk_questions = _parse_and_validate(raw, REQUIRED_KEYS + ["segment_number"])
+        chunk_questions = chunk_questions[:10]
+
         all_questions.extend(chunk_questions)
 
         # Rate-limit pause between chunks
@@ -310,4 +369,11 @@ def generate_video_quiz(
             time.sleep(3)
 
     logger.info(f"[QuizEngine] Total questions generated for video: {len(all_questions)}")
+    if len(all_questions) > 30:
+        logger.warning(
+            f"[QuizEngine] Clamping video quiz from {len(all_questions)} to 30 questions"
+        )
+        all_questions = all_questions[:30]
+
+        
     return all_questions

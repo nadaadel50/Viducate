@@ -13,6 +13,7 @@ bcrypt==4.0.1
 blinker==1.9.0
 boto3==1.42.49
 botocore==1.42.68
+brotli==1.2.0
 build==1.4.3
 certifi==2026.1.4
 cffi==2.0.0
@@ -24,6 +25,7 @@ colorama==0.4.6
 coloredlogs==15.0.1
 colorlog==6.10.1
 cryptography==46.0.5
+cssselect2==0.9.0
 distro==1.9.0
 dnspython==2.8.0
 durationpy==0.10
@@ -35,6 +37,7 @@ fastapi-mail==1.6.2
 ffmpeg-python==0.2.0
 filelock==3.25.0
 flatbuffers==25.12.19
+fonttools==4.63.0
 fsspec==2026.2.0
 future==1.0.0
 google-ai-generativelanguage==0.6.15
@@ -42,7 +45,7 @@ google-api-core==2.30.3
 google-api-python-client==2.194.0
 google-auth==2.49.2
 google-auth-httplib2==0.3.1
-google-genai==1.72.0
+google-genai==2.2.0
 google-generativeai==0.8.6
 googleapis-common-protos==1.74.0
 greenlet==3.3.2
@@ -119,10 +122,12 @@ pydantic==2.12.5
 pydantic-settings==2.13.1
 pydantic_core==2.41.5
 pydub==0.25.1
+pydyf==0.12.1
 Pygments==2.19.2
 PyMuPDF==1.27.2.2
 pyparsing==3.3.2
 pypdfium2==5.6.0
+pyphen==0.17.2
 PyPika==0.51.1
 pyproject_hooks==1.2.0
 pyreadline3==3.5.4
@@ -159,6 +164,8 @@ sympy==1.14.0
 tenacity==9.1.4
 threadpoolctl==3.6.0
 tiktoken==0.12.0
+tinycss2==1.5.1
+tinyhtml5==2.1.0
 tokenizers==0.22.2
 tomli==2.4.0
 torch==2.10.0
@@ -174,6 +181,8 @@ urllib3==2.6.3
 uvicorn==0.41.0
 watchfiles==1.1.1
 wcwidth==0.6.0
+weasyprint==68.1
+webencodings==0.5.1
 websocket-client==1.9.0
 websockets==16.0
 Werkzeug==3.1.6
@@ -183,3 +192,4 @@ zipp==3.23.1
 
 jinja2
 weasyprint
+zopfli==0.4.1

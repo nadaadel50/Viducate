@@ -8,6 +8,12 @@ from app.models.video import Video
 from app.models.content_preferences import ContentPreferences
 from app.ml.engines.flashcard_engine import generate_flashcards_for_segment
 
+from app.services.quality_service import (
+    score_feature_vs_segmentation,
+    extract_text_from_flashcards,
+)
+from app.services.quality_retry import run_with_quality_retry
+
 logger = logging.getLogger(__name__)
 
 # Cards generated per segment — keep low to save tokens
@@ -97,7 +103,8 @@ def process_flashcards(db: Session, video_id: int, user_id: int) -> None:
 
     # ── Resolve the correct language for this user + video ───────────────────
     language = _resolve_language(db, user_id, video_id, video.language or "en")
-
+    
+    db.expire_all()
     # ── If cached cards exist in wrong language → delete them all ────────────
     if not _cards_language_matches(db, video_id, language):
         deleted = (
@@ -158,36 +165,88 @@ def process_flashcards(db: Session, video_id: int, user_id: int) -> None:
             f"'{segment.title}' | subtopics={len(subtopics_data)} | lang={language}"
         )
 
-        # ── Call engine ───────────────────────────────────────────────────────
-        cards = generate_flashcards_for_segment(
-            segment_title=segment.title,
-            main_topic=segment.main_topic or segment.title,
-            subtopics=subtopics_data,
-            language=language,
-            num_cards=CARDS_PER_SEGMENT,
+
+
+         # ── Call engine with quality validation ───────────────────────────────
+        # REPLACE WITH (capture everything explicitly, add debug print):
+        _seg_id    = segment.segment_id
+        _seg_title = segment.title
+        _seg_topic = segment.main_topic or segment.title
+        _seg_ref   = segment  # explicit capture
+
+        logger.info(
+            f"[FlashcardProcessor] About to validate segment_id={_seg_id} "
+            f"title='{_seg_title}'"
         )
+
+        cards, quality = run_with_quality_retry(
+            generator_fn=lambda seg=_seg_ref, subs=subtopics_data: (
+                generate_flashcards_for_segment(
+                    segment_title=seg.title,
+                    main_topic=seg.main_topic or seg.title,
+                    subtopics=subs,
+                    language=language,
+                    num_cards=CARDS_PER_SEGMENT,
+                )
+            ),
+            score_fn=lambda result, seg=_seg_ref: score_feature_vs_segmentation(
+                feature_text=extract_text_from_flashcards(result),
+                segment=seg,
+                content_type="flashcard",
+            ),
+            label=f"flashcard segment_id={_seg_id}",
+        )
+        # ── End quality validation ────────────────────────────────────────────
 
         if not cards:
             logger.warning(
                 f"[FlashcardProcessor] No cards returned for segment "
-                f"{segment.segment_number} '{segment.title}' — skipping."
+                f"{segment.segment_number} '{segment.title}' — skipping"
+            )
+            continue
+ 
+        # ── Persist quality on the segment row ────────────────────────────────
+        # Take the maximum of any existing score (segmentation may have already
+        # written a score; we keep the higher of the two).
+        # ── Persist quality on the segment row ───────────────────────────────────
+        current_score = segment.quality_score or 0.0
+        new_score     = quality.get("score", 0.0)
+        segment.quality_score = max(current_score, new_score)
+        segment.quality_flag  = bool(quality.get("flag", False))
+        segment.retry_count   = (segment.retry_count or 0) + quality.get("retries", 0)
+
+        logger.info(
+            f"[FlashcardProcessor] VALIDATION COMPLETE | segment_id={segment.segment_id} | "
+            f"final_score={quality.get('score', 0.0):.4f} | "
+            f"flag={quality.get('flag')} | "
+            f"retries_used={quality.get('retries', 0)}"
+        )
+        if quality.get("flag"):
+            logger.warning(
+                f"[FlashcardProcessor]  Flashcard quality BELOW threshold "
+                f"(score={quality['score']:.4f} < {quality['threshold']}) "
+                f"after {quality.get('retries', 0) + 1} attempts — saving best result"
             )
         else:
-            # ── Save to DB ────────────────────────────────────────────────────
-            for card in cards:
-                db.add(Flashcard(
-                    segment_id=segment.segment_id,
-                    video_id=video_id,
-                    question=card["question"],
-                    answer=card["answer"],
-                    language=language,          # ← always store resolved language
-                    difficulty=card.get("difficulty", "medium"),
-                ))
-            db.flush()
             logger.info(
-                f"[FlashcardProcessor] Saved {len(cards)} cards for "
-                f"segment {segment.segment_number} in '{language}'"
+                f"[FlashcardProcessor]  Flashcard quality PASSED "
+                f"(score={quality['score']:.4f}) in {quality.get('retries', 0) + 1} attempt(s)"
             )
+
+        for card in cards:
+            db.add(Flashcard(
+                segment_id=segment.segment_id,
+                video_id=video_id,
+                question=card["question"],
+                answer=card["answer"],
+                language=language,
+                difficulty=card.get("difficulty", "medium"),
+            ))
+        db.flush()
+        logger.info(
+            f"[FlashcardProcessor] Saved {len(cards)} cards for "
+            f"segment {segment.segment_number} in '{language}'"
+        )
 
         # ── Rate limit protection ─────────────────────────────────────────────
         if idx < len(segments) - 1:

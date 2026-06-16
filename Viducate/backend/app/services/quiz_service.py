@@ -10,6 +10,12 @@ from app.repositories.quiz_repository import QuizRepository
 from app.repositories.video_repository import VideoRepository
 from app.ml.engines.quiz_engine import generate_segment_quiz, generate_video_quiz
 
+from app.services.quality_service import (
+    score_feature_vs_segmentation,
+    extract_text_from_quiz,
+)
+from app.services.quality_retry import run_with_quality_retry
+
 logger = logging.getLogger(__name__)
 
 
@@ -36,6 +42,7 @@ def _build_question_response(q: QuizQuestion) -> dict:
         "video_timestamp":     q.video_timestamp,
         "timestamp_label":     q.timestamp_label,
         "segment_id":          q.segment_id,
+        "concept":             q.concept,
     }
 
 
@@ -143,14 +150,25 @@ class QuizService:
             f"difficulty={difficulty} lang={language}"
         )
 
+
+
         
-        raw_questions = generate_segment_quiz(
-            segment_title=segment.title,
-            main_topic=segment.main_topic or segment.title,
-            subtopics=subtopics_data,
-            difficulty=difficulty,
-            language=language,
-            segment_start_time=segment.start_time,
+        raw_questions, quality = run_with_quality_retry(
+        generator_fn=lambda seg=segment, subs=subtopics_data: generate_segment_quiz(
+        segment_title=seg.title,
+        main_topic=seg.main_topic or seg.title,
+        subtopics=subs,
+        difficulty=difficulty,
+        language=language,
+        segment_start_time=seg.start_time,
+        segment_end_time=seg.end_time,     
+    ),
+        score_fn=lambda result, seg=segment: score_feature_vs_segmentation(
+            feature_text=extract_text_from_quiz(result),
+            segment=seg,
+            content_type="quiz",
+        ),
+        label=f"quiz segment_id={segment_id}",
         )
 
         if not raw_questions:
@@ -158,6 +176,34 @@ class QuizService:
                 status_code=status.HTTP_422_UNPROCESSABLE_ENTITY,
                 detail="Failed to generate quiz questions. Please try again.",
             )
+    
+        # Persist quality on the segment row
+        current_score = segment.quality_score or 0.0
+        segment.quality_score = max(current_score, quality.get("score", 0.0))
+        segment.quality_flag  = bool(quality.get("flag", False))
+        segment.retry_count   = (segment.retry_count or 0) + quality.get("retries", 0)
+        self.db.flush()
+ 
+        logger.info(
+            f"[QuizService] VALIDATION COMPLETE | segment_id={segment_id} | "
+            f"final_score={quality.get('score', 0.0):.4f} | "
+            f"flag={quality.get('flag')} | "
+            f"retries_used={quality.get('retries', 0)}"
+        )
+        if quality.get("flag"):
+            logger.warning(
+                f"[QuizService]  Segment quiz quality BELOW threshold "
+                f"(score={quality['score']:.4f} < {quality['threshold']}) "
+                f"after {quality.get('retries', 0) + 1} attempts — saving best result"
+            )
+        else:
+            logger.info(
+                f"[QuizService]  Segment quiz quality PASSED "
+                f"(score={quality['score']:.4f}) in {quality.get('retries', 0) + 1} attempt(s)"
+            )
+ 
+
+
 
         quiz = self.quiz_repo.create_quiz({
             "video_id":   video_id,
@@ -184,6 +230,7 @@ class QuizService:
                 "explanation":         q.get("explanation"),
                 "video_timestamp":     ts,
                 "timestamp_label":     _format_seconds(int(ts)),
+                "concept":             q.get("concept"),
             })
 
         self.quiz_repo.bulk_create_questions(question_rows)
@@ -250,12 +297,25 @@ class QuizService:
             f"segments={len(segments)} | difficulty={difficulty} | lang={language}"
         )
 
+
+
         
-        raw_questions = generate_video_quiz(
-            video_title=video.title,
-            segments=segments_data,
-            difficulty=difficulty,
-            language=language,
+         # Use the first segment as the quality reference for the whole quiz
+        reference_segment = segments[0]
+
+        raw_questions, quality = run_with_quality_retry(
+            generator_fn=lambda: generate_video_quiz(
+                video_title=video.title,
+                segments=segments_data,
+                difficulty=difficulty,
+                language=language,
+            ),
+            score_fn=lambda result, seg=reference_segment: score_feature_vs_segmentation(
+                feature_text=extract_text_from_quiz(result),
+                segment=seg,
+                content_type="quiz",
+            ),
+            label=f"video_quiz video_id={video_id}",
         )
 
         if not raw_questions:
@@ -263,6 +323,25 @@ class QuizService:
                 status_code=status.HTTP_422_UNPROCESSABLE_ENTITY,
                 detail="Failed to generate video quiz. Please try again.",
             )
+
+        logger.info(
+            f"[QuizService] VALIDATION COMPLETE | video_quiz video_id={video_id} | "
+            f"final_score={quality.get('score', 0.0):.4f} | "
+            f"flag={quality.get('flag')} | "
+            f"retries_used={quality.get('retries', 0)}"
+        )
+        if quality.get("flag"):
+            logger.warning(
+                f"[QuizService]  Video quiz quality BELOW threshold "
+                f"(score={quality['score']:.4f} < {quality['threshold']}) "
+                f"after {quality.get('retries', 0) + 1} attempts — saving best result"
+            )
+        else:
+            logger.info(
+                f"[QuizService]  Video quiz quality PASSED "
+                f"(score={quality['score']:.4f}) in {quality.get('retries', 0) + 1} attempt(s)"
+            )
+
 
         
         quiz = self.quiz_repo.create_quiz({
@@ -294,6 +373,7 @@ class QuizService:
                 "explanation":         q.get("explanation"),
                 "video_timestamp":     int(ts),
                 "timestamp_label":     _format_seconds(int(ts)),
+                "concept":             q.get("concept"),
             })
 
         self.quiz_repo.bulk_create_questions(question_rows)

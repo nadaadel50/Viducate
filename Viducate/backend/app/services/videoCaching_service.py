@@ -37,20 +37,31 @@ class VideoCachingServise:
      def check_cache(self, user_id: int, content_hash: str, title: str):
           user_video = self.video_repo.get_by_user_and_hash(user_id, content_hash)
           if user_video:
-               return {
-                    "cached": True,
-                    "same_user": True,
-                    "video_id": user_video.vid,
-                    "title": user_video.title,
-                    "url": user_video.url,
-                    "processing_status": user_video.processing_status,
-                    "language": user_video.language,
-                    "message": "You already processed this video",
-               }
+               if user_video.processing_status == "completed":
+                    return {
+                         "cached": True,
+                         "same_user": True,
+                         "video_id": user_video.vid,
+                         "title": user_video.title,
+                         "url": user_video.url,
+                         "processing_status": user_video.processing_status,
+                         "language": user_video.language,
+                         "message": "You already processed this video",
+                    }
+               else:
+                    # Same user + not completed → delete only their record and reprocess
+                    self.video_repo.delete(user_video.vid)
+                    logger.info(f"Deleted incomplete video for same user: vid={user_video.vid}, status={user_video.processing_status}")
+
 
           global_video = self.video_repo.get_by_hash(content_hash)
           if not global_video:
                return None  
+          
+          if global_video.processing_status != "completed":
+               # Another user is still processing this video → don't interfere
+               logger.info(f"Global video not completed yet: vid={global_video.vid}, status={global_video.processing_status}")
+               return None
 
           new_video = self.video_repo.create({
                "user_id": user_id,
