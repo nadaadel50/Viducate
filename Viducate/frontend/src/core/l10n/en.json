@@ -167,5 +167,56 @@
   "quiz.back_to_video": "Back to Video",
   "quiz.map_title": "Question Map",
   "quiz.go_to_watch": "Go TO Watch at {timestamp_label}",
-  "quiz.new_quiz": "New Quiz"
+  "quiz.new_quiz": "New Quiz",
+
+
+
+
+  
+  "report.topic.material.summary": "Summary",
+  "report.topic.material.studyNotes": "Study Notes",
+  "report.topic.material.quiz": "Quiz",
+  "report.topic.material.flashcards": "Flashcards ({count})",
+  "report.topic.score": "Score",
+  "report.topic.attempts": "{count} attempt(s)",
+  "report.topic.takeQuiz": "Need to take quiz",
+  "report.topic.progress": "Progress",
+  "report.topic.quizResults": "Quiz Results",
+  "report.topic.correctAnswers": "{score} correct answers out of {total}",
+  "report.topic.finishedWatching": "You've completed this lesson!",
+  "report.topic.quizReminder": "Take the quiz to see how well you've understood the topic.",
+  "report.topic.materialsPrepared": "Learning Materials",
+  "report.topic.needsMoreWork": "Needs More Practice",
+  "report.topic.mastered": "Excellent! You've mastered this topic.",
+
+  "report.overall.title": "Overall Learning Results",
+
+  "report.stats.videoProgress": "Video Progress",
+  "report.stats.watchedDuration": "{duration} watched",
+
+  "report.stats.quizAccuracy": "Quiz Accuracy",
+  "report.stats.correctAnswers": "{correct} / {total} correct",
+
+  "report.stats.flashcards": "Flashcards",
+  "report.stats.flashcardsCount": "{reviewed} / {total} cards",
+
+  "report.materials.title": "Learning Materials",
+
+  "report.materials.summary": "Summary",
+  "report.materials.studyNotes": "Study Notes",
+  "report.materials.quiz": "Video Quiz",
+
+  "report.topics.strong": "Strong Topics",
+  "report.topics.weak": "Needs More Practice",
+
+  "report.topicsBreakdown.title": "Topic-by-Topic Breakdown",
+  "report.topicsBreakdown.count": "{count} Topics",
+
+  
+  "report.hero.uploadedAt": "Uploaded {date} · {count} topics detected",
+  "report.hero.watchProgress": "Watch Progress",
+  "report.hero.watched": "{percent}% watched",
+  "report.hero.remaining": "{percent}% remaining",
+ "report.page.title": "Video Performance Report"
+
 }

@@ -168,5 +168,73 @@
   "quiz.back_to_video": "العودة لمشاهدة الفيديو",
   "quiz.map_title": "خريطة الأسئلة",
   "quiz.go_to_watch": "اذهب لمشاهدة عند {timestamp_label}",
-  "quiz.new_quiz": "اختبار جديد"
+  "quiz.new_quiz": "اختبار جديد" ,
+
+
+
+
+
+
+  
+  "report.topic.material.summary": "الملخص",
+  "report.topic.material.studyNotes": "ملاحظات المذاكرة",
+  "report.topic.material.quiz": "الاختبار",
+  "report.topic.material.flashcards": "البطاقات التعليمية ({count})",
+
+  "report.topic.score": "النتيجة",
+
+  "report.topic.attempts": "{count} محاولة",
+
+  "report.topic.takeQuiz": "تحتاج إلى إجراء الاختبار",
+
+  "report.topic.progress": "التقدم",
+
+  "report.topic.quizResults": "نتيجة الاختبار",
+
+  "report.topic.correctAnswers": "{score} إجابة صحيحة من أصل {total}",
+
+  "report.topic.finishedWatching": "أتممت دراسة هذا الدرس!",
+
+  "report.topic.quizReminder": "جرّب الاختبار لمعرفة مدى فهمك للموضوع.",
+
+  "report.topic.materialsPrepared": "المواد التعليمية",
+
+  "report.topic.needsMoreWork": "يحتاج إلى مراجعة أكثر",
+
+  "report.topic.mastered": "ممتاز! لقد أتقنت هذا الموضوع.",
+
+
+
+  
+  "report.overall.title": "نتائج التعلم",
+
+  "report.stats.videoProgress": "تقدم المشاهدة",
+  "report.stats.watchedDuration": "تمت مشاهدة {duration}",
+
+  "report.stats.quizAccuracy": "دقة الاختبار",
+  "report.stats.correctAnswers": "{correct} من {total} صحيحة",
+
+  "report.stats.flashcards": "البطاقات التعليمية",
+  "report.stats.flashcardsCount": "{reviewed} من {total}",
+
+  "report.materials.title": "المواد التعليمية",
+
+  "report.materials.summary": "الملخص",
+  "report.materials.studyNotes": "ملاحظات المذاكرة",
+  "report.materials.quiz": "اختبار الفيديو",
+
+  "report.topics.strong": "نقاط القوة",
+  "report.topics.weak": "يحتاج إلى مراجعة أكثر",
+
+  "report.topicsBreakdown.title": "تفاصيل الموضوعات",
+  "report.topicsBreakdown.count": "{count} موضوع",
+
+
+  
+  "report.hero.uploadedAt": "تم رفعه في {date} · تم اكتشاف {count} موضوع",
+  "report.hero.watchProgress": "تقدم المشاهدة",
+  "report.hero.watched": "تمت مشاهدة {percent}%",
+  "report.hero.remaining": "متبقي {percent}%",
+  "report.page.title": "تقرير أداء الفيديو"
+
 }
