@@ -24,6 +24,8 @@ import { PublicRoute } from "./publicRoutes";
 import MindMapPage from "../../features/mindMap/presentation/pages/mindMap_page";
 import{ProfilePage} from "../../features/Profile/presentation/pages/profile_page";
 import { ProfileProvider } from "../../features/Profile/presentation/context/profile_provider";
+import { DashboardProvider } from "../../features/dashboard/presentaion/context/dashboard_provider";
+import { DashboardPage } from "../../features/dashboard/presentaion/pages/dashboard_page";
 export function AppRoutes() {
   return (
     <BrowserRouter>
