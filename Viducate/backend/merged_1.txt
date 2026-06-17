@@ -1,6 +1,7 @@
 <<<<<<< HEAD
 =======
 [00:00:00]
+<<<<<<< HEAD
   Transcript :  Every day, we all are doing a mod-12 operation without even knowing that we are doing this mod-12 operation.
   OCR        : None
   Combined   :  Every day, we all are doing a mod-12 operation without even knowing that we are doing this mod-12 operation.
@@ -609,6 +610,1161 @@
   Transcript :  congruence. Then 5 is congruent to 0 mod 5. That is 5 when it is divided by 5, we get 0 as the
   OCR        : None
   Combined   :  congruence. Then 5 is congruent to 0 mod 5. That is 5 when it is divided by 5, we get 0 as the
+=======
+  Transcript :  Hello everyone, my name is Abhishek and welcome back to my channel.
+  OCR        : None
+  Combined   :  Hello everyone, my name is Abhishek and welcome back to my channel.
+
+[00:00:05]
+  Transcript :  Just imagine this, what if you can learn AWS Azure Google Cloud Platform without paying
+  OCR        : None
+  Combined   :  Just imagine this, what if you can learn AWS Azure Google Cloud Platform without paying
+
+[00:00:12]
+  Transcript :  for the services that you are using, without creating an account with these cloud platforms
+  OCR        : None
+  Combined   :  for the services that you are using, without creating an account with these cloud platforms
+
+[00:00:17]
+  Transcript :  and most importantly, without sharing your credit card information.
+  OCR        : None
+  Combined   :  and most importantly, without sharing your credit card information.
+
+[00:00:22]
+  Transcript :  Wouldn't that be awesome?
+  OCR        : None
+  Combined   :  Wouldn't that be awesome?
+
+[00:00:23]
+  Transcript :  Yes.
+  OCR        : None
+  Combined   :  Yes.
+
+[00:00:23]
+  Transcript :  In today's video, I'll show you how you can emulate these cloud providers
+  OCR        : None
+  Combined   :  In today's video, I'll show you how you can emulate these cloud providers
+
+[00:00:29]
+  Transcript :  so that you don't have to create an account with them
+  OCR        : None
+  Combined   :  so that you don't have to create an account with them
+
+[00:00:31]
+  Transcript :  and you can run everything on your local machine.
+  OCR        : None
+  Combined   :  and you can run everything on your local machine.
+
+[00:00:35]
+  Transcript :  All that you need is just Docker running on your machine.
+  OCR        : None
+  Combined   :  All that you need is just Docker running on your machine.
+
+[00:00:39]
+  Transcript :  That's it.
+  OCR        : None
+  Combined   :  That's it.
+
+[00:00:41]
+  Transcript :  Now, you might have this question,
+  OCR        : None
+  Combined   :  Now, you might have this question,
+
+[00:00:42]
+  Transcript :  but Abhishek, why is this important?
+  OCR        : None
+  Combined   :  but Abhishek, why is this important?
+
+[00:00:44]
+  Transcript :  I can just create an account with cloud.
+  OCR        : None
+  Combined   :  I can just create an account with cloud.
+
+[00:00:46]
+  Transcript :  The problem today is that,
+  OCR        : None
+  Combined   :  The problem today is that,
+
+[00:00:48]
+  Transcript :  now if you go three years or four years before,
+  OCR        : None
+  Combined   :  now if you go three years or four years before,
+
+[00:00:51]
+  Transcript :  when you create an account with cloud,
+  OCR        : None
+  Combined   :  when you create an account with cloud,
+
+[00:00:53]
+  Transcript :  you get one year free trial on AWS Azure and GCP But the problem today you only get of free credits You will end up using these free credits in no time And then your cloud account moves to pay
+  OCR        : None
+  Combined   :  you get one year free trial on AWS Azure and GCP But the problem today you only get of free credits You will end up using these free credits in no time And then your cloud account moves to pay
+
+[00:01:08]
+  Transcript :  as you go model. So if you use some services, either your account will be suspended or you will
+  OCR        : None
+  Combined   :  as you go model. So if you use some services, either your account will be suspended or you will
+
+[00:01:14]
+  Transcript :  be billed on your credit card. This is a reason why a lot of people today, they back out learning
+  OCR        : None
+  Combined   :  be billed on your credit card. This is a reason why a lot of people today, they back out learning
+
+[00:01:20]
+  Transcript :  cloud. They just watch some theory
+  OCR        : None
+  Combined   :  cloud. They just watch some theory
+
+[00:01:22]
+  Transcript :  videos but when it comes to practicals
+  OCR        : None
+  Combined   :  videos but when it comes to practicals
+
+[00:01:24]
+  Transcript :  they skip the practical part.
+  OCR        : None
+  Combined   :  they skip the practical part.
+
+[00:01:26]
+  Transcript :  The emulation that
+  OCR        : None
+  Combined   :  The emulation that
+
+[00:01:28]
+  Transcript :  we are going to learn today.
+  OCR        : None
+  Combined   :  we are going to learn today.
+
+[00:01:30]
+  Transcript :  So you can run all
+  OCR        : None
+  Combined   :  So you can run all
+
+[00:01:32]
+  Transcript :  those AWS commands. You can create
+  OCR        : None
+  Combined   :  those AWS commands. You can create
+
+[00:01:34]
+  Transcript :  all those AWS services but
+  OCR        : None
+  Combined   :  all those AWS services but
+
+[00:01:36]
+  Transcript :  everything is running on your local
+  OCR        : None
+  Combined   :  everything is running on your local
+
+[00:01:38]
+  Transcript :  machine. Not only AWS, Azure
+  OCR        : None
+  Combined   :  machine. Not only AWS, Azure
+
+[00:01:40]
+  Transcript :  and GCP as well.
+  OCR        : None
+  Combined   :  and GCP as well.
+
+[00:01:42]
+  Transcript :  Let me show you an example through a whiteboard
+  OCR        : None
+  Combined   :  Let me show you an example through a whiteboard
+
+[00:01:44]
+  Transcript :  you know so that you can understand better
+  OCR        : None
+  Combined   :  you know so that you can understand better
+
+[00:01:46]
+  Transcript :  and then I will show you the
+  OCR        : None
+  Combined   :  and then I will show you the
+
+[00:01:48]
+  Transcript :  things practically. But
+  OCR        : None
+  Combined   :  things practically. But
+
+[00:01:50]
+  Transcript :  But before we go there, let me tell you, this is very, very important, especially if you
+  OCR        : None
+  Combined   :  But before we go there, let me tell you, this is very, very important, especially if you
+
+[00:01:55]
+  Transcript :  are practicing cloud or if you're in the state of learning any cloud platform.
+  OCR        : None
+  Combined   :  are practicing cloud or if you're in the state of learning any cloud platform.
+
+[00:02:00]
+  Transcript :  Perfect. Without any further delay, let's head to the byte board.
+  OCR        : None
+  Combined   :  Perfect. Without any further delay, let's head to the byte board.
+
+[00:02:04]
+  Transcript :  Let's take a simple example.
+  OCR        : None
+  Combined   :  Let's take a simple example.
+
+[00:02:07]
+  Transcript :  Imagine you're learning EKS.
+  OCR        : None
+  Combined   :  Imagine you're learning EKS.
+
+[00:02:09]
+  Transcript :  You're watching a video on YouTube, maybe video from our channel.
+  OCR        : None
+  Combined   :  You're watching a video on YouTube, maybe video from our channel.
+
+[00:02:13]
+  Transcript :  You understood the theory part.
+  OCR        : None
+  Combined   :  You understood the theory part.
+
+[00:02:14]
+  Transcript :  You learned what is EKS.
+  OCR        : None
+  Combined   :  You learned what is EKS.
+
+[00:02:16]
+  Transcript :  Now the video also has the practical part, the demo part,
+  OCR        : None
+  Combined   :  Now the video also has the practical part, the demo part,
+
+[00:02:21]
+  Transcript :  where the tutor explained how to create EKS cluster,
+  OCR        : None
+  Combined   :  where the tutor explained how to create EKS cluster,
+
+[00:02:25]
+  Transcript :  how to create a pod within the EKS cluster,
+  OCR        : None
+  Combined   :  how to create a pod within the EKS cluster,
+
+[00:02:27]
+  Transcript :  how to deploy a service
+  OCR        : None
+  Combined   :  how to deploy a service
+
+[00:02:29]
+  Transcript :  and how to manage the cluster.
+  OCR        : None
+  Combined   :  and how to manage the cluster.
+
+[00:02:32]
+  Transcript :  Now, obviously you want to practice this.
+  OCR        : None
+  Combined   :  Now, obviously you want to practice this.
+
+[00:02:35]
+  Transcript :  You learn the theory.
+  OCR        : None
+  Combined   :  You learn the theory.
+
+[00:02:36]
+  Transcript :  Only if you practice,
+  OCR        : None
+  Combined   :  Only if you practice,
+
+[00:02:37]
+  Transcript :  you will be confident about EKS.
+  OCR        : None
+  Combined   :  you will be confident about EKS.
+
+[00:02:40]
+  Transcript :  Now, how do you achieve this?
+  OCR        : None
+  Combined   :  Now, how do you achieve this?
+
+[00:02:42]
+  Transcript :  There are two ways.
+  OCR        : None
+  Combined   :  There are two ways.
+
+[00:02:43]
+  Transcript :  One, the obvious thing,
+  OCR        : None
+  Combined   :  One, the obvious thing,
+
+[00:02:45]
+  Transcript :  you create an account with AWS.
+  OCR        : None
+  Combined   :  you create an account with AWS.
+
+[00:02:48]
+  Transcript :  You will get some free credits from AWS.
+  OCR        : None
+  Combined   :  You will get some free credits from AWS.
+
+[00:02:51]
+  Transcript :  You will spin up EKS cluster
+  OCR        : None
+  Combined   :  You will spin up EKS cluster
+
+[00:02:54]
+  Transcript :  and you will start learning these things But the problem here is that if you have this EKS cluster running for three to four days all your free credits are expired because AWS only gives you hundred dollars of
+  OCR        : None
+  Combined   :  and you will start learning these things But the problem here is that if you have this EKS cluster running for three to four days all your free credits are expired because AWS only gives you hundred dollars of
+
+[00:03:06]
+  Transcript :  free credits once you expire the credits your AWS account knows to pay as you go model basically
+  OCR        : None
+  Combined   :  free credits once you expire the credits your AWS account knows to pay as you go model basically
+
+[00:03:14]
+  Transcript :  now when you want to learn S3 bucket EBS volumes or lambda functions maybe down the line you will
+  OCR        : None
+  Combined   :  now when you want to learn S3 bucket EBS volumes or lambda functions maybe down the line you will
+
+[00:03:21]
+  Transcript :  be charged for creating these services or you might want to suspend this account and
+  OCR        : None
+  Combined   :  be charged for creating these services or you might want to suspend this account and
+
+[00:03:27]
+  Transcript :  create a new account.
+  OCR        : None
+  Combined   :  create a new account.
+
+[00:03:29]
+  Transcript :  So this is a problem.
+  OCR        : None
+  Combined   :  So this is a problem.
+
+[00:03:30]
+  Transcript :  What we are going to learn today is the other way where we will emulate these cloud providers.
+  OCR        : None
+  Combined   :  What we are going to learn today is the other way where we will emulate these cloud providers.
+
+[00:03:38]
+  Transcript :  AWS, Azure or Google Cloud Platform.
+  OCR        : None
+  Combined   :  AWS, Azure or Google Cloud Platform.
+
+[00:03:41]
+  Transcript :  What is emulation?
+  OCR        : None
+  Combined   :  What is emulation?
+
+[00:03:42]
+  Transcript :  Emulation is basically mocking the cloud providers.
+  OCR        : None
+  Combined   :  Emulation is basically mocking the cloud providers.
+
+[00:03:46]
+  Transcript :  What happens when you mock the cloud providers?
+  OCR        : None
+  Combined   :  What happens when you mock the cloud providers?
+
+[00:03:48]
+  Transcript :  so when you mock it all the APS run on your local machine so now when you go
+  OCR        : None
+  Combined   :  so when you mock it all the APS run on your local machine so now when you go
+
+[00:03:54]
+  Transcript :  ahead and let's say you run this command awa cks create cluster the
+  OCR        : None
+  Combined   :  ahead and let's say you run this command awa cks create cluster the
+
+[00:04:00]
+  Transcript :  cluster is created but the cluster is created on your local machine it will use the resources on
+  OCR        : None
+  Combined   :  cluster is created but the cluster is created on your local machine it will use the resources on
+
+[00:04:06]
+  Transcript :  your local machine not on the AWS platform so you will not be charged by AWS but Abhishek is the
+  OCR        : None
+  Combined   :  your local machine not on the AWS platform so you will not be charged by AWS but Abhishek is the
+
+[00:04:15]
+  Transcript :  response exactly similar to response that we get from EKS yes response is exactly similar even
+  OCR        : None
+  Combined   :  response exactly similar to response that we get from EKS yes response is exactly similar even
+
+[00:04:23]
+  Transcript :  trust me you will not even understand if you are running these services on AWS or on your local
+  OCR        : None
+  Combined   :  trust me you will not even understand if you are running these services on AWS or on your local
+
+[00:04:28]
+  Transcript :  machine. That is the power of mocking. Mocking is not a new concept. If you're into development,
+  OCR        : None
+  Combined   :  machine. That is the power of mocking. Mocking is not a new concept. If you're into development,
+
+[00:04:34]
+  Transcript :  developers usually mock databases. They mock different types of services, even web servers,
+  OCR        : None
+  Combined   :  developers usually mock databases. They mock different types of services, even web servers,
+
+[00:04:40]
+  Transcript :  so that you don't have to spin up these services on their cloud platform or anywhere else.
+  OCR        : None
+  Combined   :  so that you don't have to spin up these services on their cloud platform or anywhere else.
+
+[00:04:47]
+  Transcript :  We are going to apply the same concept for cloud platforms today. Abhishek,
+  OCR        : None
+  Combined   :  We are going to apply the same concept for cloud platforms today. Abhishek,
+
+[00:04:52]
+  Transcript :  there are so many projects Not really There are very less projects There is a project called local stack I tried this project in the past but it is very heavy So I thought and this is also an enterprise platform
+  OCR        : None
+  Combined   :  there are so many projects Not really There are very less projects There is a project called local stack I tried this project in the past but it is very heavy So I thought and this is also an enterprise platform
+
+[00:05:05]
+  Transcript :  So I did not bother about talking it.
+  OCR        : None
+  Combined   :  So I did not bother about talking it.
+
+[00:05:07]
+  Transcript :  But now I came across
+  OCR        : None
+  Combined   :  But now I came across
+
+[00:05:09]
+  Transcript :  an open source project called FlowC.
+  OCR        : None
+  Combined   :  an open source project called FlowC.
+
+[00:05:11]
+  Transcript :  Now this is an open source project.
+  OCR        : None
+  Combined   :  Now this is an open source project.
+
+[00:05:13]
+  Transcript :  This is absolutely free and
+  OCR        : None
+  Combined   :  This is absolutely free and
+
+[00:05:15]
+  Transcript :  there are no conditions to it.
+  OCR        : None
+  Combined   :  there are no conditions to it.
+
+[00:05:16]
+  Transcript :  I hope I'm pronouncing the name right.
+  OCR        : None
+  Combined   :  I hope I'm pronouncing the name right.
+
+[00:05:19]
+  Transcript :  I recently explored the project.
+  OCR        : None
+  Combined   :  I recently explored the project.
+
+[00:05:21]
+  Transcript :  So I'm sorry
+  OCR        : None
+  Combined   :  So I'm sorry
+
+[00:05:22]
+  Transcript :  if I'm pronouncing the name wrong.
+  OCR        : None
+  Combined   :  if I'm pronouncing the name wrong.
+
+[00:05:25]
+  Transcript :  Now let me show you how to use Flowsee.
+  OCR        : None
+  Combined   :  Now let me show you how to use Flowsee.
+
+[00:05:28]
+  Transcript :  So simple, just head to their website.
+  OCR        : None
+  Combined   :  So simple, just head to their website.
+
+[00:05:32]
+  Transcript :  So you can see here AWS, Azure and GCP.
+  OCR        : None
+  Combined   :  So you can see here AWS, Azure and GCP.
+
+[00:05:35]
+  Transcript :  They have three different pages.
+  OCR        : None
+  Combined   :  They have three different pages.
+
+[00:05:37]
+  Transcript :  We'll start with AWS.
+  OCR        : None
+  Combined   :  We'll start with AWS.
+
+[00:05:39]
+  Transcript :  So scroll down.
+  OCR        : None
+  Combined   :  So scroll down.
+
+[00:05:41]
+  Transcript :  You have commands here to get started with AWS
+  OCR        : None
+  Combined   :  You have commands here to get started with AWS
+
+[00:05:44]
+  Transcript :  or you can just go up, click on get started.
+  OCR        : None
+  Combined   :  or you can just go up, click on get started.
+
+[00:05:48]
+  Transcript :  So they have the homebrew command because I'm using Mac.
+  OCR        : None
+  Combined   :  So they have the homebrew command because I'm using Mac.
+
+[00:05:51]
+  Transcript :  I'll run this brew install.
+  OCR        : None
+  Combined   :  I'll run this brew install.
+
+[00:05:52]
+  Transcript :  If you are using Windows, go to PowerShell and run this command.
+  OCR        : None
+  Combined   :  If you are using Windows, go to PowerShell and run this command.
+
+[00:05:56]
+  Transcript :  So what does this do?
+  OCR        : None
+  Combined   :  So what does this do?
+
+[00:05:58]
+  Transcript :  This will install
+  OCR        : None
+  Combined   :  This will install
+
+[00:06:00]
+  Transcript :  API is on the local machine.
+  OCR        : None
+  Combined   :  API is on the local machine.
+
+[00:06:01]
+  Transcript :  So this will mock everything.
+  OCR        : None
+  Combined   :  So this will mock everything.
+
+[00:06:03]
+  Transcript :  One single command.
+  OCR        : None
+  Combined   :  One single command.
+
+[00:06:05]
+  Transcript :  Control R, Rue, or you know, you can just copy the command here and paste it.
+  OCR        : None
+  Combined   :  Control R, Rue, or you know, you can just copy the command here and paste it.
+
+[00:06:13]
+  Transcript :  It will not take much time because it is only emulating the APIs,
+  OCR        : None
+  Combined   :  It will not take much time because it is only emulating the APIs,
+
+[00:06:18]
+  Transcript :  but it is not creating all the service on your local machine.
+  OCR        : None
+  Combined   :  but it is not creating all the service on your local machine.
+
+[00:06:22]
+  Transcript :  It says I already have Flossy, which is fine.
+  OCR        : None
+  Combined   :  It says I already have Flossy, which is fine.
+
+[00:06:25]
+  Transcript :  Now the next thing is to run Flossy start.
+  OCR        : None
+  Combined   :  Now the next thing is to run Flossy start.
+
+[00:06:28]
+  Transcript : None
+  OCR        : [hastscar/to)
+  Combined   : [hastscar/to)
+
+[00:06:28]
+  Transcript :  Perfect.
+  OCR        : None
+  Combined   :  Perfect.
+
+[00:06:30]
+  Transcript :  If you want to run Azure,
+  OCR        : None
+  Combined   :  If you want to run Azure,
+
+[00:06:34]
+  Transcript :  then instead of running flow C start,
+  OCR        : None
+  Combined   :  then instead of running flow C start,
+
+[00:06:36]
+  Transcript :  you just have to do flow C easy start.
+  OCR        : None
+  Combined   :  you just have to do flow C easy start.
+
+[00:06:40]
+  Transcript :  Or if you want to do GCP,
+  OCR        : floci | floci | Local GCP. | Zero cost. | ZeroI | restrictions.
+  Combined   :  Or if you want to do GCP, floci | floci | Local GCP. | Zero cost. | ZeroI | restrictions.
+
+[00:06:41]
+  Transcript :  just go to the get started.
+  OCR        : None
+  Combined   :  just go to the get started.
+
+[00:06:43]
+  Transcript :  Instead of flow C start,
+  OCR        : None
+  Combined   :  Instead of flow C start,
+
+[00:06:45]
+  Transcript :  just run in the CLA part flow C GCP start.
+  OCR        : None
+  Combined   :  just run in the CLA part flow C GCP start.
+
+[00:06:50]
+  Transcript :  Cool.
+  OCR        : None
+  Combined   :  Cool.
+
+[00:06:51]
+  Transcript :  We'll go back to AWS.
+  OCR        : None
+  Combined   :  We'll go back to AWS.
+
+[00:07:00]
+  Transcript :  I show you by creating an S3 bucket first Okay So how to create an S3 bucket we will use the same command but before that we have to set up AWS environment variables so you can just say eval flow
+  OCR        : [hashicorp/tao) | Bus 'rieci step' rirst or pass --container cnane> tosee a different
+  Combined   :  I show you by creating an S3 bucket first Okay So how to create an S3 bucket we will use the same command but before that we have to set up AWS environment variables so you can just say eval flow [hashicorp/tao) | Bus 'rieci step' rirst or pass --container cnane> tosee a different
+
+[00:07:09]
+  Transcript :  C ENB so this will set up AWS environment variables for us what happens
+  OCR        : None
+  Combined   :  C ENB so this will set up AWS environment variables for us what happens
+
+[00:07:15]
+  Transcript :  if you don't run this command be careful you have to run it otherwise when you
+  OCR        : None
+  Combined   :  if you don't run this command be careful you have to run it otherwise when you
+
+[00:07:19]
+  Transcript :  run AWS S3 MB for make bucket and followed by my back. So if you run AWS S3 MB followed by name of
+  OCR        : None
+  Combined   :  run AWS S3 MB for make bucket and followed by my back. So if you run AWS S3 MB followed by name of
+
+[00:07:34]
+  Transcript :  the bucket, there is a possibility. The bucket is created on your actual AWS account. Maybe you
+  OCR        : None
+  Combined   :  the bucket, there is a possibility. The bucket is created on your actual AWS account. Maybe you
+
+[00:07:40]
+  Transcript :  have set up the account in the past and your AWS CLI is pointing to it. So there is a possibility
+  OCR        : None
+  Combined   :  have set up the account in the past and your AWS CLI is pointing to it. So there is a possibility
+
+[00:07:47]
+  Transcript :  the command that you run here is created on the AWS account.
+  OCR        : None
+  Combined   :  the command that you run here is created on the AWS account.
+
+[00:07:51]
+  Transcript :  So definitely run this command.
+  OCR        : None
+  Combined   :  So definitely run this command.
+
+[00:07:53]
+  Transcript :  Well, flow C, env.
+  OCR        : None
+  Combined   :  Well, flow C, env.
+
+[00:07:56]
+  Transcript :  Now I'll just do this.
+  OCR        : None
+  Combined   :  Now I'll just do this.
+
+[00:07:58]
+  Transcript :  My bucket, one, two, three.
+  OCR        : None
+  Combined   :  My bucket, one, two, three.
+
+[00:08:00]
+  Transcript :  okay let's see what happens there you go make bucket bucket is created I can even verify AWS
+  OCR        : None
+  Combined   :  okay let's see what happens there you go make bucket bucket is created I can even verify AWS
+
+[00:08:09]
+  Transcript :  s3 LS there you go so my bucket one two three is the name of the bucket that is created in fact we
+  OCR        : None
+  Combined   :  s3 LS there you go so my bucket one two three is the name of the bucket that is created in fact we
+
+[00:08:23]
+  Transcript :  can upload file to this bucket as well so there is this comment I'll just copy it and paste it here
+  OCR        : Studie Downloais N eval Srrtoc1 emv) | 226-0 | Downloats5 awt s) | 2926.86 | "> hetle-flect.tet
+  Combined   :  can upload file to this bucket as well so there is this comment I'll just copy it and paste it here Studie Downloais N eval Srrtoc1 emv) | 226-0 | Downloats5 awt s) | 2926.86 | "> hetle-flect.tet
+
+[00:08:24]
+  Transcript :  upload hello flow c txt to my bucket okay i did not change the name of the bucket but anyways
+  OCR        : None
+  Combined   :  upload hello flow c txt to my bucket okay i did not change the name of the bucket but anyways
+
+[00:08:38]
+  Transcript :  now this file is uploaded to my bucket i can also read it so i'll quickly read it and show it to you
+  OCR        : Downloass Nevat Srrtoci enw) | 2926.85-
+  Combined   :  now this file is uploaded to my bucket i can also read it so i'll quickly read it and show it to you Downloass Nevat Srrtoci enw) | 2926.85-
+
+[00:08:40]
+  Transcript :  same aws commands why pay for s3 when flow c is free right similarly we can create eks cluster as
+  OCR        : None
+  Combined   :  same aws commands why pay for s3 when flow c is free right similarly we can create eks cluster as
+
+[00:08:49]
+  Transcript :  but make sure you have Docker running.
+  OCR        : None
+  Combined   :  but make sure you have Docker running.
+
+[00:08:52]
+  Transcript :  How do you do that?
+  OCR        : None
+  Combined   :  How do you do that?
+
+[00:08:53]
+  Transcript :  AWS EKS create cluster I hope you know I providing the right details AWS EKS create cluster hyphen hyphen name Let provide the name of the cluster
+  OCR        : None
+  Combined   :  AWS EKS create cluster I hope you know I providing the right details AWS EKS create cluster hyphen hyphen name Let provide the name of the cluster
+
+[00:09:06]
+  Transcript :  I will say demo flow scene.
+  OCR        : None
+  Combined   :  I will say demo flow scene.
+
+[00:09:12]
+  Transcript :  Okay, so the command is wrong.
+  OCR        : None
+  Combined   :  Okay, so the command is wrong.
+
+[00:09:14]
+  Transcript :  Let's go to the documentation.
+  OCR        : None
+  Combined   :  Let's go to the documentation.
+
+[00:09:16]
+  Transcript :  Here I have a setup for EKS as well.
+  OCR        : None
+  Combined   :  Here I have a setup for EKS as well.
+
+[00:09:24]
+  Transcript :  First, I'll set up the EKS endpoints.
+  OCR        : (ParanValidation) | <sulcomeand>
+  Combined   :  First, I'll set up the EKS endpoints. (ParanValidation) | <sulcomeand>
+
+[00:09:25]
+  Transcript :  Okay.
+  OCR        : None
+  Combined   :  Okay.
+
+[00:09:26]
+  Transcript :  We forgot to do this.
+  OCR        : None
+  Combined   :  We forgot to do this.
+
+[00:09:28]
+  Transcript :  So AWS endpoint, localhost 4566.
+  OCR        : None
+  Combined   :  So AWS endpoint, localhost 4566.
+
+[00:09:32]
+  Transcript :  AWS default region, US East 1.
+  OCR        : None
+  Combined   :  AWS default region, US East 1.
+
+[00:09:35]
+  Transcript :  AWS key ID, test.
+  OCR        : None
+  Combined   :  AWS key ID, test.
+
+[00:09:37]
+  Transcript :  And AWS secret access key is also test.
+  OCR        : None
+  Combined   :  And AWS secret access key is also test.
+
+[00:09:42]
+  Transcript :  Perfect.
+  OCR        : None
+  Combined   :  Perfect.
+
+[00:09:43]
+  Transcript :  So let me run this again.
+  OCR        : None
+  Combined   :  So let me run this again.
+
+[00:09:48]
+  Transcript :  Cool.
+  OCR        : None
+  Combined   :  Cool.
+
+[00:09:49]
+  Transcript :  Now, let's go ahead, create the cluster and try.
+  OCR        : None
+  Combined   :  Now, let's go ahead, create the cluster and try.
+
+[00:09:54]
+  Transcript : None
+  OCR        : turle | Downloars | Tudse | Paport | ANSENOPOINT BRL-MERP://1OCATNOST:ESG6 | abitishekveeramalLapAbnisheks-flac-Studio
+  Combined   : turle | Downloars | Tudse | Paport | ANSENOPOINT BRL-MERP://1OCATNOST:ESG6 | abitishekveeramalLapAbnisheks-flac-Studio
+
+[00:09:55]
+  Transcript :  AWS EKS create cluster,
+  OCR        : None
+  Combined   :  AWS EKS create cluster,
+
+[00:09:57]
+  Transcript :  if an FN name dev cluster, I'm providing
+  OCR        : None
+  Combined   :  if an FN name dev cluster, I'm providing
+
+[00:10:00]
+  Transcript :  a dummy role ARN and I'm providing a dummy VPC configuration as well.
+  OCR        : None
+  Combined   :  a dummy role ARN and I'm providing a dummy VPC configuration as well.
+
+[00:10:07]
+  Transcript :  Okay, it says dev cluster already exists on my local machine.
+  OCR        : None
+  Combined   :  Okay, it says dev cluster already exists on my local machine.
+
+[00:10:11]
+  Transcript :  I'll quickly change it to dev cluster 1.
+  OCR        : None
+  Combined   :  I'll quickly change it to dev cluster 1.
+
+[00:10:15]
+  Transcript : None
+  OCR        : -create44t":-2676-06-09T01:94:72.100G61+05:70- | 1.29 | "arm:awa:jam:=B0o00000a00e:rale/eka-rols" | "resourcesNpcConfig":( | 0.0.0.0/0 | "16.100.6.0/16"
+  Combined   : -create44t":-2676-06-09T01:94:72.100G61+05:70- | 1.29 | "arm:awa:jam:=B0o00000a00e:rale/eka-rols" | "resourcesNpcConfig":( | 0.0.0.0/0 | "16.100.6.0/16"
+
+[00:10:16]
+  Transcript :  Now, unlike on AWS, this will not take 30 minutes or 40 minutes.
+  OCR        : None
+  Combined   :  Now, unlike on AWS, this will not take 30 minutes or 40 minutes.
+
+[00:10:20]
+  Transcript :  This will be done in few seconds of time.
+  OCR        : None
+  Combined   :  This will be done in few seconds of time.
+
+[00:10:24]
+  Transcript :  Why?
+  OCR        : None
+  Combined   :  Why?
+
+[00:10:25]
+  Transcript :  Because local Kubernetes cluster is created.
+  OCR        : "cr83t04At*:*2626-06-01TD1:04:22.300662+05:10* | "vpct#": | 'endosintPrivatekccess"; false | 8.0.0.6/8 | "serv1ce1ovdC14r")"10.100.0.9/26" | "tags": ()
+  Combined   :  Because local Kubernetes cluster is created. "cr83t04At*:*2626-06-01TD1:04:22.300662+05:10* | "vpct#": | 'endosintPrivatekccess"; false | 8.0.0.6/8 | "serv1ce1ovdC14r")"10.100.0.9/26" | "tags": ()
+
+[00:10:27]
+  Transcript :  Abhishek, which cluster is created locally?
+  OCR        : None
+  Combined   :  Abhishek, which cluster is created locally?
+
+[00:10:29]
+  Transcript :  it is creating K3S cluster locally.
+  OCR        : None
+  Combined   :  it is creating K3S cluster locally.
+
+[00:10:33]
+  Transcript :  I've already checked it is using K3S.
+  OCR        : None
+  Combined   :  I've already checked it is using K3S.
+
+[00:10:35]
+  Transcript :  Now we can point this EKS cluster,
+  OCR        : None
+  Combined   :  Now we can point this EKS cluster,
+
+[00:10:40]
+  Transcript :  like we can point the kubeconfig,
+  OCR        : "07081044*.*7026-06-05191:04:22.30066:+05:30- | 9.0.9.0/0
+  Combined   :  like we can point the kubeconfig, "07081044*.*7026-06-05191:04:22.30066:+05:30- | 9.0.9.0/0
+
+[00:10:41]
+  Transcript :  AWS EKS update kubeconfig,
+  OCR        : None
+  Combined   :  AWS EKS update kubeconfig,
+
+[00:10:43]
+  Transcript :  hyphen hyphen name dev cluster one.
+  OCR        : None
+  Combined   :  hyphen hyphen name dev cluster one.
+
+[00:10:46]
+  Transcript :  And now if I do kubectl get pods
+  OCR        : None
+  Combined   :  And now if I do kubectl get pods
+
+[00:10:50]
+  Transcript :  or kubectl get nodes,
+  OCR        : None
+  Combined   :  or kubectl get nodes,
+
+[00:10:52]
+  Transcript :  you can see this is the local Kubernetes cluster but you are using EKS commands You are using AWS command You are using the EKS command to fetch the kube config
+  OCR        : None
+  Combined   :  you can see this is the local Kubernetes cluster but you are using EKS commands You are using AWS command You are using the EKS command to fetch the kube config
+
+[00:11:06]
+  Transcript :  And then the kubectl is pointing to that local cluster.
+  OCR        : None
+  Combined   :  And then the kubectl is pointing to that local cluster.
+
+[00:11:10]
+  Transcript :  This way you can learn 50 different services on AWS.
+  OCR        : None
+  Combined   :  This way you can learn 50 different services on AWS.
+
+[00:11:14]
+  Transcript :  So 47 services are supported.
+  OCR        : None
+  Combined   :  So 47 services are supported.
+
+[00:11:17]
+  Transcript :  KMS is supported.
+  OCR        : None
+  Combined   :  KMS is supported.
+
+[00:11:18]
+  Transcript :  SQS is supported.
+  OCR        : None
+  Combined   :  SQS is supported.
+
+[00:11:20]
+  Transcript :  Secret manager is supported.
+  OCR        : None
+  Combined   :  Secret manager is supported.
+
+[00:11:21]
+  Transcript :  Event bridge.
+  OCR        : None
+  Combined   :  Event bridge.
+
+[00:11:24]
+  Transcript :  and similarly on AWS, Azure, multiple services are supported.
+  OCR        : Local Azure. | NOADHIOON
+  Combined   :  and similarly on AWS, Azure, multiple services are supported. Local Azure. | NOADHIOON
+
+[00:11:27]
+  Transcript :  Even on GCP, multiple services are supported.
+  OCR        : None
+  Combined   :  Even on GCP, multiple services are supported.
+
+[00:11:30]
+  Transcript :  Okay, in GCP at the moment, only seven services are supported.
+  OCR        : None
+  Combined   :  Okay, in GCP at the moment, only seven services are supported.
+
+[00:11:34]
+  Transcript :  But the best part is that this is an open source project.
+  OCR        : None
+  Combined   :  But the best part is that this is an open source project.
+
+[00:11:38]
+  Transcript :  So if we keep supporting this project,
+  OCR        : None
+  Combined   :  So if we keep supporting this project,
+
+[00:11:40]
+  Transcript :  they will add more services to it, right?
+  OCR        : None
+  Combined   :  they will add more services to it, right?
+
+[00:11:44]
+  Transcript :  Of course, there is an alternative.
+  OCR        : None
+  Combined   :  Of course, there is an alternative.
+
+[00:11:46]
+  Transcript :  As I told you, local stack is an enterprise alternative.
+  OCR        : None
+  Combined   :  As I told you, local stack is an enterprise alternative.
+
+[00:11:49]
+  Transcript :  Maybe if you're doing this within your organization,
+  OCR        : None
+  Combined   :  Maybe if you're doing this within your organization,
+
+[00:11:52]
+  Transcript :  probably your DevOps team want to use this concept.
+  OCR        : None
+  Combined   :  probably your DevOps team want to use this concept.
+
+[00:11:55]
+  Transcript :  You can head to local stack and you can see probably you can participate.
+  OCR        : None
+  Combined   :  You can head to local stack and you can see probably you can participate.
+
+[00:12:00]
+  Transcript :  purchase license or you can take subscription of it.
+  OCR        : None
+  Combined   :  purchase license or you can take subscription of it.
+
+[00:12:03]
+  Transcript :  Abhishek, what will be the advantage
+  OCR        : None
+  Combined   :  Abhishek, what will be the advantage
+
+[00:12:04]
+  Transcript :  if we take the subscription as a DevOps team?
+  OCR        : None
+  Combined   :  if we take the subscription as a DevOps team?
+
+[00:12:07]
+  Transcript :  See, maybe you're doing some proof of concept.
+  OCR        : None
+  Combined   :  See, maybe you're doing some proof of concept.
+
+[00:12:10]
+  Transcript :  Instead of creating a Dev AWS cluster,
+  OCR        : None
+  Combined   :  Instead of creating a Dev AWS cluster,
+
+[00:12:14]
+  Transcript :  Development AWS cluster,
+  OCR        : None
+  Combined   :  Development AWS cluster,
+
+[00:12:15]
+  Transcript :  you can probably try LocalStack or FlowC.
+  OCR        : None
+  Combined   :  you can probably try LocalStack or FlowC.
+
+[00:12:19]
+  Transcript :  Opportunities are endless.
+  OCR        : None
+  Combined   :  Opportunities are endless.
+
+[00:12:22]
+  Transcript :  So you can go ahead, search for FlowC.
+  OCR        : None
+  Combined   :  So you can go ahead, search for FlowC.
+
+[00:12:25]
+  Transcript : None
+  OCR        : Ofloci | 7 GCP services. All of them free. | Fast. Lightweight.Zero overhead. | Taenulees cw ane yuore | aeet orte witx Sitatsis jent, angle fccker ina
+  Combined   : Ofloci | 7 GCP services. All of them free. | Fast. Lightweight.Zero overhead. | Taenulees cw ane yuore | aeet orte witx Sitatsis jent, angle fccker ina
+
+[00:12:25]
+  Transcript :  Just search for FlowC, you will find the website.
+  OCR        : None
+  Combined   :  Just search for FlowC, you will find the website.
+
+[00:12:28]
+  Transcript :  or you can also look for their GitHub repository.
+  OCR        : None
+  Combined   :  or you can also look for their GitHub repository.
+
+[00:12:32]
+  Transcript :  So this is their GitHub repository.
+  OCR        : None
+  Combined   :  So this is their GitHub repository.
+
+[00:12:34]
+  Transcript :  On the GitHub repository,
+  OCR        : None
+  Combined   :  On the GitHub repository,
+
+[00:12:36]
+  Transcript :  they have complete details in the readme file.
+  OCR        : None
+  Combined   :  they have complete details in the readme file.
+
+[00:12:39]
+  Transcript :  Also, they have good number of stats.
+  OCR        : None
+  Combined   :  Also, they have good number of stats.
+
+[00:12:41]
+  Transcript :  So I hope the project will keep up.
+  OCR        : None
+  Combined   :  So I hope the project will keep up.
+
+[00:12:44]
+  Transcript :  Let's hope for the best
+  OCR        : None
+  Combined   :  Let's hope for the best
+
+[00:12:44]
+  Transcript :  because mocking is very useful for developers.
+  OCR        : None
+  Combined   :  because mocking is very useful for developers.
+
+[00:12:49]
+  Transcript :  As DevOps instance,
+  OCR        : None
+  Combined   :  As DevOps instance,
+
+[00:12:51]
+  Transcript :  it is good if we also have a mocking environment.
+  OCR        : None
+  Combined   :  it is good if we also have a mocking environment.
+
+[00:12:54]
+  Transcript :  Developers mock databases,
+  OCR        : None
+  Combined   :  Developers mock databases,
+
+[00:12:56]
+  Transcript :  developers mock messaging queues,
+  OCR        : None
+  Combined   :  developers mock messaging queues,
+
+[00:12:58]
+  Transcript :  Why not as DevOps and cloud engineers,
+  OCR        : None
+  Combined   :  Why not as DevOps and cloud engineers,
+
+[00:13:01]
+  Transcript :  we mock the cloud platforms.
+  OCR        : None
+  Combined   :  we mock the cloud platforms.
+
+[00:13:03]
+  Transcript :  Perfect.
+  OCR        : None
+  Combined   :  Perfect.
+
+[00:13:04]
+  Transcript :  So I hope you found the video informative.
+  OCR        : None
+  Combined   :  So I hope you found the video informative.
+
+[00:13:07]
+  Transcript :  Let me know if you have any questions.
+  OCR        : None
+  Combined   :  Let me know if you have any questions.
+
+[00:13:09]
+  Transcript :  Honestly, even I'm exploring the mocking very recently.
+  OCR        : None
+  Combined   :  Honestly, even I'm exploring the mocking very recently.
+
+[00:13:14]
+  Transcript :  So if you have any questions
+  OCR        : None
+  Combined   :  So if you have any questions
+
+[00:13:15]
+  Transcript :  and let's say I don't know the answer,
+  OCR        : None
+  Combined   :  and let's say I don't know the answer,
+
+[00:13:18]
+  Transcript :  I'll go back, do a research and get back to you.
+  OCR        : None
+  Combined   :  I'll go back, do a research and get back to you.
+
+[00:13:21]
+  Transcript :  Thank you so much for watching today's video.
+  OCR        : None
+  Combined   :  Thank you so much for watching today's video.
+
+[00:13:23]
+  Transcript :  See you all in the next one.
+  OCR        : None
+  Combined   :  See you all in the next one.
+
+[00:13:25]
+  Transcript :  Take care.
+  OCR        : None
+  Combined   :  Take care.
+>>>>>>> aac7a6af2dd9633421d7d1650ca7b01093108dc7
 
 [00:09:14]
   Transcript :  remainder. So, this is also a valid congruence. Then comes 10 is congruent to 2 mod 6. 10 when it

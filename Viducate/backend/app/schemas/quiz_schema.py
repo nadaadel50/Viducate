@@ -27,6 +27,7 @@ class QuizQuestionResponse(BaseModel):
     video_timestamp:     Optional[int] = None   
     timestamp_label:     Optional[str] = None  
     segment_id:          Optional[int] = None
+    concept:             Optional[str] = None
 
     model_config = {"from_attributes": False}
 
