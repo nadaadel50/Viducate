@@ -215,7 +215,7 @@
   "report.stats.correctAnswers": "{correct} من {total} صحيحة",
 
   "report.stats.flashcards": "البطاقات التعليمية",
-  "report.stats.flashcardsCount": "{reviewed} من {total}",
+  "report.stats.flashcardsCreated": "تم إنشاء البطاقات",
 
   "report.materials.title": "المواد التعليمية",
 

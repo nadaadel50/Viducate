@@ -198,7 +198,7 @@
   "report.stats.correctAnswers": "{correct} / {total} correct",
 
   "report.stats.flashcards": "Flashcards",
-  "report.stats.flashcardsCount": "{reviewed} / {total} cards",
+  "report.stats.flashcardsCreated": "Cards generated",
 
   "report.materials.title": "Learning Materials",
 

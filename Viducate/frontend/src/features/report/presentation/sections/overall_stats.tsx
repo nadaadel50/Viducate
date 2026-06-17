@@ -16,17 +16,17 @@ import {
   NotebookPen,
   Brain,
 } from "lucide-react";
+import { useVideoProgress } from "../hooks/use_video_progress";
 interface OverallStatsProps {
   report: VideoReport;
 }
 
 export function OverallStats({ report }: OverallStatsProps) {
+  const { percent, watchedFormatted } = useVideoProgress();
   const accuracy = Math.round(
     (report.correctAnswers / report.totalQuizQuestions) * 100,
   );
-  const flashcardRate = Math.round(
-    (report.flashcardsReviewed / report.totalFlashcards) * 100,
-  );
+
   const intl = useIntl();
   const videoMaterials = [
     {
@@ -65,8 +65,8 @@ export function OverallStats({ report }: OverallStatsProps) {
           label={intl.formatMessage({
             id: "report.stats.videoProgress",
           })}
-          value={`${report.completionPercent}%`}
-          sub={`${report.watchedDuration} watched`}
+          value={`${percent}%`}
+          sub={`${watchedFormatted} watched`}
           color="#7c3aed"
           delay={0}
         />
@@ -93,15 +93,12 @@ export function OverallStats({ report }: OverallStatsProps) {
           label={intl.formatMessage({
             id: "report.stats.flashcards",
           })}
-          value={`${flashcardRate}%`}
+          value={`${report.totalFlashcards}`}
           sub={intl.formatMessage(
             {
-              id: "report.stats.flashcardsCount",
-            },
-            {
-              reviewed: report.flashcardsReviewed,
-              total: report.totalFlashcards,
-            },
+              id: "report.stats.flashcardsCreated",
+            }
+            
           )}
           color="#059669"
           delay={160}

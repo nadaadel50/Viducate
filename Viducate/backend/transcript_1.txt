@@ -1,227 +1,121 @@
-[0.0 --> 4.6]  Hello everyone, my name is Abhishek and welcome back to my channel.
-[5.3 --> 12.7]  Just imagine this, what if you can learn AWS Azure Google Cloud Platform without paying
-[12.7 --> 17.1]  for the services that you are using, without creating an account with these cloud platforms
-[17.1 --> 21.3]  and most importantly, without sharing your credit card information.
-[22.1 --> 22.9]  Wouldn't that be awesome?
-[23.5 --> 23.9]  Yes.
-[23.9 --> 29.1]  In today's video, I'll show you how you can emulate these cloud providers
-[29.1 --> 31.7]  so that you don't have to create an account with them
-[31.7 --> 34.9]  and you can run everything on your local machine.
-[35.5 --> 39.2]  All that you need is just Docker running on your machine.
-[39.6 --> 40.3]  That's it.
-[41.3 --> 42.4]  Now, you might have this question,
-[42.9 --> 44.1]  but Abhishek, why is this important?
-[44.5 --> 46.1]  I can just create an account with cloud.
-[46.7 --> 48.3]  The problem today is that,
-[48.7 --> 51.2]  now if you go three years or four years before,
-[51.9 --> 53.7]  when you create an account with cloud,
-[53.9 --> 69.0]  you get one year free trial on AWS Azure and GCP But the problem today you only get of free credits You will end up using these free credits in no time And then your cloud account moves to pay
-[69.0 --> 74.8]  as you go model. So if you use some services, either your account will be suspended or you will
-[74.8 --> 80.3]  be billed on your credit card. This is a reason why a lot of people today, they back out learning
-[80.3 --> 82.2]  cloud. They just watch some theory
-[82.2 --> 84.6]  videos but when it comes to practicals
-[84.6 --> 86.3]  they skip the practical part.
-[87.0 --> 88.3]  The emulation that
-[88.3 --> 89.4]  we are going to learn today.
-[90.1 --> 92.3]  So you can run all
-[92.3 --> 94.3]  those AWS commands. You can create
-[94.3 --> 96.4]  all those AWS services but
-[96.4 --> 98.3]  everything is running on your local
-[98.3 --> 100.3]  machine. Not only AWS, Azure
-[100.3 --> 101.7]  and GCP as well.
-[102.4 --> 104.4]  Let me show you an example through a whiteboard
-[104.4 --> 106.2]  you know so that you can understand better
-[106.2 --> 108.3]  and then I will show you the
-[108.3 --> 110.1]  things practically. But
-[110.1 --> 115.4]  But before we go there, let me tell you, this is very, very important, especially if you
-[115.4 --> 119.9]  are practicing cloud or if you're in the state of learning any cloud platform.
-[120.0 --> 123.8]  Perfect. Without any further delay, let's head to the byte board.
-[124.7 --> 126.2]  Let's take a simple example.
-[127.1 --> 128.5]  Imagine you're learning EKS.
-[129.2 --> 132.4]  You're watching a video on YouTube, maybe video from our channel.
-[133.2 --> 134.4]  You understood the theory part.
-[134.7 --> 136.0]  You learned what is EKS.
-[136.8 --> 139.9]  Now the video also has the practical part, the demo part,
-[141.0 --> 144.5]  where the tutor explained how to create EKS cluster,
-[145.1 --> 147.2]  how to create a pod within the EKS cluster,
-[147.2 --> 149.0]  how to deploy a service
-[149.0 --> 151.3]  and how to manage the cluster.
-[152.2 --> 154.7]  Now, obviously you want to practice this.
-[155.2 --> 156.0]  You learn the theory.
-[156.4 --> 157.4]  Only if you practice,
-[157.9 --> 159.2]  you will be confident about EKS.
-[160.0 --> 161.6]  Now, how do you achieve this?
-[162.1 --> 162.9]  There are two ways.
-[163.4 --> 165.0]  One, the obvious thing,
-[165.7 --> 167.0]  you create an account with AWS.
-[168.5 --> 171.2]  You will get some free credits from AWS.
-[171.9 --> 174.1]  You will spin up EKS cluster
-[174.1 --> 186.9]  and you will start learning these things But the problem here is that if you have this EKS cluster running for three to four days all your free credits are expired because AWS only gives you hundred dollars of
-[186.9 --> 194.5]  free credits once you expire the credits your AWS account knows to pay as you go model basically
-[194.5 --> 201.8]  now when you want to learn S3 bucket EBS volumes or lambda functions maybe down the line you will
-[201.8 --> 207.5]  be charged for creating these services or you might want to suspend this account and
-[207.5 --> 208.4]  create a new account.
-[209.3 --> 210.2]  So this is a problem.
-[211.0 --> 217.4]  What we are going to learn today is the other way where we will emulate these cloud providers.
-[218.1 --> 220.4]  AWS, Azure or Google Cloud Platform.
-[221.2 --> 222.0]  What is emulation?
-[222.8 --> 225.3]  Emulation is basically mocking the cloud providers.
-[226.1 --> 228.3]  What happens when you mock the cloud providers?
-[228.3 --> 234.6]  so when you mock it all the APS run on your local machine so now when you go
-[234.6 --> 239.9]  ahead and let's say you run this command awa cks create cluster the
-[240.0 --> 246.8]  cluster is created but the cluster is created on your local machine it will use the resources on
-[246.8 --> 255.1]  your local machine not on the AWS platform so you will not be charged by AWS but Abhishek is the
-[255.1 --> 263.2]  response exactly similar to response that we get from EKS yes response is exactly similar even
-[263.2 --> 268.3]  trust me you will not even understand if you are running these services on AWS or on your local
-[268.3 --> 274.2]  machine. That is the power of mocking. Mocking is not a new concept. If you're into development,
-[274.6 --> 280.2]  developers usually mock databases. They mock different types of services, even web servers,
-[280.4 --> 286.2]  so that you don't have to spin up these services on their cloud platform or anywhere else.
-[287.2 --> 292.7]  We are going to apply the same concept for cloud platforms today. Abhishek,
-[292.7 --> 304.6]  there are so many projects Not really There are very less projects There is a project called local stack I tried this project in the past but it is very heavy So I thought and this is also an enterprise platform
-[305.1 --> 307.1]  So I did not bother about talking it.
-[307.5 --> 309.2]  But now I came across
-[309.2 --> 310.8]  an open source project called FlowC.
-[311.5 --> 313.2]  Now this is an open source project.
-[313.5 --> 315.1]  This is absolutely free and
-[315.1 --> 316.2]  there are no conditions to it.
-[316.7 --> 319.0]  I hope I'm pronouncing the name right.
-[319.4 --> 320.8]  I recently explored the project.
-[321.3 --> 322.8]  So I'm sorry
-[322.8 --> 324.6]  if I'm pronouncing the name wrong.
-[325.0 --> 327.8]  Now let me show you how to use Flowsee.
-[328.6 --> 331.5]  So simple, just head to their website.
-[332.0 --> 335.2]  So you can see here AWS, Azure and GCP.
-[335.6 --> 336.9]  They have three different pages.
-[337.8 --> 338.8]  We'll start with AWS.
-[339.4 --> 340.8]  So scroll down.
-[341.4 --> 344.6]  You have commands here to get started with AWS
-[344.6 --> 347.4]  or you can just go up, click on get started.
-[348.2 --> 351.2]  So they have the homebrew command because I'm using Mac.
-[351.2 --> 352.6]  I'll run this brew install.
-[352.6 --> 356.6]  If you are using Windows, go to PowerShell and run this command.
-[356.6 --> 358.1]  So what does this do?
-[358.1 --> 359.9]  This will install
-[360.0 --> 361.2]  API is on the local machine.
-[361.8 --> 363.3]  So this will mock everything.
-[363.7 --> 364.5]  One single command.
-[365.4 --> 372.3]  Control R, Rue, or you know, you can just copy the command here and paste it.
-[373.7 --> 378.5]  It will not take much time because it is only emulating the APIs,
-[378.6 --> 381.5]  but it is not creating all the service on your local machine.
-[382.3 --> 384.4]  It says I already have Flossy, which is fine.
-[385.2 --> 387.7]  Now the next thing is to run Flossy start.
-[388.9 --> 389.4]  Perfect.
-[390.0 --> 393.9]  If you want to run Azure,
-[394.2 --> 396.4]  then instead of running flow C start,
-[396.6 --> 399.1]  you just have to do flow C easy start.
-[399.5 --> 400.8]  Or if you want to do GCP,
-[401.4 --> 403.1]  just go to the get started.
-[403.7 --> 405.0]  Instead of flow C start,
-[405.4 --> 409.9]  just run in the CLA part flow C GCP start.
-[410.7 --> 411.0]  Cool.
-[411.5 --> 412.6]  We'll go back to AWS.
-[413.0 --> 429.5]  I show you by creating an S3 bucket first Okay So how to create an S3 bucket we will use the same command but before that we have to set up AWS environment variables so you can just say eval flow
-[429.5 --> 435.1]  C ENB so this will set up AWS environment variables for us what happens
-[435.1 --> 439.2]  if you don't run this command be careful you have to run it otherwise when you
-[439.2 --> 454.9]  run AWS S3 MB for make bucket and followed by my back. So if you run AWS S3 MB followed by name of
-[454.9 --> 460.9]  the bucket, there is a possibility. The bucket is created on your actual AWS account. Maybe you
-[460.9 --> 467.1]  have set up the account in the past and your AWS CLI is pointing to it. So there is a possibility
-[467.1 --> 470.6]  the command that you run here is created on the AWS account.
-[471.2 --> 473.3]  So definitely run this command.
-[473.7 --> 475.5]  Well, flow C, env.
-[476.2 --> 477.6]  Now I'll just do this.
-[478.1 --> 479.9]  My bucket, one, two, three.
-[480.0 --> 489.0]  okay let's see what happens there you go make bucket bucket is created I can even verify AWS
-[489.0 --> 497.6]  s3 LS there you go so my bucket one two three is the name of the bucket that is created in fact we
-[497.6 --> 504.3]  can upload file to this bucket as well so there is this comment I'll just copy it and paste it here
-[504.3 --> 511.5]  upload hello flow c txt to my bucket okay i did not change the name of the bucket but anyways
-[511.5 --> 520.0]  now this file is uploaded to my bucket i can also read it so i'll quickly read it and show it to you
-[520.0 --> 529.5]  same aws commands why pay for s3 when flow c is free right similarly we can create eks cluster as
-[529.5 --> 532.0]  but make sure you have Docker running.
-[532.0 --> 533.5]  How do you do that?
-[533.5 --> 545.8]  AWS EKS create cluster I hope you know I providing the right details AWS EKS create cluster hyphen hyphen name Let provide the name of the cluster
-[546.2 --> 549.5]  I will say demo flow scene.
-[552.8 --> 554.6]  Okay, so the command is wrong.
-[555.0 --> 556.2]  Let's go to the documentation.
-[556.8 --> 560.7]  Here I have a setup for EKS as well.
-[561.0 --> 564.6]  First, I'll set up the EKS endpoints.
-[565.0 --> 565.7]  Okay.
-[566.7 --> 567.9]  We forgot to do this.
-[568.7 --> 571.6]  So AWS endpoint, localhost 4566.
-[572.4 --> 574.6]  AWS default region, US East 1.
-[575.6 --> 577.2]  AWS key ID, test.
-[577.2 --> 580.8]  And AWS secret access key is also test.
-[582.0 --> 582.7]  Perfect.
-[583.4 --> 585.5]  So let me run this again.
-[588.1 --> 588.8]  Cool.
-[589.3 --> 593.5]  Now, let's go ahead, create the cluster and try.
-[595.0 --> 597.7]  AWS EKS create cluster,
-[597.7 --> 599.9]  if an FN name dev cluster, I'm providing
-[600.0 --> 605.6]  a dummy role ARN and I'm providing a dummy VPC configuration as well.
-[607.8 --> 611.4]  Okay, it says dev cluster already exists on my local machine.
-[611.7 --> 614.7]  I'll quickly change it to dev cluster 1.
-[616.2 --> 620.2]  Now, unlike on AWS, this will not take 30 minutes or 40 minutes.
-[620.5 --> 623.6]  This will be done in few seconds of time.
-[624.0 --> 624.2]  Why?
-[624.8 --> 627.0]  Because local Kubernetes cluster is created.
-[627.7 --> 629.4]  Abhishek, which cluster is created locally?
-[629.4 --> 632.8]  it is creating K3S cluster locally.
-[633.1 --> 635.3]  I've already checked it is using K3S.
-[636.0 --> 638.9]  Now we can point this EKS cluster,
-[639.1 --> 640.5]  like we can point the kubeconfig,
-[641.2 --> 643.4]  AWS EKS update kubeconfig,
-[643.8 --> 646.1]  hyphen hyphen name dev cluster one.
-[646.9 --> 650.6]  And now if I do kubectl get pods
-[650.6 --> 652.5]  or kubectl get nodes,
-[652.9 --> 665.7]  you can see this is the local Kubernetes cluster but you are using EKS commands You are using AWS command You are using the EKS command to fetch the kube config
-[666.2 --> 669.9]  And then the kubectl is pointing to that local cluster.
-[670.6 --> 673.9]  This way you can learn 50 different services on AWS.
-[674.5 --> 676.4]  So 47 services are supported.
-[677.1 --> 678.1]  KMS is supported.
-[678.6 --> 679.6]  SQS is supported.
-[680.1 --> 681.3]  Secret manager is supported.
-[681.8 --> 682.5]  Event bridge.
-[682.5 --> 687.3]  and similarly on AWS, Azure, multiple services are supported.
-[687.6 --> 690.5]  Even on GCP, multiple services are supported.
-[691.0 --> 694.2]  Okay, in GCP at the moment, only seven services are supported.
-[695.0 --> 697.8]  But the best part is that this is an open source project.
-[698.4 --> 700.6]  So if we keep supporting this project,
-[701.0 --> 704.2]  they will add more services to it, right?
-[704.7 --> 706.2]  Of course, there is an alternative.
-[706.7 --> 709.9]  As I told you, local stack is an enterprise alternative.
-[709.9 --> 712.9]  Maybe if you're doing this within your organization,
-[712.9 --> 715.9]  probably your DevOps team want to use this concept.
-[715.9 --> 719.9]  You can head to local stack and you can see probably you can participate.
-[720.0 --> 722.2]  purchase license or you can take subscription of it.
-[723.2 --> 724.3]  Abhishek, what will be the advantage
-[724.3 --> 726.6]  if we take the subscription as a DevOps team?
-[727.5 --> 729.6]  See, maybe you're doing some proof of concept.
-[730.3 --> 734.0]  Instead of creating a Dev AWS cluster,
-[734.3 --> 735.5]  Development AWS cluster,
-[735.9 --> 738.7]  you can probably try LocalStack or FlowC.
-[739.8 --> 740.7]  Opportunities are endless.
-[742.7 --> 745.0]  So you can go ahead, search for FlowC.
-[745.9 --> 748.3]  Just search for FlowC, you will find the website.
-[748.3 --> 751.7]  or you can also look for their GitHub repository.
-[752.3 --> 754.1]  So this is their GitHub repository.
-[754.6 --> 755.9]  On the GitHub repository,
-[756.3 --> 758.4]  they have complete details in the readme file.
-[759.5 --> 761.1]  Also, they have good number of stats.
-[761.4 --> 763.4]  So I hope the project will keep up.
-[764.0 --> 764.9]  Let's hope for the best
-[764.9 --> 768.8]  because mocking is very useful for developers.
-[769.7 --> 770.8]  As DevOps instance,
-[771.3 --> 774.1]  it is good if we also have a mocking environment.
-[775.0 --> 776.1]  Developers mock databases,
-[776.3 --> 778.0]  developers mock messaging queues,
-[778.3 --> 780.5]  Why not as DevOps and cloud engineers,
-[781.0 --> 782.3]  we mock the cloud platforms.
-[783.4 --> 783.7]  Perfect.
-[784.3 --> 786.6]  So I hope you found the video informative.
-[787.3 --> 788.7]  Let me know if you have any questions.
-[789.3 --> 793.7]  Honestly, even I'm exploring the mocking very recently.
-[794.3 --> 795.5]  So if you have any questions
-[795.5 --> 797.6]  and let's say I don't know the answer,
-[798.1 --> 800.9]  I'll go back, do a research and get back to you.
-[801.8 --> 803.5]  Thank you so much for watching today's video.
-[803.9 --> 804.7]  See you all in the next one.
-[805.1 --> 805.6]  Take care.
+[0.0 --> 3.6]  بسم الله الرحمن الرحيم. اللهم صلي وسلم وسيد وبارك على سيدنا
+[3.6 --> 7.1]  محمد. النهاردة يا ريس بازن الله اخر حكايتنا في موضوع الهوكس.
+[7.1 --> 10.8]  اتكلمنا المرات اللي فاتت عن هوكس بلت ان ري اكت. يعني حاجات
+[10.8 --> 14.7]  اصلا الري اكت هي اللي عامله. طيب الري اكت برضو زي ما هي عاملة
+[14.7 --> 18.7]  حاجة بتوفر لك يا ريس انك تعمل الهوك الخاصة بي. ركز معي بقى
+[18.7 --> 22.7]  يا صديقي. عندنا موقع بسيط جدا بيديك اي بي اي فري. وما تقلقش
+[22.7 --> 26.7]  من مواضيع الابي اي بي اي لان ده لي فيديو مفاصل تماما في الكورس ده
+[26.7 --> 29.8]  بازن الله فانا مش عاوزك تركز يعني ايه فيتش يعني ايه اكسوس يعني
+[29.8 --> 32.6]  ايه ايه اي اي اي اي اي اي اصلا من الاساس بس المفروض تكون دارس
+[32.6 --> 35.8]  المواضيع ده بالتفصيل في الجيفا سكريبت بس علي انا يا رايز بقى في
+[35.8 --> 39.2]  الرياكت هزبط لك الدنيا على الاخر زي ما اتفقنا طيب عندنا
+[39.2 --> 44.6]  الموقع بتاعنا اسمه هتكتب بس على جوجل فيزهر لك الموقع ده هو
+[44.6 --> 48.0]  عملنا كودة هو اتقطر خيره وعملنا فتش ومزبط لنا الدنيا على اخر.
+[48.0 --> 51.8]  ما تركزش برضو مع موضوع الفتش ده هوت هيجيله برضو بازن الله فيديو.
+[51.8 --> 67.1] 
+[67.1 --> 70.8]  موقع افلام او موقع منتجات او ايا كان بقى الموضوع ده. فبالتالي
+[70.8 --> 74.4]  اصلا اي اكشن في الصفحة او اي في الصفحة طب ما الافلام سابتة زي
+[74.4 --> 77.6]  ما هي. ما بيحصلش اي حاجة يعني. طيب ما المنتجات سابتة زي ما هي.
+[77.6 --> 80.6]  فبالتالي انا محتاج استخدم اللي احنا قلنا عليهم تعرض لي
+[80.6 --> 86.0]  البيانات مرة واحدة بس مع كل للصفحة. مش مع كل للصفحة.
+[86.0 --> 89.3]  ففتكر معايا كده وشغل الزاكرة. وفتكر معايا ايه? فتكر معايا
+[89.3 --> 93.2]  خلاص. تعال فقا نستخدم دلوقتي عشان نعرض البيانات بتاعتنا
+[93.2 --> 97.1]  ريس بمنتهى البساطة. يا دوباك هتكتب احنا بنفكر بعض اهوات
+[97.1 --> 101.0]  بالحوكس اللي احنا ايه ذكرناه. فهنمسك كده هو ترائز. تاخد مننا
+[101.0 --> 104.6]  ارو فانكشن وبتاخد مننا ايه? فبالتالي هوت الموضوع مفيش ابسط
+[104.6 --> 108.3]  منه. بتاعتنا يا. ونشوف هي بقى هتعتمد على ايه بالزبط. في الحالة
+[108.3 --> 111.8]  بتاعتنا احنا عايزين نعتمد على كل فاحنا بمنتهاء البساطة هنسيب
+[111.8 --> 115.2]  الريفو. تعال هنا بمنتهاء البساطة كده هوت عايزين نروح عاملين ايه
+[115.2 --> 119.9]  موضوع ده. حلو. فكده بتاعتنا هتتعرض مرة واحدة بس. تعال بس نشيل واحد ده
+[120.0 --> 123.7]  والبيانات بتاعتنا دلوقتي هتتعرض مرة واحدة بس في الصفحة. تعالك
+[123.7 --> 128.9]  انا نروح على بتاعنا ونعمل بص كده عندنا ارية هيت زي الفل والارية
+[128.9 --> 132.1]  دي هتلاقي فقال البيانات بتاعتك والدني دي. وتقدر بقى تعمل ماب
+[132.1 --> 135.3]  عليها وتلف وتعرض البيانات دي في الصفحة بتاعتك والكلام ده كله
+[135.3 --> 137.9]  هنجيله بازن الله ما تقلقش. الفكرة بس النهاردة ان احنا
+[137.9 --> 142.2]  عاوزين نتعلم ازاي نعمل خاصة بنا. طيب تعالك بقى رايز نعرف موضوع
+[142.2 --> 146.2]  القسطم هوك ده بقى هيتعمل ازاي? اي رأيك لو انا عندي شوية كده
+[146.2 --> 151.3]  حلوة كتير في بتاعي. فانت يعني بالمنطق هتيجي تبوص شكل بتاعك
+[151.3 --> 156.0]  وكل شوية تروح عامل انت لو عملت اتنين تلاتة بس هتلاقي بتاع شكله
+[156.0 --> 159.1]  كبير قوي. وده مش هيبقى كليل ولا اي حاجة. شايف? المنظر بقى شكل
+[159.1 --> 163.0]  وحش قوي. انت متخيل ده بس في موضوع طيب لو في اي حاجة تانية او
+[163.0 --> 167.2]  تاني احنا اصلا في بنحاول نقلل كل حاجة على قد منقدر. عشان كده
+[167.2 --> 170.8]  ورحة سواء عمل لك الهوكس وكمان عمل لك الكمبوننت بحيز انك تقلل
+[170.8 --> 173.6]  بقى الكود هنا على قد ما تقدر خالص يعني. تهط كل حاجة في
+[173.6 --> 185.8] 
+[185.8 --> 189.1]  عايز تسميها اي اسم يا رايس براحتك ايش حياتك فيها. فانا مسلا
+[189.1 --> 194.2]  هسميها ايه? هسميها يوز محمد هسميها اي حاجة انا عايزها براحتنا.
+[194.2 --> 197.5]  خلاص وانت برضو براحتك سمي الاسم اللي انت عاوزه. فنروح بقى
+[197.5 --> 202.4]  ونعمل زي ما احنا متعاودين خالص يعني. وبعدين نروح جايبين
+[202.4 --> 205.1]  الحاجة اللي احنا عملناها جوا الاب. هفهمك برضو ديني واحدة
+[205.1 --> 207.6]  واحدة بمنطقة البساطة الوقت. طبعا احنا مش محتاجين السطر ده
+[207.6 --> 211.5]  خالص. مش محتاجينه في اي حاجة. وي لازم يكون الاسم ده هو تأوله
+[211.5 --> 214.8]  كابتال. يعني لازم الاسم اللي انت عامله ده. والفنكشن ده
+[214.8 --> 218.3]  لازم يكون كابتال اول وكده. عشان ما ازهر لكش مشكلة ويعدي يقول
+[218.3 --> 222.5]  لك ايه بقى مش عارف ده الكلام ده. حلوة او او الكلام ده يا رايز.
+[222.5 --> 226.0]  احنا مش محتاجين طبعا الريترن دلوقتي وهقول لك ليه? ركز بس
+[226.0 --> 230.1]  معي واحدة واحدة. وهنيجي كده عند الاب وناخد بتاعتنا ديت. ونروح
+[230.1 --> 234.4]  حطنها جوه هنا. طبعا لسه ما استدعيتش فوق. فعشان كده جاب
+[234.4 --> 237.7]  عليها على محمرة كده تحت. في دوبك بس ايه? هنمسح حرفه ونحطها
+[237.7 --> 239.9]  ثاني وبعدين نضغط فكده هو
+[240.0 --> 243.7]  بمنتهى البسطة. حلو حلو قوي يا ريس والله دلوقتي الملامح بدأت
+[243.7 --> 248.2]  ها توضح واحدة واحدة. طيب ركز معي واحدة واحدة. انا عايز النتيجة
+[248.2 --> 253.1]  اللي جالي من هو تتخزن لي في طيب فهروح عامل ايه? هستخدم
+[253.1 --> 256.6]  ركز معي واحدة واحدة والله المواضيع ما فيش ابسط منه. فبرضه
+[256.6 --> 261.1]  هعمل باي اسم انا عاوزه. مسلا يا عم اكس اهو. وبعدين هروح
+[261.1 --> 264.9]  عامل ايه? هعمل ست اكس. كلام جميل وزي العسل والله ما فيش ابسط
+[264.9 --> 268.9]  منه. وبعدين نروح عاملين ايه? نروح عاملين برضو هو هيستدعى لك
+[268.9 --> 272.1]  فوق اهوات بمنتهى البساطة. طيب ركز معي بقى يا صديق. دلوقتي
+[272.1 --> 275.7]  المفروض الفيتش دي هترجع لي ايه? زي ما شوفنا اصلا في الكونسول
+[275.7 --> 281.8]  رجعت لي فبالتالي اللي انا هستقبله في بتاعتي مش رقم. خلاص?
+[281.8 --> 286.2]  فهنستقبل هنا ونحط فضية يعني انا دلوقتي بقى عايز اعمل ايه?
+[286.2 --> 292.3]  عايز اخزن دهوت في بتاعتي. فهعملها ازاي? هنروح مسكين بتاعتنا
+[292.3 --> 308.2] 
+[308.2 --> 312.0]  بتاعة دي. الكلام لحد دلوقتي زي العسل. حلوة اوي. بس حتة
+[312.0 --> 315.4]  دي مش ديناميك لحد دلوقتي يا عمام محمد. انا عايز استقبل
+[315.4 --> 319.0]  اللينك كبرامتر. بحيس ان هو يجي لي هنا البرامتر بتاعي احطه في
+[319.0 --> 322.9]  الفيتش وشكرا. فبالتالي هغير الحتة دي وخليها برضو ايه كبرامتر يعني.
+[322.9 --> 327.1]  فمسلا هسمي دي ار ال هسميه هسميه اي حاجة انت عاوزها براحتك. انا
+[327.1 --> 330.7]  مسلا هسميه وبعدين استقبلنا البرامتر بتاعنا في الحتة دي.
+[330.7 --> 335.1]  حلوة اوي اوي الكلام ده. طيب تعال بقى عند ونشوف العظمة. والله
+[335.1 --> 337.9]  هتشوف العظمة دلوقتي. احنا شلنا الكلام ده كله هو توديني
+[337.9 --> 342.1]  اتنظفته زي الفل. يا دوبك. والله يا دوبك يا ريس. هتروح عامل ايه?
+[342.1 --> 348.7]  هتروح عمل كاستماهيت وبعدين تروح هتطلها ايه يا رايس? هو بيقول لك
+[348.7 --> 353.3]  انا عايز خلاص في هدوبك هتحط لها بس بتاعها. فهتيجي هنا رايس
+[353.3 --> 357.1]  وتروح مسك دهوه وتروح هتطلها بمنطقة البساطة. طيب الكلام
+[357.1 --> 359.9]  لحد دلوقتي جميل قوي. طيب دلوقتي يا رايس انا عايز اخد
+[360.0 --> 363.1]  داتة اللي جوه هنا عشان ابدأ اعرضها بمنطقة البساطة. هتاخدها
+[363.1 --> 367.3]  ازاي? عندنا حاجة اسمها ولو انت متعرفش حاجة عنها لازم تسمع
+[367.3 --> 371.0]  فيديو خلاص علشان الموضوع هنا مهم جدا اصلا في الرئاتة. هنعتمد
+[371.0 --> 373.9]  عليه بشكل كبير جدا في شغلنا اصلا. هنعمل ايه بالدستركشنج بقى?
+[373.9 --> 376.6]  هنسحب من الاخر الداة اللي هي موجودة عندنا دي. فهنعملها
+[376.6 --> 381.8]  ازاي? هنروح عاملين ونعرف اي بس ده هيكون جوه بتوع اي? بتوع
+[381.8 --> 385.5]  الري. خلاصوا هنعمل مسلا الفاريبل ده يكون اسمه ايه مسلا يكون تي.
+[385.5 --> 388.9]  مفيش اي مشكلة. وبمنطقة البساطة رايس اكي ان عندك مسورتين مية
+[388.9 --> 392.0]  بالزبط. هل من المنطق ان عندك المسورة الاولينية راح هتطلها
+[392.0 --> 396.1]  مثلا مربع مقفول او تحطي لها اي شكل تاني غير المسورة. هل من
+[396.1 --> 399.4]  المنطق اللي المية تعدي سليمة حتى له هتطلها مربع يعمل. فكده
+[399.4 --> 402.6]  المية اصلا هتطلع من الجوانب. صح والله غلط? اكيد هتطلع من
+[402.6 --> 405.9]  الجوانب. احنا عاوزين مسورة بشكل داية بحيث ان هي المية تطلع من
+[405.9 --> 409.2]  هنا تروح دخلة في الناحية التانية. نفس الفكرة بالزبط. انا هعمل
+[409.2 --> 413.6]  شكل وهقول له بمنتهى البساطة ان شكل الري اللي جالك من هنا هو
+[413.6 --> 427.3] 
+[427.3 --> 430.8]  فيزبط معاك بشكل جدا ان شاء الله. خلاصه هنعمل بس اليساوة دي
+[430.8 --> 434.1]  ونقدر بقى نستخدم ايه? هنقدر نستخدم الموضوع بتاعنا ده. او
+[434.1 --> 438.4]  بتاعتنا دي. دي اللي جاء لنا منين? اللي جاء لنا من هنا. بفكرة ايه?
+[438.4 --> 442.9]  بفكرة وبعدها نبدأ نعرض بتاعتنا جوه البرنامج بتاعنا مفيش اي
+[443.0 --> 446.8]  مشكلة يرائز والله بص وبعدها نبدأ نعرض بتاعتنا جوه البرنامج
+[446.8 --> 449.8]  بتاعنا مفيش اي مشكلة ركز معاي كده واحد واحدة كده كده
+[451.1 --> 453.9]  بازن الله هتتعرض وهتبقى زي الفل لكده برضه نبص بصة
+[453.9 --> 457.3]  ونعمل كده كده بسيط الدهار بتاعتنا جات حيت زي المرة اللي
+[457.3 --> 460.8]  فاتت بالزبط بس الفكرة ان احنا هنا عملنا اي يا رايس عملنا هنا
+[460.8 --> 463.8]  القاستم هوك. شفتوا السطور اللي فاتت كلها لخصناها السطر واحد
+[463.8 --> 467.8]  بس. اسمه القاستم هوك. اتمنى صديقكم فهمت الفكرة بتاعت القاستم
+[467.8 --> 471.5]  هوك. طبعا انت مش هستخدم القاستم هوك عشان تجيب بيانات بس. لا يا
+[471.5 --> 475.3]  رايس. انت اي مشكلة هتقابلك في البروجيكتر بتاعك وعايز نعملها
+[475.3 --> 479.9]  قاستم هوك. ابدع انت فيها بقى وعيش حياتك فيها واعمل القاستم هوك وزبط
+[480.0 --> 482.0]  وحصلنا كده وهندلهلنا وهتبقى زي الفل
+[482.0 --> 484.5]  هنفهمتك الفكرة بتاعت القاسطم هوك بمثال
+[484.5 --> 486.5]  مش شارط تستخدم نفس المثال بالزبط
+[486.5 --> 488.5]  لا يا رايس انا هسيب لك الابداع انت بقى
+[488.5 --> 491.0]  بس اهم حاجة تكون فهمت الفكرة بتاعتها
+[491.0 --> 495.0]  اتمنى صديقي تكون فهمت وابلى ما في الفيديو ما ساش صالة عن نبي ويه بس كده

@@ -1,12 +1,13 @@
 import { FormattedMessage } from "react-intl";
 import type { VideoReport } from "../_temp_mock";
+import { useVideoProgress } from "../hooks/use_video_progress";
 
 interface VideoHeroProps {
   report: VideoReport;
 }
 
 export function VideoHero({ report }: VideoHeroProps) {
-  const remaining = 100 - report.completionPercent;
+  const { percent, remaining, watchedFormatted, totalFormatted } = useVideoProgress();
 
   return (
     <div className="glass rounded-2xl overflow-hidden mb-5 p-6 md:p-8 animate-fade-slide bg-white/80 backdrop-blur-md border border-white/60 shadow-lg">
@@ -39,9 +40,9 @@ export function VideoHero({ report }: VideoHeroProps) {
           <FormattedMessage id="report.hero.watchProgress" />
         </span>
         <span className="font-bold text-slate-900">
-          {report.watchedDuration}{" "}
+          {watchedFormatted}{ " " }
           <span className="text-slate-400 font-medium">
-            / {report.totalDuration}
+            / {totalFormatted}
           </span>
         </span>
       </div>
@@ -50,7 +51,7 @@ export function VideoHero({ report }: VideoHeroProps) {
         <div
           className="h-full rounded-full relative"
           style={{
-            width: `${report.completionPercent}%`,
+            width: `${percent}%`,
             backgroundImage:
               "linear-gradient(to bottom right, #359EFF, #5A0BB1)",
           }}
@@ -66,7 +67,7 @@ export function VideoHero({ report }: VideoHeroProps) {
         <span>
           <FormattedMessage
             id="report.hero.watched"
-            values={{ percent: report.completionPercent }}
+            values={{ percent}}
           />
         </span>
         <span>
