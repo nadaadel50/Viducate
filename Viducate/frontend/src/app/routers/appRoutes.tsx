@@ -22,9 +22,8 @@ import { FlashCards } from "../../features/flash_cards/presentation/pages/flash_
 import { WatchLayout } from "../../features/watch_video/presentation/pages/watch_outlet";
 import { PublicRoute } from "./publicRoutes";
 import MindMapPage from "../../features/mindMap/presentation/pages/mindMap_page";
-import { DashboardPage } from "../../features/dashboard/presentaion/pages/dashboard_page";
-import { DashboardProvider } from "../../features/dashboard/presentaion/context/dashboard_provider";
-
+import{ProfilePage} from "../../features/Profile/presentation/pages/profile_page";
+import { ProfileProvider } from "../../features/Profile/presentation/context/profile_provider";
 export function AppRoutes() {
   return (
     <BrowserRouter>
@@ -41,7 +40,14 @@ export function AppRoutes() {
         <Route path="/signup" element={<SignupPage />} />
         <Route path="/auth/callback" element={<AuthSuccess />} />
         <Route path="/forgot-password" element={<ForgetPasswordPage />} />
-        <Route path="/test-modals" element={<TestModalsPage />} /> /* for
+      
+
+        <Route path="/test-modals" element={<TestModalsPage />} /> {/* for testing */}
+        <Route path="/profile" element={
+          <ProfileProvider>
+            <ProfilePage />
+          </ProfileProvider>
+        } />
         <Route path="/study-notes" element={<StudyNotesPage />} />
         <Route element={<ProtectedRoute />}>
           {" "}

@@ -113,3 +113,5 @@ class ResetPasswordResponse(BaseModel):
 
 class UpdateLanguageRequest(BaseModel):
     language: Literal["en", "ar"]
+
+
