@@ -6,9 +6,7 @@ import { PreferenceCard } from "../componants/PreferenceCard";
 import { FormattedMessage } from "react-intl";
 import { COLORS } from "../../../../core/constants/colors";
 import { useSavePreferences } from "../hooks/use_save_preferences";
-import { useGetPreferences } from "../hooks/get_user_language_pref";
-import { LoadingScreen } from "../../../../core/componants/LoadingScreen";
-import { Brain } from "lucide-react";
+
 import { LoadingPreferences } from "../componants/loading_pref";
 
 interface CustomizeProps {
@@ -26,7 +24,7 @@ export const CustomizeExperienceModal: React.FC<CustomizeProps> = ({
 }) => {
   const { submitPreferences, isSubmitting } = useSavePreferences();
   const [serverError, setServerError] = useState<string | null>(null);
-  const [loading, setLoading] = useState(true);
+  const [loading, setLoading] = useState(false);
   //const { data, isLoading, error } = useGetPreferences();
   const [prefs, setPrefs] = useState<{
     summary: LanguageOption;
