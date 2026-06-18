@@ -5,37 +5,53 @@ import { DeleteAccount } from "./delete_account";
 import { TapHeader } from "./tap_header";
 import { FormInputs } from "./form_inputs";
 import { useUpdate } from "../hooks/use_update_profile";
-import { usePersonalInfoContext, useSecurityContext } from "../hooks/use_profile_context";
+import {
+  usePersonalInfoContext,
+  useSecurityContext,
+} from "../hooks/use_profile_context";
 import { useHandleInputs } from "../hooks/use_handle_inputs";
 import { useEffect } from "react";
 
 export function AccountSettingsForm() {
   // const { fields, setters, state, handleSave } = form;
-  const { updateProfile, isLoadingUpdate, error, isSuccess,reset } = useUpdate();
-const { firstName, lastName, initialFirstName, initialLastName,  } = usePersonalInfoContext();
-const { password, oldPassword ,newPasswordError,confirmPasswordError} = useSecurityContext();
-const{resetAll,successUpdateReset}=useHandleInputs()
+  const { updateProfile, isLoadingUpdate, error, isSuccess, reset } =
+    useUpdate();
+  const { firstName, lastName, initialFirstName, initialLastName } =
+    usePersonalInfoContext();
+  const {
+    password,
+    oldPassword,
+    newPasswordError,
+    confirmPasswordError,
+    confirmPassword,
+  } = useSecurityContext();
+  const { resetAll, successUpdateReset } = useHandleInputs();
   //console.log(initialFirstName,initialLastName)
-const passwordTouched = !!password || !!oldPassword;
+  const passwordTouched = !!password || !!oldPassword;
 
-const hasChanges =
-  firstName !== initialFirstName ||
-  lastName !== initialLastName ||
-  !!password ||
-  !!oldPassword;
+  const hasChanges =
+    firstName !== initialFirstName ||
+    lastName !== initialLastName ||
+    !!password ||
+    !!oldPassword;
 
-const passwordComplete = !passwordTouched || (!!password && !!oldPassword);
+  const passwordComplete =
+    !passwordTouched || (!!password && !!oldPassword && !!confirmPassword);
 
-const disabled = isLoadingUpdate || !hasChanges || !passwordComplete || !!newPasswordError || !!confirmPasswordError;  
+  const disabled =
+    isLoadingUpdate ||
+    !hasChanges ||
+    !passwordComplete ||
+    !!newPasswordError ||
+    !!confirmPasswordError;
 
   //onsole.log("first name is", firstName);
 
   useEffect(() => {
-  if (isSuccess) {
-    successUpdateReset();
-    
-  }
-}, [isSuccess]);
+    if (isSuccess) {
+      successUpdateReset();
+    }
+  }, [isSuccess]);
 
   return (
     <section className="bg-white rounded-[1.25rem] border border-slate-200 shadow-sm overflow-hidden hover:shadow-md transition-shadow duration-300">
@@ -68,8 +84,7 @@ const disabled = isLoadingUpdate || !hasChanges || !passwordComplete || !!newPas
             {/* Cancel Button */}
             <button
               onClick={() => {
-                resetAll()
-                
+                resetAll();
               }}
               type="button"
               className="flex-1 sm:flex-none px-6 py-3 text-slate-500 font-medium hover:text-slate-900 hover:bg-slate-50 rounded-xl transition-all"
@@ -87,7 +102,6 @@ const disabled = isLoadingUpdate || !hasChanges || !passwordComplete || !!newPas
                   current_password: oldPassword,
                   new_password: password,
                 });
-              
               }}
               type="submit"
               className="flex-1  bg-blue-500 flex items-center justify-center gap-2 px-8 py-3 text-white font-bold rounded-xl transition-all shadow-md active:scale-[0.98] disabled:opacity-75 disabled:cursor-not-allowed min-w-[160px]"
