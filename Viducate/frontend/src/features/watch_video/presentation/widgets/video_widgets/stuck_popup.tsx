@@ -10,8 +10,19 @@ type Props = {
 
 export function StuckPopup({ reason, onHelp, onDismiss }: Props) {
   return (
-    <div className="absolute bottom-5 right-5 bg-[#1a1a2e] border border-white/10
-      text-white p-4 rounded-xl shadow-2xl z-50 max-w-xs">
+     <div
+      className="
+        fixed bottom-5 right-5
+        bg-[#1a1a2e]
+        border border-white/10
+        text-white
+        p-4
+        rounded-xl
+        shadow-2xl
+        z-[9999]
+        max-w-xs
+      "
+    >
       <p className="text-sm leading-snug">{reason} 👀</p>
       <div className="mt-3 flex gap-3 justify-center items-center">
         <button

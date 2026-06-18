@@ -1,4 +1,5 @@
-import { TopicResponse } from "../../domin/entity/topic_response"
+
+import type { SubTopicDto } from "./sub_topic_dto"
 
 export type TopicResponseDto = {
   segment_id: number
@@ -7,7 +8,9 @@ export type TopicResponseDto = {
   start_time: number
   end_time: number
   main_topic: string
-  title: string
+  title: string,
+  is_completed: boolean,
+  sub_topics:SubTopicDto[]
 }
 
 

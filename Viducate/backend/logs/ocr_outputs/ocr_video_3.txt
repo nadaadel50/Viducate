@@ -1,5 +1,6 @@
 # OCR Output — video_id=3
 # Language: en
-# Total segments: 1
+# Total segments: 2
 
-[00:00:00] 1322-34
+[00:00:00] O(n!)O(n^2) | O(n log n) | 0(1) = constant time | 0(n) | 0(log n) = logarithmic time | (steps) | O(n) = linear time | 0(log n) | O(n log n) = quasilinear time | 0(1) | O(n^2) = quadratic time | data (n) | O(n!) = factorial time | 1322-34
+[00:06:17] O(n!) O(n^2) | o(log n) | log n) = quasilinear time | o(n!) | = factorial | 1087,728

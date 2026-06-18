@@ -167,6 +167,54 @@
   "quiz.review_answers": "مراجعة الإجابات",
   "quiz.back_to_video": "العودة لمشاهدة الفيديو",
   "quiz.map_title": "خريطة الأسئلة",
-  "quiz.go_to_watch": "اذهب لمشاهدة عند {timestamp_label}"
+  "quiz.go_to_watch": "اذهب لمشاهدة عند {timestamp_label}",
+  "quiz.new_quiz": "اختبار جديد",
+
+
+
+
+
+  "profile.preferences.title": "الإعدادات",
+  "profile.preferences.appearance": "المظهر",
+  "profile.preferences.language": "اللغة",
+  "profile.signOut": "تسجيل الخروج",
+
+  "profile.settings.title": "إعدادات الحساب",
+  "profile.settings.save": "حفظ التغييرات",
+
+  "profile.delete.warning": "تحذير: لا يمكن التراجع عن هذا الإجراء",
+  "profile.delete.description": "بعد حذف الحساب لن تتمكن من استرجاعه مرة أخرى، تأكد قبل المتابعة.",
+  "profile.delete.btn": "حذف الحساب",
+
+  "profile.hero.uploadPhoto": "تغيير الصورة",
+
+  "profile.deleteModal.title": "حذف الحساب",
+  "profile.deleteModal.description": "هل أنت متأكد من حذف حسابك؟ سيتم حذف كل بياناتك بشكل نهائي ولن يمكن استرجاعها.",
+  "profile.deleteModal.confirm": "تأكيد الحذف",
+
+  "common.cancel": "إلغاء",
+
+  "profile.section.personalInfo": "المعلومات الشخصية",
+  "profile.section.security": "الأمان",
+  "profile.section.deleteAccount": "حذف الحساب",
+
+  "form.firstName": "الاسم الأول",
+  "form.lastName": "اسم العائلة",
+  "form.currentPassword": "كلمة المرور الحالية",
+  "form.newPassword": "كلمة مرور جديدة",
+  "form.confirmPassword": "تأكيد كلمة المرور",
+  "form.password.placeholder": "••••••••",
+
+  "profile.save.success": "تم حفظ التغييرات بنجاح",
+  "profile.save.error": "حدث خطأ، حاول مرة أخرى",
+
+  "profile.password.mismatch": "كلمات المرور غير متطابقة",
+  "profile.password.minLength": "كلمة المرور يجب ألا تقل عن 8 أحرف",
+  
+  "profile.preferences.light": "فاتح",
+  "profile.preferences.dark": "داكن",
+  "profile.lang.en": "الإنجليزية",
+  "profile.lang.ar": "العربية"
+
 
 }

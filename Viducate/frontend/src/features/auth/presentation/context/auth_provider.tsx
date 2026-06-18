@@ -10,12 +10,14 @@ import type { ApiResult } from '../../../../core/api/apiResult';
 import type { LoginResponseDto } from '../../api/models/login/login_response_dto';
 import type { SignupResponseDto } from '../../api/models/signup/signup_response_dto';
 
+
+
 export const AuthProvider = ({ children }: { children: React.ReactNode }) => {
   const [user, setUser] = useState<UserDto | null>(null); 
     
 
   const [loading, setLoading] = useState(true);
-
+ 
 
   useEffect(() => {
     const initAuth = async () => {
@@ -27,6 +29,7 @@ export const AuthProvider = ({ children }: { children: React.ReactNode }) => {
         } catch {
           localStorage.removeItem('token');
           sessionStorage.removeItem('token');
+          window.location.href = '/';
         }
       }
       setLoading(false);
@@ -87,15 +90,20 @@ export const AuthProvider = ({ children }: { children: React.ReactNode }) => {
     
   };
 
+  const refreshUser = async () => {
+  const userData = await authService.getCurrentUser();
+  setUser(userData);
+};
+
   const logout = () => {
     localStorage.removeItem('token');
     sessionStorage.removeItem('token'); 
-  
+    window.location.href = '/';
     setUser(null);
   };
 
   return (
-    <AuthContext.Provider value={{ user, login, signup, logout, loading,isAuthenticated:!!user }}>
+    <AuthContext.Provider value={{ user, login, signup, logout, loading,isAuthenticated:!!user, refreshUser }}>
       {!loading && children}
     </AuthContext.Provider>
   );

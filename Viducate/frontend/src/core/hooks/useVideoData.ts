@@ -1,48 +1,51 @@
+import { useEffect } from "react";
 import { useQuery } from "@tanstack/react-query";
 import { getTopicsUseCase } from "../di/watch_video_container";
 import { TopicsRequest } from "../../features/watch_video/domin/entity/topics_request";
 import { useLearningSession } from "./useLearningContent";
 
-
-
-
 export function useVideoData() {
+  const {
+    videoId,
+    setTopics,
+    handleSetMarks,
+    handleSetCompletedTopics,
+    setSelectedTopic,
+    setVideoTitle,
+    selectedTopic,
+  } = useLearningSession();
 
-  // const fakeVideos: VideoResponse = 
-  // new VideoResponse(
-  //   "",
-  //   1,
-  //   [
-  //    new TopicResponse(1,1,0,261,"sara","zeht"),
-  //    new TopicResponse(2,2,262,300,"sara","zeht"),
-  //    new TopicResponse(3,3,301,400,"sara","zeht"),
-  //   ]
-  // )
-
- 
-  const {videoId}=useLearningSession()
- //const videoId=1
-
-    // it should not take the video id from here  it should take from the data but know let it 3
-  return useQuery({
+  const query = useQuery({
     queryKey: ["topics", videoId],
-   queryFn: async () => {
-     const result = await getTopicsUseCase.getTopics(new TopicsRequest(videoId!));
+    queryFn: async () => {
+      const result = await getTopicsUseCase.getTopics(
+        new TopicsRequest(videoId!),
+      );
 
-      if (!result.success) {
-        throw new Error(result.error);
-      }
+      if (!result.success) throw new Error(result.error);
 
-     // return result.data;
-     console.log("🔥 fetching...");
-     console.log(result.data)
-    return result.data
-    //  return fakeVideos
+      return result.data;
     },
     enabled: !!videoId,
-    staleTime: Infinity,
-    refetchOnWindowFocus: false,
-    refetchOnMount: false,
-    refetchOnReconnect: false,
   });
+
+  useEffect(() => {
+    if (!query.data || query.data.topics.length === 0) return;
+
+    setTopics(query.data.topics);
+    handleSetMarks(query.data.bookmarks);
+
+    setVideoTitle(query.data.title);
+    handleSetCompletedTopics(
+      query.data.topics
+        .filter((topic) => topic.is_completed && topic.segment_id !== null)
+        .map((topic) => topic.segment_id!),
+    );
+
+   
+      //setSelectedTopic(query.data.topics[0]);
+    
+  }, [query.data]);
+
+  return query;
 }

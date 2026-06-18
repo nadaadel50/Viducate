@@ -1,7 +1,7 @@
 import logging
 import chromadb
 from sqlalchemy.orm import Session
-from sentence_transformers import SentenceTransformer
+from sentence_transformers import SentenceTransformer, CrossEncoder
 from fastapi import HTTPException, status
 
 from app.models.subtopics import Subtopic
@@ -12,6 +12,7 @@ from app.config import settings
 logger = logging.getLogger(__name__)
 
 model = SentenceTransformer('intfloat/multilingual-e5-base')
+reranker = CrossEncoder('BAAI/bge-reranker-base')  
 chroma_client = chromadb.PersistentClient(path="./chroma_db")
 
 
@@ -22,28 +23,17 @@ def get_embedding(text: str, is_query: bool = False) -> list:
 
 groq_client = Groq(api_key=settings.GROQ_API_KEY)
 
-
-def detect_language(text: str) -> str:
-    arabic_chars = sum(1 for c in text if '\u0600' <= c <= '\u06FF')
-    return 'ar' if arabic_chars / max(len(text), 1) > 0.3 else 'en'
-
-
-def translate_query(query: str, target_lang: str) -> str:
-    if detect_language(query) == target_lang:
-        return query
-    try:
-        direction = "للعربي" if target_lang == 'ar' else "للإنجليزي"
-        response = groq_client.chat.completions.create(
-            model="llama-3.3-70b-versatile",
-            messages=[{"role": "user", "content": f"ترجم {direction}: '{query}'. رجع الترجمة بس."}],
-            max_tokens=200
-        )
-        result = response.choices[0].message.content.strip()
-        print(f"[Translate] '{query}' -> '{result}'")
-        return result
-    except Exception as e:
-        logger.warning(f"Translation failed: {e}")
-        return query
+def rerank_results(query: str, candidates: list) -> list:
+    if not candidates:
+        return candidates
+    pairs = [
+        (query, f"{c['sub_topic_name']}: {c['sub_topic_description']}")
+        for c in candidates
+    ]
+    scores = reranker.predict(pairs)
+    for i, c in enumerate(candidates):
+        c['rerank_score'] = float(scores[i])
+    return sorted(candidates, key=lambda x: x['rerank_score'], reverse=True)
 
 
 def store_embeddings(video_id: int, segments: list, video_lang: str = 'ar') -> None:
@@ -58,20 +48,17 @@ def store_embeddings(video_id: int, segments: list, video_lang: str = 'ar') -> N
                 if video_lang == 'ar':
                     text = f"""
                         موضوع: {segment['main_topic']}
-                        عنوان: {segment['title']}
                         عنوان فرعي: {sub_topic['name']}
                         وصف: {sub_topic['description']}
                         كلمات مفتاحية: {segment['main_topic']} {sub_topic['name']}
                         سؤال محتمل: ما هو {sub_topic['name']}؟ كيف يعمل {sub_topic['name']}؟
                         topic: {segment['main_topic']}
-                        title: {segment['title']}
                         subtopic: {sub_topic['name']}
                         question: What is {sub_topic['name']}? How does {sub_topic['name']} work?
                         """
                 else:
                     text = f"""
                         topic: {segment['main_topic']}
-                        title: {segment['title']}
                         subtopic: {sub_topic['name']}
                         description: {sub_topic['description']}
                         keywords: {segment['main_topic']} {sub_topic['name']}
@@ -93,6 +80,7 @@ def store_embeddings(video_id: int, segments: list, video_lang: str = 'ar') -> N
                         "end_time": sub_topic["end_time"],
                         "sub_topic_name": sub_topic["name"],
                         "sub_topic_description": sub_topic["description"],
+                        "content_type": sub_topic.get("content_type", "general"),
                         "language": video_lang
                     }]
                 )
@@ -107,6 +95,7 @@ def store_embeddings(video_id: int, segments: list, video_lang: str = 'ar') -> N
             detail=f"Failed to store embeddings for video_id={video_id}"
         )
 
+
 def time_to_seconds(time_str: str) -> int:
     parts = time_str.split(":")
     if len(parts) == 3:
@@ -117,59 +106,59 @@ def time_to_seconds(time_str: str) -> int:
         return int(m) * 60 + int(s)
     return 0
 
+
 SIMILARITY_THRESHOLD = 0.75
 
-def search(video_id: int, query: str, db: Session, n_results: int = 5) -> list:
+
+def search(video_id: int, query: str, db: Session, n_results: int = 3, threshold: float = SIMILARITY_THRESHOLD) -> list:  # ✅ threshold كـ parameter
     try:
         collection = chroma_client.get_or_create_collection(
             name=f"video_{video_id}",
             metadata={"hnsw:space": "cosine"}
         )
-        # query_ar = translate_query(query, target_lang='ar')
-        # query_en = translate_query(query, target_lang='en')
-
-        # results_ar = collection.query(query_embeddings=[get_embedding(query_ar, is_query=True)], n_results=n_results)
-        # results_en = collection.query(query_embeddings=[get_embedding(query_en, is_query=True)], n_results=n_results)
 
         results = collection.query(
             query_embeddings=[get_embedding(query, is_query=True)],
-            n_results=n_results
+            n_results=20,
         )
 
         seen = set()
         filtered = []
 
         for i in range(len(results["metadatas"][0])):
-                raw_distance = results["distances"][0][i]
-                score = round(1 - raw_distance, 4)
-                print(f"[DEBUG] dist={raw_distance:.4f} | score={score:.4f} | {results['metadatas'][0][i]['sub_topic_name']}")
-                if score < SIMILARITY_THRESHOLD:
-                    continue
-                meta = results["metadatas"][0][i]
-                key = meta["sub_topic_name"]
+            raw_distance = results["distances"][0][i]
+            score = round(1 - raw_distance, 4)
+            print(f"[DEBUG] dist={raw_distance:.4f} | score={score:.4f} | {results['metadatas'][0][i]['sub_topic_name']}")
 
-                if key in seen:
-                    continue
-                seen.add(key)
+            if score < threshold:  
+                continue
 
-                subtopic = db.query(Subtopic).join(TopicSegment).filter(
-                    TopicSegment.vid_id == video_id,
-                    Subtopic.name == meta["sub_topic_name"]
-                ).first()
+            meta = results["metadatas"][0][i]
+            key = meta["sub_topic_name"]
 
-                filtered.append({
-                    "video_id": video_id,
-                    "subtopic_id": subtopic.subtopic_id if subtopic else None,
-                    "title": meta["title"],
-                    "sub_topic_name": meta["sub_topic_name"],
-                    "sub_topic_description": meta["sub_topic_description"],
-                    # "start_time": meta["start_time"],
-                    "start_time": time_to_seconds(meta["start_time"]),
-                    "score": score
-                })
+            if key in seen:
+                continue
+            seen.add(key)
 
-        filtered.sort(key=lambda x: x["score"], reverse=True)
-        return filtered
+            subtopic = db.query(Subtopic).join(TopicSegment).filter(
+                TopicSegment.vid_id == video_id,
+                Subtopic.name == meta["sub_topic_name"]
+            ).first()
+
+            filtered.append({
+                "video_id": video_id,
+                "subtopic_id": subtopic.subtopic_id if subtopic else None,
+                "title": meta["title"],
+                "sub_topic_name": meta["sub_topic_name"],
+                "sub_topic_description": meta["sub_topic_description"],
+                "start_time": time_to_seconds(meta["start_time"]),
+                "score": score
+            })
+
+        # ✅ reranking بدل الـ sort البسيط
+        reranked = rerank_results(query, filtered)
+        reranked = [r for r in reranked if r['rerank_score'] > 0.01]
+        return reranked[:n_results]
 
     except Exception as e:
         logger.error(f"Search failed: {str(e)}", exc_info=True)

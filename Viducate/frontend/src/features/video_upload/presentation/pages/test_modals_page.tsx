@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
-import { LanguageInitModal } from '../componants/LanguageInitModal';
-import { CustomizeExperienceModal } from '../componants/CustomizeExperienceModal';
+import { CustomizeExperienceModal } from '../../../preferences/presentation/pages/CustomizeExperienceModal';
+import { LanguageInitModal } from '../../../preferences/presentation/componants/LanguageInitModal';
+
 
 const TestModalsPage: React.FC = () => {
   // حالة فتح وإغلاق المودال الصغير (البداية)
@@ -66,9 +67,8 @@ const TestModalsPage: React.FC = () => {
 
       {/* 2. المودال الكبير: يظهر لتحديد اللغات بالتفصيل */}
       <CustomizeExperienceModal 
-        isOpen={isCustomizeOpen} 
-        onClose={() => setIsCustomizeOpen(false)} 
-      />
+        isOpen={isCustomizeOpen}
+        onClose={() => setIsCustomizeOpen(false)} videoId={undefined}      />
     </div>
   );
 };

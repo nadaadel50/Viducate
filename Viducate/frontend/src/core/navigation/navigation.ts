@@ -9,8 +9,8 @@ export function goToHome(navigate: NavigateFunction) {
 export function goToLogin(navigate: NavigateFunction) {
   navigate(AppRoutesNames.login);
 }
-export function goToForgetPass(navigate: NavigateFunction) {
-  navigate(AppRoutesNames.forgetPass);
+export function goToForgotPassword(navigate: NavigateFunction) {
+  navigate(AppRoutesNames.forgotPassword);
 }
 
 export function goToLSuccessSendEmail(navigate: NavigateFunction,email:string) {

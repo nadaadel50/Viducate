@@ -1,5 +1,11 @@
 # OCR Output — video_id=6
 # Language: en
-# Total segments: 1
+# Total segments: 7
 
-[00:00:00] 1322-34
+[00:00:00] The Extended Euclidean Algorithm In One Simple Idea | Proof of Concept
+[00:01:02] The greatest common divisor ged of a and b | is the largest integer which divides both.
+[00:05:35] Challenge: Solve 196x 180y 4 | b  q  a  r | Pair 180, 196 | 1961-18016
+[00:06:37] 196118016 | x  1 | y  o | y  1 | 196196-11800 | 161961 180--1 | 180196-0180.1
+[00:07:25] Challenge: | Solve 196x 180y 4 | 196 1961180.0 | 1801960180.1 | 16  196-1 180-1 | 161961 180-1
+[00:08:00] 196196-1180.0 | -11801960180.1 | 16 196-1 180-1
+[00:08:54] y  - 1 | Pair 16, 180 | 180 11164 | x  -11

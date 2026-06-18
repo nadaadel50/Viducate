@@ -16,6 +16,14 @@ from app.services.auth_service import AuthService
 from app.services.quiz_service import QuizService
 from app.repositories.quiz_repository import QuizRepository
 from app.schemas.quiz_schema import QuizGenerateRequest, QuizResponse
+from fastapi import HTTPException
+from app.models.quiz import UserQuizResult
+from app.schemas.quiz_result_schema import (
+    QuizSubmitRequest,
+    QuizSubmitResponse,
+)
+
+from app.models.quiz import UserQuizResult
 
 router = APIRouter(prefix="/quiz", tags=["Quiz"])
 security = HTTPBearer()
@@ -128,4 +136,111 @@ def get_quiz(
         "total_questions": len(quiz.questions),
         "questions":       [_build_question_response(q) for q in quiz.questions],
         "created_at":      quiz.created_at,
+    }
+
+
+@router.post(
+    "/{quiz_id}/submit",
+    response_model=QuizSubmitResponse,
+    status_code=status.HTTP_201_CREATED,
+    summary="Submit quiz answers and save result",
+    description=(
+        "Submits answers, calculates integer score (0-100), "
+        "and saves/overwrites the result. Tracks number of trials."
+    ),
+)
+def submit_quiz_results(
+    quiz_id: int,
+    request: QuizSubmitRequest,
+    db: Session = Depends(get_db),
+    current_user=Depends(get_current_user),
+):
+    repo = QuizRepository(db)
+
+    # ── Fetch quiz ────────────────────────────────────────────────────────────
+    quiz = repo.get_quiz_with_questions(quiz_id)
+    if not quiz:
+        raise HTTPException(
+            status_code=status.HTTP_404_NOT_FOUND,
+            detail="Quiz not found",
+        )
+
+   
+    from app.repositories.video_repository import VideoRepository
+    video = VideoRepository(db).get_by_id(quiz.video_id)
+    if not video or video.user_id != current_user.id:
+        raise HTTPException(
+            status_code=status.HTTP_403_FORBIDDEN,
+            detail="Not authorized",
+        )
+
+    # ── Calculate score ───────────────────────────────────────────────────────
+    total         = len(request.answers)
+    correct_count = sum(1 for a in request.answers if a.is_correct)
+    wrong_count   = total - correct_count
+    score         = int(round((correct_count / total) * 100)) if total > 0 else 0
+
+    answers_payload = [
+        {
+            "question_id": a.question_id,
+            "user_answer": a.user_answer,
+            "is_correct":  a.is_correct,
+        }
+        for a in request.answers
+    ]
+
+    # ── Upsert result (overwrite if exists, increment trials) ─────────────────
+    existing = (
+    db.query(UserQuizResult)
+        .filter(
+            UserQuizResult.quiz_id == quiz_id,
+            UserQuizResult.user_id == current_user.id
+        )
+        .first()
+    )
+
+    if existing:
+        existing.correct_count = correct_count
+        existing.wrong_count   = wrong_count
+        existing.score         = score
+        existing.trials        = existing.trials + 1
+        existing.answers       = answers_payload
+        db.commit()
+        db.refresh(existing)
+
+        trials = existing.trials
+        is_new = False
+        logger.info(
+            f"Quiz result overwritten | quiz_id={quiz_id} | "
+            f"user={current_user.id} | trial={trials} | score={score}"
+        )
+    else:
+        new_result = UserQuizResult(
+            quiz_id=quiz_id,
+            user_id=current_user.id,
+            correct_count=correct_count,
+            wrong_count=wrong_count,
+            score=score,
+            trials=1,
+            answers=answers_payload,
+        )
+        db.add(new_result)
+        db.commit()
+        db.refresh(new_result)
+
+        trials = 1
+        is_new = True
+        logger.info(
+            f"Quiz result saved | quiz_id={quiz_id} | "
+            f"user={current_user.id} | score={score}"
+        )
+
+    return {
+        "quiz_id":       quiz_id,
+        "correct_count": correct_count,
+        "wrong_count":   wrong_count,
+        "total":         total,
+        "score":         score,
+        "trials":        trials,
+        "is_new":        is_new,
     }

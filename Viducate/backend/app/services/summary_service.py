@@ -12,6 +12,7 @@ from app.models.subtopics import Subtopic
 from sqlalchemy.orm import joinedload
 from app.ml.engines.summarization_engine import summarize_segment
 import json
+from app.utils.reading_time import calculate_reading_time
 
 logger = logging.getLogger(__name__)
 
@@ -57,7 +58,8 @@ class SummaryService:
                 "summary": existing.content,
                 "language": existing.language,
                 "created_at": existing.created_at,
-                "cached": True
+                "cached": True,
+                "reading_time": calculate_reading_time(existing.content),
             }
 
         logger.info(f"Generating new summary for video_id={video_id}")
@@ -69,7 +71,8 @@ class SummaryService:
             "summary": video_summary.content,
             "language": video_summary.language,
             "created_at": video_summary.created_at,
-            "cached": False
+            "cached": False,
+            "reading_time": calculate_reading_time(video_summary.content),
         }
 
 
@@ -103,6 +106,7 @@ class SummaryService:
                 "summary": summary.content if summary else None,
                 "language": summary.language if summary else None,
                 "generation_failed": summary is None,
+                "reading_time": calculate_reading_time(summary.content if summary else None),
             })
 
         return result
@@ -136,6 +140,7 @@ class SummaryService:
             "summary": summary.content,
             "language": summary.language,
             "cached": summary.created_at is not None,
+            "reading_time": calculate_reading_time(summary.content),
         }
         
 

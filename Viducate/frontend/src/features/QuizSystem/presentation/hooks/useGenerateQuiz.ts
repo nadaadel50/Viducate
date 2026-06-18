@@ -1,10 +1,10 @@
-import { useMutation } from '@tanstack/react-query';
-import { generateQuizUseCase } from '../../../../core/di/quiz_container';
-import { QuizRequest } from '../../domain/entity/quiz_request';
-import { QuizEntity } from '../../domain/entity/quiz_entity';
+import { useMutation } from "@tanstack/react-query";
+import { generateQuizUseCase } from "../../../../core/di/quiz_container";
+import { QuizRequest } from "../../domain/entity/quiz_request";
+import { QuizEntity } from "../../domain/entity/quiz_entity";
 
-type Difficulty = 'easy' | 'medium' | 'hard';
-type QuizMode = 'video' | 'segment';
+type Difficulty = "easy" | "medium" | "hard";
+type QuizMode = "video" | "segment";
 
 interface UseGenerateQuizOptions {
   videoId: number;
@@ -19,23 +19,17 @@ export const useGenerateQuiz = ({
   mode,
   difficulty,
 }: UseGenerateQuizOptions) => {
-
   const mutation = useMutation({
     mutationFn: async (): Promise<QuizEntity> => {
-
-      const request = new QuizRequest(
-        videoId,
-        difficulty,
-        segmentId
-      );
+      const request = new QuizRequest(videoId, difficulty, segmentId);
 
       const result =
-        mode === 'segment'
+        mode === "segment"
           ? await generateQuizUseCase.generateSegmentQuiz(request)
           : await generateQuizUseCase.generateVideoQuiz(request);
 
       if (!result.success || !result.data) {
-        throw new Error(result.error || 'Failed to generate quiz');
+        throw new Error(result.error || "Failed to generate quiz");
       }
 
       return result.data;

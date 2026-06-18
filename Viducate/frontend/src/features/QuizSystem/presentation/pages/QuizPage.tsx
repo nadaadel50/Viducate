@@ -1,62 +1,143 @@
-import { useLocation, useNavigate } from 'react-router';
-import { QuizProgressBar } from '../componants/QuizProgressBar';
-import { QuizOptions } from '../componants/QuizOptions';
-import { QuestionMap } from '../componants/QuestionMap';
-import { QuizResultCard } from '../componants/QuizResultCard';
-import { QuizTimer } from '../componants/QuizTimer';
-import { QuizActions } from '../componants/QuizActions';
-import { COLORS } from '../../../../core/constants';
-import { useQuiz } from '../hooks/useQuiz';
-import { useGenerateQuiz } from '../hooks/useGenerateQuiz';
-import { GeneratingQuizPage } from './GeneratingQuizPage';
-import { useEffect ,  useState} from 'react';
-const generateQuizKey = (segmentId: string | undefined, videoId: string, difficulty: string) =>
-  `${segmentId ?? videoId}_${difficulty}_${Date.now()}`;
+import { useLocation, useNavigate } from "react-router";
+import { QuizProgressBar } from "../componants/QuizProgressBar";
+import { QuizOptions } from "../componants/QuizOptions";
+import { QuestionMap } from "../componants/QuestionMap";
+import { QuizResultCard } from "../componants/QuizResultCard";
+import { QuizTimer } from "../componants/QuizTimer";
+import { QuizActions } from "../componants/QuizActions";
+import { COLORS } from "../../../../core/constants";
+import { useQuiz } from "../hooks/useQuiz";
+import { useGenerateQuiz } from "../hooks/useGenerateQuiz";
+import { GeneratingQuizPage } from "./GeneratingQuizPage";
+import { QuizDifficultyModal } from "../componants/QuizDifficultyModal";
+import { useEffect, useState } from "react";
+
+const SECONDS_PER_QUESTION: Record<"easy" | "medium" | "hard", number> = {
+  easy: 30,
+  medium: 50,
+  hard: 75,
+};
+
+const calcTime = (
+  totalQuestions: number,
+  difficulty: "easy" | "medium" | "hard"
+): number => {
+  return (totalQuestions * SECONDS_PER_QUESTION[difficulty]) / 60; // دقايق
+};
 
 export const QuizPage = () => {
   const { state } = useLocation();
   const navigate = useNavigate();
+  const { videoId, segmentId } = state;
 
-  const { difficulty, videoId, segmentId } = state;
-   const [quizKey] = useState(() => 
-  generateQuizKey(segmentId, videoId, difficulty)
-);
-  const { quiz, isPending , generate } = useGenerateQuiz({
+  const savedKey = localStorage.getItem(`active_quiz_key_${segmentId}`);
+
+  const [activeQuizKey, setActiveQuizKey] = useState<string | null>(
+    savedKey || null,
+  );
+
+  const [difficulty, setDifficulty] = useState<"easy" | "medium" | "hard">(
+    state?.difficulty ?? "medium",
+  );
+
+  const [isDifficultyModalOpen, setIsDifficultyModalOpen] = useState(!savedKey);
+
+  const { quiz, isPending, generate } = useGenerateQuiz({
     videoId,
     segmentId,
-    mode: segmentId ? 'segment' : 'video',
+    mode: segmentId ? "segment" : "video",
     difficulty,
   });
-  useEffect(() => {
-  localStorage.removeItem('quiz_key');
-  localStorage.removeItem('quiz_index');
-  localStorage.removeItem('quiz_answers');
-  localStorage.removeItem('quiz_time');
-  localStorage.removeItem('quiz_state');
-  localStorage.removeItem('quiz_isReview');
-  generate();
-}, []);
-  const {
-    currentIndex, setCurrentIndex, currentQuestion,
-    answers, handleSelect, timeLeft, quizState,
-    setQuizState, isReviewMode, setIsReviewMode,
-    calculateScore, progress, isAllAnswered, resetQuiz,
-  } = useQuiz( quiz?.questions ?? [], segmentId ? 5 : 15, () => navigate(-1),quizKey);
 
-  if (isPending || !quiz) return <GeneratingQuizPage />;
+  const savedQuiz = activeQuizKey
+    ? localStorage.getItem(`quiz_data_${activeQuizKey}`)
+    : null;
+  const localQuiz = savedQuiz ? JSON.parse(savedQuiz) : null;
+  const finalQuiz = localQuiz || quiz;
+  const questions = finalQuiz?.questions ?? [];
+
+  const calculatedTime = finalQuiz
+    ? calcTime(finalQuiz.total_questions ?? questions.length, difficulty)
+    : 0;
+
+  useEffect(() => {
+    if (quiz && activeQuizKey) {
+      localStorage.setItem(`quiz_data_${activeQuizKey}`, JSON.stringify(quiz));
+    }
+  }, [quiz, activeQuizKey]);
+
+  const {
+    currentIndex,
+    setCurrentIndex,
+    currentQuestion,
+    answers,
+    handleSelect,
+    timeLeft,
+    quizState,
+    setQuizState,
+    isReviewMode,
+    setIsReviewMode,
+    calculateScore,
+    progress,
+    isAllAnswered,
+    resetQuiz,
+  } = useQuiz(questions, calculatedTime, activeQuizKey ?? "");
+
+  const handleSelectDifficulty = (
+    newDifficulty: "easy" | "medium" | "hard",
+  ) => {
+    setIsDifficultyModalOpen(false);
+
+    if (activeQuizKey) {
+      resetQuiz();
+    }
+
+    const newQuizKey = `${segmentId}_${newDifficulty}_${Date.now()}`;
+    localStorage.setItem(`active_quiz_key_${segmentId}`, newQuizKey);
+
+    setDifficulty(newDifficulty);
+    setActiveQuizKey(newQuizKey);
+    generate();
+  };
+
+  useEffect(() => {
+    if (!activeQuizKey) return;
+    const hasLocal = !!localStorage.getItem(`quiz_data_${activeQuizKey}`);
+    if (!hasLocal) {
+      generate();
+    }
+  }, [activeQuizKey]);
+  if (!activeQuizKey || isDifficultyModalOpen) {
+    return (
+      <>
+        <QuizDifficultyModal
+          isOpen={isDifficultyModalOpen}
+          onClose={() => {
+            if (!activeQuizKey) navigate(-1);
+            else setIsDifficultyModalOpen(false);
+          }}
+          onSelect={handleSelectDifficulty}
+        />
+      </>
+    );
+  }
+
+  if (isPending && !finalQuiz) return <GeneratingQuizPage />;
+  if (!finalQuiz) return <GeneratingQuizPage />;
 
   const stats = calculateScore();
-  const questions = quiz.questions;
 
   return (
-    <main className="min-h-screen py-10 relative" style={{ background: COLORS.background.light }}>
-      {quizState === 'results' && (
+    <main
+      className="min-h-screen py-10 relative "
+      style={{ background: COLORS.background.light }}
+    >
+      {quizState === "results" && !isReviewMode && (
         <QuizResultCard
           stats={stats}
-          onTakeAnother={resetQuiz}
           onReview={() => {
             setIsReviewMode(true);
-            setQuizState('playing');
+            setQuizState("playing");
             setCurrentIndex(0);
           }}
         />
@@ -64,7 +145,6 @@ export const QuizPage = () => {
 
       <div className="w-full max-w-7xl mx-auto px-4">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-6 lg:gap-10">
-
           <div className="lg:col-span-8 space-y-8">
             <QuizProgressBar
               current={currentIndex + 1}
@@ -88,10 +168,12 @@ export const QuizPage = () => {
               canSubmit={isAllAnswered}
               onPrevious={() => setCurrentIndex((prev) => prev - 1)}
               onNext={() => {
-                if (currentIndex === questions.length - 1 && !isReviewMode) setQuizState('results');
-                else if (currentIndex < questions.length - 1) setCurrentIndex((prev) => prev + 1);
+                if (currentIndex === questions.length - 1 && !isReviewMode)
+                  setQuizState("results");
+                else if (currentIndex < questions.length - 1)
+                  setCurrentIndex((prev) => prev + 1);
               }}
-              onBackToVideo={() => navigate(-1)}
+              onNewQuiz={() => setIsDifficultyModalOpen(true)}
             />
             <QuestionMap
               questions={questions}
@@ -102,6 +184,12 @@ export const QuizPage = () => {
           </div>
         </div>
       </div>
+
+      <QuizDifficultyModal
+        isOpen={isDifficultyModalOpen}
+        onClose={() => setIsDifficultyModalOpen(false)}
+        onSelect={handleSelectDifficulty}
+      />
     </main>
   );
 };

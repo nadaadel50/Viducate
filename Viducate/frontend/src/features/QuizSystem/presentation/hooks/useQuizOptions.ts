@@ -1,9 +1,9 @@
 
 import { COLORS } from "../../../../core/constants";
-import { QuizQuestionEntity } from "../../domain/entity/quiz_entity"; // ✅
+import { QuizQuestionEntity } from "../../domain/entity/quiz_entity"; 
 
 interface UseQuizOptionsParams {
-  question: QuizQuestionEntity; // ✅ بدل الـ local interface
+  question: QuizQuestionEntity; 
   selectedId: string | null;
   isReviewMode: boolean;
 }

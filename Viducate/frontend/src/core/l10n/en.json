@@ -150,6 +150,8 @@
   "summary.summaryDesc": "Concise overview of the topic for quick revision",
   "summary.selectStyleTitle": "Select your summary style",
   "summary.selectStyleDesc": "Choose the format that best fits your learning needs right now",
+    "summary.selectStyleDescr": "Choose the summary style you prefer",  
+
 
   "quiz.question_count": "Question {current} of {total}",
   "quiz.time_remaining": "Time Remaining",
@@ -164,6 +166,54 @@
   "quiz.review_answers": "Review Answers",
   "quiz.back_to_video": "Back to Video",
   "quiz.map_title": "Question Map",
-  "quiz.go_to_watch": "Go TO Watch at {timestamp_label}"
+  "quiz.go_to_watch": "Go TO Watch at {timestamp_label}",
+  "quiz.new_quiz": "New Quiz",
+
+
+  
+  
+
+  "profile.preferences.title": "Preferences",
+  "profile.preferences.appearance": "Appearance",
+  "profile.preferences.language": "Language",
+  "profile.signOut": "Sign Out",
+
+  "profile.settings.title": "Account Settings",
+  "profile.settings.save": "Save Changes",
+
+  "profile.delete.warning": "Warning: Irreversible action",
+  "profile.delete.description": "Once you delete your account, there is no going back. Please be certain before proceeding.",
+  "profile.delete.btn": "Delete Account",
+
+  "profile.hero.uploadPhoto": "Upload new photo",
+
+  "profile.deleteModal.title": "Delete Account",
+  "profile.deleteModal.description": "Are you sure you want to delete your account? All of your data will be permanently removed. This action cannot be undone.",
+  "profile.deleteModal.confirm": "Delete Account",
+
+  "common.cancel": "Cancel",
+
+  "profile.section.personalInfo": "Personal Information",
+  "profile.section.security": "Security",
+  "profile.section.deleteAccount": "Delete Account",
+
+  "form.firstName": "First Name",
+  "form.lastName": "Last Name",
+  "form.currentPassword": "Current Password",
+  "form.newPassword": "New Password",
+  "form.confirmPassword": "Confirm Password",
+  "form.password.placeholder": "••••••••",
+
+  "profile.save.success": "Changes saved successfully",
+  "profile.save.error": "Something went wrong. Please try again",
+
+  "profile.password.mismatch": "New passwords do not match",
+  "profile.password.minLength": "Password must be at least 8 characters",
+
+  "profile.preferences.light": "Light",
+  "profile.preferences.dark": "Dark",
+  "profile.lang.en": "English",
+  "profile.lang.ar": "Arabic"
+
 
 }

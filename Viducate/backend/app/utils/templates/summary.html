@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="{{ 'ar' if is_arabic else 'en' }}" dir="{{ 'rtl' if is_arabic else 'ltr' }}">
+<head>
+<meta charset="UTF-8"/>
+<style>
+@font-face {
+  font-family: "UI";
+  src: url("/usr/share/fonts/truetype/dejavu/DejaVuSans.ttf");
+  font-weight: 400;
+}
+@font-face {
+  font-family: "UI";
+  src: url("/usr/share/fonts/truetype/dejavu/DejaVuSans-Bold.ttf");
+  font-weight: 700;
+}
+
+@page {
+  size: A4;
+  margin: 16mm 18mm 16mm 18mm;
+  @top-right {
+    font-family: "UI", sans-serif;
+    font-size: 7pt;
+    color: #9CA3AF;
+    content: "viducate.app";
+    padding-top: 5mm;
+  }
+  @bottom-center {
+    font-family: "UI", sans-serif;
+    font-size: 7pt;
+    color: #9CA3AF;
+    content: counter(page) " of " counter(pages);
+    padding-bottom: 4mm;
+  }
+}
+
+* { box-sizing: border-box; margin: 0; padding: 0; }
+
+body {
+  font-family: "UI", sans-serif;
+  font-size: 10pt;
+  line-height: 1.65;
+  color: #111827;
+  background: #F5F6FA;
+}
+
+.page-shell { 
+  width: 100%; 
+  padding-top: 4mm; 
+} 
+
+.main-card { 
+  background: white; 
+  border-radius: 14px; 
+  padding: 10mm; 
+  border: 1px solid #ECECF3; 
+}
+
+/* ─── Status bar ──────────────────────────────────────────────────────── */
+.status-bar {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 4.5mm;
+}
+[dir="rtl"] .status-bar { flex-direction: row-reverse; }
+
+.badge-ready {
+  background: #F0FDF4;
+  color: #15803D;
+  border: 1px solid #BBF7D0;
+  border-radius: 20px;
+  font-size: 7.5pt;
+  font-weight: 700;
+  padding: 1px 8px;
+}
+.badge-time { color: #6B7280; font-size: 8pt; }
+
+/* ─── Title ───────────────────────────────────────────────────────────── */
+.doc-title {
+  font-size: 24pt;
+  font-weight: 700;
+  color: #111827;
+  line-height: 1.2;
+  margin-bottom: 6mm;
+}
+[dir="rtl"] .doc-title { text-align: right; }
+
+/* ─── Takeaways box ───────────────────────────────────────────────────── */
+.takeaways-box {
+  border: 1px solid #E0E7FF;
+  border-radius: 8px;
+  background: #F5F7FF;
+  padding: 4mm 5mm;
+  margin-bottom: 6mm;
+}
+.takeaways-label {
+  font-size: 10pt;
+  font-weight: 700;
+  color: #4F46E5;
+  margin-bottom: 3mm;
+}
+[dir="rtl"] .takeaways-label { text-align: right; }
+
+.takeaway-item {
+  font-size: 9.5pt;
+  color: #374151;
+  margin-bottom: 2mm;
+  padding-left: 14px;
+  position: relative;
+  line-height: 1.6;
+}
+.takeaway-item::before {
+  content: "•";
+  position: absolute;
+  left: 2px;
+  color: #4F46E5;
+}
+[dir="rtl"] .takeaway-item {
+  padding-left: 0;
+  padding-right: 14px;
+  text-align: right;
+}
+[dir="rtl"] .takeaway-item::before { left: auto; right: 2px; }
+
+/* ─── Section headings ────────────────────────────────────────────────── */
+.section-heading {
+  font-size: 15pt;
+  font-weight: 700;
+  color: #111827;
+  margin-top: 6mm;
+  margin-bottom: 2.5mm;
+}
+[dir="rtl"] .section-heading { text-align: right; }
+
+/* ─── Body paragraph ──────────────────────────────────────────────────── */
+.body-text {
+  font-size: 10pt;
+  line-height: 1.72;
+  color: #374151;
+  margin-bottom: 2mm;
+}
+[dir="rtl"] .body-text { text-align: right; }
+
+/* ─── Term chip — yellow highlight (explicit type=term AND **x** inline) */
+.term {
+  background: #fcf09a;
+  color: #111827;
+  font-weight: 400;
+  border-radius: 3px;
+  padding: 0 3px;
+}
+
+/* ─── Conclusion ──────────────────────────────────────────────────────── */
+.conclusion-heading {
+  font-size: 14pt;
+  font-weight: 700;
+  color: #111827;
+  margin-top: 6mm;
+  margin-bottom: 2.5mm;
+}
+[dir="rtl"] .conclusion-heading { text-align: right; }
+
+.conclusion-text {
+  font-size: 10pt;
+  line-height: 1.72;
+  color: #374151;
+}
+[dir="rtl"] .conclusion-text { text-align: right; }
+
+.body-text,
+.explanation,
+.conclusion-text {
+  color: #4B5563;
+}
+
+/* ─── Footer ──────────────────────────────────────────────────────────── */
+.footer-strip {
+  margin-top: 10mm;
+  border-top: 1px solid #E5E7EB;
+  padding-top: 3mm;
+  display: flex;
+  justify-content: space-between;
+  font-size: 7.5pt;
+  color: #9CA3AF;
+}
+[dir="rtl"] .footer-strip { flex-direction: row-reverse; }
+
+.section-block { page-break-inside: avoid; margin-bottom: 10mm; }
+
+.main-card {
+  max-width: 165mm;
+  margin: auto;
+}
+
+</style>
+</head>
+<body>
+  <div class="page-shell">
+
+    <div class="main-card">
+      
+      <div class="status-bar">
+        <span class="badge-ready">● AI Summary Ready</span>
+        {% if reading_time %}
+        <span class="badge-time">⏱ {{ reading_time.label }}</span>
+        {% endif %}
+      </div>
+
+      <div class="doc-title">{{ video_title }}</div>
+
+      {% if content.takeaways %}
+      <div class="takeaways-box">
+        <div class="takeaways-label">💡 Key Takeaways</div>
+        {% for t in content.takeaways %}
+        <div class="takeaway-item">{{ t | safe }}</div>
+        {% endfor %}
+      </div>
+      {% endif %}
+
+
+      {% for section in content.sections %}
+      <div class="section-block">
+        <div class="section-heading">{{ section.heading | safe }}</div>
+        <div class="body-text">
+          {%- for block in section.content -%}
+            {%- if block.type == "term" -%}
+              <span class="term">{{ block.text | safe }}</span>
+            {%- else -%}
+              {{ block.text | safe }}
+            {%- endif -%}
+          {%- endfor -%}
+        </div>
+      </div>
+      {% endfor %}
+
+      {% if content.conclusion %}
+      <div class="section-block">
+        <div class="conclusion-heading">Conclusion</div>
+        <div class="conclusion-text">{{ content.conclusion | safe }}</div>
+      </div>
+      {% endif %}
+
+      <div class="footer-strip">
+        <span>Viducate · AI-powered learning</span>
+        <span>{{ generated_at }}</span>
+      </div>
+
+          
+
+    </div>
+
+  </div>
+
+</body>
+</html>

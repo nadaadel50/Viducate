@@ -31,6 +31,10 @@ class SummaryContent(BaseModel):
     sections: List[Section]
     conclusion: str
 
+class ReadingTime(BaseModel):
+    words: int
+    minutes: int
+    label: str
 
 class SegmentSummaryResponse(BaseModel):
     segment_id: int
@@ -41,6 +45,7 @@ class SegmentSummaryResponse(BaseModel):
     summary: Optional[SummaryContent] = None
     language: Optional[str] = None
     generation_failed: bool = False
+    reading_time: Optional[ReadingTime] = None
     model_config = {
         "from_attributes": True
     }
@@ -53,6 +58,7 @@ class VideoSummaryResponse(BaseModel):
     language: Optional[str] = None
     created_at: Optional[datetime] = None
     cached: bool = False
+    reading_time: Optional[ReadingTime] = None
     model_config = {
         "from_attributes": True
     }

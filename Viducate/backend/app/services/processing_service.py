@@ -9,7 +9,7 @@ from app.services.transcription_service import transcribe
 
 from app.services.ocr_service import OCRService
 from app.services.merging_service import merge_transcript_ocr
-from app.services.segmentation_service import segment_topics
+from app.services.segmentation_service import    segment_topics
 from app.repositories.segment_repository import SegmentRepository
 from app.services.embedding_service import store_embeddings
 
@@ -130,6 +130,7 @@ async def run_processing_pipeline(video_id: int, language: str):
         repo.update_status(video_id, "segmenting")
         segment_repo = SegmentRepository(db)
 
+        # logger.info(f"[Pipeline] Segments generated: {segments_result['total_segments']}")
         segments_result = await segment_topics(merged, video_id,ocr_language,Transcribt_lang)
         logger.info(f"[Pipeline] Segments generated: {segments_result['total_segments']}")
 
@@ -138,9 +139,9 @@ async def run_processing_pipeline(video_id: int, language: str):
         for seg in segments_result["segments"]:
             print(" inserting segment:", seg["segment_number"])
             try:
-                segment_repo.create_full_segment(
+                db_segment = segment_repo.create_full_segment(
                     video_id=video_id,
-                    segment_data=seg
+                    segment_data=seg,
                 )
             except Exception as e:
                 logger.error(f" Failed to insert segment: {e}")
@@ -148,15 +149,52 @@ async def run_processing_pipeline(video_id: int, language: str):
                     status_code=status.HTTP_500_INTERNAL_SERVER_ERROR,
                     detail=f"Failed to insert segment {seg['segment_number']}"
                 )
-
+            
+            #********************************************
+            # Persist quality metadata from segmentation scoring
+            quality = seg.get("_quality")
+            if quality and db_segment is not None:
+                db_segment.quality_score = quality.get("score")
+                db_segment.quality_flag  = bool(quality.get("flag", False))
+                db_segment.retry_count   = 0
+                try:
+                    db.commit()
+                    logger.info(
+                        f"[Pipeline] Segment #{seg['segment_number']} "
+                        f"quality_score={quality.get('score', 'N/A'):.4f} "
+                        f"flag={quality.get('flag')}"
+                    )
+                except Exception as e:
+                    logger.error(
+                        f"[Pipeline] Could not save quality for segment "
+                        f"#{seg['segment_number']}: {e}"
+                    )
+                    db.rollback()
+            else:
+                if quality is None:
+                    logger.warning(
+                        f"[Pipeline] No _quality key on segment "
+                        f"#{seg['segment_number']} — skipping quality persist"
+                    )
+                if db_segment is None:
+                    logger.warning(
+                        f"[Pipeline] db_segment is None for segment "
+                        f"#{seg['segment_number']} — skipping quality persist"
+                    )
+            #********************************************
         logger.info("[Pipeline] Segments saved to DB successfully")
 
-        # ── Step 4: Store Embeddings ──────────────────────────────────────
-        logger.info(f"[Pipeline] Step 4 - Embeddings: video_id={video_id}")
+        # ── Step 5: Store Embeddings ──────────────────────────────────────
+        logger.info(f"[Pipeline] Step 5 - Embeddings: video_id={video_id}")
         store_embeddings(video_id, segments_result["segments"])
 
         # ── Completed Status ─────────────────────────────────────
         repo.update_status(video_id, "completed")
+
+        # ── Calculate & Save Storage Bytes ───────────────────────
+        storage_bytes = repo.get_video_storage_bytes(video_id)
+        repo.update_storage_bytes(video_id, storage_bytes)
+
         logger.info(f"[Pipeline] Completed: video_id={video_id}")
 
     except Exception as e:
