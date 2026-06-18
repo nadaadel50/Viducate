@@ -52,7 +52,7 @@ const SummaryPage = () => {
   return (
     <div
       className="min-h-screen flex flex-col"
-      style={{ backgroundColor: COLORS.background.light }}
+       style={{background:COLORS.background.radialGradient}}
     >
       <main className="flex-1 w-full max-w-7xl mx-auto px-4 md:px-6 py-8">
         <div className="flex flex-col lg:flex-row gap-8 items-start">
