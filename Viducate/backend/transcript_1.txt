@@ -1,227 +1,139 @@
-[0.0 --> 4.6]  Hello everyone, my name is Abhishek and welcome back to my channel.
-[5.3 --> 12.7]  Just imagine this, what if you can learn AWS Azure Google Cloud Platform without paying
-[12.7 --> 17.1]  for the services that you are using, without creating an account with these cloud platforms
-[17.1 --> 21.3]  and most importantly, without sharing your credit card information.
-[22.1 --> 22.9]  Wouldn't that be awesome?
-[23.5 --> 23.9]  Yes.
-[23.9 --> 29.1]  In today's video, I'll show you how you can emulate these cloud providers
-[29.1 --> 31.7]  so that you don't have to create an account with them
-[31.7 --> 34.9]  and you can run everything on your local machine.
-[35.5 --> 39.2]  All that you need is just Docker running on your machine.
-[39.6 --> 40.3]  That's it.
-[41.3 --> 42.4]  Now, you might have this question,
-[42.9 --> 44.1]  but Abhishek, why is this important?
-[44.5 --> 46.1]  I can just create an account with cloud.
-[46.7 --> 48.3]  The problem today is that,
-[48.7 --> 51.2]  now if you go three years or four years before,
-[51.9 --> 53.7]  when you create an account with cloud,
-[53.9 --> 69.0]  you get one year free trial on AWS Azure and GCP But the problem today you only get of free credits You will end up using these free credits in no time And then your cloud account moves to pay
-[69.0 --> 74.8]  as you go model. So if you use some services, either your account will be suspended or you will
-[74.8 --> 80.3]  be billed on your credit card. This is a reason why a lot of people today, they back out learning
-[80.3 --> 82.2]  cloud. They just watch some theory
-[82.2 --> 84.6]  videos but when it comes to practicals
-[84.6 --> 86.3]  they skip the practical part.
-[87.0 --> 88.3]  The emulation that
-[88.3 --> 89.4]  we are going to learn today.
-[90.1 --> 92.3]  So you can run all
-[92.3 --> 94.3]  those AWS commands. You can create
-[94.3 --> 96.4]  all those AWS services but
-[96.4 --> 98.3]  everything is running on your local
-[98.3 --> 100.3]  machine. Not only AWS, Azure
-[100.3 --> 101.7]  and GCP as well.
-[102.4 --> 104.4]  Let me show you an example through a whiteboard
-[104.4 --> 106.2]  you know so that you can understand better
-[106.2 --> 108.3]  and then I will show you the
-[108.3 --> 110.1]  things practically. But
-[110.1 --> 115.4]  But before we go there, let me tell you, this is very, very important, especially if you
-[115.4 --> 119.9]  are practicing cloud or if you're in the state of learning any cloud platform.
-[120.0 --> 123.8]  Perfect. Without any further delay, let's head to the byte board.
-[124.7 --> 126.2]  Let's take a simple example.
-[127.1 --> 128.5]  Imagine you're learning EKS.
-[129.2 --> 132.4]  You're watching a video on YouTube, maybe video from our channel.
-[133.2 --> 134.4]  You understood the theory part.
-[134.7 --> 136.0]  You learned what is EKS.
-[136.8 --> 139.9]  Now the video also has the practical part, the demo part,
-[141.0 --> 144.5]  where the tutor explained how to create EKS cluster,
-[145.1 --> 147.2]  how to create a pod within the EKS cluster,
-[147.2 --> 149.0]  how to deploy a service
-[149.0 --> 151.3]  and how to manage the cluster.
-[152.2 --> 154.7]  Now, obviously you want to practice this.
-[155.2 --> 156.0]  You learn the theory.
-[156.4 --> 157.4]  Only if you practice,
-[157.9 --> 159.2]  you will be confident about EKS.
-[160.0 --> 161.6]  Now, how do you achieve this?
-[162.1 --> 162.9]  There are two ways.
-[163.4 --> 165.0]  One, the obvious thing,
-[165.7 --> 167.0]  you create an account with AWS.
-[168.5 --> 171.2]  You will get some free credits from AWS.
-[171.9 --> 174.1]  You will spin up EKS cluster
-[174.1 --> 186.9]  and you will start learning these things But the problem here is that if you have this EKS cluster running for three to four days all your free credits are expired because AWS only gives you hundred dollars of
-[186.9 --> 194.5]  free credits once you expire the credits your AWS account knows to pay as you go model basically
-[194.5 --> 201.8]  now when you want to learn S3 bucket EBS volumes or lambda functions maybe down the line you will
-[201.8 --> 207.5]  be charged for creating these services or you might want to suspend this account and
-[207.5 --> 208.4]  create a new account.
-[209.3 --> 210.2]  So this is a problem.
-[211.0 --> 217.4]  What we are going to learn today is the other way where we will emulate these cloud providers.
-[218.1 --> 220.4]  AWS, Azure or Google Cloud Platform.
-[221.2 --> 222.0]  What is emulation?
-[222.8 --> 225.3]  Emulation is basically mocking the cloud providers.
-[226.1 --> 228.3]  What happens when you mock the cloud providers?
-[228.3 --> 234.6]  so when you mock it all the APS run on your local machine so now when you go
-[234.6 --> 239.9]  ahead and let's say you run this command awa cks create cluster the
-[240.0 --> 246.8]  cluster is created but the cluster is created on your local machine it will use the resources on
-[246.8 --> 255.1]  your local machine not on the AWS platform so you will not be charged by AWS but Abhishek is the
-[255.1 --> 263.2]  response exactly similar to response that we get from EKS yes response is exactly similar even
-[263.2 --> 268.3]  trust me you will not even understand if you are running these services on AWS or on your local
-[268.3 --> 274.2]  machine. That is the power of mocking. Mocking is not a new concept. If you're into development,
-[274.6 --> 280.2]  developers usually mock databases. They mock different types of services, even web servers,
-[280.4 --> 286.2]  so that you don't have to spin up these services on their cloud platform or anywhere else.
-[287.2 --> 292.7]  We are going to apply the same concept for cloud platforms today. Abhishek,
-[292.7 --> 304.6]  there are so many projects Not really There are very less projects There is a project called local stack I tried this project in the past but it is very heavy So I thought and this is also an enterprise platform
-[305.1 --> 307.1]  So I did not bother about talking it.
-[307.5 --> 309.2]  But now I came across
-[309.2 --> 310.8]  an open source project called FlowC.
-[311.5 --> 313.2]  Now this is an open source project.
-[313.5 --> 315.1]  This is absolutely free and
-[315.1 --> 316.2]  there are no conditions to it.
-[316.7 --> 319.0]  I hope I'm pronouncing the name right.
-[319.4 --> 320.8]  I recently explored the project.
-[321.3 --> 322.8]  So I'm sorry
-[322.8 --> 324.6]  if I'm pronouncing the name wrong.
-[325.0 --> 327.8]  Now let me show you how to use Flowsee.
-[328.6 --> 331.5]  So simple, just head to their website.
-[332.0 --> 335.2]  So you can see here AWS, Azure and GCP.
-[335.6 --> 336.9]  They have three different pages.
-[337.8 --> 338.8]  We'll start with AWS.
-[339.4 --> 340.8]  So scroll down.
-[341.4 --> 344.6]  You have commands here to get started with AWS
-[344.6 --> 347.4]  or you can just go up, click on get started.
-[348.2 --> 351.2]  So they have the homebrew command because I'm using Mac.
-[351.2 --> 352.6]  I'll run this brew install.
-[352.6 --> 356.6]  If you are using Windows, go to PowerShell and run this command.
-[356.6 --> 358.1]  So what does this do?
-[358.1 --> 359.9]  This will install
-[360.0 --> 361.2]  API is on the local machine.
-[361.8 --> 363.3]  So this will mock everything.
-[363.7 --> 364.5]  One single command.
-[365.4 --> 372.3]  Control R, Rue, or you know, you can just copy the command here and paste it.
-[373.7 --> 378.5]  It will not take much time because it is only emulating the APIs,
-[378.6 --> 381.5]  but it is not creating all the service on your local machine.
-[382.3 --> 384.4]  It says I already have Flossy, which is fine.
-[385.2 --> 387.7]  Now the next thing is to run Flossy start.
-[388.9 --> 389.4]  Perfect.
-[390.0 --> 393.9]  If you want to run Azure,
-[394.2 --> 396.4]  then instead of running flow C start,
-[396.6 --> 399.1]  you just have to do flow C easy start.
-[399.5 --> 400.8]  Or if you want to do GCP,
-[401.4 --> 403.1]  just go to the get started.
-[403.7 --> 405.0]  Instead of flow C start,
-[405.4 --> 409.9]  just run in the CLA part flow C GCP start.
-[410.7 --> 411.0]  Cool.
-[411.5 --> 412.6]  We'll go back to AWS.
-[413.0 --> 429.5]  I show you by creating an S3 bucket first Okay So how to create an S3 bucket we will use the same command but before that we have to set up AWS environment variables so you can just say eval flow
-[429.5 --> 435.1]  C ENB so this will set up AWS environment variables for us what happens
-[435.1 --> 439.2]  if you don't run this command be careful you have to run it otherwise when you
-[439.2 --> 454.9]  run AWS S3 MB for make bucket and followed by my back. So if you run AWS S3 MB followed by name of
-[454.9 --> 460.9]  the bucket, there is a possibility. The bucket is created on your actual AWS account. Maybe you
-[460.9 --> 467.1]  have set up the account in the past and your AWS CLI is pointing to it. So there is a possibility
-[467.1 --> 470.6]  the command that you run here is created on the AWS account.
-[471.2 --> 473.3]  So definitely run this command.
-[473.7 --> 475.5]  Well, flow C, env.
-[476.2 --> 477.6]  Now I'll just do this.
-[478.1 --> 479.9]  My bucket, one, two, three.
-[480.0 --> 489.0]  okay let's see what happens there you go make bucket bucket is created I can even verify AWS
-[489.0 --> 497.6]  s3 LS there you go so my bucket one two three is the name of the bucket that is created in fact we
-[497.6 --> 504.3]  can upload file to this bucket as well so there is this comment I'll just copy it and paste it here
-[504.3 --> 511.5]  upload hello flow c txt to my bucket okay i did not change the name of the bucket but anyways
-[511.5 --> 520.0]  now this file is uploaded to my bucket i can also read it so i'll quickly read it and show it to you
-[520.0 --> 529.5]  same aws commands why pay for s3 when flow c is free right similarly we can create eks cluster as
-[529.5 --> 532.0]  but make sure you have Docker running.
-[532.0 --> 533.5]  How do you do that?
-[533.5 --> 545.8]  AWS EKS create cluster I hope you know I providing the right details AWS EKS create cluster hyphen hyphen name Let provide the name of the cluster
-[546.2 --> 549.5]  I will say demo flow scene.
-[552.8 --> 554.6]  Okay, so the command is wrong.
-[555.0 --> 556.2]  Let's go to the documentation.
-[556.8 --> 560.7]  Here I have a setup for EKS as well.
-[561.0 --> 564.6]  First, I'll set up the EKS endpoints.
-[565.0 --> 565.7]  Okay.
-[566.7 --> 567.9]  We forgot to do this.
-[568.7 --> 571.6]  So AWS endpoint, localhost 4566.
-[572.4 --> 574.6]  AWS default region, US East 1.
-[575.6 --> 577.2]  AWS key ID, test.
-[577.2 --> 580.8]  And AWS secret access key is also test.
-[582.0 --> 582.7]  Perfect.
-[583.4 --> 585.5]  So let me run this again.
-[588.1 --> 588.8]  Cool.
-[589.3 --> 593.5]  Now, let's go ahead, create the cluster and try.
-[595.0 --> 597.7]  AWS EKS create cluster,
-[597.7 --> 599.9]  if an FN name dev cluster, I'm providing
-[600.0 --> 605.6]  a dummy role ARN and I'm providing a dummy VPC configuration as well.
-[607.8 --> 611.4]  Okay, it says dev cluster already exists on my local machine.
-[611.7 --> 614.7]  I'll quickly change it to dev cluster 1.
-[616.2 --> 620.2]  Now, unlike on AWS, this will not take 30 minutes or 40 minutes.
-[620.5 --> 623.6]  This will be done in few seconds of time.
-[624.0 --> 624.2]  Why?
-[624.8 --> 627.0]  Because local Kubernetes cluster is created.
-[627.7 --> 629.4]  Abhishek, which cluster is created locally?
-[629.4 --> 632.8]  it is creating K3S cluster locally.
-[633.1 --> 635.3]  I've already checked it is using K3S.
-[636.0 --> 638.9]  Now we can point this EKS cluster,
-[639.1 --> 640.5]  like we can point the kubeconfig,
-[641.2 --> 643.4]  AWS EKS update kubeconfig,
-[643.8 --> 646.1]  hyphen hyphen name dev cluster one.
-[646.9 --> 650.6]  And now if I do kubectl get pods
-[650.6 --> 652.5]  or kubectl get nodes,
-[652.9 --> 665.7]  you can see this is the local Kubernetes cluster but you are using EKS commands You are using AWS command You are using the EKS command to fetch the kube config
-[666.2 --> 669.9]  And then the kubectl is pointing to that local cluster.
-[670.6 --> 673.9]  This way you can learn 50 different services on AWS.
-[674.5 --> 676.4]  So 47 services are supported.
-[677.1 --> 678.1]  KMS is supported.
-[678.6 --> 679.6]  SQS is supported.
-[680.1 --> 681.3]  Secret manager is supported.
-[681.8 --> 682.5]  Event bridge.
-[682.5 --> 687.3]  and similarly on AWS, Azure, multiple services are supported.
-[687.6 --> 690.5]  Even on GCP, multiple services are supported.
-[691.0 --> 694.2]  Okay, in GCP at the moment, only seven services are supported.
-[695.0 --> 697.8]  But the best part is that this is an open source project.
-[698.4 --> 700.6]  So if we keep supporting this project,
-[701.0 --> 704.2]  they will add more services to it, right?
-[704.7 --> 706.2]  Of course, there is an alternative.
-[706.7 --> 709.9]  As I told you, local stack is an enterprise alternative.
-[709.9 --> 712.9]  Maybe if you're doing this within your organization,
-[712.9 --> 715.9]  probably your DevOps team want to use this concept.
-[715.9 --> 719.9]  You can head to local stack and you can see probably you can participate.
-[720.0 --> 722.2]  purchase license or you can take subscription of it.
-[723.2 --> 724.3]  Abhishek, what will be the advantage
-[724.3 --> 726.6]  if we take the subscription as a DevOps team?
-[727.5 --> 729.6]  See, maybe you're doing some proof of concept.
-[730.3 --> 734.0]  Instead of creating a Dev AWS cluster,
-[734.3 --> 735.5]  Development AWS cluster,
-[735.9 --> 738.7]  you can probably try LocalStack or FlowC.
-[739.8 --> 740.7]  Opportunities are endless.
-[742.7 --> 745.0]  So you can go ahead, search for FlowC.
-[745.9 --> 748.3]  Just search for FlowC, you will find the website.
-[748.3 --> 751.7]  or you can also look for their GitHub repository.
-[752.3 --> 754.1]  So this is their GitHub repository.
-[754.6 --> 755.9]  On the GitHub repository,
-[756.3 --> 758.4]  they have complete details in the readme file.
-[759.5 --> 761.1]  Also, they have good number of stats.
-[761.4 --> 763.4]  So I hope the project will keep up.
-[764.0 --> 764.9]  Let's hope for the best
-[764.9 --> 768.8]  because mocking is very useful for developers.
-[769.7 --> 770.8]  As DevOps instance,
-[771.3 --> 774.1]  it is good if we also have a mocking environment.
-[775.0 --> 776.1]  Developers mock databases,
-[776.3 --> 778.0]  developers mock messaging queues,
-[778.3 --> 780.5]  Why not as DevOps and cloud engineers,
-[781.0 --> 782.3]  we mock the cloud platforms.
-[783.4 --> 783.7]  Perfect.
-[784.3 --> 786.6]  So I hope you found the video informative.
-[787.3 --> 788.7]  Let me know if you have any questions.
-[789.3 --> 793.7]  Honestly, even I'm exploring the mocking very recently.
-[794.3 --> 795.5]  So if you have any questions
-[795.5 --> 797.6]  and let's say I don't know the answer,
-[798.1 --> 800.9]  I'll go back, do a research and get back to you.
-[801.8 --> 803.5]  Thank you so much for watching today's video.
-[803.9 --> 804.7]  See you all in the next one.
-[805.1 --> 805.6]  Take care.
+[0.0 --> 2.1]  السلام عليكم ورحمة الله وبركاته
+[2.1 --> 4.2]  أهلا وسهلا بكم طلب أنا الكرام
+[4.2 --> 6.3]  أهلا بكم في كورس تأسيس النحو
+[6.3 --> 8.4]  من البداية ووصلنا يا شباب
+[8.4 --> 10.2]  للدرس العاشر من الكورس
+[10.2 --> 12.0]  وآخر فيديو إن شاء الله النهاردة
+[12.0 --> 14.0]  معلش زهقناكم طولنا عليكم
+[14.0 --> 16.0]  في الشرح بس والله أنا متفقل
+[16.0 --> 18.0]  خير إن تعليقات اللي جابية بتاعتكم
+[18.0 --> 20.0]  بترفع من روحنا المعنوية جامد
+[20.0 --> 22.3]  بحس إن فعلا إن شاء الله فيكم ناس استفادت
+[22.3 --> 24.1]  ولو حد استفاد
+[24.1 --> 25.8]  فعلا ما يبخلش علينا إن هو
+[25.8 --> 28.1]  يعرفنا إن هو إيه استفاد من الكورس
+[28.1 --> 30.0]  ده واستفاد من الشرح البسيط ده
+[30.0 --> 31.8]  ان شاء الله يا رب نكون نفعنا بكم يا بلاه
+[31.8 --> 49.8]  ان شاء الله النهاردة
+[49.9 --> 50.5]  اللغة
+[50.5 --> 51.2]  خلاص
+[51.2 --> 52.1]  ايه هم المجرورات
+[52.6 --> 84.9] 
+[84.9 --> 90.5]  علاها في اول الكورس احفظها كويس دايما اول اول ما تشوف الحرف في
+[90.5 --> 95.1]  الجملة اعرف ان اللي وراه اسم مجرور عندنا كمان حرف الباق وحرف
+[95.1 --> 101.1]  اللام خلاص للمدرسة او بالمدرسة خلاص دول من حروف المجرورات او من
+[101.1 --> 106.6]  حروف الجرة اصدي تجر اي شيء اي كلمة تأتي بعد حرف جرة على طول
+[106.6 --> 112.6]  تكون ايه اسم مجرور وعلمة الجرة بقى سواء كسرة او ايه او يا او اي
+[112.6 --> 114.6]  شيء خلاص على حسب العلمات نعليها
+[114.6 --> 116.3]  في درس العلمات خلاص
+[116.3 --> 118.7]  زي ايه سافر محمد
+[118.7 --> 119.9]  الى القاهرة
+[120.1 --> 122.0]  يلا، الجملة إيه إسميها ولا فعالية؟
+[122.5 --> 126.6]  على فكرة الواجب اللي فات والواجب اللي قبله بدأت تتعلم إعراب
+[126.6 --> 128.8]  خلاص بدأت تتعلم أن أنت تعرف
+[128.8 --> 131.8]  النهاردة إن شاء الله عايزك بقى إيه؟
+[131.8 --> 134.4]  خلاص الجملة بالنسبة لك تعرف تعريبها كلها
+[134.4 --> 137.6]  مفيش حاجة في الجملة إلا منت تعرفت إعرابها
+[137.6 --> 142.0]  سواء حرف سواء إسم سواء فعل سواء وظيفة الحاجة في الجملة
+[142.0 --> 143.6]  الكلمة إيه كل ده عرفنا
+[143.6 --> 146.2]  فإن شاء الله يعني ما عندكش عذر بقى خلاص
+[146.2 --> 149.4]  لازم تعرف تعرف كويس في آخر درس بإذن الله
+[149.4 --> 152.1]  سافر محمد إلى القاهرة
+[152.1 --> 153.6]  الجملة يسميه اللي فعلية
+[153.6 --> 155.2]  جملة فعلية
+[155.2 --> 157.5]  بدأت بفعل سافر فعل ماضي
+[157.5 --> 158.5]  مبني على الفتح
+[158.5 --> 161.2]  طيب ليه يبنى على الفتح
+[161.2 --> 164.0]  سؤال حد عارف أقول أنا
+[164.0 --> 165.3]  ليه يبنى على الفتح
+[165.3 --> 167.1]  لأنه لم يتصل بشيء
+[167.1 --> 169.4]  دي في الحالة الطبيعية بتاعت الفعل الماضي
+[169.4 --> 171.9]  إذا لم يتصل بشيء بني على الفتح
+[171.9 --> 173.7]  طيب من الذي سافر
+[173.7 --> 185.1] 
+[185.1 --> 186.9]  علامة الجر الكسرة
+[186.9 --> 189.3]  خلاص يبقى المجرور بحرف الجر
+[189.3 --> 190.8]  هو كل اسم
+[190.8 --> 192.6]  مسبوك بحرف جر من
+[192.6 --> 194.5]  الحروف اللي احنا خدناها
+[194.5 --> 196.8]  تمام طيب المجرور بالإضافة
+[196.8 --> 199.2]  سهل خالص اللي هو مضاف إليه
+[199.2 --> 200.9]  المضاف إليه هو اسم
+[200.9 --> 202.9]  نسب إليه
+[202.9 --> 204.4]  اسم صابق
+[204.4 --> 207.2]  مضاف ومضاف إليه
+[207.2 --> 209.8]  كلمتين اضافوا البعض علشان نفهم الكلام
+[209.8 --> 211.2]  ليتعرف به
+[211.2 --> 212.7]  أو يتخصص به
+[212.7 --> 215.7]  ويسمى الأول مضافا والثاني مضاف إليه
+[215.7 --> 216.9]  طب بص الكلام ده
+[216.9 --> 219.0]  نور الشمسي قوي
+[219.0 --> 221.7]  نور الشمسي
+[221.7 --> 223.8]  يبقى أنا لما أجأ أقول لك نور
+[223.8 --> 224.9]  طب نور مين
+[224.9 --> 226.7]  نور الشمس
+[226.7 --> 228.0]  آه فهمت كده
+[228.0 --> 229.8]  يبقى احنا أضافنا كلمة نور
+[229.8 --> 232.4]  لكلمة الشمس علشان نبين
+[232.4 --> 234.8]  المعنى اللي احنا عايزين نوصله للسامع
+[234.8 --> 236.4]  خلاص يبقى نور هنا
+[236.4 --> 238.7]  مبتدأ مرفوع بالضمة وهو
+[238.7 --> 239.2]  مضاف
+[240.0 --> 242.6]  والشمس مضاف إليه مجرور بالكسرة
+[242.6 --> 247.4]  خلاص يبقى كلمة نور دي مضافة لكلمة الشمس علشان توضحها
+[247.4 --> 252.3]  علشان تبين نوعها علشان يتعرف به أو يتخصص به
+[252.3 --> 255.8]  خلاص احنا خصصنا النور ده للشمس طب ما فيه نور القمر
+[255.8 --> 258.7]  أو فيه نور المصباح أو فيه نور أي شيء
+[258.7 --> 261.3]  نور العلم مثلا خلاص وهكذا
+[261.3 --> 266.0]  طيب قوي هنا تعرف ايه خبر مرفوع علامة الرفق الضمة
+[266.0 --> 269.0]  ده يا شباب باختصار جدا المجرورات
+[269.0 --> 271.4]  المجرور بحرف الجر والمجرور بالإضافة
+[271.4 --> 273.2]  وإن شاء الله بإذن الله
+[273.2 --> 275.1]  ده كده يعني ما طولناش في الدرس خالص
+[275.1 --> 277.0]  فاضل بعد كده توابع المجرور
+[277.0 --> 279.8]  زي ما احنا قلنا النعت أو الحال أو التوكيد أو العطف
+[279.8 --> 283.2]  لو كان المنعوت أو صاحب الحال
+[283.2 --> 285.9]  خلاص كل دول لو كانوا مجرورين
+[285.9 --> 288.7]  بيكون النعت والحال نفسه مجرور
+[288.7 --> 290.4]  خلاص دول التوابع
+[290.4 --> 292.7]  التوابع عموما الأربع توابع دول
+[292.7 --> 306.6] 
+[306.6 --> 309.1]  كده ان شاء الله نكون خلصنا المجرورات
+[309.1 --> 311.0]  ونكون عرفنا نوعين
+[311.0 --> 312.9]  المجرورات اللي بيجرب حرف جر
+[312.9 --> 314.2]  أو اللي بيجرب الإضافة
+[314.2 --> 316.6]  وعرفنا ان التوابع للمجرور برضو
+[316.6 --> 318.1]  من المجرورات
+[318.1 --> 320.4]  وكده شباب بارك الله فيكم
+[320.4 --> 322.3]  ونفع الله بكم وان شاء الله نكون
+[322.3 --> 324.5]  استفدنا من الفيديوهات اللي فاتت
+[324.5 --> 326.5]  كلها العشر الايام اللي احنا
+[326.5 --> 328.5]  كنا وغدينه كرس ومكسف لتأسيس
+[328.5 --> 330.4]  النحو عرفنا في كل ما
+[330.4 --> 332.5]  يخص اساسيات مبادئ هذا العلم
+[332.5 --> 334.5]  الجليل علم النحو عرفنا
+[334.5 --> 336.1]  فيه اسيات كتير جدا
+[336.1 --> 338.3]  واتدرجنا مع بعض بالمعلومة
+[338.3 --> 340.4]  لحد ما وصلنا النهاردة بازن الله ان احنا
+[340.4 --> 342.5]  نعرف نعرف كلمة كويس نعرف
+[342.5 --> 344.5]  جملة كويس نحدد وظيفتها
+[344.5 --> 346.7]  الاعرابية نحدد حكمها الاعرابي
+[346.7 --> 348.6]  ونحدد العلامة الاعرابية
+[348.6 --> 350.6]  عرفنا الفرق بين العلامات الاصلية
+[350.6 --> 352.9]  والفرعية وعرفنا بين المجرورات
+[352.9 --> 354.4]  والمرفوعات والمنصوبات
+[354.4 --> 356.6]  ان شاء الله يكون كورس دسم
+[356.6 --> 358.5]  يكون نفع بيكم ان شاء الله
+[358.5 --> 359.9]  يكون افادكم بمعلومة
+[360.0 --> 361.8]  علومة قيمة كويسة
+[361.8 --> 363.8]  ما تبخلوش علينا شباب لو كان حد
+[363.8 --> 365.7]  فعلا حس ان هو مستوات حسن
+[365.7 --> 367.9]  يشجعنا وعلشان نكمل
+[367.9 --> 369.4]  ان شاء الله ونعمل لكم مستوى تاني
+[369.4 --> 370.9]  سبونا الكلام ده في التعليقات
+[370.9 --> 373.4]  رب ننفع بيكم أولاد ويجزيكم خير
+[373.4 --> 375.7]  ويا رب دايما من تفوق لتفوق
+[375.7 --> 377.6]  ونشوفكم دايما في احسن الدرجات
+[377.6 --> 379.7]  ان شاء الله قولوا امين اللهم امين
+[379.7 --> 381.5]  بارك الله فيكم نفع الله بكم
+[381.5 --> 384.1]  والسلام عليكم ورحمة الله وبركاته

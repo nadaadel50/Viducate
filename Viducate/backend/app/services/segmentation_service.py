@@ -2,6 +2,8 @@ import os
 import json
 import logging
 import re
+from app.services.cancellation_registry import is_cancelled, PipelineCancelledError,  check_cancelled
+
 # from groq import Groq
 from google import genai
 from google.genai import types
@@ -187,11 +189,13 @@ Transcript:
 """
 
 
-async def call_groq_with_retry(client, chunk: str, chunk_index: int, final_language: str = "ar", max_retries: int = 3):
+#async def call_groq_with_retry(client, chunk: str, chunk_index: int, final_language: str = "ar", max_retries: int = 3):
+async def call_groq_with_retry(client,  chunk: str,  chunk_index: int,video_id: int,final_language: str = "ar",max_retries: int = 3):
     current_chunk = chunk
 
     for attempt in range(max_retries):
         try:
+            check_cancelled(video_id)
             prompt = build_prompt(current_chunk, final_language=final_language)
             estimated_tokens = estimate_tokens(prompt)
 
@@ -235,8 +239,8 @@ async def call_groq_with_retry(client, chunk: str, chunk_index: int, final_langu
                 half1 = " ".join(words[:mid])
                 half2 = " ".join(words[mid:])
 
-                seg1 = await call_groq_with_retry(client, half1, chunk_index, final_language, max_retries)
-                seg2 = await call_groq_with_retry(client, half2, chunk_index, final_language, max_retries)
+                seg1 = await call_groq_with_retry(client, half1, chunk_index, video_id, final_language,  max_retries)
+                seg2 = await call_groq_with_retry(client, half2, chunk_index, video_id, final_language,  max_retries)
 
                 return seg1 + seg2
 
@@ -285,8 +289,9 @@ async def segment_topics(merged: list, video_id: int, ocr_language: str ,transcr
     all_segments = []
 
     for i, chunk in enumerate(chunks):
+        check_cancelled(video_id)
         logger.info(f"[Segmentation] Processing chunk {i+1}/{len(chunks)}")
-        segments = await call_groq_with_retry(client, chunk, chunk_index=i, final_language=final_language)
+        segments = await call_groq_with_retry(client, chunk, chunk_index=i, video_id=video_id, final_language=final_language)
         all_segments.extend(segments)
 
     for idx, seg in enumerate(all_segments):
@@ -296,6 +301,7 @@ async def segment_topics(merged: list, video_id: int, ocr_language: str ,transcr
     # ── Attach source text and quality score to every segment ────────────────
     logger.info(f"[Segmentation] Scoring {len(all_segments)} segments vs merged text")
     for seg in all_segments:
+        check_cancelled(video_id)
         start_s = _time_str_to_seconds(seg.get("start_time", "00:00"))
         end_s   = _time_str_to_seconds(seg.get("end_time",   "00:00"))
 

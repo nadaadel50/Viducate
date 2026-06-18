@@ -345,7 +345,8 @@ from paddleocr import PaddleOCR
 from difflib import SequenceMatcher
 from typing import List, Dict, Tuple
 import re
-
+from app.services.cancellation_registry import is_cancelled, PipelineCancelledError,  check_cancelled
+from concurrent.futures import ThreadPoolExecutor
 
 class OCRProcessor:
 
@@ -403,12 +404,14 @@ class OCRProcessor:
     # --------------------------------------------
     # check if text is from slides or code 
     # --------------------------------------------
-    def _is_code_video(self, cap, total_frames: int) -> bool:
+    #def _is_code_video(self, cap, total_frames: int) -> bool:
+    def _is_code_video(self, cap, total_frames, video_id=None):
         sample_indices = np.linspace(0, total_frames - 1, 5, dtype=int)
         dark_frame_count = 0
         code_content_count = 0
 
         for idx in sample_indices:
+            check_cancelled(video_id)
             cap.set(cv2.CAP_PROP_POS_FRAMES, int(idx))
             ret, frame = cap.read()
             if not ret:
@@ -501,7 +504,8 @@ class OCRProcessor:
     # --------------------------------------------
     # PRE-FLIGHT: Check if the video contains text content at all
     # --------------------------------------------
-    def _video_has_text_content(self, cap, total_frames: int) -> bool:
+    #def _video_has_text_content(self, cap, total_frames: int) -> bool:
+    def _video_has_text_content(self, cap, total_frames, video_id=None):
         """
         Samples a limited number of frames and estimates whether the video
         contains textual content using image processing only (no OCR).
@@ -514,6 +518,7 @@ class OCRProcessor:
         frames_with_text = 0  # عداد الـ frames اللي فيها text فعلاً
 
         for idx in sample_indices:
+            check_cancelled(video_id)
             cap.set(cv2.CAP_PROP_POS_FRAMES, int(idx))
             ret, frame = cap.read()
             if not ret:
@@ -594,15 +599,21 @@ class OCRProcessor:
     # --------------------------------------------
     # AUTO LANGUAGE DETECTION
     # --------------------------------------------
-    def _detect_language_from_frame(self, frame) -> str:
+    #def _detect_language_from_frame(self, frame) -> str:
+    def _detect_language_from_frame(self, frame, video_id: int = None) -> str:
         """
         Detects language using OCR on only one suitable frame (not multiple).
         It searches for a frame with sufficient edge density (likely containing text).
         If none found -> fallback to middle frame.
         """
         try:
+            check_cancelled(video_id)
             ocr     = self._get_ocr("ar")
+
+            check_cancelled(video_id)
             results = ocr.predict(frame)
+
+            check_cancelled(video_id)
 
             if not results or not results[0]:
                 return "en"
@@ -628,14 +639,16 @@ class OCRProcessor:
             print(f"[OCRProcessor] Auto-detect: arabic_ratio={arabic_ratio:.2f}")
 
             return "ar" if arabic_ratio > 0.3 else "en"
-
+        except PipelineCancelledError:
+            raise
         except Exception as e:
             print(f"[OCRProcessor] Language detection failed: {e}, defaulting to en")
             return "en"
 
 
 
-    def _detect_language_fast(self, cap, total_frames: int) -> str:
+   # def _detect_language_fast(self, cap, total_frames: int) -> str:
+    def _detect_language_fast(self, cap, total_frames, video_id=None):
         """
         Detects the language using OCR on a single suitable frame (not multiple frames).
         The function searches for a frame that likely contains text by checking
@@ -649,6 +662,7 @@ class OCRProcessor:
         ]
 
         for pos in candidate_positions:
+            check_cancelled(video_id)
             cap.set(cv2.CAP_PROP_POS_FRAMES, pos)
             ret, frame = cap.read()
             if not ret:
@@ -665,7 +679,7 @@ class OCRProcessor:
                 continue
 
             # Frame is likely useful → run OCR-based language detection
-            lang = self._detect_language_from_frame(frame)
+            lang = self._detect_language_from_frame(frame, video_id=video_id)
             print(f"[OCRProcessor] Language detected from pos={pos}: {lang}")
             return lang
 
@@ -728,12 +742,32 @@ class OCRProcessor:
     # --------------------------------------------
     # RUN OCR ON SINGLE FRAME
     # --------------------------------------------
-    def _run_ocr_on_frame(self, frame, paddle_lang: str, is_code: bool = False) -> List[str]:
+    #def _run_ocr_on_frame(self, frame, paddle_lang: str, is_code: bool = False) -> List[str]:
+    def _run_ocr_on_frame(self, frame, paddle_lang: str, is_code: bool = False, video_id: int = None) -> List[str]:
         lines = []
         ocr   = self._get_ocr(paddle_lang)
 
         try:
-            results = ocr.predict(frame)
+            check_cancelled(video_id)
+            #results = ocr.predict(frame)
+              
+            with ThreadPoolExecutor(max_workers=1) as executor:
+
+                future = executor.submit(
+                    ocr.predict,
+                    frame
+                )
+
+                while not future.done():
+
+                    check_cancelled(video_id)
+
+                    time.sleep(0.2)
+
+                results = future.result()
+
+            check_cancelled(video_id)
+
         except Exception as e:
             print(f"[OCRProcessor] OCR error: {e}")
             return lines
@@ -757,7 +791,8 @@ class OCRProcessor:
     # --------------------------------------------
     # MAIN ENTRY POINT
     # --------------------------------------------
-    def process_from_file(self, video_path: str) -> Dict:
+    #def process_from_file(self, video_path: str) -> Dict:
+    def process_from_file(self, video_path: str, video_id: int = None) -> Dict:
         cap     = None
         is_temp = False
 
@@ -779,7 +814,10 @@ class OCRProcessor:
 
             # ----- 2. Pre-flight check ---------------------------------------
             print(f"[OCRProcessor] Running pre-flight text content check...")
-            preflight = self._video_has_text_content(cap, total_frames)
+
+            check_cancelled(video_id)
+            
+            preflight = self._video_has_text_content(cap, total_frames, video_id)
             cap.set(cv2.CAP_PROP_POS_FRAMES, 0)
 
             if not preflight["has_text"]:
@@ -787,7 +825,9 @@ class OCRProcessor:
                 return {"segments": [], "total": 0, "language": None, "url_type": "local"}
 
             # ----- 3. Detect video type (code vs slides) ---------------------
-            is_code_video = self._is_code_video(cap, total_frames)
+            check_cancelled(video_id)
+            
+            is_code_video = self._is_code_video(cap, total_frames, video_id)
             cap.set(cv2.CAP_PROP_POS_FRAMES, 0)
 
             # لو مش كود وtext قليل → skip
@@ -797,7 +837,12 @@ class OCRProcessor:
 
             # ---- 4. Language detection ---------------------------------------
             print(f"[OCRProcessor] Auto-detecting language...")
-            detected_lang = self._detect_language_fast(cap, total_frames)
+            check_cancelled(video_id)
+            
+            detected_lang = self._detect_language_fast(cap, total_frames, video_id)
+
+            check_cancelled(video_id)
+            
             paddle_lang   = self._get_paddle_lang(detected_lang)
             cap.set(cv2.CAP_PROP_POS_FRAMES, 0)
 
@@ -814,9 +859,12 @@ class OCRProcessor:
             OCR_COOLDOWN   = int(fps * 5)
 
             while True:
+                check_cancelled(video_id)
                 ret, frame = cap.read()
                 if not ret:
                     break
+
+                check_cancelled(video_id)
 
                 frame_idx += 1
                 step = int(fps * self.SAMPLE_INTERVAL)
@@ -850,8 +898,10 @@ class OCRProcessor:
                     mean_brightness = np.mean(cv2.cvtColor(frame_small, cv2.COLOR_BGR2GRAY))
                     if mean_brightness > 150:  # light theme → invert
                         frame_small = cv2.bitwise_not(frame_small)
-
-                lines        = self._run_ocr_on_frame(frame_small, paddle_lang, is_code=is_code_video)
+                
+                check_cancelled(video_id)
+                
+                lines        = self._run_ocr_on_frame(frame_small, paddle_lang, is_code=is_code_video, video_id=video_id)
                 lines = [l for l in lines if not self._is_url_or_browser_content(l)]
 
 

@@ -1,1155 +1,745 @@
 [00:00:00]
-  Transcript :  Hello everyone, my name is Abhishek and welcome back to my channel.
+  Transcript :  السلام عليكم ورحمة الله وبركاته
   OCR        : None
-  Combined   :  Hello everyone, my name is Abhishek and welcome back to my channel.
+  Combined   :  السلام عليكم ورحمة الله وبركاته
 
-[00:00:05]
-  Transcript :  Just imagine this, what if you can learn AWS Azure Google Cloud Platform without paying
+[00:00:02]
+  Transcript :  أهلا وسهلا بكم طلب أنا الكرام
   OCR        : None
-  Combined   :  Just imagine this, what if you can learn AWS Azure Google Cloud Platform without paying
+  Combined   :  أهلا وسهلا بكم طلب أنا الكرام
 
-[00:00:12]
-  Transcript :  for the services that you are using, without creating an account with these cloud platforms
+[00:00:06]
+  Transcript :  أهلا بكم في كورس تأسيس النحو
+  OCR        : المجرورات
+  Combined   :  أهلا بكم في كورس تأسيس النحو المجرورات
+
+[00:00:06]
+  Transcript :  من البداية ووصلنا يا شباب
   OCR        : None
-  Combined   :  for the services that you are using, without creating an account with these cloud platforms
+  Combined   :  من البداية ووصلنا يا شباب
+
+[00:00:08]
+  Transcript :  للدرس العاشر من الكورس
+  OCR        : None
+  Combined   :  للدرس العاشر من الكورس
+
+[00:00:10]
+  Transcript :  وآخر فيديو إن شاء الله النهاردة
+  OCR        : None
+  Combined   :  وآخر فيديو إن شاء الله النهاردة
+
+[00:00:11]
+  Transcript :  معلش زهقناكم طولنا عليكم
+  OCR        : None
+  Combined   :  معلش زهقناكم طولنا عليكم
+
+[00:00:14]
+  Transcript :  في الشرح بس والله أنا متفقل
+  OCR        : None
+  Combined   :  في الشرح بس والله أنا متفقل
+
+[00:00:16]
+  Transcript :  خير إن تعليقات اللي جابية بتاعتكم
+  OCR        : None
+  Combined   :  خير إن تعليقات اللي جابية بتاعتكم
 
 [00:00:17]
-  Transcript :  and most importantly, without sharing your credit card information.
+  Transcript :  بترفع من روحنا المعنوية جامد
   OCR        : None
-  Combined   :  and most importantly, without sharing your credit card information.
+  Combined   :  بترفع من روحنا المعنوية جامد
+
+[00:00:20]
+  Transcript :  بحس إن فعلا إن شاء الله فيكم ناس استفادت
+  OCR        : None
+  Combined   :  بحس إن فعلا إن شاء الله فيكم ناس استفادت
 
 [00:00:22]
-  Transcript :  Wouldn't that be awesome?
+  Transcript :  ولو حد استفاد
   OCR        : None
-  Combined   :  Wouldn't that be awesome?
+  Combined   :  ولو حد استفاد
 
-[00:00:23]
-  Transcript :  Yes.
+[00:00:24]
+  Transcript :  فعلا ما يبخلش علينا إن هو
   OCR        : None
-  Combined   :  Yes.
+  Combined   :  فعلا ما يبخلش علينا إن هو
 
-[00:00:23]
-  Transcript :  In today's video, I'll show you how you can emulate these cloud providers
+[00:00:25]
+  Transcript :  يعرفنا إن هو إيه استفاد من الكورس
   OCR        : None
-  Combined   :  In today's video, I'll show you how you can emulate these cloud providers
+  Combined   :  يعرفنا إن هو إيه استفاد من الكورس
+
+[00:00:28]
+  Transcript :  ده واستفاد من الشرح البسيط ده
+  OCR        : None
+  Combined   :  ده واستفاد من الشرح البسيط ده
 
 [00:00:29]
-  Transcript :  so that you don't have to create an account with them
+  Transcript :  ان شاء الله يا رب نكون نفعنا بيكم يا ولاد
   OCR        : None
-  Combined   :  so that you don't have to create an account with them
+  Combined   :  ان شاء الله يا رب نكون نفعنا بيكم يا ولاد
 
-[00:00:31]
-  Transcript :  and you can run everything on your local machine.
+[00:00:32]
+  Transcript :  ان شاء الله النهاردة
   OCR        : None
-  Combined   :  and you can run everything on your local machine.
+  Combined   :  ان شاء الله النهاردة
 
-[00:00:35]
-  Transcript :  All that you need is just Docker running on your machine.
+[00:00:33]
+  Transcript :  رحنا هناخد المجرورات الفيديوهات اللي فات
   OCR        : None
-  Combined   :  All that you need is just Docker running on your machine.
+  Combined   :  رحنا هناخد المجرورات الفيديوهات اللي فات
 
-[00:00:39]
-  Transcript :  That's it.
+[00:00:36]
+  Transcript :  او الفيديوهن اللي فاتوا اتكلمنا عن
   OCR        : None
-  Combined   :  That's it.
+  Combined   :  او الفيديوهن اللي فاتوا اتكلمنا عن
 
-[00:00:41]
-  Transcript :  Now, you might have this question,
+[00:00:37]
+  Transcript :  المنصوبات وعرفنا المفعيل كلها
   OCR        : None
-  Combined   :  Now, you might have this question,
+  Combined   :  المنصوبات وعرفنا المفعيل كلها
+
+[00:00:40]
+  Transcript :  واخدنا اسم كان
+  OCR        : None
+  Combined   :  واخدنا اسم كان
 
 [00:00:42]
-  Transcript :  but Abhishek, why is this important?
+  Transcript :  وخبر كان وخبر إنا
   OCR        : None
-  Combined   :  but Abhishek, why is this important?
+  Combined   :  وخبر كان وخبر إنا
 
-[00:00:44]
-  Transcript :  I can just create an account with cloud.
+[00:00:43]
+  Transcript :  وكلام ده كله عرفنا كل المنصوبات
   OCR        : None
-  Combined   :  I can just create an account with cloud.
+  Combined   :  وكلام ده كله عرفنا كل المنصوبات
 
 [00:00:46]
-  Transcript :  The problem today is that,
+  Transcript :  النهاردة هنتكلم عن
   OCR        : None
-  Combined   :  The problem today is that,
+  Combined   :  النهاردة هنتكلم عن
 
-[00:00:48]
-  Transcript :  now if you go three years or four years before,
+[00:00:47]
+  Transcript :  المجرورات المجرورات
   OCR        : None
-  Combined   :  now if you go three years or four years before,
+  Combined   :  المجرورات المجرورات
+
+[00:00:49]
+  Transcript :  في اللغة خلاص ايه هم
+  OCR        : None
+  Combined   :  في اللغة خلاص ايه هم
 
 [00:00:51]
-  Transcript :  when you create an account with cloud,
+  Transcript :  المجرورات بص يا سايدها عندنا حاجتين
   OCR        : None
-  Combined   :  when you create an account with cloud,
+  Combined   :  المجرورات بص يا سايدها عندنا حاجتين
 
-[00:00:53]
-  Transcript :  you get one year free trial on AWS Azure and GCP But the problem today you only get of free credits You will end up using these free credits in no time And then your cloud account moves to pay
+[00:00:54]
+  Transcript : 
   OCR        : None
-  Combined   :  you get one year free trial on AWS Azure and GCP But the problem today you only get of free credits You will end up using these free credits in no time And then your cloud account moves to pay
-
-[00:01:08]
-  Transcript :  as you go model. So if you use some services, either your account will be suspended or you will
-  OCR        : None
-  Combined   :  as you go model. So if you use some services, either your account will be suspended or you will
-
-[00:01:14]
-  Transcript :  be billed on your credit card. This is a reason why a lot of people today, they back out learning
-  OCR        : None
-  Combined   :  be billed on your credit card. This is a reason why a lot of people today, they back out learning
-
-[00:01:20]
-  Transcript :  cloud. They just watch some theory
-  OCR        : None
-  Combined   :  cloud. They just watch some theory
-
-[00:01:22]
-  Transcript :  videos but when it comes to practicals
-  OCR        : None
-  Combined   :  videos but when it comes to practicals
+  Combined   : 
 
 [00:01:24]
-  Transcript :  they skip the practical part.
+  Transcript :  علاها في اول الكورس احفظها كويس دايما اول اول ما تشوف الحرف في
   OCR        : None
-  Combined   :  they skip the practical part.
-
-[00:01:26]
-  Transcript :  The emulation that
-  OCR        : None
-  Combined   :  The emulation that
-
-[00:01:28]
-  Transcript :  we are going to learn today.
-  OCR        : None
-  Combined   :  we are going to learn today.
+  Combined   :  علاها في اول الكورس احفظها كويس دايما اول اول ما تشوف الحرف في
 
 [00:01:30]
-  Transcript :  So you can run all
+  Transcript :  الجملة اعرف ان اللي وراه اسم مجرور عندنا كمان حرف الباق وحرف
   OCR        : None
-  Combined   :  So you can run all
+  Combined   :  الجملة اعرف ان اللي وراه اسم مجرور عندنا كمان حرف الباق وحرف
 
-[00:01:32]
-  Transcript :  those AWS commands. You can create
+[00:01:35]
+  Transcript :  اللام خلاص للمدرسة او بالمدرسة خلاص دول من حروف المجرورات او من
   OCR        : None
-  Combined   :  those AWS commands. You can create
+  Combined   :  اللام خلاص للمدرسة او بالمدرسة خلاص دول من حروف المجرورات او من
 
-[00:01:34]
-  Transcript :  all those AWS services but
+[00:01:41]
+  Transcript :  حروف الجرة اصدي تجر اي شيء اي كلمة تأتي بعد حرف جرة على طول
   OCR        : None
-  Combined   :  all those AWS services but
-
-[00:01:36]
-  Transcript :  everything is running on your local
-  OCR        : None
-  Combined   :  everything is running on your local
-
-[00:01:38]
-  Transcript :  machine. Not only AWS, Azure
-  OCR        : None
-  Combined   :  machine. Not only AWS, Azure
-
-[00:01:40]
-  Transcript :  and GCP as well.
-  OCR        : None
-  Combined   :  and GCP as well.
-
-[00:01:42]
-  Transcript :  Let me show you an example through a whiteboard
-  OCR        : None
-  Combined   :  Let me show you an example through a whiteboard
-
-[00:01:44]
-  Transcript :  you know so that you can understand better
-  OCR        : None
-  Combined   :  you know so that you can understand better
+  Combined   :  حروف الجرة اصدي تجر اي شيء اي كلمة تأتي بعد حرف جرة على طول
 
 [00:01:46]
-  Transcript :  and then I will show you the
+  Transcript :  تكون ايه اسم مجرور وعلمة الجرة بقى سواء كسرة او ايه او يا او اي
   OCR        : None
-  Combined   :  and then I will show you the
+  Combined   :  تكون ايه اسم مجرور وعلمة الجرة بقى سواء كسرة او ايه او يا او اي
 
-[00:01:48]
-  Transcript :  things practically. But
+[00:01:52]
+  Transcript :  شيء خلاص على حسب العلمات نعليها
   OCR        : None
-  Combined   :  things practically. But
+  Combined   :  شيء خلاص على حسب العلمات نعليها
 
-[00:01:50]
-  Transcript :  But before we go there, let me tell you, this is very, very important, especially if you
+[00:01:54]
+  Transcript :  في درس العلمات خلاص
   OCR        : None
-  Combined   :  But before we go there, let me tell you, this is very, very important, especially if you
+  Combined   :  في درس العلمات خلاص
 
-[00:01:55]
-  Transcript :  are practicing cloud or if you're in the state of learning any cloud platform.
+[00:01:56]
+  Transcript :  زي ايه سافر محمد
   OCR        : None
-  Combined   :  are practicing cloud or if you're in the state of learning any cloud platform.
+  Combined   :  زي ايه سافر محمد
+
+[00:01:58]
+  Transcript :  الى القاهرة
+  OCR        : None
+  Combined   :  الى القاهرة
 
 [00:02:00]
-  Transcript :  Perfect. Without any further delay, let's head to the byte board.
+  Transcript :  يلا الجملة ايه اسميها اللي فعليية
   OCR        : None
-  Combined   :  Perfect. Without any further delay, let's head to the byte board.
+  Combined   :  يلا الجملة ايه اسميها اللي فعليية
+
+[00:02:02]
+  Transcript :  على فكرة الواجب اللي فات
+  OCR        : None
+  Combined   :  على فكرة الواجب اللي فات
 
 [00:02:04]
-  Transcript :  Let's take a simple example.
+  Transcript :  والواجب اللي قبله بدأت تتعلم
   OCR        : None
-  Combined   :  Let's take a simple example.
+  Combined   :  والواجب اللي قبله بدأت تتعلم
 
 [00:02:07]
-  Transcript :  Imagine you're learning EKS.
+  Transcript :  بدأت تتعلم ان انت تعرب
   OCR        : None
-  Combined   :  Imagine you're learning EKS.
+  Combined   :  بدأت تتعلم ان انت تعرب
 
-[00:02:09]
-  Transcript :  You're watching a video on YouTube, maybe video from our channel.
+[00:02:08]
+  Transcript :  النهاردة ان شاء الله
   OCR        : None
-  Combined   :  You're watching a video on YouTube, maybe video from our channel.
+  Combined   :  النهاردة ان شاء الله
 
-[00:02:13]
-  Transcript :  You understood the theory part.
+[00:02:10]
+  Transcript :  عايزك بقى ايه
   OCR        : None
-  Combined   :  You understood the theory part.
+  Combined   :  عايزك بقى ايه
+
+[00:02:11]
+  Transcript :  خلاص الجملة بالنسبة لك تعرف تعربها كلها
+  OCR        : None
+  Combined   :  خلاص الجملة بالنسبة لك تعرف تعربها كلها
 
 [00:02:14]
-  Transcript :  You learned what is EKS.
+  Transcript :  مفيش حاجة في الجملة الا
   OCR        : None
-  Combined   :  You learned what is EKS.
+  Combined   :  مفيش حاجة في الجملة الا
 
 [00:02:16]
-  Transcript :  Now the video also has the practical part, the demo part,
+  Transcript :  ما انت عرفت اعربها
   OCR        : None
-  Combined   :  Now the video also has the practical part, the demo part,
+  Combined   :  ما انت عرفت اعربها
 
-[00:02:21]
-  Transcript :  where the tutor explained how to create EKS cluster,
+[00:02:17]
+  Transcript :  سواء حرف سواء اسم سواء فعل
   OCR        : None
-  Combined   :  where the tutor explained how to create EKS cluster,
+  Combined   :  سواء حرف سواء اسم سواء فعل
+
+[00:02:20]
+  Transcript :  سواء وظيفة الحاجة في الجملة
+  OCR        : None
+  Combined   :  سواء وظيفة الحاجة في الجملة
+
+[00:02:22]
+  Transcript :  الكلمة ايه كل ده عرفنا
+  OCR        : None
+  Combined   :  الكلمة ايه كل ده عرفنا
+
+[00:02:23]
+  Transcript :  فان شاء الله يعني ما عندكش عزر
+  OCR        : None
+  Combined   :  فان شاء الله يعني ما عندكش عزر
 
 [00:02:25]
-  Transcript :  how to create a pod within the EKS cluster,
+  Transcript :  بقى خلاص لازم تعرف تعرف كويس
   OCR        : None
-  Combined   :  how to create a pod within the EKS cluster,
+  Combined   :  بقى خلاص لازم تعرف تعرف كويس
 
 [00:02:27]
-  Transcript :  how to deploy a service
+  Transcript :  في آخر الدرس بإذن الله
   OCR        : None
-  Combined   :  how to deploy a service
+  Combined   :  في آخر الدرس بإذن الله
 
-[00:02:29]
-  Transcript :  and how to manage the cluster.
+[00:02:30]
+  Transcript :  سافر محمد إلى القاهرة
   OCR        : None
-  Combined   :  and how to manage the cluster.
+  Combined   :  سافر محمد إلى القاهرة
 
 [00:02:32]
-  Transcript :  Now, obviously you want to practice this.
+  Transcript :  الجملة يسميه اللي فعلية
   OCR        : None
-  Combined   :  Now, obviously you want to practice this.
+  Combined   :  الجملة يسميه اللي فعلية
 
-[00:02:35]
-  Transcript :  You learn the theory.
+[00:02:33]
+  Transcript :  جملة فعلية بدأت بفعل
   OCR        : None
-  Combined   :  You learn the theory.
+  Combined   :  جملة فعلية بدأت بفعل
 
 [00:02:36]
-  Transcript :  Only if you practice,
+  Transcript :  سافر فعل ماضي مبني على الفتح
   OCR        : None
-  Combined   :  Only if you practice,
+  Combined   :  سافر فعل ماضي مبني على الفتح
 
-[00:02:37]
-  Transcript :  you will be confident about EKS.
+[00:02:38]
+  Transcript :  تمام تمام
   OCR        : None
-  Combined   :  you will be confident about EKS.
+  Combined   :  تمام تمام
 
-[00:02:40]
-  Transcript :  Now, how do you achieve this?
+[00:02:39]
+  Transcript :  طيب ليه يبنى على الفتح
   OCR        : None
-  Combined   :  Now, how do you achieve this?
+  Combined   :  طيب ليه يبنى على الفتح
 
-[00:02:42]
-  Transcript :  There are two ways.
+[00:02:41]
+  Transcript :  سؤال حد عارف أقول أنا
   OCR        : None
-  Combined   :  There are two ways.
+  Combined   :  سؤال حد عارف أقول أنا
 
-[00:02:43]
-  Transcript :  One, the obvious thing,
+[00:02:44]
+  Transcript :  ليه يبنى على الفتح
   OCR        : None
-  Combined   :  One, the obvious thing,
+  Combined   :  ليه يبنى على الفتح
 
 [00:02:45]
-  Transcript :  you create an account with AWS.
+  Transcript :  لأنه لم يتصل بشيء
   OCR        : None
-  Combined   :  you create an account with AWS.
+  Combined   :  لأنه لم يتصل بشيء
 
-[00:02:48]
-  Transcript :  You will get some free credits from AWS.
+[00:02:47]
+  Transcript :  دي في الحالة الطبيعية بتاعت الفعل الماضي
   OCR        : None
-  Combined   :  You will get some free credits from AWS.
+  Combined   :  دي في الحالة الطبيعية بتاعت الفعل الماضي
+
+[00:02:49]
+  Transcript :  إذا لم يتصل بشيء بني على الفتح
+  OCR        : None
+  Combined   :  إذا لم يتصل بشيء بني على الفتح
 
 [00:02:51]
-  Transcript :  You will spin up EKS cluster
+  Transcript :  طيب من الذي سافر
   OCR        : None
-  Combined   :  You will spin up EKS cluster
+  Combined   :  طيب من الذي سافر
 
-[00:02:54]
-  Transcript :  and you will start learning these things But the problem here is that if you have this EKS cluster running for three to four days all your free credits are expired because AWS only gives you hundred dollars of
+[00:02:53]
+  Transcript : 
   OCR        : None
-  Combined   :  and you will start learning these things But the problem here is that if you have this EKS cluster running for three to four days all your free credits are expired because AWS only gives you hundred dollars of
+  Combined   : 
+
+[00:03:05]
+  Transcript :  علامة الجر الكسرة
+  OCR        : None
+  Combined   :  علامة الجر الكسرة
 
 [00:03:06]
-  Transcript :  free credits once you expire the credits your AWS account knows to pay as you go model basically
+  Transcript :  خلاص يبقى المجرور بحرف الجر
   OCR        : None
-  Combined   :  free credits once you expire the credits your AWS account knows to pay as you go model basically
+  Combined   :  خلاص يبقى المجرور بحرف الجر
+
+[00:03:09]
+  Transcript :  هو كل اسم
+  OCR        : None
+  Combined   :  هو كل اسم
+
+[00:03:10]
+  Transcript :  مسبوك بحرف جر من
+  OCR        : None
+  Combined   :  مسبوك بحرف جر من
+
+[00:03:12]
+  Transcript :  الحروف اللي احنا خدناها
+  OCR        : None
+  Combined   :  الحروف اللي احنا خدناها
 
 [00:03:14]
-  Transcript :  now when you want to learn S3 bucket EBS volumes or lambda functions maybe down the line you will
+  Transcript :  تمام طيب المجرور بالإضافة
   OCR        : None
-  Combined   :  now when you want to learn S3 bucket EBS volumes or lambda functions maybe down the line you will
+  Combined   :  تمام طيب المجرور بالإضافة
 
-[00:03:21]
-  Transcript :  be charged for creating these services or you might want to suspend this account and
+[00:03:16]
+  Transcript :  سهل خالص اللي هو مضاف إليه
   OCR        : None
-  Combined   :  be charged for creating these services or you might want to suspend this account and
+  Combined   :  سهل خالص اللي هو مضاف إليه
+
+[00:03:19]
+  Transcript :  المضاف إليه هو اسم
+  OCR        : None
+  Combined   :  المضاف إليه هو اسم
+
+[00:03:20]
+  Transcript :  نسب إليه
+  OCR        : None
+  Combined   :  نسب إليه
+
+[00:03:22]
+  Transcript :  اسم صابق
+  OCR        : None
+  Combined   :  اسم صابق
+
+[00:03:24]
+  Transcript :  مضاف ومضاف إليه
+  OCR        : None
+  Combined   :  مضاف ومضاف إليه
 
 [00:03:27]
-  Transcript :  create a new account.
+  Transcript :  كلمتين اضافوا البعض علشان نفهم الكلام
   OCR        : None
-  Combined   :  create a new account.
+  Combined   :  كلمتين اضافوا البعض علشان نفهم الكلام
 
 [00:03:29]
-  Transcript :  So this is a problem.
+  Transcript :  ليتعرف به
   OCR        : None
-  Combined   :  So this is a problem.
+  Combined   :  ليتعرف به
 
-[00:03:30]
-  Transcript :  What we are going to learn today is the other way where we will emulate these cloud providers.
-  OCR        : None
-  Combined   :  What we are going to learn today is the other way where we will emulate these cloud providers.
+[00:03:31]
+  Transcript :  أو يتخصص به
+  OCR        : المجرور بحرف الجرالمجروربالإضافة | ١المجرور بالإضافة | المجرور بحرف الجر | المضافإلبه هواسم نسب إليه اسم سابق | ويجر الاسم إذا كان مسبوقا بحرف جر | كنإلي فعلي عن، | ويسمي الأول مضافا والثاني مضاف إليه | مثل سافرمحمدلي القاهرة | خرفجروعلا اررة | فعل ماضي | لامحل له من الإعراب | مببي علي الفتج | فاعل مرفوع بالضمة
+  Combined   :  أو يتخصص به المجرور بحرف الجرالمجروربالإضافة | ١المجرور بالإضافة | المجرور بحرف الجر | المضافإلبه هواسم نسب إليه اسم سابق | ويجر الاسم إذا كان مسبوقا بحرف جر | كنإلي فعلي عن، | ويسمي الأول مضافا والثاني مضاف إليه | مثل سافرمحمدلي القاهرة | خرفجروعلا اررة | فعل ماضي | لامحل له من الإعراب | مببي علي الفتج | فاعل مرفوع بالضمة
 
-[00:03:38]
-  Transcript :  AWS, Azure or Google Cloud Platform.
+[00:03:32]
+  Transcript :  ويسمى الأول مضافا والثاني مضاف إليه
   OCR        : None
-  Combined   :  AWS, Azure or Google Cloud Platform.
+  Combined   :  ويسمى الأول مضافا والثاني مضاف إليه
+
+[00:03:35]
+  Transcript :  طب بص الكلام ده
+  OCR        : None
+  Combined   :  طب بص الكلام ده
+
+[00:03:36]
+  Transcript :  نور الشمسي قوي
+  OCR        : None
+  Combined   :  نور الشمسي قوي
 
 [00:03:41]
-  Transcript :  What is emulation?
-  OCR        : None
-  Combined   :  What is emulation?
+  Transcript :  نور الشمسي
+  OCR        : المجروربالإضافة | المجروريحرف الجر | المجرور بالإضافة | المضافإليه هواسم نسب إليه اسم سابق | ويجرالاسم إذا كان مسبوقا بحرف جر | ليتعرفبه أويتخصص به | كمنإلي يعلي عن | مثل سافرمحمدإلي القاهرة | الشمس قوي | مثلنوز | السم مجروز | وعلامة الجر الكسرة | خرف جر | تم الاشتراك | لامل لهمن ا | مبني علي الفتج
+  Combined   :  نور الشمسي المجروربالإضافة | المجروريحرف الجر | المجرور بالإضافة | المضافإليه هواسم نسب إليه اسم سابق | ويجرالاسم إذا كان مسبوقا بحرف جر | ليتعرفبه أويتخصص به | كمنإلي يعلي عن | مثل سافرمحمدإلي القاهرة | الشمس قوي | مثلنوز | السم مجروز | وعلامة الجر الكسرة | خرف جر | تم الاشتراك | لامل لهمن ا | مبني علي الفتج
 
-[00:03:42]
-  Transcript :  Emulation is basically mocking the cloud providers.
+[00:03:41]
+  Transcript :  يبقى أنا لما أجأ أقول لك نور
   OCR        : None
-  Combined   :  Emulation is basically mocking the cloud providers.
+  Combined   :  يبقى أنا لما أجأ أقول لك نور
+
+[00:03:43]
+  Transcript :  طب نور مين
+  OCR        : None
+  Combined   :  طب نور مين
+
+[00:03:44]
+  Transcript :  نور الشمس
+  OCR        : None
+  Combined   :  نور الشمس
 
 [00:03:46]
-  Transcript :  What happens when you mock the cloud providers?
+  Transcript :  آه فهمت كده
   OCR        : None
-  Combined   :  What happens when you mock the cloud providers?
+  Combined   :  آه فهمت كده
 
-[00:03:48]
-  Transcript :  so when you mock it all the APS run on your local machine so now when you go
+[00:03:47]
+  Transcript :  يبقى احنا أضافنا كلمة نور
   OCR        : None
-  Combined   :  so when you mock it all the APS run on your local machine so now when you go
+  Combined   :  يبقى احنا أضافنا كلمة نور
+
+[00:03:51]
+  Transcript :  لكلمة الشمس علشان نبين
+  OCR        : ١المجرور بحرف الجر | ليتعرف به أويتخصص به | كن إلي فعلي عن، | ويسمي الأول مضافا والثاني مافإليه | مثل سافرمحمدالي القاهرة | مثل نورز الشمسرفوي | حرف ير | لامحل لهمن الإعراب
+  Combined   :  لكلمة الشمس علشان نبين ١المجرور بحرف الجر | ليتعرف به أويتخصص به | كن إلي فعلي عن، | ويسمي الأول مضافا والثاني مافإليه | مثل سافرمحمدالي القاهرة | مثل نورز الشمسرفوي | حرف ير | لامحل لهمن الإعراب
+
+[00:03:52]
+  Transcript :  المعنى اللي احنا عايزين نوصله للسامع
+  OCR        : None
+  Combined   :  المعنى اللي احنا عايزين نوصله للسامع
 
 [00:03:54]
-  Transcript :  ahead and let's say you run this command awa cks create cluster the
+  Transcript :  خلاص يبقى نور هنا
   OCR        : None
-  Combined   :  ahead and let's say you run this command awa cks create cluster the
+  Combined   :  خلاص يبقى نور هنا
+
+[00:03:56]
+  Transcript :  مبتدأ مرفوع بالضمة وهو
+  OCR        : None
+  Combined   :  مبتدأ مرفوع بالضمة وهو
+
+[00:03:58]
+  Transcript :  مضاف
+  OCR        : None
+  Combined   :  مضاف
 
 [00:04:00]
-  Transcript :  cluster is created but the cluster is created on your local machine it will use the resources on
+  Transcript :  والشمس مضاف إليه مجرور بالكسرة
   OCR        : None
-  Combined   :  cluster is created but the cluster is created on your local machine it will use the resources on
+  Combined   :  والشمس مضاف إليه مجرور بالكسرة
 
-[00:04:06]
-  Transcript :  your local machine not on the AWS platform so you will not be charged by AWS but Abhishek is the
+[00:04:02]
+  Transcript :  خلاص يبقى كلمة نور دي مضافة لكلمة الشمس علشان توضحها
   OCR        : None
-  Combined   :  your local machine not on the AWS platform so you will not be charged by AWS but Abhishek is the
+  Combined   :  خلاص يبقى كلمة نور دي مضافة لكلمة الشمس علشان توضحها
+
+[00:04:07]
+  Transcript :  علشان تبين نوعها علشان يتعرف به أو يتخصص به
+  OCR        : None
+  Combined   :  علشان تبين نوعها علشان يتعرف به أو يتخصص به
+
+[00:04:12]
+  Transcript :  خلاص احنا خصصنا النور ده للشمس طب ما فيه نور القمر
+  OCR        : None
+  Combined   :  خلاص احنا خصصنا النور ده للشمس طب ما فيه نور القمر
 
 [00:04:15]
-  Transcript :  response exactly similar to response that we get from EKS yes response is exactly similar even
+  Transcript :  أو فيه نور المصباح أو فيه نور أي شيء
   OCR        : None
-  Combined   :  response exactly similar to response that we get from EKS yes response is exactly similar even
+  Combined   :  أو فيه نور المصباح أو فيه نور أي شيء
 
-[00:04:23]
-  Transcript :  trust me you will not even understand if you are running these services on AWS or on your local
+[00:04:18]
+  Transcript :  نور العلم مثلا خلاص وهكذا
   OCR        : None
-  Combined   :  trust me you will not even understand if you are running these services on AWS or on your local
+  Combined   :  نور العلم مثلا خلاص وهكذا
+
+[00:04:21]
+  Transcript :  طيب قوي هنا تعرف ايه خبر مرفوع علامة الرفق الضمة
+  OCR        : None
+  Combined   :  طيب قوي هنا تعرف ايه خبر مرفوع علامة الرفق الضمة
+
+[00:04:26]
+  Transcript :  ده يا شباب باختصار جدا المجرورات
+  OCR        : None
+  Combined   :  ده يا شباب باختصار جدا المجرورات
 
 [00:04:28]
-  Transcript :  machine. That is the power of mocking. Mocking is not a new concept. If you're into development,
+  Transcript :  المجرور بحرف الجر والمجرور بالإضافة
   OCR        : None
-  Combined   :  machine. That is the power of mocking. Mocking is not a new concept. If you're into development,
+  Combined   :  المجرور بحرف الجر والمجرور بالإضافة
 
-[00:04:34]
-  Transcript :  developers usually mock databases. They mock different types of services, even web servers,
+[00:04:31]
+  Transcript :  وإن شاء الله بإذن الله
   OCR        : None
-  Combined   :  developers usually mock databases. They mock different types of services, even web servers,
+  Combined   :  وإن شاء الله بإذن الله
 
-[00:04:40]
-  Transcript :  so that you don't have to spin up these services on their cloud platform or anywhere else.
+[00:04:33]
+  Transcript :  ده كده يعني ما طولناش في الدرس خالص
   OCR        : None
-  Combined   :  so that you don't have to spin up these services on their cloud platform or anywhere else.
+  Combined   :  ده كده يعني ما طولناش في الدرس خالص
 
-[00:04:47]
-  Transcript :  We are going to apply the same concept for cloud platforms today. Abhishek,
+[00:04:35]
+  Transcript :  فاضل بعد كده توابع المجرور
   OCR        : None
-  Combined   :  We are going to apply the same concept for cloud platforms today. Abhishek,
+  Combined   :  فاضل بعد كده توابع المجرور
+
+[00:04:37]
+  Transcript :  زي ما احنا قلنا النعت أو الحال أو التوكيد أو العطف
+  OCR        : None
+  Combined   :  زي ما احنا قلنا النعت أو الحال أو التوكيد أو العطف
+
+[00:04:39]
+  Transcript :  لو كان المنعوت أو صاحب الحال
+  OCR        : None
+  Combined   :  لو كان المنعوت أو صاحب الحال
+
+[00:04:43]
+  Transcript :  خلاص كل دول لو كانوا مجرورين
+  OCR        : None
+  Combined   :  خلاص كل دول لو كانوا مجرورين
+
+[00:04:45]
+  Transcript :  بيكون النعت والحال نفسه مجرور
+  OCR        : None
+  Combined   :  بيكون النعت والحال نفسه مجرور
+
+[00:04:48]
+  Transcript :  خلاص دول التوابع
+  OCR        : None
+  Combined   :  خلاص دول التوابع
+
+[00:04:50]
+  Transcript :  التوابع عموما الأربع توابع دول
+  OCR        : None
+  Combined   :  التوابع عموما الأربع توابع دول
 
 [00:04:52]
-  Transcript :  there are so many projects Not really There are very less projects There is a project called local stack I tried this project in the past but it is very heavy So I thought and this is also an enterprise platform
+  Transcript : 
   OCR        : None
-  Combined   :  there are so many projects Not really There are very less projects There is a project called local stack I tried this project in the past but it is very heavy So I thought and this is also an enterprise platform
+  Combined   : 
 
 [00:05:05]
-  Transcript :  So I did not bother about talking it.
+  Transcript :  ده بالنسبة للتوابع
   OCR        : None
-  Combined   :  So I did not bother about talking it.
+  Combined   :  ده بالنسبة للتوابع
 
-[00:05:07]
-  Transcript :  But now I came across
+[00:05:06]
+  Transcript :  كده إن شاء الله نكون خلصنا المجرورات
   OCR        : None
-  Combined   :  But now I came across
+  Combined   :  كده إن شاء الله نكون خلصنا المجرورات
 
 [00:05:09]
-  Transcript :  an open source project called FlowC.
+  Transcript :  ونكون عرفنا نوعين المجرورات
   OCR        : None
-  Combined   :  an open source project called FlowC.
+  Combined   :  ونكون عرفنا نوعين المجرورات
 
 [00:05:11]
-  Transcript :  Now this is an open source project.
+  Transcript :  اللي بيجرب حرف جر
   OCR        : None
-  Combined   :  Now this is an open source project.
+  Combined   :  اللي بيجرب حرف جر
 
-[00:05:13]
-  Transcript :  This is absolutely free and
+[00:05:12]
+  Transcript :  أو اللي بيجرب الإضافة
   OCR        : None
-  Combined   :  This is absolutely free and
+  Combined   :  أو اللي بيجرب الإضافة
 
-[00:05:15]
-  Transcript :  there are no conditions to it.
+[00:05:14]
+  Transcript :  و عرفنا إن التوابع للمجرور برضو
   OCR        : None
-  Combined   :  there are no conditions to it.
+  Combined   :  و عرفنا إن التوابع للمجرور برضو
 
 [00:05:16]
-  Transcript :  I hope I'm pronouncing the name right.
+  Transcript :  من المجرورات
   OCR        : None
-  Combined   :  I hope I'm pronouncing the name right.
+  Combined   :  من المجرورات
 
-[00:05:19]
-  Transcript :  I recently explored the project.
+[00:05:18]
+  Transcript :  و كده شباب بارك الله فيكم
   OCR        : None
-  Combined   :  I recently explored the project.
+  Combined   :  و كده شباب بارك الله فيكم
+
+[00:05:20]
+  Transcript :  و نفع الله بكم
+  OCR        : None
+  Combined   :  و نفع الله بكم
 
 [00:05:21]
-  Transcript :  So I'm sorry
+  Transcript :  وان شاء الله نكون استفادنا من الفيديوهات اللي فاتت كلها العشر الأيام
   OCR        : None
-  Combined   :  So I'm sorry
-
-[00:05:22]
-  Transcript :  if I'm pronouncing the name wrong.
-  OCR        : None
-  Combined   :  if I'm pronouncing the name wrong.
+  Combined   :  وان شاء الله نكون استفادنا من الفيديوهات اللي فاتت كلها العشر الأيام
 
 [00:05:25]
-  Transcript :  Now let me show you how to use Flowsee.
+  Transcript :  اللي احنا كنا وغدينه كورس ومكسف لتأسيس النحو
   OCR        : None
-  Combined   :  Now let me show you how to use Flowsee.
+  Combined   :  اللي احنا كنا وغدينه كورس ومكسف لتأسيس النحو
 
 [00:05:28]
-  Transcript :  So simple, just head to their website.
+  Transcript :  عرفنا في كل ما يخص أساسيات مبادئ هذا العلم الجليل
   OCR        : None
-  Combined   :  So simple, just head to their website.
+  Combined   :  عرفنا في كل ما يخص أساسيات مبادئ هذا العلم الجليل
 
 [00:05:32]
-  Transcript :  So you can see here AWS, Azure and GCP.
+  Transcript :  علم النحو
   OCR        : None
-  Combined   :  So you can see here AWS, Azure and GCP.
+  Combined   :  علم النحو
 
-[00:05:35]
-  Transcript :  They have three different pages.
+[00:05:33]
+  Transcript :  عرفنا فيه أساسيات كتير جدا
   OCR        : None
-  Combined   :  They have three different pages.
+  Combined   :  عرفنا فيه أساسيات كتير جدا
 
-[00:05:37]
-  Transcript :  We'll start with AWS.
+[00:05:36]
+  Transcript :  واتدرجنا مع بعض بالمعلومة
   OCR        : None
-  Combined   :  We'll start with AWS.
+  Combined   :  واتدرجنا مع بعض بالمعلومة
 
-[00:05:39]
-  Transcript :  So scroll down.
+[00:05:38]
+  Transcript :  لحد ما وصلنا النهاردة بإذن الله
   OCR        : None
-  Combined   :  So scroll down.
+  Combined   :  لحد ما وصلنا النهاردة بإذن الله
+
+[00:05:40]
+  Transcript :  ان احنا نعرف نعرف كلمة كويس
+  OCR        : None
+  Combined   :  ان احنا نعرف نعرف كلمة كويس
 
 [00:05:41]
-  Transcript :  You have commands here to get started with AWS
+  Transcript :  نعرف جملة كويس
   OCR        : None
-  Combined   :  You have commands here to get started with AWS
+  Combined   :  نعرف جملة كويس
 
-[00:05:44]
-  Transcript :  or you can just go up, click on get started.
+[00:05:43]
+  Transcript :  نحدد وظيفتها الإعرابية
   OCR        : None
-  Combined   :  or you can just go up, click on get started.
+  Combined   :  نحدد وظيفتها الإعرابية
+
+[00:05:45]
+  Transcript :  نحدد حكمها الإعرابي
+  OCR        : None
+  Combined   :  نحدد حكمها الإعرابي
+
+[00:05:46]
+  Transcript :  ونحدد العلامة الإعرابية
+  OCR        : None
+  Combined   :  ونحدد العلامة الإعرابية
 
 [00:05:48]
-  Transcript :  So they have the homebrew command because I'm using Mac.
+  Transcript :  عرفنا الفرق بين العلامات الأصلية والفرعية
   OCR        : None
-  Combined   :  So they have the homebrew command because I'm using Mac.
+  Combined   :  عرفنا الفرق بين العلامات الأصلية والفرعية
 
 [00:05:51]
-  Transcript :  I'll run this brew install.
+  Transcript :  وعرفنا بين المجرورات والمرفوعات والمنصوبات
   OCR        : None
-  Combined   :  I'll run this brew install.
+  Combined   :  وعرفنا بين المجرورات والمرفوعات والمنصوبات
 
-[00:05:52]
-  Transcript :  If you are using Windows, go to PowerShell and run this command.
+[00:05:54]
+  Transcript :  إن شاء الله يكون كورس دسم يكون نفع بيكم
   OCR        : None
-  Combined   :  If you are using Windows, go to PowerShell and run this command.
-
-[00:05:56]
-  Transcript :  So what does this do?
-  OCR        : None
-  Combined   :  So what does this do?
+  Combined   :  إن شاء الله يكون كورس دسم يكون نفع بيكم
 
 [00:05:58]
-  Transcript :  This will install
+  Transcript :  إن شاء الله يكون أفادكم بمعلومات
   OCR        : None
-  Combined   :  This will install
+  Combined   :  إن شاء الله يكون أفادكم بمعلومات
 
 [00:06:00]
-  Transcript :  API is on the local machine.
+  Transcript :  علومة قيمة كويسة
   OCR        : None
-  Combined   :  API is on the local machine.
+  Combined   :  علومة قيمة كويسة
 
 [00:06:01]
-  Transcript :  So this will mock everything.
+  Transcript :  ما تبخلوش علينا شباب لو كان حد
   OCR        : None
-  Combined   :  So this will mock everything.
+  Combined   :  ما تبخلوش علينا شباب لو كان حد
 
 [00:06:03]
-  Transcript :  One single command.
+  Transcript :  فعلا حس ان هو مستوات حسن
   OCR        : None
-  Combined   :  One single command.
+  Combined   :  فعلا حس ان هو مستوات حسن
 
 [00:06:05]
-  Transcript :  Control R, Rue, or you know, you can just copy the command here and paste it.
+  Transcript :  يشجعنا وعلشان نكمل
   OCR        : None
-  Combined   :  Control R, Rue, or you know, you can just copy the command here and paste it.
+  Combined   :  يشجعنا وعلشان نكمل
+
+[00:06:07]
+  Transcript :  ان شاء الله ونعمل لكم مستوى تاني
+  OCR        : None
+  Combined   :  ان شاء الله ونعمل لكم مستوى تاني
+
+[00:06:09]
+  Transcript :  سبونا الكلام ده في التعليقات
+  OCR        : None
+  Combined   :  سبونا الكلام ده في التعليقات
+
+[00:06:10]
+  Transcript :  رب ننفع بيكم أولاد ويجزيكم خير
+  OCR        : None
+  Combined   :  رب ننفع بيكم أولاد ويجزيكم خير
 
 [00:06:13]
-  Transcript :  It will not take much time because it is only emulating the APIs,
+  Transcript :  ويا رب دايما من تفوق لتفوق
   OCR        : None
-  Combined   :  It will not take much time because it is only emulating the APIs,
+  Combined   :  ويا رب دايما من تفوق لتفوق
 
-[00:06:18]
-  Transcript :  but it is not creating all the service on your local machine.
+[00:06:15]
+  Transcript :  ونشوفكم دايما في احسن الدرجات
   OCR        : None
-  Combined   :  but it is not creating all the service on your local machine.
+  Combined   :  ونشوفكم دايما في احسن الدرجات
 
-[00:06:22]
-  Transcript :  It says I already have Flossy, which is fine.
+[00:06:17]
+  Transcript :  ان شاء الله قولوا امين اللهم امين
   OCR        : None
-  Combined   :  It says I already have Flossy, which is fine.
+  Combined   :  ان شاء الله قولوا امين اللهم امين
 
-[00:06:25]
-  Transcript :  Now the next thing is to run Flossy start.
+[00:06:19]
+  Transcript :  بارك الله فيكم نفع الله بكم
   OCR        : None
-  Combined   :  Now the next thing is to run Flossy start.
+  Combined   :  بارك الله فيكم نفع الله بكم
 
-[00:06:28]
-  Transcript : None
-  OCR        : [hastscar/to)
-  Combined   : [hastscar/to)
-
-[00:06:28]
-  Transcript :  Perfect.
-  OCR        : None
-  Combined   :  Perfect.
-
-[00:06:30]
-  Transcript :  If you want to run Azure,
-  OCR        : None
-  Combined   :  If you want to run Azure,
-
-[00:06:34]
-  Transcript :  then instead of running flow C start,
-  OCR        : None
-  Combined   :  then instead of running flow C start,
-
-[00:06:36]
-  Transcript :  you just have to do flow C easy start.
-  OCR        : None
-  Combined   :  you just have to do flow C easy start.
-
-[00:06:40]
-  Transcript :  Or if you want to do GCP,
-  OCR        : floci | floci | Local GCP. | Zero cost. | ZeroI | restrictions.
-  Combined   :  Or if you want to do GCP, floci | floci | Local GCP. | Zero cost. | ZeroI | restrictions.
-
-[00:06:41]
-  Transcript :  just go to the get started.
-  OCR        : None
-  Combined   :  just go to the get started.
-
-[00:06:43]
-  Transcript :  Instead of flow C start,
-  OCR        : None
-  Combined   :  Instead of flow C start,
-
-[00:06:45]
-  Transcript :  just run in the CLA part flow C GCP start.
-  OCR        : None
-  Combined   :  just run in the CLA part flow C GCP start.
-
-[00:06:50]
-  Transcript :  Cool.
-  OCR        : None
-  Combined   :  Cool.
-
-[00:06:51]
-  Transcript :  We'll go back to AWS.
-  OCR        : None
-  Combined   :  We'll go back to AWS.
-
-[00:07:00]
-  Transcript :  I show you by creating an S3 bucket first Okay So how to create an S3 bucket we will use the same command but before that we have to set up AWS environment variables so you can just say eval flow
-  OCR        : [hashicorp/tao) | Bus 'rieci step' rirst or pass --container cnane> tosee a different
-  Combined   :  I show you by creating an S3 bucket first Okay So how to create an S3 bucket we will use the same command but before that we have to set up AWS environment variables so you can just say eval flow [hashicorp/tao) | Bus 'rieci step' rirst or pass --container cnane> tosee a different
-
-[00:07:09]
-  Transcript :  C ENB so this will set up AWS environment variables for us what happens
-  OCR        : None
-  Combined   :  C ENB so this will set up AWS environment variables for us what happens
-
-[00:07:15]
-  Transcript :  if you don't run this command be careful you have to run it otherwise when you
-  OCR        : None
-  Combined   :  if you don't run this command be careful you have to run it otherwise when you
-
-[00:07:19]
-  Transcript :  run AWS S3 MB for make bucket and followed by my back. So if you run AWS S3 MB followed by name of
-  OCR        : None
-  Combined   :  run AWS S3 MB for make bucket and followed by my back. So if you run AWS S3 MB followed by name of
-
-[00:07:34]
-  Transcript :  the bucket, there is a possibility. The bucket is created on your actual AWS account. Maybe you
-  OCR        : None
-  Combined   :  the bucket, there is a possibility. The bucket is created on your actual AWS account. Maybe you
-
-[00:07:40]
-  Transcript :  have set up the account in the past and your AWS CLI is pointing to it. So there is a possibility
-  OCR        : None
-  Combined   :  have set up the account in the past and your AWS CLI is pointing to it. So there is a possibility
-
-[00:07:47]
-  Transcript :  the command that you run here is created on the AWS account.
-  OCR        : None
-  Combined   :  the command that you run here is created on the AWS account.
-
-[00:07:51]
-  Transcript :  So definitely run this command.
-  OCR        : None
-  Combined   :  So definitely run this command.
-
-[00:07:53]
-  Transcript :  Well, flow C, env.
-  OCR        : None
-  Combined   :  Well, flow C, env.
-
-[00:07:56]
-  Transcript :  Now I'll just do this.
-  OCR        : None
-  Combined   :  Now I'll just do this.
-
-[00:07:58]
-  Transcript :  My bucket, one, two, three.
-  OCR        : None
-  Combined   :  My bucket, one, two, three.
-
-[00:08:00]
-  Transcript :  okay let's see what happens there you go make bucket bucket is created I can even verify AWS
-  OCR        : None
-  Combined   :  okay let's see what happens there you go make bucket bucket is created I can even verify AWS
-
-[00:08:09]
-  Transcript :  s3 LS there you go so my bucket one two three is the name of the bucket that is created in fact we
-  OCR        : None
-  Combined   :  s3 LS there you go so my bucket one two three is the name of the bucket that is created in fact we
-
-[00:08:23]
-  Transcript :  can upload file to this bucket as well so there is this comment I'll just copy it and paste it here
-  OCR        : Studie Downloais N eval Srrtoc1 emv) | 226-0 | Downloats5 awt s) | 2926.86 | "> hetle-flect.tet
-  Combined   :  can upload file to this bucket as well so there is this comment I'll just copy it and paste it here Studie Downloais N eval Srrtoc1 emv) | 226-0 | Downloats5 awt s) | 2926.86 | "> hetle-flect.tet
-
-[00:08:24]
-  Transcript :  upload hello flow c txt to my bucket okay i did not change the name of the bucket but anyways
-  OCR        : None
-  Combined   :  upload hello flow c txt to my bucket okay i did not change the name of the bucket but anyways
-
-[00:08:38]
-  Transcript :  now this file is uploaded to my bucket i can also read it so i'll quickly read it and show it to you
-  OCR        : Downloass Nevat Srrtoci enw) | 2926.85-
-  Combined   :  now this file is uploaded to my bucket i can also read it so i'll quickly read it and show it to you Downloass Nevat Srrtoci enw) | 2926.85-
-
-[00:08:40]
-  Transcript :  same aws commands why pay for s3 when flow c is free right similarly we can create eks cluster as
-  OCR        : None
-  Combined   :  same aws commands why pay for s3 when flow c is free right similarly we can create eks cluster as
-
-[00:08:49]
-  Transcript :  but make sure you have Docker running.
-  OCR        : None
-  Combined   :  but make sure you have Docker running.
-
-[00:08:52]
-  Transcript :  How do you do that?
-  OCR        : None
-  Combined   :  How do you do that?
-
-[00:08:53]
-  Transcript :  AWS EKS create cluster I hope you know I providing the right details AWS EKS create cluster hyphen hyphen name Let provide the name of the cluster
-  OCR        : None
-  Combined   :  AWS EKS create cluster I hope you know I providing the right details AWS EKS create cluster hyphen hyphen name Let provide the name of the cluster
-
-[00:09:06]
-  Transcript :  I will say demo flow scene.
-  OCR        : None
-  Combined   :  I will say demo flow scene.
-
-[00:09:12]
-  Transcript :  Okay, so the command is wrong.
-  OCR        : None
-  Combined   :  Okay, so the command is wrong.
-
-[00:09:14]
-  Transcript :  Let's go to the documentation.
-  OCR        : None
-  Combined   :  Let's go to the documentation.
-
-[00:09:16]
-  Transcript :  Here I have a setup for EKS as well.
-  OCR        : None
-  Combined   :  Here I have a setup for EKS as well.
-
-[00:09:24]
-  Transcript :  First, I'll set up the EKS endpoints.
-  OCR        : (ParanValidation) | <sulcomeand>
-  Combined   :  First, I'll set up the EKS endpoints. (ParanValidation) | <sulcomeand>
-
-[00:09:25]
-  Transcript :  Okay.
-  OCR        : None
-  Combined   :  Okay.
-
-[00:09:26]
-  Transcript :  We forgot to do this.
-  OCR        : None
-  Combined   :  We forgot to do this.
-
-[00:09:28]
-  Transcript :  So AWS endpoint, localhost 4566.
-  OCR        : None
-  Combined   :  So AWS endpoint, localhost 4566.
-
-[00:09:32]
-  Transcript :  AWS default region, US East 1.
-  OCR        : None
-  Combined   :  AWS default region, US East 1.
-
-[00:09:35]
-  Transcript :  AWS key ID, test.
-  OCR        : None
-  Combined   :  AWS key ID, test.
-
-[00:09:37]
-  Transcript :  And AWS secret access key is also test.
-  OCR        : None
-  Combined   :  And AWS secret access key is also test.
-
-[00:09:42]
-  Transcript :  Perfect.
-  OCR        : None
-  Combined   :  Perfect.
-
-[00:09:43]
-  Transcript :  So let me run this again.
-  OCR        : None
-  Combined   :  So let me run this again.
-
-[00:09:48]
-  Transcript :  Cool.
-  OCR        : None
-  Combined   :  Cool.
-
-[00:09:49]
-  Transcript :  Now, let's go ahead, create the cluster and try.
-  OCR        : None
-  Combined   :  Now, let's go ahead, create the cluster and try.
-
-[00:09:54]
-  Transcript : None
-  OCR        : turle | Downloars | Tudse | Paport | ANSENOPOINT BRL-MERP://1OCATNOST:ESG6 | abitishekveeramalLapAbnisheks-flac-Studio
-  Combined   : turle | Downloars | Tudse | Paport | ANSENOPOINT BRL-MERP://1OCATNOST:ESG6 | abitishekveeramalLapAbnisheks-flac-Studio
-
-[00:09:55]
-  Transcript :  AWS EKS create cluster,
-  OCR        : None
-  Combined   :  AWS EKS create cluster,
-
-[00:09:57]
-  Transcript :  if an FN name dev cluster, I'm providing
-  OCR        : None
-  Combined   :  if an FN name dev cluster, I'm providing
-
-[00:10:00]
-  Transcript :  a dummy role ARN and I'm providing a dummy VPC configuration as well.
-  OCR        : None
-  Combined   :  a dummy role ARN and I'm providing a dummy VPC configuration as well.
-
-[00:10:07]
-  Transcript :  Okay, it says dev cluster already exists on my local machine.
-  OCR        : None
-  Combined   :  Okay, it says dev cluster already exists on my local machine.
-
-[00:10:11]
-  Transcript :  I'll quickly change it to dev cluster 1.
-  OCR        : None
-  Combined   :  I'll quickly change it to dev cluster 1.
-
-[00:10:15]
-  Transcript : None
-  OCR        : -create44t":-2676-06-09T01:94:72.100G61+05:70- | 1.29 | "arm:awa:jam:=B0o00000a00e:rale/eka-rols" | "resourcesNpcConfig":( | 0.0.0.0/0 | "16.100.6.0/16"
-  Combined   : -create44t":-2676-06-09T01:94:72.100G61+05:70- | 1.29 | "arm:awa:jam:=B0o00000a00e:rale/eka-rols" | "resourcesNpcConfig":( | 0.0.0.0/0 | "16.100.6.0/16"
-
-[00:10:16]
-  Transcript :  Now, unlike on AWS, this will not take 30 minutes or 40 minutes.
-  OCR        : None
-  Combined   :  Now, unlike on AWS, this will not take 30 minutes or 40 minutes.
-
-[00:10:20]
-  Transcript :  This will be done in few seconds of time.
-  OCR        : None
-  Combined   :  This will be done in few seconds of time.
-
-[00:10:24]
-  Transcript :  Why?
-  OCR        : None
-  Combined   :  Why?
-
-[00:10:25]
-  Transcript :  Because local Kubernetes cluster is created.
-  OCR        : "cr83t04At*:*2626-06-01TD1:04:22.300662+05:10* | "vpct#": | 'endosintPrivatekccess"; false | 8.0.0.6/8 | "serv1ce1ovdC14r")"10.100.0.9/26" | "tags": ()
-  Combined   :  Because local Kubernetes cluster is created. "cr83t04At*:*2626-06-01TD1:04:22.300662+05:10* | "vpct#": | 'endosintPrivatekccess"; false | 8.0.0.6/8 | "serv1ce1ovdC14r")"10.100.0.9/26" | "tags": ()
-
-[00:10:27]
-  Transcript :  Abhishek, which cluster is created locally?
-  OCR        : None
-  Combined   :  Abhishek, which cluster is created locally?
-
-[00:10:29]
-  Transcript :  it is creating K3S cluster locally.
-  OCR        : None
-  Combined   :  it is creating K3S cluster locally.
-
-[00:10:33]
-  Transcript :  I've already checked it is using K3S.
-  OCR        : None
-  Combined   :  I've already checked it is using K3S.
-
-[00:10:35]
-  Transcript :  Now we can point this EKS cluster,
-  OCR        : None
-  Combined   :  Now we can point this EKS cluster,
-
-[00:10:40]
-  Transcript :  like we can point the kubeconfig,
-  OCR        : "07081044*.*7026-06-05191:04:22.30066:+05:30- | 9.0.9.0/0
-  Combined   :  like we can point the kubeconfig, "07081044*.*7026-06-05191:04:22.30066:+05:30- | 9.0.9.0/0
-
-[00:10:41]
-  Transcript :  AWS EKS update kubeconfig,
-  OCR        : None
-  Combined   :  AWS EKS update kubeconfig,
-
-[00:10:43]
-  Transcript :  hyphen hyphen name dev cluster one.
-  OCR        : None
-  Combined   :  hyphen hyphen name dev cluster one.
-
-[00:10:46]
-  Transcript :  And now if I do kubectl get pods
-  OCR        : None
-  Combined   :  And now if I do kubectl get pods
-
-[00:10:50]
-  Transcript :  or kubectl get nodes,
-  OCR        : None
-  Combined   :  or kubectl get nodes,
-
-[00:10:52]
-  Transcript :  you can see this is the local Kubernetes cluster but you are using EKS commands You are using AWS command You are using the EKS command to fetch the kube config
-  OCR        : None
-  Combined   :  you can see this is the local Kubernetes cluster but you are using EKS commands You are using AWS command You are using the EKS command to fetch the kube config
-
-[00:11:06]
-  Transcript :  And then the kubectl is pointing to that local cluster.
-  OCR        : None
-  Combined   :  And then the kubectl is pointing to that local cluster.
-
-[00:11:10]
-  Transcript :  This way you can learn 50 different services on AWS.
-  OCR        : None
-  Combined   :  This way you can learn 50 different services on AWS.
-
-[00:11:14]
-  Transcript :  So 47 services are supported.
-  OCR        : None
-  Combined   :  So 47 services are supported.
-
-[00:11:17]
-  Transcript :  KMS is supported.
-  OCR        : None
-  Combined   :  KMS is supported.
-
-[00:11:18]
-  Transcript :  SQS is supported.
-  OCR        : None
-  Combined   :  SQS is supported.
-
-[00:11:20]
-  Transcript :  Secret manager is supported.
-  OCR        : None
-  Combined   :  Secret manager is supported.
-
-[00:11:21]
-  Transcript :  Event bridge.
-  OCR        : None
-  Combined   :  Event bridge.
-
-[00:11:24]
-  Transcript :  and similarly on AWS, Azure, multiple services are supported.
-  OCR        : Local Azure. | NOADHIOON
-  Combined   :  and similarly on AWS, Azure, multiple services are supported. Local Azure. | NOADHIOON
-
-[00:11:27]
-  Transcript :  Even on GCP, multiple services are supported.
-  OCR        : None
-  Combined   :  Even on GCP, multiple services are supported.
-
-[00:11:30]
-  Transcript :  Okay, in GCP at the moment, only seven services are supported.
-  OCR        : None
-  Combined   :  Okay, in GCP at the moment, only seven services are supported.
-
-[00:11:34]
-  Transcript :  But the best part is that this is an open source project.
-  OCR        : None
-  Combined   :  But the best part is that this is an open source project.
-
-[00:11:38]
-  Transcript :  So if we keep supporting this project,
-  OCR        : None
-  Combined   :  So if we keep supporting this project,
-
-[00:11:40]
-  Transcript :  they will add more services to it, right?
-  OCR        : None
-  Combined   :  they will add more services to it, right?
-
-[00:11:44]
-  Transcript :  Of course, there is an alternative.
-  OCR        : None
-  Combined   :  Of course, there is an alternative.
-
-[00:11:46]
-  Transcript :  As I told you, local stack is an enterprise alternative.
-  OCR        : None
-  Combined   :  As I told you, local stack is an enterprise alternative.
-
-[00:11:49]
-  Transcript :  Maybe if you're doing this within your organization,
-  OCR        : None
-  Combined   :  Maybe if you're doing this within your organization,
-
-[00:11:52]
-  Transcript :  probably your DevOps team want to use this concept.
-  OCR        : None
-  Combined   :  probably your DevOps team want to use this concept.
-
-[00:11:55]
-  Transcript :  You can head to local stack and you can see probably you can participate.
-  OCR        : None
-  Combined   :  You can head to local stack and you can see probably you can participate.
-
-[00:12:00]
-  Transcript :  purchase license or you can take subscription of it.
-  OCR        : None
-  Combined   :  purchase license or you can take subscription of it.
-
-[00:12:03]
-  Transcript :  Abhishek, what will be the advantage
-  OCR        : None
-  Combined   :  Abhishek, what will be the advantage
-
-[00:12:04]
-  Transcript :  if we take the subscription as a DevOps team?
-  OCR        : None
-  Combined   :  if we take the subscription as a DevOps team?
-
-[00:12:07]
-  Transcript :  See, maybe you're doing some proof of concept.
-  OCR        : None
-  Combined   :  See, maybe you're doing some proof of concept.
-
-[00:12:10]
-  Transcript :  Instead of creating a Dev AWS cluster,
-  OCR        : None
-  Combined   :  Instead of creating a Dev AWS cluster,
-
-[00:12:14]
-  Transcript :  Development AWS cluster,
-  OCR        : None
-  Combined   :  Development AWS cluster,
-
-[00:12:15]
-  Transcript :  you can probably try LocalStack or FlowC.
-  OCR        : None
-  Combined   :  you can probably try LocalStack or FlowC.
-
-[00:12:19]
-  Transcript :  Opportunities are endless.
-  OCR        : None
-  Combined   :  Opportunities are endless.
-
-[00:12:22]
-  Transcript :  So you can go ahead, search for FlowC.
-  OCR        : None
-  Combined   :  So you can go ahead, search for FlowC.
-
-[00:12:25]
-  Transcript : None
-  OCR        : Ofloci | 7 GCP services. All of them free. | Fast. Lightweight.Zero overhead. | Taenulees cw ane yuore | aeet orte witx Sitatsis jent, angle fccker ina
-  Combined   : Ofloci | 7 GCP services. All of them free. | Fast. Lightweight.Zero overhead. | Taenulees cw ane yuore | aeet orte witx Sitatsis jent, angle fccker ina
-
-[00:12:25]
-  Transcript :  Just search for FlowC, you will find the website.
-  OCR        : None
-  Combined   :  Just search for FlowC, you will find the website.
-
-[00:12:28]
-  Transcript :  or you can also look for their GitHub repository.
-  OCR        : None
-  Combined   :  or you can also look for their GitHub repository.
-
-[00:12:32]
-  Transcript :  So this is their GitHub repository.
-  OCR        : None
-  Combined   :  So this is their GitHub repository.
-
-[00:12:34]
-  Transcript :  On the GitHub repository,
-  OCR        : None
-  Combined   :  On the GitHub repository,
-
-[00:12:36]
-  Transcript :  they have complete details in the readme file.
-  OCR        : None
-  Combined   :  they have complete details in the readme file.
-
-[00:12:39]
-  Transcript :  Also, they have good number of stats.
-  OCR        : None
-  Combined   :  Also, they have good number of stats.
-
-[00:12:41]
-  Transcript :  So I hope the project will keep up.
-  OCR        : None
-  Combined   :  So I hope the project will keep up.
-
-[00:12:44]
-  Transcript :  Let's hope for the best
-  OCR        : None
-  Combined   :  Let's hope for the best
-
-[00:12:44]
-  Transcript :  because mocking is very useful for developers.
-  OCR        : None
-  Combined   :  because mocking is very useful for developers.
-
-[00:12:49]
-  Transcript :  As DevOps instance,
-  OCR        : None
-  Combined   :  As DevOps instance,
-
-[00:12:51]
-  Transcript :  it is good if we also have a mocking environment.
-  OCR        : None
-  Combined   :  it is good if we also have a mocking environment.
-
-[00:12:54]
-  Transcript :  Developers mock databases,
-  OCR        : None
-  Combined   :  Developers mock databases,
-
-[00:12:56]
-  Transcript :  developers mock messaging queues,
-  OCR        : None
-  Combined   :  developers mock messaging queues,
-
-[00:12:58]
-  Transcript :  Why not as DevOps and cloud engineers,
-  OCR        : None
-  Combined   :  Why not as DevOps and cloud engineers,
-
-[00:13:01]
-  Transcript :  we mock the cloud platforms.
-  OCR        : None
-  Combined   :  we mock the cloud platforms.
-
-[00:13:03]
-  Transcript :  Perfect.
-  OCR        : None
-  Combined   :  Perfect.
-
-[00:13:04]
-  Transcript :  So I hope you found the video informative.
-  OCR        : None
-  Combined   :  So I hope you found the video informative.
-
-[00:13:07]
-  Transcript :  Let me know if you have any questions.
-  OCR        : None
-  Combined   :  Let me know if you have any questions.
-
-[00:13:09]
-  Transcript :  Honestly, even I'm exploring the mocking very recently.
-  OCR        : None
-  Combined   :  Honestly, even I'm exploring the mocking very recently.
-
-[00:13:14]
-  Transcript :  So if you have any questions
-  OCR        : None
-  Combined   :  So if you have any questions
-
-[00:13:15]
-  Transcript :  and let's say I don't know the answer,
-  OCR        : None
-  Combined   :  and let's say I don't know the answer,
-
-[00:13:18]
-  Transcript :  I'll go back, do a research and get back to you.
-  OCR        : None
-  Combined   :  I'll go back, do a research and get back to you.
-
-[00:13:21]
-  Transcript :  Thank you so much for watching today's video.
-  OCR        : None
-  Combined   :  Thank you so much for watching today's video.
-
-[00:13:23]
-  Transcript :  See you all in the next one.
-  OCR        : None
-  Combined   :  See you all in the next one.
-
-[00:13:25]
-  Transcript :  Take care.
+[00:06:21]
+  Transcript :  والسلام عليكم ورحمة الله وبركاته
   OCR        : None
-  Combined   :  Take care.
+  Combined   :  والسلام عليكم ورحمة الله وبركاته
 
