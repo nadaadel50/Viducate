@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import { Settings2, Sun, Moon, Check, LogOut } from "lucide-react";
+import { Settings2,  Check, LogOut } from "lucide-react";
 import { FormattedMessage } from "react-intl";
 import type { usePreferences } from "../hooks/use_preferences";
 import { COLORS } from "../../../../core/constants/colors";
@@ -11,10 +11,10 @@ interface PreferencesSidebarProps {
 }
 
 export function PreferencesSidebar({
-  preferences,
+  // preferences,
   onSignOut,
 }: PreferencesSidebarProps) {
-  const { appearance, setAppearance } = preferences;
+  // const { appearance, setAppearance } = preferences;
   const { locale, setLocale } = useLanguage();
 
   return (
@@ -37,7 +37,7 @@ export function PreferencesSidebar({
 
       <div className="space-y-6">
         {/* Appearance */}
-        <div>
+        {/* <div>
           <label className="text-[11px] font-bold uppercase tracking-wider text-slate-400 mb-3 block">
             <FormattedMessage
               id="profile.preferences.appearance"
@@ -84,7 +84,7 @@ export function PreferencesSidebar({
               );
             })}
           </div>
-        </div>
+        </div> */}
 
         {/* Language */}
         <div>

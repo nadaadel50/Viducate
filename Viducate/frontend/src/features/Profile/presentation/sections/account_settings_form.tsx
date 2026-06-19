@@ -11,6 +11,7 @@ import {
 } from "../hooks/use_profile_context";
 import { useHandleInputs } from "../hooks/use_handle_inputs";
 import { useEffect } from "react";
+import { COLORS } from "../../../../core/constants";
 
 export function AccountSettingsForm() {
   // const { fields, setters, state, handleSave } = form;
@@ -94,6 +95,7 @@ export function AccountSettingsForm() {
 
             {/* Save Button */}
             <button
+              style={{ backgroundColor: disabled ? "#94a3b8" : COLORS.brand.primary }}
               disabled={disabled}
               onClick={() => {
                 updateProfile({
