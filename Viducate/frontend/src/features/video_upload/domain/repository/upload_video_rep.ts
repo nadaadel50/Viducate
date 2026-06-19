@@ -8,7 +8,8 @@ export interface UploadVideoRepo {
   uploadVideo(
   uploadReq: UploadVideoRequest,
   onProgress?: (percent: number) => void,
-  signal?: AbortSignal
+  signal?: AbortSignal,
+  onVideoIdReceived?: (id: number) => void
 ):Promise<ApiResult<ConfirmUploadResponse>>
 
 

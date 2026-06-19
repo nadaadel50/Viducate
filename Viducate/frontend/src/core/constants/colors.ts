@@ -34,14 +34,25 @@ export const COLORS = {
     white: "#ffffff",
     gray:"#6B7280"
   },
-  background: {
+    background: {
     light: "#F5F5F5",
+    moreLight: "#f8fafc",
+
+    premiumGradient: `
+      linear-gradient(
+        to bottom right,
+        #ebf5ff 0%,
+        #f3e8ff 50%,
+        #dcfce7 100%
+      )
+    `,
+
     radialGradient: `
-    radial-gradient(at 0% 0%, rgba(48, 79, 232, 0.17) 0px, transparent 80%),
-    radial-gradient(at 100% 0%, rgba(16, 185, 129, 0.14) 0px, transparent 50%),
-    radial-gradient(at 100% 100%, rgba(138, 92, 246, 0.24) 0px, transparent 80%),
-    radial-gradient(at 0% 100%, rgba(48, 79, 232, 0.1) 0px, transparent 50%)
-  `,
+      radial-gradient(at 0% 0%, rgba(48, 79, 232, 0.17) 0px, transparent 80%),
+      radial-gradient(at 100% 0%, rgba(16, 185, 129, 0.14) 0px, transparent 50%),
+      radial-gradient(at 100% 100%, rgba(138, 92, 246, 0.24) 0px, transparent 80%),
+      radial-gradient(at 0% 100%, rgba(48, 79, 232, 0.1) 0px, transparent 50%)
+    `,
   },
     layout: {
     leftBackground: "#ffffff",

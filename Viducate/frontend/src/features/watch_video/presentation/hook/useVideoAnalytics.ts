@@ -39,7 +39,7 @@ export function useVideoAnalytics(
 
     for (const event of lastMinute) {
       const existing = clusters.find((c) =>
-        c.some((t) => Math.abs(t - event.time) < 5),
+        c.some((t) => Math.abs(t - event.time) < 30),
       );
 
       if (existing) existing.push(event.time);

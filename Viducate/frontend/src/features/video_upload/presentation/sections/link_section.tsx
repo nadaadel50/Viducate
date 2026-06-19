@@ -1,9 +1,8 @@
-import { AlertCircle, CirclePlay } from "lucide-react";
+import { Info, AlertCircle, Youtube } from "lucide-react";
 
 type LinkSectionProps = {
   url: string;
   error: boolean;
-  
   handleUrlChange: (e: React.ChangeEvent<HTMLInputElement>) => void;
   handlePaste: () => void;
 };
@@ -15,47 +14,54 @@ export function LinkSection({
   handlePaste,
 }: LinkSectionProps) {
   return (
-    <div className="  bg-gray-50  w-full flex flex-col  mt-10 py-12 border-2  border-gray-200 rounded-2xl   mb-10 ">
-      <div className="mx-15 flex flex-col ">
-        <p className=" text-sm font-bold text-gray-900 dark:text-white mb-3">
-          Video URL
-        </p>
+    <div className="w-full mt-10 mb-6 rounded-2xl border border-[#DDD9FB] bg-[#F8F7FF] p-7">
+      <p className="text-xs font-medium text-gray-500 mb-2 uppercase tracking-wide">
+        Video URL
+      </p>
 
-        <div className="relative flex items-center justify-center">
-          <CirclePlay
-            width={18}
-            className="absolute left-3 top-7 -translate-y-1/2 text-gray-400 "
-          />
+      <div className="relative flex items-center">
+        <Youtube
+          size={16}
+          className="absolute left-3 text-indigo-300 pointer-events-none"
+        />
 
-          <input
-            value={url}
-            onChange={handleUrlChange}
-            className={`w-full pl-10 py-3 rounded-xl border-2 transition-all focus:outline-none
-  ${
-    error
-      ? "border-red-500 focus:ring-red-200"
-      : "border-gray-300 focus:ring-4 focus:ring-[#359EFF]/20 focus:border-[#359EFF]"
-  }`}
-            type="text"
-            placeholder="https://www.youtube.com/watch?v=..."
-          />
+        <input
+          value={url}
+          onChange={handleUrlChange}
+          type="text"
+          placeholder="https://www.youtube.com/watch?v=..."
+          className={`w-full pl-9 pr-20 py-2.5 text-sm rounded-xl border bg-white outline-none transition-all
+            ${
+              error
+                ? "border-red-400 ring-3 ring-red-100"
+                : "border-[#E0DCFB] focus:border-indigo-400 focus:ring-3 focus:ring-[#EEEDFE]"
+            }`}
+        />
 
-          <button
-            onClick={handlePaste}
-            className="absolute right-4 top-1/2 -translate-y-1/2 px-4 py-2 bg-gradient-to-br from-[#359EFF] to-[#5A0BB1] hover:from-[#2f8be0] hover:to-[#4c0997] cursor-pointer  text-white  text-xs font-bold rounded-lg transition-colors"
-          >
-            PASTE
-          </button>
-        </div>
-        <p className="flex gap-2 mt-3 text-xs text-gray-500  items-center">
-          <AlertCircle width={15} strokeWidth={3} />
-          Make sure the video is public or unlisted so our AI can access it.
-        </p>
+        <button
+          onClick={handlePaste}
+          className="absolute right-2 px-3 py-1.5 text-xs font-medium text-white bg-indigo-600 hover:bg-indigo-700 rounded-lg transition-colors cursor-pointer"
+        >
+          Paste
+        </button>
       </div>
 
-
-
-      
+      <p
+        className={`flex items-center gap-1.5 mt-2.5 text-xs transition-colors
+          ${error ? "text-red-500" : "text-gray-400"}`}
+      >
+        {error ? (
+          <>
+            <AlertCircle size={13} className="shrink-0" />
+            Please enter a valid URL starting with https://
+          </>
+        ) : (
+          <>
+            <Info size={13} className="shrink-0" />
+            Make sure the video is public or unlisted so our AI can access it.
+          </>
+        )}
+      </p>
     </div>
   );
 }

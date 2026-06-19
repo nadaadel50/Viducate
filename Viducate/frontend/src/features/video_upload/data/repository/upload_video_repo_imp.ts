@@ -19,8 +19,10 @@ export class uploadVideoRepoImp implements UploadVideoRepo {
     uploadReq: UploadVideoRequest,
     onProgress?: (percent: number) => void,
     signal?: AbortSignal,
+    onVideoIdReceived?: (id: number) => void
+    
   ): Promise<ApiResult<ConfirmUploadResponse>> {
-    return this.uploadVideoDataSource.uploadVideo(uploadReq, onProgress,signal);
+    return this.uploadVideoDataSource.uploadVideo(uploadReq, onProgress,signal,onVideoIdReceived);
   }
 
   deleteVideo(videoId:number):Promise<ApiResult<string>>{

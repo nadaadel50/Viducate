@@ -1,12 +1,13 @@
+import { useLearningSession } from "../../../../../core/hooks/useLearningContent";
 import type { TopicResponse } from "../../../domin/entity/topic_response";
 
 
-type Marker = { time: number };
+
 
 type Props = {
   progress: number;
   duration: number;
-  markers: Marker[];
+ 
   topics: TopicResponse[];
   getDuration: () => number;
   onProgressClick: (e: React.MouseEvent<HTMLDivElement>) => void;
@@ -17,13 +18,17 @@ type Props = {
 export function VideoProgressBar({
   progress,
   duration,
-  markers,
+ 
   topics,
   getDuration,
   onProgressClick,
   onMarkerClick,
   progressRef,
 }: Props) {
+
+  const {marks}= useLearningSession();
+
+
   return (
     <div
       ref={progressRef}
@@ -47,14 +52,14 @@ export function VideoProgressBar({
         ))}
       </div>
 
-      {markers.map((marker, i) => (
+      {marks!.map((marker, i) => (
         <div
           key={i}
           className="absolute top-1/2 -translate-y-1/2"
-          style={{ left: `${(marker.time / (getDuration() || 1)) * 100}%` }}
+          style={{ left: `${(marker / (getDuration() || 1)) * 100}%` }}
           onClick={(e) => {
             e.stopPropagation();
-            onMarkerClick(marker.time);
+            onMarkerClick(marker);
           }}
         >
           <div className="w-3.5 h-3.5 rounded-full bg-white flex items-center justify-center shadow hover:scale-125 transition cursor-pointer">

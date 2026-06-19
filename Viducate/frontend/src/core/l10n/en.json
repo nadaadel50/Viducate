@@ -217,6 +217,53 @@
   "report.hero.watchProgress": "Watch Progress",
   "report.hero.watched": "{percent}% watched",
   "report.hero.remaining": "{percent}% remaining",
- "report.page.title": "Video Performance Report"
+ "report.page.title": "Video Performance Report",
+
+
+  
+  
+
+  "profile.preferences.title": "Preferences",
+  "profile.preferences.appearance": "Appearance",
+  "profile.preferences.language": "Language",
+  "profile.signOut": "Sign Out",
+
+  "profile.settings.title": "Account Settings",
+  "profile.settings.save": "Save Changes",
+
+  "profile.delete.warning": "Warning: Irreversible action",
+  "profile.delete.description": "Once you delete your account, there is no going back. Please be certain before proceeding.",
+  "profile.delete.btn": "Delete Account",
+
+  "profile.hero.uploadPhoto": "Upload new photo",
+
+  "profile.deleteModal.title": "Delete Account",
+  "profile.deleteModal.description": "Are you sure you want to delete your account? All of your data will be permanently removed. This action cannot be undone.",
+  "profile.deleteModal.confirm": "Delete Account",
+
+  "common.cancel": "Cancel",
+
+  "profile.section.personalInfo": "Personal Information",
+  "profile.section.security": "Security",
+  "profile.section.deleteAccount": "Delete Account",
+
+  "form.firstName": "First Name",
+  "form.lastName": "Last Name",
+  "form.currentPassword": "Current Password",
+  "form.newPassword": "New Password",
+  "form.confirmPassword": "Confirm Password",
+  "form.password.placeholder": "••••••••",
+
+  "profile.save.success": "Changes saved successfully",
+  "profile.save.error": "Something went wrong. Please try again",
+
+  "profile.password.mismatch": "New passwords do not match",
+  "profile.password.minLength": "Password must be at least 8 characters",
+
+  "profile.preferences.light": "Light",
+  "profile.preferences.dark": "Dark",
+  "profile.lang.en": "English",
+  "profile.lang.ar": "Arabic"
+
 
 }

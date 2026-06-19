@@ -132,7 +132,7 @@ export const QuizPage = () => {
       className="min-h-screen py-10 relative "
       style={{ background: COLORS.background.light }}
     >
-      {quizState === "results" && (
+      {quizState === "results" && !isReviewMode && (
         <QuizResultCard
           stats={stats}
           onReview={() => {

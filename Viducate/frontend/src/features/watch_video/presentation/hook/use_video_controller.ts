@@ -1,6 +1,8 @@
 import { useRef, useState } from "react";
 import type { Marker } from "../types/mark_parms";
 import { StuckReasons } from "../types/stuck_reason";
+import { useLearningSession } from "../../../../core/hooks/useLearningContent";
+import { STORAGE_KEYS } from "../../../../core/constants";
 
 // ── types ─────────────────────────────────────────────────────────────────────
 
@@ -18,6 +20,7 @@ type PlayerAPI = {
   getCurrentTime: () => number;
   getDuration: () => number;
   setSpeed: (speed: number) => void;
+  
 };
 
 type AnalyticsAPI = {
@@ -33,18 +36,23 @@ type ControllerProps = {
   player: PlayerAPI;
   analytics: AnalyticsAPI;
   videoState: VideoStateSetters;
+  topicDuration: number;
 };
 
 export function useVideoController({
   player,
   analytics,
   videoState,
+  
+  topicDuration,
 }: ControllerProps) {
   const pauseStartRef = useRef<number | null>(null);
   const lastSeekTimeRef = useRef<number | null>(null);
-  const [markers, setMarkers] = useState<Marker[]>([]);
+  // const [markers, setMarkers] = useState<Marker[]>([]);
   const [showSpeedMenu, setShowSpeedMenu] = useState(false);
   const [playbackRate, setPlaybackRate] = useState(1);
+  const { setDurationTime, handleSetMarks, handleAddMark } =
+    useLearningSession();
 
   const handleStart = () => {
     videoState.setPlayerState((p) => ({
@@ -80,10 +88,18 @@ export function useVideoController({
     const resumedSameSpot =
       Math.abs(player.getCurrentTime() - lastSeekTime) < 5;
 
-    if (pauseDuration > 60_000 && pauseDuration < 180_000 && resumedSameSpot) {
+    const topicDurationMs = topicDuration || 0;
+    const minPause = Math.max(30_000, topicDurationMs * 0.15);
+    const maxPause = Math.max(90_000, topicDurationMs * 0.4);
+    console.log("from video controller the topic duration is ", topicDuration);
+
+    if (
+      pauseDuration > minPause &&
+      pauseDuration < maxPause &&
+      resumedSameSpot
+    ) {
       analytics.triggerStuck(StuckReasons.SEEK_PAUSE);
     }
-
     pauseStartRef.current = null;
   };
 
@@ -109,10 +125,14 @@ export function useVideoController({
   };
 
   const handleLoadedMetadata = () => {
+    const duration = player.getDuration();
+
     videoState.setPlayerState((p) => ({
       ...p,
-      duration: player.getDuration(),
+      duration,
     }));
+
+    setDurationTime(duration);
   };
 
   const handleSeek = () => {
@@ -129,9 +149,8 @@ export function useVideoController({
   };
 
   const handleAddMarker = () => {
-    setMarkers([...markers, { time: player.getCurrentTime() }]);
+    handleAddMark(player.getCurrentTime());
   };
-
   return {
     handleStart,
     handleToggle,
@@ -141,7 +160,6 @@ export function useVideoController({
     handlePlay,
     handlePause,
     handleSpeedChange,
-    markers,
     showSpeedMenu,
     playbackRate,
     setPlaybackRate,

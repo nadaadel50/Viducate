@@ -79,7 +79,7 @@ export function VideoPlayer() {
     handlePlay,
     handlePause,
     handleSpeedChange,
-    markers,
+   
     showSpeedMenu,
     playbackRate,
     setShowSpeedMenu,
@@ -88,12 +88,11 @@ export function VideoPlayer() {
     player: { seek, getCurrentTime, getDuration, setSpeed, play, pause },
     analytics: { addSeekEvent, triggerStuck },
     videoState: { setPlayerState, setCurrentTime },
+      topicDuration,
   });
   
 
-  useEffect(() => {
-    sessionStorage.setItem(STORAGE_KEYS.marks, JSON.stringify(markers));
-  }, [markers]);
+ 
 
   useEffect(() => {
     setCurrentTopicName(selectedTopic?.title || "");
@@ -174,7 +173,7 @@ export function VideoPlayer() {
               <VideoProgressBar
                 progress={playerState.progress}
                 duration={playerState.duration}
-                markers={markers}
+                
                 topics={topics?.topics ?? []}
                 getDuration={getDuration}
                 onProgressClick={handleProgressClick}

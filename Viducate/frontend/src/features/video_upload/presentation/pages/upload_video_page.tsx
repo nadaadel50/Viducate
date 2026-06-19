@@ -10,6 +10,8 @@ import { UploadVideoSection } from "../sections/upload_video_section";
 
 import { CustumError } from "../../../../core/componants/custum_error";
 import { useUploadVideoController } from "../hooks/use_upload_video_control";
+import { COLORS } from "../../../../core/constants";
+
 
 
 
@@ -37,7 +39,7 @@ export function UploadVideoPage() {
   function renderUploadContent() {
     if (selected === "link") {
       return (
-        <UploadLinkSection handleError={actions.handleError} />
+        <UploadLinkSection  />
       );
     }
 
@@ -47,7 +49,10 @@ export function UploadVideoPage() {
           progress={state.progress}
           title={uploadTitle}
           handleCancel={actions.handleCancelUpload}
-        />
+          videoFile={state.videoFile} 
+          controllerRef={refs.controllerRef}
+          setProgress={actions.setProgress } 
+          handleError={ actions.handleError}        />
       );
     }
 
@@ -59,20 +64,22 @@ export function UploadVideoPage() {
         }
         handleCancelTakenVideo={handleCancelTakeVideo
         }
-        setProgress={actions.setProgress}
+      
         setUploading={actions.setIsUploading}
         handleTitle={handleUploadTitle}
         titleError={uploadTitleError}
         title={uploadTitle}
-        controllerRef={refs.controllerRef}
-        handleError={actions.handleError}
+     
+        
       />
     );
   }
 
   return (
-    <div className="flex justify-center items-center bg-[#f3f4f6] min-h-screen p-12 font-display">
-      <div className="w-250 min-h-screen">
+    <div 
+    style={{background:COLORS.background.radialGradient}}
+    className="flex justify-center items-center py-5  min-h-screen  font-display">
+      <div className="w-300 ">
         <UploadTitle
           bigTitle={"New Analysis"}
           smallTitle={
@@ -80,7 +87,7 @@ export function UploadVideoPage() {
           }
         />
 
-        <div className="relative flex justify-center items-center mt-10 bg-white rounded-xl">
+        <div className="relative flex justify-center items-center mt-10 bg-white/60 rounded-xl">
 
      
           {state.errorMessage && (

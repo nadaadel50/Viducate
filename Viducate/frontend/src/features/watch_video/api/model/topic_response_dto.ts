@@ -9,6 +9,7 @@ export type TopicResponseDto = {
   end_time: number
   main_topic: string
   title: string,
+  is_completed: boolean,
   sub_topics:SubTopicDto[]
 }
 

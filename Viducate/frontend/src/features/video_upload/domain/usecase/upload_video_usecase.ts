@@ -11,16 +11,20 @@ export class UploadVideoUseCase {
     uploadReq: UploadVideoRequest,
     onProgress?: (percent: number) => void,
     signal?: AbortSignal,
+    onVideoIdReceived?: (id: number) => void
   ) {
     const response = await this.uploadVideoRepo.uploadVideo(
       uploadReq,
       onProgress,
       signal,
+      onVideoIdReceived
     );
     if (!response.success) return response;
-    if (response.data.processing_status === "cancelled") {
-      await this.uploadVideoRepo.deleteVideo(response.data.videoId);
-    }
+    // if (response.data.processing_status === "cancelled") {
+     
+    //   await this.uploadVideoRepo.deleteVideo(response.data.videoId);
+     
+    // }
     return response
   }
 }
