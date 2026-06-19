@@ -16,13 +16,8 @@ import { GeneratingSummaryPage } from "../../features/summarization/presentation
 import { GeneratingStudyNotesPage } from "../../features/summarization/presentation/pages/GeneratingStudyNotesPage";
 import SummaryPage from "../../features/summarization/presentation/pages/SummaryPage";
 import StudyNotesPage from "../../features/summarization/presentation/pages/StudyNotesPage";
-<<<<<<< HEAD
 import {QuizPage} from "../../features/QuizSystem/presentation/pages/QuizPage";
 import {ReportPage} from "../../features/report/presentation/pages/report_page";
-=======
-import { QuizPage } from "../../features/QuizSystem/presentation/pages/QuizPage";
-
->>>>>>> e0701a70c3941aa5495d970ae2e57e4322882b21
 import { FlashCards } from "../../features/flash_cards/presentation/pages/flash_card_page";
 import { WatchLayout } from "../../features/watch_video/presentation/pages/watch_outlet";
 import { PublicRoute } from "./publicRoutes";

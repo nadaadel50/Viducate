@@ -4,11 +4,13 @@ import { SearchTopicBar } from "../widgets/search_topic_bar";
 import { useLearningSession } from "../../../../core/hooks/useLearningContent";
 import { ChartColumn, ClipboardCheck, Languages, Target } from "lucide-react";
 import { CustomizeExperienceModal } from "../../../preferences/presentation/pages/CustomizeExperienceModal";
+import { useNavigate } from "react-router-dom";
+import { AppRoutesNames } from "../../../../app/routers/routes";
 
 export function LeftContentSection() {
   const [searchQuery, setSearchQuery] = useState<string>("");
   const [isCustomizeOpen, setIsCustomizeOpen] = useState(false);
-
+  const navigate = useNavigate();
   const {
     currentTime,
     setSelectedTopic,
@@ -60,7 +62,7 @@ export function LeftContentSection() {
           <div className="flex items-center gap-3">
             <span
               className="relative group text-slate-400 hover:text-[#4f46e5] cursor-pointer"
-              // onClick={() => setShowReport(true)}
+              onClick={() => navigate(AppRoutesNames.report)}
             >
               <ClipboardCheck   size={18} />
               <span className="absolute -top-8 left-1/2 -translate-x-1/2 bg-gray-800 text-white text-xs rounded px-2 py-1 whitespace-nowrap opacity-0 group-hover:opacity-100 transition-opacity">

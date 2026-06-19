@@ -15,6 +15,7 @@ export const AppRoutesNames = {
   summary:"/summary",
   generatingSummary:"/generating-summary",
   dashboard:"/dashboard",
+  report:"/report",
   
 
 };
