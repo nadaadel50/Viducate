@@ -6,4 +6,7 @@ export class VideoStatusService {
     const response = await apiClient.get<VideoStatusResponseDto>(`/videos/${videoId}/status`);
     return response.data;
   }
+  cancelAnalysis(videoId: number) {
+    return apiClient.post<string>(`/videos/${videoId}/cancel`);
+  }
 }
