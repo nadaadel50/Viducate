@@ -4,15 +4,14 @@ import type { TopicReport } from "../../domain/entity/report_entity";
 import { FormattedMessage, useIntl } from "react-intl";
 import { FileText, NotebookPen, Brain, Layers3, AlertTriangle, PartyPopper, AlertCircle } from "lucide-react";
 
+
 const MASTERY_CONFIG: Record<string, { label: string; color: string; bg: string; border: string; emoji: string }> = {
+  pending:    { label: 'Needs Quiz', color: '#7c3aed', bg: '#f3e8ff', border: '#e9d5ff', emoji: '📝' },
   weak:       { label: 'Needs Work', color: '#e11d48', bg: '#fff1f2', border: '#fecdd3', emoji: '🔴' },
   developing: { label: 'Developing', color: '#d97706', bg: '#fffbeb', border: '#fde68a', emoji: '🟡' },
   strong:     { label: 'Strong',     color: '#059669', bg: '#ecfdf5', border: '#a7f3d0', emoji: '🟢' },
   mastered:   { label: 'Mastered',   color: '#2563eb', bg: '#eff6ff', border: '#bfdbfe', emoji: '🏆' },
 };
-
-const DEFAULT_CONFIG = { label: 'In Progress', color: '#d97706', bg: '#fffbeb', border: '#fde68a', emoji: '⏳' };
-const PENDING_CONFIG  = { label: 'Needs Quiz',  color: '#7c3aed', bg: '#f3e8ff', border: '#e9d5ff', emoji: '📝' };
 
 export function TopicCard({ topic, index }: { topic: TopicReport; index: number }) {
   const [open, setOpen] = useState(false);
@@ -34,9 +33,8 @@ export function TopicCard({ topic, index }: { topic: TopicReport; index: number 
 
   const hasQuiz = topic.quizAttempts > 0;
   const config = hasQuiz
-    ? (MASTERY_CONFIG[topic.masteryLevel] ?? DEFAULT_CONFIG)
-    : topic.quizAttempts === 0 ? PENDING_CONFIG : DEFAULT_CONFIG;
-
+  ? MASTERY_CONFIG[topic.masteryLevel]
+  : MASTERY_CONFIG.pending;
   const scorePercent = hasQuiz && topic.quizTotal
     ? Math.round((topic.correctAnswers / topic.quizTotal) * 100)
     : 0;
