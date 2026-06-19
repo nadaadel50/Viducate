@@ -2,5 +2,5 @@
 # Language: en
 # Total segments: 2
 
-[00:00:35] algorithm for searching a graph | breadth  broad  wide | queue
-[00:02:54] det bisigraph, nadel: | graph | visited | B,Cl, | queve | sited.appendnode | quaue.appendnode | pe-pape | forn | ingrachs: | visited: | black  visited | opendin | gray:w to be visited
+[00:00:00] O(n!)O(n^2) | O(n log n) | 0(1) = constant time | 0(n) | 0(log n) = logarithmic time | (steps) | O(n) = linear time | 0(log n) | O(n log n) = quasilinear time | 0(1) | O(n^2) = quadratic time | data (n) | O(n!) = factorial time | 1322-34
+[00:06:17] O(n!) O(n^2) | o(log n) | log n) = quasilinear time | o(n!) | = factorial | 1087,728

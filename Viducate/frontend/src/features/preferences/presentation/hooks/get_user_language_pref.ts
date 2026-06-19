@@ -12,6 +12,8 @@ export const useGetPreferences = () => {
        if(!response.success){
            throw new Error(response.error);
        }
+
+       console.log("the deafult is",response.data)
        
         return response.data
    },

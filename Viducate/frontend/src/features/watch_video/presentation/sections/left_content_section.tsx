@@ -2,9 +2,8 @@ import { useEffect, useState } from "react";
 import { ContentLearningCard } from "../widgets/content_learning_card";
 import { SearchTopicBar } from "../widgets/search_topic_bar";
 import { useLearningSession } from "../../../../core/hooks/useLearningContent";
-import { Languages } from "lucide-react";
+import { ChartColumn, ClipboardCheck, Languages, Target } from "lucide-react";
 import { CustomizeExperienceModal } from "../../../preferences/presentation/pages/CustomizeExperienceModal";
-
 
 export function LeftContentSection() {
   const [searchQuery, setSearchQuery] = useState<string>("");
@@ -58,20 +57,27 @@ export function LeftContentSection() {
             {`${videoTitle} Topics`}
           </h2>
 
-          <span
-           onClick={() => {
-                console.log("clicked");
-                setIsCustomizeOpen(true);
-              }}
-           className="relative group text-slate-400 hover:text-[#4f46e5] cursor-pointer">
-            <Languages size={18} />
+          <div className="flex items-center gap-3">
             <span
-             
-              className="absolute -top-8 left-1/2 -translate-x-1/2 bg-gray-800 text-white text-xs rounded px-2 py-1 whitespace-nowrap opacity-0 group-hover:opacity-100 transition-opacity"
+              className="relative group text-slate-400 hover:text-[#4f46e5] cursor-pointer"
+              // onClick={() => setShowReport(true)}
             >
-              Change Topics Language
+              <ClipboardCheck   size={18} />
+              <span className="absolute -top-8 left-1/2 -translate-x-1/2 bg-gray-800 text-white text-xs rounded px-2 py-1 whitespace-nowrap opacity-0 group-hover:opacity-100 transition-opacity">
+                Learning Report
+              </span>
             </span>
-          </span>
+
+            <span
+              className="relative group text-slate-400 hover:text-[#4f46e5] cursor-pointer"
+              onClick={() => setIsCustomizeOpen(true)}
+            >
+              <Languages size={18} />
+              <span className="absolute -top-8 left-1/2 -translate-x-1/2 bg-gray-800 text-white text-xs rounded px-2 py-1 whitespace-nowrap opacity-0 group-hover:opacity-100 transition-opacity">
+                Change Topics Language
+              </span>
+            </span>
+          </div>
         </div>
       </div>
       {/* LIST */}

@@ -1,37 +1,102 @@
-import { Video } from "lucide-react";
+import { useCallback, useEffect, useRef } from "react";
+import { AlertCircle, Loader2, Video, X } from "lucide-react";
 import { UploadBtn } from "../componants/upload_btn";
-
 import { AppRoutesNames } from "../../../../app/routers/routes";
 import { useNavigate } from "react-router";
 import { useLearningSession } from "../../../../core/hooks/useLearningContent";
+import { useUploadVideo } from "../hooks/use_uploade_video";
+import { deleteVideoUseCase } from "../../../../core/di/upload_video_container";
+import { useDeleteVideo } from "../hooks/use_delete_video";
 
 type UploadLoadingSectionProps = {
+  videoFile: File | null;
   title: string;
-  handleCancel: () => void;
   progress: number;
+  controllerRef: React.RefObject<AbortController | null>;
+  setProgress: React.Dispatch<React.SetStateAction<number>>;
+  handleCancel: () => void;
+  handleError: (errorMessage: string) => void;
 };
 
 export function UploadLoadingSection({
+  videoFile,
   title,
-  handleCancel,
   progress,
+  controllerRef,
+  setProgress,
+  handleCancel,
+
 }: UploadLoadingSectionProps) {
-  const {videoId}=useLearningSession()
-  const navigate=useNavigate()
+  const { setVideoId, videoId } = useLearningSession();
+  const { uploadVideoAsync, isLoading, error } = useUploadVideo();
+  const navigate = useNavigate();
+  const {
+    deleteVideoAsync,
+    isLoading: isDeleting,
+    error: deleteError,
+  } = useDeleteVideo();
+
+  const hasStarted = useRef(false);
+
+  useEffect(() => {
+    if (!videoFile) return;
+    if (hasStarted.current) return;
+    hasStarted.current = true;
+
+    // const handleUnload = () => {
+    //   controllerRef.current?.abort();
+    // };
+
+    //window.addEventListener("beforeunload", handleUnload);
+
+    const upload = async () => {
+      controllerRef.current = new AbortController();
+
+      await uploadVideoAsync({
+        videoFile,
+        title,
+        signal: controllerRef.current.signal,
+        onProgress: (p) => setProgress(p),
+        onVideoIdReceived: (id) => {
+          setVideoId(id);
+        },
+      });
+    };
+
+    upload();
+
+    // return () => {
+    //   window.removeEventListener("beforeunload", handleUnload);
+    //   handleCancel();
+    // };
+  }, []);
+
+  const handleAnalyze = useCallback(() => {
+  if (videoId) navigate(AppRoutesNames.ProcessingPage, { replace: true });
+}, [videoId]);
+
+
+  const handleCancelClick = async () => {
+    controllerRef.current?.abort();
+    if (videoId) await deleteVideoAsync(videoId);
+    handleCancel();
+  };
+
   return (
     <>
-      <div className=" bg-gray-50  w-full flex   mt-10 py-12 border-2  border-gray-200 rounded-2xl   mb-10">
-        <div className="w-full  p-4 rounded-xl flex items-center justify-between">
-          <div className="flex items-center justify-center  p-3 rounded-xl bg-[#ececf7] text-[#4f46e5] ">
+      <div className="bg-gray-50 w-full flex mt-10 py-12 border-2 border-gray-200 rounded-2xl mb-10">
+        <div className="w-full p-4 rounded-xl flex items-center justify-between">
+          <div className="flex items-center justify-center p-3 rounded-xl bg-[#ececf7] text-[#4f46e5]">
             <Video />
           </div>
-          <div className=" w-full ml-4">
+
+          <div className="w-full ml-4">
             <div className="flex-1">
-              <p className="font-medium">{`${title}`}</p>
+              <p className="font-medium">{title}</p>
 
               <div className="w-full bg-gray-300 h-2 rounded-full mt-2">
                 <div
-                  className="bg-indigo-500 h-2 rounded-full"
+                  className="bg-indigo-500 h-2 rounded-full transition-all duration-300"
                   style={{ width: `${progress}%` }}
                 />
               </div>
@@ -39,29 +104,41 @@ export function UploadLoadingSection({
               <p className="text-sm text-gray-500 mt-1">
                 Uploading... {progress}%
               </p>
-             
             </div>
           </div>
 
           <button
-            onClick={handleCancel}
-            className="ml-4 text-gray-500 hover:text-red-500 text-xl cursor-pointer"
+            onClick={handleCancelClick}
+            disabled={isDeleting}
+            className="cursor-pointer w-8 h-8 ml-3 flex items-center justify-center rounded-lg border border-gray-200 text-gray-400
+              hover:bg-red-50 hover:text-red-500 hover:border-red-200
+              disabled:opacity-40 disabled:cursor-not-allowed
+              transition-all duration-150 shrink-0"
+            aria-label="Cancel upload"
           >
-            ✕
+            {isDeleting ? (
+              <Loader2 size={15} className="animate-spin" />
+            ) : (
+              <X size={15} />
+            )}
           </button>
         </div>
+
+        {deleteError && (
+          <div className="flex items-center gap-2 mt-3 px-3 py-2 bg-red-50 border border-red-100 rounded-lg text-red-600 text-xs">
+            <AlertCircle size={14} className="shrink-0" />
+            <span>{deleteError}</span>
+          </div>
+        )}
       </div>
 
-
       <UploadBtn
-              disabled={progress!=100}
-              label="Analyze Video"
-              onClick={()=>{
-               if(videoId)  navigate(AppRoutesNames.ProcessingPage,{ replace: true });
-              }}
-            />
-
-      
+        disabled={progress !== 100}
+        label="Analyze Video"
+        onClick={handleAnalyze}
+       
+        error={error}
+      />
     </>
   );
 }

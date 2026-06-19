@@ -1,4 +1,4 @@
-import { Video } from "lucide-react";
+import { Video, X } from "lucide-react";
 
 type VideoDragedSectionProps = {
   videoFile: File | null;
@@ -9,32 +9,36 @@ export function VideoDragedSection({
   videoFile,
   handleCancel,
 }: VideoDragedSectionProps) {
-  return (
-    <>
-      <div className=" bg-gray-50  w-full flex   mt-10 py-5 border-2  border-gray-200 rounded-2xl   mb-10">
-        <div className="w-full  p-4 rounded-xl flex items-center justify-between">
-          <div className="flex items-center justify-center  p-3 rounded-xl bg-[#ececf7] text-[#4f46e5] ">
-            <Video />
-          </div>
-          <div className=" w-full ml-4">
-            <div className="flex-1">
-              <p className="font-medium">{`${videoFile?.name}`}</p>
-              <p className="text-gray-600  text-xs">
-                {videoFile
-                  ? (videoFile.size / (1024 * 1024)).toFixed(2) + " MB"
-                  : ""}
-              </p>
-            </div>
-          </div>
+  const sizeMB = videoFile
+    ? (videoFile.size / (1024 * 1024)).toFixed(2) + " MB"
+    : "";
 
-          <button
-            onClick={handleCancel}
-            className="ml-4 text-gray-500 hover:text-red-500 text-xl cursor-pointer"
-          >
-            ✕
-          </button>
+  return (
+    <div className="w-full mt-10 mb-6 bg-white border border-[#E0DCFB] rounded-2xl p-4">
+      <div className="flex items-center gap-4">
+
+        <div className="flex items-center justify-center w-11 h-11 rounded-xl bg-indigo-50 text-indigo-500 shrink-0">
+          <Video size={20} />
         </div>
+
+        <div className="flex-1 min-w-0">
+          <p className="text-sm font-medium text-gray-800 truncate">
+            {videoFile?.name}
+          </p>
+          <p className="text-xs text-gray-400 mt-0.5">{sizeMB}</p>
+        </div>
+
+        <button
+          onClick={handleCancel}
+          className="w-8 h-8 flex items-center justify-center rounded-lg border border-gray-200 text-gray-400
+            hover:bg-red-50 hover:text-red-500 hover:border-red-200
+            transition-all duration-150 shrink-0 cursor-pointer"
+          aria-label="Remove video"
+        >
+          <X size={15} />
+        </button>
+
       </div>
-    </>
+    </div>
   );
 }

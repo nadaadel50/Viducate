@@ -11,6 +11,7 @@ import type { UrlRequest } from "../../domain/entity/url_request";
 import type { UrlResponse } from "../../domain/entity/url_response";
 import { toUrlResponse } from "../model/url_response_dto";
 import { toUrlRequestDto } from "../model/url_request_dto";
+import { useLearningSession } from "../../../../core/hooks/useLearningContent";
 
 
 
@@ -23,10 +24,12 @@ export class UploadVideoDataSourceImp implements UploadVideoDataSource {
  async uploadVideo(
   uploadReq: UploadVideoRequest,
   onProgress?: (percent: number) => void,
-  signal?: AbortSignal
+  signal?: AbortSignal,
+  onVideoIdReceived?: (id: number) => void
 ): Promise<ApiResult<ConfirmUploadResponse>> {
 
   let videoId: number | undefined;
+
 
   try {
     console.log("Requesting upload link...");
@@ -35,7 +38,9 @@ export class UploadVideoDataSourceImp implements UploadVideoDataSource {
       uploadFilestoFormData(uploadReq)
     );
     console.log("Received upload link:", linkRes);
-
+    console.log("the video id is",linkRes.video_id)
+    
+ onVideoIdReceived?.(linkRes.video_id);
     videoId = linkRes.video_id;
 
     await this.uploadVideoService.uploadVideo(

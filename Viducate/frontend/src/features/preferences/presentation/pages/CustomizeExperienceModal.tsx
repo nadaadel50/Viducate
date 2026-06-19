@@ -8,6 +8,7 @@ import { COLORS } from "../../../../core/constants/colors";
 import { useSavePreferences } from "../hooks/use_save_preferences";
 
 import { LoadingPreferences } from "../componants/loading_pref";
+import { useGetPreferences } from "../hooks/get_user_language_pref";
 
 interface CustomizeProps {
   isOpen: boolean;
@@ -24,8 +25,8 @@ export const CustomizeExperienceModal: React.FC<CustomizeProps> = ({
 }) => {
   const { submitPreferences, isSubmitting } = useSavePreferences();
   const [serverError, setServerError] = useState<string | null>(null);
-  const [loading, setLoading] = useState(false);
-  //const { data, isLoading, error } = useGetPreferences();
+ // const [loading, setLoading] = useState(false);
+  const { data, isLoading, error,refetch } = useGetPreferences();
   const [prefs, setPrefs] = useState<{
     summary: LanguageOption;
     quiz: LanguageOption;
@@ -35,16 +36,17 @@ export const CustomizeExperienceModal: React.FC<CustomizeProps> = ({
     quiz: "Same as Video",
     flashcards: "Same as Video",
   });
+  
 
-  //   useEffect(() => {
-  //   if (!data) return;
+    useEffect(() => {
+    if (!data) return;
 
-  //   setPrefs({
-  //     summary: data.summaryLang,
-  //     quiz: data.quizLang,
-  //     flashcards: data.flashcardsLang,
-  //   });
-  // }, [data]);
+    setPrefs({
+      summary: data.summaryLang,
+      quiz: data.quizLang,
+      flashcards: data.flashcardsLang,
+    });
+  }, [data]);
 
   const handleSave = async () => {
     try {
@@ -61,6 +63,7 @@ export const CustomizeExperienceModal: React.FC<CustomizeProps> = ({
         quizLang: prefs.quiz,
         flashcardsLang: prefs.flashcards,
       });
+      await handleClick()
 
       onClose();
     } catch (error: unknown) {
@@ -79,10 +82,13 @@ export const CustomizeExperienceModal: React.FC<CustomizeProps> = ({
       }
     }
   };
+  const handleClick = async () => {
+  await refetch();
+};
 
   return (
     <BaseModal isOpen={isOpen} onClose={onClose} maxWidth="max-w-5xl">
-      {loading && (
+      {isLoading && (
        <LoadingPreferences/>
       )}
       {/* Header */}

@@ -53,6 +53,7 @@ export class UploadVideoService {
   }
   async uploadURl(uploadReqDto:UrlRequestDto):Promise<UrlResponseDto>{
      const response = await apiClient.post(`/videos/url`,uploadReqDto);
+     console.log("url is",response.data)
      return response.data
 
   }
