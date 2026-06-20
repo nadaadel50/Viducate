@@ -116,7 +116,7 @@
 
   
   "analysis.title": "AI is analyzing your video",
-  "analysis.subtitle": "This usually takes about 2-3 minutes depending on length.",
+  "analysis.subtitle": "This may take a few moments depending on the video length.",
   "analysis.complete": "Analysis Complete!",
   "analysis.ready": "Your study material is ready.",
   "analysis.step.fetching": "Fetching video data",
