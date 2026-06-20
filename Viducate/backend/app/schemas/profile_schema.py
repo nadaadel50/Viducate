@@ -9,7 +9,6 @@ class UpdateProfileRequest(BaseModel):
     last_name: Optional[str] = None
     current_password: Optional[str] = None
     new_password: Optional[str] = None
-    confirm_password: Optional[str] = None
 
     # Name length validation
     @field_validator("first_name", "last_name")
@@ -39,14 +38,8 @@ class UpdateProfileRequest(BaseModel):
         if not self.new_password:
           self.current_password = None
           self.new_password = None
-          self.confirm_password = None
           return self
         
         if not self.current_password:
           raise ValueError("Current password is required to change password")
-        if self.new_password != self.confirm_password:
-          raise ValueError("Passwords do not match")
         return self
-
-    
-
