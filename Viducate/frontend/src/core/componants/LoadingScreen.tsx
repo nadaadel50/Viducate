@@ -22,7 +22,7 @@ export function LoadingScreen({
 
       <main className="relative z-10 flex flex-col items-center max-w-3xl w-full px-4 text-center">
 
-        <div className="relative mb-10 flex items-center justify-center" style={{ width: '400px', height: '400px' }}>
+        <div className="relative mb-2 flex items-center justify-center" style={{ width: '400px', height: '400px' }}>
 
           <div className="absolute rounded-full blur-[100px] animate-pulse"
                style={{
@@ -82,15 +82,16 @@ export function LoadingScreen({
         </div>
 
         <div className="space-y-5 w-full max-w-md">
-          <h1 className="text-4xl md:text-5xl font-bold tracking-tight" style={{ color: COLORS.text.primary }}>
+          <h1 className="text-4xl md:text-5xl font-bold tracking-tight  " style={{ color: COLORS.text.primary }}>
             {titlePrefix} <br/>
-            <span className="inline-block mt-2" style={{ 
+            <span className="inline-block mt-2 " style={{ 
               backgroundImage: COLORS.brand.gradient,
               WebkitBackgroundClip: 'text',
-              WebkitTextFillColor: 'transparent'
+              WebkitTextFillColor: 'transparent',
+              lineHeight: '1.2',
             }}>{titleHighlight}</span>
           </h1>
-          <p className="text-lg opacity-70 leading-relaxed" style={{ color: COLORS.text.secondary }}>{subtitle}</p>
+          <p className="text-md opacity-70 leading-relaxed" style={{ color: COLORS.text.secondary }}>{subtitle}</p>
         </div>
       </main>
 
