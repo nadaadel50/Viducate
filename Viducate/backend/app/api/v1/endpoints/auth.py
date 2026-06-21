@@ -195,19 +195,3 @@ async def google_callback(request: Request, db: Session = Depends(get_db)):
         error_redirect = f"{settings.FRONTEND_URL}/auth/error?message=google_oauth_failed"
         return RedirectResponse(url=error_redirect)
     
-
-# @router.put("/profile/language")
-# def update_language(
-#     request: UpdateLanguageRequest,
-#     credentials: HTTPAuthorizationCredentials = Depends(security),
-#     db: Session = Depends(get_db)
-# ):
-#     token = credentials.credentials
-#     service = AuthService(db)
-#     user = service.get_current_user(token)
-#     updated_user = service.update_language(user.id, request.language)
-
-#     return {
-#         "message": "Language updated successfully",
-#         "language": updated_user.language_preference
-#     }

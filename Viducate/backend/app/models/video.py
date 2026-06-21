@@ -6,6 +6,7 @@ from .base import Base
 class Video(Base):
     __tablename__ = "video"
 
+
     vid = Column(Integer, primary_key=True)
     user_id = Column(Integer, ForeignKey("user.id", ondelete="CASCADE"))
     title = Column(String(500), nullable=False)

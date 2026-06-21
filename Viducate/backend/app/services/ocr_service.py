@@ -4,6 +4,7 @@ from sqlalchemy.orm import Session
 from fastapi import HTTPException, status
 from app.ml.processors.ocr_processor import OCRProcessor
 from app.repositories.video_repository import VideoRepository
+from app.services.cancellation_registry import PipelineCancelledError
 
 logger = logging.getLogger(__name__)
 
@@ -29,7 +30,11 @@ class OCRService:
         try:
             logger.info(f"[OCRService] Starting | video_id={video_id} | url={video.url}")
 
-            result = self.processor.process_from_file(video_path)
+            
+            #result = self.processor.process_from_file(video_path)
+            result = self.processor.process_from_file(video_path, video_id=video_id)
+
+
             # result            = self.processor.process_from_file(
             #     url=video.url,
             #     language=video.language or "en"
@@ -49,7 +54,9 @@ class OCRService:
                 "segments": segments,
                 "language": detected_language
             }   # ← same as transcript variable
-
+        
+        except PipelineCancelledError:
+            raise
         except HTTPException:
             raise
         except Exception as e:
