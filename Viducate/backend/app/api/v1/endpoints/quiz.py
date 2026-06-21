@@ -10,20 +10,20 @@ import logging
 from fastapi import APIRouter, Depends, status
 from fastapi.security import HTTPBearer, HTTPAuthorizationCredentials
 from sqlalchemy.orm import Session
-
+from app.services.quiz_service import _build_question_response_secure
 from app.dependencies import get_db
 from app.services.auth_service import AuthService
 from app.services.quiz_service import QuizService
 from app.repositories.quiz_repository import QuizRepository
-from app.schemas.quiz_schema import QuizGenerateRequest, QuizResponse
 from fastapi import HTTPException
 from app.models.quiz import UserQuizResult
 from app.schemas.quiz_result_schema import (
     QuizSubmitRequest,
     QuizSubmitResponse,
 )
-
+from app.repositories.video_repository import VideoRepository
 from app.models.quiz import UserQuizResult
+from app.schemas.quiz_schema import QuizGenerateRequest, QuizResponse, QuizSecureResponse
 
 router = APIRouter(prefix="/quiz", tags=["Quiz"])
 security = HTTPBearer()
@@ -40,7 +40,7 @@ def get_current_user(
 
 @router.post(
     "/video/{video_id}/segment/{segment_id}",
-    response_model=QuizResponse,
+    response_model=QuizSecureResponse,
     status_code=status.HTTP_201_CREATED,
     summary="Generate MCQ quiz for a single segment",
     description=(
@@ -72,7 +72,7 @@ def generate_segment_quiz(
 
 @router.post(
     "/video/{video_id}",
-    response_model=QuizResponse,
+    response_model=QuizSecureResponse,
     status_code=status.HTTP_201_CREATED,
     summary="Generate MCQ quiz covering all segments of a video",
     description=(
@@ -103,7 +103,7 @@ def generate_video_quiz(
 
 @router.get(
     "/{quiz_id}",
-    response_model=QuizResponse,
+    response_model=QuizSecureResponse,
     status_code=status.HTTP_200_OK,
     summary="Fetch a previously generated quiz by its ID",
     description="Use this to retrieve a quiz that was generated in a previous call.",
@@ -125,7 +125,6 @@ def get_quiz(
     if not video or video.user_id != current_user.id:
         raise HTTPException(status_code=status.HTTP_403_FORBIDDEN, detail="Not authorized")
 
-    from app.services.quiz_service import _build_question_response
     return {
         "quiz_id":         quiz.quiz_id,
         "video_id":        quiz.video_id,
@@ -134,7 +133,7 @@ def get_quiz(
         "difficulty":      quiz.difficulty,
         "language":        quiz.language,
         "total_questions": len(quiz.questions),
-        "questions":       [_build_question_response(q) for q in quiz.questions],
+        "questions":       [_build_question_response_secure(q) for q in quiz.questions],
         "created_at":      quiz.created_at,
     }
 
@@ -145,8 +144,9 @@ def get_quiz(
     status_code=status.HTTP_201_CREATED,
     summary="Submit quiz answers and save result",
     description=(
-        "Submits answers, calculates integer score (0-100), "
-        "and saves/overwrites the result. Tracks number of trials."
+        "Submits answers (question_id + user_answer only), grades them "
+        "server-side against the stored correct_answer, calculates an "
+        "integer score (0-100), and saves/overwrites the result."
     ),
 )
 def submit_quiz_results(
@@ -165,7 +165,6 @@ def submit_quiz_results(
             detail="Quiz not found",
         )
 
-   
     from app.repositories.video_repository import VideoRepository
     video = VideoRepository(db).get_by_id(quiz.video_id)
     if not video or video.user_id != current_user.id:
@@ -174,24 +173,42 @@ def submit_quiz_results(
             detail="Not authorized",
         )
 
-    # ── Calculate score ───────────────────────────────────────────────────────
-    total         = len(request.answers)
-    correct_count = sum(1 for a in request.answers if a.is_correct)
-    wrong_count   = total - correct_count
-    score         = int(round((correct_count / total) * 100)) if total > 0 else 0
+    # ── Grade server-side: build question_id → correct_answer map ─────────────
+    correct_answer_map = {
+        q.question_id: q.correct_answer.strip().lower()
+        for q in quiz.questions
+    }
 
-    answers_payload = [
-        {
+    # ── Calculate score (correctness decided here, not by the client) ─────────
+    total = len(request.answers)
+    correct_count = 0
+    answers_payload = []
+
+    for a in request.answers:
+        correct_answer = correct_answer_map.get(a.question_id)
+        if correct_answer is None:
+            # Question doesn't belong to this quiz — ignore/skip it
+            continue
+
+        submitted = (a.user_answer or "").strip().lower()
+        is_correct = submitted == correct_answer
+        if is_correct:
+            correct_count += 1
+
+        answers_payload.append({
             "question_id": a.question_id,
             "user_answer": a.user_answer,
-            "is_correct":  a.is_correct,
-        }
-        for a in request.answers
-    ]
+            "is_correct":  is_correct,
+        })
+
+    # Recompute total based on valid answers actually graded
+    total = len(answers_payload)
+    wrong_count = total - correct_count
+    score = int(round((correct_count / total) * 100)) if total > 0 else 0
 
     # ── Upsert result (overwrite if exists, increment trials) ─────────────────
     existing = (
-    db.query(UserQuizResult)
+        db.query(UserQuizResult)
         .filter(
             UserQuizResult.quiz_id == quiz_id,
             UserQuizResult.user_id == current_user.id

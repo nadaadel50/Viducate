@@ -5,7 +5,7 @@ from typing import List
 class QuizAnswerItem(BaseModel):
     question_id: int
     user_answer: str  # "a", "b", "c", "d"
-    is_correct: bool
+  
 
 class QuizSubmitRequest(BaseModel):
     answers: List[QuizAnswerItem]

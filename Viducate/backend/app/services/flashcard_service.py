@@ -263,11 +263,11 @@ class FlashcardService:
             )
 
         # Update quality
-        current_score = segment.quality_score or 0.0
-        segment.quality_score = max(current_score, quality.get("score", 0.0))
-        segment.quality_flag  = bool(quality.get("flag", False))
-        segment.retry_count   = (segment.retry_count or 0) + quality.get("retries", 0)
-        self.db.flush()
+        # current_score = segment.quality_score or 0.0
+        # segment.quality_score = max(current_score, quality.get("score", 0.0))
+        # segment.quality_flag  = bool(quality.get("flag", False))
+        # segment.retry_count   = (segment.retry_count or 0) + quality.get("retries", 0)
+        # self.db.flush()
         
         #*********************************************
         
