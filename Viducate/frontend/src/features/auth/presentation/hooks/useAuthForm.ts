@@ -41,7 +41,7 @@ export const useAuthForm = (isLogin: boolean) => {
     mode: "onChange",
   });
 
-  const { watch, reset } = formMethods;
+  const { watch, reset ,setValue} = formMethods;
 
   useEffect(() => {
     const savedData = localStorage.getItem(isLogin ? "loginData" : "signupData");
@@ -83,6 +83,9 @@ const handleProcess = async (data: AuthFormData) => {
 
     if (!result.success) {
       setServerError(result.error);
+      if (isLogin) {
+    setValue("password", "");
+  }
       return;
     }
       localStorage.removeItem(isLogin ? "loginData" : "signupData");
