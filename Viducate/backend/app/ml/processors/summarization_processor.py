@@ -123,11 +123,11 @@ def process_single_segment_summary(
         return None
  
     # Persist quality on the segment row
-    current_score = segment.quality_score or 0.0
-    segment.quality_score = max(current_score, quality.get("score", 0.0))
-    segment.quality_flag  = bool(quality.get("flag", False))
-    segment.retry_count   = (segment.retry_count or 0) + quality.get("retries", 0)
-    db.flush()
+    # current_score = segment.quality_score or 0.0
+    # segment.quality_score = max(current_score, quality.get("score", 0.0))
+    # segment.quality_flag  = bool(quality.get("flag", False))
+    # segment.retry_count   = (segment.retry_count or 0) + quality.get("retries", 0)
+    # db.flush()
  
     logger.info(
         f"[Summarization] Segment {segment_id} "
@@ -253,10 +253,10 @@ def process_all_segment_summaries(
             continue
  
         # Persist quality
-        current_score = segment.quality_score or 0.0
-        segment.quality_score = max(current_score, quality.get("score", 0.0))
-        segment.quality_flag  = bool(quality.get("flag", False))
-        segment.retry_count   = (segment.retry_count or 0) + quality.get("retries", 0)
+        # current_score = segment.quality_score or 0.0
+        # segment.quality_score = max(current_score, quality.get("score", 0.0))
+        # segment.quality_flag  = bool(quality.get("flag", False))
+        # segment.retry_count   = (segment.retry_count or 0) + quality.get("retries", 0)
  
         logger.info(
             f"[Summarization] Segment {segment.segment_id} "
