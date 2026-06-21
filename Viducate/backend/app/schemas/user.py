@@ -58,6 +58,10 @@ class UserResponse(BaseModel):
     model_config = {"from_attributes": True}  
 
 
+class UserProfileResponse(UserResponse):
+    has_password: bool
+    oauth_provider: Optional[str] = None
+
 # Token Schema
 class TokenResponse(BaseModel):
     access_token: str

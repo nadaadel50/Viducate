@@ -26,7 +26,6 @@ class Quiz(Base):
 
 class QuizQuestion(Base):
     __tablename__ = "quiz_question"
-
     question_id = Column(Integer, primary_key=True, autoincrement=True)
     quiz_id = Column(Integer, ForeignKey("quiz.quiz_id", ondelete="CASCADE"), nullable=False, index=True)
     segment_id = Column(Integer, ForeignKey("topic_segment.segment_id", ondelete="SET NULL"), nullable=True)
