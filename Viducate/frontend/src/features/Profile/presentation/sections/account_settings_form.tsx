@@ -15,7 +15,7 @@ import { COLORS } from "../../../../core/constants";
 
 export function AccountSettingsForm() {
   // const { fields, setters, state, handleSave } = form;
-  const { updateProfile, isLoadingUpdate, error, isSuccess, reset } =
+  const { updateProfile, isLoadingUpdate, error, isSuccess } =
     useUpdate();
   const { firstName, lastName, initialFirstName, initialLastName } =
     usePersonalInfoContext();

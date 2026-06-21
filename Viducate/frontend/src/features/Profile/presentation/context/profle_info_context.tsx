@@ -14,6 +14,9 @@ export type PersonalInfoContextType = {
   setFirstNameError: (error: string) => void;
   lastNameError: string;
   setLastNameError: (error: string) => void;
+
+  hasPassword: boolean;
+  setHasPassword: (value: boolean) => void;
 };
 
 export const PersonalInfoContext = createContext<PersonalInfoContextType | null>(null);

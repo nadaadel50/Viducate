@@ -2,11 +2,11 @@ import { CustomInput } from "../../../../core/componants/custom_input";
 import { SectionTitle } from "../components/section_title";
 import { useHandleInputs } from "../hooks/use_handle_inputs";
 import { PasswordRequirements } from "../../../auth/presentation/forgetpass/componants/password_requirment";
-import { usePersonalInfoContext, useProfileContext, useSecurityContext } from "../hooks/use_profile_context";
+import { usePersonalInfoContext, useSecurityContext } from "../hooks/use_profile_context";
 
 export function FormInputs() {
   const {
-  
+
     newPasswordError,
     confirmPassword,
     confirmPasswordError,
@@ -20,8 +20,9 @@ export function FormInputs() {
 
   } = useHandleInputs();
 
-  const { firstName, lastName } = usePersonalInfoContext();
-  const { password, oldPassword } = useSecurityContext();
+  const { firstName, lastName,hasPassword } = usePersonalInfoContext();
+
+const { password, oldPassword } = useSecurityContext();
   return (
     <div>
       <div>
@@ -48,13 +49,15 @@ export function FormInputs() {
       <SectionTitle titleId="profile.section.security" />
 
       <div className="space-y-3">
-        <CustomInput
-          placeholder={"Current Password"}
-          label={"Current Password"}
-          type="password"
-          value={oldPassword}
-          onChange={handlePassword}
-        />
+        {hasPassword && (
+  <CustomInput
+    placeholder={"Current Password"}
+    label={"Current Password"}
+    type="password"
+    value={oldPassword}
+    onChange={handlePassword}
+  />
+)}
        <div className="flex gap-4">
          <CustomInput
           placeholder={"New Password"}

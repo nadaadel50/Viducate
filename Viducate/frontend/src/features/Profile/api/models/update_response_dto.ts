@@ -9,6 +9,7 @@ export interface UserProfileResponseDto {
   language_preference: string;
   account_status: string;
   created_at: string;
+   has_password: boolean;
 }
 
 
@@ -21,5 +22,5 @@ export const fromUserProfileResponseDto = (
   email: dto.email,
   study_field: dto.study_field,
   language_preference: dto.language_preference,
-
+ has_password: dto.has_password,
 });
