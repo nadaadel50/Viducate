@@ -60,7 +60,6 @@ class UserResponse(BaseModel):
 
 class UserProfileResponse(UserResponse):
     has_password: bool
-    oauth_provider: Optional[str] = None
 
 # Token Schema
 class TokenResponse(BaseModel):
