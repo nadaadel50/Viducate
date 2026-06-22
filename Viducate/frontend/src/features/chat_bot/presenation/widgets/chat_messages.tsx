@@ -1,7 +1,5 @@
 import { Bot } from "lucide-react";
-import { formatMessageTime } from "../../../../core/utils/fomat_time";
 import type { ChatMessage } from "../../domain/entity/chat_message";
-import type { Message } from "../../domain/entity/message";
 import { AssistantMessage } from "./assistant_message";
 import { UserMessage } from "./user_message";
 
