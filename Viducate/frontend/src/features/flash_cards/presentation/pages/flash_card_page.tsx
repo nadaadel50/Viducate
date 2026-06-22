@@ -2,18 +2,17 @@ import { useEffect, useState } from "react";
 import { CompeleteProgress } from "../widgets/complete_progress";
 import { FlashCard } from "../widgets/flash_card";
 import { UserLevelBtn } from "../widgets/user_level_btn";
-import type { Flashcard } from "../../domain/entity/flash_card_entity";
 import type { FlashcardAnswer } from "../../domain/entity/flash_card_answer";
 import { Difficulty } from "../../domain/entity/difficaulty";
 import { DIFFICULTY_TIME } from "../../domain/entity/difficaulty_time";
 import { useNavigate, useParams } from "react-router";
 import { useSegmentFlashcards } from "../hooks/use_segment_flash_cards";
-import Loading from "../../../../core/widgets/loading";
 import ErrorMessage from "../../../../core/widgets/error";
 import FinishSessionCard from "../section/finish_flash_cards";
 import { STORAGE_KEYS } from "../../../../core/constants";
 import { LoadingScreen } from "../../../../core/widgets/advanced_loading";
 import { Layers } from "lucide-react";
+import type { FlashCardDetials } from "../../domain/entity/flash_card_response";
 
 export function FlashCards() {
   const { segmentId } = useParams<{ segmentId: string }>();
@@ -24,7 +23,7 @@ export function FlashCards() {
   const [isFinished, setIsFinished] = useState(false);
   const [checkExistFirst, setCheckExistFirst] = useState(false);
   // add this with the other useState calls
-  const [reviewCards, setReviewCards] = useState<Flashcard[] | null>(null);
+  const [reviewCards, setReviewCards] = useState<FlashCardDetials[] | null>(null);
   const navigate=useNavigate()
 
   // LOAD session for this specific segment
@@ -116,7 +115,7 @@ export function FlashCards() {
     const resetSession = (dueCards?: FlashcardAnswer[]) => {
       if (dueCards && dueCards.length > 0) {
         const dueIds = new Set(dueCards.map((d) => d.cardId));
-        const cardsToReview = flashcardsData.flashcards.filter((c) =>
+        const cardsToReview = flashcardsData.flashcards.filter((c:FlashCardDetials) =>
           dueIds.has(c.flashcard_id),
         );
         setReviewCards(cardsToReview);

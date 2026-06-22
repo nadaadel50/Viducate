@@ -1,4 +1,4 @@
-import type { Flashcard } from "../../domain/entity/flash_card_entity";
+import type { FlashCardDetials } from "../../domain/entity/flash_card_response";
 
 export type FlashcardDto = {
   flashcard_id: number;
@@ -14,7 +14,7 @@ export type FlashcardDto = {
   segment_start_label: string;
 };
 
-export const toFlashcardEntity = (dto: FlashcardDto): Flashcard => {
+export const toFlashcardEntity = (dto: FlashcardDto): FlashCardDetials => {
   return {
     flashcard_id: dto.flashcard_id,
     segment_id: dto.segment_id,

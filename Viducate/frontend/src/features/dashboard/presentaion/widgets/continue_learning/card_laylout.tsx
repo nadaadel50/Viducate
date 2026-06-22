@@ -1,4 +1,5 @@
 import { COLORS } from "../../../../../core/constants";
+import { useLearningSession } from "../../../../../core/hooks/useLearningContent";
 import type { ContinueLearningEntity } from "../../../domain/entity/continue_learning";
 import { formatVideoTime } from "../../utils/format_dashboard_times";
 
@@ -7,11 +8,14 @@ type CardLayoutProps = {
 };
 
 export function CardLayout({ cardData }: CardLayoutProps) {
+  
   const isLink = cardData.video_type === "url";
   const progress =
     cardData.duration > 0
       ? Math.min((cardData.currentTime / cardData.duration) * 100, 100)
       : 0;
+
+      const timeLeft=cardData.remainingTime?? cardData.duration
 
   return (
     <div className="relative aspect-video bg-slate-200 overflow-hidden rounded-t-2xl">
@@ -41,9 +45,9 @@ export function CardLayout({ cardData }: CardLayoutProps) {
       </div>
 
       {/* Time Badge */}
-      {cardData.remainingTime && (
+      {timeLeft && (
         <div className="absolute top-3 right-3 bg-black/50 text-white text-[9px] font-bold px-2.5 py-1 rounded-full backdrop-blur-md border border-white/10">
-          {`${formatVideoTime(cardData.remainingTime)} left`}
+          {`${formatVideoTime(timeLeft)} left`}
         </div>
       )}
 

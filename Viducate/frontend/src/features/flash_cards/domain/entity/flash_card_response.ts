@@ -1,4 +1,4 @@
-export type Flashcard = {
+export type FlashCardDetials = {
   flashcard_id: number;
   segment_id: number;
   video_id: number;
@@ -12,13 +12,3 @@ export type Flashcard = {
   segment_start_label: string;
 };
 
-export type Segment = {
-  segment_id: number;
-  segment_number: number;
-  title: string;
-  start_time: number;
-  end_time: number;
-  start_time_label: string;
-  end_time_label: string;
-  flashcards: Flashcard[];
-};

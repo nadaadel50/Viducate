@@ -13,10 +13,10 @@
 // }) {
 //   const [seekTo, setSeekTo] = useState<number | null>(null);
 
-  // const [currentTime, setCurrentTime] = useState<number>(() => {
-  //   const saved = sessionStorage.getItem(STORAGE_KEYS.currentTime);
-  //   return saved ? Number(saved) : 0;
-  // });
+// const [currentTime, setCurrentTime] = useState<number>(() => {
+//   const saved = sessionStorage.getItem(STORAGE_KEYS.currentTime);
+//   return saved ? Number(saved) : 0;
+// });
 
 //   const [selectedTopic, setSelectedTopic] = useState<TopicResponse | null>(
 //     () => {
@@ -163,7 +163,7 @@
 //   );
 // }
 
-import { createContext, use, useEffect, useState } from "react";
+import { createContext, use, useEffect, useRef, useState } from "react";
 import type { TopicResponse } from "../../../features/watch_video/domin/entity/topic_response";
 import type { LearningSessionContextType } from "./learning_constent_context";
 import { STORAGE_KEYS } from "../../constants";
@@ -176,12 +176,6 @@ export function LearningSessionProvider({
 }: {
   children: React.ReactNode;
 }) {
-
-   
-
-
-
-
   const [hasUnsavedChanges, setHasUnsavedChanges] = useState(false);
 
   useEffect(() => {
@@ -190,20 +184,30 @@ export function LearningSessionProvider({
 
   const handleSetHasUnsavedChanges = (hasChanges: boolean) => {
     setHasUnsavedChanges(hasChanges);
-  }
+  };
 
   const [seekTo, setSeekTo] = useState<number | null>(null);
 
-    const [currentTime, setCurrentTime] = useState<number>(() => {
-    const saved = sessionStorage.getItem(STORAGE_KEYS.currentTime);
-    return saved ? Number(saved) : 0;
-  });
+  // const [currentTime, setCurrentTime] = useState<number>(() => {
+  //   const saved = sessionStorage.getItem(STORAGE_KEYS.currentTime);
+  //   return saved ? Number(saved) : 0;
+  // }); 
 
-  useEffect(() => {
-  
-  sessionStorage.setItem(STORAGE_KEYS.currentTime, String(currentTime));
+const [currentTime, setCurrentTime] = useState<number>(0);
+const baselineRef = useRef<number>(0);
+
+const handleSetInitializeCurrentTime = (time: number) => {
+  baselineRef.current = time;
+ // setCurrentTime(time);
+};
+
+
+ useEffect(() => {
+  if (Math.abs(currentTime - baselineRef.current) >= 3) { 
+    setHasUnsavedChanges(true);
+  }
 }, [currentTime]);
-
+  
   const [selectedTopic, setSelectedTopic] = useState<TopicResponse | null>(
     null,
   );
@@ -320,6 +324,7 @@ export function LearningSessionProvider({
         handleSetCompletedTopics,
         hasUnsavedChanges,
         handleSetHasUnsavedChanges,
+        handleSetInitializeCurrentTime
       }}
     >
       {children}

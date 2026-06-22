@@ -1,6 +1,9 @@
+import { useNavigate } from "react-router";
 import NoSavedVideosAnimation from "../../../../core/animations/no_saved_videos";
+import { AppRoutesNames } from "../../../../app/routers/routes";
 
 export function StartUpload() {
+  const navigate=useNavigate()
     return(
          <div className="flex flex-col items-center justify-center  gap-4">
         <NoSavedVideosAnimation />
@@ -12,7 +15,11 @@ export function StartUpload() {
           </p>
         </div>
 
-        <button className="inline-flex  items-center gap-2 text-sm cursor-pointer text-indigo-500 border border-indigo-200 hover:border-indigo-400 hover:bg-indigo-50 font-medium py-2.5 px-6 rounded-2xl transition-all duration-300">
+        <button 
+        onClick={()=>{
+          navigate(AppRoutesNames.uploadPage)
+        }}
+        className="inline-flex  items-center gap-2 text-sm cursor-pointer text-indigo-500 border border-indigo-200 hover:border-indigo-400 hover:bg-indigo-50 font-medium py-2.5 px-6 rounded-2xl transition-all duration-300">
           <span className="material-symbols-outlined" style={{ fontSize: 18 }}>
             add_circle
           </span>

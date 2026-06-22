@@ -5,7 +5,7 @@ import { ChatMessages } from "../widgets/chat_messages";
 import { ChatInputBtn } from "../widgets/chat_input_btn";
 import { useChatMessages } from "../hooks/use_chat_message";
 import { RecentChatsSidebar } from "../widgets/recent_chat_sideBar";
-import { DeleteModal } from "../widgets/delete_message";
+import { DeleteModal } from "../../../../core/componants/delete_modal";
 
 export function ChatBotPage() {
   const { closeChat, open } = useChat();
@@ -14,7 +14,7 @@ export function ChatBotPage() {
 
   const {
     messages,
-    
+
     handleSend,
     messagesEndRef,
     openRecentChats,
@@ -26,7 +26,7 @@ export function ChatBotPage() {
     openDeleteModal,
     handleOpenDeleteMessage,
     handleDeleteSession,
-    isLoadingMessage
+    isLoadingMessage,
   } = useChatMessages(open);
 
   return (
@@ -65,11 +65,15 @@ export function ChatBotPage() {
           />
         </div>
 
+       
+
         <DeleteModal
           open={openDeleteModal}
+          title="Delete Chat"
+          description="Are you sure you want to delete this conversation? This action cannot be undone."
           onClose={() => handleOpenDeleteMessage(false)}
-          onConfirm={() => {
-            handleDeleteSession()
+          onConfirm={()=>{
+             handleDeleteSession()
             handleOpenDeleteMessage(false);
           }}
         />
@@ -88,13 +92,14 @@ export function ChatBotPage() {
 
           {/* messages */}
 
-          <ChatMessages messages={messages} messagesEndRef={messagesEndRef} isLoadingMessage={isLoadingMessage} />
+          <ChatMessages
+            messages={messages}
+            messagesEndRef={messagesEndRef}
+            isLoadingMessage={isLoadingMessage}
+          />
 
           {/* input btn */}
-          <ChatInputBtn
-            
-            handleSend={handleSend}
-          />
+          <ChatInputBtn handleSend={handleSend} />
         </div>
       </div>
     </div>

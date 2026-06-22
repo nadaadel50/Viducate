@@ -1,5 +1,5 @@
 import { useNavigate } from "react-router";
-import type { Flashcard } from "../../domain/entity/flash_card_entity";
+import type { FlashCardDetials } from "../../domain/entity/flash_card_response";
 import { AppRoutesNames } from "../../../../app/routers/routes";
 import { useLearningSession } from "../../../../core/hooks/useLearningContent";
 
@@ -7,7 +7,7 @@ import { FilePlay } from "lucide-react";
 
 
 type FlashCardProps = {
-  cardData: Flashcard;
+  cardData: FlashCardDetials;
   isFliped: boolean;
 
   onClick: () => void;

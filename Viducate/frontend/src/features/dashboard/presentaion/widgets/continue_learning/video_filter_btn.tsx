@@ -11,7 +11,7 @@ export function VideoFilterButton() {
     function handleClickOutside(event: MouseEvent) {
       if (
         dropdownRef.current &&
-        !dropdownRef.current.contains(event.target as Node)  // the dropdown ref is my componant
+        !dropdownRef.current.contains(event.target as Node)  // the dropdown ref is my componant so check if exist and not click on my componant
       ) {
         setOpen(false);
       }
@@ -25,7 +25,7 @@ export function VideoFilterButton() {
   }, []);
 
   return (
-    <div ref={dropdownRef} className="relative">
+    <div ref={dropdownRef} className="relative ">
       <button
         onClick={() => setOpen(!open)}
         className="cursor-pointer flex items-center gap-1 text-sm font-medium text-slate-700 hover:text-slate-900 transition-colors"

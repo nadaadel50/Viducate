@@ -43,5 +43,9 @@ export type LearningSessionContextType = {
   hasUnsavedChanges: boolean;
   handleSetHasUnsavedChanges: (hasChanges: boolean) => void;
 
+
+  
+  handleSetInitializeCurrentTime(time: number):void
+
   
 };

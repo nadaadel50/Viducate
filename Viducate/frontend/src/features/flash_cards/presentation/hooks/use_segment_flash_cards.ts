@@ -1,11 +1,11 @@
 import { useQuery } from "@tanstack/react-query";
 import { getSegmentFlahsCardUseCase } from "../../../../core/di/flash_card_continer";
 import { useLearningSession } from "../../../../core/hooks/useLearningContent";
-import type { Segment } from "../../domain/entity/flash_card_entity";
+import type { FlashCard } from "../../domain/entity/flash_card_response";
 
 export const useSegmentFlashcards = (segmentId:number) => {
     const{videoId}=useLearningSession()
-return useQuery<Segment>({
+return useQuery<FlashCard>({
   queryKey: ["flashcards", videoId, segmentId],
   queryFn: async () => {
     const result = await getSegmentFlahsCardUseCase({
@@ -18,7 +18,7 @@ return useQuery<Segment>({
   enabled: !!videoId && !!segmentId,
 
 refetchInterval: (query) => {
-  const data = query.state.data as Segment | undefined;
+  const data = query.state.data as FlashCard | undefined;
 
   const flashcards = data?.flashcards;
 

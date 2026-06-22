@@ -21,6 +21,7 @@ export function RightContentSection() {
   const { selectedTopic, toggleTopicComplete, goToNextTopic, videoId } =
     useLearningSession();
   const [isSummaryModalOpen, setIsSummaryModalOpen] = useState(false);
+  
 
   const handleSummarySelect = (style: "summary" | "study_notes") => {
     if (style === "summary") {
@@ -33,24 +34,23 @@ export function RightContentSection() {
       });
     }
   };
-// أضف state للـ quiz modal
-const [isQuizModalOpen, setIsQuizModalOpen] = useState(false);
 
-// أضف handler للفاينل كويز
-const handleFinalQuizSelect = (difficulty: "easy" | "medium" | "hard") => {
-  setIsQuizModalOpen(false);
-  const quizKey = `video_${videoId}_${difficulty}_${Date.now()}`;
-  localStorage.setItem(`active_quiz_key_video_${videoId}`, quizKey);
+  const [isQuizModalOpen, setIsQuizModalOpen] = useState(false);
 
-  navigate(`/quiz/video/${videoId}`, {
-    state: {
-      difficulty,
-      videoId,
-      segmentId: null,   // null = video mode
-      quizKey,
-    },
-  });
-};
+  const handleFinalQuizSelect = (difficulty: "easy" | "medium" | "hard") => {
+    setIsQuizModalOpen(false);
+    const quizKey = `video_${videoId}_${difficulty}_${Date.now()}`;
+    localStorage.setItem(`active_quiz_key_video_${videoId}`, quizKey);
+
+    navigate(`/quiz/video/${videoId}`, {
+      state: {
+        difficulty,
+        videoId,
+        segmentId: null,
+        quizKey,
+      },
+    });
+  };
   return (
     <div className="min-h-screen w-full flex flex-col justify-center items-center">
       {/* centered container */}
@@ -84,8 +84,9 @@ const handleFinalQuizSelect = (difficulty: "easy" | "medium" | "hard") => {
             </button>
 
             <button
-            onClick={goToNextTopic}
-             className="cursor-pointer flex-1 flex items-center justify-center gap-3 rounded-xl bg-slate-900 px-5 py-3 text-sm font-semibold text-white shadow hover:bg-slate-800 transition">
+              onClick={goToNextTopic}
+              className="cursor-pointer flex-1 flex items-center justify-center gap-3 rounded-xl bg-slate-900 px-5 py-3 text-sm font-semibold text-white shadow hover:bg-slate-800 transition"
+            >
               Next Topic
               <ArrowRight size={20} />
             </button>
@@ -97,20 +98,22 @@ const handleFinalQuizSelect = (difficulty: "easy" | "medium" | "hard") => {
       <div className="w-full border-t border-slate-200 bg-white/80 backdrop-blur p-4 sticky bottom-0 ">
         <div className="grid grid-cols-2 gap-3">
           <FinalGeneratedBtn
-  variant="quiz"
-  icon={<FileQuestion size={20} />}
-  label="Final Quiz"
-  onClick={() => {
-    const savedKey = localStorage.getItem(`active_quiz_key_video_${videoId}`);
-    if (savedKey) {
-      navigate(`/quiz/video/${videoId}`, {
-        state: { videoId, segmentId: null, quizKey: savedKey },
-      });
-    } else {
-      setIsQuizModalOpen(true);
-    }
-  }}
-/>
+            variant="quiz"
+            icon={<FileQuestion size={20} />}
+            label="Final Quiz"
+            onClick={() => {
+              const savedKey = localStorage.getItem(
+                `active_quiz_key_video_${videoId}`,
+              );
+              if (savedKey) {
+                navigate(`/quiz/video/${videoId}`, {
+                  state: { videoId, segmentId: null, quizKey: savedKey },
+                });
+              } else {
+                setIsQuizModalOpen(true);
+              }
+            }}
+          />
           <FinalGeneratedBtn
             variant="summary"
             icon={<FileText size={20} />}
@@ -140,11 +143,10 @@ const handleFinalQuizSelect = (difficulty: "easy" | "medium" | "hard") => {
         onSelect={handleSummarySelect}
       />
       <QuizDifficultyModal
-  isOpen={isQuizModalOpen}
-  onClose={() => setIsQuizModalOpen(false)}
-  onSelect={handleFinalQuizSelect}
-/>
+        isOpen={isQuizModalOpen}
+        onClose={() => setIsQuizModalOpen(false)}
+        onSelect={handleFinalQuizSelect}
+      />
     </div>
-    
   );
 }
