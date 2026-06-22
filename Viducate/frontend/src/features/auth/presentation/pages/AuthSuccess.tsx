@@ -22,7 +22,7 @@ const AuthSuccess = () => {
 
     await refreshUser();
     
-    navigate(AppRoutesNames.uploadPage, { replace: true });
+    navigate(AppRoutesNames.dashboard, { replace: true });
   };
 
   handleAuth();

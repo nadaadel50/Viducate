@@ -1,7 +1,9 @@
 import logging
 from fastapi import APIRouter, Depends, BackgroundTasks, status
 from fastapi.security import HTTPBearer, HTTPAuthorizationCredentials
+from fastapi import HTTPException
 from sqlalchemy.orm import Session
+
 
 from app.dependencies import get_db
 from app.services.auth_service import AuthService
@@ -17,6 +19,7 @@ from app.schemas.video import (
     PresignedUploadRequest,
 )
 from app.repositories.video_repository import VideoRepository
+from app.services.processing_service import ProcessingJobService
 
 
 router = APIRouter(prefix="/videos", tags=["Videos"])
@@ -199,3 +202,35 @@ def save_video(
 ):
     service = VideoService(db)
     return service.save_video(current_user.id, request)
+
+
+
+
+@router.post(
+    "/{video_id}/cancel",
+    status_code=status.HTTP_200_OK,
+    summary="Cancel a running video analysis pipeline",
+    description=(
+        "Stops an in-progress analysis (transcription / OCR / segmentation) "
+        "and deletes all partial data (segments, subtopics, keypoints, etc.) "
+        "as well as the video record itself.  "
+        "Returns 400 if the pipeline has already finished."
+    ),
+)
+def cancel_video_analysis(
+    video_id: int,
+    background_tasks: BackgroundTasks,         
+    db: Session = Depends(get_db),
+    current_user=Depends(get_current_user),
+):
+    job_service = ProcessingJobService(db)
+    result = job_service.cancel_job(video_id, current_user.id)
+    if not result["cancelled"]:
+        raise HTTPException(
+            status_code=status.HTTP_400_BAD_REQUEST,
+            detail=result["message"],
+        )
+    logger.info(
+        f"Analysis cancelled | video_id={video_id} | user={current_user.id}"
+    )
+    return result

@@ -19,8 +19,8 @@ logger = logging.getLogger(__name__)
 
 
 # YouTube URL - database
-MAX_DB_STORAGE_BYTES = 50 * 1024 * 1024   # 50 MB
-DB_STORAGE_THRESHOLD = 49 * 1024 * 1024   # 49 MB
+MAX_DB_STORAGE_BYTES = 1 * 1024 * 1024 * 1024   # 1 GB
+DB_STORAGE_THRESHOLD = 1023 * 1024 * 1024   
 
 # File Upload - Cloudflare R2
 MAX_R2_STORAGE_BYTES = 1 * 1024 * 1024 * 1024   # 1 GB per user
@@ -42,13 +42,13 @@ class VideoService:
         self.caching_service = VideoCachingServise(db)
 
     def _check_db_storage_limit(self, user_id: int):
-            used = self.video_repo.get_user_r2_storage_bytes(user_id)
-            if used >= DB_STORAGE_THRESHOLD:
-                used_mb = used / (1024 * 1024)
-                raise HTTPException(
-                    status_code=status.HTTP_403_FORBIDDEN,
-                    detail=f"Storage limit reached. Used: {used_mb:.1f}MB / 50MB. Please delete a video to continue."
-                )
+        used = self.video_repo.get_video_storage_bytes(user_id)
+        if used >= DB_STORAGE_THRESHOLD:
+            used_gb  = used / (1024 * 1024 * 1024)
+            raise HTTPException(
+                status_code=status.HTTP_403_FORBIDDEN,
+                detail=f"Storage limit reached. Used: {used_gb :.2f}GB / 1GB. Please delete a video to continue."
+            )
             
 
     def _check_r2_storage_limit(self, user_id: int, new_file_size: int):

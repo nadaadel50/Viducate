@@ -41,7 +41,7 @@ export const useAuthForm = (isLogin: boolean) => {
     mode: "onChange",
   });
 
-  const { watch, reset } = formMethods;
+  const { watch, reset ,setValue} = formMethods;
 
   useEffect(() => {
     const savedData = localStorage.getItem(isLogin ? "loginData" : "signupData");
@@ -83,11 +83,13 @@ const handleProcess = async (data: AuthFormData) => {
 
     if (!result.success) {
       setServerError(result.error);
+      if (isLogin) {
+    setValue("password", "");
+  }
       return;
     }
       localStorage.removeItem(isLogin ? "loginData" : "signupData");
-    navigate(AppRoutesNames.uploadPage, { replace: true }); // will move to dashboard soooooooooooooooooooooooooon!!!!!
-  } catch (err) {
+    navigate(AppRoutesNames.dashboard, { replace: true }); } catch (err) {
     console.error("Unexpected error:", err); 
     setServerError("Something went wrong");
   } finally {

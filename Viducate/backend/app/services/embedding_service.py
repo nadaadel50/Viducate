@@ -8,6 +8,8 @@ from app.models.subtopics import Subtopic
 from app.models.topic_segment import TopicSegment
 from groq import Groq
 from app.config import settings
+from app.services.cancellation_registry import is_cancelled, PipelineCancelledError,  check_cancelled
+import asyncio
 
 logger = logging.getLogger(__name__)
 
@@ -36,7 +38,8 @@ def rerank_results(query: str, candidates: list) -> list:
     return sorted(candidates, key=lambda x: x['rerank_score'], reverse=True)
 
 
-def store_embeddings(video_id: int, segments: list, video_lang: str = 'ar') -> None:
+#def store_embeddings(video_id: int, segments: list, video_lang: str = 'ar') -> None:
+async def store_embeddings(video_id: int, segments: list, video_lang: str = 'ar') -> None:
     try:
         collection = chroma_client.get_or_create_collection(
             name=f"video_{video_id}",
@@ -44,7 +47,12 @@ def store_embeddings(video_id: int, segments: list, video_lang: str = 'ar') -> N
         )
         count = 0
         for segment in segments:
+            check_cancelled(video_id)
             for sub_topic in segment.get("sub_topics", []):
+                if is_cancelled(video_id):
+                    raise PipelineCancelledError(
+                        f"Video {video_id} cancelled"
+                    )
                 if video_lang == 'ar':
                     text = f"""
                         موضوع: {segment['main_topic']}
@@ -67,28 +75,56 @@ def store_embeddings(video_id: int, segments: list, video_lang: str = 'ar') -> N
                         عنوان فرعي: {sub_topic['name']}
                         """
 
-                embedding = get_embedding(text, is_query=False)
-                collection.add(
-                    ids=[f"{video_id}_{segment['segment_number']}_{sub_topic['name']}"],
-                    embeddings=[embedding],
-                    documents=[text],
-                    metadatas=[{
-                        "video_id": video_id,
-                        "segment_number": segment["segment_number"],
-                        "title": segment["title"],
-                        "start_time": sub_topic["start_time"],
-                        "end_time": sub_topic["end_time"],
-                        "sub_topic_name": sub_topic["name"],
-                        "sub_topic_description": sub_topic["description"],
-                        "content_type": sub_topic.get("content_type", "general"),
-                        "language": video_lang
-                    }]
+                #embedding = get_embedding(text, is_query=False)
+                loop = asyncio.get_event_loop()
+
+                embedding = await loop.run_in_executor(
+                    None,
+                    lambda: get_embedding(text, False)
+                )
+                
+                # collection.add(
+                #     ids=[f"{video_id}_{segment['segment_number']}_{sub_topic['name']}"],
+                #     embeddings=[embedding],
+                #     documents=[text],
+                    # metadatas=[{
+                    #     "video_id": video_id,
+                    #     "segment_number": segment["segment_number"],
+                    #     "title": segment["title"],
+                    #     "start_time": sub_topic["start_time"],
+                    #     "end_time": sub_topic["end_time"],
+                    #     "sub_topic_name": sub_topic["name"],
+                    #     "sub_topic_description": sub_topic["description"],
+                    #     "content_type": sub_topic.get("content_type", "general"),
+                    #     "language": video_lang
+                    # }]
+                # )
+
+                await loop.run_in_executor(
+                    None,
+                    lambda: collection.add(
+                        ids=[f"{video_id}_{segment['segment_number']}_{sub_topic['name']}"],
+                        embeddings=[embedding],
+                        documents=[text],
+                        metadatas=[{
+                            "video_id": video_id,
+                            "segment_number": segment["segment_number"],
+                            "title": segment["title"],
+                            "start_time": sub_topic["start_time"],
+                            "end_time": sub_topic["end_time"],
+                            "sub_topic_name": sub_topic["name"],
+                            "sub_topic_description": sub_topic["description"],
+                            "content_type": sub_topic.get("content_type", "general"),
+                            "language": video_lang
+                        }]
+                    )
                 )
                 count += 1
 
         print(f"[Embeddings] Total sub_topics embedded: {count} | lang={video_lang}")
         logger.info(f"[Embeddings] Stored embeddings for video_id={video_id}")
-
+    except PipelineCancelledError:
+        raise
     except Exception as e:
         raise HTTPException(
             status_code=status.HTTP_500_INTERNAL_SERVER_ERROR,
