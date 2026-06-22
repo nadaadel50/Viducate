@@ -1,4 +1,4 @@
-import { useEffect, useMemo } from 'react';
+import { useEffect, useMemo, useState } from 'react';
 import {  useNavigate} from 'react-router-dom';
 import { XCircle,CheckCircle, X ,RotateCcw} from 'lucide-react';
 import { FormattedMessage } from 'react-intl';
@@ -8,12 +8,16 @@ import { COLORS } from '../../../../core/constants/colors';
 import { useProcessingStatus } from '../hooks/use_processing_status';
 import { AppRoutesNames } from '../../../../app/routers/routes';
 import { useLearningSession } from '../../../../core/hooks/useLearningContent';
+import { useCancelAnalysis } from '../hooks/use_cancel_analysis';
+import { CancelAnalysisModal } from '../componants/cancel_analysis_modal';
 
 export function ProcessingPage() {
   const { videoId } = useLearningSession();
   const navigate = useNavigate(); 
-
+  const [isCancelModalOpen, setIsCancelModalOpen] = useState(false);
   const { status, progress } = useProcessingStatus(videoId!);
+  const { cancel, isLoading: isCancelling } = useCancelAnalysis();
+
   useEffect(() => {
     if (status === 'completed') {
       const timeout = setTimeout(() => navigate(AppRoutesNames.wathcVideo, { replace: true }),2500);
@@ -30,6 +34,11 @@ export function ProcessingPage() {
       : `conic-gradient(from 0deg, ${COLORS.brand.primary} 0%, ${COLORS.brand.secondary} ${progress}%, ${COLORS.effects.ringEmpty} ${progress}%)`
   }), [progress, status]);
 
+const handleCancelConfirm = () => {
+    cancel(videoId!, () => {
+      navigate('/UploadVideoPage', { replace: true });
+    });
+  };
 
   return (
     <div className="relative min-h-screen flex flex-col items-center justify-center bg-white overflow-hidden px-4 py-8 font-sans"
@@ -116,7 +125,7 @@ export function ProcessingPage() {
             </button>
           ) : status !== 'completed' && (
             <button 
-              onClick={() => navigate('/UploadVideoPage', { replace: true })}
+              onClick={() => setIsCancelModalOpen(true)}
               className="flex items-center gap-2 text-xs font-bold uppercase tracking-widest transition-all hover:text-red-500 cursor-pointer active:scale-95"
               style={{ color: COLORS.text.muted }}
             >
@@ -126,6 +135,12 @@ export function ProcessingPage() {
           )}
         </div>
       </div>
+      <CancelAnalysisModal
+        isOpen={isCancelModalOpen}
+        isLoading={isCancelling}
+        onConfirm={handleCancelConfirm}
+        onCancel={() => setIsCancelModalOpen(false)}
+      />
     </div>
   );
 }
