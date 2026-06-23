@@ -29,6 +29,9 @@ export function ChatBotPage() {
     isLoadingMessage,
   } = useChatMessages(open);
 
+
+
+
   return (
     <div className="fixed inset-0 z-40 flex justify-end pointer-events-none ">
       {/* {black bg} */}

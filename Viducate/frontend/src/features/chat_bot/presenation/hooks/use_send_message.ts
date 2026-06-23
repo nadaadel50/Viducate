@@ -13,8 +13,7 @@ export function useSendMessage (){
       if (!response.success) {
         throw new Error("get answer chatbot failed");
       }
-      console.log("lets get answer")
-      console.log(response.data)
+     
 
       return response.data;
     },
