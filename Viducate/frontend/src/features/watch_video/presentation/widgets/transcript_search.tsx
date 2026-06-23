@@ -2,25 +2,44 @@ import { PlayCircle, Search } from "lucide-react";
 import { useEffect, useState } from "react";
 import { useLearningSession } from "../../../../core/hooks/useLearningContent";
 import { useSearchMutation } from "../hook/use_search";
-import { it } from "zod/v4/locales";
 
 export function TranscriptSearch() {
   const [searchQuery, setSearchQuery] = useState("");
-  const { videoId,setSeekTo } = useLearningSession();
-  const searchMutation = useSearchMutation();
+
+  const { videoId, setSeekTo } = useLearningSession();
+
+  const {
+    sendQuery,
+    data: searchResults = [],
+    isLoadingQuery,
+    error,
+    reset,
+  } = useSearchMutation();
+  const hasNoResults =
+    !isLoadingQuery &&
+    searchQuery.trim().length >= 3 &&
+    searchResults.length === 0;
+      const isQueryTooShort =
+    searchQuery.trim().length > 0 && searchQuery.trim().length < 3;
 
   useEffect(() => {
-    if (!searchQuery || searchQuery.trim().length < 2 || !videoId) {
-      searchMutation.reset();
+    if (!searchQuery.trim() || searchQuery.trim().length < 3 || !videoId) {
+      reset();
       return;
     }
+    
 
     const timer = setTimeout(() => {
-      searchMutation.mutate({ query: searchQuery, videoId: videoId });
-    }, 500);
+      sendQuery({
+        query: searchQuery.trim(),
+        videoId,
+      });
+    }, 300);
 
     return () => clearTimeout(timer);
-  }, [searchQuery]);
+  }, [searchQuery, videoId]);
+
+
   function formatTime(seconds: number): string {
     const mins = Math.floor(seconds / 60);
     const secs = seconds % 60;
@@ -28,38 +47,44 @@ export function TranscriptSearch() {
     return `${String(mins).padStart(2, "0")}:${String(secs).padStart(2, "0")}`;
   }
 
-  const searchResults = searchMutation.data || [];
-  const isLoading = searchMutation.isPending;
-
   return (
     <div className="flex flex-col gap-4 w-full max-w-5xl mx-auto">
-      {/* input */}
       <div className="relative group w-full">
         <Search className="text-slate-400 absolute w-4 h-4 left-3 top-1/2 -translate-y-1/2 group-focus-within:text-[#4f46e5] transition-colors" />
 
         <input
-          onChange={
-            // will call the method of the semantic search
-            (e) => setSearchQuery(e.target.value)
-          }
+          value={searchQuery}
+          onChange={(e) => setSearchQuery(e.target.value)}
           type="text"
           placeholder="Search with any keyword in the video..."
           className="placeholder:text-slate-400 w-full bg-white border border-slate-200 shadow-sm rounded-xl py-3 px-10 focus:border-[#4f46e5] focus:ring-[#4f46e5] focus:ring-1 focus:outline-none transition"
         />
       </div>
+      {isQueryTooShort && (
+        <p className="text-xs text-slate-500 px-1">
+          Search term is too short. Enter at least 3 characters.
+        </p>
+      )}
 
-      {isLoading ? (
+      {error && (
+        <p className="text-sm text-red-500">Failed to search transcript</p>
+      )}
+      {hasNoResults && (
+        <p className="text-xs text-slate-500 px-1">
+            No results found for "{searchQuery}"
+        </p>
+       
+      )}
+
+      {isLoadingQuery ? (
         <div className="flex justify-center py-6">
           <div className="w-5 h-5 border-2 border-slate-300 border-t-[#4f46e5] rounded-full animate-spin" />
         </div>
       ) : (
         searchResults.map((item) => (
-          // <p>{item.main_topic}</p>
           <button
-          onClick={()=>{
-            setSeekTo(item.start_time)
-          }}
             key={item.subtopic_id}
+            onClick={() => setSeekTo(item.start_time)}
             className="cursor-pointer w-full text-left group flex flex-col sm:flex-row sm:items-center gap-3 sm:gap-4 rounded-xl border border-slate-200 bg-white p-3 sm:p-4 hover:bg-slate-50 hover:border-[#4f46e5]/40 transition shadow-sm"
           >
             <div className="flex items-center gap-2 shrink-0">
@@ -75,15 +100,6 @@ export function TranscriptSearch() {
           </button>
         ))
       )}
-      {/* {isLoading ? (
-        <div className="flex justify-center py-6">
-          <div className="w-5 h-5 border-2 border-slate-300 border-t-[#4f46e5] rounded-full animate-spin" />
-        </div>
-      ) : (
-        searchResults.map((item) => (
-          <p >{item.main_topic}</p>
-        ))
-      )} */}
     </div>
   );
 }

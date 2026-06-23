@@ -4,7 +4,7 @@ import { SemanticSearchRequest } from "../../domin/entity/semantic_search_reques
 import type { SearchParams } from "../types/search_parms";
 
 export const useSearchMutation = () => {
-  return useMutation({
+  const mutation= useMutation({
     mutationFn: async (searchProps: SearchParams) => {
       const response =
         await getSearchResultsUseCase.getSearchResults(
@@ -22,4 +22,11 @@ export const useSearchMutation = () => {
       return response.data;
     },
   });
+  return {
+    sendQuery: mutation.mutate,
+    data:mutation.data,
+    isLoadingQuery: mutation.isPending,
+    error: mutation.error?.message ?? null,
+    reset: mutation.reset,
+  };
 };
