@@ -15,7 +15,7 @@ export function MainHeader() {
 
     return `${minutes}:${seconds.toString().padStart(2, "0")}`;
   };
-  const { selectedTopic, handleSetHasUnsavedChanges, hasUnsavedChanges } =
+  const { selectedTopic, handleSetHasUnsavedChanges } =
     useLearningSession();
 
   const { handleSaveProgress, toastMessage, toastType, clearToast } =

@@ -41,7 +41,7 @@ const handleCancelConfirm = () => {
   };
 
   return (
-    <div className="relative min-h-screen flex flex-col items-center justify-center bg-white overflow-hidden px-4 py-8 font-sans"
+    <div className="relative min-h-screen font-display flex flex-col items-center justify-center bg-white overflow-hidden px-4 py-8 "
     style={{
     backgroundColor: '#fff',
     backgroundImage: COLORS.background.radialGradient,

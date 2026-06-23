@@ -5,7 +5,6 @@ import { usePreferences } from "../hooks/use_preferences";
 import { UserHeroCard } from "../sections/user_hero_card";
 import { AccountSettingsForm } from "../sections/account_settings_form";
 import { PreferencesSidebar } from "../sections/preferences_sidebar";
-import { DeleteAccountModal } from "../components/delete_account_modal";
 import { AuthContext } from "../../../auth/presentation/context/auth_context";
 import { use, useContext } from "react";
 import { LoadingScreen } from "../../../../core/componants/LoadingScreen";
@@ -14,10 +13,11 @@ import { useGetUserData } from "../hooks/use_get_user_data";
 import { ErrorMessage } from "../../../../core/widgets/error";
 import { COLORS } from "../../../../core/constants";
 import { useProfileContext } from "../hooks/use_profile_context";
+import { DeleteModal } from "../../../../core/componants/delete_modal";
 
 export function ProfilePage() {
   //
- 
+
   const { showDeleteModal } = useProfileContext();
   const deleteAccount = useDeleteAccount();
   const preferences = usePreferences({
@@ -27,7 +27,6 @@ export function ProfilePage() {
   const handleSignOut = () => {
     auth?.logout();
   };
-  
 
   const { isLoading, error } = useGetUserData();
   if (isLoading) {
@@ -41,11 +40,12 @@ export function ProfilePage() {
     );
   }
   if (error) return <ErrorMessage errorMessage={error.message} />;
- 
 
   return (
-    <div style={{background:COLORS.background.radialGradient}}
-    className="min-h-screen  text-slate-900 py-7 px-4  font-display flex flex-col transition-colors duration-200 selection:bg-primary/20">
+    <div
+      style={{ background: COLORS.background.radialGradient }}
+      className="min-h-screen  text-slate-900 py-7 px-4  font-display flex flex-col transition-colors duration-200 selection:bg-primary/20"
+    >
       <main className="flex-grow w-full max-w-7xl mx-auto">
         <motion.div
           initial={{ opacity: 0, y: 10 }}
@@ -54,7 +54,7 @@ export function ProfilePage() {
         >
           {/* Main Column */}
           <div className="lg:col-span-8 space-y-8">
-            <UserHeroCard  />
+            <UserHeroCard />
             <AccountSettingsForm />
           </div>
 
@@ -68,11 +68,21 @@ export function ProfilePage() {
         </motion.div>
       </main>
 
-      <DeleteAccountModal
+      {/* <DeleteModal
         show={showDeleteModal}
         isDeleting={deleteAccount.isDeleting}
         onConfirm={deleteAccount.handleDelete}
         onCancel={deleteAccount.closeModal}
+      /> */}
+
+      <DeleteModal
+        open={showDeleteModal}
+        title="Delete Account"
+        description="All of your data will be permanently removed. This action cannot be undone."
+        confirmText="Delete Account"
+        isLoading={deleteAccount.isDeleting}
+        onClose={() => deleteAccount.closeModal}
+        onConfirm={deleteAccount.handleDelete}
       />
     </div>
   );

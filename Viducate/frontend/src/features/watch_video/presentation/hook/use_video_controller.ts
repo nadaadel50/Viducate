@@ -51,7 +51,7 @@ export function useVideoController({
   // const [markers, setMarkers] = useState<Marker[]>([]);
   const [showSpeedMenu, setShowSpeedMenu] = useState(false);
   const [playbackRate, setPlaybackRate] = useState(1);
-  const { setDurationTime, handleSetMarks, handleAddMark } =
+  const { setDurationTime, handleAddMark } =
     useLearningSession();
 
   const handleStart = () => {

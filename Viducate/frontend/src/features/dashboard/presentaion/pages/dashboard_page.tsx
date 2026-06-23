@@ -9,9 +9,22 @@ import {} from "../context/dashboard_context";
 import { useDashboard } from "../hooks/use_dashboard";
 import { ContinueLearningPart } from "../widgets/continue_learning/continue_learning_part";
 import { StartUpload } from "../widgets/start_upload";
+import { DeleteModal } from "../../../../core/componants/delete_modal";
+
+import { Toast } from "../../../../core/componants/toast_message";
+import { useDeleteVideo } from "../hooks/use_delete_video";
 
 export function DashboardPage() {
-  const { data, isLoading, error } = useDashboard();
+  const {
+    data,
+    isLoading,
+    error,
+    handleOpenDeleteMessage,
+    openDeleteMessage,
+    selectedVideo,
+  } = useDashboard();
+  const { handleDelete, toast, clearToast } = useDeleteVideo();
+
   if (isLoading) {
     return (
       <LoadingScreen
@@ -30,6 +43,13 @@ export function DashboardPage() {
         style={{ background: COLORS.background.moreLight }}
         className="flex flex-col w-full py-5 px-20 font-display min-h-screen gap-10 "
       >
+        {toast && (
+          <Toast
+            message={toast.message}
+            type={toast.type}
+            onClose={() => clearToast}
+          />
+        )}
         {/* user card */}
         <UserCard />
 
@@ -44,6 +64,17 @@ export function DashboardPage() {
         ) : (
           <StartUpload />
         )}
+
+        <DeleteModal
+          open={openDeleteMessage}
+          title="Delete Video"
+          description="Are you sure you want to delete this Video? This action cannot be undone."
+          onClose={() => handleOpenDeleteMessage(false)}
+          onConfirm={() => {
+            handleDelete(selectedVideo?.videoId!);
+            handleOpenDeleteMessage(false);
+          }}
+        />
       </div>
     );
   }

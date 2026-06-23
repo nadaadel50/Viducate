@@ -1,4 +1,4 @@
-import type { Segment } from "../../domain/entity/flash_card_entity";
+import type { FlashCard } from "../../domain/entity/flashcard_entity";
 import { type FlashcardDto, toFlashcardEntity } from "./flash_card_dto";
 
 export type SegmentDto = {
@@ -11,7 +11,7 @@ export type SegmentDto = {
   end_time_label: string;
   flashcards: FlashcardDto[];
 };
-export const toSegmentEntity = (dto: SegmentDto): Segment => {
+export const toSegmentEntity = (dto: SegmentDto): FlashCard => {
   return {
     segment_id: dto.segment_id,
     segment_number: dto.segment_number,

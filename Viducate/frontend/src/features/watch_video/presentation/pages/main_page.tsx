@@ -13,8 +13,9 @@ import { STORAGE_KEYS } from "../../../../core/constants";
 import { CustomizeExperienceModal } from "../../../preferences/presentation/pages/CustomizeExperienceModal";
 import { LanguageInitModal } from "../../../preferences/presentation/componants/LanguageInitModal";
 
+
 export function MainPage() {
-  const { videoId, hasUnsavedChanges } = useLearningSession();
+  const { videoId, hasUnsavedChanges,setCurrentTime } = useLearningSession();
 
   const { data: data, isLoading, error } = useVideoData();
 
@@ -42,10 +43,21 @@ export function MainPage() {
 
   useEffect(() => {
   return () => {
+    console.log("MainPage unmounted");
     sessionStorage.removeItem(STORAGE_KEYS.currentTime);
-   
+    
   };
 }, []);
+
+// useEffect(()=>{
+//   if(!data)return
+
+//   console.log("came here to handle save when open")
+
+//   handleSaveProgress()
+
+  
+// },[data])
 
 
   useUnsavedChangesWarning(hasUnsavedChanges);
@@ -82,3 +94,5 @@ export function MainPage() {
     );
   }
 }
+
+

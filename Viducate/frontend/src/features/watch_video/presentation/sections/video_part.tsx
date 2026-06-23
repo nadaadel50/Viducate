@@ -27,7 +27,7 @@ export function VideoPlayer() {
     duration: 0,
   });
 
-  const [showTopicEnd, setShowTopicEnd] = useState(false);
+ 
   const { currentTime, setCurrentTime, selectedTopic, seekTo, setSeekTo } =
     useLearningSession();
   const { data: topics } = useVideoData();

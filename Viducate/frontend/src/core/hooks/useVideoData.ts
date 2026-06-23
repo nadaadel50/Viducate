@@ -10,9 +10,11 @@ export function useVideoData() {
     setTopics,
     handleSetMarks,
     handleSetCompletedTopics,
-    setSelectedTopic,
+   
     setVideoTitle,
-    selectedTopic,
+    handleSetInitializeCurrentTime,
+   
+    setCurrentTime
   } = useLearningSession();
 
   const query = useQuery({
@@ -36,6 +38,9 @@ export function useVideoData() {
     handleSetMarks(query.data.bookmarks);
 
     setVideoTitle(query.data.title);
+    setCurrentTime(query.data.current_time)
+    handleSetInitializeCurrentTime(query.data.current_time)
+    
     handleSetCompletedTopics(
       query.data.topics
         .filter((topic) => topic.is_completed && topic.segment_id !== null)
