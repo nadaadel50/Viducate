@@ -55,6 +55,7 @@ export const QuizPage = () => {
   const localQuiz = savedQuiz ? JSON.parse(savedQuiz) : null;
   const finalQuiz = localQuiz || quiz;
   const questions = finalQuiz?.questions ?? [];
+  const isArabic = finalQuiz?.language === "ar";
 
   const calculatedTime = finalQuiz
     ? calcTime(finalQuiz.total_questions ?? questions.length, difficulty)
@@ -145,7 +146,7 @@ export const QuizPage = () => {
 
       <div className="w-full max-w-7xl mx-auto px-4">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-6 lg:gap-10">
-          <div className="lg:col-span-8 space-y-8">
+          <div className={`lg:col-span-8 space-y-8`} dir={isArabic ? "rtl" : "ltr"}>
             <QuizProgressBar
               current={currentIndex + 1}
               total={questions.length}
