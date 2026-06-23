@@ -10,12 +10,11 @@ import logging
 from fastapi import APIRouter, Depends, status
 from fastapi.security import HTTPBearer, HTTPAuthorizationCredentials
 from sqlalchemy.orm import Session
-
+from app.services.quiz_service import _build_question_response_secure
 from app.dependencies import get_db
 from app.services.auth_service import AuthService
 from app.services.quiz_service import QuizService
 from app.repositories.quiz_repository import QuizRepository
-from app.schemas.quiz_schema import QuizGenerateRequest, QuizResponse
 from fastapi import HTTPException
 from app.models.quiz import UserQuizResult
 from app.schemas.quiz_result_schema import (
@@ -24,6 +23,7 @@ from app.schemas.quiz_result_schema import (
 )
 from app.repositories.video_repository import VideoRepository
 from app.models.quiz import UserQuizResult
+from app.schemas.quiz_schema import QuizGenerateRequest, QuizResponse, QuizSecureResponse
 
 router = APIRouter(prefix="/quiz", tags=["Quiz"])
 security = HTTPBearer()
@@ -40,7 +40,7 @@ def get_current_user(
 
 @router.post(
     "/video/{video_id}/segment/{segment_id}",
-    response_model=QuizResponse,
+    response_model=QuizSecureResponse,
     status_code=status.HTTP_201_CREATED,
     summary="Generate MCQ quiz for a single segment",
     description=(
@@ -72,7 +72,7 @@ def generate_segment_quiz(
 
 @router.post(
     "/video/{video_id}",
-    response_model=QuizResponse,
+    response_model=QuizSecureResponse,
     status_code=status.HTTP_201_CREATED,
     summary="Generate MCQ quiz covering all segments of a video",
     description=(
@@ -103,7 +103,7 @@ def generate_video_quiz(
 
 @router.get(
     "/{quiz_id}",
-    response_model=QuizResponse,
+    response_model=QuizSecureResponse,
     status_code=status.HTTP_200_OK,
     summary="Fetch a previously generated quiz by its ID",
     description="Use this to retrieve a quiz that was generated in a previous call.",
@@ -125,7 +125,6 @@ def get_quiz(
     if not video or video.user_id != current_user.id:
         raise HTTPException(status_code=status.HTTP_403_FORBIDDEN, detail="Not authorized")
 
-    from app.services.quiz_service import _build_question_response
     return {
         "quiz_id":         quiz.quiz_id,
         "video_id":        quiz.video_id,
@@ -134,7 +133,7 @@ def get_quiz(
         "difficulty":      quiz.difficulty,
         "language":        quiz.language,
         "total_questions": len(quiz.questions),
-        "questions":       [_build_question_response(q) for q in quiz.questions],
+        "questions":       [_build_question_response_secure(q) for q in quiz.questions],
         "created_at":      quiz.created_at,
     }
 

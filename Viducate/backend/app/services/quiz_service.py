@@ -26,23 +26,40 @@ def _format_seconds(seconds: int) -> str:
     return f"{h:02d}:{m:02d}:{s:02d}"
 
 
-def _build_question_response(q: QuizQuestion) -> dict:
+# def _build_question_response(q: QuizQuestion) -> dict:
+#     return {
+#         "question_id":         q.question_id,
+#         "question_text":       q.question_text,
+#         "choices": {
+#             "a": q.choice_a,
+#             "b": q.choice_b,
+#             "c": q.choice_c,
+#             "d": q.choice_d,
+#         },
+#         "correct_answer":      q.correct_answer,
+#         "correct_answer_text": q.correct_answer_text,
+#         "explanation":         q.explanation,
+#         "video_timestamp":     q.video_timestamp,
+#         "timestamp_label":     q.timestamp_label,
+#         "segment_id":          q.segment_id,
+#         "concept":             q.concept,
+#     }
+
+def _build_question_response_secure(q: QuizQuestion) -> dict:
+    """Response WITHOUT correct answers/explanation — used for all client-facing quiz endpoints."""
     return {
-        "question_id":         q.question_id,
-        "question_text":       q.question_text,
+        "question_id":     q.question_id,
+        "question_text":   q.question_text,
         "choices": {
             "a": q.choice_a,
             "b": q.choice_b,
             "c": q.choice_c,
             "d": q.choice_d,
         },
-        "correct_answer":      q.correct_answer,
-        "correct_answer_text": q.correct_answer_text,
-        "explanation":         q.explanation,
-        "video_timestamp":     q.video_timestamp,
-        "timestamp_label":     q.timestamp_label,
-        "segment_id":          q.segment_id,
-        "concept":             q.concept,
+        "video_timestamp": q.video_timestamp,
+        "timestamp_label": q.timestamp_label,
+        "segment_id":      q.segment_id,
+        "concept":         q.concept,
     }
 
 
@@ -116,7 +133,7 @@ class QuizService:
             "difficulty":      quiz.difficulty,
             "language":        quiz.language,
             "total_questions": len(questions),
-            "questions":       [_build_question_response(q) for q in questions],
+            "questions":       [_build_question_response_secure(q) for q in questions],
             "created_at":      quiz.created_at,
         }
 
@@ -178,11 +195,11 @@ class QuizService:
             )
     
         # Persist quality on the segment row
-        current_score = segment.quality_score or 0.0
-        segment.quality_score = max(current_score, quality.get("score", 0.0))
-        segment.quality_flag  = bool(quality.get("flag", False))
-        segment.retry_count   = (segment.retry_count or 0) + quality.get("retries", 0)
-        self.db.flush()
+        # current_score = segment.quality_score or 0.0
+        # segment.quality_score = max(current_score, quality.get("score", 0.0))
+        # segment.quality_flag  = bool(quality.get("flag", False))
+        # segment.retry_count   = (segment.retry_count or 0) + quality.get("retries", 0)
+        # self.db.flush()
  
         logger.info(
             f"[QuizService] VALIDATION COMPLETE | segment_id={segment_id} | "

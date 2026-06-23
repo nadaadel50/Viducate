@@ -209,11 +209,11 @@ def process_flashcards(db: Session, video_id: int, user_id: int) -> None:
         # Take the maximum of any existing score (segmentation may have already
         # written a score; we keep the higher of the two).
         # ── Persist quality on the segment row ───────────────────────────────────
-        current_score = segment.quality_score or 0.0
-        new_score     = quality.get("score", 0.0)
-        segment.quality_score = max(current_score, new_score)
-        segment.quality_flag  = bool(quality.get("flag", False))
-        segment.retry_count   = (segment.retry_count or 0) + quality.get("retries", 0)
+        # current_score = segment.quality_score or 0.0
+        # new_score     = quality.get("score", 0.0)
+        # segment.quality_score = max(current_score, new_score)
+        # segment.quality_flag  = bool(quality.get("flag", False))
+        # segment.retry_count   = (segment.retry_count or 0) + quality.get("retries", 0)
 
         logger.info(
             f"[FlashcardProcessor] VALIDATION COMPLETE | segment_id={segment.segment_id} | "

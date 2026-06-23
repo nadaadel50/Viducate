@@ -35,3 +35,4 @@ class User(Base):
     # quiz_attempts = relationship("UserQuizAttempts", back_populates="user")
     # chats = relationship("ChatHistory", back_populates="user")
     # stuck_events = relationship("StuckEvent", back_populates="user")
+

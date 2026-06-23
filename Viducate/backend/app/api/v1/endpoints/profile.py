@@ -1,6 +1,6 @@
 from fastapi import APIRouter, Depends, HTTPException, status, Header, Request
 from sqlalchemy.orm import Session
-from app.schemas.user import UserResponse, UpdateLanguageRequest
+from app.schemas.user import UserResponse, UpdateLanguageRequest,UserProfileResponse
 from app.schemas.profile_schema import UpdateProfileRequest
 
 from app.services.profile_service import UpdateProfileService
@@ -17,8 +17,8 @@ logger = logging.getLogger(__name__)
 security = HTTPBearer()
 
 @router.get(
-    "/profile",
-    response_model=UserResponse,
+    "/profile/get",
+    response_model=UserProfileResponse,
     status_code=status.HTTP_200_OK,
     summary="Get user profile",
     description="Returns current user profile data"
@@ -31,7 +31,10 @@ def get_profile(
     auth_service = AuthService(db)
     user = auth_service.get_current_user(token)  
     
-    return UserResponse.model_validate(user)
+    return UserProfileResponse(
+        **UserResponse.model_validate(user).model_dump(),
+        has_password=user.password is not None,
+    )
 
 
 @router.put("/profile/language")
@@ -52,7 +55,7 @@ def update_language(
     }
 
 @router.patch(
-    "/profile",
+    "/profile/UpdateAccount",
     response_model=UserResponse,
     status_code=status.HTTP_200_OK,
     summary="Update user profile",
@@ -73,7 +76,7 @@ def update_profile(
 
 
 @router.delete(
-    "/profile",
+    "/profile/DeleteAccount",
     status_code=status.HTTP_200_OK,
     summary="Delete account",
     description="Permanently deletes the authenticated user account"

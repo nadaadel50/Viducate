@@ -94,11 +94,11 @@ def process_single_segment_studynotes(db: Session, video_id: int, segment_id: in
         return None
  
     # Persist quality on the segment row
-    current_score = segment.quality_score or 0.0
-    segment.quality_score = max(current_score, quality.get("score", 0.0))
-    segment.quality_flag  = bool(quality.get("flag", False))
-    segment.retry_count   = (segment.retry_count or 0) + quality.get("retries", 0)
-    db.flush()
+    # current_score = segment.quality_score or 0.0
+    # segment.quality_score = max(current_score, quality.get("score", 0.0))
+    # segment.quality_flag  = bool(quality.get("flag", False))
+    # segment.retry_count   = (segment.retry_count or 0) + quality.get("retries", 0)
+    # db.flush()
  
     logger.info(
         f"[StudyNotesProcessor] Segment {segment_id} "
