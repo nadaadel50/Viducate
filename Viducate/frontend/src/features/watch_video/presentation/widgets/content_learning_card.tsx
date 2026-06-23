@@ -70,7 +70,7 @@ export function ContentLearningCard({
           onClick();
           setSelectedTopic(cardInfo);
         }}
-        className={`cursor-pointer group relative rounded-2xl bg-white/70  p-4 transition-all hover:bg-white hover:border-primary/40 hover:shadow-soft ${isSelected ? "border-2 border-[#4f46e5] shadow-xl shadow-[#4f46e5]/15" : "border border-slate-200/60 w-80"}`}
+        className={`cursor-pointer group relative rounded-2xl   px-3 py-4 bg-white/70 transition-all hover:bg-white hover:border-primary/40 hover:shadow-soft border-2  ${isSelected ? " border-[#4f46e5] shadow-xl shadow-[#4f46e5]/15" : "border   border-slate-200/60"}`}
       >
         {/* Title */}
         <div className="flex justify-between items-start">
@@ -92,12 +92,12 @@ export function ContentLearningCard({
             </div>
           )}
 
-          {isDue && (
+          {isDue ? (
             <span className="flex items-center gap-1 text-green-600 text-[10px] font-bold bg-green-50 px-2 py-0.5 rounded-full">
               <span className="w-1.5 h-1.5 rounded-full bg-green-500 animate-pulse" />
               Review
             </span>
-          )}
+          ):<span className="px-2 py-0.5 text-[10px]">&nbsp;</span>}
 
           <span className="text-[10px] font-bold  text-slate-400 bg-slate-100 px-2.5 py-1 rounded-full group-hover:text-slate-600 transition-colors">
             {Math.floor(cardInfo.start_time / 60)}:
@@ -108,7 +108,7 @@ export function ContentLearningCard({
         </div>
 
         {/* Description */}
-        <p className="line-clamp-2   text-xs text-slate-400 mt-1.5 mb-1.5 group-hover:text-slate-500 ">
+        <p className="line-clamp-2  text-xs text-slate-400 mt-1.5 mb-1.5 group-hover:text-slate-500 ">
           {cardInfo.main_topic}
         </p>
 
