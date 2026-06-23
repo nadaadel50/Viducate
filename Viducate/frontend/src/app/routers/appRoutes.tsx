@@ -83,7 +83,9 @@ export function AppRoutes() {
           />
           <Route path="/WatchVideo" element={<WatchLayout />}>
             <Route index element={<MainPage />} /> {/* /WatchVideo */}
-            <Route path="flashcards/:segmentId" element={<FlashCards />} />{" "}
+            <Route path="flashcards/:segmentId" element={<FlashCards />} />
+            <Route path="flashcards" element={<FlashCards />} />
+            {" "}
             {/* /WatchVideo/flashcards */}
           </Route>{" "}
         </Route>

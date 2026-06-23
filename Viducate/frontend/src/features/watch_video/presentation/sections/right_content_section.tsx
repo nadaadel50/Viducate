@@ -124,7 +124,9 @@ export function RightContentSection() {
             variant="flashcards"
             icon={<FileQuestion size={20} />}
             label="Final Flashcards"
-            onClick={() => {}}
+            onClick={() => {
+              navigate("flashcards")
+            }}
           />
           <FinalGeneratedBtn
             variant="mindmap"

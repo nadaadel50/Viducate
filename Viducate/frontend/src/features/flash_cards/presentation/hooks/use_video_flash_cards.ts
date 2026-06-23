@@ -1,24 +1,23 @@
 import { useQuery } from "@tanstack/react-query";
-
-import { useLearningSession } from "../../../../core/hooks/useLearningContent";
 import { getVideoFlashCard } from "../../../../core/di/flash_card_continer";
+import { useLearningSession } from "../../../../core/hooks/useLearningContent";
 
-export function useGetVideoFlashCards() {
-    const{videoId}=useLearningSession()
-   
+// use_video_flashcards.ts
+export const useVideoFlashcards = () => {
+  const { videoId } = useLearningSession();
+
   return useQuery({
-    queryKey: ["video_flashCard",videoId],
-
-queryFn:async () => {
-  
-    const response=await getVideoFlashCard(videoId!);
-    if(!response.success){
-        throw new Error(response.error);
-    }
-   
-     return response.data
-},
-
-    enabled: false,
+    queryKey: ["flashcards", "video", videoId],
+    queryFn: async () => {
+      const result = await getVideoFlashCard(videoId!);
+      if (!result.success) throw new Error(result.error);
+      return result.data; // FlashCard[]
+    },
+    enabled: !!videoId,
+    refetchInterval: (query) => query.state.data?.length ? false : 3000,
+    gcTime: 0,
+    staleTime: 0,
+    refetchOnWindowFocus: false,
+    refetchOnMount: "always",
   });
-}
+};

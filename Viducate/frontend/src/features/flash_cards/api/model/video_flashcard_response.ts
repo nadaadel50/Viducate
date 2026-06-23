@@ -4,6 +4,6 @@ export type VideoFlashCardResponse = {
 videoId:number;
 total_flashcards: number,
   cached: number,
-  segments:SegmentDto
+  segments:SegmentDto[]
 };
 

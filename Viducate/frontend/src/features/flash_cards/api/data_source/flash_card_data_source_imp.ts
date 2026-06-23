@@ -7,8 +7,9 @@ import type { FlashCardService } from "../client/flash_card_service";
 import type { SegmentFlashCardRequest } from "../../domain/entity/segment_flash_card_request";
 import { toFlashCardDto } from "../model/segment_flash_card_req_dto";
 import { toFlashcardEntity } from "../model/flash_card_dto";
-import { toSegmentEntity } from "../model/segment_dto";
+import { extractFlashcards, toSegmentEntity } from "../model/segment_dto";
 import type { FlashCard } from "../../domain/entity/flashcard_entity";
+import type { FlashCardDetials } from "../../domain/entity/flash_card_response";
 
 
 export class FlashCardDataSourceImp implements FlashCardDataSoruce {
@@ -16,16 +17,23 @@ export class FlashCardDataSourceImp implements FlashCardDataSoruce {
   constructor(service: FlashCardService) {
     this.service = service;
   }
-  async getVideoFlashCard(videoId: number): Promise<ApiResult<FlashCard>> {
+  async getVideoFlashCard(videoId: number): Promise<ApiResult<FlashCardDetials[]>> {
      try{
   
       const response=await this.service.getVideoFlashCards(videoId)
-      const resonseEntity=toSegmentEntity(response.segments)
+     // console.log("flash cards is...................",response)
+    // console.log("response segments",response.segments)
+      // const resonseEntity=(response.segments.map((segment)=>{
+      //   return toSegmentEntity(segment)
+      // }))
+      const responseFlashCards=extractFlashcards(response.segments)
+      
+      //console.log("flash cards after transform is...................",resonseEntity)
      
     
       return{
         success:true,
-        data:resonseEntity
+        data:responseFlashCards
 
       }
 
@@ -35,16 +43,17 @@ export class FlashCardDataSourceImp implements FlashCardDataSoruce {
       return { success: false, error: message };
     }
   }
-  async getSegmentFlashCard(req: SegmentFlashCardRequest): Promise<ApiResult<FlashCard>> {
+  async getSegmentFlashCard(req: SegmentFlashCardRequest): Promise<ApiResult<FlashCardDetials[]>> {
     try{
   
       const response=await this.service.getSegmentsFlashCards(toFlashCardDto(req))
       const resonseEntity=toSegmentEntity(response)
+      const responseFlashCards=resonseEntity.flashcards
      
     
       return{
         success:true,
-        data:resonseEntity
+        data:responseFlashCards
 
       }
 

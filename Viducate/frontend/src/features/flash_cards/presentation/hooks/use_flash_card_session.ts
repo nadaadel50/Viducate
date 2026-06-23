@@ -1,0 +1,144 @@
+import { useEffect, useState } from "react";
+import { useNavigate, useParams } from "react-router";
+import { STORAGE_KEYS } from "../../../../core/constants";
+import type { FlashcardAnswer } from "../../domain/entity/flash_card_answer";
+import type { FlashCardDetials } from "../../domain/entity/flash_card_response";
+import type { Difficulty } from "../../domain/entity/difficaulty";
+import { DIFFICULTY_TIME } from "../../domain/entity/difficaulty_time";
+import { useSegmentFlashcards } from "./use_segment_flash_cards";
+import { useVideoFlashcards } from "./use_video_flash_cards";
+
+const STORAGE_KEY = (id: number) => `${STORAGE_KEYS.flashcardSession}_${id}`;
+
+export function useFlashcardSession() {
+  const { segmentId } = useParams<{ segmentId: string }>(); // get id from parms
+  const segmentIdNumber = Number(segmentId);
+  const navigate = useNavigate();
+
+  const [answers, setAnswers] = useState<FlashcardAnswer[]>([]); // user answers in flashcards
+  const [currentIndex, setCurrentIndex] = useState(0); // curent flashcard
+  const [isFlipped, setIsFlipped] = useState(false); // is this flashcard flipped or not
+  const [isFinished, setIsFinished] = useState(false); // is user finish the flash cards to display his progress
+  const [reviewCards, setReviewCards] = useState<FlashCardDetials[] | null>(
+    null,
+  ); // the review cards user need to see
+  const [hydrated, setHydrated] = useState(false); // if data get from local storage or not
+
+  const segmentQuery = useSegmentFlashcards(segmentIdNumber!);
+  const videoQuery = useVideoFlashcards();
+
+  
+  const { data: flashcardsData, isLoading, error } = segmentIdNumber
+    ? segmentQuery
+    : videoQuery;
+  // LOAD session
+  useEffect(() => {
+    setCurrentIndex(0);
+    setIsFlipped(false);
+    setIsFinished(false);
+    setReviewCards(null);
+    setAnswers([]);
+
+    const saved = localStorage.getItem(STORAGE_KEY(segmentIdNumber));
+    if (saved) {
+      const parsed = JSON.parse(saved);
+      setAnswers(parsed.answers ?? []);
+      setCurrentIndex(parsed.currentIndex ?? 0);
+      setReviewCards(parsed.reviewCards ?? null);
+      setIsFinished(parsed.isFinished ?? false);
+    }
+
+    setHydrated(true);
+  }, [segmentIdNumber]);
+
+  // SAVE session
+  useEffect(() => {
+    if (!hydrated || !flashcardsData?.length) return;
+
+    localStorage.setItem(
+      STORAGE_KEY(segmentIdNumber),
+      JSON.stringify({
+        segmentId: segmentIdNumber,
+        answers,
+        currentIndex,
+        isFinished,
+        reviewCards,
+      }),
+    );
+  }, [
+    answers,
+    currentIndex,
+    isFinished,
+    reviewCards,
+    // segmentIdNumber,
+    // hydrated,
+  ]);
+
+  const activeCards = reviewCards ?? flashcardsData ?? [];
+  const totalCards = activeCards.length;
+  const safeIndex = currentIndex >= totalCards ? 0 : currentIndex;
+  const currentCard = activeCards[safeIndex];
+
+  const handleAnswer = (difficulty: Difficulty) => {
+    if (!currentCard) return;
+
+    const newAnswer: FlashcardAnswer = {
+      cardId: currentCard.flashcard_id,
+      selectedDifficulty: difficulty,
+      nextReviewAt: DIFFICULTY_TIME[difficulty] + Date.now(),
+    };
+
+    setAnswers((prev) => {
+      const exists = prev.some((a) => a.cardId === newAnswer.cardId);
+      return exists
+        ? prev.map((a) => (a.cardId === newAnswer.cardId ? newAnswer : a))
+        : [...prev, newAnswer];
+    });
+
+    setIsFlipped(false);
+    setTimeout(() => {
+      setCurrentIndex((prev) => {
+        const next = prev + 1;
+        if (next >= totalCards) setIsFinished(true);
+        return next >= totalCards ? prev : next;
+      });
+    }, 350);
+  };
+
+  const resetSession = (dueCards?: FlashcardAnswer[]) => {
+    if (dueCards?.length) {
+      const dueIds = new Set(dueCards.map((d) => d.cardId));
+      setReviewCards(
+        flashcardsData!.filter((c: FlashCardDetials) =>
+          dueIds.has(c.flashcard_id),
+        ),
+      );
+      setCurrentIndex(0);
+      setIsFinished(false);
+    } else {
+      setAnswers([]);
+      setReviewCards(null);
+      setCurrentIndex(0);
+      setIsFinished(false);
+      localStorage.removeItem(STORAGE_KEY(segmentIdNumber));
+      navigate(-1);
+    }
+  };
+
+  return {
+    flashcardsData,
+    isLoading,
+    error,
+    answers,
+    currentIndex,
+    isFlipped,
+    isFinished,
+    totalCards,
+    currentCard,
+    setIsFlipped,
+    handleAnswer,
+    resetSession,
+  };
+}
+
+

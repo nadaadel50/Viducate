@@ -2,7 +2,6 @@ import { useEffect, useState } from "react";
 import CompleteSessionAnimation from "../../../../core/animations/complete_ani";
 import type { FlashcardAnswer } from "../../domain/entity/flash_card_answer";
 import { StatCard } from "../widgets/state_card";
-import { useToast } from "../../../../core/hooks/useToastMessage";
 
 type Props = {
   answers: FlashcardAnswer[];
@@ -10,7 +9,7 @@ type Props = {
 };
 
 export function FinishSessionCard({ answers, onEndSession }: Props) {
- const {showToast}=useToast()
+ 
 
   const formatTime = (seconds: number) => {
     const m = Math.floor(seconds / 60);
