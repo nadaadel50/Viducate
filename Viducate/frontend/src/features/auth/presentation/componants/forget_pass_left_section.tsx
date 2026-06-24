@@ -1,6 +1,6 @@
 import { CustomInput } from "../../../../core/componants/custom_input";
 import { CustomButton } from "../../../../core/componants/custum_btn";
-import { AuthMainText } from "./auth_text_section";
+import { MainText } from "../../../../core/componants/text_section";
 import { useForgetPassword } from "../hooks/use_forget_password";
 import CustumBtnLoader from "../../../../core/componants/custum_btn_loader";
 import { CustumError } from "../../../../core/componants/custum_error";
@@ -23,7 +23,7 @@ export function ForgetPassLeftSection() {
     <div className="w-full relative ">
       {apiError && <CustumError apiError={apiError} clearError={clearError} />}
 
-      <AuthMainText
+      <MainText
         bigTitle={translation("auth.forgetPassword.title")}
         smallTitle={translation("auth.forgetPassword.subtitle")}
       />

@@ -1,6 +1,6 @@
 import { ExternalLink, Mail } from "lucide-react";
 import { COLORS } from "../../../../core/constants";
-import { AuthMainText } from "./auth_text_section";
+import { MainText } from "../../../../core/componants/text_section";
 import { CustomButton } from "../../../../core/componants/custum_btn";
 import { ClickToResend } from "./click_to_resend";
 import { FormattedMessage, useIntl } from "react-intl";
@@ -29,7 +29,7 @@ export function SendedEmailLeftSection() {
 
       {/* Smaller spacing */}
       <div className="mt-4 mb-6 flex flex-col items-center text-center">
-        <AuthMainText
+        <MainText
           bigTitle={intl.formatMessage({ id: "auth.checkEmail.title" })}
           smallTitle={intl.formatMessage({ id: "auth.checkEmail.subtitle" })}
         />

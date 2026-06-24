@@ -1,4 +1,4 @@
-import { AuthMainText } from "./auth_text_section";
+import { MainText } from "../../../../core/componants/text_section";
 import { CustomButton } from "../../../../core/componants/custum_btn";
 import { PasswordInputsSection } from "./password_input_section";
 import { PasswordRequirements } from "./password_requirment";
@@ -31,7 +31,7 @@ const { translation } = useT();
 
     {apiError && <CustumError apiError={apiError} clearError={clearError} />}
 
-    <AuthMainText
+    <MainText
       bigTitle={translation("auth.resetPassword.title") }
       smallTitle={translation("auth.resetPassword.subtitle" )}
     />

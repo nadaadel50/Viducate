@@ -1,11 +1,12 @@
-import { FONT_STYLES } from "../../../../core/constants/fonts";
+import type { ReactNode } from "react";
+import { FONT_STYLES } from "../constants/fonts";
 
 type MainTextProps = {
-  bigTitle: string;
-  smallTitle: string;
+  bigTitle: ReactNode;
+  smallTitle: ReactNode;
 };
 
-export function AuthMainText({
+export function MainText({
   bigTitle,
   smallTitle,
 }: MainTextProps) {
@@ -25,8 +26,7 @@ export function AuthMainText({
       <p
         className={`
           ${FONT_STYLES.subtitle}
-          text-[#636988]
-          dark:text-gray-300
+          text-[#767C9B]
         `}
       >
         {smallTitle}
@@ -35,4 +35,4 @@ export function AuthMainText({
   );
 }
 
-export default AuthMainText;
+export default MainText;

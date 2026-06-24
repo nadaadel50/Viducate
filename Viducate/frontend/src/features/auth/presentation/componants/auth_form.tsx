@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 import { FormattedMessage, useIntl } from "react-intl";
 import { CustomInput } from "../../../../core/componants/custom_input";
 import { CustomButton } from "../../../../core/componants/custum_btn";
-import { AuthMainText } from "./auth_text_section";
+import { MainText } from "../../../../core/componants/text_section";
 import GoogleIcon from "../../../../assets/Images/Google.png";
 import { COLORS } from "../../../../core/constants/colors";
 import { FONT_STYLES } from "../../../../core/constants/fonts";
@@ -63,7 +63,7 @@ export function AuthForm({ type }: AuthFormProps) {
         <CustumError apiError={serverError} clearError={clearError} />
       )}
 
-      <AuthMainText
+      <MainText
         bigTitle={intl.formatMessage({
           id: isLogin ? "auth.welcomeBack" : "auth.createAccount",
         })}
