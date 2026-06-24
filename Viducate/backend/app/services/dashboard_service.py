@@ -9,7 +9,7 @@ from app.models.topic_segment import TopicSegment
 logger = logging.getLogger(__name__)
 
 # Storage limits
-MAX_DB_STORAGE_BYTES = 50 * 1024 * 1024  # 50 MB
+MAX_DB_STORAGE_BYTES = 1024 * 1024 * 1024  # 1 GB
 MAX_R2_STORAGE_BYTES = 1 * 1024 * 1024 * 1024  # 1 GB per user
 
 

@@ -24,6 +24,7 @@ from app.schemas.quiz_result_schema import (
 from app.repositories.video_repository import VideoRepository
 from app.models.quiz import UserQuizResult
 from app.schemas.quiz_schema import QuizGenerateRequest, QuizResponse, QuizSecureResponse
+from app.repositories.video_repository import VideoRepository
 
 router = APIRouter(prefix="/quiz", tags=["Quiz"])
 security = HTTPBearer()
@@ -146,7 +147,8 @@ def get_quiz(
     description=(
         "Submits answers (question_id + user_answer only), grades them "
         "server-side against the stored correct_answer, calculates an "
-        "integer score (0-100), and saves/overwrites the result."
+        "integer score (0-100), and saves/overwrites the result. "
+        "Returns full question details with correct answers for frontend review."
     ),
 )
 def submit_quiz_results(
@@ -165,7 +167,6 @@ def submit_quiz_results(
             detail="Quiz not found",
         )
 
-    from app.repositories.video_repository import VideoRepository
     video = VideoRepository(db).get_by_id(quiz.video_id)
     if not video or video.user_id != current_user.id:
         raise HTTPException(
@@ -173,21 +174,27 @@ def submit_quiz_results(
             detail="Not authorized",
         )
 
-    # ── Grade server-side: build question_id → correct_answer map ─────────────
+    # ── Build lookup maps ─────────────────────────────────────────────────────
+    question_map = {q.question_id: q for q in quiz.questions}
+
     correct_answer_map = {
         q.question_id: q.correct_answer.strip().lower()
         for q in quiz.questions
     }
 
-    # ── Calculate score (correctness decided here, not by the client) ─────────
-    total = len(request.answers)
+    # ── Build a map of user's submitted answers ───────────────────────────────
+    user_answer_map = {
+        a.question_id: (a.user_answer or "").strip().lower()
+        for a in request.answers
+    }
+
+    # ── Grade server-side ─────────────────────────────────────────────────────
     correct_count = 0
     answers_payload = []
 
     for a in request.answers:
         correct_answer = correct_answer_map.get(a.question_id)
         if correct_answer is None:
-            # Question doesn't belong to this quiz — ignore/skip it
             continue
 
         submitted = (a.user_answer or "").strip().lower()
@@ -201,17 +208,16 @@ def submit_quiz_results(
             "is_correct":  is_correct,
         })
 
-    # Recompute total based on valid answers actually graded
     total = len(answers_payload)
     wrong_count = total - correct_count
     score = int(round((correct_count / total) * 100)) if total > 0 else 0
 
-    # ── Upsert result (overwrite if exists, increment trials) ─────────────────
+    # ── Upsert result ─────────────────────────────────────────────────────────
     existing = (
         db.query(UserQuizResult)
         .filter(
             UserQuizResult.quiz_id == quiz_id,
-            UserQuizResult.user_id == current_user.id
+            UserQuizResult.user_id == current_user.id,
         )
         .first()
     )
@@ -252,6 +258,36 @@ def submit_quiz_results(
             f"user={current_user.id} | score={score}"
         )
 
+    # ── Build full question results for response ───────────────────────────────
+    question_results = []
+    for q in quiz.questions:
+        user_answer = user_answer_map.get(q.question_id)
+        graded = next(
+            (a for a in answers_payload if a["question_id"] == q.question_id),
+            None,
+        )
+        is_correct = graded["is_correct"] if graded else False
+
+        question_results.append({
+            "question_id":         q.question_id,
+            "question_text":       q.question_text,
+            "choices": {
+                "a": q.choice_a,
+                "b": q.choice_b,
+                "c": q.choice_c,
+                "d": q.choice_d,
+            },
+            "user_answer":         user_answer,
+            "correct_answer":      q.correct_answer,
+            "correct_answer_text": q.correct_answer_text,
+            "is_correct":          is_correct,
+            "explanation":         q.explanation,
+            "video_timestamp":     q.video_timestamp,
+            "timestamp_label":     q.timestamp_label,
+            "segment_id":          q.segment_id,
+            "concept":             q.concept,
+        })
+
     return {
         "quiz_id":       quiz_id,
         "correct_count": correct_count,
@@ -260,4 +296,5 @@ def submit_quiz_results(
         "score":         score,
         "trials":        trials,
         "is_new":        is_new,
+        "questions":     question_results,
     }
