@@ -1,6 +1,7 @@
 import { AlertCircle, Check, Eye, EyeOff } from "lucide-react";
 import { useState } from "react";
 import { COLORS } from "../constants/colors";
+import { FONT_STYLES } from "../constants/fonts";
 
 type CustomInputProps = {
   label: string;
@@ -32,17 +33,21 @@ export function CustomInput({
   const inputType =
     isPasswordField && showPassword ? "text" : type;
 
- const borderColor = isError
-  ? COLORS.state.error
-  : isSuccess
-  ? COLORS.state.success
-  : isFocused
-  ? COLORS.border.focus
-  : COLORS.border.default;
+  const borderColor = isError
+    ? COLORS.state.error
+    : isSuccess
+    ? COLORS.state.success
+    : isFocused
+    ? COLORS.border.focus
+    : COLORS.border.default;
 
   return (
-    <div className="w-full py-2 font-display">
-      <p className="text-sm font-medium mb-2 ">{label}</p>
+    <div className="w-full py-1 mb-2 font-display">
+      <label
+        className={`${FONT_STYLES.subtitle} block mb-1.5`}
+      >
+        {label}
+      </label>
 
       <div className="relative">
         <input
@@ -53,20 +58,30 @@ export function CustomInput({
           style={{ borderColor }}
           onBlur={() => setIsFocused(false)}
           onFocus={() => setIsFocused(true)}
-          className="w-full h-12 px-4 pr-12 rounded-xl border-2 transition-all focus:outline-none "
+          className={`
+            w-full
+            h-10
+            px-3
+            md:px-4
+            pr-10
+            ${FONT_STYLES.body}
+            rounded-lg
+            border-2
+            transition-all
+            focus:outline-none
+          `}
         />
 
-        {/* Right Icon */}
         <div className="absolute right-3 top-1/2 -translate-y-1/2 flex items-center">
-          {(isError&&!isPasswordField) ? (
+          {isError && !isPasswordField ? (
             <AlertCircle
-              size={18}
+              size={16}
               style={{ color: COLORS.state.error }}
             />
           ) : isSuccess ? (
             <Check
-              size={18}
-              className="text-white rounded-full p-1"
+              size={16}
+              className="text-white rounded-full p-0.5"
               style={{ backgroundColor: COLORS.state.success }}
             />
           ) : isPasswordField ? (
@@ -76,9 +91,9 @@ export function CustomInput({
               className="focus:outline-none cursor-pointer"
             >
               {showPassword ? (
-                <EyeOff size={18} />
+                <EyeOff size={16} />
               ) : (
-                <Eye size={18} />
+                <Eye size={16} />
               )}
             </button>
           ) : null}
@@ -87,7 +102,7 @@ export function CustomInput({
 
       {isError && !isEmpty && (
         <p
-          className="text-sm mt-2"
+          className={`${FONT_STYLES.caption} mt-1`}
           style={{ color: COLORS.state.error }}
         >
           {error}

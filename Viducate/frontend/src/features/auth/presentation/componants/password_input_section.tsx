@@ -1,5 +1,5 @@
-import { CustomInput } from "../../../../../core/componants/custom_input";
-import { useT } from "../../../../../core/hooks/useTranslation";
+import { CustomInput } from "../../../../core/componants/custom_input";
+import { useT } from "../../../../core/hooks/useTranslation";
 
 type Props = {
   password: string;

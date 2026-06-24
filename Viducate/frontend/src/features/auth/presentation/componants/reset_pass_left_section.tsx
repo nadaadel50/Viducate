@@ -1,11 +1,11 @@
-import { AuthMainText } from "../../componants/auth_text_section";
-import { CustomButton } from "../../../../../core/componants/custum_btn";
+import { AuthMainText } from "./auth_text_section";
+import { CustomButton } from "../../../../core/componants/custum_btn";
 import { PasswordInputsSection } from "./password_input_section";
 import { PasswordRequirements } from "./password_requirment";
-import { CustumError } from "../../../../../core/componants/custum_error";
-import { useResetPassword } from "../hooks/useResetPassword";
-import { useT } from "../../../../../core/hooks/useTranslation";
-import CustumBtnLoader from "../../../../../core/componants/custum_btn_loader";
+import { CustumError } from "../../../../core/componants/custum_error";
+import { useResetPassword } from "../hooks/use_reset_password";
+import { useT } from "../../../../core/hooks/useTranslation";
+import CustumBtnLoader from "../../../../core/componants/custum_btn_loader";
 
 
 export function ResetPasswordLeftSection() {
@@ -27,7 +27,7 @@ const { translation } = useT();
   } = useResetPassword();
 
  return (
-  <div className="w-full relative pt-18 flex flex-col justify-center items-center pr-16">
+  <div className="w-full relative pt-18 flex flex-col justify-center items-center ">
 
     {apiError && <CustumError apiError={apiError} clearError={clearError} />}
 

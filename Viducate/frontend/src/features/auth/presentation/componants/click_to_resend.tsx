@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
-import { COLORS } from "../../../../../core/constants";
-import { useT } from "../../../../../core/hooks/useTranslation";
+import { COLORS } from "../../../../core/constants";
+import { useT } from "../../../../core/hooks/useTranslation";
 
 type ClickToResendProps={
   handleRestLink: (emailSended: string) => Promise<void>

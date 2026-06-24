@@ -1,10 +1,10 @@
 import { useState } from "react";
 import { useNavigate, useSearchParams } from "react-router-dom";
-import { resetPassUseCase } from "../../../../../core/di/auth_container";
-import { ResetPasswordRequest } from "../../../domain/entity/reset_password_request";
-import { goToSuccessResetPassword } from "../../../../../core/navigation/navigation";
-import { useApiError } from "../../hooks/use_api_error";
-import { useT } from "../../../../../core/hooks/useTranslation";
+import { resetPassUseCase } from "../../../../core/di/auth_container";
+import { ResetPasswordRequest } from "../../domain/entity/reset_password_request";
+import { goToSuccessResetPassword } from "../../../../core/navigation/navigation";
+import { useApiError } from "./use_api_error";
+import { useT } from "../../../../core/hooks/useTranslation";
 
 export function useResetPassword() {
 
