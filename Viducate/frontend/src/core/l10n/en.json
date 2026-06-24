@@ -38,7 +38,7 @@
   "auth.forgetPasswordPage.description": " It only takes a few seconds to get back on track",
 
    "auth.emailSentPage.titleFirst": "We’ve sent a password reset link",
-  "auth.emailSentPage.titleColored": "to your email address",
+  "auth.emailSentPage.titleColored": " to your email address",
   "auth.emailSentPage.description": "It only takes a few seconds to get back on track",
 
   "auth.resetPassword.errors.passwordMismatch": "Passwords do not match",

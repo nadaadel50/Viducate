@@ -26,7 +26,7 @@ export function CustomButton({
       }}
       className="
         w-full
-        h-10 sm:h-11
+        h-10
         px-4
         rounded-lg
         text-sm

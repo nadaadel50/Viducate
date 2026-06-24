@@ -1,6 +1,7 @@
 import { AlertCircle, Check, Eye, EyeOff } from "lucide-react";
 import { useState } from "react";
 import { COLORS } from "../constants/colors";
+import { FONT_STYLES } from "../constants/fonts";
 
 type CustomInputProps = {
   label: string;
@@ -41,10 +42,12 @@ export function CustomInput({
     : COLORS.border.default;
 
   return (
-    <div className="w-full py-1.5 mb-2 font-display">
-      <p className="text-xs sm:text-sm font-medium mb-1.5">
+    <div className="w-full py-1 mb-2 font-display">
+      <label
+        className={`${FONT_STYLES.subtitle} block mb-1.5`}
+      >
         {label}
-      </p>
+      </label>
 
       <div className="relative">
         <input
@@ -55,17 +58,18 @@ export function CustomInput({
           style={{ borderColor }}
           onBlur={() => setIsFocused(false)}
           onFocus={() => setIsFocused(true)}
-          className="
+          className={`
             w-full
-            h-10 sm:h-11
-            px-3 sm:px-4
+            h-10
+            px-3
+            md:px-4
             pr-10
-            text-xs sm:text-sm
+            ${FONT_STYLES.body}
             rounded-lg
             border-2
             transition-all
             focus:outline-none
-          "
+          `}
         />
 
         <div className="absolute right-3 top-1/2 -translate-y-1/2 flex items-center">
@@ -98,7 +102,7 @@ export function CustomInput({
 
       {isError && !isEmpty && (
         <p
-          className="text-xs mt-1"
+          className={`${FONT_STYLES.caption} mt-1`}
           style={{ color: COLORS.state.error }}
         >
           {error}
