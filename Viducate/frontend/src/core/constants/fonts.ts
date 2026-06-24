@@ -5,10 +5,10 @@ export const FONT_STYLES = {
   pageTitle: "text-3xl lg:text-3xl font-black",
 
   // Section Titles
-  sectionTitle: "text-lg font-bold",
+  sectionTitle: " text-xl md:text-2xl font-bold",
 
   // Cards & Modal Titles
-  cardTitle: "text-base md:text-lg font-semibold",
+  cardTitle: "text-lg md:text-xl font-semibold",
 
   // Form Labels
   label: "text-sm font-medium",

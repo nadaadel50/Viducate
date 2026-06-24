@@ -30,7 +30,7 @@ export function UploadSection(props: UploadSectionProps) {
       </div>
 
       <div className="flex flex-col items-center text-center mt-4 mb-4">
-        <h2 className={`${FONT_STYLES.sectionTitle} text-gray-900`}>
+        <h2 className={`${FONT_STYLES.cardTitle} text-gray-900`}>
           Drag & drop video
         </h2>
 

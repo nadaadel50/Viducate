@@ -5,12 +5,10 @@ import { UserCard } from "../widgets/user_card";
 import { LoadingScreen } from "../../../../core/widgets/advanced_loading";
 import { LayoutDashboard } from "lucide-react";
 import { ErrorMessage } from "../../../../core/widgets/error";
-import {} from "../context/dashboard_context";
 import { useDashboard } from "../hooks/use_dashboard";
 import { ContinueLearningPart } from "../widgets/continue_learning/continue_learning_part";
 import { StartUpload } from "../widgets/start_upload";
 import { DeleteModal } from "../../../../core/componants/delete_modal";
-
 import { Toast } from "../../../../core/componants/toast_message";
 import { useDeleteVideo } from "../hooks/use_delete_video";
 
@@ -23,6 +21,7 @@ export function DashboardPage() {
     openDeleteMessage,
     selectedVideo,
   } = useDashboard();
+
   const { handleDelete, toast, clearToast } = useDeleteVideo();
 
   if (isLoading) {
@@ -35,47 +34,51 @@ export function DashboardPage() {
       />
     );
   }
-  if (error) return <ErrorMessage errorMessage={error.message} />;
 
-  if (data) {
-    return (
-      <div
-        style={{ background: COLORS.background.moreLight }}
-        className="flex flex-col w-full py-5 px-20 font-display min-h-screen gap-10 "
-      >
-        {toast && (
-          <Toast
-            message={toast.message}
-            type={toast.type}
-            onClose={() => clearToast}
-          />
-        )}
-        {/* user card */}
+  if (error) {
+    return <ErrorMessage errorMessage={error.message} />;
+  }
+
+  if (!data) return null;
+
+  return (
+    <div
+      style={{ background: COLORS.background.moreLight }}
+      className="flex flex-col w-full min-h-screen font-display px-4 sm:px-6 md:px-8 lg:px-12 xl:px-16 py-4 md:py-5 gap-6 md:gap-8 lg:gap-10"
+    >
+      {toast && (
+        <Toast
+          message={toast.message}
+          type={toast.type}
+          onClose={clearToast}
+        />
+      )}
+
+      <div className="w-full max-w-7xl mx-auto flex flex-col gap-6 md:gap-8 lg:gap-10">
+        {/* User Card */}
         <UserCard />
 
-        {/* 3 cards */}
-
+        {/* Progress Section */}
         <ProgressPart />
 
-        {/* contiune learning */}
-
+        {/* Continue Learning / Start Upload */}
         {data.continue_learning?.length > 0 ? (
           <ContinueLearningPart />
         ) : (
           <StartUpload />
         )}
-
-        <DeleteModal
-          open={openDeleteMessage}
-          title="Delete Video"
-          description="Are you sure you want to delete this Video? This action cannot be undone."
-          onClose={() => handleOpenDeleteMessage(false)}
-          onConfirm={() => {
-            handleDelete(selectedVideo?.videoId!);
-            handleOpenDeleteMessage(false);
-          }}
-        />
       </div>
-    );
-  }
+
+      <DeleteModal
+        open={openDeleteMessage}
+        title="Delete Video"
+        description="Are you sure you want to delete this Video? This action cannot be undone."
+        onClose={() => handleOpenDeleteMessage(false)}
+        onConfirm={() => {
+          handleDelete(selectedVideo?.videoId!);
+          handleOpenDeleteMessage(false);
+        }}
+      />
+    </div>
+  );
 }
