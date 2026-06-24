@@ -1,6 +1,44 @@
-import { useEffect, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import { StuckReasons, type StuckReason } from "../types/stuck_reason";
 
+function detectRepeatedSeek(events: { time: number; timestamp: number }[]) {
+  const now = Date.now();
+  const WINDOW_MS = 180_000;
+  const POSITION_THRESHOLD_S = 30;
+  const MIN_OCCURRENCES = 3;
+
+  const recent = events.filter((e) => now - e.timestamp < WINDOW_MS);
+
+  const clusters = new Map<number, { time: number; timestamp: number }[]>();
+
+  for (const event of recent) {
+    const key = [...clusters.keys()].find(
+      (k) => Math.abs(k - event.time) < POSITION_THRESHOLD_S,
+    );
+
+    if (key !== undefined) {
+      clusters.get(key)!.push(event);
+    } else {
+      clusters.set(event.time, [event]);
+    }
+  }
+
+  for (const group of clusters.values()) {
+    if (group.length < MIN_OCCURRENCES) {
+      continue;
+    }
+
+    const timestamps = group.map((e) => e.timestamp).sort((a, b) => a - b);
+
+    const spread = timestamps[timestamps.length - 1] - timestamps[0];
+
+    if (spread > 5000) {
+      return true;
+    }
+  }
+
+  return false;
+}
 export function useVideoAnalytics(
   isPlaying: boolean,
   topicDuration: number,
@@ -11,10 +49,11 @@ export function useVideoAnalytics(
     [],
   );
   const [showPopup, setShowPopup] = useState(false);
-  const [lastPopupTime, setLastPopupTime] = useState(0);
-  const [stuckReason, setStuckReason] = useState<StuckReason>(StuckReasons.DEAFULT);
+  const lastPopupTimeRef = useRef(0);
+  const [stuckReason, setStuckReason] = useState<StuckReason>(
+    StuckReasons.DEAFULT,
+  );
   const [timeSpent, setTimeSpent] = useState(0);
-  
 
   useEffect(() => {
     const interval = setInterval(() => {
@@ -31,29 +70,11 @@ export function useVideoAnalytics(
     }
   }, [timeSpent, topicDuration, videoDuration]);
 
-  function detectRepeatedSeek(events: { time: number; timestamp: number }[]) {
-    const now = Date.now();
-    const lastMinute = events.filter((e) => now - e.timestamp < 60000);
-
-    const clusters: number[][] = [];
-
-    for (const event of lastMinute) {
-      const existing = clusters.find((c) =>
-        c.some((t) => Math.abs(t - event.time) < 30),
-      );
-
-      if (existing) existing.push(event.time);
-      else clusters.push([event.time]);
-    }
-
-    return clusters.some((c) => c.length >= 3);
-  }
-
   function triggerStuck(reason: StuckReason) {
-    if (Date.now() - lastPopupTime < 120000) return;
+    if (Date.now() - lastPopupTimeRef.current < 120000) return;
 
     setShowPopup(true);
-    setLastPopupTime(Date.now());
+    lastPopupTimeRef.current = Date.now();
     setStuckReason(reason);
   }
 
@@ -82,6 +103,6 @@ export function useVideoAnalytics(
     setShowPopup,
     triggerStuck,
     addSeekEvent,
-    setEvents
+    setEvents,
   };
 }
