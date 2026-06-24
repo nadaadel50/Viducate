@@ -9,9 +9,9 @@ import GoogleIcon from "../../../../assets/Images/Google.png";
 import { COLORS } from "../../../../core/constants/colors";
 import { FONT_STYLES } from "../../../../core/constants/fonts";
 import { AppRoutesNames as routes } from "../../../../app/routers/routes";
-import { useAuthForm } from "../hooks/use_auth_form";
 import CustumBtnLoader from "../../../../core/componants/custum_btn_loader";
 import { CustumError } from "../../../../core/componants/custum_error";
+import { useAuthForm } from "../hooks/use_auth_form";
 
 type AuthFormProps = {
   type: "login" | "signup";
