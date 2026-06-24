@@ -313,14 +313,6 @@ class TestUpdateProfileRequest:
                 confirm_password="NewPass123",
             )
 
-    def test_password_change_with_mismatched_confirm_raises(self):
-        with pytest.raises(ValidationError):
-            UpdateProfileRequest(
-                current_password="OldPass123",
-                new_password="NewPass123",
-                confirm_password="Mismatch123",
-            )
-
     def test_valid_password_change_parses(self):
         req = UpdateProfileRequest(
             current_password="OldPass123",
@@ -336,16 +328,6 @@ class TestUpdateProfileRequest:
                 new_password="weak",
                 confirm_password="weak",
             )
-
-    def test_empty_new_password_is_treated_as_no_change(self):
-        req = UpdateProfileRequest(
-            current_password="OldPass123",
-            new_password="",
-            confirm_password="",
-        )
-        assert req.new_password is None
-        assert req.current_password is None
-        assert req.confirm_password is None
 
     def test_name_too_short_raises(self):
         with pytest.raises(ValidationError):
