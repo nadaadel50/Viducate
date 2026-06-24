@@ -1,8 +1,8 @@
 import { ForgetPassLeftSection } from "../componants/forget_pass_left_section";
-import AuthLayout from "../../layouts/AuthLayout";
-import { RightSection } from "../../componants/right_section";
-import ForgetPassAnimaion from "../../../../../core/animations/forgetpass_ani";
-import { useT } from "../../../../../core/hooks/useTranslation";
+import AuthLayout from "../layouts/auth_layout";
+import { RightSection } from "../componants/right_section";
+import ForgetPassAnimaion from "../../../../core/animations/forgetpass_ani";
+import { useT } from "../../../../core/hooks/useTranslation";
 
 export function ForgetPasswordPage() {
   const { translation } = useT();
@@ -10,9 +10,9 @@ export function ForgetPasswordPage() {
   return (
     <AuthLayout
       LeftContent={
-        <div className="pr-16">
+        
           <ForgetPassLeftSection />
-        </div>
+       
       }
       RightContent={
         <RightSection

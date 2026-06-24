@@ -34,8 +34,8 @@
 
 
    "auth.forgetPasswordPage.titleFirst": "Securely reset your password",
-  "auth.forgetPasswordPage.titleColored": "and continue your learning journey",
-  "auth.forgetPasswordPage.description": "It only takes a few seconds to get back on track",
+  "auth.forgetPasswordPage.titleColored": " and continue your learning journey",
+  "auth.forgetPasswordPage.description": " It only takes a few seconds to get back on track",
 
    "auth.emailSentPage.titleFirst": "We’ve sent a password reset link",
   "auth.emailSentPage.titleColored": "to your email address",

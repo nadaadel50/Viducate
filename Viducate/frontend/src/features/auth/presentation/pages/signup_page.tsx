@@ -1,6 +1,6 @@
 import React from "react";
 import { useIntl, FormattedMessage } from "react-intl";
-import AuthLayout from "../layouts/AuthLayout";
+import AuthLayout from "../layouts/auth_layout";
 import { AuthForm } from "../componants/auth_form";
 import { RightSection } from "../componants/right_section";
 import signUpPhoto from "../../../../assets/Images/signUpPhoto.jpeg";

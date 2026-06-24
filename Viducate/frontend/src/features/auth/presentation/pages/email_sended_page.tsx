@@ -1,8 +1,8 @@
-import EmailSentAnimation from "../../../../../core/animations/email_sent_ani";
-import { RightSection } from "../../componants/right_section";
-import AuthLayout from "../../layouts/AuthLayout";
+import EmailSentAnimation from "../../../../core/animations/email_sent_ani";
+import { RightSection } from "../componants/right_section";
+import AuthLayout from "../layouts/auth_layout";
 import { SendedEmailLeftSection } from "../componants/sended_email_left_section";
-import { useT } from "../../../../../core/hooks/useTranslation";
+import { useT } from "../../../../core/hooks/useTranslation";
 
 export function EmailSendedPage() {
   const { translation } = useT();

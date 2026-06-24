@@ -1,5 +1,5 @@
 import { Check, Circle, X } from "lucide-react";
-import { useT } from "../../../../../core/hooks/useTranslation";
+import { useT } from "../../../../core/hooks/useTranslation";
 
 type Props = {
   password: string;

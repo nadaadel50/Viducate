@@ -1,8 +1,8 @@
-import LockAnimation from "../../../../../core/animations/lock_ani";
-import { RightSection } from "../../componants/right_section";
-import AuthLayout from "../../layouts/AuthLayout";
+import LockAnimation from "../../../../core/animations/lock_ani";
+import { RightSection } from "../componants/right_section";
+import AuthLayout from "../layouts/auth_layout";
 import { ResetPasswordLeftSection } from "../componants/reset_pass_left_section";
-import { useT } from "../../../../../core/hooks/useTranslation";
+import { useT } from "../../../../core/hooks/useTranslation";
 
 export function ResetPasswordPage() {
 
