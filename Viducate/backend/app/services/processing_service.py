@@ -16,6 +16,7 @@ from app.services.embedding_service import store_embeddings
 from app.services import cancellation_registry as cancel_reg
 from app.services.cancellation_registry import PipelineCancelledError
 from app.services.transcription_service import transcribe_sync
+from app.services.segmentation_service import segment_topics, SegmentationUnavailableError
 
 logger = logging.getLogger(__name__)
 
@@ -30,7 +31,9 @@ PROCESSING_STATUSES = {
     "segmenting",         # Step 4: Topic segmentation
     "completed",      # All processing done
     "cancelled",  
-    "failed",         
+    "failed",     
+    "failed_retry_tomorrow",   
+    
 }
 
 
@@ -96,7 +99,7 @@ class ProcessingJobService:
         if video.user_id != user_id:
             raise HTTPException(status_code=status.HTTP_403_FORBIDDEN, detail="Not authorized")
 
-        terminal_statuses = {"completed", "failed", "cancelled"}
+        terminal_statuses = {"completed", "failed", "failed_retry_tomorrow", "cancelled"}
         if video.processing_status in terminal_statuses:
             return {
                 "video_id": video_id,
@@ -290,6 +293,11 @@ async def run_processing_pipeline(video_id: int, language: str):
         _cleanup_partial_data(db, video_id)
 
         return
+    
+    except SegmentationUnavailableError as e:
+        logger.error(f"[Pipeline] Segmentation unavailable (overload): video_id={video_id}, error={e}")
+        VideoRepository(db).update_status(video_id, "failed_retry_tomorrow")
+
 
     except Exception as e:
         logger.error(f"[Pipeline] Failed: video_id={video_id}, error={e}")
