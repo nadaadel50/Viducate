@@ -51,7 +51,7 @@ export function AppRoutes() {
           </ProfileProvider>
         } />
         <Route path="/study-notes" element={<StudyNotesPage />} />
-        <Route element={<ProtectedRoute />}>
+        {/* <Route element={<ProtectedRoute />}> */}
           {" "}
           <Route path="/UploadVideoPage" element={<UploadVideoPage />} />
           <Route path="/ProcessingPage" element={<ProcessingPage />} />
@@ -88,7 +88,7 @@ export function AppRoutes() {
             {" "}
             {/* /WatchVideo/flashcards */}
           </Route>{" "}
-        </Route>
+        {/* </Route> */}
         <Route
           path={AppRoutesNames.sucessSendEmail}
           element={<EmailSendedPage />}

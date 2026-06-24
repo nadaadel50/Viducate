@@ -3,14 +3,36 @@ type UploadTitleProps = {
   smallTitle: string;
 };
 
-export function UploadTitle({ bigTitle, smallTitle }: UploadTitleProps) {
+export function UploadTitle({
+  bigTitle,
+  smallTitle,
+}: UploadTitleProps) {
   return (
     <div className="w-full">
       <div>
-        <h2 className="text-4xl  font-black mb-2 text-gray-900">
+        <h2
+          className="
+            text-2xl
+            sm:text-3xl
+            lg:text-4xl
+            font-black
+            mb-2
+            text-gray-900
+          "
+        >
           {bigTitle}
         </h2>
-        <p className="text-gray-500 text-lg">{smallTitle}</p>
+
+        <p
+          className="
+            text-sm
+            sm:text-base
+            lg:text-lg
+            text-gray-500
+          "
+        >
+          {smallTitle}
+        </p>
       </div>
     </div>
   );
