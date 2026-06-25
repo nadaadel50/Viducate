@@ -7,13 +7,13 @@ import { AccountSettingsForm } from "../sections/account_settings_form";
 import { PreferencesSidebar } from "../sections/preferences_sidebar";
 import { AuthContext } from "../../../auth/presentation/context/auth_context";
 import { use, useContext } from "react";
-import { LoadingScreen } from "../../../../core/componants/LoadingScreen";
 import { Brain } from "lucide-react";
 import { useGetUserData } from "../hooks/use_get_user_data";
-import { ErrorMessage } from "../../../../core/widgets/error";
+import { ErrorScreen } from "../../../../core/widgets/error";
 import { COLORS } from "../../../../core/constants";
 import { useProfileContext } from "../hooks/use_profile_context";
 import { DeleteModal } from "../../../../core/componants/delete_modal";
+import LoadingScreen from "../../../../core/widgets/loading_screen";
 
 export function ProfilePage() {
   //
@@ -32,14 +32,12 @@ export function ProfilePage() {
   if (isLoading) {
     return (
       <LoadingScreen
-        icon={<Brain />}
-        titlePrefix="Building your"
-        titleHighlight="Mind Map"
-        subtitle="Analyzing the lecture structure and organizing key concepts..."
+        smallText="Almost there..."
+        bigText="Setting up your profile"
       />
     );
   }
-  if (error) return <ErrorMessage errorMessage={error.message} />;
+  if (error) return <ErrorScreen errorMessage={error.message} />;
 
   return (
     <div

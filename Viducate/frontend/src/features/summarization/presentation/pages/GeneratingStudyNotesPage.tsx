@@ -1,10 +1,10 @@
 import { BookOpen } from 'lucide-react';
-import { LoadingScreen } from '../../../../core/componants/LoadingScreen';
 import { COLORS } from '../../../../core/constants/colors';
+import { GenerationLoadingScreen } from '../../../../core/widgets/generation_loading_screen';
 
 export function GeneratingStudyNotesPage() {
   return (
-    <LoadingScreen
+    <GenerationLoadingScreen
     
       icon={<BookOpen size={40} style={{ color: COLORS.text.white }} />}
       titlePrefix="AI is formatting"

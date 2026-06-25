@@ -2,9 +2,9 @@ import { COLORS } from "../../../../core/constants";
 
 import { ProgressPart } from "../widgets/progress/progress_part";
 import { UserCard } from "../widgets/user_card";
-import { LoadingScreen } from "../../../../core/widgets/advanced_loading";
+import { GenerationLoadingScreen } from "../../../../core/widgets/generation_loading_screen";
 import { LayoutDashboard } from "lucide-react";
-import { ErrorMessage } from "../../../../core/widgets/error";
+import { ErrorScreen } from "../../../../core/widgets/error";
 import { useDashboard } from "../hooks/use_dashboard";
 import { ContinueLearningPart } from "../widgets/continue_learning/continue_learning_part";
 import { StartUpload } from "../widgets/start_upload";
@@ -26,7 +26,7 @@ export function DashboardPage() {
 
   if (isLoading) {
     return (
-      <LoadingScreen
+      <GenerationLoadingScreen
         icon={<LayoutDashboard />}
         titlePrefix="Preparing your"
         titleHighlight="Dashboard"
@@ -36,7 +36,7 @@ export function DashboardPage() {
   }
 
   if (error) {
-    return <ErrorMessage errorMessage={error.message} />;
+    return <ErrorScreen errorMessage={error.message} />;
   }
 
   if (!data) return null;

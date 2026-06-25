@@ -15,9 +15,9 @@ import "reactflow/dist/style.css";
 import { CustomNode } from "../widgets/custom_node";
 import { useMindMapFlow } from "../hooks/use_mind_map";
 import { useCallback, useEffect } from "react";
-import { LoadingScreen } from "../../../../core/widgets/advanced_loading";
+import { GenerationLoadingScreen } from "../../../../core/widgets/generation_loading_screen";
 import { Brain } from "lucide-react";
-import ErrorMessage from "../../../../core/widgets/error";
+import ErrorScreen from "../../../../core/widgets/error";
 import { COLORS } from "../../../../core/constants";
 import { useMindMapController } from "../hooks/use_mind_map_controler";
 import { downloadMindMap } from "../utils/dowenload_mindMap";
@@ -42,7 +42,7 @@ export default function MindMapPage() {
     });
   if (isLoading) {
     return (
-      <LoadingScreen
+      <GenerationLoadingScreen
         icon={<Brain />}
         titlePrefix="Building your"
         titleHighlight="Mind Map"
@@ -50,7 +50,7 @@ export default function MindMapPage() {
       />
     );
   }
-  if (error) return <ErrorMessage errorMessage={error.message} />;
+  if (error) return <ErrorScreen errorMessage={error.message} />;
 
 
 

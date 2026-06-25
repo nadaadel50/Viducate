@@ -1,7 +1,7 @@
 import Lottie from "lottie-react";
 import error from "../../assets/animations/error.json";
 
-export function ErrorMessage({ errorMessage }: { errorMessage?: string }) {
+export function ErrorScreen({ errorMessage }: { errorMessage?: string }) {
   return (
     <div className="min-h-screen w-full flex items-center justify-center bg-white px-4 font-display">
       <div className="flex flex-col items-center justify-center gap-3 sm:gap-4 md:gap-6">
@@ -28,4 +28,4 @@ export function ErrorMessage({ errorMessage }: { errorMessage?: string }) {
   );
 }
 
-export default ErrorMessage;
+export default ErrorScreen;
