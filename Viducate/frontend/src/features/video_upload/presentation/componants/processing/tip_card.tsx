@@ -1,6 +1,6 @@
 import { Lightbulb } from "lucide-react";
 import { FormattedMessage } from "react-intl";
-import { FONT_STYLES } from "../../../../core/constants/fonts";
+import { FONT_STYLES } from "../../../../../core/constants/fonts";
 
 export const TipCard = () => {
   return (

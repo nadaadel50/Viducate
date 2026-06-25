@@ -15,7 +15,7 @@ export function UploadSection(props: UploadSectionProps) {
     <div
       onDragOver={props.handleDragOver}
       onDrop={props.handleDrop}
-      onClick={props.handleBrowseClick}
+   
       className="group w-full mt-6 md:mt-3 mb-6 md:mb-3 py-5 md:py-6 px-4 bg-gray-50 hover:bg-blue-50 border-2 border-dashed border-gray-300 rounded-xl transition-colors cursor-pointer flex flex-col items-center"
     >
       <div

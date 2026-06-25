@@ -1,7 +1,7 @@
 import { CheckCircle, RefreshCw, Circle, XCircle } from "lucide-react";
 import { FormattedMessage } from "react-intl";
-import { COLORS } from "../../../../core/constants/colors";
-import { FONT_STYLES } from "../../../../core/constants/fonts";
+import { COLORS } from "../../../../../core/constants/colors";
+import { FONT_STYLES } from "../../../../../core/constants/fonts";
 
 interface StepProps {
   labelId: string;

@@ -1,5 +1,4 @@
-import { UploadTitle } from "../componants/uplaod_title";
-import { SelectBox } from "../componants/select_box";
+import { SelectBox } from "../componants/upload/select_box";
 import { useSelectBtnHandlers } from "../hooks/use_select_btn_handlers";
 
 import { useUploadTitleInput } from "../hooks/use_upload_input_handler";

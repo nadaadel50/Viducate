@@ -1,7 +1,7 @@
 import { Link, Upload } from "lucide-react";
 import { SelectBtn } from "./select_btn";
-import type { SelectType } from "../types/types";
-import { FONT_STYLES } from "../../../../core/constants/fonts";
+import type { SelectType } from "../../types/types";
+import { FONT_STYLES } from "../../../../../core/constants/fonts";
 
 type SelectBoxProps = {
   handleSelected: (btnSelected: SelectType) => void;

@@ -1,7 +1,7 @@
-import { COLORS } from "../../../../core/constants";
-import { FONT_STYLES } from "../../../../core/constants/fonts";
+import { COLORS } from "../../../../../core/constants";
+import { FONT_STYLES } from "../../../../../core/constants/fonts";
 import type { ReactNode } from "react";
-import type { SelectType } from "../types/types";
+import type { SelectType } from "../../types/types";
 
 type SelectBtnProps = {
   isSelected: boolean;

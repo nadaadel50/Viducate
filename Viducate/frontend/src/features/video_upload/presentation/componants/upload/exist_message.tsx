@@ -1,6 +1,6 @@
 import { motion, AnimatePresence } from "framer-motion";
 import { Info, Loader2 } from "lucide-react";
-import { COLORS } from "../../../../core/constants";
+import { COLORS } from "../../../../../core/constants";
 
 interface ExistingVideoModalProps {
   show: boolean;

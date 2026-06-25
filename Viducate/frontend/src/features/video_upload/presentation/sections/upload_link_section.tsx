@@ -1,6 +1,6 @@
 import { LinkSection } from "./link_section";
-import { InputSection } from "../componants/input_section";
-import { UploadBtn } from "../componants/upload_btn";
+import { InputSection } from "../componants/upload/input_section";
+import { UploadBtn } from "../componants/upload/upload_btn";
 import { useLinkHandlers } from "../hooks/use_link_handler";
 import { useLinkTitleInput } from "../hooks/use_link_input_handler";
 
@@ -8,7 +8,7 @@ import { useNavigate } from "react-router";
 import { AppRoutesNames } from "../../../../app/routers/routes";
 import { useLearningSession } from "../../../../core/hooks/useLearningContent";
 import { useState } from "react";
-import { ExistingVideoModal } from "../componants/exist_message";
+import { ExistingVideoModal } from "../componants/upload/exist_message";
 import { useUploadLink } from "../hooks/upload_url";
 
 

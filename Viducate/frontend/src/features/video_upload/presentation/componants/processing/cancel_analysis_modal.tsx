@@ -1,7 +1,7 @@
 import { AlertTriangle} from "lucide-react";
 import { FormattedMessage } from "react-intl";
-import { COLORS } from "../../../../core/constants/colors";
-import { BaseModal } from "../../../../core/componants/base_modal";
+import { COLORS } from "../../../../../core/constants/colors";
+import { BaseModal } from "../../../../../core/componants/base_modal";
 
 type Props = {
   isOpen: boolean;

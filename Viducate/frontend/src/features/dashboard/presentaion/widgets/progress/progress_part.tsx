@@ -7,7 +7,7 @@ export function ProgressPart() {
   const stats = data?.stats;
 
   return (
-    <div className="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-3 gap-3 md:gap-4">
+    <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-3 md:gap-4">
       <ProgressCard
         iconBackGround="blue-500"
         icon="bookmark"

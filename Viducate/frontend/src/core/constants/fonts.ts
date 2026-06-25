@@ -32,7 +32,7 @@ export const FONT_STYLES = {
   button: "text-sm font-medium",
 
   // Logo
-  logo: "text-3xl md:text-2xl font-black",
+  logo: "text-3xl md:text-xl font-black",
 
   // Navigation
   navItem: "text-sm md:text-base font-medium",
