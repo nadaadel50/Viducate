@@ -7,33 +7,27 @@ export class QuizQuestionEntity {
   public readonly question_id: number;
   public readonly question_text: string;
   public readonly choices: QuizOption[];
-  public readonly correct_answer: string;
-  public readonly correct_answer_text: string;
-  public readonly explanation: string;
   public readonly video_timestamp: number;
   public readonly timestamp_label: string;
   public readonly segment_id: number;
+  public readonly concept: string;
 
   constructor(
     question_id: number,
     question_text: string,
-    choices:  QuizOption[],
-    correct_answer: string,
-    correct_answer_text: string,
-    explanation: string,
+    choices: QuizOption[],
     video_timestamp: number,
     timestamp_label: string,
     segment_id: number,
+    concept: string,
   ) {
     this.question_id = question_id;
     this.question_text = question_text;
     this.choices = choices;
-    this.correct_answer = correct_answer;
-    this.correct_answer_text = correct_answer_text;
-    this.explanation = explanation;
     this.video_timestamp = video_timestamp;
     this.timestamp_label = timestamp_label;
     this.segment_id = segment_id;
+    this.concept = concept;
   }
 }
 
@@ -70,3 +64,30 @@ export class QuizEntity {
     this.created_at = created_at;
   }
 }
+
+// Submit Entities
+export type QuizSubmitQuestion = {
+  questionId: number;
+  questionText: string;
+  choices: QuizOption[];
+  userAnswer: string;
+  correctAnswer: string;
+  correctAnswerText: string;
+  isCorrect: boolean;
+  explanation: string;
+  videoTimestamp: number;
+  timestampLabel: string;
+  segmentId: number;
+  concept: string;
+};
+
+export type QuizSubmitResult = {
+  quizId: number;
+  correctCount: number;
+  wrongCount: number;
+  total: number;
+  score: number;
+  trials: number;
+  isNew: boolean;
+  questions: QuizSubmitQuestion[];
+};
