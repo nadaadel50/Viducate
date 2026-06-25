@@ -49,22 +49,14 @@ export const useProcessingStatus = (videoId: number | undefined) => {
         ];
 
         if (preSegmenting.includes(newStatus)) {
-          setProgress(prev => {
-            if (prev < 70) return prev + 2; 
-            return prev;
-          });
-          return;
-        }
+  setProgress(prev => Math.min(prev + 1, 70));
+  return;
+}
 
-        
-        if (newStatus === 'segmenting') {
-          setProgress(prev => {
-            if (prev < 99) return prev + 2;
-            return prev;
-          });
-          return;
-        }
-
+      if (newStatus === 'segmenting') {
+  setProgress(prev => Math.min(prev + 1, 99));
+  return;
+}
       
         if (newStatus === 'completed') {
           setProgress(100);
