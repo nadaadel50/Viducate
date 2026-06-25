@@ -6,9 +6,9 @@ import { TopicsBreakdown } from "../sections/topics_breakdown";
 import { COLORS } from "../../../../core/constants";
 import { FormattedMessage } from "react-intl";
 import { useLearningSession } from "../../../../core/hooks/useLearningContent";
-import { LoadingScreen } from "../../../../core/componants/LoadingScreen";
 import { BarChart3 } from "lucide-react";
 import ErrorMessage from "../../../../core/widgets/error";
+import { GenerationLoadingScreen } from "../../../../core/widgets/generation_loading_screen";
 
 export function ReportPage() {
   const { videoId } = useLearningSession();
@@ -20,7 +20,7 @@ export function ReportPage() {
 
   if (state.status === "idle" || state.status === "loading") {
     return (
-      <LoadingScreen
+      <GenerationLoadingScreen
         icon={<BarChart3 />}
         titlePrefix="Preparing your"
         titleHighlight="Learning Report"
