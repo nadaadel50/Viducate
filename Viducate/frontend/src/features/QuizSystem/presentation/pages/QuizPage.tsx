@@ -10,7 +10,7 @@ import { useQuiz } from "../hooks/useQuiz";
 import { useGenerateQuiz } from "../hooks/useGenerateQuiz";
 import { GeneratingQuizPage } from "./GeneratingQuizPage";
 import { QuizDifficultyModal } from "../componants/QuizDifficultyModal";
-import { useEffect, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 
 const SECONDS_PER_QUESTION: Record<"easy" | "medium" | "hard", number> = {
   easy: 30,
@@ -20,10 +20,8 @@ const SECONDS_PER_QUESTION: Record<"easy" | "medium" | "hard", number> = {
 
 const calcTime = (
   totalQuestions: number,
-  difficulty: "easy" | "medium" | "hard"
-): number => {
-  return (totalQuestions * SECONDS_PER_QUESTION[difficulty]) / 60; // دقايق
-};
+  difficulty: "easy" | "medium" | "hard",
+) => (totalQuestions * SECONDS_PER_QUESTION[difficulty]) / 60;
 
 export const QuizPage = () => {
   const { state } = useLocation();
@@ -31,24 +29,31 @@ export const QuizPage = () => {
   const { videoId, segmentId } = state;
 
   const savedKey = localStorage.getItem(`active_quiz_key_${segmentId}`);
-
   const [activeQuizKey, setActiveQuizKey] = useState<string | null>(
     savedKey || null,
   );
-
   const [difficulty, setDifficulty] = useState<"easy" | "medium" | "hard">(
     state?.difficulty ?? "medium",
   );
-
   const [isDifficultyModalOpen, setIsDifficultyModalOpen] = useState(!savedKey);
 
-  const { quiz, isPending, generate } = useGenerateQuiz({
+  const {
+    quiz,
+    isPending,
+    generate,
+    submitQuiz,
+    getSubmitResult,
+    isSubmitting,
+  } = useGenerateQuiz({
     videoId,
     segmentId,
     mode: segmentId ? "segment" : "video",
     difficulty,
   });
-
+  const generateRef = useRef(generate);
+  useEffect(() => {
+    generateRef.current = generate;
+  }, [generate]);
   const savedQuiz = activeQuizKey
     ? localStorage.getItem(`quiz_data_${activeQuizKey}`)
     : null;
@@ -56,16 +61,25 @@ export const QuizPage = () => {
   const finalQuiz = localQuiz || quiz;
   const questions = finalQuiz?.questions ?? [];
   const isArabic = finalQuiz?.language === "ar";
-
   const calculatedTime = finalQuiz
     ? calcTime(finalQuiz.total_questions ?? questions.length, difficulty)
     : 0;
+
+  const submitResult = getSubmitResult(finalQuiz?.quiz_id);
 
   useEffect(() => {
     if (quiz && activeQuizKey) {
       localStorage.setItem(`quiz_data_${activeQuizKey}`, JSON.stringify(quiz));
     }
   }, [quiz, activeQuizKey]);
+
+  const answersRef = useRef<Record<string, string>>({});
+
+  const handleSubmit = () => {
+    if (finalQuiz) {
+      submitQuiz(finalQuiz.quiz_id, answersRef.current, questions);
+    }
+  };
 
   const {
     currentIndex,
@@ -78,24 +92,24 @@ export const QuizPage = () => {
     setQuizState,
     isReviewMode,
     setIsReviewMode,
-    calculateScore,
-    progress,
     isAllAnswered,
     resetQuiz,
-  } = useQuiz(questions, calculatedTime, activeQuizKey ?? "");
+    progress,
+  } = useQuiz(questions, calculatedTime, activeQuizKey ?? "", handleSubmit);
 
+  useEffect(() => {
+    answersRef.current = answers;
+  }, [answers]);
   const handleSelectDifficulty = (
     newDifficulty: "easy" | "medium" | "hard",
   ) => {
     setIsDifficultyModalOpen(false);
-
-    if (activeQuizKey) {
-      resetQuiz();
+    if (activeQuizKey) resetQuiz();
+    if (finalQuiz?.quiz_id) {
+      localStorage.removeItem(`quiz_submit_${finalQuiz.quiz_id}`);
     }
-
     const newQuizKey = `${segmentId}_${newDifficulty}_${Date.now()}`;
     localStorage.setItem(`active_quiz_key_${segmentId}`, newQuizKey);
-
     setDifficulty(newDifficulty);
     setActiveQuizKey(newQuizKey);
     generate();
@@ -104,49 +118,59 @@ export const QuizPage = () => {
   useEffect(() => {
     if (!activeQuizKey) return;
     const hasLocal = !!localStorage.getItem(`quiz_data_${activeQuizKey}`);
-    if (!hasLocal) {
-      generate();
-    }
+    if (!hasLocal) generateRef.current();
   }, [activeQuizKey]);
   if (!activeQuizKey || isDifficultyModalOpen) {
     return (
-      <>
-        <QuizDifficultyModal
-          isOpen={isDifficultyModalOpen}
-          onClose={() => {
-            if (!activeQuizKey) navigate(-1);
-            else setIsDifficultyModalOpen(false);
-          }}
-          onSelect={handleSelectDifficulty}
-        />
-      </>
+      <QuizDifficultyModal
+        isOpen={isDifficultyModalOpen}
+        onClose={() => {
+          if (!activeQuizKey) navigate(-1);
+          else setIsDifficultyModalOpen(false);
+        }}
+        onSelect={handleSelectDifficulty}
+      />
     );
   }
 
   if (isPending && !finalQuiz) return <GeneratingQuizPage />;
   if (!finalQuiz) return <GeneratingQuizPage />;
 
-  const stats = calculateScore();
+  const currentSubmitQuestion = submitResult?.questions.find(
+    (q) => q.questionId === currentQuestion?.question_id,
+  );
 
   return (
     <main
-      className="min-h-screen py-10 relative "
+      className="min-h-screen py-10 relative"
       style={{ background: COLORS.background.light }}
     >
-      {quizState === "results" && !isReviewMode && (
-        <QuizResultCard
-          stats={stats}
-          onReview={() => {
-            setIsReviewMode(true);
-            setQuizState("playing");
-            setCurrentIndex(0);
-          }}
-        />
-      )}
+      {/* Result Card */}
+      {quizState === "results" &&
+        !isReviewMode &&
+        (isSubmitting ? (
+          <div className="fixed inset-0 z-[100] flex items-center justify-center backdrop-blur-md bg-black/10">
+            <p className="text-white font-bold text-xl animate-pulse">
+              Submitting...
+            </p>
+          </div>
+        ) : submitResult ? (
+          <QuizResultCard
+            submitResult={submitResult}
+            onReview={() => {
+              setIsReviewMode(true);
+              setQuizState("playing");
+              setCurrentIndex(0);
+            }}
+          />
+        ) : null)}
 
       <div className="w-full max-w-7xl mx-auto px-4">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-6 lg:gap-10">
-          <div className={`lg:col-span-8 space-y-8`} dir={isArabic ? "rtl" : "ltr"}>
+          <div
+            className="lg:col-span-8 space-y-8"
+            dir={isArabic ? "rtl" : "ltr"}
+          >
             <QuizProgressBar
               current={currentIndex + 1}
               total={questions.length}
@@ -157,6 +181,7 @@ export const QuizPage = () => {
               selectedId={answers[currentQuestion?.question_id]}
               onSelect={handleSelect}
               isReviewMode={isReviewMode}
+              submitQuestion={currentSubmitQuestion}
             />
           </div>
 
@@ -169,10 +194,12 @@ export const QuizPage = () => {
               canSubmit={isAllAnswered}
               onPrevious={() => setCurrentIndex((prev) => prev - 1)}
               onNext={() => {
-                if (currentIndex === questions.length - 1 && !isReviewMode)
+                if (currentIndex === questions.length - 1 && !isReviewMode) {
+                  handleSubmit();
                   setQuizState("results");
-                else if (currentIndex < questions.length - 1)
+                } else if (currentIndex < questions.length - 1) {
                   setCurrentIndex((prev) => prev + 1);
+                }
               }}
               onNewQuiz={() => setIsDifficultyModalOpen(true)}
             />
