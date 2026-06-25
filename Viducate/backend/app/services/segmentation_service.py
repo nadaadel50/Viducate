@@ -4,7 +4,7 @@ import logging
 import re
 from app.services.cancellation_registry import is_cancelled, PipelineCancelledError,  check_cancelled
 
-# from groq import Groq
+from groq import Groq
 from google import genai
 from google.genai import types
 from app.config import settings
@@ -14,6 +14,11 @@ from app.services.quality_service import (
 )
 
 logger = logging.getLogger(__name__)
+
+class SegmentationUnavailableError(Exception):
+    """Raised when both Gemini and Groq fail due to overload or rate limits."""
+    pass
+
 
 def is_noise(part: str) -> bool:
     if re.search(r'https?://|\.com|\.org|www\.', part):
@@ -249,7 +254,64 @@ async def call_groq_with_retry(client,  chunk: str,  chunk_index: int,video_id: 
                 await asyncio.sleep(2 ** attempt)
 
             else:
-                logger.error(f"[Segmentation] Chunk {chunk_index+1} failed: {e}")
+                logger.error(f"[Segmentation] Gemini failed after {max_retries} attempts for chunk {chunk_index+1}: {e}")
+                logger.info(f"[Segmentation] Falling back to Groq for chunk {chunk_index+1}")
+
+                try:
+                    return await call_groq_fallback(current_chunk, chunk_index, video_id, final_language)
+                except Exception as groq_error:
+                    logger.error(f"[Segmentation] Groq fallback also failed for chunk {chunk_index+1}: {groq_error}")
+                    raise SegmentationUnavailableError(
+                        "Both Gemini and Groq are currently overloaded. Please try again tomorrow."
+                    ) from groq_error
+
+    return []
+
+
+
+async def call_groq_fallback(chunk: str, chunk_index: int, video_id: int, final_language: str = "ar", max_retries: int = 2):
+    groq_client = Groq(api_key=settings.GROQ_API_KEY_segments)
+    current_chunk = chunk
+
+    for attempt in range(max_retries):
+        try:
+            check_cancelled(video_id)
+            prompt = build_prompt(current_chunk, final_language=final_language)
+
+            logger.info(f"[Segmentation][Groq Fallback] Chunk {chunk_index+1}, attempt {attempt+1}")
+
+            response = groq_client.chat.completions.create(
+                model="llama-3.3-70b-versatile",
+                messages=[{"role": "user", "content": prompt}],
+                temperature=0.3,
+                max_tokens=8000,
+            )
+
+            text = response.choices[0].message.content.strip()
+            text = text.replace("```json", "").replace("```", "").strip()
+            if not text.endswith("}"):
+                last_bracket = text.rfind("}]")
+                if last_bracket != -1:
+                    text = text[:last_bracket + 2] + "\n}"
+
+            result = json.loads(text)
+            return result.get("segments", [])
+
+        except Exception as e:
+            error_str = str(e).lower()
+            is_token_error = any(k in error_str for k in [
+                "rate_limit", "context", "token", "exceeded", "413", "400"
+            ])
+
+            if is_token_error:
+                logger.error(f"[Segmentation][Groq Fallback] Token/rate limit error: {e}")
+                raise
+
+            if attempt < max_retries - 1:
+                import asyncio
+                await asyncio.sleep(2 ** attempt)
+            else:
+                logger.error(f"[Segmentation][Groq Fallback] Failed: {e}")
                 raise
 
     return []

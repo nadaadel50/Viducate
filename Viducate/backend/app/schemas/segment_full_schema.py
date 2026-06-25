@@ -1,7 +1,7 @@
 from pydantic import BaseModel, field_validator
 from typing import List, Optional
 
-from schemas.subtopic_schema import SubTopicSchema
+from app.schemas.subtopic_schema import SubTopicSchema
 
 
 class SegmentFullSchema(BaseModel):

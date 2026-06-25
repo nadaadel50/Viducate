@@ -46,6 +46,7 @@ class VideoCachingServise:
                          "url": user_video.url,
                          "processing_status": user_video.processing_status,
                          "language": user_video.language,
+                         "duration": user_video.duration,
                          "message": "You already processed this video",
                     }
                else:
@@ -71,6 +72,7 @@ class VideoCachingServise:
                "subject": global_video.subject,
                "processing_status": global_video.processing_status,
                "content_hash": content_hash,
+               "duration": global_video.duration,
           })
 
           segments = self.segment_repo.get_by_video(global_video.vid)
@@ -104,6 +106,7 @@ class VideoCachingServise:
                "url": new_video.url,
                "processing_status": new_video.processing_status,
                "language": new_video.language,
+               "duration": new_video.duration, 
                "message": "Video retrieved from cache",
           }
           

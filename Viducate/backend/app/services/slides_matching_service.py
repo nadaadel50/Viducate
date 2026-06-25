@@ -33,7 +33,7 @@ def match_slides_to_segments(segments_result: dict, slides_text: list[str]) -> d
         for score, i, slide_text in best_scores:
             if score >= 0.3 and i not in used_slides:
                 matched_slides.append(slide_text)
-                used_slides.add(i)  # ✅ متتكررش
+                used_slides.add(i)
 
         segment["slide_content"] = "\n\n".join(matched_slides) if matched_slides else None
 

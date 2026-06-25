@@ -1,3 +1,5 @@
+import re
+
 from chromadb import logger
 import httpx
 from app.config import settings
@@ -12,14 +14,29 @@ NASHEED_KEYWORDS = {
     "معي ربي", "lyrics", "official audio", "official video"
 }
 
+def parse_iso8601_duration(duration: str) -> int:
+    """
+    Converts ISO 8601 duration format (e.g. PT1H15M33S) into total seconds.
+    PT = Period Time (fixed prefix)
+    H = hours, M = minutes, S = seconds (each part is optional)
+    """
+    pattern = r"PT(?:(\d+)H)?(?:(\d+)M)?(?:(\d+)S)?"
+    match = re.match(pattern, duration)
+    if not match:
+        return 0
+    hours, minutes, seconds = match.groups()
+    h = int(hours) if hours else 0
+    m = int(minutes) if minutes else 0
+    s = int(seconds) if seconds else 0
+    return h * 3600 + m * 60 + s
 
-async def classify_video(video_id: str) -> str:
+async def classify_video(video_id: str) -> dict:
     try:
         async with httpx.AsyncClient() as client:
             resp = await client.get(
                 "https://www.googleapis.com/youtube/v3/videos",
                 params={
-                    "part": "snippet,topicDetails",
+                    "part": "snippet,topicDetails,contentDetails",
                     "id": video_id,
                     "key": settings.Youtube_API_KEY,
                 },
@@ -28,16 +45,21 @@ async def classify_video(video_id: str) -> str:
         data = resp.json()
         items = data.get("items", [])
         if not items:
-            return "general"
+            return {"classification": "general", "duration_seconds": None}
 
         snippet = items[0]["snippet"]
         title = snippet.get("title", "").lower()
 
         topic_details = items[0].get("topicDetails", {})
+        #  ["https://en.wikipedia.org/wiki/Music"]
         topic_categories = topic_details.get("topicCategories", [])
+
+        duration_iso = items[0].get("contentDetails", {}).get("duration", "PT0S")
+        duration_seconds = parse_iso8601_duration(duration_iso)
 
         print(f"title: {snippet.get('title', '')}")
         print(f"topics raw: {topic_categories}")
+        print(f"duration: {duration_seconds} seconds")
         
         topics_text = " ".join(topic_categories).lower()
         print(f"topics text: {topics_text}")
@@ -46,16 +68,16 @@ async def classify_video(video_id: str) -> str:
         print(f"matched blocked: {matched}")
 
         if matched:
-            return "blocked"
+            return {"classification": "blocked", "duration_seconds": duration_seconds}
         
         # if regioin NASHEED
         if "religion" in topics_text:
             if any(kw in title for kw in NASHEED_KEYWORDS):
-                return "blocked"
+                return {"classification": "blocked", "duration_seconds": duration_seconds}
 
-        return "general"
+        return {"classification": "general", "duration_seconds": duration_seconds}
 
     except Exception as e:
         print(f"classify_video failed: {e}")
         logger.warning(f"classify_video failed: {e}")
-        return "general"
+        return {"classification": "general", "duration_seconds": None}
