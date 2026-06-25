@@ -2,7 +2,7 @@ import { useState, useRef, useEffect } from "react";
 import { MaterialBadge } from "./material_badge";
 import type { TopicReport } from "../../domain/entity/report_entity";
 import { FormattedMessage, useIntl } from "react-intl";
-import { FileText, NotebookPen, Brain, Layers3, AlertTriangle, PartyPopper, AlertCircle } from "lucide-react";
+import { FileText, NotebookPen, Layers3, AlertTriangle, PartyPopper, AlertCircle, FileQuestion } from "lucide-react";
 
 
 const MASTERY_CONFIG: Record<string, { label: string; color: string; bg: string; border: string; emoji: string }> = {
@@ -42,7 +42,7 @@ export function TopicCard({ topic, index }: { topic: TopicReport; index: number 
   const topicMaterials = [
     { icon: FileText,    color: "#2563eb", label: intl.formatMessage({ id: "report.topic.material.summary" }),                                              done: topic.materialsGenerated.summary },
     { icon: NotebookPen, color: "#7c3aed", label: intl.formatMessage({ id: "report.topic.material.studyNotes" }),                                           done: topic.materialsGenerated.studyNotes },
-    { icon: Brain,       color: "#059669", label: intl.formatMessage({ id: "report.topic.material.quiz" }),                                                  done: topic.materialsGenerated.quiz },
+    { icon: FileQuestion,       color: "#059669", label: intl.formatMessage({ id: "report.topic.material.quiz" }),                                                  done: topic.materialsGenerated.quiz },
     { icon: Layers3,     color: "#ea580c", label: intl.formatMessage({ id: "report.topic.material.flashcards" }, { count: topic.materialsGenerated.flashcards }), done: topic.materialsGenerated.flashcards > 0 },
   ];
 

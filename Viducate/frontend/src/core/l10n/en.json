@@ -213,7 +213,7 @@
   "report.topicsBreakdown.count": "{count} Topics",
 
   
-  "report.hero.uploadedAt": "Uploaded {date} · {count} topics detected",
+  "report.hero.updatedAt": "Updated at {date} · {count} topics detected",
   "report.hero.watchProgress": "Watch Progress",
   "report.hero.watched": "{percent}% watched",
   "report.hero.remaining": "{percent}% remaining",

@@ -4,7 +4,7 @@ import { SectionHeader } from "../componants/section_header";
 import { StatCard } from "../componants/stat_card";
 import { TopicTag } from "../componants/topic_tag";
 import type { VideoReport } from "../../domain/entity/report_entity";
-import { BarChart3, Video, Target, Layers3, Package, TrendingUp, AlertTriangle, FileText, NotebookPen, Brain } from "lucide-react";
+import { BarChart3,  Layers3, Package, TrendingUp, AlertTriangle, FileText, NotebookPen, FileQuestion, TvMinimalPlay } from "lucide-react";
 import { useVideoProgress } from "../hooks/use_video_progress";
 
 export function OverallStats({ report }: { report: VideoReport }) {
@@ -17,7 +17,7 @@ export function OverallStats({ report }: { report: VideoReport }) {
   const videoMaterials = [
     { icon: FileText,    color: "#2563eb", label: intl.formatMessage({ id: "report.materials.summary" }),    done: report.hasSummary },
     { icon: NotebookPen, color: "#7c3aed", label: intl.formatMessage({ id: "report.materials.studyNotes" }), done: report.hasStudyNotes },
-    { icon: Brain,       color: "#059669", label: intl.formatMessage({ id: "report.materials.quiz" }),       done: report.hasComprehensiveQuiz },
+    { icon: FileQuestion,       color: "#059669", label: intl.formatMessage({ id: "report.materials.quiz" }),       done: report.hasComprehensiveQuiz },
   ];
 
   return (
@@ -25,8 +25,8 @@ export function OverallStats({ report }: { report: VideoReport }) {
       <SectionHeader icon={BarChart3} title={intl.formatMessage({ id: "report.overall.title" })} />
 
       <div className="grid grid-cols-1 md:grid-cols-3 gap-4 mb-4">
-        <StatCard icon={Video}   label={intl.formatMessage({ id: "report.stats.videoProgress" })} value={`${percent}%`}   sub={`${watchedFormatted} watched`} color="#7c3aed" delay={0} />
-        <StatCard icon={Target}  label={intl.formatMessage({ id: "report.stats.quizAccuracy" })}  value={`${accuracy}%`}  sub={intl.formatMessage({ id: "report.stats.correctAnswers" }, { correct: report.correctAnswers, total: report.totalQuizQuestions })} color="#2563eb" delay={80} />
+        <StatCard icon={TvMinimalPlay}   label={intl.formatMessage({ id: "report.stats.videoProgress" })} value={`${percent}%`}   sub={`${watchedFormatted} watched`} color="#7c3aed" delay={0} />
+        <StatCard icon={FileQuestion}  label={intl.formatMessage({ id: "report.stats.quizAccuracy" })}  value={`${accuracy}%`}  sub={intl.formatMessage({ id: "report.stats.correctAnswers" }, { correct: report.correctAnswers, total: report.totalQuizQuestions })} color="#2563eb" delay={80} />
         <StatCard icon={Layers3} label={intl.formatMessage({ id: "report.stats.flashcards" })}    value={`${report.totalFlashcards}`} sub={intl.formatMessage({ id: "report.stats.flashcardsCreated" })} color="#059669" delay={160} />
       </div>
 

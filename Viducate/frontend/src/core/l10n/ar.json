@@ -230,8 +230,8 @@
   "report.topicsBreakdown.count": "{count} موضوع",
 
 
-  
-  "report.hero.uploadedAt": "تم رفعه في {date} · تم اكتشاف {count} موضوع",
+
+  "report.hero.updatedAt": "تم تحديثه في {date} · تم اكتشاف {count} موضوع",
   "report.hero.watchProgress": "تقدم المشاهدة",
   "report.hero.watched": "تمت مشاهدة {percent}%",
   "report.hero.remaining": "متبقي {percent}%",
