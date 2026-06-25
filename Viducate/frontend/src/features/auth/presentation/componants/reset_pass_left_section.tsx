@@ -1,7 +1,7 @@
 import { MainText } from "../../../../core/componants/text_section";
 import { CustomButton } from "../../../../core/componants/custum_btn";
 import { PasswordInputsSection } from "./password_input_section";
-import { PasswordRequirements } from "./password_requirment";
+import { PasswordRequirements } from "../../../../core/componants/password_requirment";
 import { CustumError } from "../../../../core/componants/custum_error";
 import { useResetPassword } from "../hooks/use_reset_password";
 import { useT } from "../../../../core/hooks/useTranslation";

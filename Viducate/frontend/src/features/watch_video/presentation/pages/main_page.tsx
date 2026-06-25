@@ -3,8 +3,8 @@ import { RightContentSection } from "../sections/right_content_section";
 import { useVideoData } from "../../../../core/hooks/useVideoData";
 
 import { useEffect, useState } from "react";
-import LoadingScreen from "../../../../core/widgets/loading_screen";
-import { ErrorScreen } from "../../../../core/widgets/error";
+import LoadingScreen from "../../../../core/componants/loading_screen";
+import { ErrorScreen } from "../../../../core/componants/error";
 
 import { useLearningSession } from "../../../../core/hooks/useLearningContent";
 import { ChatProvider } from "../../../chat_bot/presenation/context/chatbot_provider";

@@ -2,9 +2,9 @@ import { COLORS } from "../../../../core/constants";
 
 import { ProgressPart } from "../widgets/progress/progress_part";
 import { UserCard } from "../widgets/user_card";
-import { GenerationLoadingScreen } from "../../../../core/widgets/generation_loading_screen";
+import { GenerationLoadingScreen } from "../../../../core/componants/generation_loading_screen";
 import { LayoutDashboard } from "lucide-react";
-import { ErrorScreen } from "../../../../core/widgets/error";
+import { ErrorScreen } from "../../../../core/componants/error";
 import { useDashboard } from "../hooks/use_dashboard";
 import { ContinueLearningPart } from "../widgets/continue_learning/continue_learning_part";
 import { StartUpload } from "../widgets/start_upload";
