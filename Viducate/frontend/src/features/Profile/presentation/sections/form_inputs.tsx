@@ -1,7 +1,7 @@
 import { CustomInput } from "../../../../core/componants/custom_input";
 import { SectionTitle } from "../components/section_title";
 import { useHandleInputs } from "../hooks/use_handle_inputs";
-import { PasswordRequirements } from "../../../auth/presentation/forgetpass/componants/password_requirment";
+import { PasswordRequirements } from "../../../auth/presentation/componants/password_requirment";
 import { usePersonalInfoContext, useProfileContext, useSecurityContext } from "../hooks/use_profile_context";
 
 export function FormInputs() {

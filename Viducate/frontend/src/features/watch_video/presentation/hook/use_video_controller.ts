@@ -1,8 +1,6 @@
 import { useRef, useState } from "react";
-import type { Marker } from "../types/mark_parms";
 import { StuckReasons } from "../types/stuck_reason";
 import { useLearningSession } from "../../../../core/hooks/useLearningContent";
-import { STORAGE_KEYS } from "../../../../core/constants";
 
 // ── types ─────────────────────────────────────────────────────────────────────
 

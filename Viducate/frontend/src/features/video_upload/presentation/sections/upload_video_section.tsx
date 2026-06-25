@@ -1,7 +1,7 @@
 import React from "react";
 import { VideoDragedSection } from "./video_draged_section";
-import { InputSection } from "../componants/input_section";
-import { UploadBtn } from "../componants/upload_btn";
+import { InputSection } from "../componants/upload/input_section";
+import { UploadBtn } from "../componants/upload/upload_btn";
 import { UploadSection } from "./upload_section";
 
 
@@ -75,7 +75,7 @@ export function UploadVideoSection({
         label="Upload Video"
         onClick={()=>setUploading(true)}
         // isLoading={isLoading}
-        // error={error}
+        //error={error}
       />
     </>
   );

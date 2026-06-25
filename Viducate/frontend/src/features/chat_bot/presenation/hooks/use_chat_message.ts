@@ -1,5 +1,4 @@
 import { useEffect, useRef, useState } from "react";
-import type { Message } from "../../domain/entity/message";
 import { useSendMessage } from "./use_send_message";
 import { success } from "zod";
 import { useLearningSession } from "../../../../core/hooks/useLearningContent";
@@ -11,26 +10,33 @@ import { useChat } from "./use_chat";
 
 export function useChatMessages(open: boolean) {
   const [messages, setMessages] = useState<ChatMessage[]>([]);
-  
+
   const [sessionId, setSessionId] = useState<number | null>(null);
-  
-  const { sessions, addSession } = useSessions();
-  const{input,setUserInput}=useChat()
+
+  const { sessions, addSession, refreshSessions } = useSessions();
+  const { input, setUserInput } = useChat();
 
   const messagesEndRef = useRef<HTMLDivElement | null>(null);
   const { sendMessage, isLoadingMessage, error, reset } = useSendMessage();
+  
+  
+
   const { videoId } = useLearningSession();
   const [openRecentChats, setOpenRecentChats] = useState<boolean>(false);
-  const { data: sessionMessages, isLoading: isLoadingMessages } =
-    useGetSessionMessages({
-      session_id: sessionId!,
-      video_id: videoId!,
-    });
+  const { data: sessionMessages } = useGetSessionMessages({
+    session_id: sessionId!,
+    video_id: videoId!,
+  });
+  const currentSessionRef = useRef<number | null>(null);
 
-    const [openDeleteModal, setOpenDeleteModal]
- = useState(false);
+  useEffect(() => {
+    currentSessionRef.current = sessionId;
+  }, [sessionId]);
 
- const { deleteSession } = useDeleteSession();
+  const [openDeleteModal, setOpenDeleteModal] = useState(false);
+
+  const { deleteSession } = useDeleteSession();
+  
 
   // prevent body scroll
   useEffect(() => {
@@ -56,13 +62,12 @@ export function useChatMessages(open: boolean) {
     if (sessionMessages) {
       setMessages(sessionMessages);
     }
-    if (isLoadingMessages) {
-      console.log("iam loading please wait");
-    }
   }, [sessionId, sessionMessages]);
 
   function handleSend() {
     if (!input.trim()) return;
+    // take the old version of the session id
+    
 
     setMessages((prev) => [
       ...prev,
@@ -74,7 +79,8 @@ export function useChatMessages(open: boolean) {
         // will put here the time if exist and handle input
       },
     ]);
-    reset();
+     reset();
+    
 
     sendMessage(
       {
@@ -84,15 +90,18 @@ export function useChatMessages(open: boolean) {
       },
       {
         onSuccess: (data) => {
+          
           if (!sessionId) {
             setSessionId(data.session.id);
           }
+
           addSession({
             id: data.session.id,
             title: data.session.title,
             created_at: new Date(),
             last_message_at: new Date(),
-          });
+          }); // i put it here to update the last message created at
+          
 
           setMessages((prev) => [
             ...prev,
@@ -112,35 +121,42 @@ export function useChatMessages(open: boolean) {
 
   function handleOpenRecentChats() {
     setOpenRecentChats(!openRecentChats);
+     if (openRecentChats) {
+    refreshSessions();
+  }
   }
   function handleSelectNewSession(id: number) {
+    reset()
+    
     if (sessionId == id) {
       if (sessionMessages) setMessages(sessionMessages);
       return;
     }
+
     setMessages([]);
     setSessionId(id);
   }
 
   function clearMessages() {
+    reset()
+    
     setMessages([]);
     setSessionId(null);
   }
 
-  function handleOpenDeleteMessage(value:boolean){
-    setOpenDeleteModal(value)
+  function handleOpenDeleteMessage(value: boolean) {
+    setOpenDeleteModal(value);
   }
-  function handleDeleteSession(){
-   if(sessionId&&videoId){
-    
-    deleteSession({session_id:sessionId,video_id:videoId})
-    clearMessages()
-   }
+  function handleDeleteSession() {
+    if (sessionId && videoId) {
+      deleteSession({
+        session_id: sessionId,
+        video_id: videoId,
+      });
+
+      clearMessages();
+    }
   }
-
-
-
-
 
   return {
     messages,
@@ -159,6 +175,6 @@ export function useChatMessages(open: boolean) {
     sessionId,
     openDeleteModal,
     handleOpenDeleteMessage,
-    handleDeleteSession
+    handleDeleteSession,
   };
 }

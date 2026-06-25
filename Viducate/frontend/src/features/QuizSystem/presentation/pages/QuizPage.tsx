@@ -8,9 +8,10 @@ import { QuizActions } from "../componants/QuizActions";
 import { COLORS } from "../../../../core/constants";
 import { useQuiz } from "../hooks/useQuiz";
 import { useGenerateQuiz } from "../hooks/useGenerateQuiz";
-import { GeneratingQuizPage } from "./GeneratingQuizPage";
 import { QuizDifficultyModal } from "../componants/QuizDifficultyModal";
 import { useEffect, useState } from "react";
+import { GenerationLoadingScreen } from "../../../../core/widgets/generation_loading_screen";
+import { FileQuestion } from "lucide-react";
 
 const SECONDS_PER_QUESTION: Record<"easy" | "medium" | "hard", number> = {
   easy: 30,
@@ -20,7 +21,7 @@ const SECONDS_PER_QUESTION: Record<"easy" | "medium" | "hard", number> = {
 
 const calcTime = (
   totalQuestions: number,
-  difficulty: "easy" | "medium" | "hard"
+  difficulty: "easy" | "medium" | "hard",
 ): number => {
   return (totalQuestions * SECONDS_PER_QUESTION[difficulty]) / 60; // دقايق
 };
@@ -122,8 +123,21 @@ export const QuizPage = () => {
     );
   }
 
-  if (isPending && !finalQuiz) return <GeneratingQuizPage />;
-  if (!finalQuiz) return <GeneratingQuizPage />;
+  if (isPending && !finalQuiz)
+    return (
+      <GenerationLoadingScreen
+        icon={<FileQuestion />}
+        titlePrefix="AI is Synthesizing"
+        titleHighlight="your quiz..."
+        subtitle="Crafting questions and answers based on the video content"
+      />
+    );
+  if (!finalQuiz) return  <GenerationLoadingScreen
+        icon={<FileQuestion />}
+        titlePrefix="AI is Synthesizing"
+        titleHighlight="your quiz..."
+        subtitle="Crafting questions and answers based on the video content"
+      />
 
   const stats = calculateScore();
 

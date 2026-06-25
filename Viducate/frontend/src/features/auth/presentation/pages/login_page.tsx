@@ -1,6 +1,6 @@
 import { useIntl, FormattedMessage } from "react-intl";
-import AuthLayout from "../layouts/AuthLayout";
-import { AuthForm } from "../componants/AuthForm";
+import AuthLayout from "../layouts/auth_layout";
+import { AuthForm } from "../componants/auth_form";
 import LoginPhoto from "../../../../assets/Images/LoginPhoto.png";
 import { RightSection } from "../componants/right_section";
 

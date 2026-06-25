@@ -1,11 +1,10 @@
 import { useCallback, useEffect, useRef } from "react";
 import { AlertCircle, Loader2, Video, X } from "lucide-react";
-import { UploadBtn } from "../componants/upload_btn";
+import { UploadBtn } from "../componants/upload/upload_btn";
 import { AppRoutesNames } from "../../../../app/routers/routes";
 import { useNavigate } from "react-router";
 import { useLearningSession } from "../../../../core/hooks/useLearningContent";
 import { useUploadVideo } from "../hooks/use_uploade_video";
-import { deleteVideoUseCase } from "../../../../core/di/upload_video_container";
 import { useDeleteVideo } from "../hooks/use_delete_video";
 
 type UploadLoadingSectionProps = {
@@ -25,10 +24,9 @@ export function UploadLoadingSection({
   controllerRef,
   setProgress,
   handleCancel,
-
 }: UploadLoadingSectionProps) {
   const { setVideoId, videoId } = useLearningSession();
-  const { uploadVideoAsync, isLoading, error } = useUploadVideo();
+  const { uploadVideo, error } = useUploadVideo();
   const navigate = useNavigate();
   const {
     deleteVideoAsync,
@@ -49,19 +47,21 @@ export function UploadLoadingSection({
 
     //window.addEventListener("beforeunload", handleUnload);
 
-    const upload = async () => {
+    const upload = () => {
       controllerRef.current = new AbortController();
 
-      await uploadVideoAsync({
+      uploadVideo({
         videoFile,
         title,
         signal: controllerRef.current.signal,
         onProgress: (p) => setProgress(p),
-        onVideoIdReceived: (id) => {
-          setVideoId(id);
-        },
+        onVideoIdReceived: (id) => setVideoId(id),
       });
     };
+
+    
+
+console.log("error value:", error); // ← ايه اللي بيطبع؟
 
     upload();
 
@@ -72,9 +72,8 @@ export function UploadLoadingSection({
   }, []);
 
   const handleAnalyze = useCallback(() => {
-  if (videoId) navigate(AppRoutesNames.ProcessingPage, { replace: true });
-}, [videoId]);
-
+    if (videoId) navigate(AppRoutesNames.ProcessingPage, { replace: true });
+  }, [videoId]);
 
   const handleCancelClick = async () => {
     controllerRef.current?.abort();
@@ -136,7 +135,6 @@ export function UploadLoadingSection({
         disabled={progress !== 100}
         label="Analyze Video"
         onClick={handleAnalyze}
-       
         error={error}
       />
     </>

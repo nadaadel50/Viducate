@@ -12,11 +12,13 @@ queryFn:async () => {
     if(!response.success){
         throw new Error(response.error);
     }
-    console.log(response.data)
+    
     
      return response.data
 },
 
     enabled: !!req.session_id && !!req.video_id,
+    staleTime: 0,
+  refetchOnMount: "always",
   });
 }

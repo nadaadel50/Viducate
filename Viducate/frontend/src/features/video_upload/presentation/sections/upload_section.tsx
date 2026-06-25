@@ -1,7 +1,6 @@
 import { UploadCloud } from "lucide-react";
 import { COLORS } from "../../../../core/constants";
-
-
+import { FONT_STYLES } from "../../../../core/constants/fonts";
 
 export type UploadSectionProps = {
   fileInputRef: React.RefObject<HTMLInputElement | null>;
@@ -11,29 +10,32 @@ export type UploadSectionProps = {
   handleDrop: (e: React.DragEvent<HTMLDivElement>) => void;
 };
 
-export function UploadSection(props:UploadSectionProps) {
- 
-  
+export function UploadSection(props: UploadSectionProps) {
   return (
     <div
       onDragOver={props.handleDragOver}
       onDrop={props.handleDrop}
-      onClick={props.handleBrowseClick}
-      className=" group   bg-gray-50 hover:bg-blue-50  w-full flex flex-col items-center mt-10 py-6 border-2 border-dashed border-gray-300 rounded-2xl transition-colors cursor-pointer  mb-10 "
+   
+      className="group w-full mt-6 md:mt-3 mb-6 md:mb-3 py-5 md:py-6 px-4 bg-gray-50 hover:bg-blue-50 border-2 border-dashed border-gray-300 rounded-xl transition-colors cursor-pointer flex flex-col items-center"
     >
-      <div onClick={props.handleBrowseClick}
+      <div
+        onClick={props.handleBrowseClick}
         style={{ background: COLORS.brand.gradient }}
-        className="flex justify-center items-center rounded-full p-4  "
+        className="flex items-center justify-center rounded-full p-3"
       >
-        <UploadCloud strokeWidth={2} className="w-10 h-10 text-white  transition-transform duration-300 group-hover:scale-110 " />
+        <UploadCloud
+          strokeWidth={2}
+          className="w-8 h-8 md:w-9 md:h-9 text-white transition-transform duration-300 group-hover:scale-110"
+        />
       </div>
 
-      <div className="flex flex-col items-center mt-5 mb-5">
-        <h2 className="text-lg font-bold text-gray-900">
-          {"Drag & drop video"}
+      <div className="flex flex-col items-center text-center mt-4 mb-4">
+        <h2 className={`${FONT_STYLES.cardTitle} text-gray-900`}>
+          Drag & drop video
         </h2>
-        <p className="text-gray-500  text-sm ">
-          {"Supported formats: MP4, MOV, AVI up to 2GB"}
+
+        <p className={`${FONT_STYLES.subtitle} mt-1`}>
+          Supported formats: MP4, MOV, AVI 
         </p>
       </div>
 
@@ -47,11 +49,12 @@ export function UploadSection(props:UploadSectionProps) {
 
       <button
         onClick={props.handleBrowseClick}
-        className="px-6 py-2.5 bg-white cursor-pointer  border border-gray-300  rounded-lg text-sm font-semibold text-gray-700  hover:bg-gray-50 transition-colors shadow-sm"
+        className="px-4 md:px-5 py-2 bg-white border border-gray-300 rounded-lg shadow-sm hover:bg-gray-50 transition-colors cursor-pointer"
       >
-        Browse Files
+        <span className={FONT_STYLES.button}>
+          Browse Files
+        </span>
       </button>
-     
     </div>
   );
 }

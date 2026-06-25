@@ -9,13 +9,13 @@ export function useUploadVideo() {
       title,
       signal,
       onProgress,
-      onVideoIdReceived
+      onVideoIdReceived,
     }: {
       videoFile: File;
       title: string;
       signal?: AbortSignal;
       onProgress?: (progress: number) => void;
-      onVideoIdReceived?: (id: number) => void
+      onVideoIdReceived?: (id: number) => void;
     }) => {
       const response = await uploadVideoUseCase.uploadVideo(
         new UploadVideoRequest(
@@ -25,24 +25,22 @@ export function useUploadVideo() {
           "en",
           "technology",
           videoFile.type,
-          videoFile.size
+          videoFile.size,
         ),
         onProgress,
         signal,
-        onVideoIdReceived
-
-        
-        
-    
+        onVideoIdReceived,
       );
 
       if (!response.success) {
-        throw new Error(response.error);
+        const msg = response.error;
+       
+        throw new Error(msg);
       }
-
       return response.data;
     },
   });
+  
 
   return {
     uploadVideo: mutation.mutate,
@@ -50,8 +48,7 @@ export function useUploadVideo() {
     data: mutation.data,
     isLoading: mutation.isPending,
     isSuccess: mutation.isSuccess,
-    isError: mutation.isError,
-    error: mutation.error?.message ?? null,
-    reset: mutation.reset,
+    error: mutation.error?.message??"somthing went wrong when uploading the video, please try agin later"
+      
   };
 }

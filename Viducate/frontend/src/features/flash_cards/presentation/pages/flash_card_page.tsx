@@ -3,14 +3,14 @@ import { CompeleteProgress } from "../widgets/complete_progress";
 import { FlashCard } from "../widgets/flash_card";
 import { UserLevelBtn } from "../widgets/user_level_btn";
 import { Difficulty } from "../../domain/entity/difficaulty";
-import ErrorMessage from "../../../../core/widgets/error";
+import ErrorScreen from "../../../../core/widgets/error";
 import FinishSessionCard from "../section/finish_flash_cards";
-import { LoadingScreen } from "../../../../core/widgets/advanced_loading";
+import { GenerationLoadingScreen } from "../../../../core/widgets/generation_loading_screen";
 import { useFlashcardSession } from "../hooks/use_flash_card_session";
 
 const LoadingView = () => (
   <div className="w-screen flex items-center justify-center">
-    <LoadingScreen
+    <GenerationLoadingScreen
       icon={<Layers />}
       titlePrefix="Cooking up your flashcards"
       titleHighlight="they'll be ready soon"
@@ -36,7 +36,7 @@ export function FlashCards() {
   } = useFlashcardSession();
 
   if (isLoading || !flashcardsData?.length) return <LoadingView />;
-  if (error) return <ErrorMessage errorMessage={error.message} />;
+  if (error) return <ErrorScreen errorMessage={error.message} />;
 
   return (
     <div className="w-200 h-180 bg-white/60 rounded-4xl font-display flex items-center justify-center">

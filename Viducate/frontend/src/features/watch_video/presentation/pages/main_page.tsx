@@ -3,8 +3,8 @@ import { RightContentSection } from "../sections/right_content_section";
 import { useVideoData } from "../../../../core/hooks/useVideoData";
 
 import { useEffect, useState } from "react";
-import Loading from "../../../../core/widgets/loading";
-import { ErrorMessage } from "../../../../core/widgets/error";
+import LoadingScreen from "../../../../core/widgets/loading_screen";
+import { ErrorScreen } from "../../../../core/widgets/error";
 
 import { useLearningSession } from "../../../../core/hooks/useLearningContent";
 import { ChatProvider } from "../../../chat_bot/presenation/context/chatbot_provider";
@@ -62,8 +62,8 @@ export function MainPage() {
 
   useUnsavedChangesWarning(hasUnsavedChanges);
 
-  if (isLoading && !data) return <Loading />;
-  if (error) return <ErrorMessage errorMessage={error.message} />;
+  if (isLoading && !data) return <LoadingScreen smallText={"Get Ready"} bigText={"Your smart study session is Loading"} />;
+  if (error) return <ErrorScreen errorMessage={error.message} />;
   else {
     return (
       <>

@@ -1,9 +1,9 @@
 import { FileText } from 'lucide-react';
-import { LoadingScreen } from '../../../../core/componants/LoadingScreen';
 import { COLORS } from '../../../../core/constants/colors';
+import { GenerationLoadingScreen } from '../../../../core/widgets/generation_loading_screen';
 export function GeneratingSummaryPage() {
   return (
-    <LoadingScreen
+    <GenerationLoadingScreen
       icon={<FileText size={40} style={{ color: COLORS.text.white }} />}
       titlePrefix="AI is synthesizing"
       titleHighlight="your summary..."
