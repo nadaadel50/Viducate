@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 [00:00:10]
   Transcript :  السلام عليكم ورحمة الله وبركاته
   OCR        : الفعل اللازم والفعل المتعدي
@@ -902,4 +903,10 @@
   Transcript :  والسلام عليكم ورحمة الله وبركاته
   OCR        : None
   Combined   :  والسلام عليكم ورحمة الله وبركاته
+=======
+[00:00:05]
+  Transcript : Hello everyone
+  OCR        : Slide 1
+  Combined   : Hello everyone Slide 1
+>>>>>>> 75fe1d9825d70f2f62d9b11ea05eeb948a67d4d0
 

@@ -41,6 +41,7 @@ class VideoURLResponse(BaseModel):
     url: str
     language: str
     processing_status: str
+    duration: Optional[int] = None
     message: str
 
 
@@ -59,6 +60,7 @@ class VideoResponse(BaseModel):
     title: str
     url: Optional[str]
     language: str
+    duration: Optional[int] = None
     processing_status: str
     upload_date: Optional[datetime]
     created_at: Optional[datetime]

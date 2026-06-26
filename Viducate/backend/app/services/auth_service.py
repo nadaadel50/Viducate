@@ -10,6 +10,9 @@ from app.core.security import verify_password, decode_access_token
 from datetime import datetime
 from app.services import email_service
 
+LOCKOUT_DURATION_MINUTES = 15
+MAX_LOGIN_ATTEMPTS = 5
+
 class AuthService:
 
 
@@ -59,24 +62,43 @@ class AuthService:
                 status_code=status.HTTP_401_UNAUTHORIZED,
                 detail="Incorrect email or password"
             )
-
-        if user.failed_login_attempts >= 5:
+        
+        # Check if account is temporarily locked
+        if user.locked_until and datetime.utcnow() < user.locked_until:
+            remaining = int((user.locked_until - datetime.utcnow()).total_seconds() / 60)
             raise HTTPException(
                 status_code=status.HTTP_403_FORBIDDEN,
-                detail="Account locked due to multiple failed attempts"
+                detail=f"Account temporarily locked due to too many failed attempts. Remaining time: {remaining} minutes.",
             )
+
+         # If lockout period has expired, reset the counter automatically
+        if user.locked_until and datetime.utcnow() >= user.locked_until:
+            user.failed_login_attempts = 0
+            user.locked_until = None
+            self.user_repo.update(user)
 
         if not verify_password(password, user.password):
             user.failed_login_attempts += 1
-            self.user_repo.update(user)
 
+            # Lock the account when max attempts reached
+            if user.failed_login_attempts >= MAX_LOGIN_ATTEMPTS:
+                user.locked_until = datetime.utcnow() + timedelta(minutes=LOCKOUT_DURATION_MINUTES)
+                self.user_repo.update(user)
+                raise HTTPException(
+                    status_code=status.HTTP_403_FORBIDDEN,
+                    detail=f"Too many failed attempts. Account locked for {LOCKOUT_DURATION_MINUTES} minutes.",
+                )
+
+            attempts_left = MAX_LOGIN_ATTEMPTS - user.failed_login_attempts
+            self.user_repo.update(user)
             raise HTTPException(
                 status_code=status.HTTP_401_UNAUTHORIZED,
-                detail="Incorrect email or password"
+                detail="Incorrect email or password."
             )
 
         # Successful login
         user.failed_login_attempts = 0
+        user.locked_until = None
         user.last_login = datetime.utcnow()
         self.user_repo.update(user)
 
@@ -168,6 +190,7 @@ class AuthService:
         user.reset_token = None  # Clear token (can't be reused)
         user.reset_token_expires = None
         user.failed_login_attempts = 0  # Reset any lockout
+        user.locked_until = None
         self.user_repo.update(user)
         return {"message": "Password reset successful! You can now login."}
 

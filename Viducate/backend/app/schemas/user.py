@@ -30,9 +30,12 @@ class UserRegisterRequest(BaseModel):
     @field_validator("first_name", "last_name")
     @classmethod
     def validate_name(cls, value):
-        if value and len(value.strip()) < 2:
+        if value is None:
+            return value
+        value = value.strip()
+        if len(value) < 2:
             raise ValueError("Name must be at least 2 characters")
-        return value.strip() if value else value
+        return value
 
     # Language validation
     @field_validator("language_preference")
@@ -57,6 +60,9 @@ class UserResponse(BaseModel):
 
     model_config = {"from_attributes": True}  
 
+
+class UserProfileResponse(UserResponse):
+    has_password: bool
 
 # Token Schema
 class TokenResponse(BaseModel):

@@ -19,8 +19,8 @@ logger = logging.getLogger(__name__)
 
 
 # YouTube URL - database
-MAX_DB_STORAGE_BYTES = 50 * 1024 * 1024   # 50 MB
-DB_STORAGE_THRESHOLD = 49 * 1024 * 1024   # 49 MB
+MAX_DB_STORAGE_BYTES = 1 * 1024 * 1024 * 1024   # 1 GB
+DB_STORAGE_THRESHOLD = 1023 * 1024 * 1024   
 
 # File Upload - Cloudflare R2
 MAX_R2_STORAGE_BYTES = 1 * 1024 * 1024 * 1024   # 1 GB per user
@@ -42,13 +42,13 @@ class VideoService:
         self.caching_service = VideoCachingServise(db)
 
     def _check_db_storage_limit(self, user_id: int):
-            used = self.video_repo.get_video_storage_bytes(user_id)
-            if used >= DB_STORAGE_THRESHOLD:
-                used_mb = used / (1024 * 1024)
-                raise HTTPException(
-                    status_code=status.HTTP_403_FORBIDDEN,
-                    detail=f"Storage limit reached. Used: {used_mb:.1f}MB / 50MB. Please delete a video to continue."
-                )
+        used = self.video_repo.get_video_storage_bytes(user_id)
+        if used >= DB_STORAGE_THRESHOLD:
+            used_gb  = used / (1024 * 1024 * 1024)
+            raise HTTPException(
+                status_code=status.HTTP_403_FORBIDDEN,
+                detail=f"Storage limit reached. Used: {used_gb :.2f}GB / 1GB. Please delete a video to continue."
+            )
             
 
     def _check_r2_storage_limit(self, user_id: int, new_file_size: int):
@@ -82,9 +82,16 @@ class VideoService:
             cache_result["language"] = cache_result.get("language", "en")
             return cache_result
         
-        #classify_video if film or music or.... not allowed
-        yt_video_id = self.caching_service.extract_youtube_id(normalized_url) 
-        subject = await classify_video(yt_video_id) if yt_video_id else "general"
+        # classify_video if film or music or.... not allowed
+        yt_video_id = self.caching_service.extract_youtube_id(normalized_url)
+
+        if yt_video_id:
+            classification_result = await classify_video(yt_video_id)
+            subject = classification_result["classification"]
+            duration_seconds = classification_result["duration_seconds"]
+        else:
+            subject = "general"
+            duration_seconds = None
 
         if subject == "blocked":
             raise HTTPException(
@@ -99,7 +106,8 @@ class VideoService:
             "language": request.language,
             "subject": request.subject,
             "processing_status": "uploaded",
-            "content_hash": content_hash
+            "content_hash": content_hash,
+            "duration": duration_seconds,
         }
         video = self.video_repo.create(video_data)
         logger.info(f"URL video created: video_id={video.vid}, user_id={user_id}")
@@ -112,6 +120,7 @@ class VideoService:
             "language": video.language,
             "processing_status": video.processing_status,
             "content_hash": video.content_hash,
+            "duration":video.duration,
             "message": "Video URL received and queued for processing",
         }
     
@@ -214,6 +223,7 @@ class VideoService:
                 "title": v.title,
                 "url": v.url,
                 "language": v.language,
+                "duration":v.duration,
                 "processing_status": v.processing_status,
                 "upload_date": v.upload_date,
                 "created_at": v.created_at,

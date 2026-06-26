@@ -9,7 +9,7 @@ from app.models.topic_segment import TopicSegment
 logger = logging.getLogger(__name__)
 
 # Storage limits
-MAX_DB_STORAGE_BYTES = 50 * 1024 * 1024  # 50 MB
+MAX_DB_STORAGE_BYTES = 1024 * 1024 * 1024  # 1 GB
 MAX_R2_STORAGE_BYTES = 1 * 1024 * 1024 * 1024  # 1 GB per user
 
 
@@ -38,18 +38,11 @@ class DashboardService:
         # --- Stats --------------------------------------------------
         videos = self.video_repo.get_by_user(user_id)
         
-        # --- Total Watch Time ---------------------------------------
-        total_watch_time = (
-          self.db.query(
-               func.coalesce(
-                    func.sum(TopicSegment.end_time - TopicSegment.start_time), 0
-               )
-          )
-          .join(Video, Video.vid == TopicSegment.vid_id)
-          .filter(Video.user_id == user_id)
-          .filter(TopicSegment.is_completed == True)
-          .scalar()
-          )
+        # --- Total Watch Time (sum of current_time across videos) ---
+        total_watch_time = sum(
+            v.current_time for v in videos
+            if v.current_time and v.processing_status == "completed"
+        )
 
         # --- Used Storage --------------------------------------------
         used_storage = sum(
@@ -66,9 +59,13 @@ class DashboardService:
             if v.processing_status != "completed":
                 continue
 
-            total_segments = len(v.segments)
-            completed_segments = sum(1 for s in v.segments if s.is_completed)
-            progress = int((completed_segments / total_segments) * 100) if total_segments > 0 else 0
+            # progress from current_time / duration
+            if v.duration and v.duration > 0 and v.current_time:
+                progress = int((v.current_time / v.duration) * 100)
+                progress = min(progress, 100)  # safety cap
+            else:
+                progress = 0
+
             is_completed = progress == 100
 
             videos_list.append({

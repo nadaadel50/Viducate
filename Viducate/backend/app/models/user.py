@@ -26,6 +26,7 @@ class User(Base):
     oauth_id = Column(String(255), nullable=True)
     profile_picture = Column(String, nullable=True)
     is_email_verified = Column(Boolean, default=False)
+    locked_until = Column(DateTime, nullable=True)
 
     videos = relationship("Video", back_populates="user")
     content_preferences = relationship("ContentPreferences", back_populates="user")
@@ -34,3 +35,4 @@ class User(Base):
     # quiz_attempts = relationship("UserQuizAttempts", back_populates="user")
     # chats = relationship("ChatHistory", back_populates="user")
     # stuck_events = relationship("StuckEvent", back_populates="user")
+
