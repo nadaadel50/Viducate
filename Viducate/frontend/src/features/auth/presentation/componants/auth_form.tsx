@@ -1,4 +1,3 @@
-
 import React from "react";
 import { Link } from "react-router-dom";
 import { FormattedMessage, useIntl } from "react-intl";
@@ -31,6 +30,8 @@ export function AuthForm({ type }: AuthFormProps) {
     serverError,
     clearError,
     isSubmitting,
+    lockoutDisplay,
+    isLocked,
   } = useAuthForm(isLogin);
 
   const formValues = watch();
@@ -39,7 +40,6 @@ export function AuthForm({ type }: AuthFormProps) {
     window.location.href = "http://localhost:8000/api/v1/auth/google/login";
   };
 
- 
   const getFieldProps = (
     fieldName:
       | "firstName"
@@ -55,9 +55,8 @@ export function AuthForm({ type }: AuthFormProps) {
       }),
     error: errors[fieldName]?.message,
   });
-
+  console.log("errors", serverError);
   return (
-    
     <div className="relative w-full space-y-3 py-1 md:py-2 lg:py-2">
       {serverError && (
         <CustumError apiError={serverError} clearError={clearError} />
@@ -72,7 +71,6 @@ export function AuthForm({ type }: AuthFormProps) {
         })}
       />
 
-     
       <button
         type="button"
         onClick={loginWithGoogle}
@@ -94,7 +92,6 @@ export function AuthForm({ type }: AuthFormProps) {
         />
       </button>
 
-    
       <div className="relative flex items-center py-2">
         <div className="flex-grow border-t border-gray-100"></div>
 
@@ -134,12 +131,9 @@ export function AuthForm({ type }: AuthFormProps) {
           {...getFieldProps("email")}
         />
 
-      
         <div
           className={
-            isLogin
-              ? "space-y-2"
-              : "grid grid-cols-1 md:grid-cols-2  md:gap-4 "
+            isLogin ? "space-y-2" : "grid grid-cols-1 md:grid-cols-2  md:gap-4 "
           }
         >
           <CustomInput
@@ -160,7 +154,6 @@ export function AuthForm({ type }: AuthFormProps) {
         </div>
 
         {isLogin && (
-         
           <div className="flex flex-col flex-row  justify-between gap-2 pb-2 ">
             <label
               className={`
@@ -189,8 +182,25 @@ export function AuthForm({ type }: AuthFormProps) {
           </div>
         )}
 
-        <CustomButton type="submit" disabled={isSubmitting}>
-          {isSubmitting ? (
+        <CustomButton type="submit" disabled={isSubmitting || isLocked}>
+          {isLocked ? (
+            <span className="flex items-center justify-center gap-2">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                className="w-4 h-4"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                strokeWidth="2.5"
+                strokeLinecap="round"
+                strokeLinejoin="round"
+              >
+                <rect x="3" y="11" width="18" height="11" rx="2" ry="2" />
+                <path d="M7 11V7a5 5 0 0 1 10 0v4" />
+              </svg>
+              {lockoutDisplay}
+            </span>
+          ) : isSubmitting ? (
             <CustumBtnLoader />
           ) : (
             intl.formatMessage({
@@ -200,7 +210,6 @@ export function AuthForm({ type }: AuthFormProps) {
         </CustomButton>
       </form>
 
-      {/* Typography موحدة باستخدام FONT_STYLES */}
       <p
         className={`
           ${FONT_STYLES.body}
@@ -218,12 +227,9 @@ export function AuthForm({ type }: AuthFormProps) {
           className={`${FONT_STYLES.body} ml-1 font-bold hover:underline`}
           style={{ color: COLORS.text.coloredText }}
         >
-          <FormattedMessage
-            id={isLogin ? "auth.signup" : "auth.loginLink"}
-          />
+          <FormattedMessage id={isLogin ? "auth.signup" : "auth.loginLink"} />
         </Link>
       </p>
     </div>
   );
 }
-
