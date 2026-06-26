@@ -208,7 +208,7 @@ def submit_quiz_results(
             "is_correct":  is_correct,
         })
 
-    total = len(answers_payload)
+    total = len(quiz.questions)
     wrong_count = total - correct_count
     score = int(round((correct_count / total) * 100)) if total > 0 else 0
 
