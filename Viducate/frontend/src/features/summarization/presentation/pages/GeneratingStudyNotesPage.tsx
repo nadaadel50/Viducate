@@ -1,6 +1,6 @@
 import { BookOpen } from 'lucide-react';
 import { COLORS } from '../../../../core/constants/colors';
-import { GenerationLoadingScreen } from '../../../../core/widgets/generation_loading_screen';
+import { GenerationLoadingScreen } from '../../../../core/componants/generation_loading_screen';
 
 export function GeneratingStudyNotesPage() {
   return (
