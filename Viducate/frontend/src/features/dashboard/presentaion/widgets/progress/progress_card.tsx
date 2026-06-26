@@ -38,7 +38,7 @@ export function ProgressCard(props: ProgressCardProps) {
 
       <div className="flex-1 min-w-0">
         <p
-          className={`${FONT_STYLES.tiny} text-slate-500 font-medium uppercase tracking-wide mb-1`}
+          className={`${FONT_STYLES.caption} text-slate-500 font-medium uppercase tracking-wide mb-1`}
         >
           {props.title}
         </p>

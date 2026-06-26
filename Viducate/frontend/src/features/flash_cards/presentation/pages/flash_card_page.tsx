@@ -3,9 +3,9 @@ import { CompeleteProgress } from "../widgets/complete_progress";
 import { FlashCard } from "../widgets/flash_card";
 import { UserLevelBtn } from "../widgets/user_level_btn";
 import { Difficulty } from "../../domain/entity/difficaulty";
-import ErrorScreen from "../../../../core/widgets/error";
+import ErrorScreen from "../../../../core/componants/error";
 import FinishSessionCard from "../section/finish_flash_cards";
-import { GenerationLoadingScreen } from "../../../../core/widgets/generation_loading_screen";
+import { GenerationLoadingScreen } from "../../../../core/componants/generation_loading_screen";
 import { useFlashcardSession } from "../hooks/use_flash_card_session";
 
 const LoadingView = () => (

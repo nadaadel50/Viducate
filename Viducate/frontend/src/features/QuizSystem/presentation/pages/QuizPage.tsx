@@ -10,7 +10,7 @@ import { useQuiz } from "../hooks/useQuiz";
 import { useGenerateQuiz } from "../hooks/useGenerateQuiz";
 import { QuizDifficultyModal } from "../componants/QuizDifficultyModal";
 import { useEffect, useState } from "react";
-import { GenerationLoadingScreen } from "../../../../core/widgets/generation_loading_screen";
+import { GenerationLoadingScreen } from "../../../../core/componants/generation_loading_screen";
 import { FileQuestion } from "lucide-react";
 
 const SECONDS_PER_QUESTION: Record<"easy" | "medium" | "hard", number> = {
