@@ -16,7 +16,7 @@ export const FONT_STYLES = {
   button: "text-sm font-medium",
 
   // ===== Navigation =====
-  logo: "text-3xl md:text-2xl font-black",
+  logo: "text-3xl md:text-xl font-black",
   navItem: "text-sm md:text-base font-medium",
 
   // ===== General Text =====

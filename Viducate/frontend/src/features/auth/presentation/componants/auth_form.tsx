@@ -189,7 +189,7 @@ export function AuthForm({ type }: AuthFormProps) {
           </div>
         )}
 
-        <CustomButton type="submit" disabled={isSubmitting}>
+        <CustomButton className="w-full" type="submit" disabled={isSubmitting}>
           {isSubmitting ? (
             <CustumBtnLoader />
           ) : (
@@ -200,7 +200,7 @@ export function AuthForm({ type }: AuthFormProps) {
         </CustomButton>
       </form>
 
-      {/* Typography موحدة باستخدام FONT_STYLES */}
+    
       <p
         className={`
           ${FONT_STYLES.body}
