@@ -27,9 +27,9 @@ export function VideoPlayer() {
     duration: 0,
   });
 
- 
   const { currentTime, setCurrentTime, selectedTopic, seekTo, setSeekTo } =
     useLearningSession();
+
   const { data: topics } = useVideoData();
 
   const [topicStartTime, setTopicStartTime] = useState<number | null>(null);
@@ -45,6 +45,7 @@ export function VideoPlayer() {
     setSpeed,
     getDuration,
   } = useVideoPlayer();
+
   const { openChat, setUserInput } = useChat();
 
   const {
@@ -79,7 +80,6 @@ export function VideoPlayer() {
     handlePlay,
     handlePause,
     handleSpeedChange,
-   
     showSpeedMenu,
     playbackRate,
     setShowSpeedMenu,
@@ -88,14 +88,12 @@ export function VideoPlayer() {
     player: { seek, getCurrentTime, getDuration, setSpeed, play, pause },
     analytics: { addSeekEvent, triggerStuck },
     videoState: { setPlayerState, setCurrentTime },
-      topicDuration,
+    topicDuration,
   });
-  
-
- 
 
   useEffect(() => {
     setCurrentTopicName(selectedTopic?.title || "");
+
     if (selectedTopic) {
       setTopicStartTime(Date.now());
       setTopicDuration(
@@ -103,37 +101,46 @@ export function VideoPlayer() {
       );
       setTimeSpent(0);
     }
+
     setEvents([]);
   }, [selectedTopic, setEvents, setTimeSpent]);
 
   useEffect(() => {
     if (seekTo === null) return;
+
     seek(seekTo);
     setSeekTo(null);
   }, [seekTo]);
 
   useEffect(() => {
     seek(currentTime);
-    setPlayerState((p) => ({
-    ...p,
-    isPlaying: false,
-    
-  }));
-  }, []);
-  
 
-  const handleProgressClick = (e: React.MouseEvent<HTMLDivElement>) => {
+    setPlayerState((p) => ({
+      ...p,
+      isPlaying: false,
+    }));
+  }, []);
+
+  const handleProgressClick = (
+    e: React.MouseEvent<HTMLDivElement>,
+  ) => {
     if (!progressRef.current) return;
+
     const rect = progressRef.current.getBoundingClientRect();
+
     seek(((e.clientX - rect.left) / rect.width) * getDuration());
   };
 
   return (
-    <div className="flex flex-col items-center w-full">
+    <div className="flex w-full flex-col items-center">
       <div
         ref={containerRef}
-        className="relative w-full max-w-5xl bg-black rounded-xl overflow-hidden shadow-md group"
-        style={{ height: isFullscreen ? "100vh" : "350px" }}
+        className="group relative w-full overflow-hidden rounded-lg bg-black shadow-md sm:rounded-xl lg:max-w-5xl"
+        style={{
+          height: isFullscreen
+            ? "100vh"
+            : "clamp(190px, 34vw, 280px)",
+        }}
         onMouseMove={resetHideTimer}
         onMouseLeave={handleMouseLeave}
       >
@@ -146,40 +153,54 @@ export function VideoPlayer() {
           width="100%"
           height="100%"
           onTimeUpdate={() => handleTimeUpdate()}
-          onDurationChange={(e: React.SyntheticEvent<HTMLVideoElement>) => {
+          onDurationChange={(
+            e: React.SyntheticEvent<HTMLVideoElement>,
+          ) => {
             playerRef.current = e.currentTarget;
+
             if (currentTime > 0) {
               e.currentTarget.currentTime = currentTime;
             }
+
             handleLoadedMetadata();
           }}
           onPlay={handlePlay}
           onPause={handlePause}
           onSeeked={handleSeek}
-          onEnded={() => setPlayerState((p) => ({ ...p, isPlaying: false }))}
-          // onClick={() => handleToggle(playerState.isPlaying)}
-          style={{ width: "100%", height: "100%", objectFit: "cover" }}
+          onEnded={() =>
+            setPlayerState((p) => ({
+              ...p,
+              isPlaying: false,
+            }))
+          }
+          style={{ objectFit: "cover" }}
         />
 
-        {(!playerState.started) && <InitialPlayOverlay onStart={handleStart} />}
+        {!playerState.started && (
+          <InitialPlayOverlay onStart={handleStart} />
+        )}
 
         {playerState.started && (
           <div
-            className={`absolute bottom-0 left-0 right-0 z-30 transition-opacity duration-300
-              ${showControls ? "opacity-100" : "opacity-0 pointer-events-none"}`}
+            className={`absolute bottom-0 left-0 right-0 z-30 transition-opacity duration-300 ${
+              showControls
+                ? "opacity-100"
+                : "pointer-events-none opacity-0"
+            }`}
           >
-            <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/30 to-transparent pointer-events-none rounded-b-xl" />
-            <div className="relative px-4 pb-3 pt-8 flex flex-col gap-2">
+            <div className="pointer-events-none absolute inset-0 rounded-b-lg bg-gradient-to-t from-black/75 via-black/25 to-transparent sm:rounded-b-xl" />
+
+            <div className="relative flex flex-col gap-1.5 px-2.5 pb-2.5 pt-5 sm:px-3 sm:pb-3 sm:pt-6">
               <VideoProgressBar
                 progress={playerState.progress}
                 duration={playerState.duration}
-                
                 topics={topics?.topics ?? []}
                 getDuration={getDuration}
                 onProgressClick={handleProgressClick}
                 onMarkerClick={(time) => seek(time)}
                 progressRef={progressRef}
               />
+
               <VideoControls
                 isPlaying={playerState.isPlaying}
                 currentTime={currentTime}
@@ -188,10 +209,14 @@ export function VideoPlayer() {
                 currentTopicName={currentTopicName}
                 showSpeedMenu={showSpeedMenu}
                 isFullscreen={isFullscreen}
-                onToggle={() => handleToggle(playerState.isPlaying)}
+                onToggle={() =>
+                  handleToggle(playerState.isPlaying)
+                }
                 onAddMarker={handleAddMarker}
                 onSpeedChange={handleSpeedChange}
-                onToggleSpeedMenu={() => setShowSpeedMenu((p) => !p)}
+                onToggleSpeedMenu={() =>
+                  setShowSpeedMenu((p) => !p)
+                }
                 onToggleFullscreen={toggleFullscreen}
               />
             </div>
@@ -200,24 +225,27 @@ export function VideoPlayer() {
       </div>
 
       {showPopup && (
-  <StuckPopup
-    reason={getStuckMessage(stuckReason)}
-    onHelp={() => {
-      openChat();
-      const subtopic = getClosestSubTopic(
-        selectedTopic?.sub_topics ?? [],
-        currentTime,
-      );
-      console.log("currentTime =", currentTime);
-     console.log("typeof currentTime =", typeof currentTime);  
-      const question=getRandomStuckQuestion(subtopic?.name??"",currentTime)
+        <StuckPopup
+          reason={getStuckMessage(stuckReason)}
+          onHelp={() => {
+            openChat();
 
-      setUserInput(question);
-      setShowPopup(false);
-    }}
-    onDismiss={() => setShowPopup(false)}
-  />
-)}
+            const subtopic = getClosestSubTopic(
+              selectedTopic?.sub_topics ?? [],
+              currentTime,
+            );
+
+            const question = getRandomStuckQuestion(
+              subtopic?.name ?? "",
+              currentTime,
+            );
+
+            setUserInput(question);
+            setShowPopup(false);
+          }}
+          onDismiss={() => setShowPopup(false)}
+        />
+      )}
     </div>
   );
 }

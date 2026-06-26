@@ -1,8 +1,6 @@
-
-import type { ReactNode } from "react";
-import { COLORS } from "../constants/colors";
-import { FONT_STYLES } from "../constants/fonts";
+import type { CSSProperties, ReactNode } from "react";
 import clsx from "clsx";
+import { FONT_STYLES } from "../constants/fonts";
 
 type CustomButtonProps = {
   children: ReactNode;
@@ -10,8 +8,10 @@ type CustomButtonProps = {
   disabled?: boolean;
   type?: "button" | "submit" | "reset";
   className?: string;
-  style?: React.CSSProperties;
-  variant?: "primary" | "danger" | "outline";
+  style?: CSSProperties;
+  leftIcon?: ReactNode;
+  rightIcon?: ReactNode;
+  fullWidth?: boolean;
 };
 
 export function CustomButton({
@@ -20,92 +20,27 @@ export function CustomButton({
   disabled = false,
   type = "button",
   className,
-  variant = "primary",
-  style
+  style,
+  leftIcon,
+  rightIcon,
+  fullWidth = false,
 }: CustomButtonProps) {
-  const backgroundColor = () => {
-    if (disabled) return COLORS.button.disabled;
-
-    switch (variant) {
-      case "danger":
-        return "#e11d48";
-
-      case "outline":
-        return "transparent";
-
-      default:
-        return COLORS.button.primary;
-    }
-  };
-
-  const textColor =
-    variant === "outline"
-      ? COLORS.button.primary
-      : COLORS.background.light;
-
-  const borderColor = variant==="outline"?COLORS.button.primary: "transparent";
-
-  
-
   return (
     <button
-
       type={type}
       onClick={onClick}
       disabled={disabled}
-      style={{
-        backgroundColor: backgroundColor(),
-        color: textColor,
-        border: `1px solid ${borderColor}`,
-        ...style
-      }}
+      style={style}
       className={clsx(
-        `
-        inline-flex
-        items-center
-        justify-center
-        gap-2
-        px-5
-        py-2.5
-        rounded-xl
-        transition-all
-        duration-200
-        shadow-md
-        active:scale-[0.98]
-        disabled:cursor-not-allowed
-        disabled:opacity-70
-        cursor-pointer
-        
-        `,
+        "inline-flex items-center justify-center gap-2 rounded-xl px-4 py-2.5 transition-all duration-200 shadow-md active:scale-[0.98] cursor-pointer disabled:cursor-not-allowed disabled:opacity-70 sm:px-5",
         FONT_STYLES.button,
+        fullWidth && "w-full",
         className
       )}
-      onMouseEnter={(e) => {
-        if (disabled) return;
-
-        switch (variant) {
-          case "primary":
-            e.currentTarget.style.backgroundColor =
-              COLORS.button.primaryHover;
-            break;
-
-          case "danger":
-            e.currentTarget.style.backgroundColor = "#be123c";
-            break;
-
-          case "outline":
-            e.currentTarget.style.backgroundColor =
-              `${COLORS.button.primary}10`;
-            break;
-        }
-      }}
-      onMouseLeave={(e) => {
-        if (disabled) return;
-
-        e.currentTarget.style.backgroundColor = backgroundColor();
-      }}
     >
+      {leftIcon}
       {children}
+      {rightIcon}
     </button>
   );
 }

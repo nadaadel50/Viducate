@@ -1,8 +1,8 @@
 """init
 
-Revision ID: c22211313a42
+Revision ID: 893bfeaa6773
 Revises: 
-Create Date: 2026-05-19 10:45:13.765538
+Create Date: 2026-06-26 21:51:45.327016
 
 """
 from typing import Sequence, Union
@@ -12,7 +12,7 @@ import sqlalchemy as sa
 
 
 # revision identifiers, used by Alembic.
-revision: str = 'c22211313a42'
+revision: str = '893bfeaa6773'
 down_revision: Union[str, Sequence[str], None] = None
 branch_labels: Union[str, Sequence[str], None] = None
 depends_on: Union[str, Sequence[str], None] = None
@@ -39,6 +39,7 @@ def upgrade() -> None:
     sa.Column('oauth_id', sa.String(length=255), nullable=True),
     sa.Column('profile_picture', sa.String(), nullable=True),
     sa.Column('is_email_verified', sa.Boolean(), nullable=True),
+    sa.Column('locked_until', sa.DateTime(), nullable=True),
     sa.PrimaryKeyConstraint('id'),
     sa.UniqueConstraint('email')
     )
@@ -240,6 +241,7 @@ def upgrade() -> None:
     sa.Column('video_timestamp', sa.Integer(), nullable=True),
     sa.Column('timestamp_label', sa.String(length=12), nullable=True),
     sa.Column('created_at', sa.TIMESTAMP(), server_default=sa.text('now()'), nullable=True),
+    sa.Column('concept', sa.String(length=255), nullable=True),
     sa.ForeignKeyConstraint(['quiz_id'], ['quiz.quiz_id'], ondelete='CASCADE'),
     sa.ForeignKeyConstraint(['segment_id'], ['topic_segment.segment_id'], ondelete='SET NULL'),
     sa.PrimaryKeyConstraint('question_id')
@@ -251,11 +253,14 @@ def upgrade() -> None:
     sa.Column('user_id', sa.Integer(), nullable=False),
     sa.Column('correct_count', sa.Integer(), nullable=False),
     sa.Column('wrong_count', sa.Integer(), nullable=False),
+    sa.Column('score', sa.Integer(), nullable=False),
+    sa.Column('trials', sa.Integer(), nullable=False),
     sa.Column('answers', sa.JSON(), nullable=True),
     sa.Column('submitted_at', sa.TIMESTAMP(), server_default=sa.text('now()'), nullable=True),
     sa.ForeignKeyConstraint(['quiz_id'], ['quiz.quiz_id'], ondelete='CASCADE'),
     sa.ForeignKeyConstraint(['user_id'], ['user.id'], ondelete='CASCADE'),
-    sa.PrimaryKeyConstraint('id')
+    sa.PrimaryKeyConstraint('id'),
+    sa.UniqueConstraint('quiz_id', 'user_id', name='uq_quiz_user')
     )
     # ### end Alembic commands ###
 
