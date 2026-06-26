@@ -9,6 +9,8 @@ import { loginUseCase, signupUseCase } from '../../../../core/di/auth_container'
 import type { ApiResult } from '../../../../core/api/apiResult';
 import type { LoginResponseDto } from '../../api/models/login/login_response_dto';
 import type { SignupResponseDto } from '../../api/models/signup/signup_response_dto';
+import type { Locale } from '../../../../core/l10n';
+import { LanguageProvider } from '../../../../core/contexts/languageContext/languageProvider';
 
 
 
@@ -17,7 +19,8 @@ export const AuthProvider = ({ children }: { children: React.ReactNode }) => {
     
 
   const [loading, setLoading] = useState(true);
- 
+  const [userLocale, setUserLocale] = useState<Locale | undefined>(undefined);
+
 
   useEffect(() => {
     const initAuth = async () => {
@@ -26,6 +29,9 @@ export const AuthProvider = ({ children }: { children: React.ReactNode }) => {
         try {
           const userData = await authService.getCurrentUser();
           setUser(userData);
+           if (userData.language_preference) {
+                        setUserLocale(userData.language_preference as Locale);
+                    }
         } catch {
           localStorage.removeItem('token');
           sessionStorage.removeItem('token');
@@ -59,8 +65,11 @@ export const AuthProvider = ({ children }: { children: React.ReactNode }) => {
       }
 
       setUser(loginData.user);
-    
-      return { success: true } as ApiResult<LoginResponseDto>;;
+      if (loginData.user.language_preference) {
+            setUserLocale(loginData.user.language_preference as Locale);
+        }
+
+      return { success: true } as ApiResult<LoginResponseDto>;
 
     
    
@@ -92,6 +101,7 @@ export const AuthProvider = ({ children }: { children: React.ReactNode }) => {
 
   const refreshUser = async () => {
   const userData = await authService.getCurrentUser();
+  console.log("language_preference:", userData.language_preference);
   setUser(userData);
 };
 
@@ -104,7 +114,9 @@ export const AuthProvider = ({ children }: { children: React.ReactNode }) => {
 
   return (
     <AuthContext.Provider value={{ user, login, signup, logout, loading,isAuthenticated:!!user, refreshUser }}>
-      {!loading && children}
+    <LanguageProvider initialLocale={userLocale}>
+                {!loading && children}
+    </LanguageProvider>
     </AuthContext.Provider>
   );
 };
