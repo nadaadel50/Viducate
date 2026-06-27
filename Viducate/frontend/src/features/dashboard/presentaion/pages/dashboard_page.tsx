@@ -8,9 +8,9 @@ import { ErrorScreen } from "../../../../core/componants/error";
 import { useDashboard } from "../hooks/use_dashboard";
 import { ContinueLearningPart } from "../widgets/continue_learning/continue_learning_part";
 import { StartUpload } from "../widgets/start_upload";
-import { DeleteModal } from "../../../../core/componants/delete_modal";
 import { Toast } from "../../../../core/componants/toast_message";
 import { useDeleteVideo } from "../hooks/use_delete_video";
+import { ConfirmationModal } from "../../../../core/componants/confirmation_modal";
 
 export function DashboardPage() {
   const {
@@ -69,7 +69,7 @@ export function DashboardPage() {
         )}
       </div>
 
-      <DeleteModal
+      <ConfirmationModal
         open={openDeleteMessage}
         title="Delete Video"
         description="Are you sure you want to delete this Video? This action cannot be undone."

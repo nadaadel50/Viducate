@@ -11,7 +11,7 @@ import { useGetUserData } from "../hooks/use_get_user_data";
 import { ErrorScreen } from "../../../../core/componants/error";
 import { COLORS } from "../../../../core/constants";
 import { useProfileContext } from "../hooks/use_profile_context";
-import { DeleteModal } from "../../../../core/componants/delete_modal";
+import { ConfirmationModal } from "../../../../core/componants/confirmation_modal";
 import LoadingScreen from "../../../../core/componants/loading_screen";
 
 export function ProfilePage() {
@@ -69,13 +69,13 @@ export function ProfilePage() {
         </motion.div>
       </main>
 
-      <DeleteModal
+      <ConfirmationModal
         open={showDeleteModal}
         title="Delete Account"
         description="All of your data will be permanently removed. This action cannot be undone."
         confirmText="Delete Account"
         isLoading={deleteAccount.isDeleting}
-        onClose={() => deleteAccount.closeModal}
+        onClose={deleteAccount.closeModal}
         onConfirm={deleteAccount.handleDelete}
       />
     </div>

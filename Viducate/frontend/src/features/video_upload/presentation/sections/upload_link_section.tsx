@@ -8,10 +8,9 @@ import { useNavigate } from "react-router";
 import { AppRoutesNames } from "../../../../app/routers/routes";
 import { useLearningSession } from "../../../../core/hooks/useLearningContent";
 import { useState } from "react";
-import { ExistingVideoModal } from "../componants/upload/exist_message";
 import { useUploadLink } from "../hooks/upload_url";
-
-
+import { ConfirmationModal } from "../../../../core/componants/confirmation_modal";
+import { FolderOpen } from "lucide-react";
 
 export function UploadLinkSection() {
   const { setVideoId } = useLearningSession();
@@ -20,7 +19,7 @@ export function UploadLinkSection() {
   const [showExistingVideoModal, setShowExistingVideoModal] = useState(false);
 
   const { linkTitle, linkTitleError, handleLinkTitle } = useLinkTitleInput();
-  const {uploadLinkAsync,isLoading,error}=useUploadLink()
+  const { uploadLinkAsync, isLoading, error } = useUploadLink();
 
   const navigate = useNavigate();
 
@@ -70,15 +69,24 @@ export function UploadLinkSection() {
         error={error}
       />
 
-      <ExistingVideoModal
-        show={showExistingVideoModal}
-        onCancel={() => setShowExistingVideoModal(false)}
-        onOpenVideo={async() => {
-         
+     
 
+      <ConfirmationModal
+        open={showExistingVideoModal}
+        title="Video Already Exists"
+        description="This video has already been processed. Would you like to open it instead of uploading it again?"
+        confirmText="Open Video"
+        cancelText="Cancel"
+        confirmVariant="primary"
+        icon={<FolderOpen size={22} />}
+        onClose={() => setShowExistingVideoModal(false)}
+        onConfirm={() => {
+          setShowExistingVideoModal(false);
           navigate(AppRoutesNames.wathcVideo, { replace: true });
         }}
       />
+
+     
     </>
   );
 }

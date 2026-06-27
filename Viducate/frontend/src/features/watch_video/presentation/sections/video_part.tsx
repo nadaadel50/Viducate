@@ -115,10 +115,10 @@ export function VideoPlayer() {
   useEffect(() => {
     seek(currentTime);
 
-    setPlayerState((p) => ({
-      ...p,
-      isPlaying: false,
-    }));
+    // setPlayerState((p) => ({
+    //   ...p,
+    //   isPlaying: false,
+    // }));
   }, []);
 
   const handleProgressClick = (

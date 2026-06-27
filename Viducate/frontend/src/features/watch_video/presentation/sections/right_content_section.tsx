@@ -72,10 +72,12 @@ export function RightContentSection({ onOpenTopics }: Props) {
 
   return (
     <div className="min-h-screen w-full flex flex-col justify-center items-center">
+     
       <div className="w-full max-w-5xl px-8">
-        <button onClick={onOpenTopics} className="lg:hidden my-3">
-          <PanelRightOpen size={18} />
+         <button onClick={onOpenTopics} className="lg:hidden my-3 block  p-3 border rounded-xl border-gray-100 ">
+          <PanelRightOpen size={25} />
         </button>
+        
 
         <MainHeader />
 

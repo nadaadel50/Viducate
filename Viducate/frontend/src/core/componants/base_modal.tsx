@@ -1,5 +1,5 @@
-import React from 'react';
-import type { ReactNode } from 'react';
+import type { ReactNode } from "react";
+import { createPortal } from "react-dom";
 
 interface BaseModalProps {
   isOpen: boolean;
@@ -8,16 +8,28 @@ interface BaseModalProps {
   maxWidth?: string;
 }
 
-export const BaseModal: React.FC<BaseModalProps> = ({ isOpen, onClose, children, maxWidth = "max-w-5xl" }) => {
+export function BaseModal({
+  isOpen,
+  onClose,
+  children,
+  maxWidth = "max-w-5xl",
+}: BaseModalProps) {
   if (!isOpen) return null;
 
-  return (
-    <div className="fixed inset-0 z-50 flex items-center justify-center p-4 sm:p-6">
-      <div className="absolute inset-0 bg-gray-900/40 backdrop-blur-sm transition-opacity" onClick={onClose} />
-    
-      <div className={`relative w-full ${maxWidth} max-h-[90vh] flex flex-col bg-white dark:bg-gray-900 rounded-2xl shadow-2xl ring-1 ring-gray-900/5 dark:ring-white/10 overflow-hidden transform transition-all animate-[fadeInUp_0.3s_ease-out]`}>
+  return createPortal(
+    <div className="fixed inset-0 z-[9999] flex items-center justify-center p-4 sm:p-6">
+      <div
+        className="absolute inset-0 bg-gray-900/40 backdrop-blur-sm"
+        onClick={onClose}
+      />
+
+      <div
+        onClick={(e) => e.stopPropagation()}
+        className={`relative flex max-h-[90vh] w-full ${maxWidth} flex-col overflow-hidden rounded-2xl bg-white shadow-2xl ring-1 ring-gray-900/5`}
+      >
         {children}
       </div>
-    </div>
+    </div>,
+    document.body
   );
-};
+}

@@ -4,7 +4,7 @@ import { useNavigate } from "react-router-dom";
 import { AppRoutesNames } from "../../../../app/routers/routes";
 import { FONT_STYLES } from "../../../../core/constants/fonts";
 import { useLearningSession } from "../../../../core/hooks/useLearningContent";
-import { CustomizeExperienceModal } from "../../../preferences/presentation/pages/CustomizeExperienceModal";
+import { CustomizeExperienceModal } from "../../../preferences/presentation/pages/customize_experience_modal";
 import { SearchTopicBar } from "../widgets/search_topic_bar";
 import { ContentLearningCard } from "../widgets/content_learning_card";
 type LeftContentSectionProps = {
@@ -109,11 +109,13 @@ export function LeftContentSection({ onClose }: LeftContentSectionProps) {
       </div>
 
       {isCustomizeOpen && (
-        <CustomizeExperienceModal
+    
+          <CustomizeExperienceModal
           isOpen={isCustomizeOpen}
           onClose={() => setIsCustomizeOpen(false)}
           videoId={videoId}
         />
+    
       )}
     </div>
   );

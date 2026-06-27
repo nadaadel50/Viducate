@@ -6,8 +6,8 @@ import { ChatHeader } from "../widgets/chat_header";
 import { ChatMessages } from "../widgets/chat_messages";
 import { ChatInputBtn } from "../widgets/chat_input_btn";
 import { RecentChatsSidebar } from "../widgets/recent_chat_sideBar";
+import { ConfirmationModal } from "../../../../core/componants/confirmation_modal";
 
-import { DeleteModal } from "../../../../core/componants/delete_modal";
 
 export function ChatBotPage() {
   const { closeChat, open } = useChat();
@@ -73,8 +73,9 @@ export function ChatBotPage() {
         </div>
 
         {/* Delete Modal */}
-        <DeleteModal
+        <ConfirmationModal
           open={openDeleteModal}
+          confirmVariant="danger"
           title="Delete Chat"
           description="Are you sure you want to delete this conversation? This action cannot be undone."
           onClose={handleCloseDeleteModal}

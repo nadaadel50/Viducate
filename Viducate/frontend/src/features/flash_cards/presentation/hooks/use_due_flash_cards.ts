@@ -34,7 +34,7 @@ export function useDueFlashcards() {
     {},
   );
   const totalDue = Object.values(dueBySegment).reduce((a, b) => a + b, 0);
-  console.log(dueBySegment)
+ 
 
   return {
     dueBySegment,

@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react";
+import { FONT_SIZE, FONT_WEIGHT } from "../constants/fonts_update";
 
 type ToastProps = {
   message: string;
@@ -59,7 +60,7 @@ export function Toast({
     >
       <div className="flex items-center gap-3">
         <span className="material-symbols-outlined">{icon[type]}</span>
-        <p className="text-sm font-medium">{message}</p>
+        <p className={`${FONT_SIZE.size12 } ${FONT_WEIGHT.medium}`}>{message}</p>
       </div>
 
       <button onClick={onClose} className="cursor-pointer">
