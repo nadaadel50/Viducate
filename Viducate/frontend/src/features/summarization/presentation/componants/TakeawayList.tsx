@@ -1,11 +1,17 @@
 
 import { Lightbulb } from 'lucide-react';
 import { COLORS } from '../../../../core/constants/colors';
-import { FormattedMessage } from "react-intl";
-export const TakeawayList = ({ items }: { items: string[] }) => (
+interface TakeawayListProps {
+  items: string[];
+  isArabic?: boolean;
+}
+export const TakeawayList = ({
+  items,
+  isArabic = false,
+}: TakeawayListProps) => (
   <section className="mb-10">
     <h3 className="text-xl font-bold mb-4 flex items-center gap-2" style={{ color: COLORS.brand.primary }}>
-      <Lightbulb className="w-6 h-6" /> <FormattedMessage id="summary.keyTakeaways" />
+      <Lightbulb className="w-6 h-6" /> {isArabic ? "نقاط رئيسية" : "Key Takeaways"}
     </h3>
 
     <div 

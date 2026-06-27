@@ -3,12 +3,11 @@ import { useParams, useLocation } from "react-router";
 import { COLORS } from "../../../../core/constants/colors";
 import { SummaryHeader } from "../componants/SummaryHeader";
 import { TakeawayList } from "../componants/TakeawayList";
-import { QuizCard } from "../componants/QuizCard";
+import { MotivationCard } from "../componants/MotivationCard";
 import { ToolsCard } from "../componants/ToolsCard";
 import { TermTooltip } from "../componants/TermTooltip";
 import { GeneratingSummaryPage } from "./GeneratingSummaryPage";
 import { useSegmentSummary } from "../hooks/use_segment_summary";
-import { FormattedMessage } from "react-intl";
 import type {
   SummarySection,
   ContentItem,
@@ -16,7 +15,7 @@ import type {
 import { useVideoSummary } from "../hooks/use_video_summary";
 
 const SummaryPage = () => {
-  const { segmentId , videoId: videoIdParam } = useParams();
+  const { segmentId, videoId: videoIdParam } = useParams();
   const { state: locationState } = useLocation();
   const { videoId: videoIdState } = locationState || {};
 
@@ -47,21 +46,25 @@ const SummaryPage = () => {
   const cleanText = (text: string) =>
     text.replace(/\*\*/g, "").replace(/\. /g, ".\n");
 
-  const { title, summary, readingTime } = state.data;
+  const { title, summary, readingTime, language } = state.data;
+  const isArabic = language === "ar";
 
   return (
     <div
       className="min-h-screen flex flex-col"
-      style={{ backgroundColor: COLORS.background.light }}
+      style={{ background: COLORS.background.radialGradient }}
     >
       <main className="flex-1 w-full max-w-7xl mx-auto px-4 md:px-6 py-8">
         <div className="flex flex-col lg:flex-row gap-8 items-start">
           <article
-            className="flex-1 w-full min-w-0 rounded-xl shadow-sm p-8 md:p-12"
+            dir={isArabic ? "rtl" : "ltr"}
+            className={`flex-1 w-full min-w-0 rounded-xl shadow-sm p-8 md:p-12 ${
+              isArabic ? "text-right" : "text-left"
+            }`}
             style={{ backgroundColor: COLORS.layout.leftBackground }}
           >
-            <SummaryHeader title={cleanText(title)}  time={readingTime.label} />
-            <TakeawayList items={summary.takeaways.map(cleanText)} />
+            <SummaryHeader title={cleanText(title)} time={readingTime.label} />
+            <TakeawayList items={summary.takeaways.map(cleanText)} isArabic={isArabic} />
 
             <section className="space-y-10">
               {summary.sections.map(
@@ -72,6 +75,7 @@ const SummaryPage = () => {
                       style={{ color: COLORS.text.primary }}
                     >
                       {cleanText(section.heading)}
+
                     </h3>
 
                     <p
@@ -160,7 +164,7 @@ const SummaryPage = () => {
                     className="text-2xl font-bold"
                     style={{ color: COLORS.text.primary }}
                   >
-                    <FormattedMessage id="summary.conclusion" />
+                     {isArabic ? "الخلاصة" : "Conclusion"}
                   </h3>
 
                   <p
@@ -175,12 +179,12 @@ const SummaryPage = () => {
           </article>
 
           <aside className="w-full lg:w-80 flex-shrink-0 lg:sticky lg:top-8 space-y-6">
-            <QuizCard />
+            <MotivationCard />
             <ToolsCard
-  type="summary"
-  videoId={Number(videoId)}
-  segmentId={segmentId ? Number(segmentId) : undefined}
-/>
+              type="summary"
+              videoId={Number(videoId)}
+              segmentId={segmentId ? Number(segmentId) : undefined}
+            />
           </aside>
         </div>
       </main>
