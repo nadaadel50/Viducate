@@ -10,12 +10,12 @@ import { useLearningSession } from "../../../../core/hooks/useLearningContent";
 import { useState } from "react";
 import { ExistingVideoModal } from "../componants/upload/exist_message";
 import { useUploadLink } from "../hooks/upload_url";
-
+import { useIntl } from "react-intl";
 
 
 export function UploadLinkSection() {
   const { setVideoId } = useLearningSession();
-
+const intl = useIntl();
   const { url, handleUrlChange, linkError, handlePaste } = useLinkHandlers();
   const [showExistingVideoModal, setShowExistingVideoModal] = useState(false);
 
@@ -64,7 +64,7 @@ export function UploadLinkSection() {
 
       <UploadBtn
         disabled={linkError || url === "" || linkTitle === ""}
-        label={"Upload link"}
+        label={intl.formatMessage({ id: "upload.link.uploadButton" })}
         onClick={handleUploadURL}
         isLoading={isLoading}
         error={error}

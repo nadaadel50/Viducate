@@ -6,13 +6,13 @@ import { ChatHeader } from "../widgets/chat_header";
 import { ChatMessages } from "../widgets/chat_messages";
 import { ChatInputBtn } from "../widgets/chat_input_btn";
 import { RecentChatsSidebar } from "../widgets/recent_chat_sideBar";
-
 import { DeleteModal } from "../../../../core/componants/delete_modal";
+import { useIntl } from "react-intl";
 
 export function ChatBotPage() {
   const { closeChat, open } = useChat();
   const { videoTitle } = useLearningSession();
-
+  const intl = useIntl();
   const {
     messages,
     handleSend,
@@ -75,8 +75,12 @@ export function ChatBotPage() {
         {/* Delete Modal */}
         <DeleteModal
           open={openDeleteModal}
-          title="Delete Chat"
-          description="Are you sure you want to delete this conversation? This action cannot be undone."
+          title={intl.formatMessage({
+            id: "chat.deleteModal.title",
+          })}
+          description={intl.formatMessage({
+            id: "chat.deleteModal.description",
+          })}
           onClose={handleCloseDeleteModal}
           onConfirm={handleConfirmDelete}
         />

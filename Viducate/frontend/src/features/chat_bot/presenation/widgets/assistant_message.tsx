@@ -1,9 +1,7 @@
 import { Bot } from "lucide-react";
-
-import { FONT_STYLES } from "../../../../core/constants/fonts";
 import { formatMessageTime } from "../../../../core/utils/fomat_time";
 import { FONT_SIZE, FONT_WEIGHT } from "../../../../core/constants/fonts_update";
-
+import { useIntl } from "react-intl";
 type AssistantMessageProps = {
   message: string;
   senededTime: number;
@@ -19,6 +17,7 @@ export function AssistantMessage({
     .replace(/\* /g, "\n• ")
     .replace(/\. /g, ".\n\n");
 
+const intl = useIntl();
   return (
     <div className="flex flex-col items-start gap-2">
       <div className="flex items-start gap-2">
@@ -41,7 +40,10 @@ export function AssistantMessage({
       {/* Time */}
       <div className="ml-11 lg:ml-10">
         <span className={`${FONT_SIZE.size10} ${FONT_WEIGHT.semibold} text-slate-400`}>
-          Viducate AI Assistant • {formatMessageTime(senededTime)}
+          {intl.formatMessage({
+  id: "chat.assistant.name",
+})}{" "}
+• {formatMessageTime(senededTime)}
         </span>
       </div>
     </div>

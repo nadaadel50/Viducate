@@ -1,6 +1,7 @@
 import { motion, AnimatePresence } from "framer-motion";
 import { Info, Loader2 } from "lucide-react";
 import { COLORS } from "../../../../../core/constants";
+import { FormattedMessage } from "react-intl";
 
 interface ExistingVideoModalProps {
   show: boolean;
@@ -40,15 +41,11 @@ export function ExistingVideoModal({
                 </div>
 
                 <h3 className="text-2xl font-bold text-slate-900 mb-3">
-                  Video Already Exists
+                  <FormattedMessage id="upload.existingVideo.title" />
                 </h3>
 
                 <p className="text-slate-500 text-sm mb-10 leading-relaxed px-2">
-                  This video has already been processed and is available in your
-                  dashboard.
-                  <br />
-                  <br />
-                  Would you like to open the existing video version?
+                  <FormattedMessage id="upload.existingVideo.description" />
                 </p>
 
                 <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 justify-center">
@@ -57,23 +54,21 @@ export function ExistingVideoModal({
                     disabled={isLoading}
                     className="cursor-pointer w-full sm:w-auto px-8 py-3.5 rounded-xl font-bold text-slate-600 hover:bg-slate-100 transition-colors"
                   >
-                    Cancel
+                    <FormattedMessage id="common.cancel" />
                   </button>
 
                   <button
                     onClick={onOpenVideo}
                     disabled={isLoading}
                     style={{
-                      background:
-                       COLORS.button.primary
+                      background: COLORS.button.primary,
                     }}
                     className="cursor-pointer w-full sm:w-auto flex items-center justify-center gap-2   text-white px-8 py-3.5 rounded-xl font-bold shadow-md shadow-indigo-500/20 transition-all active:scale-[0.98] disabled:opacity-70 disabled:cursor-not-allowed hover:-translate-y-0.5"
-                  
                   >
                     {isLoading ? (
                       <Loader2 size={18} className="animate-spin" />
                     ) : (
-                      "Open Video"
+                      <FormattedMessage id="upload.existingVideo.openButton" />
                     )}
                   </button>
                 </div>

@@ -9,6 +9,7 @@ import { useSavePreferences } from "../hooks/use_save_preferences";
 
 import { LoadingPreferences } from "../componants/loading_pref";
 import { useGetPreferences } from "../hooks/get_user_language_pref";
+import { useIntl } from "react-intl";
 
 interface CustomizeProps {
   isOpen: boolean;
@@ -25,8 +26,8 @@ export const CustomizeExperienceModal: React.FC<CustomizeProps> = ({
 }) => {
   const { submitPreferences, isSubmitting } = useSavePreferences();
   const [serverError, setServerError] = useState<string | null>(null);
- // const [loading, setLoading] = useState(false);
-  const { data, isLoading, error,refetch } = useGetPreferences();
+  // const [loading, setLoading] = useState(false);
+  const { data, isLoading, error, refetch } = useGetPreferences();
   const [prefs, setPrefs] = useState<{
     summary: LanguageOption;
     quiz: LanguageOption;
@@ -36,9 +37,9 @@ export const CustomizeExperienceModal: React.FC<CustomizeProps> = ({
     quiz: "Same as Video",
     flashcards: "Same as Video",
   });
-  
+  const intl = useIntl();
 
-    useEffect(() => {
+  useEffect(() => {
     if (!data) return;
 
     setPrefs({
@@ -53,7 +54,11 @@ export const CustomizeExperienceModal: React.FC<CustomizeProps> = ({
       setServerError(null);
 
       if (!videoId) {
-        setServerError("Video ID is missing");
+        setServerError(
+          intl.formatMessage({
+            id: "customize.errors.videoIdMissing",
+          }),
+        );
         return;
       }
 
@@ -63,7 +68,7 @@ export const CustomizeExperienceModal: React.FC<CustomizeProps> = ({
         quizLang: prefs.quiz,
         flashcardsLang: prefs.flashcards,
       });
-      await handleClick()
+      await handleClick();
 
       onClose();
     } catch (error: unknown) {
@@ -73,24 +78,29 @@ export const CustomizeExperienceModal: React.FC<CustomizeProps> = ({
         };
 
         setServerError(
-          apiError.response.data.detail || "Failed to save preferences",
+          apiError.response.data.detail ||
+            intl.formatMessage({
+              id: "customize.errors.saveFailed",
+            }),
         );
       } else if (error instanceof Error) {
         setServerError(error.message);
       } else {
-        setServerError("An unexpected error occurred");
+        setServerError(
+          intl.formatMessage({
+            id: "common.errors.unexpected",
+          }),
+        );
       }
     }
   };
   const handleClick = async () => {
-  await refetch();
-};
+    await refetch();
+  };
 
   return (
     <BaseModal isOpen={isOpen} onClose={onClose} maxWidth="max-w-5xl">
-      {isLoading && (
-       <LoadingPreferences/>
-      )}
+      {isLoading && <LoadingPreferences />}
       {/* Header */}
       <div className="flex items-start justify-between p-6 pb-4 border-b border-gray-100 bg-white">
         <div className="flex flex-col gap-1 text-left">
@@ -125,9 +135,13 @@ export const CustomizeExperienceModal: React.FC<CustomizeProps> = ({
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
           <PreferenceCard
-            title="Summary"
+            title={intl.formatMessage({
+              id: "customize.summary.title",
+            })}
             icon="summarize"
-            desc="Set the output language for video summaries."
+            desc={intl.formatMessage({
+              id: "customize.summary.desc",
+            })}
             value={prefs.summary}
             onChange={(v: string) =>
               setPrefs({
@@ -140,9 +154,13 @@ export const CustomizeExperienceModal: React.FC<CustomizeProps> = ({
           />
 
           <PreferenceCard
-            title="Quiz"
+            title={intl.formatMessage({
+              id: "customize.quiz.title",
+            })}
             icon="quiz"
-            desc="Choose the language for your practice questions."
+            desc={intl.formatMessage({
+              id: "customize.quiz.desc",
+            })}
             value={prefs.quiz}
             onChange={(v: string) =>
               setPrefs({
@@ -155,9 +173,13 @@ export const CustomizeExperienceModal: React.FC<CustomizeProps> = ({
           />
 
           <PreferenceCard
-            title="Flashcards"
+            title={intl.formatMessage({
+              id: "customize.flashcards.title",
+            })}
+            desc={intl.formatMessage({
+              id: "customize.flashcards.desc",
+            })}
             icon="style"
-            desc="Choose the language for your revision flashcards."
             value={prefs.flashcards}
             onChange={(v: string) =>
               setPrefs({

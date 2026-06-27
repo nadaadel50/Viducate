@@ -3,7 +3,6 @@ import { motion } from "framer-motion";
 import type { usePreferences } from "../hooks/use_preferences";
 import { useLanguage } from "../../../../core/hooks/useLanguage";
 import { SidebarHeader } from "../components/sidebar_header";
-import { AppearanceSection } from "../components/appearance_section";
 import { LanguageSection } from "../components/language_section";
 import { SignOutButton } from "../components/signout_btn";
 
