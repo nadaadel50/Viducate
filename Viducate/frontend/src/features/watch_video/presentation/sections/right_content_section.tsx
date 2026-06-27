@@ -66,7 +66,7 @@ export function RightContentSection({ onOpenTopics }: Props) {
     <div className="min-h-screen w-full flex flex-col justify-center items-center">
       <div className="w-full max-w-5xl px-8">
         <button onClick={onOpenTopics} className="lg:hidden">
-          <PanelRightOpen size={22} />
+          <PanelRightOpen size={18} />
         </button>
 
         <MainHeader />
@@ -79,7 +79,7 @@ export function RightContentSection({ onOpenTopics }: Props) {
             <TranscriptSearch />
           </div>
 
-          <div className="mt-8 flex gap-3">
+          <div className="mt-3 flex gap-3">
             <CustomButton
               fullWidth
               leftIcon={<CircleCheckBig size={20} />}

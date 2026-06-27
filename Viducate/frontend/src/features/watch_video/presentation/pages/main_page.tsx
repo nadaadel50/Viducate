@@ -61,9 +61,9 @@ export function MainPage() {
     return (
       <>
         <div 
-        className="flex h-screen bg-[#f8fafc] font-display">
+        className="flex min-h-screen bg-[#f8fafc] font-display">
           {/* hiddend===display=none */}
-          <aside className="hidden lg:block lg:w-[320px] border-r border-slate-200">
+          <aside className="hidden lg:block lg:w-[350px] border-r border-slate-200">
             <LeftContentSection />
           </aside>
 

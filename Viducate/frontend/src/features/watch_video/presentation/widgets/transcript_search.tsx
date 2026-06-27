@@ -85,16 +85,16 @@ export function TranscriptSearch() {
             <button
               key={item.subtopic_id}
               onClick={() => setSeekTo(item.start_time)}
-              className="group flex w-full cursor-pointer flex-col gap-3 rounded-xl border border-slate-200 bg-white p-3 text-left shadow-sm transition hover:border-[#4f46e5]/40 hover:bg-slate-50 sm:flex-row sm:items-center sm:gap-4 sm:p-4"
+              className="group flex w-full cursor-pointer flex-col gap-3 rounded-xl border border-slate-200 bg-white p-3 text-left shadow-sm transition hover:border-[#4f46e5]/40 hover:bg-slate-50 sm:flex-row sm:items-center sm:gap-4 sm:p-2"
             >
               <div className="flex shrink-0 items-center gap-2">
-                <span className="flex items-center justify-center rounded-lg bg-slate-100 px-2.5 py-1.5 text-xs font-bold text-slate-500 transition group-hover:bg-[#4f46e5]/10 group-hover:text-[#4f46e5]">
-                  <PlayCircle size={16} className="mr-1" />
+                <span className={`${FONT_STYLES.topicStatus} flex items-center justify-center rounded-lg bg-slate-100 px-2.5 py-1.5 text-xs font-bold text-slate-500 transition group-hover:bg-[#4f46e5]/10 group-hover:text-[#4f46e5]`}>
+                  <PlayCircle size={12} className="mr-1" />
                   {formatVideoTime(item.start_time)}
                 </span>
               </div>
 
-              <p className={`${FONT_STYLES.body} line-clamp-2 leading-relaxed text-slate-600`}>
+              <p className={`${FONT_STYLES.caption} line-clamp-2 leading-relaxed text-slate-600`}>
                 {item.sub_topic_description}
               </p>
             </button>
