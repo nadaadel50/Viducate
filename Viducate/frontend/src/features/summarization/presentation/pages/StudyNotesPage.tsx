@@ -2,7 +2,7 @@ import { useEffect } from "react";
 import { useParams, useLocation } from "react-router";
 import { COLORS } from "../../../../core/constants/colors";
 import { SummaryHeader } from "../componants/SummaryHeader";
-import { QuizCard } from "../componants/QuizCard";
+import { MotivationCard } from "../componants/MotivationCard";
 import { ToolsCard } from "../componants/ToolsCard";
 import { TermTooltip } from "../componants/TermTooltip";
 import { TakeawayList } from "../componants/TakeawayList";
@@ -15,7 +15,7 @@ import type {
 import { useVideoStudyNotes } from "../hooks/use_video_study_notes";
 
 const StudyNotesPage = () => {
-  const { segmentId , videoId: videoIdParam } = useParams();
+  const { segmentId, videoId: videoIdParam } = useParams();
   const { state: locationState } = useLocation();
   const { videoId: videoIdState } = locationState || {};
 
@@ -43,17 +43,21 @@ const StudyNotesPage = () => {
     return <p className="text-center text-red-500 mt-20">{state.message}</p>;
   }
 
-  const { studyNotes, readingTime } = state.data;
+  const { studyNotes, readingTime, language } = state.data;
+  const isArabic = language === "ar";
 
   return (
     <div
       className="min-h-screen font-sans antialiased"
-      style={{ backgroundColor: COLORS.background.light }}
+      style={{ background: COLORS.background.radialGradient }}
     >
       <main className="max-w-7xl mx-auto px-4 md:px-6 py-8">
         <div className="flex flex-col lg:flex-row gap-8 items-start">
           <article
-            className="flex-1 w-full rounded-2xl shadow-sm p-8 md:p-12 border border-gray-100"
+            dir={isArabic ? "rtl" : "ltr"}
+            className={`flex-1 w-full min-w-0 rounded-xl shadow-sm p-8 md:p-12 ${
+              isArabic ? "text-right" : "text-left"
+            }`}
             style={{ backgroundColor: COLORS.layout.leftBackground }}
           >
             <SummaryHeader title={studyNotes.title} time={readingTime.label} />
@@ -66,7 +70,7 @@ const StudyNotesPage = () => {
                 className="text-2xl font-bold mb-4"
                 style={{ color: COLORS.text.primary }}
               >
-                Introduction
+                {isArabic ? "المقدمة" : "Introduction"}
               </h2>
               <p className="whitespace-pre-line">
                 {studyNotes.introduction.replaceAll(". ", ".\n")}
@@ -110,7 +114,9 @@ const StudyNotesPage = () => {
                           className="font-bold pb-2 text-2xl border-b-2 border-gray-50"
                           style={{ color: COLORS.text.primary }}
                         >
-                          Core Concepts & Terminology
+                          {isArabic
+    ? "المفاهيم الأساسية والمصطلحات"
+    : "Core Concepts & Terminology"}
                         </h3>
                         <div className="space-y-3">
                           {section.definitions.map((d, i) => (
@@ -131,7 +137,7 @@ const StudyNotesPage = () => {
                     )}
 
                     {section.notes && section.notes.length > 0 && (
-                      <TakeawayList items={section.notes} />
+                      <TakeawayList items={section.notes} isArabic={isArabic}/>
                     )}
 
                     {section.examples && section.examples.length > 0 && (
@@ -140,7 +146,7 @@ const StudyNotesPage = () => {
                           className="font-bold text-xl mb-3"
                           style={{ color: COLORS.text.primary }}
                         >
-                          Key Examples
+                          {isArabic ? "أمثلة مهمة" : "Key Examples"}
                         </h3>
                         <ul className="list-disc pl-6 space-y-2">
                           {section.examples.map((ex, i) => (
@@ -207,12 +213,12 @@ const StudyNotesPage = () => {
           </article>
 
           <aside className="w-full lg:w-80 space-y-6 lg:sticky lg:top-8">
-            <QuizCard />
+            <MotivationCard />
             <ToolsCard
-  type="study_notes"
-  videoId={Number(videoId)}
-  segmentId={segmentId ? Number(segmentId) : undefined}
-/>
+              type="study_notes"
+              videoId={Number(videoId)}
+              segmentId={segmentId ? Number(segmentId) : undefined}
+            />
           </aside>
         </div>
       </main>

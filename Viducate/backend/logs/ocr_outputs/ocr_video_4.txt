@@ -1,15 +1,12 @@
 # OCR Output — video_id=4
 # Language: en
-# Total segments: 11
+# Total segments: 8
 
-[00:00:00] muulr eadiules | import React fron react; | import | .App.css | function App | return | div classNane-App | Hooks | export default App;
-[00:00:40] Thry out a prowlow of the now Rouct Decal os betaurescthoorg | Hooks at a Glance | Hooke are a new addison in React 15 s. fhey let you use stane and other React | feacures without witing a class | AP REEURMIOI V
-[00:01:50] import React fron react | export default App;
-[00:03:00] import React,  useState from react; | , setMohamed - useState | Returns a stateful value, | and a function to update it.
-[00:03:10] import React,  useState from react | const mohamed , setMohamed  useState | export default App;
-[00:07:00] const mohaned: number | mohared is declared but its value is never | mohaned is assigned a value but never
-[00:07:10] React, useState from react | export default App;
-[00:08:10] setMohamed- useStatee setMohamedvalue: | button onC1ick setMohamedmohamedbutton
-[00:09:20] import React, useState  from react; | mohamed, setMohamed- useStatee | button onC1ick setMchanedmchamed -1-button
-[00:10:30] const plushandler  O | Tyoe tey to soant
-[00:10:40] import React, useState  from react | :mohamed, setMohamed - useStatee | minsehandler -  -
+[00:00:10] inport React, useStatefron "react"; | import './App.css' | function App(){ | const [mohared, setMohamed] = useState(0) | const plushandler = () => ( | setMohamed(mohamed + 3); | const minsehandler = () => { | setMohamed(mohamed - 1); | return ( | <div className="App"> | <buttonanClick={plushandler}>+</button> | <button onClick=[ninsehandler]>-</button> | {mohased} | </div>
+[00:00:30] inport React, { useEffect, useState } from "react"; | const [moEffectCallback(): void
+[00:00:40] inport React, ( us | undefined): void
+[00:00:50] inport React, {useEffect , useState } from "react": | const [mohamed, setMohaned] - useState(0)
+[00:04:00] <div classNare-"App"> bivariancetack(event: | button onClick={p)React.MouseEvent<HTMLButton | <button onClick={niMouseEvent>): void | <button anClick=[()>+</button> | export default App;
+[00:04:10] <button onClick=(plushandlerReact.SetStateAction<number | <button onClick={ninsehandlevoid
+[00:04:30] <button onClick={plushandler}>+</button> | <button onC11ck={() => setx(x - 3)}>-</button>
+[00:04:50] const [x, setx] = useState(@) | const [mohamed, setMohaned] = useState(0) | useEffect(() => { | neturn (

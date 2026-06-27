@@ -1,7 +1,12 @@
-import { useState, useEffect, useRef } from 'react';
-import { QuizQuestionEntity } from '../../domain/entity/quiz_entity';
-export const useQuiz = (questions: QuizQuestionEntity[], initialTime: number, quizKey: string) => {
+import { useState, useEffect, useRef } from "react";
+import { QuizQuestionEntity } from "../../domain/entity/quiz_entity";
 
+export const useQuiz = (
+  questions: QuizQuestionEntity[],
+  initialTime: number,
+  quizKey: string,
+  onTimeUp?: () => void,
+) => {
   const [currentIndex, setCurrentIndex] = useState(() => {
     const saved = localStorage.getItem(`quiz_index_${quizKey}`);
     return saved ? parseInt(saved) : 0;
@@ -14,103 +19,72 @@ export const useQuiz = (questions: QuizQuestionEntity[], initialTime: number, qu
 
   const [timeLeft, setTimeLeft] = useState(0);
 
-  const [quizState, setQuizState] = useState<'playing' | 'results'>(() => {
+  const [quizState, setQuizState] = useState<"playing" | "results">(() => {
     const saved = localStorage.getItem(`quiz_state_${quizKey}`);
-
-    return (saved as 'playing' | 'results') || 'playing';
+    return (saved as "playing" | "results") || "playing";
   });
 
   const [isReviewMode, setIsReviewMode] = useState(() => {
-    
-    return localStorage.getItem(`quiz_isReview_${quizKey}`) === 'true';
+    return localStorage.getItem(`quiz_isReview_${quizKey}`) === "true";
   });
-useEffect(() => {
-  if (!quizKey || !initialTime || questions.length === 0) return;
 
-  const savedEndTime = localStorage.getItem(
-    `quiz_endTime_${quizKey}`
-  );
-
-  if (!savedEndTime) {
-    const endTime =
-      Date.now() + initialTime * 60 * 1000;
-
-    localStorage.setItem(
-      `quiz_endTime_${quizKey}`,
-      endTime.toString()
-    );
-  }
-}, [quizKey, initialTime, questions.length]);
   const timeInitialized = useRef(false);
+  const onTimeUpRef = useRef(onTimeUp);
 
-  
-useEffect(() => {
-  if (questions.length === 0) return;
+  useEffect(() => {
+    onTimeUpRef.current = onTimeUp;
+  }, [onTimeUp]);
 
-  const endTime = localStorage.getItem(
-    `quiz_endTime_${quizKey}`
-  );
-
-
-  if (!endTime) return;
-
-  const remaining = Math.max(
-    0,
-    Math.floor(
-      (Number(endTime) - Date.now()) / 1000
-    )
-  );
-
-  setTimeLeft(remaining);
-
-  if (remaining <= 0) {
-
-    setQuizState("results");
-  }
-
-  timeInitialized.current = true;
-}, [questions.length, quizKey]);
+  useEffect(() => {
+    if (!quizKey || !initialTime || questions.length === 0) return;
+    const savedEndTime = localStorage.getItem(`quiz_endTime_${quizKey}`);
+    if (!savedEndTime) {
+      const endTime = Date.now() + initialTime * 60 * 1000;
+      localStorage.setItem(`quiz_endTime_${quizKey}`, endTime.toString());
+    }
+  }, [quizKey, initialTime, questions.length]);
 
   useEffect(() => {
     localStorage.setItem(`quiz_index_${quizKey}`, currentIndex.toString());
     localStorage.setItem(`quiz_answers_${quizKey}`, JSON.stringify(answers));
     localStorage.setItem(`quiz_state_${quizKey}`, quizState);
     localStorage.setItem(`quiz_isReview_${quizKey}`, isReviewMode.toString());
-  }, [quizKey, currentIndex, answers, timeLeft, quizState, isReviewMode]);
+  }, [quizKey, currentIndex, answers, quizState, isReviewMode]);
 
-useEffect(() => {
-  if (quizState !== "playing" || isReviewMode)
-    return;
+  // بعد
+  useEffect(() => {
+    if (questions.length === 0 || quizState !== "playing" || isReviewMode)
+      return;
 
-  const timer = setInterval(() => {
-    const endTime = localStorage.getItem(
-      `quiz_endTime_${quizKey}`
-    );
+    const tick = () => {
+      const endTime = localStorage.getItem(`quiz_endTime_${quizKey}`);
+      if (!endTime) return;
 
-    if (!endTime) return;
+      const remaining = Math.max(
+        0,
+        Math.floor((Number(endTime) - Date.now()) / 1000),
+      );
+      setTimeLeft(remaining);
 
-    const remaining = Math.max(
-      0,
-      Math.floor(
-        (Number(endTime) - Date.now()) / 1000
-      )
-    );
+      if (remaining <= 0) {
+        setQuizState("results");
+        onTimeUpRef.current?.();
+      }
+    };
 
-    setTimeLeft(remaining);
-
-    if (remaining <= 0) {
-      setQuizState("results");
-    }
-  }, 1000);
-
-  return () => clearInterval(timer);
-}, [quizKey, quizState, isReviewMode]);
+    tick();
+    const timer = setInterval(tick, 1000);
+    return () => clearInterval(timer);
+  }, [quizKey, quizState, isReviewMode, questions.length]);
 
   const currentQuestion = questions[currentIndex];
 
   const handleSelect = (optionId: string) => {
-    if (isReviewMode || quizState === 'results') return;
-    setAnswers(prev => ({ ...prev, [currentQuestion.question_id]: optionId }));
+    if (isReviewMode || quizState === "results") return;
+    setAnswers((prev) => ({
+      ...prev,
+      [currentQuestion.question_id]: optionId,
+    }));
   };
 
   const resetQuiz = () => {
@@ -120,36 +94,32 @@ useEffect(() => {
     localStorage.removeItem(`quiz_state_${quizKey}`);
     localStorage.removeItem(`quiz_isReview_${quizKey}`);
     localStorage.removeItem(`quiz_data_${quizKey}`);
-    localStorage.removeItem(
-  `quiz_endTime_${quizKey}`
-);
+    localStorage.removeItem(`quiz_endTime_${quizKey}`);
     timeInitialized.current = false;
     setCurrentIndex(0);
     setAnswers({});
     setTimeLeft(0);
-    setQuizState('playing');
+    setQuizState("playing");
     setIsReviewMode(false);
   };
 
-  const calculateScore = () => {
-    let score = 0;
-    questions.forEach(q => {
-      if (answers[q.question_id] === q.correct_answer) score++;
-    });
-    const percentage = Math.round((score / questions.length) * 100);
-    return { score, total: questions.length, percentage };
-  };
-
-  const isAllAnswered = questions.every(q => answers[q.question_id] !== undefined);
+  const isAllAnswered = questions.every(
+    (q) => answers[q.question_id] !== undefined,
+  );
 
   return {
-    currentIndex, setCurrentIndex,
-    currentQuestion, answers,
-    handleSelect, timeLeft,
-    quizState, setQuizState,
-    isReviewMode, setIsReviewMode,
-    calculateScore, isAllAnswered,
+    currentIndex,
+    setCurrentIndex,
+    currentQuestion,
+    answers,
+    handleSelect,
+    timeLeft,
+    quizState,
+    setQuizState,
+    isReviewMode,
+    setIsReviewMode,
+    isAllAnswered,
     resetQuiz,
-    progress: ((currentIndex + 1) / questions.length) * 100
+    progress: ((currentIndex + 1) / questions.length) * 100,
   };
 };
