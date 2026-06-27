@@ -1,37 +1,41 @@
+import { useState } from "react";
 import {
   Check,
-  CircleCheckBig,
   FileQuestion,
   Layers,
   NotebookText,
   TvMinimalPlay,
 } from "lucide-react";
+import { useNavigate } from "react-router";
 import { ContentGenerationBtn } from "./content_genration_btn";
 import type { TopicResponse } from "../../domin/entity/topic_response";
 import { useLearningSession } from "../../../../core/hooks/useLearningContent";
-import { useNavigate } from "react-router";
 import { useDueFlashcards } from "../../../flash_cards/presentation/hooks/use_due_flash_cards";
-import { useState } from "react";
-
 import { QuizDifficultyModal } from "../../../QuizSystem/presentation/componants/QuizDifficultyModal";
 import { SummaryStyleModal } from "../../../summarization/presentation/componants/SummaryStyleModal";
+import { FONT_STYLES } from "../../../../core/constants/fonts";
+import { formatVideoTime } from "../../../../core/utils/fomat_time";
+
+type ContentLearningCardProps = {
+  isSelected: boolean;
+  onClick: () => void;
+  cardInfo: TopicResponse;
+};
 
 export function ContentLearningCard({
   isSelected,
   onClick,
   cardInfo,
-}: {
-  isSelected: boolean;
-  onClick: () => void;
-  cardInfo: TopicResponse;
-}) {
+}: ContentLearningCardProps) {
   const { setSelectedTopic, videoId, completedTopics } = useLearningSession();
-  const navigate = useNavigate();
   const { isDueForSegment } = useDueFlashcards();
+  const navigate = useNavigate();
 
   const [isQuizModalOpen, setIsQuizModalOpen] = useState(false);
   const [isSummaryModalOpen, setIsSummaryModalOpen] = useState(false);
+
   const isDue = isDueForSegment(cardInfo.segment_id);
+  const isCompleted = completedTopics.has(cardInfo.segment_id);
 
   const handleQuizClick = () => {
     const savedKey = localStorage.getItem(
@@ -50,18 +54,24 @@ export function ContentLearningCard({
       setIsQuizModalOpen(true);
     }
   };
+
   const handleSummarySelect = (style: "summary" | "study_notes") => {
     if (style === "summary") {
       navigate(`/summary/${cardInfo.segment_id}`, {
-        state: { videoId, segmentId: cardInfo.segment_id },
+        state: {
+          videoId,
+          segmentId: cardInfo.segment_id,
+        },
       });
     } else {
       navigate(`/study-notes/${cardInfo.segment_id}`, {
-        state: { videoId, segmentId: cardInfo.segment_id },
+        state: {
+          videoId,
+          segmentId: cardInfo.segment_id,
+        },
       });
     }
   };
-  const isCompleted = completedTopics.has(cardInfo.segment_id);
 
   return (
     <>
@@ -70,71 +80,80 @@ export function ContentLearningCard({
           onClick();
           setSelectedTopic(cardInfo);
         }}
-        className={`cursor-pointer group relative rounded-2xl   px-3 py-4 bg-white/70 transition-all hover:bg-white hover:border-primary/40 hover:shadow-soft border-2  ${isSelected ? " border-[#4f46e5] shadow-xl shadow-[#4f46e5]/15" : "border   border-slate-200/60"}`}
+        className={`group relative cursor-pointer rounded-xl border-2 bg-white/70 px-2.5 py-2.5   transition-all hover:border-primary/40 hover:bg-white hover:shadow-soft ${
+          isSelected
+            ? "border-[#4f46e5] shadow-xl shadow-[#4f46e5]/15"
+            : "border-slate-200/60"
+        }`}
       >
-        {/* Title */}
-        <div className="flex justify-between items-start">
+        <div className="flex items-start justify-between gap-2  ">
           <h4
-            className={` text-sm font-bold group-hover:text-[#4f46e5] transition-colors leading-tight ${isSelected ? "text-[#4f46e5]" : "text-slate-700"}`}
+            className={`${FONT_STYLES.topicTitle} flex-1 pr-2 text-sm lg:text-[13px] leading-tight transition-colors group-hover:text-[#4f46e5] ${isSelected ? "text-[#4f46e5]" : "text-slate-700"}`}
           >
             {cardInfo.title}
           </h4>
 
           {isCompleted && (
-            <div className="absolute -top-3 -right-3">
-             
-              <div className="w-7 h-7 rounded-full bg-white/70 p-[2px] shadow-sm">
-              
-                <div className="w-full h-full rounded-full bg-[#2E9E44] flex items-center justify-center">
-                  <Check size={14} className="text-white stroke-[3]" />
+            <div className="absolute -right-3 -top-3 ">
+              <div className="h-6 w-6 rounded-full bg-white/70 p-[2px] shadow-sm sm:h-7 sm:w-7">
+                <div className="flex h-full w-full items-center justify-center rounded-full bg-[#2E9E44]">
+                  <Check
+                    size={12}
+                    className="stroke-[3] text-white sm:h-[14px] sm:w-[14px]"
+                  />
                 </div>
               </div>
             </div>
           )}
 
           {isDue ? (
-            <span className="flex items-center gap-1 text-green-600 text-[10px] font-bold bg-green-50 px-2 py-0.5 rounded-full">
-              <span className="w-1.5 h-1.5 rounded-full bg-green-500 animate-pulse" />
+            <span 
+            
+            className={` flex shrink-0 items-center gap-1 ${FONT_STYLES.topicStatus}
+            rounded-full bg-green-50 px-2 py-0.5 text-[10px] font-bold text-green-600`}>
+              <span className="h-1.5 w-1.5 animate-pulse rounded-full bg-green-500" />
               Review
             </span>
-          ):<span className="px-2 py-0.5 text-[10px]">&nbsp;</span>}
+          ) : (
+            <span className={`"px-2 py-0.5 text-[10px] ${FONT_STYLES.topicStatus}"`}>&nbsp;</span>
+          )}
 
-          <span className="text-[10px] font-bold  text-slate-400 bg-slate-100 px-2.5 py-1 rounded-full group-hover:text-slate-600 transition-colors">
-            {Math.floor(cardInfo.start_time / 60)}:
-            {Math.floor(cardInfo.start_time % 60)
-              .toString()
-              .padStart(2, "0")}
+          <span className={`shrink-0 rounded-full bg-slate-100 px-2 py-1 ${FONT_STYLES.topicStatus} font-bold text-slate-400 transition-colors group-hover:text-slate-600`}>
+            {formatVideoTime(cardInfo.start_time)}
           </span>
         </div>
 
-        {/* Description */}
-        <p className="line-clamp-2  text-xs text-slate-400 mt-1.5 mb-1.5 group-hover:text-slate-500 ">
+        <p
+          className={`${FONT_STYLES.topicDescription} mt-1.5 mb-1.5 line-clamp-2 text-[11px] lg:text-[10px] text-slate-400 group-hover:text-slate-500`}
+        >
           {cardInfo.main_topic}
         </p>
 
-        <div className="grid grid-cols-4 gap-3 mt-4">
-          {/* ask about this */}
+        <div className=" grid grid-cols-4 gap-2 mt-2">
           <ContentGenerationBtn
             onClick={() => {}}
-            icon={<TvMinimalPlay />}
-            label={"Watch"}
+            icon={<TvMinimalPlay size={18} />}
+            label="Watch"
           />
+
           <ContentGenerationBtn
             onClick={() => setIsSummaryModalOpen(true)}
-            icon={<NotebookText />}
-            label={"Summary"}
+            icon={<NotebookText size={18} />}
+            label="Summary"
           />
+
           <ContentGenerationBtn
             onClick={handleQuizClick}
-            icon={<FileQuestion />}
-            label={"Quiz"}
+            icon={<FileQuestion size={18} />}
+            label="Quiz"
           />
+
           <ContentGenerationBtn
-            onClick={() => {
-              navigate(`/WatchVideo/flashcards/${cardInfo.segment_id}`);
-            }}
-            icon={<Layers />}
-            label={"cards"}
+            onClick={() =>
+              navigate(`/WatchVideo/flashcards/${cardInfo.segment_id}`)
+            }
+            icon={<Layers size={18} />}
+            label="Cards"
             isDue={isDue}
           />
         </div>
@@ -147,6 +166,7 @@ export function ContentLearningCard({
           setIsQuizModalOpen(false);
 
           const quizKey = `${cardInfo.segment_id}_${difficulty}_${Date.now()}`;
+
           localStorage.setItem(
             `active_quiz_key_${cardInfo.segment_id}`,
             quizKey,
@@ -162,6 +182,7 @@ export function ContentLearningCard({
           });
         }}
       />
+
       <SummaryStyleModal
         isOpen={isSummaryModalOpen}
         onClose={() => setIsSummaryModalOpen(false)}

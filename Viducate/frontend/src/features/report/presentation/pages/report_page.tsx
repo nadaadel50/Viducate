@@ -7,8 +7,9 @@ import { COLORS } from "../../../../core/constants";
 import { FormattedMessage } from "react-intl";
 import { useLearningSession } from "../../../../core/hooks/useLearningContent";
 import { BarChart3 } from "lucide-react";
-import ErrorMessage from "../../../../core/widgets/error";
-import { GenerationLoadingScreen } from "../../../../core/widgets/generation_loading_screen";
+import { GenerationLoadingScreen } from "../../../../core/componants/generation_loading_screen";
+import ErrorScreen from "../../../../core/componants/error";
+
 
 export function ReportPage() {
   const { videoId } = useLearningSession();
@@ -31,7 +32,7 @@ export function ReportPage() {
 
   if (state.status === "error") {
     return (
-      <ErrorMessage errorMessage={state.message} />
+      <ErrorScreen errorMessage={state.message} />
     );
   }
 
