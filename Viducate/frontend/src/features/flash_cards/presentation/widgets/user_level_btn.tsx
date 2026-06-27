@@ -1,17 +1,19 @@
+import clsx from "clsx";
 import type { Difficulty } from "../../domain/entity/difficaulty";
+import { CustomButton } from "../../../../core/componants/custum_btn";
+import { FONT_SIZE, FONT_WEIGHT } from "../../../../core/constants/fonts_update";
 
 const difficultyStyles = {
   easy: {
-    border: "border-blue-200 hover:border-blue-300 ",
-    text: "text-blue-600 ",
+    border: "border-blue-200 hover:border-blue-300",
+    text: "text-blue-600",
     bg: "bg-blue-50",
-    hoverBg: "hover:bg-blue-100 ",
-    iconBg: "bg-blue-100 ",
-    iconHoverBg: "group-hover:bg-blue-200 ",
+    hoverBg: "hover:bg-blue-100",
+    iconBg: "bg-blue-100",
+    iconHoverBg: "group-hover:bg-blue-200",
     icon: "thumb_up",
     time: "1d",
   },
-
   good: {
     border: "border-green-200 hover:border-green-300",
     text: "text-green-600",
@@ -22,7 +24,6 @@ const difficultyStyles = {
     icon: "check",
     time: "15min",
   },
-
   hard: {
     border: "border-yellow-200 hover:border-yellow-300",
     text: "text-yellow-600",
@@ -33,7 +34,6 @@ const difficultyStyles = {
     icon: "thumb_down",
     time: "8min",
   },
-
   again: {
     border: "border-red-200 hover:border-red-300",
     text: "text-red-600",
@@ -44,13 +44,13 @@ const difficultyStyles = {
     icon: "refresh",
     time: "1min",
   },
-};
-
+} as const;
 
 type UserLevelBtnProps = {
   diffStyle: Difficulty;
   onClick: () => void;
 };
+
 export function UserLevelBtn({
   diffStyle,
   onClick,
@@ -58,22 +58,47 @@ export function UserLevelBtn({
   const style = difficultyStyles[diffStyle];
 
   return (
-    <button
+    <CustomButton
       onClick={onClick}
-      className={`flex-1 flex flex-col items-center justify-center gap-2  rounded-xl border-2  cursor-pointer p-2
-         ${style.border} ${style.bg} ${style.text} ${style.hoverBg} transition-all group`}
+      className={clsx(
+        "group flex flex-1 flex-col gap-1.5 rounded-xl border-2 p-2 sm:p-3",
+        style.border,
+        style.bg,
+        style.text,
+        style.hoverBg,
+        "hover:shadow-md"
+      )}
     >
       <div
-        className={`p-1.5 flex items-center justify-center rounded-full ${style.iconBg} ${style.iconHoverBg}`}
+        className={clsx(
+          "flex items-center justify-center rounded-full p-1.5 transition-colors sm:p-2",
+          style.iconBg,
+          style.iconHoverBg
+        )}
       >
-        <span className="material-symbols-outlined text-[20px]">
+        <span className="material-symbols-outlined">
           {style.icon}
         </span>
-
       </div>
 
-      <span className="font-bold text-sm">{diffStyle}</span>
-      <span className=" text-xs">{style.time}</span>
-    </button>
+      <span
+        className={clsx(
+          FONT_WEIGHT.bold,
+          FONT_SIZE.size12,
+          "capitalize"
+        )}
+      >
+        {diffStyle}
+      </span>
+
+      <span
+        className={clsx(
+          FONT_SIZE.size11,
+          "capitalize"
+        )}
+      >
+        {style.time}
+      </span>
+    </CustomButton>
   );
 }

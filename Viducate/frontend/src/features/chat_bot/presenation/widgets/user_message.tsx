@@ -1,28 +1,32 @@
-import { formatMessageTime } from "../../../../core/utils/fomat_time"
+import { FONT_STYLES } from "../../../../core/constants/fonts";
+import { FONT_SIZE, FONT_WEIGHT } from "../../../../core/constants/fonts_update";
+import { formatMessageTime } from "../../../../core/utils/fomat_time";
 
+type UserMessageProps = {
+  message: string;
+  senededTime: number;
+};
 
-type UserMessageProps={
-    message:string
-    senededTime:number
-   
-}
+export function UserMessage({
+  message,
+  senededTime,
+}: UserMessageProps) {
+  return (
+    <div className="flex flex-col items-end gap-2">
+      <div className="max-w-[85%] rounded-2xl rounded-tr-none bg-[#4f46e5] px-4 py-3 text-white shadow-md shadow-[#4f46e5]/10 lg:max-w-[80%]">
+        <p
+          dir="auto"
+          className={FONT_SIZE.size13}
+        >
+          {message}
+        </p>
+      </div>
 
-export function UserMessage(props:UserMessageProps){
-
-    return(
-        <div className="flex flex-col items-end gap-3">
-           
-              <div className={`bg-[#4f46e5] text-white rounded-3xl rounded-tr-none px-6 py-4 max-w-[80%] shadow-lg shadow-[#4f46e5]/10`}>
-                <p dir="auto"
-                 className="text-sm leading-relaxed">
-                  {props.message}
-                </p>
-              </div>
-              <div className="flex items-center gap-2 mr-1">
-                <span className="text-[10px] text-slate-400 font-bold uppercase tracking-wider">
-                 { `You • ${formatMessageTime(props.senededTime)}`}
-                </span>
-              </div>
-            </div>
-    )
+      <div className="mr-1 flex items-center">
+        <span className={`${FONT_SIZE.size10} ${FONT_WEIGHT.semibold} text-slate-400`}>
+          You • {formatMessageTime(senededTime)}
+        </span>
+      </div>
+    </div>
+  );
 }

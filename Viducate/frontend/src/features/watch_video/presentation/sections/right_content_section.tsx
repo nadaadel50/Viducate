@@ -17,6 +17,7 @@ import { QuizDifficultyModal } from "../../../QuizSystem/presentation/componants
 import { useNavigate } from "react-router";
 import { useRightContentSection } from "../hook/use_right_content_section";
 import { CustomButton } from "../../../../core/componants/custum_btn";
+import { useDueFlashcards } from "../../../flash_cards/presentation/hooks/use_due_flash_cards";
 type Props = {
   onOpenTopics?: () => void;
 };
@@ -34,6 +35,9 @@ export function RightContentSection({ onOpenTopics }: Props) {
     handleCompleteClick,
     goToNextTopic,
   } = useRightContentSection();
+  const {totalDue}=useDueFlashcards()
+  //console.log("total due is: ",totalDue,hasDueCards)
+
 
   const footerActions = [
     {
@@ -41,31 +45,35 @@ export function RightContentSection({ onOpenTopics }: Props) {
       icon: <FileQuestion size={20} />,
       label: "Final Quiz",
       onClick: handleFinalQuizClick,
+      totalReviewCards:0
     },
     {
       variant: "summary",
       icon: <FileText size={20} />,
       label: "Final Summary",
       onClick: () => setIsSummaryModalOpen(true),
+       totalReviewCards:0
     },
     {
       variant: "flashcards",
       icon: <FileQuestion size={20} />,
       label: "Final Flashcards",
-      onClick: () => navigate("flashcards"),
+     onClick: () => navigate("/WatchVideo/flashcards"),
+      totalReviewCards:totalDue
     },
     {
       variant: "mindmap",
       icon: <Brain size={20} />,
       label: "Final Mind Map",
       onClick: () => navigate(AppRoutesNames.mindMap),
+       totalReviewCards:0
     },
   ] as const;
 
   return (
     <div className="min-h-screen w-full flex flex-col justify-center items-center">
       <div className="w-full max-w-5xl px-8">
-        <button onClick={onOpenTopics} className="lg:hidden">
+        <button onClick={onOpenTopics} className="lg:hidden my-3">
           <PanelRightOpen size={18} />
         </button>
 
@@ -102,13 +110,14 @@ export function RightContentSection({ onOpenTopics }: Props) {
 
       <div className="w-full border-t border-slate-200 bg-white/80 backdrop-blur p-4 sticky bottom-0">
         <div className="grid grid-cols-2 gap-3">
-          {footerActions.map(({ variant, icon, label, onClick }) => (
+          {footerActions.map(({ variant, icon, label, onClick,totalReviewCards }) => (
             <FinalGeneratedBtn
               key={variant}
               variant={variant}
               icon={icon}
               label={label}
               onClick={onClick}
+              reviewCards={totalReviewCards}
             />
           ))}
         </div>

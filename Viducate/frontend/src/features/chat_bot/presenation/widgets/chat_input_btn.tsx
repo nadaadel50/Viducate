@@ -1,33 +1,40 @@
 import { SendHorizontal } from "lucide-react";
-import { useRef, useEffect } from "react";
+import { useEffect, useRef } from "react";
+
+import { FONT_STYLES } from "../../../../core/constants/fonts";
 import { useChat } from "../hooks/use_chat";
+import { FONT_SIZE } from "../../../../core/constants/fonts_update";
 
 type ChatInputProps = {
   handleSend: () => void;
 };
 
-export function ChatInputBtn(props: ChatInputProps) {
-  const { setUserInput, input } = useChat();
+export function ChatInputBtn({ handleSend }: ChatInputProps) {
+  const { input, setUserInput } = useChat();
+
   const textareaRef = useRef<HTMLTextAreaElement>(null);
 
   useEffect(() => {
-    if (textareaRef.current) {
-      textareaRef.current.style.height = "auto";
-      textareaRef.current.style.height = `${textareaRef.current.scrollHeight}px`;
-    }
+    if (!textareaRef.current) return;
+
+    textareaRef.current.style.height = "auto";
+    textareaRef.current.style.height = `${textareaRef.current.scrollHeight}px`;
   }, [input]);
 
   const handleSendAndReset = () => {
     if (!input.trim()) return;
-    props.handleSend();
+
+    handleSend();
     setUserInput("");
   };
 
   return (
-    <div className="m-5 bottom-5 relative shrink-0 ">
+    <div className="relative mx-2  shrink-0 lg:mx-4  ">
       <textarea
         ref={textareaRef}
+        rows={1}
         value={input}
+        placeholder="Ask anything about the lecture..."
         onChange={(e) => setUserInput(e.target.value)}
         onKeyDown={(e) => {
           if (e.key === "Enter" && !e.shiftKey) {
@@ -35,19 +42,33 @@ export function ChatInputBtn(props: ChatInputProps) {
             handleSendAndReset();
           }
         }}
-        placeholder="ask any thing about the lecture"
-        rows={1}
-        className="absolute  top-1/2 -translate-y-1/2 resize-none overflow-hidden w-full border shadow-lg border-slate-200 rounded-[2rem] py-4 pl-8 pr-20 text-base focus:outline-none focus:ring-2 focus:ring-[#4f46e5]/20 focus:border-[#4f46e5] transition-all "
+        className={`${FONT_SIZE.size12} md:${FONT_SIZE.size14}
+          w-full resize-none overflow-hidden rounded-[1.75rem]
+          border border-slate-200 
+          py-3.5 pl-5 pr-16
+          bg-white
+          shadow-md
+          transition-all
+          focus:border-[#4f46e5]
+          focus:outline-none
+          focus:ring-2
+          focus:ring-[#4f46e5]/20
+          mt-1.5 
+         
+        `}
       />
 
-      <div className="absolute right-4 top-1/2 -translate-y-1/2 ">
-        <button
-          onClick={handleSendAndReset}
-          className="w-11 h-11 flex items-center justify-center rounded-full bg-[#4f46e5] text-white hover:bg-[#4f46e5]/90 transition-all shadow-lg shadow-[#4f46e5]/25 active:scale-95 cursor-pointer"
-        >
-          <SendHorizontal size={18} />
-        </button>
-      </div>
+      <button
+        type="button"
+        onClick={handleSendAndReset}
+        className="absolute right-3 top-1/2 flex h-9 w-9 -translate-y-1/2 items-center justify-center rounded-full bg-[#4f46e5] text-white shadow-md 
+        shadow-[#4f46e5]/20 transition-all hover:bg-[#4f46e5]/90 active:scale-95 lg:right-4 lg:h-8 lg:w-8"
+      >
+        <SendHorizontal
+          size={18}
+          className="lg:h-4 lg:w-4"
+        />
+      </button>
     </div>
   );
 }

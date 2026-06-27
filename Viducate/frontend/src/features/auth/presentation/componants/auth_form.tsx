@@ -182,7 +182,9 @@ export function AuthForm({ type }: AuthFormProps) {
           </div>
         )}
 
-        <CustomButton className="w-full" type="submit" disabled={isSubmitting}>
+        <CustomButton
+        style={{background:COLORS.button.primary}}
+         className="w-full text-white " type="submit" disabled={isSubmitting}>
           {isSubmitting ? (
             <CustumBtnLoader />
           ) : (

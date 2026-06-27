@@ -1,6 +1,7 @@
 import { AnimatePresence, motion } from "framer-motion";
 import { AlertTriangle, Loader2 } from "lucide-react";
-import { FONT_STYLES } from "../constants/fonts";
+import { FONT_SIZE, FONT_WEIGHT, LINE_HEIGHT } from "../constants/fonts_update";
+
 
 type DeleteModalProps = {
   open: boolean;
@@ -27,6 +28,7 @@ export function DeleteModal({
     <AnimatePresence>
       {open && (
         <>
+          {/* Overlay */}
           <motion.div
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
@@ -35,43 +37,92 @@ export function DeleteModal({
             className="fixed inset-0 z-40 bg-slate-900/40 backdrop-blur-sm"
           />
 
-          <div className="fixed inset-0 z-50 flex items-center justify-center p-4 pointer-events-none">
+          {/* Modal */}
+          <div className="pointer-events-none fixed inset-0 z-50 flex items-center justify-center p-4">
             <motion.div
-              initial={{ opacity: 0, scale: 0.95, y: 20 }}
+              initial={{ opacity: 0, scale: 0.96, y: 16 }}
               animate={{ opacity: 1, scale: 1, y: 0 }}
-              exit={{ opacity: 0, scale: 0.95, y: 20 }}
+              exit={{ opacity: 0, scale: 0.96, y: 16 }}
               transition={{ duration: 0.2 }}
-              className="pointer-events-auto w-full max-w-sm md:max-w-md overflow-hidden rounded-2xl md:rounded-3xl border border-slate-100 bg-white shadow-2xl"
+              className="pointer-events-auto w-full max-w-xs overflow-hidden rounded-2xl border border-slate-100 bg-white shadow-xl sm:max-w-sm"
             >
-              <div className="p-5 md:p-7 text-center">
-                <div className="mx-auto mb-4 flex h-14 w-14 md:h-16 md:w-16 items-center justify-center rounded-full bg-red-50 text-red-500 shadow-sm">
-                  <AlertTriangle size={24} className="md:w-7 md:h-7" />
+              <div className="p-5 text-center">
+                {/* Icon */}
+                <div className="mx-auto mb-4 flex h-12 w-12 items-center justify-center rounded-full bg-red-50 text-red-500 shadow-sm">
+                  <AlertTriangle size={22} />
                 </div>
 
-                <h3 className={`${FONT_STYLES.sectionTitle} text-slate-900 mb-2`}>
+                {/* Title */}
+                <h3
+                  className={`
+                    ${FONT_SIZE.size18}
+                    ${FONT_WEIGHT.bold}
+                    text-slate-900
+                    mb-2
+                  `}
+                >
                   {title}
                 </h3>
 
-                <p className={`${FONT_STYLES.body} text-slate-500 leading-relaxed mb-6`}>
+                {/* Description */}
+                <p
+                  className={`
+                    ${FONT_SIZE.size14}
+                    ${LINE_HEIGHT.relaxed}
+                    text-slate-500
+                    mb-5
+                  `}
+                >
                   {description}
                 </p>
 
-                <div className="flex  flex-row gap-2 justify-center ">
+                {/* Actions */}
+                <div className="flex justify-center gap-2">
                   <button
+                    type="button"
                     onClick={onClose}
                     disabled={isLoading}
-                    className="rounded-xl px-5 py-2.5 text-sm font-semibold text-slate-600 transition-colors hover:bg-slate-100 disabled:opacity-70"
+                    className={`
+                      ${FONT_SIZE.size14}
+                      ${FONT_WEIGHT.semibold}
+                      rounded-lg
+                      px-4
+                      py-2
+                      text-slate-600
+                      transition-colors
+                      hover:bg-slate-100
+                      disabled:opacity-70
+                    `}
                   >
                     {cancelText}
                   </button>
 
                   <button
+                    type="button"
                     onClick={onConfirm}
                     disabled={isLoading}
-                    className="flex items-center justify-center gap-2 rounded-xl bg-red-500 px-5 py-2.5 text-sm font-semibold text-white shadow-md shadow-red-500/20 transition-all hover:bg-red-600 active:scale-[0.98] disabled:cursor-not-allowed disabled:opacity-70"
+                    className={`
+                      ${FONT_SIZE.size14}
+                      ${FONT_WEIGHT.semibold}
+                      flex items-center justify-center gap-2
+                      rounded-lg
+                      bg-red-500
+                      px-4
+                      py-2
+                      text-white
+                      shadow-md shadow-red-500/20
+                      transition-all
+                      hover:bg-red-600
+                      active:scale-95
+                      disabled:cursor-not-allowed
+                      disabled:opacity-70
+                    `}
                   >
                     {isLoading ? (
-                      <Loader2 size={16} className="animate-spin" />
+                      <Loader2
+                        size={16}
+                        className="animate-spin"
+                      />
                     ) : (
                       confirmText
                     )}

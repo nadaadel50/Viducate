@@ -11,9 +11,9 @@ export function InitialPlayOverlay({ onStart }: Props) {
         onClick={onStart}
         className="cursor-pointer bg-gradient-to-br from-[#359EFF]/70 to-[#5A0BB1]/70
           hover:from-[#5A0BB1] hover:to-[#359EFF]
-          text-white p-5 rounded-full transition-all duration-300 scale-100 hover:scale-110"
+          text-white p-3 md:p-4 rounded-full transition-all duration-300 scale-100 hover:scale-110"
       >
-        <Play className="w-8 h-8" />
+        <Play className="w-5 h-5 md:w-7 md:h-7" />
       </button>
     </div>
   );

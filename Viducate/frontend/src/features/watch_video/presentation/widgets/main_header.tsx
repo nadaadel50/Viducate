@@ -5,6 +5,7 @@ import { FONT_STYLES } from "../../../../core/constants/fonts";
 import { useLearningSession } from "../../../../core/hooks/useLearningContent";
 import { useHandleSaveProgress } from "../hook/use_handle_save_progress";
 import { formatVideoTime } from "../../../../core/utils/fomat_time";
+import { FONT_SIZE, FONT_WEIGHT, LETTER_SPACING } from "../../../../core/constants/fonts_update";
 
 export function MainHeader() {
   const { selectedTopic, handleSetHasUnsavedChanges } = useLearningSession();
@@ -25,7 +26,7 @@ export function MainHeader() {
       />
 
       <h1
-        className={`${FONT_STYLES.pageTitle} mb-3 sm:mb-4 lg:mb-3 break-words text-slate-900`}
+        className={`${FONT_SIZE.size22} lg:${FONT_SIZE.size30} ${FONT_WEIGHT.semibold} ${LETTER_SPACING.tight} mb-3 sm:mb-4 lg:mb-3 break-words text-slate-900 leading-tight`}
       >
         {selectedTopic?.title}
       </h1>
@@ -34,7 +35,7 @@ export function MainHeader() {
         <div className="flex items-center gap-2 text-slate-500">
           <Clock4 className="h-4 w-4 lg:h-3.5 lg:w-3.5 shrink-0" />
 
-          <p className={FONT_STYLES.body}>
+          <p className={FONT_SIZE.size13}>
             {formatVideoTime(topicDuration)}
           </p>
         </div>

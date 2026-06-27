@@ -148,7 +148,10 @@ export function useChatMessages(open: boolean) {
     setOpenDeleteModal(value);
   }
   function handleDeleteSession() {
+    console.log(sessionId,videoId)
+    
     if (sessionId && videoId) {
+      console.log("came here to delete2")
       deleteSession({
         session_id: sessionId,
         video_id: videoId,

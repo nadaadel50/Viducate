@@ -39,7 +39,7 @@ export function FlashCards() {
   if (error) return <ErrorScreen errorMessage={error.message} />;
 
   return (
-    <div className="w-200 h-180 bg-white/60 rounded-4xl font-display flex items-center justify-center">
+    <div className="w-full  max-w-3xl py-3 bg-white/60 rounded-4xl font-display flex items-center justify-center">
       <div className="relative z-20 w-full">
 
         {!isFinished && (

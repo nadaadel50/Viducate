@@ -25,7 +25,7 @@ const { pathname } = useLocation();
       {isOverlay && (
         <div onClick={()=>navigate(-1)}
          className="  fixed inset-0 z-50 flex items-center justify-center bg-black/30 backdrop-blur-sm">
-         <div className="  flex items-center justify-center" onClick={(e) => e.stopPropagation()}>
+         <div className=" w-full max-w-3xl flex items-center justify-center" onClick={(e) => e.stopPropagation()}>
             <Outlet />
           </div>
         </div>

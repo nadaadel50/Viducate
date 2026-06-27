@@ -39,9 +39,9 @@ export function DeleteAccount() {
 
         <CustomButton
           type="button"
-          variant="danger"
+       
           onClick={() => setShowDeleteModal(true)}
-          className="w-full sm:w-auto"
+          className="w-full sm:w-auto bg-red-500 text-white"
         >
           <Trash2 className="size-4" />
 

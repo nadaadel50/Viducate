@@ -1,20 +1,20 @@
 import { useChat } from "../hooks/use_chat";
 import { useLearningSession } from "../../../../core/hooks/useLearningContent";
+import { useChatMessages } from "../hooks/use_chat_message";
+
 import { ChatHeader } from "../widgets/chat_header";
 import { ChatMessages } from "../widgets/chat_messages";
 import { ChatInputBtn } from "../widgets/chat_input_btn";
-import { useChatMessages } from "../hooks/use_chat_message";
 import { RecentChatsSidebar } from "../widgets/recent_chat_sideBar";
+
 import { DeleteModal } from "../../../../core/componants/delete_modal";
 
 export function ChatBotPage() {
   const { closeChat, open } = useChat();
-
   const { videoTitle } = useLearningSession();
 
   const {
     messages,
-
     handleSend,
     messagesEndRef,
     openRecentChats,
@@ -29,34 +29,38 @@ export function ChatBotPage() {
     isLoadingMessage,
   } = useChatMessages(open);
 
+  const handleCloseDeleteModal = () => {
+    handleOpenDeleteMessage(false);
+  };
 
-
+  const handleConfirmDelete = () => {
+    handleDeleteSession();
+    handleOpenDeleteMessage(false);
+  };
 
   return (
-    <div className="fixed inset-0 z-40 flex justify-end pointer-events-none ">
-      {/* {black bg} */}
+    <div className="fixed inset-0 z-40 flex justify-end pointer-events-none">
+      {/* Overlay */}
       <div
         onClick={closeChat}
-        className={`
-      absolute inset-0 bg-black/20 backdrop-blur-sm
-      transition-opacity duration-300
-      ${open ? "opacity-100 pointer-events-auto" : "opacity-0"}
-    `}
+        className={`absolute inset-0 bg-black/20 backdrop-blur-sm transition-opacity duration-300 ${
+          open ? "pointer-events-auto opacity-100" : "opacity-0"
+        }`}
       />
 
+      {/* Chat Panel */}
       <div
-        className={`
-      relative w-1/2 h-full bg-white/90 shadow-xl flex
-      transform transition-transform duration-300 ease-out
-      ${open ? "translate-x-0 pointer-events-auto" : "translate-x-full"}
-    `}
+        className={`relative flex h-full  max-w-full bg-white/90 shadow-xl transition-transform duration-300 ease-out w-[80%] md:w-[50%] ${
+          open
+            ? "translate-x-0 pointer-events-auto"
+            : "translate-x-full pointer-events-none"
+        }`}
       >
+        {/* Recent Chats */}
         <div
-          className={`
-      absolute top-0  right-0 h-full z-10 
-      transform transition-transform duration-300 ease-out
-      ${openRecentChats ? "translate-x-0" : "translate-x-full"}
-    `}
+          className={`absolute top-0 right-0 z-10 h-full transition-transform duration-300 ease-out ${
+            openRecentChats ? "translate-x-0" : "translate-x-full"
+          }`}
         >
           <RecentChatsSidebar
             selectedSession={sessionId}
@@ -68,32 +72,24 @@ export function ChatBotPage() {
           />
         </div>
 
-       
-
+        {/* Delete Modal */}
         <DeleteModal
           open={openDeleteModal}
           title="Delete Chat"
           description="Are you sure you want to delete this conversation? This action cannot be undone."
-          onClose={() => handleOpenDeleteMessage(false)}
-          onConfirm={()=>{
-             handleDeleteSession()
-            handleOpenDeleteMessage(false);
-          }}
+          onClose={handleCloseDeleteModal}
+          onConfirm={handleConfirmDelete}
         />
 
-        {/* my contnet */}
-
+        {/* Main Content */}
         <div
           onClick={openRecentChats ? handleOpenRecentChats : undefined}
-          className="flex flex-col h-full w-full"
+          className="flex h-full w-full flex-col"
         >
-          {/* header */}
           <ChatHeader
             handleOpenSession={handleOpenRecentChats}
             videoTitle={videoTitle ?? ""}
           />
-
-          {/* messages */}
 
           <ChatMessages
             messages={messages}
@@ -101,7 +97,6 @@ export function ChatBotPage() {
             isLoadingMessage={isLoadingMessage}
           />
 
-          {/* input btn */}
           <ChatInputBtn handleSend={handleSend} />
         </div>
       </div>

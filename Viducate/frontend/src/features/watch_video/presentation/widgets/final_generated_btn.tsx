@@ -1,5 +1,8 @@
 import type { ReactNode } from "react";
+import clsx from "clsx";
+
 import { CustomButton } from "../../../../core/componants/custum_btn";
+import { FONT_STYLES } from "../../../../core/constants/fonts";
 
 const styles = {
   quiz: {
@@ -31,6 +34,7 @@ type FinalGeneratedBtnProps = {
   label: string;
   onClick: () => void;
   variant: Variant;
+  reviewCards?: number;
 };
 
 export function FinalGeneratedBtn({
@@ -38,17 +42,43 @@ export function FinalGeneratedBtn({
   label,
   onClick,
   variant,
+  reviewCards,
 }: FinalGeneratedBtnProps) {
-  const style = styles[variant];
+  const variantStyle = styles[variant];
 
   return (
     <CustomButton
       fullWidth
       onClick={onClick}
-      leftIcon={<span className="transition-transform group-hover:scale-110">{icon}</span>}
-      className={`group border bg-white ${style.border} ${style.text} ${style.hover} hover:shadow hover:-translate-y-[1px]`}
+      leftIcon={
+        <span className="transition-transform group-hover:scale-110">
+          {icon}
+        </span>
+      }
+      className={clsx(
+        "group border bg-white hover:-translate-y-[1px] hover:shadow",
+        variantStyle.border,
+        variantStyle.text,
+        variantStyle.hover,
+      )}
     >
-      <span className="tracking-tight">{label}</span>
+      <span className={FONT_STYLES.button}>{label}</span>
+
+      {reviewCards && reviewCards > 0 ? (
+        <span
+          className={clsx(
+            FONT_STYLES.topicStatus,
+            "flex shrink-0 items-center rounded-full bg-green-50 px-2 py-0.5 text-green-600",
+          )}
+        >
+          <span className="h-1.5 w-1.5 animate-pulse rounded-full bg-green-500" />
+          <span className="ml-1 hidden sm:inline">Review</span>
+        </span>
+      ) : (
+        <span className={clsx(FONT_STYLES.topicStatus, "px-2 py-0.5")}>
+          &nbsp;
+        </span>
+      )}
     </CustomButton>
   );
 }

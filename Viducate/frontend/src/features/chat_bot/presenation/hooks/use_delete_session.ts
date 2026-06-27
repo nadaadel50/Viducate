@@ -10,13 +10,14 @@ export function useDeleteSession() {
   const mutation = useMutation({
     mutationFn: async (req: DeleteMessageRequest) => {
       const response = await deleteSessionsUseCase(req);
-      console.log("deleted here")
+  
       if (!response.success) {
         throw new Error("Delete session failed");
       }
      
     },
     onSuccess: (_, req) => {
+      console.log("delete done")
      
       queryClient.setQueryData(
         ["sessions", videoId],

@@ -2,6 +2,7 @@
 import { Search } from "lucide-react";
 import { FONT_STYLES } from "../../../../core/constants/fonts";
 import type { Dispatch, SetStateAction } from "react";
+import { FONT_SIZE } from "../../../../core/constants/fonts_update";
 
 type SearchTopicBarProps = {
   setSearchQuery: Dispatch<SetStateAction<string>>;
@@ -17,7 +18,7 @@ export function SearchTopicBar({ setSearchQuery }: SearchTopicBarProps) {
         placeholder="Search topics..."
         onChange={(e) => setSearchQuery(e.target.value)}
         className={`w-full rounded-xl border border-slate-200 bg-white py-2 pl-10 pr-3 shadow-sm transition-colors duration-200 placeholder:text-slate-400 focus:border-[#4f46e5] 
-          focus:outline-none focus:ring-1 focus:ring-[#4f46e5] ${FONT_STYLES.input}`}
+          focus:outline-none focus:ring-1 focus:ring-[#4f46e5] ${FONT_SIZE.size12}`}
       />
     </div>
   );

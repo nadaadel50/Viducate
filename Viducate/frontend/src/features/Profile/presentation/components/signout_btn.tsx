@@ -1,6 +1,7 @@
 import { LogOut } from "lucide-react";
 import { FormattedMessage } from "react-intl";
 import { CustomButton } from "../../../../core/componants/custum_btn";
+import { COLORS } from "../../../../core/constants";
 
 type SignOutButtonProps = {
   onSignOut?: () => void;
@@ -11,9 +12,10 @@ export function SignOutButton({ onSignOut }: SignOutButtonProps) {
     <div className="pt-2">
       <CustomButton
         type="button"
-        variant="outline"
+        style={{background:COLORS.button.primary}}
+      
         onClick={onSignOut}
-        className="w-full "
+        className="w-full text-white"
       >
         <LogOut className="size-4" />
 

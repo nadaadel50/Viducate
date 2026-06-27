@@ -8,6 +8,7 @@ import { FormInputs } from "./form_inputs";
 import { useAccountSettings } from "../hooks/use_account_settings";
 import { FONT_STYLES } from "../../../../core/constants/fonts";
 import { CustomButton } from "../../../../core/componants/custum_btn";
+import { COLORS } from "../../../../core/constants";
 
 export function AccountSettingsForm() {
   const {
@@ -53,10 +54,13 @@ export function AccountSettingsForm() {
           <div className="flex flex-col sm:flex-row gap-3 w-full lg:w-auto">
           
 
-            <div className="flex w-full flex-col gap-3 sm:w-auto sm:flex-row">
+            <div 
+            
+            className="flex w-full flex-col gap-3 sm:w-auto sm:flex-row">
               <CustomButton
                 type="button"
-                variant="outline"
+               className="border border-transparent hover:border-gray-200"
+                
                 onClick={handleCancel}
               >
                 <FormattedMessage id="common.cancel" defaultMessage="Cancel" />
@@ -64,10 +68,11 @@ export function AccountSettingsForm() {
 
               <CustomButton
                 type="button"
-                variant="primary"
+                style={{background:COLORS.button.primary}}
+               
                 disabled={disabled}
                 onClick={handleSave}
-                className="min-w-[170px]"
+                className="min-w-[170px] text-white"
               >
                 {isLoadingUpdate ? (
                   <Loader2 className="size-[18px] animate-spin" />
