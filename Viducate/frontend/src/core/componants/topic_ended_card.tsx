@@ -1,4 +1,13 @@
-const styles = {
+import type { ReactNode } from "react";
+import clsx from "clsx";
+
+import {
+  FONT_SIZE,
+  FONT_WEIGHT,
+  LINE_HEIGHT,
+} from "../constants/fonts_update";
+
+const VARIANT_STYLES = {
   purple: {
     bg: "bg-purple-50",
     iconBg: "bg-purple-100",
@@ -28,50 +37,81 @@ const styles = {
     hoverBorder: "hover:border-teal-500/20",
   },
   green: {
-    bg: "bg-[#F2FBF6]", 
+    bg: "bg-[#F2FBF6]",
     iconBg: "bg-[#E6F6ED]",
     iconColor: "text-[#22C55E]",
     hoverIconBg: "group-hover:bg-[#22C55E]",
     hoverBorder: "hover:border-green-500/20",
   },
   red: {
-    bg: "bg-[#FFF5F5]", 
+    bg: "bg-[#FFF5F5]",
     iconBg: "bg-[#FEE2E2]",
     iconColor: "text-[#EF4444]",
     hoverIconBg: "group-hover:bg-[#EF4444]",
     hoverBorder: "hover:border-red-500/20",
   },
 } as const;
-type Variant = "purple" | "orange" | "blue"| "teal"| "green" | "red";
+
+export type TopicEndCardVariant = keyof typeof VARIANT_STYLES;
+
+type TopicEndCardProps = {
+  variant?: TopicEndCardVariant;
+  icon: ReactNode;
+  title: string;
+  description: string;
+  onClick?: () => void;
+};
+
 export function TopicEndCard({
   variant = "purple",
   icon,
   title,
   description,
   onClick,
-}: {
-  variant?: Variant;
-  icon: React.ReactNode;
-  title: string;
-  description: string;
-  onClick?: () => void;
-}) {
-  const s = styles[variant];
+}: TopicEndCardProps) {
+  const style = VARIANT_STYLES[variant];
 
   return (
     <button
+      type="button"
       onClick={onClick}
-      className={`${s.bg} cursor-pointer group flex flex-col items-start gap-4 rounded-xl border border-gray-100 p-6 transition-all duration-300 hover:shadow-md hover:-translate-y-1 hover:bg-white ${s.hoverBorder} text-left`}
+      className={clsx(
+        "group flex cursor-pointer flex-col items-start gap-4 rounded-xl border border-gray-100 p-5 text-left transition-all duration-300 hover:-translate-y-1 hover:bg-white hover:shadow-md md:p-6",
+        style.bg,
+        style.hoverBorder
+      )}
     >
       <div
-        className={`w-12 h-12 rounded-lg ${s.iconColor} ${s.iconBg} flex items-center justify-center transition-all duration-300 group-hover:text-white ${s.hoverIconBg}`}
+        className={clsx(
+          "flex h-12 w-12 items-center justify-center rounded-lg transition-all duration-300 group-hover:text-white",
+          style.iconBg,
+          style.iconColor,
+          style.hoverIconBg
+        )}
       >
         {icon}
       </div>
 
-      <div>
-        <h2 className="text-[#111218] text-lg font-bold mb-1">{title}</h2>
-        <p className="text-[#636988] text-sm">{description}</p>
+      <div className="space-y-1">
+        <h2
+          className={clsx(
+            FONT_SIZE.size18,
+            FONT_WEIGHT.bold,
+            "text-[#111218]"
+          )}
+        >
+          {title}
+        </h2>
+
+        <p
+          className={clsx(
+            FONT_SIZE.size14,
+            LINE_HEIGHT.relaxed,
+            "text-[#636988]"
+          )}
+        >
+          {description}
+        </p>
       </div>
     </button>
   );

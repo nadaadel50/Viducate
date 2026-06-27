@@ -8,7 +8,7 @@ import { FormattedMessage } from "react-intl";
 import { useLearningSession } from "../../../../core/hooks/useLearningContent";
 import { BarChart3 } from "lucide-react";
 import { GenerationLoadingScreen } from "../../../../core/componants/generation_loading_screen";
-import ErrorScreen from "../../../../core/componants/error";
+import ErrorScreen from "../../../../core/componants/error_screen";
 
 
 export function ReportPage() {

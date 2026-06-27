@@ -8,11 +8,11 @@ import { PreferencesSidebar } from "../sections/preferences_sidebar";
 import { AuthContext } from "../../../auth/presentation/context/auth_context";
 import { useContext } from "react";
 import { useGetUserData } from "../hooks/use_get_user_data";
-import { ErrorScreen } from "../../../../core/componants/error";
 import { COLORS } from "../../../../core/constants";
 import { useProfileContext } from "../hooks/use_profile_context";
 import { ConfirmationModal } from "../../../../core/componants/confirmation_modal";
 import LoadingScreen from "../../../../core/componants/loading_screen";
+import ErrorScreen from "../../../../core/componants/error_screen";
 
 export function ProfilePage() {
   const { showDeleteModal } = useProfileContext();

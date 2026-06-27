@@ -1,26 +1,19 @@
 import {
   Background,
   Controls,
-  Handle,
-  Position,
   ReactFlow,
-  addEdge,
-  useEdgesState,
-  useNodesState,
-  type Connection,
-  type NodeProps,
+ 
 } from "reactflow";
 
 import "reactflow/dist/style.css";
 import { CustomNode } from "../widgets/custom_node";
 import { useMindMapFlow } from "../hooks/use_mind_map";
-import { useCallback, useEffect } from "react";
 import { GenerationLoadingScreen } from "../../../../core/componants/generation_loading_screen";
 import { Brain } from "lucide-react";
-import ErrorScreen from "../../../../core/componants/error";
 import { COLORS } from "../../../../core/constants";
 import { useMindMapController } from "../hooks/use_mind_map_controler";
 import { downloadMindMap } from "../utils/dowenload_mindMap";
+import ErrorScreen from "../../../../core/componants/error_screen";
 
 const nodeTypes = {
   custom: CustomNode,
@@ -66,7 +59,7 @@ export default function MindMapPage() {
       }}
     >
 
-        <div className="w-500">
+        <div className="w-full ">
        <button onClick={() => downloadMindMap()} className="px-4 py-2 rounded bg-blue-600 text-white hover:bg-blue-700 transition">
   Download
 </button>

@@ -1,6 +1,15 @@
 import { Handle, Position, type NodeProps } from "reactflow";
-import { getNodeStyle } from "../utils/get_node_color";
+import clsx from "clsx";
+
+import {
+  FONT_SIZE,
+  FONT_WEIGHT,
+  LETTER_SPACING,
+  LINE_HEIGHT,
+} from "../../../../core/constants/fonts_update";
+
 import type { MindMapNodeType } from "../../domain/entity/node_type";
+import { getNodeStyle } from "../utils/get_node_color";
 
 type CustomNodeData = {
   label: string;
@@ -12,119 +21,122 @@ type CustomNodeData = {
   onToggle?: (nodeId: string) => void;
 };
 
-const handleStyle = {  // for edge
+const HANDLE_STYLE = {
   width: 10,
   height: 10,
   background: "rgba(255,255,255,0.6)",
   border: "2px solid rgba(255,255,255,0.9)",
-};
+} as const;
+
+const HANDLES = [
+  {
+    id: "top",
+    position: Position.Top,
+    offset: { top: -5 },
+  },
+  {
+    id: "bottom",
+    position: Position.Bottom,
+    offset: { bottom: -5 },
+  },
+  {
+    id: "left",
+    position: Position.Left,
+    offset: { left: -5 },
+  },
+  {
+    id: "right",
+    position: Position.Right,
+    offset: { right: -5 },
+  },
+] as const;
 
 export function CustomNode({ id, data }: NodeProps<CustomNodeData>) {
-  const hasToggle = !data.isRoot && data.hasChildren;
   const nodeStyle = getNodeStyle(data.type);
+
+  const hasToggle = !data.isRoot && data.hasChildren;
 
   return (
     <div
-      className="font-display"
-      style={{
-        padding: "14px 20px",
-        borderRadius: "20px",
-        minWidth: "180px",
-        maxWidth: "240px",
-        textAlign: "center",
-        whiteSpace: "normal",
-        position: "relative",
-        cursor: "default",
-        transition: "transform 0.15s ease, box-shadow 0.15s ease",
-        ...nodeStyle,
-      }}
-      onMouseEnter={(e) => {
-        (e.currentTarget as HTMLDivElement).style.transform = "translateY(-2px) scale(1.02)";
-        (e.currentTarget as HTMLDivElement).style.filter = "brightness(1.08)";
-      }}
-      onMouseLeave={(e) => {
-        (e.currentTarget as HTMLDivElement).style.transform = "translateY(0) scale(1)";
-        (e.currentTarget as HTMLDivElement).style.filter = "brightness(1)";
-      }}
+      className={clsx(
+        "relative max-w-[240px] min-w-[180px] cursor-default rounded-[20px] px-5 py-4 text-center transition-all duration-150 hover:-translate-y-0.5 hover:scale-[1.02]",
+      )}
+      style={nodeStyle}
     >
-     
-      <Handle type="source" position={Position.Top}    id="top"    style={{ ...handleStyle, top: -5 }} />
-      <Handle type="target" position={Position.Top}    id="top"    style={{ ...handleStyle, top: -5 }} />
+      {HANDLES.map((handle) => (
+        <>
+          <Handle
+            key={`${handle.id}-source`}
+            id={handle.id}
+            type="source"
+            position={handle.position}
+            style={{
+              ...HANDLE_STYLE,
+              ...handle.offset,
+            }}
+          />
 
-      <Handle type="source" position={Position.Bottom} id="bottom" style={{ ...handleStyle, bottom: -5 }} />
-      <Handle type="target" position={Position.Bottom} id="bottom" style={{ ...handleStyle, bottom: -5 }} />
+          <Handle
+            key={`${handle.id}-target`}
+            id={handle.id}
+            type="target"
+            position={handle.position}
+            style={{
+              ...HANDLE_STYLE,
+              ...handle.offset,
+            }}
+          />
+        </>
+      ))}
 
-      <Handle type="source" position={Position.Left}   id="left"   style={{ ...handleStyle, left: -5 }} />
-      <Handle type="target" position={Position.Left}   id="left"   style={{ ...handleStyle, left: -5 }} />
-
-      <Handle type="source" position={Position.Right}  id="right"  style={{ ...handleStyle, right: -5 }} />
-      <Handle type="target" position={Position.Right}  id="right"  style={{ ...handleStyle, right: -5 }} />
-
-      {/* Type badge */}
-     
-        <div
-          style={{
-            fontSize: "12px",
-            fontWeight: 700,
-            letterSpacing: "0.12em",
-            textTransform: "uppercase",
-            opacity: 0.75,
-            marginBottom: "6px",
-          }}
-        >
-          {data.type=="segment"?  "Topic" : data.type}
-        </div>
-      
-
-      {/* Label */} 
       <div
-        style={{
-          fontWeight: 700,
-          fontSize: data.type === "root" ? "20px" : "15px",
-          lineHeight: 1.4,
-          letterSpacing: "0.01em",
-        }}
+        className={clsx(
+          FONT_SIZE.size12,
+          FONT_WEIGHT.bold,
+          LETTER_SPACING.widest,
+          "mb-1 uppercase opacity-70",
+        )}
+      >
+        {data.type === "segment" ? "Topic" : data.type}
+      </div>
+
+      <div
+        className={clsx(
+          data.type === "root" ? FONT_SIZE.size20 : FONT_SIZE.size15,
+          FONT_WEIGHT.bold,
+          LINE_HEIGHT.relaxed,
+        )}
       >
         {data.label}
       </div>
 
-      {/* Subtle inner highlight */}
       <div
+        className="pointer-events-none absolute inset-0 rounded-[20px]"
         style={{
-          position: "absolute",
-          inset: 0,
-          borderRadius: "20px",
-          background: "linear-gradient(160deg, rgba(255,255,255,0.15) 0%, transparent 60%)",
-          pointerEvents: "none",
+          background:
+            "linear-gradient(160deg, rgba(255,255,255,0.15) 0%, transparent 60%)",
         }}
       />
 
-    
       {hasToggle && data.onToggle && (
         <button
+          type="button"
           onClick={(e) => {
             e.stopPropagation();
-            data.onToggle!(id);
-          }}
-          style={{
-            position: "absolute",
-            top: -10,
-            right: -10,
-            width: 30,
-            height: 30,
-            borderRadius: "50%",
-             
 
-            border: "2px solid rgba(255,255,255,0.9)",
-            background: data.expanded ? "rgba(255,255,255,0.9)" : "rgba(255,255,255,0.3)",
+            if (data.onToggle) {
+              data.onToggle(id);
+            }
+          }}
+          className={clsx(
+            "absolute -right-2.5 -top-2.5 z-10 flex h-[30px] w-[30px] items-center justify-center rounded-full border-2 text-base transition-colors",
+          )}
+          style={{
+            borderColor: "rgba(255,255,255,0.9)",
+            background: data.expanded
+              ? "rgba(255,255,255,0.9)"
+              : "rgba(255,255,255,0.3)",
             color: data.expanded ? "#085041" : "#fff",
-            fontSize: 16,
-            cursor: "pointer",
-            display: "flex",
-            alignItems: "center",
-            justifyContent: "center",
-            padding: 0,
-            zIndex: 10,
           }}
         >
           {data.expanded ? "−" : "+"}

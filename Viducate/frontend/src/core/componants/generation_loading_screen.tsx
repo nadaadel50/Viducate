@@ -120,10 +120,10 @@ export function GenerationLoadingScreen({
           <h1
             className={`
               ${FONT_SIZE.size30}
-              md:text-4xl
-              lg:text-5xl
+              
               ${FONT_WEIGHT.bold}
               ${LETTER_SPACING.tight}
+
             `}
             style={{ color: COLORS.text.primary }}
           >
@@ -146,7 +146,7 @@ export function GenerationLoadingScreen({
           <p
             className={`
               ${FONT_SIZE.size14}
-              md:text-base
+            
               ${LINE_HEIGHT.relaxed}
               opacity-70
             `}
