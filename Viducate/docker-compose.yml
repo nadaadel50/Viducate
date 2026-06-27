@@ -1,0 +1,59 @@
+version: "3.9"
+
+services:
+  db:
+    image: postgres:16-alpine
+    container_name: viducate_db
+    restart: unless-stopped
+    environment:
+      POSTGRES_DB: viducate
+      POSTGRES_USER: viducate_user
+      POSTGRES_PASSWORD: ${POSTGRES_PASSWORD}
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+    ports:
+      - "5432:5432"
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U viducate_user -d viducate"]
+      interval: 5s
+      timeout: 5s
+      retries: 10
+
+  backend:
+    build:
+      context: ./backend
+      dockerfile: Dockerfile
+    container_name: viducate_backend
+    restart: unless-stopped
+    depends_on:
+      db:
+        condition: service_healthy
+    env_file:
+      - ./backend/.env
+    environment:
+      DATABASE_URL: postgresql://viducate_user:${POSTGRES_PASSWORD}@db:5432/viducate
+    volumes:
+      - chroma_data:/app/chroma_db
+      - ocr_logs:/app/logs
+      - temp_videos:/tmp
+    ports:
+      - "8000:8000"
+  
+  frontend:
+    build:
+      context: ./frontend
+      dockerfile: Dockerfile
+      args:
+        - VITE_VIDUCATE_BASE_URL=http://localhost:8000/api/v1
+    container_name: viducate_frontend
+    restart: unless-stopped
+    ports:
+      - "5173:5173"
+    depends_on:
+      - backend
+
+volumes:
+  postgres_data:
+  chroma_data:
+  ocr_logs:
+  temp_videos:
