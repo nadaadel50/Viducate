@@ -104,6 +104,7 @@ paddleocr==3.4.0
 paddlepaddle==3.2.0
 paddlex==3.4.2
 pandas>=2.2.0
+pandas>=2.2.0
 passlib==1.7.4
 pillow==12.1.0
 prettytable==3.17.0
@@ -192,7 +193,17 @@ zipp==3.23.1
 
 jinja2
 weasyprint
+
+jinja2
+weasyprint
 zopfli==0.4.1
+pytest
+pytest-asyncio
+pytest-cov
+httpx
+factory-boy
+faker
+google-genai
 pytest
 pytest-asyncio
 pytest-cov

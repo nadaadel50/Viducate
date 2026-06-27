@@ -1,25 +1,23 @@
-
 import { COLORS } from "../../../../core/constants";
-import { QuizQuestionEntity } from "../../domain/entity/quiz_entity"; 
+import type { QuizQuestionEntity, QuizSubmitQuestion } from "../../domain/entity/quiz_entity";
 
 interface UseQuizOptionsParams {
-  question: QuizQuestionEntity; 
+  question: QuizQuestionEntity;
   selectedId: string | null;
   isReviewMode: boolean;
+  submitQuestion?: QuizSubmitQuestion; // ← بييجي بعد الـ submit
 }
-
-
 
 export const useQuizOptions = ({
   question,
   selectedId,
   isReviewMode,
+  submitQuestion,
 }: UseQuizOptionsParams) => {
-
-const options = question.choices; 
+  const options = question.choices;
 
   const getOptionStyle = (optionId: string) => {
-    const isCorrect = optionId === question.correct_answer;
+    const isCorrect = submitQuestion ? optionId === submitQuestion.correctAnswer : false;
     const isSelected = selectedId === optionId;
 
     const style: React.CSSProperties = {
@@ -27,7 +25,7 @@ const options = question.choices;
       backgroundColor: COLORS.text.white,
     };
 
-    if (isReviewMode) {
+    if (isReviewMode && submitQuestion) {
       if (isCorrect) {
         style.border = `2px solid ${COLORS.state.success}`;
         style.backgroundColor = COLORS.state.successLight;
@@ -40,16 +38,8 @@ const options = question.choices;
       style.backgroundColor = COLORS.icon.background;
     }
 
-    return {
-      style,
-      isCorrect,
-      isSelected,
-      label: optionId.toUpperCase(),
-    };
+    return { style, isCorrect, isSelected, label: optionId.toUpperCase() };
   };
 
-  return {
-    options,
-    getOptionStyle,
-  };
+  return { options, getOptionStyle };
 };

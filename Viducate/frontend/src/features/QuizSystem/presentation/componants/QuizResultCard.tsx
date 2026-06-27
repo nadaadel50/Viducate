@@ -1,34 +1,19 @@
 import { FormattedMessage } from 'react-intl';
 import { COLORS } from "../../../../core/constants";
-
-type QuizStats = {
-  percentage: number;
-  score: number;
-  total: number;
-};
+import type { QuizSubmitResult } from "../../domain/entity/quiz_entity";
 
 type QuizResultCardProps = {
-  stats: QuizStats;
+  submitResult: QuizSubmitResult;
   onReview: () => void;
 };
 
-export const QuizResultCard = ({
-  stats,
-  onReview,
-}: QuizResultCardProps) => {
+export const QuizResultCard = ({ submitResult, onReview }: QuizResultCardProps) => {
   return (
     <div className="fixed inset-0 z-[100] flex items-center justify-center p-4 backdrop-blur-md bg-black/10 animate-in fade-in duration-500">
-
       <div
         className="relative bg-white rounded-[3rem] p-10 shadow-[0_20px_60px_rgba(0,0,0,0.15)] flex flex-col items-center justify-center animate-in zoom-in-95 duration-300"
-        style={{
-          borderColor: COLORS.border.default,
-          borderWidth: '1px',
-          width: 'min(90vw, 500px)',
-          aspectRatio: '1 / 1'
-        }}
+        style={{ borderColor: COLORS.border.default, borderWidth: '1px', width: 'min(90vw, 500px)', aspectRatio: '1 / 1' }}
       >
-
         <div className="w-20 h-20 rounded-full flex items-center justify-center mb-4 shadow-lg" style={{ background: COLORS.brand.gradient }}>
           <span className="material-symbols-outlined text-white text-4xl">emoji_events</span>
         </div>
@@ -43,29 +28,28 @@ export const QuizResultCard = ({
 
         <div className="rounded-3xl p-6 mb-10 w-full text-center" style={{ backgroundColor: COLORS.icon.background }}>
           <div className="text-6xl font-black mb-1" style={{ color: COLORS.brand.primary }}>
-            {stats.percentage}%
+            {submitResult.score}%
           </div>
           <p className="font-bold text-sm" style={{ color: COLORS.text.gray }}>
-            <FormattedMessage id="quiz.score_msg" values={{ score: stats.score, total: stats.total }} />
+            <FormattedMessage id="quiz.score_msg" values={{ score: submitResult.correctCount, total: submitResult.total }} />
           </p>
+          {submitResult.trials > 1 && (
+            <p className="text-xs mt-2" style={{ color: COLORS.text.secondary }}>
+              <FormattedMessage id="quiz.attempts" values={{ count: submitResult.trials }} defaultMessage="Attempt #{count}" />
+            </p>
+          )}
         </div>
 
         <div className="flex flex-row gap-3 w-full">
-
-
           <button
             onClick={onReview}
             className="flex-1 py-4 rounded-2xl font-bold border-2 text-sm transition-all hover:bg-slate-50 active:scale-95 flex items-center justify-center gap-2"
             style={{ borderColor: COLORS.button.primary, color: COLORS.button.primary }}
           >
             <span className="material-symbols-outlined text-lg">visibility</span>
-            <span className="whitespace-nowrap">
-              <FormattedMessage id="quiz.review_answers" />
-            </span>
+            <span className="whitespace-nowrap"><FormattedMessage id="quiz.review_answers" /></span>
           </button>
-
         </div>
-
       </div>
     </div>
   );
