@@ -10,10 +10,8 @@ import SignupPage from "../../features/auth/presentation/pages/signup_page";
 import { MainPage } from "../../features/watch_video/presentation/pages/main_page";
 import { ProcessingPage } from "../../features/video_upload/presentation/pages/processing_page";
 import AuthSuccess from "../../features/auth/presentation/pages/AuthSuccess";
-import { GeneratingSummaryPage } from "../../features/summarization/presentation/pages/GeneratingSummaryPage";
-import { GeneratingStudyNotesPage } from "../../features/summarization/presentation/pages/GeneratingStudyNotesPage";
-import SummaryPage from "../../features/summarization/presentation/pages/SummaryPage";
-import StudyNotesPage from "../../features/summarization/presentation/pages/StudyNotesPage";
+
+
 import {QuizPage} from "../../features/QuizSystem/presentation/pages/QuizPage";
 import {ReportPage} from "../../features/report/presentation/pages/report_page";
 import { FlashCards } from "../../features/flash_cards/presentation/pages/flash_card_page";
@@ -24,6 +22,10 @@ import{ProfilePage} from "../../features/Profile/presentation/pages/profile_page
 import { ProfileProvider } from "../../features/Profile/presentation/context/profile_provider";
 import { DashboardProvider } from "../../features/dashboard/presentaion/context/dashboard_provider";
 import { DashboardPage } from "../../features/dashboard/presentaion/pages/dashboard_page";
+import { GeneratingSummaryPage } from "../../features/summarization/presentation/pages/summary_generation_page";
+import StudyNotesPage from "../../features/summarization/presentation/pages/study_notes_page";
+import SummaryPage from "../../features/summarization/presentation/pages/summary_page";
+import { GeneratingStudyNotesPage } from "../../features/summarization/presentation/pages/study_notes_generation_page";
 export function AppRoutes() {
   return (
     <BrowserRouter>

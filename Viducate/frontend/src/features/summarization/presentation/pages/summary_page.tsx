@@ -1,12 +1,12 @@
 import { useEffect } from "react";
 import { useParams, useLocation } from "react-router";
 import { COLORS } from "../../../../core/constants/colors";
-import { SummaryHeader } from "../componants/SummaryHeader";
-import { TakeawayList } from "../componants/TakeawayList";
-import { QuizCard } from "../componants/QuizCard";
-import { ToolsCard } from "../componants/ToolsCard";
-import { TermTooltip } from "../componants/TermTooltip";
-import { GeneratingSummaryPage } from "./GeneratingSummaryPage";
+import { SummaryHeader } from "../componants/summary_header";
+import { TakeawayList } from "../componants/takeaway_list";
+import { QuizCard } from "../componants/quiz_card";
+import { ToolsCard } from "../componants/tools_Card";
+import { TermTooltip } from "../componants/term_tool_tip";
+import { GeneratingSummaryPage } from "./summary_generation_page";
 import { useSegmentSummary } from "../hooks/use_segment_summary";
 import { FormattedMessage } from "react-intl";
 import type {

@@ -12,7 +12,7 @@ import { FinalGeneratedBtn } from "../widgets/final_generated_btn";
 import { MainHeader } from "../widgets/main_header";
 import { ChatBotOpenBtn } from "../../../chat_bot/presenation/widgets/chat_bot_open_btn";
 import { AppRoutesNames } from "../../../../app/routers/routes";
-import { SummaryStyleModal } from "../../../summarization/presentation/componants/SummaryStyleModal";
+import { SummaryStyleModal } from "../../../summarization/presentation/componants/summary_style_modal";
 import { QuizDifficultyModal } from "../../../QuizSystem/presentation/componants/QuizDifficultyModal";
 import { useNavigate } from "react-router";
 import { useRightContentSection } from "../hook/use_right_content_section";
