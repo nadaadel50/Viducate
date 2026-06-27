@@ -8,3 +8,4 @@ __pycache__/
 merged_*.txt
 transcript_*.txt
 segmentation_*.json
+node_modules/
