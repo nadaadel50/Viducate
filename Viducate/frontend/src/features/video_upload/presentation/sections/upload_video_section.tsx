@@ -3,6 +3,7 @@ import { VideoDragedSection } from "./video_draged_section";
 import { InputSection } from "../componants/upload/input_section";
 import { UploadBtn } from "../componants/upload/upload_btn";
 import { UploadSection } from "./upload_section";
+import { useIntl } from "react-intl";
 
 
 
@@ -44,7 +45,7 @@ export function UploadVideoSection({
     handleDrop,
     fileInputRef,
   } = useUploadHandlers(handleTakeVideo);
-
+const intl = useIntl();
   
 
   return (
@@ -71,12 +72,10 @@ export function UploadVideoSection({
       />
 
       <UploadBtn
-        disabled={!videoFile || !title}
-        label="Upload Video"
-        onClick={()=>setUploading(true)}
-        // isLoading={isLoading}
-        //error={error}
-      />
+  disabled={!videoFile || !title}
+  label={intl.formatMessage({ id: "upload.video.uploadButton" })}
+  onClick={() => setUploading(true)}
+/>
     </>
   );
 }

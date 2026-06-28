@@ -6,7 +6,7 @@ import {
   usePersonalInfoContext,
   useSecurityContext,
 } from "../hooks/use_profile_context";
-
+import { useIntl } from "react-intl";
 export function FormInputs() {
   const {
     firstNameError,
@@ -22,9 +22,8 @@ export function FormInputs() {
 
   const { firstName, lastName } = usePersonalInfoContext();
 
-  const { password, oldPassword, confirmPassword } =
-    useSecurityContext();
-
+  const { password, oldPassword, confirmPassword } = useSecurityContext();
+  const intl = useIntl();
   return (
     <div className="space-y-3">
       {/* Personal Information */}
@@ -33,16 +32,16 @@ export function FormInputs() {
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
           <CustomInput
-            label="First Name"
-            placeholder="First Name"
+            label={intl.formatMessage({ id: "form.firstName" })}
+            placeholder={intl.formatMessage({ id: "auth.enterFirstName" })}
             value={firstName}
             error={firstNameError}
             onChange={handleFirstName}
           />
 
           <CustomInput
-            label="Last Name"
-            placeholder="Last Name"
+            label={intl.formatMessage({ id: "form.lastName" })}
+            placeholder={intl.formatMessage({ id: "auth.enterLastName" })}
             value={lastName}
             error={lastNameError}
             onChange={handleLastName}
@@ -55,8 +54,8 @@ export function FormInputs() {
         <SectionTitle titleId="profile.section.security" />
 
         <CustomInput
-          label="Current Password"
-          placeholder="Current Password"
+          label={intl.formatMessage({ id: "form.currentPassword" })}
+          placeholder={intl.formatMessage({ id: "form.currentPassword" })}
           type="password"
           value={oldPassword}
           onChange={handlePassword}
@@ -64,8 +63,10 @@ export function FormInputs() {
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
           <CustomInput
-            label="New Password"
-            placeholder="New Password"
+            label={intl.formatMessage({ id: "form.newPassword" })}
+            placeholder={intl.formatMessage({
+              id: "auth.resetPassword.inputs.newPasswordPlaceholder",
+            })}
             type="password"
             value={password}
             error={newPasswordError}
@@ -73,8 +74,10 @@ export function FormInputs() {
           />
 
           <CustomInput
-            label="Confirm Password"
-            placeholder="Confirm Password"
+            label={intl.formatMessage({ id: "form.confirmPassword" })}
+            placeholder={intl.formatMessage({
+              id: "auth.resetPassword.inputs.confirmPasswordPlaceholder",
+            })}
             type="password"
             value={confirmPassword}
             error={confirmPasswordError}

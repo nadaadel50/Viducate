@@ -1,7 +1,7 @@
-import type { ContinueLearningEntity } from "../../../domain/entity/continue_learning";
+ import type { ContinueLearningEntity } from "../../../domain/entity/continue_learning";
 import { formatTimeToHoursMinutes } from "../../utils/format_dashboard_times";
 import { useDashboard } from "../../hooks/use_dashboard";
-
+import { FormattedMessage, useIntl } from "react-intl";
 type CardDetailsProps = {
   cardData: ContinueLearningEntity;
 };
@@ -9,7 +9,7 @@ type CardDetailsProps = {
 export function CardDetails(props: CardDetailsProps) {
  
   const {handleSelectedVideo,handleOpenDeleteMessage}=useDashboard()
-
+const intl = useIntl();
 
   return (
     <div className="p-4 ">
@@ -22,7 +22,10 @@ export function CardDetails(props: CardDetailsProps) {
         {props.cardData.duration && (
           <div className="flex items-center gap-3 text-xs text-slate-500">
             <span className="bg-indigo-50 text-indigo-700 px-2 py-0.5 rounded text-[10px] font-semibold">
-              {props.cardData.progress}% Complete
+              <FormattedMessage
+  id="dashboard.continueLearning.completed"
+  values={{ percent: props.cardData.progress }}
+/>
             </span>
 
             <span className="flex items-center gap-1">
@@ -32,7 +35,7 @@ export function CardDetails(props: CardDetailsProps) {
               >
                 schedule
               </span>
-              {formatTimeToHoursMinutes(props.cardData.duration)}
+              {formatTimeToHoursMinutes(props.cardData.duration, intl)}
             </span>
           </div>
         )}

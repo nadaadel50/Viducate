@@ -1,7 +1,6 @@
-import { FONT_STYLES } from "../../../../core/constants/fonts";
 import { FONT_SIZE, FONT_WEIGHT } from "../../../../core/constants/fonts_update";
 import { formatMessageTime } from "../../../../core/utils/fomat_time";
-
+import { FormattedMessage } from "react-intl";
 type UserMessageProps = {
   message: string;
   senededTime: number;
@@ -24,7 +23,10 @@ export function UserMessage({
 
       <div className="mr-1 flex items-center">
         <span className={`${FONT_SIZE.size10} ${FONT_WEIGHT.semibold} text-slate-400`}>
-          You • {formatMessageTime(senededTime)}
+        <>
+  <FormattedMessage id="chat.user.you" /> •{" "}
+  {formatMessageTime(senededTime)}
+</>
         </span>
       </div>
     </div>

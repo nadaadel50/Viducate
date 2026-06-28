@@ -4,13 +4,15 @@ import { FONT_STYLES } from "../../../../core/constants/fonts";
 import { useLearningSession } from "../../../../core/hooks/useLearningContent";
 import { useDashboard } from "../hooks/use_dashboard";
 import { AppRoutesNames } from "../../../../app/routers/routes";
-
+import { FormattedMessage, useIntl } from "react-intl";
 export function UserCard() {
   const { data } = useDashboard();
   const { setVideoId } = useLearningSession();
-  const userName = data?.user.name || "Learner";
+  const userName =
+  data?.user.name ||
+  intl.formatMessage({ id: "dashboard.user.defaultName" });
   const navigate = useNavigate();
-
+  const intl = useIntl();
   const handleClick = async () => {
     if (data?.continue_learning.length! > 0) {
       await setVideoId(data?.continue_learning[0].videoId!);
@@ -25,13 +27,14 @@ export function UserCard() {
     >
       <div className="flex flex-col items-start justify-between relative z-10 gap-3">
         <h2 className={`${FONT_STYLES.pageTitle} text-slate-800 tracking-tight`}>
-          Hello, {userName}! ✨
+          <FormattedMessage
+  id="dashboard.user.greeting"
+  values={{ name: userName }}
+/>
         </h2>
 
         <p className={`${FONT_STYLES.body} text-slate-700 leading-relaxed max-w-3xl`}>
-          Every learning journey starts with a single step. Stay curious, keep
-          exploring, and remember that every lesson you complete brings you
-          closer to your goals. 😉
+          <FormattedMessage id="dashboard.user.description" />
         </p>
 
         <div className="flex flex-row  gap-3 mt-2 w-full ">
@@ -42,7 +45,7 @@ export function UserCard() {
             <span className="material-symbols-outlined text-base">
               play_lesson
             </span>
-            Resume Learning
+            <FormattedMessage id="dashboard.user.resumeLearning" />
           </button>
 
           <button
@@ -55,7 +58,7 @@ export function UserCard() {
             <span className="material-symbols-outlined text-base">
               add_circle
             </span>
-            Upload Video
+            <FormattedMessage id="dashboard.user.uploadVideo" />
           </button>
         </div>
       </div>

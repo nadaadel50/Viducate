@@ -1,6 +1,6 @@
 import { useEffect, useRef, useState } from "react";
 import { useDashboard } from "../../hooks/use_dashboard";
-
+import { FormattedMessage } from "react-intl";
 export function VideoFilterButton() {
   const [open, setOpen] = useState(false);
 
@@ -31,7 +31,7 @@ export function VideoFilterButton() {
         className="cursor-pointer flex items-center gap-1 text-sm font-medium text-slate-700 hover:text-slate-900 transition-colors"
       >
         <span className="material-symbols-outlined ">filter_list</span>
-        Filter
+        <FormattedMessage id="dashboard.filter.title" />
       </button>
 
       {open && (
@@ -46,7 +46,9 @@ export function VideoFilterButton() {
                 onChange={(e) => handleUploadedVideosChange(e.target.checked)}
               />
 
-              <span className="text-sm text-slate-700">Uploaded Videos</span>
+              <span className="text-sm text-slate-700">
+  <FormattedMessage id="dashboard.filter.uploadedVideos" />
+</span>
             </label>
 
             {/* Linked Videos */}
@@ -58,7 +60,9 @@ export function VideoFilterButton() {
                 onChange={(e) => handleLinkedVideosChange(e.target.checked)}
               />
 
-              <span className="text-sm text-slate-700">Linked Videos</span>
+              <span className="text-sm text-slate-700">
+  <FormattedMessage id="dashboard.filter.linkedVideos" />
+</span>
             </label>
           </div>
         </div>

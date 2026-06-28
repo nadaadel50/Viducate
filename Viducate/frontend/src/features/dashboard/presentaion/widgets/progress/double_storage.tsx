@@ -1,5 +1,5 @@
 import { formatStorage } from "../../utils/format_storage";
-
+import { FormattedMessage } from "react-intl";
 const colorClasses: Record<string, string> = {
   "amber-500": "bg-amber-500",
   "indigo-500": "bg-indigo-500",
@@ -53,7 +53,7 @@ export function DoubleStorage({
             >
               link
             </span>
-            Linked
+          <FormattedMessage id="dashboard.storage.linked" />
           </span>
 
           <span className="text-[10px] text-slate-500 font-medium">
@@ -78,7 +78,7 @@ export function DoubleStorage({
             >
               upload
             </span>
-            Uploaded
+          <FormattedMessage id="dashboard.storage.uploaded" />
           </span>
 
           <span className="text-[10px] text-slate-500 font-medium">

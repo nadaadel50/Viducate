@@ -1,5 +1,5 @@
 import { COLORS } from "../../../../core/constants";
-
+import { useIntl } from "react-intl";
 import { ProgressPart } from "../widgets/progress/progress_part";
 import { UserCard } from "../widgets/user_card";
 import { GenerationLoadingScreen } from "../../../../core/componants/generation_loading_screen";
@@ -21,17 +21,23 @@ export function DashboardPage() {
     openDeleteMessage,
     selectedVideo,
   } = useDashboard();
-
+const intl = useIntl();
   const { handleDelete, toast, clearToast } = useDeleteVideo();
 
   if (isLoading) {
     return (
       <GenerationLoadingScreen
-        icon={<LayoutDashboard />}
-        titlePrefix="Preparing your"
-        titleHighlight="Dashboard"
-        subtitle="Loading your learning progress, saved videos, and activity insights..."
-      />
+  icon={<LayoutDashboard />}
+  titlePrefix={intl.formatMessage({
+    id: "dashboard.loading.titlePrefix",
+  })}
+  titleHighlight={intl.formatMessage({
+    id: "dashboard.loading.titleHighlight",
+  })}
+  subtitle={intl.formatMessage({
+    id: "dashboard.loading.subtitle",
+  })}
+/>
     );
   }
 
@@ -70,15 +76,21 @@ export function DashboardPage() {
       </div>
 
       <ConfirmationModal
-        open={openDeleteMessage}
-        title="Delete Video"
-        description="Are you sure you want to delete this Video? This action cannot be undone."
-        onClose={() => handleOpenDeleteMessage(false)}
-        onConfirm={() => {
-          handleDelete(selectedVideo?.videoId!);
-          handleOpenDeleteMessage(false);
-        }}
-      />
+  open={openDeleteMessage}
+  title={intl.formatMessage({
+    id: "dashboard.deleteModal.title",
+  })}
+  description={intl.formatMessage({
+    id: "dashboard.deleteModal.description",
+  })}
+  onClose={() => handleOpenDeleteMessage(false)}
+  onConfirm={() => {
+  if (!selectedVideo?.videoId) return;
+
+  handleDelete(selectedVideo.videoId);
+  handleOpenDeleteMessage(false);
+}}
+/>
     </div>
   );
 }

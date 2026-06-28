@@ -6,7 +6,7 @@ import { useNavigate } from "react-router";
 import { useLearningSession } from "../../../../core/hooks/useLearningContent";
 import { useUploadVideo } from "../hooks/use_uploade_video";
 import { useDeleteVideo } from "../hooks/use_delete_video";
-
+import { useIntl } from "react-intl";
 type UploadLoadingSectionProps = {
   videoFile: File | null;
   title: string;
@@ -28,6 +28,7 @@ export function UploadLoadingSection({
   const { setVideoId, videoId } = useLearningSession();
   const { uploadVideo, error } = useUploadVideo();
   const navigate = useNavigate();
+  const intl = useIntl();
   const {
     deleteVideoAsync,
     isLoading: isDeleting,
@@ -101,8 +102,8 @@ console.log("error value:", error); // ← ايه اللي بيطبع؟
               </div>
 
               <p className="text-sm text-gray-500 mt-1">
-                Uploading... {progress}%
-              </p>
+  {intl.formatMessage({ id: "upload.loading.uploading" })} {progress}%
+</p>
             </div>
           </div>
 
@@ -113,7 +114,9 @@ console.log("error value:", error); // ← ايه اللي بيطبع؟
               hover:bg-red-50 hover:text-red-500 hover:border-red-200
               disabled:opacity-40 disabled:cursor-not-allowed
               transition-all duration-150 shrink-0"
-            aria-label="Cancel upload"
+            aria-label={intl.formatMessage({
+  id: "upload.loading.cancel",
+})}
           >
             {isDeleting ? (
               <Loader2 size={15} className="animate-spin" />
@@ -133,7 +136,9 @@ console.log("error value:", error); // ← ايه اللي بيطبع؟
 
       <UploadBtn
         disabled={progress !== 100}
-        label="Analyze Video"
+        label={intl.formatMessage({
+  id: "upload.loading.analyze",
+})}
         onClick={handleAnalyze}
         error={error}
       />
