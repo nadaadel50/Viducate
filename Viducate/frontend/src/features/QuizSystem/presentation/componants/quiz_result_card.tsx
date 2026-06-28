@@ -1,56 +1,111 @@
-import { FormattedMessage } from 'react-intl';
+import { FormattedMessage } from "react-intl";
+
 import { COLORS } from "../../../../core/constants";
+import {
+  FONT_SIZE,
+  FONT_WEIGHT,
+} from "../../../../core/constants/fonts_update";
+
 import type { QuizSubmitResult } from "../../domain/entity/quiz_entity";
 
-type QuizResultCardProps = {
+interface QuizResultCardProps {
   submitResult: QuizSubmitResult;
   onReview: () => void;
-};
+}
 
-export const QuizResultCard = ({ submitResult, onReview }: QuizResultCardProps) => {
+export function QuizResultCard({
+  submitResult,
+  onReview,
+}: QuizResultCardProps) {
   return (
-    <div className="fixed inset-0 z-[100] flex items-center justify-center p-4 backdrop-blur-md bg-black/10 animate-in fade-in duration-500">
+    <div className="fixed inset-0 z-[100] flex items-center justify-center bg-black/10 p-4 backdrop-blur-md animate-in fade-in duration-500">
       <div
-        className="relative bg-white rounded-[3rem] p-10 shadow-[0_20px_60px_rgba(0,0,0,0.15)] flex flex-col items-center justify-center animate-in zoom-in-95 duration-300"
-        style={{ borderColor: COLORS.border.default, borderWidth: '1px', width: 'min(90vw, 500px)', aspectRatio: '1 / 1' }}
+        className="relative flex w-full max-w-md flex-col items-center rounded-3xl border bg-white p-6 shadow-[0_20px_60px_rgba(0,0,0,0.15)] animate-in zoom-in-95 duration-300 sm:p-8"
+        style={{ borderColor: COLORS.border.default }}
       >
-        <div className="w-20 h-20 rounded-full flex items-center justify-center mb-4 shadow-lg" style={{ background: COLORS.brand.gradient }}>
-          <span className="material-symbols-outlined text-white text-4xl">emoji_events</span>
+        <div
+          className="mb-4 flex h-16 w-16 items-center justify-center rounded-full shadow-lg sm:h-20 sm:w-20"
+          style={{ background: COLORS.brand.gradient }}
+        >
+          <span
+            className="material-symbols-outlined text-white"
+            style={{ fontSize: 34 }}
+          >
+            emoji_events
+          </span>
         </div>
 
-        <h2 className="text-4xl font-black mb-2" style={{ color: COLORS.text.primary }}>
+        <h2
+          className={`${FONT_SIZE.size24} sm:${FONT_SIZE.size30} ${FONT_WEIGHT.extraBold} mb-2 text-center`}
+          style={{ color: COLORS.text.primary }}
+        >
           <FormattedMessage id="quiz.completed" />
         </h2>
 
-        <p className="mb-8 text-center text-sm" style={{ color: COLORS.text.secondary }}>
+        <p
+          className={`${FONT_SIZE.size13} mb-6 text-center`}
+          style={{ color: COLORS.text.secondary }}
+        >
           <FormattedMessage id="quiz.result_msg" />
         </p>
 
-        <div className="rounded-3xl p-6 mb-10 w-full text-center" style={{ backgroundColor: COLORS.icon.background }}>
-          <div className="text-6xl font-black mb-1" style={{ color: COLORS.brand.primary }}>
+        <div
+          className="mb-8 w-full rounded-2xl p-5 text-center"
+          style={{ backgroundColor: COLORS.icon.background }}
+        >
+          <div
+            className={`${FONT_SIZE.size48} ${FONT_WEIGHT.extraBold} mb-1`}
+            style={{ color: COLORS.brand.primary }}
+          >
             {submitResult.score}%
           </div>
-          <p className="font-bold text-sm" style={{ color: COLORS.text.gray }}>
-            <FormattedMessage id="quiz.score_msg" values={{ score: submitResult.correctCount, total: submitResult.total }} />
+
+          <p
+            className={`${FONT_SIZE.size13} ${FONT_WEIGHT.bold}`}
+            style={{ color: COLORS.text.gray }}
+          >
+            <FormattedMessage
+              id="quiz.score_msg"
+              values={{
+                score: submitResult.correctCount,
+                total: submitResult.total,
+              }}
+            />
           </p>
+
           {submitResult.trials > 1 && (
-            <p className="text-xs mt-2" style={{ color: COLORS.text.secondary }}>
-              <FormattedMessage id="quiz.attempts" values={{ count: submitResult.trials }} defaultMessage="Attempt #{count}" />
+            <p
+              className={`${FONT_SIZE.size11} mt-2`}
+              style={{ color: COLORS.text.secondary }}
+            >
+              <FormattedMessage
+                id="quiz.attempts"
+                values={{ count: submitResult.trials }}
+              />
             </p>
           )}
         </div>
 
-        <div className="flex flex-row gap-3 w-full">
-          <button
-            onClick={onReview}
-            className="flex-1 py-4 rounded-2xl font-bold border-2 text-sm transition-all hover:bg-slate-50 active:scale-95 flex items-center justify-center gap-2"
-            style={{ borderColor: COLORS.button.primary, color: COLORS.button.primary }}
+        <button
+          onClick={onReview}
+          className={`flex w-full items-center justify-center gap-2 rounded-xl border-2 py-3 transition-all hover:bg-slate-50 active:scale-95 ${FONT_SIZE.size14} ${FONT_WEIGHT.bold}`}
+          style={{
+            borderColor: COLORS.button.primary,
+            color: COLORS.button.primary,
+          }}
+        >
+          <span
+            className="material-symbols-outlined"
+            style={{ fontSize: 18 }}
           >
-            <span className="material-symbols-outlined text-lg">visibility</span>
-            <span className="whitespace-nowrap"><FormattedMessage id="quiz.review_answers" /></span>
-          </button>
-        </div>
+            visibility
+          </span>
+
+          <span className="whitespace-nowrap">
+            <FormattedMessage id="quiz.review_answers" />
+          </span>
+        </button>
       </div>
     </div>
   );
-};
+}

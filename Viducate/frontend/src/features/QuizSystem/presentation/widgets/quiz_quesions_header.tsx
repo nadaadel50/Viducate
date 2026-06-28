@@ -31,7 +31,7 @@ export function QuizQuestionHeader({
   return (
     <div className="space-y-4 px-1">
       <h2
-        className={`${FONT_STYLES.quizTitle} ${FONT_WEIGHT.bold} leading-tight`}
+        className={`${FONT_STYLES.quizTitle} ${FONT_WEIGHT.bold} ${LETTER_SPACING.tight}`}
         style={{ color: COLORS.text.primary }}
       >
         {question.question_text}
