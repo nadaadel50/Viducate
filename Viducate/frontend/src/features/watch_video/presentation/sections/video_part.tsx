@@ -15,6 +15,8 @@ import ReactPlayer from "react-player";
 import { useChat } from "../../../chat_bot/presenation/hooks/use_chat";
 import { getClosestSubTopic } from "../util/get_subtopic";
 import { getRandomStuckQuestion } from "../util/get_stuck_question";
+import { useIntl } from "react-intl";
+import { formatVideoTime } from "../../../../core/utils/fomat_time";
 
 export function VideoPlayer() {
   const containerRef = useRef<HTMLDivElement | null>(null);
@@ -47,7 +49,7 @@ export function VideoPlayer() {
   } = useVideoPlayer();
 
   const { openChat, setUserInput } = useChat();
-
+  const intl = useIntl();
   const {
     showPopup,
     stuckReason,
@@ -121,9 +123,7 @@ export function VideoPlayer() {
     // }));
   }, []);
 
-  const handleProgressClick = (
-    e: React.MouseEvent<HTMLDivElement>,
-  ) => {
+  const handleProgressClick = (e: React.MouseEvent<HTMLDivElement>) => {
     if (!progressRef.current) return;
 
     const rect = progressRef.current.getBoundingClientRect();
@@ -137,9 +137,7 @@ export function VideoPlayer() {
         ref={containerRef}
         className="group relative w-full overflow-hidden rounded-lg bg-black shadow-md sm:rounded-xl lg:max-w-5xl"
         style={{
-          height: isFullscreen
-            ? "100vh"
-            : "clamp(190px, 34vw, 280px)",
+          height: isFullscreen ? "100vh" : "clamp(190px, 34vw, 280px)",
         }}
         onMouseMove={resetHideTimer}
         onMouseLeave={handleMouseLeave}
@@ -153,9 +151,7 @@ export function VideoPlayer() {
           width="100%"
           height="100%"
           onTimeUpdate={() => handleTimeUpdate()}
-          onDurationChange={(
-            e: React.SyntheticEvent<HTMLVideoElement>,
-          ) => {
+          onDurationChange={(e: React.SyntheticEvent<HTMLVideoElement>) => {
             playerRef.current = e.currentTarget;
 
             if (currentTime > 0) {
@@ -176,16 +172,12 @@ export function VideoPlayer() {
           style={{ objectFit: "cover" }}
         />
 
-        {!playerState.started && (
-          <InitialPlayOverlay onStart={handleStart} />
-        )}
+        {!playerState.started && <InitialPlayOverlay onStart={handleStart} />}
 
         {playerState.started && (
           <div
             className={`absolute bottom-0 left-0 right-0 z-30 transition-opacity duration-300 ${
-              showControls
-                ? "opacity-100"
-                : "pointer-events-none opacity-0"
+              showControls ? "opacity-100" : "pointer-events-none opacity-0"
             }`}
           >
             <div className="pointer-events-none absolute inset-0 rounded-b-lg bg-gradient-to-t from-black/75 via-black/25 to-transparent sm:rounded-b-xl" />
@@ -209,14 +201,10 @@ export function VideoPlayer() {
                 currentTopicName={currentTopicName}
                 showSpeedMenu={showSpeedMenu}
                 isFullscreen={isFullscreen}
-                onToggle={() =>
-                  handleToggle(playerState.isPlaying)
-                }
+                onToggle={() => handleToggle(playerState.isPlaying)}
                 onAddMarker={handleAddMarker}
                 onSpeedChange={handleSpeedChange}
-                onToggleSpeedMenu={() =>
-                  setShowSpeedMenu((p) => !p)
-                }
+                onToggleSpeedMenu={() => setShowSpeedMenu((p) => !p)}
                 onToggleFullscreen={toggleFullscreen}
               />
             </div>
@@ -226,7 +214,9 @@ export function VideoPlayer() {
 
       {showPopup && (
         <StuckPopup
-          reason={getStuckMessage(stuckReason)}
+          reason={intl.formatMessage({
+            id: getStuckMessage(stuckReason),
+          })}
           onHelp={() => {
             openChat();
 
@@ -235,9 +225,16 @@ export function VideoPlayer() {
               currentTime,
             );
 
-            const question = getRandomStuckQuestion(
-              subtopic?.name ?? "",
-              currentTime,
+            const questionId = getRandomStuckQuestion();
+
+            const question = intl.formatMessage(
+              {
+                id: questionId,
+              },
+              {
+                title: subtopic?.name ?? "",
+                time: formatVideoTime(currentTime),
+              },
             );
 
             setUserInput(question);

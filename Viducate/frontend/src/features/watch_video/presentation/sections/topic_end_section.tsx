@@ -4,6 +4,7 @@ import {
   FileText,
   TvMinimalPlay,
 } from "lucide-react";
+import { FormattedMessage } from "react-intl";
 import { TopicEndCard } from "../../../../core/componants/topic_ended_card";
 export function TopicEndSection() {
   return (
@@ -15,41 +16,46 @@ export function TopicEndSection() {
 
       {/* text */}
       <h1 className="text-[#111218] tracking-tight text-[32px]  font-bold leading-tight text-center mb-2">
-        Topic Completed!
+        <FormattedMessage id="watch.topicEnd.title" />
       </h1>
       <p className="text-[#636988] text-lg font-normal leading-normal text-center max-w-lg mb-8">
-        Great job! You've mastered this section. Choose one of the activities
-        below to reinforce your learning.
+        <FormattedMessage id="watch.topicEnd.description" />
       </p>
 
       {/* cards */}
       <div className="w-full grid grid-cols-2  gap-4 ">
         <TopicEndCard
           icon={<FileText size={28} />}
-          title={"Summary"}
-          description={"Review the key points of this topic"}
+          title={<FormattedMessage id="watch.topicEnd.summary.title" />}
+          description={
+            <FormattedMessage id="watch.topicEnd.summary.description" />
+          }
           variant="blue"
-     
         />
         <TopicEndCard
           icon={<FileQuestion size={28} />}
           variant="purple"
-          title="Quiz"
-          description="Test your understanding"
+          title={<FormattedMessage id="watch.topicEnd.quiz.title" />}
+          description={
+            <FormattedMessage id="watch.topicEnd.quiz.description" />
+          }
         />
 
         <TopicEndCard
           variant="teal"
           icon={<FileQuestion size={28} />}
-          title="Flashcards"
-          description="Practice recall"
+          title={<FormattedMessage id="watch.topicEnd.flashcards.title" />}
+          description={
+            <FormattedMessage id="watch.topicEnd.flashcards.description" />
+          }
         />
         <TopicEndCard
           icon={<TvMinimalPlay size={28} />}
           variant="orange"
-          title={"Next Topic"}
-          description={"Proceed to the next section"}
-          
+          title={<FormattedMessage id="watch.topicEnd.next.title" />}
+          description={
+            <FormattedMessage id="watch.topicEnd.next.description" />
+          }
         />
       </div>
     </div>

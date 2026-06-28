@@ -4,12 +4,12 @@ import { FONT_STYLES } from "../../../../core/constants/fonts";
 import { useLearningSession } from "../../../../core/hooks/useLearningContent";
 import { useSearchMutation } from "../hook/use_search";
 import { formatVideoTime } from "../../../../core/utils/fomat_time";
-
+import { useIntl } from "react-intl";
 export function TranscriptSearch() {
   const [searchQuery, setSearchQuery] = useState("");
 
   const { videoId, setSeekTo } = useLearningSession();
-
+ const intl = useIntl();
   const {
     sendQuery,
     data: searchResults = [],
@@ -51,7 +51,9 @@ export function TranscriptSearch() {
         <input
           type="text"
           value={searchQuery}
-          placeholder="Search with any keyword in the video..."
+          placeholder={intl.formatMessage({
+  id: "watch.search.placeholder",
+})}
           onChange={(e) => setSearchQuery(e.target.value)}
           className={`w-full rounded-xl border border-slate-200 bg-white py-3 pl-10 pr-4 shadow-sm placeholder:text-slate-400 focus:border-[#4f46e5] focus:outline-none focus:ring-1 focus:ring-[#4f46e5] ${FONT_STYLES.input}`}
         />
@@ -59,19 +61,30 @@ export function TranscriptSearch() {
 
       {isQueryTooShort && (
         <p className={`${FONT_STYLES.caption} px-1 text-slate-500`}>
-          Search term is too short. Enter at least 3 characters.
+          {intl.formatMessage({
+  id: "watch.search.tooShort",
+})}
         </p>
       )}
 
       {error && (
         <p className={`${FONT_STYLES.error} text-red-500`}>
-          Failed to search transcript
+          {intl.formatMessage({
+  id: "watch.search.failed",
+})}
         </p>
       )}
 
       {hasNoResults && (
         <p className={`${FONT_STYLES.caption} px-1 text-slate-500`}>
-          No results found for "{searchQuery}"
+          {intl.formatMessage(
+  {
+    id: "watch.search.noResults",
+  },
+  {
+    query: searchQuery,
+  },
+)}
         </p>
       )}
 

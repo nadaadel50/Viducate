@@ -145,6 +145,7 @@
   "analysis.error.title": "Analysis Failed",
   "analysis.error.subtitle": "Something went wrong while processing your video. Please try again.",
   "analysis.retry": "Retry Upload",
+  "analysis.cancel.description": "Are you sure you want to cancel the video analysis? If you continue later, the analysis will need to start over.",
 
 
  
@@ -261,10 +262,10 @@
   "report.hero.watchProgress": "Watch Progress",
   "report.hero.watched": "{percent}% watched",
   "report.hero.remaining": "{percent}% remaining",
- "report.page.title": "Video Performance Report",
-"report.loading.titlePrefix": "Preparing your",
-"report.loading.titleHighlight": "Learning Report",
-"report.loading.subtitle": "Reviewing your progress and quiz results...",
+  "report.page.title": "Video Performance Report",
+  "report.loading.titlePrefix": "Preparing your",
+  "report.loading.titleHighlight": "Learning Report",
+  "report.loading.subtitle": "Reviewing your progress and quiz results...",
 
   
   
@@ -286,6 +287,9 @@
   "profile.deleteModal.title": "Delete Account",
   "profile.deleteModal.description": "Are you sure you want to delete your account? All of your data will be permanently removed. This action cannot be undone.",
   "profile.deleteModal.confirm": "Delete Account",
+    "profile.loading.small": "Almost there...",
+"profile.loading.big": "Setting up your profile",
+
 
   "common.cancel": "Cancel",
 
@@ -383,5 +387,85 @@
 "chat.sidebar.newChat": "New Chat",
 "chat.sidebar.recentChats": "Recent Chats",
 "chat.sidebar.close": "Close recent chats",
-"chat.user.you": "You"
+"chat.user.you": "You",
+
+
+"flashcards.loading.titlePrefix": "الذكاء الاصطناعي يُجهّز",
+"flashcards.loading.titleHighlight": "بطاقاتك التعليمية...",
+"flashcards.loading.subtitle": "جارٍ تحويل أهم المفاهيم إلى بطاقات سهلة للمراجعة.",
+"flashcards.finish.nextReview": "Next review in",
+"flashcards.finish.reviewNow": "Review Now",
+"flashcards.finish.endSession": "End Session",
+"flashcards.finish.resetDescription": "This will reset your session and clear your progress.",
+"flashcards.level.easy": "Easy",
+"flashcards.level.good": "Good",
+"flashcards.level.hard": "Hard",
+"flashcards.level.again": "Again",
+"flashcards.progress.card": "Card {current} of {total}",
+"flashcards.progress.complete": "{percent}% Complete",
+"flashcards.card.reveal": "Click to reveal the answer",
+"flashcards.card.back": "Click to flip back",
+"flashcards.card.viewSource": "View source ({time})",
+"flashcards.time.easy": "1 day",
+"flashcards.time.good": "15 min",
+"flashcards.time.hard": "8 min",
+"flashcards.time.again": "1 min",
+
+
+
+"mindmap.loading.titlePrefix": "AI is building",
+"mindmap.loading.titleHighlight": "your mind map...",
+"mindmap.loading.subtitle": "Analyzing the lecture structure and organizing key concepts.",
+"mindmap.download": "Download",
+
+
+"watch.loading.small": "Get Ready",
+"watch.loading.big": "Preparing your smart learning session...",
+"watch.topics.title": "Topics",
+"watch.tooltip.report": "Learning Report",
+"watch.tooltip.changeLanguage": "Change Content Language",
+"watch.actions.completeTopic": "Complete Topic",
+"watch.actions.nextTopic": "Next Topic",
+"watch.actions.finalQuiz": "Final Quiz",
+"watch.actions.finalSummary": "Final Summary",
+"watch.actions.finalFlashcards": "Flashcards",
+"watch.actions.finalMindMap": "Mind Map",
+"watch.topicEnd.title": "Topic Completed!",
+"watch.topicEnd.description": "Great job! You've mastered this section. Choose an activity below to reinforce your learning.",
+"watch.topicEnd.summary.title": "Summary",
+"watch.topicEnd.summary.description": "Review the key points",
+"watch.topicEnd.quiz.title": "Quiz",
+"watch.topicEnd.quiz.description": "Test your understanding",
+"watch.topicEnd.flashcards.title": "Flashcards",
+"watch.topicEnd.flashcards.description": "Practice active recall",
+"watch.topicEnd.next.title": "Next Topic",
+"watch.topicEnd.next.description": "Continue to the next section",
+"watch.stuck.repeatedSeek": "You've revisited this part several times. Need some help?",
+"watch.stuck.seekPause": "Looks like you paused after seeking. Would you like some help?",
+"watch.stuck.timeSpent": "You've spent quite a bit of time on this topic. Need an explanation?",
+"watch.stuck.default": "Do you need any help?",
+"watch.stuck.question.simple": "Can you explain {title} in a simpler way at {time}?",
+"watch.stuck.question.breakdown": "I'm having trouble understanding {title} at {time}. Can you break it down step by step?",
+"watch.stuck.question.example": "Can you give me a real-life example to help me understand {title} at {time}?",
+"watch.stuck.question.keyPoints": "What are the key points I need to know about {title} at {time}?",
+"watch.stuck.question.clarify": "I'm confused about {title} at {time}. Can you clarify it for me?",
+"watch.stuck.help": "Yes, Help Me",
+"watch.stuck.dismiss": "No, Thanks",
+"watch.video.marker": "Marker",
+"watch.video.speed": "Speed",
+"watch.video.normal": "Normal",
+"watch.review": "Review",
+"watch.content.watch": "Watch",
+"watch.content.summary": "Summary",
+"watch.content.quiz": "Quiz",
+"watch.content.cards": "Cards",
+"watch.save": "Save",
+"watch.searchTopics": "Search topics...",
+"watch.search.placeholder": "Search with any keyword in the video...",
+"watch.search.tooShort": "Enter at least 3 characters to start searching.",
+"watch.search.failed": "Failed to search the transcript.",
+"watch.search.noResults": "No results found for \"{query}\".",
+
+"common.confirm": "Confirm"
+
 }

@@ -7,7 +7,7 @@ import { CustomButton } from "../../../../core/componants/custum_btn";
 import { FONT_STYLES } from "../../../../core/constants/fonts";
 import { useLearningSession } from "../../../../core/hooks/useLearningContent";
 import { formatVideoTime } from "../../../../core/utils/fomat_time";
-
+import { FormattedMessage } from "react-intl";
 import type { FlashCardDetials } from "../../domain/entity/flash_card_response";
 
 type FlashCardProps = {
@@ -16,19 +16,11 @@ type FlashCardProps = {
   onClick: () => void;
 };
 
-export function FlashCard({
-  cardData,
-  isFliped,
-  onClick,
-}: FlashCardProps) {
+export function FlashCard({ cardData, isFliped, onClick }: FlashCardProps) {
   const navigate = useNavigate();
   const { setCurrentTime } = useLearningSession();
 
-  const handleViewSource = (
-    
-  ) => {
-    
-
+  const handleViewSource = () => {
     setCurrentTime(cardData.segment_start_time);
     navigate(AppRoutesNames.wathcVideo);
   };
@@ -42,7 +34,7 @@ export function FlashCard({
       <div
         className={clsx(
           "relative h-full w-full rounded-2xl border border-slate-100 bg-white shadow-[0_20px_25px_-5px_rgba(0,0,0,0.1),_0_10px_10px_-5px_rgba(0,0,0,0.04)] transition-all duration-700 [transform-style:preserve-3d]",
-          isFliped && "rotate-y-180"
+          isFliped && "rotate-y-180",
         )}
       >
         {/* Front */}
@@ -50,7 +42,7 @@ export function FlashCard({
           <h3
             className={clsx(
               FONT_STYLES.pageTitle,
-              "text-center text-slate-900"
+              "text-center text-slate-900",
             )}
           >
             {cardData.question}
@@ -59,10 +51,10 @@ export function FlashCard({
           <p
             className={clsx(
               FONT_STYLES.caption,
-              "mt-8 text-center uppercase tracking-widest text-slate-400"
+              "mt-8 text-center uppercase tracking-widest text-slate-400",
             )}
           >
-            Click to reveal answer
+            <FormattedMessage id="flashcards.card.reveal" />
           </p>
         </div>
 
@@ -71,7 +63,7 @@ export function FlashCard({
           <p
             className={clsx(
               FONT_STYLES.sectionTitle,
-              "text-center text-[#4f46e5]"
+              "text-center text-[#4f46e5]",
             )}
           >
             {cardData.answer}
@@ -80,10 +72,10 @@ export function FlashCard({
           <p
             className={clsx(
               FONT_STYLES.caption,
-              "text-center uppercase tracking-widest text-slate-400"
+              "text-center uppercase tracking-widest text-slate-400",
             )}
           >
-            Click to go back
+            <FormattedMessage id="flashcards.card.back" />
           </p>
         </div>
       </div>
@@ -93,7 +85,7 @@ export function FlashCard({
           "absolute bottom-4 left-1/2 -translate-x-1/2 transition-all duration-300",
           isFliped
             ? "translate-y-0 opacity-100"
-            : "pointer-events-none translate-y-4 opacity-0"
+            : "pointer-events-none translate-y-4 opacity-0",
         )}
       >
         <CustomButton
@@ -102,7 +94,12 @@ export function FlashCard({
           className="gap-2 whitespace-nowrap rounded-lg bg-transparent px-3 py-2 text-slate-500 hover:text-[#4f46e5]"
           leftIcon={<FilePlay size={18} />}
         >
-          View source ({formatVideoTime(cardData.segment_start_time)})
+          <FormattedMessage
+            id="flashcards.card.viewSource"
+            values={{
+              time: formatVideoTime(cardData.segment_start_time),
+            }}
+          />
         </CustomButton>
       </div>
     </div>

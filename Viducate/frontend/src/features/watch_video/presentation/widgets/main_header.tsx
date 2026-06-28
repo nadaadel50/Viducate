@@ -6,10 +6,10 @@ import { useLearningSession } from "../../../../core/hooks/useLearningContent";
 import { useHandleSaveProgress } from "../hook/use_handle_save_progress";
 import { formatVideoTime } from "../../../../core/utils/fomat_time";
 import { FONT_SIZE, FONT_WEIGHT, LETTER_SPACING } from "../../../../core/constants/fonts_update";
-
+import { useIntl } from "react-intl";
 export function MainHeader() {
   const { selectedTopic, handleSetHasUnsavedChanges } = useLearningSession();
-
+  const intl = useIntl();
   const { handleSaveProgress, toastMessage, toastType, clearToast } =
     useHandleSaveProgress();
 
@@ -42,7 +42,9 @@ export function MainHeader() {
 
         <MediaBtn
           icon={<Save size={16} />}
-          label="Save"
+          label={intl.formatMessage({
+  id: "watch.save",
+})}
           onClick={() => {
             handleSaveProgress();
             handleSetHasUnsavedChanges(false);

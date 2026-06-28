@@ -13,7 +13,7 @@ import { useProfileContext } from "../hooks/use_profile_context";
 import { ConfirmationModal } from "../../../../core/componants/confirmation_modal";
 import LoadingScreen from "../../../../core/componants/loading_screen";
 import ErrorScreen from "../../../../core/componants/error_screen";
-
+import { useIntl } from "react-intl";
 export function ProfilePage() {
   const { showDeleteModal } = useProfileContext();
 
@@ -30,12 +30,16 @@ export function ProfilePage() {
   };
 
   const { isLoading, error } = useGetUserData();
-
+const intl = useIntl();
   if (isLoading) {
     return (
       <LoadingScreen
-        smallText="Almost there..."
-        bigText="Setting up your profile"
+      smallText={intl.formatMessage({
+  id: "profile.loading.small",
+})}
+bigText={intl.formatMessage({
+  id: "profile.loading.big",
+})}
       />
     );
   }
@@ -71,9 +75,15 @@ export function ProfilePage() {
 
       <ConfirmationModal
         open={showDeleteModal}
-        title="Delete Account"
-        description="All of your data will be permanently removed. This action cannot be undone."
-        confirmText="Delete Account"
+        title={intl.formatMessage({
+  id: "profile.deleteModal.title",
+})}
+description={intl.formatMessage({
+  id: "profile.deleteModal.description",
+})}
+confirmText={intl.formatMessage({
+  id: "profile.deleteModal.confirm",
+})}
         isLoading={deleteAccount.isDeleting}
         onClose={deleteAccount.closeModal}
         onConfirm={deleteAccount.handleDelete}

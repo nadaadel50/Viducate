@@ -2,7 +2,7 @@ import clsx from "clsx";
 import type { Difficulty } from "../../domain/entity/difficaulty";
 import { CustomButton } from "../../../../core/componants/custum_btn";
 import { FONT_SIZE, FONT_WEIGHT } from "../../../../core/constants/fonts_update";
-
+import { FormattedMessage } from "react-intl";
 const difficultyStyles = {
   easy: {
     border: "border-blue-200 hover:border-blue-300",
@@ -12,7 +12,7 @@ const difficultyStyles = {
     iconBg: "bg-blue-100",
     iconHoverBg: "group-hover:bg-blue-200",
     icon: "thumb_up",
-    time: "1d",
+     timeId: "flashcards.time.easy",
   },
   good: {
     border: "border-green-200 hover:border-green-300",
@@ -22,7 +22,7 @@ const difficultyStyles = {
     iconBg: "bg-green-100",
     iconHoverBg: "group-hover:bg-green-200",
     icon: "check",
-    time: "15min",
+     timeId: "flashcards.time.good",
   },
   hard: {
     border: "border-yellow-200 hover:border-yellow-300",
@@ -32,7 +32,7 @@ const difficultyStyles = {
     iconBg: "bg-yellow-100",
     iconHoverBg: "group-hover:bg-yellow-200",
     icon: "thumb_down",
-    time: "8min",
+    timeId: "flashcards.time.hard",
   },
   again: {
     border: "border-red-200 hover:border-red-300",
@@ -42,7 +42,7 @@ const difficultyStyles = {
     iconBg: "bg-red-100",
     iconHoverBg: "group-hover:bg-red-200",
     icon: "refresh",
-    time: "1min",
+     timeId: "flashcards.time.again",
   },
 } as const;
 
@@ -88,7 +88,7 @@ export function UserLevelBtn({
           "capitalize"
         )}
       >
-        {diffStyle}
+        <FormattedMessage id={`flashcards.level.${diffStyle}`} />
       </span>
 
       <span
@@ -97,7 +97,7 @@ export function UserLevelBtn({
           "capitalize"
         )}
       >
-        {style.time}
+        <FormattedMessage id={style.timeId} />
       </span>
     </CustomButton>
   );

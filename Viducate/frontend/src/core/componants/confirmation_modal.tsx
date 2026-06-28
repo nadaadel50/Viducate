@@ -10,7 +10,7 @@ import {
   LINE_HEIGHT,
 } from "../constants/fonts_update";
 import { BaseModal } from "./base_modal";
-
+import { useIntl } from "react-intl";
 type ConfirmationModalProps = {
   open: boolean;
   title: string;
@@ -52,16 +52,27 @@ export function ConfirmationModal({
   open,
   title,
   description,
-  confirmText = "Confirm",
-  cancelText = "Cancel",
+  confirmText,
+cancelText,
   confirmVariant = "danger",
   icon,
   isLoading = false,
   onClose,
   onConfirm,
 }: ConfirmationModalProps) {
+  const intl = useIntl();
   const variant = VARIANTS[confirmVariant];
+  const finalConfirmText =
+  confirmText ??
+  intl.formatMessage({
+    id: "common.confirm",
+  });
 
+const finalCancelText =
+  cancelText ??
+  intl.formatMessage({
+    id: "common.cancel",
+  });
   return (
     <BaseModal
       isOpen={open}
@@ -106,7 +117,7 @@ export function ConfirmationModal({
             onClick={onClose}
             className="border border-slate-200 bg-white text-slate-600 hover:bg-slate-100"
           >
-            {cancelText}
+            {finalCancelText}
           </CustomButton>
 
           <CustomButton
@@ -123,7 +134,7 @@ export function ConfirmationModal({
                 className="animate-spin"
               />
             ) : (
-              confirmText
+              finalConfirmText
             )}
           </CustomButton>
         </div>
