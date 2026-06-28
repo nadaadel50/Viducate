@@ -42,10 +42,10 @@ export function ReportPage() {
   }
 
   return (
-    <div className="min-h-screen" style={{ backgroundColor: "#fff", backgroundImage: COLORS.background.radialGradient }}>
+    <div className="min-h-screen " style={{ backgroundColor: "#fff", backgroundImage: COLORS.background.radialGradient }}>
       <div className="max-w-5xl mx-auto px-4 py-8 space-y-2">
         <div className="mb-5 animate-fade-slide">
-          <h1 className="text-3xl md:text-5xl font-extrabold leading-tight" style={{ color: COLORS.brand.primary }}>
+          <h1 className="text-2xl md:text-4xl font-extrabold leading-tight" style={{ color: COLORS.brand.primary }}>
             <FormattedMessage id="report.page.title" />
           </h1>
         </div>

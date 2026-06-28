@@ -1,4 +1,9 @@
-import { CheckCircle, AlertCircle } from "lucide-react";
+import { AlertCircle, CheckCircle } from "lucide-react";
+
+import {
+  FONT_SIZE,
+  FONT_WEIGHT,
+} from "../../../../core/constants/fonts_update";
 
 interface TopicTagProps {
   label: string;
@@ -22,18 +27,28 @@ const VARIANT_STYLES = {
     },
     icon: AlertCircle,
   },
-};
+} as const;
 
-export function TopicTag({ label, variant }: TopicTagProps) {
+export function TopicTag({
+  label,
+  variant,
+}: TopicTagProps) {
   const { style, icon: Icon } = VARIANT_STYLES[variant];
 
   return (
     <span
-      className="inline-flex items-center gap-1.5 px-3 py-1 rounded-lg text-xs font-bold shadow-sm"
+      className={`inline-flex max-w-full items-center gap-1.5 rounded-lg border px-2.5 py-1 shadow-sm ${FONT_SIZE.size11} ${FONT_WEIGHT.semibold}`}
       style={style}
     >
-      <Icon size={14} strokeWidth={2.5} />
-      {label}
+      <Icon
+        size={13}
+        strokeWidth={2.3}
+        className="shrink-0"
+      />
+
+      <span className="truncate">
+        {label}
+      </span>
     </span>
   );
 }
