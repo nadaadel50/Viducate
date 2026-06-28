@@ -16,7 +16,7 @@ depends_on: Union[str, Sequence[str], None] = None
 
 def upgrade() -> None:
     # Drop the old table and recreate cleanly
-    op.drop_table('user_quiz_results')
+    op.execute('DROP TABLE IF EXISTS user_quiz_results')
 
     op.create_table(
         'user_quiz_results',

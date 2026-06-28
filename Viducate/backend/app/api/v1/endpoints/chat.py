@@ -58,14 +58,14 @@ def get_session_messages(
     result = []
     for msg in messages:
         result.append(MessageSessionResponse(
-            message_id=msg.message_id,
+            message_id=f"{msg.message_id}-user",     
             role="user",
             content=msg.question,
             time=msg.current_time,
             created_at=msg.question_at
         ))
         result.append(MessageSessionResponse(
-            message_id=msg.message_id,
+            message_id=f"{msg.message_id}-assistant", 
             role="assistant",
             content=msg.answer,
             time=None,
