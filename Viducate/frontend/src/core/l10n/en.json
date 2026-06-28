@@ -159,9 +159,31 @@
   "summary.studyNotesDesc": "Detailed points and key concepts for deep learning",
   "summary.summary": "Summary",
   "summary.summaryDesc": "Concise overview of the topic for quick revision",
-  "summary.selectStyleTitle": "Select your summary style",
   "summary.selectStyleDesc": "Choose the format that best fits your learning needs right now",
-    "summary.selectStyleDescr": "Choose the summary style you prefer",  
+  "summary.loading.titlePrefix": "AI is synthesizing",
+  "summary.loading.titleHighlight": "your summary...",
+  "summary.loading.subtitle": "Identifying key concepts and takeaways from the video",
+   "studyNotes.loading.titlePrefix": "AI is formatting",
+  "studyNotes.loading.titleHighlight": "your study notes...",
+  "studyNotes.loading.subtitle": "Organizing core concepts, definitions, and examples for you",
+
+    "summary.selectStyleTitle": "Choose Your Learning Style",
+    "summary.selectStyleDescr": "Select the format that best fits how you want to study.",
+    "summary.studyNotesTitle": "Study Notes",
+    "summary.studyNotesDescription": "Detailed points and key concepts for deep learning",
+    "summary.summaryTitle": "Summary",
+    "summary.summaryDescription": "Concise overview of the topic for quick revision",
+  "motivation.title": "Daily Inspiration",
+  "motivation.subtitle": "Take a moment to reflect. You are building your future one lecture at a time.",
+  "motivation.quote1": "The beautiful thing about learning is that nobody can take it away from you.",
+  "motivation.quote2": "The expert in anything was once a beginner.",
+  "motivation.quote3": "Strive for progress, not perfection.",
+  "motivation.quote4": "You don't have to be great to start, but you have to start to be great.",
+  "motivation.quote5": "Education is the most powerful weapon which you can use to change the world.",
+  "motivation.quote6": "Don't let what you cannot do interfere with what you can do.",
+  "motivation.quote7": "Success is the sum of small efforts, repeated day in and day out.",
+  "motivation.quote8": "Learning is a treasure that will follow its owner everywhere.",
+
 
 
   "quiz.question_count": "Question {current} of {total}",
@@ -179,7 +201,14 @@
   "quiz.map_title": "Question Map",
   "quiz.go_to_watch": "Go TO Watch at {timestamp_label}",
   "quiz.new_quiz": "New Quiz",
-
+  "quiz.selectDifficultyTitle": "Select your quiz difficulty level",
+  "quiz.selectDifficultyDescription": "Choose a difficulty level that matches your current understanding.",
+  "quiz.easyTitle": "Easy",
+  "quiz.easyDescription": "Master the basics",
+  "quiz.mediumTitle": "Intermediate",
+  "quiz.mediumDescription": "Build your skills",
+  "quiz.hardTitle": "Hard",
+  "quiz.hardDescription": "Challenge yourself",
 
 
 
