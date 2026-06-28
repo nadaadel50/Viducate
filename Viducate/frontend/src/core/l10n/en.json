@@ -199,7 +199,7 @@
   "quiz.review_answers": "Review Answers",
   "quiz.back_to_video": "Back to Video",
   "quiz.map_title": "Question Map",
-  "quiz.go_to_watch": "Go TO Watch at {timestamp_label}",
+  "quiz.go_to_watch": "Go To Watch at {timestamp_label}",
   "quiz.new_quiz": "New Quiz",
   "quiz.selectDifficultyTitle": "Select your quiz difficulty level",
   "quiz.selectDifficultyDescription": "Choose a difficulty level that matches your current understanding.",

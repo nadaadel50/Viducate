@@ -81,4 +81,7 @@ export const FONT_STYLES = {
   // ===== Misc =====
   badge: "text-[10px] font-bold uppercase tracking-wide",
   overline: "text-[10px] font-bold uppercase tracking-widest",
+
+  quizTitle: "text-xl lg:text-[26px] font-bold leading-tight",
+  quiz_item: "text-[12px] lg:text-[14px] font-bold leading-tight",
 } as const;

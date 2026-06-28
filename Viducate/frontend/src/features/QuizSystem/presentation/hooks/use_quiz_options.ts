@@ -5,7 +5,7 @@ interface UseQuizOptionsParams {
   question: QuizQuestionEntity;
   selectedId: string | null;
   isReviewMode: boolean;
-  submitQuestion?: QuizSubmitQuestion; // ← بييجي بعد الـ submit
+  submitQuestion?: QuizSubmitQuestion; 
 }
 
 export const useQuizOptions = ({

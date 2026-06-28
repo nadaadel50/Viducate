@@ -11,7 +11,7 @@ import { ContentGenerationBtn } from "./content_genration_btn";
 import type { TopicResponse } from "../../domin/entity/topic_response";
 import { useLearningSession } from "../../../../core/hooks/useLearningContent";
 import { useDueFlashcards } from "../../../flash_cards/presentation/hooks/use_due_flash_cards";
-import { QuizDifficultyModal } from "../../../QuizSystem/presentation/componants/QuizDifficultyModal";
+import { QuizDifficultyModal } from "../../../QuizSystem/presentation/componants/quiz_difficulty_modal";
 import { SummaryStyleModal } from "../../../summarization/presentation/componants/summary_style_modal";
 import { FONT_STYLES } from "../../../../core/constants/fonts";
 import { formatVideoTime } from "../../../../core/utils/fomat_time";
