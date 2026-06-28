@@ -12,7 +12,7 @@ import { QuizDifficultyModal } from "../componants/QuizDifficultyModal";
 import { useEffect, useRef, useState } from "react";
 import { GenerationLoadingScreen } from "../../../../core/componants/generation_loading_screen";
 import { FileQuestion } from "lucide-react";
-
+import { FormattedMessage, useIntl } from "react-intl";
 const SECONDS_PER_QUESTION: Record<"easy" | "medium" | "hard", number> = {
   easy: 30,
   medium: 50,
@@ -28,7 +28,7 @@ export const QuizPage = () => {
   const { state } = useLocation();
   const navigate = useNavigate();
   const { videoId, segmentId } = state;
-
+  const intl = useIntl();
   const savedKey = localStorage.getItem(`active_quiz_key_${segmentId}`);
   const [activeQuizKey, setActiveQuizKey] = useState<string | null>(
     savedKey || null,
@@ -138,17 +138,32 @@ export const QuizPage = () => {
     return (
       <GenerationLoadingScreen
         icon={<FileQuestion />}
-        titlePrefix="AI is Synthesizing"
-        titleHighlight="your quiz..."
-        subtitle="Crafting questions and answers based on the video content"
+        titlePrefix={intl.formatMessage({
+          id: "quiz.loading.titlePrefix",
+        })}
+        titleHighlight={intl.formatMessage({
+          id: "quiz.loading.titleHighlight",
+        })}
+        subtitle={intl.formatMessage({
+          id: "quiz.loading.subtitle",
+        })}
       />
     );
-  if (!finalQuiz) return  <GenerationLoadingScreen
+  if (!finalQuiz)
+    return (
+      <GenerationLoadingScreen
         icon={<FileQuestion />}
-        titlePrefix="AI is Synthesizing"
-        titleHighlight="your quiz..."
-        subtitle="Crafting questions and answers based on the video content"
+        titlePrefix={intl.formatMessage({
+          id: "quiz.loading.titlePrefix",
+        })}
+        titleHighlight={intl.formatMessage({
+          id: "quiz.loading.titleHighlight",
+        })}
+        subtitle={intl.formatMessage({
+          id: "quiz.loading.subtitle",
+        })}
       />
+    );
 
   const currentSubmitQuestion = submitResult?.questions.find(
     (q) => q.questionId === currentQuestion?.question_id,
@@ -165,7 +180,7 @@ export const QuizPage = () => {
         (isSubmitting ? (
           <div className="fixed inset-0 z-[100] flex items-center justify-center backdrop-blur-md bg-black/10">
             <p className="text-white font-bold text-xl animate-pulse">
-              Submitting...
+              <FormattedMessage id="quiz.submitting" />
             </p>
           </div>
         ) : submitResult ? (

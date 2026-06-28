@@ -209,6 +209,10 @@
   "quiz.mediumDescription": "Build your skills",
   "quiz.hardTitle": "Hard",
   "quiz.hardDescription": "Challenge yourself",
+  "quiz.loading.titlePrefix": "AI is preparing",
+"quiz.loading.titleHighlight": "your quiz...",
+"quiz.loading.subtitle": "Generating questions and answers from the video content.",
+"quiz.submitting": "Submitting your answers...",
 
 
 
@@ -258,7 +262,9 @@
   "report.hero.watched": "{percent}% watched",
   "report.hero.remaining": "{percent}% remaining",
  "report.page.title": "Video Performance Report",
-
+"report.loading.titlePrefix": "Preparing your",
+"report.loading.titleHighlight": "Learning Report",
+"report.loading.subtitle": "Reviewing your progress and quiz results...",
 
   
   

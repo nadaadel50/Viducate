@@ -76,7 +76,7 @@ export function TopicEndCard({
       type="button"
       onClick={onClick}
       className={clsx(
-        "group flex cursor-pointer flex-col items-start gap-4 rounded-xl border border-gray-100 p-5 text-left transition-all duration-300 hover:-translate-y-1 hover:bg-white hover:shadow-md md:p-6",
+        " w-full group flex cursor-pointer flex-col items-start gap-4 rounded-xl border border-gray-100 p-5 text-left transition-all duration-300 hover:-translate-y-1 hover:bg-white hover:shadow-md md:p-6",
         style.bg,
         style.hoverBorder
       )}
@@ -92,7 +92,7 @@ export function TopicEndCard({
         {icon}
       </div>
 
-      <div className="space-y-1">
+      <div className="space-y-1 flex flex-col items-start">
         <h2
           className={clsx(
             FONT_SIZE.size18,
