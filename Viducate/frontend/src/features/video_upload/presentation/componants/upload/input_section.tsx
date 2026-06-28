@@ -1,4 +1,6 @@
 import { AlertCircle, Pencil } from "lucide-react";
+import { FormattedMessage } from "react-intl";
+import { useIntl } from "react-intl";
 
 type InputSectionProps = {
   title: string;
@@ -7,10 +9,11 @@ type InputSectionProps = {
 };
 
 export function InputSection({ title, error, handleTitle }: InputSectionProps) {
+  const intl = useIntl();
   return (
     <div className="w-full">
       <p className="text-xs font-medium text-gray-500 mb-2 uppercase tracking-wide">
-        Video Title
+        <FormattedMessage id="upload.video.titleLabel" />
       </p>
 
       <div className="relative flex items-center">
@@ -23,7 +26,9 @@ export function InputSection({ title, error, handleTitle }: InputSectionProps) {
           value={title}
           onChange={handleTitle}
           type="text"
-          placeholder="e.g. Intro to Macroeconomics - Week 1"
+          placeholder={intl.formatMessage({
+            id: "upload.video.titlePlaceholder",
+          })}
           className={`w-full pl-9 pr-4 py-2.5 text-sm rounded-xl border bg-white outline-none transition-all
             ${
               error
@@ -36,7 +41,7 @@ export function InputSection({ title, error, handleTitle }: InputSectionProps) {
       {error && (
         <p className="flex items-center gap-1.5 mt-2 text-xs text-red-500">
           <AlertCircle size={13} className="shrink-0" />
-          Please enter a title for your video.
+          <FormattedMessage id="upload.video.titleRequired" />
         </p>
       )}
     </div>

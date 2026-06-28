@@ -1,25 +1,30 @@
 import { Lightbulb, Quote } from "lucide-react";
 import { useState } from "react";
 import { COLORS } from "../../../../core/constants/colors";
+import { FormattedMessage, useIntl } from "react-intl";
 
-const MOTIVATIONAL_QUOTES = [
-  "The beautiful thing about learning is that nobody can take it away from you.",
-  "The expert in anything was once a beginner.",
-  "Strive for progress, not perfection.",
-  "You don't have to be great to start, but you have to start to be great.",
-  "Education is the most powerful weapon which you can use to change the world.",
-  "Don't let what you cannot do interfere with what you can do.",
-  "Success is the sum of small efforts, repeated day in and day out.",
-  "Learning is a treasure that will follow its owner everywhere.",
-];
+
 
 export const MotivationCard = () => {
+    const intl = useIntl();
+    const motivationalQuotes = [
+
+  intl.formatMessage({ id: "motivation.quote1" }),
+  intl.formatMessage({ id: "motivation.quote2" }),
+  intl.formatMessage({ id: "motivation.quote3" }),
+  intl.formatMessage({ id: "motivation.quote4" }),
+  intl.formatMessage({ id: "motivation.quote5" }),
+  intl.formatMessage({ id: "motivation.quote6" }),
+  intl.formatMessage({ id: "motivation.quote7" }),
+  intl.formatMessage({ id: "motivation.quote8" }),
+];
+
   const [quote] = useState(() => {
   const randomIndex = Math.floor(
-    Math.random() * MOTIVATIONAL_QUOTES.length
+    Math.random() * motivationalQuotes.length
   );
 
-  return MOTIVATIONAL_QUOTES[randomIndex];
+  return motivationalQuotes[randomIndex];
 });
 
   return (
@@ -38,15 +43,14 @@ export const MotivationCard = () => {
         className="text-lg font-bold mb-2 relative z-10"
         style={{ color: COLORS.text.primary }}
       >
-        Daily Inspiration
+      <FormattedMessage id="motivation.title" />
       </h3>
 
       <p
         className="text-sm mb-5 relative z-10 pr-2"
         style={{ color: COLORS.text.secondary }}
       >
-        Take a moment to reflect. You are building your future one lecture at a
-        time.
+        <FormattedMessage id="motivation.subtitle" />
       </p>
 
       <div

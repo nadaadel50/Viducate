@@ -1,8 +1,7 @@
 import { COLORS } from "../../../../../core/constants";
-import { useLearningSession } from "../../../../../core/hooks/useLearningContent";
 import type { ContinueLearningEntity } from "../../../domain/entity/continue_learning";
 import { formatVideoTime } from "../../utils/format_dashboard_times";
-
+import { FormattedMessage } from "react-intl";
 type CardLayoutProps = {
   cardData: ContinueLearningEntity;
 };
@@ -47,7 +46,10 @@ export function CardLayout({ cardData }: CardLayoutProps) {
       {/* Time Badge */}
       {timeLeft && (
         <div className="absolute top-3 right-3 bg-black/50 text-white text-[9px] font-bold px-2.5 py-1 rounded-full backdrop-blur-md border border-white/10">
-          {`${formatVideoTime(timeLeft)} left`}
+          <FormattedMessage
+  id="dashboard.continueLearning.timeLeft"
+  values={{ time: formatVideoTime(timeLeft) }}
+/>
         </div>
       )}
 
@@ -59,7 +61,13 @@ export function CardLayout({ cardData }: CardLayoutProps) {
         <span className="material-symbols-outlined" style={{ fontSize: 12 }}>
           {isLink ? "link" : "video_file"}
         </span>
-        <span>{isLink ? "Link" : "Uploaded"}</span>
+        <span>
+  {isLink ? (
+    <FormattedMessage id="dashboard.continueLearning.link" />
+  ) : (
+    <FormattedMessage id="dashboard.continueLearning.uploaded" />
+  )}
+</span>
       </div>
     </div>
   );

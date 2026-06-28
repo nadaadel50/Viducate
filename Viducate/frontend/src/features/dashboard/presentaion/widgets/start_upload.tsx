@@ -1,7 +1,7 @@
 import { useNavigate } from "react-router";
 import NoSavedVideosAnimation from "../../../../core/animations/no_saved_videos";
 import { AppRoutesNames } from "../../../../app/routers/routes";
-
+import { FormattedMessage } from "react-intl";
 export function StartUpload() {
   const navigate=useNavigate()
     return(
@@ -9,9 +9,9 @@ export function StartUpload() {
         <NoSavedVideosAnimation />
 
         <div className="text-center">
-          <h2 className="text-2xl font-bold text-slate-800">No Videos Yet!</h2>
+          <h2 className="text-2xl font-bold text-slate-800"><FormattedMessage id="dashboard.empty.title" /></h2>
           <p className="text-sm text-slate-400 mt-1">
-            Start learning by uploading a video or adding a YouTube link
+            <FormattedMessage id="dashboard.empty.description" />
           </p>
         </div>
 
@@ -23,7 +23,7 @@ export function StartUpload() {
           <span className="material-symbols-outlined" style={{ fontSize: 18 }}>
             add_circle
           </span>
-          Add Your First Video
+          <FormattedMessage id="dashboard.empty.addFirstVideo" />
         </button>
       </div>
     )

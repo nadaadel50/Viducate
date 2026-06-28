@@ -1,9 +1,14 @@
 import { History, Trash2 } from "lucide-react";
 
 import { formatMessageTime } from "../../../../core/utils/fomat_time";
+import { useIntl } from "react-intl";
 
 import type { ChatSession } from "../../domain/entity/chat_session";
-import { FONT_SIZE, FONT_WEIGHT, TEXT_UTILS } from "../../../../core/constants/fonts_update";
+import {
+  FONT_SIZE,
+  FONT_WEIGHT,
+  TEXT_UTILS,
+} from "../../../../core/constants/fonts_update";
 
 type ChatHistoryCardProps = {
   session: ChatSession;
@@ -21,7 +26,7 @@ export function ChatHistoryCard({
   const handleDelete = (e: React.MouseEvent<HTMLButtonElement>) => {
     setOpenDeleteMessage(true);
   };
-
+  const intl = useIntl();
   return (
     <div
       onClick={() => handleSelectNewSession(session.id)}
@@ -73,8 +78,10 @@ export function ChatHistoryCard({
       <button
         type="button"
         onClick={handleDelete}
-        className="flex h-7 w-7 shrink-0 items-center 
-        justify-center rounded-md text-slate-400 transition-colors hover:bg-red-100 hover:text-red-500"
+        aria-label={intl.formatMessage({
+          id: "chat.history.delete",
+        })}
+        className="flex h-7 w-7 shrink-0 items-center justify-center rounded-md text-slate-400 transition-colors hover:bg-red-100 hover:text-red-500"
       >
         <Trash2 size={14} />
       </button>
