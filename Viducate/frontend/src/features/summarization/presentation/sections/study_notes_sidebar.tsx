@@ -1,4 +1,4 @@
-import { QuizCard } from "../componants/quiz_card";
+
 import { ToolsCard } from "../componants/tools_Card";
 
 
@@ -13,7 +13,7 @@ export function StudyNotesSidebar({
 }: StudyNotesSidebarProps) {
   return (
     <aside className="w-full space-y-6 lg:sticky lg:top-8 lg:w-80">
-      <QuizCard />
+     
 
       <ToolsCard
         type="study_notes"
