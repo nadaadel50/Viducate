@@ -8,10 +8,16 @@ import { ChatInputBtn } from "../widgets/chat_input_btn";
 import { RecentChatsSidebar } from "../widgets/recent_chat_sideBar";
 import { useIntl } from "react-intl";
 import { ConfirmationModal } from "../../../../core/componants/confirmation_modal";
+import { useLanguage } from "../../../../core/hooks/useLanguage";
+
+// ...
+
+
 export function ChatBotPage() {
   const { closeChat, open } = useChat();
   const { videoTitle } = useLearningSession();
   const intl = useIntl();
+  const { isRTL } = useLanguage();
   const {
     messages,
     handleSend,
@@ -56,21 +62,28 @@ export function ChatBotPage() {
         }`}
       >
         {/* Recent Chats */}
-        <div
-          className={`absolute top-0 right-0 z-10 h-full transition-transform duration-300 ease-out ${
-            openRecentChats ? "translate-x-0" : "translate-x-full"
-          }`}
-        >
-          <RecentChatsSidebar
-            selectedSession={sessionId}
-            handleOpenSession={handleOpenRecentChats}
-            handleClearMessages={clearMessages}
-            sessions={sessions}
-            handleSelectNewSession={handleSelectNewSession}
-            setOpenDeleteMessage={handleOpenDeleteMessage}
-          />
-        </div>
 
+
+<div
+  className={`absolute top-0 z-10 h-full transition-transform duration-300 ease-out
+    ${isRTL ? "left-0" : "right-0"}
+    ${
+      openRecentChats
+        ? "translate-x-0"
+        : isRTL
+        ? "-translate-x-full"
+        : "translate-x-full"
+    }`}
+>
+  <RecentChatsSidebar
+    selectedSession={sessionId}
+    handleOpenSession={handleOpenRecentChats}
+    handleClearMessages={clearMessages}
+    sessions={sessions}
+    handleSelectNewSession={handleSelectNewSession}
+    setOpenDeleteMessage={handleOpenDeleteMessage}
+  />
+</div>
         {/* Delete Modal */}
         <ConfirmationModal
           open={openDeleteModal}

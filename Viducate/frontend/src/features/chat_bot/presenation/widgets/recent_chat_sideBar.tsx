@@ -1,10 +1,11 @@
-import { PanelRight, Plus } from "lucide-react";
+import { PanelLeft, PanelRight, Plus } from "lucide-react";
+import { FormattedMessage, useIntl } from "react-intl";
 
 import { FONT_STYLES } from "../../../../core/constants/fonts";
+import { CustomButton } from "../../../../core/componants/custum_btn";
 import type { ChatSession } from "../../domain/entity/chat_session";
 import { ChatHistoryCard } from "./chat_history_card";
-import { CustomButton } from "../../../../core/componants/custum_btn";
-import { FormattedMessage, useIntl  } from "react-intl";
+import { useLanguage } from "../../../../core/hooks/useLanguage";
 
 type RecentChatsSidebarProps = {
   handleOpenSession: () => void;
@@ -24,8 +25,13 @@ export function RecentChatsSidebar({
   setOpenDeleteMessage,
 }: RecentChatsSidebarProps) {
   const intl = useIntl();
+  const { isRTL } = useLanguage();
+
   return (
-    <aside className="flex h-full w-60 flex-col border-r border-slate-200 bg-white/10 px-2 backdrop-blur-xl lg:w-80">
+    <aside
+      className={`flex h-full w-60 flex-col bg-white/10 px-2 backdrop-blur-xl lg:w-80
+        ${isRTL ? "border-l" : "border-r"} border-slate-200`}
+    >
       {/* Header */}
       <div className="flex gap-3 border-b border-slate-100 p-3 lg:p-4">
         <CustomButton
@@ -43,15 +49,22 @@ export function RecentChatsSidebar({
         <button
           type="button"
           onClick={handleOpenSession}
+          aria-label={intl.formatMessage({
+            id: "chat.sidebar.close",
+          })}
           className="group flex h-9 w-9 shrink-0 items-center justify-center rounded-lg text-slate-500 transition-all duration-200 hover:bg-[#4f46e5] hover:text-white hover:shadow-md active:scale-95 lg:h-8 lg:w-8"
         >
-          <PanelRight
-          aria-label={intl.formatMessage({
-  id: "chat.sidebar.close",
-})}
-            size={20}
-            className="transition-transform duration-200 group-hover:scale-110 lg:h-[18px] lg:w-[18px]"
-          />
+          {isRTL ? (
+            <PanelLeft
+              size={20}
+              className="transition-transform duration-200 group-hover:scale-110 lg:h-[18px] lg:w-[18px]"
+            />
+          ) : (
+            <PanelRight
+              size={20}
+              className="transition-transform duration-200 group-hover:scale-110 lg:h-[18px] lg:w-[18px]"
+            />
+          )}
         </button>
       </div>
 

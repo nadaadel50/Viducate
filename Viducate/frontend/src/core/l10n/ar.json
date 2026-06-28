@@ -205,6 +205,10 @@
   "quiz.mediumDescription": "طوّر مهاراتك",
   "quiz.hardTitle": "صعب",
   "quiz.hardDescription": "تحدَّ نفسك",
+  "quiz.loading.titlePrefix": "الذكاء الاصطناعي يُعد",
+"quiz.loading.titleHighlight": "اختبارك...",
+"quiz.loading.subtitle": "جارٍ إنشاء أسئلة وإجابات من محتوى الفيديو.",
+"quiz.submitting": "جارٍ إرسال الإجابات...",
 
 
 
@@ -263,14 +267,15 @@
 
   "report.topicsBreakdown.title": "تفاصيل الموضوعات",
   "report.topicsBreakdown.count": "{count} موضوع",
-
-
-
   "report.hero.updatedAt": "تم تحديثه في {date} · تم اكتشاف {count} موضوع",
   "report.hero.watchProgress": "تقدم المشاهدة",
   "report.hero.watched": "تمت مشاهدة {percent}%",
   "report.hero.remaining": "متبقي {percent}%",
   "report.page.title": "تقرير أداء الفيديو" ,
+  "report.loading.titlePrefix": "جارٍ تجهيز",
+"report.loading.titleHighlight": "تقرير التعلّم",
+"report.loading.subtitle": "بنراجع تقدمك ونتائج الاختبارات عشان نجهز التقرير...",
+
 
   "profile.preferences.title": "الإعدادات",
   "profile.preferences.appearance": "المظهر",
