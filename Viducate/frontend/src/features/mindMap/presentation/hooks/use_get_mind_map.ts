@@ -9,7 +9,7 @@ export function useGetMindMap() {
     queryKey: ["mind_map", videoId,],
 
 queryFn:async () => {
-  console.log("came here to get the mindMap")
+
   const req:MindMapReq={
     videoid:videoId!
   }
@@ -17,7 +17,7 @@ queryFn:async () => {
     if(!response.success){
         throw new Error(response.error);
     }
-    console.log("mind map is : ",response.data)
+    
      return response.data
 },
 
