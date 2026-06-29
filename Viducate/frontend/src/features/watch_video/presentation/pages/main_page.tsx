@@ -8,7 +8,7 @@ import LoadingScreen from "../../../../core/componants/loading_screen";
 import { useLearningSession } from "../../../../core/hooks/useLearningContent";
 import { ChatProvider } from "../../../chat_bot/presenation/context/chatbot_provider";
 import { useUnsavedChangesWarning } from "../hook/use_unsave_changes";
-import { COLORS, STORAGE_KEYS } from "../../../../core/constants";
+import {  STORAGE_KEYS } from "../../../../core/constants";
 import { CustomizeExperienceModal } from "../../../preferences/presentation/pages/customize_experience_modal";
 import { LanguageInitModal } from "../../../preferences/presentation/componants/LanguageInitModal";
 import ErrorScreen from "../../../../core/componants/error_screen";
@@ -104,13 +104,11 @@ export function MainPage() {
           />
 
      
-          <aside
-            className={`fixed left-0 top-0 z-50 h-full w-[80%] max-w-sm border-r border-slate-200 bg-white shadow-2xl transition-all duration-300 ease-out lg:hidden ${
-              isSidebarOpen ? "translate-x-0" : "-translate-x-full"
-            }`}
-          >
-            <LeftContentSection onClose={() => setIsSidebarOpen(false)} />
-          </aside>
+        {isSidebarOpen && (
+  <aside className="fixed left-0 top-0 z-50 h-full w-[80%] max-w-sm border-r border-slate-200 bg-white shadow-2xl lg:hidden">
+    <LeftContentSection onClose={() => setIsSidebarOpen(false)} />
+  </aside>
+)}
         </>
       </>
     );

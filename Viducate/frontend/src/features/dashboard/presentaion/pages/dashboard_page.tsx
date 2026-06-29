@@ -2,8 +2,6 @@ import { COLORS } from "../../../../core/constants";
 import { useIntl } from "react-intl";
 import { ProgressPart } from "../widgets/progress/progress_part";
 import { UserCard } from "../widgets/user_card";
-import { GenerationLoadingScreen } from "../../../../core/componants/generation_loading_screen";
-import { LayoutDashboard } from "lucide-react";
 import { useDashboard } from "../hooks/use_dashboard";
 import { ContinueLearningPart } from "../widgets/continue_learning/continue_learning_part";
 import { StartUpload } from "../widgets/start_upload";
@@ -11,12 +9,14 @@ import { Toast } from "../../../../core/componants/toast_message";
 import { useDeleteVideo } from "../hooks/use_delete_video";
 import { ConfirmationModal } from "../../../../core/componants/confirmation_modal";
 import ErrorScreen from "../../../../core/componants/error_screen";
+import LoadingScreen from "../../../../core/componants/loading_screen";
 
 export function DashboardPage() {
   const {
     data,
     isLoading,
     error,
+  
     handleOpenDeleteMessage,
     openDeleteMessage,
     selectedVideo,
@@ -26,17 +26,13 @@ const intl = useIntl();
 
   if (isLoading) {
     return (
-      <GenerationLoadingScreen
-  icon={<LayoutDashboard />}
-  titlePrefix={intl.formatMessage({
-    id: "dashboard.loading.titlePrefix",
-  })}
-  titleHighlight={intl.formatMessage({
-    id: "dashboard.loading.titleHighlight",
-  })}
-  subtitle={intl.formatMessage({
-    id: "dashboard.loading.subtitle",
-  })}
+            <LoadingScreen
+            smallText={intl.formatMessage({
+        id: "dashboard.loading.small",
+      })}
+      bigText={intl.formatMessage({
+        id: "dashboard.loading.big",
+      })}
 />
     );
   }
