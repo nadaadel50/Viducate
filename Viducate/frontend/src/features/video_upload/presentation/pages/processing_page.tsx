@@ -28,7 +28,7 @@ export function ProcessingPage() {
     if (status !== "completed") return;
 
     const timeout = setTimeout(() => {
-      navigate(AppRoutesNames.wathcVideo, {
+      navigate(AppRoutesNames.watchVideo, {
         replace: true,
       });
     }, 2500);
@@ -38,14 +38,14 @@ export function ProcessingPage() {
 
   const handleCancelConfirm = () => {
     cancel(videoId!, () => {
-      navigate("/UploadVideoPage", {
+      navigate(AppRoutesNames.uploadVideo, {
         replace: true,
       });
     });
   };
 
   const handleRetry = () => {
-    navigate("/UploadVideoPage", {
+    navigate(AppRoutesNames.uploadVideo, {
       replace: true,
     });
   };

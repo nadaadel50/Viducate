@@ -25,7 +25,7 @@ export function QuizQuestionHeader({
     if (question.video_timestamp == null) return;
 
     setCurrentTime(question.video_timestamp);
-    navigate(AppRoutesNames.wathcVideo);
+    navigate(AppRoutesNames.watchVideo);
   };
 
   return (

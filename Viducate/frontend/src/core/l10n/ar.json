@@ -480,5 +480,8 @@
 
 
 
-"common.confirm": "تأكيد"
+"common.confirm": "تأكيد",
+
+
+ "upload.video.maxSizeError": "يجب ألا يزيد حجم الفيديو عن {size} ميجابايت."
 }

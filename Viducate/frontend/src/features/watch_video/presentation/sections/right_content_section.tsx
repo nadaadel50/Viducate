@@ -56,12 +56,15 @@ export function RightContentSection({ onOpenTopics }: Props) {
     totalReviewCards: 0,
   },
   {
-    variant: "flashcards",
-    icon: <FileQuestion size={20} />,
-    labelId: "watch.actions.finalFlashcards",
-    onClick: () => navigate("/WatchVideo/flashcards"),
-    totalReviewCards: totalDue,
-  },
+  variant: "flashcards",
+  icon: <FileQuestion size={20} />,
+  labelId: "watch.actions.finalFlashcards",
+  onClick: () =>
+    navigate(
+      `${AppRoutesNames.watchVideo}/${AppRoutesNames.flashCards}`
+    ),
+  totalReviewCards: totalDue,
+},
   {
     variant: "mindmap",
     icon: <Brain size={20} />,

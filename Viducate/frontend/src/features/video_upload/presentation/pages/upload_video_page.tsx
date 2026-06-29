@@ -80,6 +80,12 @@ export function UploadVideoPage() {
         font-display
       "
     >
+       {state.errorMessage && (
+            <CustumError
+              apiError={state.errorMessage}
+              clearError={actions.clearError}
+            />
+          )}
       <div className="w-full max-w-6xl">
         <MainText
           bigTitle={<FormattedMessage id="upload.page.title" />}
@@ -97,12 +103,7 @@ export function UploadVideoPage() {
             backdrop-blur-sm
           "
         >
-          {state.errorMessage && (
-            <CustumError
-              apiError={state.errorMessage}
-              clearError={actions.clearError}
-            />
-          )}
+         
 
           <div
             className="

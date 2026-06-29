@@ -43,7 +43,7 @@ const intl = useIntl();
       return;
     }
 
-    navigate(AppRoutesNames.ProcessingPage, {
+    navigate(AppRoutesNames.processing, {
       replace: true,
     });
   };
@@ -84,7 +84,7 @@ const intl = useIntl();
         onClose={() => setShowExistingVideoModal(false)}
         onConfirm={() => {
           setShowExistingVideoModal(false);
-          navigate(AppRoutesNames.wathcVideo, { replace: true });
+          navigate(AppRoutesNames.watchVideo, { replace: true });
         }}
       />
 

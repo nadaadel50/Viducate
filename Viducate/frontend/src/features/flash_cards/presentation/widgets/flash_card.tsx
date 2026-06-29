@@ -22,7 +22,7 @@ export function FlashCard({ cardData, isFliped, onClick }: FlashCardProps) {
 
   const handleViewSource = () => {
     setCurrentTime(cardData.segment_start_time);
-    navigate(AppRoutesNames.wathcVideo);
+    navigate(AppRoutesNames.watchVideo);
   };
 
   return (

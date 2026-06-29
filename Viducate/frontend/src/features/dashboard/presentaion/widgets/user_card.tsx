@@ -8,15 +8,17 @@ import { FormattedMessage, useIntl } from "react-intl";
 export function UserCard() {
   const { data } = useDashboard();
   const { setVideoId } = useLearningSession();
+  const intl = useIntl();
+ 
   const userName =
   data?.user.name ||
   intl.formatMessage({ id: "dashboard.user.defaultName" });
   const navigate = useNavigate();
-  const intl = useIntl();
+  
   const handleClick = async () => {
     if (data?.continue_learning.length! > 0) {
       await setVideoId(data?.continue_learning[0].videoId!);
-      navigate(AppRoutesNames.wathcVideo);
+      navigate(AppRoutesNames.watchVideo);
     }
   };
 
@@ -50,7 +52,7 @@ export function UserCard() {
 
           <button
             onClick={() => {
-              navigate(AppRoutesNames.uploadPage);
+              navigate(AppRoutesNames.uploadVideo);
             }}
             style={{ background: COLORS.brand.gradient }}
             className="cursor-pointer text-white px-4 md:px-5 py-2 rounded-full text-xs md:text-sm font-bold flex items-center justify-center gap-2 shadow-lg hover:shadow-xl duration-300 hover:-translate-y-0.5 active:translate-y-0"
