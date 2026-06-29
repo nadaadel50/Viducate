@@ -82,8 +82,7 @@ def ask(session_id: int, video_id: int, question: str, current_time: int | None,
 
         ),
         message=MessageResponse(
-            user_message_id=f"{message.message_id}-user",
-            assistant_message_id=f"{message.message_id}-assistant",
+            message_id=message.message_id,
             content=message.answer,
         )
     )
