@@ -1,7 +1,7 @@
 import { LogOut, Settings } from "lucide-react";
 import { useNavigate } from "react-router-dom";
 import { AppRoutesNames } from "../../app/routers/routes";
-
+import { FormattedMessage } from "react-intl";
 type NavbarDropdownProps = {
   fullName: string;
   email: string;
@@ -36,7 +36,7 @@ export function NavbarDropdown({
           size={14}
           className="text-gray-400"
         />
-        Profile Settings
+          <FormattedMessage id="navbar.profileSettings" />
       </button>
 
       <div className="my-1 border-t border-gray-100" />
@@ -49,7 +49,7 @@ export function NavbarDropdown({
         className="flex w-full cursor-pointer items-center gap-2.5 px-3 py-2 text-sm text-red-500 transition-colors hover:bg-red-50"
       >
         <LogOut size={14} />
-        Log out
+       <FormattedMessage id="navbar.logout" />
       </button>
     </div>
   );
