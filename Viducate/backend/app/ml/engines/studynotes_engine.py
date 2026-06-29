@@ -4,6 +4,7 @@ import re
 import time
 from groq import Groq
 from app.config import settings
+from app.utils.text_sanitizer import sanitize_dict, strip_cjk
 
 logger = logging.getLogger(__name__)
 
@@ -74,6 +75,31 @@ def _lang_instruction(language: str) -> str:
             "Keep all technical terms, code keywords, and established English terminology in English as-is. "
             "Section headings, explanations, definitions, examples, notes, and the introduction must be in Arabic. "
             "Do NOT transliterate English terms into Arabic letters."
+            "STRICT PROHIBITION: Do NOT output any Chinese, Japanese, Korean, or other CJK characters.\n\n"
+            "TECHNICAL TERMS RULE — the following categories MUST remain in English exactly as-is, "
+            "never translated or transliterated into Arabic:\n"
+            "  - Algorithm names: Linear Search, Binary Search, Bubble Sort, Merge Sort, Quick Sort, etc.\n"
+            "  - Data structures: Array, Stack, Queue, Linked List, Tree, Graph, Heap, Hash Table, etc.\n"
+            "  - Complexity notation: Big O, O(n), O(log n), O(1), O(n^2), Time Complexity, Space Complexity\n"
+            "  - Programming concepts: Loop, Recursion, Pointer, Variable, Function, Class, Object, etc.\n"
+            "  - CS/Math concepts: Binary, Index, Node, Edge, Path, Depth, Height, Matrix, Vector, etc.\n"
+            "  - Any term that appears in English in the original video content\n\n"
+            "CORRECT examples:\n"
+            "  ✓ heading: 'Time Complexity و Big O Notation'\n"
+            "  ✓ term block: text='Linear Search', tooltip='خوارزمية بحث تمر على كل عنصر واحداً تلو الآخر'\n"
+            "  ✓ important block: text='Binary Search', tooltip='تعمل فقط على القوائم المترتبة'\n"
+            "  ✓ normal block: ' أسرع من Linear Search — Time Complexity هي O(log n)'\n"
+            "  ✓ definition: term='Stack', meaning='هيكل بيانات يعمل بمبدأ LIFO'\n"
+            "  ✓ example: 'مثال على Time Complexity: Linear Search = O(n), Binary Search = O(log n)'\n"
+            "  ✓ note: 'تذكر: Binary Search تتطلب قائمة مترتبة، أما Linear Search فلا'\n"
+            "WRONG examples (never do this):\n"
+            "  ✗ 'تعقيد الوقت'    → should be 'Time Complexity'\n"
+            "  ✗ 'البحث الخطي'    → should be 'Linear Search'\n"
+            "  ✗ 'البحث الثنائي'  → should be 'Binary Search'\n"
+            "  ✗ 'المكدس'         → should be 'Stack'\n"
+            "  ✗ 'الرسم البياني'  → should be 'Graph'\n"
+            "  ✗ 'تدوين Big O'    → should be 'Big O Notation'\n"
+            "  ✗ 'مبدأ LIFO'      → 'LIFO' stays in English but 'مبدأ' (principle) in Arabic is fine\n"
         )
     return "Respond in English."
 
@@ -191,12 +217,13 @@ def _call_with_retry(client: Groq, prompt: str, max_retries: int = 3) -> str:
 
 def _parse(raw: str) -> dict | None:
     try:
-        return json.loads(_clean_json(raw))
+        result = json.loads(_clean_json(raw))
+        return sanitize_dict(result)
     except json.JSONDecodeError:
         match = re.search(r"\{.*\}", raw, re.DOTALL)
         if match:
             try:
-                return json.loads(match.group())
+                return sanitize_dict(json.loads(match.group()))
             except Exception:
                 pass
     return None

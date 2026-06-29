@@ -1,6 +1,8 @@
 import os
 from groq import Groq
 import json
+from app.utils.text_sanitizer import sanitize_dict, strip_cjk
+import json
 
 client = Groq(api_key=os.getenv("GROQ_API_KEY"))
 MODEL = "llama-3.3-70b-versatile"
@@ -122,6 +124,26 @@ def summarize_segment(segment_title: str, main_topic: str, subtopics: list[dict]
         "Respond in Arabic, BUT keep all technical terms, code, and programming concepts in English as-is (do not translate terms like 'Fuzzy Logic', 'membership', 'defuzzification', 'centroid', etc.). "
         "Section headings, explanations, takeaways, tooltips, and conclusion must be in Arabic. "
         "Technical terms inside 'term' blocks and highlights stay in English."
+        "STRICT PROHIBITION: Do NOT output any Chinese, Japanese, Korean, or other CJK characters.\n\n"
+        "TECHNICAL TERMS RULE — the following categories MUST remain in English exactly as-is, "
+        "never translated or transliterated into Arabic:\n"
+        "  - Algorithm names: Linear Search, Binary Search, Bubble Sort, Merge Sort, Quick Sort, etc.\n"
+        "  - Data structures: Array, Stack, Queue, Linked List, Tree, Graph, Heap, Hash Table, etc.\n"
+        "  - Complexity notation: Big O, O(n), O(log n), O(1), O(n^2), Time Complexity, Space Complexity\n"
+        "  - Programming concepts: Loop, Recursion, Pointer, Variable, Function, Class, Object, etc.\n"
+        "  - CS/Math concepts: Binary, Index, Node, Edge, Path, Depth, Height, Matrix, Vector, etc.\n"
+        "  - Any term that appears in English in the original video content\n\n"
+        "CORRECT examples:\n"
+        "  ✓ heading: 'Time Complexity و Big O Notation'\n"
+        "  ✓ term block: text='Linear Search', tooltip='خوارزمية بحث تمر على كل عنصر بالترتيب'\n"
+        "  ✓ normal block: ' هي أبطأ من Binary Search لأن Time Complexity هي O(n)'\n"
+        "  ✓ takeaway: 'Binary Search أسرع من Linear Search عند استخدام قوائم مترتبة'\n"
+        "WRONG examples (never do this):\n"
+        "  ✗ 'تعقيد الوقت'    → should be 'Time Complexity'\n"
+        "  ✗ 'البحث الخطي'    → should be 'Linear Search'\n"
+        "  ✗ 'البحث الثنائي'  → should be 'Binary Search'\n"
+        "  ✗ 'المكدس'         → should be 'Stack'\n"
+        "  ✗ 'تدوين Big O'    → should be 'Big O Notation'\n"
     ) if language == "ar" else "Respond in English."
 
     subtopics_text = "\n".join(
@@ -208,8 +230,8 @@ def summarize_segment(segment_title: str, main_topic: str, subtopics: list[dict]
     )
     raw = response.choices[0].message.content.strip()
     raw = raw.replace("```json", "").replace("```", "").strip()
-    import json
-    return json.loads(raw)
+    
+    return sanitize_dict(json.loads(raw))
 
 
 def summarize_full_video(video_title: str, segments: list[dict], language: str = "en") -> dict:
@@ -217,6 +239,26 @@ def summarize_full_video(video_title: str, segments: list[dict], language: str =
         "Respond in Arabic, BUT keep all technical terms, code, and programming concepts in English as-is (do not translate terms like 'Fuzzy Logic', 'membership', 'defuzzification', 'centroid', etc.). "
         "Section headings, explanations, takeaways, tooltips, and conclusion must be in Arabic. "
         "Technical terms inside 'term' blocks and highlights stay in English."
+        "STRICT PROHIBITION: Do NOT output any Chinese, Japanese, Korean, or other CJK characters.\n\n"
+        "TECHNICAL TERMS RULE — the following categories MUST remain in English exactly as-is, "
+        "never translated or transliterated into Arabic:\n"
+        "  - Algorithm names: Linear Search, Binary Search, Bubble Sort, Merge Sort, Quick Sort, etc.\n"
+        "  - Data structures: Array, Stack, Queue, Linked List, Tree, Graph, Heap, Hash Table, etc.\n"
+        "  - Complexity notation: Big O, O(n), O(log n), O(1), O(n^2), Time Complexity, Space Complexity\n"
+        "  - Programming concepts: Loop, Recursion, Pointer, Variable, Function, Class, Object, etc.\n"
+        "  - CS/Math concepts: Binary, Index, Node, Edge, Path, Depth, Height, Matrix, Vector, etc.\n"
+        "  - Any term that appears in English in the original video content\n\n"
+        "CORRECT examples:\n"
+        "  ✓ heading: 'Time Complexity و Big O Notation'\n"
+        "  ✓ term block: text='Linear Search', tooltip='خوارزمية بحث تمر على كل عنصر بالترتيب'\n"
+        "  ✓ normal block: ' هي أبطأ من Binary Search لأن Time Complexity هي O(n)'\n"
+        "  ✓ takeaway: 'Binary Search أسرع من Linear Search عند استخدام قوائم مترتبة'\n"
+        "WRONG examples (never do this):\n"
+        "  ✗ 'تعقيد الوقت'    → should be 'Time Complexity'\n"
+        "  ✗ 'البحث الخطي'    → should be 'Linear Search'\n"
+        "  ✗ 'البحث الثنائي'  → should be 'Binary Search'\n"
+        "  ✗ 'المكدس'         → should be 'Stack'\n"
+        "  ✗ 'تدوين Big O'    → should be 'Big O Notation'\n"
     ) if language == "ar" else "Respond in English."
 
     segments_text = ""
@@ -324,5 +366,5 @@ def summarize_full_video(video_title: str, segments: list[dict], language: str =
     raw = response.choices[0].message.content.strip()
     raw = raw.replace("```json", "").replace("```", "").strip()
 
-    return json.loads(raw)
+    return sanitize_dict(json.loads(raw))
     

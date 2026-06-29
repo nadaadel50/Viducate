@@ -4,11 +4,33 @@ import re
 import time
 from groq import Groq
 from app.config import settings
+from app.utils.text_sanitizer import sanitize_dict, strip_cjk
 
 logger = logging.getLogger(__name__)
 
 MODEL = "llama-3.3-70b-versatile"
 
+CONTENT_FILTER = """
+CRITICAL: Create flashcards ONLY for educational subject matter — terms, definitions, mechanisms, rules, or comparisons that belong to the topic itself.
+
+Do NOT create flashcards about ANY of the following:
+
+  INTRO content:
+  - Greetings and opening salutations (e.g. "السلام عليكم", "hello everyone", "welcome back")
+  - Course or lesson introductions (e.g. "today we will cover...", "in this lesson we will learn...")
+  - Recaps of previous lessons (e.g. "last time we covered...", "we already studied this in level 1")
+  - Motivational or religious opening remarks unrelated to the subject
+  - Course announcements, broadcast schedules, or contact info
+
+  OUTRO content:
+  - Farewells, sign-offs, or closing blessings (e.g. "بارك الله فيكم", "see you next time", "والسلام عليكم")
+  - Teasers for the next lesson (e.g. "next time we will explain...", "in the next video...")
+  - Calls to action (subscribe, like, share, follow)
+  - Homework reminders or administrative notices
+  - Encouragement or motivational closing remarks unrelated to the subject
+
+A flashcard is valid ONLY if the question and answer are self-contained educational facts a student can study independently of the video framing.
+"""
 
 def _get_client() -> Groq:
     return Groq(api_key=settings.GROQ_API_KEY)
@@ -29,15 +51,33 @@ def _build_prompt(
     language: str,
     num_cards: int,
 ) -> str:
-    """
-    Builds a SHORT prompt using only subtopic names (not full descriptions)
-    to stay well under Groq token limits.
-    """
     lang_note = (
-        "Write all questions and answers in Arabic only."
+        "OUTPUT LANGUAGE: Arabic only for prose and explanations.\n"
+        "STRICT PROHIBITION: Do NOT output any Chinese, Japanese, Korean, or other CJK characters.\n\n"
+        "TECHNICAL TERMS RULE — the following categories of terms MUST remain in English exactly as-is, "
+        "never translated or transliterated into Arabic:\n"
+        "  - Algorithm names: Linear Search, Binary Search, Bubble Sort, Merge Sort, Quick Sort, etc.\n"
+        "  - Data structures: Array, Stack, Queue, Linked List, Tree, Graph, Heap, Hash Table, etc.\n"
+        "  - Complexity notation: Big O, O(n), O(log n), O(1), O(n^2), Time Complexity, Space Complexity\n"
+        "  - Programming concepts: Loop, Recursion, Pointer, Variable, Function, Class, Object, etc.\n"
+        "  - CS concepts: Binary, Index, Node, Edge, Path, Depth, Height, etc.\n"
+        "  - Any term that appears in English in the original video content\n\n"
+        "CORRECT examples:\n"
+        "  ✓ Q: 'ما هو Time Complexity لـ Linear Search؟'  A: 'O(n)'\n"
+        "  ✓ Q: 'ما هي ميزة Binary Search؟'  A: 'أسرع من Linear Search — Time Complexity هي O(log n)'\n"
+        "WRONG examples (never do this):\n"
+        "  ✗ 'البحث الخطي'    → should be 'Linear Search'\n"
+        "  ✗ 'البحث الثنائي'  → should be 'Binary Search'\n"
+        "  ✗ 'تعقيد الوقت'   → should be 'Time Complexity'\n"
+        "  ✗ 'تعقيد المكان'   → should be 'Space Complexity'\n"
         if language == "ar"
         else "Write all questions and answers in English only."
     )
+    # lang_note = (
+    #     "Write all questions and answers in Arabic only."
+    #     if language == "ar"
+    #     else "Write all questions and answers in English only."
+    # )
 
     topics_line = ", ".join(subtopic_names) if subtopic_names else main_topic
 
@@ -46,16 +86,11 @@ def _build_prompt(
         f"Topic: {segment_title}\n"
         f"Key concepts: {topics_line}\n"
         f"{lang_note}\n\n"
+        f"{CONTENT_FILTER}\n\n"
         f"RULES:\n"
         f"1. Each flashcard must test understanding of a real educational concept.\n"
         f"2. Answers must be concise and factual.\n"
         f"3. Do NOT include explanations, just question and answer.\n\n"
-        f"IMPORTANT:\n"
-        f"Do NOT create flashcards about:\n"
-        f"- Introduction, greetings, or opening remarks\n"
-        f"- Conclusions, closing remarks, or farewell content\n"
-        f"- Administrative announcements or homework reminders\n"
-        f"Only create flashcards about actual educational concepts.\n\n"
         f"Return ONLY a JSON array, no extra text:\n"
         f'[{{"question":"...","answer":"...","difficulty":"easy|medium|hard"}}]'
     )
@@ -143,7 +178,11 @@ def generate_flashcards_for_segment(
         if d not in ("easy", "medium", "hard"):
             d = "medium"
 
-        validated.append({"question": q, "answer": a, "difficulty": d})
+        validated.append({
+            "question": strip_cjk(q),
+            "answer":   strip_cjk(a),
+            "difficulty": d
+        })
 
     logger.info(
         f"[FlashcardEngine] Done | segment='{segment_title}' | "
