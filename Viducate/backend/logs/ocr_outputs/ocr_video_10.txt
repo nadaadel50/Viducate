@@ -1,5 +1,6 @@
 # OCR Output — video_id=10
 # Language: en
-# Total segments: 1
+# Total segments: 2
 
-[00:00:00] 1322-34
+[00:02:19] use cases | backtracking | - finding the correct path through a maze
+[00:02:29] compile-time memory management | - programs use them to store local data and procedure info | -nested and recursive functions

@@ -47,6 +47,7 @@ import StudyNotesPage from "../../features/summarization/presentation/pages/stud
 import { GeneratingSummaryPage } from "../../features/summarization/presentation/pages/summary_generation_page";
 import { GeneratingStudyNotesPage } from "../../features/summarization/presentation/pages/study_notes_generation_page";
 import { AppLayout } from "../../layout/app_layout";
+import { ProtectedRoute } from "./protextedRoutes";
 
 export function AppRoutes() {
   return (
@@ -83,6 +84,7 @@ export function AppRoutes() {
         />
 
         {/* ================= APP ================= */}
+        <Route element={<ProtectedRoute />}>
 
         <Route element={<AppLayout />}>
           <Route path="/report" element={<ReportPage />} />
@@ -158,7 +160,9 @@ export function AppRoutes() {
             />
           </Route>
         </Route>
-      </Routes>
+      </Route>
+    </Routes>
+      
     </BrowserRouter>
   );
 }

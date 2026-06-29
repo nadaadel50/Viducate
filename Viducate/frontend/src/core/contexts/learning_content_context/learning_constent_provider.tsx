@@ -6,11 +6,7 @@ import { STORAGE_KEYS } from "../../constants";
 export const LearningSessionContext =
   createContext<LearningSessionContextType | null>(null);
 
-export function LearningSessionProvider({
-  children,
-}: {
-  children: React.ReactNode;
-}) {
+export function LearningSessionProvider({ children,}: {children: React.ReactNode;}) {
   const [hasUnsavedChanges, setHasUnsavedChanges] = useState(false);
 
   useEffect(() => {
@@ -124,6 +120,19 @@ const handleSetInitializeCurrentTime = (time: number) => {
   function setDurationTime(newDuration: number) {
     setDuration(newDuration);
   }
+useEffect(() => {
+  if (videoId === null) return;
+  setSelectedTopic(null);
+  setTopics(null);
+  setVideoTitle(null);
+  setMarks([]);
+  setCompletedTopics(new Set());
+  setCurrentTime(0);
+  baselineRef.current = 0;
+  setHasUnsavedChanges(false);
+  setSeekTo(null);
+  setDuration(0);
+}, [videoId]);
 
   return (
     <LearningSessionContext.Provider

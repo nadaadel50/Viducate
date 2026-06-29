@@ -1,83 +1,37 @@
-[0.0 --> 5.1]  All right guys welcome back to the channel once again and today someone asked me on my common box
-[5.1 --> 10.4]  like how to make custom node like different different kind of shape so if you can see I
-[10.4 --> 18.0]  have already converted this box into the like little bit it looks like ellipses so there's
-[18.0 --> 23.0]  one way like if you can do like this you can do it otherwise you need to write custom css for that
-[23.0 --> 29.1]  so I just implemented this thing like this so it's easy like you can write the css for that so
-[29.1 --> 32.4]  So I put the border radius by 50% over here.
-[32.7 --> 34.9]  And if you want to do it into the code,
-[35.4 --> 37.1]  so let me guide you where you can do that.
-[37.7 --> 40.8]  So see, we have custom node over here.
-[41.3 --> 43.4]  I already told you how to assign the custom node.
-[43.4 --> 51.1]  So you can see these tools are two node types are the custom nodes we have.
-[51.5 --> 54.7]  So first one, if you can see over here, custom node selector one.
-[55.2 --> 64.6]  And second one is custom node selector Okay sorry custom node selector and custom node selector one Okay so see over here we have already defined the style properties
-[65.2 --> 69.1]  Like what would be the style if we, so these are the handle type of style.
-[69.2 --> 72.0]  Okay, but custom color picker node.
-[72.2 --> 76.5]  Okay, so what we can do, we can give the style to this one.
-[78.2 --> 83.8]  Or we can write a style into the style.stss by giving the class to this.
-[83.8 --> 87.7]  okay let's do a class give a class name over here like class name
-[90.3 --> 98.2]  custom node one okay and let's see into the browser that we are getting that class name or not
-[98.2 --> 107.3]  okay so let's reload this page go on now and if you see let's see so you can see custom color
-[107.3 --> 113.4]  picker so i have created this another node which one is having the class name that i written right
-[113.4 --> 118.0]  Let's go open this object inside this.
-[118.0 --> 119.9]  And if you see the custom name
-[120.0 --> 122.1]  node is coming over here.
-[122.1 --> 124.1]  See this class name is coming over here.
-[124.1 --> 126.4]  So all the input properties inside of this.
-[126.4 --> 128.1]  So what we can do, or what we can do,
-[128.1 --> 130.8]  we can define the class property to this one.
-[130.8 --> 133.9]  Like we can style it like this.
-[133.9 --> 136.1]  Okay, so just give a padding.
-[136.1 --> 138.2]  Let's give a background color first.
-[139.1 --> 141.1]  Background color.
-[142.0 --> 143.9]  Okay, so background color would be,
-[143.9 --> 147.0]  I would like to have, let's choose one.
-[147.0 --> 148.2]  Okay.
-[148.2 --> 155.0]  this one will be better. Okay give some padding to this padding would be one REM
-[155.0 --> 166.2]  okay and after that just give a border radius border radius will be 50% okay so
-[166.2 --> 170.9]  you can see it's gone to elixirs but if you fix the width and height so I will
-[170.9 --> 189.0]  like to put the width equals to 10RM and height also 10K So now it looks like a circle but if we reduce the width and height like 2 arum it would
-[189.0 --> 195.0]  be 2 arum and width also would be 2 arum so it's gonna look like a circle.
-[195.0 --> 199.0]  2 arum, 2 arum.
-[199.0 --> 204.9]  So see, it's looking like a circle and you can connect this node to any of these nodes.
-[205.1 --> 205.3]  Okay.
-[205.6 --> 206.8]  So that's how you can do.
-[207.2 --> 211.5]  So about the content thing, you can manage by yourself.
-[211.6 --> 217.0]  But like if you assign the font size, font size will be 10px.
-[217.8 --> 218.1]  Okay.
-[218.1 --> 220.8]  So you can see the font size had been reduced as well.
-[221.4 --> 223.5]  And if you can see, it's working fine.
-[224.7 --> 227.4]  And also you can connect this node like this.
-[227.4 --> 230.2]  if you connect these pointers.
-[230.2 --> 235.2]  Okay, so this is how you can create multiple kind of shapes
-[235.9 --> 237.6]  for your custom node.
-[237.6 --> 239.9]  So what I did, I just did normally,
-[240.0 --> 245.4]  just assigned a class over here and pick that class and put it into your style.scss.
-[245.4 --> 249.2]  So you can create a style.scss file over here like this.
-[249.5 --> 250.9]  You get a style.scss.
-[252.7 --> 253.9]  Okay, wait a minute.
-[254.1 --> 256.3]  Let's copy this all this time first.
-[257.1 --> 257.9]  And we'll see.
-[258.6 --> 263.8]  And make this style.scss file this.
-[265.0 --> 267.4]  style.scss.
-[267.4 --> 269.3]  Okay, I'm not going to reset scss.
-[269.3 --> 275.2]  and let's copy that class name or what was that a class name custom or select
-[275.2 --> 284.5]  program okay first copy the styles dot here and let's replace this a with the
-[284.5 --> 287.3]  class
-[288.2 --> 291.8]  but we'll see
-[291.8 --> 300.8]  Okay, so custom node one and you can just put this file inside the react flow.
-[300.8 --> 306.8]  Okay, so this is my parent component where I'm rendering everything.
-[306.8 --> 310.8]  I'll CSS.
-[310.8 --> 317.8]  Okay, now if I will reload my page.
-[317.8 --> 322.4]  So you can see it's coming already like this.
-[322.7 --> 327.4]  I didn't do anything and everything is coming from the class.
-[327.5 --> 328.9]  So it's style.css file.
-[329.3 --> 334.9]  So that's how you can customize your custom nodes with this style property.
-[334.9 --> 336.1]  And it's very easy.
-[336.2 --> 339.3]  No need to figure out everything and no need to understand everything.
-[339.5 --> 342.1]  You know, HTML, CSS and React thing.
-[342.4 --> 343.6]  So you can do it by way.
-[344.2 --> 346.1]  So it's very easy library to use.
-[346.1 --> 351.4]  and there's no any kind of hard stuff that you need to learn a lot of things into that just go
-[351.4 --> 356.8]  with that and start learning and you will be able to do anything into that okay thank you so much
-[356.8 --> 359.0]  guys thank you for watching and that's it from this review
+[0.0 --> 4.4]  يحكى أنه في قديم الزمان سأل تلميذ معلمه الحكيم
+[4.4 --> 8.5]  يا معلمي كيف أهدئ من عاصفة الأفكار في ذهني
+[8.5 --> 10.3]  نظر إليه المعلم وقال
+[10.3 --> 14.4]  يا بني أنا في غاية الانشغال الآن ولا أملك وقتا للحديث
+[14.4 --> 18.2]  لماذا لا تذهب وتسأل أخاك الأكبر فهو حكيم مثلي
+[18.2 --> 24.5]  انطلق التلميذ إلى أخيه الأكبر وسأله نفس السؤال الذي طرحه على معلمه
+[24.5 --> 26.7]  ولكن الأخ الأكبر أجاب بتعب
+[26.7 --> 31.5]  آسف يا أخي أنا أعاني من صداع شديد ولا أقوى على الكلام الآن
+[31.5 --> 34.5]  لماذا لا تذهب وتسأل أخانا الثاني في الدارما
+[34.5 --> 37.1]  ذهب التلميذ إلى أخيه الثاني في الدارما
+[37.1 --> 39.6]  ولكنه واجهه بنفس الرد
+[39.6 --> 43.2]  يا أخي معتي تؤلمني بشدة ولا أستطيع الحديث
+[43.2 --> 45.6]  لماذا لا تذهب وتسأل سيدنا في الدارما
+[45.6 --> 47.6]  فهو الأقدر على مساعدتك
+[47.6 --> 50.3]  عاد التلميذ إلى سيده واشتكى قائلا
+[50.3 --> 54.1]  يا معلمي لقد سألت الجميع ولم يجبني أحد
+[54.1 --> 67.2] 
+[67.2 --> 68.9]  بالحيرة والارتباك فقال
+[68.9 --> 71.2]  ولكن يا معلم لم يقل لي
+[71.2 --> 72.3]  أحد شيئا يذكر
+[72.3 --> 75.2]  أجاب المعلم بحكمة لقد أراد
+[75.2 --> 77.2]  أن يخبروك أن الحل لمشاكلك
+[77.2 --> 79.1]  يكمن بداخلك لا أحد
+[79.1 --> 80.9]  يستطيع أن يهدئ عقلك غيرك
+[80.9 --> 82.8]  عليك أن تخوض رحلة داخلية
+[82.8 --> 86.3]  أن تتحدث مع نفسك وتفهم رغباتك ومخاوفك
+[86.3 --> 88.7]  وتستكشف قوة عقلك وقلبك
+[88.7 --> 92.3]  كل ما تحتاجه موجود بداخلك في أعماق روحك
+[92.3 --> 96.5]  العالم الخارجي ما هو إلا انعكاس لعالمك الداخلي
+[96.5 --> 99.4]  في هذه اللحظة أدرك التلميذ الحقيقة
+[99.4 --> 103.8]  فهم أن الإجابات التي يبحث عنها ليست في الخارج بل في داخله
+[103.8 --> 107.7]  وعندها وصل إلى حالة من التنوير والسكون الداخلي
+[107.7 --> 111.5]  تذكر يا صديقي لا أحد يستطيع حل مشاكلك نياب عنك
+[111.5 --> 117.1]  أنت وحدك تملك القدرة على فهم ذاتك وتحقيق السلام الداخلي
+[117.1 --> 119.8]  استمع إلى صوتك الداخلي
+[120.0 --> 121.9]  واكتشف حقيقتك
+[121.9 --> 125.8]  واعلم أن كل ما تحتاجه موجود بداخلك

@@ -16,7 +16,6 @@ export function QuizDifficultyModal({
   onClose,
   onSelect,
 }: QuizDifficultyModalProps) {
-  
 const intl = useIntl();
   return (
     <BaseModal isOpen={isOpen} onClose={onClose} maxWidth="max-w-4xl">

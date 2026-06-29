@@ -4,11 +4,14 @@ import { AppRoutesNames } from "./routes";
 
 
 export function ProtectedRoute() {
-  const { isAuthenticated } = useAuth();
+const { isAuthenticated, loading } = useAuth();
 
-  if (!isAuthenticated) {
-    return <Navigate to={AppRoutesNames.login} replace />;  //for example or landing page 
-  }
+if (loading) return null;
+
+if (!isAuthenticated) {
+  return <Navigate to={AppRoutesNames.login} replace />;
+}
+
 
   return <Outlet />;  // or outlet (will make it soon)
 }

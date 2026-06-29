@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import { useNavigate } from "react-router-dom";
+import { Navigate, useNavigate } from "react-router-dom";
 
 import { TipCard } from "../componants/processing/tip_card";
 import { ProcessingProgress } from "../componants/processing/processing_progress";
@@ -20,35 +20,44 @@ export function ProcessingPage() {
   const intl = useIntl();
   const [isCancelModalOpen, setIsCancelModalOpen] = useState(false);
 
-  const { status, progress } = useProcessingStatus(videoId!);
 
+  
+  const { status, progress } = useProcessingStatus(videoId ?? undefined);
   const { cancel, isLoading: isCancelling } = useCancelAnalysis();
 
   useEffect(() => {
+    sessionStorage.removeItem('from_upload'); 
+  }, []);
+
+  useEffect(() => {
     if (status !== "completed") return;
-
     const timeout = setTimeout(() => {
-      navigate(AppRoutesNames.wathcVideo, {
-        replace: true,
-      });
+      navigate(AppRoutesNames.wathcVideo, { replace: true });
     }, 2500);
-
     return () => clearTimeout(timeout);
   }, [status, navigate]);
 
   const handleCancelConfirm = () => {
     cancel(videoId!, () => {
-      navigate("/UploadVideoPage", {
-        replace: true,
-      });
+      navigate("/UploadVideoPage", { replace: true });
     });
   };
 
   const handleRetry = () => {
-    navigate("/UploadVideoPage", {
-      replace: true,
-    });
+    navigate("/UploadVideoPage", { replace: true });
   };
+
+const [isFromUpload] = useState(
+  () => sessionStorage.getItem('from_upload') === 'true'
+);
+
+useEffect(() => {
+  sessionStorage.removeItem('from_upload');
+}, []);
+
+  if (!videoId || !isFromUpload) {
+    return <Navigate to="/UploadVideoPage" replace />;
+  }
 
   return (
     <div
