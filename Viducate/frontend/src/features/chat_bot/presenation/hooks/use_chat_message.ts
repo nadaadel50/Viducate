@@ -72,8 +72,7 @@ export function useChatMessages(open: boolean) {
     setMessages((prev) => [
       ...prev,
       {
-        message_id: crypto.randomUUID?.() ??
-  Math.random().toString(36).slice(2) + Date.now(), //// will updated to crypto
+        message_id: crypto.randomUUID?.() , //// will updated to crypto
         role: "user",
         content: input,
         created_at: new Date().toISOString(),

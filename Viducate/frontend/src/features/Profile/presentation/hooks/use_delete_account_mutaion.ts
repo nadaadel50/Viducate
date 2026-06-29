@@ -1,22 +1,24 @@
 import { useMutation } from "@tanstack/react-query";
-import type { UpdateRequest } from "../../domain/entity/update_req";
-import { deleteAccountUsecase, updateProfileUsecase } from "../../../../core/di/profile_container";
+import { deleteAccountUsecase } from "../../../../core/di/profile_container";
+import { useAuth } from "../../../../core/hooks/useAuth";
 
+export function useDeleteAccountMutation() {
+  const { logout } = useAuth();
 
-export function useDeleteAccountMutation (){
-  const mutation= useMutation({
+  const mutation = useMutation({
     mutationFn: async () => {
-      
-      const response =
-        await deleteAccountUsecase()
+      const response = await deleteAccountUsecase();
 
       if (!response.success) {
         throw new Error(response.error);
       }
-      console.log("delte is",response)
-     
+
+      console.log("delete account is..............", response);
 
       return response.data;
+    },
+    onSuccess: () => {
+      logout();
     },
   });
 
@@ -27,5 +29,4 @@ export function useDeleteAccountMutation (){
     error: mutation.error?.message ?? null,
     reset: mutation.reset,
   };
-};
-
+}

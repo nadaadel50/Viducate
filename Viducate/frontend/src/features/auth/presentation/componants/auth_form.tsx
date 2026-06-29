@@ -138,6 +138,8 @@ export function AuthForm({ type }: AuthFormProps) {
           <CustomInput
             label={intl.formatMessage({ id: "auth.password" })}
             placeholder="••••••••"
+            type="password"
+            
        
             {...getFieldProps("password")}
           />

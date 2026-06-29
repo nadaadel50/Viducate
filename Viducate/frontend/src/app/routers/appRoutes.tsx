@@ -90,9 +90,10 @@ export function AppRoutes() {
         />
 
         {/* ================= APP ================= */}
-        <Route element={<ProtectedRoute />}>
-
+       
+  <Route element={<ProtectedRoute />}>
         <Route element={<AppLayout />}>
+       
           <Route
             path={AppRoutesNames.dashboard}
             element={

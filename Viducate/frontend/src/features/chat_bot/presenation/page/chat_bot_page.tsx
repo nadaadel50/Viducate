@@ -44,7 +44,7 @@ export function ChatBotPage() {
   };
 
   return (
-    <div className="fixed inset-0 z-40 flex justify-end pointer-events-none">
+    <div className="fixed inset-0 z-100 flex justify-end pointer-events-none">
       {/* Overlay */}
       <div
         onClick={closeChat}
