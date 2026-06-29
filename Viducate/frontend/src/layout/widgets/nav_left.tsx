@@ -1,6 +1,7 @@
 import { LayoutDashboard } from "lucide-react";
 import { useNavigate } from "react-router-dom";
 import { Logo } from "../../core/componants/logo";
+import { AppRoutesNames } from "../../app/routers/routes";
 
 type NavbarLeftProps = {
   isDashboard: boolean;
@@ -16,7 +17,7 @@ export function NavbarLeft({ isDashboard }: NavbarLeftProps) {
       <div className="h-4 w-px bg-gray-200" />
 
       <button
-        onClick={() => navigate("/dashboard")}
+        onClick={() => navigate(AppRoutesNames.dashboard)}
         className={`flex cursor-pointer items-center gap-1.5 rounded-lg px-2.5 py-1.5 text-sm transition-colors ${
           isDashboard
             ? "bg-indigo-50 font-medium text-indigo-600"

@@ -11,32 +11,22 @@ import { StatsCards } from "../widgets/states_card";
 import { StrongTopicsCard } from "../widgets/strong_topics_card";
 import { WeakTopicsCard } from "../widgets/weak_topic_card";
 
-
 interface OverallStatsProps {
   report: VideoReport;
 }
 
-export function OverallStats({
-  report,
-}: OverallStatsProps) {
+export function OverallStats({ report }: OverallStatsProps) {
   const intl = useIntl();
 
-  const {
-    percent,
-    watchedFormatted,
-  } = useVideoProgress();
+  const { percent, watchedFormatted } = useVideoProgress();
 
   const accuracy =
     report.totalQuizQuestions > 0
-      ? Math.round(
-          (report.correctAnswers /
-            report.totalQuizQuestions) *
-            100,
-        )
+      ? Math.round((report.correctAnswers / report.totalQuizQuestions) * 100)
       : 0;
 
   return (
-    <section className="space-y-6">
+    <section className="space-y-6 ">
       <SectionHeader
         icon={BarChart3}
         title={intl.formatMessage({
@@ -52,16 +42,15 @@ export function OverallStats({
       />
 
       <div className="grid gap-4 lg:grid-cols-2">
-        <LearningMaterials report={report} />
+        <div className="min-w-0">
+          <LearningMaterials report={report} />
+        </div>
 
-        <div className="flex flex-col gap-4">
-          <StrongTopicsCard
-            topics={report.strongTopics}
-          />
-
-          <WeakTopicsCard
-            topics={report.weakTopics}
-          />
+        <div className="min-w-0">
+          <div className="flex flex-col gap-4">
+            <StrongTopicsCard topics={report.strongTopics} />
+            <WeakTopicsCard topics={report.weakTopics} />
+          </div>
         </div>
       </div>
     </section>

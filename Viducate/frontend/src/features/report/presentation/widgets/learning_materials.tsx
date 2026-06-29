@@ -46,7 +46,7 @@ export function LearningMaterials({
   ];
 
   return (
-    <div className="flex flex-col justify-center rounded-2xl border border-slate-100 bg-white p-6 shadow-sm">
+    <div className="flex flex-col justify-center rounded-2xl border border-slate-100 bg-white p-4 shadow-sm">
       <div className="mb-5 flex items-center gap-2">
         <Package
           size={20}
