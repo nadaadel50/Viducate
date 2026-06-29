@@ -4,6 +4,20 @@ from datetime import datetime
 import re
 from typing import Literal
 
+def validate_password_strength(value: str):
+    if len(value) < 8:
+        raise ValueError("Password must be at least 8 characters long")
+
+    if not re.search(r"[A-Z]", value):
+        raise ValueError("Password must contain at least one uppercase letter")
+
+    if not re.search(r"[0-9]", value):
+        raise ValueError("Password must contain at least one number")
+
+    if not re.search(r"[!@#$%^&*()_+\-=\[\]{};':\"\\|,.<>/?]", value):
+        raise ValueError("Password must contain at least one special character")
+
+    return value
 
 # User Request
 class UserRegisterRequest(BaseModel):
@@ -18,13 +32,7 @@ class UserRegisterRequest(BaseModel):
     @field_validator("password")
     @classmethod
     def validate_password(cls, value):
-        if len(value) < 8:
-            raise ValueError("Password must be at least 8 characters long")
-        if not re.search(r"[A-Z]", value):
-            raise ValueError("Password must contain at least one uppercase letter")
-        if not re.search(r"[0-9]", value):
-            raise ValueError("Password must contain at least one number")
-        return value
+        return validate_password_strength(value)
 
     # Name length validation
     @field_validator("first_name", "last_name")
@@ -98,13 +106,7 @@ class ResetPasswordRequest(BaseModel):
     @field_validator("new_password")
     @classmethod
     def validate_password(cls, value):
-        if len(value) < 8:
-            raise ValueError("Password must be at least 8 characters long")
-        if not re.search(r"[A-Z]", value):
-            raise ValueError("Password must contain at least one uppercase letter")
-        if not re.search(r"[0-9]", value):
-            raise ValueError("Password must contain at least one number")
-        return value
+        return validate_password_strength(value)
     
     @field_validator("confirm_password")
     @classmethod
