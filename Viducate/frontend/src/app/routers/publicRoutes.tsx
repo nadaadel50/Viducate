@@ -5,7 +5,7 @@ export function PublicRoute({ children }: { children: React.ReactNode }) {
   const token = localStorage.getItem("token");
 
   if (token) {
-    return <Navigate to={AppRoutesNames.uploadPage} replace />;
+    return <Navigate to={AppRoutesNames.dashboard} replace />;
   }
 
   return children;
