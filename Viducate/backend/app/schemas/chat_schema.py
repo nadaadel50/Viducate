@@ -19,11 +19,11 @@ class ChatRequest(BaseModel):
 
 
 class MessageResponse(BaseModel):
-    user_message_id: str      # "17-user"
-    assistant_message_id: str  # "17-assistant"
+    message_id:int
     content: str
     class Config:
         from_attributes = True
+
 
 
 class AskResponse(BaseModel):

@@ -153,6 +153,12 @@ class AuthService:
                 status_code=status.HTTP_409_CONFLICT,
                 detail="An account with this email not exists")
         
+        if existing_user.oauth_provider is not None:
+            raise HTTPException(
+                status_code=status.HTTP_400_BAD_REQUEST,
+                detail=f"This account is registered using {existing_user.oauth_provider}. Please sign in with {existing_user.oauth_provider} instead."
+            )
+        
         reset_token = secrets.token_urlsafe(32)
         expires_at = datetime.utcnow() + timedelta(hours=1)
 

@@ -96,6 +96,12 @@ def download_video(url: str, video_id: int) -> str:
             except OSError:
                 pass
         raise PipelineCancelledError(f"Video {video_id} was cancelled by user")
+    
+    except Exception as e:
+        error_msg = str(e)
+        if "getaddrinfo failed" in error_msg or "Failed to resolve" in error_msg:
+            raise Exception(" Please check the server's internet connection.")
+        raise Exception(f"Video download failed: {error_msg}")
 
     final_file = None
     if os.path.exists(output_path):
