@@ -89,6 +89,12 @@ class VideoService:
             classification_result = await classify_video(yt_video_id)
             subject = classification_result["classification"]
             duration_seconds = classification_result["duration_seconds"]
+
+            if duration_seconds and duration_seconds > 10800: # 3 hours
+                raise HTTPException(
+                    status_code=status.HTTP_400_BAD_REQUEST,
+                    detail="Video duration exceeds the maximum allowed limit of 3 hours"
+                )
         else:
             subject = "general"
             duration_seconds = None
