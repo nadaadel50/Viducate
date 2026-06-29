@@ -42,8 +42,8 @@ export function getLayoutedElements(nodes: Node[], edges: Edge[]) {
     // level1   ROOT   level1
 
     //       level2
-  // const radiusPerLevel = [0, 500, 900, 1300];
-  const radiusPerLevel = [0, 300, 550, 800];
+   const radiusPerLevel = [0, 500, 900, 1300];
+  //const radiusPerLevel = [0, 300, 550, 800];
 
   function placeNodes(
     nodeId: string,

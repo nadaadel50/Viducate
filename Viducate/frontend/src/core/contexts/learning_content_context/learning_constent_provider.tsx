@@ -83,19 +83,17 @@ const handleSetInitializeCurrentTime = (time: number) => {
   };
 
   const toggleTopicComplete = (segmentId: number) => {
-    setCompletedTopics((prev) => {
-      const next = new Set(prev);
-
-      if (next.has(segmentId)) {
-        next.delete(segmentId);
-      } else {
-        next.add(segmentId);
-      }
-
-      return next;
-    });
-    setHasUnsavedChanges(!hasUnsavedChanges);
-  };
+  setCompletedTopics((prev) => {
+    const next = new Set(prev);
+    if (next.has(segmentId)) {
+      next.delete(segmentId);
+    } else {
+      next.add(segmentId);
+    }
+    return next;
+  });
+  setHasUnsavedChanges(true); 
+};
 
   const goToNextTopic = () => {
     if (!topics || !selectedTopic) return;

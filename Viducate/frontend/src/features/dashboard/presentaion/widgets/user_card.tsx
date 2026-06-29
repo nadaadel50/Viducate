@@ -9,12 +9,11 @@ export function UserCard() {
   const { data } = useDashboard();
   const { setVideoId } = useLearningSession();
   const intl = useIntl();
- 
+
   const userName =
-  data?.user.name ||
-  intl.formatMessage({ id: "dashboard.user.defaultName" });
+    data?.user.name || intl.formatMessage({ id: "dashboard.user.defaultName" });
   const navigate = useNavigate();
-  
+
   const handleClick = async () => {
     if (data?.continue_learning.length! > 0) {
       await setVideoId(data?.continue_learning[0].videoId!);
@@ -25,17 +24,21 @@ export function UserCard() {
   return (
     <div
       style={{ backgroundImage: COLORS.background.premiumGradient }}
-      className="rounded-2xl md:rounded-3xl p-4 md:p-6 lg:p-7 relative overflow-hidden shadow-soft"
+      className="rounded-2xl md:rounded-3xl px-5 py-4 relative overflow-hidden shadow-soft"
     >
       <div className="flex flex-col items-start justify-between relative z-10 gap-3">
-        <h2 className={`${FONT_STYLES.pageTitle} text-slate-800 tracking-tight`}>
+        <h2
+          className={`${FONT_STYLES.pageTitle} text-slate-800 tracking-tight`}
+        >
           <FormattedMessage
-  id="dashboard.user.greeting"
-  values={{ name: userName }}
-/>
+            id="dashboard.user.greeting"
+            values={{ name: userName }}
+          />
         </h2>
 
-        <p className={`${FONT_STYLES.body} text-slate-700 leading-relaxed max-w-3xl`}>
+        <p
+          className={`${FONT_STYLES.body} text-slate-700 leading-relaxed max-w-3xl`}
+        >
           <FormattedMessage id="dashboard.user.description" />
         </p>
 

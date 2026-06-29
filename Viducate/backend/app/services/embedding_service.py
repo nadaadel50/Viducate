@@ -143,7 +143,7 @@ def time_to_seconds(time_str: str) -> int:
     return 0
 
 
-SIMILARITY_THRESHOLD = 0.75
+SIMILARITY_THRESHOLD = 0.70
 
 
 def search(video_id: int, query: str, db: Session, n_results: int = 3, threshold: float = SIMILARITY_THRESHOLD) -> list:  # ✅ threshold كـ parameter

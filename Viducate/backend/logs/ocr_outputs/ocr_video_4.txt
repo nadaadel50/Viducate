@@ -1,12 +1,4 @@
 # OCR Output — video_id=4
-# Language: en
-# Total segments: 8
+# Language: None
+# Total segments: 0
 
-[00:00:10] inport React, useStatefron "react"; | import './App.css' | function App(){ | const [mohared, setMohamed] = useState(0) | const plushandler = () => ( | setMohamed(mohamed + 3); | const minsehandler = () => { | setMohamed(mohamed - 1); | return ( | <div className="App"> | <buttonanClick={plushandler}>+</button> | <button onClick=[ninsehandler]>-</button> | {mohased} | </div>
-[00:00:30] inport React, { useEffect, useState } from "react"; | const [moEffectCallback(): void
-[00:00:40] inport React, ( us | undefined): void
-[00:00:50] inport React, {useEffect , useState } from "react": | const [mohamed, setMohaned] - useState(0)
-[00:04:00] <div classNare-"App"> bivariancetack(event: | button onClick={p)React.MouseEvent<HTMLButton | <button onClick={niMouseEvent>): void | <button anClick=[()>+</button> | export default App;
-[00:04:10] <button onClick=(plushandlerReact.SetStateAction<number | <button onClick={ninsehandlevoid
-[00:04:30] <button onClick={plushandler}>+</button> | <button onC11ck={() => setx(x - 3)}>-</button>
-[00:04:50] const [x, setx] = useState(@) | const [mohamed, setMohaned] = useState(0) | useEffect(() => { | neturn (

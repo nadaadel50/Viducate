@@ -53,7 +53,7 @@ export function LeftContentSection({ onClose }: LeftContentSectionProps) {
   });
 
   return (
-    <div className="flex h-full w-full flex-col">
+    <div className="flex h-screen w-full flex-col">
       <div className="border-b border-slate-100 p-3">
         <SearchTopicBar setSearchQuery={setSearchQuery} />
       </div>
@@ -64,9 +64,8 @@ export function LeftContentSection({ onClose }: LeftContentSectionProps) {
             className={`${FONT_STYLES.label} flex-1 truncate text-slate-400 tracking-wide hover:text-[#4f46e5]`}
           >
             <>
-  {videoTitle}{" "}
-  <FormattedMessage id="watch.topics.title" />
-</>
+              {videoTitle} <FormattedMessage id="watch.topics.title" />
+            </>
           </h2>
 
           <div className="flex shrink-0 items-center gap-2 sm:gap-3">
@@ -95,7 +94,7 @@ export function LeftContentSection({ onClose }: LeftContentSectionProps) {
         </div>
       </div>
 
-      <div className="flex-1 overflow-y-auto">
+      <div className="overflow-y-auto">
         <div className="mx-auto flex w-full max-w-md flex-col gap-3 p-3 sm:max-w-lg sm:p-4 lg:max-w-xl">
           {filteredCards.map((card, index) => (
             <ContentLearningCard
@@ -113,13 +112,11 @@ export function LeftContentSection({ onClose }: LeftContentSectionProps) {
       </div>
 
       {isCustomizeOpen && (
-    
-          <CustomizeExperienceModal
+        <CustomizeExperienceModal
           isOpen={isCustomizeOpen}
           onClose={() => setIsCustomizeOpen(false)}
           videoId={videoId}
         />
-    
       )}
     </div>
   );

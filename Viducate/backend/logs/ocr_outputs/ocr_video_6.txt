@@ -1,5 +1,62 @@
 # OCR Output — video_id=6
 # Language: en
-# Total segments: 1
+# Total segments: 58
 
-[00:11:30] lempiny (Phas 1) | Noomy Pe D)
+[00:00:30] ARRAY
+[00:01:30] Pixed Size | Niew Blieck of Mewaay
+[00:03:30] The chain reconnects around it. | The item is simply... gone.
+[00:04:00] To find a specific node - start at HEAD. | Follow the chain, one step at a time.
+[00:04:30] Arrays  fast to read, slow to change. | Linked Lists  slow to read, fast to change. | Nexdt up:
+[00:05:00] Plte 3 | Pac 2 | Plite I | LAST IN | FIRST OUT
+[00:05:50] Last In, First Out | the rhythm of a stack  everywhere, once you see it
+[00:06:20] First In, | First Out
+[00:06:30] Two Operations | adds to the back | removes from the front
+[00:06:50] Stack vs Queue | work here | served firs4 | always finishes what | was started first
+[00:07:00] A web server, slammed. | thousands of requests
+[00:07:30] Double-Ended Queue | a layer of versatility
+[00:07:50] Add / Remove | Add / Remove
+[00:08:10] A Deque is both at once. | Add to BACK, remove from FRONT  behaves like a Queue
+[00:09:40] Mom" runs through | slot 4,827
+[00:10:00] Without a Hash Map | Scan every item or | '1 you find a match.
+[00:10:40] Now, suppose the value no longer matters. | "fruit, red"
+[00:10:50] A data structure built purely for | checking membership.
+[00:11:00] Hash Map | Hash Set | Hash Set  keys only. No values.
+[00:11:20] Nightclub Analogy | Are you on the list? | GUEST LIST | YES  Come in! | NO  Step aside.
+[00:11:40] No Duplicates - By Design | Already exists - ignored! | Every item appears exactly once.
+[00:11:50] O(N)  Slow | O(1)  Instant
+[00:12:00] Tracking which users have seen a notification | Filtering duplicates from a Dataset | Checking if a username is already taken | Again and again, the same idea appears
+[00:13:20] ML Decision | Natural for anything with a parent-child relationship.
+[00:13:30] A PLa | No rules about where values go.
+[00:13:40] What if you could take a tree, | impose one simple rule on it, | and suddenly make searching dramatically faster?
+[00:14:30] All ready to go. | From the moment you connect it.
+[00:14:40] Your prompt | DB  Auth  Stoxage  Edge
+[00:15:10] picks a numberl | and 1,000.
+[00:15:20] 1 - 250 | 251 - 500
+[00:15:50] Compared to a regular tree, a BST is on another level. | The structure of the data | does the work for you.
+[00:16:50] An Emergency Room. | heart attack | Urgency beats arrival time.
+[00:17:50] A heap solves this. | Almost sorted at all times.
+[00:18:20] Live, Evolving Dataset | Priority 1  Critical | Priority 3 - High | asks aniyim. | Alwhys the most
+[00:18:30] Data Structures | Memory Regions | Atree-bused priority structure | Dynamic memory allocation area | LIFO data structure
+[00:18:50] always like that. | Real world: a web | Item A | Item D | in every direction
+[00:20:20] 1 = edge exists | 0 = no edge
+[00:20:30] a Graph | Way 2 | Each node stores a list ofits neighbours.
+[00:21:00] Graphs Are Everywhere | things are connected in any way | you're dealing with a graph.
+[00:21:10] Pronounced "try" | Legitimately genius.
+[00:22:10] Hash Map vs Trie | Great for exact lookups. | Give it the full key  instant result. | But "give me everything starting with app" ?
+[00:23:10] Scale to Millions of Users.. | Tracing every chain one-by-one is not fast enough.
+[00:23:40] Different Leader  Different Group | Different leader  different group. That check is nearly instant.
+[00:23:50] Path Compression | Path compresses - all nodes now point directly to the root.
+[00:24:20] It's a specialist data structure. | For one specific class of problem: | Tracking connected groups that keep evolving. | Groups keep evolving  UnionFind adapts instantly
+[00:24:40] Bloom Filter | And yes  it literally lies.
+[00:25:10] e Positives | The filter says YES | but the item is NOT actually there.
+[00:25:20] Mistakes in Only One Direction | It will NEVER say NO
+[00:25:40] Password Checker | ~10 GB | Without Blo
+[00:25:50] Safe Browsing | Bloom Filter "bit array
+[00:26:10] Username Availability | Step 1: Ask the Bloom filter. | Probably taken.
+[00:26:20] Smart about what to store. | Smart about what to throw away. | The last data structure on this list | does exactly that.
+[00:26:30] Least I | y Used | How your computer decides what to forget.
+[00:27:10] Space is Limited | No room!
+[00:27:20] Least Recently Used  Evict First | 5 min ago | 1 min ago | 10 min ago | 3 min ago
+[00:27:40] Access  Move to Front | Most Recent | Least Recent | C moved to front
+[00:27:50] O(1) Get & Put | get( key ) | put(key, val )
+[00:28:20] Memory Is Limited | Var A | ThAts hiord fraw. | That's exactly what keeps it fast.

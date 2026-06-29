@@ -64,14 +64,14 @@ export function MainPage() {
   else {
     return (
       <>
-        <div className="flex  bg-[#f8fafc] font-display">
+        <div className="flex bg-[#f8fafc] font-display min-h-screen">
           {/* hiddend===display=none */}
           <aside className="hidden lg:block lg:w-[350px] border-r border-slate-200">
             <LeftContentSection />
           </aside>
 
           {/* Main Content */}
-          <div className="flex-1">
+          <div className="flex-1  ">
             <ChatProvider>
               <RightContentSection
                 onOpenTopics={() => setIsSidebarOpen(true)}

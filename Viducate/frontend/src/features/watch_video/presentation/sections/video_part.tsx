@@ -137,7 +137,7 @@ export function VideoPlayer() {
         ref={containerRef}
         className="group relative w-full overflow-hidden rounded-lg bg-black shadow-md sm:rounded-xl lg:max-w-5xl"
         style={{
-          height: isFullscreen ? "100vh" : "clamp(190px, 34vw, 260px)",
+          height: isFullscreen ? "100vh" : "clamp(190px, 34vw, 300px)",
         }}
         onMouseMove={resetHideTimer}
         onMouseLeave={handleMouseLeave}

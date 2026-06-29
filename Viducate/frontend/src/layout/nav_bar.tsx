@@ -24,7 +24,7 @@ export default function Navbar({
   } = useNavbar(user);
 
   return (
-    <header className="fixed top-0 left-0 right-0 z-50 h-14 border-b border-gray-100 bg-white font-display">
+    <header className="fixed top-0 left-0 right-0 z-50 h-11 border-b border-gray-100 bg-white font-display">
       <div className="mx-5 flex h-full items-center justify-between">
         <NavbarLeft isDashboard={isDashboard} />
 
