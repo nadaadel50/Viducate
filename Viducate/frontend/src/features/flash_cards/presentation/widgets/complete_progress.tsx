@@ -1,5 +1,5 @@
 import { FONT_STYLES } from "../../../../core/constants/fonts";
-
+import { FormattedMessage } from "react-intl";
 type CompleteProgressProps = {
   cardsLenght: number;
   cardNumber: number;
@@ -9,22 +9,30 @@ export function CompeleteProgress({
   cardsLenght,
   cardNumber,
 }: CompleteProgressProps) {
-  const progress =
-    cardsLenght > 0
-      ? (cardNumber / cardsLenght) * 100
-      : 0;
+  const progress = cardsLenght > 0 ? (cardNumber / cardsLenght) * 100 : 0;
 
   return (
     <div className="mb-6 flex w-full max-w-2xl flex-col gap-2 sm:mb-8">
       <div className="mb-1 flex items-end justify-between gap-2">
         <span className={FONT_STYLES.body}>
-          Card {cardNumber + 1} of {cardsLenght}
+          <FormattedMessage
+            id="flashcards.progress.card"
+            values={{
+              current: cardNumber + 1,
+              total: cardsLenght,
+            }}
+          />
         </span>
 
         <span
           className={`${FONT_STYLES.caption} whitespace-nowrap text-[#4f46e5]`}
         >
-          {Math.round(progress)}% complete
+          <FormattedMessage
+            id="flashcards.progress.complete"
+            values={{
+              percent: Math.round(progress),
+            }}
+          />
         </span>
       </div>
 

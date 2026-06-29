@@ -12,12 +12,12 @@ import { COLORS, STORAGE_KEYS } from "../../../../core/constants";
 import { CustomizeExperienceModal } from "../../../preferences/presentation/pages/customize_experience_modal";
 import { LanguageInitModal } from "../../../preferences/presentation/componants/LanguageInitModal";
 import ErrorScreen from "../../../../core/componants/error_screen";
-
+import { useIntl } from "react-intl";
 export function MainPage() {
   const { videoId, hasUnsavedChanges } = useLearningSession();
 
   const { data: data, isLoading, error } = useVideoData();
-
+  const intl = useIntl();
   const [isInitOpen, setIsInitOpen] = useState(false);
   const [isCustomizeOpen, setIsCustomizeOpen] = useState(false);
   const [isSidebarOpen, setIsSidebarOpen] = useState(false);
@@ -52,9 +52,13 @@ export function MainPage() {
   if (isLoading && !data)
     return (
       <LoadingScreen
-        smallText={"Get Ready"}
-        bigText={"Your smart study session is Loading"}
-      />
+  smallText={intl.formatMessage({
+    id: "watch.loading.small",
+  })}
+  bigText={intl.formatMessage({
+    id: "watch.loading.big",
+  })}
+/>
     );
   if (error) return <ErrorScreen errorMessage={error.message} />;
   else {

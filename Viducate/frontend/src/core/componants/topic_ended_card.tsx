@@ -57,8 +57,8 @@ export type TopicEndCardVariant = keyof typeof VARIANT_STYLES;
 type TopicEndCardProps = {
   variant?: TopicEndCardVariant;
   icon: ReactNode;
-  title: string;
-  description: string;
+  title:ReactNode ;
+  description:ReactNode ;
   onClick?: () => void;
 };
 

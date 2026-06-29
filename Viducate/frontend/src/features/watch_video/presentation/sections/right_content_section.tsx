@@ -18,6 +18,7 @@ import { useNavigate } from "react-router";
 import { useRightContentSection } from "../hook/use_right_content_section";
 import { CustomButton } from "../../../../core/componants/custum_btn";
 import { useDueFlashcards } from "../../../flash_cards/presentation/hooks/use_due_flash_cards";
+import { FormattedMessage } from "react-intl";
 type Props = {
   onOpenTopics?: () => void;
 };
@@ -40,35 +41,35 @@ export function RightContentSection({ onOpenTopics }: Props) {
 
 
   const footerActions = [
-    {
-      variant: "quiz",
-      icon: <FileQuestion size={20} />,
-      label: "Final Quiz",
-      onClick: handleFinalQuizClick,
-      totalReviewCards:0
-    },
-    {
-      variant: "summary",
-      icon: <FileText size={20} />,
-      label: "Final Summary",
-      onClick: () => setIsSummaryModalOpen(true),
-       totalReviewCards:0
-    },
-    {
-      variant: "flashcards",
-      icon: <FileQuestion size={20} />,
-      label: "Final Flashcards",
-     onClick: () => navigate("/WatchVideo/flashcards"),
-      totalReviewCards:totalDue
-    },
-    {
-      variant: "mindmap",
-      icon: <Brain size={20} />,
-      label: "Final Mind Map",
-      onClick: () => navigate(AppRoutesNames.mindMap),
-       totalReviewCards:0
-    },
-  ] as const;
+  {
+    variant: "quiz",
+    icon: <FileQuestion size={20} />,
+    labelId: "watch.actions.finalQuiz",
+    onClick: handleFinalQuizClick,
+    totalReviewCards: 0,
+  },
+  {
+    variant: "summary",
+    icon: <FileText size={20} />,
+    labelId: "watch.actions.finalSummary",
+    onClick: () => setIsSummaryModalOpen(true),
+    totalReviewCards: 0,
+  },
+  {
+    variant: "flashcards",
+    icon: <FileQuestion size={20} />,
+    labelId: "watch.actions.finalFlashcards",
+    onClick: () => navigate("/WatchVideo/flashcards"),
+    totalReviewCards: totalDue,
+  },
+  {
+    variant: "mindmap",
+    icon: <Brain size={20} />,
+    labelId: "watch.actions.finalMindMap",
+    onClick: () => navigate(AppRoutesNames.mindMap),
+    totalReviewCards: 0,
+  },
+] as const;
 
   return (
     <div className="min-h-screen w-full flex flex-col justify-center items-center">
@@ -96,7 +97,7 @@ export function RightContentSection({ onOpenTopics }: Props) {
               onClick={handleCompleteClick}
               className="border border-slate-200 bg-white text-slate-700 hover:border-[#4f46e5]/50 hover:bg-slate-50 hover:text-[#4f46e5]"
             >
-              Complete Topic
+              <FormattedMessage id="watch.actions.completeTopic" />
             </CustomButton>
             <CustomButton
               fullWidth
@@ -104,7 +105,7 @@ export function RightContentSection({ onOpenTopics }: Props) {
               onClick={goToNextTopic}
               className="bg-slate-900 text-white hover:bg-slate-800"
             >
-              Next Topic
+            <FormattedMessage id="watch.actions.nextTopic" />
             </CustomButton>
           </div>
         </div>
@@ -112,12 +113,12 @@ export function RightContentSection({ onOpenTopics }: Props) {
 
       <div className="w-full border-t border-slate-200 bg-white/80 backdrop-blur p-4 sticky bottom-0">
         <div className="grid grid-cols-2 gap-3">
-          {footerActions.map(({ variant, icon, label, onClick,totalReviewCards }) => (
+          {footerActions.map(({ variant, icon, labelId, onClick,totalReviewCards }) => (
             <FinalGeneratedBtn
               key={variant}
               variant={variant}
               icon={icon}
-              label={label}
+              label={<FormattedMessage id={labelId} />}
               onClick={onClick}
               reviewCards={totalReviewCards}
             />

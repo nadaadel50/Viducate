@@ -7,6 +7,7 @@ import { useLearningSession } from "../../../../core/hooks/useLearningContent";
 import { CustomizeExperienceModal } from "../../../preferences/presentation/pages/customize_experience_modal";
 import { SearchTopicBar } from "../widgets/search_topic_bar";
 import { ContentLearningCard } from "../widgets/content_learning_card";
+import { FormattedMessage } from "react-intl";
 type LeftContentSectionProps = {
   onClose?: () => void;
 };
@@ -62,7 +63,10 @@ export function LeftContentSection({ onClose }: LeftContentSectionProps) {
           <h2
             className={`${FONT_STYLES.label} flex-1 truncate text-slate-400 tracking-wide hover:text-[#4f46e5]`}
           >
-            {videoTitle} Topics
+            <>
+  {videoTitle}{" "}
+  <FormattedMessage id="watch.topics.title" />
+</>
           </h2>
 
           <div className="flex shrink-0 items-center gap-2 sm:gap-3">
@@ -73,7 +77,7 @@ export function LeftContentSection({ onClose }: LeftContentSectionProps) {
               <ClipboardCheck size={18} />
 
               <span className="absolute -top-8 left-1/2 -translate-x-1/2 whitespace-nowrap rounded bg-gray-800 px-2 py-1 text-xs text-white opacity-0 transition-opacity group-hover:opacity-100">
-                Learning Report
+                <FormattedMessage id="watch.tooltip.report" />
               </span>
             </span>
 
@@ -84,7 +88,7 @@ export function LeftContentSection({ onClose }: LeftContentSectionProps) {
               <Languages size={18} />
 
               <span className="absolute -top-8 left-1/2 -translate-x-1/2 whitespace-nowrap rounded bg-gray-800 px-2 py-1 text-xs text-white opacity-0 transition-opacity group-hover:opacity-100">
-                Change Topics Language
+                <FormattedMessage id="watch.tooltip.changeLanguage" />
               </span>
             </span>
           </div>

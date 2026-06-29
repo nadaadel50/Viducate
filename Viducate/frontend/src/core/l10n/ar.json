@@ -144,6 +144,7 @@
   "analysis.error.title": "فشلت عملية التحليل",
   "analysis.error.subtitle": "حدث خطأ أثناء معالجة الفيديو الخاص بك. يرجى المحاولة مرة أخرى.",
   "analysis.retry": "إعادة محاولة الرفع",
+  "analysis.cancel.description": "هل أنت متأكد إنك عايز توقف تحليل الفيديو؟ هتحتاج تبدأ التحليل من جديد لو رجعت بعد كده.",
 
 
   "summary.aiReady": "الملخص جاهز بالذكاء الاصطناعي",
@@ -152,6 +153,7 @@
   "summary.exportPdf": "تصدير PDF",
   "summary.downloadOffline": "تحميل للاستخدام بدون إنترنت",
   "summary.tools": "الأدوات",
+
 
 
   "summary.loading.titlePrefix": "الذكاء الاصطناعي يقوم بإعداد",
@@ -294,6 +296,9 @@
   "profile.deleteModal.title": "حذف الحساب",
   "profile.deleteModal.description": "هل أنت متأكد من حذف حسابك؟ سيتم حذف كل بياناتك بشكل نهائي ولن يمكن استرجاعها.",
   "profile.deleteModal.confirm": "تأكيد الحذف",
+  "profile.loading.small": "لحظة واحدة...",
+"profile.loading.big": "جارٍ تجهيز ملفك الشخصي",
+
 
   "common.cancel": "إلغاء",
 
@@ -392,5 +397,89 @@
 "chat.sidebar.newChat": "محادثة جديدة",
 "chat.sidebar.recentChats": "آخر المحادثات",
 "chat.sidebar.close": "إغلاق قائمة المحادثات",
-"chat.user.you": "أنت"
+"chat.user.you": "أنت",
+
+
+
+
+"flashcards.loading.titlePrefix": "الذكاء الاصطناعي يُجهّز",
+"flashcards.loading.titleHighlight": "بطاقاتك التعليمية...",
+"flashcards.loading.subtitle": "جارٍ تحويل أهم المفاهيم إلى بطاقات سهلة للمراجعة.",
+"flashcards.finish.nextReview": "المراجعة القادمة بعد",
+"flashcards.finish.reviewNow": "ابدأ المراجعة",
+"flashcards.finish.endSession": "إنهاء الجلسة",
+"flashcards.finish.resetDescription": "سيتم إنهاء الجلسة الحالية وإعادة تعيين تقدمك.",
+"flashcards.level.easy": "سهل",
+"flashcards.level.good": "جيد",
+"flashcards.level.hard": "صعب",
+"flashcards.level.again": "مرة أخرى",
+"flashcards.progress.card": "البطاقة {current} من {total}",
+"flashcards.progress.complete": "اكتمل {percent}%",
+"flashcards.card.reveal": "اضغط لإظهار الإجابة",
+"flashcards.card.back": "اضغط للعودة",
+"flashcards.card.viewSource": "عرض المقطع ({time})",
+"flashcards.time.easy": "بعد يوم",
+"flashcards.time.good": "بعد 15 دقيقة",
+"flashcards.time.hard": "بعد 8 دقائق",
+"flashcards.time.again": "بعد دقيقة",
+
+
+"mindmap.loading.titlePrefix": "الذكاء الاصطناعي يُنشئ",
+"mindmap.loading.titleHighlight": "الخريطة الذهنية...",
+"mindmap.loading.subtitle": "جارٍ تحليل المحاضرة وتنظيم المفاهيم الرئيسية في خريطة واضحة.",
+"mindmap.download": "تحميل الخريطة",
+
+
+
+
+"watch.loading.small": "استعد",
+"watch.loading.big": "جارٍ تجهيز جلسة التعلم الذكية الخاصة بك...",
+"watch.topics.title": "الموضوعات",
+"watch.tooltip.report": "تقرير التعلّم",
+"watch.tooltip.changeLanguage": "تغيير لغة المحتوى",
+"watch.actions.completeTopic": "إنهاء الموضوع",
+"watch.actions.nextTopic": "الموضوع التالي",
+"watch.actions.finalQuiz": "الاختبار النهائي",
+"watch.actions.finalSummary": "الملخص النهائي",
+"watch.actions.finalFlashcards": "البطاقات التعليمية",
+"watch.actions.finalMindMap": "الخريطة الذهنية",
+"watch.topicEnd.title": "أحسنت! أنهيت هذا الموضوع",
+"watch.topicEnd.description": "عمل رائع! دلوقتي تقدر تراجع المحتوى أو تختبر نفسك علشان تثبت المعلومات أكتر.",
+"watch.topicEnd.summary.title": "الملخص",
+"watch.topicEnd.summary.description": "راجع أهم النقاط بسرعة",
+"watch.topicEnd.quiz.title": "الاختبار",
+"watch.topicEnd.quiz.description": "اختبر مدى فهمك",
+"watch.topicEnd.flashcards.title": "البطاقات التعليمية",
+"watch.topicEnd.flashcards.description": "درّب ذاكرتك بالمراجعة السريعة",
+"watch.topicEnd.next.title": "الموضوع التالي",
+"watch.topicEnd.next.description": "انتقل إلى الجزء التالي",
+"watch.stuck.repeatedSeek": "لاحظنا إنك بترجع لنفس الجزء كتير، محتاج مساعدة؟",
+"watch.stuck.seekPause": "واضح إنك وقفت بعد ما رجعت لجزء معين، تحب أوضحه؟",
+"watch.stuck.timeSpent": "واضح إنك واخد وقت في الجزء ده، محتاج شرح إضافي؟",
+"watch.stuck.default": "هل تحتاج أي مساعدة؟",
+"watch.stuck.question.simple": "هل ممكن تشرح {title} عند {time} بطريقة أبسط؟",
+"watch.stuck.question.breakdown": "أنا مش فاهم {title} عند {time}. ممكن تشرحه خطوة بخطوة؟",
+"watch.stuck.question.example": "ممكن تديني مثال عملي على {title} عند {time}؟",
+"watch.stuck.question.keyPoints": "إيه أهم النقاط اللي لازم أعرفها عن {title} عند {time}؟",
+"watch.stuck.question.clarify": "أنا محتار في {title} عند {time}. ممكن توضحها؟",
+"watch.stuck.help": "أيوه، ساعدني",
+"watch.stuck.dismiss": "لأ، شكرًا",
+"watch.video.marker": "علامة",
+"watch.video.speed": "السرعة",
+"watch.video.normal": "العادية",
+"watch.review": "للمراجعة",
+"watch.content.watch": "المشاهدة",
+"watch.content.summary": "الملخص",
+"watch.content.quiz": "الاختبار",
+"watch.content.cards": "البطاقات",
+"watch.save": "حفظ",
+"watch.searchTopics": "ابحث داخل الموضوعات...",
+"watch.search.placeholder": "ابحث بأي كلمة داخل الفيديو...",
+"watch.search.tooShort": "اكتب 3 أحرف على الأقل لبدء البحث.",
+"watch.search.failed": "تعذر البحث داخل محتوى الفيديو.",
+"watch.search.noResults": "مفيش نتائج لـ \"{query}\".",
+
+
+
+"common.confirm": "تأكيد"
 }

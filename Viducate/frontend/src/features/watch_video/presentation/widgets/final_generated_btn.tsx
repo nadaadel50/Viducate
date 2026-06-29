@@ -3,7 +3,7 @@ import clsx from "clsx";
 
 import { CustomButton } from "../../../../core/componants/custum_btn";
 import { FONT_STYLES } from "../../../../core/constants/fonts";
-
+import { FormattedMessage } from "react-intl";
 const styles = {
   quiz: {
     border: "border-[#6f8ab7]",
@@ -31,7 +31,7 @@ type Variant = keyof typeof styles;
 
 type FinalGeneratedBtnProps = {
   icon: ReactNode;
-  label: string;
+  label: ReactNode;
   onClick: () => void;
   variant: Variant;
   reviewCards?: number;
@@ -72,7 +72,9 @@ export function FinalGeneratedBtn({
           )}
         >
           <span className="h-1.5 w-1.5 animate-pulse rounded-full bg-green-500" />
-          <span className="ml-1 hidden sm:inline">Review</span>
+          <span className="ml-1 hidden sm:inline">
+  <FormattedMessage id="watch.review" />
+</span>
         </span>
       ) : (
         <span className={clsx(FONT_STYLES.topicStatus, "px-2 py-0.5")}>

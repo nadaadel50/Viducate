@@ -15,7 +15,7 @@ import { QuizDifficultyModal } from "../../../QuizSystem/presentation/componants
 import { SummaryStyleModal } from "../../../summarization/presentation/componants/summary_style_modal";
 import { FONT_STYLES } from "../../../../core/constants/fonts";
 import { formatVideoTime } from "../../../../core/utils/fomat_time";
-
+import { useIntl } from "react-intl";
 type ContentLearningCardProps = {
   isSelected: boolean;
   onClick: () => void;
@@ -30,7 +30,7 @@ export function ContentLearningCard({
   const { setSelectedTopic, videoId, completedTopics } = useLearningSession();
   const { isDueForSegment } = useDueFlashcards();
   const navigate = useNavigate();
-
+  const intl = useIntl();
   const [isQuizModalOpen, setIsQuizModalOpen] = useState(false);
   const [isSummaryModalOpen, setIsSummaryModalOpen] = useState(false);
 
@@ -112,7 +112,9 @@ export function ContentLearningCard({
             className={` flex shrink-0 items-center gap-1 ${FONT_STYLES.topicStatus}
             rounded-full bg-green-50 px-2 py-0.5 text-[10px] font-bold text-green-600`}>
               <span className="h-1.5 w-1.5 animate-pulse rounded-full bg-green-500" />
-              Review
+              {intl.formatMessage({
+  id: "watch.review",
+})}
             </span>
           ) : (
             <span className={`"px-2 py-0.5 text-[10px] ${FONT_STYLES.topicStatus}"`}>&nbsp;</span>
@@ -133,19 +135,25 @@ export function ContentLearningCard({
           <ContentGenerationBtn
             onClick={() => {}}
             icon={<TvMinimalPlay size={18} />}
-            label="Watch"
+            label={intl.formatMessage({
+  id: "watch.content.watch",
+})}
           />
 
           <ContentGenerationBtn
             onClick={() => setIsSummaryModalOpen(true)}
             icon={<NotebookText size={18} />}
-            label="Summary"
+            label={intl.formatMessage({
+  id: "watch.content.summary",
+})}
           />
 
           <ContentGenerationBtn
             onClick={handleQuizClick}
             icon={<FileQuestion size={18} />}
-            label="Quiz"
+            label={intl.formatMessage({
+  id: "watch.content.quiz",
+})}
           />
 
           <ContentGenerationBtn
@@ -153,7 +161,9 @@ export function ContentLearningCard({
               navigate(`/WatchVideo/flashcards/${cardInfo.segment_id}`)
             }
             icon={<Layers size={18} />}
-            label="Cards"
+            label={intl.formatMessage({
+  id: "watch.content.cards",
+})}
             isDue={isDue}
           />
         </div>

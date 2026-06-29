@@ -1,6 +1,5 @@
 import { ClipboardList, FileText } from "lucide-react";
-import { FormattedMessage } from "react-intl";
-
+import { FormattedMessage, useIntl } from "react-intl";
 import { BaseModal } from "../../../../core/componants/base_modal";
 import { TopicEndCard } from "../../../../core/componants/topic_ended_card";
 import {
@@ -17,29 +16,39 @@ type Props = {
   onSelect: (style: SummaryStyle) => void;
 };
 
-const SUMMARY_OPTIONS = [
-  {
-    id: "study_notes",
-    variant: "purple",
-    title: "Study Notes",
-    description: "Detailed points and key concepts for deep learning",
-    icon: <ClipboardList />,
-  },
-  {
-    id: "summary",
-    variant: "blue",
-    title: "Summary",
-    description: "Concise overview of the topic for quick revision",
-    icon: <FileText />,
-  },
-] as const;
 
 export function SummaryStyleModal({
   isOpen,
   onClose,
   onSelect,
 }: Props) {
+  const intl = useIntl();
+  const SUMMARY_OPTIONS = [
+  {
+    id: "study_notes",
+    variant: "purple",
+    title: intl.formatMessage({
+      id: "summary.studyNotesTitle",
+    }),
+    description: intl.formatMessage({
+      id: "summary.studyNotesDescription",
+    }),
+    icon: <ClipboardList />,
+  },
+  {
+    id: "summary",
+    variant: "blue",
+    title: intl.formatMessage({
+      id: "summary.summaryTitle",
+    }),
+    description: intl.formatMessage({
+      id: "summary.summaryDescription",
+    }),
+    icon: <FileText />,
+  },
+] as const;
   return (
+
     <BaseModal
       isOpen={isOpen}
       onClose={onClose}

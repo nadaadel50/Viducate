@@ -1,4 +1,3 @@
-import { FormattedMessage } from "react-intl";
 
 import { COLORS } from "../../../../core/constants/colors";
 
