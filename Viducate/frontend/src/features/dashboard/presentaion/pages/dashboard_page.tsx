@@ -16,24 +16,24 @@ export function DashboardPage() {
     data,
     isLoading,
     error,
-  
+
     handleOpenDeleteMessage,
     openDeleteMessage,
     selectedVideo,
   } = useDashboard();
-const intl = useIntl();
+  const intl = useIntl();
   const { handleDelete, toast, clearToast } = useDeleteVideo();
 
   if (isLoading) {
     return (
-            <LoadingScreen
-            smallText={intl.formatMessage({
-        id: "dashboard.loading.small",
-      })}
-      bigText={intl.formatMessage({
-        id: "dashboard.loading.big",
-      })}
-/>
+      <LoadingScreen
+        smallText={intl.formatMessage({
+          id: "dashboard.loading.small",
+        })}
+        bigText={intl.formatMessage({
+          id: "dashboard.loading.big",
+        })}
+      />
     );
   }
 
@@ -49,14 +49,10 @@ const intl = useIntl();
       className="flex flex-col w-full min-h-screen font-display px-4 sm:px-6 md:px-8 lg:px-12 xl:px-16 py-4 md:py-5 gap-6 md:gap-8 lg:gap-10"
     >
       {toast && (
-        <Toast
-          message={toast.message}
-          type={toast.type}
-          onClose={clearToast}
-        />
+        <Toast message={toast.message} type={toast.type} onClose={clearToast} />
       )}
 
-      <div className="w-full max-w-7xl mx-auto flex flex-col gap-6 md:gap-8 lg:gap-10">
+      <div className="w-full max-w-7xl mx-auto flex flex-col gap-5">
         {/* User Card */}
         <UserCard />
 
@@ -72,21 +68,21 @@ const intl = useIntl();
       </div>
 
       <ConfirmationModal
-  open={openDeleteMessage}
-  title={intl.formatMessage({
-    id: "dashboard.deleteModal.title",
-  })}
-  description={intl.formatMessage({
-    id: "dashboard.deleteModal.description",
-  })}
-  onClose={() => handleOpenDeleteMessage(false)}
-  onConfirm={() => {
-  if (!selectedVideo?.videoId) return;
+        open={openDeleteMessage}
+        title={intl.formatMessage({
+          id: "dashboard.deleteModal.title",
+        })}
+        description={intl.formatMessage({
+          id: "dashboard.deleteModal.description",
+        })}
+        onClose={() => handleOpenDeleteMessage(false)}
+        onConfirm={() => {
+          if (!selectedVideo?.videoId) return;
 
-  handleDelete(selectedVideo.videoId);
-  handleOpenDeleteMessage(false);
-}}
-/>
+          handleDelete(selectedVideo.videoId);
+          handleOpenDeleteMessage(false);
+        }}
+      />
     </div>
   );
 }

@@ -1,6 +1,8 @@
 # OCR Output — video_id=5
 # Language: en
-# Total segments: 2
+# Total segments: 4
 
-[00:00:00] O(n!)O(n^2) | O(n log n) | 0(1) = constant time | 0(n) | 0(log n) = logarithmic time | (steps) | O(n) = linear time | 0(log n) | O(n log n) = quasilinear time | 0(1) | O(n^2) = quadratic time | data (n) | O(n!) = factorial time | 1322-34
-[00:06:17] O(n!) O(n^2) | o(log n) | log n) = quasilinear time | o(n!) | = factorial | 1087,728
+[00:00:19] usually done recursively | divide  conquer
+[00:02:29] mergesort array a | f  n   1 | merge array a, array b | while  a anc b hsave elemaris | if a0  b0
+[00:02:39] mergesort array a | merge  array a, array b | f  n   1 | while  a anc b hsave elemaerris | if a0  b0
+[00:02:59] Thank you for watching! | Please subscribe and share.

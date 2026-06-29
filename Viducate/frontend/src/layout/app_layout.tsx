@@ -10,7 +10,7 @@ export function AppLayout() {
   };
 
   return (
-    <div className="min-h-screen bg-white">
+    <div className="flex flex-col">
       {userData && (
         <Navbar
           user={userData}
@@ -18,7 +18,7 @@ export function AppLayout() {
         />
       )}
 
-      <main className="pt-12">
+      <main className="pt-11 flex-1">
         <Outlet />
       </main>
     </div>

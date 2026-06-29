@@ -4,7 +4,7 @@ export const FONT_STYLES = {
   pageSubtitle: "text-sm md:text-base text-slate-500",
 
   // ===== Sections =====
-  sectionTitle: "text-lg font-bold tracking-tight",
+  sectionTitle: "text-lg lg:text-2xl font-bold tracking-tight",
   sectionSubtitle: "text-sm text-slate-500",
 
   // ===== Hero =====
@@ -22,7 +22,7 @@ export const FONT_STYLES = {
   cardBadge: "text-[10px] font-bold uppercase tracking-wide",
 
   // ===== Topic Cards =====
-  topicTitle: "text-sm font-bold leading-tight",
+  topicTitle: "text-[13px] font-semibold leading-tight",
   topicDescription: "text-xs text-slate-400 leading-relaxed",
   topicTime: "text-[10px] font-bold",
   topicStatus: "text-[9px] font-bold uppercase tracking-wide",

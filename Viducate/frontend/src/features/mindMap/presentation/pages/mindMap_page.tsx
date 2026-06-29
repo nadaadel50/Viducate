@@ -1,9 +1,4 @@
-import {
-  Background,
-  Controls,
-  ReactFlow,
- 
-} from "reactflow";
+import { Background, Controls, ReactFlow } from "reactflow";
 
 import "reactflow/dist/style.css";
 import { CustomNode } from "../widgets/custom_node";
@@ -26,7 +21,7 @@ export default function MindMapPage() {
     isLoading,
     error,
   } = useMindMapFlow();
-const intl = useIntl();
+  const intl = useIntl();
 
   const { nodes, edges, onNodesChange, onEdgesChange, onConnect } =
     useMindMapController({
@@ -36,22 +31,20 @@ const intl = useIntl();
   if (isLoading) {
     return (
       <GenerationLoadingScreen
-  icon={<Brain />}
-  titlePrefix={intl.formatMessage({
-    id: "mindmap.loading.titlePrefix",
-  })}
-  titleHighlight={intl.formatMessage({
-    id: "mindmap.loading.titleHighlight",
-  })}
-  subtitle={intl.formatMessage({
-    id: "mindmap.loading.subtitle",
-  })}
-/>
+        icon={<Brain />}
+        titlePrefix={intl.formatMessage({
+          id: "mindmap.loading.titlePrefix",
+        })}
+        titleHighlight={intl.formatMessage({
+          id: "mindmap.loading.titleHighlight",
+        })}
+        subtitle={intl.formatMessage({
+          id: "mindmap.loading.subtitle",
+        })}
+      />
     );
   }
   if (error) return <ErrorScreen errorMessage={error.message} />;
-
-
 
   return (
     <div
@@ -64,17 +57,16 @@ const intl = useIntl();
         backgroundImage: COLORS.background.radialGradient,
       }}
     >
-
-        <div className="w-full ">
-       <button
-  onClick={() => downloadMindMap()}
-  className="px-4 py-2 rounded bg-blue-600 text-white hover:bg-blue-700 transition"
->
-  <FormattedMessage id="mindmap.download" />
-</button>
+      <div className="w-full ">
+        {/* <button
+          onClick={() => downloadMindMap()}
+          className="px-4 py-2 rounded bg-blue-600 text-white hover:bg-blue-700 transition"
+        >
+          <FormattedMessage id="mindmap.download" />
+        </button> */}
       </div>
       <ReactFlow
-      id="mindmap"
+        id="mindmap"
         nodes={nodes}
         edges={edges}
         onNodesChange={onNodesChange}
@@ -86,9 +78,6 @@ const intl = useIntl();
         <Background />
         <Controls />
       </ReactFlow>
-
-
-    
     </div>
   );
 }

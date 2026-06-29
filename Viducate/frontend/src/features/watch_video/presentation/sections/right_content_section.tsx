@@ -6,25 +6,29 @@ import {
   Brain,
   PanelRightOpen,
 } from "lucide-react";
+import { useNavigate } from "react-router";
+import { FormattedMessage } from "react-intl";
+
 import { VideoPlayer } from "./video_part";
 import { TranscriptSearch } from "../widgets/transcript_search";
 import { FinalGeneratedBtn } from "../widgets/final_generated_btn";
 import { MainHeader } from "../widgets/main_header";
-import { ChatBotOpenBtn } from "../../../chat_bot/presenation/widgets/chat_bot_open_btn";
-import { AppRoutesNames } from "../../../../app/routers/routes";
 import { SummaryStyleModal } from "../../../summarization/presentation/componants/summary_style_modal";
 import { QuizDifficultyModal } from "../../../QuizSystem/presentation/componants/quiz_difficulty_modal";
-import { useNavigate } from "react-router";
-import { useRightContentSection } from "../hook/use_right_content_section";
 import { CustomButton } from "../../../../core/componants/custum_btn";
+
+import { AppRoutesNames } from "../../../../app/routers/routes";
+import { useRightContentSection } from "../hook/use_right_content_section";
 import { useDueFlashcards } from "../../../flash_cards/presentation/hooks/use_due_flash_cards";
-import { FormattedMessage } from "react-intl";
+import { ChatBotOpenBtn } from "../../../chat_bot/presenation/widgets/chat_bot_open_btn";
+
 type Props = {
   onOpenTopics?: () => void;
 };
 
 export function RightContentSection({ onOpenTopics }: Props) {
   const navigate = useNavigate();
+
   const {
     isQuizModalOpen,
     isSummaryModalOpen,
@@ -36,60 +40,59 @@ export function RightContentSection({ onOpenTopics }: Props) {
     handleCompleteClick,
     goToNextTopic,
   } = useRightContentSection();
-  const {totalDue}=useDueFlashcards()
-  //console.log("total due is: ",totalDue,hasDueCards)
 
+  const { totalDue } = useDueFlashcards();
 
   const footerActions = [
-  {
-    variant: "quiz",
-    icon: <FileQuestion size={20} />,
-    labelId: "watch.actions.finalQuiz",
-    onClick: handleFinalQuizClick,
-    totalReviewCards: 0,
-  },
-  {
-    variant: "summary",
-    icon: <FileText size={20} />,
-    labelId: "watch.actions.finalSummary",
-    onClick: () => setIsSummaryModalOpen(true),
-    totalReviewCards: 0,
-  },
-  {
-  variant: "flashcards",
-  icon: <FileQuestion size={20} />,
-  labelId: "watch.actions.finalFlashcards",
-  onClick: () =>
-    navigate(
-      `${AppRoutesNames.watchVideo}/${AppRoutesNames.flashCards}`
-    ),
-  totalReviewCards: totalDue,
-},
-  {
-    variant: "mindmap",
-    icon: <Brain size={20} />,
-    labelId: "watch.actions.finalMindMap",
-    onClick: () => navigate(AppRoutesNames.mindMap),
-    totalReviewCards: 0,
-  },
-] as const;
+    {
+      variant: "quiz",
+      icon: <FileQuestion size={20} />,
+      labelId: "watch.actions.finalQuiz",
+      onClick: handleFinalQuizClick,
+      totalReviewCards: 0,
+    },
+    {
+      variant: "summary",
+      icon: <FileText size={20} />,
+      labelId: "watch.actions.finalSummary",
+      onClick: () => setIsSummaryModalOpen(true),
+      totalReviewCards: 0,
+    },
+    {
+      variant: "flashcards",
+      icon: <FileQuestion size={20} />,
+      labelId: "watch.actions.finalFlashcards",
+      onClick: () =>
+        navigate(`${AppRoutesNames.watchVideo}/${AppRoutesNames.flashCards}`),
+      totalReviewCards: totalDue,
+    },
+    {
+      variant: "mindmap",
+      icon: <Brain size={20} />,
+      labelId: "watch.actions.finalMindMap",
+      onClick: () => navigate(AppRoutesNames.mindMap),
+      totalReviewCards: 0,
+    },
+  ] as const;
 
   return (
-    <div className=" min-h-screen w-full flex flex-col justify-center items-center">
-     
-      <div className="w-full max-w-5xl px-8">
-         <button onClick={onOpenTopics} className="lg:hidden my-3 block  p-3 border rounded-xl border-gray-100 ">
+    <div className="w-full flex flex-col items-center pt-6 min-h-[calc(100vh-40px)]">
+
+      <div className="w-full max-w-5xl px-4 flex-1">
+        <button
+          onClick={onOpenTopics}
+          className="lg:hidden my-3 block p-3 border rounded-xl border-gray-100"
+        >
           <PanelRightOpen size={25} />
         </button>
-        
 
         <MainHeader />
 
-        <div className="flex-1 pb-10">
-          <div className="mt-2">
+        <div className="pb-10">
+          <div className="my-2">
             <VideoPlayer />
           </div>
-          <div className="mt-5">
+          <div className="mt-4">
             <TranscriptSearch />
           </div>
 
@@ -108,15 +111,17 @@ export function RightContentSection({ onOpenTopics }: Props) {
               onClick={goToNextTopic}
               className="bg-slate-900 text-white hover:bg-slate-800"
             >
-            <FormattedMessage id="watch.actions.nextTopic" />
+              <FormattedMessage id="watch.actions.nextTopic" />
             </CustomButton>
           </div>
         </div>
       </div>
 
-      <div className="w-full  border-t border-slate-200 bg-white/80 backdrop-blur p-4 sticky bottom-0">
-        <div className="grid grid-cols-2 gap-3">
-          {footerActions.map(({ variant, icon, labelId, onClick,totalReviewCards }) => (
+
+
+      <div className="w-full backdrop-blur ">
+        <div className=" mx-auto w-full grid grid-cols-2 gap-3 border-t p-4 border-gray-100 ">
+          {footerActions.map(({ variant, icon, labelId, onClick, totalReviewCards }) => (
             <FinalGeneratedBtn
               key={variant}
               variant={variant}
@@ -128,7 +133,6 @@ export function RightContentSection({ onOpenTopics }: Props) {
           ))}
         </div>
       </div>
-
       <ChatBotOpenBtn />
 
       <QuizDifficultyModal

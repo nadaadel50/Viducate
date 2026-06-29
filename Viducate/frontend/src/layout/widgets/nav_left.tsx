@@ -18,7 +18,7 @@ export function NavbarLeft({ isDashboard }: NavbarLeftProps) {
 
       <button
         onClick={() => navigate(AppRoutesNames.dashboard)}
-        className={`flex cursor-pointer items-center gap-1.5 rounded-lg px-2.5 py-1.5 text-sm transition-colors ${
+        className={` flex cursor-pointer items-center gap-1.5 rounded-lg px-2.5 py-1.5 text-sm transition-colors ${
           isDashboard
             ? "bg-indigo-50 font-medium text-indigo-600"
             : "font-normal text-gray-500 hover:bg-gray-50 hover:text-gray-800"

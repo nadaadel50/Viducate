@@ -18,7 +18,7 @@ export function ContentGenerationBtn({
     <button
       onClick={onClick}
       title={label}
-      className={`flex cursor-pointer flex-col items-center justify-center rounded-lg border bg-white/50 p-2 transition-all 
+      className={`flex cursor-pointer flex-col items-center justify-center rounded-lg border bg-white/50 px-1 py-2 transition-all 
         shadow-sm hover:border-[#4f46e5]/30 hover:bg-white 
         hover:text-[#4f46e5] ${isDue ? "border-green-500 text-green-600" : "border-slate-200/60 text-slate-400"}`}
     >
