@@ -30,16 +30,16 @@ export function ProfilePage() {
   };
 
   const { isLoading, error } = useGetUserData();
-const intl = useIntl();
+  const intl = useIntl();
   if (isLoading) {
     return (
       <LoadingScreen
-      smallText={intl.formatMessage({
-  id: "profile.loading.small",
-})}
-bigText={intl.formatMessage({
-  id: "profile.loading.big",
-})}
+        smallText={intl.formatMessage({
+          id: "profile.loading.small",
+        })}
+        bigText={intl.formatMessage({
+          id: "profile.loading.big",
+        })}
       />
     );
   }
@@ -76,14 +76,14 @@ bigText={intl.formatMessage({
       <ConfirmationModal
         open={showDeleteModal}
         title={intl.formatMessage({
-  id: "profile.deleteModal.title",
-})}
-description={intl.formatMessage({
-  id: "profile.deleteModal.description",
-})}
-confirmText={intl.formatMessage({
-  id: "profile.deleteModal.confirm",
-})}
+          id: "profile.deleteModal.title",
+        })}
+        description={intl.formatMessage({
+          id: "profile.deleteModal.description",
+        })}
+        confirmText={intl.formatMessage({
+          id: "profile.deleteModal.confirm",
+        })}
         isLoading={deleteAccount.isDeleting}
         onClose={deleteAccount.closeModal}
         onConfirm={deleteAccount.handleDelete}

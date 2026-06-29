@@ -6,7 +6,7 @@ import {
   FONT_WEIGHT,
 } from "../../../../core/constants/fonts_update";
 
-import { formatDate } from "../componants/format_date";
+import { formatDate } from "../../../../core/utils/format_date";
 import { useVideoProgress } from "../hooks/use_video_progress";
 
 import type { VideoReport } from "../../domain/entity/report_entity";

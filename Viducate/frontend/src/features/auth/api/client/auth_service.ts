@@ -1,4 +1,5 @@
 import { apiClient } from "../../../../core/api/apiClient";
+import type { ApiResult } from "../../../../core/api/apiResult";
 import type { ForgetPassReqDTO } from "../models/forgetPass/forgetpass_req_dto";
 import type { ForgetPasswordResponseDto } from "../models/forgetPass/forgetpass_response_dto";
 import type { ResetPasswordResponseDto } from "../models/forgetPass/reset_pass_response_dto";
@@ -6,6 +7,7 @@ import type { ResetPasswordRequestDto } from "../models/forgetPass/reset_passwor
 
 import type { LoginRequestDto } from '../models/login/login_request_dto';
 import type { SignupRequestDto } from '../models/signup/signup_request_dto';
+import type { UserDTO } from "../models/user_dto";
 
 export class AuthApiService {
   async forgetPassword(
@@ -42,7 +44,7 @@ export const authService = {
     return response.data;
   },
   
-  getCurrentUser: async () => {
+  getCurrentUser: async ():Promise<UserDTO> => {
     const response = await apiClient.get('/auth/me');
     return response.data;
   },

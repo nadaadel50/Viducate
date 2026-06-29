@@ -10,6 +10,7 @@ import { toSignupRequestDto } from "../../api/models/signup/signup_request_dto";
 import type { SignupResponseDto } from "../../api/models/signup/signup_response_dto";
 import { toLoginRequestDto } from "../../api/models/login/login_request_dto";
 import type { LoginResponseDto } from "../../api/models/login/login_response_dto";
+import type { User } from "../../domain/entity/user";
 
 
 export class AuthRepoImp implements AuthRepo {
@@ -17,6 +18,10 @@ export class AuthRepoImp implements AuthRepo {
     constructor(AuthDataSource: AuthDataSource) {
         this.AuthDataSource = AuthDataSource;
     }
+  async getCurrentUser(): Promise<ApiResult<User>> {
+    return this.AuthDataSource.getCurrentUser()
+    
+  }
     resetPassword(resetPassReq: ResetPasswordRequest): Promise<ApiResult<string>> {
         return this.AuthDataSource.resetPassword(resetPassReq)
     }
