@@ -1,5 +1,6 @@
 import { LogOut, Settings } from "lucide-react";
 import { useNavigate } from "react-router-dom";
+import { AppRoutesNames } from "../../app/routers/routes";
 
 type NavbarDropdownProps = {
   fullName: string;
@@ -27,7 +28,7 @@ export function NavbarDropdown({
       <button
         onClick={() => {
           closeDropdown();
-          navigate("/profile");
+          navigate(AppRoutesNames.profile);
         }}
         className="flex w-full cursor-pointer items-center gap-2.5 px-3 py-2 text-sm text-gray-600 transition-colors hover:bg-gray-50"
       >

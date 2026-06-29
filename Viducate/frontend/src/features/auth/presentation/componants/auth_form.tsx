@@ -30,8 +30,7 @@ export function AuthForm({ type }: AuthFormProps) {
     serverError,
     clearError,
     isSubmitting,
-    lockoutDisplay,
-    isLocked,
+  
   } = useAuthForm(isLogin);
 
   const formValues = watch();
@@ -55,7 +54,7 @@ export function AuthForm({ type }: AuthFormProps) {
       }),
     error: errors[fieldName]?.message,
   });
-  console.log("errors", serverError);
+
   return (
     <div className="relative w-full space-y-3 py-1 md:py-2 lg:py-2">
       {serverError && (
@@ -139,7 +138,7 @@ export function AuthForm({ type }: AuthFormProps) {
           <CustomInput
             label={intl.formatMessage({ id: "auth.password" })}
             placeholder="••••••••"
-            type="password"
+       
             {...getFieldProps("password")}
           />
 
@@ -148,6 +147,7 @@ export function AuthForm({ type }: AuthFormProps) {
               label={intl.formatMessage({ id: "auth.confirmPassword" })}
               placeholder="••••••••"
               type="password"
+              
               {...getFieldProps("confirmPassword")}
             />
           )}

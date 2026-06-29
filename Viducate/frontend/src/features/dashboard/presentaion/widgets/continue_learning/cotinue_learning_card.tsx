@@ -15,7 +15,7 @@ export function ContinueLearningCard({ cardData }: ContinueLearningCardProps) {
 
   const handleClick = async () => {
     await setVideoId(cardData.videoId);
-    navigate(AppRoutesNames.wathcVideo);
+    navigate(AppRoutesNames.watchVideo);
   };
 
   return (

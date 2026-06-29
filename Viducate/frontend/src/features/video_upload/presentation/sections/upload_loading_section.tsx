@@ -75,7 +75,7 @@ console.log("error value:", error); // ← ايه اللي بيطبع؟
   const handleAnalyze = useCallback(() => {
   
 sessionStorage.setItem('from_upload', 'true');
-    if (videoId) navigate(AppRoutesNames.ProcessingPage, { replace: true });
+    if (videoId) navigate(AppRoutesNames.processing, { replace: true });
   }, [videoId]);
 
   const handleCancelClick = async () => {

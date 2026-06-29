@@ -32,19 +32,25 @@ export function ProcessingPage() {
   useEffect(() => {
     if (status !== "completed") return;
     const timeout = setTimeout(() => {
-      navigate(AppRoutesNames.wathcVideo, { replace: true });
+      navigate(AppRoutesNames.watchVideo, {
+        replace: true,
+      });
     }, 2500);
     return () => clearTimeout(timeout);
   }, [status, navigate]);
 
   const handleCancelConfirm = () => {
     cancel(videoId!, () => {
-      navigate("/UploadVideoPage", { replace: true });
+      navigate(AppRoutesNames.uploadVideo, {
+        replace: true,
+      });
     });
   };
 
   const handleRetry = () => {
-    navigate("/UploadVideoPage", { replace: true });
+    navigate(AppRoutesNames.uploadVideo, {
+      replace: true,
+    });
   };
 
 const [isFromUpload] = useState(

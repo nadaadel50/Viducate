@@ -1,12 +1,12 @@
 import { useState } from "react";
 import { forgetPassUseCase } from "../../../../core/di/auth_container";
-import { goToLSuccessSendEmail } from "../../../../core/navigation/navigation";
 import { ForgetPassReq } from "../../domain/entity/forgetpass_request";
 import { useNavigate } from "react-router-dom";
 import { z } from "zod";
 import { useApiError } from "./use_api_error";
 import { useT } from "../../../../core/hooks/useTranslation";
 import { STORAGE_KEYS } from "../../../../core/constants";
+import { AppRoutesNames } from "../../../../app/routers/routes";
 
 export const useForgetPassword = () => {
 
@@ -74,7 +74,8 @@ export const useForgetPassword = () => {
 
       localStorage.removeItem(STORAGE_KEYS.forgetEmail);
 
-      goToLSuccessSendEmail(navigate, email);
+      // goToLSuccessSendEmail(navigate, email);
+      navigate(AppRoutesNames.successSendEmail)
 
     } else {
       setApiError(response.error);

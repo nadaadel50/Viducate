@@ -23,6 +23,7 @@ function parseLockoutMinutes(message: string): number | null {
 export const useAuthForm = (isLogin: boolean) => {
   const { login, signup } = useAuth();
   const navigate = useNavigate();
+
   const intl = useIntl();
   const [serverError, setServerError] = useState<string | null>(null);
   const [isSubmitting, setIsSubmitting] = useState(false);
@@ -80,18 +81,23 @@ export const useAuthForm = (isLogin: boolean) => {
             .string()
             .min(2, intl.formatMessage({ id: "auth.lastNameRequired" })),
       email: z.string().email(intl.formatMessage({ id: "auth.invalidEmail" })),
-      password: z
-        .string()
-        .min(8, intl.formatMessage({ id: "auth.passwordMinLength" }))
-        .regex(
-          /[A-Z]/,
-          intl.formatMessage({ id: "auth.passwordUppercaseRequired" }),
-        )
-        .regex(/[0-9]/, intl.formatMessage({ id: "auth.passwordReq.number" }))
-        .regex(
-          /[^A-Za-z0-9]/,
-          intl.formatMessage({ id: "auth.passwordReq.special" }),
-        ),
+      password: isLogin
+        ? z.string().nonempty("pass is req")
+        : z
+            .string()
+            .min(8, intl.formatMessage({ id: "auth.passwordMinLength" }))
+            .regex(
+              /[A-Z]/,
+              intl.formatMessage({ id: "auth.passwordUppercaseRequired" }),
+            )
+            .regex(
+              /[0-9]/,
+              intl.formatMessage({ id: "auth.passwordReq.number" }),
+            )
+            .regex(
+              /[^A-Za-z0-9]/,
+              intl.formatMessage({ id: "auth.passwordReq.special" }),
+            ),
       confirmPassword: isLogin ? z.string().optional() : z.string(),
       rememberMe: z.boolean().optional(),
     })

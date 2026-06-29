@@ -49,7 +49,7 @@ export function StartUpload() {
             add_circle
           </span>
         }
-        onClick={() => navigate(AppRoutesNames.uploadPage)}
+        onClick={() => navigate(AppRoutesNames.uploadVideo)}
         className="border border-indigo-200 bg-white text-indigo-500 hover:border-indigo-400 hover:bg-indigo-50"
       >
         <FormattedMessage id="dashboard.empty.addFirstVideo" />

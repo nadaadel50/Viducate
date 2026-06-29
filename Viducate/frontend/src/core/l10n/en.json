@@ -77,6 +77,7 @@
   "auth.firstNameRequired": "First name required",
   "auth.lastNameRequired": "Last name required",
   "auth.invalidEmail": "Invalid email",
+  "auth.passwordMinRequired": "Password is required",
   "auth.passwordMinLength": "Password must be at least 8 characters",
   "auth.passwordUppercaseRequired": "Password must contain at least one uppercase letter",
   "auth.passwordsNotMatch": "Passwords don't match",
@@ -465,6 +466,9 @@
 "watch.search.failed": "Failed to search the transcript.",
 "watch.search.noResults": "No results found for \"{query}\".",
 
-"common.confirm": "Confirm"
+"common.confirm": "Confirm",
+
+
+"upload.video.maxSizeError": "Video size must be less than {size} MB."
 
 }
