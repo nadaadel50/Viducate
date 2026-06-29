@@ -42,6 +42,8 @@ const intl = useIntl();
       setShowExistingVideoModal(true);
       return;
     }
+  
+   sessionStorage.setItem('from_upload', 'true');
 
     navigate(AppRoutesNames.processing, {
       replace: true,

@@ -3,7 +3,9 @@ import { useQuery } from "@tanstack/react-query";
 import { getUserDataUsecase } from "../../../../core/di/profile_container";
 
 export function useGetUser() {
-    const token = localStorage.getItem('token')
+    const token =
+  localStorage.getItem("token") ??
+  sessionStorage.getItem("token");
   return useQuery({
     
     queryKey: ["userData"],

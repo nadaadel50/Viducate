@@ -3,47 +3,44 @@
   "segments": [
     {
       "segment_number": 1,
-      "start_time": "00:00:00",
-      "end_time": "00:05:56",
-      "main_topic": "Customizing Custom Nodes",
-      "title": "Creating Custom Node Shapes",
+      "start_time": "00:00",
+      "end_time": "02:01",
+      "main_topic": "البحث عن السلام الداخلي",
+      "title": "رحلة اكتشاف الذات والحلول الداخلية",
       "sub_topics": [
         {
-          "name": "Introduction to Custom Nodes",
-          "start_time": "00:00:00",
-          "end_time": "00:00:29",
-          "description": "All right guys welcome back to the channel once again and today someone asked me on my common box like how to make custom node like different different kind of shape so if you can see I have already converted this box into the like little bit it looks like ellipses so there's one way like if you can do like this you can do it otherwise you need to write custom css for that so I just implemented this thing like this so it's easy like you can write the css for that so So I put the border radius by 50% over here."
+          "name": "بحث التلميذ عن إجابات خارجية",
+          "start_time": "00:00",
+          "end_time": "00:47",
+          "description": "يحكى أنه في قديم الزمان سأل تلميذ معلمه الحكيم يا معلمي كيف أهدئ من عاصفة الأفكار في ذهني نظر إليه المعلم وقال يا بني أنا في غاية الانشغال الآن ولا أملك وقتا للحديث لماذا لا تذهب وتسأل أخاك الأكبر فهو حكيم مثلي انطلق التلميذ إلى أخيه الأكبر وسأله نفس السؤال الذي طرحه على معلمه انطلق التلميذ إلى أخية الأكبر وسأله ولكن الأخ الأكبر أجاب بتعب آسف يا أخي أنا أعاني من صداع شديد ولا أقوى على الكلام الآن لماذا لا تذهب وتسأل أخانا الثاني في الدارما ذهب التلميذ إلى أخيه الثاني في الدارما ولكنه واجهه بنفس الرد يا أخي معتي تؤلمني بشدة ولا أستطيع الحديث لماذا لا تذهب وتسأل سيدنا في الدارما فهو الأقدر على مساعدتك",
+          "content_type": "problem"
         },
         {
-          "name": "Assigning Custom Node Styles",
-          "start_time": "00:00:32",
-          "end_time": "00:01:41",
-          "description": "And if you want to do it into the code, so let me guide you where you can do that. So see, we have custom node over here. I already told you how to assign the custom node. So you can see these tools are two node types are the custom nodes we have. So first one, if you can see over here, custom node selector one. And second one is custom node selector Okay sorry custom node selector and custom node selector one Okay so see over here we have already defined the style properties Like what would be the style if we, so these are the handle type of style."
+          "name": "شكوى التلميذ وتوجيه المعلم نحو الذات",
+          "start_time": "00:47",
+          "end_time": "01:28",
+          "description": "عاد التلميذ إلى سيده واشتكى قائلا يا معلمي لقد سألت الجميع ولم يجبني أحد بالحيرة والارتباك فقال ولكن يا معلم لم يقل لي أحد شيئا يذكر أجاب المعلم بحكمة لقد أراد أن يخبروك أن الحل لمشاكلك يكمن بداخلك لا أحد يستطيع أن يهدئ عقلك غيرك عليك أن تخوض رحلة داخلية أن تتحدث مع نفسك وتفهم رغباتك ومخاوفك وتستكشف قوة عقلك وقلبك",
+          "content_type": "solution"
         },
         {
-          "name": "Defining Class Properties for Custom Nodes",
-          "start_time": "00:01:43",
-          "end_time": "00:03:19",
-          "description": "Okay, but custom color picker node. Okay, so what we can do, we can give the style to this one. Or we can write a style into the style.stss by giving the class to this. okay let's do a class give a class name over here like class name custom node one okay and let's see into the browser that we are getting that class name or not okay so let's reload this page go on now and if you see let's see so you can see custom color Activabe Windown | fyou bese to aanct picker so i have created this another node which one is having the class name that i written right Let's go open this object inside this."
-        },
-        {
-          "name": "Styling Custom Nodes with CSS",
-          "start_time": "00:03:20",
-          "end_time": "00:04:05",
-          "description": "So all the input properties inside of this. So what we can do, or what we can do, we can define the class property to this one. Like we can style it like this. Okay, so just give a padding. Let's give a background color first. Background color. Okay, so background color would be, I would like to have, let's choose one. Okay. this one will be better. Okay give some padding to this padding would be one REM okay and after that just give a border radius border radius will be 50% okay so"
-        },
-        {
-          "name": "Implementing Custom Node Styles in React",
-          "start_time": "00:04:06",
-          "end_time": "00:05:56",
-          "description": "So you can create a style.scss file over here like this. You get a style.scss. Okay, wait a minute. Let's copy this all this time first. And we'll see. And make this style.scss file this. style.scss. Okay, I'm not going to reset scss. and let's copy that class name or what was that a class name custom or select program okay first copy the styles dot here and let's replace this a with the class but we'll see Okay, so custom node one and you can just put this file inside the react flow."
+          "name": "إدراك الحقيقة وتحقيق السلام الداخلي",
+          "start_time": "01:28",
+          "end_time": "02:01",
+          "description": "كل ما تحتاجه موجود بداخلك في أعماق روحك العالم الخارجي ما هو إلا انعكاس لعالمك الداخلي في هذه اللحظة أدرك التلميذ الحقيقة فهم أن الإجابات التي يبحث عنها ليست في الخارج بل في داخله وعندها وصل إلى حالة من التنوير والسكون الداخلي تذكر يا صديقي لا أحد يستطيع حل مشاكلك نياب عنك أنت وحدك تملك القدرة على فهم ذاتك وتحقيق السلام الداخلي استمع إلى صوتك الداخلي واكتشف حقيقتك واعلم أن كل ما تحتاجه موجود بداخلك",
+          "content_type": "general"
         }
       ],
       "key_points": [
-        "Customizing custom nodes with CSS",
-        "Defining class properties for custom nodes",
-        "Implementing custom node styles in React"
-      ]
+        "البحث عن الحلول الخارجية غالبًا ما يكون غير مجدٍ.",
+        "الحل لمشاكلنا يكمن دائمًا في داخلنا.",
+        "فهم الذات وتحقيق السلام الداخلي مسؤولية شخصية."
+      ],
+      "_source_text": "يحكى أنه في قديم الزمان سأل تلميذ معلمه الحكيم يا معلمي كيف أهدئ من عاصفة الأفكار في ذهني نظر إليه المعلم وقال يا بني أنا في غاية الانشغال الآن ولا أملك وقتا للحديث لماذا لا تذهب وتسأل أخاك الأكبر فهو حكيم مثلي انطلق التلميذ إلى أخيه الأكبر وسأله نفس السؤال الذي طرحه على معلمه انطلق التلميذ إلى أخية الأكبر وسأله ولكن الأخ الأكبر أجاب بتعب آسف يا أخي أنا أعاني من صداع شديد ولا أقوى على الكلام الآن لماذا لا تذهب وتسأل أخانا الثاني في الدارما ذهب التلميذ إلى أخيه الثاني في الدارما ولكنه واجهه بنفس الرد يا أخي معتي تؤلمني بشدة ولا أستطيع الحديث لماذا لا تذهب وتسأل سيدنا في الدارما فهو الأقدر على مساعدتك عاد التلميذ إلى سيده واشتكى قائلا يا معلمي لقد سألت الجميع ولم يجبني أحد بالحيرة والارتباك فقال ولكن يا معلم لم يقل لي أحد شيئا يذكر أجاب المعلم بحكمة لقد أراد أن يخبروك أن الحل لمشاكلك يكمن بداخلك لا أحد يستطيع أن يهدئ عقلك غيرك عليك أن تخوض رحلة داخلية أن تتحدث مع نفسك وتفهم رغباتك ومخاوفك وتستكشف قوة عقلك وقلبك كل ما تحتاجه موجود بداخلك في أعماق روحك العالم الخارجي ما هو إلا انعكاس لعالمك الداخلي في هذه اللحظة أدرك التلميذ الحقيقة فهم أن الإجابات التي يبحث عنها ليست في الخارج بل في داخله وعندها وصل إلى حالة من التنوير والسكون الداخلي تذكر يا صديقي لا أحد يستطيع حل مشاكلك نياب عنك أنت وحدك تملك القدرة على فهم ذاتك وتحقيق السلام الداخلي استمع إلى صوتك الداخلي واكتشف حقيقتك",
+      "_quality": {
+        "score": 0.8561,
+        "flag": false,
+        "threshold": 0.32
+      }
     }
   ]
 }

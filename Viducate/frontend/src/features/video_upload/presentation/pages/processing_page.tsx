@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import { useNavigate } from "react-router-dom";
+import { Navigate, useNavigate } from "react-router-dom";
 
 import { TipCard } from "../componants/processing/tip_card";
 import { ProcessingProgress } from "../componants/processing/processing_progress";
@@ -20,19 +20,22 @@ export function ProcessingPage() {
   const intl = useIntl();
   const [isCancelModalOpen, setIsCancelModalOpen] = useState(false);
 
-  const { status, progress } = useProcessingStatus(videoId!);
 
+  
+  const { status, progress } = useProcessingStatus(videoId ?? undefined);
   const { cancel, isLoading: isCancelling } = useCancelAnalysis();
 
   useEffect(() => {
-    if (status !== "completed") return;
+    sessionStorage.removeItem('from_upload'); 
+  }, []);
 
+  useEffect(() => {
+    if (status !== "completed") return;
     const timeout = setTimeout(() => {
       navigate(AppRoutesNames.watchVideo, {
         replace: true,
       });
     }, 2500);
-
     return () => clearTimeout(timeout);
   }, [status, navigate]);
 
@@ -49,6 +52,18 @@ export function ProcessingPage() {
       replace: true,
     });
   };
+
+const [isFromUpload] = useState(
+  () => sessionStorage.getItem('from_upload') === 'true'
+);
+
+useEffect(() => {
+  sessionStorage.removeItem('from_upload');
+}, []);
+
+  if (!videoId || !isFromUpload) {
+    return <Navigate to="/UploadVideoPage" replace />;
+  }
 
   return (
     <div

@@ -1,11 +1,10 @@
-import { useCallback, useEffect, useRef, useState } from "react";
+import { useCallback, useEffect, useMemo, useRef, useState } from "react";
 import { useIntl } from "react-intl";
 import { useLocation, useNavigate } from "react-router";
 
 import { useGenerateQuiz } from "./use_generate_quiz";
 import { useQuiz } from "./use_quiz";
 import { calculateQuizTime } from "../utlis/quiz_time";
-
 
 type Difficulty = "easy" | "medium" | "hard";
 
@@ -17,7 +16,15 @@ export function useQuizPage() {
   const navigate = useNavigate();
   const intl = useIntl();
 
-  const savedKey = localStorage.getItem(`active_quiz_key_${segmentId}`);
+  const quizStorageKey = useMemo(
+    () =>
+      segmentId
+        ? `active_quiz_key_${segmentId}`
+        : `active_quiz_key_video_${videoId}`,
+    [segmentId, videoId],
+  );
+
+  const savedKey = localStorage.getItem(quizStorageKey);
 
   const [activeQuizKey, setActiveQuizKey] = useState<string | null>(
     savedKey ?? null,
@@ -27,8 +34,7 @@ export function useQuizPage() {
     initialDifficulty ?? "medium",
   );
 
-  const [isDifficultyModalOpen, setIsDifficultyModalOpen] =
-    useState(!savedKey);
+  const [isDifficultyModalOpen, setIsDifficultyModalOpen] = useState(!savedKey);
 
   const {
     quiz,
@@ -54,30 +60,37 @@ export function useQuizPage() {
     ? localStorage.getItem(`quiz_data_${activeQuizKey}`)
     : null;
 
-  const localQuiz = savedQuiz ? JSON.parse(savedQuiz) : null;
+  const localQuiz = useMemo(
+    () => (savedQuiz ? JSON.parse(savedQuiz) : null),
+    [savedQuiz],
+  );
 
-  const finalQuiz = localQuiz || quiz;
+  const finalQuiz = useMemo(() => localQuiz || quiz, [localQuiz, quiz]);
 
-  const questions = finalQuiz?.questions ?? [];
+  const questions = useMemo(
+    () => finalQuiz?.questions ?? [],
+    [finalQuiz],
+  );
 
   const isArabic = finalQuiz?.language === "ar";
 
-  const calculatedTime = finalQuiz
-    ? calculateQuizTime(
-        finalQuiz.total_questions ?? questions.length,
-        difficulty,
-      )
-    : 0;
+  const calculatedTime = useMemo(
+    () =>
+      finalQuiz
+        ? calculateQuizTime(
+            finalQuiz.total_questions ?? questions.length,
+            difficulty,
+          )
+        : 0,
+    [finalQuiz, questions.length, difficulty],
+  );
 
   const submitResult = getSubmitResult(finalQuiz?.quiz_id);
 
   useEffect(() => {
     if (!quiz || !activeQuizKey) return;
 
-    localStorage.setItem(
-      `quiz_data_${activeQuizKey}`,
-      JSON.stringify(quiz),
-    );
+    localStorage.setItem(`quiz_data_${activeQuizKey}`, JSON.stringify(quiz));
   }, [quiz, activeQuizKey]);
 
   const answersRef = useRef<Record<string, string>>({});
@@ -102,12 +115,7 @@ export function useQuizPage() {
     isAllAnswered,
     resetQuiz,
     progress,
-  } = useQuiz(
-    questions,
-    calculatedTime,
-    activeQuizKey ?? "",
-    handleSubmit,
-  );
+  } = useQuiz(questions, calculatedTime, activeQuizKey ?? "", handleSubmit);
 
   useEffect(() => {
     answersRef.current = answers;
@@ -122,30 +130,21 @@ export function useQuizPage() {
       }
 
       if (finalQuiz?.quiz_id) {
-        localStorage.removeItem(
-          `quiz_submit_${finalQuiz.quiz_id}`,
-        );
+        localStorage.removeItem(`quiz_submit_${finalQuiz.quiz_id}`);
       }
 
-      const newQuizKey = `${segmentId}_${newDifficulty}_${Date.now()}`;
+      const newQuizKey = segmentId
+        ? `${segmentId}_${newDifficulty}_${Date.now()}`
+        : `video_${videoId}_${newDifficulty}_${Date.now()}`;
 
-      localStorage.setItem(
-        `active_quiz_key_${segmentId}`,
-        newQuizKey,
-      );
+      localStorage.setItem(quizStorageKey, newQuizKey);
 
       setDifficulty(newDifficulty);
       setActiveQuizKey(newQuizKey);
 
       generate();
     },
-    [
-      activeQuizKey,
-      finalQuiz,
-      generate,
-      resetQuiz,
-      segmentId,
-    ],
+    [activeQuizKey, finalQuiz, generate, resetQuiz, segmentId, quizStorageKey, videoId],
   );
 
   useEffect(() => {
@@ -171,10 +170,7 @@ export function useQuizPage() {
   }, [setCurrentIndex, setIsReviewMode, setQuizState]);
 
   const handleNext = useCallback(() => {
-    if (
-      currentIndex === questions.length - 1 &&
-      !isReviewMode
-    ) {
+    if (currentIndex === questions.length - 1 && !isReviewMode) {
       handleSubmit();
       setQuizState("results");
       return;
@@ -202,8 +198,7 @@ export function useQuizPage() {
   }, [activeQuizKey, navigate]);
 
   const currentSubmitQuestion = submitResult?.questions.find(
-    (question) =>
-      question.questionId === currentQuestion?.question_id,
+    (question) => question.questionId === currentQuestion?.question_id,
   );
 
   return {

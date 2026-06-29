@@ -2,7 +2,6 @@ import { BrowserRouter, Route, Routes } from "react-router-dom";
 
 import { AppRoutesNames } from "./routes";
 import { PublicRoute } from "./publicRoutes";
-import { AppLayout } from "../../layout/app_layout";
 
 // Auth
 import LoginPage from "../../features/auth/presentation/pages/login_page";
@@ -39,11 +38,11 @@ import SummaryPage from "../../features/summarization/presentation/pages/summary
 import StudyNotesPage from "../../features/summarization/presentation/pages/study_notes_page";
 import { GeneratingSummaryPage } from "../../features/summarization/presentation/pages/summary_generation_page";
 import { GeneratingStudyNotesPage } from "../../features/summarization/presentation/pages/study_notes_generation_page";
-
-// Watch
+import { AppLayout } from "../../layout/app_layout";
+import { ProtectedRoute } from "./protextedRoutes";
 import { WatchLayout } from "../../features/watch_video/presentation/pages/watch_outlet";
+import  { FlashCards } from "../../features/flash_cards/presentation/pages/flash_card_page";
 import { MainPage } from "../../features/watch_video/presentation/pages/main_page";
-import { FlashCards } from "../../features/flash_cards/presentation/pages/flash_card_page";
 
 export function AppRoutes() {
   return (
@@ -91,6 +90,7 @@ export function AppRoutes() {
         />
 
         {/* ================= APP ================= */}
+        <Route element={<ProtectedRoute />}>
 
         <Route element={<AppLayout />}>
           <Route
@@ -204,7 +204,9 @@ export function AppRoutes() {
             />
           </Route>
         </Route>
-      </Routes>
+      </Route>
+    </Routes>
+      
     </BrowserRouter>
   );
 }
