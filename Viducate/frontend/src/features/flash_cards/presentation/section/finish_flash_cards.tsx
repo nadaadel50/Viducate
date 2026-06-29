@@ -30,7 +30,7 @@ export function FinishSessionCard({ answers, onEndSession }: Props) {
               onClick={() => onEndSession(dueCards)}
               className="group rounded-2xl bg-gradient-to-r from-green-500 to-emerald-600 px-5 py-3 text-white shadow-lg hover:scale-105 hover:shadow-xl"
             >
-              <span className="flex items-center gap-2">
+              <span className="flex items-center gap-2 text-lg">
                 <FormattedMessage id="flashcards.finish.reviewNow" />
                 <span className="text-lg group-hover:animate-bounce">😎</span>
               </span>

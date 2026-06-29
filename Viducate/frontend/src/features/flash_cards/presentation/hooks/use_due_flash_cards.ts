@@ -14,10 +14,10 @@ export function useDueFlashcards() {
     return () => clearInterval(interval);
   }, []);
   const getAllSessions = (): FlashcardSession[] => {
-    return Object.keys(localStorage)
+    return Object.keys(sessionStorage)
       .filter((key) => key.startsWith(`${STORAGE_KEYS.flashcardSession}_`))
       .map((key) => {
-        const parsed = JSON.parse(localStorage.getItem(key) ?? "{}");
+        const parsed = JSON.parse(sessionStorage.getItem(key) ?? "{}");
     
         return { ...parsed, segmentId: parsed.segmentId || null };
       })

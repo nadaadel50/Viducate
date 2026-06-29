@@ -45,7 +45,7 @@ export function useFlashcardSession() {
     setAnswers([]);
     const resolvedId = !isNaN(segmentIdNumber) ? segmentIdNumber : "video";
 
-    const saved = localStorage.getItem(STORAGE_KEY(resolvedId!));
+    const saved = sessionStorage.getItem(STORAGE_KEY(resolvedId!));
     if (saved) {
       const parsed = JSON.parse(saved);
       setAnswers(parsed.answers ?? []);
@@ -62,7 +62,7 @@ export function useFlashcardSession() {
     if (!hydrated || !flashcardsData?.length) return;
     const resolvedId = !isNaN(segmentIdNumber) ? segmentIdNumber : "video";
 
-    localStorage.setItem(
+    sessionStorage.setItem(
       STORAGE_KEY(resolvedId!),
       JSON.stringify({
         segmentId: segmentIdNumber,
@@ -133,10 +133,10 @@ export function useFlashcardSession() {
       console.log(resolvedId);
       console.log("removing key:", STORAGE_KEY(segmentIdNumber));
 
-      localStorage.removeItem(STORAGE_KEY(resolvedId!));
+      sessionStorage.removeItem(STORAGE_KEY(resolvedId!));
       console.log(
         "existing keys:",
-        Object.keys(localStorage).filter((k) => k.startsWith("flashcards")),
+        Object.keys(sessionStorage).filter((k) => k.startsWith("flashcards")),
       );
       navigate(-1);
     }
