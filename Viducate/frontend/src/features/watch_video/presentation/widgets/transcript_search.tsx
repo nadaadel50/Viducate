@@ -9,7 +9,7 @@ export function TranscriptSearch() {
   const [searchQuery, setSearchQuery] = useState("");
 
   const { videoId, setSeekTo } = useLearningSession();
- const intl = useIntl();
+  const intl = useIntl();
   const {
     sendQuery,
     data: searchResults = [],
@@ -24,8 +24,7 @@ export function TranscriptSearch() {
     searchResults.length === 0;
 
   const isQueryTooShort =
-    searchQuery.trim().length > 0 &&
-    searchQuery.trim().length < 3;
+    searchQuery.trim().length > 0 && searchQuery.trim().length < 3;
 
   useEffect(() => {
     if (!searchQuery.trim() || searchQuery.trim().length < 3 || !videoId) {
@@ -44,47 +43,47 @@ export function TranscriptSearch() {
   }, [searchQuery, videoId]);
 
   return (
-    <div className="mx-auto flex w-full max-w-5xl flex-col gap-4">
-      <div className="group relative w-full">
+    <div className="mx-auto flex w-full max-w-5xl flex-col gap-3 ">
+      <div className="group relative w-full ">
         <Search className="absolute left-3 top-1/2 h-4 w-4 -translate-y-1/2 text-slate-400 transition-colors group-focus-within:text-[#4f46e5]" />
 
         <input
           type="text"
           value={searchQuery}
           placeholder={intl.formatMessage({
-  id: "watch.search.placeholder",
-})}
+            id: "watch.search.placeholder",
+          })}
           onChange={(e) => setSearchQuery(e.target.value)}
-          className={`w-full rounded-xl border border-slate-200 bg-white py-3 pl-10 pr-4 shadow-sm placeholder:text-slate-400 focus:border-[#4f46e5] focus:outline-none focus:ring-1 focus:ring-[#4f46e5] ${FONT_STYLES.input}`}
+          className={`w-full rounded-xl border border-slate-200 bg-white py-2 pl-10 pr-4 shadow-sm placeholder:text-slate-400 focus:border-[#4f46e5] focus:outline-none focus:ring-1 focus:ring-[#4f46e5] ${FONT_STYLES.input}`}
         />
       </div>
 
       {isQueryTooShort && (
         <p className={`${FONT_STYLES.caption} px-1 text-slate-500`}>
           {intl.formatMessage({
-  id: "watch.search.tooShort",
-})}
+            id: "watch.search.tooShort",
+          })}
         </p>
       )}
 
       {error && (
         <p className={`${FONT_STYLES.error} text-red-500`}>
           {intl.formatMessage({
-  id: "watch.search.failed",
-})}
+            id: "watch.search.failed",
+          })}
         </p>
       )}
 
       {hasNoResults && (
         <p className={`${FONT_STYLES.caption} px-1 text-slate-500`}>
           {intl.formatMessage(
-  {
-    id: "watch.search.noResults",
-  },
-  {
-    query: searchQuery,
-  },
-)}
+            {
+              id: "watch.search.noResults",
+            },
+            {
+              query: searchQuery,
+            },
+          )}
         </p>
       )}
 
@@ -101,13 +100,17 @@ export function TranscriptSearch() {
               className="group flex w-full cursor-pointer flex-col gap-3 rounded-xl border border-slate-200 bg-white p-3 text-left shadow-sm transition hover:border-[#4f46e5]/40 hover:bg-slate-50 sm:flex-row sm:items-center sm:gap-4 sm:p-2"
             >
               <div className="flex shrink-0 items-center gap-2">
-                <span className={`${FONT_STYLES.topicStatus} flex items-center justify-center rounded-lg bg-slate-100 px-2.5 py-1.5 text-xs font-bold text-slate-500 transition group-hover:bg-[#4f46e5]/10 group-hover:text-[#4f46e5]`}>
+                <span
+                  className={`${FONT_STYLES.topicStatus} flex items-center justify-center rounded-lg bg-slate-100 px-2.5 py-1.5 text-xs font-bold text-slate-500 transition group-hover:bg-[#4f46e5]/10 group-hover:text-[#4f46e5]`}
+                >
                   <PlayCircle size={12} className="mr-1" />
                   {formatVideoTime(item.start_time)}
                 </span>
               </div>
 
-              <p className={`${FONT_STYLES.caption} line-clamp-2 leading-relaxed text-slate-600`}>
+              <p
+                className={`${FONT_STYLES.caption} line-clamp-2 leading-relaxed text-slate-600`}
+              >
                 {item.sub_topic_description}
               </p>
             </button>
