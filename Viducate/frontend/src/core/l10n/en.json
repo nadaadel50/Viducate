@@ -90,7 +90,7 @@
 
   "login.hero.title1": "Turn hours of video ",
   "login.hero.title2": "into minutes of learning.",
-  "login.hero.description": "Master your coursework with AI-powered tools.",
+  "login.hero.description": "Master your coursework with smart tools built for students.",
   "login.badge.title": "AI Summary",
   "login.badge.subtitle": "Completed in 2m",
 
@@ -127,7 +127,7 @@
 "common.errors.unexpected": "Something went wrong. Please try again.",
 
   
-  "analysis.title": "AI is analyzing your video",
+  "analysis.title": "Analyzing your video",
   "analysis.subtitle": "This may take a few moments depending on the video length.",
   "analysis.complete": "Analysis Complete!",
   "analysis.ready": "Your study material is ready.",
@@ -136,7 +136,7 @@
   "analysis.step.generating": "Generating summary & quiz",
   "analysis.cancel": "Cancel Analysis",
   "analysis.tip.title": "Did you know?",
-  "analysis.tip.desc": "Our AI can detect over 50 different educational topics and automatically generate timestamps for easier navigation through your learning content.",
+  "analysis.tip.desc": "We can detec over 50 different educational topics and automatically generate timestamps for easier navigation through your learning content.",
   "analysis.pending": "Pending",
   "analysis.active": "In Progress",
   "analysis.completed": "Completed",
@@ -151,7 +151,7 @@
 
  
 
-  "summary.aiReady": "AI Summary Ready",
+  "summary.aiReady": "Summary Ready",
   "summary.keyTakeaways": "Key Takeaways",
   "summary.conclusion": "Conclusion",
   "summary.exportPdf": "Export to PDF",
@@ -162,10 +162,10 @@
   "summary.summary": "Summary",
   "summary.summaryDesc": "Concise overview of the topic for quick revision",
   "summary.selectStyleDesc": "Choose the format that best fits your learning needs right now",
-  "summary.loading.titlePrefix": "AI is synthesizing",
+  "summary.loading.titlePrefix": "Synthesizing",
   "summary.loading.titleHighlight": "your summary...",
   "summary.loading.subtitle": "Identifying key concepts and takeaways from the video",
-   "studyNotes.loading.titlePrefix": "AI is formatting",
+   "studyNotes.loading.titlePrefix": "Formatting",
   "studyNotes.loading.titleHighlight": "your study notes...",
   "studyNotes.loading.subtitle": "Organizing core concepts, definitions, and examples for you",
 
@@ -211,7 +211,7 @@
   "quiz.mediumDescription": "Build your skills",
   "quiz.hardTitle": "Hard",
   "quiz.hardDescription": "Challenge yourself",
-  "quiz.loading.titlePrefix": "AI is preparing",
+  "quiz.loading.titlePrefix": "Preparing",
 "quiz.loading.titleHighlight": "your quiz...",
 "quiz.loading.subtitle": "Generating questions and answers from the video content.",
 "quiz.submitting": "Submitting your answers...",
@@ -354,7 +354,7 @@
 "upload.link.placeholder": "https://www.youtube.com/watch?v=...",
 "upload.link.paste": "Paste",
 "upload.link.invalidUrl": "Please enter a valid URL starting with https://",
-"upload.link.info": "Make sure the video is public or unlisted so our AI can access it.",
+"upload.link.info": "Make sure the video is public or unlisted so we can process it.",
 "upload.link.uploadButton": "Upload Link",
 "upload.loading.uploading": "Uploading...",
 "upload.loading.cancel": "Cancel upload",
@@ -413,7 +413,7 @@
 
 
 
-"mindmap.loading.titlePrefix": "AI is building",
+"mindmap.loading.titlePrefix": "Building",
 "mindmap.loading.titleHighlight": "your mind map...",
 "mindmap.loading.subtitle": "Analyzing the lecture structure and organizing key concepts.",
 "mindmap.download": "Download",
@@ -469,6 +469,12 @@
 "common.confirm": "Confirm",
 
 
-"upload.video.maxSizeError": "Video size must be less than {size} MB."
+"upload.video.maxSizeError": "Video size must be less than {size} MB.",
+
+
+  "navbar.profileSettings": "Profile Settings",
+  "navbar.logout": "Log Out",
+   "navbar.dashboard": "Dashboard"
+
 
 }
