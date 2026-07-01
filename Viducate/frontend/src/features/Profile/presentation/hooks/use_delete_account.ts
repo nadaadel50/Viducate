@@ -3,28 +3,32 @@ import { useProfileContext } from "./use_profile_context";
 import { useDeleteAccountMutation } from "./use_delete_account_mutaion";
 import { useNavigate } from "react-router-dom";
 import { STORAGE_KEYS } from "../../../../core/constants";
+import { AppRoutes } from "../../../../app/routers/appRoutes";
+import { AppRoutesNames } from "../../../../app/routers/routes";
+import { useAuth } from "../../../../core/hooks/useAuth";
 
 export function useDeleteAccount() {
   const { setShowDeleteModal } = useProfileContext();
   const [isDeleting, setIsDeleting] = useState(false);
+ 
 
   const openModal = () => setShowDeleteModal(true);
   const closeModal = () => setShowDeleteModal(false);
   const { deleteAccount } = useDeleteAccountMutation();
-  const navigate = useNavigate();
+
 
   const handleDelete = async () => {
     setIsDeleting(true);
 
     try {
-       deleteAccount();
-
-      localStorage.removeItem(STORAGE_KEYS.token);
-
+       
       closeModal();
-      navigate("/", { replace: true });
+      deleteAccount();
+ 
+     
     } finally {
       setIsDeleting(false);
+    
     }
   };
 

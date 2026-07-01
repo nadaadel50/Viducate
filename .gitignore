@@ -1,7 +1,6 @@
 chroma_db/
 logs/
 ocr_outputs/
-.env
 __pycache__/
 *.pyc
 

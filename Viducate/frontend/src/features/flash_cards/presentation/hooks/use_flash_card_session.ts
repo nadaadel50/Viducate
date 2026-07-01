@@ -7,14 +7,18 @@ import type { Difficulty } from "../../domain/entity/difficaulty";
 import { DIFFICULTY_TIME } from "../../domain/entity/difficaulty_time";
 import { useSegmentFlashcards } from "./use_segment_flash_cards";
 import { useVideoFlashcards } from "./use_video_flash_cards";
+import { useLearningSession } from "../../../../core/hooks/useLearningContent";
 
-const STORAGE_KEY = (id: number) => `${STORAGE_KEYS.flashcardSession}_${id}`;
+const STORAGE_KEY = (id: number | "video") =>
+  id === "video"
+    ? `${STORAGE_KEYS.flashcardSession}_video`
+    : `${STORAGE_KEYS.flashcardSession}_${id}`;
 
 export function useFlashcardSession() {
   const { segmentId } = useParams<{ segmentId: string }>(); // get id from parms
   const segmentIdNumber = Number(segmentId);
   const navigate = useNavigate();
-
+  const { videoId } = useLearningSession();
   const [answers, setAnswers] = useState<FlashcardAnswer[]>([]); // user answers in flashcards
   const [currentIndex, setCurrentIndex] = useState(0); // curent flashcard
   const [isFlipped, setIsFlipped] = useState(false); // is this flashcard flipped or not
@@ -27,10 +31,11 @@ export function useFlashcardSession() {
   const segmentQuery = useSegmentFlashcards(segmentIdNumber!);
   const videoQuery = useVideoFlashcards();
 
-  
-  const { data: flashcardsData, isLoading, error } = segmentIdNumber
-    ? segmentQuery
-    : videoQuery;
+  const {
+    data: flashcardsData,
+    isLoading,
+    error,
+  } = segmentIdNumber ? segmentQuery : videoQuery;
   // LOAD session
   useEffect(() => {
     setCurrentIndex(0);
@@ -38,8 +43,9 @@ export function useFlashcardSession() {
     setIsFinished(false);
     setReviewCards(null);
     setAnswers([]);
+    const resolvedId = !isNaN(segmentIdNumber) ? segmentIdNumber : "video";
 
-    const saved = localStorage.getItem(STORAGE_KEY(segmentIdNumber));
+    const saved = sessionStorage.getItem(STORAGE_KEY(resolvedId!));
     if (saved) {
       const parsed = JSON.parse(saved);
       setAnswers(parsed.answers ?? []);
@@ -49,14 +55,15 @@ export function useFlashcardSession() {
     }
 
     setHydrated(true);
-  }, [segmentIdNumber]);
+  }, [segmentIdNumber, videoId]);
 
   // SAVE session
   useEffect(() => {
     if (!hydrated || !flashcardsData?.length) return;
+    const resolvedId = !isNaN(segmentIdNumber) ? segmentIdNumber : "video";
 
-    localStorage.setItem(
-      STORAGE_KEY(segmentIdNumber),
+    sessionStorage.setItem(
+      STORAGE_KEY(resolvedId!),
       JSON.stringify({
         segmentId: segmentIdNumber,
         answers,
@@ -70,7 +77,8 @@ export function useFlashcardSession() {
     currentIndex,
     isFinished,
     reviewCards,
-    // segmentIdNumber,
+    videoId,
+    segmentIdNumber,
     // hydrated,
   ]);
 
@@ -120,7 +128,16 @@ export function useFlashcardSession() {
       setReviewCards(null);
       setCurrentIndex(0);
       setIsFinished(false);
-      localStorage.removeItem(STORAGE_KEY(segmentIdNumber));
+
+      const resolvedId = !isNaN(segmentIdNumber) ? segmentIdNumber : "video";
+      console.log(resolvedId);
+      console.log("removing key:", STORAGE_KEY(segmentIdNumber));
+
+      sessionStorage.removeItem(STORAGE_KEY(resolvedId!));
+      console.log(
+        "existing keys:",
+        Object.keys(sessionStorage).filter((k) => k.startsWith("flashcards")),
+      );
       navigate(-1);
     }
   };
@@ -140,5 +157,3 @@ export function useFlashcardSession() {
     resetSession,
   };
 }
-
-

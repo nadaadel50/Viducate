@@ -1,27 +1,15 @@
-import {
-  Background,
-  Controls,
-  Handle,
-  Position,
-  ReactFlow,
-  addEdge,
-  useEdgesState,
-  useNodesState,
-  type Connection,
-  type NodeProps,
-} from "reactflow";
+import { Background, Controls, ReactFlow } from "reactflow";
 
 import "reactflow/dist/style.css";
 import { CustomNode } from "../widgets/custom_node";
 import { useMindMapFlow } from "../hooks/use_mind_map";
-import { useCallback, useEffect } from "react";
-import { GenerationLoadingScreen } from "../../../../core/widgets/generation_loading_screen";
+import { GenerationLoadingScreen } from "../../../../core/componants/generation_loading_screen";
 import { Brain } from "lucide-react";
-import ErrorScreen from "../../../../core/widgets/error";
 import { COLORS } from "../../../../core/constants";
 import { useMindMapController } from "../hooks/use_mind_map_controler";
 import { downloadMindMap } from "../utils/dowenload_mindMap";
-
+import ErrorScreen from "../../../../core/componants/error_screen";
+import { FormattedMessage, useIntl } from "react-intl";
 const nodeTypes = {
   custom: CustomNode,
 };
@@ -33,7 +21,7 @@ export default function MindMapPage() {
     isLoading,
     error,
   } = useMindMapFlow();
-
+  const intl = useIntl();
 
   const { nodes, edges, onNodesChange, onEdgesChange, onConnect } =
     useMindMapController({
@@ -44,15 +32,19 @@ export default function MindMapPage() {
     return (
       <GenerationLoadingScreen
         icon={<Brain />}
-        titlePrefix="Building your"
-        titleHighlight="Mind Map"
-        subtitle="Analyzing the lecture structure and organizing key concepts..."
+        titlePrefix={intl.formatMessage({
+          id: "mindmap.loading.titlePrefix",
+        })}
+        titleHighlight={intl.formatMessage({
+          id: "mindmap.loading.titleHighlight",
+        })}
+        subtitle={intl.formatMessage({
+          id: "mindmap.loading.subtitle",
+        })}
       />
     );
   }
   if (error) return <ErrorScreen errorMessage={error.message} />;
-
-
 
   return (
     <div
@@ -65,14 +57,16 @@ export default function MindMapPage() {
         backgroundImage: COLORS.background.radialGradient,
       }}
     >
-
-        <div className="w-500">
-       <button onClick={() => downloadMindMap()} className="px-4 py-2 rounded bg-blue-600 text-white hover:bg-blue-700 transition">
-  Download
-</button>
+      <div className="w-full ">
+        {/* <button
+          onClick={() => downloadMindMap()}
+          className="px-4 py-2 rounded bg-blue-600 text-white hover:bg-blue-700 transition"
+        >
+          <FormattedMessage id="mindmap.download" />
+        </button> */}
       </div>
       <ReactFlow
-      id="mindmap"
+        id="mindmap"
         nodes={nodes}
         edges={edges}
         onNodesChange={onNodesChange}
@@ -84,9 +78,6 @@ export default function MindMapPage() {
         <Background />
         <Controls />
       </ReactFlow>
-
-
-    
     </div>
   );
 }

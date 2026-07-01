@@ -1,13 +1,15 @@
 import Lottie from "lottie-react";
-import noSavedVideos from "../../assets/animations/Upload Blue.json"
 
+import noSavedVideosAnimation from "../../assets/animations/Upload Blue.json";
 
-function NoSavedVideosAnimation() {
+export default function NoSavedVideosAnimation() {
   return (
-    <div style={{ width: 300 }}>
-      <Lottie animationData={noSavedVideos} loop={true} />
+    <div className="w-50">
+      <Lottie
+        animationData={noSavedVideosAnimation}
+        loop
+        className="h-full w-full"
+      />
     </div>
   );
 }
-
-export default NoSavedVideosAnimation;

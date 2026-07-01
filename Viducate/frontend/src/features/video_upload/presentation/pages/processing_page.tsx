@@ -1,8 +1,7 @@
 import { useEffect, useState } from "react";
-import { useNavigate } from "react-router-dom";
+import { Navigate, useNavigate } from "react-router-dom";
 
 import { TipCard } from "../componants/processing/tip_card";
-import { CancelAnalysisModal } from "../componants/processing/cancel_analysis_modal";
 import { ProcessingProgress } from "../componants/processing/processing_progress";
 import { ProcessingHeader } from "../componants/processing/processing_header";
 import { ProcessingActions } from "../componants/processing/processing_actions";
@@ -13,45 +12,58 @@ import { useCancelAnalysis } from "../hooks/use_cancel_analysis";
 import { useLearningSession } from "../../../../core/hooks/useLearningContent";
 import { AppRoutesNames } from "../../../../app/routers/routes";
 import { ProcessingTimeline } from "../componants/processing/processing_timeLine";
-
+import { useIntl } from "react-intl";
+import { ConfirmationModal } from "../../../../core/componants/confirmation_modal";
 export function ProcessingPage() {
   const navigate = useNavigate();
   const { videoId } = useLearningSession();
+  const intl = useIntl();
+  const [isCancelModalOpen, setIsCancelModalOpen] = useState(false);
 
-  const [isCancelModalOpen, setIsCancelModalOpen] =
-    useState(false);
 
-  const { status, progress } =
-    useProcessingStatus(videoId!);
+  
+  const { status, progress } = useProcessingStatus(videoId ?? undefined);
+  const { cancel, isLoading: isCancelling } = useCancelAnalysis();
 
-  const { cancel, isLoading: isCancelling } =
-    useCancelAnalysis();
+  useEffect(() => {
+    sessionStorage.removeItem('from_upload'); 
+  }, []);
 
   useEffect(() => {
     if (status !== "completed") return;
-
     const timeout = setTimeout(() => {
-      navigate(AppRoutesNames.wathcVideo, {
+      navigate(AppRoutesNames.watchVideo, {
         replace: true,
       });
     }, 2500);
-
     return () => clearTimeout(timeout);
   }, [status, navigate]);
 
   const handleCancelConfirm = () => {
     cancel(videoId!, () => {
-      navigate("/UploadVideoPage", {
+      navigate(AppRoutesNames.uploadVideo, {
         replace: true,
       });
     });
   };
 
   const handleRetry = () => {
-    navigate("/UploadVideoPage", {
+    navigate(AppRoutesNames.uploadVideo, {
       replace: true,
     });
   };
+
+const [isFromUpload] = useState(
+  () => sessionStorage.getItem('from_upload') === 'true'
+);
+
+useEffect(() => {
+  sessionStorage.removeItem('from_upload');
+}, []);
+
+  if (!videoId || !isFromUpload) {
+    return <Navigate to="/UploadVideoPage" replace />;
+  }
 
   return (
     <div
@@ -62,10 +74,7 @@ export function ProcessingPage() {
       }}
     >
       <div className="relative z-10 w-full max-w-[520px] flex flex-col items-center gap-5 md:gap-7">
-        <ProcessingProgress
-          status={status}
-          progress={progress}
-        />
+        <ProcessingProgress status={status} progress={progress} />
 
         <ProcessingHeader status={status} />
 
@@ -76,19 +85,25 @@ export function ProcessingPage() {
         <ProcessingActions
           status={status}
           onRetry={handleRetry}
-          onCancel={() =>
-            setIsCancelModalOpen(true)
-          }
+          onCancel={() => setIsCancelModalOpen(true)}
         />
       </div>
 
-      <CancelAnalysisModal
-        isOpen={isCancelModalOpen}
+      <ConfirmationModal
+        open={isCancelModalOpen}
+        title={intl.formatMessage({
+          id: "analysis.cancel",
+        })}
+        description={intl.formatMessage({
+          id: "analysis.cancel.description",
+        })}
+        confirmText={intl.formatMessage({
+          id: "analysis.cancel",
+        })}
+        confirmVariant="danger"
         isLoading={isCancelling}
         onConfirm={handleCancelConfirm}
-        onCancel={() =>
-          setIsCancelModalOpen(false)
-        }
+        onClose={() => setIsCancelModalOpen(false)}
       />
     </div>
   );

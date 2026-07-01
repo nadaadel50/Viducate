@@ -19,10 +19,11 @@ class ChatRequest(BaseModel):
 
 
 class MessageResponse(BaseModel):
-    message_id: int
+    message_id:int
     content: str
     class Config:
         from_attributes = True
+
 
 
 class AskResponse(BaseModel):
@@ -31,7 +32,7 @@ class AskResponse(BaseModel):
 
 
 class MessageSessionResponse(BaseModel):
-    message_id: int
+    message_id: str 
     role: str        # "user" or "assistant"
     content: str
     time: Optional[int] = None

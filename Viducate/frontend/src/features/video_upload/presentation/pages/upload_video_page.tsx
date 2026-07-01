@@ -11,9 +11,7 @@ import { CustumError } from "../../../../core/componants/custum_error";
 import { useUploadVideoController } from "../hooks/use_upload_video_control";
 import { COLORS } from "../../../../core/constants";
 import MainText from "../../../../core/componants/text_section";
-
-
-
+import { FormattedMessage } from "react-intl";
 
 export function UploadVideoPage() {
   const { handleSelected, selected } = useSelectBtnHandlers();
@@ -82,10 +80,16 @@ export function UploadVideoPage() {
         font-display
       "
     >
+       {state.errorMessage && (
+            <CustumError
+              apiError={state.errorMessage}
+              clearError={actions.clearError}
+            />
+          )}
       <div className="w-full max-w-6xl">
         <MainText
-          bigTitle="New Analysis"
-          smallTitle="Upload a lecture recording or paste a link to get started."
+          bigTitle={<FormattedMessage id="upload.page.title" />}
+          smallTitle={<FormattedMessage id="upload.page.subtitle" />}
         />
 
         <div
@@ -99,12 +103,7 @@ export function UploadVideoPage() {
             backdrop-blur-sm
           "
         >
-          {state.errorMessage && (
-            <CustumError
-              apiError={state.errorMessage}
-              clearError={actions.clearError}
-            />
-          )}
+         
 
           <div
             className="
@@ -121,10 +120,7 @@ export function UploadVideoPage() {
             "
           >
             {!state.isUploading && (
-              <SelectBox
-                handleSelected={handleSelected}
-                selected={selected}
-              />
+              <SelectBox handleSelected={handleSelected} selected={selected} />
             )}
 
             {renderUploadContent()}

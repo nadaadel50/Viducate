@@ -1,16 +1,22 @@
 import { useEffect, useState } from "react";
-import { ContentLearningCard } from "../widgets/content_learning_card";
-import { SearchTopicBar } from "../widgets/search_topic_bar";
-import { useLearningSession } from "../../../../core/hooks/useLearningContent";
-import { ChartColumn, ClipboardCheck, Languages, Target } from "lucide-react";
-import { CustomizeExperienceModal } from "../../../preferences/presentation/pages/CustomizeExperienceModal";
+import { ClipboardCheck, Languages } from "lucide-react";
 import { useNavigate } from "react-router-dom";
 import { AppRoutesNames } from "../../../../app/routers/routes";
-
-export function LeftContentSection() {
-  const [searchQuery, setSearchQuery] = useState<string>("");
+import { FONT_STYLES } from "../../../../core/constants/fonts";
+import { useLearningSession } from "../../../../core/hooks/useLearningContent";
+import { CustomizeExperienceModal } from "../../../preferences/presentation/pages/customize_experience_modal";
+import { SearchTopicBar } from "../widgets/search_topic_bar";
+import { ContentLearningCard } from "../widgets/content_learning_card";
+import { FormattedMessage } from "react-intl";
+type LeftContentSectionProps = {
+  onClose?: () => void;
+};
+export function LeftContentSection({ onClose }: LeftContentSectionProps) {
+  const [searchQuery, setSearchQuery] = useState("");
   const [isCustomizeOpen, setIsCustomizeOpen] = useState(false);
+
   const navigate = useNavigate();
+
   const {
     currentTime,
     setSelectedTopic,
@@ -38,60 +44,66 @@ export function LeftContentSection() {
     });
   }, [currentTopicIndex]);
 
-  //  filter
   if (!topics) return null;
-  const filteredCards = topics!.filter((item) => {
+
+  const filteredCards = topics.filter((item) => {
     if (!searchQuery) return true;
 
     return item.title.toLowerCase().includes(searchQuery.toLowerCase());
   });
 
   return (
-    <div className="flex flex-col h-full w-full ">
-      {/* SEARCH */}
-      <div className="p-4 border-b border-slate-100">
+    <div className="flex h-screen w-full flex-col">
+      <div className="border-b border-slate-100 p-3">
         <SearchTopicBar setSearchQuery={setSearchQuery} />
       </div>
 
-      <div className="px-5 py-2">
-        <div className="flex items-center justify-between">
-          <h2 className="text-xs font-semibold text-slate-400 tracking-wide hover:text-[#4f46e5]">
-            {`${videoTitle} Topics`}
+      <div className="px-3 py-2 sm:px-5">
+        <div className="flex items-center justify-between gap-3">
+          <h2
+            className={`${FONT_STYLES.label} flex-1 truncate text-slate-400 tracking-wide hover:text-[#4f46e5]`}
+          >
+            <>
+              {videoTitle} <FormattedMessage id="watch.topics.title" />
+            </>
           </h2>
 
-          <div className="flex items-center gap-3">
+          <div className="flex shrink-0 items-center gap-2 sm:gap-3">
             <span
-              className="relative group text-slate-400 hover:text-[#4f46e5] cursor-pointer"
+              className="group relative cursor-pointer text-slate-400 transition-colors hover:text-[#4f46e5]"
               onClick={() => navigate(AppRoutesNames.report)}
             >
-              <ClipboardCheck   size={18} />
-              <span className="absolute -top-8 left-1/2 -translate-x-1/2 bg-gray-800 text-white text-xs rounded px-2 py-1 whitespace-nowrap opacity-0 group-hover:opacity-100 transition-opacity">
-                Learning Report
+              <ClipboardCheck size={18} />
+
+              <span className="absolute -top-8 left-1/2 -translate-x-1/2 whitespace-nowrap rounded bg-gray-800 px-2 py-1 text-xs text-white opacity-0 transition-opacity group-hover:opacity-100">
+                <FormattedMessage id="watch.tooltip.report" />
               </span>
             </span>
 
             <span
-              className="relative group text-slate-400 hover:text-[#4f46e5] cursor-pointer"
+              className="group relative cursor-pointer text-slate-400 transition-colors hover:text-[#4f46e5]"
               onClick={() => setIsCustomizeOpen(true)}
             >
               <Languages size={18} />
-              <span className="absolute -top-8 left-1/2 -translate-x-1/2 bg-gray-800 text-white text-xs rounded px-2 py-1 whitespace-nowrap opacity-0 group-hover:opacity-100 transition-opacity">
-                Change Topics Language
+
+              <span className="absolute -top-8 left-1/2 -translate-x-1/2 whitespace-nowrap rounded bg-gray-800 px-2 py-1 text-xs text-white opacity-0 transition-opacity group-hover:opacity-100">
+                <FormattedMessage id="watch.tooltip.changeLanguage" />
               </span>
             </span>
           </div>
         </div>
       </div>
-      {/* LIST */}
-      <div className="flex-1 overflow-y-auto">
-        <div className="flex flex-col gap-3 p-4 max-w-md mx-auto w-full">
+
+      <div className="overflow-y-auto">
+        <div className="mx-auto flex w-full max-w-md flex-col gap-3 p-3 sm:max-w-lg sm:p-4 lg:max-w-xl">
           {filteredCards.map((card, index) => (
             <ContentLearningCard
-              key={index}
+              key={card.segment_id ?? index}
               isSelected={currentTopicIndex === index}
               onClick={() => {
                 setSelectedTopic(card);
                 setSeekTo(card.start_time);
+                onClose?.();
               }}
               cardInfo={card}
             />

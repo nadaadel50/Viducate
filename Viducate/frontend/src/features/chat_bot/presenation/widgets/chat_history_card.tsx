@@ -1,116 +1,90 @@
 import { History, Trash2 } from "lucide-react";
 
-import type { ChatSession } from "../../domain/entity/chat_session";
-
 import { formatMessageTime } from "../../../../core/utils/fomat_time";
+import { useIntl } from "react-intl";
+
+import type { ChatSession } from "../../domain/entity/chat_session";
+import {
+  FONT_SIZE,
+  FONT_WEIGHT,
+  TEXT_UTILS,
+} from "../../../../core/constants/fonts_update";
 
 type ChatHistoryCardProps = {
   session: ChatSession;
-
   handleSelectNewSession: (id: number) => void;
-  setOpenDeleteMessage: (value:boolean) => void;
-
+  setOpenDeleteMessage: (value: boolean) => void;
   selected: boolean;
 };
 
-export function ChatHistoryCard(props: ChatHistoryCardProps) {
-  function handleDelete() {
-    props.setOpenDeleteMessage(true)
-
-   
-  }
-
+export function ChatHistoryCard({
+  session,
+  handleSelectNewSession,
+  setOpenDeleteMessage,
+  selected,
+}: ChatHistoryCardProps) {
+  const handleDelete = (e: React.MouseEvent<HTMLButtonElement>) => {
+    setOpenDeleteMessage(true);
+  };
+  const intl = useIntl();
   return (
     <div
-      onClick={() => {
-        props.handleSelectNewSession(props.session.id);
-      }}
+      onClick={() => handleSelectNewSession(session.id)}
       className={`
-        w-full
-        flex
-        items-start
-        gap-3
-        px-4
-        py-3
-        rounded-xl
-        text-left
-        transition-all
-        duration-200
-        cursor-pointer
-        border
-        group
-
+        group flex w-full cursor-pointer items-start gap-2.5
+        rounded-lg border px-3 py-2 transition-all duration-200
         ${
-          props.selected
-            ? `
-              bg-[#4f46e5]/10
-              border-[#4f46e5]/20
-            `
-            : `
-              bg-transparent
-              border-transparent
-              hover:bg-slate-100/80
-            `
+          selected
+            ? "border-[#4f46e5]/20 bg-[#4f46e5]/10"
+            : "border-transparent hover:bg-slate-100/80"
         }
       `}
     >
+      {/* Icon */}
       <div
-        className={`
-          mt-0.5
-          flex
-          items-center
-          justify-center
-          shrink-0
-          transition-colors
-
-          ${props.selected ? "text-[#4f46e5]" : "text-slate-400"}
-        `}
+        className={`mt-0.5 shrink-0 ${
+          selected ? "text-[#4f46e5]" : "text-slate-400"
+        }`}
       >
-        <History size={17} />
+        <History size={16} />
       </div>
 
+      {/* Content */}
       <div className="min-w-0 flex-1">
         <h4
           className={`
-            text-sm
-            font-medium
-            truncate
+            ${FONT_SIZE.size12}
+            ${FONT_WEIGHT.medium}
+            ${TEXT_UTILS.truncate}
             transition-colors
-
-            ${props.selected ? "text-[#4f46e5]" : "text-slate-700"}
+            ${selected ? "text-[#4f46e5]" : "text-slate-700"}
           `}
         >
-          {props.session.title}
+          {session.title}
         </h4>
 
         <p
-          className="
-            text-xs
+          className={`
+            ${FONT_SIZE.size10}
             text-slate-400
-            mt-1
-          "
+            mt-0.5
+          `}
         >
-          {formatMessageTime(props.session.last_message_at)}
+          {formatMessageTime(session.last_message_at)}
         </p>
       </div>
 
+      {/* Delete */}
       <button
+        type="button"
         onClick={handleDelete}
-        className="
-          
-          cursor-pointer
-          transition-opacity
-          p-1.5
-          rounded-lg
-          hover:bg-red-100
-          text-slate-400
-          hover:text-red-500
-          shrink-0
-        "
+        aria-label={intl.formatMessage({
+          id: "chat.history.delete",
+        })}
+        className="flex h-7 w-7 shrink-0 items-center justify-center rounded-md text-slate-400 transition-colors hover:bg-red-100 hover:text-red-500"
       >
-        <Trash2 size={16} />
+        <Trash2 size={14} />
       </button>
-      
     </div>
   );
 }

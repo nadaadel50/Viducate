@@ -1,5 +1,1059 @@
+<<<<<<< HEAD
+[00:00:00]
+  Transcript :  Today we're going to learn about heaps.
+  OCR        : None
+  Combined   :  Today we're going to learn about heaps.
+
+[00:00:02]
+  Transcript :  You'll often hear the word heap when discussing storage for garbage collection in languages such as Java,
+  OCR        : None
+  Combined   :  You'll often hear the word heap when discussing storage for garbage collection in languages such as Java,
+
+[00:00:09]
+  Transcript :  but this video is about the heap data structure that is used to manage information.
+  OCR        : None
+  Combined   :  but this video is about the heap data structure that is used to manage information.
+
+[00:00:19]
+  Transcript :  Heaps are sometimes called binary heaps and are nearly complete binary trees.
+  OCR        : heap  data structure to manage information | - binary heap | - nearly complete binary tree
+  Combined   :  Heaps are sometimes called binary heaps and are nearly complete binary trees. heap  data structure to manage information | - binary heap | - nearly complete binary tree
+
+[00:00:23]
+  Transcript :  Here's an example of a heap.
+  OCR        : None
+  Combined   :  Here's an example of a heap.
+
+[00:00:25]
+  Transcript :  By a nearly complete binary tree, I mean that all levels are filled except the lowest, and the lowest level is filled up to a certain point starting from the left.
+  OCR        : None
+  Combined   :  By a nearly complete binary tree, I mean that all levels are filled except the lowest, and the lowest level is filled up to a certain point starting from the left.
+
+[00:00:39]
+  Transcript :  Uses of heaps include heap sort and priority queues, and there are two kinds of heaps, max heaps and min heaps.
+  OCR        : None
+  Combined   :  Uses of heaps include heap sort and priority queues, and there are two kinds of heaps, max heaps and min heaps.
+
+[00:00:49]
+  Transcript :  On the left, we have a max heap.
+  OCR        : None
+  Combined   :  On the left, we have a max heap.
+
+[00:00:51]
+  Transcript :  The condition for a max heap is that the value of the node i is less than or equal to the value of its parent Max heaps are used for heap sort
+  OCR        : None
+  Combined   :  The condition for a max heap is that the value of the node i is less than or equal to the value of its parent Max heaps are used for heap sort
+
+[00:01:10]
+  Transcript :  Similarly for the min heap, the value of the node i is greater than or equal to the value of its parent.
+  OCR        : None
+  Combined   :  Similarly for the min heap, the value of the node i is greater than or equal to the value of its parent.
+
+[00:01:19]
+  Transcript :  min heaps are great for priority queues.
+  OCR        : None
+  Combined   :  min heaps are great for priority queues.
+
+[00:01:26]
+  Transcript :  Because we said heaps are nearly complete binary trees, we know that the height of a heap is O ,
+  OCR        : None
+  Combined   :  Because we said heaps are nearly complete binary trees, we know that the height of a heap is O ,
+
+[00:01:34]
+  Transcript :  which you'll see in various operations that we'll learn later.
+  OCR        : None
+  Combined   :  which you'll see in various operations that we'll learn later.
+
+[00:01:40]
+  Transcript :  I'd also like to show heaps represented as an array.
+  OCR        : None
+  Combined   :  I'd also like to show heaps represented as an array.
+
+[00:01:45]
+  Transcript :  Here's our max heap, and here it is as an array.
+  OCR        : None
+  Combined   :  Here's our max heap, and here it is as an array.
+
+[00:01:53]
+  Transcript :  The root of the tree is at index 1 of the array.
+  OCR        : None
+  Combined   :  The root of the tree is at index 1 of the array.
+
+[00:02:00]
+  Transcript :  To get a node's left child, you simply take the index times by 2.
+  OCR        : None
+  Combined   :  To get a node's left child, you simply take the index times by 2.
+
+[00:02:07]
+  Transcript :  And to get the node's right child, you take the index times by 2 and add 1.
+  OCR        : None
+  Combined   :  And to get the node's right child, you take the index times by 2 and add 1.
+
+[00:02:19]
+  Transcript :  Finally, to retrieve a node's parent, it's the floor of the node's index divided by 2.
+  OCR        : righti  2i  1 | parenti  floor i2
+  Combined   :  Finally, to retrieve a node's parent, it's the floor of the node's index divided by 2. righti  2i  1 | parenti  floor i2
+
+[00:02:23]
+  Transcript :  We choose to put the root at index 1 instead of 0, as it keeps this arithmetic cleaner
+  OCR        : None
+  Combined   :  We choose to put the root at index 1 instead of 0, as it keeps this arithmetic cleaner
+
+[00:02:29]
+  Transcript :  and most computers can do these operations with fewer instructions.
+  OCR        : None
+  Combined   :  and most computers can do these operations with fewer instructions.
+
+[00:02:34]
+  Transcript :  Let's take a look at 15, which is at index 3.
+  OCR        : None
+  Combined   :  Let's take a look at 15, which is at index 3.
+
+[00:02:40]
+  Transcript :  The left child of 15 is equal to 2 times 3, which is the 6th index and a node value of
+  OCR        : None
+  Combined   :  The left child of 15 is equal to 2 times 3, which is the 6th index and a node value of
+
+[00:02:49]
+  Transcript :  12.
+  OCR        : None
+  Combined   :  12.
+
+[00:02:52]
+  Transcript :  The right child of 15 is 2 times 3 plus 1, which is the index of 7, or the node 13.
+  OCR        : None
+  Combined   :  The right child of 15 is 2 times 3 plus 1, which is the index of 7, or the node 13.
+
+[00:03:03]
+  Transcript :  Lastly, the parent of 15 is the floor of 3 divided by 2, which is the first index and
+  OCR        : None
+  Combined   :  Lastly, the parent of 15 is the floor of 3 divided by 2, which is the first index and
+
+[00:03:12]
+  Transcript :  the root of our tree, 21.
+  OCR        : None
+  Combined   :  the root of our tree, 21.
+
+[00:03:18]
+  Transcript :  You know I prefer brevity, so we'll end the video here and in the next one I'll show
+  OCR        : None
+  Combined   :  You know I prefer brevity, so we'll end the video here and in the next one I'll show
+
+[00:03:23]
+  Transcript :  you how to create a heap from an unordered array.
+  OCR        : None
+  Combined   :  you how to create a heap from an unordered array.
+=======
+<<<<<<< HEAD
+[00:00:10]
+  Transcript :  السلام عليكم ورحمة الله وبركاته
+  OCR        : الفعل اللازم والفعل المتعدي
+  Combined   :  السلام عليكم ورحمة الله وبركاته الفعل اللازم والفعل المتعدي
+
+[00:00:30]
+  Transcript :  وعلشان تكون مستفاد فيه
+  OCR        : الفعل ا | يبث الكورس يوميا في تمام الساعة مساءا
+  Combined   :  وعلشان تكون مستفاد فيه الفعل ا | يبث الكورس يوميا في تمام الساعة مساءا
+
+[00:00:31]
+  Transcript :  وانت عارف ان كل ده بيتبنى
+  OCR        : None
+  Combined   :  وانت عارف ان كل ده بيتبنى
+
+[00:00:33]
+  Transcript :  بيكمل بعضه في بعض
+  OCR        : None
+  Combined   :  بيكمل بعضه في بعض
+
+[00:00:35]
+  Transcript :  تمام فالنهاردة ان شاء الله
+  OCR        : None
+  Combined   :  تمام فالنهاردة ان شاء الله
+
+[00:00:37]
+  Transcript :  هنتكلم في درس جديد عرفنا قبل كده
+  OCR        : None
+  Combined   :  هنتكلم في درس جديد عرفنا قبل كده
+
+[00:00:40]
+  Transcript :  اتكلمنا عن المبتدأ وتكلمنا عن
+  OCR        : لاين مع أأحمد سعيد علي رقم الواتس أب | للتواصل أون
+  Combined   :  اتكلمنا عن المبتدأ وتكلمنا عن لاين مع أأحمد سعيد علي رقم الواتس أب | للتواصل أون
+
+[00:00:41]
+  Transcript :  الخبر وعرفنا نائب الفاعل
+  OCR        : None
+  Combined   :  الخبر وعرفنا نائب الفاعل
+
+[00:00:43]
+  Transcript :  وعرفنا الفاعل وعلامات اعراب الفاعل
+  OCR        : None
+  Combined   :  وعرفنا الفاعل وعلامات اعراب الفاعل
+
+[00:00:46]
+  Transcript :  تمام اتكلمنا في حاجات
+  OCR        : None
+  Combined   :  تمام اتكلمنا في حاجات
+
+[00:00:48]
+  Transcript :  كتير كانت ممكن صعبة شوية
+  OCR        : None
+  Combined   :  كتير كانت ممكن صعبة شوية
+
+[00:00:50]
+  Transcript :  بس الحل الله لا سهلة
+  OCR        : None
+  Combined   :  بس الحل الله لا سهلة
+
+[00:00:52]
+  Transcript :  الا ما جعله الله سهلا
+  OCR        : None
+  Combined   :  الا ما جعله الله سهلا
+
+[00:00:53]
+  Transcript : 
+  OCR        : None
+  Combined   : 
+
+[00:01:07]
+  Transcript :  ينفعكم ويبارك فيكم
+  OCR        : None
+  Combined   :  ينفعكم ويبارك فيكم
+
+[00:01:08]
+  Transcript :  ونصيحة يقول الله عز وجل
+  OCR        : None
+  Combined   :  ونصيحة يقول الله عز وجل
+
+[00:01:11]
+  Transcript :  واتقوا الله ويعلمكم الله
+  OCR        : None
+  Combined   :  واتقوا الله ويعلمكم الله
+
+[00:01:13]
+  Transcript :  عليكم بتقو الله عز وجل
+  OCR        : None
+  Combined   :  عليكم بتقو الله عز وجل
+
+[00:01:14]
+  Transcript :  وان شاء الله ربنا هيرزقك العلم النافع
+  OCR        : None
+  Combined   :  وان شاء الله ربنا هيرزقك العلم النافع
+
+[00:01:17]
+  Transcript :  الذي ينفعك في الدنيا وينفعك
+  OCR        : None
+  Combined   :  الذي ينفعك في الدنيا وينفعك
+
+[00:01:18]
+  Transcript :  في الاخرة بارك الله فيكم
+  OCR        : None
+  Combined   :  في الاخرة بارك الله فيكم
+
+[00:01:20]
+  Transcript :  نبدأ الحصة بسم الله تبكرنا على الله
+  OCR        : None
+  Combined   :  نبدأ الحصة بسم الله تبكرنا على الله
+
+[00:01:23]
+  Transcript :  ولا حول ولا قوة إلا بالله
+  OCR        : None
+  Combined   :  ولا حول ولا قوة إلا بالله
+
+[00:01:24]
+  Transcript :  العلي العظيم
+  OCR        : None
+  Combined   :  العلي العظيم
+
+[00:01:26]
+  Transcript :  درس النهاردة هنتكلم عن الفعل اللازم
+  OCR        : None
+  Combined   :  درس النهاردة هنتكلم عن الفعل اللازم
+
+[00:01:28]
+  Transcript :  والفعل المتعدد
+  OCR        : None
+  Combined   :  والفعل المتعدد
+
+[00:01:30]
+  Transcript :  طلعنا من المرفوعات تمام
+  OCR        : None
+  Combined   :  طلعنا من المرفوعات تمام
+
+[00:01:32]
+  Transcript :  وأنا عارف أن احنا ما كملناش المرفوعات
+  OCR        : None
+  Combined   :  وأنا عارف أن احنا ما كملناش المرفوعات
+
+[00:01:34]
+  Transcript :  لأن بعد كده كان سهل
+  OCR        : None
+  Combined   :  لأن بعد كده كان سهل
+
+[00:01:36]
+  Transcript :  احنا اتكلمنا عنه في المستوى الأول
+  OCR        : None
+  Combined   :  احنا اتكلمنا عنه في المستوى الأول
+
+[00:01:37]
+  Transcript :  اللي هو اسم كان
+  OCR        : None
+  Combined   :  اللي هو اسم كان
+
+[00:01:40]
+  Transcript :  واخواتها وخبر إنا واخواتها
+  OCR        : None
+  Combined   :  واخواتها وخبر إنا واخواتها
+
+[00:01:43]
+  Transcript :  كل ده اتكلمنا عليه
+  OCR        : None
+  Combined   :  كل ده اتكلمنا عليه
+
+[00:01:44]
+  Transcript :  في المستوى الأول تمام
+  OCR        : None
+  Combined   :  في المستوى الأول تمام
+
+[00:01:46]
+  Transcript :  وعرفنا أن هم بيدخول على المبتدى
+  OCR        : None
+  Combined   :  وعرفنا أن هم بيدخول على المبتدى
+
+[00:01:49]
+  Transcript :  والخبر بيغيروا فيهم
+  OCR        : None
+  Combined   :  والخبر بيغيروا فيهم
+
+[00:01:50]
+  Transcript :  وعرفنا أن مين البيوت
+  OCR        : None
+  Combined   :  وعرفنا أن مين البيوت
+
+[00:01:52]
+  Transcript :  مرفوع مين بيكون موصوف فيهم كل ده موجود في المستوى الاول. فاحنا
+  OCR        : None
+  Combined   :  مرفوع مين بيكون موصوف فيهم كل ده موجود في المستوى الاول. فاحنا
+
+[00:01:56]
+  Transcript :  ان شاء الله يعتبر المرفوعات كده انت خلصت خالص. هندخل
+  OCR        : None
+  Combined   :  ان شاء الله يعتبر المرفوعات كده انت خلصت خالص. هندخل
+
+[00:02:00]
+  Transcript :  على التقسيمة تانية للفعل لوعادها على طول
+  OCR        : None
+  Combined   :  على التقسيمة تانية للفعل لوعادها على طول
+
+[00:02:24]
+  Transcript :  اللي هو بينقسم الفعل فيه لفعل لازم وفعل متعدي
+  OCR        : None
+  Combined   :  اللي هو بينقسم الفعل فيه لفعل لازم وفعل متعدي
+
+[00:02:28]
+  Transcript :  وده درس موجود عندك في المرحلة الاعدادية ودرس مهم
+  OCR        : None
+  Combined   :  وده درس موجود عندك في المرحلة الاعدادية ودرس مهم
+
+[00:02:32]
+  Transcript :  تعرف ان الفعل ده يعني ايه لازم ويعني متعدي
+  OCR        : None
+  Combined   :  تعرف ان الفعل ده يعني ايه لازم ويعني متعدي
+
+[00:02:36]
+  Transcript :  وامتى يكون الفعل لازم وامتى يكون الفعل متعدي
+  OCR        : None
+  Combined   :  وامتى يكون الفعل لازم وامتى يكون الفعل متعدي
+
+[00:02:38]
+  Transcript :  يلا تابع معنا كراستك معاك وقلمك وابدأ توكل على الله وكتب معنا
+  OCR        : None
+  Combined   :  يلا تابع معنا كراستك معاك وقلمك وابدأ توكل على الله وكتب معنا
+
+[00:02:43]
+  Transcript :  بص يا سيد لما اجيسألك سؤال مما تتكون الجملة الفعلية
+  OCR        : None
+  Combined   :  بص يا سيد لما اجيسألك سؤال مما تتكون الجملة الفعلية
+
+[00:02:50]
+  Transcript :  سؤال سهل خالص يعني ممكن اي طالب من ابتداء يرد عليك
+  OCR        : اللازم والفعل | سم تتكون الجملة الفعلية؟
+  Combined   :  سؤال سهل خالص يعني ممكن اي طالب من ابتداء يرد عليك اللازم والفعل | سم تتكون الجملة الفعلية؟
+
+[00:02:52]
+  Transcript : 
+  OCR        : None
+  Combined   : 
+
+[00:03:09]
+  Transcript :  قال فعل ماضي مبني على الفتح والرجل فاعل مرفوع بالضمة والحق
+  OCR        : None
+  Combined   :  قال فعل ماضي مبني على الفتح والرجل فاعل مرفوع بالضمة والحق
+
+[00:03:15]
+  Transcript :  مفعول به منصوب بالفتحة. تمام? سهل كده? ده سهل خالص طلع على
+  OCR        : None
+  Combined   :  مفعول به منصوب بالفتحة. تمام? سهل كده? ده سهل خالص طلع على
+
+[00:03:21]
+  Transcript :  فعل اللازم ده لا لسه ما تستعجلش
+  OCR        : None
+  Combined   :  فعل اللازم ده لا لسه ما تستعجلش
+
+[00:03:23]
+  Transcript :  طيب جاء محمد
+  OCR        : None
+  Combined   :  طيب جاء محمد
+
+[00:03:25]
+  Transcript :  مسرعا
+  OCR        : None
+  Combined   :  مسرعا
+
+[00:03:26]
+  Transcript :  جاء فعل موضي مبني على الفتح
+  OCR        : None
+  Combined   :  جاء فعل موضي مبني على الفتح
+
+[00:03:29]
+  Transcript :  ومحمد فعل
+  OCR        : None
+  Combined   :  ومحمد فعل
+
+[00:03:31]
+  Transcript :  مرفوع بالضمة ومسرع
+  OCR        : None
+  Combined   :  مرفوع بالضمة ومسرع
+
+[00:03:33]
+  Transcript :  مفعول به منصوب بالفتحة
+  OCR        : None
+  Combined   :  مفعول به منصوب بالفتحة
+
+[00:03:35]
+  Transcript :  سهل كده
+  OCR        : None
+  Combined   :  سهل كده
+
+[00:03:36]
+  Transcript :  لا مش سهل
+  OCR        : None
+  Combined   :  لا مش سهل
+
+[00:03:38]
+  Transcript :  الله طب إيه اللي أنا غلطت فيه
+  OCR        : None
+  Combined   :  الله طب إيه اللي أنا غلطت فيه
+
+[00:03:40]
+  Transcript :  ما هو فعل وفعل ومفعول
+  OCR        : None
+  Combined   :  ما هو فعل وفعل ومفعول
+
+[00:03:42]
+  Transcript :  تمام حضرتك
+  OCR        : None
+  Combined   :  تمام حضرتك
+
+[00:03:45]
+  Transcript :  أعربت في الأول صح
+  OCR        : None
+  Combined   :  أعربت في الأول صح
+
+[00:03:46]
+  Transcript :  لكن الجملة التانية أعربناها خطأ
+  OCR        : None
+  Combined   :  لكن الجملة التانية أعربناها خطأ
+
+[00:03:49]
+  Transcript :  طب ليه مستر
+  OCR        : None
+  Combined   :  طب ليه مستر
+
+[00:03:50]
+  Transcript :  ازاي جاء محمد جاء فاعل ومحمد فاعل طب مسرع عندي ايه مسرع عندي بقى مش مفعول به طب ايه هتكون ايه بص بقى سيدة
+  OCR        : None
+  Combined   :  ازاي جاء محمد جاء فاعل ومحمد فاعل طب مسرع عندي ايه مسرع عندي بقى مش مفعول به طب ايه هتكون ايه بص بقى سيدة
+
+[00:04:00]
+  Transcript :  الحق دي ومسرعاً
+  OCR        : None
+  Combined   :  الحق دي ومسرعاً
+
+[00:04:02]
+  Transcript :  الحق مفعول به ومسرعاً حال
+  OCR        : None
+  Combined   :  الحق مفعول به ومسرعاً حال
+
+[00:04:05]
+  Transcript :  طب ازاي؟
+  OCR        : None
+  Combined   :  طب ازاي؟
+
+[00:04:10]
+  Transcript :  بص لما يجي أقول لك حضرتك المفعول به
+  OCR        : مفعول به | فعل فاعل | الفعول به | مفعول به | فسال عنهب
+  Combined   :  بص لما يجي أقول لك حضرتك المفعول به مفعول به | فعل فاعل | الفعول به | مفعول به | فسال عنهب
+
+[00:04:10]
+  Transcript :  تسأل عنه بإيه؟
+  OCR        : None
+  Combined   :  تسأل عنه بإيه؟
+
+[00:04:11]
+  Transcript :  عشان أعرف أن كلمة الحق دي مفعول به
+  OCR        : None
+  Combined   :  عشان أعرف أن كلمة الحق دي مفعول به
+
+[00:04:14]
+  Transcript :  إم تتأكد أنها مفعول به؟
+  OCR        : None
+  Combined   :  إم تتأكد أنها مفعول به؟
+
+[00:04:16]
+  Transcript :  قال لك نسأل عنه بما؟
+  OCR        : None
+  Combined   :  قال لك نسأل عنه بما؟
+
+[00:04:19]
+  Transcript :  نسأل عنه بما؟
+  OCR        : None
+  Combined   :  نسأل عنه بما؟
+
+[00:04:20]
+  Transcript :  قال الرجل الحق
+  OCR        : None
+  Combined   :  قال الرجل الحق
+
+[00:04:21]
+  Transcript :  ما الذي قاله الرجل؟
+  OCR        : None
+  Combined   :  ما الذي قاله الرجل؟
+
+[00:04:23]
+  Transcript :  قال ليه؟
+  OCR        : None
+  Combined   :  قال ليه؟
+
+[00:04:24]
+  Transcript :  قال الحق
+  OCR        : None
+  Combined   :  قال الحق
+
+[00:04:24]
+  Transcript :  طب سواني بقى
+  OCR        : None
+  Combined   :  طب سواني بقى
+
+[00:04:26]
+  Transcript :  مسرعاً
+  OCR        : None
+  Combined   :  مسرعاً
+
+[00:04:27]
+  Transcript :  ما الذي جاءه محمد؟
+  OCR        : None
+  Combined   :  ما الذي جاءه محمد؟
+
+[00:04:29]
+  Transcript :  محمد ينفع
+  OCR        : None
+  Combined   :  محمد ينفع
+
+[00:04:30]
+  Transcript :  طب ما الذي جاء به محمد
+  OCR        : None
+  Combined   :  طب ما الذي جاء به محمد
+
+[00:04:32]
+  Transcript :  ينفع هنقوله مسرعا
+  OCR        : None
+  Combined   :  ينفع هنقوله مسرعا
+
+[00:04:34]
+  Transcript :  لا مش هينفع
+  OCR        : None
+  Combined   :  لا مش هينفع
+
+[00:04:36]
+  Transcript :  يبقى اول حاجة دي تبينلك ان مسرعا
+  OCR        : None
+  Combined   :  يبقى اول حاجة دي تبينلك ان مسرعا
+
+[00:04:39]
+  Transcript :  دي مش مفعول به
+  OCR        : None
+  Combined   :  دي مش مفعول به
+
+[00:04:40]
+  Transcript :  علشان لما تيجي تسأل عنها
+  OCR        : None
+  Combined   :  علشان لما تيجي تسأل عنها
+
+[00:04:42]
+  Transcript :  تمام بما مش هتعرف
+  OCR        : None
+  Combined   :  تمام بما مش هتعرف
+
+[00:04:44]
+  Transcript :  مش هيكون لها اجابة طيب
+  OCR        : None
+  Combined   :  مش هيكون لها اجابة طيب
+
+[00:04:46]
+  Transcript :  الحال بنسأل عنه باين
+  OCR        : None
+  Combined   :  الحال بنسأل عنه باين
+
+[00:04:50]
+  Transcript :  نسأل عنه بكيفة تمام
+  OCR        : مالذي قااله الرجل قال | كيف جاء محمد جاء
+  Combined   :  نسأل عنه بكيفة تمام مالذي قااله الرجل قال | كيف جاء محمد جاء
+
+[00:04:50]
+  Transcript :  لما اجا اقول كيف قال الرجل
+  OCR        : None
+  Combined   :  لما اجا اقول كيف قال الرجل
+
+[00:04:53]
+  Transcript :  هتقول الحق ازاي يعني
+  OCR        : None
+  Combined   :  هتقول الحق ازاي يعني
+
+[00:04:54]
+  Transcript : 
+  OCR        : None
+  Combined   : 
+
+[00:05:06]
+  Transcript :  يبقى عندنا نفرق بين النقطة دي
+  OCR        : None
+  Combined   :  يبقى عندنا نفرق بين النقطة دي
+
+[00:05:08]
+  Transcript :  الاول علشان انا حبيتها بيين لك كده حاجة بنقع فيها في الاعراب
+  OCR        : None
+  Combined   :  الاول علشان انا حبيتها بيين لك كده حاجة بنقع فيها في الاعراب
+
+[00:05:13]
+  Transcript :  ان احنا بنتصرع في الاعراب زي محمد بالظبط
+  OCR        : None
+  Combined   :  ان احنا بنتصرع في الاعراب زي محمد بالظبط
+
+[00:05:16]
+  Transcript :  تمام فانت تعرف ان هنا دلوقتي لازم تبقى فاهم الكلمة مكانها جي ايه
+  OCR        : None
+  Combined   :  تمام فانت تعرف ان هنا دلوقتي لازم تبقى فاهم الكلمة مكانها جي ايه
+
+[00:05:21]
+  Transcript :  يعني لازم تكون عارف الكلمة دي بتعني ايه في الجملة كمعنى و ايه محلها الاعرافة
+  OCR        : None
+  Combined   :  يعني لازم تكون عارف الكلمة دي بتعني ايه في الجملة كمعنى و ايه محلها الاعرافة
+
+[00:05:27]
+  Transcript :  يعني لما بنيجي نقول جاء محمد مسرعا مسرعا دي عمره ما تكون مفعول به
+  OCR        : None
+  Combined   :  يعني لما بنيجي نقول جاء محمد مسرعا مسرعا دي عمره ما تكون مفعول به
+
+[00:05:32]
+  Transcript :  لان ايه اللي عمله الفعل
+  OCR        : None
+  Combined   :  لان ايه اللي عمله الفعل
+
+[00:05:34]
+  Transcript :  الفعل ما نوش دعو بيه خالص ده هو ده حل محمد
+  OCR        : None
+  Combined   :  الفعل ما نوش دعو بيه خالص ده هو ده حل محمد
+
+[00:05:38]
+  Transcript :  محمد ده كان هيئته كان مسرع
+  OCR        : None
+  Combined   :  محمد ده كان هيئته كان مسرع
+
+[00:05:40]
+  Transcript :  فعشان كده يعرف حال
+  OCR        : None
+  Combined   :  فعشان كده يعرف حال
+
+[00:05:41]
+  Transcript :  يبقى فرق بين المفعول به والحال ده اللي نستفاده
+  OCR        : None
+  Combined   :  يبقى فرق بين المفعول به والحال ده اللي نستفاده
+
+[00:05:45]
+  Transcript :  بايه ان المفعول به نسأل عنه بما
+  OCR        : None
+  Combined   :  بايه ان المفعول به نسأل عنه بما
+
+[00:05:47]
+  Transcript :  والحال نسأل عنه بكيفا
+  OCR        : None
+  Combined   :  والحال نسأل عنه بكيفا
+
+[00:05:49]
+  Transcript :  تمام تمام
+  OCR        : None
+  Combined   :  تمام تمام
+
+[00:05:50]
+  Transcript :  طيب بص المثال ده يرتفع مستوى الدخل
+  OCR        : None
+  Combined   :  طيب بص المثال ده يرتفع مستوى الدخل
+
+[00:05:55]
+  Transcript :  تمام يرتفع مستوى الدخل
+  OCR        : None
+  Combined   :  تمام يرتفع مستوى الدخل
+
+[00:05:57]
+  Transcript :  طيب الجملة دي جملة فعل
+  OCR        : None
+  Combined   :  طيب الجملة دي جملة فعل
+
+[00:06:00]
+  Transcript :  هي ابتدأت بفعل فعل مضارع مرفوع لم ترفعه الضم ما الذي يرتفع مستوى يعرف فعل مرفوع لم ترفعه الضم المقدرة
+  OCR        : None
+  Combined   :  هي ابتدأت بفعل فعل مضارع مرفوع لم ترفعه الضم ما الذي يرتفع مستوى يعرف فعل مرفوع لم ترفعه الضم المقدرة
+
+[00:06:09]
+  Transcript :  ليه المقدرة دي المقدرة لأن كلمة مستوى أخيرها ألف لقينا اللي هي حرف اليقدر تمام فتقدر عليه العلامات اللي هو حرف علة
+  OCR        : None
+  Combined   :  ليه المقدرة دي المقدرة لأن كلمة مستوى أخيرها ألف لقينا اللي هي حرف اليقدر تمام فتقدر عليه العلامات اللي هو حرف علة
+
+[00:06:18]
+  Transcript :  تمام طب الدخل يعرف ee مضاف ee يرتفع مستوى addaklay
+  OCR        : None
+  Combined   :  تمام طب الدخل يعرف ee مضاف ee يرتفع مستوى addaklay
+
+[00:06:24]
+  Transcript :  هنا مستوى مستوى ee مستوى الصليوية
+  OCR        : None
+  Combined   :  هنا مستوى مستوى ee مستوى الصليوية
+
+[00:06:27]
+  Transcript :  مستوى العلم او مستوى ee بالضبط لا مستوى
+  OCR        : None
+  Combined   :  مستوى العلم او مستوى ee بالضبط لا مستوى
+
+[00:06:30]
+  Transcript :  الدخل بقى الدخل دي كلمة
+  OCR        : None
+  Combined   :  الدخل بقى الدخل دي كلمة
+
+[00:06:33]
+  Transcript :  لا مستوى مستوى الى ايه نوع المستوى ابا ايه هو
+  OCR        : None
+  Combined   :  لا مستوى مستوى الى ايه نوع المستوى ابا ايه هو
+
+[00:06:37]
+  Transcript :  ايه هو شكل المستوى خلاص طب الجملة دي
+  OCR        : None
+  Combined   :  ايه هو شكل المستوى خلاص طب الجملة دي
+
+[00:06:40]
+  Transcript :  اتكونت من فعل وفعل ومضاف ee mean where does it make you follow
+  OCR        : None
+  Combined   :  اتكونت من فعل وفعل ومضاف ee mean where does it make you follow
+
+[00:06:43]
+  Transcript :  حد شايفه شباب حد شايفه واقعت تحت الكمبيوتر كده
+  OCR        : None
+  Combined   :  حد شايفه شباب حد شايفه واقعت تحت الكمبيوتر كده
+
+[00:06:46]
+  Transcript :  ولا حاجة
+  OCR        : None
+  Combined   :  ولا حاجة
+
+[00:06:47]
+  Transcript :  مفيش مفعول
+  OCR        : None
+  Combined   :  مفيش مفعول
+
+[00:06:48]
+  Transcript :  تمام
+  OCR        : None
+  Combined   :  تمام
+
+[00:06:49]
+  Transcript :  يبقى هنا بقى
+  OCR        : None
+  Combined   :  يبقى هنا بقى
+
+[00:06:50]
+  Transcript :  لما اجا أقول لحضرتك
+  OCR        : None
+  Combined   :  لما اجا أقول لحضرتك
+
+[00:06:51]
+  Transcript :  في جملة
+  OCR        : None
+  Combined   :  في جملة
+
+[00:06:52]
+  Transcript :  بيكون
+  OCR        : None
+  Combined   :  بيكون
+
+[00:06:53]
+  Transcript : 
+  OCR        : None
+  Combined   : 
+
+[00:07:05]
+  Transcript :  طب هو يا مصدر يعني احنا نستفادي لما نعرف اني في جملة فيها مفعول به
+  OCR        : None
+  Combined   :  طب هو يا مصدر يعني احنا نستفادي لما نعرف اني في جملة فيها مفعول به
+
+[00:07:08]
+  Transcript :  وفي جملة مفعش مفعول به
+  OCR        : None
+  Combined   :  وفي جملة مفعش مفعول به
+
+[00:07:09]
+  Transcript :  هتستفاد ان حضرتك تكون عرفت
+  OCR        : None
+  Combined   :  هتستفاد ان حضرتك تكون عرفت
+
+[00:07:12]
+  Transcript :  يعني ايه فعل لازم ويعني ايه فعل متعد
+  OCR        : None
+  Combined   :  يعني ايه فعل لازم ويعني ايه فعل متعد
+
+[00:07:14]
+  Transcript :  ببساطة كده شباب
+  OCR        : None
+  Combined   :  ببساطة كده شباب
+
+[00:07:16]
+  Transcript :  الفعل اللازم هو الذي
+  OCR        : None
+  Combined   :  الفعل اللازم هو الذي
+
+[00:07:18]
+  Transcript :  هو الذي فاعله
+  OCR        : None
+  Combined   :  هو الذي فاعله
+
+[00:07:20]
+  Transcript :  يرفع فاعلا ولا يحتاج لمفعول به
+  OCR        : None
+  Combined   :  يرفع فاعلا ولا يحتاج لمفعول به
+
+[00:07:22]
+  Transcript :  ولا ينصب مفعول به
+  OCR        : None
+  Combined   :  ولا ينصب مفعول به
+
+[00:07:23]
+  Transcript :  والفعل المتعدد هو الذي يحتاج فاعله إلى مفعول به
+  OCR        : None
+  Combined   :  والفعل المتعدد هو الذي يحتاج فاعله إلى مفعول به
+
+[00:07:28]
+  Transcript :  يرفع فعلا وينصد مفعولا به
+  OCR        : None
+  Combined   :  يرفع فعلا وينصد مفعولا به
+
+[00:07:29]
+  Transcript :  يعني الجملة اللي مفعاش مفعول به
+  OCR        : None
+  Combined   :  يعني الجملة اللي مفعاش مفعول به
+
+[00:07:31]
+  Transcript :  ده اسمها فعلها لازم
+  OCR        : None
+  Combined   :  ده اسمها فعلها لازم
+
+[00:07:34]
+  Transcript :  فعل كلمة يرتفع ده أو الفعل يرتفع ده
+  OCR        : None
+  Combined   :  فعل كلمة يرتفع ده أو الفعل يرتفع ده
+
+[00:07:37]
+  Transcript :  اسمه فعل لازم لأنه رفع فاعل ولم ينصد مفعول به
+  OCR        : None
+  Combined   :  اسمه فعل لازم لأنه رفع فاعل ولم ينصد مفعول به
+
+[00:07:40]
+  Transcript :  تمام تمام
+  OCR        : None
+  Combined   :  تمام تمام
+
+[00:07:41]
+  Transcript :  طب بص المثال الثاني
+  OCR        : None
+  Combined   :  طب بص المثال الثاني
+
+[00:07:43]
+  Transcript :  يعيش المجتمع في رخاء
+  OCR        : None
+  Combined   :  يعيش المجتمع في رخاء
+
+[00:07:46]
+  Transcript :  يعيش فعل مضارع مرفوع لمترفع الضمة
+  OCR        : None
+  Combined   :  يعيش فعل مضارع مرفوع لمترفع الضمة
+
+[00:07:50]
+  Transcript :  المجتمع فاعل مرفوع لمترفع الضمة
+  OCR        : يعيش المجتمع في رخاء | يرتفع مستوي الدخل | فعل مضارع | فعل مشارع فاعل مضان إليه
+  Combined   :  المجتمع فاعل مرفوع لمترفع الضمة يعيش المجتمع في رخاء | يرتفع مستوي الدخل | فعل مضارع | فعل مشارع فاعل مضان إليه
+
+[00:07:52]
+  Transcript :  وفيه رخاء جار ومجروب
+  OCR        : None
+  Combined   :  وفيه رخاء جار ومجروب
+
+[00:07:54]
+  Transcript :  تمام؟ طيب نفس المثال برضو
+  OCR        : None
+  Combined   :  تمام؟ طيب نفس المثال برضو
+
+[00:07:56]
+  Transcript :  خلاص اللي هو يعيش المجتمع
+  OCR        : None
+  Combined   :  خلاص اللي هو يعيش المجتمع
+
+[00:07:58]
+  Transcript :  فيه رخاء برضو
+  OCR        : None
+  Combined   :  فيه رخاء برضو
+
+[00:08:00]
+  Transcript :  فعل وفعل وما فوش مفعول به
+  OCR        : None
+  Combined   :  فعل وفعل وما فوش مفعول به
+
+[00:08:02]
+  Transcript :  تمام طيب يبقى الفعلين دول
+  OCR        : None
+  Combined   :  تمام طيب يبقى الفعلين دول
+
+[00:08:04]
+  Transcript :  الفعل يعيش وفعل يرتفع
+  OCR        : None
+  Combined   :  الفعل يعيش وفعل يرتفع
+
+[00:08:06]
+  Transcript :  دي افعال اسمها افعال لازمه
+  OCR        : None
+  Combined   :  دي افعال اسمها افعال لازمه
+
+[00:08:10]
+  Transcript :  نيجي بقى نبص لدرس الفعل اللازم
+  OCR        : الفعل اللازم والفعل المتعدى | فعل فاعل | سمم تتكون الجملة الفعلية؟ | يت الكورس يوميافي ام السابفة مشاا
+  Combined   :  نيجي بقى نبص لدرس الفعل اللازم الفعل اللازم والفعل المتعدى | فعل فاعل | سمم تتكون الجملة الفعلية؟ | يت الكورس يوميافي ام السابفة مشاا
+
+[00:08:10]
+  Transcript :  والفعل المتعدي ده كان تمهيد
+  OCR        : None
+  Combined   :  والفعل المتعدي ده كان تمهيد
+
+[00:08:12]
+  Transcript :  شباب ان شاء الله ايه لدرس
+  OCR        : None
+  Combined   :  شباب ان شاء الله ايه لدرس
+
+[00:08:14]
+  Transcript :  الفعل اللازم والفعل المتعدي
+  OCR        : None
+  Combined   :  الفعل اللازم والفعل المتعدي
+
+[00:08:16]
+  Transcript :  ويا رب بقى ايه نبدأ كده
+  OCR        : None
+  Combined   :  ويا رب بقى ايه نبدأ كده
+
+[00:08:20]
+  Transcript :  نشد مع بعض دلوقتي ونشوف
+  OCR        : الفعل اللازم والفعل المتعدى | لاين مع أ أحمد سعيد علي رقم الواتس أب | للتواصل أون
+  Combined   :  نشد مع بعض دلوقتي ونشوف الفعل اللازم والفعل المتعدى | لاين مع أ أحمد سعيد علي رقم الواتس أب | للتواصل أون
+
+[00:08:20]
+  Transcript :  تقسيمة الفعل ده بس
+  OCR        : None
+  Combined   :  تقسيمة الفعل ده بس
+
+[00:08:22]
+  Transcript :  هقول لحضرتك حاجة
+  OCR        : None
+  Combined   :  هقول لحضرتك حاجة
+
+[00:08:24]
+  Transcript :  ان شاء الله هنخليه في الفيديو
+  OCR        : None
+  Combined   :  ان شاء الله هنخليه في الفيديو
+
+[00:08:26]
+  Transcript :  اللي جاي علشان برضو ما تكونش
+  OCR        : None
+  Combined   :  اللي جاي علشان برضو ما تكونش
+
+[00:08:28]
+  Transcript :  طولت عليك في الفيديو ده
+  OCR        : None
+  Combined   :  طولت عليك في الفيديو ده
+
+[00:08:30]
+  Transcript :  وأنا حابب أن حضرتك تاخد الكورس
+  OCR        : الفعل اللازم والفعل المتعدى | فعل فاعل | ما االذي قاله الرجلال | فاعل جاروور | فعل مارع
+  Combined   :  وأنا حابب أن حضرتك تاخد الكورس الفعل اللازم والفعل المتعدى | فعل فاعل | ما االذي قاله الرجلال | فاعل جاروور | فعل مارع
+
+[00:08:32]
+  Transcript :  على بساطة وعلى هدوة خالص
+  OCR        : None
+  Combined   :  على بساطة وعلى هدوة خالص
+
+[00:08:34]
+  Transcript :  فالدرس ده إن شاء الله يكون خلص
+  OCR        : None
+  Combined   :  فالدرس ده إن شاء الله يكون خلص
+
+[00:08:35]
+  Transcript :  وبإذن الله الدرس اللي جاي
+  OCR        : None
+  Combined   :  وبإذن الله الدرس اللي جاي
+
+[00:08:37]
+  Transcript :  هبدأ أفهمك أو هوضح لك
+  OCR        : None
+  Combined   :  هبدأ أفهمك أو هوضح لك
+
+[00:08:40]
+  Transcript :  يعني فعل لازم ويعني فعل متعدي
+  OCR        : None
+  Combined   :  يعني فعل لازم ويعني فعل متعدي
+
+[00:08:42]
+  Transcript :  وإن كده نكون وصلنا لهاية الحلقة النهاردة
+  OCR        : None
+  Combined   :  وإن كده نكون وصلنا لهاية الحلقة النهاردة
+
+[00:08:45]
+  Transcript :  بارك الله فيكم
+  OCR        : None
+  Combined   :  بارك الله فيكم
+
+[00:08:46]
+  Transcript :  وشباب وربنا ينفع بيكم
+  OCR        : None
+  Combined   :  وشباب وربنا ينفع بيكم
+
+[00:08:48]
+  Transcript :  وجزاكم الله خيرا
+  OCR        : None
+  Combined   :  وجزاكم الله خيرا
+
+[00:08:49]
+  Transcript :  والسلام عليكم ورحمة الله وبركاته
+  OCR        : None
+  Combined   :  والسلام عليكم ورحمة الله وبركاته
+=======
 [00:00:05]
   Transcript : Hello everyone
   OCR        : Slide 1
   Combined   : Hello everyone Slide 1
+>>>>>>> 75fe1d9825d70f2f62d9b11ea05eeb948a67d4d0
+>>>>>>> 06a0b67704605cecbae3eae6d4cc39d5a459d10e
 

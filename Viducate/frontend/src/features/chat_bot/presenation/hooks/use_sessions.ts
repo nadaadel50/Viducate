@@ -12,6 +12,7 @@ export function useSessions() {
     queryFn: async () => {
       const result = await getSessionsUseCase(videoId!);
       if (!result.success) throw Error("Error With Sessions");
+      console.log("sessions is:",result.data)
       
       return result.data;
     },

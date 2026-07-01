@@ -8,19 +8,20 @@ import { useNavigate } from "react-router";
 import { AppRoutesNames } from "../../../../app/routers/routes";
 import { useLearningSession } from "../../../../core/hooks/useLearningContent";
 import { useState } from "react";
-import { ExistingVideoModal } from "../componants/upload/exist_message";
 import { useUploadLink } from "../hooks/upload_url";
-
+import { ConfirmationModal } from "../../../../core/componants/confirmation_modal";
+import { FolderOpen } from "lucide-react";
+import { useIntl } from "react-intl";
 
 
 export function UploadLinkSection() {
   const { setVideoId } = useLearningSession();
-
+const intl = useIntl();
   const { url, handleUrlChange, linkError, handlePaste } = useLinkHandlers();
   const [showExistingVideoModal, setShowExistingVideoModal] = useState(false);
 
   const { linkTitle, linkTitleError, handleLinkTitle } = useLinkTitleInput();
-  const {uploadLinkAsync,isLoading,error}=useUploadLink()
+  const { uploadLinkAsync, isLoading, error } = useUploadLink();
 
   const navigate = useNavigate();
 
@@ -41,8 +42,10 @@ export function UploadLinkSection() {
       setShowExistingVideoModal(true);
       return;
     }
+  
+   sessionStorage.setItem('from_upload', 'true');
 
-    navigate(AppRoutesNames.ProcessingPage, {
+    navigate(AppRoutesNames.processing, {
       replace: true,
     });
   };
@@ -64,21 +67,30 @@ export function UploadLinkSection() {
 
       <UploadBtn
         disabled={linkError || url === "" || linkTitle === ""}
-        label={"Upload link"}
+        label={intl.formatMessage({ id: "upload.link.uploadButton" })}
         onClick={handleUploadURL}
         isLoading={isLoading}
         error={error}
       />
 
-      <ExistingVideoModal
-        show={showExistingVideoModal}
-        onCancel={() => setShowExistingVideoModal(false)}
-        onOpenVideo={async() => {
-         
+     
 
-          navigate(AppRoutesNames.wathcVideo, { replace: true });
+      <ConfirmationModal
+        open={showExistingVideoModal}
+        title="Video Already Exists"
+        description="This video has already been processed. Would you like to open it instead of uploading it again?"
+        confirmText="Open Video"
+        cancelText="Cancel"
+        confirmVariant="primary"
+        icon={<FolderOpen size={22} />}
+        onClose={() => setShowExistingVideoModal(false)}
+        onConfirm={() => {
+          setShowExistingVideoModal(false);
+          navigate(AppRoutesNames.watchVideo, { replace: true });
         }}
       />
+
+     
     </>
   );
 }

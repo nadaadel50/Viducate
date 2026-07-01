@@ -68,12 +68,7 @@ class AuthService:
             remaining = int((user.locked_until - datetime.utcnow()).total_seconds() / 60)
             raise HTTPException(
                 status_code=status.HTTP_403_FORBIDDEN,
-                detail={
-                    "code": "ACCOUNT_LOCKED",
-                    "message": "Account temporarily locked due to too many failed attempts.",
-                    "locked_until": user.locked_until.isoformat(), 
-                    "remaining_seconds": int((user.locked_until - datetime.utcnow()).total_seconds()),
-                }
+                detail=f"Account temporarily locked due to too many failed attempts. Remaining time: {remaining} minutes.",
             )
 
          # If lockout period has expired, reset the counter automatically
@@ -91,23 +86,14 @@ class AuthService:
                 self.user_repo.update(user)
                 raise HTTPException(
                     status_code=status.HTTP_403_FORBIDDEN,
-                    detail={
-                        "code": "ACCOUNT_LOCKED",
-                        "message": f"Too many failed attempts. Account locked for {LOCKOUT_DURATION_MINUTES} minutes.",
-                        "locked_until": user.locked_until.isoformat(),
-                        "remaining_seconds": LOCKOUT_DURATION_MINUTES * 60,
-                    }
+                    detail=f"Too many failed attempts. Account locked for {LOCKOUT_DURATION_MINUTES} minutes.",
                 )
 
             attempts_left = MAX_LOGIN_ATTEMPTS - user.failed_login_attempts
             self.user_repo.update(user)
             raise HTTPException(
                 status_code=status.HTTP_401_UNAUTHORIZED,
-                detail={
-                    "code": "INVALID_CREDENTIALS",
-                    "message": "Incorrect email or password.",
-                    "attempts_left": attempts_left,
-                }
+                detail="Incorrect email or password."
             )
 
         # Successful login
@@ -167,6 +153,12 @@ class AuthService:
                 status_code=status.HTTP_409_CONFLICT,
                 detail="An account with this email not exists")
                 
+        
+        if existing_user.oauth_provider is not None:
+            raise HTTPException(
+                status_code=status.HTTP_400_BAD_REQUEST,
+                detail=f"This account is registered using {existing_user.oauth_provider}. Please sign in with {existing_user.oauth_provider} instead."
+            )
         
         reset_token = secrets.token_urlsafe(32)
         expires_at = datetime.utcnow() + timedelta(hours=1)

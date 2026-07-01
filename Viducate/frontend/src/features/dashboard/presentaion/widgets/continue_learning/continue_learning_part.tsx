@@ -3,11 +3,13 @@ import { useDashboard } from "../../hooks/use_dashboard";
 import { ContinueLearningCard } from "./cotinue_learning_card";
 import { VideoFilterButton } from "./video_filter_btn";
 import { FONT_STYLES } from "../../../../../core/constants/fonts";
+import { FormattedMessage } from "react-intl";
+import { useIntl } from "react-intl";
 
 export function ContinueLearningPart() {
   const { data, uploaded_videos, linked_videos } = useDashboard();
   const [searchQuery, setSearchQuery] = useState("");
-
+  const intl = useIntl();
   const cardsData = useMemo(() => {
     if (!data?.continue_learning) return [];
 
@@ -31,7 +33,7 @@ export function ContinueLearningPart() {
   return (
     <div className="flex flex-col gap-4">
       <h2 className={`${FONT_STYLES.sectionTitle} text-slate-900`}>
-        Continue Learning
+        <FormattedMessage id="dashboard.continueLearning.title" />
       </h2>
 
       <div className="flex  w-full max-w-4xl items-center gap-2">
@@ -46,7 +48,9 @@ export function ContinueLearningPart() {
             onChange={(e) => setSearchQuery(e.target.value)}
             type="text"
             className="block w-full pl-10 pr-3 py-2 border border-slate-200 rounded-xl bg-white text-slate-900 placeholder-slate-400 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:border-indigo-500 text-sm transition-all shadow-soft"
-            placeholder="Search for saved videos..."
+            placeholder={intl.formatMessage({
+              id: "dashboard.continueLearning.searchPlaceholder",
+            })}
           />
         </div>
 
@@ -73,11 +77,11 @@ export function ContinueLearningPart() {
             </span>
 
             <h3 className={`${FONT_STYLES.cardTitle} text-slate-900`}>
-              No videos found
+              <FormattedMessage id="dashboard.continueLearning.empty.title" />
             </h3>
 
             <p className={`${FONT_STYLES.caption} mt-1 max-w-xs`}>
-              Try a different search term, or upload a video to start learning.
+              <FormattedMessage id="dashboard.continueLearning.empty.description" />
             </p>
           </div>
         )}

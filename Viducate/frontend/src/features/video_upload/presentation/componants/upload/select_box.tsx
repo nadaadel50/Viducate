@@ -2,16 +2,14 @@ import { Link, Upload } from "lucide-react";
 import { SelectBtn } from "./select_btn";
 import type { SelectType } from "../../types/types";
 import { FONT_STYLES } from "../../../../../core/constants/fonts";
-
+import { useIntl } from "react-intl";
 type SelectBoxProps = {
   handleSelected: (btnSelected: SelectType) => void;
   selected: string;
 };
 
-export function SelectBox({
-  handleSelected,
-  selected,
-}: SelectBoxProps) {
+export function SelectBox({ handleSelected, selected }: SelectBoxProps) {
+  const intl = useIntl();
   return (
     <div
       className="
@@ -28,13 +26,11 @@ export function SelectBox({
           <SelectBtn
             handleSelect={handleSelected}
             isSelected={selected === "upload"}
-            text="Upload File"
+            text={intl.formatMessage({
+              id: "upload.select.uploadFile",
+            })}
             value="upload"
-            icon={
-              <Upload
-                className="w-4 h-4 md:w-[18px] md:h-[18px]"
-              />
-            }
+            icon={<Upload className="w-4 h-4 md:w-[18px] md:h-[18px]" />}
           />
         </div>
 
@@ -42,13 +38,11 @@ export function SelectBox({
           <SelectBtn
             handleSelect={handleSelected}
             isSelected={selected === "link"}
-            text="Link"
+            text={intl.formatMessage({
+              id: "upload.select.link",
+            })}
             value="link"
-            icon={
-              <Link
-                className="w-4 h-4 md:w-[18px] md:h-[18px]"
-              />
-            }
+            icon={<Link className="w-4 h-4 md:w-[18px] md:h-[18px]" />}
           />
         </div>
       </div>

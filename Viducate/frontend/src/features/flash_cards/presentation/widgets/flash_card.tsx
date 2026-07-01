@@ -1,97 +1,109 @@
-import { useNavigate } from "react-router";
-import type { FlashCardDetials } from "../../domain/entity/flash_card_response";
-import { AppRoutesNames } from "../../../../app/routers/routes";
-import { useLearningSession } from "../../../../core/hooks/useLearningContent";
-
 import { FilePlay } from "lucide-react";
+import { useNavigate } from "react-router";
+import clsx from "clsx";
 
+import { AppRoutesNames } from "../../../../app/routers/routes";
+import { CustomButton } from "../../../../core/componants/custum_btn";
+import { FONT_STYLES } from "../../../../core/constants/fonts";
+import { useLearningSession } from "../../../../core/hooks/useLearningContent";
+import { formatVideoTime } from "../../../../core/utils/fomat_time";
+import { FormattedMessage } from "react-intl";
+import type { FlashCardDetials } from "../../domain/entity/flash_card_response";
 
 type FlashCardProps = {
   cardData: FlashCardDetials;
   isFliped: boolean;
-
   onClick: () => void;
 };
 
-export function FlashCard({ isFliped, cardData, onClick }: FlashCardProps) {
-  const { setCurrentTime } = useLearningSession();
-
-  const formatTime = (seconds: number) => {
-    const mins = Math.floor(seconds / 60);
-    const secs = Math.floor(seconds % 60);
-
-    return `${String(mins).padStart(2, "0")}:${String(secs).padStart(2, "0")}`;
-  };
+export function FlashCard({ cardData, isFliped, onClick }: FlashCardProps) {
   const navigate = useNavigate();
+  const { setCurrentTime,setSeekTo } = useLearningSession();
+
+  const handleViewSource = () => {
+    setCurrentTime(cardData.segment_start_time);
+    setSeekTo(cardData.segment_start_time)
+    
+    navigate(AppRoutesNames.watchVideo);
+  };
+
   return (
     <div
-      style={{ perspective: "1000px" }}
-      className="relative w-full max-w-2xl h-[420px] group cursor-pointer mb-10"
       onClick={onClick}
+      style={{ perspective: "1000px" }}
+      className="group relative mb-8 h-[300px] w-full max-w-2xl cursor-pointer sm:h-[360px] lg:h-[420px]"
     >
       <div
-        className={`relative w-full h-full text-center transition-all duration-900 
-        [transform-style:preserve-3d] 
-        ${isFliped ? "rotate-y-180" : ""} 
-        shadow-[0_20px_25px_-5px_rgba(0,0,0,0.1),_0_10px_10px_-5px_rgba(0,0,0,0.04)] 
-        rounded-2xl bg-white border border-gray-100`}
+        className={clsx(
+          "relative h-full w-full rounded-2xl border border-slate-100 bg-white shadow-[0_20px_25px_-5px_rgba(0,0,0,0.1),_0_10px_10px_-5px_rgba(0,0,0,0.04)] transition-all duration-700 [transform-style:preserve-3d]",
+          isFliped && "rotate-y-180",
+        )}
       >
-        <div
-          className="
-          absolute inset-0 w-full h-full 
-     
-          flex flex-col items-center justify-center 
-          p-12 rounded-2xl bg-white"
-        >
-          <h3 className="text-3xl font-bold text-slate-900 leading-tight tracking-tight p-8">
+        {/* Front */}
+        <div className="absolute inset-0 flex h-full w-full flex-col items-center justify-center rounded-2xl bg-white p-5 sm:p-8 lg:p-12">
+          <h3
+            className={clsx(
+              FONT_STYLES.pageTitle,
+              "text-center text-slate-900",
+            )}
+          >
             {cardData.question}
           </h3>
 
-          <p className="text-sm font-medium text-gray-400 mt-10 uppercase tracking-widest">
-            Click to reveal answer
+          <p
+            className={clsx(
+              FONT_STYLES.caption,
+              "mt-8 text-center uppercase tracking-widest text-slate-400",
+            )}
+          >
+            <FormattedMessage id="flashcards.card.reveal" />
           </p>
         </div>
 
-        <div
-          className="
-          absolute inset-0 w-full h-full 
-          [backface-visibility:hidden] 
-          rotate-y-180 
-          gap-4
-          flex flex-col items-center justify-center 
-          rounded-2xl bg-white"
-        >
-          <p className="text-[#4f46e5] font-bold text-2xl p-8">
+        {/* Back */}
+        <div className="absolute inset-0 flex h-full w-full rotate-y-180 flex-col items-center justify-center gap-5 rounded-2xl bg-white p-5 [backface-visibility:hidden] sm:p-8 lg:p-12">
+          <p
+            className={clsx(
+              FONT_STYLES.sectionTitle,
+              "text-center text-[#4f46e5]",
+            )}
+          >
             {cardData.answer}
           </p>
 
-          <p className="text-sm font-medium text-gray-400 uppercase tracking-widest">
-            Click to go back
+          <p
+            className={clsx(
+              FONT_STYLES.caption,
+              "text-center uppercase tracking-widest text-slate-400",
+            )}
+          >
+            <FormattedMessage id="flashcards.card.back" />
           </p>
         </div>
       </div>
+
       <div
-  className={`absolute bottom-5 left-1/2 -translate-x-1/2 transition-all duration-300
-  ${isFliped ? "opacity-100 translate-y-0" : "opacity-0 translate-y-4 pointer-events-none"}
-`}
->
-  <button
-    className="cursor-pointer flex gap-2 text-sm font-bold text-gray-500 hover:text-[#4f46e5] transition-colors duration-300"
-    onClick={() => {
-      
-      setCurrentTime(cardData.segment_start_time);
-      navigate(AppRoutesNames.wathcVideo)
-   
-
-    }}
-  >
-    <FilePlay size={18} />
-    <span>
-      {`View source in video (${formatTime(cardData.segment_start_time)})`}
-    </span>
-  </button>
-</div>
-
+        className={clsx(
+          "absolute bottom-4 left-1/2 -translate-x-1/2 transition-all duration-300",
+          isFliped
+            ? "translate-y-0 opacity-100"
+            : "pointer-events-none translate-y-4 opacity-0",
+        )}
+      >
+        <CustomButton
+          type="button"
+          onClick={handleViewSource}
+          className="gap-2 whitespace-nowrap rounded-lg bg-transparent px-3 py-2 text-slate-500 hover:text-[#4f46e5]"
+          leftIcon={<FilePlay size={18} />}
+        >
+          <FormattedMessage
+            id="flashcards.card.viewSource"
+            values={{
+              time: formatVideoTime(cardData.segment_start_time),
+            }}
+          />
+        </CustomButton>
+      </div>
     </div>
   );
 }

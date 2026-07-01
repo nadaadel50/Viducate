@@ -9,7 +9,7 @@
   "auth.checkEmail.subtitle": "لقد أرسلنا رابط إعادة تعيين كلمة المرور إلى",
   "auth.checkEmail.openEmailApp": "فتح تطبيق البريد",
   "auth.checkEmail.resend": "إعادة الإرسال",
-  "auth.checkEmail.didnotReciveEmail": "لم يتك ارسال الايميل",
+  "auth.checkEmail.didnotReciveEmail": "ما وصلكش الإيميل؟",
 
   "auth.resetPassword.title": "إنشاء كلمة مرور جديدة",
   "auth.resetPassword.subtitle": "يجب أن تكون كلمة المرور الجديدة مختلفة عن كلمات المرور المستخدمة سابقًا.",
@@ -17,23 +17,22 @@
 
   "auth.resetSuccess.titleLine1": "تم إعادة تعيين كلمة المرور",
   "auth.resetSuccess.titleLine2": "بنجاح",
-  "auth.resetSuccess.description": "تم تحديث كلمة المرور الخاصة بك بنجاح. يمكنك الآن الوصول إلى مكتبة الدراسة باستخدام بيانات الاعتماد الجديدة.",
+  "auth.resetSuccess.description": "كلمة مرورك اتغيرت بنجاح، دلوقتي تقدر تدخل بيانات الدخول الجديدة.",
   "auth.resetSuccess.backToLogin": "العودة إلى تسجيل الدخول",
 
-   "auth.passwordReq.title": "متطلبات كلمة المرور:",
+  "auth.passwordReq.title": "متطلبات كلمة المرور:",
   "auth.passwordReq.length": "على الأقل 8 أحرف",
   "auth.passwordReq.number": "تحتوي على رقم واحد على الأقل",
   "auth.passwordReq.special": "تحتوي على رمز خاص واحد على الأقل",
 
-
-   "auth.resetSuccessPage.title": "كل شيء جاهز!",
+  "auth.resetSuccessPage.title": "كل شيء جاهز!",
   "auth.resetSuccessPage.description": "تابع رحلة تعلمك بثقة",
 
   "auth.resetPasswordPage.titleFirst": "قم بتأمين حسابك من أجل",
   "auth.resetPasswordPage.titleColored": "فتح باب المعرفة.",
-  "auth.resetPasswordPage.description": "حافظ على رحلة تعلمك آمنة. قم بتعيين كلمة مرور قوية لمواصلة الوصول إلى الرؤى المدعومة بالذكاء الاصطناعي.",
+  "auth.resetPasswordPage.description": "خلي حسابك آمن واختار كلمة مرور قوية عشان تكمل رحلتك في التعلم.",
 
-   "auth.forgetPasswordPage.titleFirst": "أعد تعيين كلمة المرور بأمان",
+  "auth.forgetPasswordPage.titleFirst": "أعد تعيين كلمة المرور بأمان",
   "auth.forgetPasswordPage.titleColored": "وتابع رحلتك في التعلم",
   "auth.forgetPasswordPage.description": "لن يستغرق الأمر سوى بضع ثوانٍ للعودة إلى المسار الصحيح",
 
@@ -41,17 +40,17 @@
   "auth.emailSentPage.titleColored": "إلى بريدك الإلكتروني",
   "auth.emailSentPage.description": "لن يستغرق الأمر سوى بضع ثوانٍ للعودة إلى المسار الصحيح",
 
-    "auth.forgetPassword.errors.invalidEmail": "يرجى إدخال بريد إلكتروني صحيح",
-     "auth.resetPassword.errors.passwordMismatch": "كلمتا المرور غير متطابقتين",
-
-      "auth.resetPassword.inputs.newPasswordLabel": "كلمة المرور الجديدة",
+  "auth.forgetPassword.errors.invalidEmail": "يرجى إدخال بريد إلكتروني صحيح",
+  "auth.resetPassword.errors.passwordMismatch": "كلمتا المرور غير متطابقتين",
+  "auth.passwordMinRequired": "يجب كتابه كلمه المرور",
+  "auth.resetPassword.inputs.newPasswordLabel": "كلمة المرور الجديدة",
   "auth.resetPassword.inputs.newPasswordPlaceholder": "أدخل كلمة المرور الجديدة",
   "auth.resetPassword.inputs.confirmPasswordLabel": "تأكيد كلمة المرور الجديدة",
   "auth.resetPassword.inputs.confirmPasswordPlaceholder": "أكد كلمة المرور",
   "auth.welcomeBack": "مرحبًا بعودتك",
   "auth.createAccount": "أنشئ حسابك",
-  "auth.loginSubtitle": "سجّل دخولك وابدأ الوصول لمكتبتك التعليمية بسهولة.",
-  "auth.signupSubtitle": "استفد من الذكاء الاصطناعي لتعلّم موادك الدراسية بشكل أسرع وأذكى.",
+  "auth.loginSubtitle": "سجّل دخولك وابدأ ذاكر على طول!",
+  "auth.signupSubtitle": "تعلّم أسرع وأذكى من أي وقت فات!",
   "auth.loginWithGoogle": "تسجيل الدخول بجوجل",
   "auth.signupWithGoogle": "إنشاء حساب بجوجل",
   "auth.or": "أو",
@@ -61,6 +60,7 @@
   "auth.enterLastName": "أدخل اسمك الأخير",
   "auth.email": "البريد الإلكتروني",
   "auth.enterEmail": "أدخل بريدك الإلكتروني",
+
   "auth.password": "كلمة المرور",
   "auth.confirmPassword": "تأكيد كلمة المرور",
   "auth.rememberMe": "تذكرني",
@@ -72,10 +72,10 @@
   "auth.haveAccount": "لديك حساب بالفعل؟",
   "auth.signup": "إنشاء حساب",
   "auth.loginLink": "تسجيل الدخول",
-    "auth.fullNameRequired": "الاسم بالكامل مطلوب",
+  "auth.fullNameRequired": "الاسم بالكامل مطلوب",
   "auth.invalidEmail": "البريد الإلكتروني غير صالح",
   "auth.passwordMinLength": "يجب أن تكون كلمة المرور 8 أحرف على الأقل",
-   "auth.passwordUppercaseRequired_ar": "يجب أن يحتوي كلمة المرور على حرف كبير واحد على الأقل",
+  "auth.passwordUppercaseRequired_ar": "يجب أن يحتوي كلمة المرور على حرف كبير واحد على الأقل",
   "auth.passwordsNotMatch": "كلمتا المرور غير متطابقتين",
   "auth.genericError": "حدث خطأ ما. يرجى المحاولة مرة أخرى.",
   "signup.hero.title1": "حوّل ساعات المشاهدة",
@@ -86,11 +86,9 @@
 
   "login.hero.title1": "وفّر وقتك في المذاكرة",
   "login.hero.title2": "وتعلّم بذكاء أكبر.",
-  "login.hero.description": "طوّر مستواك الدراسي باستخدام أدوات ذكية بتختصر عليك الطريق.",
+"login.hero.description": "طوّر مستواك الدراسي باستخدام أدوات ذكية بتختصر عليك الطريق.",
   "login.badge.title": "ملخص ذكي",
   "login.badge.subtitle": "اكتمل في دقيقتين فقط",
-
-
 
   "preferences.outputLanguage": "لغة عرض المحتوى",
   "preferences.sameAsVideo": "مثل لغة الفيديو",
@@ -98,7 +96,7 @@
   "preferences.arabic": "العربية",
 
   "languageInit.title": "هل تريد تخصيص لغة المحتوى؟",
-  "languageInit.desc": "يستخدم Viducate الذكاء الاصطناعي لتكييف المحتوى معك. هل تريد تخصيص لغة المحتوى، أو المتابعة بلغة الفيديو؟",
+  "languageInit.desc": "عايز المحتوى يطلعلك بلغة معينة، ولا تكمل بنفس لغة الفيديو؟",
   "languageInit.noContinue": "لا، متابعة",
   "languageInit.yesCustomize": "نعم، تخصيص",
   "languageInit.secure": "سيتم حفظ تفضيلاتك بشكل آمن.",
@@ -112,10 +110,20 @@
   "customize.language.unified.disabled": "بيتم استخدام لغة المحتوى المفضلة لديك",
   "customize.preferredLanguage": "لغتك المفضلة",
 
+  "customize.summary.title": "الملخص",
+  "customize.summary.desc": "اختر اللغة المستخدمة في إنشاء الملخصات.",
 
+  "customize.quiz.title": "الاختبار",
+  "customize.quiz.desc": "اختر اللغة المستخدمة في الاختبارات والأسئلة التدريبية.",
 
-  
-  "analysis.title": "الذكاء الاصطناعي يحلل الفيديو الخاص بك",
+  "customize.flashcards.title": "البطاقات التعليمية",
+  "customize.flashcards.desc": "اختر اللغة المستخدمة في البطاقات التعليمية للمراجعة.",
+
+  "customize.errors.videoIdMissing": "معرّف الفيديو غير متوفر.",
+  "customize.errors.saveFailed": "تعذر حفظ تفضيلاتك، حاول مرة أخرى.",
+  "common.errors.unexpected": "حدث خطأ غير متوقع، حاول مرة أخرى.",
+
+  "analysis.title": "جارٍ تحليل الفيديو الخاص بك",
   "analysis.subtitle": "قد يستغرق الأمر بعض الوقت حسب مدة الفيديو.",
   "analysis.complete": "اكتمل التحليل!",
   "analysis.ready": "المحتوى الدراسي الخاص بك جاهز.",
@@ -124,35 +132,46 @@
   "analysis.step.generating": "إنشاء الملخص والاختبارات",
   "analysis.cancel": "إلغاء التحليل",
   "analysis.tip.title": "هل تعلم؟",
-  "analysis.tip.desc": "يمكن لذكاءنا الاصطناعي اكتشاف أكثر من 50 موضوعًا تعليميًا مختلفًا وإنشاء طوابع زمنية تلقائيًا لتسهيل التنقل عبر محتوى التعلم الخاص بك.",
+  "analysis.tip.desc": "يمكننا اكتشاف أكثر من 50 موضوعًا تعليميًا مختلفًا وإنشاء طوابع زمنية تلقائيًا لتسهيل التنقل عبر محتوى التعلم الخاص بك.",
   "analysis.pending": "قيد الانتظار",
   "analysis.active": "جارٍ المعالجة",
   "analysis.completed": "اكتمل",
-  
+
   "analysis.failed": "فشلت العملية",
   "analysis.error.title": "فشلت عملية التحليل",
   "analysis.error.subtitle": "حدث خطأ أثناء معالجة الفيديو الخاص بك. يرجى المحاولة مرة أخرى.",
   "analysis.retry": "إعادة محاولة الرفع",
+  "analysis.cancel.description": "هل أنت متأكد إنك عايز توقف تحليل الفيديو؟ هتحتاج تبدأ التحليل من جديد لو رجعت بعد كده.",
 
-
-  "summary.aiReady": "الملخص جاهز بالذكاء الاصطناعي",
+  "summary.aiReady": "الملخص جاهز",
   "summary.keyTakeaways": "أهم النقاط",
   "summary.conclusion": "الخلاصة",
   "summary.exportPdf": "تصدير PDF",
   "summary.downloadOffline": "تحميل للاستخدام بدون إنترنت",
   "summary.tools": "الأدوات",
-  "summary.studyNotes": "ملاحظات دراسية",
-  "summary.studyNotesDesc": "نقاط تفصيلية ومفاهيم أساسية للتعلم العميق",
-  "summary.summary": "ملخص",
-  "summary.summaryDesc": "نظرة سريعة ومختصرة للمراجعة",
+
+  "summary.loading.titlePrefix": "جارٍ إعداد",
+  "summary.loading.titleHighlight": "ملخصك...",
+  "summary.loading.subtitle": "جارٍ استخراج أهم الأفكار والنقاط الرئيسية من الفيديو",
+  "studyNotes.loading.titlePrefix": "جارٍ تنسيق",
+  "studyNotes.loading.titleHighlight": "ملاحظاتك الدراسية...",
   "summary.selectStyleTitle": "اختر نوع الملخص",
-  "summary.selectStyleDesc": "اختر الشكل المناسب لطريقة تعلمك الآن",
-
-
-
-
-
-
+  "studyNotes.loading.subtitle": "جارٍ تنظيم المفاهيم الأساسية والتعريفات والأمثلة من أجلك",
+  "summary.selectStyleDescr": "اختر الشكل المناسب لطريقة تعلمك الآن",
+  "summary.studyNotesTitle": "ملاحظات دراسية",
+  "summary.studyNotesDescription": "نقاط تفصيلية ومفاهيم أساسية لفهم أعمق",
+  "summary.summaryTitle": "ملخص",
+  "summary.summaryDescription": "نظرة عامة مختصرة للمراجعة السريعة",
+  "motivation.title": "إلهام اليوم",
+  "motivation.subtitle": "خذ لحظة للتأمل، فأنت تبني مستقبلك محاضرة بعد أخرى.",
+  "motivation.quote1": "أجمل ما في التعلم أنه شيء لا يستطيع أحد أن يسلبه منك.",
+  "motivation.quote2": "كل خبير كان في يوم من الأيام مبتدئًا.",
+  "motivation.quote3": "اسعَ للتقدم لا للكمال.",
+  "motivation.quote4": "ليس عليك أن تكون عظيمًا لتبدأ، لكن عليك أن تبدأ لتصبح عظيمًا.",
+  "motivation.quote5": "التعليم هو أقوى سلاح يمكنك استخدامه لتغيير العالم.",
+  "motivation.quote6": "لا تدع ما لا تستطيع فعله يمنعك مما تستطيع فعله.",
+  "motivation.quote7": "النجاح هو مجموع الجهود الصغيرة المتكررة يومًا بعد يوم.",
+  "motivation.quote8": "التعلم كنز يرافق صاحبه أينما ذهب.",
 
   "quiz.question_count": "السؤال {current} من {total}",
   "quiz.time_remaining": "الوقت المتبقي",
@@ -169,56 +188,46 @@
   "quiz.map_title": "خريطة الأسئلة",
   "quiz.go_to_watch": "اذهب لمشاهدة عند {timestamp_label}",
   "quiz.new_quiz": "اختبار جديد",
+  "quiz.selectDifficultyTitle": "اختر مستوى صعوبة الاختبار",
+  "quiz.selectDifficultyDescription": "اختر مستوى الصعوبة الذي يناسب فهمك الحالي.",
+  "quiz.easyTitle": "سهل",
+  "quiz.easyDescription": "أتقن الأساسيات",
+  "quiz.mediumTitle": "متوسط",
+  "quiz.mediumDescription": "طوّر مهاراتك",
+  "quiz.hardTitle": "صعب",
+  "quiz.hardDescription": "تحدَّ نفسك",
+  "quiz.loading.titlePrefix": "جارٍ تجهيز",
+  "quiz.loading.titleHighlight": "اختبارك...",
+  "quiz.loading.subtitle": "جارٍ إنشاء أسئلة وإجابات من محتوى الفيديو.",
+  "quiz.submitting": "جارٍ إرسال الإجابات...",
 
-
-
-
-
-
-  
   "report.topic.material.summary": "الملخص",
   "report.topic.material.studyNotes": "ملاحظات المذاكرة",
   "report.topic.material.quiz": "الاختبار",
   "report.topic.material.flashcards": "البطاقات التعليمية ({count})",
 
   "report.topic.score": "النتيجة",
-
   "report.topic.attempts": "{count} محاولة",
-
   "report.topic.takeQuiz": "تحتاج إلى إجراء الاختبار",
-
   "report.topic.progress": "التقدم",
-
   "report.topic.quizResults": "نتيجة الاختبار",
-
   "report.topic.correctAnswers": "{score} إجابة صحيحة من أصل {total}",
-
   "report.topic.finishedWatching": "أتممت دراسة هذا الدرس!",
-
   "report.topic.quizReminder": "جرّب الاختبار لمعرفة مدى فهمك للموضوع.",
-
   "report.topic.materialsPrepared": "المواد التعليمية",
-
   "report.topic.needsMoreWork": "يحتاج إلى مراجعة أكثر",
-
   "report.topic.mastered": "ممتاز! لقد أتقنت هذا الموضوع.",
 
-
-
-  
   "report.overall.title": "نتائج التعلم",
 
   "report.stats.videoProgress": "تقدم المشاهدة",
   "report.stats.watchedDuration": "تمت مشاهدة {duration}",
-
   "report.stats.quizAccuracy": "دقة الاختبار",
   "report.stats.correctAnswers": "{correct} من {total} صحيحة",
-
   "report.stats.flashcards": "البطاقات التعليمية",
   "report.stats.flashcardsCreated": "تم إنشاء البطاقات",
 
   "report.materials.title": "المواد التعليمية",
-
   "report.materials.summary": "الملخص",
   "report.materials.studyNotes": "ملاحظات المذاكرة",
   "report.materials.quiz": "اختبار الفيديو",
@@ -228,14 +237,14 @@
 
   "report.topicsBreakdown.title": "تفاصيل الموضوعات",
   "report.topicsBreakdown.count": "{count} موضوع",
-
-
-
   "report.hero.updatedAt": "تم تحديثه في {date} · تم اكتشاف {count} موضوع",
   "report.hero.watchProgress": "تقدم المشاهدة",
   "report.hero.watched": "تمت مشاهدة {percent}%",
   "report.hero.remaining": "متبقي {percent}%",
-  "report.page.title": "تقرير أداء الفيديو" ,
+  "report.page.title": "تقرير أداء الفيديو",
+  "report.loading.titlePrefix": "جارٍ تجهيز",
+  "report.loading.titleHighlight": "تقرير التعلّم",
+  "report.loading.subtitle": "بنشوف تقدمك ونجهزلك التقرير...",
 
   "profile.preferences.title": "الإعدادات",
   "profile.preferences.appearance": "المظهر",
@@ -254,6 +263,8 @@
   "profile.deleteModal.title": "حذف الحساب",
   "profile.deleteModal.description": "هل أنت متأكد من حذف حسابك؟ سيتم حذف كل بياناتك بشكل نهائي ولن يمكن استرجاعها.",
   "profile.deleteModal.confirm": "تأكيد الحذف",
+  "profile.loading.small": "لحظة واحدة...",
+  "profile.loading.big": "جارٍ تجهيز ملفك الشخصي",
 
   "common.cancel": "إلغاء",
 
@@ -273,11 +284,159 @@
 
   "profile.password.mismatch": "كلمات المرور غير متطابقة",
   "profile.password.minLength": "كلمة المرور يجب ألا تقل عن 8 أحرف",
-  
+
   "profile.preferences.light": "فاتح",
   "profile.preferences.dark": "داكن",
   "profile.lang.en": "الإنجليزية",
-  "profile.lang.ar": "العربية"
+  "profile.lang.ar": "العربية",
 
+  "dashboard.continueLearning.completed": "اكتمل {percent}%",
+  "dashboard.continueLearning.timeLeft": "متبقي {time}",
+  "dashboard.continueLearning.link": "رابط",
+  "dashboard.continueLearning.uploaded": "مرفوع",
+  "dashboard.continueLearning.title": "أكمل رحلة التعلم",
+  "dashboard.continueLearning.searchPlaceholder": "ابحث في الفيديوهات المحفوظة...",
+  "dashboard.continueLearning.empty.title": "لا توجد فيديوهات",
+  "dashboard.continueLearning.empty.description": "جرّب البحث بكلمة مختلفة أو ارفع فيديو جديد وابدأ التعلم.",
+  "dashboard.filter.title": "تصفية",
+  "dashboard.filter.uploadedVideos": "الفيديوهات المرفوعة",
+  "dashboard.filter.linkedVideos": "الفيديوهات المرتبطة",
+  "dashboard.storage.linked": "الروابط",
+  "dashboard.storage.uploaded": "المرفوع",
+  "dashboard.progress.saved": "المحفوظة",
+  "dashboard.progress.watched": "وقت المشاهدة",
+  "dashboard.progress.storage": "المساحة",
+  "dashboard.empty.title": "لسه مفيش فيديوهات",
+  "dashboard.empty.description": "ابدأ رحلتك في التعلم برفع فيديو أو إضافة رابط يوتيوب.",
+  "dashboard.empty.addFirstVideo": "أضف أول فيديو",
+  "dashboard.user.defaultName": "المتعلم",
+  "dashboard.user.greeting": "أهلًا، {name}! ✨",
+  "dashboard.user.description": "كل خطوة بتاخدها بتقربك من هدفك، استمر وانت عارف إنك بتتقدم! 😉",
+  "dashboard.user.resumeLearning": "استكمل التعلم",
+  "dashboard.user.uploadVideo": "رفع فيديو",
+  "dashboard.loading.small": "جار تجهيز لوحة التحكم",
+  "dashboard.loading.big": "بنجهز لك تقدمك وفيديوهاتك وكل حاجة...",
+  "dashboard.deleteModal.title": "حذف الفيديو",
+  "dashboard.deleteModal.description": "هل أنت متأكد من حذف هذا الفيديو؟ لن تتمكن من استرجاعه بعد الحذف.",
+  "common.time.hoursMinutes": "{hours}س {minutes}د",
 
-}
+  "upload.page.title": "تحليل جديد",
+  "upload.page.subtitle": "ارفع فيديو أو حط رابط، واحنا نكمل الباقي!",
+  "upload.link.videoUrl": "رابط الفيديو",
+  "upload.link.placeholder": "https://www.youtube.com/watch?v=...",
+  "upload.link.paste": "لصق",
+  "upload.link.invalidUrl": "من فضلك أدخل رابطًا صحيحًا يبدأ بـ https://",
+  "upload.link.info": "تأكد إن الفيديو Public أو Unlisted عشان نقدر نحلله.",
+  "upload.link.uploadButton": "رفع الرابط",
+  "upload.loading.uploading": "جارٍ رفع الفيديو...",
+  "upload.loading.cancel": "إلغاء الرفع",
+  "upload.loading.analyze": "ابدأ التحليل",
+  "upload.video.dragDrop": "اسحب الفيديو وأفلته هنا",
+  "upload.video.supportedFormats": "الصيغ المدعومة: MP4، MOV، AVI",
+  "upload.video.browseFiles": "اختر فيديو",
+  "upload.video.uploadButton": "رفع الفيديو",
+  "upload.video.remove": "إزالة الفيديو",
+  "upload.existingVideo.title": "الفيديو موجود بالفعل",
+  "upload.existingVideo.description": "الفيديو ده عندنا بالفعل! تحب تفتحه بدل ما ترفعه تاني؟",
+  "upload.existingVideo.openButton": "فتح الفيديو",
+  "upload.video.titleLabel": "عنوان الفيديو",
+  "upload.video.titlePlaceholder": "مثال: مقدمة في الاقتصاد الكلي - الأسبوع الأول",
+  "upload.video.titleRequired": "من فضلك اكتب عنوانًا للفيديو.",
+  "upload.select.uploadFile": "رفع ملف",
+  "upload.select.link": "رابط الفيديو",
+
+  "chat.deleteModal.title": "حذف المحادثة",
+  "chat.deleteModal.description": "هل أنت متأكد من حذف هذه المحادثة؟ لن تتمكن من استرجاعها بعد الحذف.",
+  "chat.assistant.name": "مساعد Viducate الذكي",
+  "chat.header.title": "مساعد التعلم الذكي",
+  "chat.header.active": "نشط",
+  "chat.header.openSessions": "فتح المحادثات الأخيرة",
+  "chat.history.delete": "حذف المحادثة",
+  "chat.input.placeholder": "اسأل أي حاجة عن المحاضرة...",
+  "chat.input.send": "إرسال الرسالة",
+  "chat.sidebar.newChat": "محادثة جديدة",
+  "chat.sidebar.recentChats": "آخر المحادثات",
+  "chat.sidebar.close": "إغلاق قائمة المحادثات",
+  "chat.user.you": "أنت",
+
+  "flashcards.loading.titlePrefix": "جارٍ تجهيز",
+  "flashcards.loading.titleHighlight": "بطاقاتك التعليمية...",
+  "flashcards.loading.subtitle": "جارٍ تحويل أهم المفاهيم إلى بطاقات سهلة للمراجعة.",
+  "flashcards.finish.nextReview": "المراجعة القادمة بعد",
+  "flashcards.finish.reviewNow": "ابدأ المراجعة",
+  "flashcards.finish.endSession": "إنهاء الجلسة",
+  "flashcards.finish.resetDescription": "سيتم إنهاء الجلسة الحالية وإعادة تعيين تقدمك.",
+  "flashcards.level.easy": "سهل",
+  "flashcards.level.good": "جيد",
+  "flashcards.level.hard": "صعب",
+  "flashcards.level.again": "مرة أخرى",
+  "flashcards.progress.card": "البطاقة {current} من {total}",
+  "flashcards.progress.complete": "اكتمل {percent}%",
+  "flashcards.card.reveal": "اضغط لإظهار الإجابة",
+  "flashcards.card.back": "اضغط للعودة",
+  "flashcards.card.viewSource": "عرض المقطع ({time})",
+  "flashcards.time.easy": "بعد يوم",
+  "flashcards.time.good": "بعد 15 دقيقة",
+  "flashcards.time.hard": "بعد 8 دقائق",
+  "flashcards.time.again": "بعد دقيقة",
+
+  "mindmap.loading.titlePrefix": "جارٍ إنشاء",
+  "mindmap.loading.titleHighlight": "الخريطة الذهنية...",
+  "mindmap.loading.subtitle": "جارٍ تحليل المحاضرة وتنظيم المفاهيم الرئيسية في خريطة واضحة.",
+  "mindmap.download": "تحميل الخريطة",
+
+  "watch.loading.small": "استعد",
+  "watch.loading.big": "بنجهز جلسة التعلم الخاصة بيك...",
+  "watch.topics.title": "الموضوعات",
+  "watch.tooltip.report": "تقرير التعلّم",
+  "watch.tooltip.changeLanguage": "تغيير لغة المحتوى",
+  "watch.actions.completeTopic": "إنهاء الموضوع",
+  "watch.actions.nextTopic": "الموضوع التالي",
+  "watch.actions.finalQuiz": "الاختبار النهائي",
+  "watch.actions.finalSummary": "الملخص النهائي",
+  "watch.actions.finalFlashcards": "البطاقات التعليمية",
+  "watch.actions.finalMindMap": "الخريطة الذهنية",
+  "watch.topicEnd.title": "أحسنت! أنهيت هذا الموضوع",
+  "watch.topicEnd.description": "برافو! راجع أو اختبر نفسك عشان المعلومة تثبت أكتر.",
+  "watch.topicEnd.summary.title": "الملخص",
+  "watch.topicEnd.summary.description": "راجع أهم النقاط بسرعة",
+  "watch.topicEnd.quiz.title": "الاختبار",
+  "watch.topicEnd.quiz.description": "اختبر مدى فهمك",
+  "watch.topicEnd.flashcards.title": "البطاقات التعليمية",
+  "watch.topicEnd.flashcards.description": "درّب ذاكرتك بالمراجعة السريعة",
+  "watch.topicEnd.next.title": "الموضوع التالي",
+  "watch.topicEnd.next.description": "انتقل إلى الجزء التالي",
+  "watch.stuck.repeatedSeek": "لاحظنا إنك بترجع لنفس الجزء كتير، محتاج مساعدة؟",
+  "watch.stuck.seekPause": "واضح إنك وقفت بعد ما رجعت لجزء معين، تحب أوضحه؟",
+  "watch.stuck.timeSpent": "واضح إنك واخد وقت في الجزء ده، محتاج شرح إضافي؟",
+  "watch.stuck.default": "هل تحتاج أي مساعدة؟",
+  "watch.stuck.question.simple": "هل ممكن تشرح {title} عند {time} بطريقة أبسط؟",
+  "watch.stuck.question.breakdown": "أنا مش فاهم {title} عند {time}. ممكن تشرحه خطوة بخطوة؟",
+  "watch.stuck.question.example": "ممكن تديني مثال عملي على {title} عند {time}؟",
+  "watch.stuck.question.keyPoints": "إيه أهم النقاط اللي لازم أعرفها عن {title} عند {time}؟",
+  "watch.stuck.question.clarify": "أنا محتار في {title} عند {time}. ممكن توضحها؟",
+  "watch.stuck.help": "أيوه، ساعدني",
+  "watch.stuck.dismiss": "لأ، شكرًا",
+  "watch.video.marker": "علامة",
+  "watch.video.speed": "السرعة",
+  "watch.video.normal": "العادية",
+  "watch.review": "للمراجعة",
+  "watch.content.watch": "المشاهدة",
+  "watch.content.summary": "الملخص",
+  "watch.content.quiz": "الاختبار",
+  "watch.content.cards": "البطاقات",
+  "watch.save": "حفظ",
+  "watch.searchTopics": "ابحث داخل الموضوعات...",
+  "watch.search.placeholder": "ابحث بأي كلمة داخل الفيديو...",
+  "watch.search.tooShort": "اكتب 3 أحرف على الأقل لبدء البحث.",
+  "watch.search.failed": "تعذر البحث داخل محتوى الفيديو.",
+  "watch.search.noResults": "مفيش نتائج لـ \"{query}\".",
+
+  "common.confirm": "تأكيد",
+
+  "upload.video.maxSizeError": "يجب ألا يزيد حجم الفيديو عن {size} ميجابايت.",
+
+  "navbar.profileSettings": "إعدادات الحساب",
+  "navbar.logout": "تسجيل الخروج",
+  "navbar.dashboard": "لوحة التحكم"
+} 

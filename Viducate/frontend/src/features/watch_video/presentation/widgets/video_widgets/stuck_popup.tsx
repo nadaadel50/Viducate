@@ -1,43 +1,33 @@
-
-
-type Props = {
+import { FONT_STYLES } from "../../../../../core/constants/fonts";
+import { FormattedMessage } from "react-intl";
+type StuckPopupProps = {
   reason: string;
   onHelp: () => void;
   onDismiss: () => void;
 };
 
-
-
-export function StuckPopup({ reason, onHelp, onDismiss }: Props) {
+export function StuckPopup({ reason, onHelp, onDismiss }: StuckPopupProps) {
   return (
-     <div
-      className="
-        fixed bottom-5 right-5
-        bg-[#1a1a2e]
-        border border-white/10
-        text-white
-        p-4
-        rounded-xl
-        shadow-2xl
-        z-[9999]
-        max-w-xs
-      "
-    >
-      <p className="text-sm leading-snug">{reason} 👀</p>
-      <div className="mt-3 flex gap-3 justify-center items-center">
+    <div className="fixed bottom-4 left-1/2 z-[9999] w-[calc(100%-2rem)] max-w-xs -translate-x-1/2 rounded-xl border border-white/10 bg-[#1a1a2e] p-4 text-white shadow-2xl sm:bottom-5 sm:left-auto sm:right-5 sm:w-full sm:translate-x-0">
+      <p className={`${FONT_STYLES.body} leading-relaxed`}>{reason} 👀</p>
+
+      <div className="mt-4 flex items-center justify-center gap-3">
         <button
           onClick={onHelp}
-          className="bg-gradient-to-r from-[#359EFF] to-[#5A0BB1] text-white
-            text-xs px-3 py-1.5 rounded-lg font-medium cursor-pointer"
+          className="cursor-pointer rounded-lg bg-gradient-to-r from-[#359EFF] to-[#5A0BB1] px-3 py-2 text-xs font-medium text-white transition-opacity hover:opacity-90"
         >
-          Yes Help 😊
+          <>
+            <FormattedMessage id="watch.stuck.help" /> 😊
+          </>
         </button>
+
         <button
           onClick={onDismiss}
-          className="text-white/60 hover:text-white text-xs px-3 py-1.5
-            rounded-lg transition cursor-pointer"
+          className="cursor-pointer rounded-lg px-3 py-2 text-xs text-white/60 transition hover:text-white"
         >
-          No Thanks 😏
+          <>
+            <FormattedMessage id="watch.stuck.dismiss" /> 😏
+          </>
         </button>
       </div>
     </div>

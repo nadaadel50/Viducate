@@ -1,21 +1,32 @@
+import type { ReactNode } from "react";
+import { FONT_STYLES } from "../../../../core/constants/fonts";
+
 type ContentGenerationBtnProps = {
   onClick: () => void;
-  icon: React.ReactNode;
+  icon: ReactNode;
   label: string;
-  isDue?: boolean; 
+  isDue?: boolean;
 };
 
-export function ContentGenerationBtn({ onClick, icon, label, isDue }: ContentGenerationBtnProps) {
+export function ContentGenerationBtn({
+  onClick,
+  icon,
+  label,
+  isDue = false,
+}: ContentGenerationBtnProps) {
   return (
     <button
       onClick={onClick}
-      className={`cursor-pointer flex flex-col items-center justify-center p-2 rounded-lg bg-white/50 border 
-        ${isDue ? "border-green-500 text-green-600" : "border-slate-200/60 text-slate-400"} 
-        hover:text-[#4f46e5] hover:border-[#4f46e5]/30 hover:bg-white shadow-sm transition-all`}
       title={label}
+      className={`flex cursor-pointer flex-col items-center justify-center rounded-lg border bg-white/50 px-1 py-2 transition-all 
+        shadow-sm hover:border-[#4f46e5]/30 hover:bg-white 
+        hover:text-[#4f46e5] ${isDue ? "border-green-500 text-green-600" : "border-slate-200/60 text-slate-400"}`}
     >
-      <span className="mb-1 text-[20px]">{icon}</span>
-      <span className="text-[9px] font-bold uppercase tracking-wide">{label}</span>
+      <span  className="mb-1">{icon}</span>
+
+      <span className={`${FONT_STYLES.topicStatus}  uppercase tracking-wide`}>
+        {label}
+      </span>
     </button>
   );
 }

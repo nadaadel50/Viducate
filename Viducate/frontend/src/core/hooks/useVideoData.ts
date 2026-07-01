@@ -25,6 +25,7 @@ export function useVideoData() {
       );
 
       if (!result.success) throw new Error(result.error);
+      console.log("topics is: ",result.data)
 
       return result.data;
     },

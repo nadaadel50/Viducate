@@ -1,4 +1,5 @@
 import { FONT_STYLES } from "../../../../../core/constants/fonts";
+import { FONT_SIZE } from "../../../../../core/constants/fonts_update";
 import { DoubleStorage } from "./double_storage";
 
 type ProgressCardProps = {
@@ -24,7 +25,7 @@ export function ProgressCard(props: ProgressCardProps) {
     props.usedUploaded !== undefined;
 
   return (
-    <div className="bg-white px-3 md:px-4 py-2 rounded-xl md:rounded-2xl border border-slate-100 shadow-sm flex items-center gap-3 hover:-translate-y-0.5 hover:shadow-md cursor-pointer transition duration-300">
+    <div className="bg-white px-3 md:px-3 py-1 rounded-xl md:rounded-2xl border border-slate-100 shadow-sm flex items-center gap-3 hover:-translate-y-0.5 hover:shadow-md cursor-pointer transition duration-300">
       <div
         className={`${colorClasses[props.iconBackGround]} p-2 rounded-lg md:rounded-xl flex items-center justify-center text-white shadow-lg`}
       >
@@ -38,7 +39,7 @@ export function ProgressCard(props: ProgressCardProps) {
 
       <div className="flex-1 min-w-0">
         <p
-          className={`${FONT_STYLES.tiny} text-slate-500 font-medium uppercase tracking-wide mb-1`}
+          className={`${FONT_SIZE.size11} text-slate-500 font-medium uppercase tracking-wide mb-1`}
         >
           {props.title}
         </p>

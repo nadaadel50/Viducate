@@ -72,7 +72,7 @@ export function useChatMessages(open: boolean) {
     setMessages((prev) => [
       ...prev,
       {
-        message_id: crypto.randomUUID(), //// will updated to crypto
+        message_id: crypto.randomUUID?.() , //// will updated to crypto
         role: "user",
         content: input,
         created_at: new Date().toISOString(),
@@ -148,7 +148,10 @@ export function useChatMessages(open: boolean) {
     setOpenDeleteModal(value);
   }
   function handleDeleteSession() {
+    console.log(sessionId,videoId)
+    
     if (sessionId && videoId) {
+      console.log("came here to delete2")
       deleteSession({
         session_id: sessionId,
         video_id: videoId,

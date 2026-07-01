@@ -3,6 +3,8 @@ from sqlalchemy.orm import Session
 from fastapi import HTTPException, status
 
 from app.repositories.chat_repository import ChatRepository
+from app.repositories.video_repository import VideoRepository
+
 from app.ml.engines.chat_engine import generate_answer
 from app.services.embedding_service import search
 from app.schemas.chat_schema import AskResponse, MessageResponse, SessionResponse
@@ -39,6 +41,11 @@ def create_session(video_id: int, db: Session):
 
 def ask(session_id: int, video_id: int, question: str, current_time: int | None, db: Session):
     repo = ChatRepository(db)
+
+    video_repo = VideoRepository(db)
+    video = video_repo.get_by_id(video_id)
+    if not video:
+        raise HTTPException(status_code=status.HTTP_404_NOT_FOUND, detail="Video not found")
 
     if session_id is None or session_id == 0:
         session = repo.create_session(video_id=video_id, title=question[:100])
@@ -79,9 +86,3 @@ def ask(session_id: int, video_id: int, question: str, current_time: int | None,
             content=message.answer,
         )
     )
-    # return MessageResponse(
-    #     message_id=message.message_id,
-    #     role="assistant",
-    #     content=message.answer,
-    #     time=message.current_time
-    # )

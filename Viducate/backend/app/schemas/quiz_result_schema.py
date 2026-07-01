@@ -14,10 +14,10 @@ class QuizSubmitRequest(BaseModel):
 class QuizQuestionResult(BaseModel):
     question_id:         int
     question_text:       str
-    choices:             dict      
+    choices:             dict       
     user_answer:         Optional[str] = None  
-    correct_answer:      str                   
-    correct_answer_text: str                   
+    correct_answer:      str                    
+    correct_answer_text: str                
     is_correct:          bool
     explanation:         Optional[str] = None
     video_timestamp:     Optional[int] = None

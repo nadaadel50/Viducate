@@ -1,80 +1,91 @@
-import { History, PanelRight, Plus } from "lucide-react";
+import { PanelLeft, PanelRight, Plus } from "lucide-react";
+import { FormattedMessage, useIntl } from "react-intl";
+
+import { FONT_STYLES } from "../../../../core/constants/fonts";
+import { CustomButton } from "../../../../core/componants/custum_btn";
 import type { ChatSession } from "../../domain/entity/chat_session";
 import { ChatHistoryCard } from "./chat_history_card";
+import { useLanguage } from "../../../../core/hooks/useLanguage";
+
 type RecentChatsSidebarProps = {
   handleOpenSession: () => void;
   handleClearMessages: () => void;
   sessions: ChatSession[];
   handleSelectNewSession: (id: number) => void;
   selectedSession: number | null;
-  setOpenDeleteMessage: (value:boolean) => void;
+  setOpenDeleteMessage: (value: boolean) => void;
 };
 
-export function RecentChatsSidebar(props: RecentChatsSidebarProps) {
-  return (
-    <div className="w-90 h-full border-r border-slate-200 bg-white/10 backdrop-blur-xl flex flex-col px-2  ">
-      {/* header */}
-      <div className="p-4 border-b border-slate-100 flex gap-5">
-        <button
-          onClick={() => {
-            props.handleClearMessages();
-            props.handleOpenSession();
-          }}
-          className="
-          cursor-pointer
-            w-full flex items-center justify-center gap-2
-            bg-[#4f46e5]
-            text-white
-            rounded-xl
-            py-3
-            text-sm
-            font-semibold
-            hover:bg-[#4338ca]
-            transition-all
-          "
-        >
-          <Plus size={18} />
-          New Chat
-        </button>
+export function RecentChatsSidebar({
+  handleOpenSession,
+  handleClearMessages,
+  sessions,
+  handleSelectNewSession,
+  selectedSession,
+  setOpenDeleteMessage,
+}: RecentChatsSidebarProps) {
+  const intl = useIntl();
+  const { isRTL } = useLanguage();
 
-        <div>
-          <button
-            onClick={props.handleOpenSession}
-            className=" group flex items-center justify-center h-10 w-10 rounded-xl   text-slate-500 transition-all duration-200 hover:bg-[#4f46e5] hover:text-white hover:shadow-lg active:scale-95 cursor-pointer"
-          >
-            <PanelRight
-              size={25}
-              className="transition-transform duration-200 group-hover:scale-110"
+  return (
+    <aside
+      className={`flex h-full w-60 flex-col bg-white/10 px-2 backdrop-blur-xl lg:w-80
+        ${isRTL ? "border-l" : "border-r"} border-slate-200`}
+    >
+      {/* Header */}
+      <div className="flex gap-3 border-b border-slate-100 p-3 lg:p-4">
+        <CustomButton
+          type="button"
+          onClick={() => {
+            handleClearMessages();
+            handleOpenSession();
+          }}
+          className={`${FONT_STYLES.button} flex w-full items-center justify-center gap-2 rounded-lg bg-[#4f46e5] py-2.5 text-white transition-all hover:bg-[#4338ca] active:scale-95`}
+        >
+          <Plus size={16} />
+          <FormattedMessage id="chat.sidebar.newChat" />
+        </CustomButton>
+
+        <button
+          type="button"
+          onClick={handleOpenSession}
+          aria-label={intl.formatMessage({
+            id: "chat.sidebar.close",
+          })}
+          className="group flex h-9 w-9 shrink-0 items-center justify-center rounded-lg text-slate-500 transition-all duration-200 hover:bg-[#4f46e5] hover:text-white hover:shadow-md active:scale-95 lg:h-8 lg:w-8"
+        >
+          {isRTL ? (
+            <PanelLeft
+              size={20}
+              className="transition-transform duration-200 group-hover:scale-110 lg:h-[18px] lg:w-[18px]"
             />
-          </button>
-        </div>
+          ) : (
+            <PanelRight
+              size={20}
+              className="transition-transform duration-200 group-hover:scale-110 lg:h-[18px] lg:w-[18px]"
+            />
+          )}
+        </button>
       </div>
 
-      {/* chats */}
-      <div className="flex-1 overflow-y-auto p-3">
-        <p className="text-xs font-semibold text-slate-400 mb-3 px-2">
-          Recent Chats
+      {/* Chats */}
+      <div className="custom-scrollbar flex-1 overflow-y-auto px-2 py-3">
+        <p className={`${FONT_STYLES.overline} mb-3 px-2 text-slate-400`}>
+          <FormattedMessage id="chat.sidebar.recentChats" />
         </p>
 
         <div className="space-y-2">
-          {props.sessions.map((session) => {
-            return (
-              <ChatHistoryCard
-                key={session.id}
-                session={session}
-                selected={
-                  props.selectedSession
-                    ? session.id === props.selectedSession
-                    : false
-                }
-                handleSelectNewSession={props.handleSelectNewSession}
-                // handleDeleteSession={() => {}}
-                setOpenDeleteMessage={props.setOpenDeleteMessage}
-              />
-            );
-          })}
+          {sessions.map((session) => (
+            <ChatHistoryCard
+              key={session.id}
+              session={session}
+              selected={selectedSession === session.id}
+              handleSelectNewSession={handleSelectNewSession}
+              setOpenDeleteMessage={setOpenDeleteMessage}
+            />
+          ))}
         </div>
       </div>
-    </div>
+    </aside>
   );
 }

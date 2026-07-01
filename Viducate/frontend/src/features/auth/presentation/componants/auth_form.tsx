@@ -1,4 +1,3 @@
-
 import React from "react";
 import { Link } from "react-router-dom";
 import { FormattedMessage, useIntl } from "react-intl";
@@ -31,6 +30,7 @@ export function AuthForm({ type }: AuthFormProps) {
     serverError,
     clearError,
     isSubmitting,
+  
   } = useAuthForm(isLogin);
 
   const formValues = watch();
@@ -39,7 +39,6 @@ export function AuthForm({ type }: AuthFormProps) {
     window.location.href = "http://localhost:8000/api/v1/auth/google/login";
   };
 
- 
   const getFieldProps = (
     fieldName:
       | "firstName"
@@ -57,7 +56,6 @@ export function AuthForm({ type }: AuthFormProps) {
   });
 
   return (
-    
     <div className="relative w-full space-y-3 py-1 md:py-2 lg:py-2">
       {serverError && (
         <CustumError apiError={serverError} clearError={clearError} />
@@ -72,7 +70,6 @@ export function AuthForm({ type }: AuthFormProps) {
         })}
       />
 
-     
       <button
         type="button"
         onClick={loginWithGoogle}
@@ -94,7 +91,6 @@ export function AuthForm({ type }: AuthFormProps) {
         />
       </button>
 
-    
       <div className="relative flex items-center py-2">
         <div className="flex-grow border-t border-gray-100"></div>
 
@@ -134,18 +130,17 @@ export function AuthForm({ type }: AuthFormProps) {
           {...getFieldProps("email")}
         />
 
-      
         <div
           className={
-            isLogin
-              ? "space-y-2"
-              : "grid grid-cols-1 md:grid-cols-2  md:gap-4 "
+            isLogin ? "space-y-2" : "grid grid-cols-1 md:grid-cols-2  md:gap-4 "
           }
         >
           <CustomInput
             label={intl.formatMessage({ id: "auth.password" })}
             placeholder="••••••••"
             type="password"
+            
+       
             {...getFieldProps("password")}
           />
 
@@ -154,13 +149,13 @@ export function AuthForm({ type }: AuthFormProps) {
               label={intl.formatMessage({ id: "auth.confirmPassword" })}
               placeholder="••••••••"
               type="password"
+              
               {...getFieldProps("confirmPassword")}
             />
           )}
         </div>
 
         {isLogin && (
-         
           <div className="flex flex-col flex-row  justify-between gap-2 pb-2 ">
             <label
               className={`
@@ -189,7 +184,9 @@ export function AuthForm({ type }: AuthFormProps) {
           </div>
         )}
 
-        <CustomButton type="submit" disabled={isSubmitting}>
+        <CustomButton
+        style={{background:COLORS.button.primary}}
+         className="w-full text-white " type="submit" disabled={isSubmitting}>
           {isSubmitting ? (
             <CustumBtnLoader />
           ) : (
@@ -200,7 +197,7 @@ export function AuthForm({ type }: AuthFormProps) {
         </CustomButton>
       </form>
 
-      {/* Typography موحدة باستخدام FONT_STYLES */}
+    
       <p
         className={`
           ${FONT_STYLES.body}
@@ -218,12 +215,9 @@ export function AuthForm({ type }: AuthFormProps) {
           className={`${FONT_STYLES.body} ml-1 font-bold hover:underline`}
           style={{ color: COLORS.text.coloredText }}
         >
-          <FormattedMessage
-            id={isLogin ? "auth.signup" : "auth.loginLink"}
-          />
+          <FormattedMessage id={isLogin ? "auth.signup" : "auth.loginLink"} />
         </Link>
       </p>
     </div>
   );
 }
-

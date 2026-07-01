@@ -1,6 +1,7 @@
 from sqlalchemy.orm import Session
 from app.models.mindmap import Mindmap
 from typing import Optional
+from sqlalchemy.exc import IntegrityError
 
 
 class MindmapRepository:
@@ -22,9 +23,19 @@ class MindmapRepository:
             language=language,
         )
         self.db.add(mindmap)
-        self.db.commit()
-        self.db.refresh(mindmap)
-        return mindmap
+        try:
+            self.db.commit()
+            self.db.refresh(mindmap)
+            return mindmap
+
+        except IntegrityError:
+            self.db.rollback()
+
+            return (
+                self.db.query(Mindmap)
+                .filter(Mindmap.video_id == video_id)
+                .first()
+            )
 
     def update(self, mindmap: Mindmap, nodes: list, edges: list, language: str) -> Mindmap:
         mindmap.nodes    = nodes

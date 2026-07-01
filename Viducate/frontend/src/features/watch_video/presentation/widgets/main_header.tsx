@@ -1,63 +1,52 @@
 import { Clock4, Save } from "lucide-react";
-
 import { MediaBtn } from "./media_btn";
-import { useLearningSession } from "../../../../core/hooks/useLearningContent";
-
-import { useHandleSaveProgress } from "../hook/use_handle_save_progress";
 import { Toast } from "../../../../core/componants/toast_message";
-
+import { useLearningSession } from "../../../../core/hooks/useLearningContent";
+import { useHandleSaveProgress } from "../hook/use_handle_save_progress";
+import { formatVideoTime } from "../../../../core/utils/fomat_time";
+import {
+  FONT_SIZE,
+  FONT_WEIGHT,
+  LETTER_SPACING,
+} from "../../../../core/constants/fonts_update";
+import { useIntl } from "react-intl";
 export function MainHeader() {
-  const formatDuration = (start: number, end: number) => {
-    const duration = end - start;
-
-    const minutes = Math.floor(duration / 60);
-    const seconds = duration % 60;
-
-    return `${minutes}:${seconds.toString().padStart(2, "0")}`;
-  };
-  const { selectedTopic, handleSetHasUnsavedChanges } =
-    useLearningSession();
-
+  const { selectedTopic, handleSetHasUnsavedChanges } = useLearningSession();
+  const intl = useIntl();
   const { handleSaveProgress, toastMessage, toastType, clearToast } =
     useHandleSaveProgress();
 
+  const topicDuration = selectedTopic
+    ? selectedTopic.end_time - selectedTopic.start_time
+    : 0;
+
   return (
-    <div className=" pt-12  ">
+    <div>
       <Toast message={toastMessage} type={toastType} onClose={clearToast} />
-      <h1 className="text-4xl font-bold tracking-tight text-slate-900 mb-6 ">
+
+      <h1
+        className={`${FONT_SIZE.size22} lg:${FONT_SIZE.size30} ${FONT_WEIGHT.semibold} ${LETTER_SPACING.tight} mb-3 sm:mb-4 lg:mb-3 break-words text-slate-900 leading-tight`}
+      >
         {selectedTopic?.title}
       </h1>
 
-      <div className="flex justify-between items-center mt-2">
-        <div className="flex gap-1.5 items-center ">
-          <Clock4 className="w-4 h-4 text-slate-500" />
-          <p className="text-sm text-slate-500">
-            {selectedTopic
-              ? formatDuration(selectedTopic.start_time, selectedTopic.end_time)
-              : "0:00"}
-          </p>
+      <div className="flex items-center justify-between gap-2 lg:gap-3">
+        <div className="flex items-center gap-2 text-slate-500">
+          <Clock4 className="h-4 w-4 lg:h-3.5 lg:w-3.5 shrink-0" />
+
+          <p className={FONT_SIZE.size13}>{formatVideoTime(topicDuration)}</p>
         </div>
 
-        <div className="flex gap-2 ">
-          <div className="flex items-center gap-3">
-            <MediaBtn
-              icon={<Save size={18} />}
-              label="Save"
-              onClick={() => {
-                handleSaveProgress();
-
-                handleSetHasUnsavedChanges(false);
-              }}
-
-
-              
-            />
-
-             
-
-          </div>
-
-        </div>
+        <MediaBtn
+          icon={<Save size={16} />}
+          label={intl.formatMessage({
+            id: "watch.save",
+          })}
+          onClick={() => {
+            handleSaveProgress();
+            handleSetHasUnsavedChanges(false);
+          }}
+        />
       </div>
     </div>
   );

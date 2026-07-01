@@ -1,4 +1,5 @@
 # OCR Output — video_id=8
-# Language: None
-# Total segments: 0
+# Language: ar
+# Total segments: 1
 
+[00:00:20] انطلق التلميذ إلى أخية الأكبر وسأله
