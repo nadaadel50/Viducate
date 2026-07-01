@@ -11,7 +11,8 @@ import {
 } from "../../../../core/constants/fonts_update";
 import { useIntl } from "react-intl";
 export function MainHeader() {
-  const { selectedTopic, handleSetHasUnsavedChanges } = useLearningSession();
+  const{currentTime}=useLearningSession()
+  const { selectedTopic, handleSetHasUnsavedChanges,handleSetInitializeCurrentTime } = useLearningSession();
   const intl = useIntl();
   const { handleSaveProgress, toastMessage, toastType, clearToast } =
     useHandleSaveProgress();
@@ -44,7 +45,7 @@ export function MainHeader() {
           })}
           onClick={() => {
             handleSaveProgress();
-            handleSetHasUnsavedChanges(false);
+            handleSetInitializeCurrentTime(currentTime);
           }}
         />
       </div>

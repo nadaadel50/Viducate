@@ -26,14 +26,16 @@ export function AuthForm({ type }: AuthFormProps) {
     handleSubmit,
     setValue,
     watch,
-    formState: { errors },
+    formState: { errors,isValid },
     serverError,
     clearError,
     isSubmitting,
+    isLocked
   
   } = useAuthForm(isLogin);
 
   const formValues = watch();
+  
 
   const loginWithGoogle = () => {
     window.location.href = "http://localhost:8000/api/v1/auth/google/login";
@@ -54,6 +56,18 @@ export function AuthForm({ type }: AuthFormProps) {
       }),
     error: errors[fieldName]?.message,
   });
+
+  const isButtonDisabled =
+  isSubmitting ||
+  isLocked ||
+  !isValid ||
+  (isLogin
+    ? !formValues.email || !formValues.password
+    : !formValues.firstName ||
+      !formValues.lastName ||
+      !formValues.email ||
+      !formValues.password ||
+      !formValues.confirmPassword);
 
   return (
     <div className="relative w-full space-y-3 py-1 md:py-2 lg:py-2">
@@ -186,7 +200,8 @@ export function AuthForm({ type }: AuthFormProps) {
 
         <CustomButton
         style={{background:COLORS.button.primary}}
-         className="w-full text-white " type="submit" disabled={isSubmitting}>
+        
+         className="w-full text-white " type="submit" disabled={isButtonDisabled }>
           {isSubmitting ? (
             <CustumBtnLoader />
           ) : (

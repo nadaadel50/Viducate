@@ -82,7 +82,7 @@ export const useAuthForm = (isLogin: boolean) => {
             .min(2, intl.formatMessage({ id: "auth.lastNameRequired" })),
       email: z.string().email(intl.formatMessage({ id: "auth.invalidEmail" })),
       password: isLogin
-        ? z.string().nonempty("pass is req")
+        ? z.string().nonempty(intl.formatMessage({ id: "auth.passwordMinRequired" }))
         : z
             .string()
             .min(8, intl.formatMessage({ id: "auth.passwordMinLength" }))

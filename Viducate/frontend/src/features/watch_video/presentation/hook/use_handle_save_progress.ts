@@ -12,7 +12,7 @@ export function useHandleSaveProgress() {
   );
 
   const {
-    selectedTopic,
+   
     videoId,
     completedTopics,
     duration,
@@ -30,10 +30,7 @@ export function useHandleSaveProgress() {
     handleSaveProgress();
   }, [duration]);
   function handleSaveProgress() {
-    console.log(selectedTopic, videoId, duration);
-
-    console.log("Completed Topics:", completedTopics);
-    console.log("Marks:", marks);
+    
 
     saveVideoProgress(
       {

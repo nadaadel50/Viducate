@@ -1,5 +1,8 @@
 # OCR Output — video_id=9
-# Language: ar
-# Total segments: 1
+# Language: en
+# Total segments: 4
 
-[00:00:20] انطلق التلميذ إلى أخية الأكبر وسأله
+[00:00:19] 1Correct position in final, sorted array | 2. Items to the left are smaller | 3. Items to the right are larger
+[00:00:59] 1. itemFromLeft that is larger than pivot | 2. itemFromRight that is smaller than pivot
+[00:04:09] Worst case: O(n²) | Average case: O(nlogn)
+[00:04:19] Thank you for watching! | Please subscribe and share.

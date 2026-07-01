@@ -14,6 +14,7 @@ export function LearningSessionProvider({ children,}: {children: React.ReactNode
   }, [hasUnsavedChanges]);
 
   const handleSetHasUnsavedChanges = (hasChanges: boolean) => {
+
     setHasUnsavedChanges(hasChanges);
   };
 
@@ -29,12 +30,13 @@ const baselineRef = useRef<number>(0);
 
 const handleSetInitializeCurrentTime = (time: number) => {
   baselineRef.current = time;
+    setHasUnsavedChanges(false);
  // setCurrentTime(time);
 };
 
 
  useEffect(() => {
-  if (Math.abs(currentTime - baselineRef.current) >= 3) { 
+  if (Math.abs(currentTime - baselineRef.current) >= 10) { 
     setHasUnsavedChanges(true);
   }
 }, [currentTime]);

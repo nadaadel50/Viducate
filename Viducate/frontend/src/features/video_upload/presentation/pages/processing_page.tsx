@@ -73,7 +73,7 @@ useEffect(() => {
         backgroundImage: COLORS.background.radialGradient,
       }}
     >
-      <div className="relative z-10 w-full max-w-[520px] flex flex-col items-center gap-5 md:gap-7">
+      <div className="relative z-10 w-full max-w-[520px] flex flex-col items-center gap-5">
         <ProcessingProgress status={status} progress={progress} />
 
         <ProcessingHeader status={status} />

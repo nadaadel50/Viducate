@@ -89,7 +89,7 @@ export function RightContentSection({ onOpenTopics }: Props) {
         <MainHeader />
 
         <div className="pb-10">
-          <div className="my-2">
+          <div className="my-5">
             <VideoPlayer />
           </div>
           <div className="mt-4">

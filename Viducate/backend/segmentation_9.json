@@ -1,43 +1,77 @@
 {
-  "total_segments": 1,
+  "total_segments": 2,
   "segments": [
     {
       "segment_number": 1,
       "start_time": "00:00",
-      "end_time": "02:01",
-      "main_topic": "البحث عن السلام الداخلي",
-      "title": "رحلة اكتشاف الذات والحلول الداخلية",
+      "end_time": "02:21",
+      "main_topic": "Quicksort Partitioning Algorithm",
+      "title": "Understanding Quicksort and Its Initial Partitioning Step",
       "sub_topics": [
         {
-          "name": "بحث التلميذ عن إجابات خارجية",
+          "name": "Introduction to Quicksort and Pivot Definition",
           "start_time": "00:00",
-          "end_time": "00:47",
-          "description": "يحكى أنه في قديم الزمان سأل تلميذ معلمه الحكيم يا معلمي كيف أهدئ من عاصفة الأفكار في ذهني نظر إليه المعلم وقال يا بني أنا في غاية الانشغال الآن ولا أملك وقتا للحديث لماذا لا تذهب وتسأل أخاك الأكبر فهو حكيم مثلي انطلق التلميذ إلى أخيه الأكبر وسأله نفس السؤال الذي طرحه على معلمه انطلق التلميذ إلى أخية الأكبر وسأله ولكن الأخ الأكبر أجاب بتعب آسف يا أخي أنا أعاني من صداع شديد ولا أقوى على الكلام الآن لماذا لا تذهب وتسأل أخانا الثاني في الدارما ذهب التلميذ إلى أخيه الثاني في الدارما ولكنه واجهه بنفس الرد يا أخي معتي تؤلمني بشدة ولا أستطيع الحديث لماذا لا تذهب وتسأل سيدنا في الدارما فهو الأقدر على مساعدتك",
-          "content_type": "problem"
+          "end_time": "00:32",
+          "description": "Today we're going to learn quicksort. Like merge sort, quicksort is a recursive algorithm. However, when you think of quicksort, I want you to think of the word pivot. A pivot is simply one of the items in the array that meets the following three conditions after we sorted it. First, the pivot is in its correct position in the final sorted array. 1Correct position in final, sorted array | 2. Items to the left are smaller | 3. Items to the right are larger This means that all items to the left are smaller and all items to the right are larger. Let's look at an example.",
+          "content_type": "definition"
         },
         {
-          "name": "شكوى التلميذ وتوجيه المعلم نحو الذات",
-          "start_time": "00:47",
-          "end_time": "01:28",
-          "description": "عاد التلميذ إلى سيده واشتكى قائلا يا معلمي لقد سألت الجميع ولم يجبني أحد بالحيرة والارتباك فقال ولكن يا معلم لم يقل لي أحد شيئا يذكر أجاب المعلم بحكمة لقد أراد أن يخبروك أن الحل لمشاكلك يكمن بداخلك لا أحد يستطيع أن يهدئ عقلك غيرك عليك أن تخوض رحلة داخلية أن تتحدث مع نفسك وتفهم رغباتك ومخاوفك وتستكشف قوة عقلك وقلبك",
+          "name": "Initial Pivot Selection and Swapping Strategy",
+          "start_time": "00:32",
+          "end_time": "01:18",
+          "description": "We're asked to sort the following array. Let's choose a pivot. I'll explain the best way to do this later, but for now let's just choose three. First we move the pivot to the end of the array to get it out of our way. Next we're going to look for two items. Item from left which is the first item starting from the left that is larger than our pivot Second item from right which is the first item starting from the right that is smaller than our pivot Starting at 1. itemFromLeft that is larger than pivot | 2. itemFromRight that is smaller than pivot 2 we can see that 6 is item from left. Now starting at the right we see that 1 is item from right. Let's swap item from left with item from right.",
           "content_type": "solution"
         },
         {
-          "name": "إدراك الحقيقة وتحقيق السلام الداخلي",
-          "start_time": "01:28",
-          "end_time": "02:01",
-          "description": "كل ما تحتاجه موجود بداخلك في أعماق روحك العالم الخارجي ما هو إلا انعكاس لعالمك الداخلي في هذه اللحظة أدرك التلميذ الحقيقة فهم أن الإجابات التي يبحث عنها ليست في الخارج بل في داخله وعندها وصل إلى حالة من التنوير والسكون الداخلي تذكر يا صديقي لا أحد يستطيع حل مشاكلك نياب عنك أنت وحدك تملك القدرة على فهم ذاتك وتحقيق السلام الداخلي استمع إلى صوتك الداخلي واكتشف حقيقتك واعلم أن كل ما تحتاجه موجود بداخلك",
+          "name": "Iterative Swapping and Final Pivot Placement",
+          "start_time": "01:18",
+          "end_time": "02:21",
+          "description": "We repeat the process. This time 5 is item from left and 0 is item from right. Again we swap the two. One more time. Again we swap the two. One more time. This time we see that item from left has a greater index than item from right. So we know we're done. We swap item from left with our pick. 3. Our pivot is now in its correct spot. To prove it, let's review our three conditions. As you can see, all items to the left are smaller, and all items to the right are larger.",
+          "content_type": "example"
+        }
+      ],
+      "key_points": [
+        "1Correct position in final, sorted array",
+        "2. Items to the left are smaller",
+        "3. Items to the right are larger"
+      ],
+      "_source_text": "Today we're going to learn quicksort. Like merge sort, quicksort is a recursive algorithm. However, when you think of quicksort, I want you to think of the word pivot. A pivot is simply one of the items in the array that meets the following three conditions after we sorted it. First, the pivot is in its correct position in the final sorted array. 1Correct position in final, sorted array | 2. Items to the left are smaller | 3. Items to the right are larger This means that all items to the left are smaller and all items to the right are larger. Let's look at an example. We're asked to sort the following array. Let's choose a pivot. I'll explain the best way to do this later, but for now let's just choose three. First we move the pivot to the end of the array to get it out of our way. Next we're going to look for two items. Item from left which is the first item starting from the left that is larger than our pivot Second item from right which is the first item starting from the right that is smaller than our pivot Starting at 1. itemFromLeft that is larger than pivot | 2. itemFromRight that is smaller than pivot 2 we can see that 6 is item from left. Now starting at the right we see that 1 is item from right. Let's swap item from left with item from right. We repeat the process. This time 5 is item from left and 0 is item from right. Again we swap the two. One more time. Again we swap the two. One more time. This time we see that item from left has a greater index than item from right. So we know we're done. We swap item from left with our pick. 3. Our pivot is now in its correct spot. To prove it, let's review our three conditions. As you can see, all items to the left are smaller, and all items to the right are larger.",
+      "_quality": {
+        "score": 0.871,
+        "flag": false,
+        "threshold": 0.32
+      }
+    },
+    {
+      "segment_number": 2,
+      "start_time": "02:21",
+      "end_time": "04:19",
+      "main_topic": "Advanced Quicksort Concepts and Performance",
+      "title": "Recursive Sorting, Optimal Pivot Selection, Pseudocode, and Complexity",
+      "sub_topics": [
+        {
+          "name": "Demonstrating Recursive Partitioning",
+          "start_time": "02:21",
+          "end_time": "03:24",
+          "description": "We said quicksort is recursive. Let's go through the process one more time with the larger partition we just made. We'll choose 7 as our pivot and move it to the end. I'll let you watch without voiceover. Thank you Now we have 3 and 7 in their correct positions I think you understand the concept, so we'll let recursion handle the rest.",
+          "content_type": "example"
+        },
+        {
+          "name": "Pivot Selection Strategy, Pseudocode, and Time Complexity",
+          "start_time": "03:24",
+          "end_time": "04:19",
+          "description": "One important question is how do we choose the pivot? This makes a large difference in the performance of the algorithm, as we want to choose a pivot that divides the array in half, or as close as possible, to even out the work. One popular method is called median of three. In this method we look at the first, middle, and last elements of the array. We sort them properly and choose the middle item as our pivot. We're making the guess that the middle of these three items could be close to the median of the entire array, and as you can see it's not too far. Here's the pseudocode for quicksort. Worst case: O(n²) | Average case: O(nlogn) Thank you for watching! | Please subscribe and share.",
           "content_type": "general"
         }
       ],
       "key_points": [
-        "البحث عن الحلول الخارجية غالبًا ما يكون غير مجدٍ.",
-        "الحل لمشاكلنا يكمن دائمًا في داخلنا.",
-        "فهم الذات وتحقيق السلام الداخلي مسؤولية شخصية."
+        "median of three",
+        "Worst case: O(n²)",
+        "Average case: O(nlogn)"
       ],
-      "_source_text": "يحكى أنه في قديم الزمان سأل تلميذ معلمه الحكيم يا معلمي كيف أهدئ من عاصفة الأفكار في ذهني نظر إليه المعلم وقال يا بني أنا في غاية الانشغال الآن ولا أملك وقتا للحديث لماذا لا تذهب وتسأل أخاك الأكبر فهو حكيم مثلي انطلق التلميذ إلى أخيه الأكبر وسأله نفس السؤال الذي طرحه على معلمه انطلق التلميذ إلى أخية الأكبر وسأله ولكن الأخ الأكبر أجاب بتعب آسف يا أخي أنا أعاني من صداع شديد ولا أقوى على الكلام الآن لماذا لا تذهب وتسأل أخانا الثاني في الدارما ذهب التلميذ إلى أخيه الثاني في الدارما ولكنه واجهه بنفس الرد يا أخي معتي تؤلمني بشدة ولا أستطيع الحديث لماذا لا تذهب وتسأل سيدنا في الدارما فهو الأقدر على مساعدتك عاد التلميذ إلى سيده واشتكى قائلا يا معلمي لقد سألت الجميع ولم يجبني أحد بالحيرة والارتباك فقال ولكن يا معلم لم يقل لي أحد شيئا يذكر أجاب المعلم بحكمة لقد أراد أن يخبروك أن الحل لمشاكلك يكمن بداخلك لا أحد يستطيع أن يهدئ عقلك غيرك عليك أن تخوض رحلة داخلية أن تتحدث مع نفسك وتفهم رغباتك ومخاوفك وتستكشف قوة عقلك وقلبك كل ما تحتاجه موجود بداخلك في أعماق روحك العالم الخارجي ما هو إلا انعكاس لعالمك الداخلي في هذه اللحظة أدرك التلميذ الحقيقة فهم أن الإجابات التي يبحث عنها ليست في الخارج بل في داخله وعندها وصل إلى حالة من التنوير والسكون الداخلي تذكر يا صديقي لا أحد يستطيع حل مشاكلك نياب عنك أنت وحدك تملك القدرة على فهم ذاتك وتحقيق السلام الداخلي استمع إلى صوتك الداخلي واكتشف حقيقتك",
+      "_source_text": "We said quicksort is recursive. Let's go through the process one more time with the larger partition we just made. We'll choose 7 as our pivot and move it to the end. I'll let you watch without voiceover. Thank you Now we have 3 and 7 in their correct positions I think you understand the concept, so we'll let recursion handle the rest. One important question is how do we choose the pivot? This makes a large difference in the performance of the algorithm, as we want to choose a pivot that divides the array in half, or as close as possible, to even out the work. One popular method is called median of three. In this method we look at the first, middle, and last elements of the array. We sort them properly and choose the middle item as our pivot. We're making the guess that the middle of these three items could be close to the median of the entire array, and as you can see it's not too far. Here's the pseudocode for quicksort. Worst case: O(n²) | Average case: O(nlogn)",
       "_quality": {
-        "score": 0.8561,
+        "score": 0.8639,
         "flag": false,
         "threshold": 0.32
       }

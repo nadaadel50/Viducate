@@ -1,5 +1,15 @@
 # OCR Output — video_id=8
-# Language: ar
-# Total segments: 1
+# Language: en
+# Total segments: 11
 
-[00:00:20] انطلق التلميذ إلى أخية الأكبر وسأله
+[00:00:10] Design | Analysis | Algorithms | Understanding | Time Complexity
+[00:01:10] Priori vs. Posteriori Analysis - Recap | Computations and Main Memory Space
+[00:01:50] Estimation of time and memory | Calculation of time and memory | space required by an algorithm | space required by an algorithm | before executing it on the system.
+[00:04:50] refers to a task | performed by the CPU or instruction | executed by the
+[00:05:20] refers to : | CPU or instruction | Main Merory Space:
+[00:07:10] Understanding the Time Complexity | o Estimation of total CPU computations required to execute an algorithm.
+[00:08:10] Total No. of | Sum of frequency count of | of an Algorithm | each instruction of an
+[00:09:30] Analysis - Recap | Main Memory Space
+[00:09:40] Algo suma, n | fori  1; i  n; i | sum  sum  ai
+[00:14:40] n  1 units | for i  1;
+[00:24:40] vs. Posteriori Analysis - Recap | Computations and Main Memory Space | Understanding the Time Complexity

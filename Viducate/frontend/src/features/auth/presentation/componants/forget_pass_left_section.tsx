@@ -5,6 +5,7 @@ import { useForgetPassword } from "../hooks/use_forget_password";
 import CustumBtnLoader from "../../../../core/componants/custum_btn_loader";
 import { CustumError } from "../../../../core/componants/custum_error";
 import { useT } from "../../../../core/hooks/useTranslation";
+import { COLORS } from "../../../../core/constants";
 
 export function ForgetPassLeftSection() {
   const { translation } = useT();
@@ -40,7 +41,9 @@ export function ForgetPassLeftSection() {
         />
 
         <CustomButton
+        style={{background:COLORS.button.primary}}
           type="submit"
+          className="w-full text-white"
           disabled={!!validationError || email.length === 0}
         >
           {loading ? (

@@ -263,7 +263,7 @@
   "report.hero.watchProgress": "Watch Progress",
   "report.hero.watched": "{percent}% watched",
   "report.hero.remaining": "{percent}% remaining",
-  "report.page.title": "Video Performance Report",
+  "report.page.title": "Your Performance in This Video",
   "report.loading.titlePrefix": "Preparing your",
   "report.loading.titleHighlight": "Learning Report",
   "report.loading.subtitle": "Reviewing your progress and quiz results...",
@@ -390,9 +390,9 @@
 "chat.user.you": "You",
 
 
-"flashcards.loading.titlePrefix": "الذكاء الاصطناعي يُجهّز",
-"flashcards.loading.titleHighlight": "بطاقاتك التعليمية...",
-"flashcards.loading.subtitle": "جارٍ تحويل أهم المفاهيم إلى بطاقات سهلة للمراجعة.",
+"flashcards.loading.titlePrefix": "Preparing",
+"flashcards.loading.titleHighlight": "your flashcards...",
+"flashcards.loading.subtitle": "Converting the most important concepts into easy-to-review flashcards.",
 "flashcards.finish.nextReview": "Next review in",
 "flashcards.finish.reviewNow": "Review Now",
 "flashcards.finish.endSession": "End Session",

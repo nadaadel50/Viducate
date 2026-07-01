@@ -1,185 +1,190 @@
 [00:00:00]
-  Transcript :  يحكى أنه في قديم الزمان سأل تلميذ معلمه الحكيم
+  Transcript :  Today we're going to learn quicksort.
   OCR        : None
-  Combined   :  يحكى أنه في قديم الزمان سأل تلميذ معلمه الحكيم
+  Combined   :  Today we're going to learn quicksort.
 
-[00:00:04]
-  Transcript :  يا معلمي كيف أهدئ من عاصفة الأفكار في ذهني
+[00:00:03]
+  Transcript :  Like merge sort, quicksort is a recursive algorithm.
   OCR        : None
-  Combined   :  يا معلمي كيف أهدئ من عاصفة الأفكار في ذهني
+  Combined   :  Like merge sort, quicksort is a recursive algorithm.
 
-[00:00:08]
-  Transcript :  نظر إليه المعلم وقال
+[00:00:06]
+  Transcript :  However, when you think of quicksort, I want you to think of the word pivot.
   OCR        : None
-  Combined   :  نظر إليه المعلم وقال
+  Combined   :  However, when you think of quicksort, I want you to think of the word pivot.
 
-[00:00:10]
-  Transcript :  يا بني أنا في غاية الانشغال الآن ولا أملك وقتا للحديث
+[00:00:11]
+  Transcript :  A pivot is simply one of the items in the array that meets the following three conditions
   OCR        : None
-  Combined   :  يا بني أنا في غاية الانشغال الآن ولا أملك وقتا للحديث
+  Combined   :  A pivot is simply one of the items in the array that meets the following three conditions
 
-[00:00:14]
-  Transcript :  لماذا لا تذهب وتسأل أخاك الأكبر فهو حكيم مثلي
+[00:00:16]
+  Transcript :  after we sorted it.
   OCR        : None
-  Combined   :  لماذا لا تذهب وتسأل أخاك الأكبر فهو حكيم مثلي
+  Combined   :  after we sorted it.
 
-[00:00:20]
-  Transcript :  انطلق التلميذ إلى أخيه الأكبر وسأله نفس السؤال الذي طرحه على معلمه
-  OCR        : انطلق التلميذ إلى أخية الأكبر وسأله
-  Combined   :  انطلق التلميذ إلى أخيه الأكبر وسأله نفس السؤال الذي طرحه على معلمه انطلق التلميذ إلى أخية الأكبر وسأله
+[00:00:19]
+  Transcript :  First, the pivot is in its correct position in the final sorted array.
+  OCR        : 1Correct position in final, sorted array | 2. Items to the left are smaller | 3. Items to the right are larger
+  Combined   :  First, the pivot is in its correct position in the final sorted array. 1Correct position in final, sorted array | 2. Items to the left are smaller | 3. Items to the right are larger
 
-[00:00:24]
-  Transcript :  ولكن الأخ الأكبر أجاب بتعب
+[00:00:23]
+  Transcript :  This means that all items to the left are smaller and all items to the right are larger.
   OCR        : None
-  Combined   :  ولكن الأخ الأكبر أجاب بتعب
+  Combined   :  This means that all items to the left are smaller and all items to the right are larger.
 
-[00:00:26]
-  Transcript :  آسف يا أخي أنا أعاني من صداع شديد ولا أقوى على الكلام الآن
+[00:00:29]
+  Transcript :  Let's look at an example.
   OCR        : None
-  Combined   :  آسف يا أخي أنا أعاني من صداع شديد ولا أقوى على الكلام الآن
+  Combined   :  Let's look at an example.
 
-[00:00:31]
-  Transcript :  لماذا لا تذهب وتسأل أخانا الثاني في الدارما
+[00:00:32]
+  Transcript :  We're asked to sort the following array.
   OCR        : None
-  Combined   :  لماذا لا تذهب وتسأل أخانا الثاني في الدارما
+  Combined   :  We're asked to sort the following array.
 
-[00:00:34]
-  Transcript :  ذهب التلميذ إلى أخيه الثاني في الدارما
+[00:00:35]
+  Transcript :  Let's choose a pivot.
   OCR        : None
-  Combined   :  ذهب التلميذ إلى أخيه الثاني في الدارما
+  Combined   :  Let's choose a pivot.
 
 [00:00:37]
-  Transcript :  ولكنه واجهه بنفس الرد
+  Transcript :  I'll explain the best way to do this later, but for now let's just choose three.
   OCR        : None
-  Combined   :  ولكنه واجهه بنفس الرد
-
-[00:00:39]
-  Transcript :  يا أخي معتي تؤلمني بشدة ولا أستطيع الحديث
-  OCR        : None
-  Combined   :  يا أخي معتي تؤلمني بشدة ولا أستطيع الحديث
+  Combined   :  I'll explain the best way to do this later, but for now let's just choose three.
 
 [00:00:43]
-  Transcript :  لماذا لا تذهب وتسأل سيدنا في الدارما
+  Transcript :  First we move the pivot to the end of the array to get it out of our way.
   OCR        : None
-  Combined   :  لماذا لا تذهب وتسأل سيدنا في الدارما
+  Combined   :  First we move the pivot to the end of the array to get it out of our way.
 
-[00:00:45]
-  Transcript :  فهو الأقدر على مساعدتك
+[00:00:51]
+  Transcript :  Next we're going to look for two items.
   OCR        : None
-  Combined   :  فهو الأقدر على مساعدتك
+  Combined   :  Next we're going to look for two items.
 
-[00:00:47]
-  Transcript :  عاد التلميذ إلى سيده واشتكى قائلا
-  OCR        : None
-  Combined   :  عاد التلميذ إلى سيده واشتكى قائلا
+[00:00:59]
+  Transcript :  Item from left which is the first item starting from the left that is larger than our pivot Second item from right which is the first item starting from the right that is smaller than our pivot Starting at
+  OCR        : 1. itemFromLeft that is larger than pivot | 2. itemFromRight that is smaller than pivot
+  Combined   :  Item from left which is the first item starting from the left that is larger than our pivot Second item from right which is the first item starting from the right that is smaller than our pivot Starting at 1. itemFromLeft that is larger than pivot | 2. itemFromRight that is smaller than pivot
 
-[00:00:50]
-  Transcript :  يا معلمي لقد سألت الجميع ولم يجبني أحد
+[00:01:09]
+  Transcript :  2 we can see that 6 is item from left. Now starting at the right we see that 1 is item
   OCR        : None
-  Combined   :  يا معلمي لقد سألت الجميع ولم يجبني أحد
+  Combined   :  2 we can see that 6 is item from left. Now starting at the right we see that 1 is item
 
-[00:00:54]
-  Transcript : 
+[00:01:18]
+  Transcript :  from right. Let's swap item from left with item from right. We repeat the process. This
   OCR        : None
-  Combined   : 
+  Combined   :  from right. Let's swap item from left with item from right. We repeat the process. This
 
-[00:01:07]
-  Transcript :  بالحيرة والارتباك فقال
+[00:01:30]
+  Transcript :  time 5 is item from left and 0 is item from right. Again we swap the two. One more time.
   OCR        : None
-  Combined   :  بالحيرة والارتباك فقال
+  Combined   :  time 5 is item from left and 0 is item from right. Again we swap the two. One more time.
 
-[00:01:08]
-  Transcript :  ولكن يا معلم لم يقل لي
+[00:01:37]
+  Transcript :  Again we swap the two.
   OCR        : None
-  Combined   :  ولكن يا معلم لم يقل لي
+  Combined   :  Again we swap the two.
 
-[00:01:11]
-  Transcript :  أحد شيئا يذكر
+[00:01:44]
+  Transcript :  One more time. This time we see that item from left has a greater index than item from right.
   OCR        : None
-  Combined   :  أحد شيئا يذكر
-
-[00:01:12]
-  Transcript :  أجاب المعلم بحكمة لقد أراد
-  OCR        : None
-  Combined   :  أجاب المعلم بحكمة لقد أراد
-
-[00:01:15]
-  Transcript :  أن يخبروك أن الحل لمشاكلك
-  OCR        : None
-  Combined   :  أن يخبروك أن الحل لمشاكلك
-
-[00:01:17]
-  Transcript :  يكمن بداخلك لا أحد
-  OCR        : None
-  Combined   :  يكمن بداخلك لا أحد
-
-[00:01:19]
-  Transcript :  يستطيع أن يهدئ عقلك غيرك
-  OCR        : None
-  Combined   :  يستطيع أن يهدئ عقلك غيرك
-
-[00:01:20]
-  Transcript :  عليك أن تخوض رحلة داخلية
-  OCR        : None
-  Combined   :  عليك أن تخوض رحلة داخلية
-
-[00:01:22]
-  Transcript :  أن تتحدث مع نفسك وتفهم رغباتك ومخاوفك
-  OCR        : None
-  Combined   :  أن تتحدث مع نفسك وتفهم رغباتك ومخاوفك
-
-[00:01:26]
-  Transcript :  وتستكشف قوة عقلك وقلبك
-  OCR        : None
-  Combined   :  وتستكشف قوة عقلك وقلبك
-
-[00:01:28]
-  Transcript :  كل ما تحتاجه موجود بداخلك في أعماق روحك
-  OCR        : None
-  Combined   :  كل ما تحتاجه موجود بداخلك في أعماق روحك
-
-[00:01:32]
-  Transcript :  العالم الخارجي ما هو إلا انعكاس لعالمك الداخلي
-  OCR        : None
-  Combined   :  العالم الخارجي ما هو إلا انعكاس لعالمك الداخلي
-
-[00:01:36]
-  Transcript :  في هذه اللحظة أدرك التلميذ الحقيقة
-  OCR        : None
-  Combined   :  في هذه اللحظة أدرك التلميذ الحقيقة
-
-[00:01:39]
-  Transcript :  فهم أن الإجابات التي يبحث عنها ليست في الخارج بل في داخله
-  OCR        : None
-  Combined   :  فهم أن الإجابات التي يبحث عنها ليست في الخارج بل في داخله
-
-[00:01:43]
-  Transcript :  وعندها وصل إلى حالة من التنوير والسكون الداخلي
-  OCR        : None
-  Combined   :  وعندها وصل إلى حالة من التنوير والسكون الداخلي
-
-[00:01:47]
-  Transcript :  تذكر يا صديقي لا أحد يستطيع حل مشاكلك نياب عنك
-  OCR        : None
-  Combined   :  تذكر يا صديقي لا أحد يستطيع حل مشاكلك نياب عنك
+  Combined   :  One more time. This time we see that item from left has a greater index than item from right.
 
 [00:01:51]
-  Transcript :  أنت وحدك تملك القدرة على فهم ذاتك وتحقيق السلام الداخلي
+  Transcript :  So we know we're done.
   OCR        : None
-  Combined   :  أنت وحدك تملك القدرة على فهم ذاتك وتحقيق السلام الداخلي
+  Combined   :  So we know we're done.
 
-[00:01:57]
-  Transcript :  استمع إلى صوتك الداخلي
+[00:01:56]
+  Transcript :  We swap item from left with our pick.
   OCR        : None
-  Combined   :  استمع إلى صوتك الداخلي
+  Combined   :  We swap item from left with our pick.
 
 [00:02:00]
-  Transcript :  واكتشف حقيقتك
+  Transcript :  3. Our pivot is now in its correct spot. To prove it, let's review our three conditions.
   OCR        : None
-  Combined   :  واكتشف حقيقتك
+  Combined   :  3. Our pivot is now in its correct spot. To prove it, let's review our three conditions.
 
-[00:02:01]
-  Transcript :  واعلم أن كل ما تحتاجه موجود بداخلك
+[00:02:14]
+  Transcript :  As you can see, all items to the left are smaller, and all items to the right are larger.
   OCR        : None
-  Combined   :  واعلم أن كل ما تحتاجه موجود بداخلك
+  Combined   :  As you can see, all items to the left are smaller, and all items to the right are larger.
+
+[00:02:21]
+  Transcript :  We said quicksort is recursive. Let's go through the process one more time with the larger
+  OCR        : None
+  Combined   :  We said quicksort is recursive. Let's go through the process one more time with the larger
+
+[00:02:26]
+  Transcript :  partition we just made. We'll choose 7 as our pivot and move it to the end.
+  OCR        : None
+  Combined   :  partition we just made. We'll choose 7 as our pivot and move it to the end.
+
+[00:02:39]
+  Transcript :  I'll let you watch without voiceover.
+  OCR        : None
+  Combined   :  I'll let you watch without voiceover.
+
+[00:02:56]
+  Transcript :  Thank you Now we have 3 and 7 in their correct positions
+  OCR        : None
+  Combined   :  Thank you Now we have 3 and 7 in their correct positions
+
+[00:03:15]
+  Transcript :  I think you understand the concept, so we'll let recursion handle the rest.
+  OCR        : None
+  Combined   :  I think you understand the concept, so we'll let recursion handle the rest.
+
+[00:03:24]
+  Transcript :  One important question is how do we choose the pivot?
+  OCR        : None
+  Combined   :  One important question is how do we choose the pivot?
+
+[00:03:27]
+  Transcript :  This makes a large difference in the performance of the algorithm, as we want to choose a pivot
+  OCR        : None
+  Combined   :  This makes a large difference in the performance of the algorithm, as we want to choose a pivot
+
+[00:03:32]
+  Transcript :  that divides the array in half, or as close as possible, to even out the work.
+  OCR        : None
+  Combined   :  that divides the array in half, or as close as possible, to even out the work.
+
+[00:03:38]
+  Transcript :  One popular method is called median of three.
+  OCR        : None
+  Combined   :  One popular method is called median of three.
+
+[00:03:41]
+  Transcript :  In this method we look at the first, middle, and last elements of the array.
+  OCR        : None
+  Combined   :  In this method we look at the first, middle, and last elements of the array.
+
+[00:03:48]
+  Transcript :  We sort them properly and choose the middle item as our pivot.
+  OCR        : None
+  Combined   :  We sort them properly and choose the middle item as our pivot.
+
+[00:03:51]
+  Transcript :  We're making the guess that the middle of these three items could be close to the median of the entire array, and as you can see it's not too far.
+  OCR        : None
+  Combined   :  We're making the guess that the middle of these three items could be close to the median of the entire array, and as you can see it's not too far.
+
+[00:04:00]
+  Transcript :  Here's the pseudocode for quicksort.
+  OCR        : None
+  Combined   :  Here's the pseudocode for quicksort.
+
+[00:04:09]
+  Transcript : None
+  OCR        : Worst case: O(n²) | Average case: O(nlogn)
+  Combined   : Worst case: O(n²) | Average case: O(nlogn)
+
+[00:04:19]
+  Transcript : None
+  OCR        : Thank you for watching! | Please subscribe and share.
+  Combined   : Thank you for watching! | Please subscribe and share.
 

@@ -1,37 +1,36 @@
-[0.0 --> 4.4]  يحكى أنه في قديم الزمان سأل تلميذ معلمه الحكيم
-[4.4 --> 8.5]  يا معلمي كيف أهدئ من عاصفة الأفكار في ذهني
-[8.5 --> 10.3]  نظر إليه المعلم وقال
-[10.3 --> 14.4]  يا بني أنا في غاية الانشغال الآن ولا أملك وقتا للحديث
-[14.4 --> 18.2]  لماذا لا تذهب وتسأل أخاك الأكبر فهو حكيم مثلي
-[18.2 --> 24.5]  انطلق التلميذ إلى أخيه الأكبر وسأله نفس السؤال الذي طرحه على معلمه
-[24.5 --> 26.7]  ولكن الأخ الأكبر أجاب بتعب
-[26.7 --> 31.5]  آسف يا أخي أنا أعاني من صداع شديد ولا أقوى على الكلام الآن
-[31.5 --> 34.5]  لماذا لا تذهب وتسأل أخانا الثاني في الدارما
-[34.5 --> 37.1]  ذهب التلميذ إلى أخيه الثاني في الدارما
-[37.1 --> 39.6]  ولكنه واجهه بنفس الرد
-[39.6 --> 43.2]  يا أخي معتي تؤلمني بشدة ولا أستطيع الحديث
-[43.2 --> 45.6]  لماذا لا تذهب وتسأل سيدنا في الدارما
-[45.6 --> 47.6]  فهو الأقدر على مساعدتك
-[47.6 --> 50.3]  عاد التلميذ إلى سيده واشتكى قائلا
-[50.3 --> 54.1]  يا معلمي لقد سألت الجميع ولم يجبني أحد
-[54.1 --> 67.2] 
-[67.2 --> 68.9]  بالحيرة والارتباك فقال
-[68.9 --> 71.2]  ولكن يا معلم لم يقل لي
-[71.2 --> 72.3]  أحد شيئا يذكر
-[72.3 --> 75.2]  أجاب المعلم بحكمة لقد أراد
-[75.2 --> 77.2]  أن يخبروك أن الحل لمشاكلك
-[77.2 --> 79.1]  يكمن بداخلك لا أحد
-[79.1 --> 80.9]  يستطيع أن يهدئ عقلك غيرك
-[80.9 --> 82.8]  عليك أن تخوض رحلة داخلية
-[82.8 --> 86.3]  أن تتحدث مع نفسك وتفهم رغباتك ومخاوفك
-[86.3 --> 88.7]  وتستكشف قوة عقلك وقلبك
-[88.7 --> 92.3]  كل ما تحتاجه موجود بداخلك في أعماق روحك
-[92.3 --> 96.5]  العالم الخارجي ما هو إلا انعكاس لعالمك الداخلي
-[96.5 --> 99.4]  في هذه اللحظة أدرك التلميذ الحقيقة
-[99.4 --> 103.8]  فهم أن الإجابات التي يبحث عنها ليست في الخارج بل في داخله
-[103.8 --> 107.7]  وعندها وصل إلى حالة من التنوير والسكون الداخلي
-[107.7 --> 111.5]  تذكر يا صديقي لا أحد يستطيع حل مشاكلك نياب عنك
-[111.5 --> 117.1]  أنت وحدك تملك القدرة على فهم ذاتك وتحقيق السلام الداخلي
-[117.1 --> 119.8]  استمع إلى صوتك الداخلي
-[120.0 --> 121.9]  واكتشف حقيقتك
-[121.9 --> 125.8]  واعلم أن كل ما تحتاجه موجود بداخلك
+[0.6 --> 3.6]  Today we're going to learn quicksort.
+[3.6 --> 6.8]  Like merge sort, quicksort is a recursive algorithm.
+[6.8 --> 11.9]  However, when you think of quicksort, I want you to think of the word pivot.
+[11.9 --> 16.6]  A pivot is simply one of the items in the array that meets the following three conditions
+[16.6 --> 18.6]  after we sorted it.
+[18.6 --> 23.8]  First, the pivot is in its correct position in the final sorted array.
+[23.8 --> 29.6]  This means that all items to the left are smaller and all items to the right are larger.
+[29.6 --> 32.6]  Let's look at an example.
+[32.6 --> 35.7]  We're asked to sort the following array.
+[35.7 --> 37.5]  Let's choose a pivot.
+[37.5 --> 43.6]  I'll explain the best way to do this later, but for now let's just choose three.
+[43.6 --> 51.0]  First we move the pivot to the end of the array to get it out of our way.
+[51.0 --> 53.5]  Next we're going to look for two items.
+[53.5 --> 69.4]  Item from left which is the first item starting from the left that is larger than our pivot Second item from right which is the first item starting from the right that is smaller than our pivot Starting at
+[69.4 --> 78.2]  2 we can see that 6 is item from left. Now starting at the right we see that 1 is item
+[78.2 --> 85.2]  from right. Let's swap item from left with item from right. We repeat the process. This
+[90.0 --> 97.0]  time 5 is item from left and 0 is item from right. Again we swap the two. One more time.
+[97.0 --> 104.0]  Again we swap the two.
+[104.0 --> 111.0]  One more time. This time we see that item from left has a greater index than item from right.
+[111.0 --> 116.0]  So we know we're done.
+[116.0 --> 119.9]  We swap item from left with our pick.
+[120.0 --> 134.4]  3. Our pivot is now in its correct spot. To prove it, let's review our three conditions.
+[134.4 --> 141.6]  As you can see, all items to the left are smaller, and all items to the right are larger.
+[141.6 --> 146.3]  We said quicksort is recursive. Let's go through the process one more time with the larger
+[146.3 --> 153.3]  partition we just made. We'll choose 7 as our pivot and move it to the end.
+[159.3 --> 162.3]  I'll let you watch without voiceover.
+[176.3 --> 195.9]  Thank you Now we have 3 and 7 in their correct positions
+[195.9 --> 204.3]  I think you understand the concept, so we'll let recursion handle the rest.
+[204.3 --> 207.3]  One important question is how do we choose the pivot?
+[207.3 --> 212.1]  This makes a large difference in the performance of the algorithm, as we want to choose a pivot
+[212.1 --> 218.4]  that divides the array in half, or as close as possible, to even out the work.
+[218.4 --> 221.1]  One popular method is called median of three.
+[221.1 --> 228.1]  In this method we look at the first, middle, and last elements of the array.
+[228.1 --> 231.6]  We sort them properly and choose the middle item as our pivot.
+[231.6 --> 239.9]  We're making the guess that the middle of these three items could be close to the median of the entire array, and as you can see it's not too far.
+[240.0 --> 247.0]  Here's the pseudocode for quicksort.
