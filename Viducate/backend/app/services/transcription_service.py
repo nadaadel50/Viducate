@@ -9,6 +9,7 @@ from pydub import AudioSegment
 from app.services.cancellation_registry import is_cancelled, PipelineCancelledError,  check_cancelled
 import asyncio
 import logging
+from app.services.network_errors import raise_if_network_error
 
 from app.services.downloading import download_video
 from app.config import settings
@@ -115,6 +116,7 @@ def send_to_groq(client: Groq, chunk_path: str, offset: float, lang: str, video_
         except HTTPException:
             raise   
         except Exception as e:
+            raise_if_network_error(e, context=f"transcription Groq call {chunk_path}")
             logger.warning(f"attempt {attempt+1} failed: {e}")
             if attempt < retries - 1:
                 time.sleep(10)  

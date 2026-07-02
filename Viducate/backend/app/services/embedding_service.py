@@ -10,6 +10,7 @@ from groq import Groq
 from app.config import settings
 from app.services.cancellation_registry import is_cancelled, PipelineCancelledError,  check_cancelled
 import asyncio
+from app.services.network_errors import NetworkUnavailableError, raise_if_network_error
 
 logger = logging.getLogger(__name__)
 
@@ -191,12 +192,13 @@ def search(video_id: int, query: str, db: Session, n_results: int = 3, threshold
                 "score": score
             })
 
-        # ✅ reranking بدل الـ sort البسيط
+        # reranking بدل الـ sort البسيط
         reranked = rerank_results(query, filtered)
         reranked = [r for r in reranked if r['rerank_score'] > 0.01]
         return reranked[:n_results]
 
     except Exception as e:
+        raise_if_network_error(e, context="embedding search")
         logger.error(f"Search failed: {str(e)}", exc_info=True)
         raise HTTPException(
             status_code=status.HTTP_500_INTERNAL_SERVER_ERROR,

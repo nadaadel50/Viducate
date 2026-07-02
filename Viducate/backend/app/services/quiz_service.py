@@ -9,6 +9,7 @@ from app.models.quiz import Quiz, QuizQuestion
 from app.repositories.quiz_repository import QuizRepository
 from app.repositories.video_repository import VideoRepository
 from app.ml.engines.quiz_engine import generate_segment_quiz, generate_video_quiz
+from app.services.network_errors import NetworkUnavailableError
 
 from app.services.quality_service import (
     score_feature_vs_segmentation,
@@ -169,25 +170,29 @@ class QuizService:
 
 
 
-        
-        raw_questions, quality = run_with_quality_retry(
-        generator_fn=lambda seg=segment, subs=subtopics_data: generate_segment_quiz(
-        segment_title=seg.title,
-        main_topic=seg.main_topic or seg.title,
-        subtopics=subs,
-        difficulty=difficulty,
-        language=language,
-        segment_start_time=seg.start_time,
-        segment_end_time=seg.end_time,     
-    ),
-        score_fn=lambda result, seg=segment: score_feature_vs_segmentation(
-            feature_text=extract_text_from_quiz(result),
-            segment=seg,
-            content_type="quiz",
+        try:
+            raw_questions, quality = run_with_quality_retry(
+            generator_fn=lambda seg=segment, subs=subtopics_data: generate_segment_quiz(
+            segment_title=seg.title,
+            main_topic=seg.main_topic or seg.title,
+            subtopics=subs,
+            difficulty=difficulty,
+            language=language,
+            segment_start_time=seg.start_time,
+            segment_end_time=seg.end_time,     
         ),
-        label=f"quiz segment_id={segment_id}",
-        )
-
+            score_fn=lambda result, seg=segment: score_feature_vs_segmentation(
+                feature_text=extract_text_from_quiz(result),
+                segment=seg,
+                content_type="quiz",
+            ),
+            label=f"quiz segment_id={segment_id}",
+            )
+        except NetworkUnavailableError:
+            raise HTTPException(
+                status_code=status.HTTP_503_SERVICE_UNAVAILABLE,
+                detail="Network connection issue while generating quiz. Please try again.",
+            )
         if not raw_questions:
             raise HTTPException(
                 status_code=status.HTTP_422_UNPROCESSABLE_ENTITY,
@@ -320,20 +325,26 @@ class QuizService:
          # Use the first segment as the quality reference for the whole quiz
         reference_segment = segments[0]
 
-        raw_questions, quality = run_with_quality_retry(
-            generator_fn=lambda: generate_video_quiz(
-                video_title=video.title,
-                segments=segments_data,
-                difficulty=difficulty,
-                language=language,
-            ),
-            score_fn=lambda result, seg=reference_segment: score_feature_vs_segmentation(
-                feature_text=extract_text_from_quiz(result),
-                segment=seg,
-                content_type="quiz",
-            ),
-            label=f"video_quiz video_id={video_id}",
-        )
+        try:
+            raw_questions, quality = run_with_quality_retry(
+                generator_fn=lambda: generate_video_quiz(
+                    video_title=video.title,
+                    segments=segments_data,
+                    difficulty=difficulty,
+                    language=language,
+                ),
+                score_fn=lambda result, seg=reference_segment: score_feature_vs_segmentation(
+                    feature_text=extract_text_from_quiz(result),
+                    segment=seg,
+                    content_type="quiz",
+                ),
+                label=f"video_quiz video_id={video_id}",
+            )
+        except NetworkUnavailableError:
+            raise HTTPException(
+                status_code=status.HTTP_503_SERVICE_UNAVAILABLE,
+                detail="Network connection issue while generating quiz. Please try again.",
+            )
 
         if not raw_questions:
             raise HTTPException(

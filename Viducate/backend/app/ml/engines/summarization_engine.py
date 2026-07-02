@@ -3,6 +3,7 @@ from groq import Groq
 import json
 from app.utils.text_sanitizer import sanitize_dict, strip_cjk
 import json
+from app.services.network_errors import with_network_retry
 
 client = Groq(api_key=os.getenv("GROQ_API_KEY"))
 MODEL = "llama-3.3-70b-versatile"
@@ -222,11 +223,14 @@ def summarize_segment(segment_title: str, main_topic: str, subtopics: list[dict]
         """
 
 
-    response = client.chat.completions.create(
-        model=MODEL,
-        messages=[{"role": "user", "content": prompt}],
-        max_tokens=1200,
-        temperature=0.2,
+    response = with_network_retry(
+        lambda: client.chat.completions.create(
+            model=MODEL,
+            messages=[{"role": "user", "content": prompt}],
+            max_tokens=1200,
+            temperature=0.2,
+        ),
+        context="summarize_segment Groq call",
     )
     raw = response.choices[0].message.content.strip()
     raw = raw.replace("```json", "").replace("```", "").strip()
@@ -356,11 +360,14 @@ def summarize_full_video(video_title: str, segments: list[dict], language: str =
     - highlights containing technical terms MUST remain in English
     """
 
-    response = client.chat.completions.create(
-        model=MODEL,
-        messages=[{"role": "user", "content": prompt}],
-        max_tokens=1800,
-        temperature=0.2,
+    response = with_network_retry(
+        lambda: client.chat.completions.create(
+            model=MODEL,
+            messages=[{"role": "user", "content": prompt}],
+            max_tokens=1800,
+            temperature=0.2,
+        ),
+        context="summarize_full_video Groq call"
     )
 
     raw = response.choices[0].message.content.strip()

@@ -5,6 +5,7 @@ import time
 from groq import Groq
 from app.config import settings
 from app.utils.text_sanitizer import sanitize_dict, strip_cjk
+from app.services.network_errors import with_network_retry, NetworkUnavailableError
 
 logger = logging.getLogger(__name__)
 
@@ -124,16 +125,22 @@ def generate_flashcards_for_segment(
 
     for attempt in range(3):
         try:
-            response = client.chat.completions.create(
-                model=MODEL,
-                messages=[{"role": "user", "content": prompt}],
-                max_tokens=600,
-                temperature=0.3,
+            response = with_network_retry(
+                lambda: client.chat.completions.create(
+                    model=MODEL,
+                    messages=[{"role": "user", "content": prompt}],
+                    max_tokens=600,
+                    temperature=0.3,
+                ),
+                context="FlashcardEngine Groq call"
             )
             raw = response.choices[0].message.content or ""
             logger.debug(f"[FlashcardEngine] Raw response: {raw[:500]}")
             break  # success — exit retry loop
-
+        
+        except NetworkUnavailableError:
+            raise
+        
         except Exception as e:
             err_str = str(e).lower()
             if "rate_limit" in err_str or "429" in err_str or "quota" in err_str:

@@ -8,6 +8,7 @@ from app.models.mindmap import Mindmap
 from app.repositories.mindmap_repository import MindmapRepository
 from app.repositories.video_repository import VideoRepository
 from app.ml.engines.mindmap_engine import generate_mindmap
+from app.services.network_errors import NetworkUnavailableError
 
 from app.services.quality_service import (
     score_feature_vs_segmentation,
@@ -157,18 +158,24 @@ class MindmapService:
          # Use the first segment as the quality reference (domain anchor)
         reference_segment = segments[0]
 
-        result, quality = run_with_quality_retry(
-            generator_fn=lambda: generate_mindmap(
-                video_title=video.title,
-                segments=engine_input,
-            ),
-            score_fn=lambda res, seg=reference_segment: score_feature_vs_segmentation(
-                feature_text=extract_text_from_mindmap(res),
-                segment=seg,
-                content_type="mindmap",
-            ),
-            label=f"mindmap video_id={video_id}",
-        )
+        try:
+            result, quality = run_with_quality_retry(
+                generator_fn=lambda: generate_mindmap(
+                    video_title=video.title,
+                    segments=engine_input,
+                ),
+                score_fn=lambda res, seg=reference_segment: score_feature_vs_segmentation(
+                    feature_text=extract_text_from_mindmap(res),
+                    segment=seg,
+                    content_type="mindmap",
+                ),
+                label=f"mindmap video_id={video_id}",
+            )
+        except NetworkUnavailableError:
+            raise HTTPException(
+                status_code=status.HTTP_503_SERVICE_UNAVAILABLE,
+                detail="Network connection issue while generating mind map. Please try again.",
+            )
 
         if result is None:
             raise HTTPException(

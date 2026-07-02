@@ -6,6 +6,7 @@ from app.repositories.video_repository import VideoRepository
 from app.services.s3_service import S3Service
 from app.services.processing_service import ProcessingJobService
 from app.services.videoCaching_service import VideoCachingServise
+from app.services.network_errors import NetworkUnavailableError
 
 from app.schemas.video import (
     SaveVideoRequest,
@@ -86,7 +87,13 @@ class VideoService:
         yt_video_id = self.caching_service.extract_youtube_id(normalized_url)
 
         if yt_video_id:
-            classification_result = await classify_video(yt_video_id)
+            try:
+                classification_result = await classify_video(yt_video_id)
+            except NetworkUnavailableError:
+                raise HTTPException(
+                    status_code=status.HTTP_503_SERVICE_UNAVAILABLE,
+                    detail="Network connection issue while validating the video. Please try again.",
+                )
             subject = classification_result["classification"]
             duration_seconds = classification_result["duration_seconds"]
 

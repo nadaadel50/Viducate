@@ -8,6 +8,7 @@ from app.services.cancellation_registry import is_cancelled, PipelineCancelledEr
 import logging
 import glob
 from yt_dlp.utils import DownloadCancelled
+from app.services.network_errors import raise_if_network_error, with_network_retry
 
 logger = logging.getLogger(__name__)
 
@@ -26,7 +27,10 @@ def _is_direct_url(url: str) -> bool:
 # def _download_direct(url: str, output_path: str) -> str:
 def _download_direct(url: str, output_path: str, video_id: int) -> str:
     """Download file directly using requests"""
-    response = requests.get(url, stream=True, timeout=300)
+    response = with_network_retry(
+        lambda: requests.get(url, stream=True, timeout=300),
+        context="direct video download",
+    )
     if response.status_code != 200:
         raise HTTPException(
             status_code=status.HTTP_400_BAD_REQUEST,
@@ -98,6 +102,7 @@ def download_video(url: str, video_id: int) -> str:
         raise PipelineCancelledError(f"Video {video_id} was cancelled by user")
     
     except Exception as e:
+        raise_if_network_error(e, context="yt-dlp video download")
         error_msg = str(e)
         if "getaddrinfo failed" in error_msg or "Failed to resolve" in error_msg:
             raise Exception(" Please check the server's internet connection.")

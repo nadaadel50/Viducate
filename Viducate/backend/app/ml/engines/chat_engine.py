@@ -2,7 +2,7 @@ import logging
 from groq import Groq
 from app.config import settings
 from app.utils.text_sanitizer import strip_cjk
-
+from app.services.network_errors import NetworkUnavailableError, with_network_retry
 
 logger = logging.getLogger(__name__)
 
@@ -73,17 +73,23 @@ def generate_answer(context: str, history: list[dict], question: str) -> str:
     messages = _build_messages(context, history, question)
 
     try:
-        response = client.chat.completions.create(
-            model=MODEL,
-            messages=messages,
-            max_tokens=1000,
-            temperature=0.7,
+        response = with_network_retry(
+            lambda: client.chat.completions.create(
+                model=MODEL,
+                messages=messages,
+                max_tokens=1000,
+                temperature=0.7,
+            ),
+            context="ChatEngine Groq call"
         )
         answer = response.choices[0].message.content.strip()
         answer = strip_cjk(answer)
         logger.info(f"[ChatEngine] Answer generated successfully")
         return answer
-
+    
+    except NetworkUnavailableError:
+        raise
+    
     except Exception as e:
         logger.error(f"[ChatEngine] Groq error: {e}")
         raise

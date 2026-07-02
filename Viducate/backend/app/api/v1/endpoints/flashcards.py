@@ -75,7 +75,7 @@ def get_flashcards_by_segment(
     current_user=Depends(get_current_user),
 ):
     service = FlashcardService(db)
-    return service.get_by_segment(video_id, segment_id, current_user.id)
+    return service.get_or_generate_segment(video_id, segment_id, current_user.id)
 
 
 

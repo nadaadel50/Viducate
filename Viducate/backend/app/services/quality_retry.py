@@ -1,5 +1,9 @@
 import logging
 from typing import Callable, Any
+from app.services.network_errors import (
+    NetworkUnavailableError,
+    with_network_retry,
+)
 
 logger = logging.getLogger(__name__)
 
@@ -31,19 +35,26 @@ def run_with_quality_retry(
         # ── Call generator ────────────────────────────────────────────────────
         try:
             logger.info(f"[QualityRetry] {label} | calling generator_fn ...")
-            result = generator_fn()
+            result = with_network_retry(
+                generator_fn,
+                context=f"generator_fn for {label}",
+            )
             result_type = type(result).__name__
             result_empty = not result
             logger.info(
                 f"[QualityRetry] {label} | generator OK | "
                 f"type={result_type} | empty={result_empty}"
             )
-            print(f"[QualityRetry] {label} | generator OK | type={result_type}")
+        except NetworkUnavailableError:
+            logger.error(
+                f"[QualityRetry] {label} | Network unavailable after retries"
+            )
+            raise
         except Exception as e:
             logger.error(f"[QualityRetry] {label} | generator FAILED: {e}")
             print(f"[QualityRetry] {label} | generator FAILED: {e}")
             continue
-
+ 
         if result is None:
             logger.warning(f"[QualityRetry] {label} | generator returned None — skipping")
             print(f"[QualityRetry] {label} | generator returned None — skipping")
@@ -53,7 +64,10 @@ def run_with_quality_retry(
         try:
             logger.info(f"[QualityRetry] {label} | calling score_fn ...")
             print(f"[QualityRetry] {label} | calling score_fn ...")
-            quality = score_fn(result)
+            quality = with_network_retry(
+                lambda: score_fn(result),
+                context=f"score_fn for {label}",
+            )
             score     = quality.get("score", 0.0)
             flag      = quality.get("flag", True)
             threshold = quality.get("threshold", 0.0)
@@ -68,6 +82,11 @@ def run_with_quality_retry(
                 f"[QualityRetry] {label} | "
                 f"SCORE={score:.4f} | THRESHOLD={threshold} | FLAG={flag} | {status_icon}"
             )
+        except NetworkUnavailableError:
+            logger.error(
+                f"[QualityRetry] {label} | Network unavailable during scoring after retries"
+            )
+            raise
         except Exception as e:
             logger.error(f"[QualityRetry] {label} | scorer FAILED: {e}")
             print(f"[QualityRetry] {label} | scorer FAILED: {e}")

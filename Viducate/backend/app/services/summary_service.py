@@ -13,6 +13,7 @@ from sqlalchemy.orm import joinedload
 from app.ml.engines.summarization_engine import summarize_segment
 import json
 from app.utils.reading_time import calculate_reading_time
+from app.services.network_errors import NetworkUnavailableError
 
 logger = logging.getLogger(__name__)
 
@@ -64,8 +65,18 @@ class SummaryService:
             }
 
         logger.info(f"Generating new summary for video_id={video_id}")
-        video_summary = process_video_summary(self.db, video_id, lang)
+        
+        try:
+            video_summary = process_video_summary(self.db, video_id, lang)
 
+        except NetworkUnavailableError:
+            raise HTTPException(
+                status_code=status.HTTP_503_SERVICE_UNAVAILABLE,
+                detail="Network connection issue while generating summary. Please try again.",
+            )
+
+        if video_summary is None:
+            raise HTTPException(status_code=status.HTTP_500_INTERNAL_SERVER_ERROR, detail="Summary generation failed.")
         return {
             "video_id": video_id,
             "title": video.title,
@@ -91,7 +102,13 @@ class SummaryService:
             raise HTTPException(status_code=status.HTTP_404_NOT_FOUND, detail="No segments found for this video")
 
         lang = self._resolve_language(user_id, video_id, video.language)
-        process_all_segment_summaries(self.db, video_id, lang)
+        try:
+            process_all_segment_summaries(self.db, video_id, lang)
+        except NetworkUnavailableError:
+            raise HTTPException(
+                status_code=status.HTTP_503_SERVICE_UNAVAILABLE,
+                detail="Network connection issue while generating segment summaries. Please try again.",
+            )
 
         result = []
         for seg in segments:
@@ -124,7 +141,13 @@ class SummaryService:
 
         lang = self._resolve_language(user_id, video_id, video.language)
 
-        summary = process_single_segment_summary(self.db, video_id, segment_id, lang)
+        try:
+            summary = process_single_segment_summary(self.db, video_id, segment_id, lang)
+        except NetworkUnavailableError:
+            raise HTTPException(
+                status_code=status.HTTP_503_SERVICE_UNAVAILABLE,
+                detail="Network connection issue while generating segment summary. Please try again.",
+            )
 
         if summary is None:
             raise HTTPException(
