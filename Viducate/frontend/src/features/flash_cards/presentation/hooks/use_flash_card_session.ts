@@ -9,9 +9,9 @@ import { useSegmentFlashcards } from "./use_segment_flash_cards";
 import { useVideoFlashcards } from "./use_video_flash_cards";
 import { useLearningSession } from "../../../../core/hooks/useLearningContent";
 
-const STORAGE_KEY = (id: number | "video") =>
+const STORAGE_KEY = (id: number | "video", videoId?: number | string) =>
   id === "video"
-    ? `${STORAGE_KEYS.flashcardSession}_video`
+    ? `${STORAGE_KEYS.flashcardSession}_video_${videoId}`
     : `${STORAGE_KEYS.flashcardSession}_${id}`;
 
 export function useFlashcardSession() {
@@ -45,7 +45,7 @@ export function useFlashcardSession() {
     setAnswers([]);
     const resolvedId = !isNaN(segmentIdNumber) ? segmentIdNumber : "video";
 
-    const saved = sessionStorage.getItem(STORAGE_KEY(resolvedId!));
+    const saved = sessionStorage.getItem(STORAGE_KEY(resolvedId, videoId!));
     if (saved) {
       const parsed = JSON.parse(saved);
       setAnswers(parsed.answers ?? []);
@@ -63,9 +63,10 @@ export function useFlashcardSession() {
     const resolvedId = !isNaN(segmentIdNumber) ? segmentIdNumber : "video";
 
     sessionStorage.setItem(
-      STORAGE_KEY(resolvedId!),
+      STORAGE_KEY(resolvedId, videoId!),
       JSON.stringify({
         segmentId: segmentIdNumber,
+        videoId,
         answers,
         currentIndex,
         isFinished,
@@ -133,7 +134,7 @@ export function useFlashcardSession() {
       console.log(resolvedId);
       console.log("removing key:", STORAGE_KEY(segmentIdNumber));
 
-      sessionStorage.removeItem(STORAGE_KEY(resolvedId!));
+      sessionStorage.removeItem(STORAGE_KEY(resolvedId, videoId!));
       console.log(
         "existing keys:",
         Object.keys(sessionStorage).filter((k) => k.startsWith("flashcards")),

@@ -21,9 +21,10 @@ class SummaryService:
     def __init__(self, db: Session):
         self.db = db
 
-    def _resolve_language(self, user_id: int, video_language: str) -> str:
+    def _resolve_language(self, user_id: int, video_id: int, video_language: str) -> str:
         pref = self.db.query(ContentPreferences).filter(
-            ContentPreferences.user_id == user_id
+            ContentPreferences.user_id == user_id,
+            ContentPreferences.video_id == video_id,
         ).first()
         if pref and pref.summary_language:
             return pref.summary_language
@@ -45,7 +46,7 @@ class SummaryService:
     def get_or_generate_video_summary(self, video_id: int, user_id: int) -> dict:
         video = self._check_video_belongs_to_user(video_id, user_id)
 
-        lang = self._resolve_language(user_id, video.language)
+        lang = self._resolve_language(user_id, video_id, video.language)
         existing = self.db.query(VideoSummary).filter(
             VideoSummary.video_id == video_id
         ).first()
@@ -89,7 +90,7 @@ class SummaryService:
         if not segments:
             raise HTTPException(status_code=status.HTTP_404_NOT_FOUND, detail="No segments found for this video")
 
-        lang = self._resolve_language(user_id, video.language)
+        lang = self._resolve_language(user_id, video_id, video.language)
         process_all_segment_summaries(self.db, video_id, lang)
 
         result = []
@@ -121,7 +122,7 @@ class SummaryService:
         if not segment:
             raise HTTPException(status_code=status.HTTP_404_NOT_FOUND, detail="No segments found for this video")
 
-        lang = self._resolve_language(user_id, video.language)
+        lang = self._resolve_language(user_id, video_id, video.language)
 
         summary = process_single_segment_summary(self.db, video_id, segment_id, lang)
 

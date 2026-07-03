@@ -14,6 +14,7 @@ from app.services.quality_service import (
     extract_text_from_mindmap,
 )
 from app.services.quality_retry import run_with_quality_retry
+import re
 
 logger = logging.getLogger(__name__)
 
@@ -26,6 +27,38 @@ def _format_seconds(seconds: int) -> str:
     return f"{h:02d}:{m:02d}:{s:02d}"
 
 
+
+def _clean_description(text: str, max_chars: int = 300) -> str:
+    """
+    Strip OCR noise from descriptions before sending to mindmap engine.
+    Keeps only meaningful content — removes garbled transliterations,
+    repeated words, and excessively short tokens.
+    """
+    if not text:
+        return ""
+
+    # Split on pipe (OCR separator) and take only meaningful parts
+    parts = [p.strip() for p in text.split("|")]
+
+    cleaned_parts = []
+    for part in parts:
+        # Skip parts that are too short to be meaningful
+        if len(part.split()) < 3:
+            continue
+        # Skip parts that look like garbled transliteration
+        # (high ratio of non-Arabic, non-English, non-space characters)
+        weird = len(re.findall(r'[^a-zA-Z\u0600-\u06FF\s\d\(\)\-\.,]', part))
+        if len(part) > 0 and weird / len(part) > 0.15:
+            continue
+        # Skip parts with repeated words (OCR artifact)
+        words = part.split()
+        if len(words) >= 2 and words[0] == words[1]:
+            continue
+        cleaned_parts.append(part)
+
+    result = " | ".join(cleaned_parts) if cleaned_parts else ""
+    return result[:max_chars]
+
 def _segments_to_engine_input(segments: list[TopicSegment]) -> list[dict]:
     
     result = []
@@ -37,7 +70,7 @@ def _segments_to_engine_input(segments: list[TopicSegment]) -> list[dict]:
             "start_time":     _format_seconds(seg.start_time),
             "end_time":       _format_seconds(seg.end_time),
             "sub_topics": [
-                {"name": st.name, "description": st.description or ""}
+                {"name": st.name, "description": _clean_description(st.description or "")}
                 for st in seg.subtopics
                 if st.name
             ],

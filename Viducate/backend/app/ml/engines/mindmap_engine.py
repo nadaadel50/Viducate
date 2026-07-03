@@ -4,6 +4,7 @@ import re
 import time
 from groq import Groq
 from app.config import settings
+from app.utils.text_sanitizer import sanitize_dict, strip_cjk
 
 logger = logging.getLogger(__name__)
 
@@ -98,6 +99,18 @@ def _lang_instruction(language: str) -> str:
             "(e.g. 'Defuzzification', 'Centroid', 'Mamdani', 'fuzzy set'). "
             "Do NOT transliterate them into Arabic letters.\n"
             "  - If a subtopic name or key point is already in English, keep it in English."
+            "STRICT PROHIBITION: Do NOT output any Chinese, Japanese, Korean, or other CJK characters.\n\n"
+            "TECHNICAL TERMS RULE — the following categories MUST remain in English exactly as-is:\n"
+            "  - Algorithm names, data structures, complexity notation, programming concepts, CS/Math terms\n"
+            "  - Any term that appears in English in the original slide or transcript content\n\n"
+            "CORRECT label examples:\n"
+            "  ✓ 'Time Complexity'                (English term from slide — keep English)\n"
+            "  ✓ 'أكثر الطرق استخداماً'            (Arabic explanation — keep Arabic)\n"
+            "  ✓ 'Binary Search أسرع من Linear Search'\n"
+            "WRONG label examples (never do this):\n"
+            "  ✗ 'تعقيد الوقت'   → should be 'Time Complexity'\n"
+            "  ✗ 'البحث الثنائي' → should be 'Binary Search'\n"
+            "  ✗ 'Al-Stack'      → transliterating is forbidden\n"
         )
     if language == "en":
         return "The lecture is in ENGLISH. Write ALL labels in English."
@@ -119,6 +132,18 @@ def _lang_instruction(language: str) -> str:
         "  GOOD: 'Centroid method'            (English slide term)\n"
         "  BAD:  'مبدأ الحدية القصوى'          (translating 'Max membership' — do NOT do this)\n"
         "  BAD:  'Al-Centroid'                (transliterating — do NOT do this)\n"
+        "STRICT PROHIBITION: Do NOT output any Chinese, Japanese, Korean, or other CJK characters.\n\n"
+        "TECHNICAL TERMS RULE — the following categories MUST remain in English exactly as-is:\n"
+        "  - Algorithm names, data structures, complexity notation, programming concepts, CS/Math terms\n"
+        "  - Any term that appears in English in the original slide or transcript content\n\n"
+        "CORRECT label examples:\n"
+        "  ✓ 'Time Complexity'                (English term from slide — keep English)\n"
+        "  ✓ 'أكثر الطرق استخداماً'            (Arabic explanation — keep Arabic)\n"
+        "  ✓ 'Binary Search أسرع من Linear Search'\n"
+        "WRONG label examples (never do this):\n"
+        "  ✗ 'تعقيد الوقت'   → should be 'Time Complexity'\n"
+        "  ✗ 'البحث الثنائي' → should be 'Binary Search'\n"
+        "  ✗ 'Al-Stack'      → transliterating is forbidden\n"
     )
 
 
@@ -200,8 +225,18 @@ LABEL RULES:
   - root label     = video title (keep as-is)
   - segment label  = segment title (keep as-is, may be longer)
   - subtopic label = subtopic name (keep as-is)
-  - detail label   = SHORT phrase extracted from description (max {DETAIL_WORDS} words, factual)
-                     Prefer phrases that add new information not already in the subtopic name.
+  - detail label   = SHORT informative phrase (max {DETAIL_WORDS} words).
+                     MUST be a clean, readable phrase — never a raw transcript fragment.
+                     RULES for detail labels:
+                       * Extract the core concept or fact, not a verbatim sentence
+                       * If the description is garbled or contains OCR errors, summarize the subtopic name instead
+                       * Never include ellipsis (...) or cut-off sentences
+                       * Never copy transliterated Arabic words written in Latin script (e.g. 'liniar sirt', 'algorthm')
+                       * Prefer phrases that add new information not already in the subtopic name
+                     CORRECT: 'Time Complexity هي O(n)', 'يمر على كل عنصر بالترتيب', 'لا تحتاج قائمة مترتبة'
+                     WRONG:   'هو اللينير سيرت اللينير سيرت هو من أسهل…'
+                     WRONG:   'أكاريمية تنوجيز فرح يبحث عنصر عنصر…'
+                     WRONG:   'كيف نكتب الالغورثم للينير سيرج في البداية…'
   - keypoint label = key point text (keep as-is)
 
 STRICT RULES:
@@ -268,7 +303,7 @@ def _parse(raw: str) -> dict | None:
     raw = raw.strip()
 
     try:
-        return json.loads(raw)
+        return sanitize_dict(json.loads(raw))
     except json.JSONDecodeError:
         pass
 
@@ -276,7 +311,7 @@ def _parse(raw: str) -> dict | None:
     match = re.search(r'\{.*\}', raw, re.DOTALL)
     if match:
         try:
-            return json.loads(match.group())
+            return sanitize_dict(json.loads(match.group()))
         except Exception:
             pass
     return None
@@ -305,6 +340,29 @@ def _truncate(text: str, max_words: int) -> str:
         return text
     return " ".join(words[:max_words]) + "…"
 
+def _clean_label(label: str) -> str:
+    """
+    Post-generation cleanup for mindmap node labels.
+    Removes truncated sentences, ellipsis artifacts, and obvious OCR noise.
+    """
+    if not label:
+        return label
+
+    label = re.sub(r'\s*[…\.]{2,}$', '', label).strip()
+
+    words = label.split()
+    if len(words) > DETAIL_WORDS:
+        label = " ".join(words[:DETAIL_WORDS])
+
+    return strip_cjk(label)
+
+
+def _clean_nodes(nodes: list[dict]) -> list[dict]:
+    """Apply label cleanup to detail nodes only."""
+    for node in nodes:
+        if node.get("type") == "detail":
+            node["label"] = _clean_label(node.get("label", ""))
+    return nodes
 
 def _build_fallback(video_title: str, segments: list[dict], language: str) -> dict:
     """
@@ -337,7 +395,7 @@ def _build_fallback(video_title: str, segments: list[dict], language: str) -> di
                 det_id = f"det_{n}_{m}_{d}"
                 nodes.append({
                     "id":    det_id,
-                    "label": _truncate(detail_text, DETAIL_WORDS),
+                    "label": _clean_label(_truncate(detail_text, DETAIL_WORDS)),
                     "type":  "detail",
                 })
                 edges.append({
@@ -422,7 +480,8 @@ def generate_mindmap(video_title: str, segments: list[dict]) -> dict:
                     all_nodes.append(node)
             all_edges.extend(fallback_chunk["edges"])
             continue
-
+         
+        data["nodes"] = _clean_nodes(data["nodes"])
         # Merge chunk result
         for node in data["nodes"]:
             if node["id"] == "root":

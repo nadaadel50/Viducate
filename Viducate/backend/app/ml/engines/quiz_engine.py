@@ -4,6 +4,7 @@ import re
 import time
 from groq import Groq
 from app.config import settings
+from app.utils.text_sanitizer import sanitize_dict, strip_cjk
 
 logger = logging.getLogger(__name__)
 
@@ -14,6 +15,28 @@ DIFFICULTY_CONFIGS = {
     "medium": {"description": "understanding and application questions", "subtopics_multiplier": 1.5},
     "hard":   {"description": "analysis, evaluation, and synthesis questions", "subtopics_multiplier": 2.0},
 }
+
+CONTENT_FILTER = """
+CRITICAL: Test ONLY educational subject matter — concepts, definitions, mechanisms, comparisons, and applications that belong to the topic itself.
+
+Do NOT generate questions about ANY of the following, regardless of how much transcript space they occupy:
+
+  INTRO content:
+  - Greetings and opening salutations (e.g. "السلام عليكم", "hello everyone", "welcome back")
+  - Course or lesson introductions (e.g. "today we will cover...", "in this lesson we will learn...")
+  - Recaps of previous lessons (e.g. "last time we covered...", "we already studied this in level 1")
+  - Motivational or religious opening remarks unrelated to the subject
+  - Course announcements, broadcast schedules, or contact info (e.g. "the course airs daily at 7pm", "WhatsApp number")
+
+  OUTRO content:
+  - Farewells, sign-offs, or closing blessings (e.g. "بارك الله فيكم", "see you next time", "والسلام عليكم")
+  - Teasers for the next lesson (e.g. "next time we will explain...", "in the next video...")
+  - Calls to action (subscribe, like, share, follow)
+  - Homework reminders or administrative notices
+  - Encouragement or motivational closing remarks unrelated to the subject
+
+A question is valid ONLY if a student who never watched the intro or outro could still answer it from the subject content alone.
+"""
 
 SEGMENT_MIN_QUESTIONS = 3
 SEGMENT_MAX_QUESTIONS = 10
@@ -59,6 +82,7 @@ def _clean_json(raw: str) -> str:
     return raw.strip()
 
 
+
 def _build_segment_prompt(
     segment_title: str,
     main_topic: str,
@@ -69,10 +93,35 @@ def _build_segment_prompt(
     num_questions: int,
 ) -> str:
     lang_note = (
-        "Write all text in Arabic only."
+        "OUTPUT LANGUAGE: Arabic only for prose and explanations.\n"
+        "STRICT PROHIBITION: Do NOT output any Chinese, Japanese, Korean, or other CJK characters.\n\n"
+        "TECHNICAL TERMS RULE — the following categories of terms MUST remain in English exactly as-is, "
+        "never translated or transliterated into Arabic:\n"
+        "  - Algorithm names: Linear Search, Binary Search, Bubble Sort, Merge Sort, Quick Sort, etc.\n"
+        "  - Data structures: Array, Stack, Queue, Linked List, Tree, Graph, Heap, Hash Table, etc.\n"
+        "  - Complexity notation: Big O, O(n), O(log n), O(1), O(n^2), Time Complexity, Space Complexity\n"
+        "  - Programming concepts: Loop, Recursion, Pointer, Variable, Function, Class, Object, etc.\n"
+        "  - CS concepts: Binary, Index, Node, Edge, Path, Depth, Height, etc.\n"
+        "  - Any term that appears in English in the original video content\n\n"
+        "CORRECT examples:\n"
+        "  ✓ 'ما هو تعريف Time Complexity؟'\n"
+        "  ✓ 'ما هي ميزة Linear Search؟'\n"
+        "  ✓ 'ما الفرق بين Linear Search و Binary Search؟'\n"
+        "  ✓ 'ما هو تعقيد Big O لـ Binary Search؟'\n"
+        "WRONG examples (never do this):\n"
+        "  ✗ 'ما هو تعريف تعقيد الوقت؟'  → should be 'Time Complexity'\n"
+        "  ✗ 'ما هي ميزة البحث الخطي؟'   → should be 'Linear Search'\n"
+        "  ✗ 'ما هو البحث الثنائي؟'       → should be 'Binary Search'\n"
+        "  ✗ 'تعقيد الوقت O(n)'           → should be 'Time Complexity O(n)'\n"
         if language == "ar"
-        else "Write all text in English only."
+        else "OUTPUT LANGUAGE: English only. No Arabic, no CJK characters."
     )
+    # lang_note = (
+    #     "Write all text in Arabic only."
+    #     if language == "ar"
+    #     else "Write all text in English only."
+    # )
+
     diff_desc = DIFFICULTY_CONFIGS[difficulty]["description"]
 
     subtopics_text = "\n".join(
@@ -86,7 +135,7 @@ def _build_segment_prompt(
 Generate exactly {num_questions} multiple-choice questions for the following video segment.
 Difficulty: {difficulty} ({diff_desc})
 {lang_note}
-
+{CONTENT_FILTER}
 Segment: {segment_title}
 Main Topic: {main_topic}
 Subtopics:
@@ -103,12 +152,7 @@ RULES:
 7. concept: a short concept or skill being tested
    (e.g. "Gradient Descent", "Binary Search", "Photosynthesis").
 8. Return ONLY a valid JSON array, no markdown, no extra text.
-IMPORTANT: Do NOT generate questions about:
-- Video introduction or opening remarks (greetings, announcements, "today we will...")
-- Video conclusions, closing remarks, or "see you next time" content
-- Administrative content like "subscribe", "like", "homework reminders"
-- Meta-content about the lesson structure itself
-Only generate questions about the ACTUAL educational content.
+
 
 Format:
 [
@@ -135,10 +179,34 @@ def _build_video_prompt(
     questions_per_segment: int,
 ) -> str:
     lang_note = (
-        "Write all text in Arabic only."
+        "OUTPUT LANGUAGE: Arabic only for prose and explanations.\n"
+        "STRICT PROHIBITION: Do NOT output any Chinese, Japanese, Korean, or other CJK characters.\n\n"
+        "TECHNICAL TERMS RULE — the following categories of terms MUST remain in English exactly as-is, "
+        "never translated or transliterated into Arabic:\n"
+        "  - Algorithm names: Linear Search, Binary Search, Bubble Sort, Merge Sort, Quick Sort, etc.\n"
+        "  - Data structures: Array, Stack, Queue, Linked List, Tree, Graph, Heap, Hash Table, etc.\n"
+        "  - Complexity notation: Big O, O(n), O(log n), O(1), O(n^2), Time Complexity, Space Complexity\n"
+        "  - Programming concepts: Loop, Recursion, Pointer, Variable, Function, Class, Object, etc.\n"
+        "  - CS concepts: Binary, Index, Node, Edge, Path, Depth, Height, etc.\n"
+        "  - Any term that appears in English in the original video content\n\n"
+        "CORRECT examples:\n"
+        "  ✓ 'ما هو تعريف Time Complexity؟'\n"
+        "  ✓ 'ما هي ميزة Linear Search؟'\n"
+        "  ✓ 'ما الفرق بين Linear Search و Binary Search؟'\n"
+        "  ✓ 'ما هو تعقيد Big O لـ Binary Search؟'\n"
+        "WRONG examples (never do this):\n"
+        "  ✗ 'ما هو تعريف تعقيد الوقت؟'  → should be 'Time Complexity'\n"
+        "  ✗ 'ما هي ميزة البحث الخطي؟'   → should be 'Linear Search'\n"
+        "  ✗ 'ما هو البحث الثنائي؟'       → should be 'Binary Search'\n"
+        "  ✗ 'تعقيد الوقت O(n)'           → should be 'Time Complexity O(n)'\n"
         if language == "ar"
-        else "Write all text in English only."
+        else "OUTPUT LANGUAGE: English only. No Arabic, no CJK characters."
     )
+    # lang_note = (
+    #     "Write all text in Arabic only."
+    #     if language == "ar"
+    #     else "Write all text in English only."
+    # )
     diff_desc = DIFFICULTY_CONFIGS[difficulty]["description"]
 
     segments_text = ""
@@ -156,6 +224,7 @@ Generate a comprehensive quiz covering ALL segments of the video below.
 Generate {questions_per_segment} question(s) per segment.
 Difficulty: {difficulty} ({diff_desc})
 {lang_note}
+{CONTENT_FILTER}
 
 Video: {video_title}
 {segments_text}
@@ -170,12 +239,7 @@ RULES:
 7. segment_number: which segment (1, 2, 3…) this question belongs to.
 8. concept: short concept or skill tested.
 9. Return ONLY a valid JSON array, no markdown, no extra text.
-IMPORTANT: Do NOT generate questions about:
-- Video introduction or opening remarks (greetings, announcements, "today we will...")
-- Video conclusions, closing remarks, or "see you next time" content
-- Administrative content like "subscribe", "like", "homework reminders"
-- Meta-content about the lesson structure itself
-Only generate questions about the ACTUAL educational content.
+
 
 Format:
 [
@@ -221,6 +285,12 @@ def _parse_and_validate(raw: str, expected_keys: list[str]) -> list[dict]:
     for item in data:
         if not isinstance(item, dict):
             continue
+        # Sanitize CJK leakage from all text fields
+        for field in ("question_text", "choice_a", "choice_b", "choice_c", "choice_d",
+                    "correct_answer_text", "explanation", "concept"):
+            if isinstance(item.get(field), str):
+                item[field] = strip_cjk(item[field])
+        
         missing = [k for k in expected_keys if not item.get(k)]
         if missing:
             logger.warning(f"[QuizEngine] Skipping question missing keys: {missing}")

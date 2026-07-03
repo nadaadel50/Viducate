@@ -41,7 +41,7 @@ export function RightContentSection({ onOpenTopics }: Props) {
     goToNextTopic,
   } = useRightContentSection();
 
-  const { totalDue } = useDueFlashcards();
+  const { videoDueCards } = useDueFlashcards();
 
   const footerActions = [
     {
@@ -64,7 +64,7 @@ export function RightContentSection({ onOpenTopics }: Props) {
       labelId: "watch.actions.finalFlashcards",
       onClick: () =>
         navigate(`${AppRoutesNames.watchVideo}/${AppRoutesNames.flashCards}`),
-      totalReviewCards: totalDue,
+      totalReviewCards: videoDueCards.length,
     },
     {
       variant: "mindmap",
@@ -88,15 +88,15 @@ export function RightContentSection({ onOpenTopics }: Props) {
 
         <MainHeader />
 
-        <div className="pb-10">
+        <div className="pb-8">
           <div className="my-5">
             <VideoPlayer />
           </div>
-          <div className="mt-4">
+          <div className="mt-2">
             <TranscriptSearch />
           </div>
 
-          <div className="mt-3 flex gap-3">
+          <div className="mt-1 flex gap-3">
             <CustomButton
               fullWidth
               leftIcon={<CircleCheckBig size={20} />}
