@@ -4,7 +4,7 @@ import { StuckReasons, type StuckReason } from "../types/stuck_reason";
 function detectRepeatedSeek(events: { time: number; timestamp: number }[]) {
   const now = Date.now();
   const WINDOW_MS = 180_000;
-  const POSITION_THRESHOLD_S = 30;
+  const POSITION_THRESHOLD_S = 60;
   const MIN_OCCURRENCES = 3;
 
   const recent = events.filter((e) => now - e.timestamp < WINDOW_MS);

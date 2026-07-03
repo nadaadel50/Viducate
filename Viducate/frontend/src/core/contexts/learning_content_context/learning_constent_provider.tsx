@@ -113,6 +113,7 @@ const handleSetInitializeCurrentTime = (time: number) => {
     setSelectedTopic(nextTopic);
 
     setSeekTo(nextTopic.start_time);
+    setCurrentTime(nextTopic.start_time);
   };
 
   const [duration, setDuration] = useState<number>(0);
@@ -122,9 +123,10 @@ const handleSetInitializeCurrentTime = (time: number) => {
   }
 useEffect(() => {
   if (videoId === null) return;
-  setSelectedTopic(null);
-  setTopics(null);
-  setVideoTitle(null);
+  console.log("videoId changed, resetting session state:", videoId);  
+  // setSelectedTopic(null);
+  // setTopics(null);
+  // setVideoTitle(null);
   setMarks([]);
   setCompletedTopics(new Set());
   setCurrentTime(0);

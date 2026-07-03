@@ -4,6 +4,7 @@ import { CardLayout } from "./card_laylout";
 import { useNavigate } from "react-router";
 import { useLearningSession } from "../../../../../core/hooks/useLearningContent";
 import { AppRoutesNames } from "../../../../../app/routers/routes";
+import { useQueryClient } from "@tanstack/react-query";
 
 type ContinueLearningCardProps = {
   cardData: ContinueLearningEntity;
@@ -12,9 +13,14 @@ type ContinueLearningCardProps = {
 export function ContinueLearningCard({ cardData }: ContinueLearningCardProps) {
   const navigate = useNavigate();
   const { setVideoId } = useLearningSession();
+   const queryClient = useQueryClient();
 
   const handleClick = async () => {
     await setVideoId(cardData.videoId);
+     await queryClient.refetchQueries({
+      queryKey: ['topics', cardData.videoId],
+      exact: true,
+    });
     navigate(AppRoutesNames.watchVideo);
   };
 

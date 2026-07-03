@@ -89,7 +89,7 @@ export function useVideoController({
     const topicDurationMs = topicDuration || 0;
     const minPause = Math.max(30_000, topicDurationMs * 0.15);
     const maxPause = Math.max(90_000, topicDurationMs * 0.4);
-    console.log("from video controller the topic duration is ", topicDuration);
+   
 
     if (
       pauseDuration > minPause &&
@@ -133,11 +133,21 @@ export function useVideoController({
     setDurationTime(duration);
   };
 
-  const handleSeek = () => {
-    const time = player.getCurrentTime();
+const SEEK_JUMP_THRESHOLD = 2; 
+
+const handleSeek = () => {
+  const time = player.getCurrentTime();
+  const lastTime = lastSeekTimeRef.current;
+
+ 
+  if (lastTime !== null && Math.abs(time - lastTime) < SEEK_JUMP_THRESHOLD) {
     lastSeekTimeRef.current = time;
-    analytics.addSeekEvent(time);
-  };
+    return;
+  }
+
+  lastSeekTimeRef.current = time;
+  analytics.addSeekEvent(time);
+};
 
   // speed change
   const handleSpeedChange = (speed: number) => {

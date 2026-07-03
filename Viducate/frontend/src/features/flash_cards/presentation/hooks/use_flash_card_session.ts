@@ -131,14 +131,9 @@ export function useFlashcardSession() {
       setIsFinished(false);
 
       const resolvedId = !isNaN(segmentIdNumber) ? segmentIdNumber : "video";
-      console.log(resolvedId);
-      console.log("removing key:", STORAGE_KEY(segmentIdNumber));
-
+     
       sessionStorage.removeItem(STORAGE_KEY(resolvedId, videoId!));
-      console.log(
-        "existing keys:",
-        Object.keys(sessionStorage).filter((k) => k.startsWith("flashcards")),
-      );
+     
       navigate(-1);
     }
   };

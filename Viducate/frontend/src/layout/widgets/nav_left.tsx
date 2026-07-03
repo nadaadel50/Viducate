@@ -3,12 +3,12 @@ import { useNavigate } from "react-router-dom";
 import { Logo } from "../../core/componants/logo";
 import { AppRoutesNames } from "../../app/routers/routes";
 import { FormattedMessage } from "react-intl";
+import { SafeNavLink } from "../hooks/save_nav_link";
 type NavbarLeftProps = {
   isDashboard: boolean;
 };
 
 export function NavbarLeft({ isDashboard }: NavbarLeftProps) {
-  const navigate = useNavigate();
 
   return (
     <div className="flex items-center gap-6">
@@ -16,8 +16,8 @@ export function NavbarLeft({ isDashboard }: NavbarLeftProps) {
 
       <div className="h-4 w-px bg-gray-200" />
 
-      <button
-        onClick={() => navigate(AppRoutesNames.dashboard)}
+      <SafeNavLink
+        to={AppRoutesNames.dashboard}
         className={` flex cursor-pointer items-center gap-1.5 rounded-lg px-2.5 py-1.5 text-sm transition-colors ${
           isDashboard
             ? "bg-indigo-50 font-medium text-indigo-600"
@@ -26,7 +26,7 @@ export function NavbarLeft({ isDashboard }: NavbarLeftProps) {
       >
         <LayoutDashboard size={15} />
         <FormattedMessage id="navbar.dashboard" />
-      </button>
+      </SafeNavLink>
     </div>
   );
 }

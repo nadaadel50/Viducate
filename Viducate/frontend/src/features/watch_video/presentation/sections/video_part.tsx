@@ -111,16 +111,18 @@ export function VideoPlayer() {
     if (seekTo === null) return;
 
     seek(seekTo);
+    console.log("seeking to:", seekTo);
     setSeekTo(null);
   }, [seekTo]);
 
   useEffect(() => {
     seek(currentTime);
 
-    // setPlayerState((p) => ({
-    //   ...p,
-    //   isPlaying: false,
-    // }));
+    setPlayerState((p) => ({
+      ...p,
+      isPlaying: true,
+      started: true,
+    }));
   }, []);
 
   const handleProgressClick = (e: React.MouseEvent<HTMLDivElement>) => {

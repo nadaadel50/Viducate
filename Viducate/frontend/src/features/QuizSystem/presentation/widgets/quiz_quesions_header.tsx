@@ -2,12 +2,14 @@ import { FormattedMessage } from "react-intl";
 import { useNavigate } from "react-router";
 import { useLearningSession } from "../../../../core/hooks/useLearningContent";
 import { AppRoutesNames } from "../../../../app/routers/routes";
-import  { COLORS } from "../../../../core/constants";
-import { FONT_SIZE, FONT_WEIGHT, LETTER_SPACING } from "../../../../core/constants/fonts_update";
-import  { QuizQuestionEntity } from "../../domain/entity/quiz_entity";
+import { COLORS, STORAGE_KEYS } from "../../../../core/constants";
+import {
+  FONT_SIZE,
+  FONT_WEIGHT,
+  LETTER_SPACING,
+} from "../../../../core/constants/fonts_update";
+import { QuizQuestionEntity } from "../../domain/entity/quiz_entity";
 import { FONT_STYLES } from "../../../../core/constants/fonts";
-
-
 
 interface QuizQuestionHeaderProps {
   question: QuizQuestionEntity;
@@ -19,12 +21,16 @@ export function QuizQuestionHeader({
   isReviewMode,
 }: QuizQuestionHeaderProps) {
   const navigate = useNavigate();
-  const { setCurrentTime } = useLearningSession();
+  const { setCurrentTime, setSeekTo } = useLearningSession();
 
   const handleWatch = () => {
     if (question.video_timestamp == null) return;
+    console.log("going to watch video at timestamp:", question.video_timestamp);
 
     setCurrentTime(question.video_timestamp);
+    setSeekTo(question.video_timestamp);
+   
+
     navigate(AppRoutesNames.watchVideo);
   };
 
@@ -42,14 +48,10 @@ export function QuizQuestionHeader({
           onClick={handleWatch}
           className="flex w-fit bg-white/40 hover:bg-white cursor-pointer items-center gap-2 rounded-lg px-3 py-2 shadow-sm transition-all hover:scale-[1.02] active:scale-95"
           style={{
-            
             color: COLORS.brand.primary,
           }}
         >
-          <span
-            className="material-symbols-outlined"
-            style={{ fontSize: 20 }}
-          >
+          <span className="material-symbols-outlined" style={{ fontSize: 20 }}>
             play_circle
           </span>
 
