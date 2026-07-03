@@ -1,15 +1,13 @@
 import Lottie from "lottie-react";
 
 import errorAnimation from "../../assets/animations/error.json";
-
+import { FormattedMessage } from "react-intl";
 import { FONT_SIZE, FONT_WEIGHT, LINE_HEIGHT } from "../constants/fonts_update";
 
 type ErrorScreenProps = {
   errorMessage?: string;
 };
 
-const DEFAULT_ERROR_MESSAGE =
-  "Oops! Something went wrong. Please try again later.";
 
 export default function ErrorScreen({ errorMessage }: ErrorScreenProps) {
   return (
@@ -24,18 +22,18 @@ export default function ErrorScreen({ errorMessage }: ErrorScreenProps) {
         </div>
 
         <p
-          className={`
-            ${FONT_SIZE.size16}
-            ${FONT_WEIGHT.medium}
-            ${LINE_HEIGHT.relaxed}
-            max-w-xl
-            break-words
-            text-[#636988]
-            dark:text-gray-300
-          `}
-        >
-          {errorMessage ?? DEFAULT_ERROR_MESSAGE}
-        </p>
+  className={`
+    ${FONT_SIZE.size16}
+    ${FONT_WEIGHT.medium}
+    ${LINE_HEIGHT.relaxed}
+    max-w-xl
+    break-words
+    text-[#636988]
+    dark:text-gray-300
+  `}
+>
+  {errorMessage ?? <FormattedMessage id="error.default" />}
+</p>
       </div>
     </div>
   );

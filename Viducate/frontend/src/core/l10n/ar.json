@@ -439,5 +439,10 @@
 
   "navbar.profileSettings": "إعدادات الحساب",
   "navbar.logout": "تسجيل الخروج",
-  "navbar.dashboard": "لوحة التحكم"
+  "navbar.dashboard": "لوحة التحكم",
+
+
+  
+  "error.default": "حدث خطأ غير متوقع. حاول مرة أخرى بعد قليل."
+
 }

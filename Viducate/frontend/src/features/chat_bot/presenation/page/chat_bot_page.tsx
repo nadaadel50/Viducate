@@ -93,8 +93,8 @@ export function ChatBotPage() {
         <ConfirmationModal
           open={openDeleteModal}
           isLoading={isDeleteSessionLoading}
-          title="Delete Chat"
-          description="Are you sure you want to delete this conversation? This action cannot be undone."
+          title=  {intl.formatMessage({ id: "chat.deleteModal.title" })}
+          description={intl.formatMessage({ id: "chat.deleteModal.description" })}
           onClose={handleCloseDeleteModal}
           onConfirm={handleConfirmDelete}
         />

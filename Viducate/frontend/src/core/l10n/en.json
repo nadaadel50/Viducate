@@ -447,5 +447,8 @@
 
   "navbar.profileSettings": "Profile Settings",
   "navbar.logout": "Log Out",
-  "navbar.dashboard": "Dashboard"
+  "navbar.dashboard": "Dashboard",
+
+  "error.default": "Oops! Something went wrong. Please try again later."
+
 }
