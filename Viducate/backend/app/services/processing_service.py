@@ -10,7 +10,7 @@ from app.services.transcription_service import transcribe
 from app.services.ocr_service import OCRService
 from app.services.merging_service import merge_transcript_ocr
 from app.services.segmentation_service import    segment_topics
-from app.repositories.segment_repository import SegmentRepository
+from app.repositories.segment_repository import SegmentRepository, time_to_seconds
 from app.services.embedding_service import store_embeddings
 
 from app.services import cancellation_registry as cancel_reg
@@ -32,7 +32,6 @@ PROCESSING_STATUSES = {
     "completed",      # All processing done
     "cancelled",  
     "failed",     
-    "failed_retry_tomorrow",   
     
 }
 
@@ -99,7 +98,7 @@ class ProcessingJobService:
         if video.user_id != user_id:
             raise HTTPException(status_code=status.HTTP_403_FORBIDDEN, detail="Not authorized")
 
-        terminal_statuses = {"completed", "failed", "failed_retry_tomorrow", "cancelled"}
+        terminal_statuses = {"completed", "failed", "cancelled"}
         if video.processing_status in terminal_statuses:
             return {
                 "video_id": video_id,
@@ -218,9 +217,22 @@ async def run_processing_pipeline(video_id: int, language: str):
 
         # SAVE TO DATABASE
         print("TOTAL:", segments_result["total_segments"])
+        last_end_time = None
         for seg in segments_result["segments"]:
-            _check_cancel(video_id)          # ← check before each DB write
+            _check_cancel(video_id)          # <- check before each DB write
             print(" inserting segment:", seg["segment_number"])
+            
+            start_time = time_to_seconds(seg["start_time"])
+            end_time = time_to_seconds(seg["end_time"])
+            if last_end_time is not None and start_time <= last_end_time:
+                logger.warning(
+                    f"[Pipeline] Fixing timing: segment #{seg['segment_number']} "
+                    f"start_time={start_time}s -> {last_end_time + 1}s"
+                )
+                start_time = last_end_time + 1
+                seg["start_time"] = start_time
+
+
             try:
                 db_segment = segment_repo.create_full_segment(
                     video_id=video_id,
@@ -232,6 +244,7 @@ async def run_processing_pipeline(video_id: int, language: str):
                     status_code=status.HTTP_500_INTERNAL_SERVER_ERROR,
                     detail=f"Failed to insert segment {seg['segment_number']}"
                 )
+            last_end_time = end_time
             
             #********************************************
             # Persist quality metadata from segmentation scoring
@@ -296,7 +309,7 @@ async def run_processing_pipeline(video_id: int, language: str):
     
     except SegmentationUnavailableError as e:
         logger.error(f"[Pipeline] Segmentation unavailable (overload): video_id={video_id}, error={e}")
-        VideoRepository(db).update_status(video_id, "failed_retry_tomorrow")
+        VideoRepository(db).update_status(video_id, "failed")
 
 
     except Exception as e:
