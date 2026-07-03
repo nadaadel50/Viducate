@@ -17,8 +17,11 @@ export function ProfilePage() {
   const { showDeleteModal } = useProfileContext();
 
   const deleteAccount = useDeleteAccount();
+  const { data } = useGetUserData();
 
- 
+ const preferences = usePreferences({
+  language_preference: data?.language_preference ?? "en",
+});
 
   const auth = useContext(AuthContext);
 
@@ -63,6 +66,7 @@ export function ProfilePage() {
 
           <div className="lg:col-span-4">
             <PreferencesSidebar
+            preferences={preferences}
           
               onSignOut={handleSignOut}
             />

@@ -92,7 +92,7 @@ export function TranscriptSearch() {
           <div className="h-5 w-5 animate-spin rounded-full border-2 border-slate-300 border-t-[#4f46e5]" />
         </div>
       ) : (
-        <div className="flex flex-col gap-3">
+        <div className="flex flex-col gap-3 mb-2">
           {searchResults.map((item) => (
             <button
               key={item.subtopic_id}

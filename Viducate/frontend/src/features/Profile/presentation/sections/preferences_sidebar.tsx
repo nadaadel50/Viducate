@@ -6,7 +6,9 @@ import { LanguageSection } from "../components/language_section";
 import { SignOutButton } from "../components/signout_btn";
 
 interface PreferencesSidebarProps {
-
+preferences: {
+  language_preference: string;
+};
   onSignOut?: () => void;
 }
 

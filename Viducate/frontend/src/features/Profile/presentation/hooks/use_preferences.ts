@@ -1,12 +1,10 @@
-import { useState, useEffect, useRef } from "react";
-import type { AppearanceMode, UserPreferences } from "../_temp_mock";
+import { useEffect, useRef } from "react";
 import { useLanguage } from "../../../../core/hooks/useLanguage";
 import { updateLanguageUsecase } from "../../../../core/di/profile_container";
+import type { UserProfileData } from "../../domain/entity/update_user_data";
 
-export function usePreferences(initial: Pick<UserPreferences, "appearance">) {
-  const [appearance, setAppearance] = useState<AppearanceMode>(
-    initial.appearance,
-  );
+export function usePreferences(initial: Pick<UserProfileData, "language_preference">) {
+ 
   const { locale } = useLanguage();
   const prevLocale = useRef(locale);
 
@@ -16,5 +14,5 @@ export function usePreferences(initial: Pick<UserPreferences, "appearance">) {
     updateLanguageUsecase.execute(locale);
   }, [locale]);
 
-  return { appearance, setAppearance };
+  return { language_preference: initial.language_preference };
 }

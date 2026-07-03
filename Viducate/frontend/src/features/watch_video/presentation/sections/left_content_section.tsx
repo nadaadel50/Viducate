@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react";
+import { useRef } from "react";
 import { ClipboardCheck, Languages } from "lucide-react";
 import { useNavigate } from "react-router-dom";
 import { AppRoutesNames } from "../../../../app/routers/routes";
@@ -14,6 +15,8 @@ type LeftContentSectionProps = {
 export function LeftContentSection({ onClose }: LeftContentSectionProps) {
   const [searchQuery, setSearchQuery] = useState("");
   const [isCustomizeOpen, setIsCustomizeOpen] = useState(false);
+
+  const cardRefs = useRef<(HTMLDivElement | null)[]>([]);
 
   const navigate = useNavigate();
 
@@ -35,6 +38,10 @@ export function LeftContentSection({ onClose }: LeftContentSectionProps) {
 
   useEffect(() => {
     if (currentTopicIndex === -1) return;
+    cardRefs.current[currentTopicIndex]?.scrollIntoView({
+      behavior: "smooth",
+      block: "center",
+    });
 
     const newTopic = topics![currentTopicIndex];
 
@@ -97,16 +104,22 @@ export function LeftContentSection({ onClose }: LeftContentSectionProps) {
       <div className="overflow-y-auto">
         <div className="mx-auto flex w-full max-w-md flex-col gap-3 p-3 sm:max-w-lg sm:p-4 lg:max-w-xl">
           {filteredCards.map((card, index) => (
-            <ContentLearningCard
+            <div
               key={card.segment_id ?? index}
-              isSelected={currentTopicIndex === index}
-              onClick={() => {
-                setSelectedTopic(card);
-                setSeekTo(card.start_time);
-                onClose?.();
+              ref={(el) => {
+                cardRefs.current[index] = el;
               }}
-              cardInfo={card}
-            />
+            >
+              <ContentLearningCard
+                isSelected={currentTopicIndex === index}
+                onClick={() => {
+                  setSelectedTopic(card);
+                  setSeekTo(card.start_time);
+                  onClose?.();
+                }}
+                cardInfo={card}
+              />
+            </div>
           ))}
         </div>
       </div>
