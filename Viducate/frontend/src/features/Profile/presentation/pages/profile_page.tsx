@@ -13,6 +13,7 @@ import { ConfirmationModal } from "../../../../core/componants/confirmation_moda
 import LoadingScreen from "../../../../core/componants/loading_screen";
 import ErrorScreen from "../../../../core/componants/error_screen";
 import { useIntl } from "react-intl";
+
 export function ProfilePage() {
   const { showDeleteModal } = useProfileContext();
 

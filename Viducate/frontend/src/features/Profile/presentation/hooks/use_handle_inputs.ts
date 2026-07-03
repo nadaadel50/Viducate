@@ -17,18 +17,13 @@ export function useHandleInputs() {
   const { data: userData } = useGetUserData();
 
   const {
-    firstName,
-    setFirstName,
-    lastName,
-    setLastName,
-    initialFirstName,
-    initialLastName,
-    setInitialFirstName,
-    setInitialLastName,
-    firstNameError,
-    setFirstNameError,
-    lastNameError,
-    setLastNameError,
+    firstName, setFirstName,
+    lastName, setLastName,
+    initialFirstName,initialLastName,
+    setInitialFirstName, setInitialLastName,
+    firstNameError, setFirstNameError,
+    lastNameError, setLastNameError,
+     setHasPassword,
   } = usePersonalInfoContext();
 
   const {
@@ -49,7 +44,8 @@ export function useHandleInputs() {
       setLastName(userData.last_name ?? "");
       setInitialFirstName(userData.first_name ?? "");
       setInitialLastName(userData.last_name ?? "");
-    }
+       setHasPassword(userData.has_password ?? false);
+        }
   }, [userData]);
 
   const validatePasswords = (
@@ -111,14 +107,16 @@ export function useHandleInputs() {
     setNewPasswordError("");
     setConfirmPassword("");
     setConfirmPasswordError("");
-    (setFirstName(initialFirstName),
-      setLastName(initialLastName),
-      setPassword(""),
-      setOldPassword(""),
-      setConfirmPassword(""));
+    setFirstName(initialFirstName);
+    setLastName(initialLastName);
+    setPassword("");
+    setOldPassword("");
+    setConfirmPassword("");
   };
   const successUpdateReset = () => {
-    (setPassword(""), setOldPassword(""), setConfirmPassword(""));
+    setPassword("");
+    setOldPassword("");
+    setConfirmPassword("");
   };
 
   return {

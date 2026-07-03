@@ -12,7 +12,7 @@ export function ProfileProvider({ children }: { children: React.ReactNode }) {
   const [initialLastName, setInitialLastName] = useState("");
   const [firstNameError, setFirstNameError] = useState("");
   const [lastNameError, setLastNameError] = useState("");
-
+  const [hasPassword, setHasPassword] = useState(false);
   // Security
   const [password, setPassword] = useState("");
   const [oldPassword, setOldPassword] = useState("");
@@ -27,18 +27,13 @@ export function ProfileProvider({ children }: { children: React.ReactNode }) {
     <ProfileContext.Provider value={{ showDeleteModal, setShowDeleteModal }}>
       <PersonalInfoContext.Provider
         value={{
-          firstName,
-          setFirstName,
-          initialFirstName,
-          setInitialFirstName,
-          lastName,
-          setLastName,
-          initialLastName,
-          setInitialLastName,
-          firstNameError,
-          setFirstNameError,
-          lastNameError,
-          setLastNameError,
+          firstName, setFirstName,
+          initialFirstName, setInitialFirstName,
+          lastName, setLastName,
+          initialLastName, setInitialLastName,
+          firstNameError, setFirstNameError,
+          lastNameError, setLastNameError,
+          hasPassword,setHasPassword,
         }}
       >
         <SecurityContext.Provider

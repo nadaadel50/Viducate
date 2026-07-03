@@ -5,5 +5,8 @@ export type UserProfileData = {
   email: string;
   study_field: string;
   language_preference: string;
+    has_password: boolean;
 };
+
+  
 
