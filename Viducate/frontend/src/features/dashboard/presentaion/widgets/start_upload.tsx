@@ -1,8 +1,6 @@
 import { useNavigate } from "react-router";
 import { FormattedMessage } from "react-intl";
-
 import { AppRoutesNames } from "../../../../app/routers/routes";
-
 import NoSavedVideosAnimation from "../../../../core/animations/no_saved_videos";
 import { CustomButton } from "../../../../core/componants/custum_btn";
 import {
@@ -42,10 +40,7 @@ export function StartUpload() {
 
       <CustomButton
         leftIcon={
-          <span
-            className="material-symbols-outlined"
-            style={{ fontSize: 12 }}
-          >
+          <span className="material-symbols-outlined" style={{ fontSize: 12 }}>
             add_circle
           </span>
         }

@@ -8,9 +8,9 @@ import type { SignupResponseDto } from "../../api/models/signup/signup_response_
 import type { User } from "../entity/user";
 
 export interface AuthRepo {
-    forgetPassword(forgetPassReq:ForgetPassReq):Promise<ApiResult<string>>
-     resetPassword(resetPassReq:ResetPasswordRequest):Promise<ApiResult<string>>
-     register(entity: SignupRequest): Promise<ApiResult<SignupResponseDto>>;
-     login(entity: LoginRequest): Promise<ApiResult<LoginResponseDto>>;
-     getCurrentUser():Promise<ApiResult<User>>
+  forgetPassword(forgetPassReq: ForgetPassReq): Promise<ApiResult<string>>;
+  resetPassword(resetPassReq: ResetPasswordRequest): Promise<ApiResult<string>>;
+  register(entity: SignupRequest): Promise<ApiResult<SignupResponseDto>>;
+  login(entity: LoginRequest): Promise<ApiResult<LoginResponseDto>>;
+  getCurrentUser(): Promise<ApiResult<User>>;
 }

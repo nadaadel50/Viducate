@@ -1,7 +1,6 @@
 import { useContext } from "react";
 import { DashboardContext } from "../context/dashboard_context";
 
-// Hook
 export function useDashboard() {
   const context = useContext(DashboardContext);
   if (!context) {

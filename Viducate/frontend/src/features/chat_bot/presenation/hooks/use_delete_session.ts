@@ -10,22 +10,16 @@ export function useDeleteSession() {
   const mutation = useMutation({
     mutationFn: async (req: DeleteMessageRequest) => {
       const response = await deleteSessionsUseCase(req);
-  
+
       if (!response.success) {
         throw new Error(response.error);
       }
-     
     },
     onSuccess: (_, req) => {
-    
-     
-      queryClient.setQueryData(
-        ["sessions", videoId],
-        (old: unknown) => {
-          if (!Array.isArray(old)) return [];
-          return old.filter((s) => s.id !== req.session_id);
-        }
-      );
+      queryClient.setQueryData(["sessions", videoId], (old: unknown) => {
+        if (!Array.isArray(old)) return [];
+        return old.filter((s) => s.id !== req.session_id);
+      });
     },
   });
 

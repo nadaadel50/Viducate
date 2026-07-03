@@ -15,7 +15,7 @@ export type ContinueLearningDto = {
 };
 
 export function mapContinueLearningDtoToEntity(
-  dto: ContinueLearningDto
+  dto: ContinueLearningDto,
 ): ContinueLearningEntity {
   return {
     videoId: dto.videoId,

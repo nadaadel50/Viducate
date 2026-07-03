@@ -5,5 +5,4 @@ export type User = {
   email: string;
   study_field: string;
   language_preference: string;
-  
 };

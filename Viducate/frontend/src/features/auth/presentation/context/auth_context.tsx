@@ -10,8 +10,11 @@ type AuthContextType = {
   user: User | null;
   isAuthenticated?: boolean;
 
-  login: (credentials: LoginRequest, rememberMe: boolean) => Promise<ApiResult<LoginResponseDto>>;
-  signup: (userData: SignupRequest) => Promise<ApiResult<SignupResponseDto>>; 
+  login: (
+    credentials: LoginRequest,
+    rememberMe: boolean,
+  ) => Promise<ApiResult<LoginResponseDto>>;
+  signup: (userData: SignupRequest) => Promise<ApiResult<SignupResponseDto>>;
   logout: () => void;
   loading: boolean;
   refreshUser: () => Promise<void>;
@@ -20,5 +23,6 @@ export type AuthContextProps = {
   children: React.ReactNode;
 };
 
-export const AuthContext =
-  createContext<AuthContextType | undefined>(undefined);
+export const AuthContext = createContext<AuthContextType | undefined>(
+  undefined,
+);

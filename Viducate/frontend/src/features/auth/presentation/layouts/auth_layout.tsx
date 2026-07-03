@@ -30,9 +30,7 @@ const AuthLayout: React.FC<AuthLayoutProps> = ({
         </div>
 
         <div className="flex-1 flex items-center justify-center w-full">
-          <div className="w-full max-w-3xl">
-            {LeftContent}
-          </div>
+          <div className="w-full max-w-3xl">{LeftContent}</div>
         </div>
 
         <div
@@ -79,11 +77,7 @@ const AuthLayout: React.FC<AuthLayoutProps> = ({
         <div className="relative flex flex-col items-center">
           {RightContent}
 
-          {RightBadge && (
-            <div className="absolute z-10">
-              {RightBadge}
-            </div>
-          )}
+          {RightBadge && <div className="absolute z-10">{RightBadge}</div>}
         </div>
       </div>
     </div>

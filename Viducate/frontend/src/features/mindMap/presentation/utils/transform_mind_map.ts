@@ -11,12 +11,9 @@ export function transformMindMap(data: MindMapEntity) {
     parentToChildren[edge.source].push(edge.target);
   });
 
- 
   const rootId = data.nodes.find((n) => !childToParent[n.id])?.id;
 
-  const level1Ids = new Set(
-    rootId ? (parentToChildren[rootId] ?? []) : []
-  );
+  const level1Ids = new Set(rootId ? (parentToChildren[rootId] ?? []) : []);
 
   const nodes: Node[] = data.nodes.map((node) => {
     const isRoot = node.id === rootId;
@@ -32,8 +29,8 @@ export function transformMindMap(data: MindMapEntity) {
         type: node.type,
         isRoot,
         expanded: false,
-        parentId: childToParent[node.id] ?? null, // retunn the parent id or null if it's root
-        hasChildren: (parentToChildren[node.id]?.length ?? 0) > 0,  // retuen boolean if the node has children or not   (used to remove toggle sign from leafs)
+        parentId: childToParent[node.id] ?? null,
+        hasChildren: (parentToChildren[node.id]?.length ?? 0) > 0,
       },
     };
   });
@@ -46,9 +43,8 @@ export function transformMindMap(data: MindMapEntity) {
       source: edge.source,
       target: edge.target,
       animated: false,
-     
+
       hidden: !isLevel1Edge,
-      
     };
   });
 

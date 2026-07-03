@@ -7,7 +7,6 @@ import { useT } from "../../../../core/hooks/useTranslation";
 import { AppRoutesNames } from "../../../../app/routers/routes";
 
 export function useResetPassword() {
-
   const { translation } = useT();
 
   const [password, setPassword] = useState("");
@@ -28,7 +27,7 @@ export function useResetPassword() {
 
     if (confirmPassword && confirmPassword !== value) {
       setConfirmPasswordError(
-        translation("auth.resetPassword.errors.passwordMismatch")
+        translation("auth.resetPassword.errors.passwordMismatch"),
       );
     } else {
       setConfirmPasswordError("");
@@ -41,7 +40,7 @@ export function useResetPassword() {
 
     if (value !== password) {
       setConfirmPasswordError(
-        translation("auth.resetPassword.errors.passwordMismatch")
+        translation("auth.resetPassword.errors.passwordMismatch"),
       );
     } else {
       setConfirmPasswordError("");
@@ -49,17 +48,16 @@ export function useResetPassword() {
   };
 
   const handleResetPassClick = async () => {
-
     setLoading(true);
 
     const response = await resetPassUseCase.resetPass(
-      new ResetPasswordRequest(token, password, confirmPassword)
+      new ResetPasswordRequest(token, password, confirmPassword),
     );
 
     setLoading(false);
 
     if (response.success) {
-      navigate(AppRoutesNames.successResetPassword)
+      navigate(AppRoutesNames.successResetPassword);
     } else {
       setApiError(response.error);
     }

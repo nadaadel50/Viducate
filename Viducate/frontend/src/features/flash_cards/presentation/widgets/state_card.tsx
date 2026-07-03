@@ -14,35 +14,17 @@ const colorClasses = {
   red: "bg-red-100 text-red-600",
 } as const;
 
-export function StatCard({
-  title,
-  value,
-  color,
-}: StatProps) {
+export function StatCard({ title, value, color }: StatProps) {
   return (
     <div
       className={clsx(
         "rounded-xl p-2 text-center shadow sm:p-3",
-        colorClasses[color]
+        colorClasses[color],
       )}
     >
-      <p
-        className={clsx(
-          FONT_STYLES.caption,
-          "text-gray-600"
-        )}
-      >
-        {title}
-      </p>
+      <p className={clsx(FONT_STYLES.caption, "text-gray-600")}>{title}</p>
 
-      <p
-        className={clsx(
-          FONT_STYLES.sectionTitle,
-          
-        )}
-      >
-        {value}
-      </p>
+      <p className={clsx(FONT_STYLES.sectionTitle)}>{value}</p>
     </div>
   );
 }

@@ -1,5 +1,3 @@
-// core/context/DashboardContext.tsx
-
 import { createContext } from "react";
 import type { ContinueLearningEntity } from "../../domain/entity/continue_learning";
 import type { DashboardUser } from "../../domain/entity/user";
@@ -21,11 +19,10 @@ type DashboardContextType = {
   handleLinkedVideosChange: (value: boolean) => void;
   openDeleteMessage: boolean;
   handleOpenDeleteMessage: (value: boolean) => void;
-  selectedVideo: ContinueLearningEntity|undefined;
+  selectedVideo: ContinueLearningEntity | undefined;
   handleSelectedVideo: (value: ContinueLearningEntity) => void;
 };
 
-// Context
 export const DashboardContext = createContext<DashboardContextType | null>(
   null,
 );

@@ -4,10 +4,7 @@ export interface MindMapRequestDto {
   video_id: number;
 }
 
-
-export function toMindMapRequestDto(
-  entity: MindMapReq
-): MindMapRequestDto {
+export function toMindMapRequestDto(entity: MindMapReq): MindMapRequestDto {
   return {
     video_id: entity.videoid,
   };

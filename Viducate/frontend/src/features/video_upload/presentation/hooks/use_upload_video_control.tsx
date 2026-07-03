@@ -2,7 +2,7 @@ import { useRef, useState } from "react";
 import { useIntl } from "react-intl";
 
 export function useUploadVideoController() {
-  //  STATE
+  
   const [videoFile, setVideoFile] = useState<File | null>(null);
   const [isUploading, setIsUploading] = useState(false);
   const [progress, setProgress] = useState(0);

@@ -1,6 +1,4 @@
-
 import type { Stats } from "../../domain/entity/stats";
-
 
 export type DashboardStatsDto = {
   total_videos_saved: number;
@@ -11,9 +9,7 @@ export type DashboardStatsDto = {
   used_r2_storage: number;
 };
 
-export function mapDashboardStatsDtoToEntity(
-  dto: DashboardStatsDto
-): Stats {
+export function mapDashboardStatsDtoToEntity(dto: DashboardStatsDto): Stats {
   return {
     total_videos_saved: dto.total_videos_saved,
     total_watch_time_seconds: dto.total_watch_time_seconds,

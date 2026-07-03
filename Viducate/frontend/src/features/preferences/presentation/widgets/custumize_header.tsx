@@ -11,9 +11,7 @@ type CustomizeHeaderProps = {
   onClose: () => void;
 };
 
-export function CustomizeHeader({
-  onClose,
-}: CustomizeHeaderProps) {
+export function CustomizeHeader({ onClose }: CustomizeHeaderProps) {
   return (
     <header className="flex items-start justify-between border-b border-gray-100 bg-white p-5 md:p-6">
       <div className="flex flex-col gap-1 text-left">
@@ -43,9 +41,7 @@ export function CustomizeHeader({
         onClick={onClose}
         className="rounded-lg p-1 text-gray-400 transition-colors hover:bg-gray-100 hover:text-gray-600"
       >
-        <span className="material-symbols-outlined">
-          close
-        </span>
+        <span className="material-symbols-outlined">close</span>
       </button>
     </header>
   );

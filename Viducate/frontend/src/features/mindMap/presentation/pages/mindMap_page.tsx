@@ -7,9 +7,7 @@ import { GenerationLoadingScreen } from "../../../../core/componants/generation_
 import { Brain } from "lucide-react";
 import { COLORS } from "../../../../core/constants";
 import { useMindMapController } from "../hooks/use_mind_map_controler";
-import { downloadMindMap } from "../utils/dowenload_mindMap";
 import ErrorScreen from "../../../../core/componants/error_screen";
-import { FormattedMessage, useIntl } from "react-intl";
 const nodeTypes = {
   custom: CustomNode,
 };

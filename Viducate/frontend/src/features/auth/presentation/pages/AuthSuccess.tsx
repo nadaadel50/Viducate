@@ -8,25 +8,25 @@ const AuthSuccess = () => {
   const location = useLocation();
   const { refreshUser } = useAuth();
   useEffect(() => {
-  const handleAuth = async () => {
-    const hash = location.hash;
+    const handleAuth = async () => {
+      const hash = location.hash;
 
-    if (!hash) return;
+      if (!hash) return;
 
-    const params = new URLSearchParams(hash.substring(1));
-    const token = params.get("access_token");
+      const params = new URLSearchParams(hash.substring(1));
+      const token = params.get("access_token");
 
-    if (!token) return;
+      if (!token) return;
 
-    localStorage.setItem("token", token);
+      localStorage.setItem("token", token);
 
-    await refreshUser();
-    
-    navigate(AppRoutesNames.dashboard, { replace: true });
-  };
+      await refreshUser();
 
-  handleAuth();
-}, [location, navigate, refreshUser]);
+      navigate(AppRoutesNames.dashboard, { replace: true });
+    };
+
+    handleAuth();
+  }, [location, navigate, refreshUser]);
 
   return null;
 };

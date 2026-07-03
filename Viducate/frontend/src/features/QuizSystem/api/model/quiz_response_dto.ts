@@ -20,7 +20,7 @@ export interface QuizResponseDto {
   created_at: string;
 }
 
-// Submit DTOs
+
 export interface QuizSubmitAnswerDto {
   question_id: number;
   user_answer: string;

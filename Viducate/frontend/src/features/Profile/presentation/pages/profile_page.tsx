@@ -63,7 +63,7 @@ export function ProfilePage() {
 
           <div className="lg:col-span-4">
             <PreferencesSidebar
-              // preferences={preferences}
+          
               onSignOut={handleSignOut}
             />
           </div>

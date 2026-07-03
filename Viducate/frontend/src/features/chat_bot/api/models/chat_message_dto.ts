@@ -1,5 +1,4 @@
-import type { ChatMessage } 
-from "../../domain/entity/chat_message";
+import type { ChatMessage } from "../../domain/entity/chat_message";
 
 export type ChatMessageDto = {
   message_id: number;
@@ -9,9 +8,7 @@ export type ChatMessageDto = {
   created_at: string;
 };
 
-export function toChatMessage(
-  dto: ChatMessageDto,
-): ChatMessage {
+export function toChatMessage(dto: ChatMessageDto): ChatMessage {
   return {
     message_id: dto.message_id.toString(),
     role: dto.role,

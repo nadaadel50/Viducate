@@ -1,9 +1,9 @@
-import type { PreferencesRepository } from '../repository/preferences_repository';
-import type  { VideoPreferences } from '../entity/video_preferences';
+import type { PreferencesRepository } from "../repository/preferences_repository";
+import type { VideoPreferences } from "../entity/video_preferences";
 
 export class SavePreferencesUseCase {
   private savePreferencesRepo: PreferencesRepository;
-  constructor(   savePreferencesRepo: PreferencesRepository) {
+  constructor(savePreferencesRepo: PreferencesRepository) {
     this.savePreferencesRepo = savePreferencesRepo;
   }
 

@@ -5,19 +5,24 @@ export function VideoFilterButton() {
   const [open, setOpen] = useState(false);
 
   const dropdownRef = useRef<HTMLDivElement>(null);
-  const {handleLinkedVideosChange,handleUploadedVideosChange,linked_videos,uploaded_videos}=useDashboard();
+  const {
+    handleLinkedVideosChange,
+    handleUploadedVideosChange,
+    linked_videos,
+    uploaded_videos,
+  } = useDashboard();
 
   useEffect(() => {
     function handleClickOutside(event: MouseEvent) {
       if (
         dropdownRef.current &&
-        !dropdownRef.current.contains(event.target as Node)  // the dropdown ref is my componant so check if exist and not click on my componant
+        !dropdownRef.current.contains(event.target as Node)
       ) {
         setOpen(false);
       }
     }
 
-    document.addEventListener("mousedown", handleClickOutside);  // listen to any user click and immeditly work the handle clikc outside function 
+    document.addEventListener("mousedown", handleClickOutside); 
 
     return () => {
       document.removeEventListener("mousedown", handleClickOutside);
@@ -47,8 +52,8 @@ export function VideoFilterButton() {
               />
 
               <span className="text-sm text-slate-700">
-  <FormattedMessage id="dashboard.filter.uploadedVideos" />
-</span>
+                <FormattedMessage id="dashboard.filter.uploadedVideos" />
+              </span>
             </label>
 
             {/* Linked Videos */}
@@ -61,8 +66,8 @@ export function VideoFilterButton() {
               />
 
               <span className="text-sm text-slate-700">
-  <FormattedMessage id="dashboard.filter.linkedVideos" />
-</span>
+                <FormattedMessage id="dashboard.filter.linkedVideos" />
+              </span>
             </label>
           </div>
         </div>

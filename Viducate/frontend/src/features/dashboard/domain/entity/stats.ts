@@ -6,4 +6,3 @@ export type Stats = {
   total_r2_storage: number;
   used_r2_storage: number;
 };
-

@@ -1,7 +1,10 @@
 import clsx from "clsx";
 import type { Difficulty } from "../../domain/entity/difficaulty";
 import { CustomButton } from "../../../../core/componants/custum_btn";
-import { FONT_SIZE, FONT_WEIGHT } from "../../../../core/constants/fonts_update";
+import {
+  FONT_SIZE,
+  FONT_WEIGHT,
+} from "../../../../core/constants/fonts_update";
 import { FormattedMessage } from "react-intl";
 const difficultyStyles = {
   easy: {
@@ -12,7 +15,7 @@ const difficultyStyles = {
     iconBg: "bg-blue-100",
     iconHoverBg: "group-hover:bg-blue-200",
     icon: "thumb_up",
-     timeId: "flashcards.time.easy",
+    timeId: "flashcards.time.easy",
   },
   good: {
     border: "border-green-200 hover:border-green-300",
@@ -22,7 +25,7 @@ const difficultyStyles = {
     iconBg: "bg-green-100",
     iconHoverBg: "group-hover:bg-green-200",
     icon: "check",
-     timeId: "flashcards.time.good",
+    timeId: "flashcards.time.good",
   },
   hard: {
     border: "border-yellow-200 hover:border-yellow-300",
@@ -42,7 +45,7 @@ const difficultyStyles = {
     iconBg: "bg-red-100",
     iconHoverBg: "group-hover:bg-red-200",
     icon: "refresh",
-     timeId: "flashcards.time.again",
+    timeId: "flashcards.time.again",
   },
 } as const;
 
@@ -51,10 +54,7 @@ type UserLevelBtnProps = {
   onClick: () => void;
 };
 
-export function UserLevelBtn({
-  diffStyle,
-  onClick,
-}: UserLevelBtnProps) {
+export function UserLevelBtn({ diffStyle, onClick }: UserLevelBtnProps) {
   const style = difficultyStyles[diffStyle];
 
   return (
@@ -66,37 +66,24 @@ export function UserLevelBtn({
         style.bg,
         style.text,
         style.hoverBg,
-        "hover:shadow-md"
+        "hover:shadow-md",
       )}
     >
       <div
         className={clsx(
           "flex items-center justify-center rounded-full p-1.5 transition-colors sm:p-2",
           style.iconBg,
-          style.iconHoverBg
+          style.iconHoverBg,
         )}
       >
-        <span className="material-symbols-outlined">
-          {style.icon}
-        </span>
+        <span className="material-symbols-outlined">{style.icon}</span>
       </div>
 
-      <span
-        className={clsx(
-          FONT_WEIGHT.bold,
-          FONT_SIZE.size12,
-          "capitalize"
-        )}
-      >
+      <span className={clsx(FONT_WEIGHT.bold, FONT_SIZE.size12, "capitalize")}>
         <FormattedMessage id={`flashcards.level.${diffStyle}`} />
       </span>
 
-      <span
-        className={clsx(
-          FONT_SIZE.size11,
-          "capitalize"
-        )}
-      >
+      <span className={clsx(FONT_SIZE.size11, "capitalize")}>
         <FormattedMessage id={style.timeId} />
       </span>
     </CustomButton>

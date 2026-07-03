@@ -6,7 +6,7 @@ export class GetCurrentUserUseCase {
   constructor(repository: AuthRepo) {
     this.repository = repository;
   }
-async execute(): Promise<ApiResult<User>> { 
+  async execute(): Promise<ApiResult<User>> {
     return await this.repository.getCurrentUser();
   }
 }

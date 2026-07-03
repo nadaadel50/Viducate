@@ -16,14 +16,14 @@ export function PasswordInputsSection({
   onPasswordChange,
   onConfirmPasswordChange,
 }: Props) {
-
   const { translation } = useT();
 
   return (
     <div className="w-full mt-5">
-
       <CustomInput
-        placeholder={translation("auth.resetPassword.inputs.newPasswordPlaceholder")}
+        placeholder={translation(
+          "auth.resetPassword.inputs.newPasswordPlaceholder",
+        )}
         label={translation("auth.resetPassword.inputs.newPasswordLabel")}
         type="password"
         value={password}
@@ -31,14 +31,15 @@ export function PasswordInputsSection({
       />
 
       <CustomInput
-        placeholder={translation("auth.resetPassword.inputs.confirmPasswordPlaceholder")}
+        placeholder={translation(
+          "auth.resetPassword.inputs.confirmPasswordPlaceholder",
+        )}
         type="password"
         label={translation("auth.resetPassword.inputs.confirmPasswordLabel")}
         value={confirmPassword}
         error={confirmPasswordError}
         onChange={onConfirmPasswordChange}
       />
-
     </div>
   );
 }

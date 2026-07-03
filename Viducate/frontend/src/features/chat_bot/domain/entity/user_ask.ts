@@ -1,8 +1,6 @@
 export type UserAsk = {
   videoId: number;
-  session_id?:number|null
+  session_id?: number | null;
   question: string;
   currentTime?: number;
-  
-  
 };

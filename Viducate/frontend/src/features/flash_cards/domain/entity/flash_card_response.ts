@@ -11,4 +11,3 @@ export type FlashCardDetials = {
   segment_end_time: number;
   segment_start_label: string;
 };
-

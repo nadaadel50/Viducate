@@ -1,5 +1,3 @@
-// delete_message_request_dto.ts
-
 import type { DeleteMessageRequest } from "../../domain/entity/delete_message_req";
 
 export type DeleteMessageRequestDto = {
@@ -9,7 +7,7 @@ export type DeleteMessageRequestDto = {
 };
 
 export function toDeleteMessageRequestDto(
-  entity: DeleteMessageRequest
+  entity: DeleteMessageRequest,
 ): DeleteMessageRequestDto {
   return {
     video_id: entity.video_id,

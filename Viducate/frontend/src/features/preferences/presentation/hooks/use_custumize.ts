@@ -27,14 +27,13 @@ export function useCustomizeExperience(
     data,
     isLoading,
     error: getSessionsError,
-    
+
     refetch,
   } = useGetPreferences();
 
   const [serverError, setServerError] = useState<string | null>(null);
 
-  const [prefs, setPrefs] =
-    useState<Preferences>(INITIAL_PREFERENCES);
+  const [prefs, setPrefs] = useState<Preferences>(INITIAL_PREFERENCES);
 
   useEffect(() => {
     if (!data) return;
@@ -76,11 +75,7 @@ export function useCustomizeExperience(
 
       onClose();
     } catch (error: unknown) {
-      if (
-        typeof error === "object" &&
-        error !== null &&
-        "response" in error
-      ) {
+      if (typeof error === "object" && error !== null && "response" in error) {
         const apiError = error as {
           response: {
             data: {
@@ -90,8 +85,7 @@ export function useCustomizeExperience(
         };
 
         setServerError(
-          apiError.response.data.detail ??
-            "Failed to save preferences",
+          apiError.response.data.detail ?? "Failed to save preferences",
         );
       } else if (error instanceof Error) {
         setServerError(error.message);
@@ -110,9 +104,8 @@ export function useCustomizeExperience(
 
     serverError,
     clearError: () => setServerError(null),
-getSessionsError,
+    getSessionsError,
     handleSave,
     saveError,
-    
   };
 }

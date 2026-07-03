@@ -122,7 +122,7 @@ export function QuizPage() {
         ) : null)}
 
       <div className="mx-auto w-full max-w-7xl px-4 sm:px-6 lg:px-8">
-        {/* Mobile */}
+        
         <div className="lg:hidden mb-2">
           <QuizTimer timeLeft={timeLeft} compact />
         </div>

@@ -18,12 +18,12 @@ type FlashCardProps = {
 
 export function FlashCard({ cardData, isFliped, onClick }: FlashCardProps) {
   const navigate = useNavigate();
-  const { setCurrentTime,setSeekTo } = useLearningSession();
+  const { setCurrentTime, setSeekTo } = useLearningSession();
 
   const handleViewSource = () => {
     setCurrentTime(cardData.segment_start_time);
-    setSeekTo(cardData.segment_start_time)
-    
+    setSeekTo(cardData.segment_start_time);
+
     navigate(AppRoutesNames.watchVideo);
   };
 

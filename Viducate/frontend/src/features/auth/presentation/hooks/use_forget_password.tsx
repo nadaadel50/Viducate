@@ -9,7 +9,6 @@ import { STORAGE_KEYS } from "../../../../core/constants";
 import { AppRoutesNames } from "../../../../app/routers/routes";
 
 export const useForgetPassword = () => {
-
   const { translation } = useT();
 
   const [email, setEmail] = useState(() => {
@@ -28,7 +27,7 @@ export const useForgetPassword = () => {
   });
 
   const invalidEmailMsg = translation(
-    "auth.forgetPassword.errors.invalidEmail"
+    "auth.forgetPassword.errors.invalidEmail",
   );
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
@@ -60,23 +59,20 @@ export const useForgetPassword = () => {
   };
 
   const fetchRequest = async (emailSended: string) => {
-
     setEmail(emailSended);
     setLoading(true);
 
     const response = await forgetPassUseCase.forgetPass(
-      new ForgetPassReq(email)
+      new ForgetPassReq(email),
     );
 
     setLoading(false);
 
     if (response.success) {
-
       localStorage.removeItem(STORAGE_KEYS.forgetEmail);
 
-      // goToLSuccessSendEmail(navigate, email);
-      navigate(AppRoutesNames.successSendEmail)
 
+      navigate(AppRoutesNames.successSendEmail);
     } else {
       setApiError(response.error);
     }

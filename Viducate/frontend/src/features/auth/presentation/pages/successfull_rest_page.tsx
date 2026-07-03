@@ -5,7 +5,6 @@ import { SucessLeftSection } from "../componants/success_left_section";
 import { useT } from "../../../../core/hooks/useTranslation";
 
 export function SuccessfullResetPage() {
-
   const { translation } = useT();
 
   return (

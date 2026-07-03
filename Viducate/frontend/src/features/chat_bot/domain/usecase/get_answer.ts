@@ -5,7 +5,6 @@ import type { ChatBotRepo } from "../repository/chat_bot_rep";
 
 export const GetAnswer = (repo: ChatBotRepo) => {
   return async (req: UserAsk): Promise<ApiResult<ChatResponse>> => {
-   
     return repo.getAnswer(req);
   };
 };

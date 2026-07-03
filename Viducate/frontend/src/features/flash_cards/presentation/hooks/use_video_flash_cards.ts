@@ -2,7 +2,6 @@ import { useQuery } from "@tanstack/react-query";
 import { getVideoFlashCard } from "../../../../core/di/flash_card_continer";
 import { useLearningSession } from "../../../../core/hooks/useLearningContent";
 
-// use_video_flashcards.ts
 export const useVideoFlashcards = () => {
   const { videoId } = useLearningSession();
 
@@ -11,10 +10,10 @@ export const useVideoFlashcards = () => {
     queryFn: async () => {
       const result = await getVideoFlashCard(videoId!);
       if (!result.success) throw new Error(result.error);
-      return result.data; // FlashCard[]
+      return result.data;
     },
     enabled: !!videoId,
-    refetchInterval: (query) => query.state.data?.length ? false : 3000,
+    refetchInterval: (query) => (query.state.data?.length ? false : 3000),
     gcTime: 0,
     staleTime: 0,
     refetchOnWindowFocus: false,

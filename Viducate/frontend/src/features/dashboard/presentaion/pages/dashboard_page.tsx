@@ -53,13 +53,12 @@ export function DashboardPage() {
       )}
 
       <div className="w-full max-w-7xl mx-auto flex flex-col gap-5">
-        {/* User Card */}
+    
         <UserCard />
 
-        {/* Progress Section */}
         <ProgressPart />
 
-        {/* Continue Learning / Start Upload */}
+        
         {data.continue_learning?.length > 0 ? (
           <ContinueLearningPart />
         ) : (

@@ -5,7 +5,7 @@ import { useIntl } from "react-intl";
 export function ProgressPart() {
   const { data } = useDashboard();
   const stats = data?.stats;
-const intl = useIntl();
+  const intl = useIntl();
   return (
     <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-3 md:gap-4">
       <ProgressCard
@@ -20,8 +20,9 @@ const intl = useIntl();
         icon="schedule"
         title={intl.formatMessage({ id: "dashboard.progress.watched" })}
         value={formatTimeToHoursMinutes(
-          stats?.total_watch_time_seconds || 0
-        , intl)}
+          stats?.total_watch_time_seconds || 0,
+          intl,
+        )}
       />
 
       <ProgressCard

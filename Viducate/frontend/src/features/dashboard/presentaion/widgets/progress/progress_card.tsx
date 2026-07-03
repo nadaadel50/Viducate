@@ -1,4 +1,3 @@
-import { FONT_STYLES } from "../../../../../core/constants/fonts";
 import { FONT_SIZE } from "../../../../../core/constants/fonts_update";
 import { DoubleStorage } from "./double_storage";
 
@@ -21,18 +20,14 @@ const colorClasses: Record<string, string> = {
 
 export function ProgressCard(props: ProgressCardProps) {
   const isDoubleStorage =
-    props.usedLinked !== undefined &&
-    props.usedUploaded !== undefined;
+    props.usedLinked !== undefined && props.usedUploaded !== undefined;
 
   return (
     <div className="bg-white px-3 md:px-3 py-1 rounded-xl md:rounded-2xl border border-slate-100 shadow-sm flex items-center gap-3 hover:-translate-y-0.5 hover:shadow-md cursor-pointer transition duration-300">
       <div
         className={`${colorClasses[props.iconBackGround]} p-2 rounded-lg md:rounded-xl flex items-center justify-center text-white shadow-lg`}
       >
-        <span
-          style={{ fontSize: 18 }}
-          className="material-symbols-outlined"
-        >
+        <span style={{ fontSize: 18 }} className="material-symbols-outlined">
           {props.icon}
         </span>
       </div>

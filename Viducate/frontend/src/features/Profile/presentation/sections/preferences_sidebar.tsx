@@ -6,7 +6,7 @@ import { LanguageSection } from "../components/language_section";
 import { SignOutButton } from "../components/signout_btn";
 
 interface PreferencesSidebarProps {
- // preferences: ReturnType<typeof usePreferences>;
+
   onSignOut?: () => void;
 }
 
@@ -23,10 +23,7 @@ export function PreferencesSidebar({ onSignOut }: PreferencesSidebarProps) {
       <SidebarHeader />
 
       <div className="space-y-6">
-        {/* <AppearanceSection
-          appearance={appearance}
-          setAppearance={setAppearance}
-        /> */}
+        
 
         <LanguageSection locale={locale} setLocale={setLocale} />
 

@@ -7,9 +7,8 @@ export interface UserPreferencesResponseDto {
   flashcard_language: string | null;
 }
 
-
 export const fromUserPreferencesResponseDto = (
-  dto: UserPreferencesResponseDto
+  dto: UserPreferencesResponseDto,
 ): VideoPreferences => ({
   videoId: dto.video_id,
   summaryLang: (dto.summary_language ?? "Same as Video") as

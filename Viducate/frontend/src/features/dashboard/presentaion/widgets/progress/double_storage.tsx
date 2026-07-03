@@ -53,7 +53,7 @@ export function DoubleStorage({
             >
               link
             </span>
-          <FormattedMessage id="dashboard.storage.linked" />
+            <FormattedMessage id="dashboard.storage.linked" />
           </span>
 
           <span className="text-[10px] text-slate-500 font-medium">
@@ -78,7 +78,7 @@ export function DoubleStorage({
             >
               upload
             </span>
-          <FormattedMessage id="dashboard.storage.uploaded" />
+            <FormattedMessage id="dashboard.storage.uploaded" />
           </span>
 
           <span className="text-[10px] text-slate-500 font-medium">

@@ -1,7 +1,7 @@
 import type { MindMapEdgeEntity } from "./edge_entity";
 import type { MindMapNodeEntity } from "./node_entity";
 
-export type MindMapEntity= {
+export type MindMapEntity = {
   videoId: number;
   title: string;
   language: string;
@@ -9,4 +9,4 @@ export type MindMapEntity= {
   nodes: MindMapNodeEntity[];
   edges: MindMapEdgeEntity[];
   createdAt: Date;
-}
+};

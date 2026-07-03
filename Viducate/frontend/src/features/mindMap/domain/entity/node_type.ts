@@ -4,4 +4,3 @@ export type MindMapNodeType =
   | "subtopic"
   | "detail"
   | "keypoint";
-

@@ -19,7 +19,7 @@ export class ProfileDataSourceImp implements ProfileDataSource {
   async getUserProfile(): Promise<ApiResult<UserProfileData>> {
     try {
       const response = await profileService.getUserProfile();
-     
+
       const responseEntity = fromUserProfileResponseDto(response);
 
       return { success: true, data: responseEntity };
@@ -37,7 +37,6 @@ export class ProfileDataSourceImp implements ProfileDataSource {
 
       return { success: true, data: responseEntity };
     } catch (error) {
-    
       return { success: false, error: handleApiError(error) };
     }
   }

@@ -82,7 +82,9 @@ export const useAuthForm = (isLogin: boolean) => {
             .min(2, intl.formatMessage({ id: "auth.lastNameRequired" })),
       email: z.string().email(intl.formatMessage({ id: "auth.invalidEmail" })),
       password: isLogin
-        ? z.string().nonempty(intl.formatMessage({ id: "auth.passwordMinRequired" }))
+        ? z
+            .string()
+            .nonempty(intl.formatMessage({ id: "auth.passwordMinRequired" }))
         : z
             .string()
             .min(8, intl.formatMessage({ id: "auth.passwordMinLength" }))
@@ -183,7 +185,6 @@ export const useAuthForm = (isLogin: boolean) => {
       localStorage.removeItem(isLogin ? "loginData" : "signupData");
       navigate(AppRoutesNames.dashboard, { replace: true });
     } catch (err) {
-     
       setServerError("Something went wrong");
     } finally {
       setIsSubmitting(false);

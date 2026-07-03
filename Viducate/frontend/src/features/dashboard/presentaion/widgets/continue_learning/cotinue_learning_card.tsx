@@ -13,12 +13,12 @@ type ContinueLearningCardProps = {
 export function ContinueLearningCard({ cardData }: ContinueLearningCardProps) {
   const navigate = useNavigate();
   const { setVideoId } = useLearningSession();
-   const queryClient = useQueryClient();
+  const queryClient = useQueryClient();
 
   const handleClick = async () => {
     await setVideoId(cardData.videoId);
-     await queryClient.refetchQueries({
-      queryKey: ['topics', cardData.videoId],
+    await queryClient.refetchQueries({
+      queryKey: ["topics", cardData.videoId],
       exact: true,
     });
     navigate(AppRoutesNames.watchVideo);

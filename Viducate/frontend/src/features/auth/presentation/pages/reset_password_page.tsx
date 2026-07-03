@@ -5,7 +5,6 @@ import { ResetPasswordLeftSection } from "../componants/reset_pass_left_section"
 import { useT } from "../../../../core/hooks/useTranslation";
 
 export function ResetPasswordPage() {
-
   const { translation } = useT();
 
   return (

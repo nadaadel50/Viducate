@@ -8,7 +8,6 @@ import type { MindMapReq } from "../../domain/entity/maind_map_req";
 import { toMindMapRequestDto } from "../models/mind_map_req_dto";
 import { toMindMapEntity } from "../models/mind_map_dto";
 
-
 export class MindMapDataSourceImp implements MindMapDataSource {
   private service: MindMapService;
   constructor(service: MindMapService) {
@@ -16,9 +15,11 @@ export class MindMapDataSourceImp implements MindMapDataSource {
   }
   async getMindMapDetails(req: MindMapReq): Promise<ApiResult<MindMapEntity>> {
     try {
-      const response = await this.service.getMindMapDetails(toMindMapRequestDto(req));
+      const response = await this.service.getMindMapDetails(
+        toMindMapRequestDto(req),
+      );
 
-      const resonseEntity: MindMapEntity = toMindMapEntity(response)
+      const resonseEntity: MindMapEntity = toMindMapEntity(response);
 
       return {
         success: true,
@@ -28,11 +29,5 @@ export class MindMapDataSourceImp implements MindMapDataSource {
       const message = handleApiError(error);
       return { success: false, error: message };
     }
-    
   }
-  
-
-  
-
- 
 }

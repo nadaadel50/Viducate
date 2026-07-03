@@ -7,14 +7,13 @@ type CardLayoutProps = {
 };
 
 export function CardLayout({ cardData }: CardLayoutProps) {
-  
   const isLink = cardData.video_type === "url";
   const progress =
     cardData.duration > 0
       ? Math.min((cardData.currentTime / cardData.duration) * 100, 100)
       : 0;
 
-      const timeLeft=cardData.remainingTime?? cardData.duration
+  const timeLeft = cardData.remainingTime ?? cardData.duration;
 
   return (
     <div className="relative aspect-video bg-slate-200 overflow-hidden rounded-t-2xl">
@@ -33,8 +32,6 @@ export function CardLayout({ cardData }: CardLayoutProps) {
         </div>
       </div>
 
-      
-
       {/* Progress Bar */}
       <div className="absolute bottom-0 left-0 right-0 h-1.5 bg-slate-200/30">
         <div
@@ -47,9 +44,9 @@ export function CardLayout({ cardData }: CardLayoutProps) {
       {timeLeft && (
         <div className="absolute top-3 right-3 bg-black/50 text-white text-[9px] font-bold px-2.5 py-1 rounded-full backdrop-blur-md border border-white/10">
           <FormattedMessage
-  id="dashboard.continueLearning.timeLeft"
-  values={{ time: formatVideoTime(timeLeft) }}
-/>
+            id="dashboard.continueLearning.timeLeft"
+            values={{ time: formatVideoTime(timeLeft) }}
+          />
         </div>
       )}
 
@@ -62,12 +59,12 @@ export function CardLayout({ cardData }: CardLayoutProps) {
           {isLink ? "link" : "video_file"}
         </span>
         <span>
-  {isLink ? (
-    <FormattedMessage id="dashboard.continueLearning.link" />
-  ) : (
-    <FormattedMessage id="dashboard.continueLearning.uploaded" />
-  )}
-</span>
+          {isLink ? (
+            <FormattedMessage id="dashboard.continueLearning.link" />
+          ) : (
+            <FormattedMessage id="dashboard.continueLearning.uploaded" />
+          )}
+        </span>
       </div>
     </div>
   );

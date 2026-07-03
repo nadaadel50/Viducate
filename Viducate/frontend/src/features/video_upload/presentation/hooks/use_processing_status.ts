@@ -67,7 +67,7 @@ export const useProcessingStatus = (videoId: number | undefined) => {
         console.error('Polling Error:', error);
       }
     };
-// Start polling every 2 seconds
+
     const intervalId = setInterval(fetchStatus, 2000);
     fetchStatus();
 

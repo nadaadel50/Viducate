@@ -25,7 +25,6 @@ export function useDueFlashcards() {
       (answer: FlashcardAnswer) => answer.nextReviewAt <= now,
     ) ?? [];
 
- 
   useEffect(() => {
     const interval = setInterval(() => setNow(Date.now()), 1000);
     return () => clearInterval(interval);

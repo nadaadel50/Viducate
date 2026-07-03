@@ -8,9 +8,8 @@ export type UserDTO = {
   study_field: string;
   language_preference: string;
   account_status: string;
-  created_at: string; 
+  created_at: string;
 };
-
 
 export function toUserEntity(dto: UserDTO): User {
   return {
@@ -20,6 +19,5 @@ export function toUserEntity(dto: UserDTO): User {
     email: dto.email,
     study_field: dto.study_field,
     language_preference: dto.language_preference,
- 
   };
 }

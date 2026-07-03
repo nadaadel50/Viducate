@@ -5,5 +5,4 @@ export const Difficulty = {
   Easy: "easy",
 } as const;
 
-export type Difficulty =
-  (typeof Difficulty)[keyof typeof Difficulty];
+export type Difficulty = (typeof Difficulty)[keyof typeof Difficulty];

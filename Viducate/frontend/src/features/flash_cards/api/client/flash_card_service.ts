@@ -14,13 +14,8 @@ export class FlashCardService {
 
     return response.data;
   }
-  async getVideoFlashCards(
-    videoId: number,
-  ): Promise<VideoFlashCardResponse> {
-    const response = await apiClient.get(
-      `/flashcards/video/${videoId}`,
-      {},
-    );
+  async getVideoFlashCards(videoId: number): Promise<VideoFlashCardResponse> {
+    const response = await apiClient.get(`/flashcards/video/${videoId}`, {});
 
     return response.data;
   }

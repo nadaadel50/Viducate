@@ -27,19 +27,17 @@ export function AuthForm({ type }: AuthFormProps) {
     handleSubmit,
     setValue,
     watch,
-    formState: { errors,isValid },
+    formState: { errors, isValid },
     serverError,
     clearError,
     isSubmitting,
-    isLocked
-  
+    isLocked,
   } = useAuthForm(isLogin);
 
   const formValues = watch();
-  
 
   const loginWithGoogle = () => {
-    window.location.href =Keys.google_url_key;
+    window.location.href = Keys.google_url_key;
   };
 
   const getFieldProps = (
@@ -59,16 +57,16 @@ export function AuthForm({ type }: AuthFormProps) {
   });
 
   const isButtonDisabled =
-  isSubmitting ||
-  isLocked ||
-  !isValid ||
-  (isLogin
-    ? !formValues.email || !formValues.password
-    : !formValues.firstName ||
-      !formValues.lastName ||
-      !formValues.email ||
-      !formValues.password ||
-      !formValues.confirmPassword);
+    isSubmitting ||
+    isLocked ||
+    !isValid ||
+    (isLogin
+      ? !formValues.email || !formValues.password
+      : !formValues.firstName ||
+        !formValues.lastName ||
+        !formValues.email ||
+        !formValues.password ||
+        !formValues.confirmPassword);
 
   return (
     <div className="relative w-full space-y-3 py-1 md:py-2 lg:py-2">
@@ -154,8 +152,6 @@ export function AuthForm({ type }: AuthFormProps) {
             label={intl.formatMessage({ id: "auth.password" })}
             placeholder="••••••••"
             type="password"
-            
-       
             {...getFieldProps("password")}
           />
 
@@ -164,7 +160,6 @@ export function AuthForm({ type }: AuthFormProps) {
               label={intl.formatMessage({ id: "auth.confirmPassword" })}
               placeholder="••••••••"
               type="password"
-              
               {...getFieldProps("confirmPassword")}
             />
           )}
@@ -200,9 +195,11 @@ export function AuthForm({ type }: AuthFormProps) {
         )}
 
         <CustomButton
-        style={{background:COLORS.button.primary}}
-        
-         className="w-full text-white " type="submit" disabled={isButtonDisabled }>
+          style={{ background: COLORS.button.primary }}
+          className="w-full text-white "
+          type="submit"
+          disabled={isButtonDisabled}
+        >
           {isSubmitting ? (
             <CustumBtnLoader />
           ) : (
@@ -213,7 +210,6 @@ export function AuthForm({ type }: AuthFormProps) {
         </CustomButton>
       </form>
 
-    
       <p
         className={`
           ${FONT_STYLES.body}

@@ -1,3 +1,3 @@
-export type MindMapReq={
-    videoid:number
-}
+export type MindMapReq = {
+  videoid: number;
+};

@@ -36,7 +36,7 @@ export function useFlashcardSession() {
     isLoading,
     error,
   } = segmentIdNumber ? segmentQuery : videoQuery;
-  // LOAD session
+
   useEffect(() => {
     setCurrentIndex(0);
     setIsFlipped(false);
@@ -57,7 +57,7 @@ export function useFlashcardSession() {
     setHydrated(true);
   }, [segmentIdNumber, videoId]);
 
-  // SAVE session
+
   useEffect(() => {
     if (!hydrated || !flashcardsData?.length) return;
     const resolvedId = !isNaN(segmentIdNumber) ? segmentIdNumber : "video";
@@ -80,7 +80,6 @@ export function useFlashcardSession() {
     reviewCards,
     videoId,
     segmentIdNumber,
-    // hydrated,
   ]);
 
   const activeCards = reviewCards ?? flashcardsData ?? [];
@@ -131,9 +130,9 @@ export function useFlashcardSession() {
       setIsFinished(false);
 
       const resolvedId = !isNaN(segmentIdNumber) ? segmentIdNumber : "video";
-     
+
       sessionStorage.removeItem(STORAGE_KEY(resolvedId, videoId!));
-     
+
       navigate(-1);
     }
   };

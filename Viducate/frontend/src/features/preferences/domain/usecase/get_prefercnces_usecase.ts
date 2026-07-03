@@ -1,8 +1,8 @@
-import type { PreferencesRepository } from '../repository/preferences_repository';
+import type { PreferencesRepository } from "../repository/preferences_repository";
 
 export class GetPreferencesUseCase {
   private getPreferencesRepo: PreferencesRepository;
-  constructor(   getPreferencesRepo: PreferencesRepository) {
+  constructor(getPreferencesRepo: PreferencesRepository) {
     this.getPreferencesRepo = getPreferencesRepo;
   }
 

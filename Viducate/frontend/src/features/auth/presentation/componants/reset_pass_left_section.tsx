@@ -7,12 +7,8 @@ import { useResetPassword } from "../hooks/use_reset_password";
 import { useT } from "../../../../core/hooks/useTranslation";
 import CustumBtnLoader from "../../../../core/componants/custum_btn_loader";
 
-
 export function ResetPasswordLeftSection() {
- 
-
-const { translation } = useT();
-  
+  const { translation } = useT();
 
   const {
     password,
@@ -23,42 +19,40 @@ const { translation } = useT();
     handlePassword,
     handleConfirmPassword,
     handleResetPassClick,
-    clearError
+    clearError,
   } = useResetPassword();
 
- return (
-  <div className="w-full relative pt-18 flex flex-col justify-center items-center ">
+  return (
+    <div className="w-full relative pt-18 flex flex-col justify-center items-center ">
+      {apiError && <CustumError apiError={apiError} clearError={clearError} />}
 
-    {apiError && <CustumError apiError={apiError} clearError={clearError} />}
+      <MainText
+        bigTitle={translation("auth.resetPassword.title")}
+        smallTitle={translation("auth.resetPassword.subtitle")}
+      />
 
-    <MainText
-      bigTitle={translation("auth.resetPassword.title") }
-      smallTitle={translation("auth.resetPassword.subtitle" )}
-    />
+      <PasswordInputsSection
+        password={password}
+        confirmPassword={confirmPassword}
+        confirmPasswordError={confirmPasswordError}
+        onPasswordChange={handlePassword}
+        onConfirmPasswordChange={handleConfirmPassword}
+      />
 
-    <PasswordInputsSection
-      password={password}
-      confirmPassword={confirmPassword}
-      confirmPasswordError={confirmPasswordError}
-      onPasswordChange={handlePassword}
-      onConfirmPasswordChange={handleConfirmPassword}
-    />
+      <PasswordRequirements password={password} />
 
-    <PasswordRequirements password={password} />
-
-    <div className="w-full mt-5">
-      <CustomButton
-        disabled={!!confirmPasswordError || confirmPassword.length === 0}
-        onClick={handleResetPassClick}
-      >
-        {loading ? (
-          <CustumBtnLoader />
-        ) : (
-          translation("auth.resetPassword.button")
-        )}
-      </CustomButton>
+      <div className="w-full mt-5">
+        <CustomButton
+          disabled={!!confirmPasswordError || confirmPassword.length === 0}
+          onClick={handleResetPassClick}
+        >
+          {loading ? (
+            <CustumBtnLoader />
+          ) : (
+            translation("auth.resetPassword.button")
+          )}
+        </CustomButton>
+      </div>
     </div>
-
-  </div>
-);
+  );
 }

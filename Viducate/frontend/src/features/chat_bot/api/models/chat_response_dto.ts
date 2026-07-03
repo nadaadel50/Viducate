@@ -1,5 +1,3 @@
-// chat_response_dto.ts
-
 import type { ChatResponse } from "../../domain/entity/chat_response";
 
 export type ChatResponseDto = {
@@ -9,7 +7,7 @@ export type ChatResponseDto = {
   };
 
   message: {
-    message_id:number;
+    message_id: number;
     content: string;
   };
 };
@@ -22,7 +20,7 @@ export function toChatResponse(dto: ChatResponseDto): ChatResponse {
     },
     message: {
       content: dto.message.content,
-      message_id:dto.message.message_id.toString()
+      message_id: dto.message.message_id.toString(),
     },
   };
 }

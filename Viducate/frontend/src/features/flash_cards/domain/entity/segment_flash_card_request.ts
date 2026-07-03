@@ -1,4 +1,4 @@
-export type SegmentFlashCardRequest={
-    videoId:number
-    segmentId:number
-}
+export type SegmentFlashCardRequest = {
+  videoId: number;
+  segmentId: number;
+};

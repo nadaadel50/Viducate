@@ -14,5 +14,5 @@ export const forgetPassUseCase = new ForgetPassUseCase(repository);
 export const resetPassUseCase = new ResetPasswordUsecase(repository);
 export const signupUseCase = new SignupUseCase(repository);
 export const loginUseCase = new LoginUseCase(repository);
-//export const getCurrenctUserUseCase= new GetCurrentUserUseCase(repository)
+
 

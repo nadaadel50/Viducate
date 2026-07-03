@@ -1,5 +1,4 @@
 import type { ApiResult } from "../../../../core/api/apiResult";
-
 import handleApiError from "../../../../core/api/apiError";
 import type { ChatBotDataSource } from "../../data/data_source/chat_bot_data_source";
 import type { ChatBotService } from "../client/chat_bot_service";
@@ -80,8 +79,6 @@ export class ChatBotDataSourceImp implements ChatBotDataSource {
       const response = await this.service.getAnswer(toChatRequestDto(req));
 
       const resonseEntity = toChatResponse(response);
-
-     
 
       return {
         success: true,

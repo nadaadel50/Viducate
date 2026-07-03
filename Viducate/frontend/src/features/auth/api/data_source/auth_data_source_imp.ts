@@ -22,9 +22,9 @@ export class AuthDataSourceImp implements AuthDataSource {
     this.authApiService = authApiService;
   }
   async getCurrentUser(): Promise<ApiResult<User>> {
-     try {
+    try {
       const response = await authService.getCurrentUser();
-      const responseEntity=toUserEntity(response)
+      const responseEntity = toUserEntity(response);
       return {
         success: true,
         data: responseEntity,
@@ -60,7 +60,6 @@ export class AuthDataSourceImp implements AuthDataSource {
 
       return { success: true, data: response.message };
     } catch (error) {
-     
       const message = handleApiError(error);
       return { success: false, error: message };
     }
@@ -81,7 +80,7 @@ export class AuthDataSourceImp implements AuthDataSource {
   ): Promise<ApiResult<SignupResponseDto>> {
     try {
       const response = await authService.register(data);
-     
+
       return { success: true, data: response };
     } catch (error) {
       const message = handleApiError(error);

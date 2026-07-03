@@ -9,11 +9,7 @@ export function ForgetPasswordPage() {
 
   return (
     <AuthLayout
-      LeftContent={
-        
-          <ForgetPassLeftSection />
-       
-      }
+      LeftContent={<ForgetPassLeftSection />}
       RightContent={
         <RightSection
           animation={true}

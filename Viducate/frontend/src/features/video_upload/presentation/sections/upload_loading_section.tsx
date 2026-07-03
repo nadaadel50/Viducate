@@ -42,12 +42,6 @@ export function UploadLoadingSection({
     if (hasStarted.current) return;
     hasStarted.current = true;
 
-    // const handleUnload = () => {
-    //   controllerRef.current?.abort();
-    // };
-
-    //window.addEventListener("beforeunload", handleUnload);
-
     const upload = () => {
       controllerRef.current = new AbortController();
 
@@ -66,10 +60,6 @@ export function UploadLoadingSection({
 
     upload();
 
-    // return () => {
-    //   window.removeEventListener("beforeunload", handleUnload);
-    //   handleCancel();
-    // };
   }, []);
 
   const handleAnalyze = useCallback(() => {

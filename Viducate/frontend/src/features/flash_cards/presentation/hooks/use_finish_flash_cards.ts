@@ -1,9 +1,7 @@
 import { useEffect, useMemo, useState } from "react";
 import type { FlashcardAnswer } from "../../domain/entity/flash_card_answer";
 
-export function useFinishSession(
-  answers: FlashcardAnswer[],
-) {
+export function useFinishSession(answers: FlashcardAnswer[]) {
   const [now, setNow] = useState(Date.now());
 
   useEffect(() => {
@@ -43,10 +41,7 @@ export function useFinishSession(
   const timeLeft = useMemo(() => {
     if (!nextReviewAt) return 0;
 
-    return Math.max(
-      0,
-      Math.floor((nextReviewAt - now) / 1000),
-    );
+    return Math.max(0, Math.floor((nextReviewAt - now) / 1000));
   }, [nextReviewAt, now]);
 
   return {

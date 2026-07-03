@@ -1,4 +1,4 @@
-import type { UserDto } from '../user_dto';
+import type { UserDto } from "../user_dto";
 
 export type SignupResponseDto = {
   message: string;

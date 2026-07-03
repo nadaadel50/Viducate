@@ -1,3 +1,3 @@
-export type ForgetPasswordResponseDto={
-    message:string
-}
+export type ForgetPasswordResponseDto = {
+  message: string;
+};

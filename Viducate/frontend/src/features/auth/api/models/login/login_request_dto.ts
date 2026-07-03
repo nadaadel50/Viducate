@@ -1,4 +1,3 @@
-
 import { LoginRequest } from "../../../domain/entity/login_request";
 
 export type LoginRequestDto = {

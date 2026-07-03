@@ -25,7 +25,7 @@ export function FormField({
 
   return (
     <div className="space-y-2">
-      {/* Label */}
+      
       <label
         htmlFor={id}
         className="block text-sm font-semibold text-slate-700 ml-1"
@@ -33,7 +33,7 @@ export function FormField({
         <FormattedMessage id={labelId} />
       </label>
 
-      {/* Input */}
+      
       <input
         id={id}
         type={type}

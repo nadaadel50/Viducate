@@ -23,15 +23,15 @@ export const AuthProvider = ({ children }: { children: React.ReactNode }) => {
   const [loading, setLoading] = useState(true);
   const [userLocale, setUserLocale] = useState<Locale | undefined>(undefined);
 
- useEffect(() => {
-  if (userData) {
-    setUser(userData);
+  useEffect(() => {
+    if (userData) {
+      setUser(userData);
 
-    if (userData.language_preference) {
-      setUserLocale(userData.language_preference as Locale);
+      if (userData.language_preference) {
+        setUserLocale(userData.language_preference as Locale);
+      }
     }
-  }
-}, [userData]);
+  }, [userData]);
 
   useEffect(() => {
     if (isError) {
@@ -88,7 +88,7 @@ export const AuthProvider = ({ children }: { children: React.ReactNode }) => {
 
     sessionStorage.setItem("token", signupData.token.access_token);
     localStorage.removeItem("token");
-   
+
     setUser(signupData.user);
 
     return { success: true } as ApiResult<SignupResponseDto>;
@@ -114,7 +114,7 @@ export const AuthProvider = ({ children }: { children: React.ReactNode }) => {
         signup,
         logout,
         loading,
-        
+
         isAuthenticated: !!user,
         refreshUser,
       }}

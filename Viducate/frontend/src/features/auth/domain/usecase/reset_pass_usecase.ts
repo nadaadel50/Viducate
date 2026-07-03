@@ -8,7 +8,9 @@ export class ResetPasswordUsecase {
     this.authRepository = authRepository;
   }
 
-  async resetPass(resetPassReq: ResetPasswordRequest): Promise<ApiResult<string>> {
+  async resetPass(
+    resetPassReq: ResetPasswordRequest,
+  ): Promise<ApiResult<string>> {
     return await this.authRepository.resetPassword(resetPassReq);
   }
 }

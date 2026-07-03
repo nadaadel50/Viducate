@@ -1,4 +1,3 @@
-
 import type { ApiResult } from "../../../../core/api/apiResult";
 import type { ForgetPassReq } from "../../domain/entity/forgetpass_request";
 import type { ResetPasswordRequest } from "../../domain/entity/reset_password_request";
@@ -12,24 +11,22 @@ import { toLoginRequestDto } from "../../api/models/login/login_request_dto";
 import type { LoginResponseDto } from "../../api/models/login/login_response_dto";
 import type { User } from "../../domain/entity/user";
 
-
 export class AuthRepoImp implements AuthRepo {
-    private AuthDataSource: AuthDataSource;
-    constructor(AuthDataSource: AuthDataSource) {
-        this.AuthDataSource = AuthDataSource;
-    }
-  async getCurrentUser(): Promise<ApiResult<User>> {
-    return this.AuthDataSource.getCurrentUser()
-    
+  private AuthDataSource: AuthDataSource;
+  constructor(AuthDataSource: AuthDataSource) {
+    this.AuthDataSource = AuthDataSource;
   }
-    resetPassword(resetPassReq: ResetPasswordRequest): Promise<ApiResult<string>> {
-        return this.AuthDataSource.resetPassword(resetPassReq)
-    }
-    forgetPassword(forgetPassReq: ForgetPassReq): Promise<ApiResult<string>> {
-        return this.AuthDataSource.forgetPassword(forgetPassReq)
-    }
-   
-
+  async getCurrentUser(): Promise<ApiResult<User>> {
+    return this.AuthDataSource.getCurrentUser();
+  }
+  resetPassword(
+    resetPassReq: ResetPasswordRequest,
+  ): Promise<ApiResult<string>> {
+    return this.AuthDataSource.resetPassword(resetPassReq);
+  }
+  forgetPassword(forgetPassReq: ForgetPassReq): Promise<ApiResult<string>> {
+    return this.AuthDataSource.forgetPassword(forgetPassReq);
+  }
 
   async register(entity: SignupRequest): Promise<ApiResult<SignupResponseDto>> {
     const dto = toSignupRequestDto(entity);

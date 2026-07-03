@@ -4,8 +4,9 @@ import type { SessionMessagesRequest } from "../entity/all_chat_messages_req";
 import type { ChatMessage } from "../entity/chat_message";
 
 export const GetSessionMessages = (repo: ChatBotRepo) => {
-  return async (req: SessionMessagesRequest): Promise<ApiResult<ChatMessage[]>> => {
-   
+  return async (
+    req: SessionMessagesRequest,
+  ): Promise<ApiResult<ChatMessage[]>> => {
     return repo.getAllSessionMessages(req);
   };
 };

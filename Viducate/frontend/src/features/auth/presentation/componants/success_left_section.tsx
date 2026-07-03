@@ -31,9 +31,7 @@ export function SucessLeftSection() {
         >
           {translation("auth.resetSuccess.titleLine1")}
           <br />
-          <span>
-            {translation("auth.resetSuccess.titleLine2")}
-          </span>
+          <span>{translation("auth.resetSuccess.titleLine2")}</span>
         </h2>
 
         <p

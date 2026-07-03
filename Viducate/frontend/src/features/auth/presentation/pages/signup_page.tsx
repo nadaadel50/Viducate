@@ -26,9 +26,7 @@ const SignupPage: React.FC = () => {
           style={{ animationDuration: "3s" }}
         >
           <div className="flex h-10 w-10 items-center justify-center rounded-full bg-green-100 p-1.5 text-green-600">
-            <span className="material-symbols-outlined">
-              check_circle
-            </span>
+            <span className="material-symbols-outlined">check_circle</span>
           </div>
           <div>
             <p className="text-xs font-bold uppercase tracking-wider text-slate-500">

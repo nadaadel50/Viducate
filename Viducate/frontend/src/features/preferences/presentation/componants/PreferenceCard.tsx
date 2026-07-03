@@ -1,6 +1,6 @@
-import React from 'react';
+import React from "react";
 import { FormattedMessage } from "react-intl";
-import { COLORS } from '../../../../core/constants';
+import { COLORS } from "../../../../core/constants";
 
 interface PreferenceCardProps {
   title: string;
@@ -19,11 +19,9 @@ export const PreferenceCard: React.FC<PreferenceCardProps> = ({
   value,
   onChange,
   iconBgClass,
-  iconTextClass
+  iconTextClass,
 }) => (
-  <div
-    className="group flex flex-col rounded-xl bg-white border border-gray-200 shadow-sm hover:shadow-md hover:border-[#6366f1] transition-all duration-300"
-  >
+  <div className="group flex flex-col rounded-xl bg-white border border-gray-200 shadow-sm hover:shadow-md hover:border-[#6366f1] transition-all duration-300">
     <div className="p-5 flex flex-col h-full gap-4">
       <div className="flex items-center gap-3">
         <div className={`p-2 rounded-lg ${iconBgClass} ${iconTextClass}`}>

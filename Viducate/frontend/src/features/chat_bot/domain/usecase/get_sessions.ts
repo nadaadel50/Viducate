@@ -4,7 +4,6 @@ import type { ChatSession } from "../entity/chat_session";
 
 export const GetSessions = (repo: ChatBotRepo) => {
   return async (videoId: number): Promise<ApiResult<ChatSession[]>> => {
-   
     return repo.getAllSessions(videoId);
   };
 };

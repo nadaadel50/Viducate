@@ -6,7 +6,6 @@ import type { DashboardService } from "../client/dashboard_service";
 import type { DashboardEntity } from "../../domain/entity/dashboard";
 import { mapDashboardDtoToEntity } from "../models/dashboard_dto";
 
-
 export class DashboardDataSourceImp implements DashboardDataSource {
   private service: DashboardService;
   constructor(service: DashboardService) {
@@ -27,7 +26,4 @@ export class DashboardDataSourceImp implements DashboardDataSource {
       return { success: false, error: message };
     }
   }
-
-
-  
 }

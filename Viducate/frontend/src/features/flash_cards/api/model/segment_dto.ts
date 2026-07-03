@@ -18,13 +18,17 @@ export const toSegmentEntity = (dto: SegmentDto): FlashCard => {
     segment_number: dto.segment_number,
     title: dto.title,
     start_time: dto.start_time,
-    end_time: dto.end_time, 
+    end_time: dto.end_time,
     start_time_label: dto.start_time_label,
     end_time_label: dto.end_time_label,
     flashcards: dto.flashcards.map(toFlashcardEntity),
   };
 };
 
-export const extractFlashcards = (segments: SegmentDto[]): FlashCardDetials[] => {
-  return segments.flatMap((segment) => segment.flashcards.map(toFlashcardEntity));
+export const extractFlashcards = (
+  segments: SegmentDto[],
+): FlashCardDetials[] => {
+  return segments.flatMap((segment) =>
+    segment.flashcards.map(toFlashcardEntity),
+  );
 };

@@ -9,7 +9,7 @@ export class LoginUseCase {
     this.repository = repository;
   }
 
-async execute(params: LoginRequest): Promise<ApiResult<LoginResponseDto>> {
+  async execute(params: LoginRequest): Promise<ApiResult<LoginResponseDto>> {
     return await this.repository.login(params);
   }
 }

@@ -68,7 +68,7 @@ export function useMindMapController({ initialNodes, initialEdges }: Params) {
     restoreEdgesState(initialEdges),
   );
 
-  // sync incoming data
+
   useEffect(() => {
     setNodes(restoreNodesState(initialNodes));
   }, [initialNodes, setNodes]);
@@ -77,111 +77,112 @@ export function useMindMapController({ initialNodes, initialEdges }: Params) {
     setEdges(restoreEdgesState(initialEdges));
   }, [initialEdges, setEdges]);
 
+  useEffect(() => {
+    if (nodes.length === 0) return;
 
+    const nodesState = nodes.reduce(
+      (acc, node) => {
+        acc[node.id] = {
+          hidden: node.hidden,
+          expanded: node.data.expanded,
+        };
+        return acc;
+      },
+      {} as Record<string, any>,
+    );
 
- useEffect(() => {
-    if (nodes.length === 0) return; 
-
-    const nodesState = nodes.reduce((acc, node) => {
-      acc[node.id] = {
-        hidden: node.hidden,
-        expanded: node.data.expanded,
-      };
-      return acc;
-    }, {} as Record<string, any>);
-
-    const edgesState = edges.reduce((acc, edge) => {
-      acc[edge.id] = {
-        hidden: edge.hidden,
-      };
-      return acc;
-    }, {} as Record<string, any>);
+    const edgesState = edges.reduce(
+      (acc, edge) => {
+        acc[edge.id] = {
+          hidden: edge.hidden,
+        };
+        return acc;
+      },
+      {} as Record<string, any>,
+    );
 
     sessionStorage.setItem(
       STORAGE_KEYS.mind_map_state,
-      JSON.stringify({ nodes: nodesState, edges: edgesState })
+      JSON.stringify({ nodes: nodesState, edges: edgesState }),
     );
   }, [nodes, edges]);
 
-  // toggle logic
+
   const toggleNode = useCallback(
-  (nodeId: string) => {
-    const clickedNode = nodes.find((n) => n.id === nodeId);
-    if (!clickedNode) return;
+    (nodeId: string) => {
+      const clickedNode = nodes.find((n) => n.id === nodeId);
+      if (!clickedNode) return;
 
-    const nowExpanded = !clickedNode.data.expanded;
+      const nowExpanded = !clickedNode.data.expanded;
 
-    if (nowExpanded) {
-    
-      const directChildIds = new Set(
-        edges.filter((e) => e.source === nodeId).map((e) => e.target)
-      );
+      if (nowExpanded) {
+        const directChildIds = new Set(
+          edges.filter((e) => e.source === nodeId).map((e) => e.target),
+        );
 
-      setNodes((prev) =>
-        prev.map((node) => {
-          if (node.id === nodeId) {
-            return { ...node, data: { ...node.data, expanded: true } };
+        setNodes((prev) =>
+          prev.map((node) => {
+            if (node.id === nodeId) {
+              return { ...node, data: { ...node.data, expanded: true } };
+            }
+            if (directChildIds.has(node.id)) {
+              return { ...node, hidden: false };
+            }
+            return node;
+          }),
+        );
+
+        setEdges((prev) =>
+          prev.map((edge) =>
+            edge.source === nodeId ? { ...edge, hidden: false } : edge,
+          ),
+        );
+      } else {
+        function getAllDescendants(parentId: string): Set<string> {
+          const result = new Set<string>();
+          const queue = [parentId];
+          while (queue.length > 0) {
+            const current = queue.shift()!;
+            edges
+              .filter((e) => e.source === current)
+              .forEach((e) => {
+                result.add(e.target);
+                queue.push(e.target);
+              });
           }
-          if (directChildIds.has(node.id)) {
-            return { ...node, hidden: false };
-          }
-          return node;
-        })
-      );
-
-      setEdges((prev) =>
-        prev.map((edge) =>
-          edge.source === nodeId ? { ...edge, hidden: false } : edge
-        )
-      );
-
-    } else {
-      
-      function getAllDescendants(parentId: string): Set<string> {
-        const result = new Set<string>();
-        const queue = [parentId];
-        while (queue.length > 0) {
-          const current = queue.shift()!;
-          edges
-            .filter((e) => e.source === current)
-            .forEach((e) => {
-              result.add(e.target);
-              queue.push(e.target);
-            });
+          return result;
         }
-        return result;
+
+        const allDescendants = getAllDescendants(nodeId);
+
+        setNodes((prev) =>
+          prev.map((node) => {
+            if (node.id === nodeId) {
+              return { ...node, data: { ...node.data, expanded: false } };
+            }
+            if (allDescendants.has(node.id)) {
+              return {
+                ...node,
+                hidden: true,
+                data: { ...node.data, expanded: false },
+              };
+            }
+            return node;
+          }),
+        );
+
+        setEdges((prev) =>
+          prev.map((edge) => {
+            const isDescendantEdge =
+              allDescendants.has(edge.target) || edge.source === nodeId;
+            return isDescendantEdge ? { ...edge, hidden: true } : edge;
+          }),
+        );
       }
+    },
+    [edges, nodes, setNodes, setEdges],
+  );
 
-      const allDescendants = getAllDescendants(nodeId);
-
-      setNodes((prev) =>
-        prev.map((node) => {
-          if (node.id === nodeId) {
-            return { ...node, data: { ...node.data, expanded: false } };
-          }
-          if (allDescendants.has(node.id)) {
-            return {
-              ...node,
-              hidden: true,
-              data: { ...node.data, expanded: false },
-            };
-          }
-          return node;
-        })
-      );
-
-      setEdges((prev) =>
-        prev.map((edge) => {
-          const isDescendantEdge =
-            allDescendants.has(edge.target) || edge.source === nodeId;
-          return isDescendantEdge ? { ...edge, hidden: true } : edge;
-        })
-      );
-    }
-  },
-  [edges, nodes, setNodes, setEdges]
-);
-  // inject callbacks
   const nodesWithToggle = nodes.map((node) => ({
     ...node,
 

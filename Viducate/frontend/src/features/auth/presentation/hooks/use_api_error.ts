@@ -1,7 +1,6 @@
 import { useEffect, useState } from "react";
 
 export function useApiError() {
-
   const [apiError, setApiError] = useState("");
 
   const clearError = () => {
@@ -21,6 +20,6 @@ export function useApiError() {
   return {
     apiError,
     setApiError,
-    clearError
+    clearError,
   };
 }

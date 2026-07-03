@@ -41,7 +41,7 @@ export function ForgetPassLeftSection() {
         />
 
         <CustomButton
-        style={{background:COLORS.button.primary}}
+          style={{ background: COLORS.button.primary }}
           type="submit"
           className="w-full text-white"
           disabled={!!validationError || email.length === 0}

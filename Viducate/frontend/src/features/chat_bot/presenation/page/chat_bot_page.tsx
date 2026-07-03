@@ -10,9 +10,6 @@ import { useIntl } from "react-intl";
 import { ConfirmationModal } from "../../../../core/componants/confirmation_modal";
 import { useLanguage } from "../../../../core/hooks/useLanguage";
 
-// ...
-
-
 export function ChatBotPage() {
   const { closeChat, open } = useChat();
   const { videoTitle } = useLearningSession();
@@ -36,7 +33,6 @@ export function ChatBotPage() {
 
     isDeleteSessionLoading,
     deleteSessionError,
-   
   } = useChatMessages(open);
 
   const handleCloseDeleteModal = () => {
@@ -68,28 +64,26 @@ export function ChatBotPage() {
       >
         {/* Recent Chats */}
 
-
-<div
-  className={`absolute top-0 z-10 h-full transition-transform duration-300 ease-out
+        <div
+          className={`absolute top-0 z-10 h-full transition-transform duration-300 ease-out
     ${isRTL ? "left-0" : "right-0"}
     ${
       openRecentChats
         ? "translate-x-0"
         : isRTL
-        ? "-translate-x-full"
-        : "translate-x-full"
+          ? "-translate-x-full"
+          : "translate-x-full"
     }`}
->
-  <RecentChatsSidebar
-    selectedSession={sessionId}
-    handleOpenSession={handleOpenRecentChats}
-    handleClearMessages={clearMessages}
-    sessions={sessions}
-    handleSelectNewSession={handleSelectNewSession}
-    setOpenDeleteMessage={handleOpenDeleteMessage}
-  
-  />
-</div>
+        >
+          <RecentChatsSidebar
+            selectedSession={sessionId}
+            handleOpenSession={handleOpenRecentChats}
+            handleClearMessages={clearMessages}
+            sessions={sessions}
+            handleSelectNewSession={handleSelectNewSession}
+            setOpenDeleteMessage={handleOpenDeleteMessage}
+          />
+        </div>
         {/* Delete Modal */}
         {deleteSessionError && (
           <div className="absolute top-0 z-20 flex items-center gap-2 rounded-lg bg-red-100 px-3 py-2 text-sm text-red-700">
@@ -99,7 +93,6 @@ export function ChatBotPage() {
         <ConfirmationModal
           open={openDeleteModal}
           isLoading={isDeleteSessionLoading}
-         
           title="Delete Chat"
           description="Are you sure you want to delete this conversation? This action cannot be undone."
           onClose={handleCloseDeleteModal}

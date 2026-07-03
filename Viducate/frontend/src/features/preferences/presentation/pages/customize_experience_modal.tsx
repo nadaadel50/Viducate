@@ -8,8 +8,6 @@ import { CustomizeContent } from "../widgets/custumize_content";
 import { CustomizeFooter } from "../widgets/custumize_footer";
 import { CustomizeHeader } from "../widgets/custumize_header";
 
-
-
 interface CustomizeProps {
   isOpen: boolean;
   onClose: () => void;
@@ -37,15 +35,13 @@ export const CustomizeExperienceModal: React.FC<CustomizeProps> = ({
   } = useCustomizeExperience(videoId, onClose);
 
   return (
-    <BaseModal
-      isOpen={isOpen}
-      onClose={onClose}
-      maxWidth="max-w-5xl"
-    >
+    <BaseModal isOpen={isOpen} onClose={onClose} maxWidth="max-w-5xl">
       {isLoading ? (
         <LoadingPreferences />
-      ) : saveError||getSessionsError ? (
-        <div className="text-red-500">{saveError || getSessionsError?.message}</div>
+      ) : saveError || getSessionsError ? (
+        <div className="text-red-500">
+          {saveError || getSessionsError?.message}
+        </div>
       ) : (
         <>
           <CustomizeHeader onClose={onClose} />
