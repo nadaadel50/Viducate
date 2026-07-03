@@ -22,9 +22,7 @@ export function SelectBtn({
     <button
       onClick={() => handleSelect(value)}
       style={{
-        color: isSelected
-          ? COLORS.brand.primary
-          : COLORS.text.gray,
+        color: isSelected ? COLORS.brand.primary : COLORS.text.gray,
       }}
       className={`
         w-full
@@ -39,22 +37,12 @@ export function SelectBtn({
         duration-300
         ease-in-out
 
-        ${
-          isSelected
-            ? "rounded-lg shadow-sm bg-white"
-            : "cursor-pointer"
-        }
+        ${isSelected ? "rounded-lg shadow-sm bg-white" : "cursor-pointer"}
       `}
     >
-      <span className="shrink-0">
-        {icon}
-      </span>
+      <span className="shrink-0">{icon}</span>
 
-      <span
-        className={`${FONT_STYLES.button} truncate`}
-      >
-        {text}
-      </span>
+      <span className={`${FONT_STYLES.button} truncate`}>{text}</span>
     </button>
   );
 }

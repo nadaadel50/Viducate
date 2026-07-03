@@ -8,7 +8,7 @@ export class UrlRequest {
     url: string,
     title: string,
     language: string = "en",
-    subject: string
+    subject: string,
   ) {
     this.url = url;
     this.title = title;

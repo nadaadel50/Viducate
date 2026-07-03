@@ -6,9 +6,9 @@ import type { TopicsRequest } from "../entity/topics_request";
 import type { VideoResponse } from "../entity/video_response";
 
 export interface WatchVideoRepo {
-
-    getTopics(topic: TopicsRequest): Promise<ApiResult<VideoResponse>>;
-    getSearchResults(req:SemanticSearchRequest):Promise<ApiResult<SemanticSearchResponse[]>>;
-    saveVideoProgress(req: SaveVideoReq): Promise<ApiResult<void>>;
-
+  getTopics(topic: TopicsRequest): Promise<ApiResult<VideoResponse>>;
+  getSearchResults(
+    req: SemanticSearchRequest,
+  ): Promise<ApiResult<SemanticSearchResponse[]>>;
+  saveVideoProgress(req: SaveVideoReq): Promise<ApiResult<void>>;
 }

@@ -6,17 +6,12 @@ import { SidebarHeader } from "../components/sidebar_header";
 import { LanguageSection } from "../components/language_section";
 import { SignOutButton } from "../components/signout_btn";
 
-
 interface PreferencesSidebarProps {
   preferences: ReturnType<typeof usePreferences>;
   onSignOut?: () => void;
 }
 
-export function PreferencesSidebar({
-  onSignOut,
-}: PreferencesSidebarProps) {
- // const { appearance, setAppearance } = preferences;
-
+export function PreferencesSidebar({ onSignOut }: PreferencesSidebarProps) {
   const { locale, setLocale } = useLanguage();
 
   return (
@@ -34,14 +29,9 @@ export function PreferencesSidebar({
           setAppearance={setAppearance}
         /> */}
 
-        <LanguageSection
-          locale={locale}
-          setLocale={setLocale}
-        />
+        <LanguageSection locale={locale} setLocale={setLocale} />
 
-        <SignOutButton
-          onSignOut={onSignOut}
-        />
+        <SignOutButton onSignOut={onSignOut} />
       </div>
     </motion.aside>
   );

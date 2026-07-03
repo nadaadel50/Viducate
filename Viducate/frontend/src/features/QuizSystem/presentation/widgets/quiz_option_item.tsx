@@ -1,7 +1,9 @@
-import  { COLORS } from "../../../../core/constants";
+import { COLORS } from "../../../../core/constants";
 import { FONT_STYLES } from "../../../../core/constants/fonts";
-import  { FONT_SIZE, FONT_WEIGHT } from "../../../../core/constants/fonts_update";
-
+import {
+  FONT_SIZE,
+  FONT_WEIGHT,
+} from "../../../../core/constants/fonts_update";
 
 type OptionState = {
   style: React.CSSProperties;
@@ -26,12 +28,7 @@ export function QuizOptionItem({
   isReviewMode,
   onSelect,
 }: QuizOptionItemProps) {
-  const {
-    style,
-    isCorrect,
-    isSelected,
-    label,
-  } = optionState;
+  const { style, isCorrect, isSelected, label } = optionState;
 
   return (
     <label className="group cursor-pointer">

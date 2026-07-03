@@ -16,44 +16,34 @@ type Props = {
   onSelect: (style: SummaryStyle) => void;
 };
 
-
-export function SummaryStyleModal({
-  isOpen,
-  onClose,
-  onSelect,
-}: Props) {
+export function SummaryStyleModal({ isOpen, onClose, onSelect }: Props) {
   const intl = useIntl();
   const SUMMARY_OPTIONS = [
-  {
-    id: "study_notes",
-    variant: "purple",
-    title: intl.formatMessage({
-      id: "summary.studyNotesTitle",
-    }),
-    description: intl.formatMessage({
-      id: "summary.studyNotesDescription",
-    }),
-    icon: <ClipboardList />,
-  },
-  {
-    id: "summary",
-    variant: "blue",
-    title: intl.formatMessage({
-      id: "summary.summaryTitle",
-    }),
-    description: intl.formatMessage({
-      id: "summary.summaryDescription",
-    }),
-    icon: <FileText />,
-  },
-] as const;
+    {
+      id: "study_notes",
+      variant: "purple",
+      title: intl.formatMessage({
+        id: "summary.studyNotesTitle",
+      }),
+      description: intl.formatMessage({
+        id: "summary.studyNotesDescription",
+      }),
+      icon: <ClipboardList />,
+    },
+    {
+      id: "summary",
+      variant: "blue",
+      title: intl.formatMessage({
+        id: "summary.summaryTitle",
+      }),
+      description: intl.formatMessage({
+        id: "summary.summaryDescription",
+      }),
+      icon: <FileText />,
+    },
+  ] as const;
   return (
-
-    <BaseModal
-      isOpen={isOpen}
-      onClose={onClose}
-      maxWidth="max-w-3xl"
-    >
+    <BaseModal isOpen={isOpen} onClose={onClose} maxWidth="max-w-3xl">
       <div className="p-6 md:p-8 lg:p-10">
         <header className="mb-8 text-center lg:mb-10">
           <h2

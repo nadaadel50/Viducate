@@ -1,6 +1,9 @@
 import { COLORS } from "../../../../core/constants/colors";
 import { FONT_STYLES } from "../../../../core/constants/fonts";
-import { FONT_SIZE, FONT_WEIGHT } from "../../../../core/constants/fonts_update";
+import {
+  FONT_SIZE,
+  FONT_WEIGHT,
+} from "../../../../core/constants/fonts_update";
 
 import type {
   StudyNotesContentItem,
@@ -16,14 +19,8 @@ type Props = {
 };
 
 export function StudyNotesSection({ section }: Props) {
-  const {
-    heading,
-    explanation,
-    definitions,
-    notes,
-    examples,
-    tables,
-  } = section;
+  const { heading, explanation, definitions, notes, examples, tables } =
+    section;
 
   return (
     <section className="space-y-6">
@@ -46,10 +43,8 @@ export function StudyNotesSection({ section }: Props) {
               tooltip={item.tooltip ?? ""}
             />
           ) : (
-            <span key={index}>
-              {item.text.replaceAll(". ", ".\n")}
-            </span>
-          )
+            <span key={index}>{item.text.replaceAll(". ", ".\n")}</span>
+          ),
         )}
       </div>
 
@@ -107,10 +102,7 @@ export function StudyNotesSection({ section }: Props) {
       )}
 
       {tables?.map((table, index) => (
-        <StudyNotesTable
-          key={index}
-          table={table}
-        />
+        <StudyNotesTable key={index} table={table} />
       ))}
     </section>
   );

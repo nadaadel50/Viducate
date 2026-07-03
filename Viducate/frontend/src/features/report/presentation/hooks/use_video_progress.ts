@@ -11,9 +11,10 @@ const formatTime = (seconds: number): string => {
 export function useVideoProgress() {
   const { currentTime, duration } = useLearningSession();
 
-  const percent = duration && duration > 0
-    ? Math.min(Math.round((currentTime / duration) * 100), 100)
-    : 0;
+  const percent =
+    duration && duration > 0
+      ? Math.min(Math.round((currentTime / duration) * 100), 100)
+      : 0;
 
   return {
     percent,

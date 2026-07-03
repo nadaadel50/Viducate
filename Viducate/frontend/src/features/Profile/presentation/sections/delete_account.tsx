@@ -35,11 +35,8 @@ export function DeleteAccount() {
           </p>
         </div>
 
-       
-
         <CustomButton
           type="button"
-       
           onClick={() => setShowDeleteModal(true)}
           className="w-full sm:w-auto bg-red-500 text-white"
         >

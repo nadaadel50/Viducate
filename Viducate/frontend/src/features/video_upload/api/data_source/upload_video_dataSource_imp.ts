@@ -11,104 +11,83 @@ import type { UrlRequest } from "../../domain/entity/url_request";
 import type { UrlResponse } from "../../domain/entity/url_response";
 import { toUrlResponse } from "../model/url_response_dto";
 import { toUrlRequestDto } from "../model/url_request_dto";
-import { useLearningSession } from "../../../../core/hooks/useLearningContent";
-
-
 
 export class UploadVideoDataSourceImp implements UploadVideoDataSource {
   private uploadVideoService: UploadVideoService;
   constructor(uploadVideoService: UploadVideoService) {
     this.uploadVideoService = uploadVideoService;
   }
- 
- async uploadVideo(
-  uploadReq: UploadVideoRequest,
-  onProgress?: (percent: number) => void,
-  signal?: AbortSignal,
-  onVideoIdReceived?: (id: number) => void
-): Promise<ApiResult<ConfirmUploadResponse>> {
 
-  let videoId: number | undefined;
+  async uploadVideo(
+    uploadReq: UploadVideoRequest,
+    onProgress?: (percent: number) => void,
+    signal?: AbortSignal,
+    onVideoIdReceived?: (id: number) => void,
+  ): Promise<ApiResult<ConfirmUploadResponse>> {
+    let videoId: number | undefined;
 
+    try {
+      console.log("Requesting upload link...");
 
-  try {
-    console.log("Requesting upload link...");
+      const linkRes = await this.uploadVideoService.requestUploadLink(
+        uploadFilestoFormData(uploadReq),
+      );
+      console.log("Received upload link:", linkRes);
+      console.log("the video id is", linkRes.video_id);
 
-    const linkRes = await this.uploadVideoService.requestUploadLink(
-      uploadFilestoFormData(uploadReq)
-    );
-    console.log("Received upload link:", linkRes);
-    console.log("the video id is",linkRes.video_id)
-    
- onVideoIdReceived?.(linkRes.video_id);
-    videoId = linkRes.video_id;
+      onVideoIdReceived?.(linkRes.video_id);
+      videoId = linkRes.video_id;
 
-    await this.uploadVideoService.uploadVideo(
-      linkRes.upload_url,
-      uploadReq.file,
-      onProgress,
-      signal
-    );
+      await this.uploadVideoService.uploadVideo(
+        linkRes.upload_url,
+        uploadReq.file,
+        onProgress,
+        signal,
+      );
 
-    const confirmRes = await this.uploadVideoService.confirmUpload(videoId);
+      const confirmRes = await this.uploadVideoService.confirmUpload(videoId);
 
-    // console.log(confirmRes)
-
-    return {
-      success: true,
-      data: toConfirmEntity(confirmRes),
-    };
-
-  } catch (error) {
-
-    
-
-    if (axios.isCancel(error) && videoId) {
-    
       return {
         success: true,
-        data: {
-          videoId: videoId,
-          title: uploadReq.title,
-          message: "Upload cancelled",
-          processing_status: "cancelled",
-        },
+        data: toConfirmEntity(confirmRes),
       };
+    } catch (error) {
+      if (axios.isCancel(error) && videoId) {
+        return {
+          success: true,
+          data: {
+            videoId: videoId,
+            title: uploadReq.title,
+            message: "Upload cancelled",
+            processing_status: "cancelled",
+          },
+        };
+      }
+
+      const message = handleApiError(error);
+      return { success: false, error: message };
     }
-
-    const message = handleApiError(error);
-    return { success: false, error: message };
-  }
-}
-
-
-async deleteVideo(videoId:number):Promise<ApiResult<string>>{
-  try{
-    const response=await this.uploadVideoService.deleteVideo(videoId)
-    return {success:true,data:response}
-  }
-  catch(error){
-     const message = handleApiError(error);
-    return { success: false, error: message };
-
   }
 
-}
-
-
- async uploadURL(uploadReq: UrlRequest): Promise<ApiResult<UrlResponse>> {
-   try{
-    const response=await this.uploadVideoService.uploadURl(toUrlRequestDto(uploadReq))
-    return {success:true,data:toUrlResponse(response)}
-  }
-  catch(error){
-     const message = handleApiError(error);
-    return { success: false, error: message };
-
+  async deleteVideo(videoId: number): Promise<ApiResult<string>> {
+    try {
+      const response = await this.uploadVideoService.deleteVideo(videoId);
+      return { success: true, data: response };
+    } catch (error) {
+      const message = handleApiError(error);
+      return { success: false, error: message };
+    }
   }
 
+  async uploadURL(uploadReq: UrlRequest): Promise<ApiResult<UrlResponse>> {
+    try {
+      const response = await this.uploadVideoService.uploadURl(
+        toUrlRequestDto(uploadReq),
+      );
+      return { success: true, data: toUrlResponse(response) };
+    } catch (error) {
+      const message = handleApiError(error);
+      return { success: false, error: message };
+    }
   }
-
-
-
 }

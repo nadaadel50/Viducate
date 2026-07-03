@@ -9,7 +9,6 @@ import { AppRoutes } from "./app/routers/appRoutes.tsx";
 import { ErrorBoundary } from "./app/providers/ErrorBoundary";
 import { setUpApiInterceptors } from "./core/api/apiInterceptors";
 
-//It is executed once, the first time the application opens
 setUpApiInterceptors();
 
 createRoot(document.getElementById("root")!).render(

@@ -1,19 +1,18 @@
 import { FormattedMessage } from "react-intl";
 
 import { COLORS } from "../../../../core/constants/colors";
-import { FONT_SIZE, FONT_WEIGHT, LINE_HEIGHT } from "../../../../core/constants/fonts_update";
+import {
+  FONT_SIZE,
+  FONT_WEIGHT,
+  LINE_HEIGHT,
+} from "../../../../core/constants/fonts_update";
 import { cleanSummaryText } from "../utlis/clear_summary";
-
-
 
 type SummaryConclusionProps = {
   conclusion: string;
 };
 
-
-export function SummaryConclusion({
-  conclusion,
-}: SummaryConclusionProps) {
+export function SummaryConclusion({ conclusion }: SummaryConclusionProps) {
   if (!conclusion) return null;
 
   return (

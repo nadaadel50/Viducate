@@ -1,19 +1,19 @@
 import { useEffect, useRef, useState } from "react";
 
-export function useVideoUI(containerRef: React.RefObject<HTMLDivElement|null>, isPlaying:boolean) {
+export function useVideoUI(
+  containerRef: React.RefObject<HTMLDivElement | null>,
+  isPlaying: boolean,
+) {
   const [isFullscreen, setIsFullscreen] = useState(false);
   const [showControls, setShowControls] = useState(true);
-  
 
   const hideControlsTimer = useRef<ReturnType<typeof setTimeout> | null>(null);
 
-  // fullscreen sync
   useEffect(() => {
     const onFsChange = () => setIsFullscreen(!!document.fullscreenElement);
     document.addEventListener("fullscreenchange", onFsChange);
 
-    return () =>
-      document.removeEventListener("fullscreenchange", onFsChange);
+    return () => document.removeEventListener("fullscreenchange", onFsChange);
   }, []);
 
   const toggleFullscreen = async () => {
@@ -26,7 +26,6 @@ export function useVideoUI(containerRef: React.RefObject<HTMLDivElement|null>, i
     }
   };
 
-  // auto hide controls
   const resetHideTimer = () => {
     setShowControls(true);
 
@@ -42,35 +41,34 @@ export function useVideoUI(containerRef: React.RefObject<HTMLDivElement|null>, i
   };
 
   const handleMouseLeave = () => {
-  if (hideControlsTimer.current) {
-    clearTimeout(hideControlsTimer.current);
-  }
+    if (hideControlsTimer.current) {
+      clearTimeout(hideControlsTimer.current);
+    }
 
-  if (isFullscreen && isPlaying) {
-    hideControlsTimer.current = setTimeout(() => {
-      setShowControls(false);
-    }, 1000);
-  }
-};
- useEffect(() => {
+    if (isFullscreen && isPlaying) {
+      hideControlsTimer.current = setTimeout(() => {
+        setShowControls(false);
+      }, 1000);
+    }
+  };
+  useEffect(() => {
     const onFsChange = () => setIsFullscreen(!!document.fullscreenElement);
     document.addEventListener("fullscreenchange", onFsChange);
     return () => document.removeEventListener("fullscreenchange", onFsChange);
   }, []);
 
-
-    useEffect(() => {
+  useEffect(() => {
     resetHideTimer();
     return () => {
       if (hideControlsTimer.current) clearTimeout(hideControlsTimer.current);
     };
-  }, [isFullscreen,isPlaying]);
+  }, [isFullscreen, isPlaying]);
 
   return {
     isFullscreen,
     showControls,
     toggleFullscreen,
     resetHideTimer,
-    handleMouseLeave
+    handleMouseLeave,
   };
 }

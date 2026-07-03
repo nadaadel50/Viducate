@@ -3,14 +3,8 @@ import { DashboardDataSourceImp } from "../../features/dashboard/api/data_source
 import { DashboardRepoImp } from "../../features/dashboard/data/respository/dashboard_repo_imp";
 import { GetDashboardData } from "../../features/dashboard/domain/usecase/get_sessions";
 
-
-
 const dashboardService = new DashboardService();
 const dataSource = new DashboardDataSourceImp(dashboardService);
 const repository = new DashboardRepoImp(dataSource);
 
-export const getDashboardData =  GetDashboardData(repository);
-
-
-
-
+export const getDashboardData = GetDashboardData(repository);

@@ -1,15 +1,15 @@
-import type { SemanticSearchRequest } from "../../domin/entity/semantic_search_request"
+import type { SemanticSearchRequest } from "../../domin/entity/semantic_search_request";
 
 export type SemanticSearchRequestDto = {
-  query: string
-  videoId:number
- 
-}
+  query: string;
+  videoId: number;
+};
 
-
-export function toSearchRequestDto(entity: SemanticSearchRequest): SemanticSearchRequestDto {
+export function toSearchRequestDto(
+  entity: SemanticSearchRequest,
+): SemanticSearchRequestDto {
   return {
     query: entity.query,
-    videoId:entity.videoId
-  }
+    videoId: entity.videoId,
+  };
 }

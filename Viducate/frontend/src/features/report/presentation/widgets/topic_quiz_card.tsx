@@ -1,7 +1,10 @@
 import { FormattedMessage } from "react-intl";
-import { FONT_SIZE, FONT_WEIGHT, LETTER_SPACING } from "../../../../core/constants/fonts_update";
+import {
+  FONT_SIZE,
+  FONT_WEIGHT,
+  LETTER_SPACING,
+} from "../../../../core/constants/fonts_update";
 import type { TopicReport } from "../../domain/entity/report_entity";
-
 
 interface TopicQuizCardProps {
   topic: TopicReport;
@@ -29,9 +32,7 @@ export function TopicQuizCard({
           <FormattedMessage id="report.topic.finishedWatching" />
         </h4>
 
-        <p
-          className={`mt-2 max-w-[220px] ${FONT_SIZE.size12} text-slate-500`}
-        >
+        <p className={`mt-2 max-w-[220px] ${FONT_SIZE.size12} text-slate-500`}>
           <FormattedMessage id="report.topic.quizReminder" />
         </p>
       </div>

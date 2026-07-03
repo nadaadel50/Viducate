@@ -5,5 +5,5 @@ export function useT() {
 
   const translation = (id: string) => intl.formatMessage({ id });
 
-  return { translation};
+  return { translation };
 }

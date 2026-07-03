@@ -3,29 +3,24 @@ import { useState } from "react";
 import { COLORS } from "../../../../core/constants/colors";
 import { FormattedMessage, useIntl } from "react-intl";
 
-
-
 export const MotivationCard = () => {
-    const intl = useIntl();
-    const motivationalQuotes = [
-
-  intl.formatMessage({ id: "motivation.quote1" }),
-  intl.formatMessage({ id: "motivation.quote2" }),
-  intl.formatMessage({ id: "motivation.quote3" }),
-  intl.formatMessage({ id: "motivation.quote4" }),
-  intl.formatMessage({ id: "motivation.quote5" }),
-  intl.formatMessage({ id: "motivation.quote6" }),
-  intl.formatMessage({ id: "motivation.quote7" }),
-  intl.formatMessage({ id: "motivation.quote8" }),
-];
+  const intl = useIntl();
+  const motivationalQuotes = [
+    intl.formatMessage({ id: "motivation.quote1" }),
+    intl.formatMessage({ id: "motivation.quote2" }),
+    intl.formatMessage({ id: "motivation.quote3" }),
+    intl.formatMessage({ id: "motivation.quote4" }),
+    intl.formatMessage({ id: "motivation.quote5" }),
+    intl.formatMessage({ id: "motivation.quote6" }),
+    intl.formatMessage({ id: "motivation.quote7" }),
+    intl.formatMessage({ id: "motivation.quote8" }),
+  ];
 
   const [quote] = useState(() => {
-  const randomIndex = Math.floor(
-    Math.random() * motivationalQuotes.length
-  );
+    const randomIndex = Math.floor(Math.random() * motivationalQuotes.length);
 
-  return motivationalQuotes[randomIndex];
-});
+    return motivationalQuotes[randomIndex];
+  });
 
   return (
     <div
@@ -43,7 +38,7 @@ export const MotivationCard = () => {
         className="text-lg font-bold mb-2 relative z-10"
         style={{ color: COLORS.text.primary }}
       >
-      <FormattedMessage id="motivation.title" />
+        <FormattedMessage id="motivation.title" />
       </h3>
 
       <p

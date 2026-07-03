@@ -13,13 +13,19 @@ export class ExportDataSourceImp implements ExportDataSource {
     }
   }
 
-  async downloadSegmentSummary(videoId: number, segmentId: number): Promise<ApiResult<Blob>> {
+  async downloadSegmentSummary(
+    videoId: number,
+    segmentId: number,
+  ): Promise<ApiResult<Blob>> {
     try {
-      const res = await exportService.downloadSegmentSummary(videoId, segmentId);
-      console.log("came here ............",res)
+      const res = await exportService.downloadSegmentSummary(
+        videoId,
+        segmentId,
+      );
+      console.log("came here ............", res);
       return { success: true, data: res.data };
     } catch (error) {
-       console.log("came here ............",error)
+      console.log("came here ............", error);
       return { success: false, error: handleApiError(error) };
     }
   }
@@ -33,9 +39,15 @@ export class ExportDataSourceImp implements ExportDataSource {
     }
   }
 
-  async downloadSegmentStudyNotes(videoId: number, segmentId: number): Promise<ApiResult<Blob>> {
+  async downloadSegmentStudyNotes(
+    videoId: number,
+    segmentId: number,
+  ): Promise<ApiResult<Blob>> {
     try {
-      const res = await exportService.downloadSegmentStudyNotes(videoId, segmentId);
+      const res = await exportService.downloadSegmentStudyNotes(
+        videoId,
+        segmentId,
+      );
       return { success: true, data: res.data };
     } catch (error) {
       return { success: false, error: handleApiError(error) };

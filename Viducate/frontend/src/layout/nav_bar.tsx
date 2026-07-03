@@ -1,4 +1,3 @@
-
 import { useNavbar } from "./hooks/use_navbar";
 import type { User } from "../features/auth/domain/entity/user";
 import { NavbarUserButton } from "./widgets/nav_btn";
@@ -10,10 +9,7 @@ interface NavbarProps {
   onLogout: () => void;
 }
 
-export default function Navbar({
-  user,
-  onLogout,
-}: NavbarProps) {
+export default function Navbar({ user, onLogout }: NavbarProps) {
   const {
     dropdownOpen,
     setDropdownOpen,
@@ -28,10 +24,7 @@ export default function Navbar({
       <div className="mx-5 flex h-full items-center justify-between">
         <NavbarLeft isDashboard={isDashboard} />
 
-        <div
-          ref={dropdownRef}
-          className="relative"
-        >
+        <div ref={dropdownRef} className="relative">
           <NavbarUserButton
             fullName={fullName}
             initials={initials}

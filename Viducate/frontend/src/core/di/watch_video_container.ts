@@ -5,12 +5,12 @@ import { GetSearchResultUseCase } from "../../features/watch_video/domin/usecase
 import { GetTopicsUseCase } from "../../features/watch_video/domin/usecase/get_topics";
 import { SaveVideoProgressUseCase } from "../../features/watch_video/domin/usecase/save_video_progress";
 
-
 const watchVideoService = new WatchVideoService();
 const dataSource = new WatchVideoDataSourceImp(watchVideoService);
 const repository = new WatchVideoRepoImp(dataSource);
 
 export const getTopicsUseCase = new GetTopicsUseCase(repository);
 export const getSearchResultsUseCase = new GetSearchResultUseCase(repository);
-export const saveVideoProgressUseCase = new SaveVideoProgressUseCase(repository);
-
+export const saveVideoProgressUseCase = new SaveVideoProgressUseCase(
+  repository,
+);

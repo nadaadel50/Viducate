@@ -1,11 +1,7 @@
 import type { ReactNode } from "react";
 import clsx from "clsx";
 
-import {
-  FONT_SIZE,
-  FONT_WEIGHT,
-  LINE_HEIGHT,
-} from "../constants/fonts_update";
+import { FONT_SIZE, FONT_WEIGHT, LINE_HEIGHT } from "../constants/fonts_update";
 
 const VARIANT_STYLES = {
   purple: {
@@ -57,8 +53,8 @@ export type TopicEndCardVariant = keyof typeof VARIANT_STYLES;
 type TopicEndCardProps = {
   variant?: TopicEndCardVariant;
   icon: ReactNode;
-  title:ReactNode ;
-  description:ReactNode ;
+  title: ReactNode;
+  description: ReactNode;
   onClick?: () => void;
 };
 
@@ -78,7 +74,7 @@ export function TopicEndCard({
       className={clsx(
         "w-full group flex cursor-pointer flex-col items-start gap-4 rounded-xl border border-gray-100 p-5 text-left transition-all duration-300 hover:-translate-y-1 hover:bg-white hover:shadow-md md:p-6",
         style.bg,
-        style.hoverBorder
+        style.hoverBorder,
       )}
     >
       <div
@@ -86,7 +82,7 @@ export function TopicEndCard({
           "flex h-12 w-12 items-center justify-center rounded-lg transition-all duration-300 group-hover:text-white",
           style.iconBg,
           style.iconColor,
-          style.hoverIconBg
+          style.hoverIconBg,
         )}
       >
         {icon}
@@ -94,11 +90,7 @@ export function TopicEndCard({
 
       <div className="space-y-1  flex flex-col items-start">
         <h2
-          className={clsx(
-            FONT_SIZE.size18,
-            FONT_WEIGHT.bold,
-            "text-[#111218]"
-          )}
+          className={clsx(FONT_SIZE.size18, FONT_WEIGHT.bold, "text-[#111218]")}
         >
           {title}
         </h2>
@@ -107,7 +99,7 @@ export function TopicEndCard({
           className={clsx(
             FONT_SIZE.size14,
             LINE_HEIGHT.relaxed,
-            "text-[#636988]"
+            "text-[#636988]",
           )}
         >
           {description}

@@ -1,5 +1,3 @@
-// semantic-search-response.type.ts
-
 export type SemanticSearchResponse = {
   video_id: number;
   subtopic_id: number;

@@ -86,7 +86,7 @@
 
   "login.hero.title1": "وفّر وقتك في المذاكرة",
   "login.hero.title2": "وتعلّم بذكاء أكبر.",
-"login.hero.description": "طوّر مستواك الدراسي باستخدام أدوات ذكية بتختصر عليك الطريق.",
+  "login.hero.description": "طوّر مستواك الدراسي باستخدام أدوات ذكية بتختصر عليك الطريق.",
   "login.badge.title": "ملخص ذكي",
   "login.badge.subtitle": "اكتمل في دقيقتين فقط",
 
@@ -439,4 +439,4 @@
   "navbar.profileSettings": "إعدادات الحساب",
   "navbar.logout": "تسجيل الخروج",
   "navbar.dashboard": "لوحة التحكم"
-} 
+}

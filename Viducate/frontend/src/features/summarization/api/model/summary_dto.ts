@@ -18,7 +18,6 @@ export type SummaryDto = {
   takeaways: string[];
   sections: SectionDto[];
   conclusion: string;
-
 };
 
 export type VideoSummaryResponseDto = {

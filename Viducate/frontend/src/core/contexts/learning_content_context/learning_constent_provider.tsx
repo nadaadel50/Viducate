@@ -6,7 +6,11 @@ import { STORAGE_KEYS } from "../../constants";
 export const LearningSessionContext =
   createContext<LearningSessionContextType | null>(null);
 
-export function LearningSessionProvider({ children,}: {children: React.ReactNode;}) {
+export function LearningSessionProvider({
+  children,
+}: {
+  children: React.ReactNode;
+}) {
   const [hasUnsavedChanges, setHasUnsavedChanges] = useState(false);
 
   useEffect(() => {
@@ -14,33 +18,25 @@ export function LearningSessionProvider({ children,}: {children: React.ReactNode
   }, [hasUnsavedChanges]);
 
   const handleSetHasUnsavedChanges = (hasChanges: boolean) => {
-
     setHasUnsavedChanges(hasChanges);
   };
 
   const [seekTo, setSeekTo] = useState<number | null>(null);
 
-  // const [currentTime, setCurrentTime] = useState<number>(() => {
-  //   const saved = sessionStorage.getItem(STORAGE_KEYS.currentTime);
-  //   return saved ? Number(saved) : 0;
-  // }); 
+  const [currentTime, setCurrentTime] = useState<number>(0);
+  const baselineRef = useRef<number>(0);
 
-const [currentTime, setCurrentTime] = useState<number>(0);
-const baselineRef = useRef<number>(0);
-
-const handleSetInitializeCurrentTime = (time: number) => {
-  baselineRef.current = time;
+  const handleSetInitializeCurrentTime = (time: number) => {
+    baselineRef.current = time;
     setHasUnsavedChanges(false);
- // setCurrentTime(time);
-};
+  };
 
+  useEffect(() => {
+    if (Math.abs(currentTime - baselineRef.current) >= 10) {
+      setHasUnsavedChanges(true);
+    }
+  }, [currentTime]);
 
- useEffect(() => {
-  if (Math.abs(currentTime - baselineRef.current) >= 10) { 
-    setHasUnsavedChanges(true);
-  }
-}, [currentTime]);
-  
   const [selectedTopic, setSelectedTopic] = useState<TopicResponse | null>(
     null,
   );
@@ -81,21 +77,20 @@ const handleSetInitializeCurrentTime = (time: number) => {
 
   const handleSetCompletedTopics = (segmentIds: number[]) => {
     setCompletedTopics(new Set(segmentIds));
-    // setHasUnsavedChanges(true);
   };
 
   const toggleTopicComplete = (segmentId: number) => {
-  setCompletedTopics((prev) => {
-    const next = new Set(prev);
-    if (next.has(segmentId)) {
-      next.delete(segmentId);
-    } else {
-      next.add(segmentId);
-    }
-    return next;
-  });
-  setHasUnsavedChanges(true); 
-};
+    setCompletedTopics((prev) => {
+      const next = new Set(prev);
+      if (next.has(segmentId)) {
+        next.delete(segmentId);
+      } else {
+        next.add(segmentId);
+      }
+      return next;
+    });
+    setHasUnsavedChanges(true);
+  };
 
   const goToNextTopic = () => {
     if (!topics || !selectedTopic) return;
@@ -121,20 +116,17 @@ const handleSetInitializeCurrentTime = (time: number) => {
   function setDurationTime(newDuration: number) {
     setDuration(newDuration);
   }
-useEffect(() => {
-  if (videoId === null) return;
-  
-  // setSelectedTopic(null);
-  // setTopics(null);
-  // setVideoTitle(null);
-  setMarks([]);
-  setCompletedTopics(new Set());
-  setCurrentTime(0);
-  baselineRef.current = 0;
-  setHasUnsavedChanges(false);
-  setSeekTo(null);
-  setDuration(0);
-}, [videoId]);
+  useEffect(() => {
+    if (videoId === null) return;
+
+    setMarks([]);
+    setCompletedTopics(new Set());
+    setCurrentTime(0);
+    baselineRef.current = 0;
+    setHasUnsavedChanges(false);
+    setSeekTo(null);
+    setDuration(0);
+  }, [videoId]);
 
   return (
     <LearningSessionContext.Provider
@@ -170,7 +162,7 @@ useEffect(() => {
         handleSetCompletedTopics,
         hasUnsavedChanges,
         handleSetHasUnsavedChanges,
-        handleSetInitializeCurrentTime
+        handleSetInitializeCurrentTime,
       }}
     >
       {children}

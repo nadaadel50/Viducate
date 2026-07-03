@@ -7,7 +7,6 @@ export type UrlRequestDto = {
   subject: string;
 };
 
-
 export function toUrlRequestDto(entity: UrlRequest): UrlRequestDto {
   return {
     url: entity.url,

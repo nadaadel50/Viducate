@@ -65,7 +65,7 @@ export class QuizEntity {
   }
 }
 
-// Submit Entities
+
 export type QuizSubmitQuestion = {
   questionId: number;
   questionText: string;

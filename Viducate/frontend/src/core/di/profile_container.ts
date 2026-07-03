@@ -9,6 +9,6 @@ const profileDataSource = new ProfileDataSourceImp();
 const profileRepo = new ProfileRepoImp(profileDataSource);
 
 export const updateLanguageUsecase = new UpdateLanguageUsecase(profileRepo);
-export const getUserDataUsecase =  GetUserData(profileRepo);
-export const updateProfileUsecase =  UpdateProfile(profileRepo);
-export const deleteAccountUsecase =  deleteAccount(profileRepo);
+export const getUserDataUsecase = GetUserData(profileRepo);
+export const updateProfileUsecase = UpdateProfile(profileRepo);
+export const deleteAccountUsecase = deleteAccount(profileRepo);

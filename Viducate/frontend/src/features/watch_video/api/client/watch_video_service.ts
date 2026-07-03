@@ -11,13 +11,13 @@ export class WatchVideoService {
       `/segments/videos/${reqDto.video_id}`,
       {},
     );
-    console.log(response.data)
+    console.log(response.data);
 
     return response.data;
   }
 
   async getSearchResult(
-   reqDto:SemanticSearchRequestDto
+    reqDto: SemanticSearchRequestDto,
   ): Promise<SematicResults> {
     const response = await apiClient.post(
       `/semantic_search/video/${reqDto.videoId}/search`,
@@ -29,18 +29,13 @@ export class WatchVideoService {
     return response.data;
   }
 
-  async saveVideoProgress(
-    reqDto: SaveVideoReqDto
-  ): Promise<void> {
-    await apiClient.post(
-      `/videos/${reqDto.video_id}/save`,
-      {
-        video_id: reqDto.video_id,
-        completed_segment_ids: reqDto.completed_segment_ids,
-        bookmarks: reqDto.bookmarks,
-        current_time: reqDto.current_time,
-        duration: reqDto.duration,
-      }
-    );
+  async saveVideoProgress(reqDto: SaveVideoReqDto): Promise<void> {
+    await apiClient.post(`/videos/${reqDto.video_id}/save`, {
+      video_id: reqDto.video_id,
+      completed_segment_ids: reqDto.completed_segment_ids,
+      bookmarks: reqDto.bookmarks,
+      current_time: reqDto.current_time,
+      duration: reqDto.duration,
+    });
   }
 }

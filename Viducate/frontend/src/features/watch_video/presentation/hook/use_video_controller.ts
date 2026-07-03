@@ -2,8 +2,6 @@ import { useRef, useState } from "react";
 import { StuckReasons } from "../types/stuck_reason";
 import { useLearningSession } from "../../../../core/hooks/useLearningContent";
 
-// ── types ─────────────────────────────────────────────────────────────────────
-
 type PlayerState = {
   started: boolean;
   isPlaying: boolean;
@@ -18,7 +16,6 @@ type PlayerAPI = {
   getCurrentTime: () => number;
   getDuration: () => number;
   setSpeed: (speed: number) => void;
-  
 };
 
 type AnalyticsAPI = {
@@ -41,16 +38,15 @@ export function useVideoController({
   player,
   analytics,
   videoState,
-  
+
   topicDuration,
 }: ControllerProps) {
   const pauseStartRef = useRef<number | null>(null);
   const lastSeekTimeRef = useRef<number | null>(null);
-  // const [markers, setMarkers] = useState<Marker[]>([]);
+
   const [showSpeedMenu, setShowSpeedMenu] = useState(false);
   const [playbackRate, setPlaybackRate] = useState(1);
-  const { setDurationTime, handleAddMark } =
-    useLearningSession();
+  const { setDurationTime, handleAddMark } = useLearningSession();
 
   const handleStart = () => {
     videoState.setPlayerState((p) => ({
@@ -89,7 +85,6 @@ export function useVideoController({
     const topicDurationMs = topicDuration || 0;
     const minPause = Math.max(30_000, topicDurationMs * 0.15);
     const maxPause = Math.max(90_000, topicDurationMs * 0.4);
-   
 
     if (
       pauseDuration > minPause &&
@@ -109,7 +104,6 @@ export function useVideoController({
     pauseStartRef.current = Date.now();
   };
 
-  // time update → progress bar
   const handleTimeUpdate = () => {
     const current = player.getCurrentTime();
     const duration = player.getDuration();
@@ -133,23 +127,21 @@ export function useVideoController({
     setDurationTime(duration);
   };
 
-const SEEK_JUMP_THRESHOLD = 2; 
+  const SEEK_JUMP_THRESHOLD = 2;
 
-const handleSeek = () => {
-  const time = player.getCurrentTime();
-  const lastTime = lastSeekTimeRef.current;
+  const handleSeek = () => {
+    const time = player.getCurrentTime();
+    const lastTime = lastSeekTimeRef.current;
 
- 
-  if (lastTime !== null && Math.abs(time - lastTime) < SEEK_JUMP_THRESHOLD) {
+    if (lastTime !== null && Math.abs(time - lastTime) < SEEK_JUMP_THRESHOLD) {
+      lastSeekTimeRef.current = time;
+      return;
+    }
+
     lastSeekTimeRef.current = time;
-    return;
-  }
+    analytics.addSeekEvent(time);
+  };
 
-  lastSeekTimeRef.current = time;
-  analytics.addSeekEvent(time);
-};
-
-  // speed change
   const handleSpeedChange = (speed: number) => {
     player.setSpeed(speed);
     setPlaybackRate(speed);

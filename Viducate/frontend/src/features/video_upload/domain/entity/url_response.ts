@@ -12,7 +12,7 @@ export class UrlResponse {
     url: string,
     language: string,
     processingStatus: string,
-    message: string
+    message: string,
   ) {
     this.videoId = videoId;
     this.title = title;

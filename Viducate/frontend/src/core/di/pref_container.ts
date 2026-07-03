@@ -4,10 +4,11 @@ import { PreferencesRepoImp } from "../../features/preferences/data/repository/p
 import { GetPreferencesUseCase } from "../../features/preferences/domain/usecase/get_prefercnces_usecase";
 import { SavePreferencesUseCase } from "../../features/preferences/domain/usecase/save_preferences_usecase";
 
-
 const preferencesService = new PreferencesService();
 const preferencesDataSource = new PreferencesDataSourceImp(preferencesService);
 const preferencesRepo = new PreferencesRepoImp(preferencesDataSource);
 
-export const savePreferencesUseCase = new SavePreferencesUseCase(preferencesRepo);
+export const savePreferencesUseCase = new SavePreferencesUseCase(
+  preferencesRepo,
+);
 export const getPreferencesUseCase = new GetPreferencesUseCase(preferencesRepo);

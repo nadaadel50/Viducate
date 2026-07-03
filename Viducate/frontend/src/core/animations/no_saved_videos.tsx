@@ -1,5 +1,4 @@
 import Lottie from "lottie-react";
-
 import noSavedVideosAnimation from "../../assets/animations/Upload Blue.json";
 
 export default function NoSavedVideosAnimation() {

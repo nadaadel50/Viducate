@@ -1,4 +1,4 @@
-import { useEffect, useRef, useState } from "react";
+import { useRef, useState } from "react";
 
 import { useLearningSession } from "../../../../core/hooks/useLearningContent";
 
@@ -11,27 +11,13 @@ export function useHandleSaveProgress() {
     "info",
   );
 
-  const {
-   
-    videoId,
-    completedTopics,
-    duration,
-    currentTime,
-    marks,
-  } = useLearningSession();
+  const { videoId, completedTopics, duration, currentTime, marks } =
+    useLearningSession();
 
   const { saveVideoProgress, isSavingProgress } = useSaveVideoProgress();
   const isAutoSave = useRef(false);
 
-  // useEffect(() => {
-  //   if (!duration) return;
-
-  //   isAutoSave.current = false;
-  //   handleSaveProgress();
-  // }, [duration]);
   function handleSaveProgress() {
-    
-
     saveVideoProgress(
       {
         video_id: videoId!,
@@ -44,12 +30,10 @@ export function useHandleSaveProgress() {
         onSuccess: () => {
           setToastType("success");
           if (!isAutoSave.current) {
-            // to prevent toast message when save the video when user reload
             setToastMessage("your progress saved successfully in dashboard");
           }
-         
 
-           isAutoSave.current = false;
+          isAutoSave.current = false;
         },
         onError: () => {
           setToastType("error");

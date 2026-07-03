@@ -8,22 +8,14 @@ import { useStudyNotesData } from "../hooks/use_study_notes_data";
 import { SummaryHeader } from "../componants/summary_header";
 
 const StudyNotesPage = () => {
-  const {
-    state,
-    videoId,
-    segmentId,
-  } = useStudyNotesData();
+  const { state, videoId, segmentId } = useStudyNotesData();
 
   if (state.status === "idle" || state.status === "loading") {
     return <GeneratingStudyNotesPage />;
   }
 
   if (state.status === "error") {
-    return (
-      <p className="mt-20 text-center text-red-500">
-        {state.message}
-      </p>
-    );
+    return <p className="mt-20 text-center text-red-500">{state.message}</p>;
   }
 
   const { studyNotes, readingTime } = state.data;
@@ -41,20 +33,12 @@ const StudyNotesPage = () => {
               backgroundColor: COLORS.layout.leftBackground,
             }}
           >
-            <SummaryHeader
-              title={studyNotes.title}
-              time={readingTime.label}
-            />
+            <SummaryHeader title={studyNotes.title} time={readingTime.label} />
 
-            <StudyNotesContent
-              studyNotes={studyNotes}
-            />
+            <StudyNotesContent studyNotes={studyNotes} />
           </article>
 
-          <StudyNotesSidebar
-            videoId={videoId}
-            segmentId={segmentId}
-          />
+          <StudyNotesSidebar videoId={videoId} segmentId={segmentId} />
         </div>
       </main>
     </div>

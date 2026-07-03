@@ -1,6 +1,5 @@
 import { useEffect, useRef, useState } from "react";
 import { useVideoData } from "../../../../core/hooks/useVideoData";
-import { STORAGE_KEYS } from "../../../../core/constants";
 import { useLearningSession } from "../../../../core/hooks/useLearningContent";
 import { useVideoPlayer } from "../hook/useVideoPlayer";
 import { useVideoAnalytics } from "../hook/useVideoAnalytics";

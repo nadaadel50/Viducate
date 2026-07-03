@@ -35,9 +35,8 @@ export function Toast({
     };
   }, [message]);
 
-  if (!message) return null; // to remove from dom
+  if (!message) return null;
 
-   
   const styles = {
     error: "bg-red-50 border-red-200 text-red-800",
     success: "bg-green-50 border-green-200 text-green-800",
@@ -60,7 +59,7 @@ export function Toast({
     >
       <div className="flex items-center gap-3">
         <span className="material-symbols-outlined">{icon[type]}</span>
-        <p className={`${FONT_SIZE.size12 } ${FONT_WEIGHT.medium}`}>{message}</p>
+        <p className={`${FONT_SIZE.size12} ${FONT_WEIGHT.medium}`}>{message}</p>
       </div>
 
       <button onClick={onClose} className="cursor-pointer">

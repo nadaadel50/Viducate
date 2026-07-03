@@ -1,5 +1,11 @@
-import type { VideoSummaryResponseDto, SegmentSummaryResponseDto } from "../../api/model/summary_dto";
-import type { VideoSummary, SegmentSummary } from "../../domain/entity/summary_entity";
+import type {
+  VideoSummaryResponseDto,
+  SegmentSummaryResponseDto,
+} from "../../api/model/summary_dto";
+import type {
+  VideoSummary,
+  SegmentSummary,
+} from "../../domain/entity/summary_entity";
 
 export function mapVideoSummary(dto: VideoSummaryResponseDto): VideoSummary {
   return {
@@ -9,11 +15,12 @@ export function mapVideoSummary(dto: VideoSummaryResponseDto): VideoSummary {
     language: dto.language,
     createdAt: dto.created_at,
     readingTime: dto.reading_time,
-
   };
 }
 
-export function mapSegmentSummary(dto: SegmentSummaryResponseDto): SegmentSummary {
+export function mapSegmentSummary(
+  dto: SegmentSummaryResponseDto,
+): SegmentSummary {
   return {
     segmentId: dto.segment_id,
     segmentNumber: dto.segment_number,

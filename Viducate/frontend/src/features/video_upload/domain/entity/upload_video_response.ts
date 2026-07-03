@@ -1,5 +1,4 @@
 export class UploadVideoResponse {
- 
   video_id: number;
   title: string;
   upload_url: string;
@@ -13,7 +12,7 @@ export class UploadVideoResponse {
     upload_url: string,
     s3_key: string,
     processing_status: string,
-    message: string
+    message: string,
   ) {
     this.video_id = video_id;
     this.title = title;

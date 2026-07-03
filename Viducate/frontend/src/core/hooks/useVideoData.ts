@@ -10,13 +10,12 @@ export function useVideoData() {
     setTopics,
     handleSetMarks,
     handleSetCompletedTopics,
-   
+
     setVideoTitle,
     handleSetInitializeCurrentTime,
-   setSelectedTopic,
+    setSelectedTopic,
     setCurrentTime,
     seekTo,
-
   } = useLearningSession();
 
   const query = useQuery({
@@ -27,43 +26,36 @@ export function useVideoData() {
       );
 
       if (!result.success) throw new Error(result.error);
-      console.log("topics is: ",result.data)
+      console.log("topics is: ", result.data);
 
       return result.data;
     },
     enabled: !!videoId,
-    
-    //refetchOnMount: "always",
-    refetchOnMount: false,    
- 
-    
-    
+
+    refetchOnMount: false,
   });
 
-// useVideoData.ts
-useEffect(() => {
-  if (!query.data || query.data.topics.length === 0) return;
+  useEffect(() => {
+    if (!query.data || query.data.topics.length === 0) return;
 
-  console.log("query.data is: ", query.data);
+    console.log("query.data is: ", query.data);
 
-  setTopics(query.data.topics);
-  handleSetMarks(query.data.bookmarks);
-  setVideoTitle(query.data.title);
-  setSelectedTopic(query.data.topics[0]);
-  
+    setTopics(query.data.topics);
+    handleSetMarks(query.data.bookmarks);
+    setVideoTitle(query.data.title);
+    setSelectedTopic(query.data.topics[0]);
 
-  if (seekTo === null) {
-    
-    setCurrentTime(query.data.current_time);
-    handleSetInitializeCurrentTime(query.data.current_time);
-  }
+    if (seekTo === null) {
+      setCurrentTime(query.data.current_time);
+      handleSetInitializeCurrentTime(query.data.current_time);
+    }
 
-  handleSetCompletedTopics(
-    query.data.topics
-      .filter((topic) => topic.is_completed && topic.segment_id !== null)
-      .map((topic) => topic.segment_id!),
-  );
-}, [query.data]);
+    handleSetCompletedTopics(
+      query.data.topics
+        .filter((topic) => topic.is_completed && topic.segment_id !== null)
+        .map((topic) => topic.segment_id!),
+    );
+  }, [query.data]);
 
   return query;
 }

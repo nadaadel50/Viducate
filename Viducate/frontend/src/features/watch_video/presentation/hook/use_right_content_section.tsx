@@ -8,65 +8,47 @@ const QUIZ_KEY = (videoId: number) => `active_quiz_key_video_${videoId}`;
 export function useRightContentSection() {
   const navigate = useNavigate();
 
-  const {
-    selectedTopic,
-    toggleTopicComplete,
-    goToNextTopic,
-    videoId,
-  } = useLearningSession();
+  const { selectedTopic, toggleTopicComplete, goToNextTopic, videoId } =
+    useLearningSession();
 
   const [isQuizModalOpen, setIsQuizModalOpen] = useState(false);
-  const [isSummaryModalOpen, setIsSummaryModalOpen] =
-    useState(false);
+  const [isSummaryModalOpen, setIsSummaryModalOpen] = useState(false);
 
   const handleFinalQuizClick = () => {
     const savedKey = localStorage.getItem(QUIZ_KEY(videoId!));
 
     if (savedKey) {
-      navigate(
-        `${AppRoutesNames.quizByVideo}/${videoId}`,
-        {
-          state: {
-            videoId,
-            segmentId: null,
-            quizKey: savedKey,
-          },
+      navigate(`${AppRoutesNames.quizByVideo}/${videoId}`, {
+        state: {
+          videoId,
+          segmentId: null,
+          quizKey: savedKey,
         },
-      );
+      });
       return;
     }
 
     setIsQuizModalOpen(true);
   };
 
-  const handleFinalQuizSelect = (
-    difficulty: "easy" | "medium" | "hard",
-  ) => {
+  const handleFinalQuizSelect = (difficulty: "easy" | "medium" | "hard") => {
     setIsQuizModalOpen(false);
 
     const quizKey = `video_${videoId}_${difficulty}_${Date.now()}`;
 
-    localStorage.setItem(
-      QUIZ_KEY(videoId!),
-      quizKey,
-    );
+    localStorage.setItem(QUIZ_KEY(videoId!), quizKey);
 
-    navigate(
-      `${AppRoutesNames.quizByVideo}/${videoId}`,
-      {
-        state: {
-          difficulty,
-          videoId,
-          segmentId: null,
-          quizKey,
-        },
+    navigate(`${AppRoutesNames.quizByVideo}/${videoId}`, {
+      state: {
+        difficulty,
+        videoId,
+        segmentId: null,
+        quizKey,
       },
-    );
+    });
   };
 
-  const handleSummarySelect = (
-    style: "summary" | "study_notes",
-  ) => {
+  const handleSummarySelect = (style: "summary" | "study_notes") => {
     const path =
       style === "summary"
         ? `${AppRoutesNames.summaryByVideo}/${videoId}`

@@ -1,4 +1,3 @@
-// contexts/personal_info_context.ts
 import { createContext } from "react";
 
 export type PersonalInfoContextType = {
@@ -16,4 +15,5 @@ export type PersonalInfoContextType = {
   setLastNameError: (error: string) => void;
 };
 
-export const PersonalInfoContext = createContext<PersonalInfoContextType | null>(null);
+export const PersonalInfoContext =
+  createContext<PersonalInfoContextType | null>(null);

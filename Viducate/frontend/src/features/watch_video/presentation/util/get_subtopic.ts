@@ -1,11 +1,8 @@
-// utils/get_closest_subtopic.ts
-
 import type { SubTopic } from "../../domin/entity/sub_topic";
-
 
 export function getClosestSubTopic(
   subTopics: SubTopic[],
-  currentTime: number
+  currentTime: number,
 ): SubTopic | null {
   if (subTopics.length === 0) return null;
 

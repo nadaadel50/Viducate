@@ -1,7 +1,9 @@
 import { useEffect } from "react";
 import { useGetUserData } from "./use_get_user_data";
-import { usePersonalInfoContext, useSecurityContext } from "./use_profile_context";
-
+import {
+  usePersonalInfoContext,
+  useSecurityContext,
+} from "./use_profile_context";
 
 function isPasswordFormatValid(password: string): boolean {
   return (
@@ -15,20 +17,30 @@ export function useHandleInputs() {
   const { data: userData } = useGetUserData();
 
   const {
-    firstName, setFirstName,
-    lastName, setLastName,
-    initialFirstName,initialLastName,
-    setInitialFirstName, setInitialLastName,
-    firstNameError, setFirstNameError,
-    lastNameError, setLastNameError,
+    firstName,
+    setFirstName,
+    lastName,
+    setLastName,
+    initialFirstName,
+    initialLastName,
+    setInitialFirstName,
+    setInitialLastName,
+    firstNameError,
+    setFirstNameError,
+    lastNameError,
+    setLastNameError,
   } = usePersonalInfoContext();
 
   const {
-    password, setPassword,
+    password,
+    setPassword,
     setOldPassword,
-    confirmPassword, setConfirmPassword,
-    newPasswordError, setNewPasswordError,
-    confirmPasswordError, setConfirmPasswordError,
+    confirmPassword,
+    setConfirmPassword,
+    newPasswordError,
+    setNewPasswordError,
+    confirmPasswordError,
+    setConfirmPasswordError,
   } = useSecurityContext();
 
   useEffect(() => {
@@ -40,7 +52,10 @@ export function useHandleInputs() {
     }
   }, [userData]);
 
-  const validatePasswords = (passwordValue: string, confirmPasswordValue: string) => {
+  const validatePasswords = (
+    passwordValue: string,
+    confirmPasswordValue: string,
+  ) => {
     if (confirmPasswordValue && passwordValue !== confirmPasswordValue) {
       setConfirmPasswordError("Passwords do not match");
     } else {
@@ -76,7 +91,9 @@ export function useHandleInputs() {
     const value = e.target.value;
     setPassword(value);
     if (value && !isPasswordFormatValid(value)) {
-      setNewPasswordError("Password must be at least 8 characters, include a number and a special character");
+      setNewPasswordError(
+        "Password must be at least 8 characters, include a number and a special character",
+      );
     } else {
       setNewPasswordError("");
     }
@@ -94,18 +111,15 @@ export function useHandleInputs() {
     setNewPasswordError("");
     setConfirmPassword("");
     setConfirmPasswordError("");
-    setFirstName(initialFirstName),
-    setLastName(initialLastName),
-    setPassword(""),
-    setOldPassword(""),
-    setConfirmPassword("")
+    (setFirstName(initialFirstName),
+      setLastName(initialLastName),
+      setPassword(""),
+      setOldPassword(""),
+      setConfirmPassword(""));
   };
-  const successUpdateReset=()=>{
-     setPassword(""),
-    setOldPassword(""),
-    setConfirmPassword("")
-
-  }
+  const successUpdateReset = () => {
+    (setPassword(""), setOldPassword(""), setConfirmPassword(""));
+  };
 
   return {
     firstName,
@@ -121,6 +135,6 @@ export function useHandleInputs() {
     handleConfirmPassword,
     handleNewPassword,
     resetAll,
-    successUpdateReset
+    successUpdateReset,
   };
 }

@@ -1,4 +1,3 @@
-
 import { COLORS } from "../../../../core/constants/colors";
 
 import { GeneratingSummaryPage } from "./summary_generation_page";
@@ -8,29 +7,17 @@ import { SummarySidebar } from "../sections/summary_sidebar";
 import { useSummaryPage } from "../hooks/use_summary";
 
 const SummaryPage = () => {
-  const {
-    state,
-    videoId,
-    segmentId,
-  } = useSummaryPage();
+  const { state, videoId, segmentId } = useSummaryPage();
 
   if (state.status === "idle" || state.status === "loading") {
     return <GeneratingSummaryPage />;
   }
 
   if (state.status === "error") {
-    return (
-      <p className="mt-20 text-center text-red-500">
-        {state.message}
-      </p>
-    );
+    return <p className="mt-20 text-center text-red-500">{state.message}</p>;
   }
 
-  const {
-    title,
-    summary,
-    readingTime,
-  } = state.data;
+  const { title, summary, readingTime } = state.data;
 
   return (
     <div
@@ -44,10 +31,7 @@ const SummaryPage = () => {
           readingTime={readingTime.label}
         />
 
-        <SummarySidebar
-          videoId={videoId}
-          segmentId={segmentId}
-        />
+        <SummarySidebar videoId={videoId} segmentId={segmentId} />
       </main>
     </div>
   );

@@ -27,21 +27,32 @@ export function ProfileProvider({ children }: { children: React.ReactNode }) {
     <ProfileContext.Provider value={{ showDeleteModal, setShowDeleteModal }}>
       <PersonalInfoContext.Provider
         value={{
-          firstName, setFirstName,
-          initialFirstName, setInitialFirstName,
-          lastName, setLastName,
-          initialLastName, setInitialLastName,
-          firstNameError, setFirstNameError,
-          lastNameError, setLastNameError,
+          firstName,
+          setFirstName,
+          initialFirstName,
+          setInitialFirstName,
+          lastName,
+          setLastName,
+          initialLastName,
+          setInitialLastName,
+          firstNameError,
+          setFirstNameError,
+          lastNameError,
+          setLastNameError,
         }}
       >
         <SecurityContext.Provider
           value={{
-            password, setPassword,
-            oldPassword, setOldPassword,
-            confirmPassword, setConfirmPassword,
-            newPasswordError, setNewPasswordError,
-            confirmPasswordError, setConfirmPasswordError,
+            password,
+            setPassword,
+            oldPassword,
+            setOldPassword,
+            confirmPassword,
+            setConfirmPassword,
+            newPasswordError,
+            setNewPasswordError,
+            confirmPasswordError,
+            setConfirmPasswordError,
           }}
         >
           {children}

@@ -1,9 +1,12 @@
 import { Package } from "lucide-react";
 import { FormattedMessage } from "react-intl";
 
-
 import type { LucideIcon } from "lucide-react";
-import { FONT_SIZE, FONT_WEIGHT, LETTER_SPACING } from "../../../../core/constants/fonts_update";
+import {
+  FONT_SIZE,
+  FONT_WEIGHT,
+  LETTER_SPACING,
+} from "../../../../core/constants/fonts_update";
 import { MaterialBadge } from "../componants/material_badge";
 
 interface MaterialItem {
@@ -17,16 +20,11 @@ interface TopicMaterialsCardProps {
   materials: MaterialItem[];
 }
 
-export function TopicMaterialsCard({
-  materials,
-}: TopicMaterialsCardProps) {
+export function TopicMaterialsCard({ materials }: TopicMaterialsCardProps) {
   return (
     <section className="rounded-xl border border-slate-100 bg-white p-4 shadow-sm sm:p-5">
       <div className="mb-4 flex items-center gap-2">
-        <Package
-          size={18}
-          className="text-slate-500"
-        />
+        <Package size={18} className="text-slate-500" />
 
         <span
           className={`${FONT_SIZE.size11} ${FONT_WEIGHT.bold} ${LETTER_SPACING.wider} uppercase text-slate-500`}

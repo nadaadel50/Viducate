@@ -5,7 +5,6 @@ import { APPEARANCE_OPTIONS } from "../constants/prefrences";
 import { COLORS } from "../../../../core/constants";
 import { getPreferenceButtonStyle } from "../utlis/get_prefrence_utlis";
 
-
 type Appearance = "light" | "dark";
 
 type AppearanceSectionProps = {
@@ -19,7 +18,9 @@ export function AppearanceSection({
 }: AppearanceSectionProps) {
   return (
     <section className="space-y-3">
-      <label className={`${FONT_STYLES.caption} block uppercase tracking-wider`}>
+      <label
+        className={`${FONT_STYLES.caption} block uppercase tracking-wider`}
+      >
         <FormattedMessage
           id="profile.preferences.appearance"
           defaultMessage="Appearance"
@@ -41,7 +42,7 @@ export function AppearanceSection({
               style={getPreferenceButtonStyle(
                 isActive,
                 COLORS.brand.primary,
-                "#64748b"
+                "#64748b",
               )}
             >
               <Icon className="mb-2 size-[18px] transition-transform group-hover:scale-110" />

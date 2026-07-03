@@ -29,10 +29,7 @@ const VARIANT_STYLES = {
   },
 } as const;
 
-export function TopicTag({
-  label,
-  variant,
-}: TopicTagProps) {
+export function TopicTag({ label, variant }: TopicTagProps) {
   const { style, icon: Icon } = VARIANT_STYLES[variant];
 
   return (
@@ -40,15 +37,9 @@ export function TopicTag({
       className={`inline-flex max-w-full items-center gap-1.5 rounded-lg border px-2.5 py-1 shadow-sm ${FONT_SIZE.size11} ${FONT_WEIGHT.semibold}`}
       style={style}
     >
-      <Icon
-        size={13}
-        strokeWidth={2.3}
-        className="shrink-0"
-      />
+      <Icon size={13} strokeWidth={2.3} className="shrink-0" />
 
-      <span className="truncate">
-        {label}
-      </span>
+      <span className="truncate">{label}</span>
     </span>
   );
 }

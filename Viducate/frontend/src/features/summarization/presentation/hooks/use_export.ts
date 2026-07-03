@@ -18,7 +18,7 @@ export function useExport() {
     type: "summary" | "study_notes",
     videoId: number,
     segmentId?: number,
-    filename?: string
+    filename?: string,
   ) => {
     setIsLoading(true);
     setError(null);
@@ -35,7 +35,10 @@ export function useExport() {
     }
 
     if (result.success) {
-      triggerDownload(result.data, filename ?? `${type}_${segmentId ?? videoId}.pdf`);
+      triggerDownload(
+        result.data,
+        filename ?? `${type}_${segmentId ?? videoId}.pdf`,
+      );
     } else {
       setError(result.error);
     }

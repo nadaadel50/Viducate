@@ -8,10 +8,8 @@ import { toUpdateProfileRequestDto } from "../models/update_req_dto";
 import { fromUserProfileResponseDto } from "../models/update_response_dto";
 
 export class ProfileDataSourceImp implements ProfileDataSource {
-
-  
   async deleteAccount(): Promise<ApiResult<string>> {
-    try{
+    try {
       const response = await profileService.deleteAccount();
       return { success: true, data: response };
     } catch (error) {
@@ -21,7 +19,7 @@ export class ProfileDataSourceImp implements ProfileDataSource {
   async getUserProfile(): Promise<ApiResult<UserProfileData>> {
     try {
       const response = await profileService.getUserProfile();
-      console.log("the response from the get user profile api is ",response)
+      console.log("the response from the get user profile api is ", response);
       const responseEntity = fromUserProfileResponseDto(response);
 
       return { success: true, data: responseEntity };
@@ -29,7 +27,6 @@ export class ProfileDataSourceImp implements ProfileDataSource {
       return { success: false, error: handleApiError(error) };
     }
   }
-
 
   async updateProfile(req: UpdateRequest): Promise<ApiResult<UserProfileData>> {
     try {
@@ -45,7 +42,6 @@ export class ProfileDataSourceImp implements ProfileDataSource {
     }
   }
 
-  
   async updateLanguage(language: string): Promise<ApiResult<void>> {
     try {
       await profileService.updateLanguage(language);

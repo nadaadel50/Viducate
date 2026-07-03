@@ -45,9 +45,7 @@ export function useVideoAnalytics(
   videoDuration: number,
   topicStartTime: number | null,
 ) {
-  const [events, setEvents] = useState<{ time: number; timestamp: number }[]>(
-    [],
-  );
+  const [setEvents] = useState<{ time: number; timestamp: number }[]>([]);
   const [showPopup, setShowPopup] = useState(false);
   const lastPopupTimeRef = useRef(0);
   const [stuckReason, setStuckReason] = useState<StuckReason>(

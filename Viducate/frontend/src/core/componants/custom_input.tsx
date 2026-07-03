@@ -30,24 +30,19 @@ export function CustomInput({
   const isError = !!error;
   const isSuccess = success && !isError && !isEmpty;
 
-  const inputType =
-    isPasswordField && showPassword ? "text" : type;
+  const inputType = isPasswordField && showPassword ? "text" : type;
 
   const borderColor = isError
     ? COLORS.state.error
     : isSuccess
-    ? COLORS.state.success
-    : isFocused
-    ? COLORS.border.focus
-    : COLORS.border.default;
+      ? COLORS.state.success
+      : isFocused
+        ? COLORS.border.focus
+        : COLORS.border.default;
 
   return (
     <div className="w-full py-1 mb-2 font-display">
-      <label
-        className={`${FONT_STYLES.subtitle} block mb-1.5`}
-      >
-        {label}
-      </label>
+      <label className={`${FONT_STYLES.subtitle} block mb-1.5`}>{label}</label>
 
       <div className="relative">
         <input
@@ -74,10 +69,7 @@ export function CustomInput({
 
         <div className="absolute right-3 top-1/2 -translate-y-1/2 flex items-center">
           {isError && !isPasswordField ? (
-            <AlertCircle
-              size={16}
-              style={{ color: COLORS.state.error }}
-            />
+            <AlertCircle size={16} style={{ color: COLORS.state.error }} />
           ) : isSuccess ? (
             <Check
               size={16}
@@ -90,11 +82,7 @@ export function CustomInput({
               onClick={() => setShowPassword((prev) => !prev)}
               className="focus:outline-none cursor-pointer"
             >
-              {showPassword ? (
-                <EyeOff size={16} />
-              ) : (
-                <Eye size={16} />
-              )}
+              {showPassword ? <EyeOff size={16} /> : <Eye size={16} />}
             </button>
           ) : null}
         </div>

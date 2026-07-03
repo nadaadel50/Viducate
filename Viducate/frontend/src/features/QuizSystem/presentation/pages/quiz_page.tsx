@@ -107,7 +107,6 @@ export function QuizPage() {
       className="relative min-h-screen py-6 md:py-8 lg:py-10 font-display"
       style={{ background: COLORS.background.radialGradient }}
     >
-      
       {quizState === "results" &&
         !isReviewMode &&
         (isSubmitting ? (
@@ -123,10 +122,10 @@ export function QuizPage() {
         ) : null)}
 
       <div className="mx-auto w-full max-w-7xl px-4 sm:px-6 lg:px-8">
-          {/* Mobile */}
-            <div className="lg:hidden mb-2">
-              <QuizTimer timeLeft={timeLeft} compact />
-            </div>
+        {/* Mobile */}
+        <div className="lg:hidden mb-2">
+          <QuizTimer timeLeft={timeLeft} compact />
+        </div>
         <div className="grid grid-cols-1 gap-5 md:gap-6 lg:grid-cols-12 lg:gap-10">
           <section
             className="space-y-5 md:space-y-6 lg:col-span-8 lg:space-y-8"

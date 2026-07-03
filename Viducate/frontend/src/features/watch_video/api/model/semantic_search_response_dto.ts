@@ -1,5 +1,3 @@
-// semantic-search-response.dto.ts
-
 import type { SemanticSearchResponse } from "../../domin/entity/semantic_search_response";
 
 export class SemanticSearchResponseDto {
@@ -20,13 +18,10 @@ export class SemanticSearchResponseDto {
     this.start_time = data.start_time;
     this.score = data.score;
   }
-
- 
 }
 
-
 export function toSemanticSearchResponse(
-  dto: SemanticSearchResponseDto
+  dto: SemanticSearchResponseDto,
 ): SemanticSearchResponse {
   return {
     video_id: dto.video_id,

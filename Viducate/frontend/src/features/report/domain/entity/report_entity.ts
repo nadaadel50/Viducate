@@ -1,4 +1,4 @@
-export type MasteryLevel = 'weak' | 'developing' | 'strong' | 'mastered';
+export type MasteryLevel = "weak" | "developing" | "strong" | "mastered";
 
 export type MaterialsGenerated = {
   summary: boolean;

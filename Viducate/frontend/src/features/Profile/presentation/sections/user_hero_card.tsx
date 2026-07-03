@@ -6,7 +6,8 @@ import { useGetUserData } from "../hooks/use_get_user_data";
 export function UserHeroCard() {
   const { data: userData } = useGetUserData();
 
-  const fullName = `${userData?.first_name ?? ""} ${userData?.last_name ?? ""}`.trim();
+  const fullName =
+    `${userData?.first_name ?? ""} ${userData?.last_name ?? ""}`.trim();
 
   return (
     <section className="rounded-[1.25rem] border border-slate-200 bg-white p-4 shadow-sm transition-shadow duration-300 hover:shadow-md">

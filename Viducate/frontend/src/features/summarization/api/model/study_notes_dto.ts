@@ -32,7 +32,6 @@ export type StudyNotesDto = {
   title: string;
   introduction: string;
   sections: StudyNotesSectionDto[];
-  
 };
 
 export type SegmentStudyNotesResponseDto = {

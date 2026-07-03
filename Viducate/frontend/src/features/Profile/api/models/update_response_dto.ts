@@ -11,9 +11,8 @@ export interface UserProfileResponseDto {
   created_at: string;
 }
 
-
 export const fromUserProfileResponseDto = (
-  dto: UserProfileResponseDto
+  dto: UserProfileResponseDto,
 ): UserProfileData => ({
   id: dto.id,
   first_name: dto.first_name,
@@ -21,5 +20,4 @@ export const fromUserProfileResponseDto = (
   email: dto.email,
   study_field: dto.study_field,
   language_preference: dto.language_preference,
-
 });

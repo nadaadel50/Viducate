@@ -94,10 +94,7 @@ export function QuizResultCard({
             color: COLORS.button.primary,
           }}
         >
-          <span
-            className="material-symbols-outlined"
-            style={{ fontSize: 18 }}
-          >
+          <span className="material-symbols-outlined" style={{ fontSize: 18 }}>
             visibility
           </span>
 

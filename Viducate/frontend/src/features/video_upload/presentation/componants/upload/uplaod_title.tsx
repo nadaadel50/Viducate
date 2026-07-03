@@ -3,10 +3,7 @@ type UploadTitleProps = {
   smallTitle: string;
 };
 
-export function UploadTitle({
-  bigTitle,
-  smallTitle,
-}: UploadTitleProps) {
+export function UploadTitle({ bigTitle, smallTitle }: UploadTitleProps) {
   return (
     <div className="w-full">
       <div>

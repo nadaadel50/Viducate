@@ -11,8 +11,9 @@ import {
 } from "../../../../core/constants/fonts_update";
 import { useIntl } from "react-intl";
 export function MainHeader() {
-  const{currentTime}=useLearningSession()
-  const { selectedTopic,handleSetInitializeCurrentTime } = useLearningSession();
+  const { currentTime } = useLearningSession();
+  const { selectedTopic, handleSetInitializeCurrentTime } =
+    useLearningSession();
   const intl = useIntl();
   const { handleSaveProgress, toastMessage, toastType, clearToast } =
     useHandleSaveProgress();

@@ -9,9 +9,8 @@ export function useMainBtn() {
     );
   };
 
-
-  return{
+  return {
     handleComplete,
-    completeTopics
-  }
+    completeTopics,
+  };
 }

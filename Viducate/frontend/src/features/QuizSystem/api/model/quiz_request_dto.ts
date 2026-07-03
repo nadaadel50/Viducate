@@ -1,5 +1,5 @@
 export interface QuizRequestDto {
-  difficulty: 'easy' | 'medium' | 'hard';
+  difficulty: "easy" | "medium" | "hard";
 }
 
 export interface QuizSubmitRequestDto {

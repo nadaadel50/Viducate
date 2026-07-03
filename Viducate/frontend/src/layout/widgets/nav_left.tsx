@@ -1,5 +1,4 @@
 import { LayoutDashboard } from "lucide-react";
-import { useNavigate } from "react-router-dom";
 import { Logo } from "../../core/componants/logo";
 import { AppRoutesNames } from "../../app/routers/routes";
 import { FormattedMessage } from "react-intl";
@@ -9,7 +8,6 @@ type NavbarLeftProps = {
 };
 
 export function NavbarLeft({ isDashboard }: NavbarLeftProps) {
-
   return (
     <div className="flex items-center gap-6">
       <Logo />

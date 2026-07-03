@@ -1,5 +1,4 @@
 import { Search } from "lucide-react";
-import { FONT_STYLES } from "../../../../core/constants/fonts";
 import type { Dispatch, SetStateAction } from "react";
 import { FONT_SIZE } from "../../../../core/constants/fonts_update";
 import { useIntl } from "react-intl";

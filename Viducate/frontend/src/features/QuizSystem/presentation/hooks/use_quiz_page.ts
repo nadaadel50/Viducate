@@ -67,10 +67,7 @@ export function useQuizPage() {
 
   const finalQuiz = useMemo(() => localQuiz || quiz, [localQuiz, quiz]);
 
-  const questions = useMemo(
-    () => finalQuiz?.questions ?? [],
-    [finalQuiz],
-  );
+  const questions = useMemo(() => finalQuiz?.questions ?? [], [finalQuiz]);
 
   const isArabic = finalQuiz?.language === "ar";
 
@@ -144,7 +141,15 @@ export function useQuizPage() {
 
       generate();
     },
-    [activeQuizKey, finalQuiz, generate, resetQuiz, segmentId, quizStorageKey, videoId],
+    [
+      activeQuizKey,
+      finalQuiz,
+      generate,
+      resetQuiz,
+      segmentId,
+      quizStorageKey,
+      videoId,
+    ],
   );
 
   useEffect(() => {

@@ -1,16 +1,16 @@
 import { FormattedMessage } from "react-intl";
-import  { COLORS } from "../../../../core/constants";
-import  { FONT_SIZE, FONT_WEIGHT } from "../../../../core/constants/fonts_update";
+import { COLORS } from "../../../../core/constants";
+import {
+  FONT_SIZE,
+  FONT_WEIGHT,
+} from "../../../../core/constants/fonts_update";
 
 interface QuizTimerProps {
   timeLeft: number;
   compact?: boolean;
 }
 
-export function QuizTimer({
-  timeLeft,
-  compact = false,
-}: QuizTimerProps) {
+export function QuizTimer({ timeLeft, compact = false }: QuizTimerProps) {
   const minutes = Math.floor(timeLeft / 60);
   const seconds = timeLeft % 60;
 
@@ -24,10 +24,7 @@ export function QuizTimer({
           className="flex items-center gap-2"
           style={{ color: COLORS.text.secondary }}
         >
-          <span
-            className="material-symbols-outlined"
-            style={{ fontSize: 18 }}
-          >
+          <span className="material-symbols-outlined" style={{ fontSize: 18 }}>
             timer
           </span>
 
@@ -47,70 +44,57 @@ export function QuizTimer({
     );
   }
   return (
-  <section
-    className="rounded-xl border bg-white p-4 shadow-sm md:p-5"
-    style={{ borderColor: COLORS.border.default }}
-  >
-    <div
-      className="mb-3 flex items-center gap-2"
-      style={{ color: COLORS.text.secondary }}
+    <section
+      className="rounded-xl border bg-white p-4 shadow-sm md:p-5"
+      style={{ borderColor: COLORS.border.default }}
     >
-      <span
-        className="material-symbols-outlined"
-        style={{ fontSize: 20 }}
+      <div
+        className="mb-3 flex items-center gap-2"
+        style={{ color: COLORS.text.secondary }}
       >
-        timer
-      </span>
+        <span className="material-symbols-outlined" style={{ fontSize: 20 }}>
+          timer
+        </span>
 
-      <span
-        className={`${FONT_SIZE.size12} ${FONT_WEIGHT.bold}`}
-      >
-        <FormattedMessage id="quiz.time_remaining" />
-      </span>
-    </div>
-
-    <div
-      className="flex items-center justify-center gap-2 rounded-lg p-3"
-      style={{ backgroundColor: COLORS.icon.background }}
-    >
-      <div className="text-center">
-        <div
-          className={`${FONT_SIZE.size24} ${FONT_WEIGHT.bold}`}
-          style={{ color: COLORS.text.primary }}
-        >
-          {minutes.toString().padStart(2, "0")}
-        </div>
-
-        <div
-          className={`${FONT_SIZE.size10} ${FONT_WEIGHT.bold} opacity-50`}
-        >
-          <FormattedMessage id="quiz.min" />
-        </div>
+        <span className={`${FONT_SIZE.size12} ${FONT_WEIGHT.bold}`}>
+          <FormattedMessage id="quiz.time_remaining" />
+        </span>
       </div>
 
-      <span
-        className={`${FONT_SIZE.size20} ${FONT_WEIGHT.bold} opacity-30`}
+      <div
+        className="flex items-center justify-center gap-2 rounded-lg p-3"
+        style={{ backgroundColor: COLORS.icon.background }}
       >
-        :
-      </span>
+        <div className="text-center">
+          <div
+            className={`${FONT_SIZE.size24} ${FONT_WEIGHT.bold}`}
+            style={{ color: COLORS.text.primary }}
+          >
+            {minutes.toString().padStart(2, "0")}
+          </div>
 
-      <div className="text-center">
-        <div
-          className={`${FONT_SIZE.size24} ${FONT_WEIGHT.bold}`}
-          style={{ color: COLORS.text.primary }}
-        >
-          {seconds.toString().padStart(2, "0")}
+          <div className={`${FONT_SIZE.size10} ${FONT_WEIGHT.bold} opacity-50`}>
+            <FormattedMessage id="quiz.min" />
+          </div>
         </div>
 
-        <div
-          className={`${FONT_SIZE.size10} ${FONT_WEIGHT.bold} opacity-50`}
-        >
-          <FormattedMessage id="quiz.sec" />
+        <span className={`${FONT_SIZE.size20} ${FONT_WEIGHT.bold} opacity-30`}>
+          :
+        </span>
+
+        <div className="text-center">
+          <div
+            className={`${FONT_SIZE.size24} ${FONT_WEIGHT.bold}`}
+            style={{ color: COLORS.text.primary }}
+          >
+            {seconds.toString().padStart(2, "0")}
+          </div>
+
+          <div className={`${FONT_SIZE.size10} ${FONT_WEIGHT.bold} opacity-50`}>
+            <FormattedMessage id="quiz.sec" />
+          </div>
         </div>
       </div>
-    </div>
-  </section>
-);
-
-
+    </section>
+  );
 }

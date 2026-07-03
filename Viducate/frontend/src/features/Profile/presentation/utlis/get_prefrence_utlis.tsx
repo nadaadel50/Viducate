@@ -3,7 +3,7 @@ import type { CSSProperties } from "react";
 export function getPreferenceButtonStyle(
   isActive: boolean,
   primaryColor: string,
-  inactiveColor: string
+  inactiveColor: string,
 ): CSSProperties {
   return {
     borderColor: isActive ? primaryColor : "#f1f5f9",

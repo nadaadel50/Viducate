@@ -2,16 +2,17 @@ import { Lightbulb } from "lucide-react";
 import { FormattedMessage } from "react-intl";
 
 import { COLORS } from "../../../../core/constants/colors";
-import { FONT_SIZE, FONT_WEIGHT, LINE_HEIGHT } from "../../../../core/constants/fonts_update";
-
+import {
+  FONT_SIZE,
+  FONT_WEIGHT,
+  LINE_HEIGHT,
+} from "../../../../core/constants/fonts_update";
 
 type TakeawayListProps = {
   items: string[];
 };
 
-export function TakeawayList({
-  items,
-}: TakeawayListProps) {
+export function TakeawayList({ items }: TakeawayListProps) {
   return (
     <section className="mb-8 sm:mb-10">
       <h3

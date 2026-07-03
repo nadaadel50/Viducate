@@ -1,4 +1,11 @@
-import { CirclePlus, Gauge, Maximize, Minimize, Pause, Play } from "lucide-react";
+import {
+  CirclePlus,
+  Gauge,
+  Maximize,
+  Minimize,
+  Pause,
+  Play,
+} from "lucide-react";
 import { FONT_STYLES } from "../../../../../core/constants/fonts";
 import { formatVideoTime } from "../../../../../core/utils/fomat_time";
 import { FormattedMessage } from "react-intl";
@@ -42,7 +49,9 @@ export function VideoControls({
         {isPlaying ? <Pause size={18} /> : <Play size={18} />}
       </button>
 
-      <span className={`${FONT_STYLES.caption} select-none tabular-nums text-white/80`}>
+      <span
+        className={`${FONT_STYLES.caption} select-none tabular-nums text-white/80`}
+      >
         {formatVideoTime(currentTime)}
         <span className="mx-1 text-white/40">/</span>
         {formatVideoTime(duration)}
@@ -62,8 +71,8 @@ export function VideoControls({
       >
         <CirclePlus size={15} />
         <span className="hidden sm:inline text-xs font-medium">
-  <FormattedMessage id="watch.video.marker" />
-</span>
+          <FormattedMessage id="watch.video.marker" />
+        </span>
       </button>
 
       <div className="relative">
@@ -74,10 +83,10 @@ export function VideoControls({
           <Gauge size={15} />
           <span className="text-xs font-medium">
             {playbackRate === 1 ? (
-  <FormattedMessage id="watch.video.speed" />
-) : (
-  `${playbackRate}×`
-)}
+              <FormattedMessage id="watch.video.speed" />
+            ) : (
+              `${playbackRate}×`
+            )}
           </span>
         </button>
 
@@ -90,10 +99,10 @@ export function VideoControls({
                 className={`w-full cursor-pointer px-4 py-2 text-left text-xs transition hover:bg-white/10 ${playbackRate === speed ? "font-semibold text-[#359EFF]" : "text-white/70"}`}
               >
                 {speed === 1 ? (
-  <FormattedMessage id="watch.video.normal" />
-) : (
-  `${speed}×`
-)}
+                  <FormattedMessage id="watch.video.normal" />
+                ) : (
+                  `${speed}×`
+                )}
               </button>
             ))}
           </div>

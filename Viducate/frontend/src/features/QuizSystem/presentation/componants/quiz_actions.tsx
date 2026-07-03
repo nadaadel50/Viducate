@@ -26,8 +26,7 @@ export function QuizActions({
   onNewQuiz,
 }: QuizActionsProps) {
   const isNextDisabled =
-    (!isReviewMode && isLast && !canSubmit) ||
-    (isReviewMode && isLast);
+    (!isReviewMode && isLast && !canSubmit) || (isReviewMode && isLast);
 
   return (
     <section className="flex flex-col gap-3 rounded-xl border border-slate-100 bg-white p-3 shadow-sm dark:bg-slate-800">
@@ -38,10 +37,7 @@ export function QuizActions({
           className="flex h-10 w-10 items-center justify-center rounded-lg transition hover:bg-slate-50 disabled:cursor-not-allowed disabled:opacity-30"
           style={{ color: COLORS.text.secondary }}
         >
-          <span
-            className="material-symbols-outlined"
-            style={{ fontSize: 20 }}
-          >
+          <span className="material-symbols-outlined" style={{ fontSize: 20 }}>
             arrow_back
           </span>
         </button>
@@ -61,21 +57,12 @@ export function QuizActions({
         >
           <span className="whitespace-nowrap">
             <FormattedMessage
-              id={
-                isLast && !isReviewMode
-                  ? "quiz.submit"
-                  : "quiz.next"
-              }
+              id={isLast && !isReviewMode ? "quiz.submit" : "quiz.next"}
             />
           </span>
 
-          <span
-            className="material-symbols-outlined"
-            style={{ fontSize: 18 }}
-          >
-            {isLast && !isReviewMode
-              ? "done"
-              : "arrow_forward"}
+          <span className="material-symbols-outlined" style={{ fontSize: 18 }}>
+            {isLast && !isReviewMode ? "done" : "arrow_forward"}
           </span>
         </button>
       </div>
@@ -89,10 +76,7 @@ export function QuizActions({
             color: COLORS.brand.primary,
           }}
         >
-          <span
-            className="material-symbols-outlined"
-            style={{ fontSize: 18 }}
-          >
+          <span className="material-symbols-outlined" style={{ fontSize: 18 }}>
             autorenew
           </span>
 

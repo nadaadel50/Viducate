@@ -2,20 +2,19 @@ import type { ReactNode } from "react";
 
 import { COLORS } from "../../../../core/constants/colors";
 
-
 import type { ContentItem } from "../../domain/entity/summary_entity";
 import { TermTooltip } from "../componants/term_tool_tip";
 import { cleanSummaryText } from "../utlis/clear_summary";
-import { FONT_SIZE, FONT_WEIGHT } from "../../../../core/constants/fonts_update";
-
+import {
+  FONT_SIZE,
+  FONT_WEIGHT,
+} from "../../../../core/constants/fonts_update";
 
 type SummaryContentItemProps = {
   item: ContentItem;
 };
 
-export function SummaryContentItem({
-  item,
-}: SummaryContentItemProps) {
+export function SummaryContentItem({ item }: SummaryContentItemProps) {
   if (item.type === "term") {
     return (
       <TermTooltip
@@ -41,10 +40,7 @@ export function SummaryContentItem({
   item.highlights.forEach((highlight, index) => {
     const cleanHighlight = cleanSummaryText(highlight);
 
-    const startIndex = text.indexOf(
-      cleanHighlight,
-      currentIndex,
-    );
+    const startIndex = text.indexOf(cleanHighlight, currentIndex);
 
     if (startIndex === -1) return;
 
@@ -70,11 +66,7 @@ export function SummaryContentItem({
   });
 
   if (currentIndex < text.length) {
-    parts.push(
-      <span key="remaining">
-        {text.slice(currentIndex)}
-      </span>,
-    );
+    parts.push(<span key="remaining">{text.slice(currentIndex)}</span>);
   }
 
   return <span>{parts}</span>;
