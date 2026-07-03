@@ -77,6 +77,7 @@ export const useGenerateQuiz = ({
     quiz: generateMutation.data ?? null,
     isPending: generateMutation.isPending,
     isError: generateMutation.isError,
+    generateQuizError: generateMutation.error?.message,
     generate: () => generateMutation.mutate(),
     submitQuiz: (
       quizId: number,
@@ -85,5 +86,6 @@ export const useGenerateQuiz = ({
     ) => submitMutation.mutate({ quizId, answers, questions }),
     getSubmitResult,
     isSubmitting: submitMutation.isPending,
+    submitError: submitMutation.error?.message,
   };
 };

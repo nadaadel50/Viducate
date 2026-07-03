@@ -6,6 +6,7 @@ import { StudyNotesContent } from "../sections/study_notes_content";
 import { StudyNotesSidebar } from "../sections/study_notes_sidebar";
 import { useStudyNotesData } from "../hooks/use_study_notes_data";
 import { SummaryHeader } from "../componants/summary_header";
+import ErrorScreen from "../../../../core/componants/error_screen";
 
 const StudyNotesPage = () => {
   const { state, videoId, segmentId } = useStudyNotesData();
@@ -14,9 +15,9 @@ const StudyNotesPage = () => {
     return <GeneratingStudyNotesPage />;
   }
 
-  if (state.status === "error") {
-    return <p className="mt-20 text-center text-red-500">{state.message}</p>;
-  }
+ if (state.status === "error") {
+     return <ErrorScreen errorMessage={state.message} />;
+   }
 
   const { studyNotes, readingTime } = state.data;
 

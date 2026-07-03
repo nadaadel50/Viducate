@@ -1,4 +1,5 @@
 import React from "react";
+import ErrorScreen from "../../core/componants/error_screen";
 
 type Props = {
   children: React.ReactNode;
@@ -6,26 +7,28 @@ type Props = {
 
 type State = {
   hasError: boolean;
+  errorMessage: string;
 };
 
 export class ErrorBoundary extends React.Component<Props, State> {
-  state: State = { hasError: false };
+  state: State = {
+    hasError: false,
+    errorMessage: "",
+  };
 
-  static getDerivedStateFromError(_error: Error) {
-    return { hasError: true };
+  static getDerivedStateFromError(error: Error): Partial<State> {
+    return {
+      hasError: true,
+      errorMessage: error.message,
+    };
   }
 
-  componentDidCatch(error: Error, errorInfo: React.ErrorInfo) {
-    console.error("Error caught by ErrorBoundary:", error, errorInfo);
-  }
+ 
 
   render() {
     if (this.state.hasError) {
       return (
-        <div style={{ padding: 20, textAlign: "center" }}>
-          <h1>Oops! Something went wrong.</h1>
-          <p>Please try refreshing the page.</p>
-        </div>
+        <ErrorScreen errorMessage={this.state.errorMessage} />
       );
     }
 

@@ -17,6 +17,8 @@ import { QuestionMap } from "../componants/question_map";
 import { QuizResultCard } from "../componants/quiz_result_card";
 import { QuizTimer } from "../componants/quiz_timer";
 import { useQuizPage } from "../hooks/use_quiz_page";
+import { CustumError } from "../../../../core/componants/custum_error";
+import ErrorScreen from "../../../../core/componants/error_screen";
 
 export function QuizPage() {
   const {
@@ -56,7 +58,16 @@ export function QuizPage() {
 
     setCurrentIndex,
     setIsDifficultyModalOpen,
+    isError,
+    generateQuizError,
+    submitError,
   } = useQuizPage();
+
+  if(isError) {
+    return(
+      <ErrorScreen errorMessage={generateQuizError} />
+    )
+  }
 
   if (!activeQuizKey || isDifficultyModalOpen) {
     return (
@@ -119,6 +130,8 @@ export function QuizPage() {
           </div>
         ) : submitResult ? (
           <QuizResultCard submitResult={submitResult} onReview={handleReview} />
+        ) : submitError ? (
+          <div className="text-red-500"> {submitError} </div>
         ) : null)}
 
       <div className="mx-auto w-full max-w-7xl px-4 sm:px-6 lg:px-8">

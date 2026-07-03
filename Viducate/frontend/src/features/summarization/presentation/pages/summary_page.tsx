@@ -5,6 +5,7 @@ import { GeneratingSummaryPage } from "./summary_generation_page";
 import { SummaryContent } from "../sections/summary_content";
 import { SummarySidebar } from "../sections/summary_sidebar";
 import { useSummaryPage } from "../hooks/use_summary";
+import ErrorScreen from "../../../../core/componants/error_screen";
 
 const SummaryPage = () => {
   const { state, videoId, segmentId } = useSummaryPage();
@@ -14,7 +15,7 @@ const SummaryPage = () => {
   }
 
   if (state.status === "error") {
-    return <p className="mt-20 text-center text-red-500">{state.message}</p>;
+    return <ErrorScreen errorMessage={state.message} />;
   }
 
   const { title, summary, readingTime } = state.data;

@@ -148,6 +148,7 @@
   "summary.conclusion": "Conclusion",
   "summary.exportPdf": "Export to PDF",
   "summary.downloadOffline": "Download for offline",
+   "summary.downloadError": "Download failed. Please try again.",
   "summary.tools": "Tools",
   "summary.studyNotes": "Study Notes",
   "summary.studyNotesDesc": "Detailed points and key concepts for deep learning",

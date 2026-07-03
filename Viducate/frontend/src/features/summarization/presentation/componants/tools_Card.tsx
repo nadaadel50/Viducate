@@ -18,7 +18,7 @@ type Props = {
 };
 
 export function ToolsCard({ type, videoId, segmentId }: Props) {
-  const { download, isLoading } = useExport();
+  const { download, isLoading, error } = useExport();
 
   return (
     <div
@@ -55,6 +55,9 @@ export function ToolsCard({ type, videoId, segmentId }: Props) {
           >
             {isLoading ? (
               "Downloading..."
+            ) :
+            error ? (
+              <FormattedMessage id="summary.downloadError" />
             ) : (
               <FormattedMessage id="summary.downloadOffline" />
             )}
