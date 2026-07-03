@@ -35,9 +35,7 @@ const SummaryPage = () => {
   return (
     <div
       className="min-h-screen font-display"
-      style={{
-        backgroundColor: COLORS.background.light,
-      }}
+      style={{ background: COLORS.background.radialGradient }}
     >
       <main className="mx-auto flex w-full max-w-7xl flex-1 flex-col gap-8 px-4 py-8 md:px-6 lg:flex-row lg:items-start">
         <SummaryContent

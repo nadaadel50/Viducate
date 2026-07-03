@@ -31,7 +31,7 @@ const StudyNotesPage = () => {
   return (
     <div
       className="min-h-screen font-display"
-      style={{ backgroundColor: COLORS.background.light }}
+      style={{ background: COLORS.background.radialGradient }}
     >
       <main className="mx-auto max-w-7xl px-4 py-6 md:px-6 md:py-8">
         <div className="flex flex-col items-start gap-8 lg:flex-row">
