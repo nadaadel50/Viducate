@@ -129,11 +129,17 @@ def process_single_segment_summary(
     # segment.retry_count   = (segment.retry_count or 0) + quality.get("retries", 0)
     # db.flush()
  
+    # logger.info(
+    #     f"[Summarization] Segment {segment_id} "
+    #     f"quality_score={segment.quality_score:.4f} "
+    #     f"flag={segment.quality_flag} "
+    #     f"retries={quality.get('retries', 0)}"
+    # )
     logger.info(
-        f"[Summarization] Segment {segment_id} "
-        f"quality_score={segment.quality_score:.4f} "
-        f"flag={segment.quality_flag} "
-        f"retries={quality.get('retries', 0)}"
+    f"[Summarization] Segment {segment_id} "
+    f"quality_score={quality.get('score', 0.0):.4f} "
+    f"flag={quality.get('flag', False)} "
+    f"retries={quality.get('retries', 0)}"
     )
  
     if quality.get("flag"):
@@ -258,11 +264,16 @@ def process_all_segment_summaries(
         # segment.quality_flag  = bool(quality.get("flag", False))
         # segment.retry_count   = (segment.retry_count or 0) + quality.get("retries", 0)
  
+        # logger.info(
+        #     f"[Summarization] Segment {segment.segment_id} "
+        #     f"quality_score={segment.quality_score:.4f} "
+        #     f"flag={segment.quality_flag}"
+        # )
         logger.info(
-            f"[Summarization] Segment {segment.segment_id} "
-            f"quality_score={segment.quality_score:.4f} "
-            f"flag={segment.quality_flag}"
-        )
+        f"[Summarization] Segment {segment.segment_id} "
+        f"quality_score={quality.get('score', 0.0):.4f} "
+        f"flag={quality.get('flag', False)}"
+    )
 
         #********************************************
 
