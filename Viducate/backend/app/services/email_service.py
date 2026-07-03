@@ -3,6 +3,7 @@ from fastapi import HTTPException , status
 from fastapi_mail import FastMail, MessageSchema, ConnectionConfig
 from pydantic import EmailStr
 from app.config import settings
+from app.services.network_errors import is_network_error
 
 conf = ConnectionConfig(
     MAIL_USERNAME=settings.MAIL_USERNAME,
@@ -34,7 +35,13 @@ async def send_reset_email(to_email: EmailStr, reset_url: str):
         await fm.send_message(message)
         
     except Exception as e:
+        detail = (
+            "Could not send email — network connection issue. Please try again."
+            if is_network_error(e)
+            else "Failed to send reset email. Please try again later."
+        )
         raise HTTPException(
-            status_code=status.HTTP_500_INTERNAL_SERVER_ERROR,
-            detail=f"Failed to send reset email. Please try again later."
+            status_code=status.HTTP_503_SERVICE_UNAVAILABLE if is_network_error(e)
+            else status.HTTP_500_INTERNAL_SERVER_ERROR,
+            detail=detail,
         )

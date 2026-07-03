@@ -8,6 +8,7 @@ from app.models.studynotes import VideoStudyNotes, SegmentStudyNotes
 from app.models.content_preferences import ContentPreferences
 from app.ml.processors.studynotes_processor import process_video_studynotes,process_single_segment_studynotes
 from app.utils.reading_time import calculate_reading_time
+from app.services.network_errors import NetworkUnavailableError
 
 logger = logging.getLogger(__name__)
 
@@ -83,7 +84,13 @@ class StudyNotesService:
         logger.info(
             f"[StudyNotesService] Generating video notes for video_id={video_id}"
         )
-        notes = process_video_studynotes(self.db, video_id, language)
+        try:
+            notes = process_video_studynotes(self.db, video_id, language)
+        except NetworkUnavailableError:
+            raise HTTPException(
+                status_code=status.HTTP_503_SERVICE_UNAVAILABLE,
+                detail="Network connection issue while generating study notes. Please try again.",
+            )
 
         if notes is None:
             raise HTTPException(
@@ -141,9 +148,15 @@ class StudyNotesService:
 
         language = self._resolve_language(user_id, video_id, video.language or "en")
 
-        notes = process_single_segment_studynotes(
+        try:
+            notes = process_single_segment_studynotes(
             self.db, video_id, segment_id, language
         )
+        except NetworkUnavailableError:
+            raise HTTPException(
+                status_code=status.HTTP_503_SERVICE_UNAVAILABLE,
+                detail="Network connection issue while generating segment study notes. Please try again.",
+            )
 
         if notes is None:
             raise HTTPException(

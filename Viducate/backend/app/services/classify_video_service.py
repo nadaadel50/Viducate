@@ -3,6 +3,7 @@ import re
 from chromadb import logger
 import httpx
 from app.config import settings
+from app.services.network_errors import raise_if_network_error, NetworkUnavailableError
 
 BLOCKED_TOPICS = {
     "music", "entertainment", "television_program", 
@@ -77,7 +78,11 @@ async def classify_video(video_id: str) -> dict:
 
         return {"classification": "general", "duration_seconds": duration_seconds}
 
+    except NetworkUnavailableError:
+        raise
+
     except Exception as e:
+        raise_if_network_error(e, context="YouTube classify_video call")
         print(f"classify_video failed: {e}")
         logger.warning(f"classify_video failed: {e}")
         return {"classification": "general", "duration_seconds": None}

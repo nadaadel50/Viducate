@@ -3,6 +3,7 @@ import json
 import logging
 import re
 from app.services.cancellation_registry import is_cancelled, PipelineCancelledError,  check_cancelled
+from app.services.network_errors import NetworkUnavailableError, with_network_retry
 
 from groq import Groq
 from google import genai
@@ -206,13 +207,15 @@ async def call_groq_with_retry(client,  chunk: str,  chunk_index: int,video_id: 
 
             logger.info(f"[Segmentation] Chunk {chunk_index+1}, attempt {attempt+1}, ~{estimated_tokens} tokens")
 
-            response = client.models.generate_content(
-                model="gemini-2.5-flash",
-                contents=prompt,
-                config=types.GenerateContentConfig(
-                    max_output_tokens=30000,
-                    temperature=0.3
-                )
+            response = with_network_retry(
+                lambda: client.models.generate_content(
+                    model="gemini-2.5-flash",
+                    contents=prompt,
+                    config=types.GenerateContentConfig(
+                        max_output_tokens=30000,
+                        temperature=0.3
+                )),
+                context="SegmentationService Gemini call"
             )
 
             text = response.text.strip()
@@ -225,6 +228,9 @@ async def call_groq_with_retry(client,  chunk: str,  chunk_index: int,video_id: 
 
             result = json.loads(text)
             return result.get("segments", [])
+        
+        except NetworkUnavailableError:
+            raise
 
         except Exception as e:
             error_str = str(e).lower()
@@ -280,11 +286,14 @@ async def call_groq_fallback(chunk: str, chunk_index: int, video_id: int, final_
 
             logger.info(f"[Segmentation][Groq Fallback] Chunk {chunk_index+1}, attempt {attempt+1}")
 
-            response = groq_client.chat.completions.create(
-                model="llama-3.3-70b-versatile",
-                messages=[{"role": "user", "content": prompt}],
-                temperature=0.3,
-                max_tokens=8000,
+            response = with_network_retry(
+                lambda: groq_client.chat.completions.create(
+                    model="llama-3.3-70b-versatile",
+                    messages=[{"role": "user", "content": prompt}],
+                    temperature=0.3,
+                    max_tokens=8000,
+                ),
+                context="SegmentationService Groq fallback call"
             )
 
             text = response.choices[0].message.content.strip()
@@ -296,6 +305,9 @@ async def call_groq_fallback(chunk: str, chunk_index: int, video_id: int, final_
 
             result = json.loads(text)
             return result.get("segments", [])
+        
+        except NetworkUnavailableError:
+            raise
 
         except Exception as e:
             error_str = str(e).lower()

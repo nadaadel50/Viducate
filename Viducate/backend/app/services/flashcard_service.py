@@ -8,7 +8,7 @@ from app.models.flashcard import Flashcard
 from app.repositories.flashcard_repository import FlashcardRepository
 from app.ml.processors.flashcard_processor import CARDS_PER_SEGMENT, _resolve_language, process_flashcards
 from app.ml.engines.flashcard_engine import generate_flashcards_for_segment
-
+from app.services.network_errors import NetworkUnavailableError
 from app.services.quality_service import (
     score_feature_vs_segmentation,
     extract_text_from_flashcards,  
@@ -127,7 +127,13 @@ class FlashcardService:
         if not cached:
             logger.info(f"[FlashcardService] Cache miss — generating for video_id={video_id}")
             logger.info(f"[FlashcardService] Calling process_flashcards with validation")
-            process_flashcards(self.db, video_id, user_id)
+            try:
+                process_flashcards(self.db, video_id, user_id)
+            except NetworkUnavailableError:
+                raise HTTPException(
+                    status_code=status.HTTP_503_SERVICE_UNAVAILABLE,
+                    detail="Network connection issue while generating flashcards. Please try again.",
+                )
         else:
             logger.info(
                 f"[FlashcardService] Cache hit — flashcards exist for all segments video_id={video_id}"
@@ -240,21 +246,27 @@ class FlashcardService:
         #         detail=f"Failed to generate flashcards for segment {segment_id}",
         #     )
 
-        cards, quality = run_with_quality_retry(
-            generator_fn=lambda seg=segment, subs=subtopics_data: generate_flashcards_for_segment(
-                segment_title=seg.title,
-                main_topic=seg.main_topic or seg.title,
-                subtopics=subs,
-                language=language,
-                num_cards=CARDS_PER_SEGMENT,
-            ),
-            score_fn=lambda result, seg=segment: score_feature_vs_segmentation(
-                feature_text=extract_text_from_flashcards(result),
-                segment=seg,
-                content_type="flashcard",
-            ),
-            label=f"flashcard segment_id={segment_id}",
-        )
+        try:
+            cards, quality = run_with_quality_retry(
+                generator_fn=lambda seg=segment, subs=subtopics_data: generate_flashcards_for_segment(
+                    segment_title=seg.title,
+                    main_topic=seg.main_topic or seg.title,
+                    subtopics=subs,
+                    language=language,
+                    num_cards=CARDS_PER_SEGMENT,
+                ),
+                score_fn=lambda result, seg=segment: score_feature_vs_segmentation(
+                    feature_text=extract_text_from_flashcards(result),
+                    segment=seg,
+                    content_type="flashcard",
+                ),
+                label=f"flashcard segment_id={segment_id}",
+            )
+        except NetworkUnavailableError:
+            raise HTTPException(
+                status_code=status.HTTP_503_SERVICE_UNAVAILABLE,
+                detail="Network connection issue while generating flashcards. Please try again.",
+            )
 
         if not cards:
             raise HTTPException(

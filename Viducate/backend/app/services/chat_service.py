@@ -8,6 +8,7 @@ from app.repositories.video_repository import VideoRepository
 from app.ml.engines.chat_engine import generate_answer
 from app.services.embedding_service import search
 from app.schemas.chat_schema import AskResponse, MessageResponse, SessionResponse
+from app.services.network_errors import NetworkUnavailableError
 
 logger = logging.getLogger(__name__)
 
@@ -59,12 +60,18 @@ def ask(session_id: int, video_id: int, question: str, current_time: int | None,
     messages = repo.get_session_messages(session_id)
     history = _build_history(messages)
 
-    # 3. Search chroma for relevant video content
-    search_results = search(video_id=video_id, query=question, db=db)
-    context = _build_context(search_results)
+    try:
+        # 3. Search chroma for relevant video content
+        search_results = search(video_id=video_id, query=question, db=db)
+        context = _build_context(search_results)
 
-    # 4. Generate answer from Groq
-    answer = generate_answer(context=context, history=history, question=question)
+        # 4. Generate answer from Groq
+        answer = generate_answer(context=context, history=history, question=question)
+    except NetworkUnavailableError:
+        raise HTTPException(
+            status_code=status.HTTP_503_SERVICE_UNAVAILABLE,
+            detail="Network connection issue. Please try sending your message again.",
+        )
 
     # 5. Save question and answer
     message = repo.save_message(

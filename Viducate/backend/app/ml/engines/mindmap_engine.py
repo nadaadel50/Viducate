@@ -5,6 +5,7 @@ import time
 from groq import Groq
 from app.config import settings
 from app.utils.text_sanitizer import sanitize_dict, strip_cjk
+from app.services.network_errors import NetworkUnavailableError, with_network_retry
 
 logger = logging.getLogger(__name__)
 
@@ -273,13 +274,20 @@ JSON FORMAT:
 def _call_groq(client: Groq, prompt: str, max_retries: int = 3) -> str:
     for attempt in range(max_retries):
         try:
-            response = client.chat.completions.create(
-                model=MODEL,
-                messages=[{"role": "user", "content": prompt}],
-                max_tokens=4000,
-                temperature=0.2,
+            response = with_network_retry(
+                lambda: client.chat.completions.create(
+                    model=MODEL,
+                    messages=[{"role": "user", "content": prompt}],
+                    max_tokens=4000,
+                    temperature=0.2,
+                ),
+                context="MindmapEngine Groq call"
             )
             return response.choices[0].message.content or ""
+        
+        except NetworkUnavailableError:
+            raise
+        
         except Exception as e:
             err = str(e).lower()
             if "rate_limit" in err or "429" in err:
