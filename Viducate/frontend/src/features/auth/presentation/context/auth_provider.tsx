@@ -88,8 +88,7 @@ export const AuthProvider = ({ children }: { children: React.ReactNode }) => {
 
     sessionStorage.setItem("token", signupData.token.access_token);
     localStorage.removeItem("token");
-    console.log(".....................");
-    console.log(signupData);
+   
     setUser(signupData.user);
 
     return { success: true } as ApiResult<SignupResponseDto>;
@@ -115,6 +114,7 @@ export const AuthProvider = ({ children }: { children: React.ReactNode }) => {
         signup,
         logout,
         loading,
+        
         isAuthenticated: !!user,
         refreshUser,
       }}

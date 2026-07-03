@@ -111,7 +111,7 @@ export function VideoPlayer() {
     if (seekTo === null) return;
 
     seek(seekTo);
-    console.log("seeking to:", seekTo);
+   
     setSeekTo(null);
   }, [seekTo]);
 

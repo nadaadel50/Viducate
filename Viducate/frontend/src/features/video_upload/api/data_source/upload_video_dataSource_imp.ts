@@ -32,13 +32,12 @@ export class UploadVideoDataSourceImp implements UploadVideoDataSource {
 
 
   try {
-    console.log("Requesting upload link...");
+   
 
     const linkRes = await this.uploadVideoService.requestUploadLink(
       uploadFilestoFormData(uploadReq)
     );
-    console.log("Received upload link:", linkRes);
-    console.log("the video id is",linkRes.video_id)
+  
     
  onVideoIdReceived?.(linkRes.video_id);
     videoId = linkRes.video_id;
@@ -52,7 +51,7 @@ export class UploadVideoDataSourceImp implements UploadVideoDataSource {
 
     const confirmRes = await this.uploadVideoService.confirmUpload(videoId);
 
-    // console.log(confirmRes)
+    
 
     return {
       success: true,

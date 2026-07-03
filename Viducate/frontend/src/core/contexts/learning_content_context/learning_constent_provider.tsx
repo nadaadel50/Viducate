@@ -10,7 +10,7 @@ export function LearningSessionProvider({ children,}: {children: React.ReactNode
   const [hasUnsavedChanges, setHasUnsavedChanges] = useState(false);
 
   useEffect(() => {
-    console.log("Has unsaved changes:", hasUnsavedChanges);
+   
   }, [hasUnsavedChanges]);
 
   const handleSetHasUnsavedChanges = (hasChanges: boolean) => {
@@ -20,10 +20,7 @@ export function LearningSessionProvider({ children,}: {children: React.ReactNode
 
   const [seekTo, setSeekTo] = useState<number | null>(null);
 
-  // const [currentTime, setCurrentTime] = useState<number>(() => {
-  //   const saved = sessionStorage.getItem(STORAGE_KEYS.currentTime);
-  //   return saved ? Number(saved) : 0;
-  // }); 
+ 
 
 const [currentTime, setCurrentTime] = useState<number>(0);
 const baselineRef = useRef<number>(0);

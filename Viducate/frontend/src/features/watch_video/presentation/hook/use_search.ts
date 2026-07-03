@@ -17,7 +17,7 @@ export const useSearchMutation = () => {
       if (!response.success) {
         throw new Error("Search failed");
       }
-      console.log("search result is",response.data)
+     
 
       return response.data;
     },

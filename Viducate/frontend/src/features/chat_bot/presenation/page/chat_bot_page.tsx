@@ -32,6 +32,11 @@ export function ChatBotPage() {
     handleOpenDeleteMessage,
     handleDeleteSession,
     isLoadingMessage,
+    error,
+
+    isDeleteSessionLoading,
+    deleteSessionError,
+   
   } = useChatMessages(open);
 
   const handleCloseDeleteModal = () => {
@@ -82,11 +87,19 @@ export function ChatBotPage() {
     sessions={sessions}
     handleSelectNewSession={handleSelectNewSession}
     setOpenDeleteMessage={handleOpenDeleteMessage}
+  
   />
 </div>
         {/* Delete Modal */}
+        {deleteSessionError && (
+          <div className="absolute top-0 z-20 flex items-center gap-2 rounded-lg bg-red-100 px-3 py-2 text-sm text-red-700">
+            <span className="font-semibold">Error:</span> {deleteSessionError}
+          </div>
+        )}
         <ConfirmationModal
           open={openDeleteModal}
+          isLoading={isDeleteSessionLoading}
+         
           title="Delete Chat"
           description="Are you sure you want to delete this conversation? This action cannot be undone."
           onClose={handleCloseDeleteModal}
@@ -107,6 +120,7 @@ export function ChatBotPage() {
             messages={messages}
             messagesEndRef={messagesEndRef}
             isLoadingMessage={isLoadingMessage}
+            error={error}
           />
 
           <ChatInputBtn handleSend={handleSend} />

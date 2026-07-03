@@ -13,7 +13,7 @@ export function useDeleteAccountMutation() {
         throw new Error(response.error);
       }
 
-      console.log("delete account is..............", response);
+     
 
       return response.data;
     },

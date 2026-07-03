@@ -5,6 +5,7 @@ import { savePreferencesUseCase } from '../../../../core/di/pref_container';
 
 export const useSavePreferences = () => {
   const [isSubmitting, setIsSubmitting] = useState(false);
+  const [saveError, setSaveError] = useState<string | null>(null);
 
   const submitPreferences = async (prefs: VideoPreferences) => {
     setIsSubmitting(true);
@@ -13,12 +14,12 @@ export const useSavePreferences = () => {
       const result = await savePreferencesUseCase.execute(prefs);
       return result;
     } catch (error) {
-      console.error("Error saving preferences", error);
+      setSaveError(error instanceof Error ? error.message : 'An unexpected error occurred when saving preferences');
       throw error;
     } finally {
       setIsSubmitting(false);
     }
   };
 
-  return { submitPreferences, isSubmitting };
+  return { submitPreferences, isSubmitting, saveError };
 };

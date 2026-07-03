@@ -23,7 +23,7 @@ export function useChatMessages(open: boolean) {
 
   const { videoId } = useLearningSession();
   const [openRecentChats, setOpenRecentChats] = useState<boolean>(false);
-  const { data: sessionMessages } = useGetSessionMessages({
+  const { data: sessionMessages, error: sessionMessagesError ,isLoading: isSessionMessagesLoading} = useGetSessionMessages({
     session_id: sessionId!,
     video_id: videoId!,
   });
@@ -35,7 +35,7 @@ export function useChatMessages(open: boolean) {
 
   const [openDeleteModal, setOpenDeleteModal] = useState(false);
 
-  const { deleteSession } = useDeleteSession();
+  const { deleteSession,isLoading: isDeleteSessionLoading,error: deleteSessionError } = useDeleteSession();
   
 
   // prevent body scroll
@@ -148,10 +148,10 @@ export function useChatMessages(open: boolean) {
     setOpenDeleteModal(value);
   }
   function handleDeleteSession() {
-    console.log(sessionId,videoId)
+  
     
     if (sessionId && videoId) {
-      console.log("came here to delete2")
+    
       deleteSession({
         session_id: sessionId,
         video_id: videoId,
@@ -179,5 +179,11 @@ export function useChatMessages(open: boolean) {
     openDeleteModal,
     handleOpenDeleteMessage,
     handleDeleteSession,
+
+    sessionMessagesError,
+    isSessionMessagesLoading,
+
+    isDeleteSessionLoading,
+    deleteSessionError,
   };
 }

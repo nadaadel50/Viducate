@@ -11,9 +11,9 @@ export function useSendMessage (){
         await getAnswerCardUseCase(req)
 
       if (!response.success) {
-        throw new Error("get answer chatbot failed");
+        throw new Error(response.error);
       }
-      console.log("the chat respose is:",response.data)
+    
      
 
       return response.data;

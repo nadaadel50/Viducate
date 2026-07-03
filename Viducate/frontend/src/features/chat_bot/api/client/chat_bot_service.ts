@@ -8,7 +8,7 @@ import type { DeleteMessageRequestDto } from "../models/delete_session_req_dto";
 
 export class ChatBotService {
   async getAnswer(reqDto: ChatRequestDto): Promise<ChatResponseDto> {
-    console.log(reqDto)
+  
     const response = await apiClient.post(
       "/chat/ask",
       {
@@ -41,8 +41,7 @@ export class ChatBotService {
     const response = await apiClient.get(
       `/chat/videos/${videoId}/sessions`,
     );
-    console.log("server",response.data)
-
+  
     return response.data;
   }
 

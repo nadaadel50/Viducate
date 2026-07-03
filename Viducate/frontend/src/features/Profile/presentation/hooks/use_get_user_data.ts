@@ -12,7 +12,7 @@ queryFn:async () => {
     if(!response.success){
         throw new Error(response.error);
     }
-    console.log(response.data)
+  
      return response.data
 },
 

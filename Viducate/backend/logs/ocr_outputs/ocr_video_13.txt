@@ -1,4 +1,7 @@
 # OCR Output — video_id=13
-# Language: None
-# Total segments: 0
+# Language: en
+# Total segments: 3
 
+[00:00:09] Prims Algorithm | Minimum Spanning | Tree MST
+[00:01:59] Binary Henp and | A djacency list
+[00:02:09] A connected undirected graph G  V,E with edge weights w | A minimum spanning tree defined by the array prev | for all u V: | Pick any initial node Mo | priority queue, using cost-values as keys

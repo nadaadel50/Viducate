@@ -81,7 +81,7 @@ export class ChatBotDataSourceImp implements ChatBotDataSource {
 
       const resonseEntity = toChatResponse(response);
 
-      console.log("answer is",resonseEntity);
+     
 
       return {
         success: true,

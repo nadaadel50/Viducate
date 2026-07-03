@@ -25,7 +25,7 @@ export function QuizQuestionHeader({
 
   const handleWatch = () => {
     if (question.video_timestamp == null) return;
-    console.log("going to watch video at timestamp:", question.video_timestamp);
+  
 
     setCurrentTime(question.video_timestamp);
     setSeekTo(question.video_timestamp);

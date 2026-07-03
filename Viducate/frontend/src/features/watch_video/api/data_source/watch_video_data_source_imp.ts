@@ -21,7 +21,7 @@ export class WatchVideoDataSourceImp implements WatchVideoDataSource {
   }
   async saveVideoProgress(req: SaveVideoReq): Promise<ApiResult<void>> {
     try {
-      console.log("the data is",mapSaveVideoReqToDto(req))
+    
       await this.watchVideoService.saveVideoProgress(mapSaveVideoReqToDto(req));
 
       return {
@@ -30,7 +30,7 @@ export class WatchVideoDataSourceImp implements WatchVideoDataSource {
       };
     } catch (error:any) {
       const message = handleApiError(error);
-      console.log("the error is",error.response.data)
+     
      
       return { success: false, error: message };
     }

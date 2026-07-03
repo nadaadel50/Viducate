@@ -3,7 +3,7 @@ import { COLORS } from "../../../../core/constants";
 import { MainText } from "../../../../core/componants/text_section";
 import { CustomButton } from "../../../../core/componants/custum_btn";
 import { ClickToResend } from "./click_to_resend";
-import { FormattedMessage, useIntl } from "react-intl";
+import {  useIntl } from "react-intl";
 import { useLocation } from "react-router-dom";
 import { useForgetPassword } from "../hooks/use_forget_password";
 

@@ -32,6 +32,8 @@ export const CustomizeExperienceModal: React.FC<CustomizeProps> = ({
     clearError,
 
     handleSave,
+    saveError,
+    getSessionsError,
   } = useCustomizeExperience(videoId, onClose);
 
   return (
@@ -42,6 +44,8 @@ export const CustomizeExperienceModal: React.FC<CustomizeProps> = ({
     >
       {isLoading ? (
         <LoadingPreferences />
+      ) : saveError||getSessionsError ? (
+        <div className="text-red-500">{saveError || getSessionsError?.message}</div>
       ) : (
         <>
           <CustomizeHeader onClose={onClose} />

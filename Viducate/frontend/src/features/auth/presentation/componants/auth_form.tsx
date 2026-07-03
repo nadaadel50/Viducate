@@ -11,6 +11,7 @@ import { AppRoutesNames as routes } from "../../../../app/routers/routes";
 import CustumBtnLoader from "../../../../core/componants/custum_btn_loader";
 import { CustumError } from "../../../../core/componants/custum_error";
 import { useAuthForm } from "../hooks/use_auth_form";
+import { Keys } from "../../../../core/constants/keys";
 
 type AuthFormProps = {
   type: "login" | "signup";
@@ -38,7 +39,7 @@ export function AuthForm({ type }: AuthFormProps) {
   
 
   const loginWithGoogle = () => {
-    window.location.href = "http://localhost:8000/api/v1/auth/google/login";
+    window.location.href =Keys.google_url_key;
   };
 
   const getFieldProps = (

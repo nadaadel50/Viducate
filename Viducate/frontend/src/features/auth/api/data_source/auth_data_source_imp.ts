@@ -60,7 +60,7 @@ export class AuthDataSourceImp implements AuthDataSource {
 
       return { success: true, data: response.message };
     } catch (error) {
-      console.log(error);
+     
       const message = handleApiError(error);
       return { success: false, error: message };
     }
@@ -81,7 +81,7 @@ export class AuthDataSourceImp implements AuthDataSource {
   ): Promise<ApiResult<SignupResponseDto>> {
     try {
       const response = await authService.register(data);
-      console.log("2");
+     
       return { success: true, data: response };
     } catch (error) {
       const message = handleApiError(error);

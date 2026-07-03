@@ -1,5 +1,4 @@
 import { apiClient } from "../../../../core/api/apiClient";
-import type { ApiResult } from "../../../../core/api/apiResult";
 import type { ForgetPassReqDTO } from "../models/forgetPass/forgetpass_req_dto";
 import type { ForgetPasswordResponseDto } from "../models/forgetPass/forgetpass_response_dto";
 import type { ResetPasswordResponseDto } from "../models/forgetPass/reset_pass_response_dto";

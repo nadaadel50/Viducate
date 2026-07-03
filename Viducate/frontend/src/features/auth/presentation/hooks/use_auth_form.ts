@@ -183,7 +183,7 @@ export const useAuthForm = (isLogin: boolean) => {
       localStorage.removeItem(isLogin ? "loginData" : "signupData");
       navigate(AppRoutesNames.dashboard, { replace: true });
     } catch (err) {
-      console.error("Unexpected error:", err);
+     
       setServerError("Something went wrong");
     } finally {
       setIsSubmitting(false);

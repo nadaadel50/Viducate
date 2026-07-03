@@ -62,7 +62,7 @@ export function UploadLoadingSection({
 
     
 
-console.log("error value:", error); // ← ايه اللي بيطبع؟
+
 
     upload();
 

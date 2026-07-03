@@ -27,13 +27,12 @@ export function useVideoData() {
       );
 
       if (!result.success) throw new Error(result.error);
-      console.log("topics is: ",result.data)
-
+    
       return result.data;
     },
     enabled: !!videoId,
     
-    //refetchOnMount: "always",
+
     refetchOnMount: false,    
  
     
@@ -44,7 +43,7 @@ export function useVideoData() {
 useEffect(() => {
   if (!query.data || query.data.topics.length === 0) return;
 
-  console.log("query.data is: ", query.data);
+ 
 
   setTopics(query.data.topics);
   handleSetMarks(query.data.bookmarks);

@@ -21,15 +21,10 @@ export class FlashCardDataSourceImp implements FlashCardDataSoruce {
      try{
   
       const response=await this.service.getVideoFlashCards(videoId)
-     // console.log("flash cards is...................",response)
-    // console.log("response segments",response.segments)
-      // const resonseEntity=(response.segments.map((segment)=>{
-      //   return toSegmentEntity(segment)
-      // }))
+   
       const responseFlashCards=extractFlashcards(response.segments)
       
-      //console.log("flash cards after transform is...................",resonseEntity)
-     
+   
     
       return{
         success:true,

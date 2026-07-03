@@ -12,12 +12,12 @@ export function useDeleteSession() {
       const response = await deleteSessionsUseCase(req);
   
       if (!response.success) {
-        throw new Error("Delete session failed");
+        throw new Error(response.error);
       }
      
     },
     onSuccess: (_, req) => {
-      console.log("delete done")
+    
      
       queryClient.setQueryData(
         ["sessions", videoId],

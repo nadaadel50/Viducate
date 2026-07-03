@@ -11,7 +11,7 @@ export class WatchVideoService {
       `/segments/videos/${reqDto.video_id}`,
       {},
     );
-    console.log(response.data)
+   
 
     return response.data;
   }

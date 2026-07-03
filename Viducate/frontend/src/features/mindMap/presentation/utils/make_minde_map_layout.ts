@@ -95,7 +95,7 @@ export function getLayoutedElements(nodes: Node[], edges: Edge[]) {
  
 
 
-console.log("positions:", JSON.stringify(positions, null, 2));
+
 
  
   function getHandle(fromPos: { x: number; y: number }, toPos: { x: number; y: number }) {
@@ -103,10 +103,7 @@ console.log("positions:", JSON.stringify(positions, null, 2));
     const dy = toPos.y - fromPos.y;
     const angle = Math.atan2(dy, dx) * (180 / Math.PI); // -180 → 180
 
-    // -45 → 45   = يمين
-    // 45  → 135  = تحت
-    // -135 → -45 = فوق
-    // غير كده    = شمال
+ 
     if (angle >= -45 && angle < 45)   return { source: "right",  target: "left"   };
     if (angle >= 45  && angle < 135)  return { source: "bottom", target: "top"    };
     if (angle >= -135 && angle < -45) return { source: "top",    target: "bottom" };

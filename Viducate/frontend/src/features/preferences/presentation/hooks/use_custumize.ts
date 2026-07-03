@@ -21,11 +21,12 @@ export function useCustomizeExperience(
   videoId: number | null | undefined,
   onClose: () => void,
 ) {
-  const { submitPreferences, isSubmitting } = useSavePreferences();
+  const { submitPreferences, isSubmitting, saveError } = useSavePreferences();
 
   const {
     data,
     isLoading,
+    error: getSessionsError,
     
     refetch,
   } = useGetPreferences();
@@ -109,7 +110,9 @@ export function useCustomizeExperience(
 
     serverError,
     clearError: () => setServerError(null),
-
+getSessionsError,
     handleSave,
+    saveError,
+    
   };
 }

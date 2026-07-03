@@ -13,7 +13,7 @@ export const useGetPreferences = () => {
            throw new Error(response.error);
        }
 
-       console.log("the deafult is",response.data)
+     
        
         return response.data
    },

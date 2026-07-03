@@ -51,7 +51,7 @@ export const useQuiz = (
     localStorage.setItem(`quiz_isReview_${quizKey}`, isReviewMode.toString());
   }, [quizKey, currentIndex, answers, quizState, isReviewMode]);
 
-  // بعد
+
   useEffect(() => {
     if (questions.length === 0 || quizState !== "playing" || isReviewMode)
       return;

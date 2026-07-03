@@ -1,6 +1,201 @@
 # OCR Output — video_id=10
 # Language: en
-# Total segments: 2
+# Total segments: 197
 
-[00:02:19] use cases | backtracking | - finding the correct path through a maze
-[00:02:29] compile-time memory management | - programs use them to store local data and procedure info | -nested and recursive functions
+[00:00:00] BIOLOGY | Cates | UICK | BIOLOGY | REVIEW | ATGTTA CCTA | ATGTAC CTA
+[00:01:20] No membrane-bound nucleus nucleoid | membrane bound nucleus | No membrane bound organelles | Membrane bound organelles | DNA is naked to cireular or linear
+[00:01:50] cdy in the wbont. | Tcks caned inside wtons of is mater | slage of develepont | labe: in the meupion
+[00:02:00] Four Fundamentol tenets of cell theory : | 1 - All living things are composed of cells. | 2- The cell is the basrc funchional unit of life | 3 - Cells arise only froin preexishing cells O | 4 - Cells carry genetic info in the form of DNA
+[00:02:10] prokaryotes  No nucleus, | Eukary otes  Have nuclaus nuclear membrane r | L cystosol cyloplasm | The condents of both combined
+[00:02:20] The living content of the cell that is surrounded by a plasma membrane | Organelles: Subunit in the cell wilth a specific funchion. | suspended in the cytosol. | in eukaryotes, most organelles are membrane-bound. | separate cellular compartments
+[00:02:30] Cell plama membrane | hylophut headinterchig w aos nvroment | Chghy seaecbve bower
+[00:03:00] - Cell membrane | Nucleus: Carries the genetic matenial in DNA organized into chromosomey | -Cyptosdl: allows for diffusion of mollecaules thru different areas | of the cell | Organelles: Mitochondnia, lysosomes, Endoplasmic reticulum, peroxisomes
+[00:03:10] form follows function | Sperms need to move  need a lot of energy lots of mitachondria | Islets af Tangerhans in pancreasneed to secrete lots af Golyi  ER | RBCs just carry O, no organelles
+[00:03:40] Mitochondria  power plant: provides energy. | lysosome Soldier: desroyes | Endosome  Delivery guy : packages shuff and deliver them | ER R.E.R Translator: translate protein for secretion | S.E.R  Doughnut: Fat synthesis
+[00:04:30] Protoplasm: , everything ineluded in the cell membrane | divided into nucleoplasm tx cytoplasm | .Contains cytosoltr oreomelles | Cytosol:Area of cytoplasm thats not beld by organelles | Cyloplasm minus the organelles
+[00:04:50] The Nucleus  The larqest orgonelle in animal cells | The control room, the brain of the cell. | Condains the genetic material DNA in the form of chromasomes | essential for cell replicahion division | Surrounded by a membrane Nuclear membrane
+[00:05:00] The nuclear membrane envelope | A double membrane surrounding the nucleus | Maindains the intemal environmest in the nuclens . How? | by sepecting the nuclaws from the cyloplasm. | Membrane pores nuclear pores :-
+[00:05:30] DNA franscriphion DNAnRNA : nucleus | DNA translation mRNA  protein:
+[00:06:00] The nucleolus: literally: a small nucleas | Ooccupies 25 of the nucleus | Assembly of ribosomes | Synthesis of rRNA
+[00:06:10] For A students | The vast majonify of cells in your body have 1 nucleus | RBCs in mamnals have Zero | Osteoclasts bone: multiple | In WBCs, the nucleus may be lobated bi-lobed,tri-lobed,
+[00:06:30] double mombine bowd aggmnte | The powor plant af the col.  Arp nony anang 43 | - The killer of the cell s releases enyme wo inikiate apoplbsis | - 2 membranes | proeesonead cell dcalh
+[00:07:00] Protons are conshantly being pumped from madnix to intermembrane spac prodon | thru ATP synthare | inatinge of the inor monbvane - | Ceelsias Tick recle
+[00:07:40] For A  studends | -Mature mammalian RBCs have neither a nucleus nor a milbochondrion | - Hepatocytes liver cells have  2.ooo mitochondria | -Mitochondria produces most not al of ATp for the cell. | -Mitochondrial DNA is similar to bacterial DNA
+[00:07:50] Mitochondria  power plant: provides energy. | lysosomg Soldier: destroyes | Endosome Delivery guy : packages shuff and deliver them | ER R.E.R Translator: translate protein for secretion | S.EiR Doughnut: Fat synthesis
+[00:08:00] Discovered in 1974 less than 50 years ago !! | Membrane. bound organelle in animal cells. | resicles containing hydrolyhc enaymes  digest waste producds of the cell. | lysosornal membrane Keeps these entymes Contained lest they should | aligest the cell  cause aubblysis
+[00:08:20] from outside the cell  endocytosis | with help of en somes | from inside the cell  autophagy | with the holp of phagasomes
+[00:09:10] Mitochondria  power plant: provides exergy. | lysosome Soldier: destroyes | Endosome Delivery guy : packager shuff and deliver them | ER R.E.R Translator: translate protein for secretion | S.E.R  Doughnut: Fat synthesis
+[00:09:30] Series of tubular  Flat vesicular structures | double membrane is folded inbo invaginations | attached to the nuclear membrane. | Rough Ribosomes, proteintranslation | Smooth no ribosomes. fat syntheris, deloxifigation
+[00:09:50] Smooth ce fat synthesis | phasphelipd of sell menckn | eg. Ses hormones
+[00:10:10] Mitochondria  power plant: provides erergy. | lysosome Soldier: destroyes | Endosome Dslivery guy : packages stuff and deliver them | ER R.E.R Translator: translate protein for secretion | S.E.R Doughnut: Fat synthesis
+[00:10:20] The distribution Center  FedEx 1 | Stacked membrane-bound sacs | Styff  ER  Vesides  Golgi | Golgi modifies stuff | A chemical groups po,, sO,, Carbs
+[00:11:00] How Golqi ER | work in harmony
+[00:11:20] Mitochondria  power plant: provides energy. | lysosome Soldier: destroyes | Endosome Delivery guy : packages shuff and deliver them | ER R.E.R Translator: translate protein for secretion | S.E.R Doughmut: Fat synthesis
+[00:11:40] encymes for pentose phosphatz shunt | Help break down very lang chain faty acids | . Help form phospholipids  cell membrane | eg. plasmalogen: myelin sheath that covees the nerve. | Reduchion of Reacive oxygen species R.as aka. free radicals
+[00:12:00] Peroxisomal diseases :- | : penoxisome forms myelin sheath. | : adrenoleukadyshrophy will have nervous system
+[00:12:20] . The most abundant thing in the cell is water  70 | C except for fat cells | . The 2nd most abundant is protein 10-20 | eq. protein hloments  micetubules | cyloskeleton: network uf fibrillar proteins orgamized into filaments oc tubules
+[00:12:40] cytoskeleton structural proteins | Fibrillar protein network | synthesized inthe ribosornes | organized into tubules or filaments | Determine the shape uf the cell.
+[00:13:00] Eukaryotic cels has 3 types ofcytoskeleton | made of actin | Cyloskeleton: netwark of fibrillar probeins organized into filaments o tubules
+[00:13:30] Microfilaments actin filaments | FUNCTION:with the halpofATP | . Tracks for movument of myasin mole cules. | . Muscle contrachion | . Intracellular transporttrafficking
+[00:13:40] Polymerization needs GTP | . Hollow cylinders with a lumen : | polymers of d-tubulin x B-tubulin | Nine triplets of microtubules  centrioles star.shaped | Nine doubleks  2 additional  cilia  flagella  wheel-shaped
+[00:14:10] How do you | - Found in eukaryotes | like my eyelashes | Nine doubleks  2 additionalmitrofubules | motile, or immohle
+[00:14:30] For At students. | No motile cilia in fallopian tube  ectopic pregnancy. | adefect uf 1Y immotile Glium in renal tubule cells  PKD | Defect in Dynein arm  Kartageners syndrome | Caka IY ciliary diskinesia, or immohile cilia syndrom
+[00:15:10] flagella are identical | Helicobacber pylori has | Sperm has a flagellum
+[00:15:30] 9 peripheaal doublets | 2 central single
+[00:15:40] Nine doubleks  2 additional  cilia r flagella wheel-shaped | Nine triplets of microtubules  cewtrioles star-shaped | 2 centrioles  1 centrosome | centers of mierohubules | Made of tubulin
+[00:16:00] stronger than microfilaments | They form nuclear lowina dense fibrillar network inside the nucleus | Type of intermediate filaments
+[00:16:30] The Cell is the builoling unit of the living organism | Porform body funchions
+[00:16:40] Epithelial tissue Epithelium | I cover the body  I line ibs cavibies | I stand over a basement membrane | I aspire towands the | outer body sufface or the inside of a cavily.
+[00:17:00] Conneofive fissue matnx | the bulk of a substance | -The bed that holds the cells strudure | The furctional part of on ogan | - No specific function to that
+[00:17:20] Classification Of epithelium | number of layers | Simple 1 layer | bet one achuailly
+[00:17:30] a group of cells suited for a specific funcbion | 4 typer of tissue | Epithelial tissue epithelium a
+[00:17:40] I cover fhe body c I line its cavibies | I stand over a basement membrane g5 | Iaspice towards the | outer body sufface or the inside of a cavily. | I am the active person in the enterpriseI do the job
+[00:17:50] I provide Support.. I give a framework | Unlike epithelium which forms the parenchyma, | I form the stroma that supports. | Without my suport, the epithelium is nothing | I secrete collagen  elastin
+[00:19:20] G.: Growth 1: Reparing for 5 | Gyclins,cOK tanscriphion oTanslehion  Popteias | call 17 in sace. 11 anegy tn pobeic poduchion. | tt organells formation. | G2 Growth 2Reporing frM
+[00:20:10] Always in Gp | Never in Go | Do Not divide | very short G | Divrde under cerbain
+[00:20:30] Objective: anticoncer dugs. | the mest affeched. | - PRos: Concer cels wont be able bo divide o cancer cells wil die. | - Cons: Your own cells wont be able to divide  your cells will dic. | Rapody dicding ges ave th mast affechad
+[00:20:50] Goal: prowent mubant cols fom replcating or causing cancer | -Dekect DuA danage To Repair  o entes the cyele | Cyclins bird b r achinate Gyclin-dependent kinases. | Cytie , ctks  taasciphom | the Cell lyole,
+[00:21:00] 1. G1 reshichion checkpoint. | 3 ronsoiptional repmssans oka pockat poteins | Firsl lafy inliba the cel eacle | 2bind to E2F frorscriphion fachos o Provent Pngussion | Both Rb p53
+[00:21:10] 1. G1 reshriction checkpoint. | 3 ronsoiptional repmessans oka pockat poteirs | Eivsl: defts inhibi rhe cel cacle | 2bied to E2F tronsciphon fachos o Prevont Pnguession | are bumor Suppressorns
+[00:21:20] 2. G2 Checkpoint Gg-M checkpoint | Firsk detis inhibit the cell cycle. | p53, Chk1 i Chk2 Prevonk Pognession, 1e. aresk | Positive fuedback leop. | Cyolin, 8 CDK-1 Cyclin B-CDk-1 Complex p entay to the M phase
+[00:21:30] 3. Metophase spindlle Checkpoint | Wokc spindle is under bpdlar tenoiee tengor Seperation | Rin 4f inbibtin of Anaphoass.pemohing-ampkex ARC | SoARC is uzinkibobed. | Cuk the Cobssin
+[00:21:40] Defeckive in Xeroderna | Lynick Sundrome Msw, MLH | smlian yo pole | - Xoodatnmet Fimnica Cul, abc3 | . Seel canre icts, Bicay?
+[00:21:50] Whots the disease? | Wheres the problem? | Rebinoddasims LiFraneni Spadone | DNe cmeslinkng ogents | Nuclobides extision repair
+[00:22:00] When cell cyck Oobols is danaged | Mubaion in TP53 gete | abnormal p53 prolein | Palferabon of matant culs occur | Tumor is not suppressed
+[00:22:10] Not imolved in sexual reproduchion | Imolved in sexual reproduchion | diploid 2n cels | 4 haploid n cells | 1 round division
+[00:23:50] Pro phase I X | Mchaphare I- M
+[00:24:00] MEIOSIS π is almost | idenbical to Mitosis. | The only differna is what you start with | Slout wih: 2n | end with: identicel
+[00:24:10] 3. Seminiferous hubudes | 5. Vas Deferens | 7. Uninary koladder | 9 Ejaculatory duet | 13. Glons penis
+[00:24:30] n : ploidy | 46 Sapk chomesomes | C number fChromatids
+[00:27:30] Phases of mensmual cyclke | Proliferation eshogen phase | Secretory pagesterene phase | Day 1 5 | FSH Follioke  Esteagen
+[00:27:40] 1 bilcicke -o Greafian | expels the ovm | I temp 1 c | fallicle -o Luteal | in the 2ind ye of
+[00:28:00] The structure of the ovum | Cel membrane vitelline membrane | Follicador cells af | the corona radiata
+[00:28:10] Steps of ferbilzation | 2. Acrosomal reochion. | 3. Polyspermy block | 4. Completion of meiosis I | 5. Zygote formation
+[00:28:20] Lask skep in, sperm, maburabion | Ready to fertrize | Uterine wall secretions migger, | Sperns plasina moxbranc | Repoves the sperns hip
+[00:28:30] Recognion bebween - s .why? - To ensuRe some-species furbveabion, | Wken spem reaches the zena pellucida, achin filamenbs wil bind ZP3 | Release ofhypdobpticemymes by the sperms AcRosomeo dgest thne the Zena pellucida. | the Zona pellucida ensuRes some-species fevblicobon. | 0s1 monbeme edine meebne
+[00:28:40] 3. Polyspermy Block | Blocks PolyspermyBlocks Poly plaidy | . FAST BLOCK | Rapid ensck, shart dution | Cuk the knie belwsen
+[00:28:50] 4. Complehion of moiosis I | 29 coute 1 | n ploidy 2ntypod | 46 Suge choomsomes | C number ofChvomelids
+[00:29:20] The embryo itself | lenor call maes | Ouler Cel mass
+[00:30:10] Epodermis of shen over skull | Camial neves, Schwann cell
+[00:31:20] Peorls for the pros | Basal layer of the skin | Pneumocyhes type 1 | Hematoporehic shem cells
+[00:31:50] Physiological or Pathological | Mypoperfurion dm 6 clot. | Forms blebs Apoplobic blebs | Chromahin gat condensed r fragmanted.
+[00:32:00] , Prevents th lass of DrA motenal genes. | : Thoy oo Nor eplicote easily s They sheten with each | Subsequent division cyole: | Telomerase: , An enzyme thak synthesses Telomere. | . Prevents cell aging senescence:
+[00:32:40] 1 artery  2 veins | 2 arbenies  1 vein | Arbery carnies oxygenated blood. | Arbery carries deoxygenated blood. | Vein carries deoxygenated blood
+[00:32:50] .  2-3 BPG | shift to the RE | shift to the left:
+[00:33:30] ilake deficieny  Phenygoin | 1 It - 18 cs
+[00:34:10] Second, Fetal Croulabion | Nor- funchional lungs | - Foromen Ovole | branch of aa
+[00:34:50] - Fonsmsa-Dvale Clase -fossa, Ovalis. | - hches-Aberiosus. ligamonbum Arberioous
+[00:35:10] White malter  Gray matter | White: myelinated faste
+[00:35:20] You con contial | You camst conbol
+[00:35:40] A collection f | Oall bodieo Somas
+[00:35:50] lue can see 6 | we camot see ib | Touching bt sh
+[00:36:00] All nevons have | Not all nevene have | a ryeln sheath
+[00:36:20] ②The nerve impulse in yeur body is uni-direchional | kn one dirackon | Towlands the axon knob
+[00:36:30] The Struchire of the newon | iT cell surface orea - recephion of m sigmals. | Soma cell BadySumounded by cell membrane | Axon nerve fiber | lamnoo nerve signals in 1 direchion i vvo.
+[00:36:50] Poteins secreted by Neuroglial cells or by myocybes. | Funckion: Development, Gowth, Survival r regenerations | Internalized by nerve endings | transported bo the Somas
+[00:37:00] Niss bodies Granules | Granular bodies bound in neuvons. | Not found in axans or axon Hillock | RERf Roseltes f ribosomes | Miss shain Awline slain for RNA granules
+[00:37:40] Mgu Clinical Pearls | Brain Spinal Cord
+[00:37:50] Niggels of Medkine | ④During rest polarized state The inside f the membiane is RMP | At Achivahion Roversd of polanby   The inside of the membrose is
+[00:38:10] The achen Ppterhol | Duving rest : Poleization | , Membrane is -g the inside. | - 90 mV. | , Membrane is  in tn inside.
+[00:38:40] Selecive Permeabiliby of the membrane. | The membrans is penacable to k ts s | The membrans is impexmeable to potains or onpnc mons | , K is leaving ahertas No is eckeaing. | The amount ofKeffx is 20 to 10o tines greater than He amount of no
+[00:38:50] Resting Membrane Potential RMP | 0 ks the Potential difference across the Membrane during Rest. | The inside ospect is moe negalive relabive bo the cutside. | What Causes the RMP ? | Selecbive Permeabiliby of the membrane.
+[00:39:00] The Achion Potential | Duving rest Bolaneation | Merkeane i  th inide. | - 90 V. | Aclivolion s Depelex taliae
+[00:39:10] Absolute Refracbory Period ARP | Relatine Rehrachony Period RRp | Its a penod of dame duing who a 2nd | Its a period of time during which a gnd | Ackon Rtenkial: Ap camal occw to malber
+[00:39:40] Exodation Conbraction Coupling | ①Nat influx-o Depolarization | ③ Cat influx | ④ Activatiom 6 A.Ch vesices | 6A.Chbinds is Ny secepors
+[00:40:20] 1 type  Somatic | 2 types : Sympathelic 8r Parasympathehic | 1 Target : Supply skeletol muscles | 1 ype of, muscles | 2 lypes of muscla
+[00:40:30] Somabic spinal nenve is | An bype thack, myelinahed | tel bdy ai5 | Spisol sont. 1 wh
+[00:41:20] Spherical lens for near vision | p No effect on accompdation
+[00:41:40] Conshickor pupillae ms. | Dilator pupillas ms. | Edinger,Weshphol nudeusrw CN | LH.C  Ti  Supe cervical gangha | shark cling naruet
+[00:42:20] Types of fibere | Bhest yunglonk, alorurmic pves | T. L, Cholinergic A.Ch
+[00:43:10] nipple is ducts | milk poduchan r
+[00:43:20] ,I soy wahr dunas | this decreases the | of the plasea | ADH can help
+[00:43:50] Decreensss gluccaa and F.F.A. | in Me blood | Inscoresmas gluczse and FEA | Incnasse glucose and E.F.A. | Taia hoe cababolie
+[00:44:10] Grouth homane GH | Anti- Inoulin actions | I1 Octeogenesis de | comelar to pro.inaukin | C. glacone 1x FFA
+[00:44:20] Teaine is bond io Tpogsn | Fillicalar cells in the thopoud erthe
+[00:44:30] Thyroid Hormone Actions | 1 Body TemperahurB | Permissine actions on catecholamines | Thypoid Homons enhamces the achion of catecholamines How? | by it the number  sancithity of 8 receplorr.
+[00:44:40] Tyroidgond abltn n sugey raddie | Tos multinodular Goiber | TSH- secreling tumor | TRH- Seveling tumor | Discdhin  losie shools
+[00:45:00] PTH leads to | M senum Car Dct  Coliecting | Serum phasphatePCTPTHsecrhe pOite PeTseqm | Calcitomin leads to | .1,25 OH, Ds 1 seum posphat
+[00:46:00] Renin-Angiotensin Aldosterone Synthesis | . v.C. of whurioles | , k- Hypokolermia | - M riaix endhange per
+[00:46:40] Mesodemol Cels liniag the | Chromaffin Cells. why? | They slais yellow or brouan with cheme cels.
+[00:46:50] Felets of Langerhans | direadbly into the blood | Panomafic digesive Exgyres | e g. Pancreatic Hormones:
+[00:47:30] Cluckgon α 2 99 glucose in the blood. | Insulin B  glucose in the blood. | Somaloshatin8  auniversal inhibifor
+[00:48:10] The resprnatay system | Vibrissae hoir noe | i or Epiglttis
+[00:48:20] Cordacting rone teoewnmcal | umaperial ory 30m0 | nar lip of noso s ends byamminal teonotilee | frurn respinasory beonotisies s alveo. | brunchk cartlage and gamor
+[00:48:50] I V P | expond the lung | le shall creabe | Wes chall creade | You cacbotheher,u ny nyu.
+[00:49:10] Breathe in air | venous blood tHb
+[00:49:30] loger of seclachont | Type ID preumocybte
+[00:49:50] Hydrogen ion conc.  H | The heeThe a the The md
+[00:51:40] The chronic effects of hypoxia | 9 RBC farmabion | 9 new blood vessel formation
+[00:51:50] Dq is kong gren to disie | tisasue is keft behind | Shift to the Rt | shift to the Lt | .  2-3 BPG
+[00:52:30] Hiqk alfitude  uPh0,  uPa02 | Vasoconshvickion - why
+[00:52:40] Effects of High Allitude | , 1 EPOeylthropoesisPolysyhema | I HCT vela | Right shift f O-Hgb dissociation Cuve | 1 binding 1f lik in 9
+[00:53:00] Heart 4 Voles | voins have walves | Ahovenhiaular AV valves | Somilunar AP valves
+[00:53:20] Present n ton Glomenls | in toies Glamecks | Absentcontaies cmgdalin ntd | Stomach wall, inbestines.
+[00:53:30] The Gap Junction Nexus | The SAN need only innervate | the birst atrial muscle fiber. | insoncalabed dGop unothion | adjacent muscle fibers
+[00:53:40] Cordiac Conducbon System | doesnt need nerves | to inibiate impulse. | Speciaked muscle fbes | thab acf as nerves
+[00:53:50] fou home to shee the dow shud | in onder to hear | Valm cpens  16 sound | Clasure If aortc tr
+[00:54:10] Volume of bbod | ejecked fom venkide
+[00:55:20] bon anrtorioles io werdes | Fast  High Ressure | Slow  Las Pessume E | Trick, Elashic, Muscudar | Thiner, Less Elaohic
+[00:55:30] 0 Medigeus Pearls for the pros C | What happons when you vasodilate your arteries?!
+[00:55:50] Thorough fare chamel | The Recapllay Sohocher
+[00:56:00] the anterial side | Net diffusion Pressore | 35  3    0  28 | the arberial side
+[00:56:40] Your blood consists of | 52 of iel handy wmipht | 4.5 milion 4-1 6somd
+[00:57:10] - Semi- permeable | CA Combonis anhypdrase
+[00:57:20] Hishamine aley, TypeI HSn | Mat ats is taoul
+[00:57:50] Steps of hemostasis:- | 2. Temporany plabelet plug  1nyhemostasis | 3. Coagulation  2TY hemOstasis I.I,II,IV,V,VI,VI,VII. | clot Contraction ir senum formation. | IX,X, XI, XI, XM
+[00:58:10] There are hundreds of anbigens on RBc surfce | molecule capable of inducing immune | A BO aaniguns | you have I of each of the | 3 pairs of Rh anbigens
+[00:58:20] antigens agglutinogen miggers, | 2 anbigens A yx.B: you can have either, neither or both. | 4 blood types: A , B , AB, phenobype | Genebic locus: 3 alleles: I, I 8, 1 | different gone fors
+[00:58:30] You were boue with i! | You hove learn t! | - 5 apioletamid | present at birth | develops after birth
+[00:58:40] The Innade Immuniky | Nauhophils Bacteia, pus | Bosophils : Hishamne Relne | Cronophils : Banha,
+[00:59:00] A Segience of lients | Anbodas Gonns Globsles | 5 havy Chain isobupes : MA G E D | 2 light chsin subhype: k D
+[00:59:10] anhigen binding sibe | Fab: Fragmeest for anigen buiding | Fc : Froyment cnystallizable
+[00:59:20] The skoey Immmology | Deshoy the microbe | Candehe cells Langortons cells
+[00:59:50] The lymph Node | L. Bone mamow, B-lymphagh | 2 Thgnas : | kand puel anhoing | lyagh moder. O
+[01:00:20] transpork brom the giut | to the blood | Ine bhe mucoral wili
+[01:00:40] inside each cell | whe te gals laet
+[01:00:50] Inside GI track | Outside GI track | lips tongue onal
+[01:01:00] The Gastrointeshinal Track | upper esophageal sphincter | lower esophageal sphineter | Anal canal External
+[01:01:10] ChemicalSalivation anylase plyahaCorbabydrate | The end resull | is a bolus
+[01:01:20] lals emany backern. | S prlucks the shomach sowk frow the aad | Heslamine  panslal calts
+[01:01:30] Some famous GI hormones | upper pewd of smoll inbeabine.
+[01:01:40] Jone famous GI hormones | by the slomach | Duodenal ph is alkaline
+[01:01:50] Jome farous GI hormones | upper powd of cnord inbeubine
+[01:02:10] Comman hepake dhot | Commoen ble duck
+[01:02:40] Water - Soluble | wy proteins vr Corbs
+[01:04:00] Raking: Hyphashatic Ricane | Forcee Govoring Gittraion | Rilling: Oncahe osmois Rlessa | Booimons spoule oncok: Phesoune | Forceo opposing filbration
+[01:04:20] Stratum corneum. bony | Stratum fycidum: clear. havless | Stradumn granbosum gronder: kimbaayke de s bou Mew nuckei. | Sthralum Spinasum squeas, lagihaes. Kerhnooyho od eos | Stratum basale: bosat: Shen cels
+[01:04:30] Thonk you Hypothalamus | Come frm bloud, | Sweat glnds  dermis | Excdor pili sxuscles | le offi me bea.
+[01:04:40] Sarcomere NO ilondglaking thick s thin flamens | The filaments are allached to dense bodves. | Fewer Nat channels, but | More Voltage-gated Ca channels | Sow Cat influx
+[01:04:50] Siruchure of the Muscles | Endomysium, Perimysium, Epimysium
+[01:05:00] Hierarchy of muscles | Q, which one is | the actual muscle cell
+[01:05:10] Conloins Myosin ir Ackin | In the cacter of the sorcomere
+[01:05:30] 2 Heavy Chains | 4 Light chains | They Col amound each others | Bonming a double helix. | Hove 3 binding sibes
+[01:05:40] T-L, Chalinergic A.Ch | A.Ch M al u
+[01:05:50] Choracterisbics of the Neuromuscular transmission: | Dolay of a5 asec:  NMJ | Fahigue wihy ? de io ackauston of synapho vesicles | dhee bo rpuslad slondadan | Effect of ions
+[01:06:20] Slow-hwihch Red,Type I | Fast- huirtch Fale: Type II | small, slow motor neuons | Large, foetmotor neurons | Why that color ?r
+[01:06:30] 25  matcle work | Heat p, kimps yor body warn. | o Rovche ophinun, heap for | Q: Where did you get the ATPase from ?! | Thi ATPase will
+[01:06:40] During Streneous Exercise | ust toe ATP Bal3 | ADPis t ATP
+[01:07:40] Thind: During Recovery | The O debt Extra, post-exeraise O Consumption | Uses, Why do you bypervenbate after exercie 91 | 0 Reformation of ATp x Creatine Phosphate | Removal of lachic acid
+[01:07:50] Covers the whole organism | does NoT Cover the whole organism | Musk be shed aatay disposed f ir | regenerabed regolwn as the oyganism | No need to be shed is regrown
+[01:08:00] Arkicular End Head | Arkculor End Head
+[01:08:10] Typeo of bone | Compact Corbical bone | Spongy Trabecular bone | Less dense, less hand | Gmater surface ama br remedeling
+[01:08:20] Bone formation build up bone | Cut down bone | Synthesis of mabix poboine: | Degradation of proteins by enzymes | . Type I Collagen
+[01:08:30] The main PRotein in the exhacellular matnix ECM. | TwO : CarTwOlage. | FouR : Under the FIOOR.
+[01:08:40] Type I Ccollagen | Type I Collagen
+[01:09:00] al of then hove a cerhain Allele | What percenbage of the populahion will | express the phenolype ? Penetrance | Yer or no | All uf hem have a cerhain Genotype  Pp
+[01:09:10] Lelz moke babis | Tt Tt Tt Tt | Offleprings F Tall Tall Tall Tall | 1  1 : 1 : 1
+[01:09:20] Gregor Mendel s | The nherilance of ooe gene does not | affeck the isheritance of angther gose. | 0 Each goe nay how Alovagbve foms in Aleles | 0 An individuad egoion possess 2 Aneles
+[01:09:30] Cross over happens | belwaon, hamologous chomosomes, | Sexund repoducin srde diversdy | not sisber chomabids | Asutunl repeduchen e idenkcal ofpag
+[01:09:40] Change is Daka sagumn | A Dul Seqasne | a alled fun
+[01:10:00] Tdehs crer t | Lets maks babisa | F : in generation of oflapriegs | Fn 2nd generadion -f oftprings | Punnett Square: Riedcts rolativs
+[01:10:10] Meadel o his peas | F  PP  PP ; PP  PP
+[01:10:30] tP Tp tpF | Tall pr. Raphe | Tall 5p Rigle | Gned tr, Plorple
+[01:10:40] Gene  Chomosonal mapping | 3The cloter 2 qunes ane bo each other, | Hhe less likoly toy on bo be sepanahed. | Lo lower recombisakion bequeny θ | 6g dylily lakaed gunes 0 Zero!
+[01:10:50] Gete  chonosomal  mapping | IF you knw θ you can deduce the onder f genes on a chromosome! | Ceald be ?
+[01:11:10] T Dominant allale. | The frequeng of the | The fequery of the | tis t Reoeive alleke. | in a populabon
+[01:11:30] Puking  av logether | Suppose te fepoiny f a domied ah T in a pepdehin i7020.7 | The the fuy i the neessin alle tin te se pepe s30203 | P  q  1 | P 2  0.49
+[01:11:40] Nahural Selechon  Evoluhon | Nohural selechon is a mechanism for Evoluchon | If the charadenshicGreaker reproduchive succes bitness | the charackenislic  pass to affsprings. | Survivalfor the fittest.
+[01:11:50] Modeo 6 Nabral Sekchon | eloneats extmsnsnow the | eg. Birth weght | e3 Achbiole resishance | 2 exranes  Monn
+[01:12:20] Patterns -b Evoluhion | Thifferent or the offewne | is golting wider | Hhe ailfance is shable | Seals ox cals
+[01:12:30] 15 Videos  15 PDF Notes | 100 Qs vr As  20 Cases  PUN.
+[01:12:40] I offer TUTORING | Wwla patreon commedicosis | Wldal paypal. mgperfectionalis

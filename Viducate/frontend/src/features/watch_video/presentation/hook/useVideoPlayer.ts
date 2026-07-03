@@ -9,7 +9,7 @@ export function useVideoPlayer() {
   const seek = (time: number) => {
     
     if (playerRef.current){
-      console.log("Seeking to:", time);
+    
      
       playerRef.current.currentTime = time;}
      
