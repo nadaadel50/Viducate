@@ -148,6 +148,7 @@
   "summary.conclusion": "الخلاصة",
   "summary.exportPdf": "تصدير PDF",
   "summary.downloadOffline": "تحميل للاستخدام بدون إنترنت",
+   "summary.downloadError": "فشل التحميل. يرجى المحاولة مرة أخرى.",
   "summary.tools": "الأدوات",
 
   "summary.loading.titlePrefix": "جارٍ إعداد",

@@ -43,6 +43,9 @@ export function useQuizPage() {
     submitQuiz,
     getSubmitResult,
     isSubmitting,
+    isError,
+    generateQuizError,
+    submitError,
   } = useGenerateQuiz({
     videoId,
     segmentId,
@@ -112,6 +115,7 @@ export function useQuizPage() {
     isAllAnswered,
     resetQuiz,
     progress,
+    
   } = useQuiz(questions, calculatedTime, activeQuizKey ?? "", handleSubmit);
 
   useEffect(() => {
@@ -246,5 +250,8 @@ export function useQuizPage() {
     setQuizState,
     setIsReviewMode,
     setIsDifficultyModalOpen,
+    isError,
+    generateQuizError,
+    submitError,
   };
 }
