@@ -4,8 +4,6 @@ import { TopicFeedback } from "./topic_feedback";
 import { TopicMaterialsCard } from "./topic_materials_card";
 import { TopicQuizCard } from "./topic_quiz_card";
 
-
-
 interface MaterialItem {
   icon: LucideIcon;
   color: string;
@@ -41,8 +39,7 @@ export function TopicExpanded({
       style={{
         maxHeight: open ? "900px" : "0px",
         overflow: "hidden",
-        transition:
-          "max-height .4s cubic-bezier(.4,0,.2,1)",
+        transition: "max-height .4s cubic-bezier(.4,0,.2,1)",
       }}
     >
       <div className="border-t border-slate-100 bg-slate-50/40 px-4 pb-4 pt-4 sm:px-5 sm:pb-5">
@@ -54,15 +51,10 @@ export function TopicExpanded({
             config={config}
           />
 
-          <TopicMaterialsCard
-            materials={topicMaterials}
-          />
+          <TopicMaterialsCard materials={topicMaterials} />
         </div>
 
-        <TopicFeedback
-          topic={topic}
-          hasQuiz={hasQuiz}
-        />
+        <TopicFeedback topic={topic} hasQuiz={hasQuiz} />
       </div>
     </div>
   );

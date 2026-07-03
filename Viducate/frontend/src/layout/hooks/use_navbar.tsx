@@ -24,13 +24,12 @@ export function useNavbar(user: User) {
 
     document.addEventListener("mousedown", handleClickOutside);
 
-    return () =>
-      document.removeEventListener("mousedown", handleClickOutside);
+    return () => document.removeEventListener("mousedown", handleClickOutside);
   }, []);
 
   const fullName = `${user.first_name} ${user.last_name}`;
 
-  const initials = getInitials(fullName)
+  const initials = getInitials(fullName);
   return {
     dropdownOpen,
     setDropdownOpen,

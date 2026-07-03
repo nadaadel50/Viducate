@@ -1,8 +1,10 @@
 import type { ApiResult } from "../../../../core/api/apiResult";
-import type { SegmentStudyNotes, VideoStudyNotes } from "../../domain/entity/study_notes_entity";
+import type {
+  SegmentStudyNotes,
+  VideoStudyNotes,
+} from "../../domain/entity/study_notes_entity";
 import type { StudyNotesRepository } from "../../domain/repository/study_notes_repository";
 import type { StudyNotesDataSource } from "../dataSource/study_notes_data_source";
-
 
 export class StudyNotesRepoImp implements StudyNotesRepository {
   private dataSource: StudyNotesDataSource;
@@ -12,9 +14,12 @@ export class StudyNotesRepoImp implements StudyNotesRepository {
 
   async getSegmentStudyNotes(
     videoId: number,
-    segmentId: number
+    segmentId: number,
   ): Promise<ApiResult<SegmentStudyNotes>> {
-    const result = await this.dataSource.getSegmentStudyNotes(videoId, segmentId);
+    const result = await this.dataSource.getSegmentStudyNotes(
+      videoId,
+      segmentId,
+    );
     if (!result.success) return result;
 
     const dto = result.data;
@@ -34,21 +39,23 @@ export class StudyNotesRepoImp implements StudyNotesRepository {
     };
   }
 
-  async getVideoStudyNotes(videoId: number): Promise<ApiResult<VideoStudyNotes>> {
-  const result = await this.dataSource.getVideoStudyNotes(videoId);
-  if (!result.success) return result;
+  async getVideoStudyNotes(
+    videoId: number,
+  ): Promise<ApiResult<VideoStudyNotes>> {
+    const result = await this.dataSource.getVideoStudyNotes(videoId);
+    if (!result.success) return result;
 
-  const dto = result.data;
-  return {
-    success: true,
-    data: {
-      videoId: dto.video_id,
-      language: dto.language,
-      cached: dto.cached,
-      studyNotes: dto.study_notes,
-      createdAt: dto.created_at,
-      readingTime: dto.reading_time,
-    },
-  };
-}
+    const dto = result.data;
+    return {
+      success: true,
+      data: {
+        videoId: dto.video_id,
+        language: dto.language,
+        cached: dto.cached,
+        studyNotes: dto.study_notes,
+        createdAt: dto.created_at,
+        readingTime: dto.reading_time,
+      },
+    };
+  }
 }

@@ -12,8 +12,7 @@ export function SignOutButton({ onSignOut }: SignOutButtonProps) {
     <div className="pt-2">
       <CustomButton
         type="button"
-        style={{background:COLORS.button.primary}}
-      
+        style={{ background: COLORS.button.primary }}
         onClick={onSignOut}
         className="w-full text-white"
       >

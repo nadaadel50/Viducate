@@ -18,12 +18,8 @@ interface VideoHeroProps {
 export function VideoHero({ report }: VideoHeroProps) {
   const { locale } = useIntl();
 
-  const {
-    percent,
-    remaining,
-    watchedFormatted,
-    totalFormatted,
-  } = useVideoProgress();
+  const { percent, remaining, watchedFormatted, totalFormatted } =
+    useVideoProgress();
 
   const formattedDate = formatDate(report.updatedAt, locale);
 
@@ -103,10 +99,7 @@ export function VideoHero({ report }: VideoHeroProps) {
         style={{ color: COLORS.text.secondary }}
       >
         <span>
-          <FormattedMessage
-            id="report.hero.watched"
-            values={{ percent }}
-          />
+          <FormattedMessage id="report.hero.watched" values={{ percent }} />
         </span>
 
         <span>

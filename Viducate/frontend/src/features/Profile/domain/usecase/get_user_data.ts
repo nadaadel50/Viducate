@@ -4,7 +4,6 @@ import type { ProfileRepository } from "../repository/profile_repository";
 
 export const GetUserData = (repo: ProfileRepository) => {
   return async (): Promise<ApiResult<UserProfileData>> => {
-   
     return repo.getUserProfile();
   };
 };

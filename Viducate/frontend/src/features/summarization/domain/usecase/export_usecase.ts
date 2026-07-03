@@ -12,7 +12,10 @@ export class ExportUsecase {
     return this.repo.downloadVideoSummary(videoId);
   }
 
-  downloadSegmentSummary(videoId: number, segmentId: number): Promise<ApiResult<Blob>> {
+  downloadSegmentSummary(
+    videoId: number,
+    segmentId: number,
+  ): Promise<ApiResult<Blob>> {
     return this.repo.downloadSegmentSummary(videoId, segmentId);
   }
 
@@ -20,7 +23,10 @@ export class ExportUsecase {
     return this.repo.downloadVideoStudyNotes(videoId);
   }
 
-  downloadSegmentStudyNotes(videoId: number, segmentId: number): Promise<ApiResult<Blob>> {
+  downloadSegmentStudyNotes(
+    videoId: number,
+    segmentId: number,
+  ): Promise<ApiResult<Blob>> {
     return this.repo.downloadSegmentStudyNotes(videoId, segmentId);
   }
 }

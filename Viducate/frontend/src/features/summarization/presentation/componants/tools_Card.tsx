@@ -4,9 +4,12 @@ import { FormattedMessage } from "react-intl";
 import { CustomButton } from "../../../../core/componants/custum_btn";
 import { COLORS } from "../../../../core/constants/colors";
 
-
 import { useExport } from "../hooks/use_export";
-import { FONT_SIZE, FONT_WEIGHT, LETTER_SPACING } from "../../../../core/constants/fonts_update";
+import {
+  FONT_SIZE,
+  FONT_WEIGHT,
+  LETTER_SPACING,
+} from "../../../../core/constants/fonts_update";
 
 type Props = {
   type: "summary" | "study_notes";
@@ -14,11 +17,7 @@ type Props = {
   segmentId?: number;
 };
 
-export function ToolsCard({
-  type,
-  videoId,
-  segmentId,
-}: Props) {
+export function ToolsCard({ type, videoId, segmentId }: Props) {
   const { download, isLoading } = useExport();
 
   return (
@@ -39,9 +38,7 @@ export function ToolsCard({
         className="group justify-start rounded-lg p-3 hover:bg-gray-50"
       >
         <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-lg bg-orange-50 text-orange-600 transition-colors group-hover:bg-orange-100">
-          <span className="material-symbols-outlined">
-            picture_as_pdf
-          </span>
+          <span className="material-symbols-outlined">picture_as_pdf</span>
         </div>
 
         <div className="flex flex-1 flex-col items-start text-left">

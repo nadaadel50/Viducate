@@ -1,5 +1,4 @@
 import { motion } from "framer-motion";
-import { mockPreferences } from "../_temp_mock";
 import { useDeleteAccount } from "../hooks/use_delete_account";
 import { usePreferences } from "../hooks/use_preferences";
 import { UserHeroCard } from "../sections/user_hero_card";
@@ -19,9 +18,7 @@ export function ProfilePage() {
 
   const deleteAccount = useDeleteAccount();
 
-  const preferences = usePreferences({
-    appearance: mockPreferences.appearance,
-  });
+ 
 
   const auth = useContext(AuthContext);
 
@@ -66,7 +63,7 @@ export function ProfilePage() {
 
           <div className="lg:col-span-4">
             <PreferencesSidebar
-              preferences={preferences}
+              // preferences={preferences}
               onSignOut={handleSignOut}
             />
           </div>

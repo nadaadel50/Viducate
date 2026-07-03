@@ -1,5 +1,3 @@
-// Route names used across the application
-
 export const AppRoutesNames = {
   // Auth
   login: "/",

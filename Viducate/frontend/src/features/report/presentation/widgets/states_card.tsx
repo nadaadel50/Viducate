@@ -1,8 +1,4 @@
-import {
-  FileQuestion,
-  Layers3,
-  TvMinimalPlay,
-} from "lucide-react";
+import { FileQuestion, Layers3, TvMinimalPlay } from "lucide-react";
 import { useIntl } from "react-intl";
 
 import { StatCard } from "../componants/stat_card";

@@ -2,7 +2,6 @@ import { FONT_STYLES } from "../constants/fonts";
 import { useT } from "../hooks/useTranslation";
 import { PasswordRequirementItem } from "../widgets/password_req_item";
 
-
 type Props = {
   password: string;
 };

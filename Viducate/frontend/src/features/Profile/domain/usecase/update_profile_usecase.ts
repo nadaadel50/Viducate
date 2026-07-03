@@ -5,7 +5,6 @@ import type { ProfileRepository } from "../repository/profile_repository";
 
 export const UpdateProfile = (repo: ProfileRepository) => {
   return async (req: UpdateRequest): Promise<ApiResult<UserProfileData>> => {
-   
     return repo.updateProfile(req);
   };
 };

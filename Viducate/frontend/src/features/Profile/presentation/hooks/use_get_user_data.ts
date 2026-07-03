@@ -6,10 +6,9 @@ export function useGetUserData() {
   return useQuery({
     queryKey: ["user-data"],
 
-queryFn:async () => {
-  
-    const response=await getUserDataUsecase();
-    if(!response.success){
+    queryFn: async () => {
+      const response = await getUserDataUsecase();
+      if (!response.success) {
         throw new Error(response.error);
     }
   

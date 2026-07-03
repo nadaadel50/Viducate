@@ -1,6 +1,5 @@
 import Lottie from "lottie-react";
-import lock from "../../assets/animations/lock.json"
-
+import lock from "../../assets/animations/lock.json";
 
 function LockAnimation() {
   return (

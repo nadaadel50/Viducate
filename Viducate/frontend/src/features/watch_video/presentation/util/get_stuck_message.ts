@@ -1,8 +1,6 @@
 import { StuckReasons, type StuckReason } from "../types/stuck_reason";
 
-export const getStuckMessage = (
-  reason: StuckReason,
-): string => {
+export const getStuckMessage = (reason: StuckReason): string => {
   switch (reason) {
     case StuckReasons.REPEATED_SEEK:
       return "watch.stuck.repeatedSeek";

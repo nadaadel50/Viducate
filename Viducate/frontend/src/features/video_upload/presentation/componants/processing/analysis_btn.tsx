@@ -1,24 +1,19 @@
 import { Sparkles } from "lucide-react";
 
-
 type AnalysisBtnProps = {
   videoLink: string;
-  
- 
-  
-  videoFile:File | null;
-  selected:string
+
+  videoFile: File | null;
+  selected: string;
 };
 
 export function AnalysisBtn({
   videoLink,
-  
-  videoFile,selected
+
+  videoFile,
+  selected,
 }: AnalysisBtnProps) {
-
-  const isDisabled =
-
-  !(
+  const isDisabled = !(
     (selected === "link" && videoLink !== "") ||
     (selected === "upload" && videoFile)
   );
@@ -27,10 +22,7 @@ export function AnalysisBtn({
     <div className="w-full flex justify-end mt-10">
       <button
         disabled={isDisabled}
-        onClick={() => {
-
-          // call api to take the video url or the video file
-        }}
+        onClick={() => {}}
         className={`flex text-sm font-bold w-45 items-center justify-center gap-2 py-2.5 transition-all text-white rounded-xl
         ${
           isDisabled
@@ -42,12 +34,7 @@ export function AnalysisBtn({
         {"Analyze Video"}
       </button>
 
-
-    <div>
-        
-         
-    </div>
-      
+      <div></div>
     </div>
   );
 }

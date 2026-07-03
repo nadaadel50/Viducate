@@ -4,15 +4,11 @@ import { SemanticSearchRequest } from "../../domin/entity/semantic_search_reques
 import type { SearchParams } from "../types/search_parms";
 
 export const useSearchMutation = () => {
-  const mutation= useMutation({
+  const mutation = useMutation({
     mutationFn: async (searchProps: SearchParams) => {
-      const response =
-        await getSearchResultsUseCase.getSearchResults(
-          new SemanticSearchRequest(
-            searchProps.query,
-            searchProps.videoId
-          )
-        );
+      const response = await getSearchResultsUseCase.getSearchResults(
+        new SemanticSearchRequest(searchProps.query, searchProps.videoId),
+      );
 
       if (!response.success) {
         throw new Error("Search failed");
@@ -24,7 +20,7 @@ export const useSearchMutation = () => {
   });
   return {
     sendQuery: mutation.mutate,
-    data:mutation.data,
+    data: mutation.data,
     isLoadingQuery: mutation.isPending,
     error: mutation.error?.message ?? null,
     reset: mutation.reset,

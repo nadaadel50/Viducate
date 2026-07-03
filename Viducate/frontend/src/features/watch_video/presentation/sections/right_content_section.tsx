@@ -77,7 +77,6 @@ export function RightContentSection({ onOpenTopics }: Props) {
 
   return (
     <div className="w-full flex flex-col items-center pt-6 min-h-[calc(100vh-40px)]">
-
       <div className="w-full max-w-5xl px-4 flex-1">
         <button
           onClick={onOpenTopics}
@@ -117,20 +116,20 @@ export function RightContentSection({ onOpenTopics }: Props) {
         </div>
       </div>
 
-
-
       <div className="w-full backdrop-blur ">
         <div className=" mx-auto w-full grid grid-cols-2 gap-3 border-t p-4 border-gray-100 ">
-          {footerActions.map(({ variant, icon, labelId, onClick, totalReviewCards }) => (
-            <FinalGeneratedBtn
-              key={variant}
-              variant={variant}
-              icon={icon}
-              label={<FormattedMessage id={labelId} />}
-              onClick={onClick}
-              reviewCards={totalReviewCards}
-            />
-          ))}
+          {footerActions.map(
+            ({ variant, icon, labelId, onClick, totalReviewCards }) => (
+              <FinalGeneratedBtn
+                key={variant}
+                variant={variant}
+                icon={icon}
+                label={<FormattedMessage id={labelId} />}
+                onClick={onClick}
+                reviewCards={totalReviewCards}
+              />
+            ),
+          )}
         </div>
       </div>
       <ChatBotOpenBtn />

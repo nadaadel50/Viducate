@@ -15,9 +15,7 @@ interface TopicsBreakdownProps {
   report: VideoReport;
 }
 
-export function TopicsBreakdown({
-  report,
-}: TopicsBreakdownProps) {
+export function TopicsBreakdown({ report }: TopicsBreakdownProps) {
   const intl = useIntl();
 
   return (
@@ -49,11 +47,7 @@ export function TopicsBreakdown({
 
       <div className="space-y-3">
         {report.topics.map((topic, index) => (
-          <TopicCard
-            key={topic.id}
-            topic={topic}
-            index={index}
-          />
+          <TopicCard key={topic.id} topic={topic} index={index} />
         ))}
       </div>
     </section>

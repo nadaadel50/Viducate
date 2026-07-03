@@ -15,12 +15,10 @@ export function MaterialBadge({
 }: MaterialBadgeProps) {
   return (
     <div className="flex items-center gap-3 text-sm p-2 rounded-lg bg-slate-50 border border-slate-100">
-      {/* Checkbox status */}
       <span className={done ? "text-emerald-500" : "text-slate-300"}>
         {done ? "✅" : "⬜"}
       </span>
 
-      {/* Material icon + label */}
       <div className="flex items-center gap-2">
         <Icon
           size={16}

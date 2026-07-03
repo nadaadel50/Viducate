@@ -5,11 +5,10 @@ import type { SemanticSearchResponse } from "../../domin/entity/semantic_search_
 import type { TopicsRequest } from "../../domin/entity/topics_request";
 import type { VideoResponse } from "../../domin/entity/video_response";
 
-
 export interface WatchVideoDataSource {
- getTopics(topicReq: TopicsRequest): Promise<ApiResult<VideoResponse>>;
- getSearchResults(req:SemanticSearchRequest):Promise<ApiResult<SemanticSearchResponse[]>>;
+  getTopics(topicReq: TopicsRequest): Promise<ApiResult<VideoResponse>>;
+  getSearchResults(
+    req: SemanticSearchRequest,
+  ): Promise<ApiResult<SemanticSearchResponse[]>>;
   saveVideoProgress(req: SaveVideoReq): Promise<ApiResult<void>>;
 }
-
-

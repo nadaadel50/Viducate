@@ -2,23 +2,23 @@ export const FONT_SIZE = {
   size9: "text-[9px]",
   size10: "text-[10px]",
   size11: "text-[11px]",
-  size12: "text-xs",      // 12px
+  size12: "text-xs", // 12px
   size13: "text-[13px]",
-  size14: "text-sm",      // 14px
+  size14: "text-sm", // 14px
   size15: "text-[15px]",
-  size16: "text-base",    // 16px
+  size16: "text-base", // 16px
   size17: "text-[17px]",
-  size18: "text-lg",      // 18px
-  size20: "text-xl",      // 20px
+  size18: "text-lg", // 18px
+  size20: "text-xl", // 20px
   size22: "text-[22px]",
-  size24: "text-2xl",     // 24px
+  size24: "text-2xl", // 24px
   size26: "text-[26px]",
   size28: "text-[28px]",
-  size30: "text-3xl",     // 30px
+  size30: "text-3xl", // 30px
   size32: "text-[32px]",
-  size36: "text-4xl",     // 36px
+  size36: "text-4xl", // 36px
   size40: "text-[40px]",
-  size48: "text-5xl",     // 48px
+  size48: "text-5xl", // 48px
   size56: "text-[56px]",
   size64: "text-[64px]",
 } as const;

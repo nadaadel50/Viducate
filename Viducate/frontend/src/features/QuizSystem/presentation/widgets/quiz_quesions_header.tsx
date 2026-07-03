@@ -2,7 +2,7 @@ import { FormattedMessage } from "react-intl";
 import { useNavigate } from "react-router";
 import { useLearningSession } from "../../../../core/hooks/useLearningContent";
 import { AppRoutesNames } from "../../../../app/routers/routes";
-import { COLORS, STORAGE_KEYS } from "../../../../core/constants";
+import { COLORS} from "../../../../core/constants";
 import {
   FONT_SIZE,
   FONT_WEIGHT,
@@ -29,7 +29,6 @@ export function QuizQuestionHeader({
 
     setCurrentTime(question.video_timestamp);
     setSeekTo(question.video_timestamp);
-   
 
     navigate(AppRoutesNames.watchVideo);
   };

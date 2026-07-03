@@ -1,6 +1,5 @@
 import type { UploadVideoRequest } from "../../domain/entity/upload_video_request";
 
-
 export type UploadVideoRequestDTO = {
   filename: string;
   title: string;

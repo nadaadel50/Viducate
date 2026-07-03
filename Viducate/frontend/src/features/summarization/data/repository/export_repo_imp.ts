@@ -12,7 +12,10 @@ export class ExportRepoImp implements ExportRepository {
     return this.dataSource.downloadVideoSummary(videoId);
   }
 
-  downloadSegmentSummary(videoId: number, segmentId: number): Promise<ApiResult<Blob>> {
+  downloadSegmentSummary(
+    videoId: number,
+    segmentId: number,
+  ): Promise<ApiResult<Blob>> {
     return this.dataSource.downloadSegmentSummary(videoId, segmentId);
   }
 
@@ -20,7 +23,10 @@ export class ExportRepoImp implements ExportRepository {
     return this.dataSource.downloadVideoStudyNotes(videoId);
   }
 
-  downloadSegmentStudyNotes(videoId: number, segmentId: number): Promise<ApiResult<Blob>> {
+  downloadSegmentStudyNotes(
+    videoId: number,
+    segmentId: number,
+  ): Promise<ApiResult<Blob>> {
     return this.dataSource.downloadSegmentStudyNotes(videoId, segmentId);
   }
 }

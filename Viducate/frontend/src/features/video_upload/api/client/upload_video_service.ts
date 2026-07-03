@@ -11,35 +11,34 @@ export class UploadVideoService {
     return response.data;
   }
 
- async uploadVideo(
-  upload_url: string,
-  file: File,
-  onProgress?: (percent: number) => void,
-  signal?: AbortSignal
-) {
-  const response = await axios.put(upload_url, file, {
-    headers: {
-      "Content-Type": file.type,
-    },
+  async uploadVideo(
+    upload_url: string,
+    file: File,
+    onProgress?: (percent: number) => void,
+    signal?: AbortSignal,
+  ) {
+    const response = await axios.put(upload_url, file, {
+      headers: {
+        "Content-Type": file.type,
+      },
 
-   signal: signal,
+      signal: signal,
 
-    onUploadProgress: (progressEvent) => {
-      if (!progressEvent.total) return;
+      onUploadProgress: (progressEvent) => {
+        if (!progressEvent.total) return;
 
-      const percent = Math.round(
-        (progressEvent.loaded * 100) / progressEvent.total
-      );
+        const percent = Math.round(
+          (progressEvent.loaded * 100) / progressEvent.total,
+        );
 
-      onProgress?.(percent);
-      
-    },
-  });
+        onProgress?.(percent);
+      },
+    });
 
-  return response;
-}
+    return response;
+  }
 
-  async confirmUpload(video_id: number):Promise<ConfirmUploadResponseDto> {
+  async confirmUpload(video_id: number): Promise<ConfirmUploadResponseDto> {
     const response = await apiClient.post(`/videos/${video_id}/confirm`);
 
     return response.data;

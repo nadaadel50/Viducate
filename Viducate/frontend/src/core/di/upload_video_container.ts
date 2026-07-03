@@ -10,6 +10,5 @@ const dataSource = new UploadVideoDataSourceImp(uploadService);
 const repository = new uploadVideoRepoImp(dataSource);
 
 export const uploadVideoUseCase = new UploadVideoUseCase(repository);
-export const deleteVideoUseCase=new DeleteVideoUseCase(repository)
-export const uploadURLUseCase=new UploadUrlUseCase(repository)
-
+export const deleteVideoUseCase = new DeleteVideoUseCase(repository);
+export const uploadURLUseCase = new UploadUrlUseCase(repository);

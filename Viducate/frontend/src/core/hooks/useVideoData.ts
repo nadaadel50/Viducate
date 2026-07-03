@@ -10,13 +10,12 @@ export function useVideoData() {
     setTopics,
     handleSetMarks,
     handleSetCompletedTopics,
-   
+
     setVideoTitle,
     handleSetInitializeCurrentTime,
-   setSelectedTopic,
+    setSelectedTopic,
     setCurrentTime,
     seekTo,
-
   } = useLearningSession();
 
   const query = useQuery({
@@ -39,30 +38,27 @@ export function useVideoData() {
     
   });
 
-// useVideoData.ts
-useEffect(() => {
-  if (!query.data || query.data.topics.length === 0) return;
+  useEffect(() => {
+    if (!query.data || query.data.topics.length === 0) return;
 
  
 
-  setTopics(query.data.topics);
-  handleSetMarks(query.data.bookmarks);
-  setVideoTitle(query.data.title);
-  setSelectedTopic(query.data.topics[0]);
-  
+    setTopics(query.data.topics);
+    handleSetMarks(query.data.bookmarks);
+    setVideoTitle(query.data.title);
+    setSelectedTopic(query.data.topics[0]);
 
-  if (seekTo === null) {
-    
-    setCurrentTime(query.data.current_time);
-    handleSetInitializeCurrentTime(query.data.current_time);
-  }
+    if (seekTo === null) {
+      setCurrentTime(query.data.current_time);
+      handleSetInitializeCurrentTime(query.data.current_time);
+    }
 
-  handleSetCompletedTopics(
-    query.data.topics
-      .filter((topic) => topic.is_completed && topic.segment_id !== null)
-      .map((topic) => topic.segment_id!),
-  );
-}, [query.data]);
+    handleSetCompletedTopics(
+      query.data.topics
+        .filter((topic) => topic.is_completed && topic.segment_id !== null)
+        .map((topic) => topic.segment_id!),
+    );
+  }, [query.data]);
 
   return query;
 }

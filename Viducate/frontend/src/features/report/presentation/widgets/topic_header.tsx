@@ -1,9 +1,11 @@
 import { ChevronDown } from "lucide-react";
 import { FormattedMessage } from "react-intl";
-import { FONT_SIZE, FONT_WEIGHT, LETTER_SPACING } from "../../../../core/constants/fonts_update";
+import {
+  FONT_SIZE,
+  FONT_WEIGHT,
+  LETTER_SPACING,
+} from "../../../../core/constants/fonts_update";
 import type { TopicReport } from "../../domain/entity/report_entity";
-
-
 
 interface TopicHeaderProps {
   topic: TopicReport;
@@ -48,9 +50,7 @@ export function TopicHeader({
           borderColor: config.border,
         }}
       >
-        <span
-          className={`${FONT_SIZE.size13} ${FONT_WEIGHT.bold}`}
-        >
+        <span className={`${FONT_SIZE.size13} ${FONT_WEIGHT.bold}`}>
           {index + 1}
         </span>
       </div>
@@ -107,12 +107,9 @@ export function TopicHeader({
                 <div
                   className="h-full rounded-full"
                   style={{
-                    width: scoreAnim
-                      ? `${scorePercent}%`
-                      : "0%",
+                    width: scoreAnim ? `${scorePercent}%` : "0%",
                     backgroundColor: config.color,
-                    transition:
-                      "width 1.2s cubic-bezier(.4,0,.2,1)",
+                    transition: "width 1.2s cubic-bezier(.4,0,.2,1)",
                   }}
                 />
               </div>
@@ -141,9 +138,7 @@ export function TopicHeader({
           size={18}
           className="transition-transform duration-300"
           style={{
-            transform: open
-              ? "rotate(180deg)"
-              : "rotate(0deg)",
+            transform: open ? "rotate(180deg)" : "rotate(0deg)",
           }}
         />
       </div>

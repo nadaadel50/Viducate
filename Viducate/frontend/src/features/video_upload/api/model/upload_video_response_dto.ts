@@ -1,6 +1,5 @@
 import type { UploadVideoResponse } from "../../domain/entity/upload_video_response";
 
-
 export type UploadVideoResponseDTO = {
   video_id: number;
   title: string;
@@ -11,7 +10,7 @@ export type UploadVideoResponseDTO = {
 };
 
 export function toUploadVideoResponseEntity(
-  dto: UploadVideoResponseDTO
+  dto: UploadVideoResponseDTO,
 ): UploadVideoResponse {
   return {
     video_id: dto.video_id,

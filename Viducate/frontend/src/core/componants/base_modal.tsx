@@ -30,6 +30,6 @@ export function BaseModal({
         {children}
       </div>
     </div>,
-    document.body
+    document.body,
   );
 }

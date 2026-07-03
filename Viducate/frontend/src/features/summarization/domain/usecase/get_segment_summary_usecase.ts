@@ -9,7 +9,10 @@ export class GetSegmentSummaryUsecase {
     this.repo = repo;
   }
 
-  execute(videoId: number, segmentId: number): Promise<ApiResult<SegmentSummary>> {
+  execute(
+    videoId: number,
+    segmentId: number,
+  ): Promise<ApiResult<SegmentSummary>> {
     return this.repo.getSegmentSummary(videoId, segmentId);
   }
 }

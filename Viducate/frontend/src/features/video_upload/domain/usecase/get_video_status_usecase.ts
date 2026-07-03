@@ -1,4 +1,4 @@
-import  type {VideoStatusRepository } from '../repository/video_status_repository';
+import type { VideoStatusRepository } from "../repository/video_status_repository";
 
 export class GetVideoStatusUseCase {
   private repository: VideoStatusRepository;
@@ -7,7 +7,6 @@ export class GetVideoStatusUseCase {
   }
 
   async execute(videoId: number) {
-
     return await this.repository.getVideoStatus(videoId);
   }
 }

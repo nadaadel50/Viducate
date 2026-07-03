@@ -1,21 +1,13 @@
-import {
-  FileQuestion,
-  FileText,
-  NotebookPen,
-  Package,
-} from "lucide-react";
+import { FileQuestion, FileText, NotebookPen, Package } from "lucide-react";
 import { FormattedMessage, useIntl } from "react-intl";
 import { MaterialBadge } from "../componants/material_badge";
 import type { VideoReport } from "../../domain/entity/report_entity";
-
 
 interface LearningMaterialsProps {
   report: VideoReport;
 }
 
-export function LearningMaterials({
-  report,
-}: LearningMaterialsProps) {
+export function LearningMaterials({ report }: LearningMaterialsProps) {
   const intl = useIntl();
 
   const materials = [
@@ -48,10 +40,7 @@ export function LearningMaterials({
   return (
     <div className="flex flex-col justify-center rounded-2xl border border-slate-100 bg-white p-4 shadow-sm">
       <div className="mb-5 flex items-center gap-2">
-        <Package
-          size={20}
-          className="text-slate-500"
-        />
+        <Package size={20} className="text-slate-500" />
 
         <span className="text-sm font-bold uppercase tracking-wider text-slate-500">
           <FormattedMessage id="report.materials.title" />

@@ -1,6 +1,9 @@
 import { COLORS } from "../../../../core/constants/colors";
 import { FONT_STYLES } from "../../../../core/constants/fonts";
-import { FONT_SIZE, FONT_WEIGHT } from "../../../../core/constants/fonts_update";
+import {
+  FONT_SIZE,
+  FONT_WEIGHT,
+} from "../../../../core/constants/fonts_update";
 
 import type { StudyNotesContent as StudyNotesContentType } from "../../domain/entity/study_notes_entity";
 import { StudyNotesSection } from "./study_notes_secion";
@@ -9,9 +12,7 @@ type StudyNotesContentProps = {
   studyNotes: StudyNotesContentType;
 };
 
-export function StudyNotesContent({
-  studyNotes,
-}: StudyNotesContentProps) {
+export function StudyNotesContent({ studyNotes }: StudyNotesContentProps) {
   const { introduction, sections } = studyNotes;
 
   return (
@@ -32,10 +33,7 @@ export function StudyNotesContent({
 
       <div className=" space-y-2">
         {sections?.map((section, index) => (
-          <StudyNotesSection
-            key={index}
-            section={section}
-          />
+          <StudyNotesSection key={index} section={section} />
         ))}
       </div>
     </>

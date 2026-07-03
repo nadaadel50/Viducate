@@ -13,5 +13,5 @@ if (!isAuthenticated) {
 }
 
 
-  return <Outlet />;  // or outlet (will make it soon)
+  return <Outlet />;  
 }

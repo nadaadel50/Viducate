@@ -6,10 +6,7 @@ type MainTextProps = {
   smallTitle: ReactNode;
 };
 
-export function MainText({
-  bigTitle,
-  smallTitle,
-}: MainTextProps) {
+export function MainText({ bigTitle, smallTitle }: MainTextProps) {
   return (
     <div className="w-full mb-6">
       <h2

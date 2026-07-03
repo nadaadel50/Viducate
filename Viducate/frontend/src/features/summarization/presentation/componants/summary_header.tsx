@@ -3,26 +3,25 @@ import { Clock } from "lucide-react";
 import { FormattedMessage } from "react-intl";
 
 import { COLORS } from "../../../../core/constants/colors";
-import  { FONT_STYLES } from "../../../../core/constants/fonts";
-import { FONT_SIZE, FONT_WEIGHT } from "../../../../core/constants/fonts_update";
-
+import { FONT_STYLES } from "../../../../core/constants/fonts";
+import {
+  FONT_SIZE,
+  FONT_WEIGHT,
+} from "../../../../core/constants/fonts_update";
 
 interface SummaryHeaderProps {
   title: string;
   time: string;
 }
 
-export function SummaryHeader({
-  title,
-  time,
-}: SummaryHeaderProps) {
+export function SummaryHeader({ title, time }: SummaryHeaderProps) {
   return (
     <header className="mb-6 sm:mb-8">
       <div className="mb-3 flex flex-wrap items-center gap-2 sm:mb-4 sm:gap-3">
         <span
           className={clsx(
             FONT_STYLES.topicStatus,
-            "inline-flex items-center gap-2 rounded-full px-3 py-1"
+            "inline-flex items-center gap-2 rounded-full px-3 py-1",
           )}
           style={{
             backgroundColor: COLORS.state.successLight,
@@ -41,7 +40,7 @@ export function SummaryHeader({
           className={clsx(
             FONT_SIZE.size12,
             FONT_WEIGHT.medium,
-            "inline-flex items-center gap-1"
+            "inline-flex items-center gap-1",
           )}
           style={{ color: COLORS.brand.primary }}
         >
@@ -51,10 +50,7 @@ export function SummaryHeader({
       </div>
 
       <h1
-        className={clsx(
-          FONT_STYLES.pageTitle,
-          "break-words"
-        )}
+        className={clsx(FONT_STYLES.pageTitle, "break-words")}
         style={{ color: COLORS.text.primary }}
       >
         {title}

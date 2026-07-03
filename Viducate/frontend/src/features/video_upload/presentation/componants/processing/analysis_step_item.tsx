@@ -9,11 +9,7 @@ interface StepProps {
   isLast?: boolean;
 }
 
-export const AnalysisStepItem = ({
-  labelId,
-  status,
-  isLast,
-}: StepProps) => {
+export const AnalysisStepItem = ({ labelId, status, isLast }: StepProps) => {
   const isCompleted = status === "completed";
   const isActive = status === "active";
   const isFailed = status === "failed";
@@ -67,10 +63,7 @@ export const AnalysisStepItem = ({
           ) : isCompleted ? (
             <CheckCircle size={20} className="md:w-6 md:h-6" />
           ) : isActive ? (
-            <RefreshCw
-              className="animate-spin md:w-6 md:h-6"
-              size={20}
-            />
+            <RefreshCw className="animate-spin md:w-6 md:h-6" size={20} />
           ) : (
             <Circle size={20} className="md:w-6 md:h-6" />
           )}
@@ -94,9 +87,7 @@ export const AnalysisStepItem = ({
           className={`${FONT_STYLES.body} font-semibold`}
           style={{
             color:
-              isCompleted || isActive
-                ? COLORS.text.primary
-                : COLORS.text.muted,
+              isCompleted || isActive ? COLORS.text.primary : COLORS.text.muted,
           }}
         >
           <FormattedMessage id={labelId} />
@@ -106,10 +97,7 @@ export const AnalysisStepItem = ({
           className="text-[10px] md:text-xs font-semibold uppercase tracking-wide mt-0.5"
           style={{ color: activeColors.text }}
         >
-          <FormattedMessage
-            id={`analysis.${status}`}
-            defaultMessage={status}
-          />
+          <FormattedMessage id={`analysis.${status}`} defaultMessage={status} />
         </span>
       </div>
     </div>

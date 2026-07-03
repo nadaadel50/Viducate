@@ -7,7 +7,6 @@ import { QuizExplanation } from "../widgets/quiz_explaintion";
 import { QuizOptionItem } from "../widgets/quiz_option_item";
 import { QuizQuestionHeader } from "../widgets/quiz_quesions_header";
 
-
 interface QuizOptionsProps {
   question: QuizQuestionEntity;
   selectedId: string | null;
@@ -34,10 +33,7 @@ export function QuizOptions({
 
   return (
     <section className="space-y-5">
-      <QuizQuestionHeader
-        question={question}
-        isReviewMode={isReviewMode}
-      />
+      <QuizQuestionHeader question={question} isReviewMode={isReviewMode} />
 
       {isReviewMode && submitQuestion?.explanation && (
         <QuizExplanation explanation={submitQuestion.explanation} />

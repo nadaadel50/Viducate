@@ -11,7 +11,6 @@ import type { UrlRequest } from "../../domain/entity/url_request";
 import type { UrlResponse } from "../../domain/entity/url_response";
 import { toUrlResponse } from "../model/url_response_dto";
 import { toUrlRequestDto } from "../model/url_request_dto";
-import { useLearningSession } from "../../../../core/hooks/useLearningContent";
 
 
 

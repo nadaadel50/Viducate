@@ -1,11 +1,14 @@
 import { COLORS } from "../../../../core/constants";
-import type { QuizQuestionEntity, QuizSubmitQuestion } from "../../domain/entity/quiz_entity";
+import type {
+  QuizQuestionEntity,
+  QuizSubmitQuestion,
+} from "../../domain/entity/quiz_entity";
 
 interface UseQuizOptionsParams {
   question: QuizQuestionEntity;
   selectedId: string | null;
   isReviewMode: boolean;
-  submitQuestion?: QuizSubmitQuestion; 
+  submitQuestion?: QuizSubmitQuestion;
 }
 
 export const useQuizOptions = ({
@@ -17,7 +20,9 @@ export const useQuizOptions = ({
   const options = question.choices;
 
   const getOptionStyle = (optionId: string) => {
-    const isCorrect = submitQuestion ? optionId === submitQuestion.correctAnswer : false;
+    const isCorrect = submitQuestion
+      ? optionId === submitQuestion.correctAnswer
+      : false;
     const isSelected = selectedId === optionId;
 
     const style: React.CSSProperties = {

@@ -1,7 +1,5 @@
 import Lottie from "lottie-react";
-
 import loadingAnimation from "../../assets/animations/loading.json";
-
 import {
   FONT_SIZE,
   FONT_WEIGHT,
@@ -14,10 +12,7 @@ type LoadingProps = {
   bigText: string;
 };
 
-export default function LoadingScreen({
-  smallText,
-  bigText,
-}: LoadingProps) {
+export default function LoadingScreen({ smallText, bigText }: LoadingProps) {
   return (
     <div className="flex min-h-screen w-full items-center justify-center bg-white px-4 sm:px-6 font-display">
       <div className="flex flex-col items-center gap-4 text-center md:gap-6">

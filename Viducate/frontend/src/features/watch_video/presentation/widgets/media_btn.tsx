@@ -32,7 +32,9 @@ export function MediaBtn({ onClick, icon, label }: MediaBtnProps) {
         }
       `}
     >
-      <span className={`flex-shrink-0 transition-colors ${hasUnsavedChanges ? "text-indigo-200" : "text-slate-400"}`}>
+      <span
+        className={`flex-shrink-0 transition-colors ${hasUnsavedChanges ? "text-indigo-200" : "text-slate-400"}`}
+      >
         {icon}
       </span>
 

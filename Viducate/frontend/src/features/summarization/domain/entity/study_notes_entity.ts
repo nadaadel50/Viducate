@@ -32,7 +32,6 @@ export type StudyNotesContent = {
   title: string;
   introduction: string;
   sections: StudyNotesSection[];
-  
 };
 
 export type SegmentStudyNotes = {
@@ -44,7 +43,7 @@ export type SegmentStudyNotes = {
   language: string;
   studyNotes: StudyNotesContent;
   generationFailed: boolean;
-readingTime: ReadingTime;
+  readingTime: ReadingTime;
 };
 export type VideoStudyNotes = {
   videoId: number;

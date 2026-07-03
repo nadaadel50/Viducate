@@ -3,7 +3,6 @@ import { FormattedMessage } from "react-intl";
 import { COLORS } from "../../../../../core/constants/colors";
 import type { VideoStatusEntity } from "../../../domain/entity/video_status_entity";
 
-
 type ProcessingActionsProps = {
   status: VideoStatusEntity["status"];
   onRetry: () => void;

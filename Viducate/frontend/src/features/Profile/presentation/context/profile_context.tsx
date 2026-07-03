@@ -1,4 +1,3 @@
-// contexts/profile_context.ts
 import { createContext } from "react";
 
 export type ProfileContextType = {

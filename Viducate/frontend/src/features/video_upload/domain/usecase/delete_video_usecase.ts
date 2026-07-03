@@ -6,10 +6,7 @@ export class DeleteVideoUseCase {
     this.uploadVideoRepo = uploadVideoRepo;
   }
 
-  async deleteVideo(
-    videoId:number
-    
-  ) {
+  async deleteVideo(videoId: number) {
     return this.uploadVideoRepo.deleteVideo(videoId);
   }
 }

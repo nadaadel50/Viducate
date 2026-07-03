@@ -4,11 +4,7 @@ import { AlertTriangle, Loader2 } from "lucide-react";
 
 import { CustomButton } from "./custum_btn";
 
-import {
-  FONT_SIZE,
-  FONT_WEIGHT,
-  LINE_HEIGHT,
-} from "../constants/fonts_update";
+import { FONT_SIZE, FONT_WEIGHT, LINE_HEIGHT } from "../constants/fonts_update";
 import { BaseModal } from "./base_modal";
 import { useIntl } from "react-intl";
 type ConfirmationModalProps = {
@@ -53,7 +49,7 @@ export function ConfirmationModal({
   title,
   description,
   confirmText,
-cancelText,
+  cancelText,
   confirmVariant = "danger",
   icon,
   isLoading = false,
@@ -63,27 +59,23 @@ cancelText,
   const intl = useIntl();
   const variant = VARIANTS[confirmVariant];
   const finalConfirmText =
-  confirmText ??
-  intl.formatMessage({
-    id: "common.confirm",
-  });
+    confirmText ??
+    intl.formatMessage({
+      id: "common.confirm",
+    });
 
-const finalCancelText =
-  cancelText ??
-  intl.formatMessage({
-    id: "common.cancel",
-  });
+  const finalCancelText =
+    cancelText ??
+    intl.formatMessage({
+      id: "common.cancel",
+    });
   return (
-    <BaseModal
-      isOpen={open}
-      onClose={onClose}
-      maxWidth="max-w-sm"
-    >
+    <BaseModal isOpen={open} onClose={onClose} maxWidth="max-w-sm">
       <div className="p-5 sm:p-6">
         <div
           className={clsx(
             "mx-auto mb-4 flex h-12 w-12 items-center justify-center rounded-full shadow-sm",
-            variant.icon
+            variant.icon,
           )}
         >
           {icon ?? <AlertTriangle size={22} />}
@@ -94,7 +86,7 @@ const finalCancelText =
             className={clsx(
               FONT_SIZE.size18,
               FONT_WEIGHT.bold,
-              "mb-2 text-slate-900"
+              "mb-2 text-slate-900",
             )}
           >
             {title}
@@ -104,7 +96,7 @@ const finalCancelText =
             className={clsx(
               FONT_SIZE.size14,
               LINE_HEIGHT.relaxed,
-              "mb-6 text-slate-500"
+              "mb-6 text-slate-500",
             )}
           >
             {description}
@@ -123,16 +115,10 @@ const finalCancelText =
           <CustomButton
             disabled={isLoading}
             onClick={onConfirm}
-            className={clsx(
-              "shadow-md",
-              variant.button
-            )}
+            className={clsx("shadow-md", variant.button)}
           >
             {isLoading ? (
-              <Loader2
-                size={18}
-                className="animate-spin"
-              />
+              <Loader2 size={18} className="animate-spin" />
             ) : (
               finalConfirmText
             )}

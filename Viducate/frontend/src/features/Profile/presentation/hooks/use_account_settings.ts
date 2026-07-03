@@ -9,12 +9,8 @@ import { useHandleInputs } from "./use_handle_inputs";
 export function useAccountSettings() {
   const { updateProfile, isLoadingUpdate, error, isSuccess } = useUpdate();
 
-  const {
-    firstName,
-    lastName,
-    initialFirstName,
-    initialLastName,
-  } = usePersonalInfoContext();
+  const { firstName, lastName, initialFirstName, initialLastName } =
+    usePersonalInfoContext();
 
   const {
     password,
@@ -35,9 +31,7 @@ export function useAccountSettings() {
 
   const passwordComplete =
     !passwordTouched ||
-    (Boolean(password) &&
-      Boolean(oldPassword) &&
-      Boolean(confirmPassword));
+    (Boolean(password) && Boolean(oldPassword) && Boolean(confirmPassword));
 
   const disabled =
     isLoadingUpdate ||

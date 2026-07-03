@@ -1,14 +1,10 @@
 import { useEffect } from "react";
 
-export function useUnsavedChangesWarning(
-  hasUnsavedChanges: boolean,
-) {
+export function useUnsavedChangesWarning(hasUnsavedChanges: boolean) {
   useEffect(() => {
     if (!hasUnsavedChanges) return;
 
-    const handleBeforeUnload = (
-      e: BeforeUnloadEvent,
-    ) => {
+    const handleBeforeUnload = (e: BeforeUnloadEvent) => {
       const message =
         "You have unsaved changes. Are you sure you want to leave?";
 
@@ -19,16 +15,10 @@ export function useUnsavedChangesWarning(
       return message;
     };
 
-    window.addEventListener(
-      "beforeunload",
-      handleBeforeUnload,
-    );
+    window.addEventListener("beforeunload", handleBeforeUnload);
 
     return () => {
-      window.removeEventListener(
-        "beforeunload",
-        handleBeforeUnload,
-      );
+      window.removeEventListener("beforeunload", handleBeforeUnload);
     };
   }, [hasUnsavedChanges]);
 }

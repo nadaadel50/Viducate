@@ -13,7 +13,10 @@ export function useSegmentStudyNotes() {
 
   const fetch = async (videoId: number, segmentId: number) => {
     setState({ status: "loading" });
-    const result = await getSegmentStudyNotesUsecase.execute(videoId, segmentId);
+    const result = await getSegmentStudyNotesUsecase.execute(
+      videoId,
+      segmentId,
+    );
     if (result.success) {
       setState({ status: "success", data: result.data });
     } else {

@@ -1,10 +1,5 @@
 import { useEffect, useMemo, useRef, useState } from "react";
-import {
-  FileQuestion,
-  FileText,
-  Layers3,
-  NotebookPen,
-} from "lucide-react";
+import { FileQuestion, FileText, Layers3, NotebookPen } from "lucide-react";
 import { useIntl } from "react-intl";
 
 import type { TopicReport } from "../../domain/entity/report_entity";
@@ -100,10 +95,7 @@ export function useTopicCard(topic: TopicReport) {
 
   const scorePercent =
     hasQuiz && topic.quizTotal
-      ? Math.round(
-          (topic.correctAnswers / topic.quizTotal) *
-            100,
-        )
+      ? Math.round((topic.correctAnswers / topic.quizTotal) * 100)
       : 0;
 
   const topicMaterials = useMemo(
@@ -140,13 +132,10 @@ export function useTopicCard(topic: TopicReport) {
             id: "report.topic.material.flashcards",
           },
           {
-            count:
-              topic.materialsGenerated.flashcards,
+            count: topic.materialsGenerated.flashcards,
           },
         ),
-        done:
-          topic.materialsGenerated.flashcards >
-          0,
+        done: topic.materialsGenerated.flashcards > 0,
       },
     ],
     [intl, topic],
@@ -164,7 +153,6 @@ export function useTopicCard(topic: TopicReport) {
     scorePercent,
     topicMaterials,
 
-    toggleOpen: () =>
-      setOpen((previous) => !previous),
+    toggleOpen: () => setOpen((previous) => !previous),
   };
 }

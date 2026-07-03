@@ -2,11 +2,7 @@ import Lottie from "lottie-react";
 
 import errorAnimation from "../../assets/animations/error.json";
 
-import {
-  FONT_SIZE,
-  FONT_WEIGHT,
-  LINE_HEIGHT,
-} from "../constants/fonts_update";
+import { FONT_SIZE, FONT_WEIGHT, LINE_HEIGHT } from "../constants/fonts_update";
 
 type ErrorScreenProps = {
   errorMessage?: string;
@@ -15,9 +11,7 @@ type ErrorScreenProps = {
 const DEFAULT_ERROR_MESSAGE =
   "Oops! Something went wrong. Please try again later.";
 
-export default function ErrorScreen({
-  errorMessage,
-}: ErrorScreenProps) {
+export default function ErrorScreen({ errorMessage }: ErrorScreenProps) {
   return (
     <div className="flex min-h-screen w-full items-center justify-center bg-white px-4 font-display">
       <div className="flex max-w-2xl flex-col items-center gap-4 text-center md:gap-6">

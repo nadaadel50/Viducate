@@ -25,10 +25,7 @@ export function SectionHeader({
           color,
         }}
       >
-        <Icon
-          size={18}
-          strokeWidth={2.2}
-        />
+        <Icon size={18} strokeWidth={2.2} />
       </div>
 
       <h2

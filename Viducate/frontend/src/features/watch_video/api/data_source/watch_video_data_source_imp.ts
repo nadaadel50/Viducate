@@ -28,7 +28,7 @@ export class WatchVideoDataSourceImp implements WatchVideoDataSource {
         success: true,
         data: undefined,
       };
-    } catch (error:any) {
+    } catch (error: any) {
       const message = handleApiError(error);
      
      

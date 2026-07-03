@@ -52,15 +52,10 @@ export function AccountSettingsForm() {
           </div>
 
           <div className="flex flex-col sm:flex-row gap-3 w-full lg:w-auto">
-          
-
-            <div 
-            
-            className="flex w-full flex-col gap-3 sm:w-auto sm:flex-row">
+            <div className="flex w-full flex-col gap-3 sm:w-auto sm:flex-row">
               <CustomButton
                 type="button"
-               className="border border-transparent hover:border-gray-200"
-                
+                className="border border-transparent hover:border-gray-200"
                 onClick={handleCancel}
               >
                 <FormattedMessage id="common.cancel" defaultMessage="Cancel" />
@@ -68,8 +63,7 @@ export function AccountSettingsForm() {
 
               <CustomButton
                 type="button"
-                style={{background:COLORS.button.primary}}
-               
+                style={{ background: COLORS.button.primary }}
                 disabled={disabled}
                 onClick={handleSave}
                 className="min-w-[170px] text-white"

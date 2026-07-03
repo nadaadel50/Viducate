@@ -1,4 +1,3 @@
-
 export function getRandomStuckQuestion(): string {
   const questions = [
     "watch.stuck.question.simple",

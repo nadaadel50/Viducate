@@ -16,6 +16,6 @@ export function toUrlResponse(dto: UrlResponseDto): UrlResponse {
     dto.url,
     dto.language,
     dto.processing_status,
-    dto.message
+    dto.message,
   );
 }

@@ -5,10 +5,7 @@ interface TermTooltipProps {
   tooltip: string;
 }
 
-export const TermTooltip = ({
-  text,
-  tooltip,
-}: TermTooltipProps) => {
+export const TermTooltip = ({ text, tooltip }: TermTooltipProps) => {
   return (
     <span
       className="

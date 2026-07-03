@@ -9,7 +9,10 @@ export class GetSegmentStudyNotesUsecase {
     this.repo = repo;
   }
 
-  execute(videoId: number, segmentId: number): Promise<ApiResult<SegmentStudyNotes>> {
+  execute(
+    videoId: number,
+    segmentId: number,
+  ): Promise<ApiResult<SegmentStudyNotes>> {
     return this.repo.getSegmentStudyNotes(videoId, segmentId);
   }
 }

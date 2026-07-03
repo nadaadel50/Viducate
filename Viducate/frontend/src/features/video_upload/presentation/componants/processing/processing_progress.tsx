@@ -3,7 +3,6 @@ import { CheckCircle, XCircle } from "lucide-react";
 import { COLORS } from "../../../../../core/constants/colors";
 import type { VideoStatusEntity } from "../../../domain/entity/video_status_entity";
 
-
 type ProcessingProgressProps = {
   status: VideoStatusEntity["status"];
   progress: number;
@@ -19,10 +18,10 @@ export function ProcessingProgress({
         status === "failed"
           ? `conic-gradient(from 0deg, ${COLORS.state.error} 0%, ${COLORS.state.error} 100%)`
           : status === "completed"
-          ? `conic-gradient(from 0deg, ${COLORS.state.success} 0%, ${COLORS.state.success} 100%)`
-          : `conic-gradient(from 0deg, ${COLORS.brand.primary} 0%, ${COLORS.brand.secondary} ${progress}%, ${COLORS.effects.ringEmpty} ${progress}%)`,
+            ? `conic-gradient(from 0deg, ${COLORS.state.success} 0%, ${COLORS.state.success} 100%)`
+            : `conic-gradient(from 0deg, ${COLORS.brand.primary} 0%, ${COLORS.brand.secondary} ${progress}%, ${COLORS.effects.ringEmpty} ${progress}%)`,
     }),
-    [progress, status]
+    [progress, status],
   );
 
   return (

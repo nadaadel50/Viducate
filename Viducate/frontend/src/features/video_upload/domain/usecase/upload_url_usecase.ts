@@ -7,10 +7,7 @@ export class UploadUrlUseCase {
     this.uploadVideoRepo = uploadVideoRepo;
   }
 
-  async uploadUrl(
-    urlReq:UrlRequest
-    
-  ) {
+  async uploadUrl(urlReq: UrlRequest) {
     return this.uploadVideoRepo.uploadURL(urlReq);
   }
 }

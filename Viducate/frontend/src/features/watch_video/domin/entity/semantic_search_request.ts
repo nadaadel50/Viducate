@@ -1,10 +1,8 @@
 export class SemanticSearchRequest {
   query: string;
-   videoId:number
-  
+  videoId: number;
 
-  constructor(query: string,videoId:number) {
-    ((
-      (this.query = query,this.videoId=videoId)));
+  constructor(query: string, videoId: number) {
+    ((this.query = query), (this.videoId = videoId));
   }
 }

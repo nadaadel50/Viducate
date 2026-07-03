@@ -2,11 +2,9 @@ import type { TopicResponse } from "../../../features/watch_video/domin/entity/t
 
 export type LearningSessionContextType = {
   videoId: number | null;
-  videoTitle: string|null
+  videoTitle: string | null;
 
-  //handleSetVideoTitle: (title: string|null) => void;
-
-  topics:TopicResponse[]|null
+  topics: TopicResponse[] | null;
 
   selectedTopic: TopicResponse | null;
 
@@ -15,26 +13,21 @@ export type LearningSessionContextType = {
   seekTo: number | null;
 
   setVideoId: (id: number | null) => void;
-   setVideoTitle: (title: string | null) => void;
+  setVideoTitle: (title: string | null) => void;
 
-   setTopics: (topics:TopicResponse[]|null) => void;
+  setTopics: (topics: TopicResponse[] | null) => void;
 
-  setSelectedTopic: React.Dispatch<
-    React.SetStateAction<TopicResponse | null>
-  >;
+  setSelectedTopic: React.Dispatch<React.SetStateAction<TopicResponse | null>>;
 
   setCurrentTime: (time: number) => void;
 
-  setSeekTo: React.Dispatch<
-    React.SetStateAction<number | null>
-  >;
-  completedTopics: Set<number>;  
+  setSeekTo: React.Dispatch<React.SetStateAction<number | null>>;
+  completedTopics: Set<number>;
   handleSetCompletedTopics: (segmentIds: number[]) => void;
   toggleTopicComplete: (segmentId: number) => void;
   goToNextTopic: () => void;
 
-
-  duration: number|null;
+  duration: number | null;
   setDurationTime: (duration: number) => void;
 
   marks: number[];
@@ -43,9 +36,5 @@ export type LearningSessionContextType = {
   hasUnsavedChanges: boolean;
   handleSetHasUnsavedChanges: (hasChanges: boolean) => void;
 
-
-  
-  handleSetInitializeCurrentTime(time: number):void
-
-  
+  handleSetInitializeCurrentTime(time: number): void;
 };

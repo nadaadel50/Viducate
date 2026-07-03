@@ -6,14 +6,13 @@ import type { UrlResponse } from "../entity/url_response";
 
 export interface UploadVideoRepo {
   uploadVideo(
-  uploadReq: UploadVideoRequest,
-  onProgress?: (percent: number) => void,
-  signal?: AbortSignal,
-  onVideoIdReceived?: (id: number) => void
-):Promise<ApiResult<ConfirmUploadResponse>>
+    uploadReq: UploadVideoRequest,
+    onProgress?: (percent: number) => void,
+    signal?: AbortSignal,
+    onVideoIdReceived?: (id: number) => void,
+  ): Promise<ApiResult<ConfirmUploadResponse>>;
 
+  deleteVideo(videoId: number): Promise<ApiResult<string>>;
 
-deleteVideo(videoId:number):Promise<ApiResult<string>>
-
-uploadURL(uploadReq:UrlRequest):Promise<ApiResult<UrlResponse>>
+  uploadURL(uploadReq: UrlRequest): Promise<ApiResult<UrlResponse>>;
 }

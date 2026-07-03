@@ -4,18 +4,15 @@ import type { UploadVideoRequest } from "../../domain/entity/upload_video_reques
 import type { UrlRequest } from "../../domain/entity/url_request";
 import type { UrlResponse } from "../../domain/entity/url_response";
 
-
 export interface UploadVideoDataSource {
- uploadVideo(
-   uploadReq: UploadVideoRequest,
-   onProgress?: (percent: number) => void,
-   signal?: AbortSignal,
-   onVideoIdReceived?: (id: number) => void
-   
- ):Promise<ApiResult<ConfirmUploadResponse>>
+  uploadVideo(
+    uploadReq: UploadVideoRequest,
+    onProgress?: (percent: number) => void,
+    signal?: AbortSignal,
+    onVideoIdReceived?: (id: number) => void,
+  ): Promise<ApiResult<ConfirmUploadResponse>>;
 
+  deleteVideo(videoId: number): Promise<ApiResult<string>>;
 
- deleteVideo(videoId:number):Promise<ApiResult<string>>
-
- uploadURL(uploadReq:UrlRequest):Promise<ApiResult<UrlResponse>>
+  uploadURL(uploadReq: UrlRequest): Promise<ApiResult<UrlResponse>>;
 }

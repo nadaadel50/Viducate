@@ -17,7 +17,11 @@ const studyNotesRepo = new StudyNotesRepoImp(studyNotesDataSource);
 const exportDataSource = new ExportDataSourceImp();
 const exportRepo = new ExportRepoImp(exportDataSource);
 export const exportUsecase = new ExportUsecase(exportRepo);
-export const getSegmentStudyNotesUsecase = new GetSegmentStudyNotesUsecase(studyNotesRepo);
+export const getSegmentStudyNotesUsecase = new GetSegmentStudyNotesUsecase(
+  studyNotesRepo,
+);
 export const getVideoSummaryUsecase = new GetVideoSummaryUsecase(repo);
 export const getSegmentSummaryUsecase = new GetSegmentSummaryUsecase(repo);
-export const getVideoStudyNotesUsecase = new GetVideoStudyNotesUsecase(studyNotesRepo);
+export const getVideoStudyNotesUsecase = new GetVideoStudyNotesUsecase(
+  studyNotesRepo,
+);

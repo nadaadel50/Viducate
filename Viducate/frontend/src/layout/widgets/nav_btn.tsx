@@ -20,9 +20,7 @@ export function NavbarUserButton({
       aria-expanded={dropdownOpen}
       aria-haspopup="true"
     >
-      <span className="hidden text-sm text-gray-600 sm:block">
-        {fullName}
-      </span>
+      <span className="hidden text-sm text-gray-600 sm:block">{fullName}</span>
 
       <div className="flex h-7 w-7 items-center justify-center rounded-full bg-indigo-50 text-xs font-medium text-indigo-600 ring-[1.5px] ring-indigo-200">
         {initials}

@@ -1,4 +1,3 @@
-// contexts/security_context.ts
 import { createContext } from "react";
 
 export type SecurityContextType = {
