@@ -11,7 +11,7 @@ export function useUploadVideoController() {
 
   const controllerRef = useRef<AbortController | null>(null);
 
-  const MAX_VIDEO_SIZE_MB = 14;
+  const MAX_VIDEO_SIZE_MB = 500;
   const MAX_VIDEO_SIZE = MAX_VIDEO_SIZE_MB * 1024 * 1024;
   const intl=useIntl()
   

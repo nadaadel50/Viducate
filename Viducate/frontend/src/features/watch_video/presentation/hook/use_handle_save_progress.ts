@@ -23,12 +23,12 @@ export function useHandleSaveProgress() {
   const { saveVideoProgress, isSavingProgress } = useSaveVideoProgress();
   const isAutoSave = useRef(false);
 
-  useEffect(() => {
-    if (!duration) return;
+  // useEffect(() => {
+  //   if (!duration) return;
 
-    isAutoSave.current = true;
-    handleSaveProgress();
-  }, [duration]);
+  //   isAutoSave.current = false;
+  //   handleSaveProgress();
+  // }, [duration]);
   function handleSaveProgress() {
     
 
