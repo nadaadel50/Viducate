@@ -13,12 +13,17 @@ import { ConfirmationModal } from "../../../../core/componants/confirmation_moda
 import LoadingScreen from "../../../../core/componants/loading_screen";
 import ErrorScreen from "../../../../core/componants/error_screen";
 import { useIntl } from "react-intl";
+
 export function ProfilePage() {
   const { showDeleteModal } = useProfileContext();
 
   const deleteAccount = useDeleteAccount();
 
- 
+const { data } = useGetUserData();
+
+ const preferences = usePreferences({
+  language_preference: data?.language_preference ?? "en",
+});
 
   const auth = useContext(AuthContext);
 
@@ -63,7 +68,7 @@ export function ProfilePage() {
 
           <div className="lg:col-span-4">
             <PreferencesSidebar
-          
+              preferences={preferences}
               onSignOut={handleSignOut}
             />
           </div>

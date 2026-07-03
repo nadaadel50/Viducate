@@ -4,13 +4,19 @@ import { useLanguage } from "../../../../core/hooks/useLanguage";
 import { SidebarHeader } from "../components/sidebar_header";
 import { LanguageSection } from "../components/language_section";
 import { SignOutButton } from "../components/signout_btn";
+import type { usePreferences } from "../hooks/use_preferences";
 
 interface PreferencesSidebarProps {
+   preferences: ReturnType<typeof usePreferences>;
 
   onSignOut?: () => void;
 }
 
-export function PreferencesSidebar({ onSignOut }: PreferencesSidebarProps) {
+export function PreferencesSidebar({
+  
+  onSignOut,
+}: PreferencesSidebarProps) {
+
   const { locale, setLocale } = useLanguage();
 
   return (
