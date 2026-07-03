@@ -12,7 +12,7 @@ import {
 import { useIntl } from "react-intl";
 export function MainHeader() {
   const{currentTime}=useLearningSession()
-  const { selectedTopic, handleSetHasUnsavedChanges,handleSetInitializeCurrentTime } = useLearningSession();
+  const { selectedTopic,handleSetInitializeCurrentTime } = useLearningSession();
   const intl = useIntl();
   const { handleSaveProgress, toastMessage, toastType, clearToast } =
     useHandleSaveProgress();

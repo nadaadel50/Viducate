@@ -13,7 +13,7 @@ export function useVideoData() {
    
     setVideoTitle,
     handleSetInitializeCurrentTime,
-   
+   setSelectedTopic,
     setCurrentTime,
     seekTo,
 
@@ -49,10 +49,11 @@ useEffect(() => {
   setTopics(query.data.topics);
   handleSetMarks(query.data.bookmarks);
   setVideoTitle(query.data.title);
+  setSelectedTopic(query.data.topics[0]);
+  
 
   if (seekTo === null) {
-    console.log("came here to test")
-    console.log("query.data.current_time is: ", query.data.current_time);
+    
     setCurrentTime(query.data.current_time);
     handleSetInitializeCurrentTime(query.data.current_time);
   }

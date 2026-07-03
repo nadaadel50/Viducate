@@ -123,7 +123,7 @@ const handleSetInitializeCurrentTime = (time: number) => {
   }
 useEffect(() => {
   if (videoId === null) return;
-  console.log("videoId changed, resetting session state:", videoId);  
+  
   // setSelectedTopic(null);
   // setTopics(null);
   // setVideoTitle(null);
