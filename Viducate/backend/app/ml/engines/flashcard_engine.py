@@ -38,7 +38,6 @@ def _get_client() -> Groq:
 
 
 def _clean_json(raw: str) -> str:
-    """Strip markdown fences."""
     raw = raw.strip()
     raw = re.sub(r"^```(?:json)?\s*", "", raw)
     raw = re.sub(r"\s*```$", "", raw)
@@ -74,11 +73,7 @@ def _build_prompt(
         if language == "ar"
         else "Write all questions and answers in English only."
     )
-    # lang_note = (
-    #     "Write all questions and answers in Arabic only."
-    #     if language == "ar"
-    #     else "Write all questions and answers in English only."
-    # )
+   
 
     topics_line = ", ".join(subtopic_names) if subtopic_names else main_topic
 
@@ -104,12 +99,8 @@ def generate_flashcards_for_segment(
     language: str = "en",
     num_cards: int = 5,
 ) -> list[dict]:
-    """
-    Generates flashcards using Groq.
-    Uses only subtopic NAMES (not descriptions) to minimize token usage.
-    Retries up to 3 times on rate limit errors with backoff.
-    """
-    # Only names — keep prompt tiny
+    
+   
     subtopic_names = [st["name"] for st in subtopics if st.get("name")]
 
     prompt = _build_prompt(segment_title, main_topic, subtopic_names, language, num_cards)
@@ -136,7 +127,7 @@ def generate_flashcards_for_segment(
             )
             raw = response.choices[0].message.content or ""
             logger.debug(f"[FlashcardEngine] Raw response: {raw[:500]}")
-            break  # success — exit retry loop
+            break 
         
         except NetworkUnavailableError:
             raise
@@ -159,7 +150,7 @@ def generate_flashcards_for_segment(
         logger.error("[FlashcardEngine] Empty response after all retries")
         return []
 
-    # ── Parse JSON ──────────────────────────────────────────────────────────
+    #  Parse JSON 
     try:
         cleaned = _clean_json(raw)
         cards = json.loads(cleaned)
@@ -171,7 +162,7 @@ def generate_flashcards_for_segment(
         logger.error(f"[FlashcardEngine] Expected list, got {type(cards)}. raw={raw[:300]}")
         return []
 
-    # ── Validate each card ──────────────────────────────────────────────────
+    #  Validate each card 
     validated = []
     for card in cards:
         if not isinstance(card, dict):

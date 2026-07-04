@@ -32,19 +32,17 @@ class DashboardService:
 
     def get_dashboard(self, user_id: int) -> dict:
         
-        # --- User ---------------------------------------------------
         user = self.db.query(User).filter(User.id == user_id).first()
 
-        # --- Stats --------------------------------------------------
         videos = self.video_repo.get_by_user(user_id)
         
-        # --- Total Watch Time (sum of current_time across videos) ---
+        #  Total Watch Time 
         total_watch_time = sum(
             v.current_time for v in videos
             if v.current_time and v.processing_status == "completed"
         )
 
-        # --- Used Storage --------------------------------------------
+        #  Used Storage 
         used_storage = sum(
             v.storage_bytes for v in videos 
             if v.storage_bytes and v.processing_status == "completed"
@@ -52,17 +50,15 @@ class DashboardService:
         used_r2_storage = self.video_repo.get_user_r2_storage_bytes(user_id)
 
 
-        # --- Videos List --------------------------------------------
+        #  Videos List 
         videos_list = []
         for v in videos:
-            # Only show completed videos
             if v.processing_status != "completed":
                 continue
 
-            # progress from current_time / duration
             if v.duration and v.duration > 0 and v.current_time:
                 progress = int((v.current_time / v.duration) * 100)
-                progress = min(progress, 100)  # safety cap
+                progress = min(progress, 100) 
             else:
                 progress = 0
 

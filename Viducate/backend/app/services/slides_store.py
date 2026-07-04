@@ -1,4 +1,3 @@
-# مؤقت للتجربة - هنبدله بـ Redis بعدين
 slides_store: dict[int, list[str]] = {}
 
 def save_slides_text(video_id: int, slides_text: list[str]):

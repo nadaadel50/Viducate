@@ -12,10 +12,10 @@ class SegmentFullSchema(BaseModel):
     main_topic: str
     title: str
 
-    sub_topics: List[SubTopicSchema]   # REQUIRED
+    sub_topics: List[SubTopicSchema]  
     key_points: Optional[List[str]] = []
 
-    # -------- Validators -------- #
+
 
     @field_validator("segment_number")
     @classmethod
@@ -48,9 +48,6 @@ class SegmentFullSchema(BaseModel):
     
 
 
-# =========================
-# 2. CREATE (DB Insert)
-# =========================
 class SegmentCreate(BaseModel):
     video_id: int
     segment_number: int

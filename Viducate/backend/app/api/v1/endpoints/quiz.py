@@ -1,11 +1,3 @@
-"""
-quiz.py  –  FastAPI router
-───────────────────────────
-POST /api/v1/quiz/video/{video_id}/segment/{segment_id}   → segment quiz
-POST /api/v1/quiz/video/{video_id}                        → whole-video quiz
-GET  /api/v1/quiz/{quiz_id}                               → fetch existing quiz by ID
-"""
-
 import logging
 from fastapi import APIRouter, Depends, status
 from fastapi.security import HTTPBearer, HTTPAuthorizationCredentials
@@ -25,7 +17,7 @@ from app.repositories.video_repository import VideoRepository
 from app.models.quiz import UserQuizResult
 from app.schemas.quiz_schema import QuizGenerateRequest, QuizResponse, QuizSecureResponse
 from app.repositories.video_repository import VideoRepository
-
+from app.repositories.video_repository import VideoRepository
 router = APIRouter(prefix="/quiz", tags=["Quiz"])
 security = HTTPBearer()
 logger = logging.getLogger(__name__)
@@ -120,8 +112,7 @@ def get_quiz(
     if not quiz:
         raise HTTPException(status_code=status.HTTP_404_NOT_FOUND, detail="Quiz not found")
 
-    # Quick ownership check via video
-    from app.repositories.video_repository import VideoRepository
+    
     video = VideoRepository(db).get_by_id(quiz.video_id)
     if not video or video.user_id != current_user.id:
         raise HTTPException(status_code=status.HTTP_403_FORBIDDEN, detail="Not authorized")
@@ -159,7 +150,7 @@ def submit_quiz_results(
 ):
     repo = QuizRepository(db)
 
-    # ── Fetch quiz ────────────────────────────────────────────────────────────
+    # Fetch quiz 
     quiz = repo.get_quiz_with_questions(quiz_id)
     if not quiz:
         raise HTTPException(
@@ -174,7 +165,7 @@ def submit_quiz_results(
             detail="Not authorized",
         )
 
-    # ── Build lookup maps ─────────────────────────────────────────────────────
+    #  Build lookup maps 
     question_map = {q.question_id: q for q in quiz.questions}
 
     correct_answer_map = {
@@ -182,13 +173,13 @@ def submit_quiz_results(
         for q in quiz.questions
     }
 
-    # ── Build a map of user's submitted answers ───────────────────────────────
+    #  Build a map of user's submitted answers 
     user_answer_map = {
         a.question_id: (a.user_answer or "").strip().lower()
         for a in request.answers
     }
 
-    # ── Grade server-side ─────────────────────────────────────────────────────
+    #  Grade server-side 
     correct_count = 0
     answers_payload = []
 
@@ -212,7 +203,7 @@ def submit_quiz_results(
     wrong_count = total - correct_count
     score = int(round((correct_count / total) * 100)) if total > 0 else 0
 
-    # ── Upsert result ─────────────────────────────────────────────────────────
+    #  Upsert result 
     existing = (
         db.query(UserQuizResult)
         .filter(
@@ -258,7 +249,7 @@ def submit_quiz_results(
             f"user={current_user.id} | score={score}"
         )
 
-    # ── Build full question results for response ───────────────────────────────
+    #  Build full question results for response 
     question_results = []
     for q in quiz.questions:
         user_answer = user_answer_map.get(q.question_id)

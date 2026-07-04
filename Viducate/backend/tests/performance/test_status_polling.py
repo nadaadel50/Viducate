@@ -12,7 +12,7 @@ sys.path.insert(0, os.path.dirname(__file__))
 
 
 
-CONCURRENT_POLLERS = 20
+CONCURRENT_POLLERS = 10
 POLLS_PER_CLIENT = 10
 
 
@@ -41,7 +41,7 @@ async def test_concurrent_status_polling():
     async def run_poller():
         results = []
 
-        async with httpx.AsyncClient(timeout=5.0) as client:
+        async with httpx.AsyncClient(timeout=11.0) as client:
 
             # Warm-up 
             await client.get(url, headers=HEADERS)

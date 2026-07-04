@@ -22,10 +22,10 @@ class Video(Base):
     content_hash = Column(String(64), index=True, nullable=True)
 
     # to dashboard
-    file_size = Column(BigInteger, nullable=True)      # size file R2 in bytes  
-    storage_bytes = Column(BigInteger, default=0)      # storage in data base  in bytes
-    current_time = Column(Integer, default=0)           # user stop in which time
-    last_watched_at = Column(TIMESTAMP, nullable=True)  # last time user watch video
+    file_size = Column(BigInteger, nullable=True)      
+    storage_bytes = Column(BigInteger, default=0)     
+    current_time = Column(Integer, default=0)          
+    last_watched_at = Column(TIMESTAMP, nullable=True)  
     bookmarks = Column(JSON, default=[])  # [120, 350, 780]
 
     user = relationship("User", back_populates="videos")

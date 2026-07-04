@@ -30,11 +30,7 @@ def _format_seconds(seconds: int) -> str:
 
 
 def _build_segment_dict(seg: TopicSegment, cards: list) -> dict:
-    """
-    Builds the segment response dict including start_time and end_time.
-    Both raw seconds (for redirecting) and formatted string (for display)
-    are included so the frontend can use whichever it needs.
-    """
+    
     return {
         "segment_id":        seg.segment_id,
         "segment_number":    seg.segment_number,
@@ -67,9 +63,7 @@ class FlashcardService:
         self.db   = db
         self.repo = FlashcardRepository(db)
 
-    # ─────────────────────────────────────────────────────────────────────────
-    # INTERNAL HELPERS
-    # ─────────────────────────────────────────────────────────────────────────
+   
     def _get_video_or_404(self, video_id: int) -> Video:
         video = self.db.query(Video).filter(Video.vid == video_id).first()
         if not video:
@@ -100,22 +94,14 @@ class FlashcardService:
             .all()
         )
 
-    # ─────────────────────────────────────────────────────────────────────────
-    # PUBLIC METHODS
-    # ─────────────────────────────────────────────────────────────────────────
+    
     def get_or_generate(self, video_id: int, user_id: int) -> dict:
-        """
-        Returns flashcards for the video grouped by segment.
-        Each segment includes start_time and end_time in seconds.
-        Each flashcard also carries segment_start_time for easy frontend redirect.
-        Generates with Groq on first call; returns cached on subsequent calls.
-        """
+     
         video = self._get_video_or_404(video_id)
         self._check_ownership(video, user_id)
         self._check_processing_complete(video)
 
-        # existing_count = self.repo.count_by_video(video_id)
-        # cached = existing_count > 0
+    
         segments = self._get_ordered_segments(video_id)
         segments_with_cards = self.repo.get_segments_with_cards(video_id)
 
@@ -156,10 +142,6 @@ class FlashcardService:
         }
 
     def regenerate(self, video_id: int, user_id: int) -> dict:
-        """
-        Deletes existing flashcards and regenerates fresh ones.
-        Useful when user changes language preference.
-        """
         video = self._get_video_or_404(video_id)
         self._check_ownership(video, user_id)
         self._check_processing_complete(video)
@@ -170,10 +152,6 @@ class FlashcardService:
         return self.get_or_generate(video_id, user_id)
 
     def get_by_segment(self, video_id: int, segment_id: int, user_id: int) -> dict:
-        """
-        Returns flashcards for a single segment including start_time and end_time.
-        Frontend can use start_time to seek the video player to that timestamp.
-        """
         video = self._get_video_or_404(video_id)
         self._check_ownership(video, user_id)
 
@@ -191,10 +169,7 @@ class FlashcardService:
 
 
     def get_or_generate_segment(self, video_id: int, segment_id: int, user_id: int) -> dict:
-        """
-        Returns flashcards for a single segment.
-        Generates them if not cached yet.
-        """
+    
         video = self._get_video_or_404(video_id)
         self._check_ownership(video, user_id)
         self._check_processing_complete(video)
@@ -231,21 +206,7 @@ class FlashcardService:
             for st in segment.subtopics
             if st.name
         ]
-        #*********************************************
-        # cards = generate_flashcards_for_segment(
-        #     segment_title=segment.title,
-        #     main_topic=segment.main_topic or segment.title,
-        #     subtopics=subtopics_data,
-        #     language=language,
-        #     num_cards=CARDS_PER_SEGMENT,
-        # )
-
-        # if not cards:
-        #     raise HTTPException(
-        #         status_code=status.HTTP_422_UNPROCESSABLE_ENTITY,
-        #         detail=f"Failed to generate flashcards for segment {segment_id}",
-        #     )
-
+       
         try:
             cards, quality = run_with_quality_retry(
                 generator_fn=lambda seg=segment, subs=subtopics_data: generate_flashcards_for_segment(
@@ -274,14 +235,6 @@ class FlashcardService:
                 detail=f"Failed to generate flashcards for segment {segment_id}",
             )
 
-        # Update quality
-        # current_score = segment.quality_score or 0.0
-        # segment.quality_score = max(current_score, quality.get("score", 0.0))
-        # segment.quality_flag  = bool(quality.get("flag", False))
-        # segment.retry_count   = (segment.retry_count or 0) + quality.get("retries", 0)
-        # self.db.flush()
-        
-        #*********************************************
         
         for card in cards:
             self.db.add(Flashcard(

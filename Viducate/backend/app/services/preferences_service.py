@@ -32,7 +32,7 @@ class PreferencesService:
 
         prefs = self.repo.get_by_video(video_id)
         if not prefs:
-            # No preferences set yet — return all null (same as video)
+    
             return {
                 "video_id": video_id,
                 "summary_language": None,

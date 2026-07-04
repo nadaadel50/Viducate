@@ -53,21 +53,8 @@ def process_single_segment_studynotes(db: Session, video_id: int, segment_id: in
         if st.name
     ]
 
-    #********************************************
-    # content = generate_segment_studynotes(
-    #     segment_title=segment.title,
-    #     main_topic=segment.main_topic or segment.title,
-    #     subtopics=subtopics_data,
-    #     language=language,
-    # )
-
-    # if content is None:
-    #     logger.warning(
-    #         f"[StudyNotesProcessor] Segment {segment_id} generation failed, NOT caching."
-    #     )
-    #     return None
     
-    # ── Generate with quality validation ─────────────────────────────────────
+    #  Generate with quality validation 
     content, quality = run_with_quality_retry(
         generator_fn=lambda seg=segment, subs=subtopics_data: (
             generate_segment_studynotes(
@@ -84,7 +71,7 @@ def process_single_segment_studynotes(db: Session, video_id: int, segment_id: in
         ),
         label=f"studynotes segment_id={segment_id}",
     )
-    # ── End quality validation ────────────────────────────────────────────────
+    #  End quality validation 
  
     if content is None:
         logger.warning(
@@ -93,12 +80,6 @@ def process_single_segment_studynotes(db: Session, video_id: int, segment_id: in
         )
         return None
  
-    # Persist quality on the segment row
-    # current_score = segment.quality_score or 0.0
-    # segment.quality_score = max(current_score, quality.get("score", 0.0))
-    # segment.quality_flag  = bool(quality.get("flag", False))
-    # segment.retry_count   = (segment.retry_count or 0) + quality.get("retries", 0)
-    # db.flush()
  
     logger.info(
         f"[StudyNotesProcessor] Segment {segment_id} "
@@ -112,7 +93,7 @@ def process_single_segment_studynotes(db: Session, video_id: int, segment_id: in
             f"[StudyNotesProcessor] Segment {segment_id} study notes below "
             f"threshold (score={quality['score']:.4f}) — saving best attempt"
         )
-    #********************************************
+   
     new_notes = SegmentStudyNotes(
         segment_id=segment_id,
         content=content,
@@ -220,12 +201,6 @@ def process_video_studynotes(db: Session, video_id: int, language: str) -> Video
         for seg in segments
     ]
 
-    #********************************************
-    # content = generate_video_studynotes(
-    #     video_title=video.title,
-    #     segments=segments_data,
-    #     language=language,
-    # )
     content, _ = run_with_quality_retry(
         generator_fn=lambda: generate_video_studynotes(
             video_title=video.title,
@@ -236,7 +211,6 @@ def process_video_studynotes(db: Session, video_id: int, language: str) -> Video
         label=f"video_studynotes video_id={video_id}",
     )
 
-    #********************************************
     if content is None:
         logger.warning(
             f"[StudyNotesProcessor] Video {video_id} generation failed, NOT caching."

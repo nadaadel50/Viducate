@@ -59,10 +59,7 @@ def _calc_segment_questions(num_subtopics: int, duration_seconds: int, difficult
 
 
 def _calc_video_questions(segments: list[dict], difficulty: str) -> int:
-    """
-    Dynamically calculates total questions for a full-video quiz.
-    Sums estimated questions per segment, capped at VIDEO_MAX_QUESTIONS.
-    """
+ 
     total = 0
     for seg in segments:
         num_subtopics   = len(seg.get("subtopics", []))
@@ -203,11 +200,7 @@ def _build_video_prompt(
         if language == "ar"
         else "OUTPUT LANGUAGE: English only. No Arabic, no CJK characters."
     )
-    # lang_note = (
-    #     "Write all text in Arabic only."
-    #     if language == "ar"
-    #     else "Write all text in English only."
-    # )
+  
     diff_desc = DIFFICULTY_CONFIGS[difficulty]["description"]
 
     segments_text = ""
@@ -335,7 +328,6 @@ def _call_groq_with_retry(client: Groq, prompt: str, max_retries: int = 3) -> st
     return ""
 
 
-# ─── PUBLIC API ───────────────────────────────────────────────────────────────
 
 REQUIRED_KEYS = [
     "question_text", "choice_a", "choice_b", "choice_c", "choice_d",
@@ -386,7 +378,7 @@ def generate_segment_quiz(
         logger.warning(
             f"[QuizEngine] Too few valid questions ({len(questions)}) for segment '{segment_title}'"
         )
-        return []  # or trigger retry logic
+        return [] 
     
 
     logger.info(f"[QuizEngine] Got {len(questions)} valid questions for segment '{segment_title}'")

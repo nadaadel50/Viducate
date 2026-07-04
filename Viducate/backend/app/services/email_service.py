@@ -1,4 +1,3 @@
-# app/services/email_service.py
 from fastapi import HTTPException , status
 from fastapi_mail import FastMail, MessageSchema, ConnectionConfig
 from pydantic import EmailStr

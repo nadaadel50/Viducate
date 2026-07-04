@@ -15,11 +15,7 @@ class OCRService:
         self.processor  = OCRProcessor()
 
     def run(self, video_path: str, video_id: int) -> list:
-        """
-        Runs OCR pipeline.
-        Saves results to text file.
-        Returns segments list — same structure as transcript variable.
-        """
+       
         video = self.video_repo.get_by_id(video_id)
         if not video:
             raise HTTPException(
@@ -29,20 +25,16 @@ class OCRService:
 
         try:
             logger.info(f"[OCRService] Starting | video_id={video_id} | url={video.url}")
+<<<<<<< Updated upstream
+=======
 
             
-            #result = self.processor.process_from_file(video_path)
+>>>>>>> Stashed changes
             result = self.processor.process_from_file(video_path, video_id=video_id)
 
-
-            # result            = self.processor.process_from_file(
-            #     url=video.url,
-            #     language=video.language or "en"
-            # )
             segments          = result["segments"]
             detected_language = result["language"]
 
-            # Save to text file
             self._save_to_txt(video_id, segments, detected_language)
 
             logger.info(
@@ -53,7 +45,11 @@ class OCRService:
             return {
                 "segments": segments,
                 "language": detected_language
-            }   # ← same as transcript variable
+<<<<<<< Updated upstream
+            }   
+=======
+            }   #  same as transcript variable
+>>>>>>> Stashed changes
         
         except PipelineCancelledError:
             raise

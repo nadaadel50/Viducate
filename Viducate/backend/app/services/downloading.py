@@ -15,7 +15,6 @@ logger = logging.getLogger(__name__)
 
 
 def _is_direct_url(url: str) -> bool:
-    """Check if the URL is a direct file link (R2 or S3 presigned)"""
     direct_domains = [
         "r2.cloudflarestorage.com",
         "s3.amazonaws.com",
@@ -24,7 +23,6 @@ def _is_direct_url(url: str) -> bool:
     return any(domain in url for domain in direct_domains)
 
 
-# def _download_direct(url: str, output_path: str) -> str:
 def _download_direct(url: str, output_path: str, video_id: int) -> str:
     """Download file directly using requests"""
     response = with_network_retry(
@@ -85,15 +83,13 @@ def download_video(url: str, video_id: int) -> str:
         'http_chunk_size': 1 * 1024 * 1024,   # 1 MB chunks
     }
 
-    # with yt_dlp.YoutubeDL(ydl_opts) as ydl:
-    #     ydl.download([url])
     check_cancelled(video_id)
     try:
         with yt_dlp.YoutubeDL(ydl_opts) as ydl:
             ydl.download([url])
     except DownloadCancelled:
         logger.info(f"[Download] Stopped mid-download for video_id={video_id}")
-        # remove whatever partial/fragment files yt-dlp already wrote
+      
         for partial in glob.glob(output_path.replace(".mp4", ".*")):
             try:
                 os.remove(partial)
