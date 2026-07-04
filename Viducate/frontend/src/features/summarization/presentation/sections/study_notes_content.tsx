@@ -10,9 +10,13 @@ import { StudyNotesSection } from "./study_notes_secion";
 
 type StudyNotesContentProps = {
   studyNotes: StudyNotesContentType;
+  isArabic: boolean;
 };
 
-export function StudyNotesContent({ studyNotes }: StudyNotesContentProps) {
+export function StudyNotesContent({
+  studyNotes,
+  isArabic,
+}: StudyNotesContentProps) {
   const { introduction, sections } = studyNotes;
 
   return (
@@ -20,20 +24,25 @@ export function StudyNotesContent({ studyNotes }: StudyNotesContentProps) {
       <section
         className={`${FONT_STYLES.body} border-b border-gray-100 pb-2 whitespace-pre-line leading-relaxed mb-10`}
         style={{ color: COLORS.text.secondary }}
+        dir={isArabic ? "rtl" : "ltr"}
       >
         <h2
-          className={`${FONT_SIZE.size18} lg:${FONT_SIZE.size20} ${FONT_WEIGHT.bold} mb-4`}
+          className={`${FONT_SIZE.size18} lg:${FONT_SIZE.size26} ${FONT_WEIGHT.bold} mb-4`}
           style={{ color: COLORS.text.primary }}
         >
-          Introduction
+          {isArabic ? "المقدمة" : "Introduction"}
         </h2>
 
-        <p>{introduction.replaceAll(". ", ".\n")}</p>
+        <p>{introduction}</p>
       </section>
 
-      <div className=" space-y-2">
+      <div className=" space-y-2" dir={isArabic ? "rtl" : "ltr"}>
         {sections?.map((section, index) => (
-          <StudyNotesSection key={index} section={section} />
+          <StudyNotesSection
+            key={index}
+            section={section}
+            isArabic={isArabic}
+          />
         ))}
       </div>
     </>

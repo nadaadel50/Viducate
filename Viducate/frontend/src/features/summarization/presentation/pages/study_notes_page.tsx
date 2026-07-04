@@ -15,12 +15,12 @@ const StudyNotesPage = () => {
     return <GeneratingStudyNotesPage />;
   }
 
- if (state.status === "error") {
-     return <ErrorScreen errorMessage={state.message} />;
-   }
+  if (state.status === "error") {
+    return <ErrorScreen errorMessage={state.message} />;
+  }
 
-  const { studyNotes, readingTime } = state.data;
-
+  const { studyNotes, readingTime, language } = state.data;
+  const isArabic = language === "ar";
   return (
     <div
       className="min-h-screen font-display"
@@ -29,14 +29,14 @@ const StudyNotesPage = () => {
       <main className="mx-auto max-w-7xl px-4 py-6 md:px-6 md:py-8">
         <div className="flex flex-col items-start gap-8 lg:flex-row">
           <article
-            className="w-full flex-1 rounded-2xl border border-gray-100 p-6 shadow-sm md:p-10 xl:p-12"
+            className={`w-full flex-1 rounded-2xl border border-gray-100 p-6 shadow-sm md:p-10 xl:p-12`}
             style={{
               backgroundColor: COLORS.layout.leftBackground,
             }}
           >
             <SummaryHeader title={studyNotes.title} time={readingTime.label} />
 
-            <StudyNotesContent studyNotes={studyNotes} />
+            <StudyNotesContent studyNotes={studyNotes} isArabic={isArabic} />
           </article>
 
           <StudyNotesSidebar videoId={videoId} segmentId={segmentId} />

@@ -18,8 +18,10 @@ const SummaryPage = () => {
     return <ErrorScreen errorMessage={state.message} />;
   }
 
-  const { title, summary, readingTime } = state.data;
-
+  const { title, summary, readingTime, language } = state.data;
+  const isArabic = language === "ar";
+  console.log("language =", language);
+  console.log("isArabic =", isArabic);
   return (
     <div
       className="min-h-screen font-display"
@@ -30,6 +32,7 @@ const SummaryPage = () => {
           title={title}
           summary={summary}
           readingTime={readingTime.label}
+          isArabic={isArabic}
         />
 
         <SummarySidebar videoId={videoId} segmentId={segmentId} />
