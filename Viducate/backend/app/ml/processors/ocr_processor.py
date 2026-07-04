@@ -97,7 +97,7 @@ class OCRProcessor:
                 seg["lines"] = new_lines
                 deduped.append(seg)
 
-                # ضيف سطور السيجمنت الحالي لقائمة السطور الحديثة
+                # اضيف سطور السيجمنت الحالي لقائمة السطور الحديثة
                 recent_lines.extend(_normalize(l) for l in curr_lines)
 
                 # سيب بس آخر window_size segments من السطور (تقريبيًا)
