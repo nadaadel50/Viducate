@@ -50,6 +50,7 @@ class VideoCachingServise:
                          "message": "You already processed this video",
                     }
                else:
+                    # Same user + not completed -> delete only their record and reprocess
                     self.video_repo.delete(user_video.vid)
                     logger.info(f"Deleted incomplete video for same user: vid={user_video.vid}, status={user_video.processing_status}")
 
@@ -59,6 +60,7 @@ class VideoCachingServise:
                return None  
           
           if global_video.processing_status != "completed":
+               # Another user is still processing this video -> don't interfere
                logger.info(f"Global video not completed yet: vid={global_video.vid}, status={global_video.processing_status}")
                return None
 

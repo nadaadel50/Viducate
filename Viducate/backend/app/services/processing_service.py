@@ -117,6 +117,7 @@ class ProcessingJobService:
             "message": "Cancellation requested. The pipeline will stop and remove partial data shortly.",
             "cancelled": True,
         }
+    
 async def run_processing_pipeline(video_id: int, language: str):
     db = SessionLocal()
     try:
@@ -127,6 +128,7 @@ async def run_processing_pipeline(video_id: int, language: str):
         repo.update_status(video_id, "processing")
 
          #  Step 1: Transcription 
+         #  Step 1: Transcription
         _check_cancel(video_id)
         logger.info(f"[Pipeline] Step 1 - Transcription: video_id={video_id}")
         repo.update_status(video_id, "transcribing")
@@ -159,6 +161,7 @@ async def run_processing_pipeline(video_id: int, language: str):
         ocr_segments = ocr_result["segments"]
         ocr_language  = ocr_result["language"]
        
+
         logger.info(f"[Pipeline] OCR segments: {len(ocr_segments)}")
         
         logger.info(f"[Pipeline] OCR done: {len(ocr_segments)} segments, video_id={video_id}")
@@ -175,6 +178,7 @@ async def run_processing_pipeline(video_id: int, language: str):
         logger.info(f"[Pipeline] Merge done: {len(merged)} entries, video_id={video_id}")
         
         #  Step 4: Topic Segmentation 
+        #  Step 4: Topic Segmentation
         _check_cancel(video_id)
        
         logger.info(f"[Pipeline] Step 4 - Segmentation: video_id={video_id}")
@@ -206,11 +210,10 @@ async def run_processing_pipeline(video_id: int, language: str):
             if last_end_time is not None and start_time <= last_end_time:
                 logger.warning(
                     f"[Pipeline] Fixing timing: segment #{seg['segment_number']} "
-                    f"start_time={start_time}s -> {last_end_time + 1}s"
+                    f"start_time={start_time}s -> {last_end_time + 10}s"
                 )
-                start_time = last_end_time + 1
+                start_time = last_end_time + 10
                 seg["start_time"] = start_time
-
 
             try:
                 db_segment = segment_repo.create_full_segment(

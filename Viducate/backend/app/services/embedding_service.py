@@ -174,6 +174,7 @@ def search(video_id: int, query: str, db: Session, n_results: int = 3, threshold
                 "score": score
             })
 
+
         reranked = rerank_results(query, filtered)
         reranked = [r for r in reranked if r['rerank_score'] > 0.01]
         return reranked[:n_results]

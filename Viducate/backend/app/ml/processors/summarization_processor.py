@@ -84,12 +84,9 @@ def process_single_segment_summary(
         return None
 
  
-    logger.info(
-        f"[Summarization] Segment {segment_id} "
-        f"quality_score={segment.quality_score:.4f} "
-        f"flag={segment.quality_flag} "
-        f"retries={quality.get('retries', 0)}"
-    )
+
+ 
+
  
     if quality.get("flag"):
         logger.warning(
@@ -191,12 +188,6 @@ def process_all_segment_summaries(
             )
             continue
  
- 
-        logger.info(
-            f"[Summarization] Segment {segment.segment_id} "
-            f"quality_score={segment.quality_score:.4f} "
-            f"flag={segment.quality_flag}"
-        )
 
         
 

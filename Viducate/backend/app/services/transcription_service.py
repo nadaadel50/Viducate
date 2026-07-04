@@ -48,7 +48,6 @@ def extract_audio(video_path: str, video_id:int) -> str:
     return audio_path
 
 
-
 def split_audio(file_path: str, video_id:int, chunk_minutes: int = 2):
     logger.info(f"Splitting start: ")
     audio = AudioSegment.from_file(file_path)

@@ -8,11 +8,11 @@ sys.path.insert(0, os.path.dirname(__file__))
 from perf_config import BASE_URL, HEADERS, COMPLETED_VIDEO_ID
 
 QUERIES = [
-    "ما هي حروف الجر؟",
-    "شرح المضاف إليه",
-    "علامة الجر في الاسم المثنى",
-    "ما الفرق بين المجرور بحرف الجر والمجرور بالإضافة؟",
-    "examples of prepositions in Arabic",
+    "What is Insertion Sort?",
+    "time complexity of insertion sort",
+    "how does the while loop work in insertion sort",
+    "what is the outer loop in insertion sort",
+    "space complexity of insertion sort",
 ]
 
 P50_LIMIT_MS = 8000

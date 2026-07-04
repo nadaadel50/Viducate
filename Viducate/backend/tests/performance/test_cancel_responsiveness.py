@@ -9,7 +9,7 @@ from app.services.cancellation_registry import request_cancel, is_cancelled, cle
 
 
 
-ALREADY_COMPLETED_VIDEO_ID = 1  
+ALREADY_COMPLETED_VIDEO_ID = 227
 
 
 @pytest.mark.asyncio

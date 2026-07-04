@@ -21,53 +21,15 @@ class SegmentationUnavailableError(Exception):
     pass
 
 
-def is_noise(part: str) -> bool:
-    if re.search(r'https?://|\.com|\.org|www\.', part):
-        return True
-    
-    if len(part) > 0 and len(re.findall(r'\d', part)) / len(part) > 0.3:
-        return True
-    
-    weird_chars = len(re.findall(r'[^a-zA-Z0-9\u0600-\u06FF\s\.\,\!\?\-]', part))
-    if len(part) > 0 and weird_chars / len(part) > 0.2:
-        return True
-    
-    if len(part.split()) == 1 and len(part) < 4:
-        return True
-    
-    if re.search(r'(.)\1{3,}', part):
-        return True
-    
-    return False
-
-
-# clean_ocr_text
-def clean_ocr_text(ocr_text: str) -> str:
-    if not ocr_text or ocr_text == "None":
-        return ""
-    
-    parts = [p.strip() for p in ocr_text.split("|")]
-    seen = set()
-    unique_parts = []
-    
-    for part in parts:
-        if not part or part in seen:
-            continue
-        if is_noise(part):
-            continue
-        seen.add(part)
-        unique_parts.append(part)
-    
-    return " | ".join(unique_parts)
-
-
 # clean_transcript
+# --------------------------------clean_transcript--------------------------------
 def clean_transcript(text: str) -> str:
     lines = text.split('\n')
     cleaned = []
     prev_line = ""
     
     for line in lines:
+        # Remove timestamp from the text if here
         content = re.sub(r'\[\d{2}:\d{2}:\d{2}\]', '', line).strip()
         
         if content == prev_line:
@@ -94,6 +56,7 @@ def chunk_text(text: str, max_words: int = 2500) -> list:
     return chunks
 
 
+# Time helpers 
 
 def _time_str_to_seconds(t: str) -> int:
     
@@ -109,6 +72,12 @@ def _time_str_to_seconds(t: str) -> int:
             return int(parts[0])
     except (ValueError, IndexError):
         return 0
+
+def _seconds_to_time_str(seconds: int) -> str:
+    hh = seconds // 3600
+    mm = (seconds % 3600) // 60
+    ss = seconds % 60
+    return f"{hh:02d}:{mm:02d}:{ss:02d}"
 
 
 def build_prompt(merged_text: str, final_language: str = "ar") -> str:
@@ -130,6 +99,7 @@ CRITICAL RULES - READ CAREFULLY:
 
 2. TIMESTAMPS:
    - start_time and end_time MUST be taken exactly from the transcript
+   - TIMESTAMPS format MUST be "HH:MM:SS" exactly
    - Minimum sub_topic duration is 30 seconds - never make a sub_topic shorter than that
    - Every second of the transcript MUST be covered - no gaps allowed
 
@@ -171,15 +141,15 @@ CRITICAL RULES - READ CAREFULLY:
   "segments": [
     {{
       "segment_number": 1,
-      "start_time": "00:00",
-      "end_time": "01:16",
+      "start_time": "00:00:00",
+      "end_time": "01:16:00",
       "main_topic": "topic name in {lang_instruction}",
       "title": "descriptive title in {lang_instruction}",
       "sub_topics": [
         {{
           "name": "sub topic name in {lang_instruction}",
-          "start_time": "00:00",
-          "end_time": "00:30",
+          "start_time": "00:00:00",
+          "end_time": "00:30:00",
           "description": "EXACT verbatim combined text from transcript lines, no timestamps",
           "content_type": "one of: definition, problem, solution, example, general"
         }}
@@ -192,6 +162,7 @@ CRITICAL RULES - READ CAREFULLY:
 Transcript:
 {merged_text}
 """
+
 
 async def call_groq_with_retry(client,  chunk: str,  chunk_index: int,video_id: int,final_language: str = "ar",max_retries: int = 3):
     current_chunk = chunk
@@ -218,7 +189,6 @@ async def call_groq_with_retry(client,  chunk: str,  chunk_index: int,video_id: 
             text = response.text.strip()
             text = text.replace("```json", "").replace("```", "").strip()
             if not text.endswith("}"):
-                # قطع عند آخر segment كامل
                 last_bracket = text.rfind("}]")
                 if last_bracket != -1:
                     text = text[:last_bracket + 2] + "\n}"
@@ -368,6 +338,15 @@ async def segment_topics(merged: list, video_id: int, ocr_language: str ,transcr
     for idx, seg in enumerate(all_segments):
         seg["segment_number"] = idx + 1
 
+        # Normalize timestamps
+    for seg in all_segments:
+        seg["start_time"] = _seconds_to_time_str(_time_str_to_seconds(seg.get("start_time", "00:00:00")))
+        seg["end_time"]   = _seconds_to_time_str(_time_str_to_seconds(seg.get("end_time", "00:00:00")))
+        for sub in seg.get("sub_topics", []):
+            sub["start_time"] = _seconds_to_time_str(_time_str_to_seconds(sub.get("start_time", "00:00:00")))
+            sub["end_time"]   = _seconds_to_time_str(_time_str_to_seconds(sub.get("end_time", "00:00:00")))
+
+    # Attach source text and quality score to every segment 
     logger.info(f"[Segmentation] Scoring {len(all_segments)} segments vs merged text")
     for seg in all_segments:
         check_cancelled(video_id)
@@ -401,3 +380,4 @@ async def segment_topics(merged: list, video_id: int, ocr_language: str ,transcr
 
     logger.info(f"[Segmentation] Done: video_id={video_id}, total={len(all_segments)}")
     return final_result
+

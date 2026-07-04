@@ -7,82 +7,11 @@ chunk_text, _time_str_to_seconds.
 """
 import pytest
 from app.services.segmentation_service import (
-    is_noise,
-    clean_ocr_text,
     clean_transcript,
     estimate_tokens,
     chunk_text,
     _time_str_to_seconds,
 )
-
-class TestIsNoise:
-    @pytest.mark.parametrize("text", [
-        "https://example.com/page",
-        "visit www.example.com",
-        "check out example.com",
-        "see example.org for details",
-    ])
-    def test_urls_are_flagged_as_noise(self, text):
-        assert is_noise(text) is True
-
-    def test_high_digit_ratio_is_noise(self):
-        # >30% of characters are digits
-        assert is_noise("12345678") is True
-
-    def test_single_short_word_is_noise(self):
-        assert is_noise("ok") is True
-
-    def test_repeated_character_run_is_noise(self):
-        assert is_noise("aaaaaaaa") is True
-
-    def test_normal_sentence_is_not_noise(self):
-        assert is_noise("This is a normal sentence about loops") is False
-
-    def test_normal_arabic_sentence_is_not_noise(self):
-        assert is_noise("هذا شرح عن المصفوفات في البرمجة") is False
-
-    def test_high_weird_character_ratio_is_noise(self):
-        assert is_noise("@#$%^&*()!@#$") is True
-
-    def test_single_long_word_is_not_flagged_by_short_word_rule(self):
-        assert is_noise("recursion") is False
-
-    def test_empty_string_is_not_noise(self):
-        assert is_noise("") is False
-
-
-class TestCleanOcrText:
-    def test_none_string_literal_returns_empty(self):
-        assert clean_ocr_text("None") == ""
-
-    def test_empty_string_returns_empty(self):
-        assert clean_ocr_text("") == ""
-
-    def test_deduplicates_repeated_parts(self):
-        result = clean_ocr_text("struct definition | struct definition | members")
-        parts = result.split(" | ")
-        assert parts.count("struct definition") == 1
-
-    def test_filters_out_noisy_parts(self):
-        result = clean_ocr_text("normal text about classes | https://example.com | ok")
-        assert "https://example.com" not in result
-        assert "ok" not in result
-        assert "normal text about classes" in result
-
-    def test_strips_whitespace_from_parts(self):
-        result = clean_ocr_text("  struct fields  | members list  ")
-        assert "  struct fields  " not in result
-        assert "struct fields" in result
-
-    def test_all_noise_parts_returns_empty_joined_string(self):
-        result = clean_ocr_text("ok | hi | www.spam.com")
-        assert result == ""
-
-    def test_preserves_order_of_first_occurrence(self):
-        result = clean_ocr_text("first concept here | second concept here")
-        parts = result.split(" | ")
-        assert parts[0] == "first concept here"
-        assert parts[1] == "second concept here"
 
 
 class TestCleanTranscript:
