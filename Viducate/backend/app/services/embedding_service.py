@@ -129,7 +129,7 @@ def time_to_seconds(time_str: str) -> int:
 SIMILARITY_THRESHOLD = 0.75
 
 
-def search(video_id: int, query: str, db: Session, n_results: int = 3, threshold: float = SIMILARITY_THRESHOLD) -> list:  # ✅ threshold كـ parameter
+def search(video_id: int, query: str, db: Session, n_results: int = 3, threshold: float = SIMILARITY_THRESHOLD) -> list:  
     try:
         collection = chroma_client.get_or_create_collection(
             name=f"video_{video_id}",
