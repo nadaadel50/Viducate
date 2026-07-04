@@ -25,11 +25,8 @@ class OCRService:
 
         try:
             logger.info(f"[OCRService] Starting | video_id={video_id} | url={video.url}")
-<<<<<<< Updated upstream
-=======
 
             
->>>>>>> Stashed changes
             result = self.processor.process_from_file(video_path, video_id=video_id)
 
             segments          = result["segments"]
@@ -42,14 +39,7 @@ class OCRService:
                 f"segments={len(segments)} | lang={detected_language}"
             )
 
-            return {
-                "segments": segments,
-                "language": detected_language
-<<<<<<< Updated upstream
-            }   
-=======
-            }   #  same as transcript variable
->>>>>>> Stashed changes
+              #  same as transcript variable
         
         except PipelineCancelledError:
             raise
