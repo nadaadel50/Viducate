@@ -1,8 +1,5 @@
 def merge_transcript_ocr(transcript: list,video_id: int, ocr_segments: list) -> list:
-    """
-    Merges transcript segments with OCR segments based on time.
-    Returns a unified list of segments sorted by time.
-    """
+   
     merged = []
 
     for ocr in ocr_segments:
@@ -25,7 +22,7 @@ def merge_transcript_ocr(transcript: list,video_id: int, ocr_segments: list) -> 
             )
         })
 
-    #append transcript segments that's not in OCR
+  
     ocr_times = {ocr["time"] for ocr in ocr_segments}
     for t in transcript:
         has_ocr = any(t["start"] <= ocr_time <= t["end"] for ocr_time in ocr_times)
@@ -42,9 +39,6 @@ def merge_transcript_ocr(transcript: list,video_id: int, ocr_segments: list) -> 
     merged.sort(key=lambda x: x["time"])
 
 
-
-
-    # بعدين احفظي
     with open(f"merged_{video_id}.txt", "w", encoding="utf-8") as f:
         for seg in merged:
             f.write(f"[{seg['timestamp']}]\n")

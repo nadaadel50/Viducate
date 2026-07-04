@@ -16,7 +16,7 @@ def run_with_quality_retry(
     max_retries: int = 2,
 ) -> tuple[Any, dict]:
     
-    print(f"[QualityRetry] STARTED: {label}")  # fallback if logging not configured
+    print(f"[QualityRetry] STARTED: {label}") 
     logger.info(f"[QualityRetry] {'='*60}")
     logger.info(f"[QualityRetry] STARTED | label={label} | max_retries={max_retries}")
 
@@ -32,7 +32,7 @@ def run_with_quality_retry(
         )
         print(f"[QualityRetry] {label} | ATTEMPT {attempt + 1}/{total_attempts}")
 
-        # ── Call generator ────────────────────────────────────────────────────
+        #  Call generator 
         try:
             logger.info(f"[QualityRetry] {label} | calling generator_fn ...")
             result = with_network_retry(
@@ -60,7 +60,7 @@ def run_with_quality_retry(
             print(f"[QualityRetry] {label} | generator returned None — skipping")
             continue
 
-        # ── Score result ──────────────────────────────────────────────────────
+        #  Score result 
         try:
             logger.info(f"[QualityRetry] {label} | calling score_fn ...")
             print(f"[QualityRetry] {label} | calling score_fn ...")
@@ -94,7 +94,7 @@ def run_with_quality_retry(
 
         quality["retries"] = attempt
 
-        # ── Track best ────────────────────────────────────────────────────────
+        #  Track best 
         current_score = quality.get("score", 0.0)
         if current_score > best_score:
             best_score   = current_score
@@ -105,7 +105,7 @@ def run_with_quality_retry(
             )
             print(f"[QualityRetry] {label} | new BEST score={best_score:.4f}")
 
-        # ── Check if passed ───────────────────────────────────────────────────
+        #  Check if passed 
         if not quality.get("flag", True):
             logger.info(
                 f"[QualityRetry] {label} | "
@@ -114,7 +114,7 @@ def run_with_quality_retry(
             print(f"[QualityRetry] {label} | Quality OK — stopping at attempt {attempt + 1}")
             break
 
-        # ── Decide to retry ───────────────────────────────────────────────────
+        #  Decide to retry 
         if attempt < total_attempts - 1:
             logger.warning(
                 f"[QualityRetry] {label} | "
@@ -136,7 +136,7 @@ def run_with_quality_retry(
                 f"All {total_attempts} attempts done | best_score={best_score:.4f}"
             )
 
-    # ── Final summary ─────────────────────────────────────────────────────────
+    #  Final summary 
     final_flag    = best_quality.get("flag", True)
     final_retries = best_quality.get("retries", 0)
     logger.info(

@@ -5,10 +5,6 @@ from typing import Optional, List
 
 
 class OCRRepository:
-    """
-    All DB operations for OCR pipeline.
-
-    """
 
     def __init__(self, db: Session):
         self.db = db

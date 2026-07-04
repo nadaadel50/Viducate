@@ -3,7 +3,7 @@ from datetime import datetime
 from pydantic import BaseModel, field_validator
 from typing import List, Optional
 
-# from schemas.subtopic_schema import SubTopicSchema
+
 
 
 class SegmentSchema(BaseModel):
@@ -13,10 +13,10 @@ class SegmentSchema(BaseModel):
     end_time: int
     main_topic: str
     title: str
-    #********************************************
+    
     class Config:
         from_attributes = True
-    #********************************************
+    
 
     @field_validator("segment_number")
     @classmethod
@@ -54,9 +54,7 @@ class SubTopicBriefResponse(BaseModel):
 
     model_config = {"from_attributes": True}
 
-# =========================
-# 3. RESPONSE (Frontend)
-# =========================
+
 class SegmentResponse(BaseModel):
     segment_id: int
     segment_number: int
@@ -66,11 +64,11 @@ class SegmentResponse(BaseModel):
     title: str
     is_completed:bool
     sub_topics: list[SubTopicBriefResponse] = []
-    #********************************************
+    
     quality_score:  Optional[float] = None
     quality_flag:   Optional[bool]  = None
     retry_count:    Optional[int]   = None
-    #********************************************
+    
 
     model_config = {"from_attributes": True}
 
@@ -85,7 +83,7 @@ class VideoSegmentsResponse(BaseModel):
     segments: List[SegmentResponse]
 
 
-#********************************************
+
 class SegmentQualityItem(BaseModel):
     segment_id:     int
     segment_number: int
@@ -102,4 +100,3 @@ class VideoQualityResponse(BaseModel):
     flagged_segments:   int
     average_score:      Optional[float]
     segments:           List[SegmentQualityItem]
-#********************************************

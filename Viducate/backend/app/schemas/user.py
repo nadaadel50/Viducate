@@ -55,7 +55,7 @@ class UserRegisterRequest(BaseModel):
         return value
 
 
-#  System Response 
+
 class UserResponse(BaseModel):
     id: int
     first_name: Optional[str]
@@ -72,14 +72,14 @@ class UserResponse(BaseModel):
 class UserProfileResponse(UserResponse):
     has_password: bool
 
-# Token Schema
+
 class TokenResponse(BaseModel):
     access_token: str
     token_type: str = "bearer"
     user: UserResponse
 
 
-# Registration Response 
+
 class RegisterResponse(BaseModel):
     message: str
     user: UserResponse

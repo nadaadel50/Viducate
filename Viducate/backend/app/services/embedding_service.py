@@ -39,7 +39,6 @@ def rerank_results(query: str, candidates: list) -> list:
     return sorted(candidates, key=lambda x: x['rerank_score'], reverse=True)
 
 
-#def store_embeddings(video_id: int, segments: list, video_lang: str = 'ar') -> None:
 async def store_embeddings(video_id: int, segments: list, video_lang: str = 'ar') -> None:
     try:
         collection = chroma_client.get_or_create_collection(
@@ -76,7 +75,6 @@ async def store_embeddings(video_id: int, segments: list, video_lang: str = 'ar'
                         عنوان فرعي: {sub_topic['name']}
                         """
 
-                #embedding = get_embedding(text, is_query=False)
                 loop = asyncio.get_event_loop()
 
                 embedding = await loop.run_in_executor(
@@ -84,22 +82,6 @@ async def store_embeddings(video_id: int, segments: list, video_lang: str = 'ar'
                     lambda: get_embedding(text, False)
                 )
                 
-                # collection.add(
-                #     ids=[f"{video_id}_{segment['segment_number']}_{sub_topic['name']}"],
-                #     embeddings=[embedding],
-                #     documents=[text],
-                    # metadatas=[{
-                    #     "video_id": video_id,
-                    #     "segment_number": segment["segment_number"],
-                    #     "title": segment["title"],
-                    #     "start_time": sub_topic["start_time"],
-                    #     "end_time": sub_topic["end_time"],
-                    #     "sub_topic_name": sub_topic["name"],
-                    #     "sub_topic_description": sub_topic["description"],
-                    #     "content_type": sub_topic.get("content_type", "general"),
-                    #     "language": video_lang
-                    # }]
-                # )
 
                 await loop.run_in_executor(
                     None,
@@ -192,7 +174,6 @@ def search(video_id: int, query: str, db: Session, n_results: int = 3, threshold
                 "score": score
             })
 
-        # reranking بدل الـ sort البسيط
         reranked = rerank_results(query, filtered)
         reranked = [r for r in reranked if r['rerank_score'] > 0.01]
         return reranked[:n_results]

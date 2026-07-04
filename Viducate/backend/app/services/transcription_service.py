@@ -18,7 +18,6 @@ from concurrent.futures import ThreadPoolExecutor
 logger = logging.getLogger(__name__)
 
 
-# def detect_language(audio_file: str) -> str:    
 def detect_language(audio_file, video_id):
     logger.info("detecting language...")
     check_cancelled(video_id)
@@ -73,13 +72,7 @@ def send_to_groq(client: Groq, chunk_path: str, offset: float, lang: str, video_
         try:
             with open(chunk_path, "rb") as f:
                 logger.info(f"START chunk {chunk_path}")
-                # result = client.audio.transcriptions.create(
-                #     file=f,
-                #     model="whisper-large-v3-turbo",
-                #     language=lang,
-                #     response_format="verbose_json",
-                #     timeout=120 # timeout
-                # )
+             
                 with ThreadPoolExecutor(max_workers=1) as executor:
 
                     future = executor.submit(
@@ -191,6 +184,6 @@ async def transcribe(url: str, video_id: int, language: str = None) -> str:
 def transcribe_sync(url: str, video_id: int, language: str = None):
     """
     Synchronous wrapper around transcribe() so it can be safely
-    dispatched via run_in_executor without blocking the event loop.
+    dispatched via run_in_executor without blocking the event loop
     """
     return asyncio.run(transcribe(url, video_id=video_id, language=language))

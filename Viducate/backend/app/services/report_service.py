@@ -9,11 +9,11 @@ from app.repositories.report_repository import ReportRepository
 
 logger = logging.getLogger(__name__)
 
-MASTERY_MASTERED = 90   # score >= 90 → mastered
-MASTERY_STRONG   = 70   # score >= 70 → strong
-MASTERY_WEAK     = 0    # score >  0  → weak (below strong)
-# score == 0 with attempts  → weak
-# no attempts at all        → needs_quiz
+MASTERY_MASTERED = 90   # score >= 90  mastered
+MASTERY_STRONG   = 70   # score >= 70  strong
+MASTERY_WEAK     = 0    # score >  0   weak 
+# score == 0 with attempts   weak
+# no attempts at all         needs_quiz
 
 
 def _mastery_level(score: int, attempts: int) -> str:
@@ -89,12 +89,11 @@ class ReportService:
         seg_results  = self.repo.get_all_segment_quiz_results_for_video(video_id, user_id)
         seg_result_map = {r["segment_id"]: r for r in seg_results}
 
-        # Video-level flags
+       
         has_summary     = self.repo.has_video_summary(video_id)
         has_studynotes  = self.repo.has_video_studynotes(video_id)
         total_flashcards = self.repo.flashcard_count_for_video(video_id)
 
-        # video-level quiz: the most recent one with any result
         video_quiz = self.repo.get_latest_video_quiz(video_id)
         video_quiz_result = (
             self.repo.get_quiz_result(video_quiz.quiz_id, user_id)
@@ -103,7 +102,6 @@ class ReportService:
         )
         has_comprehensive_quiz = video_quiz is not None
 
-        # Per-topic data
         topics        = []
         strong_topics = []
         weak_topics   = []
@@ -126,7 +124,6 @@ class ReportService:
 
             mastery = _mastery_level(score, attempts)
 
-            # weak areas from stored answers
             weak_areas: list[str] = []
             if result and latest_quiz:
                 quiz_result_obj = self.repo.get_quiz_result(latest_quiz.quiz_id, user_id)
@@ -169,9 +166,7 @@ class ReportService:
             elif mastery == "weak":
                 weak_topics.append(seg.title)
 
-        # Overall score
-        # If the user has submitted a whole-video quiz, use that score.
-        # Otherwise, compute a weighted average from segment results.
+      
         if video_quiz_result:
             overall_score    = video_quiz_result.score
             overall_correct  = video_quiz_result.correct_count

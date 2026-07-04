@@ -7,8 +7,7 @@ sys.path.insert(0, os.path.dirname(__file__))
 from perf_config import BASE_URL, HEADERS
 from app.services.cancellation_registry import request_cancel, is_cancelled, clear
 
-# This test requires you to have submitted a video URL that is currently
-# processing, OR it tests cancel on an already-completed video
+
 
 ALREADY_COMPLETED_VIDEO_ID = 1  
 
@@ -26,7 +25,6 @@ async def test_cancel_responds_immediately():
             r = await client.post(url, headers=HEADERS)
             elapsed = (time.perf_counter() - t0) * 1000
             times.append(elapsed)
-            # Either 200 (cancelled) or 400 (already terminal) — both are valid fast paths
             assert r.status_code in (200, 400), f"Unexpected status {r.status_code}"
 
     avg = sum(times) / len(times)

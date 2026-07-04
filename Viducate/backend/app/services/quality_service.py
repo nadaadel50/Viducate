@@ -5,7 +5,6 @@ from sqlalchemy.orm import Session
 
 logger = logging.getLogger(__name__)
 
-# ── Lazy model reference (same instance as embedding_service) ────────────────
 _model = None
 
 def _get_model():
@@ -16,22 +15,21 @@ def _get_model():
     return _model
 
 THRESHOLDS = {
-    "segmentation": 0.32,   # segment title+topic vs merged transcript text
-    "summary":      0.30,   # summary conclusion vs segment title+topic
-    "studynotes":   0.28,   # study notes intro vs segment title+topic
-    "flashcard":    0.25,   # flashcard questions vs segment title+topic
-    "mindmap":      0.28,   # mindmap node labels vs segment title+topic
-    "quiz":         0.27,   # quiz questions vs segment title+topic
+    "segmentation": 0.32,   
+    "summary":      0.30,  
+    "studynotes":   0.28,   
+    "flashcard":    0.25,   
+    "mindmap":      0.28,  
+    "quiz":         0.27,   
 }
 
 MAX_RETRIES = 2             # maximum regeneration attempts per content piece
 
 
-# ── Embedding helpers ─────────────────────────────────────────────────────────
 def _embed(text: str, is_query: bool = False) -> np.ndarray:
     prefix = "query: " if is_query else "passage: "
     return _get_model().encode(
-        prefix + text[:2000],   # cap to avoid OOM on very long texts
+        prefix + text[:2000],  
         normalize_embeddings=True,
     )
 
@@ -41,7 +39,6 @@ def _cosine_sim(a: np.ndarray, b: np.ndarray) -> float:
     return float(np.dot(a, b))
 
 
-# ── Public API ────────────────────────────────────────────────────────────────
 
 def score_against_source(
     generated_text: str,
@@ -81,17 +78,14 @@ def score_against_source(
         logger.error(f"[QualityService] [{content_type}] scoring FAILED: {e}")
         return {"score": 1.0, "flag": False, "threshold": THRESHOLDS[content_type]}
 
-# ── Mode 1: Segmentation vs merged text ──────────────────────────────────────
+#  Mode 1: Segmentation vs merged text 
 
 def extract_source_text_for_segment(
     merged: list[dict],
     start_time_seconds: int,
     end_time_seconds: int,
 ) -> str:
-    """
-    Extracts merged transcript+OCR text that falls within a segment's
-    time range. Uses the same `merged` list from merge_transcript_ocr().
-    """
+   
     parts = []
     for entry in merged:
         t = entry.get("time", 0)
@@ -111,23 +105,15 @@ def score_segmentation(
     segment_main_topic: str,
     source_text: str,
 ) -> dict:
-    """
-    Mode 1: Score segment quality vs merged transcript+OCR text.
-    Called during processing pipeline for NEW (non-cached) videos.
-    """
+    
     generated = f"{segment_title}. {segment_main_topic}"
     return score_against_source(generated, source_text, "segmentation")
 
 
-# ── Mode 2: Feature output vs segmentation ───────────────────────────────────
+#  Mode 2: Feature output vs segmentation 
 
 def build_segment_reference_text(segment) -> str:
-    """
-    Builds a reference string from a TopicSegment ORM object.
-    Includes title, main_topic, and all subtopic names.
-    Works for both new and cached videos because segmentation is
-    always persisted in the DB before any feature is generated.
-    """
+    
     parts = [segment.title or "", segment.main_topic or ""]
     for st in getattr(segment, 'subtopics', []):
         if st.name:
@@ -137,27 +123,15 @@ def build_segment_reference_text(segment) -> str:
 
 def score_feature_vs_segmentation(
     feature_text: str,
-    segment,            # TopicSegment ORM object (already loaded with subtopics)
+    segment,           
     content_type: str,
 ) -> dict:
-    """
-    Mode 2: Score a generated feature against the stored segmentation.
-    Used for Summary, Study Notes, Flashcards, Mindmap, Quiz.
-    Called after generation, before saving to DB.
-
-    Args:
-        feature_text: Representative text extracted from the generated feature.
-        segment:      TopicSegment ORM object (joined with subtopics).
-        content_type: One of summary/studynotes/flashcard/mindmap/quiz.
-    """
     reference = build_segment_reference_text(segment)
     return score_against_source(feature_text, reference, content_type)
 
 
-# ── Text extractors for each feature type ────────────────────────────────────
 
 def extract_text_from_summary(content: dict) -> str:
-    """Extract scoreable text from a summary JSON dict."""
     if not isinstance(content, dict):
         return str(content)[:500]
     parts = []
@@ -175,7 +149,6 @@ def extract_text_from_summary(content: dict) -> str:
 
 
 def extract_text_from_studynotes(content: dict) -> str:
-    """Extract scoreable text from a study notes JSON dict."""
     if not isinstance(content, dict):
         return str(content)[:500]
     parts = []
@@ -193,7 +166,6 @@ def extract_text_from_studynotes(content: dict) -> str:
 
 
 def extract_text_from_flashcards(cards: list) -> str:
-    """Extract scoreable text from a flashcard list."""
     if not isinstance(cards, list):
         return ""
     parts = [
@@ -205,7 +177,6 @@ def extract_text_from_flashcards(cards: list) -> str:
 
 
 def extract_text_from_mindmap(result: dict) -> str:
-    """Extract scoreable text from a mindmap result dict."""
     if not isinstance(result, dict):
         return ""
     nodes = result.get("nodes", [])
@@ -218,7 +189,6 @@ def extract_text_from_mindmap(result: dict) -> str:
 
 
 def extract_text_from_quiz(questions: list) -> str:
-    """Extract scoreable text from quiz question list."""
     if not isinstance(questions, list):
         return ""
     parts = [

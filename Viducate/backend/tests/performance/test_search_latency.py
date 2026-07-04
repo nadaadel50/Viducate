@@ -15,9 +15,6 @@ QUERIES = [
     "examples of prepositions in Arabic",
 ]
 
-# Current acceptable median latency for semantic search.
-# This endpoint performs embedding generation, vector similarity search,
-# and database retrieval.
 P50_LIMIT_MS = 8000
 
 

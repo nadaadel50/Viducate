@@ -1,5 +1,5 @@
 from fastapi import HTTPException,status
-import fitz  # pymupdf
+import fitz  
 from pptx import Presentation
 
 def extract_from_pdf(file_path: str) -> list[str]:
@@ -8,7 +8,7 @@ def extract_from_pdf(file_path: str) -> list[str]:
     
     for page in doc:
         text = page.get_text().strip()
-        if text:  # مش هنضيف slides فاضية
+        if text:  
             slides_text.append(text)
     
     doc.close()
@@ -28,7 +28,7 @@ def extract_from_pptx(file_path: str) -> list[str]:
                     if line:
                         texts.append(line)
         
-        if texts:  # مش هنضيف slides فاضية
+        if texts: 
             slides_text.append("\n".join(texts))
     
     return slides_text

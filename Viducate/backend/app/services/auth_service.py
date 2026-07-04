@@ -18,7 +18,7 @@ class AuthService:
 
     def __init__(self, db: Session):
         self.user_repo = UserRepository(db)
-        # self.email_service = email_service
+    
 
     def register(self, request: UserRegisterRequest):
      
@@ -44,7 +44,6 @@ class AuthService:
             "account_status": "active",
         }
 
-        # Save to DB
         new_user = self.user_repo.create(user_data)
 
         # Create JWT token
@@ -143,10 +142,10 @@ class AuthService:
         return True
     
 
-#User Forget Password ,He request to reset password 
+#User Forget Password and request to reset password 
 
     async def request_password_reset(self,request:ForgetPasswordRequest):
-        # Check if email already exists
+        
         existing_user = self.user_repo.get_by_email(request.email)
         if not existing_user:
             raise HTTPException(
@@ -175,7 +174,6 @@ class AuthService:
 
 
     def reset_password(self, request:ResetPasswordRequest):
-        #User resets password using token
         user = self.user_repo.get_by_reset_token(request.token)
         if not user:
             raise HTTPException(
@@ -193,9 +191,9 @@ class AuthService:
 
         hashed_password = hash_password(request.new_password)
         user.password = hashed_password
-        user.reset_token = None  # Clear token (can't be reused)
+        user.reset_token = None 
         user.reset_token_expires = None
-        user.failed_login_attempts = 0  # Reset any lockout
+        user.failed_login_attempts = 0 
         user.locked_until = None
         self.user_repo.update(user)
         return {"message": "Password reset successful! You can now login."}

@@ -22,14 +22,14 @@ logger = logging.getLogger(__name__)
 
 # Valid processing status transitions
 PROCESSING_STATUSES = {
-    "uploaded",       # Just saved to DB (URL) or presigned URL issued (file)
-    "pending",        # Confirmed in S3 / queued for processing
-    "processing",     # ML pipeline running (transcription, segmentation, etc.)
-    "transcribing",       # Step 1: Speech to text
-    "ocr_processing",     # Step 2: OCR
-    "merging",            # Step 3: Merge
-    "segmenting",         # Step 4: Topic segmentation
-    "completed",      # All processing done
+    "uploaded",      
+    "pending",     
+    "processing",    
+    "transcribing",       
+    "ocr_processing",   
+    "merging",            
+    "segmenting",        
+    "completed",     
     "cancelled",  
     "failed",     
     
@@ -37,12 +37,7 @@ PROCESSING_STATUSES = {
 
 
 class ProcessingJobService:
-    """
-    Creates and manages video processing jobs.
-    Uses FastAPI BackgroundTasks for now — swap the _run_pipeline body
-    for an SQS message / Celery task when ready.
-    """
-
+   
     def __init__(self, db: Session):
         self.db = db
         self.video_repo = VideoRepository(db)
@@ -87,8 +82,7 @@ class ProcessingJobService:
         logger.info(f"[CANCEL REQUESTED] video_id={video_id}")
         video = self.video_repo.get_by_id(video_id)
         if not video:
-            # Most likely: the pipeline already noticed the cancel and cleaned
-            # up itself. Treat this as success, not an error.
+            
             return {
                 "video_id": video_id,
                 "message": "This video no longer exists — it was likely already cancelled.",
@@ -113,8 +107,7 @@ class ProcessingJobService:
                 "cancelled": True,
             }
 
-        # Only flag it. Do NOT touch segments/embeddings/the video row here —
-        # the pipeline is the only thing allowed to mutate that data while running.
+
         cancel_reg.request_cancel(video_id)
         self.video_repo.update_status(video_id, "cancelling")
 
@@ -125,16 +118,6 @@ class ProcessingJobService:
             "cancelled": True,
         }
 async def run_processing_pipeline(video_id: int, language: str):
-    """
-    Background task that simulates the ML pipeline.
-
-    Replace the body of each step with your real ML calls:
-      - Transcription
-      - Segmentation
-      - Summarisation
-      - Quiz generation
-      - Mindmap generation
-    """
     db = SessionLocal()
     try:
         repo = VideoRepository(db)
@@ -143,15 +126,15 @@ async def run_processing_pipeline(video_id: int, language: str):
         logger.info(f"[Pipeline] Starting: video_id={video_id}, language={language}")
         repo.update_status(video_id, "processing")
 
-         # ── Step 1: Transcription ──────────────────────────────────────────
+         #  Step 1: Transcription 
         _check_cancel(video_id)
         logger.info(f"[Pipeline] Step 1 - Transcription: video_id={video_id}")
         repo.update_status(video_id, "transcribing")
         _check_cancel(video_id)
         video = repo.get_by_id(video_id)
-        # transcript = await transcribe(video.url, video_id=video_id)
+        
         _check_cancel(video_id)
-        #transcript, video_path, Transcribt_lang  = await transcribe(video.url, video_id=video_id)
+        
         transcript, video_path, Transcribt_lang = await loop.run_in_executor(
             None,
             lambda: transcribe_sync(video.url, video_id=video_id)
@@ -160,12 +143,12 @@ async def run_processing_pipeline(video_id: int, language: str):
         
         logger.info(f"[Pipeline] Transcription done: video_id={video_id}")
 
-        # ── Step 2: OCR ───────────────────────────────────────────────────
+        #  Step 2: OCR 
         _check_cancel(video_id)
         
         logger.info(f"[Pipeline] Step 2 - OCR: video_id={video_id}")
         repo.update_status(video_id, "ocr_processing")
-        #loop = asyncio.get_event_loop()
+        
         ocr_service = OCRService(db)
 
         ocr_result = await loop.run_in_executor(
@@ -175,15 +158,12 @@ async def run_processing_pipeline(video_id: int, language: str):
 
         ocr_segments = ocr_result["segments"]
         ocr_language  = ocr_result["language"]
-        # ocr_segments = await loop.run_in_executor(
-        #     None,
-        #     lambda: OCRService(db).run(video_id)
-        # )
+       
         logger.info(f"[Pipeline] OCR segments: {len(ocr_segments)}")
         
         logger.info(f"[Pipeline] OCR done: {len(ocr_segments)} segments, video_id={video_id}")
         
-        # ── Step 3: Merging ─────────────────────────────────────
+        #  Step 3: Merging 
 
         _check_cancel(video_id)
 
@@ -194,15 +174,14 @@ async def run_processing_pipeline(video_id: int, language: str):
 
         logger.info(f"[Pipeline] Merge done: {len(merged)} entries, video_id={video_id}")
         
-        # ── Step 4: Topic Segmentation ──────────────────────────────────
+        #  Step 4: Topic Segmentation 
         _check_cancel(video_id)
        
         logger.info(f"[Pipeline] Step 4 - Segmentation: video_id={video_id}")
         repo.update_status(video_id, "segmenting")
         segment_repo = SegmentRepository(db)
 
-        # logger.info(f"[Pipeline] Segments generated: {segments_result['total_segments']}")
-        #segments_result = await segment_topics(merged, video_id,ocr_language,Transcribt_lang)
+    
         segments_result = await loop.run_in_executor(
             None,
             lambda: asyncio.run(
@@ -215,11 +194,11 @@ async def run_processing_pipeline(video_id: int, language: str):
             f"[Pipeline] Segmentation done: {segments_result['total_segments']} segments"
         )
 
-        # SAVE TO DATABASE
+       
         print("TOTAL:", segments_result["total_segments"])
         last_end_time = None
         for seg in segments_result["segments"]:
-            _check_cancel(video_id)          # <- check before each DB write
+            _check_cancel(video_id)        
             print(" inserting segment:", seg["segment_number"])
             
             start_time = time_to_seconds(seg["start_time"])
@@ -246,8 +225,6 @@ async def run_processing_pipeline(video_id: int, language: str):
                 )
             last_end_time = end_time
             
-            #********************************************
-            # Persist quality metadata from segmentation scoring
             quality = seg.get("_quality")
             if quality and db_segment is not None:
                 db_segment.quality_score = quality.get("score")
@@ -277,23 +254,23 @@ async def run_processing_pipeline(video_id: int, language: str):
                         f"[Pipeline] db_segment is None for segment "
                         f"#{seg['segment_number']} — skipping quality persist"
                     )
-            #********************************************
+         
         logger.info("[Pipeline] Segments saved to DB successfully")
 
-        # ── Step 5: Store Embeddings ──────────────────────────────────────
+        #  Step 5: Store Embeddings 
        
         _check_cancel(video_id)
         logger.info(f"[Pipeline] Step 5 - Embeddings: video_id={video_id}")
-        #store_embeddings(video_id, segments_result["segments"])
+       
         await store_embeddings(
             video_id,
             segments_result["segments"]
         )
 
-        # ── Completed Status ─────────────────────────────────────
+        #  Completed Status 
         repo.update_status(video_id, "completed")
 
-        # ── Calculate & Save Storage Bytes ───────────────────────
+        #  Calculate & Save Storage Bytes 
         storage_bytes = repo.get_video_storage_bytes(video_id)
         repo.update_storage_bytes(video_id, storage_bytes)
 
@@ -325,20 +302,12 @@ async def run_processing_pipeline(video_id: int, language: str):
  
  
 def _check_cancel(video_id: int) -> None:
-    """Raise PipelineCancelledError if the video has been cancelled."""
     if cancel_reg.is_cancelled(video_id):
         raise PipelineCancelledError(f"Video {video_id} was cancelled by user")
  
  
 def _cleanup_partial_data(db: Session, video_id: int) -> None:
-    """
-    Delete every partial artefact that may have been written to the DB
-    during an incomplete pipeline run:
-      - topic_segment rows  (cascade-deletes subtopics, keypoints,
-        segment_summary, flashcards, quizzes, segment_studynotes)
-    The video row itself is DELETED so the user can re-upload / re-submit.
-    ChromaDB embeddings for this video are also removed if they exist.
-    """
+    
     logger.info(f"[Pipeline] Cleaning up partial data for video_id={video_id}")
  
     try:
@@ -357,16 +326,15 @@ def _cleanup_partial_data(db: Session, video_id: int) -> None:
         logger.warning(f"[Pipeline] Could not delete segments: {e}")
         db.rollback()
  
-    # Remove ChromaDB collection for this video (best-effort)
     try:
         import chromadb
         chroma_client = chromadb.PersistentClient(path="./chroma_db")
         chroma_client.delete_collection(name=f"video_{video_id}")
         logger.info(f"[Pipeline] Deleted ChromaDB collection for video_id={video_id}")
     except Exception:
-        pass   # Collection may not exist yet — that is fine
+        pass   
  
-    # Finally delete the video row itself so the slot is freed
+ 
     try:
         repo = VideoRepository(db)
         repo.delete(video_id)

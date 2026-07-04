@@ -30,28 +30,21 @@ def _format_seconds(seconds: int) -> str:
 
 
 def _clean_description(text: str, max_chars: int = 300) -> str:
-    """
-    Strip OCR noise from descriptions before sending to mindmap engine.
-    Keeps only meaningful content — removes garbled transliterations,
-    repeated words, and excessively short tokens.
-    """
     if not text:
         return ""
 
-    # Split on pipe (OCR separator) and take only meaningful parts
+    # Split on pipe (OCR separator) 
     parts = [p.strip() for p in text.split("|")]
 
     cleaned_parts = []
     for part in parts:
-        # Skip parts that are too short to be meaningful
         if len(part.split()) < 3:
             continue
-        # Skip parts that look like garbled transliteration
-        # (high ratio of non-Arabic, non-English, non-space characters)
+       
         weird = len(re.findall(r'[^a-zA-Z\u0600-\u06FF\s\d\(\)\-\.,]', part))
         if len(part) > 0 and weird / len(part) > 0.15:
             continue
-        # Skip parts with repeated words (OCR artifact)
+
         words = part.split()
         if len(words) >= 2 and words[0] == words[1]:
             continue
@@ -155,7 +148,6 @@ class MindmapService:
         engine_input = _segments_to_engine_input(segments)
 
         
-         # Use the first segment as the quality reference (domain anchor)
         reference_segment = segments[0]
 
         try:

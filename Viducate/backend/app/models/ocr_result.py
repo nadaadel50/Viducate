@@ -13,9 +13,9 @@ class OCRResult(Base):
         nullable=False,
         index=True
     )
-    timestamp_seconds = Column(Float, nullable=False)   # 12.5
-    timestamp_label = Column(String(12), nullable=False) # "00:00:12"
-    text = Column(Text, nullable=False)                  # cleaned OCR text
-    raw_lines = Column(Text, nullable=True)              # original lines joined by |
-    frame_index = Column(Integer, nullable=True)         # which frame number
+    timestamp_seconds = Column(Float, nullable=False)   
+    timestamp_label = Column(String(12), nullable=False) 
+    text = Column(Text, nullable=False)                 
+    raw_lines = Column(Text, nullable=True)             
+    frame_index = Column(Integer, nullable=True)         
     created_at = Column(TIMESTAMP, server_default=func.now())

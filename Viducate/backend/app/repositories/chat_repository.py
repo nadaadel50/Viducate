@@ -9,7 +9,7 @@ class ChatRepository:
      def __init__(self, db: Session):
         self.db = db
 
-     # session
+     
      def create_session(self, video_id: int, title: str = None) -> ChatSession:
           session = ChatSession(video_id=video_id, title=title)
           self.db.add(session)
@@ -24,7 +24,6 @@ class ChatRepository:
         return self.db.query(ChatSession).filter(ChatSession.video_id == video_id).first()
 
 
-     #message
      def save_message(self, session_id: int, question: str, answer: str, current_time: Optional[int] = None) -> ChatMessage:
         message = ChatMessage(
             session_id=session_id,

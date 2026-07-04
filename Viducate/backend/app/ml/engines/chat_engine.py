@@ -66,9 +66,7 @@ def _build_messages(context: str, history: list[dict], question: str) -> list[di
 
 
 def generate_answer(context: str, history: list[dict], question: str) -> str:
-    """
-    Calls Groq and returns the answer string.
-    """
+    
     client = _get_client()
     messages = _build_messages(context, history, question)
 

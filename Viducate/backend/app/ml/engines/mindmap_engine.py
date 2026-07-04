@@ -46,14 +46,13 @@ def _detect_language(segments: list[dict]) -> str:
                     transcript_english += 1
 
         for st in seg.get("sub_topics", []):
-            # Subtopic name — same as segment labels
             for ch in st.get("name", ""):
                 if '\u0600' <= ch <= '\u06FF':
                     transcript_arabic += 1
                 elif ch.isalpha():
                     transcript_english += 1
 
-            # Description — split transcript vs slide content
+            
             transcript_text, slide_text = _split_transcript_vs_slides(
                 st.get("description", "")
             )
@@ -79,11 +78,9 @@ def _detect_language(segments: list[dict]) -> str:
 
     ar_ratio = transcript_arabic / total_transcript
 
-    # Arabic lecture: instructor speaks Arabic, slides may be English
+    # mixed 
     if ar_ratio >= 0.25:
-        # Has meaningful Arabic transcript content
         if slide_english > 50:
-            # Also has substantial English slide content → mixed
             return "mixed"
         return "ar"
 
@@ -315,7 +312,6 @@ def _parse(raw: str) -> dict | None:
     except json.JSONDecodeError:
         pass
 
-    # try to find the outermost {...}
     match = re.search(r'\{.*\}', raw, re.DOTALL)
     if match:
         try:
@@ -349,10 +345,7 @@ def _truncate(text: str, max_words: int) -> str:
     return " ".join(words[:max_words]) + "…"
 
 def _clean_label(label: str) -> str:
-    """
-    Post-generation cleanup for mindmap node labels.
-    Removes truncated sentences, ellipsis artifacts, and obvious OCR noise.
-    """
+    
     if not label:
         return label
 
@@ -366,7 +359,6 @@ def _clean_label(label: str) -> str:
 
 
 def _clean_nodes(nodes: list[dict]) -> list[dict]:
-    """Apply label cleanup to detail nodes only."""
     for node in nodes:
         if node.get("type") == "detail":
             node["label"] = _clean_label(node.get("label", ""))

@@ -34,7 +34,7 @@ async def measure_endpoint(client, method, url, label):
     for _ in range(WARMUP_CALLS):
         await client.request(method, url, headers=HEADERS)
 
-    # Measure
+   
     latencies = []
     for _ in range(MEASURE_CALLS):
         t0 = time.perf_counter()

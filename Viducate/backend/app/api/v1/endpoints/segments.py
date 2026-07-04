@@ -17,9 +17,7 @@ logger = logging.getLogger(__name__)
 security = HTTPBearer()
 
 
-# =========================
 # AUTH
-# =========================
 def get_current_user(
     credentials: HTTPAuthorizationCredentials = Depends(security),
     db: Session = Depends(get_db),
@@ -27,10 +25,7 @@ def get_current_user(
     return AuthService(db).get_current_user(credentials.credentials)
 
 
-
-# =========================
 # GET SEGMENTS BY VIDEO
-# =========================
 @router.get(
     "/videos/{video_id}",
     response_model=VideoSegmentsResponse,
@@ -79,23 +74,7 @@ def get_segments_by_video(
         ]
     }
 
-# # =========================
-# # DELETE SEGMENT
-# # =========================
-# @router.delete(
-#     "/{segment_id}",
-#     status_code=status.HTTP_200_OK,
-#     summary="Delete segment",
-# )
-# def delete_segment(
-#     segment_id: int,
-#     db: Session = Depends(get_db),
-#     current_user=Depends(get_current_user),
-# ):
-#     repo = SegmentRepository(db)
-#     return repo.delete(segment_id)
 
-#********************************************
 @router.get(
     "/videos/{video_id}/quality",
     response_model=VideoQualityResponse,
@@ -140,4 +119,3 @@ def get_video_quality(
             for s in segments
         ],
     }
-#********************************************
