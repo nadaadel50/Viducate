@@ -1,6 +1,8 @@
 # OCR Output — video_id=33
 # Language: en
-# Total segments: 2
+# Total segments: 4
 
-[00:00:00] O(n!)O(n^2) | O(n log n) | 0(1) = constant time | 0(n) | 0(log n) = logarithmic time | (steps) | O(n) = linear time | 0(log n) | O(n log n) = quasilinear time | 0(1) | O(n^2) = quadratic time | data (n) | O(n!) = factorial time | 1322-34
-[00:06:17] O(n!) O(n^2) | o(log n) | log n) = quasilinear time | o(n!) | = factorial | 1087,728
+[00:00:50] carbo- | nucleic | hydrates | lipids | proteins | acids | that are fundamental to life!
+[00:16:50] Adjust the cormelation of penguin weight with this | hypethetical measurement to- 0.2 | 3 x h
+[00:17:00] Comect your phones timling emor to find your | Timing Acljualrment mal
+[00:17:10] Center of Mass | The center of mass is the averace positian of | weight. Find the center of mass of this systern.

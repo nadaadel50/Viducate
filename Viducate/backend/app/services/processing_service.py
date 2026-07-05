@@ -374,4 +374,3 @@ def _cleanup_partial_data(db: Session, video_id: int) -> None:
     except Exception as e:
         logger.warning(f"[Pipeline] Could not delete video record: {e}")
         db.rollback()
- 

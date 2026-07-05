@@ -127,20 +127,31 @@ export function useVideoController({
     setDurationTime(duration);
   };
 
-  const SEEK_JUMP_THRESHOLD = 2;
+ // use_video_controller.ts
+const lastRealTimeRef = useRef<number | null>(null);
+const SEEK_JUMP_THRESHOLD = 2;
 
-  const handleSeek = () => {
-    const time = player.getCurrentTime();
-    const lastTime = lastSeekTimeRef.current;
+const handleSeek = () => {
+  const time = player.getCurrentTime();
+  const lastTime = lastSeekTimeRef.current;
+  const now = Date.now();
+  const lastReal = lastRealTimeRef.current;
 
-    if (lastTime !== null && Math.abs(time - lastTime) < SEEK_JUMP_THRESHOLD) {
-      lastSeekTimeRef.current = time;
-      return;
-    }
+  const videoDelta = lastTime !== null ? time - lastTime : Infinity;
+  const realDeltaSec = lastReal !== null ? (now - lastReal) / 1000 : Infinity;
 
-    lastSeekTimeRef.current = time;
-    analytics.addSeekEvent(time);
-  };
+  lastSeekTimeRef.current = time;
+  lastRealTimeRef.current = now;
+
+ 
+  const isNormalPlaybackDrift = Math.abs(videoDelta - realDeltaSec) < 1.5;
+
+  if (Math.abs(videoDelta) < SEEK_JUMP_THRESHOLD || isNormalPlaybackDrift) {
+    return;
+  }
+
+  analytics.addSeekEvent(time);
+};
 
   const handleSpeedChange = (speed: number) => {
     player.setSpeed(speed);

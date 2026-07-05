@@ -40,6 +40,7 @@ export function useVideoData() {
 
   useEffect(() => {
     if (!query.data || query.data.topics.length === 0) return;
+    
 
  
 

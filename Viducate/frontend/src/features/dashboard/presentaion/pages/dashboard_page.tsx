@@ -22,7 +22,7 @@ export function DashboardPage() {
     selectedVideo,
   } = useDashboard();
   const intl = useIntl();
-  const { handleDelete, toast, clearToast } = useDeleteVideo();
+  const { handleDelete, toast, clearToast ,isDelteing} = useDeleteVideo();
 
   if (isLoading) {
     return (
@@ -68,6 +68,7 @@ export function DashboardPage() {
 
       <ConfirmationModal
         open={openDeleteMessage}
+        isLoading={isDelteing}
         title={intl.formatMessage({
           id: "dashboard.deleteModal.title",
         })}

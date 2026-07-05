@@ -37,6 +37,7 @@ export function VideoPlayer() {
   const [topicStartTime, setTopicStartTime] = useState<number | null>(null);
   const [topicDuration, setTopicDuration] = useState(0);
   const [currentTopicName, setCurrentTopicName] = useState("");
+  const hasResumedRef = useRef(false);
 
   const {
     play,
@@ -103,15 +104,18 @@ export function VideoPlayer() {
       );
       setTimeSpent(0);
     }
+    
+  hasResumedRef.current = false; 
 
     setEvents([]);
   }, [selectedTopic, setEvents, setTimeSpent]);
 
+  
   useEffect(() => {
     if (seekTo === null) return;
 
     seek(seekTo);
-   
+
     setSeekTo(null);
   }, [seekTo]);
 
@@ -156,8 +160,9 @@ export function VideoPlayer() {
           onDurationChange={(e: React.SyntheticEvent<HTMLVideoElement>) => {
             playerRef.current = e.currentTarget;
 
-            if (currentTime > 0) {
+            if (currentTime > 0 && !hasResumedRef.current) {
               e.currentTarget.currentTime = currentTime;
+              hasResumedRef.current = true;
             }
 
             handleLoadedMetadata();
