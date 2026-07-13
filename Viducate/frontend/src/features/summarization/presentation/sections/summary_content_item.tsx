@@ -12,6 +12,7 @@ import {
 
 type SummaryContentItemProps = {
   item: ContentItem;
+  
 };
 
 export function SummaryContentItem({ item }: SummaryContentItemProps) {

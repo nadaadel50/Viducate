@@ -21,10 +21,6 @@ class SegmentRepository:
     def __init__(self, db: Session):
         self.db = db
 
-    
-    # =========================
-    # CREATE SEGMENT ONLY
-    # =========================
     def create_segment(self, video_id: int, segment_data: dict) -> TopicSegment:
 
         segment = TopicSegment(
@@ -92,7 +88,7 @@ class SegmentRepository:
             print(" keypoints added")
 
 
-            # 4. commit once (IMPORTANT)
+            # 4. commit once
             self.db.commit()
             self.db.refresh(segment)
 
@@ -104,9 +100,7 @@ class SegmentRepository:
             raise e
         
 
-    # =========================
-    # GET BY VIDEO
-    # =========================
+ 
     def get_by_video(self, video_id: int) -> List[TopicSegment]:
         return (
             self.db.query(TopicSegment)
@@ -115,18 +109,6 @@ class SegmentRepository:
             .all()
         )
 
-    # # =========================
-    # # DELETE
-    # # =========================
-    # def delete(self, segment_id: int) -> bool:
-    #     segment = self.get_by_id(segment_id)
-    #     if not segment:
-    #         return False
-
-    #     self.db.delete(segment)
-    #     self.db.commit()
-    #     return True
-
     def update_quality(
         self,
         segment_id: int,
@@ -134,7 +116,7 @@ class SegmentRepository:
         quality_flag: bool,
         retry_count: int = 0,
     ) -> None:
-        """Update quality metadata on a segment row."""
+
         segment = self.db.query(TopicSegment).filter(
             TopicSegment.segment_id == segment_id
         ).first()
@@ -145,7 +127,6 @@ class SegmentRepository:
             self.db.commit()
 
     def get_flagged_segments(self, video_id: int) -> list:
-        """Return all low-quality segments for a video."""
         return (
             self.db.query(TopicSegment)
             .filter(

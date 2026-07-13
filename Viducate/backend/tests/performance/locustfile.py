@@ -9,7 +9,7 @@ AUTH_HEADERS = {"Authorization": TEST_TOKEN}
 class ViducateReadUser(HttpUser):
     """
     Simulates a student browsing study materials for an already-processed video.
-    All tasks hit endpoints that return cached/stored data — no LLM calls.
+    All tasks hit endpoints that return cached/stored data (no LLM calls)
     """
     wait_time = between(1, 3)
 

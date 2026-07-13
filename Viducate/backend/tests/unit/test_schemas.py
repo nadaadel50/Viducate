@@ -28,7 +28,7 @@ class TestUserRegisterRequest:
         first_name="Ahmed",
         last_name="Mohamed",
         email="ahmed@viducate.com",
-        password="StrongPass1",
+        password="StrongPass1!",
         study_field="Computer Science",
         language_preference="en",
     )
@@ -36,7 +36,7 @@ class TestUserRegisterRequest:
     def test_valid_payload_parses_successfully(self):
         req = UserRegisterRequest(**self.VALID)
         assert req.email == "ahmed@viducate.com"
-        assert req.password == "StrongPass1"
+        assert req.password == "StrongPass1!"
 
     def test_invalid_email_raises(self):
         with pytest.raises(ValidationError):
@@ -53,8 +53,8 @@ class TestUserRegisterRequest:
             UserRegisterRequest(**{**self.VALID, "password": bad_password})
 
     def test_password_exactly_eight_chars_with_upper_and_digit_is_valid(self):
-        req = UserRegisterRequest(**{**self.VALID, "password": "Abcdefg1"})
-        assert req.password == "Abcdefg1"
+        req = UserRegisterRequest(**{**self.VALID, "password": "Abcdefg1!"})
+        assert req.password == "Abcdefg1!"
 
     def test_name_shorter_than_two_chars_raises(self):
         with pytest.raises(ValidationError):
@@ -96,10 +96,10 @@ class TestResetPasswordRequest:
     def test_matching_passwords_parse_successfully(self):
         req = ResetPasswordRequest(
             token="sometoken",
-            new_password="NewPass123",
-            confirm_password="NewPass123",
+            new_password="NewPass123!",
+            confirm_password="NewPass123!",
         )
-        assert req.new_password == "NewPass123"
+        assert req.new_password == "NewPass123!"
 
     def test_mismatched_passwords_raise(self):
         with pytest.raises(ValidationError):

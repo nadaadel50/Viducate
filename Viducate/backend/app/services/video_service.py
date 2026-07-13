@@ -28,13 +28,7 @@ MAX_R2_STORAGE_BYTES = 1 * 1024 * 1024 * 1024   # 1 GB per user
 
 
 class VideoService:
-    """
-    Orchestrates video ingestion:
-      - URL submission  → validate → save metadata → create processing job
-      - File upload     → generate presigned S3 URL → save metadata → job created
-                          after frontend confirms upload via /confirm endpoint
-    """
-
+  
     def __init__(self, db: Session):
         self.db = db
         self.video_repo = VideoRepository(db)
@@ -61,7 +55,7 @@ class VideoService:
                 detail=f"Storage limit reached. Used: {used_gb:.2f}GB / 1GB. Please delete a video to continue."
             )
         
-    # check_total_r2_storage
+ 
     def _check_total_r2_storage(self, new_file_size: int):
         total_used = self.video_repo.get_total_r2_storage_bytes()
         if total_used + new_file_size > 10 * 1024 * 1024 * 1024:  # 10 GB
@@ -72,7 +66,6 @@ class VideoService:
 
     
     async def submit_url(self, user_id: int, request: VideoUploadURLRequest) -> dict:
-        #First Check database storage 
         self._check_db_storage_limit(user_id)
 
         normalized_url = self.caching_service.normalize_youtube_url(request.url)
@@ -83,7 +76,7 @@ class VideoService:
             cache_result["language"] = cache_result.get("language", "en")
             return cache_result
         
-        # classify_video if film or music or.... not allowed
+        # classify_video if film or music or not allowed
         yt_video_id = self.caching_service.extract_youtube_id(normalized_url)
 
         if yt_video_id:

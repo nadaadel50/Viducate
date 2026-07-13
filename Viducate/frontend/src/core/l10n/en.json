@@ -148,7 +148,7 @@
   "summary.conclusion": "Conclusion",
   "summary.exportPdf": "Export to PDF",
   "summary.downloadOffline": "Download for offline",
-   "summary.downloadError": "Download failed. Please try again.",
+  "summary.downloadError": "Download failed. Please try again.",
   "summary.tools": "Tools",
   "summary.studyNotes": "Study Notes",
   "summary.studyNotesDesc": "Detailed points and key concepts for deep learning",
@@ -168,7 +168,7 @@
   "summary.studyNotesDescription": "Detailed points and key concepts for deep learning",
   "summary.summaryTitle": "Summary",
   "summary.summaryDescription": "Concise overview of the topic for quick revision",
-  "motivation.title": "Daily Inspiration",
+  "motivation.title": "Keep Going, You've Got This 💪",
   "motivation.subtitle": "Take a moment to reflect. You are building your future one lecture at a time.",
   "motivation.quote1": "The beautiful thing about learning is that nobody can take it away from you.",
   "motivation.quote2": "The expert in anything was once a beginner.",
@@ -450,5 +450,4 @@
   "navbar.dashboard": "Dashboard",
 
   "error.default": "Oops! Something went wrong. Please try again later."
-
 }

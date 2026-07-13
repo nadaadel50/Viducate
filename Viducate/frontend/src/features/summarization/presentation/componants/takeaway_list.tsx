@@ -1,6 +1,4 @@
 import { Lightbulb } from "lucide-react";
-import { FormattedMessage } from "react-intl";
-
 import { COLORS } from "../../../../core/constants/colors";
 import {
   FONT_SIZE,
@@ -10,18 +8,19 @@ import {
 
 type TakeawayListProps = {
   items: string[];
+  isArabic?: boolean;
 };
 
-export function TakeawayList({ items }: TakeawayListProps) {
+export function TakeawayList({ items, isArabic }: TakeawayListProps) {
   return (
-    <section className="mb-8 sm:mb-10">
+    <section className="mb-8 sm:mb-10" dir={isArabic ? "rtl" : "ltr"}>
       <h3
         className={`${FONT_SIZE.size18} lg:${FONT_SIZE.size20} ${FONT_WEIGHT.bold} mb-4 inline-flex items-center gap-2`}
         style={{ color: COLORS.brand.primary }}
       >
         <Lightbulb className="h-6 w-6 shrink-0" />
 
-        <FormattedMessage id="summary.keyTakeaways" />
+        {isArabic ? "نقاط رئيسية" : "Key Takeaways"}
       </h3>
 
       <div

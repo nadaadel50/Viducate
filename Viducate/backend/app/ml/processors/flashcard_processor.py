@@ -16,29 +16,19 @@ from app.services.quality_retry import run_with_quality_retry
 
 logger = logging.getLogger(__name__)
 
-# Cards generated per segment — keep low to save tokens
+
 CARDS_PER_SEGMENT = 3
 
-# Seconds to wait between Groq calls to avoid rate limiting
 DELAY_BETWEEN_SEGMENTS = 5
 
 
 def _resolve_language(db: Session, user_id: int, video_id: int, video_language: str) -> str:
-    """
-    Priority order:
-    1. User's flashcard_language preference for THIS specific video
-    2. The video's own language
-    3. Default "en"
-
-    BUG FIX: Must filter by BOTH user_id AND video_id.
-    Previously only filtered by user_id, so preferences from
-    a different video could bleed in.
-    """
+    
     pref = (
         db.query(ContentPreferences)
         .filter(
             ContentPreferences.user_id == user_id,
-            ContentPreferences.video_id == video_id,   # ← was missing before
+            ContentPreferences.video_id == video_id,  
         )
         .first()
     )
@@ -60,18 +50,14 @@ def _resolve_language(db: Session, user_id: int, video_id: int, video_language: 
 
 
 def _cards_language_matches(db: Session, video_id: int, expected_language: str) -> bool:
-    """
-    Checks if the already-cached flashcards are in the correct language.
-    Returns False if they were generated in a different language,
-    meaning we need to regenerate even though cards exist.
-    """
+    
     sample = (
         db.query(Flashcard.language)
         .filter(Flashcard.video_id == video_id)
         .first()
     )
     if sample is None:
-        return True  # No cards yet — not a mismatch
+        return True  # No cards yet  not a mismatch
 
     cached_language = sample[0]
     match = (cached_language == expected_language)
@@ -86,26 +72,15 @@ def _cards_language_matches(db: Session, video_id: int, expected_language: str) 
 
 
 def process_flashcards(db: Session, video_id: int, user_id: int) -> None:
-    """
-    Generates and saves flashcards for all segments of a video.
-
-    Language logic:
-    - Reads user's flashcard_language preference for THIS video specifically.
-    - Falls back to the video's language if no preference is set.
-    - If cached cards exist but in the WRONG language, deletes and regenerates them.
-
-    Rate limiting:
-    - Waits DELAY_BETWEEN_SEGMENTS seconds between each Groq call.
-    """
+    
     video = db.query(Video).filter(Video.vid == video_id).first()
     if not video:
         raise ValueError(f"Video {video_id} not found")
 
-    # ── Resolve the correct language for this user + video ───────────────────
     language = _resolve_language(db, user_id, video_id, video.language or "en")
     
     db.expire_all()
-    # ── If cached cards exist in wrong language → delete them all ────────────
+   
     if not _cards_language_matches(db, video_id, language):
         deleted = (
             db.query(Flashcard)
@@ -118,7 +93,6 @@ def process_flashcards(db: Session, video_id: int, user_id: int) -> None:
             f"for video_id={video_id}. Will regenerate in '{language}'."
         )
 
-    # ── Load segments ────────────────────────────────────────────────────────
     segments = (
         db.query(TopicSegment)
         .options(joinedload(TopicSegment.subtopics))
@@ -139,7 +113,7 @@ def process_flashcards(db: Session, video_id: int, user_id: int) -> None:
     )
 
     for idx, segment in enumerate(segments):
-        # ── Check cache (per segment) ─────────────────────────────────────────
+        #Check cache
         existing_count = (
             db.query(Flashcard)
             .filter(Flashcard.segment_id == segment.segment_id)
@@ -153,7 +127,7 @@ def process_flashcards(db: Session, video_id: int, user_id: int) -> None:
             )
             continue
 
-        # ── Build subtopic list (names only to minimize tokens) ───────────────
+        #  Build subtopic list (names only to minimize tokens) 
         subtopics_data = [
             {"name": st.name, "description": st.description}
             for st in segment.subtopics
@@ -167,12 +141,11 @@ def process_flashcards(db: Session, video_id: int, user_id: int) -> None:
 
 
 
-         # ── Call engine with quality validation ───────────────────────────────
-        # REPLACE WITH (capture everything explicitly, add debug print):
+         #  Call engine with quality validation 
         _seg_id    = segment.segment_id
         _seg_title = segment.title
         _seg_topic = segment.main_topic or segment.title
-        _seg_ref   = segment  # explicit capture
+        _seg_ref   = segment  
 
         logger.info(
             f"[FlashcardProcessor] About to validate segment_id={_seg_id} "
@@ -196,7 +169,7 @@ def process_flashcards(db: Session, video_id: int, user_id: int) -> None:
             ),
             label=f"flashcard segment_id={_seg_id}",
         )
-        # ── End quality validation ────────────────────────────────────────────
+        #  End quality validation 
 
         if not cards:
             logger.warning(
@@ -205,15 +178,6 @@ def process_flashcards(db: Session, video_id: int, user_id: int) -> None:
             )
             continue
  
-        # ── Persist quality on the segment row ────────────────────────────────
-        # Take the maximum of any existing score (segmentation may have already
-        # written a score; we keep the higher of the two).
-        # ── Persist quality on the segment row ───────────────────────────────────
-        # current_score = segment.quality_score or 0.0
-        # new_score     = quality.get("score", 0.0)
-        # segment.quality_score = max(current_score, new_score)
-        # segment.quality_flag  = bool(quality.get("flag", False))
-        # segment.retry_count   = (segment.retry_count or 0) + quality.get("retries", 0)
 
         logger.info(
             f"[FlashcardProcessor] VALIDATION COMPLETE | segment_id={segment.segment_id} | "
@@ -248,7 +212,7 @@ def process_flashcards(db: Session, video_id: int, user_id: int) -> None:
             f"segment {segment.segment_number} in '{language}'"
         )
 
-        # ── Rate limit protection ─────────────────────────────────────────────
+        #  Rate limit protection 
         if idx < len(segments) - 1:
             logger.debug(
                 f"[FlashcardProcessor] Waiting {DELAY_BETWEEN_SEGMENTS}s "

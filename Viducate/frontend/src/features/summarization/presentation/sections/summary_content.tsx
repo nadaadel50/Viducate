@@ -11,12 +11,14 @@ type SummaryContentProps = {
   summary: SummaryContent;
   title: string;
   readingTime: string;
+  isArabic: boolean;
 };
 
 export function SummaryContent({
   summary,
   title,
   readingTime,
+  isArabic,
 }: SummaryContentProps) {
   return (
     <article
@@ -25,14 +27,20 @@ export function SummaryContent({
     >
       <SummaryHeader title={cleanSummaryText(title)} time={readingTime} />
 
-      <TakeawayList items={summary.takeaways.map(cleanSummaryText)} />
+      <TakeawayList
+        items={summary.takeaways.map(cleanSummaryText)}
+        isArabic={isArabic}
+      />
 
       <section className="space-y-10">
         {summary.sections.map((section, index) => (
-          <SummarySection key={index} section={section} />
+          <SummarySection key={index} section={section} isArabic={isArabic} />
         ))}
 
-        <SummaryConclusion conclusion={summary.conclusion} />
+        <SummaryConclusion
+          conclusion={summary.conclusion}
+          isArabic={isArabic}
+        />
       </section>
     </article>
   );

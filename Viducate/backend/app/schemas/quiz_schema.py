@@ -3,7 +3,6 @@ from typing import List, Optional, Literal
 from datetime import datetime
 
 
-# ─── Request ──────────────────────────────────────────────────────────────────
 
 class QuizGenerateRequest(BaseModel):
     difficulty: Literal["easy", "medium", "hard"] = "medium"

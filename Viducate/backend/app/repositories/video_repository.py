@@ -32,8 +32,7 @@ class VideoRepository:
             .filter(Video.content_hash == content_hash)
             .first()
         )
-    # def get_by_url(self, url: str):
-    #     return self.db.query(Video).filter(Video.url == url).first()
+   
 
     def get_by_id(self, video_id: int) -> Optional[Video]:
         return self.db.query(Video).filter(Video.vid == video_id).first()

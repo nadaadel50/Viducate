@@ -8,7 +8,6 @@ class UserRepository:
     def __init__(self, db: Session):
         self.db = db
 
-    # Find user by email by checking if email already exists
     def get_by_email(self, email: str) -> Optional[User]:
         return self.db.query(User).filter(User.email == email).first()
 

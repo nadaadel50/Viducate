@@ -43,7 +43,7 @@ def clean_transcript(text: str) -> str:
     
     return '\n'.join(cleaned)
 
-# --------------------------------segmentations--------------------------------
+# segmentations
 def estimate_tokens(text: str) -> int:
     return len(text)
 
@@ -57,7 +57,7 @@ def chunk_text(text: str, max_words: int = 2500) -> list:
 # Time helpers 
 
 def _time_str_to_seconds(t: str) -> int:
-    """'00:01:30' or '01:30' or '90' → seconds int."""
+    
     if not t:
         return 0
     parts = str(t).strip().split(":")
@@ -187,7 +187,6 @@ async def call_groq_with_retry(client,  chunk: str,  chunk_index: int,video_id: 
             text = response.text.strip()
             text = text.replace("```json", "").replace("```", "").strip()
             if not text.endswith("}"):
-                # قطع عند آخر segment كامل
                 last_bracket = text.rfind("}]")
                 if last_bracket != -1:
                     text = text[:last_bracket + 2] + "\n}"

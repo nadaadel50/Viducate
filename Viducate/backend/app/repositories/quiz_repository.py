@@ -11,7 +11,7 @@ class QuizRepository:
     def create_quiz(self, data: dict) -> Quiz:
         quiz = Quiz(**data)
         self.db.add(quiz)
-        self.db.flush()   # get quiz_id without committing
+        self.db.flush()  
         return quiz
 
     def get_quiz_with_questions(self, quiz_id: int) -> Optional[Quiz]:

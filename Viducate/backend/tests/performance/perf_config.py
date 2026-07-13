@@ -11,6 +11,6 @@ HEADERS = {
     "Content-Type": "application/json",
 }
 
-COMPLETED_VIDEO_ID = int(os.getenv("COMPLETED_VIDEO_ID", 1))
-TEST_SEGMENT_ID = int(os.getenv("TEST_SEGMENT_ID", 2))
-TEST_QUIZ_ID = int(os.getenv("TEST_QUIZ_ID", 1))
+COMPLETED_VIDEO_ID = int(os.getenv("COMPLETED_VIDEO_ID", 227))
+TEST_SEGMENT_ID = int(os.getenv("TEST_SEGMENT_ID", 376))
+TEST_QUIZ_ID = int(os.getenv("TEST_QUIZ_ID", 8))

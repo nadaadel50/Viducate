@@ -34,7 +34,7 @@ async def measure_endpoint(client, method, url, label):
     for _ in range(WARMUP_CALLS):
         await client.request(method, url, headers=HEADERS)
 
-    # Measure
+   
     latencies = []
     for _ in range(MEASURE_CALLS):
         t0 = time.perf_counter()
@@ -71,7 +71,6 @@ async def test_all_endpoint_latencies():
 
 @pytest.mark.asyncio
 async def test_auth_me_under_50ms_p50():
-    """The simplest DB lookup should be very fast."""
     url = f"{BASE_URL}/api/v1/auth/me"
     async with httpx.AsyncClient(timeout=5.0) as client:
         r = await measure_endpoint(client, "GET", url, "auth_me_tight")

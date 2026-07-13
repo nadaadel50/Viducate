@@ -12,11 +12,12 @@ import { SummaryContentItem } from "./summary_content_item";
 
 type SummarySectionProps = {
   section: SummarySectionType;
+  isArabic?: boolean;
 };
 
-export function SummarySection({ section }: SummarySectionProps) {
+export function SummarySection({ section, isArabic }: SummarySectionProps) {
   return (
-    <section className="space-y-4">
+    <section className="space-y-4" dir={isArabic ? "rtl" : "ltr"}>
       <h3
         className={`${FONT_SIZE.size18} lg:${FONT_SIZE.size20} ${FONT_WEIGHT.bold}`}
         style={{ color: COLORS.text.primary }}

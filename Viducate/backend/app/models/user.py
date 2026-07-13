@@ -30,9 +30,6 @@ class User(Base):
 
     videos = relationship("Video", back_populates="user")
     content_preferences = relationship("ContentPreferences", back_populates="user")
-    # dashboard = relationship("UserDashboard", uselist=False, back_populates="user")
     settings = relationship("Settings", uselist=False, back_populates="user")
-    # quiz_attempts = relationship("UserQuizAttempts", back_populates="user")
-    # chats = relationship("ChatHistory", back_populates="user")
-    # stuck_events = relationship("StuckEvent", back_populates="user")
+    
 

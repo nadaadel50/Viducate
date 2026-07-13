@@ -4,8 +4,7 @@ from typing import List, Tuple
 
 
 class FrameExtractor:
-   # Extracting unique frames where slide content changes.
-
+   # Extracting unique frames where slide content changes
     def __init__(
         self,
         sample_interval: int = 2,       # seconds between sampled frames
@@ -19,11 +18,8 @@ class FrameExtractor:
     def _frames_are_same(
         self, prev_gray: np.ndarray, curr_gray: np.ndarray
     ) -> bool:
-        """
-        Returns True if slide has NOT changed enough to warrant OCR.
-        """
         if prev_gray is None:
-            return False  # always process first frame
+            return False 
 
         diff = cv2.absdiff(prev_gray, curr_gray)
         changed_ratio = (
@@ -32,12 +28,6 @@ class FrameExtractor:
         return changed_ratio < self.diff_threshold
 
     def extract(self, video_path: str) -> List[Tuple[int, float, str, np.ndarray]]:
-        """
-        Scans video and returns frames only where slide changed.
-
-        Returns list of:
-            (frame_index, timestamp_seconds, timestamp_label, frame_image)
-        """
         cap = cv2.VideoCapture(video_path)
         if not cap.isOpened():
             raise ValueError(f"Cannot open video: {video_path}")

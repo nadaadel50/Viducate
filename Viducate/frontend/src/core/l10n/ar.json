@@ -148,7 +148,7 @@
   "summary.conclusion": "الخلاصة",
   "summary.exportPdf": "تصدير PDF",
   "summary.downloadOffline": "تحميل للاستخدام بدون إنترنت",
-   "summary.downloadError": "فشل التحميل. يرجى المحاولة مرة أخرى.",
+  "summary.downloadError": "فشل التحميل. يرجى المحاولة مرة أخرى.",
   "summary.tools": "الأدوات",
 
   "summary.loading.titlePrefix": "جارٍ إعداد",
@@ -163,7 +163,7 @@
   "summary.studyNotesDescription": "نقاط تفصيلية ومفاهيم أساسية لفهم أعمق",
   "summary.summaryTitle": "ملخص",
   "summary.summaryDescription": "نظرة عامة مختصرة للمراجعة السريعة",
-  "motivation.title": "إلهام اليوم",
+  "motivation.title": "كمل، أنت قدها 💪",
   "motivation.subtitle": "خذ لحظة للتأمل، فأنت تبني مستقبلك محاضرة بعد أخرى.",
   "motivation.quote1": "أجمل ما في التعلم أنه شيء لا يستطيع أحد أن يسلبه منك.",
   "motivation.quote2": "كل خبير كان في يوم من الأيام مبتدئًا.",
@@ -299,9 +299,9 @@
   "dashboard.continueLearning.searchPlaceholder": "ابحث في الفيديوهات المحفوظة...",
   "dashboard.continueLearning.empty.title": "لا توجد فيديوهات",
   "dashboard.continueLearning.empty.description": "جرّب البحث بكلمة مختلفة أو ارفع فيديو جديد وابدأ التعلم.",
-  "dashboard.filter.title": "تصفية",
-  "dashboard.filter.uploadedVideos": "الفيديوهات المرفوعة",
-  "dashboard.filter.linkedVideos": "الفيديوهات المرتبطة",
+  "dashboard.filter.title": "فلتره",
+  "dashboard.filter.uploadedVideos": "فيديوهات رفعتها",
+  "dashboard.filter.linkedVideos": "فيديوهات من رابط",
   "dashboard.storage.linked": "الروابط",
   "dashboard.storage.uploaded": "المرفوع",
   "dashboard.progress.saved": "المحفوظة",
@@ -441,8 +441,5 @@
   "navbar.logout": "تسجيل الخروج",
   "navbar.dashboard": "لوحة التحكم",
 
-
-  
   "error.default": "حدث خطأ غير متوقع. حاول مرة أخرى بعد قليل."
-
 }

@@ -82,5 +82,3 @@ def root():
     return {"status": "Viducate API is running"}
 
 # uvicorn app.main:app --reload
-
-

@@ -12,9 +12,9 @@ class FlashcardItem(BaseModel):
     language:            Optional[str] = "en"
     difficulty:          Optional[str] = "medium"
     created_at:          Optional[datetime] = None
-    segment_start_time:  Optional[int] = None    # raw seconds ex 125
+    segment_start_time:  Optional[int] = None    # raw seconds  125
     segment_end_time:    Optional[int] = None    
-    segment_start_label: Optional[str] = None   # formatted  ex "00:02:05"
+    segment_start_label: Optional[str] = None   # formatted   "00:02:05"
 
     model_config = {"from_attributes": False}
 

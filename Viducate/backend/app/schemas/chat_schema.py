@@ -13,7 +13,7 @@ class SessionResponse(BaseModel):
 
 class ChatRequest(BaseModel):
      video_id: int
-     session_id: int | None = None  # Optional
+     session_id: int | None = None 
      question: str
      current_time: Optional[int] = None
 
@@ -33,7 +33,7 @@ class AskResponse(BaseModel):
 
 class MessageSessionResponse(BaseModel):
     message_id: str 
-    role: str        # "user" or "assistant"
+    role: str       
     content: str
     time: Optional[int] = None
     created_at:  datetime.datetime    # question_at or answer_at

@@ -16,16 +16,17 @@ import { StudyNotesTable } from "./study_notes_table";
 
 type Props = {
   section: StudyNotesSectionType;
+  isArabic: boolean;
 };
 
-export function StudyNotesSection({ section }: Props) {
+export function StudyNotesSection({ section, isArabic }: Props) {
   const { heading, explanation, definitions, notes, examples, tables } =
     section;
 
   return (
-    <section className="space-y-6">
+    <section className="space-y-6" dir={isArabic ? "rtl" : "ltr"}>
       <h2
-        className={`${FONT_SIZE.size18} lg:${FONT_SIZE.size20} ${FONT_WEIGHT.bold} border-b border-gray-100 pb-2`}
+        className={`${FONT_SIZE.size18} lg:${FONT_SIZE.size26} ${FONT_WEIGHT.bold} border-b border-gray-100 pb-2`}
         style={{ color: COLORS.text.primary }}
       >
         {heading}
@@ -51,10 +52,12 @@ export function StudyNotesSection({ section }: Props) {
       {!!definitions?.length && (
         <div className="space-y-4 pt-2">
           <h3
-            className={`${FONT_STYLES.sectionTitle} border-b border-gray-100 pb-2`}
+            className={`${FONT_SIZE.size20} ${FONT_WEIGHT.bold} border-b border-gray-100 pb-2`}
             style={{ color: COLORS.text.primary }}
           >
-            Core Concepts & Terminology
+            {isArabic
+              ? "المفاهيم الأساسية والمصطلحات"
+              : "Core Concepts & Terminology"}
           </h3>
 
           <div className="space-y-3">
@@ -76,7 +79,7 @@ export function StudyNotesSection({ section }: Props) {
         </div>
       )}
 
-      {!!notes?.length && <TakeawayList items={notes} />}
+      {!!notes?.length && <TakeawayList items={notes} isArabic={isArabic} />}
 
       {!!examples?.length && (
         <div className="space-y-3 pt-2">
@@ -84,7 +87,7 @@ export function StudyNotesSection({ section }: Props) {
             className={`${FONT_SIZE.size18} lg:${FONT_SIZE.size20} ${FONT_WEIGHT.bold}`}
             style={{ color: COLORS.text.primary }}
           >
-            Key Examples
+            {isArabic ? "أمثلة مهمة" : "Key Examples"}
           </h3>
 
           <ul className="list-disc space-y-2 pl-5 sm:pl-6">

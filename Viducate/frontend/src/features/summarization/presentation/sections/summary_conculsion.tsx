@@ -1,5 +1,3 @@
-import { FormattedMessage } from "react-intl";
-
 import { COLORS } from "../../../../core/constants/colors";
 import {
   FONT_SIZE,
@@ -10,18 +8,22 @@ import { cleanSummaryText } from "../utlis/clear_summary";
 
 type SummaryConclusionProps = {
   conclusion: string;
+  isArabic?: boolean;
 };
 
-export function SummaryConclusion({ conclusion }: SummaryConclusionProps) {
+export function SummaryConclusion({
+  conclusion,
+  isArabic,
+}: SummaryConclusionProps) {
   if (!conclusion) return null;
 
   return (
-    <section className="mt-12 space-y-3">
+    <section className="mt-12 space-y-3" dir={isArabic ? "rtl" : "ltr"}>
       <h3
         className={`${FONT_SIZE.size18} lg:${FONT_SIZE.size20} ${FONT_WEIGHT.bold}`}
         style={{ color: COLORS.text.primary }}
       >
-        <FormattedMessage id="summary.conclusion" />
+        {isArabic ? "الخلاصة" : "Conclusion"}
       </h3>
 
       <p

@@ -2,6 +2,7 @@ import { AlertCircle, Check, Eye, EyeOff } from "lucide-react";
 import { useState } from "react";
 import { COLORS } from "../constants/colors";
 import { FONT_STYLES } from "../constants/fonts";
+import { useLanguage } from "../hooks/useLanguage";
 
 type CustomInputProps = {
   label: string;
@@ -29,7 +30,7 @@ export function CustomInput({
   const isEmpty = value.length === 0;
   const isError = !!error;
   const isSuccess = success && !isError && !isEmpty;
-
+  const { isRTL } = useLanguage();
   const inputType =
     isPasswordField && showPassword ? "text" : type;
 
@@ -43,11 +44,7 @@ export function CustomInput({
 
   return (
     <div className="w-full py-1 mb-2 font-display">
-      <label
-        className={`${FONT_STYLES.subtitle} block mb-1.5`}
-      >
-        {label}
-      </label>
+      <label className={`${FONT_STYLES.subtitle} block mb-1.5`}>{label}</label>
 
       <div className="relative">
         <input
@@ -59,54 +56,28 @@ export function CustomInput({
           onBlur={() => setIsFocused(false)}
           onFocus={() => setIsFocused(true)}
           className={`
-            w-full
-            h-10
-            px-3
-            md:px-4
-            pr-10
+            w-full h-10 px-3 md:px-4
+            ${isRTL ? 'pl-10 pr-3' : 'pr-10 pl-3'}
             ${FONT_STYLES.body}
-            rounded-lg
-            border-2
-            transition-all
-            focus:outline-none
+            rounded-lg border-2 transition-all focus:outline-none
           `}
         />
 
-        <div className="absolute right-3 top-1/2 -translate-y-1/2 flex items-center">
+        <div className={`absolute ${isRTL ? 'left-3' : 'right-3'} top-1/2 -translate-y-1/2 flex items-center`}>
           {isError && !isPasswordField ? (
-            <AlertCircle
-              size={16}
-              style={{ color: COLORS.state.error }}
-            />
+            <AlertCircle size={16} style={{ color: COLORS.state.error }} />
           ) : isSuccess ? (
-            <Check
-              size={16}
-              className="text-white rounded-full p-0.5"
-              style={{ backgroundColor: COLORS.state.success }}
-            />
+            <Check size={16} className="text-white rounded-full p-0.5" style={{ backgroundColor: COLORS.state.success }} />
           ) : isPasswordField ? (
-            <button
-              type="button"
-              onClick={() => setShowPassword((prev) => !prev)}
-              className="focus:outline-none cursor-pointer"
-            >
-              {showPassword ? (
-                <EyeOff size={16} />
-              ) : (
-                <Eye size={16} />
-              )}
+            <button type="button" onClick={() => setShowPassword(prev => !prev)} className="focus:outline-none cursor-pointer">
+              {showPassword ? <EyeOff size={16} /> : <Eye size={16} />}
             </button>
           ) : null}
         </div>
       </div>
 
       {isError && !isEmpty && (
-        <p
-          className={`${FONT_STYLES.caption} mt-1`}
-          style={{ color: COLORS.state.error }}
-        >
-          {error}
-        </p>
+        <p className={`${FONT_STYLES.caption} mt-1`} style={{ color: COLORS.state.error }}>{error}</p>
       )}
     </div>
   );
