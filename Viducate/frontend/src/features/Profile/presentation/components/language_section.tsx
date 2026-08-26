@@ -33,7 +33,6 @@ export function LanguageSection({ locale, setLocale }: LanguageSectionProps) {
             <CustomButton
               key={language.code}
               type="button"
-              variant="outline"
               onClick={() => setLocale(language.code)}
               style={getPreferenceButtonStyle(
                 isActive,

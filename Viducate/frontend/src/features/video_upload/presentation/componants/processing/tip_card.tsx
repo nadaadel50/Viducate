@@ -47,7 +47,7 @@ export const TipCard = () => {
 
         <p
           className={`"
-           ${FONT_STYLES.small}
+          
             text-[#475569]
             text-xs md:text-sm
             leading-relaxed
